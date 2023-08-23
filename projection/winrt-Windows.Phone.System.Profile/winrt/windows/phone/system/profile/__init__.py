@@ -3,4 +3,8 @@
 import winrt.system
 from . import _winrt_windows_phone_system_profile
 
+__all__ = [
+    "RetailMode",
+]
+
 RetailMode = _winrt_windows_phone_system_profile.RetailMode

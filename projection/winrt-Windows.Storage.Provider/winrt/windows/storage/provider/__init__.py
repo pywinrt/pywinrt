@@ -5,6 +5,46 @@ import enum
 import winrt.system
 from . import _winrt_windows_storage_provider
 
+__all__ = [
+    "CachedFileOptions",
+    "CachedFileTarget",
+    "FileUpdateStatus",
+    "ReadActivationMode",
+    "StorageProviderHardlinkPolicy",
+    "StorageProviderHydrationPolicy",
+    "StorageProviderHydrationPolicyModifier",
+    "StorageProviderInSyncPolicy",
+    "StorageProviderPopulationPolicy",
+    "StorageProviderProtectionMode",
+    "StorageProviderState",
+    "StorageProviderUICommandState",
+    "StorageProviderUriSourceStatus",
+    "UIStatus",
+    "WriteActivationMode",
+    "CachedFileUpdater",
+    "CachedFileUpdaterUI",
+    "FileUpdateRequest",
+    "FileUpdateRequestDeferral",
+    "FileUpdateRequestedEventArgs",
+    "StorageProviderFileTypeInfo",
+    "StorageProviderGetContentInfoForPathResult",
+    "StorageProviderGetPathForContentUriResult",
+    "StorageProviderItemProperties",
+    "StorageProviderItemProperty",
+    "StorageProviderItemPropertyDefinition",
+    "StorageProviderMoreInfoUI",
+    "StorageProviderQuotaUI",
+    "StorageProviderStatusUI",
+    "StorageProviderSyncRootInfo",
+    "StorageProviderSyncRootManager",
+    "IStorageProviderItemPropertySource",
+    "IStorageProviderPropertyCapabilities",
+    "IStorageProviderStatusUISource",
+    "IStorageProviderStatusUISourceFactory",
+    "IStorageProviderUICommand",
+    "IStorageProviderUriSource",
+]
+
 class CachedFileOptions(enum.IntFlag):
     NONE = 0
     REQUIRE_UPDATE_ON_ACCESS = 0x1

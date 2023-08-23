@@ -5,6 +5,22 @@ import enum
 import winrt.system
 from . import _winrt_windows_applicationmodel_appservice
 
+__all__ = [
+    "AppServiceClosedStatus",
+    "AppServiceConnectionStatus",
+    "AppServiceResponseStatus",
+    "StatelessAppServiceResponseStatus",
+    "AppServiceCatalog",
+    "AppServiceClosedEventArgs",
+    "AppServiceConnection",
+    "AppServiceDeferral",
+    "AppServiceRequest",
+    "AppServiceRequestReceivedEventArgs",
+    "AppServiceResponse",
+    "AppServiceTriggerDetails",
+    "StatelessAppServiceResponse",
+]
+
 class AppServiceClosedStatus(enum.IntEnum):
     COMPLETED = 0
     CANCELED = 1

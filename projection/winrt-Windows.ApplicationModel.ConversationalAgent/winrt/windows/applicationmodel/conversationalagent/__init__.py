@@ -5,6 +5,36 @@ import enum
 import winrt.system
 from . import _winrt_windows_applicationmodel_conversationalagent
 
+__all__ = [
+    "ActivationSignalDetectionConfigurationCreationStatus",
+    "ActivationSignalDetectionConfigurationRemovalResult",
+    "ActivationSignalDetectionConfigurationSetModelDataResult",
+    "ActivationSignalDetectionConfigurationStateChangeResult",
+    "ActivationSignalDetectionTrainingDataFormat",
+    "ActivationSignalDetectorKind",
+    "ActivationSignalDetectorPowerState",
+    "ConversationalAgentActivationKind",
+    "ConversationalAgentActivationResult",
+    "ConversationalAgentSessionUpdateResponse",
+    "ConversationalAgentState",
+    "ConversationalAgentSystemStateChangeType",
+    "ConversationalAgentVoiceActivationPrerequisiteKind",
+    "DetectionConfigurationAvailabilityChangeKind",
+    "DetectionConfigurationTrainingStatus",
+    "SignalDetectorResourceKind",
+    "ActivationSignalDetectionConfiguration",
+    "ActivationSignalDetectionConfigurationCreationResult",
+    "ActivationSignalDetector",
+    "ConversationalAgentDetectorManager",
+    "ConversationalAgentSession",
+    "ConversationalAgentSessionInterruptedEventArgs",
+    "ConversationalAgentSignal",
+    "ConversationalAgentSignalDetectedEventArgs",
+    "ConversationalAgentSystemStateChangedEventArgs",
+    "DetectionConfigurationAvailabilityChangedEventArgs",
+    "DetectionConfigurationAvailabilityInfo",
+]
+
 class ActivationSignalDetectionConfigurationCreationStatus(enum.IntEnum):
     SUCCESS = 0
     SIGNAL_ID_NOT_AVAILABLE = 1

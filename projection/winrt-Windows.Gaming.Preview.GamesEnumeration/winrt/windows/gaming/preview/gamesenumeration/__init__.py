@@ -6,6 +6,18 @@ import typing
 import winrt.system
 from . import _winrt_windows_gaming_preview_gamesenumeration
 
+__all__ = [
+    "GameListCategory",
+    "GameListEntryLaunchableState",
+    "GameList",
+    "GameListEntry",
+    "GameModeConfiguration",
+    "GameModeUserConfiguration",
+    "IGameListEntry",
+    "GameListChangedEventHandler",
+    "GameListRemovedEventHandler",
+]
+
 class GameListCategory(enum.IntEnum):
     CANDIDATE = 0
     CONFIRMED_BY_SYSTEM = 1

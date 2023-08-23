@@ -5,6 +5,32 @@ import enum
 import winrt.system
 from . import _winrt_windows_devices_pointofservice_provider
 
+__all__ = [
+    "BarcodeScannerTriggerState",
+    "BarcodeScannerDisableScannerRequest",
+    "BarcodeScannerDisableScannerRequestEventArgs",
+    "BarcodeScannerEnableScannerRequest",
+    "BarcodeScannerEnableScannerRequestEventArgs",
+    "BarcodeScannerFrameReader",
+    "BarcodeScannerFrameReaderFrameArrivedEventArgs",
+    "BarcodeScannerGetSymbologyAttributesRequest",
+    "BarcodeScannerGetSymbologyAttributesRequestEventArgs",
+    "BarcodeScannerHideVideoPreviewRequest",
+    "BarcodeScannerHideVideoPreviewRequestEventArgs",
+    "BarcodeScannerProviderConnection",
+    "BarcodeScannerProviderTriggerDetails",
+    "BarcodeScannerSetActiveSymbologiesRequest",
+    "BarcodeScannerSetActiveSymbologiesRequestEventArgs",
+    "BarcodeScannerSetSymbologyAttributesRequest",
+    "BarcodeScannerSetSymbologyAttributesRequestEventArgs",
+    "BarcodeScannerStartSoftwareTriggerRequest",
+    "BarcodeScannerStartSoftwareTriggerRequestEventArgs",
+    "BarcodeScannerStopSoftwareTriggerRequest",
+    "BarcodeScannerStopSoftwareTriggerRequestEventArgs",
+    "BarcodeScannerVideoFrame",
+    "BarcodeSymbologyAttributesBuilder",
+]
+
 class BarcodeScannerTriggerState(enum.IntEnum):
     RELEASED = 0
     PRESSED = 1

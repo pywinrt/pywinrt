@@ -5,6 +5,20 @@ import enum
 import winrt.system
 from . import _winrt_windows_applicationmodel_calls_background
 
+__all__ = [
+    "PhoneCallBlockedReason",
+    "PhoneIncomingCallDismissedReason",
+    "PhoneLineChangeKind",
+    "PhoneLineProperties",
+    "PhoneTriggerType",
+    "PhoneCallBlockedTriggerDetails",
+    "PhoneCallOriginDataRequestTriggerDetails",
+    "PhoneIncomingCallDismissedTriggerDetails",
+    "PhoneIncomingCallNotificationTriggerDetails",
+    "PhoneLineChangedTriggerDetails",
+    "PhoneNewVoicemailMessageTriggerDetails",
+]
+
 class PhoneCallBlockedReason(enum.IntEnum):
     IN_CALL_BLOCKING_LIST = 0
     PRIVATE_NUMBER = 1

@@ -5,6 +5,46 @@ import enum
 import winrt.system
 from . import _winrt_windows_applicationmodel_appointments
 
+__all__ = [
+    "AppointmentBusyStatus",
+    "AppointmentCalendarOtherAppReadAccess",
+    "AppointmentCalendarOtherAppWriteAccess",
+    "AppointmentCalendarSyncStatus",
+    "AppointmentConflictType",
+    "AppointmentDaysOfWeek",
+    "AppointmentDetailsKind",
+    "AppointmentParticipantResponse",
+    "AppointmentParticipantRole",
+    "AppointmentRecurrenceUnit",
+    "AppointmentSensitivity",
+    "AppointmentStoreAccessType",
+    "AppointmentStoreChangeType",
+    "AppointmentSummaryCardView",
+    "AppointmentWeekOfMonth",
+    "FindAppointmentCalendarsOptions",
+    "RecurrenceType",
+    "Appointment",
+    "AppointmentCalendar",
+    "AppointmentCalendarSyncManager",
+    "AppointmentConflictResult",
+    "AppointmentException",
+    "AppointmentInvitee",
+    "AppointmentManager",
+    "AppointmentManagerForUser",
+    "AppointmentOrganizer",
+    "AppointmentProperties",
+    "AppointmentRecurrence",
+    "AppointmentStore",
+    "AppointmentStoreChange",
+    "AppointmentStoreChangeReader",
+    "AppointmentStoreChangeTracker",
+    "AppointmentStoreChangedDeferral",
+    "AppointmentStoreChangedEventArgs",
+    "AppointmentStoreNotificationTriggerDetails",
+    "FindAppointmentsOptions",
+    "IAppointmentParticipant",
+]
+
 class AppointmentBusyStatus(enum.IntEnum):
     BUSY = 0
     TENTATIVE = 1

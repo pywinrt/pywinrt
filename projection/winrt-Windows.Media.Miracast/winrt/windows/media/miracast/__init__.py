@@ -5,6 +5,35 @@ import enum
 import winrt.system
 from . import _winrt_windows_media_miracast
 
+__all__ = [
+    "MiracastReceiverApplySettingsStatus",
+    "MiracastReceiverAuthorizationMethod",
+    "MiracastReceiverDisconnectReason",
+    "MiracastReceiverGameControllerDeviceUsageMode",
+    "MiracastReceiverListeningStatus",
+    "MiracastReceiverSessionStartStatus",
+    "MiracastReceiverWiFiStatus",
+    "MiracastTransmitterAuthorizationStatus",
+    "MiracastReceiver",
+    "MiracastReceiverApplySettingsResult",
+    "MiracastReceiverConnection",
+    "MiracastReceiverConnectionCreatedEventArgs",
+    "MiracastReceiverCursorImageChannel",
+    "MiracastReceiverCursorImageChannelSettings",
+    "MiracastReceiverDisconnectedEventArgs",
+    "MiracastReceiverGameControllerDevice",
+    "MiracastReceiverInputDevices",
+    "MiracastReceiverKeyboardDevice",
+    "MiracastReceiverMediaSourceCreatedEventArgs",
+    "MiracastReceiverSession",
+    "MiracastReceiverSessionStartResult",
+    "MiracastReceiverSettings",
+    "MiracastReceiverStatus",
+    "MiracastReceiverStreamControl",
+    "MiracastReceiverVideoStreamSettings",
+    "MiracastTransmitter",
+]
+
 class MiracastReceiverApplySettingsStatus(enum.IntEnum):
     SUCCESS = 0
     UNKNOWN_FAILURE = 1

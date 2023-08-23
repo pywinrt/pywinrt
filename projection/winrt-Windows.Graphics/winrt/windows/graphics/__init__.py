@@ -3,6 +3,15 @@
 import winrt.system
 from . import _winrt_windows_graphics
 
+__all__ = [
+    "DisplayAdapterId",
+    "DisplayId",
+    "PointInt32",
+    "RectInt32",
+    "SizeInt32",
+    "IGeometrySource2D",
+]
+
 DisplayAdapterId = _winrt_windows_graphics.DisplayAdapterId
 DisplayId = _winrt_windows_graphics.DisplayId
 PointInt32 = _winrt_windows_graphics.PointInt32

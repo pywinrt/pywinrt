@@ -5,6 +5,34 @@ import enum
 import winrt.system
 from . import _winrt_windows_media_capture_frames
 
+__all__ = [
+    "MediaFrameReaderAcquisitionMode",
+    "MediaFrameReaderStartStatus",
+    "MediaFrameSourceGetPropertyStatus",
+    "MediaFrameSourceKind",
+    "MediaFrameSourceSetPropertyStatus",
+    "MultiSourceMediaFrameReaderStartStatus",
+    "AudioMediaFrame",
+    "BufferMediaFrame",
+    "DepthMediaFrame",
+    "DepthMediaFrameFormat",
+    "InfraredMediaFrame",
+    "MediaFrameArrivedEventArgs",
+    "MediaFrameFormat",
+    "MediaFrameReader",
+    "MediaFrameReference",
+    "MediaFrameSource",
+    "MediaFrameSourceController",
+    "MediaFrameSourceGetPropertyResult",
+    "MediaFrameSourceGroup",
+    "MediaFrameSourceInfo",
+    "MultiSourceMediaFrameArrivedEventArgs",
+    "MultiSourceMediaFrameReader",
+    "MultiSourceMediaFrameReference",
+    "VideoMediaFrame",
+    "VideoMediaFrameFormat",
+]
+
 class MediaFrameReaderAcquisitionMode(enum.IntEnum):
     REALTIME = 0
     BUFFERED = 1

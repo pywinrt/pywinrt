@@ -6,6 +6,46 @@ import typing
 import winrt.system
 from . import _winrt_windows_graphics_printing3d
 
+__all__ = [
+    "Print3DTaskCompletion",
+    "Print3DTaskDetail",
+    "Printing3DBufferFormat",
+    "Printing3DMeshVerificationMode",
+    "Printing3DModelUnit",
+    "Printing3DObjectType",
+    "Printing3DPackageCompression",
+    "Printing3DTextureEdgeBehavior",
+    "Printing3DBufferDescription",
+    "Print3DManager",
+    "Print3DTask",
+    "Print3DTaskCompletedEventArgs",
+    "Print3DTaskRequest",
+    "Print3DTaskRequestedEventArgs",
+    "Print3DTaskSourceChangedEventArgs",
+    "Print3DTaskSourceRequestedArgs",
+    "Printing3D3MFPackage",
+    "Printing3DBaseMaterial",
+    "Printing3DBaseMaterialGroup",
+    "Printing3DColorMaterial",
+    "Printing3DColorMaterialGroup",
+    "Printing3DComponent",
+    "Printing3DComponentWithMatrix",
+    "Printing3DCompositeMaterial",
+    "Printing3DCompositeMaterialGroup",
+    "Printing3DFaceReductionOptions",
+    "Printing3DMaterial",
+    "Printing3DMesh",
+    "Printing3DMeshVerificationResult",
+    "Printing3DModel",
+    "Printing3DModelTexture",
+    "Printing3DMultiplePropertyMaterial",
+    "Printing3DMultiplePropertyMaterialGroup",
+    "Printing3DTexture2CoordMaterial",
+    "Printing3DTexture2CoordMaterialGroup",
+    "Printing3DTextureResource",
+    "Print3DTaskSourceRequestedHandler",
+]
+
 class Print3DTaskCompletion(enum.IntEnum):
     ABANDONED = 0
     CANCELED = 1

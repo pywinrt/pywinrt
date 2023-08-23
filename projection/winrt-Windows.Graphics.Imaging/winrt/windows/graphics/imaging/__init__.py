@@ -5,6 +5,39 @@ import enum
 import winrt.system
 from . import _winrt_windows_graphics_imaging
 
+__all__ = [
+    "BitmapAlphaMode",
+    "BitmapBufferAccessMode",
+    "BitmapFlip",
+    "BitmapInterpolationMode",
+    "BitmapPixelFormat",
+    "BitmapRotation",
+    "ColorManagementMode",
+    "ExifOrientationMode",
+    "JpegSubsamplingMode",
+    "PngFilterMode",
+    "TiffCompressionMode",
+    "BitmapBounds",
+    "BitmapPlaneDescription",
+    "BitmapSize",
+    "BitmapBuffer",
+    "BitmapCodecInformation",
+    "BitmapDecoder",
+    "BitmapEncoder",
+    "BitmapFrame",
+    "BitmapProperties",
+    "BitmapPropertiesView",
+    "BitmapPropertySet",
+    "BitmapTransform",
+    "BitmapTypedValue",
+    "ImageStream",
+    "PixelDataProvider",
+    "SoftwareBitmap",
+    "IBitmapFrame",
+    "IBitmapFrameWithSoftwareBitmap",
+    "IBitmapPropertiesView",
+]
+
 class BitmapAlphaMode(enum.IntEnum):
     PREMULTIPLIED = 0
     STRAIGHT = 1

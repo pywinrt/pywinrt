@@ -5,6 +5,43 @@ import enum
 import winrt.system
 from . import _winrt_windows_management_deployment
 
+__all__ = [
+    "AddPackageByAppInstallerOptions",
+    "DeploymentOptions",
+    "DeploymentProgressState",
+    "PackageInstallState",
+    "PackageState",
+    "PackageStatus",
+    "PackageStubPreference",
+    "PackageTypes",
+    "RemovalOptions",
+    "SharedPackageContainerCreationCollisionOptions",
+    "SharedPackageContainerOperationStatus",
+    "StubPackageOption",
+    "DeploymentProgress",
+    "AddPackageOptions",
+    "AppInstallerManager",
+    "AutoUpdateSettingsOptions",
+    "CreateSharedPackageContainerOptions",
+    "CreateSharedPackageContainerResult",
+    "DeleteSharedPackageContainerOptions",
+    "DeleteSharedPackageContainerResult",
+    "DeploymentResult",
+    "FindSharedPackageContainerOptions",
+    "PackageAllUserProvisioningOptions",
+    "PackageManager",
+    "PackageManagerDebugSettings",
+    "PackageUserInformation",
+    "PackageVolume",
+    "RegisterPackageOptions",
+    "SharedPackageContainer",
+    "SharedPackageContainerManager",
+    "SharedPackageContainerMember",
+    "StagePackageOptions",
+    "UpdateSharedPackageContainerOptions",
+    "UpdateSharedPackageContainerResult",
+]
+
 class AddPackageByAppInstallerOptions(enum.IntFlag):
     NONE = 0
     INSTALL_ALL_RESOURCES = 0x20

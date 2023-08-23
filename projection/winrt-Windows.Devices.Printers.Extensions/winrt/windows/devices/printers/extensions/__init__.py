@@ -5,6 +5,20 @@ import enum
 import winrt.system
 from . import _winrt_windows_devices_printers_extensions
 
+__all__ = [
+    "Print3DWorkflowDetail",
+    "Print3DWorkflowStatus",
+    "Print3DWorkflow",
+    "Print3DWorkflowPrintRequestedEventArgs",
+    "Print3DWorkflowPrinterChangedEventArgs",
+    "PrintExtensionContext",
+    "PrintNotificationEventDetails",
+    "PrintTaskConfiguration",
+    "PrintTaskConfigurationSaveRequest",
+    "PrintTaskConfigurationSaveRequestedDeferral",
+    "PrintTaskConfigurationSaveRequestedEventArgs",
+]
+
 class Print3DWorkflowDetail(enum.IntEnum):
     UNKNOWN = 0
     MODEL_EXCEEDS_PRINT_BED = 1

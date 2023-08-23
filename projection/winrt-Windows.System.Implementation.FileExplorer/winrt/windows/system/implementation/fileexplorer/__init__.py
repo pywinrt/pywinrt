@@ -3,6 +3,13 @@
 import winrt.system
 from . import _winrt_windows_system_implementation_fileexplorer
 
+__all__ = [
+    "SysStorageProviderEventReceivedEventArgs",
+    "ISysStorageProviderEventSource",
+    "ISysStorageProviderHandlerFactory",
+    "ISysStorageProviderHttpRequestProvider",
+]
+
 SysStorageProviderEventReceivedEventArgs = _winrt_windows_system_implementation_fileexplorer.SysStorageProviderEventReceivedEventArgs
 ISysStorageProviderEventSource = _winrt_windows_system_implementation_fileexplorer.ISysStorageProviderEventSource
 ISysStorageProviderHandlerFactory = _winrt_windows_system_implementation_fileexplorer.ISysStorageProviderHandlerFactory

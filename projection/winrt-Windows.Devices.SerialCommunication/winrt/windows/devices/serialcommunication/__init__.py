@@ -5,6 +5,17 @@ import enum
 import winrt.system
 from . import _winrt_windows_devices_serialcommunication
 
+__all__ = [
+    "SerialError",
+    "SerialHandshake",
+    "SerialParity",
+    "SerialPinChange",
+    "SerialStopBitCount",
+    "ErrorReceivedEventArgs",
+    "PinChangedEventArgs",
+    "SerialDevice",
+]
+
 class SerialError(enum.IntEnum):
     FRAME = 0
     BUFFER_OVERRUN = 1

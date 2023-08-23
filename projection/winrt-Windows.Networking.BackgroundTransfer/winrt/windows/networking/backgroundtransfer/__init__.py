@@ -5,6 +5,33 @@ import enum
 import winrt.system
 from . import _winrt_windows_networking_backgroundtransfer
 
+__all__ = [
+    "BackgroundTransferBehavior",
+    "BackgroundTransferCostPolicy",
+    "BackgroundTransferPriority",
+    "BackgroundTransferStatus",
+    "BackgroundDownloadProgress",
+    "BackgroundTransferFileRange",
+    "BackgroundUploadProgress",
+    "BackgroundDownloader",
+    "BackgroundTransferCompletionGroup",
+    "BackgroundTransferCompletionGroupTriggerDetails",
+    "BackgroundTransferContentPart",
+    "BackgroundTransferError",
+    "BackgroundTransferGroup",
+    "BackgroundTransferRangesDownloadedEventArgs",
+    "BackgroundUploader",
+    "ContentPrefetcher",
+    "DownloadOperation",
+    "ResponseInformation",
+    "UnconstrainedTransferRequestResult",
+    "UploadOperation",
+    "IBackgroundTransferBase",
+    "IBackgroundTransferContentPartFactory",
+    "IBackgroundTransferOperation",
+    "IBackgroundTransferOperationPriority",
+]
+
 class BackgroundTransferBehavior(enum.IntEnum):
     PARALLEL = 0
     SERIALIZED = 1

@@ -5,5 +5,10 @@ import typing
 import winrt.system
 from . import _winrt_windows_system_remotedesktop_input
 
+__all__ = [
+    "RemoteTextConnection",
+    "RemoteTextConnectionDataHandler",
+]
+
 RemoteTextConnection = _winrt_windows_system_remotedesktop_input.RemoteTextConnection
 RemoteTextConnectionDataHandler = typing.Callable[[winrt.system.Array[winrt.system.UInt8]], winrt.system.Boolean]

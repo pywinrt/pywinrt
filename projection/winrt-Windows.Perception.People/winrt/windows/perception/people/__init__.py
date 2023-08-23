@@ -5,6 +5,18 @@ import enum
 import winrt.system
 from . import _winrt_windows_perception_people
 
+__all__ = [
+    "HandJointKind",
+    "JointPoseAccuracy",
+    "HandMeshVertex",
+    "JointPose",
+    "EyesPose",
+    "HandMeshObserver",
+    "HandMeshVertexState",
+    "HandPose",
+    "HeadPose",
+]
+
 class HandJointKind(enum.IntEnum):
     PALM = 0
     WRIST = 1

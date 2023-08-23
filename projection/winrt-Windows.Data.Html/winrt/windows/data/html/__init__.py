@@ -3,4 +3,8 @@
 import winrt.system
 from . import _winrt_windows_data_html
 
+__all__ = [
+    "HtmlUtilities",
+]
+
 HtmlUtilities = _winrt_windows_data_html.HtmlUtilities

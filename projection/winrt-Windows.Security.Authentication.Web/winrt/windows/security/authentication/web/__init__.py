@@ -5,6 +5,14 @@ import enum
 import winrt.system
 from . import _winrt_windows_security_authentication_web
 
+__all__ = [
+    "TokenBindingKeyType",
+    "WebAuthenticationOptions",
+    "WebAuthenticationStatus",
+    "WebAuthenticationBroker",
+    "WebAuthenticationResult",
+]
+
 class TokenBindingKeyType(enum.IntEnum):
     RSA2048 = 0
     ECDSA_P256 = 1

@@ -5,6 +5,13 @@ import enum
 import winrt.system
 from . import _winrt_windows_system_diagnostics_telemetry
 
+__all__ = [
+    "PlatformTelemetryRegistrationStatus",
+    "PlatformTelemetryClient",
+    "PlatformTelemetryRegistrationResult",
+    "PlatformTelemetryRegistrationSettings",
+]
+
 class PlatformTelemetryRegistrationStatus(enum.IntEnum):
     SUCCESS = 0
     SETTINGS_OUT_OF_RANGE = 1

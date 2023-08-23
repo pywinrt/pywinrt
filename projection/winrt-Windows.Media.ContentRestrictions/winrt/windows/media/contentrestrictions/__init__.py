@@ -5,6 +5,14 @@ import enum
 import winrt.system
 from . import _winrt_windows_media_contentrestrictions
 
+__all__ = [
+    "ContentAccessRestrictionLevel",
+    "RatedContentCategory",
+    "ContentRestrictionsBrowsePolicy",
+    "RatedContentDescription",
+    "RatedContentRestrictions",
+]
+
 class ContentAccessRestrictionLevel(enum.IntEnum):
     ALLOW = 0
     WARN = 1

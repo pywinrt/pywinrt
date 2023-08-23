@@ -3,4 +3,8 @@
 import winrt.system
 from . import _winrt_windows_ui_composition_core
 
+__all__ = [
+    "CompositorController",
+]
+
 CompositorController = _winrt_windows_ui_composition_core.CompositorController

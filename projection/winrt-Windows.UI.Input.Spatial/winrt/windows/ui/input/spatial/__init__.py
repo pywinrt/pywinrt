@@ -5,6 +5,42 @@ import enum
 import winrt.system
 from . import _winrt_windows_ui_input_spatial
 
+__all__ = [
+    "SpatialGestureSettings",
+    "SpatialInteractionPressKind",
+    "SpatialInteractionSourceHandedness",
+    "SpatialInteractionSourceKind",
+    "SpatialInteractionSourcePositionAccuracy",
+    "SpatialGestureRecognizer",
+    "SpatialHoldCanceledEventArgs",
+    "SpatialHoldCompletedEventArgs",
+    "SpatialHoldStartedEventArgs",
+    "SpatialInteraction",
+    "SpatialInteractionController",
+    "SpatialInteractionControllerProperties",
+    "SpatialInteractionDetectedEventArgs",
+    "SpatialInteractionManager",
+    "SpatialInteractionSource",
+    "SpatialInteractionSourceEventArgs",
+    "SpatialInteractionSourceLocation",
+    "SpatialInteractionSourceProperties",
+    "SpatialInteractionSourceState",
+    "SpatialManipulationCanceledEventArgs",
+    "SpatialManipulationCompletedEventArgs",
+    "SpatialManipulationDelta",
+    "SpatialManipulationStartedEventArgs",
+    "SpatialManipulationUpdatedEventArgs",
+    "SpatialNavigationCanceledEventArgs",
+    "SpatialNavigationCompletedEventArgs",
+    "SpatialNavigationStartedEventArgs",
+    "SpatialNavigationUpdatedEventArgs",
+    "SpatialPointerInteractionSourcePose",
+    "SpatialPointerPose",
+    "SpatialRecognitionEndedEventArgs",
+    "SpatialRecognitionStartedEventArgs",
+    "SpatialTappedEventArgs",
+]
+
 class SpatialGestureSettings(enum.IntFlag):
     NONE = 0
     TAP = 0x1

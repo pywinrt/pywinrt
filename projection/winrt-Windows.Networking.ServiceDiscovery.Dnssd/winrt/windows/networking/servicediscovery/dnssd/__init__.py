@@ -5,6 +5,15 @@ import enum
 import winrt.system
 from . import _winrt_windows_networking_servicediscovery_dnssd
 
+__all__ = [
+    "DnssdRegistrationStatus",
+    "DnssdServiceWatcherStatus",
+    "DnssdRegistrationResult",
+    "DnssdServiceInstance",
+    "DnssdServiceInstanceCollection",
+    "DnssdServiceWatcher",
+]
+
 class DnssdRegistrationStatus(enum.IntEnum):
     SUCCESS = 0
     INVALID_SERVICE_NAME = 1

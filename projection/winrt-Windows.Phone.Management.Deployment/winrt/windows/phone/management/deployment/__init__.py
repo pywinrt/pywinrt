@@ -5,6 +5,16 @@ import enum
 import winrt.system
 from . import _winrt_windows_phone_management_deployment
 
+__all__ = [
+    "EnterpriseEnrollmentStatus",
+    "EnterpriseStatus",
+    "Enterprise",
+    "EnterpriseEnrollmentManager",
+    "EnterpriseEnrollmentResult",
+    "InstallationManager",
+    "PackageInstallResult",
+]
+
 class EnterpriseEnrollmentStatus(enum.IntEnum):
     SUCCESS = 0
     CANCELLED_BY_USER = 1

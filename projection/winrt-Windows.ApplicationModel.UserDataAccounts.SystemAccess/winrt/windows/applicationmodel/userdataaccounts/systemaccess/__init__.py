@@ -5,6 +5,16 @@ import enum
 import winrt.system
 from . import _winrt_windows_applicationmodel_userdataaccounts_systemaccess
 
+__all__ = [
+    "DeviceAccountAuthenticationType",
+    "DeviceAccountIconId",
+    "DeviceAccountMailAgeFilter",
+    "DeviceAccountServerType",
+    "DeviceAccountSyncScheduleKind",
+    "DeviceAccountConfiguration",
+    "UserDataAccountSystemAccessManager",
+]
+
 class DeviceAccountAuthenticationType(enum.IntEnum):
     BASIC = 0
     O_AUTH = 1

@@ -5,6 +5,21 @@ import enum
 import winrt.system
 from . import _winrt_windows_storage_pickers_provider
 
+__all__ = [
+    "AddFileResult",
+    "FileSelectionMode",
+    "SetFileNameResult",
+    "FileOpenPickerUI",
+    "FileRemovedEventArgs",
+    "FileSavePickerUI",
+    "PickerClosingDeferral",
+    "PickerClosingEventArgs",
+    "PickerClosingOperation",
+    "TargetFileRequest",
+    "TargetFileRequestDeferral",
+    "TargetFileRequestedEventArgs",
+]
+
 class AddFileResult(enum.IntEnum):
     ADDED = 0
     ALREADY_ADDED = 1

@@ -6,6 +6,25 @@ import typing
 import winrt.system
 from . import _winrt_windows_ui_xaml_media_imaging
 
+__all__ = [
+    "BitmapCreateOptions",
+    "DecodePixelType",
+    "SvgImageSourceLoadStatus",
+    "BitmapImage",
+    "BitmapSource",
+    "DownloadProgressEventArgs",
+    "RenderTargetBitmap",
+    "SoftwareBitmapSource",
+    "SurfaceImageSource",
+    "SvgImageSource",
+    "SvgImageSourceFailedEventArgs",
+    "SvgImageSourceOpenedEventArgs",
+    "VirtualSurfaceImageSource",
+    "WriteableBitmap",
+    "XamlRenderingBackgroundTask",
+    "DownloadProgressEventHandler",
+]
+
 class BitmapCreateOptions(enum.IntFlag):
     NONE = 0
     IGNORE_IMAGE_CACHE = 0x8

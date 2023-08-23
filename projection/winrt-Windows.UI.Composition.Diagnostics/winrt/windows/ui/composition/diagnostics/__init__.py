@@ -5,6 +5,12 @@ import enum
 import winrt.system
 from . import _winrt_windows_ui_composition_diagnostics
 
+__all__ = [
+    "CompositionDebugOverdrawContentKinds",
+    "CompositionDebugHeatMaps",
+    "CompositionDebugSettings",
+]
+
 class CompositionDebugOverdrawContentKinds(enum.IntFlag):
     NONE = 0
     OFFSCREEN_RENDERED = 0x1

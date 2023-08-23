@@ -5,6 +5,12 @@ import typing
 import winrt.system
 from . import _winrt_windows_system_threading_core
 
+__all__ = [
+    "PreallocatedWorkItem",
+    "SignalNotifier",
+    "SignalHandler",
+]
+
 PreallocatedWorkItem = _winrt_windows_system_threading_core.PreallocatedWorkItem
 SignalNotifier = _winrt_windows_system_threading_core.SignalNotifier
 SignalHandler = typing.Callable[[typing.Optional[SignalNotifier], winrt.system.Boolean], None]

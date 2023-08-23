@@ -5,6 +5,15 @@ import enum
 import winrt.system
 from . import _winrt_windows_media_closedcaptioning
 
+__all__ = [
+    "ClosedCaptionColor",
+    "ClosedCaptionEdgeEffect",
+    "ClosedCaptionOpacity",
+    "ClosedCaptionSize",
+    "ClosedCaptionStyle",
+    "ClosedCaptionProperties",
+]
+
 class ClosedCaptionColor(enum.IntEnum):
     DEFAULT = 0
     WHITE = 1

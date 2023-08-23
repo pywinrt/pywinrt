@@ -5,6 +5,35 @@ import enum
 import winrt.system
 from . import _winrt_windows_media_import
 
+__all__ = [
+    "PhotoImportAccessMode",
+    "PhotoImportConnectionTransport",
+    "PhotoImportContentType",
+    "PhotoImportContentTypeFilter",
+    "PhotoImportImportMode",
+    "PhotoImportItemSelectionMode",
+    "PhotoImportPowerSource",
+    "PhotoImportSourceType",
+    "PhotoImportStage",
+    "PhotoImportStorageMediumType",
+    "PhotoImportSubfolderCreationMode",
+    "PhotoImportSubfolderDateFormat",
+    "PhotoImportProgress",
+    "PhotoImportDeleteImportedItemsFromSourceResult",
+    "PhotoImportFindItemsResult",
+    "PhotoImportImportItemsResult",
+    "PhotoImportItem",
+    "PhotoImportItemImportedEventArgs",
+    "PhotoImportManager",
+    "PhotoImportOperation",
+    "PhotoImportSelectionChangedEventArgs",
+    "PhotoImportSession",
+    "PhotoImportSidecar",
+    "PhotoImportSource",
+    "PhotoImportStorageMedium",
+    "PhotoImportVideoSegment",
+]
+
 class PhotoImportAccessMode(enum.IntEnum):
     READ_WRITE = 0
     READ_ONLY = 1

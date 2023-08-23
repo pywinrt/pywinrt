@@ -5,6 +5,12 @@ import enum
 import winrt.system
 from . import _winrt_windows_applicationmodel_contacts_provider
 
+__all__ = [
+    "AddContactResult",
+    "ContactPickerUI",
+    "ContactRemovedEventArgs",
+]
+
 class AddContactResult(enum.IntEnum):
     ADDED = 0
     ALREADY_ADDED = 1

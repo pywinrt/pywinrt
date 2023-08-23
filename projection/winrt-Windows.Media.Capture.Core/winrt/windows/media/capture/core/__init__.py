@@ -3,5 +3,10 @@
 import winrt.system
 from . import _winrt_windows_media_capture_core
 
+__all__ = [
+    "VariablePhotoCapturedEventArgs",
+    "VariablePhotoSequenceCapture",
+]
+
 VariablePhotoCapturedEventArgs = _winrt_windows_media_capture_core.VariablePhotoCapturedEventArgs
 VariablePhotoSequenceCapture = _winrt_windows_media_capture_core.VariablePhotoSequenceCapture

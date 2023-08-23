@@ -3,4 +3,8 @@
 import winrt.system
 from . import _winrt_windows_applicationmodel_preview_inkworkspace
 
+__all__ = [
+    "InkWorkspaceHostedAppManager",
+]
+
 InkWorkspaceHostedAppManager = _winrt_windows_applicationmodel_preview_inkworkspace.InkWorkspaceHostedAppManager

@@ -3,4 +3,8 @@
 import winrt.system
 from . import _winrt_windows_management_core
 
+__all__ = [
+    "ApplicationDataManager",
+]
+
 ApplicationDataManager = _winrt_windows_management_core.ApplicationDataManager

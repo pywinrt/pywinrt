@@ -5,6 +5,14 @@ import enum
 import winrt.system
 from . import _winrt_windows_devices_display
 
+__all__ = [
+    "DisplayMonitorConnectionKind",
+    "DisplayMonitorDescriptorKind",
+    "DisplayMonitorPhysicalConnectorKind",
+    "DisplayMonitorUsageKind",
+    "DisplayMonitor",
+]
+
 class DisplayMonitorConnectionKind(enum.IntEnum):
     INTERNAL = 0
     WIRED = 1

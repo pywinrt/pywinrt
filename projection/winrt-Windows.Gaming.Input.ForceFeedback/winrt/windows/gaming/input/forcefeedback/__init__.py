@@ -5,6 +5,20 @@ import enum
 import winrt.system
 from . import _winrt_windows_gaming_input_forcefeedback
 
+__all__ = [
+    "ConditionForceEffectKind",
+    "ForceFeedbackEffectAxes",
+    "ForceFeedbackEffectState",
+    "ForceFeedbackLoadEffectResult",
+    "PeriodicForceEffectKind",
+    "ConditionForceEffect",
+    "ConstantForceEffect",
+    "ForceFeedbackMotor",
+    "PeriodicForceEffect",
+    "RampForceEffect",
+    "IForceFeedbackEffect",
+]
+
 class ConditionForceEffectKind(enum.IntEnum):
     SPRING = 0
     DAMPER = 1

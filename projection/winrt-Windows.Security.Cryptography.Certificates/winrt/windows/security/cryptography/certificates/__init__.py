@@ -5,6 +5,40 @@ import enum
 import winrt.system
 from . import _winrt_windows_security_cryptography_certificates
 
+__all__ = [
+    "CertificateChainPolicy",
+    "ChainValidationResult",
+    "EnrollKeyUsages",
+    "ExportOption",
+    "InstallOptions",
+    "KeyProtectionLevel",
+    "KeySize",
+    "SignatureValidationResult",
+    "Certificate",
+    "CertificateChain",
+    "CertificateEnrollmentManager",
+    "CertificateExtension",
+    "CertificateKeyUsages",
+    "CertificateQuery",
+    "CertificateRequestProperties",
+    "CertificateStore",
+    "CertificateStores",
+    "ChainBuildingParameters",
+    "ChainValidationParameters",
+    "CmsAttachedSignature",
+    "CmsDetachedSignature",
+    "CmsSignerInfo",
+    "CmsTimestampInfo",
+    "KeyAlgorithmNames",
+    "KeyAttestationHelper",
+    "KeyStorageProviderNames",
+    "PfxImportParameters",
+    "StandardCertificateStoreNames",
+    "SubjectAlternativeNameInfo",
+    "UserCertificateEnrollmentManager",
+    "UserCertificateStore",
+]
+
 class CertificateChainPolicy(enum.IntEnum):
     BASE = 0
     SSL = 1

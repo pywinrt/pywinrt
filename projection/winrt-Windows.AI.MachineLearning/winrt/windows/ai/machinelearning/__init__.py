@@ -5,6 +5,41 @@ import enum
 import winrt.system
 from . import _winrt_windows_ai_machinelearning
 
+__all__ = [
+    "LearningModelDeviceKind",
+    "LearningModelFeatureKind",
+    "LearningModelPixelRange",
+    "TensorKind",
+    "ImageFeatureDescriptor",
+    "ImageFeatureValue",
+    "LearningModel",
+    "LearningModelBinding",
+    "LearningModelDevice",
+    "LearningModelEvaluationResult",
+    "LearningModelSession",
+    "LearningModelSessionOptions",
+    "MapFeatureDescriptor",
+    "SequenceFeatureDescriptor",
+    "TensorBoolean",
+    "TensorDouble",
+    "TensorFeatureDescriptor",
+    "TensorFloat",
+    "TensorFloat16Bit",
+    "TensorInt16Bit",
+    "TensorInt32Bit",
+    "TensorInt64Bit",
+    "TensorInt8Bit",
+    "TensorString",
+    "TensorUInt16Bit",
+    "TensorUInt32Bit",
+    "TensorUInt64Bit",
+    "TensorUInt8Bit",
+    "ILearningModelFeatureDescriptor",
+    "ILearningModelFeatureValue",
+    "ILearningModelOperatorProvider",
+    "ITensor",
+]
+
 class LearningModelDeviceKind(enum.IntEnum):
     DEFAULT = 0
     CPU = 1

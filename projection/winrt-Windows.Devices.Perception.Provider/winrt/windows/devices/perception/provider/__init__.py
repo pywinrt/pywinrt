@@ -5,6 +5,23 @@ import typing
 import winrt.system
 from . import _winrt_windows_devices_perception_provider
 
+__all__ = [
+    "KnownPerceptionFrameKind",
+    "PerceptionControlGroup",
+    "PerceptionCorrelation",
+    "PerceptionCorrelationGroup",
+    "PerceptionFaceAuthenticationGroup",
+    "PerceptionFrame",
+    "PerceptionFrameProviderInfo",
+    "PerceptionFrameProviderManagerService",
+    "PerceptionPropertyChangeRequest",
+    "PerceptionVideoFrameAllocator",
+    "IPerceptionFrameProvider",
+    "IPerceptionFrameProviderManager",
+    "PerceptionStartFaceAuthenticationHandler",
+    "PerceptionStopFaceAuthenticationHandler",
+]
+
 KnownPerceptionFrameKind = _winrt_windows_devices_perception_provider.KnownPerceptionFrameKind
 PerceptionControlGroup = _winrt_windows_devices_perception_provider.PerceptionControlGroup
 PerceptionCorrelation = _winrt_windows_devices_perception_provider.PerceptionCorrelation

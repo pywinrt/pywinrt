@@ -5,6 +5,16 @@ import enum
 import winrt.system
 from . import _winrt_windows_networking_pushnotifications
 
+__all__ = [
+    "PushNotificationType",
+    "PushNotificationChannel",
+    "PushNotificationChannelManager",
+    "PushNotificationChannelManagerForUser",
+    "PushNotificationChannelsRevokedEventArgs",
+    "PushNotificationReceivedEventArgs",
+    "RawNotification",
+]
+
 class PushNotificationType(enum.IntEnum):
     TOAST = 0
     TILE = 1

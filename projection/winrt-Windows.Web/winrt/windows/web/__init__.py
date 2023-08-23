@@ -5,6 +5,12 @@ import enum
 import winrt.system
 from . import _winrt_windows_web
 
+__all__ = [
+    "WebErrorStatus",
+    "WebError",
+    "IUriToStreamResolver",
+]
+
 class WebErrorStatus(enum.IntEnum):
     UNKNOWN = 0
     CERTIFICATE_COMMON_NAME_IS_INCORRECT = 1

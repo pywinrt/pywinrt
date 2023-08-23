@@ -5,6 +5,20 @@ import enum
 import winrt.system
 from . import _winrt_windows_applicationmodel_core
 
+__all__ = [
+    "AppRestartFailureReason",
+    "AppListEntry",
+    "CoreApplication",
+    "CoreApplicationView",
+    "CoreApplicationViewTitleBar",
+    "HostedViewClosingEventArgs",
+    "UnhandledError",
+    "UnhandledErrorDetectedEventArgs",
+    "ICoreApplicationUnhandledError",
+    "IFrameworkView",
+    "IFrameworkViewSource",
+]
+
 class AppRestartFailureReason(enum.IntEnum):
     RESTART_PENDING = 0
     NOT_IN_FOREGROUND = 1

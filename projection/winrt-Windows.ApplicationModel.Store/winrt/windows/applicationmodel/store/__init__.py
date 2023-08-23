@@ -6,6 +6,22 @@ import typing
 import winrt.system
 from . import _winrt_windows_applicationmodel_store
 
+__all__ = [
+    "FulfillmentResult",
+    "ProductPurchaseStatus",
+    "ProductType",
+    "CurrentApp",
+    "CurrentAppSimulator",
+    "LicenseInformation",
+    "ListingInformation",
+    "ProductLicense",
+    "ProductListing",
+    "ProductPurchaseDisplayProperties",
+    "PurchaseResults",
+    "UnfulfilledConsumable",
+    "LicenseChangedEventHandler",
+]
+
 class FulfillmentResult(enum.IntEnum):
     SUCCEEDED = 0
     NOTHING_TO_FULFILL = 1

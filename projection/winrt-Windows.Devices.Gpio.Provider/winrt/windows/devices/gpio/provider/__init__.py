@@ -5,6 +5,17 @@ import enum
 import winrt.system
 from . import _winrt_windows_devices_gpio_provider
 
+__all__ = [
+    "ProviderGpioPinDriveMode",
+    "ProviderGpioPinEdge",
+    "ProviderGpioPinValue",
+    "ProviderGpioSharingMode",
+    "GpioPinProviderValueChangedEventArgs",
+    "IGpioControllerProvider",
+    "IGpioPinProvider",
+    "IGpioProvider",
+]
+
 class ProviderGpioPinDriveMode(enum.IntEnum):
     INPUT = 0
     OUTPUT = 1

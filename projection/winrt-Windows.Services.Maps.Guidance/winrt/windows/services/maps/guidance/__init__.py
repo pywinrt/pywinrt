@@ -5,6 +5,26 @@ import enum
 import winrt.system
 from . import _winrt_windows_services_maps_guidance
 
+__all__ = [
+    "GuidanceAudioMeasurementSystem",
+    "GuidanceAudioNotificationKind",
+    "GuidanceAudioNotifications",
+    "GuidanceLaneMarkers",
+    "GuidanceManeuverKind",
+    "GuidanceMode",
+    "GuidanceAudioNotificationRequestedEventArgs",
+    "GuidanceLaneInfo",
+    "GuidanceManeuver",
+    "GuidanceMapMatchedCoordinate",
+    "GuidanceNavigator",
+    "GuidanceReroutedEventArgs",
+    "GuidanceRoadSegment",
+    "GuidanceRoadSignpost",
+    "GuidanceRoute",
+    "GuidanceTelemetryCollector",
+    "GuidanceUpdatedEventArgs",
+]
+
 class GuidanceAudioMeasurementSystem(enum.IntEnum):
     METERS = 0
     MILES_AND_YARDS = 1

@@ -5,6 +5,22 @@ import enum
 import winrt.system
 from . import _winrt_windows_applicationmodel_store_preview
 
+__all__ = [
+    "DeliveryOptimizationDownloadMode",
+    "DeliveryOptimizationDownloadModeSource",
+    "StoreLogOptions",
+    "StorePreviewProductPurchaseStatus",
+    "StoreSystemFeature",
+    "DeliveryOptimizationSettings",
+    "StoreConfiguration",
+    "StoreHardwareManufacturerInfo",
+    "StorePreview",
+    "StorePreviewProductInfo",
+    "StorePreviewPurchaseResults",
+    "StorePreviewSkuInfo",
+    "WebAuthenticationCoreManagerHelper",
+]
+
 class DeliveryOptimizationDownloadMode(enum.IntEnum):
     SIMPLE = 0
     HTTP_ONLY = 1

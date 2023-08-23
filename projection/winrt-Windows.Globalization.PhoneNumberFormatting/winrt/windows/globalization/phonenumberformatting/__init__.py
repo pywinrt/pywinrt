@@ -5,6 +5,15 @@ import enum
 import winrt.system
 from . import _winrt_windows_globalization_phonenumberformatting
 
+__all__ = [
+    "PhoneNumberFormat",
+    "PhoneNumberMatchResult",
+    "PhoneNumberParseResult",
+    "PredictedPhoneNumberKind",
+    "PhoneNumberFormatter",
+    "PhoneNumberInfo",
+]
+
 class PhoneNumberFormat(enum.IntEnum):
     E164 = 0
     INTERNATIONAL = 1

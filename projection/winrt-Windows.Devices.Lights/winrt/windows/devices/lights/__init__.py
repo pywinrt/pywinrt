@@ -5,6 +5,15 @@ import enum
 import winrt.system
 from . import _winrt_windows_devices_lights
 
+__all__ = [
+    "LampArrayKind",
+    "LampPurposes",
+    "Lamp",
+    "LampArray",
+    "LampAvailabilityChangedEventArgs",
+    "LampInfo",
+]
+
 class LampArrayKind(enum.IntEnum):
     UNDEFINED = 0
     KEYBOARD = 1

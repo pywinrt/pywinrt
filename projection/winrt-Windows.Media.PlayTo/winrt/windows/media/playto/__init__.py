@@ -5,6 +5,27 @@ import enum
 import winrt.system
 from . import _winrt_windows_media_playto
 
+__all__ = [
+    "PlayToConnectionError",
+    "PlayToConnectionState",
+    "CurrentTimeChangeRequestedEventArgs",
+    "MuteChangeRequestedEventArgs",
+    "PlayToConnection",
+    "PlayToConnectionErrorEventArgs",
+    "PlayToConnectionStateChangedEventArgs",
+    "PlayToConnectionTransferredEventArgs",
+    "PlayToManager",
+    "PlayToReceiver",
+    "PlayToSource",
+    "PlayToSourceDeferral",
+    "PlayToSourceRequest",
+    "PlayToSourceRequestedEventArgs",
+    "PlayToSourceSelectedEventArgs",
+    "PlaybackRateChangeRequestedEventArgs",
+    "SourceChangeRequestedEventArgs",
+    "VolumeChangeRequestedEventArgs",
+]
+
 class PlayToConnectionError(enum.IntEnum):
     NONE = 0
     DEVICE_NOT_RESPONDING = 1

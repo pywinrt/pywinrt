@@ -3,6 +3,12 @@
 import winrt.system
 from . import _winrt_windows_devices
 
+__all__ = [
+    "LowLevelDevicesAggregateProvider",
+    "LowLevelDevicesController",
+    "ILowLevelDevicesAggregateProvider",
+]
+
 LowLevelDevicesAggregateProvider = _winrt_windows_devices.LowLevelDevicesAggregateProvider
 LowLevelDevicesController = _winrt_windows_devices.LowLevelDevicesController
 ILowLevelDevicesAggregateProvider = _winrt_windows_devices.ILowLevelDevicesAggregateProvider

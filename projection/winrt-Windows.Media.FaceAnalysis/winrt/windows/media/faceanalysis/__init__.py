@@ -3,6 +3,12 @@
 import winrt.system
 from . import _winrt_windows_media_faceanalysis
 
+__all__ = [
+    "DetectedFace",
+    "FaceDetector",
+    "FaceTracker",
+]
+
 DetectedFace = _winrt_windows_media_faceanalysis.DetectedFace
 FaceDetector = _winrt_windows_media_faceanalysis.FaceDetector
 FaceTracker = _winrt_windows_media_faceanalysis.FaceTracker

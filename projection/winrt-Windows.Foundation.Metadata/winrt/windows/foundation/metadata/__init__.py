@@ -5,6 +5,18 @@ import enum
 import winrt.system
 from . import _winrt_windows_foundation_metadata
 
+__all__ = [
+    "AttributeTargets",
+    "CompositionType",
+    "DeprecationType",
+    "FeatureStage",
+    "GCPressureAmount",
+    "MarshalingType",
+    "Platform",
+    "ThreadingModel",
+    "ApiInformation",
+]
+
 class AttributeTargets(enum.IntFlag):
     ALL = 0xffffffff
     DELEGATE = 0x1

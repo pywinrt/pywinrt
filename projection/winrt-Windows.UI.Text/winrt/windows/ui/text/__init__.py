@@ -5,6 +5,48 @@ import enum
 import winrt.system
 from . import _winrt_windows_ui_text
 
+__all__ = [
+    "CaretType",
+    "FindOptions",
+    "FontStretch",
+    "FontStyle",
+    "FormatEffect",
+    "HorizontalCharacterAlignment",
+    "LetterCase",
+    "LineSpacingRule",
+    "LinkType",
+    "MarkerAlignment",
+    "MarkerStyle",
+    "MarkerType",
+    "ParagraphAlignment",
+    "ParagraphStyle",
+    "PointOptions",
+    "RangeGravity",
+    "RichEditMathMode",
+    "SelectionOptions",
+    "SelectionType",
+    "TabAlignment",
+    "TabLeader",
+    "TextDecorations",
+    "TextGetOptions",
+    "TextRangeUnit",
+    "TextScript",
+    "TextSetOptions",
+    "UnderlineType",
+    "VerticalCharacterAlignment",
+    "FontWeight",
+    "ContentLinkInfo",
+    "FontWeights",
+    "RichEditTextDocument",
+    "RichEditTextRange",
+    "TextConstants",
+    "ITextCharacterFormat",
+    "ITextDocument",
+    "ITextParagraphFormat",
+    "ITextRange",
+    "ITextSelection",
+]
+
 class CaretType(enum.IntEnum):
     NORMAL = 0
     NULL = 1

@@ -3,5 +3,10 @@
 import winrt.system
 from . import _winrt_windows_embedded_devicelockdown
 
+__all__ = [
+    "DeviceLockdownProfile",
+    "DeviceLockdownProfileInformation",
+]
+
 DeviceLockdownProfile = _winrt_windows_embedded_devicelockdown.DeviceLockdownProfile
 DeviceLockdownProfileInformation = _winrt_windows_embedded_devicelockdown.DeviceLockdownProfileInformation

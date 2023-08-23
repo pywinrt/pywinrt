@@ -107,6 +107,26 @@ namespace pywinrt
     }
 
     /**
+     * Writes a type name for inclusion in the list of `__all__` module members.
+     *
+     * Skips types that are not projected to Python.
+     */
+    void write_dunder_all_type_name_entry(writer& w, TypeDef const& type)
+    {
+        if (is_exclusive_to(type))
+        {
+            return;
+        }
+
+        if (is_customized_struct(type))
+        {
+            return;
+        }
+
+        w.write("\"@\",\n", type.TypeName());
+    }
+
+    /**
      * Writes the binary extension module name for the given namespace.
      *
      * Example: "Windows.Foundation" becomes "_winrt_windows_foundation".

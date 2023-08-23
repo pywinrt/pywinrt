@@ -5,6 +5,13 @@ import enum
 import winrt.system
 from . import _winrt_windows_system_preview
 
+__all__ = [
+    "HingeState",
+    "TwoPanelHingedDevicePosturePreview",
+    "TwoPanelHingedDevicePosturePreviewReading",
+    "TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs",
+]
+
 class HingeState(enum.IntEnum):
     UNKNOWN = 0
     CLOSED = 1

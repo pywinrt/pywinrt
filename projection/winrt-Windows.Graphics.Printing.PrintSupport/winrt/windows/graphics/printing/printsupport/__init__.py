@@ -5,6 +5,21 @@ import enum
 import winrt.system
 from . import _winrt_windows_graphics_printing_printsupport
 
+__all__ = [
+    "SettingsLaunchKind",
+    "WorkflowPrintTicketValidationStatus",
+    "PrintSupportExtensionSession",
+    "PrintSupportExtensionTriggerDetails",
+    "PrintSupportPrintDeviceCapabilitiesChangedEventArgs",
+    "PrintSupportPrintDeviceCapabilitiesUpdatePolicy",
+    "PrintSupportPrintTicketElement",
+    "PrintSupportPrintTicketValidationRequestedEventArgs",
+    "PrintSupportPrinterSelectedEventArgs",
+    "PrintSupportSessionInfo",
+    "PrintSupportSettingsActivatedEventArgs",
+    "PrintSupportSettingsUISession",
+]
+
 class SettingsLaunchKind(enum.IntEnum):
     JOB_PRINT_TICKET = 0
     USER_DEFAULT_PRINT_TICKET = 1

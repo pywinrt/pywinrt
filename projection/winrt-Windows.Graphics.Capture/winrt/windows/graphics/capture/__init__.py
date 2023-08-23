@@ -5,6 +5,16 @@ import enum
 import winrt.system
 from . import _winrt_windows_graphics_capture
 
+__all__ = [
+    "GraphicsCaptureAccessKind",
+    "Direct3D11CaptureFrame",
+    "Direct3D11CaptureFramePool",
+    "GraphicsCaptureAccess",
+    "GraphicsCaptureItem",
+    "GraphicsCapturePicker",
+    "GraphicsCaptureSession",
+]
+
 class GraphicsCaptureAccessKind(enum.IntEnum):
     BORDERLESS = 0
     PROGRAMMATIC = 1

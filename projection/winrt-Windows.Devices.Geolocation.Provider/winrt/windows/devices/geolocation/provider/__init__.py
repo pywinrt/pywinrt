@@ -5,6 +5,11 @@ import enum
 import winrt.system
 from . import _winrt_windows_devices_geolocation_provider
 
+__all__ = [
+    "LocationOverrideStatus",
+    "GeolocationProvider",
+]
+
 class LocationOverrideStatus(enum.IntEnum):
     SUCCESS = 0
     ACCESS_DENIED = 1

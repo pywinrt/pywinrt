@@ -3,6 +3,13 @@
 import winrt.system
 from . import _winrt_windows_applicationmodel_preview_notes
 
+__all__ = [
+    "NotePlacementChangedPreviewEventArgs",
+    "NoteVisibilityChangedPreviewEventArgs",
+    "NotesWindowManagerPreview",
+    "NotesWindowManagerPreviewShowNoteOptions",
+]
+
 NotePlacementChangedPreviewEventArgs = _winrt_windows_applicationmodel_preview_notes.NotePlacementChangedPreviewEventArgs
 NoteVisibilityChangedPreviewEventArgs = _winrt_windows_applicationmodel_preview_notes.NoteVisibilityChangedPreviewEventArgs
 NotesWindowManagerPreview = _winrt_windows_applicationmodel_preview_notes.NotesWindowManagerPreview

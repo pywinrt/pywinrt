@@ -5,6 +5,17 @@ import enum
 import winrt.system
 from . import _winrt_windows_storage_pickers
 
+__all__ = [
+    "PickerLocationId",
+    "PickerViewMode",
+    "FileExtensionVector",
+    "FileOpenPicker",
+    "FilePickerFileTypesOrderedMap",
+    "FilePickerSelectedFilesArray",
+    "FileSavePicker",
+    "FolderPicker",
+]
+
 class PickerLocationId(enum.IntEnum):
     DOCUMENTS_LIBRARY = 0
     COMPUTER_FOLDER = 1

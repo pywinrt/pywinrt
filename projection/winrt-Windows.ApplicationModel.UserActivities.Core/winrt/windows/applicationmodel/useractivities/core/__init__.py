@@ -3,4 +3,8 @@
 import winrt.system
 from . import _winrt_windows_applicationmodel_useractivities_core
 
+__all__ = [
+    "CoreUserActivityManager",
+]
+
 CoreUserActivityManager = _winrt_windows_applicationmodel_useractivities_core.CoreUserActivityManager

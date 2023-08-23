@@ -3,4 +3,8 @@
 import winrt.system
 from . import _winrt_windows_system_remotedesktop
 
+__all__ = [
+    "InteractiveSession",
+]
+
 InteractiveSession = _winrt_windows_system_remotedesktop.InteractiveSession

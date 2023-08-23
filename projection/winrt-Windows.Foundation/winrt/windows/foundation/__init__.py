@@ -5,6 +5,46 @@ import typing
 
 import winrt.system
 from . import _winrt_windows_foundation
+
+__all__ = [
+    "AsyncStatus",
+    "PropertyType",
+    "EventRegistrationToken",
+    "HResult",
+    "Point",
+    "Rect",
+    "Size",
+    "Deferral",
+    "GuidHelper",
+    "MemoryBuffer",
+    "PropertyValue",
+    "Uri",
+    "WwwFormUrlDecoder",
+    "WwwFormUrlDecoderEntry",
+    "IAsyncAction",
+    "IAsyncActionWithProgress",
+    "IAsyncInfo",
+    "IAsyncOperationWithProgress",
+    "IAsyncOperation",
+    "IClosable",
+    "IGetActivationFactory",
+    "IMemoryBuffer",
+    "IMemoryBufferReference",
+    "IPropertyValue",
+    "IReferenceArray",
+    "IReference",
+    "IStringable",
+    "IWwwFormUrlDecoderEntry",
+    "AsyncActionCompletedHandler",
+    "AsyncActionProgressHandler",
+    "AsyncActionWithProgressCompletedHandler",
+    "AsyncOperationCompletedHandler",
+    "AsyncOperationProgressHandler",
+    "AsyncOperationWithProgressCompletedHandler",
+    "DeferralCompletedHandler",
+    "EventHandler",
+    "TypedEventHandler",
+]
 T = typing.TypeVar('T')
 TProgress = typing.TypeVar('TProgress')
 TResult = typing.TypeVar('TResult')

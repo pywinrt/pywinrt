@@ -5,6 +5,21 @@ import enum
 import winrt.system
 from . import _winrt_windows_gaming_xboxlive_storage
 
+__all__ = [
+    "GameSaveErrorStatus",
+    "GameSaveBlobGetResult",
+    "GameSaveBlobInfo",
+    "GameSaveBlobInfoGetResult",
+    "GameSaveBlobInfoQuery",
+    "GameSaveContainer",
+    "GameSaveContainerInfo",
+    "GameSaveContainerInfoGetResult",
+    "GameSaveContainerInfoQuery",
+    "GameSaveOperationResult",
+    "GameSaveProvider",
+    "GameSaveProviderGetResult",
+]
+
 class GameSaveErrorStatus(enum.IntEnum):
     OK = 0
     ABORT = -2147467260

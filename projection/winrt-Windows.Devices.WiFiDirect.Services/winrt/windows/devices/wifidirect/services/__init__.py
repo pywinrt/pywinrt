@@ -5,6 +5,25 @@ import enum
 import winrt.system
 from . import _winrt_windows_devices_wifidirect_services
 
+__all__ = [
+    "WiFiDirectServiceAdvertisementStatus",
+    "WiFiDirectServiceConfigurationMethod",
+    "WiFiDirectServiceError",
+    "WiFiDirectServiceIPProtocol",
+    "WiFiDirectServiceSessionErrorStatus",
+    "WiFiDirectServiceSessionStatus",
+    "WiFiDirectServiceStatus",
+    "WiFiDirectService",
+    "WiFiDirectServiceAdvertiser",
+    "WiFiDirectServiceAutoAcceptSessionConnectedEventArgs",
+    "WiFiDirectServiceProvisioningInfo",
+    "WiFiDirectServiceRemotePortAddedEventArgs",
+    "WiFiDirectServiceSession",
+    "WiFiDirectServiceSessionDeferredEventArgs",
+    "WiFiDirectServiceSessionRequest",
+    "WiFiDirectServiceSessionRequestedEventArgs",
+]
+
 class WiFiDirectServiceAdvertisementStatus(enum.IntEnum):
     CREATED = 0
     STARTED = 1

@@ -5,6 +5,16 @@ import enum
 import winrt.system
 from . import _winrt_windows_gaming_ui
 
+__all__ = [
+    "GameChatMessageOrigin",
+    "GameChatOverlayPosition",
+    "GameBar",
+    "GameChatMessageReceivedEventArgs",
+    "GameChatOverlay",
+    "GameChatOverlayMessageSource",
+    "GameUIProviderActivatedEventArgs",
+]
+
 class GameChatMessageOrigin(enum.IntEnum):
     VOICE = 0
     TEXT = 1

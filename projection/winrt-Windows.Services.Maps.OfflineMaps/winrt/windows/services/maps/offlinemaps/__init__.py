@@ -5,6 +5,15 @@ import enum
 import winrt.system
 from . import _winrt_windows_services_maps_offlinemaps
 
+__all__ = [
+    "OfflineMapPackageQueryStatus",
+    "OfflineMapPackageStartDownloadStatus",
+    "OfflineMapPackageStatus",
+    "OfflineMapPackage",
+    "OfflineMapPackageQueryResult",
+    "OfflineMapPackageStartDownloadResult",
+]
+
 class OfflineMapPackageQueryStatus(enum.IntEnum):
     SUCCESS = 0
     UNKNOWN_ERROR = 1

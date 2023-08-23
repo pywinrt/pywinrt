@@ -5,6 +5,34 @@ import enum
 import winrt.system
 from . import _winrt_windows_foundation_diagnostics
 
+__all__ = [
+    "CausalityRelation",
+    "CausalitySource",
+    "CausalitySynchronousWork",
+    "CausalityTraceLevel",
+    "ErrorOptions",
+    "LoggingFieldFormat",
+    "LoggingLevel",
+    "LoggingOpcode",
+    "AsyncCausalityTracer",
+    "ErrorDetails",
+    "FileLoggingSession",
+    "LogFileGeneratedEventArgs",
+    "LoggingActivity",
+    "LoggingChannel",
+    "LoggingChannelOptions",
+    "LoggingFields",
+    "LoggingOptions",
+    "LoggingSession",
+    "RuntimeBrokerErrorSettings",
+    "TracingStatusChangedEventArgs",
+    "IErrorReportingSettings",
+    "IFileLoggingSession",
+    "ILoggingChannel",
+    "ILoggingSession",
+    "ILoggingTarget",
+]
+
 class CausalityRelation(enum.IntEnum):
     ASSIGN_DELEGATE = 0
     JOIN = 1

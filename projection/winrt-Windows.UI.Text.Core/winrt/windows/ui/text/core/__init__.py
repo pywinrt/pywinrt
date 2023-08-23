@@ -5,6 +5,32 @@ import enum
 import winrt.system
 from . import _winrt_windows_ui_text_core
 
+__all__ = [
+    "CoreTextFormatUpdatingReason",
+    "CoreTextFormatUpdatingResult",
+    "CoreTextInputPaneDisplayPolicy",
+    "CoreTextInputScope",
+    "CoreTextSelectionUpdatingResult",
+    "CoreTextTextUpdatingResult",
+    "CoreTextRange",
+    "CoreTextCompositionCompletedEventArgs",
+    "CoreTextCompositionSegment",
+    "CoreTextCompositionStartedEventArgs",
+    "CoreTextEditContext",
+    "CoreTextFormatUpdatingEventArgs",
+    "CoreTextLayoutBounds",
+    "CoreTextLayoutRequest",
+    "CoreTextLayoutRequestedEventArgs",
+    "CoreTextSelectionRequest",
+    "CoreTextSelectionRequestedEventArgs",
+    "CoreTextSelectionUpdatingEventArgs",
+    "CoreTextServicesConstants",
+    "CoreTextServicesManager",
+    "CoreTextTextRequest",
+    "CoreTextTextRequestedEventArgs",
+    "CoreTextTextUpdatingEventArgs",
+]
+
 class CoreTextFormatUpdatingReason(enum.IntEnum):
     NONE = 0
     COMPOSITION_UNCONVERTED = 1

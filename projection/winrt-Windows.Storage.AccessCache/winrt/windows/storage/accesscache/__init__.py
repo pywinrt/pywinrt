@@ -5,6 +5,18 @@ import enum
 import winrt.system
 from . import _winrt_windows_storage_accesscache
 
+__all__ = [
+    "AccessCacheOptions",
+    "RecentStorageItemVisibility",
+    "AccessListEntry",
+    "AccessListEntryView",
+    "ItemRemovedEventArgs",
+    "StorageApplicationPermissions",
+    "StorageItemAccessList",
+    "StorageItemMostRecentlyUsedList",
+    "IStorageItemAccessList",
+]
+
 class AccessCacheOptions(enum.IntFlag):
     NONE = 0
     DISALLOW_USER_INPUT = 0x1

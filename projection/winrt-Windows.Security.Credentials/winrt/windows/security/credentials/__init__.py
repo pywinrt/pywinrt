@@ -5,6 +5,25 @@ import enum
 import winrt.system
 from . import _winrt_windows_security_credentials
 
+__all__ = [
+    "KeyCredentialAttestationStatus",
+    "KeyCredentialCreationOption",
+    "KeyCredentialStatus",
+    "WebAccountPictureSize",
+    "WebAccountState",
+    "KeyCredential",
+    "KeyCredentialAttestationResult",
+    "KeyCredentialManager",
+    "KeyCredentialOperationResult",
+    "KeyCredentialRetrievalResult",
+    "PasswordCredential",
+    "PasswordCredentialPropertyStore",
+    "PasswordVault",
+    "WebAccount",
+    "WebAccountProvider",
+    "IWebAccount",
+]
+
 class KeyCredentialAttestationStatus(enum.IntEnum):
     SUCCESS = 0
     UNKNOWN_ERROR = 1

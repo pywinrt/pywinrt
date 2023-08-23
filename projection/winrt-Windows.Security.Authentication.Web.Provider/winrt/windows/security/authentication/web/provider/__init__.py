@@ -5,6 +5,32 @@ import enum
 import winrt.system
 from . import _winrt_windows_security_authentication_web_provider
 
+__all__ = [
+    "WebAccountClientViewType",
+    "WebAccountProviderOperationKind",
+    "WebAccountScope",
+    "WebAccountSelectionOptions",
+    "WebAccountClientView",
+    "WebAccountManager",
+    "WebAccountProviderAddAccountOperation",
+    "WebAccountProviderDeleteAccountOperation",
+    "WebAccountProviderGetTokenSilentOperation",
+    "WebAccountProviderManageAccountOperation",
+    "WebAccountProviderRequestTokenOperation",
+    "WebAccountProviderRetrieveCookiesOperation",
+    "WebAccountProviderSignOutAccountOperation",
+    "WebAccountProviderTriggerDetails",
+    "WebProviderTokenRequest",
+    "WebProviderTokenResponse",
+    "IWebAccountProviderBaseReportOperation",
+    "IWebAccountProviderOperation",
+    "IWebAccountProviderSilentReportOperation",
+    "IWebAccountProviderTokenObjects",
+    "IWebAccountProviderTokenObjects2",
+    "IWebAccountProviderTokenOperation",
+    "IWebAccountProviderUIReportOperation",
+]
+
 class WebAccountClientViewType(enum.IntEnum):
     ID_ONLY = 0
     ID_AND_PROPERTIES = 1

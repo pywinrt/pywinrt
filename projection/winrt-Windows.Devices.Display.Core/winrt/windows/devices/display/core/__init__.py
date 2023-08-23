@@ -5,6 +5,53 @@ import enum
 import winrt.system
 from . import _winrt_windows_devices_display_core
 
+__all__ = [
+    "DisplayBitsPerChannel",
+    "DisplayDeviceCapability",
+    "DisplayManagerOptions",
+    "DisplayManagerResult",
+    "DisplayModeQueryOptions",
+    "DisplayPathScaling",
+    "DisplayPathStatus",
+    "DisplayPresentStatus",
+    "DisplayRotation",
+    "DisplayScanoutOptions",
+    "DisplaySourceStatus",
+    "DisplayStateApplyOptions",
+    "DisplayStateFunctionalizeOptions",
+    "DisplayStateOperationStatus",
+    "DisplayTargetPersistence",
+    "DisplayTaskSignalKind",
+    "DisplayWireFormatColorSpace",
+    "DisplayWireFormatEotf",
+    "DisplayWireFormatHdrMetadata",
+    "DisplayWireFormatPixelEncoding",
+    "DisplayPresentationRate",
+    "DisplayAdapter",
+    "DisplayDevice",
+    "DisplayFence",
+    "DisplayManager",
+    "DisplayManagerChangedEventArgs",
+    "DisplayManagerDisabledEventArgs",
+    "DisplayManagerEnabledEventArgs",
+    "DisplayManagerPathsFailedOrInvalidatedEventArgs",
+    "DisplayManagerResultWithState",
+    "DisplayModeInfo",
+    "DisplayPath",
+    "DisplayPrimaryDescription",
+    "DisplayScanout",
+    "DisplaySource",
+    "DisplayState",
+    "DisplayStateOperationResult",
+    "DisplaySurface",
+    "DisplayTarget",
+    "DisplayTask",
+    "DisplayTaskPool",
+    "DisplayTaskResult",
+    "DisplayView",
+    "DisplayWireFormat",
+]
+
 class DisplayBitsPerChannel(enum.IntFlag):
     NONE = 0
     BPC6 = 0x1

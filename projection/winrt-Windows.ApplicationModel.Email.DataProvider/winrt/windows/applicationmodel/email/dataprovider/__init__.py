@@ -3,6 +3,41 @@
 import winrt.system
 from . import _winrt_windows_applicationmodel_email_dataprovider
 
+__all__ = [
+    "EmailDataProviderConnection",
+    "EmailDataProviderTriggerDetails",
+    "EmailMailboxCreateFolderRequest",
+    "EmailMailboxCreateFolderRequestEventArgs",
+    "EmailMailboxDeleteFolderRequest",
+    "EmailMailboxDeleteFolderRequestEventArgs",
+    "EmailMailboxDownloadAttachmentRequest",
+    "EmailMailboxDownloadAttachmentRequestEventArgs",
+    "EmailMailboxDownloadMessageRequest",
+    "EmailMailboxDownloadMessageRequestEventArgs",
+    "EmailMailboxEmptyFolderRequest",
+    "EmailMailboxEmptyFolderRequestEventArgs",
+    "EmailMailboxForwardMeetingRequest",
+    "EmailMailboxForwardMeetingRequestEventArgs",
+    "EmailMailboxGetAutoReplySettingsRequest",
+    "EmailMailboxGetAutoReplySettingsRequestEventArgs",
+    "EmailMailboxMoveFolderRequest",
+    "EmailMailboxMoveFolderRequestEventArgs",
+    "EmailMailboxProposeNewTimeForMeetingRequest",
+    "EmailMailboxProposeNewTimeForMeetingRequestEventArgs",
+    "EmailMailboxResolveRecipientsRequest",
+    "EmailMailboxResolveRecipientsRequestEventArgs",
+    "EmailMailboxServerSearchReadBatchRequest",
+    "EmailMailboxServerSearchReadBatchRequestEventArgs",
+    "EmailMailboxSetAutoReplySettingsRequest",
+    "EmailMailboxSetAutoReplySettingsRequestEventArgs",
+    "EmailMailboxSyncManagerSyncRequest",
+    "EmailMailboxSyncManagerSyncRequestEventArgs",
+    "EmailMailboxUpdateMeetingResponseRequest",
+    "EmailMailboxUpdateMeetingResponseRequestEventArgs",
+    "EmailMailboxValidateCertificatesRequest",
+    "EmailMailboxValidateCertificatesRequestEventArgs",
+]
+
 EmailDataProviderConnection = _winrt_windows_applicationmodel_email_dataprovider.EmailDataProviderConnection
 EmailDataProviderTriggerDetails = _winrt_windows_applicationmodel_email_dataprovider.EmailDataProviderTriggerDetails
 EmailMailboxCreateFolderRequest = _winrt_windows_applicationmodel_email_dataprovider.EmailMailboxCreateFolderRequest

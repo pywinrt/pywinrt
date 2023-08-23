@@ -5,6 +5,15 @@ import enum
 import winrt.system
 from . import _winrt_windows_system_power
 
+__all__ = [
+    "BatteryStatus",
+    "EnergySaverStatus",
+    "PowerSupplyStatus",
+    "BackgroundEnergyManager",
+    "ForegroundEnergyManager",
+    "PowerManager",
+]
+
 class BatteryStatus(enum.IntEnum):
     NOT_PRESENT = 0
     DISCHARGING = 1

@@ -5,6 +5,18 @@ import enum
 import winrt.system
 from . import _winrt_windows_security_authentication_identity_core
 
+__all__ = [
+    "MicrosoftAccountMultiFactorAuthenticationType",
+    "MicrosoftAccountMultiFactorServiceResponse",
+    "MicrosoftAccountMultiFactorSessionApprovalStatus",
+    "MicrosoftAccountMultiFactorSessionAuthenticationStatus",
+    "MicrosoftAccountMultiFactorAuthenticationManager",
+    "MicrosoftAccountMultiFactorGetSessionsResult",
+    "MicrosoftAccountMultiFactorOneTimeCodedInfo",
+    "MicrosoftAccountMultiFactorSessionInfo",
+    "MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo",
+]
+
 class MicrosoftAccountMultiFactorAuthenticationType(enum.IntEnum):
     USER = 0
     DEVICE = 1

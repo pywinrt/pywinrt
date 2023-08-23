@@ -5,6 +5,29 @@ import enum
 import winrt.system
 from . import _winrt_windows_web_syndication
 
+__all__ = [
+    "SyndicationErrorStatus",
+    "SyndicationFormat",
+    "SyndicationTextType",
+    "RetrievalProgress",
+    "TransferProgress",
+    "SyndicationAttribute",
+    "SyndicationCategory",
+    "SyndicationClient",
+    "SyndicationContent",
+    "SyndicationError",
+    "SyndicationFeed",
+    "SyndicationGenerator",
+    "SyndicationItem",
+    "SyndicationLink",
+    "SyndicationNode",
+    "SyndicationPerson",
+    "SyndicationText",
+    "ISyndicationClient",
+    "ISyndicationNode",
+    "ISyndicationText",
+]
+
 class SyndicationErrorStatus(enum.IntEnum):
     UNKNOWN = 0
     MISSING_REQUIRED_ELEMENT = 1

@@ -3,6 +3,13 @@
 import winrt.system
 from . import _winrt_windows_storage_bulkaccess
 
+__all__ = [
+    "FileInformation",
+    "FileInformationFactory",
+    "FolderInformation",
+    "IStorageItemInformation",
+]
+
 FileInformation = _winrt_windows_storage_bulkaccess.FileInformation
 FileInformationFactory = _winrt_windows_storage_bulkaccess.FileInformationFactory
 FolderInformation = _winrt_windows_storage_bulkaccess.FolderInformation

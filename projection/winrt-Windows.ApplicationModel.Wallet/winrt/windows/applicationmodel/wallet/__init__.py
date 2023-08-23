@@ -5,6 +5,22 @@ import enum
 import winrt.system
 from . import _winrt_windows_applicationmodel_wallet
 
+__all__ = [
+    "WalletActionKind",
+    "WalletBarcodeSymbology",
+    "WalletDetailViewPosition",
+    "WalletItemKind",
+    "WalletSummaryViewPosition",
+    "WalletBarcode",
+    "WalletItem",
+    "WalletItemCustomProperty",
+    "WalletItemStore",
+    "WalletManager",
+    "WalletRelevantLocation",
+    "WalletTransaction",
+    "WalletVerb",
+]
+
 class WalletActionKind(enum.IntEnum):
     OPEN_ITEM = 0
     TRANSACTION = 1

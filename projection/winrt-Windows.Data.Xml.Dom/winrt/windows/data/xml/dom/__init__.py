@@ -5,6 +5,31 @@ import enum
 import winrt.system
 from . import _winrt_windows_data_xml_dom
 
+__all__ = [
+    "NodeType",
+    "DtdEntity",
+    "DtdNotation",
+    "XmlAttribute",
+    "XmlCDataSection",
+    "XmlComment",
+    "XmlDocument",
+    "XmlDocumentFragment",
+    "XmlDocumentType",
+    "XmlDomImplementation",
+    "XmlElement",
+    "XmlEntityReference",
+    "XmlLoadSettings",
+    "XmlNamedNodeMap",
+    "XmlNodeList",
+    "XmlProcessingInstruction",
+    "XmlText",
+    "IXmlCharacterData",
+    "IXmlNode",
+    "IXmlNodeSelector",
+    "IXmlNodeSerializer",
+    "IXmlText",
+]
+
 class NodeType(enum.IntEnum):
     INVALID = 0
     ELEMENT_NODE = 1

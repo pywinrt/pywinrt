@@ -6,6 +6,17 @@ import typing
 import winrt.system
 from . import _winrt_windows_ui_xaml_printing
 
+__all__ = [
+    "PreviewPageCountType",
+    "AddPagesEventArgs",
+    "GetPreviewPageEventArgs",
+    "PaginateEventArgs",
+    "PrintDocument",
+    "AddPagesEventHandler",
+    "GetPreviewPageEventHandler",
+    "PaginateEventHandler",
+]
+
 class PreviewPageCountType(enum.IntEnum):
     FINAL = 0
     INTERMEDIATE = 1

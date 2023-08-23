@@ -6,6 +6,47 @@ import typing
 import winrt.system
 from . import _winrt_windows_security_isolation
 
+__all__ = [
+    "IsolatedWindowsEnvironmentActivator",
+    "IsolatedWindowsEnvironmentAllowedClipboardFormats",
+    "IsolatedWindowsEnvironmentAvailablePrinters",
+    "IsolatedWindowsEnvironmentClipboardCopyPasteDirections",
+    "IsolatedWindowsEnvironmentCreateStatus",
+    "IsolatedWindowsEnvironmentCreationPriority",
+    "IsolatedWindowsEnvironmentHostError",
+    "IsolatedWindowsEnvironmentLaunchFileStatus",
+    "IsolatedWindowsEnvironmentOwnerRegistrationStatus",
+    "IsolatedWindowsEnvironmentPostMessageStatus",
+    "IsolatedWindowsEnvironmentProcessState",
+    "IsolatedWindowsEnvironmentProgressState",
+    "IsolatedWindowsEnvironmentShareFileStatus",
+    "IsolatedWindowsEnvironmentShareFolderStatus",
+    "IsolatedWindowsEnvironmentSignInProgress",
+    "IsolatedWindowsEnvironmentStartProcessStatus",
+    "IsolatedWindowsEnvironmentCreateProgress",
+    "IsolatedWindowsEnvironment",
+    "IsolatedWindowsEnvironmentCreateResult",
+    "IsolatedWindowsEnvironmentFile",
+    "IsolatedWindowsEnvironmentHost",
+    "IsolatedWindowsEnvironmentLaunchFileResult",
+    "IsolatedWindowsEnvironmentOptions",
+    "IsolatedWindowsEnvironmentOwnerRegistration",
+    "IsolatedWindowsEnvironmentOwnerRegistrationData",
+    "IsolatedWindowsEnvironmentOwnerRegistrationResult",
+    "IsolatedWindowsEnvironmentPostMessageResult",
+    "IsolatedWindowsEnvironmentProcess",
+    "IsolatedWindowsEnvironmentShareFileRequestOptions",
+    "IsolatedWindowsEnvironmentShareFileResult",
+    "IsolatedWindowsEnvironmentShareFolderRequestOptions",
+    "IsolatedWindowsEnvironmentShareFolderResult",
+    "IsolatedWindowsEnvironmentStartProcessResult",
+    "IsolatedWindowsEnvironmentTelemetryParameters",
+    "IsolatedWindowsEnvironmentUserInfo",
+    "IsolatedWindowsHostMessenger",
+    "HostMessageReceivedCallback",
+    "MessageReceivedCallback",
+]
+
 class IsolatedWindowsEnvironmentActivator(enum.IntEnum):
     SYSTEM = 0
     USER = 1

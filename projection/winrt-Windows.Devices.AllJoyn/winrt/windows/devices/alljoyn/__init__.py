@@ -5,6 +5,37 @@ import enum
 import winrt.system
 from . import _winrt_windows_devices_alljoyn
 
+__all__ = [
+    "AllJoynAuthenticationMechanism",
+    "AllJoynBusAttachmentState",
+    "AllJoynSessionLostReason",
+    "AllJoynTrafficType",
+    "AllJoynAboutData",
+    "AllJoynAboutDataView",
+    "AllJoynAcceptSessionJoinerEventArgs",
+    "AllJoynAuthenticationCompleteEventArgs",
+    "AllJoynBusAttachment",
+    "AllJoynBusAttachmentStateChangedEventArgs",
+    "AllJoynBusObject",
+    "AllJoynBusObjectStoppedEventArgs",
+    "AllJoynCredentials",
+    "AllJoynCredentialsRequestedEventArgs",
+    "AllJoynCredentialsVerificationRequestedEventArgs",
+    "AllJoynMessageInfo",
+    "AllJoynProducerStoppedEventArgs",
+    "AllJoynServiceInfo",
+    "AllJoynServiceInfoRemovedEventArgs",
+    "AllJoynSession",
+    "AllJoynSessionJoinedEventArgs",
+    "AllJoynSessionLostEventArgs",
+    "AllJoynSessionMemberAddedEventArgs",
+    "AllJoynSessionMemberRemovedEventArgs",
+    "AllJoynStatus",
+    "AllJoynWatcherStoppedEventArgs",
+    "IAllJoynAcceptSessionJoiner",
+    "IAllJoynProducer",
+]
+
 class AllJoynAuthenticationMechanism(enum.IntEnum):
     NONE = 0
     SRP_ANONYMOUS = 1

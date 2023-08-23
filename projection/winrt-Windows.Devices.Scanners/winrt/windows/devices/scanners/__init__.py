@@ -5,6 +5,22 @@ import enum
 import winrt.system
 from . import _winrt_windows_devices_scanners
 
+__all__ = [
+    "ImageScannerAutoCroppingMode",
+    "ImageScannerColorMode",
+    "ImageScannerFormat",
+    "ImageScannerScanSource",
+    "ImageScannerResolution",
+    "ImageScanner",
+    "ImageScannerAutoConfiguration",
+    "ImageScannerFeederConfiguration",
+    "ImageScannerFlatbedConfiguration",
+    "ImageScannerPreviewResult",
+    "ImageScannerScanResult",
+    "IImageScannerFormatConfiguration",
+    "IImageScannerSourceConfiguration",
+]
+
 class ImageScannerAutoCroppingMode(enum.IntEnum):
     DISABLED = 0
     SINGLE_REGION = 1

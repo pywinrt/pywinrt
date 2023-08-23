@@ -3,6 +3,13 @@
 import winrt.system
 from . import _winrt_windows_system_profile_systemmanufacturers
 
+__all__ = [
+    "OemSupportInfo",
+    "SmbiosInformation",
+    "SystemSupportDeviceInfo",
+    "SystemSupportInfo",
+]
+
 OemSupportInfo = _winrt_windows_system_profile_systemmanufacturers.OemSupportInfo
 SmbiosInformation = _winrt_windows_system_profile_systemmanufacturers.SmbiosInformation
 SystemSupportDeviceInfo = _winrt_windows_system_profile_systemmanufacturers.SystemSupportDeviceInfo

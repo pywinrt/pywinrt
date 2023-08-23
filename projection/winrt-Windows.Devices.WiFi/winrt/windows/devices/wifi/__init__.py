@@ -5,6 +5,29 @@ import enum
 import winrt.system
 from . import _winrt_windows_devices_wifi
 
+__all__ = [
+    "WiFiAccessStatus",
+    "WiFiConnectionMethod",
+    "WiFiConnectionStatus",
+    "WiFiNetworkKind",
+    "WiFiOnDemandHotspotAvailability",
+    "WiFiOnDemandHotspotCellularBars",
+    "WiFiOnDemandHotspotConnectStatus",
+    "WiFiPhyKind",
+    "WiFiReconnectionKind",
+    "WiFiWpsConfigurationStatus",
+    "WiFiWpsKind",
+    "WiFiAdapter",
+    "WiFiAvailableNetwork",
+    "WiFiConnectionResult",
+    "WiFiNetworkReport",
+    "WiFiOnDemandHotspotConnectTriggerDetails",
+    "WiFiOnDemandHotspotConnectionResult",
+    "WiFiOnDemandHotspotNetwork",
+    "WiFiOnDemandHotspotNetworkProperties",
+    "WiFiWpsConfigurationResult",
+]
+
 class WiFiAccessStatus(enum.IntEnum):
     UNSPECIFIED = 0
     ALLOWED = 1

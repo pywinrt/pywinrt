@@ -3,5 +3,10 @@
 import winrt.system
 from . import _winrt_windows_globalization_fonts
 
+__all__ = [
+    "LanguageFont",
+    "LanguageFontGroup",
+]
+
 LanguageFont = _winrt_windows_globalization_fonts.LanguageFont
 LanguageFontGroup = _winrt_windows_globalization_fonts.LanguageFontGroup

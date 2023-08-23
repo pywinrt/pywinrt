@@ -6,6 +6,33 @@ import typing
 import winrt.system
 from . import _winrt_windows_applicationmodel_payments
 
+__all__ = [
+    "PaymentCanMakePaymentResultStatus",
+    "PaymentOptionPresence",
+    "PaymentRequestChangeKind",
+    "PaymentRequestCompletionStatus",
+    "PaymentRequestStatus",
+    "PaymentShippingType",
+    "PaymentAddress",
+    "PaymentCanMakePaymentResult",
+    "PaymentCurrencyAmount",
+    "PaymentDetails",
+    "PaymentDetailsModifier",
+    "PaymentItem",
+    "PaymentMediator",
+    "PaymentMerchantInfo",
+    "PaymentMethodData",
+    "PaymentOptions",
+    "PaymentRequest",
+    "PaymentRequestChangedArgs",
+    "PaymentRequestChangedResult",
+    "PaymentRequestSubmitResult",
+    "PaymentResponse",
+    "PaymentShippingOption",
+    "PaymentToken",
+    "PaymentRequestChangedHandler",
+]
+
 class PaymentCanMakePaymentResultStatus(enum.IntEnum):
     UNKNOWN = 0
     YES = 1

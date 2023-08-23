@@ -3,5 +3,10 @@
 import winrt.system
 from . import _winrt_windows_devices_power
 
+__all__ = [
+    "Battery",
+    "BatteryReport",
+]
+
 Battery = _winrt_windows_devices_power.Battery
 BatteryReport = _winrt_windows_devices_power.BatteryReport

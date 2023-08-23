@@ -5,6 +5,16 @@ import enum
 import winrt.system
 from . import _winrt_windows_applicationmodel_datatransfer_dragdrop_core
 
+__all__ = [
+    "CoreDragUIContentMode",
+    "CoreDragDropManager",
+    "CoreDragInfo",
+    "CoreDragOperation",
+    "CoreDragUIOverride",
+    "CoreDropOperationTargetRequestedEventArgs",
+    "ICoreDropOperationTarget",
+]
+
 class CoreDragUIContentMode(enum.IntFlag):
     AUTO = 0
     DEFERRED = 0x1

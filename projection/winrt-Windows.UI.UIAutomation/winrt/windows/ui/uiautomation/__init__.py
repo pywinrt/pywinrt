@@ -3,6 +3,13 @@
 import winrt.system
 from . import _winrt_windows_ui_uiautomation
 
+__all__ = [
+    "AutomationConnection",
+    "AutomationConnectionBoundObject",
+    "AutomationElement",
+    "AutomationTextRange",
+]
+
 AutomationConnection = _winrt_windows_ui_uiautomation.AutomationConnection
 AutomationConnectionBoundObject = _winrt_windows_ui_uiautomation.AutomationConnectionBoundObject
 AutomationElement = _winrt_windows_ui_uiautomation.AutomationElement

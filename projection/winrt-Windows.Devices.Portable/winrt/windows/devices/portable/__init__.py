@@ -5,6 +5,12 @@ import enum
 import winrt.system
 from . import _winrt_windows_devices_portable
 
+__all__ = [
+    "ServiceDeviceType",
+    "ServiceDevice",
+    "StorageDevice",
+]
+
 class ServiceDeviceType(enum.IntEnum):
     CALENDAR_SERVICE = 0
     CONTACTS_SERVICE = 1

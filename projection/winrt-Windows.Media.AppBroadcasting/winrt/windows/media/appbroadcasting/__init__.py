@@ -3,6 +3,13 @@
 import winrt.system
 from . import _winrt_windows_media_appbroadcasting
 
+__all__ = [
+    "AppBroadcastingMonitor",
+    "AppBroadcastingStatus",
+    "AppBroadcastingStatusDetails",
+    "AppBroadcastingUI",
+]
+
 AppBroadcastingMonitor = _winrt_windows_media_appbroadcasting.AppBroadcastingMonitor
 AppBroadcastingStatus = _winrt_windows_media_appbroadcasting.AppBroadcastingStatus
 AppBroadcastingStatusDetails = _winrt_windows_media_appbroadcasting.AppBroadcastingStatusDetails

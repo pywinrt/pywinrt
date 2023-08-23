@@ -3,5 +3,10 @@
 import winrt.system
 from . import _winrt_windows_applicationmodel_calls_provider
 
+__all__ = [
+    "PhoneCallOrigin",
+    "PhoneCallOriginManager",
+]
+
 PhoneCallOrigin = _winrt_windows_applicationmodel_calls_provider.PhoneCallOrigin
 PhoneCallOriginManager = _winrt_windows_applicationmodel_calls_provider.PhoneCallOriginManager

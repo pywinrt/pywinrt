@@ -5,6 +5,27 @@ import enum
 import winrt.system
 from . import _winrt_windows_ui_input_preview_injection
 
+__all__ = [
+    "InjectedInputButtonChangeKind",
+    "InjectedInputKeyOptions",
+    "InjectedInputMouseOptions",
+    "InjectedInputPenButtons",
+    "InjectedInputPenParameters",
+    "InjectedInputPointerOptions",
+    "InjectedInputShortcut",
+    "InjectedInputTouchParameters",
+    "InjectedInputVisualizationMode",
+    "InjectedInputPoint",
+    "InjectedInputPointerInfo",
+    "InjectedInputRectangle",
+    "InjectedInputGamepadInfo",
+    "InjectedInputKeyboardInfo",
+    "InjectedInputMouseInfo",
+    "InjectedInputPenInfo",
+    "InjectedInputTouchInfo",
+    "InputInjector",
+]
+
 class InjectedInputButtonChangeKind(enum.IntEnum):
     NONE = 0
     FIRST_BUTTON_DOWN = 1

@@ -5,6 +5,17 @@ import enum
 import winrt.system
 from . import _winrt_windows_web_ui_interop
 
+__all__ = [
+    "WebViewControlAcceleratorKeyRoutingStage",
+    "WebViewControlMoveFocusReason",
+    "WebViewControlProcessCapabilityState",
+    "WebViewControl",
+    "WebViewControlAcceleratorKeyPressedEventArgs",
+    "WebViewControlMoveFocusRequestedEventArgs",
+    "WebViewControlProcess",
+    "WebViewControlProcessOptions",
+]
+
 class WebViewControlAcceleratorKeyRoutingStage(enum.IntEnum):
     TUNNELING = 0
     BUBBLING = 1

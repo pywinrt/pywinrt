@@ -5,6 +5,33 @@ import enum
 import winrt.system
 from . import _winrt_windows_gaming_input
 
+__all__ = [
+    "ArcadeStickButtons",
+    "FlightStickButtons",
+    "GameControllerButtonLabel",
+    "GameControllerSwitchKind",
+    "GameControllerSwitchPosition",
+    "GamepadButtons",
+    "OptionalUINavigationButtons",
+    "RacingWheelButtons",
+    "RequiredUINavigationButtons",
+    "ArcadeStickReading",
+    "FlightStickReading",
+    "GamepadReading",
+    "GamepadVibration",
+    "RacingWheelReading",
+    "UINavigationReading",
+    "ArcadeStick",
+    "FlightStick",
+    "Gamepad",
+    "Headset",
+    "RacingWheel",
+    "RawGameController",
+    "UINavigationController",
+    "IGameController",
+    "IGameControllerBatteryInfo",
+]
+
 class ArcadeStickButtons(enum.IntFlag):
     NONE = 0
     STICK_UP = 0x1

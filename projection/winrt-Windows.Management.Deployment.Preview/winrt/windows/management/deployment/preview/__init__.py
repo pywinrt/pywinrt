@@ -3,5 +3,10 @@
 import winrt.system
 from . import _winrt_windows_management_deployment_preview
 
+__all__ = [
+    "ClassicAppManager",
+    "InstalledClassicAppInfo",
+]
+
 ClassicAppManager = _winrt_windows_management_deployment_preview.ClassicAppManager
 InstalledClassicAppInfo = _winrt_windows_management_deployment_preview.InstalledClassicAppInfo

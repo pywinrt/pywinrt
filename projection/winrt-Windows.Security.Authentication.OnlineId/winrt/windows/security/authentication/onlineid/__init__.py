@@ -5,6 +5,21 @@ import enum
 import winrt.system
 from . import _winrt_windows_security_authentication_onlineid
 
+__all__ = [
+    "CredentialPromptType",
+    "OnlineIdSystemTicketStatus",
+    "OnlineIdAuthenticator",
+    "OnlineIdServiceTicket",
+    "OnlineIdServiceTicketRequest",
+    "OnlineIdSystemAuthenticator",
+    "OnlineIdSystemAuthenticatorForUser",
+    "OnlineIdSystemIdentity",
+    "OnlineIdSystemTicketResult",
+    "SignOutUserOperation",
+    "UserAuthenticationOperation",
+    "UserIdentity",
+]
+
 class CredentialPromptType(enum.IntEnum):
     PROMPT_IF_NEEDED = 0
     RETYPE_CREDENTIALS = 1

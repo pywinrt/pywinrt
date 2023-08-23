@@ -3,6 +3,12 @@
 import winrt.system
 from . import _winrt_windows_ui_core_preview
 
+__all__ = [
+    "CoreAppWindowPreview",
+    "SystemNavigationCloseRequestedPreviewEventArgs",
+    "SystemNavigationManagerPreview",
+]
+
 CoreAppWindowPreview = _winrt_windows_ui_core_preview.CoreAppWindowPreview
 SystemNavigationCloseRequestedPreviewEventArgs = _winrt_windows_ui_core_preview.SystemNavigationCloseRequestedPreviewEventArgs
 SystemNavigationManagerPreview = _winrt_windows_ui_core_preview.SystemNavigationManagerPreview

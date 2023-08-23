@@ -3,4 +3,8 @@
 import winrt.system
 from . import _winrt_windows_ui_windowmanagement_preview
 
+__all__ = [
+    "WindowManagementPreview",
+]
+
 WindowManagementPreview = _winrt_windows_ui_windowmanagement_preview.WindowManagementPreview

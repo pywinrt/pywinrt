@@ -5,6 +5,26 @@ import enum
 import winrt.system
 from . import _winrt_windows_devices_wifidirect
 
+__all__ = [
+    "WiFiDirectAdvertisementListenStateDiscoverability",
+    "WiFiDirectAdvertisementPublisherStatus",
+    "WiFiDirectConfigurationMethod",
+    "WiFiDirectConnectionStatus",
+    "WiFiDirectDeviceSelectorType",
+    "WiFiDirectError",
+    "WiFiDirectPairingProcedure",
+    "WiFiDirectAdvertisement",
+    "WiFiDirectAdvertisementPublisher",
+    "WiFiDirectAdvertisementPublisherStatusChangedEventArgs",
+    "WiFiDirectConnectionListener",
+    "WiFiDirectConnectionParameters",
+    "WiFiDirectConnectionRequest",
+    "WiFiDirectConnectionRequestedEventArgs",
+    "WiFiDirectDevice",
+    "WiFiDirectInformationElement",
+    "WiFiDirectLegacySettings",
+]
+
 class WiFiDirectAdvertisementListenStateDiscoverability(enum.IntEnum):
     NONE = 0
     NORMAL = 1

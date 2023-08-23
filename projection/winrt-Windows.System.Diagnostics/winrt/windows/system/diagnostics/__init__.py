@@ -5,6 +5,24 @@ import enum
 import winrt.system
 from . import _winrt_windows_system_diagnostics
 
+__all__ = [
+    "DiagnosticActionState",
+    "DiagnosticActionResult",
+    "DiagnosticInvoker",
+    "ProcessCpuUsage",
+    "ProcessCpuUsageReport",
+    "ProcessDiagnosticInfo",
+    "ProcessDiskUsage",
+    "ProcessDiskUsageReport",
+    "ProcessMemoryUsage",
+    "ProcessMemoryUsageReport",
+    "SystemCpuUsage",
+    "SystemCpuUsageReport",
+    "SystemDiagnosticInfo",
+    "SystemMemoryUsage",
+    "SystemMemoryUsageReport",
+]
+
 class DiagnosticActionState(enum.IntEnum):
     INITIALIZING = 0
     DOWNLOADING = 1

@@ -5,6 +5,14 @@ import enum
 import winrt.system
 from . import _winrt_windows_applicationmodel_search_core
 
+__all__ = [
+    "SearchSuggestionKind",
+    "RequestingFocusOnKeyboardInputEventArgs",
+    "SearchSuggestion",
+    "SearchSuggestionManager",
+    "SearchSuggestionsRequestedEventArgs",
+]
+
 class SearchSuggestionKind(enum.IntEnum):
     QUERY = 0
     RESULT = 1

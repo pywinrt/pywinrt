@@ -5,6 +5,25 @@ import enum
 import winrt.system
 from . import _winrt_windows_devices_bluetooth_advertisement
 
+__all__ = [
+    "BluetoothLEAdvertisementFlags",
+    "BluetoothLEAdvertisementPublisherStatus",
+    "BluetoothLEAdvertisementType",
+    "BluetoothLEAdvertisementWatcherStatus",
+    "BluetoothLEScanningMode",
+    "BluetoothLEAdvertisement",
+    "BluetoothLEAdvertisementBytePattern",
+    "BluetoothLEAdvertisementDataSection",
+    "BluetoothLEAdvertisementDataTypes",
+    "BluetoothLEAdvertisementFilter",
+    "BluetoothLEAdvertisementPublisher",
+    "BluetoothLEAdvertisementPublisherStatusChangedEventArgs",
+    "BluetoothLEAdvertisementReceivedEventArgs",
+    "BluetoothLEAdvertisementWatcher",
+    "BluetoothLEAdvertisementWatcherStoppedEventArgs",
+    "BluetoothLEManufacturerData",
+]
+
 class BluetoothLEAdvertisementFlags(enum.IntFlag):
     NONE = 0
     LIMITED_DISCOVERABLE_MODE = 0x1

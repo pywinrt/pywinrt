@@ -3,5 +3,10 @@
 import winrt.system
 from . import _winrt_windows_perception
 
+__all__ = [
+    "PerceptionTimestamp",
+    "PerceptionTimestampHelper",
+]
+
 PerceptionTimestamp = _winrt_windows_perception.PerceptionTimestamp
 PerceptionTimestampHelper = _winrt_windows_perception.PerceptionTimestampHelper

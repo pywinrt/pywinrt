@@ -5,6 +5,26 @@ import enum
 import winrt.system
 from . import _winrt_windows_ui_input_inking_analysis
 
+__all__ = [
+    "InkAnalysisDrawingKind",
+    "InkAnalysisNodeKind",
+    "InkAnalysisStatus",
+    "InkAnalysisStrokeKind",
+    "InkAnalysisInkBullet",
+    "InkAnalysisInkDrawing",
+    "InkAnalysisInkWord",
+    "InkAnalysisLine",
+    "InkAnalysisListItem",
+    "InkAnalysisNode",
+    "InkAnalysisParagraph",
+    "InkAnalysisResult",
+    "InkAnalysisRoot",
+    "InkAnalysisWritingRegion",
+    "InkAnalyzer",
+    "IInkAnalysisNode",
+    "IInkAnalyzerFactory",
+]
+
 class InkAnalysisDrawingKind(enum.IntEnum):
     DRAWING = 0
     CIRCLE = 1

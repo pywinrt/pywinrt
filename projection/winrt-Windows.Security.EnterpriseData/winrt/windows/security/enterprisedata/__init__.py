@@ -5,6 +5,32 @@ import enum
 import winrt.system
 from . import _winrt_windows_security_enterprisedata
 
+__all__ = [
+    "DataProtectionStatus",
+    "EnforcementLevel",
+    "FileProtectionStatus",
+    "ProtectedImportExportStatus",
+    "ProtectionPolicyAuditAction",
+    "ProtectionPolicyEvaluationResult",
+    "ProtectionPolicyRequestAccessBehavior",
+    "BufferProtectUnprotectResult",
+    "DataProtectionInfo",
+    "DataProtectionManager",
+    "FileProtectionInfo",
+    "FileProtectionManager",
+    "FileRevocationManager",
+    "FileUnprotectOptions",
+    "ProtectedAccessResumedEventArgs",
+    "ProtectedAccessSuspendingEventArgs",
+    "ProtectedContainerExportResult",
+    "ProtectedContainerImportResult",
+    "ProtectedContentRevokedEventArgs",
+    "ProtectedFileCreateResult",
+    "ProtectionPolicyAuditInfo",
+    "ProtectionPolicyManager",
+    "ThreadNetworkContext",
+]
+
 class DataProtectionStatus(enum.IntEnum):
     PROTECTED_TO_OTHER_IDENTITY = 0
     PROTECTED = 1

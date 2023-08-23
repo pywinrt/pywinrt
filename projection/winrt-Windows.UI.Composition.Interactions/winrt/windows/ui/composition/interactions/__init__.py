@@ -5,6 +5,35 @@ import enum
 import winrt.system
 from . import _winrt_windows_ui_composition_interactions
 
+__all__ = [
+    "InteractionBindingAxisModes",
+    "InteractionChainingMode",
+    "InteractionSourceMode",
+    "InteractionSourceRedirectionMode",
+    "InteractionTrackerClampingOption",
+    "InteractionTrackerPositionUpdateOption",
+    "VisualInteractionSourceRedirectionMode",
+    "CompositionConditionalValue",
+    "CompositionInteractionSourceCollection",
+    "InteractionSourceConfiguration",
+    "InteractionTracker",
+    "InteractionTrackerCustomAnimationStateEnteredArgs",
+    "InteractionTrackerIdleStateEnteredArgs",
+    "InteractionTrackerInertiaModifier",
+    "InteractionTrackerInertiaMotion",
+    "InteractionTrackerInertiaNaturalMotion",
+    "InteractionTrackerInertiaRestingValue",
+    "InteractionTrackerInertiaStateEnteredArgs",
+    "InteractionTrackerInteractingStateEnteredArgs",
+    "InteractionTrackerRequestIgnoredArgs",
+    "InteractionTrackerValuesChangedArgs",
+    "InteractionTrackerVector2InertiaModifier",
+    "InteractionTrackerVector2InertiaNaturalMotion",
+    "VisualInteractionSource",
+    "ICompositionInteractionSource",
+    "IInteractionTrackerOwner",
+]
+
 class InteractionBindingAxisModes(enum.IntFlag):
     NONE = 0
     POSITION_X = 0x1

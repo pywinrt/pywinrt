@@ -5,6 +5,13 @@ import enum
 import winrt.system
 from . import _winrt_windows_graphics_directx
 
+__all__ = [
+    "DirectXAlphaMode",
+    "DirectXColorSpace",
+    "DirectXPixelFormat",
+    "DirectXPrimitiveTopology",
+]
+
 class DirectXAlphaMode(enum.IntEnum):
     UNSPECIFIED = 0
     PREMULTIPLIED = 1

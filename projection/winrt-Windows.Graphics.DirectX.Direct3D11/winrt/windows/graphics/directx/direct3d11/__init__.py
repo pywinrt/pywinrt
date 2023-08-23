@@ -5,6 +5,15 @@ import enum
 import winrt.system
 from . import _winrt_windows_graphics_directx_direct3d11
 
+__all__ = [
+    "Direct3DBindings",
+    "Direct3DUsage",
+    "Direct3DMultisampleDescription",
+    "Direct3DSurfaceDescription",
+    "IDirect3DDevice",
+    "IDirect3DSurface",
+]
+
 class Direct3DBindings(enum.IntFlag):
     VERTEX_BUFFER = 0x1
     INDEX_BUFFER = 0x2

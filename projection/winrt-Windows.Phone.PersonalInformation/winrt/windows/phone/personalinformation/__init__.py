@@ -5,6 +5,24 @@ import enum
 import winrt.system
 from . import _winrt_windows_phone_personalinformation
 
+__all__ = [
+    "ContactChangeType",
+    "ContactQueryResultOrdering",
+    "ContactStoreApplicationAccessMode",
+    "ContactStoreSystemAccessMode",
+    "VCardFormat",
+    "ContactAddress",
+    "ContactChangeRecord",
+    "ContactInformation",
+    "ContactQueryOptions",
+    "ContactQueryResult",
+    "ContactStore",
+    "KnownContactProperties",
+    "StoredContact",
+    "IContactInformation",
+    "IContactInformation2",
+]
+
 class ContactChangeType(enum.IntEnum):
     CREATED = 0
     MODIFIED = 1

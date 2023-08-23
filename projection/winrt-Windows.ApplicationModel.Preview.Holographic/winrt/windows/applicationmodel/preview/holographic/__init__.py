@@ -3,5 +3,10 @@
 import winrt.system
 from . import _winrt_windows_applicationmodel_preview_holographic
 
+__all__ = [
+    "HolographicApplicationPreview",
+    "HolographicKeyboardPlacementOverridePreview",
+]
+
 HolographicApplicationPreview = _winrt_windows_applicationmodel_preview_holographic.HolographicApplicationPreview
 HolographicKeyboardPlacementOverridePreview = _winrt_windows_applicationmodel_preview_holographic.HolographicKeyboardPlacementOverridePreview

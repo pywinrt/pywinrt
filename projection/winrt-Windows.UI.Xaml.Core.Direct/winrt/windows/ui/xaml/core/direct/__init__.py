@@ -5,6 +5,14 @@ import enum
 import winrt.system
 from . import _winrt_windows_ui_xaml_core_direct
 
+__all__ = [
+    "XamlEventIndex",
+    "XamlPropertyIndex",
+    "XamlTypeIndex",
+    "XamlDirect",
+    "IXamlDirectObject",
+]
+
 class XamlEventIndex(enum.IntEnum):
     FRAMEWORK_ELEMENT_DATA_CONTEXT_CHANGED = 16
     FRAMEWORK_ELEMENT_SIZE_CHANGED = 17

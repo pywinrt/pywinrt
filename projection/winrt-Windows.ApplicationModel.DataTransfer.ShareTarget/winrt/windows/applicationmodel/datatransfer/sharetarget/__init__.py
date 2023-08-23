@@ -3,5 +3,10 @@
 import winrt.system
 from . import _winrt_windows_applicationmodel_datatransfer_sharetarget
 
+__all__ = [
+    "QuickLink",
+    "ShareOperation",
+]
+
 QuickLink = _winrt_windows_applicationmodel_datatransfer_sharetarget.QuickLink
 ShareOperation = _winrt_windows_applicationmodel_datatransfer_sharetarget.ShareOperation

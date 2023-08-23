@@ -3,4 +3,8 @@
 import winrt.system
 from . import _winrt_windows_ui_xaml_resources
 
+__all__ = [
+    "CustomXamlResourceLoader",
+]
+
 CustomXamlResourceLoader = _winrt_windows_ui_xaml_resources.CustomXamlResourceLoader

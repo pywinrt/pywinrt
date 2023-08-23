@@ -3,5 +3,10 @@
 import winrt.system
 from . import _winrt_windows_ui_accessibility
 
+__all__ = [
+    "ScreenReaderPositionChangedEventArgs",
+    "ScreenReaderService",
+]
+
 ScreenReaderPositionChangedEventArgs = _winrt_windows_ui_accessibility.ScreenReaderPositionChangedEventArgs
 ScreenReaderService = _winrt_windows_ui_accessibility.ScreenReaderService

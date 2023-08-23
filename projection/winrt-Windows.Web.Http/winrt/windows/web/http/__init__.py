@@ -5,6 +5,34 @@ import enum
 import winrt.system
 from . import _winrt_windows_web_http
 
+__all__ = [
+    "HttpCompletionOption",
+    "HttpProgressStage",
+    "HttpResponseMessageSource",
+    "HttpStatusCode",
+    "HttpVersion",
+    "HttpProgress",
+    "HttpBufferContent",
+    "HttpClient",
+    "HttpCookie",
+    "HttpCookieCollection",
+    "HttpCookieManager",
+    "HttpFormUrlEncodedContent",
+    "HttpGetBufferResult",
+    "HttpGetInputStreamResult",
+    "HttpGetStringResult",
+    "HttpMethod",
+    "HttpMultipartContent",
+    "HttpMultipartFormDataContent",
+    "HttpRequestMessage",
+    "HttpRequestResult",
+    "HttpResponseMessage",
+    "HttpStreamContent",
+    "HttpStringContent",
+    "HttpTransportInformation",
+    "IHttpContent",
+]
+
 class HttpCompletionOption(enum.IntEnum):
     RESPONSE_CONTENT_READ = 0
     RESPONSE_HEADERS_READ = 1

@@ -5,6 +5,13 @@ import enum
 import winrt.system
 from . import _winrt_windows_applicationmodel_store_licensemanagement
 
+__all__ = [
+    "LicenseRefreshOption",
+    "LicenseManager",
+    "LicenseSatisfactionInfo",
+    "LicenseSatisfactionResult",
+]
+
 class LicenseRefreshOption(enum.IntEnum):
     RUNNING_LICENSES = 0
     ALL_LICENSES = 1

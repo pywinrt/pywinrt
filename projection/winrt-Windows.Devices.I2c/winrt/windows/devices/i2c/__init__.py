@@ -5,6 +5,17 @@ import enum
 import winrt.system
 from . import _winrt_windows_devices_i2c
 
+__all__ = [
+    "I2cBusSpeed",
+    "I2cSharingMode",
+    "I2cTransferStatus",
+    "I2cTransferResult",
+    "I2cConnectionSettings",
+    "I2cController",
+    "I2cDevice",
+    "II2cDeviceStatics",
+]
+
 class I2cBusSpeed(enum.IntEnum):
     STANDARD_MODE = 0
     FAST_MODE = 1

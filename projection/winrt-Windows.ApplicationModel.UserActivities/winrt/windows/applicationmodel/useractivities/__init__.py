@@ -5,6 +5,21 @@ import enum
 import winrt.system
 from . import _winrt_windows_applicationmodel_useractivities
 
+__all__ = [
+    "UserActivityState",
+    "UserActivity",
+    "UserActivityAttribution",
+    "UserActivityChannel",
+    "UserActivityContentInfo",
+    "UserActivityRequest",
+    "UserActivityRequestManager",
+    "UserActivityRequestedEventArgs",
+    "UserActivitySession",
+    "UserActivitySessionHistoryItem",
+    "UserActivityVisualElements",
+    "IUserActivityContentInfo",
+]
+
 class UserActivityState(enum.IntEnum):
     NEW = 0
     PUBLISHED = 1

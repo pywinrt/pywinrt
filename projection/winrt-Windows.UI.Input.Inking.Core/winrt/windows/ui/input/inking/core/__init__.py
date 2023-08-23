@@ -5,6 +5,15 @@ import enum
 import winrt.system
 from . import _winrt_windows_ui_input_inking_core
 
+__all__ = [
+    "CoreWetStrokeDisposition",
+    "CoreIncrementalInkStroke",
+    "CoreInkIndependentInputSource",
+    "CoreInkPresenterHost",
+    "CoreWetStrokeUpdateEventArgs",
+    "CoreWetStrokeUpdateSource",
+]
+
 class CoreWetStrokeDisposition(enum.IntEnum):
     INKING = 0
     COMPLETED = 1

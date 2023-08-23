@@ -6,6 +6,22 @@ import typing
 import winrt.system
 from . import _winrt_windows_ui_webui_core
 
+__all__ = [
+    "WebUICommandBarClosedDisplayMode",
+    "WebUICommandBar",
+    "WebUICommandBarBitmapIcon",
+    "WebUICommandBarConfirmationButton",
+    "WebUICommandBarIconButton",
+    "WebUICommandBarItemInvokedEventArgs",
+    "WebUICommandBarSizeChangedEventArgs",
+    "WebUICommandBarSymbolIcon",
+    "IWebUICommandBarElement",
+    "IWebUICommandBarIcon",
+    "MenuClosedEventHandler",
+    "MenuOpenedEventHandler",
+    "SizeChangedEventHandler",
+]
+
 class WebUICommandBarClosedDisplayMode(enum.IntEnum):
     DEFAULT = 0
     MINIMAL = 1

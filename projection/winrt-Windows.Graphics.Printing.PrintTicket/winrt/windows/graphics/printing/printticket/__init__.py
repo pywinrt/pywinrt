@@ -5,6 +5,20 @@ import enum
 import winrt.system
 from . import _winrt_windows_graphics_printing_printticket
 
+__all__ = [
+    "PrintTicketFeatureSelectionType",
+    "PrintTicketParameterDataType",
+    "PrintTicketValueType",
+    "PrintTicketCapabilities",
+    "PrintTicketFeature",
+    "PrintTicketOption",
+    "PrintTicketParameterDefinition",
+    "PrintTicketParameterInitializer",
+    "PrintTicketValue",
+    "WorkflowPrintTicket",
+    "WorkflowPrintTicketValidationResult",
+]
+
 class PrintTicketFeatureSelectionType(enum.IntEnum):
     PICK_ONE = 0
     PICK_MANY = 1

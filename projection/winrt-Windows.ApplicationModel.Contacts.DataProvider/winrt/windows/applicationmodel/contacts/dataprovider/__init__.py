@@ -3,6 +3,19 @@
 import winrt.system
 from . import _winrt_windows_applicationmodel_contacts_dataprovider
 
+__all__ = [
+    "ContactDataProviderConnection",
+    "ContactDataProviderTriggerDetails",
+    "ContactListCreateOrUpdateContactRequest",
+    "ContactListCreateOrUpdateContactRequestEventArgs",
+    "ContactListDeleteContactRequest",
+    "ContactListDeleteContactRequestEventArgs",
+    "ContactListServerSearchReadBatchRequest",
+    "ContactListServerSearchReadBatchRequestEventArgs",
+    "ContactListSyncManagerSyncRequest",
+    "ContactListSyncManagerSyncRequestEventArgs",
+]
+
 ContactDataProviderConnection = _winrt_windows_applicationmodel_contacts_dataprovider.ContactDataProviderConnection
 ContactDataProviderTriggerDetails = _winrt_windows_applicationmodel_contacts_dataprovider.ContactDataProviderTriggerDetails
 ContactListCreateOrUpdateContactRequest = _winrt_windows_applicationmodel_contacts_dataprovider.ContactListCreateOrUpdateContactRequest

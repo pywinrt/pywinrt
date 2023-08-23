@@ -3,6 +3,16 @@
 import winrt.system
 from . import _winrt_windows_ui_xaml_shapes
 
+__all__ = [
+    "Ellipse",
+    "Line",
+    "Path",
+    "Polygon",
+    "Polyline",
+    "Rectangle",
+    "Shape",
+]
+
 Ellipse = _winrt_windows_ui_xaml_shapes.Ellipse
 Line = _winrt_windows_ui_xaml_shapes.Line
 Path = _winrt_windows_ui_xaml_shapes.Path

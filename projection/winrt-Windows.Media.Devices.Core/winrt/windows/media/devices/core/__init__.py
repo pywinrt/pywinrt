@@ -5,6 +5,25 @@ import enum
 import winrt.system
 from . import _winrt_windows_media_devices_core
 
+__all__ = [
+    "FrameFlashMode",
+    "CameraIntrinsics",
+    "DepthCorrelatedCoordinateMapper",
+    "FrameControlCapabilities",
+    "FrameController",
+    "FrameExposureCapabilities",
+    "FrameExposureCompensationCapabilities",
+    "FrameExposureCompensationControl",
+    "FrameExposureControl",
+    "FrameFlashCapabilities",
+    "FrameFlashControl",
+    "FrameFocusCapabilities",
+    "FrameFocusControl",
+    "FrameIsoSpeedCapabilities",
+    "FrameIsoSpeedControl",
+    "VariablePhotoSequenceController",
+]
+
 class FrameFlashMode(enum.IntEnum):
     DISABLE = 0
     ENABLE = 1

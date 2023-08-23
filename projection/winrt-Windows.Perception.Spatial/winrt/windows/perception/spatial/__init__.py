@@ -5,6 +5,41 @@ import enum
 import winrt.system
 from . import _winrt_windows_perception_spatial
 
+__all__ = [
+    "SpatialAnchorExportPurpose",
+    "SpatialEntityWatcherStatus",
+    "SpatialLocatability",
+    "SpatialLookDirectionRange",
+    "SpatialMovementRange",
+    "SpatialPerceptionAccessStatus",
+    "SpatialBoundingBox",
+    "SpatialBoundingFrustum",
+    "SpatialBoundingOrientedBox",
+    "SpatialBoundingSphere",
+    "SpatialRay",
+    "SpatialAnchor",
+    "SpatialAnchorExportSufficiency",
+    "SpatialAnchorExporter",
+    "SpatialAnchorManager",
+    "SpatialAnchorRawCoordinateSystemAdjustedEventArgs",
+    "SpatialAnchorStore",
+    "SpatialAnchorTransferManager",
+    "SpatialBoundingVolume",
+    "SpatialCoordinateSystem",
+    "SpatialEntity",
+    "SpatialEntityAddedEventArgs",
+    "SpatialEntityRemovedEventArgs",
+    "SpatialEntityStore",
+    "SpatialEntityUpdatedEventArgs",
+    "SpatialEntityWatcher",
+    "SpatialLocation",
+    "SpatialLocator",
+    "SpatialLocatorAttachedFrameOfReference",
+    "SpatialLocatorPositionalTrackingDeactivatingEventArgs",
+    "SpatialStageFrameOfReference",
+    "SpatialStationaryFrameOfReference",
+]
+
 class SpatialAnchorExportPurpose(enum.IntEnum):
     RELOCALIZATION = 0
     SHARING = 1

@@ -5,6 +5,14 @@ import enum
 import winrt.system
 from . import _winrt_windows_data_pdf
 
+__all__ = [
+    "PdfPageRotation",
+    "PdfDocument",
+    "PdfPage",
+    "PdfPageDimensions",
+    "PdfPageRenderOptions",
+]
+
 class PdfPageRotation(enum.IntEnum):
     NORMAL = 0
     ROTATE90 = 1

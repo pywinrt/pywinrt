@@ -3,4 +3,8 @@
 import winrt.system
 from . import _winrt_windows_phone_devices_notification
 
+__all__ = [
+    "VibrationDevice",
+]
+
 VibrationDevice = _winrt_windows_phone_devices_notification.VibrationDevice

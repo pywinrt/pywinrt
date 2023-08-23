@@ -3,4 +3,8 @@
 import winrt.system
 from . import _winrt_windows_perception_automation_core
 
+__all__ = [
+    "CorePerceptionAutomation",
+]
+
 CorePerceptionAutomation = _winrt_windows_perception_automation_core.CorePerceptionAutomation

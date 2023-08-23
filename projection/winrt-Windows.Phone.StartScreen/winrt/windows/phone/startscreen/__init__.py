@@ -3,5 +3,10 @@
 import winrt.system
 from . import _winrt_windows_phone_startscreen
 
+__all__ = [
+    "DualSimTile",
+    "IToastNotificationManagerStatics3",
+]
+
 DualSimTile = _winrt_windows_phone_startscreen.DualSimTile
 IToastNotificationManagerStatics3 = _winrt_windows_phone_startscreen.IToastNotificationManagerStatics3

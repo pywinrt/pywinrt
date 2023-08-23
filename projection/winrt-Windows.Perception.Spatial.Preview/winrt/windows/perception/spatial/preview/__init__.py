@@ -3,5 +3,10 @@
 import winrt.system
 from . import _winrt_windows_perception_spatial_preview
 
+__all__ = [
+    "SpatialGraphInteropFrameOfReferencePreview",
+    "SpatialGraphInteropPreview",
+]
+
 SpatialGraphInteropFrameOfReferencePreview = _winrt_windows_perception_spatial_preview.SpatialGraphInteropFrameOfReferencePreview
 SpatialGraphInteropPreview = _winrt_windows_perception_spatial_preview.SpatialGraphInteropPreview

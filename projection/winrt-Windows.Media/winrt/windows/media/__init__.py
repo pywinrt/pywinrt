@@ -5,6 +5,45 @@ import enum
 import winrt.system
 from . import _winrt_windows_media
 
+__all__ = [
+    "AudioBufferAccessMode",
+    "AudioProcessing",
+    "MediaPlaybackAutoRepeatMode",
+    "MediaPlaybackStatus",
+    "MediaPlaybackType",
+    "MediaTimelineControllerState",
+    "SoundLevel",
+    "SystemMediaTransportControlsButton",
+    "SystemMediaTransportControlsProperty",
+    "MediaTimeRange",
+    "AudioBuffer",
+    "AudioFrame",
+    "AutoRepeatModeChangeRequestedEventArgs",
+    "ImageDisplayProperties",
+    "MediaControl",
+    "MediaExtensionManager",
+    "MediaMarkerTypes",
+    "MediaProcessingTriggerDetails",
+    "MediaTimelineController",
+    "MediaTimelineControllerFailedEventArgs",
+    "MusicDisplayProperties",
+    "PlaybackPositionChangeRequestedEventArgs",
+    "PlaybackRateChangeRequestedEventArgs",
+    "ShuffleEnabledChangeRequestedEventArgs",
+    "SystemMediaTransportControls",
+    "SystemMediaTransportControlsButtonPressedEventArgs",
+    "SystemMediaTransportControlsDisplayUpdater",
+    "SystemMediaTransportControlsPropertyChangedEventArgs",
+    "SystemMediaTransportControlsTimelineProperties",
+    "VideoDisplayProperties",
+    "VideoEffects",
+    "VideoFrame",
+    "IMediaExtension",
+    "IMediaFrame",
+    "IMediaMarker",
+    "IMediaMarkers",
+]
+
 class AudioBufferAccessMode(enum.IntEnum):
     READ = 0
     READ_WRITE = 1

@@ -3,4 +3,8 @@
 import winrt.system
 from . import _winrt_windows_ui_composition_desktop
 
+__all__ = [
+    "DesktopWindowTarget",
+]
+
 DesktopWindowTarget = _winrt_windows_ui_composition_desktop.DesktopWindowTarget

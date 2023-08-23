@@ -5,6 +5,26 @@ import enum
 import winrt.system
 from . import _winrt_windows_gaming_input_custom
 
+__all__ = [
+    "GipFirmwareUpdateStatus",
+    "GipMessageClass",
+    "XusbDeviceSubtype",
+    "XusbDeviceType",
+    "GameControllerVersionInfo",
+    "GipFirmwareUpdateProgress",
+    "GameControllerFactoryManager",
+    "GipFirmwareUpdateResult",
+    "GipGameControllerProvider",
+    "HidGameControllerProvider",
+    "XusbGameControllerProvider",
+    "ICustomGameControllerFactory",
+    "IGameControllerInputSink",
+    "IGameControllerProvider",
+    "IGipGameControllerInputSink",
+    "IHidGameControllerInputSink",
+    "IXusbGameControllerInputSink",
+]
+
 class GipFirmwareUpdateStatus(enum.IntEnum):
     COMPLETED = 0
     UP_TO_DATE = 1

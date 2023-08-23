@@ -3,5 +3,10 @@
 import winrt.system
 from . import _winrt_windows_system_power_diagnostics
 
+__all__ = [
+    "BackgroundEnergyDiagnostics",
+    "ForegroundEnergyDiagnostics",
+]
+
 BackgroundEnergyDiagnostics = _winrt_windows_system_power_diagnostics.BackgroundEnergyDiagnostics
 ForegroundEnergyDiagnostics = _winrt_windows_system_power_diagnostics.ForegroundEnergyDiagnostics

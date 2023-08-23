@@ -5,6 +5,18 @@ import enum
 import winrt.system
 from . import _winrt_windows_system_diagnostics_tracereporting
 
+__all__ = [
+    "PlatformDiagnosticActionState",
+    "PlatformDiagnosticEscalationType",
+    "PlatformDiagnosticEventBufferLatencies",
+    "PlatformDiagnosticTracePriority",
+    "PlatformDiagnosticTraceSlotState",
+    "PlatformDiagnosticTraceSlotType",
+    "PlatformDiagnosticActions",
+    "PlatformDiagnosticTraceInfo",
+    "PlatformDiagnosticTraceRuntimeInfo",
+]
+
 class PlatformDiagnosticActionState(enum.IntEnum):
     SUCCESS = 0
     FREE_NETWORK_NOT_AVAILABLE = 1

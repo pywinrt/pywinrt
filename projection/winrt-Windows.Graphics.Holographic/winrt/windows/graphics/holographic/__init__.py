@@ -5,6 +5,36 @@ import enum
 import winrt.system
 from . import _winrt_windows_graphics_holographic
 
+__all__ = [
+    "HolographicDepthReprojectionMethod",
+    "HolographicFramePresentResult",
+    "HolographicFramePresentWaitBehavior",
+    "HolographicReprojectionMode",
+    "HolographicSpaceUserPresence",
+    "HolographicViewConfigurationKind",
+    "HolographicAdapterId",
+    "HolographicFrameId",
+    "HolographicStereoTransform",
+    "HolographicCamera",
+    "HolographicCameraPose",
+    "HolographicCameraRenderingParameters",
+    "HolographicCameraViewportParameters",
+    "HolographicDisplay",
+    "HolographicFrame",
+    "HolographicFramePrediction",
+    "HolographicFramePresentationMonitor",
+    "HolographicFramePresentationReport",
+    "HolographicFrameRenderingReport",
+    "HolographicFrameScanoutMonitor",
+    "HolographicFrameScanoutReport",
+    "HolographicQuadLayer",
+    "HolographicQuadLayerUpdateParameters",
+    "HolographicSpace",
+    "HolographicSpaceCameraAddedEventArgs",
+    "HolographicSpaceCameraRemovedEventArgs",
+    "HolographicViewConfiguration",
+]
+
 class HolographicDepthReprojectionMethod(enum.IntEnum):
     DEPTH_REPROJECTION = 0
     AUTO_PLANAR = 1

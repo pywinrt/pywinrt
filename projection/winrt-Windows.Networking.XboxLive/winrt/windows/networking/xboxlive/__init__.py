@@ -5,6 +5,25 @@ import enum
 import winrt.system
 from . import _winrt_windows_networking_xboxlive
 
+__all__ = [
+    "XboxLiveEndpointPairCreationBehaviors",
+    "XboxLiveEndpointPairCreationStatus",
+    "XboxLiveEndpointPairState",
+    "XboxLiveNetworkAccessKind",
+    "XboxLiveQualityOfServiceMeasurementStatus",
+    "XboxLiveQualityOfServiceMetric",
+    "XboxLiveSocketKind",
+    "XboxLiveDeviceAddress",
+    "XboxLiveEndpointPair",
+    "XboxLiveEndpointPairCreationResult",
+    "XboxLiveEndpointPairStateChangedEventArgs",
+    "XboxLiveEndpointPairTemplate",
+    "XboxLiveInboundEndpointPairCreatedEventArgs",
+    "XboxLiveQualityOfServiceMeasurement",
+    "XboxLiveQualityOfServiceMetricResult",
+    "XboxLiveQualityOfServicePrivatePayloadResult",
+]
+
 class XboxLiveEndpointPairCreationBehaviors(enum.IntFlag):
     NONE = 0
     REEVALUATE_PATH = 0x1

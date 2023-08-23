@@ -5,6 +5,38 @@ import enum
 import winrt.system
 from . import _winrt_windows_storage_streams
 
+__all__ = [
+    "ByteOrder",
+    "FileOpenDisposition",
+    "InputStreamOptions",
+    "UnicodeEncoding",
+    "Buffer",
+    "DataReader",
+    "DataReaderLoadOperation",
+    "DataWriter",
+    "DataWriterStoreOperation",
+    "FileInputStream",
+    "FileOutputStream",
+    "FileRandomAccessStream",
+    "InMemoryRandomAccessStream",
+    "InputStreamOverStream",
+    "OutputStreamOverStream",
+    "RandomAccessStream",
+    "RandomAccessStreamOverStream",
+    "RandomAccessStreamReference",
+    "IBuffer",
+    "IContentTypeProvider",
+    "IDataReader",
+    "IDataWriter",
+    "IInputStream",
+    "IInputStreamReference",
+    "IOutputStream",
+    "IPropertySetSerializer",
+    "IRandomAccessStream",
+    "IRandomAccessStreamReference",
+    "IRandomAccessStreamWithContentType",
+]
+
 class ByteOrder(enum.IntEnum):
     LITTLE_ENDIAN = 0
     BIG_ENDIAN = 1

@@ -6,6 +6,41 @@ import typing
 import winrt.system
 from . import _winrt_windows_graphics_printing
 
+__all__ = [
+    "PrintBinding",
+    "PrintBordering",
+    "PrintCollation",
+    "PrintColorMode",
+    "PrintDuplex",
+    "PrintHolePunch",
+    "PrintMediaSize",
+    "PrintMediaType",
+    "PrintOrientation",
+    "PrintQuality",
+    "PrintStaple",
+    "PrintTaskCompletion",
+    "PrintPageDescription",
+    "PrintManager",
+    "PrintPageInfo",
+    "PrintPageRange",
+    "PrintPageRangeOptions",
+    "PrintTask",
+    "PrintTaskCompletedEventArgs",
+    "PrintTaskOptions",
+    "PrintTaskProgressingEventArgs",
+    "PrintTaskRequest",
+    "PrintTaskRequestedDeferral",
+    "PrintTaskRequestedEventArgs",
+    "PrintTaskSourceRequestedArgs",
+    "PrintTaskSourceRequestedDeferral",
+    "StandardPrintTaskOptions",
+    "IPrintDocumentSource",
+    "IPrintTaskOptionsCore",
+    "IPrintTaskOptionsCoreProperties",
+    "IPrintTaskOptionsCoreUIConfiguration",
+    "PrintTaskSourceRequestedHandler",
+]
+
 class PrintBinding(enum.IntEnum):
     DEFAULT = 0
     NOT_AVAILABLE = 1

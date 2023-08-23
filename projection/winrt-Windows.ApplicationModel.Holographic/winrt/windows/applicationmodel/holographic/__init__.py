@@ -3,4 +3,8 @@
 import winrt.system
 from . import _winrt_windows_applicationmodel_holographic
 
+__all__ = [
+    "HolographicKeyboard",
+]
+
 HolographicKeyboard = _winrt_windows_applicationmodel_holographic.HolographicKeyboard

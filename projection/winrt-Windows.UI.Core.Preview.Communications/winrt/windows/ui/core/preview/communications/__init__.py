@@ -5,6 +5,19 @@ import enum
 import winrt.system
 from . import _winrt_windows_ui_core_preview_communications
 
+__all__ = [
+    "PreviewMeetingInfoDisplayKind",
+    "PreviewSystemState",
+    "PreviewTeamEndMeetingKind",
+    "PreviewTeamViewCommand",
+    "PreviewTeamCleanupRequestedEventArgs",
+    "PreviewTeamCommandInvokedEventArgs",
+    "PreviewTeamDeviceCredentials",
+    "PreviewTeamEndMeetingRequestedEventArgs",
+    "PreviewTeamJoinMeetingRequestedEventArgs",
+    "PreviewTeamView",
+]
+
 class PreviewMeetingInfoDisplayKind(enum.IntEnum):
     ORGANIZER_AND_TIME = 0
     ORGANIZER_TIME_AND_TITLE = 1

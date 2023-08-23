@@ -3,6 +3,14 @@
 import winrt.system
 from . import _winrt_windows_applicationmodel_lockscreen
 
+__all__ = [
+    "LockApplicationHost",
+    "LockScreenBadge",
+    "LockScreenInfo",
+    "LockScreenUnlockingDeferral",
+    "LockScreenUnlockingEventArgs",
+]
+
 LockApplicationHost = _winrt_windows_applicationmodel_lockscreen.LockApplicationHost
 LockScreenBadge = _winrt_windows_applicationmodel_lockscreen.LockScreenBadge
 LockScreenInfo = _winrt_windows_applicationmodel_lockscreen.LockScreenInfo

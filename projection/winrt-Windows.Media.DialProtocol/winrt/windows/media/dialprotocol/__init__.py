@@ -5,6 +5,21 @@ import enum
 import winrt.system
 from . import _winrt_windows_media_dialprotocol
 
+__all__ = [
+    "DialAppLaunchResult",
+    "DialAppState",
+    "DialAppStopResult",
+    "DialDeviceDisplayStatus",
+    "DialApp",
+    "DialAppStateDetails",
+    "DialDevice",
+    "DialDevicePicker",
+    "DialDevicePickerFilter",
+    "DialDeviceSelectedEventArgs",
+    "DialDisconnectButtonClickedEventArgs",
+    "DialReceiverApp",
+]
+
 class DialAppLaunchResult(enum.IntEnum):
     LAUNCHED = 0
     FAILED_TO_LAUNCH = 1

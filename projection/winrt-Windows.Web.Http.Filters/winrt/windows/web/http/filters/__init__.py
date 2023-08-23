@@ -5,6 +5,16 @@ import enum
 import winrt.system
 from . import _winrt_windows_web_http_filters
 
+__all__ = [
+    "HttpCacheReadBehavior",
+    "HttpCacheWriteBehavior",
+    "HttpCookieUsageBehavior",
+    "HttpBaseProtocolFilter",
+    "HttpCacheControl",
+    "HttpServerCustomValidationRequestedEventArgs",
+    "IHttpFilter",
+]
+
 class HttpCacheReadBehavior(enum.IntEnum):
     DEFAULT = 0
     MOST_RECENT = 1

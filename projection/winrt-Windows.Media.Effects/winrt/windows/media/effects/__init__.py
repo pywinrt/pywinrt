@@ -5,6 +5,31 @@ import enum
 import winrt.system
 from . import _winrt_windows_media_effects
 
+__all__ = [
+    "AudioEffectType",
+    "MediaEffectClosedReason",
+    "MediaMemoryTypes",
+    "AudioCaptureEffectsManager",
+    "AudioEffect",
+    "AudioEffectDefinition",
+    "AudioEffectsManager",
+    "AudioRenderEffectsManager",
+    "CompositeVideoFrameContext",
+    "ProcessAudioFrameContext",
+    "ProcessVideoFrameContext",
+    "SlowMotionEffectDefinition",
+    "VideoCompositorDefinition",
+    "VideoEffectDefinition",
+    "VideoTransformEffectDefinition",
+    "VideoTransformSphericalProjection",
+    "IAudioEffectDefinition",
+    "IBasicAudioEffect",
+    "IBasicVideoEffect",
+    "IVideoCompositor",
+    "IVideoCompositorDefinition",
+    "IVideoEffectDefinition",
+]
+
 class AudioEffectType(enum.IntEnum):
     OTHER = 0
     ACOUSTIC_ECHO_CANCELLATION = 1

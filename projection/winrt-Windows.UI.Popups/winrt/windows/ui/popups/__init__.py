@@ -6,6 +6,17 @@ import typing
 import winrt.system
 from . import _winrt_windows_ui_popups
 
+__all__ = [
+    "MessageDialogOptions",
+    "Placement",
+    "MessageDialog",
+    "PopupMenu",
+    "UICommand",
+    "UICommandSeparator",
+    "IUICommand",
+    "UICommandInvokedHandler",
+]
+
 class MessageDialogOptions(enum.IntFlag):
     NONE = 0
     ACCEPT_USER_INPUT_AFTER_DELAY = 0x1

@@ -5,6 +5,35 @@ import enum
 import winrt.system
 from . import _winrt_windows_devices_geolocation
 
+__all__ = [
+    "AltitudeReferenceSystem",
+    "GeolocationAccessStatus",
+    "GeoshapeType",
+    "PositionAccuracy",
+    "PositionSource",
+    "PositionStatus",
+    "VisitMonitoringScope",
+    "VisitStateChange",
+    "BasicGeoposition",
+    "CivicAddress",
+    "GeoboundingBox",
+    "Geocircle",
+    "Geocoordinate",
+    "GeocoordinateSatelliteData",
+    "Geolocator",
+    "Geopath",
+    "Geopoint",
+    "Geoposition",
+    "Geovisit",
+    "GeovisitMonitor",
+    "GeovisitStateChangedEventArgs",
+    "GeovisitTriggerDetails",
+    "PositionChangedEventArgs",
+    "StatusChangedEventArgs",
+    "VenueData",
+    "IGeoshape",
+]
+
 class AltitudeReferenceSystem(enum.IntEnum):
     UNSPECIFIED = 0
     TERRAIN = 1

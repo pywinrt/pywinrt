@@ -5,6 +5,26 @@ import enum
 import winrt.system
 from . import _winrt_windows_applicationmodel_resources_core
 
+__all__ = [
+    "ResourceCandidateKind",
+    "ResourceQualifierPersistence",
+    "ResourceLayoutInfo",
+    "NamedResource",
+    "ResourceCandidate",
+    "ResourceCandidateVectorView",
+    "ResourceContext",
+    "ResourceContextLanguagesVectorView",
+    "ResourceManager",
+    "ResourceMap",
+    "ResourceMapIterator",
+    "ResourceMapMapView",
+    "ResourceMapMapViewIterator",
+    "ResourceQualifier",
+    "ResourceQualifierMapView",
+    "ResourceQualifierObservableMap",
+    "ResourceQualifierVectorView",
+]
+
 class ResourceCandidateKind(enum.IntEnum):
     STRING = 0
     FILE = 1

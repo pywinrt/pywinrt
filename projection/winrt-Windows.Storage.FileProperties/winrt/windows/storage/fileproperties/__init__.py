@@ -5,6 +5,24 @@ import enum
 import winrt.system
 from . import _winrt_windows_storage_fileproperties
 
+__all__ = [
+    "PhotoOrientation",
+    "PropertyPrefetchOptions",
+    "ThumbnailMode",
+    "ThumbnailOptions",
+    "ThumbnailType",
+    "VideoOrientation",
+    "BasicProperties",
+    "DocumentProperties",
+    "GeotagHelper",
+    "ImageProperties",
+    "MusicProperties",
+    "StorageItemContentProperties",
+    "StorageItemThumbnail",
+    "VideoProperties",
+    "IStorageItemExtraProperties",
+]
+
 class PhotoOrientation(enum.IntEnum):
     UNSPECIFIED = 0
     NORMAL = 1

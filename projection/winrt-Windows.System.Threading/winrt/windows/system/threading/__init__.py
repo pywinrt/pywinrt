@@ -6,6 +6,16 @@ import typing
 import winrt.system
 from . import _winrt_windows_system_threading
 
+__all__ = [
+    "WorkItemOptions",
+    "WorkItemPriority",
+    "ThreadPool",
+    "ThreadPoolTimer",
+    "TimerDestroyedHandler",
+    "TimerElapsedHandler",
+    "WorkItemHandler",
+]
+
 class WorkItemOptions(enum.IntFlag):
     NONE = 0
     TIME_SLICED = 0x1

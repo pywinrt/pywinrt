@@ -5,6 +5,37 @@ import enum
 import winrt.system
 from . import _winrt_windows_devices_usb
 
+__all__ = [
+    "UsbControlRecipient",
+    "UsbControlTransferType",
+    "UsbEndpointType",
+    "UsbReadOptions",
+    "UsbTransferDirection",
+    "UsbWriteOptions",
+    "UsbBulkInEndpointDescriptor",
+    "UsbBulkInPipe",
+    "UsbBulkOutEndpointDescriptor",
+    "UsbBulkOutPipe",
+    "UsbConfiguration",
+    "UsbConfigurationDescriptor",
+    "UsbControlRequestType",
+    "UsbDescriptor",
+    "UsbDevice",
+    "UsbDeviceClass",
+    "UsbDeviceClasses",
+    "UsbDeviceDescriptor",
+    "UsbEndpointDescriptor",
+    "UsbInterface",
+    "UsbInterfaceDescriptor",
+    "UsbInterfaceSetting",
+    "UsbInterruptInEndpointDescriptor",
+    "UsbInterruptInEventArgs",
+    "UsbInterruptInPipe",
+    "UsbInterruptOutEndpointDescriptor",
+    "UsbInterruptOutPipe",
+    "UsbSetupPacket",
+]
+
 class UsbControlRecipient(enum.IntEnum):
     DEVICE = 0
     SPECIFIED_INTERFACE = 1

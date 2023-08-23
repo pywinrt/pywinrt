@@ -5,6 +5,16 @@ import enum
 import winrt.system
 from . import _winrt_windows_system_update
 
+__all__ = [
+    "SystemUpdateAttentionRequiredReason",
+    "SystemUpdateItemState",
+    "SystemUpdateManagerState",
+    "SystemUpdateStartInstallAction",
+    "SystemUpdateItem",
+    "SystemUpdateLastErrorInfo",
+    "SystemUpdateManager",
+]
+
 class SystemUpdateAttentionRequiredReason(enum.IntEnum):
     NONE = 0
     NETWORK_REQUIRED = 1

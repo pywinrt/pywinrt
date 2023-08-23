@@ -3,4 +3,8 @@
 import winrt.system
 from . import _winrt_windows_applicationmodel_resources
 
+__all__ = [
+    "ResourceLoader",
+]
+
 ResourceLoader = _winrt_windows_applicationmodel_resources.ResourceLoader

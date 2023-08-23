@@ -5,6 +5,12 @@ import enum
 import winrt.system
 from . import _winrt_windows_management_workplace
 
+__all__ = [
+    "MessagingSyncPolicy",
+    "MdmPolicy",
+    "WorkplaceSettings",
+]
+
 class MessagingSyncPolicy(enum.IntEnum):
     DISALLOWED = 0
     ALLOWED = 1

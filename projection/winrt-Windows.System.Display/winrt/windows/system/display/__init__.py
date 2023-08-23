@@ -3,4 +3,8 @@
 import winrt.system
 from . import _winrt_windows_system_display
 
+__all__ = [
+    "DisplayRequest",
+]
+
 DisplayRequest = _winrt_windows_system_display.DisplayRequest

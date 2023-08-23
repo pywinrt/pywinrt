@@ -5,6 +5,16 @@ import enum
 import winrt.system
 from . import _winrt_windows_web_http_diagnostics
 
+__all__ = [
+    "HttpDiagnosticRequestInitiator",
+    "HttpDiagnosticProvider",
+    "HttpDiagnosticProviderRequestResponseCompletedEventArgs",
+    "HttpDiagnosticProviderRequestResponseTimestamps",
+    "HttpDiagnosticProviderRequestSentEventArgs",
+    "HttpDiagnosticProviderResponseReceivedEventArgs",
+    "HttpDiagnosticSourceLocation",
+]
+
 class HttpDiagnosticRequestInitiator(enum.IntEnum):
     PARSED_ELEMENT = 0
     SCRIPT = 1

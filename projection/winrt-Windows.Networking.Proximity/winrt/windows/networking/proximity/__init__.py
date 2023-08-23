@@ -6,6 +6,24 @@ import typing
 import winrt.system
 from . import _winrt_windows_networking_proximity
 
+__all__ = [
+    "PeerDiscoveryTypes",
+    "PeerRole",
+    "PeerWatcherStatus",
+    "TriggeredConnectState",
+    "ConnectionRequestedEventArgs",
+    "PeerFinder",
+    "PeerInformation",
+    "PeerWatcher",
+    "ProximityDevice",
+    "ProximityMessage",
+    "TriggeredConnectionStateChangedEventArgs",
+    "DeviceArrivedEventHandler",
+    "DeviceDepartedEventHandler",
+    "MessageReceivedHandler",
+    "MessageTransmittedHandler",
+]
+
 class PeerDiscoveryTypes(enum.IntFlag):
     NONE = 0
     BROWSE = 0x1

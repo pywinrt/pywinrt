@@ -5,6 +5,21 @@ import enum
 import winrt.system
 from . import _winrt_windows_devices_lights_effects
 
+__all__ = [
+    "LampArrayEffectCompletionBehavior",
+    "LampArrayEffectStartMode",
+    "LampArrayRepetitionMode",
+    "LampArrayBitmapEffect",
+    "LampArrayBitmapRequestedEventArgs",
+    "LampArrayBlinkEffect",
+    "LampArrayColorRampEffect",
+    "LampArrayCustomEffect",
+    "LampArrayEffectPlaylist",
+    "LampArraySolidEffect",
+    "LampArrayUpdateRequestedEventArgs",
+    "ILampArrayEffect",
+]
+
 class LampArrayEffectCompletionBehavior(enum.IntEnum):
     CLEAR_STATE = 0
     KEEP_STATE = 1

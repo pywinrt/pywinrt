@@ -5,6 +5,22 @@ import enum
 import winrt.system
 from . import _winrt_windows_devices_gpio
 
+__all__ = [
+    "GpioChangePolarity",
+    "GpioOpenStatus",
+    "GpioPinDriveMode",
+    "GpioPinEdge",
+    "GpioPinValue",
+    "GpioSharingMode",
+    "GpioChangeCount",
+    "GpioChangeRecord",
+    "GpioChangeCounter",
+    "GpioChangeReader",
+    "GpioController",
+    "GpioPin",
+    "GpioPinValueChangedEventArgs",
+]
+
 class GpioChangePolarity(enum.IntEnum):
     FALLING = 0
     RISING = 1

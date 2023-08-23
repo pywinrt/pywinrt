@@ -5,6 +5,15 @@ import enum
 import winrt.system
 from . import _winrt_windows_services_cortana
 
+__all__ = [
+    "CortanaPermission",
+    "CortanaPermissionsChangeResult",
+    "CortanaActionableInsights",
+    "CortanaActionableInsightsOptions",
+    "CortanaPermissionsManager",
+    "CortanaSettings",
+]
+
 class CortanaPermission(enum.IntEnum):
     BROWSING_HISTORY = 0
     CALENDAR = 1

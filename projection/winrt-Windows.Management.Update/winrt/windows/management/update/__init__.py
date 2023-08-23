@@ -5,6 +5,28 @@ import enum
 import winrt.system
 from . import _winrt_windows_management_update
 
+__all__ = [
+    "WindowsUpdateAdministratorOptions",
+    "WindowsUpdateAdministratorStatus",
+    "WindowsUpdateAttentionRequiredReason",
+    "PreviewBuildsManager",
+    "PreviewBuildsState",
+    "WindowsUpdate",
+    "WindowsUpdateActionCompletedEventArgs",
+    "WindowsUpdateActionProgress",
+    "WindowsUpdateActionResult",
+    "WindowsUpdateAdministrator",
+    "WindowsUpdateApprovalData",
+    "WindowsUpdateAttentionRequiredInfo",
+    "WindowsUpdateAttentionRequiredReasonChangedEventArgs",
+    "WindowsUpdateGetAdministratorResult",
+    "WindowsUpdateItem",
+    "WindowsUpdateManager",
+    "WindowsUpdateProgressChangedEventArgs",
+    "WindowsUpdateRestartRequestOptions",
+    "WindowsUpdateScanCompletedEventArgs",
+]
+
 class WindowsUpdateAdministratorOptions(enum.IntFlag):
     NONE = 0
     REQUIRE_ADMINISTRATOR_APPROVAL_FOR_SCANS = 0x1

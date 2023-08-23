@@ -3,6 +3,13 @@
 import winrt.system
 from . import _winrt_windows_media_ocr
 
+__all__ = [
+    "OcrEngine",
+    "OcrLine",
+    "OcrResult",
+    "OcrWord",
+]
+
 OcrEngine = _winrt_windows_media_ocr.OcrEngine
 OcrLine = _winrt_windows_media_ocr.OcrLine
 OcrResult = _winrt_windows_media_ocr.OcrResult

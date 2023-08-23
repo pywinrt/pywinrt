@@ -3,4 +3,8 @@
 import winrt.system
 from . import _winrt_windows_ui_input_preview
 
+__all__ = [
+    "InputActivationListenerPreview",
+]
+
 InputActivationListenerPreview = _winrt_windows_ui_input_preview.InputActivationListenerPreview

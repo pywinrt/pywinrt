@@ -5,6 +5,27 @@ import enum
 import winrt.system
 from . import _winrt_windows_media_streaming_adaptive
 
+__all__ = [
+    "AdaptiveMediaSourceCreationStatus",
+    "AdaptiveMediaSourceDiagnosticType",
+    "AdaptiveMediaSourceDownloadBitrateChangedReason",
+    "AdaptiveMediaSourceResourceType",
+    "AdaptiveMediaSource",
+    "AdaptiveMediaSourceAdvancedSettings",
+    "AdaptiveMediaSourceCorrelatedTimes",
+    "AdaptiveMediaSourceCreationResult",
+    "AdaptiveMediaSourceDiagnosticAvailableEventArgs",
+    "AdaptiveMediaSourceDiagnostics",
+    "AdaptiveMediaSourceDownloadBitrateChangedEventArgs",
+    "AdaptiveMediaSourceDownloadCompletedEventArgs",
+    "AdaptiveMediaSourceDownloadFailedEventArgs",
+    "AdaptiveMediaSourceDownloadRequestedDeferral",
+    "AdaptiveMediaSourceDownloadRequestedEventArgs",
+    "AdaptiveMediaSourceDownloadResult",
+    "AdaptiveMediaSourceDownloadStatistics",
+    "AdaptiveMediaSourcePlaybackBitrateChangedEventArgs",
+]
+
 class AdaptiveMediaSourceCreationStatus(enum.IntEnum):
     SUCCESS = 0
     MANIFEST_DOWNLOAD_FAILURE = 1

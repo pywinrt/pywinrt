@@ -5,6 +5,45 @@ import enum
 import winrt.system
 from . import _winrt_windows_devices_perception
 
+__all__ = [
+    "PerceptionFrameSourceAccessStatus",
+    "PerceptionFrameSourcePropertyChangeStatus",
+    "KnownCameraIntrinsicsProperties",
+    "KnownPerceptionColorFrameSourceProperties",
+    "KnownPerceptionDepthFrameSourceProperties",
+    "KnownPerceptionFrameSourceProperties",
+    "KnownPerceptionInfraredFrameSourceProperties",
+    "KnownPerceptionVideoFrameSourceProperties",
+    "KnownPerceptionVideoProfileProperties",
+    "PerceptionColorFrame",
+    "PerceptionColorFrameArrivedEventArgs",
+    "PerceptionColorFrameReader",
+    "PerceptionColorFrameSource",
+    "PerceptionColorFrameSourceAddedEventArgs",
+    "PerceptionColorFrameSourceRemovedEventArgs",
+    "PerceptionColorFrameSourceWatcher",
+    "PerceptionControlSession",
+    "PerceptionDepthCorrelatedCameraIntrinsics",
+    "PerceptionDepthCorrelatedCoordinateMapper",
+    "PerceptionDepthFrame",
+    "PerceptionDepthFrameArrivedEventArgs",
+    "PerceptionDepthFrameReader",
+    "PerceptionDepthFrameSource",
+    "PerceptionDepthFrameSourceAddedEventArgs",
+    "PerceptionDepthFrameSourceRemovedEventArgs",
+    "PerceptionDepthFrameSourceWatcher",
+    "PerceptionFrameSourcePropertiesChangedEventArgs",
+    "PerceptionFrameSourcePropertyChangeResult",
+    "PerceptionInfraredFrame",
+    "PerceptionInfraredFrameArrivedEventArgs",
+    "PerceptionInfraredFrameReader",
+    "PerceptionInfraredFrameSource",
+    "PerceptionInfraredFrameSourceAddedEventArgs",
+    "PerceptionInfraredFrameSourceRemovedEventArgs",
+    "PerceptionInfraredFrameSourceWatcher",
+    "PerceptionVideoProfile",
+]
+
 class PerceptionFrameSourceAccessStatus(enum.IntEnum):
     UNSPECIFIED = 0
     ALLOWED = 1

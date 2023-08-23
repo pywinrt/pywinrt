@@ -5,6 +5,10 @@ import enum
 import winrt.system
 from . import _winrt_windows_applicationmodel_datatransfer_dragdrop
 
+__all__ = [
+    "DragDropModifiers",
+]
+
 class DragDropModifiers(enum.IntFlag):
     NONE = 0
     SHIFT = 0x1

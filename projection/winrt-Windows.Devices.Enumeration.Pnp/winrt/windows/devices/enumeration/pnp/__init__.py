@@ -5,6 +5,14 @@ import enum
 import winrt.system
 from . import _winrt_windows_devices_enumeration_pnp
 
+__all__ = [
+    "PnpObjectType",
+    "PnpObject",
+    "PnpObjectCollection",
+    "PnpObjectUpdate",
+    "PnpObjectWatcher",
+]
+
 class PnpObjectType(enum.IntEnum):
     UNKNOWN = 0
     DEVICE_INTERFACE = 1

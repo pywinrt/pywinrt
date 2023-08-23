@@ -5,6 +5,12 @@ import enum
 import winrt.system
 from . import _winrt_windows_management_policies
 
+__all__ = [
+    "NamedPolicyKind",
+    "NamedPolicy",
+    "NamedPolicyData",
+]
+
 class NamedPolicyKind(enum.IntEnum):
     INVALID = 0
     BINARY = 1

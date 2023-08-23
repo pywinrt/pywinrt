@@ -5,6 +5,10 @@ import enum
 import winrt.system
 from . import _winrt_windows_media_render
 
+__all__ = [
+    "AudioRenderCategory",
+]
+
 class AudioRenderCategory(enum.IntEnum):
     OTHER = 0
     FOREGROUND_ONLY_MEDIA = 1

@@ -3,5 +3,10 @@
 import winrt.system
 from . import _winrt_windows_devices_pwm_provider
 
+__all__ = [
+    "IPwmControllerProvider",
+    "IPwmProvider",
+]
+
 IPwmControllerProvider = _winrt_windows_devices_pwm_provider.IPwmControllerProvider
 IPwmProvider = _winrt_windows_devices_pwm_provider.IPwmProvider

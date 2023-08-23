@@ -5,6 +5,11 @@ import enum
 import winrt.system
 from . import _winrt_windows_ui_notifications_management
 
+__all__ = [
+    "UserNotificationListenerAccessStatus",
+    "UserNotificationListener",
+]
+
 class UserNotificationListenerAccessStatus(enum.IntEnum):
     UNSPECIFIED = 0
     ALLOWED = 1

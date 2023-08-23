@@ -3,4 +3,8 @@
 import winrt.system
 from . import _winrt_windows_security_cryptography_dataprotection
 
+__all__ = [
+    "DataProtectionProvider",
+]
+
 DataProtectionProvider = _winrt_windows_security_cryptography_dataprotection.DataProtectionProvider

@@ -5,6 +5,29 @@ import enum
 import winrt.system
 from . import _winrt_windows_system_profile
 
+__all__ = [
+    "PlatformDataCollectionLevel",
+    "SystemIdentificationSource",
+    "SystemOutOfBoxExperienceState",
+    "UnsupportedAppRequirementReasons",
+    "AnalyticsInfo",
+    "AnalyticsVersionInfo",
+    "AppApplicability",
+    "EducationSettings",
+    "HardwareIdentification",
+    "HardwareToken",
+    "KnownRetailInfoProperties",
+    "PlatformDiagnosticsAndUsageDataSettings",
+    "RetailInfo",
+    "SharedModeSettings",
+    "SmartAppControlPolicy",
+    "SystemIdentification",
+    "SystemIdentificationInfo",
+    "SystemSetupInfo",
+    "UnsupportedAppRequirement",
+    "WindowsIntegrityPolicy",
+]
+
 class PlatformDataCollectionLevel(enum.IntEnum):
     SECURITY = 0
     BASIC = 1

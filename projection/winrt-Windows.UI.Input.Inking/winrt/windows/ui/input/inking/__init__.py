@@ -5,6 +5,49 @@ import enum
 import winrt.system
 from . import _winrt_windows_ui_input_inking
 
+__all__ = [
+    "HandwritingLineHeight",
+    "InkDrawingAttributesKind",
+    "InkHighContrastAdjustment",
+    "InkInputProcessingMode",
+    "InkInputRightDragAction",
+    "InkManipulationMode",
+    "InkPersistenceFormat",
+    "InkPresenterPredefinedConfiguration",
+    "InkPresenterStencilKind",
+    "InkRecognitionTarget",
+    "PenHandedness",
+    "PenTipShape",
+    "InkDrawingAttributes",
+    "InkDrawingAttributesPencilProperties",
+    "InkInputConfiguration",
+    "InkInputProcessingConfiguration",
+    "InkManager",
+    "InkModelerAttributes",
+    "InkPoint",
+    "InkPresenter",
+    "InkPresenterProtractor",
+    "InkPresenterRuler",
+    "InkRecognitionResult",
+    "InkRecognizer",
+    "InkRecognizerContainer",
+    "InkStroke",
+    "InkStrokeBuilder",
+    "InkStrokeContainer",
+    "InkStrokeInput",
+    "InkStrokeRenderingSegment",
+    "InkStrokesCollectedEventArgs",
+    "InkStrokesErasedEventArgs",
+    "InkSynchronizer",
+    "InkUnprocessedInput",
+    "PenAndInkSettings",
+    "IInkPointFactory",
+    "IInkPresenterRulerFactory",
+    "IInkPresenterStencil",
+    "IInkRecognizerContainer",
+    "IInkStrokeContainer",
+]
+
 class HandwritingLineHeight(enum.IntEnum):
     SMALL = 0
     MEDIUM = 1

@@ -6,6 +6,52 @@ import typing
 import winrt.system
 from . import _winrt_windows_devices_sms
 
+__all__ = [
+    "CellularClass",
+    "SmsBroadcastType",
+    "SmsDataFormat",
+    "SmsDeviceStatus",
+    "SmsEncoding",
+    "SmsFilterActionType",
+    "SmsGeographicalScope",
+    "SmsMessageClass",
+    "SmsMessageFilter",
+    "SmsMessageType",
+    "SmsModemErrorCode",
+    "SmsEncodedLength",
+    "DeleteSmsMessageOperation",
+    "DeleteSmsMessagesOperation",
+    "GetSmsDeviceOperation",
+    "GetSmsMessageOperation",
+    "GetSmsMessagesOperation",
+    "SendSmsMessageOperation",
+    "SmsAppMessage",
+    "SmsBinaryMessage",
+    "SmsBroadcastMessage",
+    "SmsDevice",
+    "SmsDevice2",
+    "SmsDeviceMessageStore",
+    "SmsFilterRule",
+    "SmsFilterRules",
+    "SmsMessageReceivedEventArgs",
+    "SmsMessageReceivedTriggerDetails",
+    "SmsMessageRegistration",
+    "SmsReceivedEventDetails",
+    "SmsSendMessageResult",
+    "SmsStatusMessage",
+    "SmsTextMessage",
+    "SmsTextMessage2",
+    "SmsVoicemailMessage",
+    "SmsWapMessage",
+    "ISmsBinaryMessage",
+    "ISmsDevice",
+    "ISmsMessage",
+    "ISmsMessageBase",
+    "ISmsTextMessage",
+    "SmsDeviceStatusChangedEventHandler",
+    "SmsMessageReceivedEventHandler",
+]
+
 class CellularClass(enum.IntEnum):
     NONE = 0
     GSM = 1

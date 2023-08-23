@@ -5,6 +5,18 @@ import enum
 import winrt.system
 from . import _winrt_windows_devices_bluetooth_background
 
+__all__ = [
+    "BluetoothEventTriggeringMode",
+    "BluetoothLEAdvertisementPublisherTriggerDetails",
+    "BluetoothLEAdvertisementWatcherTriggerDetails",
+    "GattCharacteristicNotificationTriggerDetails",
+    "GattServiceProviderConnection",
+    "GattServiceProviderTriggerDetails",
+    "RfcommConnectionTriggerDetails",
+    "RfcommInboundConnectionInformation",
+    "RfcommOutboundConnectionInformation",
+]
+
 class BluetoothEventTriggeringMode(enum.IntEnum):
     SERIAL = 0
     BATCH = 1

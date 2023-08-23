@@ -3,6 +3,12 @@
 import winrt.system
 from . import _winrt_windows_applicationmodel_socialinfo_provider
 
+__all__ = [
+    "SocialDashboardItemUpdater",
+    "SocialFeedUpdater",
+    "SocialInfoProviderManager",
+]
+
 SocialDashboardItemUpdater = _winrt_windows_applicationmodel_socialinfo_provider.SocialDashboardItemUpdater
 SocialFeedUpdater = _winrt_windows_applicationmodel_socialinfo_provider.SocialFeedUpdater
 SocialInfoProviderManager = _winrt_windows_applicationmodel_socialinfo_provider.SocialInfoProviderManager

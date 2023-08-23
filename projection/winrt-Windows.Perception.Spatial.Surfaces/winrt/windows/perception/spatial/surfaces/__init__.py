@@ -3,6 +3,14 @@
 import winrt.system
 from . import _winrt_windows_perception_spatial_surfaces
 
+__all__ = [
+    "SpatialSurfaceInfo",
+    "SpatialSurfaceMesh",
+    "SpatialSurfaceMeshBuffer",
+    "SpatialSurfaceMeshOptions",
+    "SpatialSurfaceObserver",
+]
+
 SpatialSurfaceInfo = _winrt_windows_perception_spatial_surfaces.SpatialSurfaceInfo
 SpatialSurfaceMesh = _winrt_windows_perception_spatial_surfaces.SpatialSurfaceMesh
 SpatialSurfaceMeshBuffer = _winrt_windows_perception_spatial_surfaces.SpatialSurfaceMeshBuffer

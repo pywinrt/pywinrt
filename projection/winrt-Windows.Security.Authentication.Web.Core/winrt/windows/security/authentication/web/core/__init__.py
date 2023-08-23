@@ -5,6 +5,20 @@ import enum
 import winrt.system
 from . import _winrt_windows_security_authentication_web_core
 
+__all__ = [
+    "FindAllWebAccountsStatus",
+    "WebTokenRequestPromptType",
+    "WebTokenRequestStatus",
+    "FindAllAccountsResult",
+    "WebAccountEventArgs",
+    "WebAccountMonitor",
+    "WebAuthenticationCoreManager",
+    "WebProviderError",
+    "WebTokenRequest",
+    "WebTokenRequestResult",
+    "WebTokenResponse",
+]
+
 class FindAllWebAccountsStatus(enum.IntEnum):
     SUCCESS = 0
     NOT_ALLOWED_BY_PROVIDER = 1

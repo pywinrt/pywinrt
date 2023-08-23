@@ -5,6 +5,51 @@ import enum
 import winrt.system
 from . import _winrt_windows_services_store
 
+__all__ = [
+    "StoreCanLicenseStatus",
+    "StoreConsumableStatus",
+    "StoreDurationUnit",
+    "StorePackageUpdateState",
+    "StorePurchaseStatus",
+    "StoreQueueItemExtendedState",
+    "StoreQueueItemKind",
+    "StoreQueueItemState",
+    "StoreRateAndReviewStatus",
+    "StoreUninstallStorePackageStatus",
+    "StorePackageUpdateStatus",
+    "StoreAcquireLicenseResult",
+    "StoreAppLicense",
+    "StoreAvailability",
+    "StoreCanAcquireLicenseResult",
+    "StoreCollectionData",
+    "StoreConsumableResult",
+    "StoreContext",
+    "StoreImage",
+    "StoreLicense",
+    "StorePackageInstallOptions",
+    "StorePackageLicense",
+    "StorePackageUpdate",
+    "StorePackageUpdateResult",
+    "StorePrice",
+    "StoreProduct",
+    "StoreProductOptions",
+    "StoreProductPagedQueryResult",
+    "StoreProductQueryResult",
+    "StoreProductResult",
+    "StorePurchaseProperties",
+    "StorePurchaseResult",
+    "StoreQueueItem",
+    "StoreQueueItemCompletedEventArgs",
+    "StoreQueueItemStatus",
+    "StoreRateAndReviewResult",
+    "StoreRequestHelper",
+    "StoreSendRequestResult",
+    "StoreSku",
+    "StoreSubscriptionInfo",
+    "StoreUninstallStorePackageResult",
+    "StoreVideo",
+]
+
 class StoreCanLicenseStatus(enum.IntEnum):
     NOT_LICENSABLE_TO_USER = 0
     LICENSABLE = 1

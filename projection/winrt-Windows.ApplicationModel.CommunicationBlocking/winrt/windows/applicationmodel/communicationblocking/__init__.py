@@ -3,5 +3,10 @@
 import winrt.system
 from . import _winrt_windows_applicationmodel_communicationblocking
 
+__all__ = [
+    "CommunicationBlockingAccessManager",
+    "CommunicationBlockingAppManager",
+]
+
 CommunicationBlockingAccessManager = _winrt_windows_applicationmodel_communicationblocking.CommunicationBlockingAccessManager
 CommunicationBlockingAppManager = _winrt_windows_applicationmodel_communicationblocking.CommunicationBlockingAppManager

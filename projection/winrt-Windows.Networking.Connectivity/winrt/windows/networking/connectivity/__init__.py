@@ -6,6 +6,51 @@ import typing
 import winrt.system
 from . import _winrt_windows_networking_connectivity
 
+__all__ = [
+    "CellularApnAuthenticationType",
+    "ConnectionProfileDeleteStatus",
+    "DataUsageGranularity",
+    "DomainAuthenticationKind",
+    "DomainConnectivityLevel",
+    "NetworkAuthenticationType",
+    "NetworkConnectivityLevel",
+    "NetworkCostType",
+    "NetworkEncryptionType",
+    "NetworkTypes",
+    "RoamingStates",
+    "TriStates",
+    "WwanDataClass",
+    "WwanNetworkIPKind",
+    "WwanNetworkRegistrationState",
+    "NetworkUsageStates",
+    "AttributedNetworkUsage",
+    "CellularApnContext",
+    "ConnectionCost",
+    "ConnectionProfile",
+    "ConnectionProfileFilter",
+    "ConnectionSession",
+    "ConnectivityInterval",
+    "ConnectivityManager",
+    "DataPlanStatus",
+    "DataPlanUsage",
+    "DataUsage",
+    "IPInformation",
+    "LanIdentifier",
+    "LanIdentifierData",
+    "NetworkAdapter",
+    "NetworkInformation",
+    "NetworkItem",
+    "NetworkSecuritySettings",
+    "NetworkStateChangeEventDetails",
+    "NetworkUsage",
+    "ProviderNetworkUsage",
+    "ProxyConfiguration",
+    "RoutePolicy",
+    "WlanConnectionProfileDetails",
+    "WwanConnectionProfileDetails",
+    "NetworkStatusChangedEventHandler",
+]
+
 class CellularApnAuthenticationType(enum.IntEnum):
     NONE = 0
     PAP = 1

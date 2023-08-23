@@ -3,6 +3,17 @@
 import winrt.system
 from . import _winrt_windows_foundation_numerics
 
+__all__ = [
+    "Matrix3x2",
+    "Matrix4x4",
+    "Plane",
+    "Quaternion",
+    "Rational",
+    "Vector2",
+    "Vector3",
+    "Vector4",
+]
+
 Matrix3x2 = _winrt_windows_foundation_numerics.Matrix3x2
 Matrix4x4 = _winrt_windows_foundation_numerics.Matrix4x4
 Plane = _winrt_windows_foundation_numerics.Plane

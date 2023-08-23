@@ -5,6 +5,44 @@ import enum
 import winrt.system
 from . import _winrt_windows_phone_notification_management
 
+__all__ = [
+    "AccessoryNotificationType",
+    "CalendarChangedEvent",
+    "PhoneCallAudioEndpoint",
+    "PhoneCallDirection",
+    "PhoneCallState",
+    "PhoneCallTransport",
+    "PhoneLineRegistrationState",
+    "PhoneMediaType",
+    "PhoneNotificationType",
+    "PlaybackCapability",
+    "PlaybackCommand",
+    "PlaybackStatus",
+    "ReminderState",
+    "VibrateState",
+    "AccessoryManager",
+    "AlarmNotificationTriggerDetails",
+    "AppNotificationInfo",
+    "BinaryId",
+    "CalendarChangedNotificationTriggerDetails",
+    "CortanaTileNotificationTriggerDetails",
+    "EmailAccountInfo",
+    "EmailFolderInfo",
+    "EmailNotificationTriggerDetails",
+    "EmailReadNotificationTriggerDetails",
+    "MediaControlsTriggerDetails",
+    "MediaMetadata",
+    "PhoneCallDetails",
+    "PhoneLineDetails",
+    "PhoneNotificationTriggerDetails",
+    "ReminderNotificationTriggerDetails",
+    "SpeedDialEntry",
+    "TextResponse",
+    "ToastNotificationTriggerDetails",
+    "VolumeInfo",
+    "IAccessoryNotificationTriggerDetails",
+]
+
 class AccessoryNotificationType(enum.IntFlag):
     NONE = 0
     PHONE = 0x1

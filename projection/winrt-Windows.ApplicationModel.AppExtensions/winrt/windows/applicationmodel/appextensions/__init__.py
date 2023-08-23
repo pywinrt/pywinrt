@@ -3,6 +3,16 @@
 import winrt.system
 from . import _winrt_windows_applicationmodel_appextensions
 
+__all__ = [
+    "AppExtension",
+    "AppExtensionCatalog",
+    "AppExtensionPackageInstalledEventArgs",
+    "AppExtensionPackageStatusChangedEventArgs",
+    "AppExtensionPackageUninstallingEventArgs",
+    "AppExtensionPackageUpdatedEventArgs",
+    "AppExtensionPackageUpdatingEventArgs",
+]
+
 AppExtension = _winrt_windows_applicationmodel_appextensions.AppExtension
 AppExtensionCatalog = _winrt_windows_applicationmodel_appextensions.AppExtensionCatalog
 AppExtensionPackageInstalledEventArgs = _winrt_windows_applicationmodel_appextensions.AppExtensionPackageInstalledEventArgs

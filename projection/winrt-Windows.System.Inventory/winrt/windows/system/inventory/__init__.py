@@ -3,4 +3,8 @@
 import winrt.system
 from . import _winrt_windows_system_inventory
 
+__all__ = [
+    "InstalledDesktopApp",
+]
+
 InstalledDesktopApp = _winrt_windows_system_inventory.InstalledDesktopApp

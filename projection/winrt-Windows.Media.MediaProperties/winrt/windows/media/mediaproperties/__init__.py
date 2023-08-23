@@ -5,6 +5,29 @@ import enum
 import winrt.system
 from . import _winrt_windows_media_mediaproperties
 
+__all__ = [
+    "AudioEncodingQuality",
+    "MediaMirroringOptions",
+    "MediaPixelFormat",
+    "MediaRotation",
+    "MediaThumbnailFormat",
+    "SphericalVideoFrameFormat",
+    "StereoscopicVideoPackingMode",
+    "VideoEncodingQuality",
+    "AudioEncodingProperties",
+    "ContainerEncodingProperties",
+    "H264ProfileIds",
+    "ImageEncodingProperties",
+    "MediaEncodingProfile",
+    "MediaEncodingSubtypes",
+    "MediaPropertySet",
+    "MediaRatio",
+    "Mpeg2ProfileIds",
+    "TimedMetadataEncodingProperties",
+    "VideoEncodingProperties",
+    "IMediaEncodingProperties",
+]
+
 class AudioEncodingQuality(enum.IntEnum):
     AUTO = 0
     HIGH = 1

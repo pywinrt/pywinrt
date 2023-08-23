@@ -5,6 +5,15 @@ import enum
 import winrt.system
 from . import _winrt_windows_graphics_display_core
 
+__all__ = [
+    "HdmiDisplayColorSpace",
+    "HdmiDisplayHdrOption",
+    "HdmiDisplayPixelEncoding",
+    "HdmiDisplayHdr2086Metadata",
+    "HdmiDisplayInformation",
+    "HdmiDisplayMode",
+]
+
 class HdmiDisplayColorSpace(enum.IntEnum):
     RGB_LIMITED = 0
     RGB_FULL = 1

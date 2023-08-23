@@ -5,6 +5,32 @@ import enum
 import winrt.system
 from . import _winrt_windows_devices_bluetooth
 
+__all__ = [
+    "BluetoothAddressType",
+    "BluetoothCacheMode",
+    "BluetoothConnectionStatus",
+    "BluetoothError",
+    "BluetoothLEPreferredConnectionParametersRequestStatus",
+    "BluetoothMajorClass",
+    "BluetoothMinorClass",
+    "BluetoothServiceCapabilities",
+    "BluetoothAdapter",
+    "BluetoothClassOfDevice",
+    "BluetoothDevice",
+    "BluetoothDeviceId",
+    "BluetoothLEAppearance",
+    "BluetoothLEAppearanceCategories",
+    "BluetoothLEAppearanceSubcategories",
+    "BluetoothLEConnectionParameters",
+    "BluetoothLEConnectionPhy",
+    "BluetoothLEConnectionPhyInfo",
+    "BluetoothLEDevice",
+    "BluetoothLEPreferredConnectionParameters",
+    "BluetoothLEPreferredConnectionParametersRequest",
+    "BluetoothSignalStrengthFilter",
+    "BluetoothUuidHelper",
+]
+
 class BluetoothAddressType(enum.IntEnum):
     PUBLIC = 0
     RANDOM = 1

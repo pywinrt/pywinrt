@@ -3,4 +3,8 @@
 import winrt.system
 from . import _winrt_windows_media_core_preview
 
+__all__ = [
+    "SoundLevelBroker",
+]
+
 SoundLevelBroker = _winrt_windows_media_core_preview.SoundLevelBroker

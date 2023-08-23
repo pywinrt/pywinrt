@@ -5,6 +5,11 @@ import enum
 import winrt.system
 from . import _winrt_windows_system_remotedesktop_provider
 
+__all__ = [
+    "RemoteDesktopConnectionStatus",
+    "RemoteDesktopConnectionInfo",
+]
+
 class RemoteDesktopConnectionStatus(enum.IntEnum):
     CONNECTING = 0
     CONNECTED = 1

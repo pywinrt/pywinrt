@@ -5,6 +5,23 @@ import enum
 import winrt.system
 from . import _winrt_windows_ui_uiautomation_core
 
+__all__ = [
+    "AutomationRemoteOperationStatus",
+    "AutomationAnnotationTypeRegistration",
+    "AutomationRemoteOperationOperandId",
+    "AutomationRemoteOperationResult",
+    "CoreAutomationRegistrar",
+    "CoreAutomationRemoteOperation",
+    "CoreAutomationRemoteOperationContext",
+    "RemoteAutomationClientSession",
+    "RemoteAutomationConnectionRequestedEventArgs",
+    "RemoteAutomationDisconnectedEventArgs",
+    "RemoteAutomationServer",
+    "RemoteAutomationWindow",
+    "ICoreAutomationConnectionBoundObjectProvider",
+    "ICoreAutomationRemoteOperationExtensionProvider",
+]
+
 class AutomationRemoteOperationStatus(enum.IntEnum):
     SUCCESS = 0
     MALFORMED_BYTECODE = 1

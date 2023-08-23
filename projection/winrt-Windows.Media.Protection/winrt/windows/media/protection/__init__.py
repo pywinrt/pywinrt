@@ -6,6 +6,29 @@ import typing
 import winrt.system
 from . import _winrt_windows_media_protection
 
+__all__ = [
+    "GraphicsTrustStatus",
+    "HdcpProtection",
+    "HdcpSetProtectionResult",
+    "ProtectionCapabilityResult",
+    "RenewalStatus",
+    "RevocationAndRenewalReasons",
+    "ComponentLoadFailedEventArgs",
+    "ComponentRenewal",
+    "HdcpSession",
+    "MediaProtectionManager",
+    "MediaProtectionPMPServer",
+    "MediaProtectionServiceCompletion",
+    "ProtectionCapabilities",
+    "RevocationAndRenewalInformation",
+    "RevocationAndRenewalItem",
+    "ServiceRequestedEventArgs",
+    "IMediaProtectionServiceRequest",
+    "ComponentLoadFailedEventHandler",
+    "RebootNeededEventHandler",
+    "ServiceRequestedEventHandler",
+]
+
 class GraphicsTrustStatus(enum.IntEnum):
     TRUST_NOT_REQUIRED = 0
     TRUST_ESTABLISHED = 1

@@ -3,6 +3,13 @@
 import winrt.system
 from . import _winrt_windows_web_atompub
 
+__all__ = [
+    "AtomPubClient",
+    "ResourceCollection",
+    "ServiceDocument",
+    "Workspace",
+]
+
 AtomPubClient = _winrt_windows_web_atompub.AtomPubClient
 ResourceCollection = _winrt_windows_web_atompub.ResourceCollection
 ServiceDocument = _winrt_windows_web_atompub.ServiceDocument

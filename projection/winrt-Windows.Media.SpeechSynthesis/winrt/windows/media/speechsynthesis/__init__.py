@@ -5,6 +5,16 @@ import enum
 import winrt.system
 from . import _winrt_windows_media_speechsynthesis
 
+__all__ = [
+    "SpeechAppendedSilence",
+    "SpeechPunctuationSilence",
+    "VoiceGender",
+    "SpeechSynthesisStream",
+    "SpeechSynthesizer",
+    "SpeechSynthesizerOptions",
+    "VoiceInformation",
+]
+
 class SpeechAppendedSilence(enum.IntEnum):
     DEFAULT = 0
     MIN = 1

@@ -3,6 +3,12 @@
 import winrt.system
 from . import _winrt_windows_phone_ui_input
 
+__all__ = [
+    "BackPressedEventArgs",
+    "CameraEventArgs",
+    "HardwareButtons",
+]
+
 BackPressedEventArgs = _winrt_windows_phone_ui_input.BackPressedEventArgs
 CameraEventArgs = _winrt_windows_phone_ui_input.CameraEventArgs
 HardwareButtons = _winrt_windows_phone_ui_input.HardwareButtons

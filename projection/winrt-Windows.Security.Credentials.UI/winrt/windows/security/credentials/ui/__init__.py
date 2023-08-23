@@ -5,6 +5,17 @@ import enum
 import winrt.system
 from . import _winrt_windows_security_credentials_ui
 
+__all__ = [
+    "AuthenticationProtocol",
+    "CredentialSaveOption",
+    "UserConsentVerificationResult",
+    "UserConsentVerifierAvailability",
+    "CredentialPicker",
+    "CredentialPickerOptions",
+    "CredentialPickerResults",
+    "UserConsentVerifier",
+]
+
 class AuthenticationProtocol(enum.IntEnum):
     BASIC = 0
     DIGEST = 1

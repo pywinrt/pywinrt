@@ -5,6 +5,37 @@ import enum
 import winrt.system
 from . import _winrt_windows_services_maps
 
+__all__ = [
+    "ManeuverWarningKind",
+    "ManeuverWarningSeverity",
+    "MapLocationDesiredAccuracy",
+    "MapLocationFinderStatus",
+    "MapManeuverNotices",
+    "MapRouteFinderStatus",
+    "MapRouteManeuverKind",
+    "MapRouteOptimization",
+    "MapRouteRestrictions",
+    "MapServiceDataUsagePreference",
+    "TrafficCongestion",
+    "WaypointKind",
+    "EnhancedWaypoint",
+    "ManeuverWarning",
+    "MapAddress",
+    "MapLocation",
+    "MapLocationFinder",
+    "MapLocationFinderResult",
+    "MapManager",
+    "MapRoute",
+    "MapRouteDrivingOptions",
+    "MapRouteFinder",
+    "MapRouteFinderResult",
+    "MapRouteLeg",
+    "MapRouteManeuver",
+    "MapService",
+    "PlaceInfo",
+    "PlaceInfoCreateOptions",
+]
+
 class ManeuverWarningKind(enum.IntEnum):
     NONE = 0
     ACCIDENT = 1

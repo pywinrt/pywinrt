@@ -6,6 +6,27 @@ import typing
 import winrt.system
 from . import _winrt_windows_data_text
 
+__all__ = [
+    "AlternateNormalizationFormat",
+    "TextPredictionOptions",
+    "UnicodeGeneralCategory",
+    "UnicodeNumericType",
+    "TextSegment",
+    "AlternateWordForm",
+    "SelectableWordSegment",
+    "SelectableWordsSegmenter",
+    "SemanticTextQuery",
+    "TextConversionGenerator",
+    "TextPhoneme",
+    "TextPredictionGenerator",
+    "TextReverseConversionGenerator",
+    "UnicodeCharacters",
+    "WordSegment",
+    "WordsSegmenter",
+    "SelectableWordSegmentsTokenizingHandler",
+    "WordSegmentsTokenizingHandler",
+]
+
 class AlternateNormalizationFormat(enum.IntEnum):
     NOT_NORMALIZED = 0
     NUMBER = 1

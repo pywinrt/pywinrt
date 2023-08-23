@@ -5,6 +5,21 @@ import enum
 import winrt.system
 from . import _winrt_windows_applicationmodel_voicecommands
 
+__all__ = [
+    "VoiceCommandCompletionReason",
+    "VoiceCommandContentTileType",
+    "VoiceCommand",
+    "VoiceCommandCompletedEventArgs",
+    "VoiceCommandConfirmationResult",
+    "VoiceCommandContentTile",
+    "VoiceCommandDefinition",
+    "VoiceCommandDefinitionManager",
+    "VoiceCommandDisambiguationResult",
+    "VoiceCommandResponse",
+    "VoiceCommandServiceConnection",
+    "VoiceCommandUserMessage",
+]
+
 class VoiceCommandCompletionReason(enum.IntEnum):
     UNKNOWN = 0
     COMMUNICATION_FAILED = 1

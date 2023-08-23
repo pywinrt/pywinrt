@@ -5,6 +5,16 @@ import enum
 import winrt.system
 from . import _winrt_windows_devices_spi
 
+__all__ = [
+    "SpiMode",
+    "SpiSharingMode",
+    "SpiBusInfo",
+    "SpiConnectionSettings",
+    "SpiController",
+    "SpiDevice",
+    "ISpiDeviceStatics",
+]
+
 class SpiMode(enum.IntEnum):
     MODE0 = 0
     MODE1 = 1

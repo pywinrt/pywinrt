@@ -181,6 +181,23 @@ static void custom_set(winrt::hresult& instance, int32_t value)
         w.write("import winrt.system\n");
         w.write("from . import %\n", bind<write_ns_module_name>(ns));
 
+        w.write("\n");
+        w.write("__all__ = [\n");
+        {
+            writer::indent_guard g{w};
+            settings.filter.bind_each<write_dunder_all_type_name_entry>(members.enums)(
+                w);
+            settings.filter.bind_each<write_dunder_all_type_name_entry>(
+                members.structs)(w);
+            settings.filter.bind_each<write_dunder_all_type_name_entry>(
+                members.classes)(w);
+            settings.filter.bind_each<write_dunder_all_type_name_entry>(
+                members.interfaces)(w);
+            settings.filter.bind_each<write_dunder_all_type_name_entry>(
+                members.delegates)(w);
+        }
+        w.write("]\n");
+
         write_python_type_vars(w, members.delegates);
 
         settings.filter.bind_each<write_python_enum>(members.enums)(w);

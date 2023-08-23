@@ -5,6 +5,15 @@ import enum
 import winrt.system
 from . import _winrt_windows_management
 
+__all__ = [
+    "MdmAlertDataType",
+    "MdmAlertMark",
+    "MdmSessionState",
+    "MdmAlert",
+    "MdmSession",
+    "MdmSessionManager",
+]
+
 class MdmAlertDataType(enum.IntEnum):
     STRING = 0
     BASE64 = 1

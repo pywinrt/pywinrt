@@ -3,6 +3,21 @@
 import winrt.system
 from . import _winrt_windows_applicationmodel_userdatatasks_dataprovider
 
+__all__ = [
+    "UserDataTaskDataProviderConnection",
+    "UserDataTaskDataProviderTriggerDetails",
+    "UserDataTaskListCompleteTaskRequest",
+    "UserDataTaskListCompleteTaskRequestEventArgs",
+    "UserDataTaskListCreateOrUpdateTaskRequest",
+    "UserDataTaskListCreateOrUpdateTaskRequestEventArgs",
+    "UserDataTaskListDeleteTaskRequest",
+    "UserDataTaskListDeleteTaskRequestEventArgs",
+    "UserDataTaskListSkipOccurrenceRequest",
+    "UserDataTaskListSkipOccurrenceRequestEventArgs",
+    "UserDataTaskListSyncManagerSyncRequest",
+    "UserDataTaskListSyncManagerSyncRequestEventArgs",
+]
+
 UserDataTaskDataProviderConnection = _winrt_windows_applicationmodel_userdatatasks_dataprovider.UserDataTaskDataProviderConnection
 UserDataTaskDataProviderTriggerDetails = _winrt_windows_applicationmodel_userdatatasks_dataprovider.UserDataTaskDataProviderTriggerDetails
 UserDataTaskListCompleteTaskRequest = _winrt_windows_applicationmodel_userdatatasks_dataprovider.UserDataTaskListCompleteTaskRequest

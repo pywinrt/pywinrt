@@ -3,6 +3,13 @@
 import winrt.system
 from . import _winrt_windows_applicationmodel_appointments_appointmentsprovider
 
+__all__ = [
+    "AddAppointmentOperation",
+    "AppointmentsProviderLaunchActionVerbs",
+    "RemoveAppointmentOperation",
+    "ReplaceAppointmentOperation",
+]
+
 AddAppointmentOperation = _winrt_windows_applicationmodel_appointments_appointmentsprovider.AddAppointmentOperation
 AppointmentsProviderLaunchActionVerbs = _winrt_windows_applicationmodel_appointments_appointmentsprovider.AppointmentsProviderLaunchActionVerbs
 RemoveAppointmentOperation = _winrt_windows_applicationmodel_appointments_appointmentsprovider.RemoveAppointmentOperation

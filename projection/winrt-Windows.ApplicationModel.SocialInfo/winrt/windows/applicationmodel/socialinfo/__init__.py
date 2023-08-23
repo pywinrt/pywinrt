@@ -5,6 +5,19 @@ import enum
 import winrt.system
 from . import _winrt_windows_applicationmodel_socialinfo
 
+__all__ = [
+    "SocialFeedItemStyle",
+    "SocialFeedKind",
+    "SocialFeedUpdateMode",
+    "SocialItemBadgeStyle",
+    "SocialFeedChildItem",
+    "SocialFeedContent",
+    "SocialFeedItem",
+    "SocialFeedSharedItem",
+    "SocialItemThumbnail",
+    "SocialUserInfo",
+]
+
 class SocialFeedItemStyle(enum.IntEnum):
     DEFAULT = 0
     PHOTO = 1

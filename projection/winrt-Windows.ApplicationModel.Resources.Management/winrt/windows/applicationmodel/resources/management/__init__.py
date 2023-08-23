@@ -5,6 +5,13 @@ import enum
 import winrt.system
 from . import _winrt_windows_applicationmodel_resources_management
 
+__all__ = [
+    "IndexedResourceType",
+    "IndexedResourceCandidate",
+    "IndexedResourceQualifier",
+    "ResourceIndexer",
+]
+
 class IndexedResourceType(enum.IntEnum):
     STRING = 0
     PATH = 1

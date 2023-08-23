@@ -5,6 +5,17 @@ import enum
 import winrt.system
 from . import _winrt_windows_devices_custom
 
+__all__ = [
+    "DeviceAccessMode",
+    "DeviceSharingMode",
+    "IOControlAccessMode",
+    "IOControlBufferingMethod",
+    "CustomDevice",
+    "IOControlCode",
+    "KnownDeviceTypes",
+    "IIOControlCode",
+]
+
 class DeviceAccessMode(enum.IntEnum):
     READ = 0
     WRITE = 1

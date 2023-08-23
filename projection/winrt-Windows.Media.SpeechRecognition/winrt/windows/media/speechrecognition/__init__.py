@@ -5,6 +5,37 @@ import enum
 import winrt.system
 from . import _winrt_windows_media_speechrecognition
 
+__all__ = [
+    "SpeechContinuousRecognitionMode",
+    "SpeechRecognitionAudioProblem",
+    "SpeechRecognitionConfidence",
+    "SpeechRecognitionConstraintProbability",
+    "SpeechRecognitionConstraintType",
+    "SpeechRecognitionResultStatus",
+    "SpeechRecognitionScenario",
+    "SpeechRecognizerState",
+    "SpeechContinuousRecognitionCompletedEventArgs",
+    "SpeechContinuousRecognitionResultGeneratedEventArgs",
+    "SpeechContinuousRecognitionSession",
+    "SpeechRecognitionCompilationResult",
+    "SpeechRecognitionGrammarFileConstraint",
+    "SpeechRecognitionHypothesis",
+    "SpeechRecognitionHypothesisGeneratedEventArgs",
+    "SpeechRecognitionListConstraint",
+    "SpeechRecognitionQualityDegradingEventArgs",
+    "SpeechRecognitionResult",
+    "SpeechRecognitionSemanticInterpretation",
+    "SpeechRecognitionTopicConstraint",
+    "SpeechRecognitionVoiceCommandDefinitionConstraint",
+    "SpeechRecognizer",
+    "SpeechRecognizerStateChangedEventArgs",
+    "SpeechRecognizerTimeouts",
+    "SpeechRecognizerUIOptions",
+    "VoiceCommandManager",
+    "VoiceCommandSet",
+    "ISpeechRecognitionConstraint",
+]
+
 class SpeechContinuousRecognitionMode(enum.IntEnum):
     DEFAULT = 0
     PAUSE_ON_RECOGNITION = 1

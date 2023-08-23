@@ -5,6 +5,14 @@ import enum
 import winrt.system
 from . import _winrt_windows_applicationmodel_extendedexecution_foreground
 
+__all__ = [
+    "ExtendedExecutionForegroundReason",
+    "ExtendedExecutionForegroundResult",
+    "ExtendedExecutionForegroundRevokedReason",
+    "ExtendedExecutionForegroundRevokedEventArgs",
+    "ExtendedExecutionForegroundSession",
+]
+
 class ExtendedExecutionForegroundReason(enum.IntEnum):
     UNSPECIFIED = 0
     SAVING_DATA = 1

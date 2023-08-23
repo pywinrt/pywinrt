@@ -5,6 +5,25 @@ import enum
 import winrt.system
 from . import _winrt_windows_devices_printers
 
+__all__ = [
+    "IppAttributeErrorReason",
+    "IppAttributeValueKind",
+    "IppResolutionUnit",
+    "PageConfigurationSource",
+    "IppAttributeError",
+    "IppAttributeValue",
+    "IppIntegerRange",
+    "IppPrintDevice",
+    "IppResolution",
+    "IppSetAttributesResult",
+    "IppTextWithLanguage",
+    "PageConfigurationSettings",
+    "PdlPassthroughProvider",
+    "PdlPassthroughTarget",
+    "Print3DDevice",
+    "PrintSchema",
+]
+
 class IppAttributeErrorReason(enum.IntEnum):
     REQUEST_ENTITY_TOO_LARGE = 0
     ATTRIBUTE_NOT_SUPPORTED = 1

@@ -5,6 +5,19 @@ import enum
 import winrt.system
 from . import _winrt_windows_media_casting
 
+__all__ = [
+    "CastingConnectionErrorStatus",
+    "CastingConnectionState",
+    "CastingPlaybackTypes",
+    "CastingConnection",
+    "CastingConnectionErrorOccurredEventArgs",
+    "CastingDevice",
+    "CastingDevicePicker",
+    "CastingDevicePickerFilter",
+    "CastingDeviceSelectedEventArgs",
+    "CastingSource",
+]
+
 class CastingConnectionErrorStatus(enum.IntEnum):
     SUCCEEDED = 0
     DEVICE_DID_NOT_RESPOND = 1

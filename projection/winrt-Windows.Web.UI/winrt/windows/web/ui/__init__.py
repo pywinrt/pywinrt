@@ -5,6 +5,27 @@ import enum
 import winrt.system
 from . import _winrt_windows_web_ui
 
+__all__ = [
+    "WebViewControlPermissionState",
+    "WebViewControlPermissionType",
+    "WebViewControlContentLoadingEventArgs",
+    "WebViewControlDOMContentLoadedEventArgs",
+    "WebViewControlDeferredPermissionRequest",
+    "WebViewControlLongRunningScriptDetectedEventArgs",
+    "WebViewControlNavigationCompletedEventArgs",
+    "WebViewControlNavigationStartingEventArgs",
+    "WebViewControlNewWindowRequestedEventArgs",
+    "WebViewControlPermissionRequest",
+    "WebViewControlPermissionRequestedEventArgs",
+    "WebViewControlScriptNotifyEventArgs",
+    "WebViewControlSettings",
+    "WebViewControlUnsupportedUriSchemeIdentifiedEventArgs",
+    "WebViewControlUnviewableContentIdentifiedEventArgs",
+    "WebViewControlWebResourceRequestedEventArgs",
+    "IWebViewControl",
+    "IWebViewControl2",
+]
+
 class WebViewControlPermissionState(enum.IntEnum):
     UNKNOWN = 0
     DEFER = 1

@@ -5,6 +5,17 @@ import enum
 import winrt.system
 from . import _winrt_windows_services_maps_localsearch
 
+__all__ = [
+    "LocalLocationFinderStatus",
+    "LocalCategories",
+    "LocalLocation",
+    "LocalLocationFinder",
+    "LocalLocationFinderResult",
+    "LocalLocationHoursOfOperationItem",
+    "LocalLocationRatingInfo",
+    "PlaceInfoHelper",
+]
+
 class LocalLocationFinderStatus(enum.IntEnum):
     SUCCESS = 0
     UNKNOWN_ERROR = 1

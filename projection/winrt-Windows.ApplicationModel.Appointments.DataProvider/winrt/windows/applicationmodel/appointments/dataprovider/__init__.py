@@ -3,6 +3,23 @@
 import winrt.system
 from . import _winrt_windows_applicationmodel_appointments_dataprovider
 
+__all__ = [
+    "AppointmentCalendarCancelMeetingRequest",
+    "AppointmentCalendarCancelMeetingRequestEventArgs",
+    "AppointmentCalendarCreateOrUpdateAppointmentRequest",
+    "AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs",
+    "AppointmentCalendarForwardMeetingRequest",
+    "AppointmentCalendarForwardMeetingRequestEventArgs",
+    "AppointmentCalendarProposeNewTimeForMeetingRequest",
+    "AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs",
+    "AppointmentCalendarSyncManagerSyncRequest",
+    "AppointmentCalendarSyncManagerSyncRequestEventArgs",
+    "AppointmentCalendarUpdateMeetingResponseRequest",
+    "AppointmentCalendarUpdateMeetingResponseRequestEventArgs",
+    "AppointmentDataProviderConnection",
+    "AppointmentDataProviderTriggerDetails",
+]
+
 AppointmentCalendarCancelMeetingRequest = _winrt_windows_applicationmodel_appointments_dataprovider.AppointmentCalendarCancelMeetingRequest
 AppointmentCalendarCancelMeetingRequestEventArgs = _winrt_windows_applicationmodel_appointments_dataprovider.AppointmentCalendarCancelMeetingRequestEventArgs
 AppointmentCalendarCreateOrUpdateAppointmentRequest = _winrt_windows_applicationmodel_appointments_dataprovider.AppointmentCalendarCreateOrUpdateAppointmentRequest

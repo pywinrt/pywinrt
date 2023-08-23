@@ -5,6 +5,17 @@ import enum
 import winrt.system
 from . import _winrt_windows_applicationmodel_userdataaccounts
 
+__all__ = [
+    "UserDataAccountContentKinds",
+    "UserDataAccountOtherAppReadAccess",
+    "UserDataAccountStoreAccessType",
+    "UserDataAccount",
+    "UserDataAccountManager",
+    "UserDataAccountManagerForUser",
+    "UserDataAccountStore",
+    "UserDataAccountStoreChangedEventArgs",
+]
+
 class UserDataAccountContentKinds(enum.IntFlag):
     EMAIL = 0x1
     CONTACT = 0x2

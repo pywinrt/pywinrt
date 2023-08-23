@@ -3,6 +3,13 @@
 import winrt.system
 from . import _winrt_windows_applicationmodel_payments_provider
 
+__all__ = [
+    "PaymentAppCanMakePaymentTriggerDetails",
+    "PaymentAppManager",
+    "PaymentTransaction",
+    "PaymentTransactionAcceptResult",
+]
+
 PaymentAppCanMakePaymentTriggerDetails = _winrt_windows_applicationmodel_payments_provider.PaymentAppCanMakePaymentTriggerDetails
 PaymentAppManager = _winrt_windows_applicationmodel_payments_provider.PaymentAppManager
 PaymentTransaction = _winrt_windows_applicationmodel_payments_provider.PaymentTransaction

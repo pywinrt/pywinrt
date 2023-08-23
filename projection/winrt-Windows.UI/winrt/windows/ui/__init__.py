@@ -3,6 +3,15 @@
 import winrt.system
 from . import _winrt_windows_ui
 
+__all__ = [
+    "Color",
+    "WindowId",
+    "ColorHelper",
+    "Colors",
+    "UIContentRoot",
+    "UIContext",
+]
+
 Color = _winrt_windows_ui.Color
 WindowId = _winrt_windows_ui.WindowId
 ColorHelper = _winrt_windows_ui.ColorHelper

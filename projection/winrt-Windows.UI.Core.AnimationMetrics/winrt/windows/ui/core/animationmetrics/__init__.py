@@ -5,6 +5,18 @@ import enum
 import winrt.system
 from . import _winrt_windows_ui_core_animationmetrics
 
+__all__ = [
+    "AnimationEffect",
+    "AnimationEffectTarget",
+    "PropertyAnimationType",
+    "AnimationDescription",
+    "OpacityAnimation",
+    "PropertyAnimation",
+    "ScaleAnimation",
+    "TranslationAnimation",
+    "IPropertyAnimation",
+]
+
 class AnimationEffect(enum.IntEnum):
     EXPAND = 0
     COLLAPSE = 1

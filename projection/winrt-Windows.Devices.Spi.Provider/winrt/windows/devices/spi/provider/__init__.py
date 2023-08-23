@@ -5,6 +5,15 @@ import enum
 import winrt.system
 from . import _winrt_windows_devices_spi_provider
 
+__all__ = [
+    "ProviderSpiMode",
+    "ProviderSpiSharingMode",
+    "ProviderSpiConnectionSettings",
+    "ISpiControllerProvider",
+    "ISpiDeviceProvider",
+    "ISpiProvider",
+]
+
 class ProviderSpiMode(enum.IntEnum):
     MODE0 = 0
     MODE1 = 1

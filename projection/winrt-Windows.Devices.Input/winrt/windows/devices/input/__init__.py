@@ -5,6 +5,26 @@ import enum
 import winrt.system
 from . import _winrt_windows_devices_input
 
+__all__ = [
+    "PointerDeviceType",
+    "MouseDelta",
+    "PointerDeviceUsage",
+    "KeyboardCapabilities",
+    "MouseCapabilities",
+    "MouseDevice",
+    "MouseEventArgs",
+    "PenButtonListener",
+    "PenDevice",
+    "PenDockListener",
+    "PenDockedEventArgs",
+    "PenTailButtonClickedEventArgs",
+    "PenTailButtonDoubleClickedEventArgs",
+    "PenTailButtonLongPressedEventArgs",
+    "PenUndockedEventArgs",
+    "PointerDevice",
+    "TouchCapabilities",
+]
+
 class PointerDeviceType(enum.IntEnum):
     TOUCH = 0
     PEN = 1

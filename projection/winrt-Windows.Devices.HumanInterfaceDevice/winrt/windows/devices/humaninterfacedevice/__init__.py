@@ -5,6 +5,21 @@ import enum
 import winrt.system
 from . import _winrt_windows_devices_humaninterfacedevice
 
+__all__ = [
+    "HidCollectionType",
+    "HidReportType",
+    "HidBooleanControl",
+    "HidBooleanControlDescription",
+    "HidCollection",
+    "HidDevice",
+    "HidFeatureReport",
+    "HidInputReport",
+    "HidInputReportReceivedEventArgs",
+    "HidNumericControl",
+    "HidNumericControlDescription",
+    "HidOutputReport",
+]
+
 class HidCollectionType(enum.IntEnum):
     PHYSICAL = 0
     APPLICATION = 1

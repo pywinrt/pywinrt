@@ -3,4 +3,8 @@
 import winrt.system
 from . import _winrt_windows_ui_input_core
 
+__all__ = [
+    "RadialControllerIndependentInputSource",
+]
+
 RadialControllerIndependentInputSource = _winrt_windows_ui_input_core.RadialControllerIndependentInputSource

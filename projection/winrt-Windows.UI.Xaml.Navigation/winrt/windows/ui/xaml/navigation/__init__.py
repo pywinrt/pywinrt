@@ -6,6 +6,21 @@ import typing
 import winrt.system
 from . import _winrt_windows_ui_xaml_navigation
 
+__all__ = [
+    "NavigationCacheMode",
+    "NavigationMode",
+    "FrameNavigationOptions",
+    "NavigatingCancelEventArgs",
+    "NavigationEventArgs",
+    "NavigationFailedEventArgs",
+    "PageStackEntry",
+    "LoadCompletedEventHandler",
+    "NavigatedEventHandler",
+    "NavigatingCancelEventHandler",
+    "NavigationFailedEventHandler",
+    "NavigationStoppedEventHandler",
+]
+
 class NavigationCacheMode(enum.IntEnum):
     DISABLED = 0
     REQUIRED = 1

@@ -5,6 +5,21 @@ import enum
 import winrt.system
 from . import _winrt_windows_applicationmodel_store_preview_installcontrol
 
+__all__ = [
+    "AppInstallState",
+    "AppInstallType",
+    "AppInstallationToastNotificationMode",
+    "AutoUpdateSetting",
+    "GetEntitlementStatus",
+    "AppInstallItem",
+    "AppInstallManager",
+    "AppInstallManagerItemEventArgs",
+    "AppInstallOptions",
+    "AppInstallStatus",
+    "AppUpdateOptions",
+    "GetEntitlementResult",
+]
+
 class AppInstallState(enum.IntEnum):
     PENDING = 0
     STARTING = 1

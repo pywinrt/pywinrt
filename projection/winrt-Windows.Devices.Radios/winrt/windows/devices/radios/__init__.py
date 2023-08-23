@@ -5,6 +5,13 @@ import enum
 import winrt.system
 from . import _winrt_windows_devices_radios
 
+__all__ = [
+    "RadioAccessStatus",
+    "RadioKind",
+    "RadioState",
+    "Radio",
+]
+
 class RadioAccessStatus(enum.IntEnum):
     UNSPECIFIED = 0
     ALLOWED = 1

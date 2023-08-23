@@ -5,6 +5,21 @@ import enum
 import winrt.system
 from . import _winrt_windows_media_control
 
+__all__ = [
+    "GlobalSystemMediaTransportControlsSessionPlaybackStatus",
+    "CurrentSessionChangedEventArgs",
+    "GlobalSystemMediaTransportControlsSession",
+    "GlobalSystemMediaTransportControlsSessionManager",
+    "GlobalSystemMediaTransportControlsSessionMediaProperties",
+    "GlobalSystemMediaTransportControlsSessionPlaybackControls",
+    "GlobalSystemMediaTransportControlsSessionPlaybackInfo",
+    "GlobalSystemMediaTransportControlsSessionTimelineProperties",
+    "MediaPropertiesChangedEventArgs",
+    "PlaybackInfoChangedEventArgs",
+    "SessionsChangedEventArgs",
+    "TimelinePropertiesChangedEventArgs",
+]
+
 class GlobalSystemMediaTransportControlsSessionPlaybackStatus(enum.IntEnum):
     CLOSED = 0
     OPENED = 1

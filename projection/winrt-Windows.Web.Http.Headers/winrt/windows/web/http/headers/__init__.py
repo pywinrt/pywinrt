@@ -3,6 +3,42 @@
 import winrt.system
 from . import _winrt_windows_web_http_headers
 
+__all__ = [
+    "HttpCacheDirectiveHeaderValueCollection",
+    "HttpChallengeHeaderValue",
+    "HttpChallengeHeaderValueCollection",
+    "HttpConnectionOptionHeaderValue",
+    "HttpConnectionOptionHeaderValueCollection",
+    "HttpContentCodingHeaderValue",
+    "HttpContentCodingHeaderValueCollection",
+    "HttpContentCodingWithQualityHeaderValue",
+    "HttpContentCodingWithQualityHeaderValueCollection",
+    "HttpContentDispositionHeaderValue",
+    "HttpContentHeaderCollection",
+    "HttpContentRangeHeaderValue",
+    "HttpCookiePairHeaderValue",
+    "HttpCookiePairHeaderValueCollection",
+    "HttpCredentialsHeaderValue",
+    "HttpDateOrDeltaHeaderValue",
+    "HttpExpectationHeaderValue",
+    "HttpExpectationHeaderValueCollection",
+    "HttpLanguageHeaderValueCollection",
+    "HttpLanguageRangeWithQualityHeaderValue",
+    "HttpLanguageRangeWithQualityHeaderValueCollection",
+    "HttpMediaTypeHeaderValue",
+    "HttpMediaTypeWithQualityHeaderValue",
+    "HttpMediaTypeWithQualityHeaderValueCollection",
+    "HttpMethodHeaderValueCollection",
+    "HttpNameValueHeaderValue",
+    "HttpProductHeaderValue",
+    "HttpProductInfoHeaderValue",
+    "HttpProductInfoHeaderValueCollection",
+    "HttpRequestHeaderCollection",
+    "HttpResponseHeaderCollection",
+    "HttpTransferCodingHeaderValue",
+    "HttpTransferCodingHeaderValueCollection",
+]
+
 HttpCacheDirectiveHeaderValueCollection = _winrt_windows_web_http_headers.HttpCacheDirectiveHeaderValueCollection
 winrt.system._mixin_mutable_sequence(HttpCacheDirectiveHeaderValueCollection)
 HttpChallengeHeaderValue = _winrt_windows_web_http_headers.HttpChallengeHeaderValue

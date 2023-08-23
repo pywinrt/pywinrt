@@ -3,6 +3,14 @@
 import winrt.system
 from . import _winrt_windows_ui_xaml_media_media3d
 
+__all__ = [
+    "Matrix3D",
+    "CompositeTransform3D",
+    "Matrix3DHelper",
+    "PerspectiveTransform3D",
+    "Transform3D",
+]
+
 Matrix3D = _winrt_windows_ui_xaml_media_media3d.Matrix3D
 CompositeTransform3D = _winrt_windows_ui_xaml_media_media3d.CompositeTransform3D
 Matrix3DHelper = _winrt_windows_ui_xaml_media_media3d.Matrix3DHelper

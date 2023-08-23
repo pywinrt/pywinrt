@@ -3,4 +3,8 @@
 import winrt.system
 from . import _winrt_windows_phone_system
 
+__all__ = [
+    "SystemProtection",
+]
+
 SystemProtection = _winrt_windows_phone_system.SystemProtection

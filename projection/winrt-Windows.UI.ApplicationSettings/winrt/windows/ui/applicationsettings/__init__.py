@@ -6,6 +6,26 @@ import typing
 import winrt.system
 from . import _winrt_windows_ui_applicationsettings
 
+__all__ = [
+    "SettingsEdgeLocation",
+    "SupportedWebAccountActions",
+    "WebAccountAction",
+    "AccountsSettingsPane",
+    "AccountsSettingsPaneCommandsRequestedEventArgs",
+    "AccountsSettingsPaneEventDeferral",
+    "CredentialCommand",
+    "SettingsCommand",
+    "SettingsPane",
+    "SettingsPaneCommandsRequest",
+    "SettingsPaneCommandsRequestedEventArgs",
+    "WebAccountCommand",
+    "WebAccountInvokedArgs",
+    "WebAccountProviderCommand",
+    "CredentialCommandCredentialDeletedHandler",
+    "WebAccountCommandInvokedHandler",
+    "WebAccountProviderCommandInvokedHandler",
+]
+
 class SettingsEdgeLocation(enum.IntEnum):
     RIGHT = 0
     LEFT = 1

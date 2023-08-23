@@ -5,6 +5,38 @@ import enum
 import winrt.system
 from . import _winrt_windows_ui_xaml_documents
 
+__all__ = [
+    "LogicalDirection",
+    "UnderlineStyle",
+    "TextRange",
+    "Block",
+    "BlockCollection",
+    "Bold",
+    "ContactContentLinkProvider",
+    "ContentLink",
+    "ContentLinkInvokedEventArgs",
+    "ContentLinkProvider",
+    "ContentLinkProviderCollection",
+    "Glyphs",
+    "Hyperlink",
+    "HyperlinkClickEventArgs",
+    "Inline",
+    "InlineCollection",
+    "InlineUIContainer",
+    "Italic",
+    "LineBreak",
+    "Paragraph",
+    "PlaceContentLinkProvider",
+    "Run",
+    "Span",
+    "TextElement",
+    "TextHighlighter",
+    "TextHighlighterBase",
+    "TextPointer",
+    "Typography",
+    "Underline",
+]
+
 class LogicalDirection(enum.IntEnum):
     BACKWARD = 0
     FORWARD = 1

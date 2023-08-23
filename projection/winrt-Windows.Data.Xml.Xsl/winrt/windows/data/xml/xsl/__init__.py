@@ -3,4 +3,8 @@
 import winrt.system
 from . import _winrt_windows_data_xml_xsl
 
+__all__ = [
+    "XsltProcessor",
+]
+
 XsltProcessor = _winrt_windows_data_xml_xsl.XsltProcessor

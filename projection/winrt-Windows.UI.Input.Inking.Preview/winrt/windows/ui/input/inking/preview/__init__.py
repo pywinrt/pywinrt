@@ -3,4 +3,8 @@
 import winrt.system
 from . import _winrt_windows_ui_input_inking_preview
 
+__all__ = [
+    "PalmRejectionDelayZonePreview",
+]
+
 PalmRejectionDelayZonePreview = _winrt_windows_ui_input_inking_preview.PalmRejectionDelayZonePreview

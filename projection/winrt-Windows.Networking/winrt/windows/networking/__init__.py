@@ -5,6 +5,14 @@ import enum
 import winrt.system
 from . import _winrt_windows_networking
 
+__all__ = [
+    "DomainNameType",
+    "HostNameSortOptions",
+    "HostNameType",
+    "EndpointPair",
+    "HostName",
+]
+
 class DomainNameType(enum.IntEnum):
     SUFFIX = 0
     FULLY_QUALIFIED = 1

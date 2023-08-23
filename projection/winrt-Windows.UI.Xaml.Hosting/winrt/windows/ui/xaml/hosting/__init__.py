@@ -5,6 +5,25 @@ import enum
 import winrt.system
 from . import _winrt_windows_ui_xaml_hosting
 
+__all__ = [
+    "DesignerAppViewState",
+    "XamlSourceFocusNavigationReason",
+    "DesignerAppExitedEventArgs",
+    "DesignerAppManager",
+    "DesignerAppView",
+    "DesktopWindowXamlSource",
+    "DesktopWindowXamlSourceGotFocusEventArgs",
+    "DesktopWindowXamlSourceTakeFocusRequestedEventArgs",
+    "ElementCompositionPreview",
+    "WindowsXamlManager",
+    "XamlSourceFocusNavigationRequest",
+    "XamlSourceFocusNavigationResult",
+    "XamlUIPresenter",
+    "IXamlUIPresenterHost",
+    "IXamlUIPresenterHost2",
+    "IXamlUIPresenterHost3",
+]
+
 class DesignerAppViewState(enum.IntEnum):
     VISIBLE = 0
     HIDDEN = 1

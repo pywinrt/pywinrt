@@ -5,6 +5,16 @@ import enum
 import winrt.system
 from . import _winrt_windows_applicationmodel_userdataaccounts_provider
 
+__all__ = [
+    "UserDataAccountProviderOperationKind",
+    "UserDataAccountProviderPartnerAccountKind",
+    "UserDataAccountPartnerAccountInfo",
+    "UserDataAccountProviderAddAccountOperation",
+    "UserDataAccountProviderResolveErrorsOperation",
+    "UserDataAccountProviderSettingsOperation",
+    "IUserDataAccountProviderOperation",
+]
+
 class UserDataAccountProviderOperationKind(enum.IntEnum):
     ADD_ACCOUNT = 0
     SETTINGS = 1

@@ -3,5 +3,10 @@
 import winrt.system
 from . import _winrt_windows_phone_personalinformation_provisioning
 
+__all__ = [
+    "ContactPartnerProvisioningManager",
+    "MessagePartnerProvisioningManager",
+]
+
 ContactPartnerProvisioningManager = _winrt_windows_phone_personalinformation_provisioning.ContactPartnerProvisioningManager
 MessagePartnerProvisioningManager = _winrt_windows_phone_personalinformation_provisioning.MessagePartnerProvisioningManager

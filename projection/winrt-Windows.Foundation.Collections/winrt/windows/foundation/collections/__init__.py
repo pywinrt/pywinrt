@@ -5,6 +5,27 @@ import typing
 
 import winrt.system
 from . import _winrt_windows_foundation_collections
+
+__all__ = [
+    "CollectionChange",
+    "PropertySet",
+    "StringMap",
+    "ValueSet",
+    "IIterable",
+    "IIterator",
+    "IKeyValuePair",
+    "IMapChangedEventArgs",
+    "IMapView",
+    "IMap",
+    "IObservableMap",
+    "IObservableVector",
+    "IPropertySet",
+    "IVectorChangedEventArgs",
+    "IVectorView",
+    "IVector",
+    "MapChangedEventHandler",
+    "VectorChangedEventHandler",
+]
 K = typing.TypeVar('K')
 T = typing.TypeVar('T')
 V = typing.TypeVar('V')

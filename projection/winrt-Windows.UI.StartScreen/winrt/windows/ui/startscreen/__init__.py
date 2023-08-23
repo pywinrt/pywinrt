@@ -5,6 +5,24 @@ import enum
 import winrt.system
 from . import _winrt_windows_ui_startscreen
 
+__all__ = [
+    "ForegroundText",
+    "JumpListItemKind",
+    "JumpListSystemGroupKind",
+    "TileMixedRealityModelActivationBehavior",
+    "TileOptions",
+    "TileSize",
+    "JumpList",
+    "JumpListItem",
+    "SecondaryTile",
+    "SecondaryTileVisualElements",
+    "StartScreenManager",
+    "TileMixedRealityModel",
+    "VisualElementsRequest",
+    "VisualElementsRequestDeferral",
+    "VisualElementsRequestedEventArgs",
+]
+
 class ForegroundText(enum.IntEnum):
     DARK = 0
     LIGHT = 1

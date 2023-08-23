@@ -3,6 +3,45 @@
 import winrt.system
 from . import _winrt_windows_ui_xaml_automation_provider
 
+__all__ = [
+    "IRawElementProviderSimple",
+    "IAnnotationProvider",
+    "ICustomNavigationProvider",
+    "IDockProvider",
+    "IDragProvider",
+    "IDropTargetProvider",
+    "IExpandCollapseProvider",
+    "IGridItemProvider",
+    "IGridProvider",
+    "IInvokeProvider",
+    "IItemContainerProvider",
+    "IMultipleViewProvider",
+    "IObjectModelProvider",
+    "IRangeValueProvider",
+    "IScrollItemProvider",
+    "IScrollProvider",
+    "ISelectionItemProvider",
+    "ISelectionProvider",
+    "ISpreadsheetItemProvider",
+    "ISpreadsheetProvider",
+    "IStylesProvider",
+    "ISynchronizedInputProvider",
+    "ITableItemProvider",
+    "ITableProvider",
+    "ITextChildProvider",
+    "ITextEditProvider",
+    "ITextProvider",
+    "ITextProvider2",
+    "ITextRangeProvider",
+    "ITextRangeProvider2",
+    "IToggleProvider",
+    "ITransformProvider",
+    "ITransformProvider2",
+    "IValueProvider",
+    "IVirtualizedItemProvider",
+    "IWindowProvider",
+]
+
 IRawElementProviderSimple = _winrt_windows_ui_xaml_automation_provider.IRawElementProviderSimple
 IAnnotationProvider = _winrt_windows_ui_xaml_automation_provider.IAnnotationProvider
 ICustomNavigationProvider = _winrt_windows_ui_xaml_automation_provider.ICustomNavigationProvider

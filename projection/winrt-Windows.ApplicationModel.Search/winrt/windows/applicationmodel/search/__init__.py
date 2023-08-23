@@ -3,6 +3,24 @@
 import winrt.system
 from . import _winrt_windows_applicationmodel_search
 
+__all__ = [
+    "LocalContentSuggestionSettings",
+    "SearchPane",
+    "SearchPaneQueryChangedEventArgs",
+    "SearchPaneQueryLinguisticDetails",
+    "SearchPaneQuerySubmittedEventArgs",
+    "SearchPaneResultSuggestionChosenEventArgs",
+    "SearchPaneSuggestionsRequest",
+    "SearchPaneSuggestionsRequestDeferral",
+    "SearchPaneSuggestionsRequestedEventArgs",
+    "SearchPaneVisibilityChangedEventArgs",
+    "SearchQueryLinguisticDetails",
+    "SearchSuggestionCollection",
+    "SearchSuggestionsRequest",
+    "SearchSuggestionsRequestDeferral",
+    "ISearchPaneQueryChangedEventArgs",
+]
+
 LocalContentSuggestionSettings = _winrt_windows_applicationmodel_search.LocalContentSuggestionSettings
 SearchPane = _winrt_windows_applicationmodel_search.SearchPane
 SearchPaneQueryChangedEventArgs = _winrt_windows_applicationmodel_search.SearchPaneQueryChangedEventArgs

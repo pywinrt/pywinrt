@@ -5,6 +5,22 @@ import enum
 import winrt.system
 from . import _winrt_windows_system_userprofile
 
+__all__ = [
+    "AccountPictureKind",
+    "SetAccountPictureResult",
+    "SetImageFeedResult",
+    "AdvertisingManager",
+    "AdvertisingManagerForUser",
+    "AssignedAccessSettings",
+    "DiagnosticsSettings",
+    "FirstSignInSettings",
+    "GlobalizationPreferences",
+    "GlobalizationPreferencesForUser",
+    "LockScreen",
+    "UserInformation",
+    "UserProfilePersonalizationSettings",
+]
+
 class AccountPictureKind(enum.IntEnum):
     SMALL_IMAGE = 0
     LARGE_IMAGE = 1

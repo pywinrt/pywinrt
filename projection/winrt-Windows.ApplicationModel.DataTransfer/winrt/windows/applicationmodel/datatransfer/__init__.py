@@ -6,6 +6,41 @@ import typing
 import winrt.system
 from . import _winrt_windows_applicationmodel_datatransfer
 
+__all__ = [
+    "ClipboardHistoryItemsResultStatus",
+    "DataPackageOperation",
+    "SetHistoryItemAsContentStatus",
+    "ShareUITheme",
+    "Clipboard",
+    "ClipboardContentOptions",
+    "ClipboardHistoryChangedEventArgs",
+    "ClipboardHistoryItem",
+    "ClipboardHistoryItemsResult",
+    "DataPackage",
+    "DataPackagePropertySet",
+    "DataPackagePropertySetView",
+    "DataPackageView",
+    "DataProviderDeferral",
+    "DataProviderRequest",
+    "DataRequest",
+    "DataRequestDeferral",
+    "DataRequestedEventArgs",
+    "DataTransferManager",
+    "HtmlFormatHelper",
+    "OperationCompletedEventArgs",
+    "ShareCompletedEventArgs",
+    "ShareProvider",
+    "ShareProviderOperation",
+    "ShareProvidersRequestedEventArgs",
+    "ShareTargetInfo",
+    "ShareUIOptions",
+    "SharedStorageAccessManager",
+    "StandardDataFormats",
+    "TargetApplicationChosenEventArgs",
+    "DataProviderHandler",
+    "ShareProviderHandler",
+]
+
 class ClipboardHistoryItemsResultStatus(enum.IntEnum):
     SUCCESS = 0
     ACCESS_DENIED = 1

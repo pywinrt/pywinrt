@@ -5,6 +5,23 @@ import enum
 import winrt.system
 from . import _winrt_windows_ai_machinelearning_preview
 
+__all__ = [
+    "FeatureElementKindPreview",
+    "LearningModelDeviceKindPreview",
+    "LearningModelFeatureKindPreview",
+    "ImageVariableDescriptorPreview",
+    "InferencingOptionsPreview",
+    "LearningModelBindingPreview",
+    "LearningModelDescriptionPreview",
+    "LearningModelEvaluationResultPreview",
+    "LearningModelPreview",
+    "LearningModelVariableDescriptorPreview",
+    "MapVariableDescriptorPreview",
+    "SequenceVariableDescriptorPreview",
+    "TensorVariableDescriptorPreview",
+    "ILearningModelVariableDescriptorPreview",
+]
+
 class FeatureElementKindPreview(enum.IntEnum):
     UNDEFINED = 0
     FLOAT = 1

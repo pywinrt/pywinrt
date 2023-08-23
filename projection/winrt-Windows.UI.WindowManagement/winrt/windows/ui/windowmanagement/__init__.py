@@ -5,6 +5,33 @@ import enum
 import winrt.system
 from . import _winrt_windows_ui_windowmanagement
 
+__all__ = [
+    "AppWindowClosedReason",
+    "AppWindowFrameStyle",
+    "AppWindowPresentationKind",
+    "AppWindowTitleBarVisibility",
+    "WindowingEnvironmentKind",
+    "AppWindow",
+    "AppWindowChangedEventArgs",
+    "AppWindowCloseRequestedEventArgs",
+    "AppWindowClosedEventArgs",
+    "AppWindowFrame",
+    "AppWindowPlacement",
+    "AppWindowPresentationConfiguration",
+    "AppWindowPresenter",
+    "AppWindowTitleBar",
+    "AppWindowTitleBarOcclusion",
+    "CompactOverlayPresentationConfiguration",
+    "DefaultPresentationConfiguration",
+    "DisplayRegion",
+    "FullScreenPresentationConfiguration",
+    "WindowServices",
+    "WindowingEnvironment",
+    "WindowingEnvironmentAddedEventArgs",
+    "WindowingEnvironmentChangedEventArgs",
+    "WindowingEnvironmentRemovedEventArgs",
+]
+
 class AppWindowClosedReason(enum.IntEnum):
     OTHER = 0
     APP_INITIATED = 1

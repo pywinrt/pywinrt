@@ -3,5 +3,10 @@
 import winrt.system
 from . import _winrt_windows_security_authentication_identity
 
+__all__ = [
+    "EnterpriseKeyCredentialRegistrationInfo",
+    "EnterpriseKeyCredentialRegistrationManager",
+]
+
 EnterpriseKeyCredentialRegistrationInfo = _winrt_windows_security_authentication_identity.EnterpriseKeyCredentialRegistrationInfo
 EnterpriseKeyCredentialRegistrationManager = _winrt_windows_security_authentication_identity.EnterpriseKeyCredentialRegistrationManager

@@ -5,6 +5,20 @@ import enum
 import winrt.system
 from . import _winrt_windows_devices_input_preview
 
+__all__ = [
+    "GazeDeviceConfigurationStatePreview",
+    "GazeDevicePreview",
+    "GazeDeviceWatcherAddedPreviewEventArgs",
+    "GazeDeviceWatcherPreview",
+    "GazeDeviceWatcherRemovedPreviewEventArgs",
+    "GazeDeviceWatcherUpdatedPreviewEventArgs",
+    "GazeEnteredPreviewEventArgs",
+    "GazeExitedPreviewEventArgs",
+    "GazeInputSourcePreview",
+    "GazeMovedPreviewEventArgs",
+    "GazePointPreview",
+]
+
 class GazeDeviceConfigurationStatePreview(enum.IntEnum):
     UNKNOWN = 0
     READY = 1

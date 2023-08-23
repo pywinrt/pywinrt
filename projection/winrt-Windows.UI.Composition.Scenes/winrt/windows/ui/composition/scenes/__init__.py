@@ -5,6 +5,30 @@ import enum
 import winrt.system
 from . import _winrt_windows_ui_composition_scenes
 
+__all__ = [
+    "SceneAlphaMode",
+    "SceneAttributeSemantic",
+    "SceneComponentType",
+    "SceneWrappingMode",
+    "SceneBoundingBox",
+    "SceneComponent",
+    "SceneComponentCollection",
+    "SceneMaterial",
+    "SceneMaterialInput",
+    "SceneMesh",
+    "SceneMeshMaterialAttributeMap",
+    "SceneMeshRendererComponent",
+    "SceneMetallicRoughnessMaterial",
+    "SceneModelTransform",
+    "SceneNode",
+    "SceneNodeCollection",
+    "SceneObject",
+    "ScenePbrMaterial",
+    "SceneRendererComponent",
+    "SceneSurfaceMaterialInput",
+    "SceneVisual",
+]
+
 class SceneAlphaMode(enum.IntEnum):
     OPAQUE = 0
     ALPHA_TEST = 1

@@ -5,6 +5,34 @@ import enum
 import winrt.system
 from . import _winrt_windows_applicationmodel_userdatatasks
 
+__all__ = [
+    "UserDataTaskDaysOfWeek",
+    "UserDataTaskDetailsKind",
+    "UserDataTaskKind",
+    "UserDataTaskListOtherAppReadAccess",
+    "UserDataTaskListOtherAppWriteAccess",
+    "UserDataTaskListSyncStatus",
+    "UserDataTaskPriority",
+    "UserDataTaskQueryKind",
+    "UserDataTaskQuerySortProperty",
+    "UserDataTaskRecurrenceUnit",
+    "UserDataTaskRegenerationUnit",
+    "UserDataTaskSensitivity",
+    "UserDataTaskStoreAccessType",
+    "UserDataTaskWeekOfMonth",
+    "UserDataTask",
+    "UserDataTaskBatch",
+    "UserDataTaskList",
+    "UserDataTaskListLimitedWriteOperations",
+    "UserDataTaskListSyncManager",
+    "UserDataTaskManager",
+    "UserDataTaskQueryOptions",
+    "UserDataTaskReader",
+    "UserDataTaskRecurrenceProperties",
+    "UserDataTaskRegenerationProperties",
+    "UserDataTaskStore",
+]
+
 class UserDataTaskDaysOfWeek(enum.IntFlag):
     NONE = 0
     SUNDAY = 0x1

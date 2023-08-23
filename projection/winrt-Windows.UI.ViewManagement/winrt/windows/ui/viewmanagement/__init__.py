@@ -5,6 +5,41 @@ import enum
 import winrt.system
 from . import _winrt_windows_ui_viewmanagement
 
+__all__ = [
+    "ApplicationViewBoundsMode",
+    "ApplicationViewMode",
+    "ApplicationViewOrientation",
+    "ApplicationViewState",
+    "ApplicationViewSwitchingOptions",
+    "ApplicationViewWindowingMode",
+    "FullScreenSystemOverlayMode",
+    "HandPreference",
+    "ScreenCaptureDisabledBehavior",
+    "UIColorType",
+    "UIElementType",
+    "UserInteractionMode",
+    "ViewSizePreference",
+    "AccessibilitySettings",
+    "ActivationViewSwitcher",
+    "ApplicationView",
+    "ApplicationViewConsolidatedEventArgs",
+    "ApplicationViewScaling",
+    "ApplicationViewSwitcher",
+    "ApplicationViewTitleBar",
+    "ApplicationViewTransferContext",
+    "InputPane",
+    "InputPaneVisibilityEventArgs",
+    "ProjectionManager",
+    "StatusBar",
+    "StatusBarProgressIndicator",
+    "UISettings",
+    "UISettingsAnimationsEnabledChangedEventArgs",
+    "UISettingsAutoHideScrollBarsChangedEventArgs",
+    "UISettingsMessageDurationChangedEventArgs",
+    "UIViewSettings",
+    "ViewModePreferences",
+]
+
 class ApplicationViewBoundsMode(enum.IntEnum):
     USE_VISIBLE = 0
     USE_CORE_WINDOW = 1

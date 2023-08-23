@@ -5,6 +5,42 @@ import enum
 import winrt.system
 from . import _winrt_windows_devices_enumeration
 
+__all__ = [
+    "DeviceAccessStatus",
+    "DeviceClass",
+    "DeviceInformationKind",
+    "DevicePairingKinds",
+    "DevicePairingProtectionLevel",
+    "DevicePairingResultStatus",
+    "DevicePickerDisplayStatusOptions",
+    "DeviceUnpairingResultStatus",
+    "DeviceWatcherEventKind",
+    "DeviceWatcherStatus",
+    "Panel",
+    "DeviceAccessChangedEventArgs",
+    "DeviceAccessInformation",
+    "DeviceConnectionChangeTriggerDetails",
+    "DeviceDisconnectButtonClickedEventArgs",
+    "DeviceInformation",
+    "DeviceInformationCollection",
+    "DeviceInformationCustomPairing",
+    "DeviceInformationPairing",
+    "DeviceInformationUpdate",
+    "DevicePairingRequestedEventArgs",
+    "DevicePairingResult",
+    "DevicePicker",
+    "DevicePickerAppearance",
+    "DevicePickerFilter",
+    "DeviceSelectedEventArgs",
+    "DeviceThumbnail",
+    "DeviceUnpairingResult",
+    "DeviceWatcher",
+    "DeviceWatcherEvent",
+    "DeviceWatcherTriggerDetails",
+    "EnclosureLocation",
+    "IDevicePairingSettings",
+]
+
 class DeviceAccessStatus(enum.IntEnum):
     UNSPECIFIED = 0
     ALLOWED = 1

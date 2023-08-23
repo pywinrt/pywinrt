@@ -5,6 +5,16 @@ import enum
 import winrt.system
 from . import _winrt_windows_security_dataprotection
 
+__all__ = [
+    "UserDataAvailability",
+    "UserDataBufferUnprotectStatus",
+    "UserDataStorageItemProtectionStatus",
+    "UserDataAvailabilityStateChangedEventArgs",
+    "UserDataBufferUnprotectResult",
+    "UserDataProtectionManager",
+    "UserDataStorageItemProtectionInfo",
+]
+
 class UserDataAvailability(enum.IntEnum):
     ALWAYS = 0
     AFTER_FIRST_UNLOCK = 1

@@ -5,6 +5,12 @@ import enum
 import winrt.system
 from . import _winrt_windows_security_authorization_appcapabilityaccess
 
+__all__ = [
+    "AppCapabilityAccessStatus",
+    "AppCapability",
+    "AppCapabilityAccessChangedEventArgs",
+]
+
 class AppCapabilityAccessStatus(enum.IntEnum):
     DENIED_BY_SYSTEM = 0
     NOT_DECLARED_BY_APP = 1

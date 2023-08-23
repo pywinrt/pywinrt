@@ -5,6 +5,30 @@ import enum
 import winrt.system
 from . import _winrt_windows_storage_search
 
+__all__ = [
+    "CommonFileQuery",
+    "CommonFolderQuery",
+    "DateStackOption",
+    "FolderDepth",
+    "IndexedState",
+    "IndexerOption",
+    "SortEntry",
+    "ContentIndexer",
+    "ContentIndexerQuery",
+    "IndexableContent",
+    "QueryOptions",
+    "SortEntryVector",
+    "StorageFileQueryResult",
+    "StorageFolderQueryResult",
+    "StorageItemQueryResult",
+    "StorageLibraryChangeTrackerTriggerDetails",
+    "StorageLibraryContentChangedTriggerDetails",
+    "ValueAndLanguage",
+    "IIndexableContent",
+    "IStorageFolderQueryOperations",
+    "IStorageQueryResultBase",
+]
+
 class CommonFileQuery(enum.IntEnum):
     DEFAULT_QUERY = 0
     ORDER_BY_NAME = 1

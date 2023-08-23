@@ -5,6 +5,46 @@ import enum
 import winrt.system
 from . import _winrt_windows_graphics_printing_workflow
 
+__all__ = [
+    "PdlConversionHostBasedProcessingOperations",
+    "PrintWorkflowAttributesMergePolicy",
+    "PrintWorkflowJobAbortReason",
+    "PrintWorkflowPdlConversionType",
+    "PrintWorkflowPrinterJobStatus",
+    "PrintWorkflowSessionStatus",
+    "PrintWorkflowSubmittedStatus",
+    "PrintWorkflowUICompletionStatus",
+    "PrintWorkflowBackgroundSession",
+    "PrintWorkflowBackgroundSetupRequestedEventArgs",
+    "PrintWorkflowConfiguration",
+    "PrintWorkflowForegroundSession",
+    "PrintWorkflowForegroundSetupRequestedEventArgs",
+    "PrintWorkflowJobActivatedEventArgs",
+    "PrintWorkflowJobBackgroundSession",
+    "PrintWorkflowJobNotificationEventArgs",
+    "PrintWorkflowJobStartingEventArgs",
+    "PrintWorkflowJobTriggerDetails",
+    "PrintWorkflowJobUISession",
+    "PrintWorkflowObjectModelSourceFileContent",
+    "PrintWorkflowObjectModelTargetPackage",
+    "PrintWorkflowPdlConverter",
+    "PrintWorkflowPdlDataAvailableEventArgs",
+    "PrintWorkflowPdlModificationRequestedEventArgs",
+    "PrintWorkflowPdlSourceContent",
+    "PrintWorkflowPdlTargetStream",
+    "PrintWorkflowPrinterJob",
+    "PrintWorkflowSourceContent",
+    "PrintWorkflowSpoolStreamContent",
+    "PrintWorkflowStreamTarget",
+    "PrintWorkflowSubmittedEventArgs",
+    "PrintWorkflowSubmittedOperation",
+    "PrintWorkflowTarget",
+    "PrintWorkflowTriggerDetails",
+    "PrintWorkflowUIActivatedEventArgs",
+    "PrintWorkflowUILauncher",
+    "PrintWorkflowXpsDataAvailableEventArgs",
+]
+
 class PdlConversionHostBasedProcessingOperations(enum.IntFlag):
     NONE = 0
     PAGE_ROTATION = 0x1

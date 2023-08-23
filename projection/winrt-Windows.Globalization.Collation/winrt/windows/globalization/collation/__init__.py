@@ -3,6 +3,11 @@
 import winrt.system
 from . import _winrt_windows_globalization_collation
 
+__all__ = [
+    "CharacterGrouping",
+    "CharacterGroupings",
+]
+
 CharacterGrouping = _winrt_windows_globalization_collation.CharacterGrouping
 CharacterGroupings = _winrt_windows_globalization_collation.CharacterGroupings
 winrt.system._mixin_sequence(CharacterGroupings)

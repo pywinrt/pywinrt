@@ -3,6 +3,12 @@
 import winrt.system
 from . import _winrt_windows_devices_sensors_custom
 
+__all__ = [
+    "CustomSensor",
+    "CustomSensorReading",
+    "CustomSensorReadingChangedEventArgs",
+]
+
 CustomSensor = _winrt_windows_devices_sensors_custom.CustomSensor
 CustomSensorReading = _winrt_windows_devices_sensors_custom.CustomSensorReading
 CustomSensorReadingChangedEventArgs = _winrt_windows_devices_sensors_custom.CustomSensorReadingChangedEventArgs

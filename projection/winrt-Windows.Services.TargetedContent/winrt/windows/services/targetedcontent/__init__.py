@@ -5,6 +5,28 @@ import enum
 import winrt.system
 from . import _winrt_windows_services_targetedcontent
 
+__all__ = [
+    "TargetedContentAppInstallationState",
+    "TargetedContentAvailability",
+    "TargetedContentInteraction",
+    "TargetedContentObjectKind",
+    "TargetedContentValueKind",
+    "TargetedContentAction",
+    "TargetedContentAvailabilityChangedEventArgs",
+    "TargetedContentChangedEventArgs",
+    "TargetedContentCollection",
+    "TargetedContentContainer",
+    "TargetedContentFile",
+    "TargetedContentImage",
+    "TargetedContentItem",
+    "TargetedContentItemState",
+    "TargetedContentObject",
+    "TargetedContentStateChangedEventArgs",
+    "TargetedContentSubscription",
+    "TargetedContentSubscriptionOptions",
+    "TargetedContentValue",
+]
+
 class TargetedContentAppInstallationState(enum.IntEnum):
     NOT_APPLICABLE = 0
     NOT_INSTALLED = 1

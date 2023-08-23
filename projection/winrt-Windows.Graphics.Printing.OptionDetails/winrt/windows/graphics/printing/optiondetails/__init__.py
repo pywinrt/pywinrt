@@ -5,6 +5,35 @@ import enum
 import winrt.system
 from . import _winrt_windows_graphics_printing_optiondetails
 
+__all__ = [
+    "PrintOptionStates",
+    "PrintOptionType",
+    "PrintBindingOptionDetails",
+    "PrintBorderingOptionDetails",
+    "PrintCollationOptionDetails",
+    "PrintColorModeOptionDetails",
+    "PrintCopiesOptionDetails",
+    "PrintCustomItemDetails",
+    "PrintCustomItemListOptionDetails",
+    "PrintCustomTextOptionDetails",
+    "PrintCustomToggleOptionDetails",
+    "PrintDuplexOptionDetails",
+    "PrintHolePunchOptionDetails",
+    "PrintMediaSizeOptionDetails",
+    "PrintMediaTypeOptionDetails",
+    "PrintOrientationOptionDetails",
+    "PrintPageRangeOptionDetails",
+    "PrintQualityOptionDetails",
+    "PrintStapleOptionDetails",
+    "PrintTaskOptionChangedEventArgs",
+    "PrintTaskOptionDetails",
+    "IPrintCustomOptionDetails",
+    "IPrintItemListOptionDetails",
+    "IPrintNumberOptionDetails",
+    "IPrintOptionDetails",
+    "IPrintTextOptionDetails",
+]
+
 class PrintOptionStates(enum.IntFlag):
     NONE = 0
     ENABLED = 0x1

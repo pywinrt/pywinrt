@@ -5,6 +5,31 @@ import enum
 import winrt.system
 from . import _winrt_windows_ui_shell
 
+__all__ = [
+    "SecurityAppKind",
+    "SecurityAppState",
+    "SecurityAppSubstatus",
+    "ShareWindowCommand",
+    "AdaptiveCardBuilder",
+    "FocusSession",
+    "FocusSessionManager",
+    "SecurityAppManager",
+    "ShareWindowCommandEventArgs",
+    "ShareWindowCommandSource",
+    "TaskbarManager",
+    "WindowTab",
+    "WindowTabCloseRequestedEventArgs",
+    "WindowTabCollection",
+    "WindowTabGroup",
+    "WindowTabIcon",
+    "WindowTabManager",
+    "WindowTabSwitchRequestedEventArgs",
+    "WindowTabTearOutRequestedEventArgs",
+    "WindowTabThumbnailRequestedEventArgs",
+    "IAdaptiveCard",
+    "IAdaptiveCardBuilderStatics",
+]
+
 class SecurityAppKind(enum.IntEnum):
     WEB_PROTECTION = 0
 

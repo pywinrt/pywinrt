@@ -5,6 +5,17 @@ import enum
 import winrt.system
 from . import _winrt_windows_media_editing
 
+__all__ = [
+    "MediaTrimmingPreference",
+    "VideoFramePrecision",
+    "BackgroundAudioTrack",
+    "EmbeddedAudioTrack",
+    "MediaClip",
+    "MediaComposition",
+    "MediaOverlay",
+    "MediaOverlayLayer",
+]
+
 class MediaTrimmingPreference(enum.IntEnum):
     FAST = 0
     PRECISE = 1

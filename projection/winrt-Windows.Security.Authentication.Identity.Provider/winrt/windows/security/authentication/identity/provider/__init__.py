@@ -5,6 +5,27 @@ import enum
 import winrt.system
 from . import _winrt_windows_security_authentication_identity_provider
 
+__all__ = [
+    "SecondaryAuthenticationFactorAuthenticationMessage",
+    "SecondaryAuthenticationFactorAuthenticationScenario",
+    "SecondaryAuthenticationFactorAuthenticationStage",
+    "SecondaryAuthenticationFactorAuthenticationStatus",
+    "SecondaryAuthenticationFactorDeviceCapabilities",
+    "SecondaryAuthenticationFactorDeviceFindScope",
+    "SecondaryAuthenticationFactorDevicePresence",
+    "SecondaryAuthenticationFactorDevicePresenceMonitoringMode",
+    "SecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus",
+    "SecondaryAuthenticationFactorFinishAuthenticationStatus",
+    "SecondaryAuthenticationFactorRegistrationStatus",
+    "SecondaryAuthenticationFactorAuthentication",
+    "SecondaryAuthenticationFactorAuthenticationResult",
+    "SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs",
+    "SecondaryAuthenticationFactorAuthenticationStageInfo",
+    "SecondaryAuthenticationFactorInfo",
+    "SecondaryAuthenticationFactorRegistration",
+    "SecondaryAuthenticationFactorRegistrationResult",
+]
+
 class SecondaryAuthenticationFactorAuthenticationMessage(enum.IntEnum):
     INVALID = 0
     SWIPE_UP_WELCOME = 1

@@ -3,6 +3,24 @@
 import winrt.system
 from . import _winrt_windows_ui_xaml_markup
 
+__all__ = [
+    "XamlBinaryWriterErrorInformation",
+    "XmlnsDefinition",
+    "MarkupExtension",
+    "XamlBinaryWriter",
+    "XamlBindingHelper",
+    "XamlMarkupHelper",
+    "XamlReader",
+    "IComponentConnector",
+    "IComponentConnector2",
+    "IDataTemplateComponent",
+    "IXamlBindScopeDiagnostics",
+    "IXamlMember",
+    "IXamlMetadataProvider",
+    "IXamlType",
+    "IXamlType2",
+]
+
 XamlBinaryWriterErrorInformation = _winrt_windows_ui_xaml_markup.XamlBinaryWriterErrorInformation
 XmlnsDefinition = _winrt_windows_ui_xaml_markup.XmlnsDefinition
 MarkupExtension = _winrt_windows_ui_xaml_markup.MarkupExtension

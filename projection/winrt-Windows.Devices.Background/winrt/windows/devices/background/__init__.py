@@ -3,5 +3,10 @@
 import winrt.system
 from . import _winrt_windows_devices_background
 
+__all__ = [
+    "DeviceServicingDetails",
+    "DeviceUseDetails",
+]
+
 DeviceServicingDetails = _winrt_windows_devices_background.DeviceServicingDetails
 DeviceUseDetails = _winrt_windows_devices_background.DeviceUseDetails

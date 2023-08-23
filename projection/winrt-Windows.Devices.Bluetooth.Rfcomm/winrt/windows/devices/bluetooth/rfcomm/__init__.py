@@ -3,6 +3,13 @@
 import winrt.system
 from . import _winrt_windows_devices_bluetooth_rfcomm
 
+__all__ = [
+    "RfcommDeviceService",
+    "RfcommDeviceServicesResult",
+    "RfcommServiceId",
+    "RfcommServiceProvider",
+]
+
 RfcommDeviceService = _winrt_windows_devices_bluetooth_rfcomm.RfcommDeviceService
 RfcommDeviceServicesResult = _winrt_windows_devices_bluetooth_rfcomm.RfcommDeviceServicesResult
 RfcommServiceId = _winrt_windows_devices_bluetooth_rfcomm.RfcommServiceId
