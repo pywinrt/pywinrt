@@ -3445,7 +3445,7 @@ return [delegate = std::move(_delegate)](%)
                         "winrt::handle_type<py::gil_state_traits> gil_state{ PyGILState_Ensure() };\n\n");
 
                     std::vector<std::string> tuple_params{};
-                    for (auto&& p : signature.params())
+                    for (auto&& p : filter_py_in_params(signature.params()))
                     {
                         auto param_name = w.write_temp("%", bind<write_param_name>(p));
                         auto py_param_name = "py_"s + param_name;
@@ -3495,12 +3495,67 @@ if (!return_value)
     throw winrt::hresult_error();
 }
 )");
+                    auto i = signature.return_signature() ? 1 : 0;
+                    for (auto&& p : filter_py_out_params(signature.params()))
+                    {
+                        auto category = get_param_category(p);
+
+                        switch (category)
+                        {
+                        case param_category::out:
+                            w.write(
+                                "\n% = py::convert_to<%>(return_value.get(), %);\n",
+                                bind<write_param_name>(p),
+                                p.second->Type(),
+                                i++);
+                            break;
+                        case param_category::receive_array:
+                            w.write(
+                                "\nauto %_buf = py::convert_to<py::pybuf_view<%, false>>(return_value.get(), %);\n",
+                                bind<write_param_name>(p),
+                                p.second->Type(),
+                                i++);
+                            w.write(
+                                "static_cast<winrt::com_array<%>&>(%) = winrt::com_array<%>{%_buf.begin(), %_buf.end()};\n",
+                                p.second->Type(),
+                                bind<write_param_name>(p),
+                                p.second->Type(),
+                                bind<write_param_name>(p),
+                                bind<write_param_name>(p));
+                            break;
+                        default:
+                            throw_invalid("invalid param_category for delegate");
+                        }
+                    }
 
                     if (signature.return_signature())
                     {
-                        w.write(
-                            "\nreturn py::convert_to<%>(return_value.get());\n",
-                            signature.return_signature().Type());
+                        std::string index = "";
+
+                        if (i > 1)
+                        {
+                            // delegate has out params and a return value so
+                            // the return value is the first item in the tuple
+                            index = ", 0";
+                        }
+
+                        if (signature.return_signature().Type().is_szarray())
+                        {
+                            w.write(
+                                "\nauto return_buf = py::convert_to<py::pybuf_view<%, false>>(return_value.get()%);\n",
+                                signature.return_signature().Type(),
+                                index);
+                            w.write(
+                                "return winrt::com_array<%>{return_buf.begin(), return_buf.end()};\n",
+                                signature.return_signature().Type());
+                        }
+                        else
+                        {
+                            w.write(
+                                "\nreturn py::convert_to<%>(return_value.get()%);\n",
+                                signature.return_signature().Type(),
+                                index);
+                        }
                     }
                 }
 

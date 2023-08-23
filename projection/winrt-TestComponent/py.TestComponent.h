@@ -46,14 +46,7 @@ namespace py::impl::TestComponent
                     throw std::invalid_argument("param1");
                 }
 
-                py::pyobj_handle py_param2{ py::convert(param2) };
-
-                if (!py_param2) {
-                    PyErr_WriteUnraisable(delegate.callable());
-                    throw std::invalid_argument("param2");
-                }
-
-                py::pyobj_handle args{ PyTuple_Pack(3, py_param0.get(), py_param1.get(), py_param2.get()) };
+                py::pyobj_handle args{ PyTuple_Pack(2, py_param0.get(), py_param1.get()) };
 
                 if (!args) {
                     PyErr_WriteUnraisable(delegate.callable());
@@ -68,7 +61,11 @@ namespace py::impl::TestComponent
                     throw winrt::hresult_error();
                 }
 
-                return py::convert_to<double>(return_value.get());
+                auto param2_buf = py::convert_to<py::pybuf_view<double, false>>(return_value.get(), 1);
+                static_cast<winrt::com_array<double>&>(param2) = winrt::com_array<double>{param2_buf.begin(), param2_buf.end()};
+
+                auto return_buf = py::convert_to<py::pybuf_view<double, false>>(return_value.get(), 0);
+                return winrt::com_array<double>{return_buf.begin(), return_buf.end()};
             };
         };
     };
@@ -97,14 +94,7 @@ namespace py::impl::TestComponent
                     throw std::invalid_argument("param1");
                 }
 
-                py::pyobj_handle py_param2{ py::convert(param2) };
-
-                if (!py_param2) {
-                    PyErr_WriteUnraisable(delegate.callable());
-                    throw std::invalid_argument("param2");
-                }
-
-                py::pyobj_handle args{ PyTuple_Pack(3, py_param0.get(), py_param1.get(), py_param2.get()) };
+                py::pyobj_handle args{ PyTuple_Pack(2, py_param0.get(), py_param1.get()) };
 
                 if (!args) {
                     PyErr_WriteUnraisable(delegate.callable());
@@ -119,7 +109,11 @@ namespace py::impl::TestComponent
                     throw winrt::hresult_error();
                 }
 
-                return py::convert_to<char16_t>(return_value.get());
+                auto param2_buf = py::convert_to<py::pybuf_view<char16_t, false>>(return_value.get(), 1);
+                static_cast<winrt::com_array<char16_t>&>(param2) = winrt::com_array<char16_t>{param2_buf.begin(), param2_buf.end()};
+
+                auto return_buf = py::convert_to<py::pybuf_view<char16_t, false>>(return_value.get(), 0);
+                return winrt::com_array<char16_t>{return_buf.begin(), return_buf.end()};
             };
         };
     };
@@ -148,14 +142,7 @@ namespace py::impl::TestComponent
                     throw std::invalid_argument("param1");
                 }
 
-                py::pyobj_handle py_param2{ py::convert(param2) };
-
-                if (!py_param2) {
-                    PyErr_WriteUnraisable(delegate.callable());
-                    throw std::invalid_argument("param2");
-                }
-
-                py::pyobj_handle args{ PyTuple_Pack(3, py_param0.get(), py_param1.get(), py_param2.get()) };
+                py::pyobj_handle args{ PyTuple_Pack(2, py_param0.get(), py_param1.get()) };
 
                 if (!args) {
                     PyErr_WriteUnraisable(delegate.callable());
@@ -170,7 +157,11 @@ namespace py::impl::TestComponent
                     throw winrt::hresult_error();
                 }
 
-                return py::convert_to<winrt::hstring>(return_value.get());
+                auto param2_buf = py::convert_to<py::pybuf_view<winrt::hstring, false>>(return_value.get(), 1);
+                static_cast<winrt::com_array<winrt::hstring>&>(param2) = winrt::com_array<winrt::hstring>{param2_buf.begin(), param2_buf.end()};
+
+                auto return_buf = py::convert_to<py::pybuf_view<winrt::hstring, false>>(return_value.get(), 0);
+                return winrt::com_array<winrt::hstring>{return_buf.begin(), return_buf.end()};
             };
         };
     };
@@ -199,14 +190,7 @@ namespace py::impl::TestComponent
                     throw std::invalid_argument("param1");
                 }
 
-                py::pyobj_handle py_param2{ py::convert(param2) };
-
-                if (!py_param2) {
-                    PyErr_WriteUnraisable(delegate.callable());
-                    throw std::invalid_argument("param2");
-                }
-
-                py::pyobj_handle args{ PyTuple_Pack(3, py_param0.get(), py_param1.get(), py_param2.get()) };
+                py::pyobj_handle args{ PyTuple_Pack(2, py_param0.get(), py_param1.get()) };
 
                 if (!args) {
                     PyErr_WriteUnraisable(delegate.callable());
@@ -221,7 +205,11 @@ namespace py::impl::TestComponent
                     throw winrt::hresult_error();
                 }
 
-                return py::convert_to<winrt::TestComponent::Blittable>(return_value.get());
+                auto param2_buf = py::convert_to<py::pybuf_view<winrt::TestComponent::Blittable, false>>(return_value.get(), 1);
+                static_cast<winrt::com_array<winrt::TestComponent::Blittable>&>(param2) = winrt::com_array<winrt::TestComponent::Blittable>{param2_buf.begin(), param2_buf.end()};
+
+                auto return_buf = py::convert_to<py::pybuf_view<winrt::TestComponent::Blittable, false>>(return_value.get(), 0);
+                return winrt::com_array<winrt::TestComponent::Blittable>{return_buf.begin(), return_buf.end()};
             };
         };
     };
@@ -250,14 +238,7 @@ namespace py::impl::TestComponent
                     throw std::invalid_argument("param1");
                 }
 
-                py::pyobj_handle py_param2{ py::convert(param2) };
-
-                if (!py_param2) {
-                    PyErr_WriteUnraisable(delegate.callable());
-                    throw std::invalid_argument("param2");
-                }
-
-                py::pyobj_handle args{ PyTuple_Pack(3, py_param0.get(), py_param1.get(), py_param2.get()) };
+                py::pyobj_handle args{ PyTuple_Pack(2, py_param0.get(), py_param1.get()) };
 
                 if (!args) {
                     PyErr_WriteUnraisable(delegate.callable());
@@ -272,7 +253,11 @@ namespace py::impl::TestComponent
                     throw winrt::hresult_error();
                 }
 
-                return py::convert_to<winrt::TestComponent::NonBlittable>(return_value.get());
+                auto param2_buf = py::convert_to<py::pybuf_view<winrt::TestComponent::NonBlittable, false>>(return_value.get(), 1);
+                static_cast<winrt::com_array<winrt::TestComponent::NonBlittable>&>(param2) = winrt::com_array<winrt::TestComponent::NonBlittable>{param2_buf.begin(), param2_buf.end()};
+
+                auto return_buf = py::convert_to<py::pybuf_view<winrt::TestComponent::NonBlittable, false>>(return_value.get(), 0);
+                return winrt::com_array<winrt::TestComponent::NonBlittable>{return_buf.begin(), return_buf.end()};
             };
         };
     };
@@ -301,14 +286,7 @@ namespace py::impl::TestComponent
                     throw std::invalid_argument("param1");
                 }
 
-                py::pyobj_handle py_param2{ py::convert(param2) };
-
-                if (!py_param2) {
-                    PyErr_WriteUnraisable(delegate.callable());
-                    throw std::invalid_argument("param2");
-                }
-
-                py::pyobj_handle args{ PyTuple_Pack(3, py_param0.get(), py_param1.get(), py_param2.get()) };
+                py::pyobj_handle args{ PyTuple_Pack(2, py_param0.get(), py_param1.get()) };
 
                 if (!args) {
                     PyErr_WriteUnraisable(delegate.callable());
@@ -323,7 +301,11 @@ namespace py::impl::TestComponent
                     throw winrt::hresult_error();
                 }
 
-                return py::convert_to<winrt::TestComponent::Nested>(return_value.get());
+                auto param2_buf = py::convert_to<py::pybuf_view<winrt::TestComponent::Nested, false>>(return_value.get(), 1);
+                static_cast<winrt::com_array<winrt::TestComponent::Nested>&>(param2) = winrt::com_array<winrt::TestComponent::Nested>{param2_buf.begin(), param2_buf.end()};
+
+                auto return_buf = py::convert_to<py::pybuf_view<winrt::TestComponent::Nested, false>>(return_value.get(), 0);
+                return winrt::com_array<winrt::TestComponent::Nested>{return_buf.begin(), return_buf.end()};
             };
         };
     };
@@ -352,14 +334,7 @@ namespace py::impl::TestComponent
                     throw std::invalid_argument("param1");
                 }
 
-                py::pyobj_handle py_param2{ py::convert(param2) };
-
-                if (!py_param2) {
-                    PyErr_WriteUnraisable(delegate.callable());
-                    throw std::invalid_argument("param2");
-                }
-
-                py::pyobj_handle args{ PyTuple_Pack(3, py_param0.get(), py_param1.get(), py_param2.get()) };
+                py::pyobj_handle args{ PyTuple_Pack(2, py_param0.get(), py_param1.get()) };
 
                 if (!args) {
                     PyErr_WriteUnraisable(delegate.callable());
@@ -374,7 +349,11 @@ namespace py::impl::TestComponent
                     throw winrt::hresult_error();
                 }
 
-                return py::convert_to<bool>(return_value.get());
+                auto param2_buf = py::convert_to<py::pybuf_view<bool, false>>(return_value.get(), 1);
+                static_cast<winrt::com_array<bool>&>(param2) = winrt::com_array<bool>{param2_buf.begin(), param2_buf.end()};
+
+                auto return_buf = py::convert_to<py::pybuf_view<bool, false>>(return_value.get(), 0);
+                return winrt::com_array<bool>{return_buf.begin(), return_buf.end()};
             };
         };
     };
@@ -403,14 +382,7 @@ namespace py::impl::TestComponent
                     throw std::invalid_argument("param1");
                 }
 
-                py::pyobj_handle py_param2{ py::convert(param2) };
-
-                if (!py_param2) {
-                    PyErr_WriteUnraisable(delegate.callable());
-                    throw std::invalid_argument("param2");
-                }
-
-                py::pyobj_handle args{ PyTuple_Pack(3, py_param0.get(), py_param1.get(), py_param2.get()) };
+                py::pyobj_handle args{ PyTuple_Pack(2, py_param0.get(), py_param1.get()) };
 
                 if (!args) {
                     PyErr_WriteUnraisable(delegate.callable());
@@ -425,7 +397,11 @@ namespace py::impl::TestComponent
                     throw winrt::hresult_error();
                 }
 
-                return py::convert_to<uint8_t>(return_value.get());
+                auto param2_buf = py::convert_to<py::pybuf_view<uint8_t, false>>(return_value.get(), 1);
+                static_cast<winrt::com_array<uint8_t>&>(param2) = winrt::com_array<uint8_t>{param2_buf.begin(), param2_buf.end()};
+
+                auto return_buf = py::convert_to<py::pybuf_view<uint8_t, false>>(return_value.get(), 0);
+                return winrt::com_array<uint8_t>{return_buf.begin(), return_buf.end()};
             };
         };
     };
@@ -454,14 +430,7 @@ namespace py::impl::TestComponent
                     throw std::invalid_argument("param1");
                 }
 
-                py::pyobj_handle py_param2{ py::convert(param2) };
-
-                if (!py_param2) {
-                    PyErr_WriteUnraisable(delegate.callable());
-                    throw std::invalid_argument("param2");
-                }
-
-                py::pyobj_handle args{ PyTuple_Pack(3, py_param0.get(), py_param1.get(), py_param2.get()) };
+                py::pyobj_handle args{ PyTuple_Pack(2, py_param0.get(), py_param1.get()) };
 
                 if (!args) {
                     PyErr_WriteUnraisable(delegate.callable());
@@ -476,7 +445,11 @@ namespace py::impl::TestComponent
                     throw winrt::hresult_error();
                 }
 
-                return py::convert_to<uint16_t>(return_value.get());
+                auto param2_buf = py::convert_to<py::pybuf_view<uint16_t, false>>(return_value.get(), 1);
+                static_cast<winrt::com_array<uint16_t>&>(param2) = winrt::com_array<uint16_t>{param2_buf.begin(), param2_buf.end()};
+
+                auto return_buf = py::convert_to<py::pybuf_view<uint16_t, false>>(return_value.get(), 0);
+                return winrt::com_array<uint16_t>{return_buf.begin(), return_buf.end()};
             };
         };
     };
@@ -505,14 +478,7 @@ namespace py::impl::TestComponent
                     throw std::invalid_argument("param1");
                 }
 
-                py::pyobj_handle py_param2{ py::convert(param2) };
-
-                if (!py_param2) {
-                    PyErr_WriteUnraisable(delegate.callable());
-                    throw std::invalid_argument("param2");
-                }
-
-                py::pyobj_handle args{ PyTuple_Pack(3, py_param0.get(), py_param1.get(), py_param2.get()) };
+                py::pyobj_handle args{ PyTuple_Pack(2, py_param0.get(), py_param1.get()) };
 
                 if (!args) {
                     PyErr_WriteUnraisable(delegate.callable());
@@ -527,7 +493,11 @@ namespace py::impl::TestComponent
                     throw winrt::hresult_error();
                 }
 
-                return py::convert_to<uint32_t>(return_value.get());
+                auto param2_buf = py::convert_to<py::pybuf_view<uint32_t, false>>(return_value.get(), 1);
+                static_cast<winrt::com_array<uint32_t>&>(param2) = winrt::com_array<uint32_t>{param2_buf.begin(), param2_buf.end()};
+
+                auto return_buf = py::convert_to<py::pybuf_view<uint32_t, false>>(return_value.get(), 0);
+                return winrt::com_array<uint32_t>{return_buf.begin(), return_buf.end()};
             };
         };
     };
@@ -556,14 +526,7 @@ namespace py::impl::TestComponent
                     throw std::invalid_argument("param1");
                 }
 
-                py::pyobj_handle py_param2{ py::convert(param2) };
-
-                if (!py_param2) {
-                    PyErr_WriteUnraisable(delegate.callable());
-                    throw std::invalid_argument("param2");
-                }
-
-                py::pyobj_handle args{ PyTuple_Pack(3, py_param0.get(), py_param1.get(), py_param2.get()) };
+                py::pyobj_handle args{ PyTuple_Pack(2, py_param0.get(), py_param1.get()) };
 
                 if (!args) {
                     PyErr_WriteUnraisable(delegate.callable());
@@ -578,7 +541,11 @@ namespace py::impl::TestComponent
                     throw winrt::hresult_error();
                 }
 
-                return py::convert_to<uint64_t>(return_value.get());
+                auto param2_buf = py::convert_to<py::pybuf_view<uint64_t, false>>(return_value.get(), 1);
+                static_cast<winrt::com_array<uint64_t>&>(param2) = winrt::com_array<uint64_t>{param2_buf.begin(), param2_buf.end()};
+
+                auto return_buf = py::convert_to<py::pybuf_view<uint64_t, false>>(return_value.get(), 0);
+                return winrt::com_array<uint64_t>{return_buf.begin(), return_buf.end()};
             };
         };
     };
@@ -607,14 +574,7 @@ namespace py::impl::TestComponent
                     throw std::invalid_argument("param1");
                 }
 
-                py::pyobj_handle py_param2{ py::convert(param2) };
-
-                if (!py_param2) {
-                    PyErr_WriteUnraisable(delegate.callable());
-                    throw std::invalid_argument("param2");
-                }
-
-                py::pyobj_handle args{ PyTuple_Pack(3, py_param0.get(), py_param1.get(), py_param2.get()) };
+                py::pyobj_handle args{ PyTuple_Pack(2, py_param0.get(), py_param1.get()) };
 
                 if (!args) {
                     PyErr_WriteUnraisable(delegate.callable());
@@ -629,7 +589,11 @@ namespace py::impl::TestComponent
                     throw winrt::hresult_error();
                 }
 
-                return py::convert_to<int16_t>(return_value.get());
+                auto param2_buf = py::convert_to<py::pybuf_view<int16_t, false>>(return_value.get(), 1);
+                static_cast<winrt::com_array<int16_t>&>(param2) = winrt::com_array<int16_t>{param2_buf.begin(), param2_buf.end()};
+
+                auto return_buf = py::convert_to<py::pybuf_view<int16_t, false>>(return_value.get(), 0);
+                return winrt::com_array<int16_t>{return_buf.begin(), return_buf.end()};
             };
         };
     };
@@ -658,14 +622,7 @@ namespace py::impl::TestComponent
                     throw std::invalid_argument("param1");
                 }
 
-                py::pyobj_handle py_param2{ py::convert(param2) };
-
-                if (!py_param2) {
-                    PyErr_WriteUnraisable(delegate.callable());
-                    throw std::invalid_argument("param2");
-                }
-
-                py::pyobj_handle args{ PyTuple_Pack(3, py_param0.get(), py_param1.get(), py_param2.get()) };
+                py::pyobj_handle args{ PyTuple_Pack(2, py_param0.get(), py_param1.get()) };
 
                 if (!args) {
                     PyErr_WriteUnraisable(delegate.callable());
@@ -680,7 +637,11 @@ namespace py::impl::TestComponent
                     throw winrt::hresult_error();
                 }
 
-                return py::convert_to<int32_t>(return_value.get());
+                auto param2_buf = py::convert_to<py::pybuf_view<int32_t, false>>(return_value.get(), 1);
+                static_cast<winrt::com_array<int32_t>&>(param2) = winrt::com_array<int32_t>{param2_buf.begin(), param2_buf.end()};
+
+                auto return_buf = py::convert_to<py::pybuf_view<int32_t, false>>(return_value.get(), 0);
+                return winrt::com_array<int32_t>{return_buf.begin(), return_buf.end()};
             };
         };
     };
@@ -709,14 +670,7 @@ namespace py::impl::TestComponent
                     throw std::invalid_argument("param1");
                 }
 
-                py::pyobj_handle py_param2{ py::convert(param2) };
-
-                if (!py_param2) {
-                    PyErr_WriteUnraisable(delegate.callable());
-                    throw std::invalid_argument("param2");
-                }
-
-                py::pyobj_handle args{ PyTuple_Pack(3, py_param0.get(), py_param1.get(), py_param2.get()) };
+                py::pyobj_handle args{ PyTuple_Pack(2, py_param0.get(), py_param1.get()) };
 
                 if (!args) {
                     PyErr_WriteUnraisable(delegate.callable());
@@ -731,7 +685,11 @@ namespace py::impl::TestComponent
                     throw winrt::hresult_error();
                 }
 
-                return py::convert_to<int64_t>(return_value.get());
+                auto param2_buf = py::convert_to<py::pybuf_view<int64_t, false>>(return_value.get(), 1);
+                static_cast<winrt::com_array<int64_t>&>(param2) = winrt::com_array<int64_t>{param2_buf.begin(), param2_buf.end()};
+
+                auto return_buf = py::convert_to<py::pybuf_view<int64_t, false>>(return_value.get(), 0);
+                return winrt::com_array<int64_t>{return_buf.begin(), return_buf.end()};
             };
         };
     };
@@ -760,14 +718,7 @@ namespace py::impl::TestComponent
                     throw std::invalid_argument("param1");
                 }
 
-                py::pyobj_handle py_param2{ py::convert(param2) };
-
-                if (!py_param2) {
-                    PyErr_WriteUnraisable(delegate.callable());
-                    throw std::invalid_argument("param2");
-                }
-
-                py::pyobj_handle args{ PyTuple_Pack(3, py_param0.get(), py_param1.get(), py_param2.get()) };
+                py::pyobj_handle args{ PyTuple_Pack(2, py_param0.get(), py_param1.get()) };
 
                 if (!args) {
                     PyErr_WriteUnraisable(delegate.callable());
@@ -782,7 +733,11 @@ namespace py::impl::TestComponent
                     throw winrt::hresult_error();
                 }
 
-                return py::convert_to<float>(return_value.get());
+                auto param2_buf = py::convert_to<py::pybuf_view<float, false>>(return_value.get(), 1);
+                static_cast<winrt::com_array<float>&>(param2) = winrt::com_array<float>{param2_buf.begin(), param2_buf.end()};
+
+                auto return_buf = py::convert_to<py::pybuf_view<float, false>>(return_value.get(), 0);
+                return winrt::com_array<float>{return_buf.begin(), return_buf.end()};
             };
         };
     };
@@ -1008,14 +963,7 @@ namespace py::impl::TestComponent
                     throw std::invalid_argument("param0");
                 }
 
-                py::pyobj_handle py_param1{ py::convert(param1) };
-
-                if (!py_param1) {
-                    PyErr_WriteUnraisable(delegate.callable());
-                    throw std::invalid_argument("param1");
-                }
-
-                py::pyobj_handle args{ PyTuple_Pack(2, py_param0.get(), py_param1.get()) };
+                py::pyobj_handle args{ PyTuple_Pack(1, py_param0.get()) };
 
                 if (!args) {
                     PyErr_WriteUnraisable(delegate.callable());
@@ -1030,7 +978,9 @@ namespace py::impl::TestComponent
                     throw winrt::hresult_error();
                 }
 
-                return py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(return_value.get());
+                param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(return_value.get(), 1);
+
+                return py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(return_value.get(), 0);
             };
         };
     };
@@ -1052,14 +1002,7 @@ namespace py::impl::TestComponent
                     throw std::invalid_argument("param0");
                 }
 
-                py::pyobj_handle py_param1{ py::convert(param1) };
-
-                if (!py_param1) {
-                    PyErr_WriteUnraisable(delegate.callable());
-                    throw std::invalid_argument("param1");
-                }
-
-                py::pyobj_handle args{ PyTuple_Pack(2, py_param0.get(), py_param1.get()) };
+                py::pyobj_handle args{ PyTuple_Pack(1, py_param0.get()) };
 
                 if (!args) {
                     PyErr_WriteUnraisable(delegate.callable());
@@ -1074,7 +1017,9 @@ namespace py::impl::TestComponent
                     throw winrt::hresult_error();
                 }
 
-                return py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::hstring>>>(return_value.get());
+                param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::hstring>>>(return_value.get(), 1);
+
+                return py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::hstring>>>(return_value.get(), 0);
             };
         };
     };
@@ -1096,14 +1041,7 @@ namespace py::impl::TestComponent
                     throw std::invalid_argument("param0");
                 }
 
-                py::pyobj_handle py_param1{ py::convert(param1) };
-
-                if (!py_param1) {
-                    PyErr_WriteUnraisable(delegate.callable());
-                    throw std::invalid_argument("param1");
-                }
-
-                py::pyobj_handle args{ PyTuple_Pack(2, py_param0.get(), py_param1.get()) };
+                py::pyobj_handle args{ PyTuple_Pack(1, py_param0.get()) };
 
                 if (!args) {
                     PyErr_WriteUnraisable(delegate.callable());
@@ -1118,7 +1056,9 @@ namespace py::impl::TestComponent
                     throw winrt::hresult_error();
                 }
 
-                return py::convert_to<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(return_value.get());
+                param1 = py::convert_to<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(return_value.get(), 1);
+
+                return py::convert_to<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>>(return_value.get(), 0);
             };
         };
     };
@@ -1140,14 +1080,7 @@ namespace py::impl::TestComponent
                     throw std::invalid_argument("param0");
                 }
 
-                py::pyobj_handle py_param1{ py::convert(param1) };
-
-                if (!py_param1) {
-                    PyErr_WriteUnraisable(delegate.callable());
-                    throw std::invalid_argument("param1");
-                }
-
-                py::pyobj_handle args{ PyTuple_Pack(2, py_param0.get(), py_param1.get()) };
+                py::pyobj_handle args{ PyTuple_Pack(1, py_param0.get()) };
 
                 if (!args) {
                     PyErr_WriteUnraisable(delegate.callable());
@@ -1162,7 +1095,9 @@ namespace py::impl::TestComponent
                     throw winrt::hresult_error();
                 }
 
-                return py::convert_to<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::hstring>>(return_value.get());
+                param1 = py::convert_to<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::hstring>>(return_value.get(), 1);
+
+                return py::convert_to<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::hstring>>(return_value.get(), 0);
             };
         };
     };
@@ -1184,14 +1119,7 @@ namespace py::impl::TestComponent
                     throw std::invalid_argument("param0");
                 }
 
-                py::pyobj_handle py_param1{ py::convert(param1) };
-
-                if (!py_param1) {
-                    PyErr_WriteUnraisable(delegate.callable());
-                    throw std::invalid_argument("param1");
-                }
-
-                py::pyobj_handle args{ PyTuple_Pack(2, py_param0.get(), py_param1.get()) };
+                py::pyobj_handle args{ PyTuple_Pack(1, py_param0.get()) };
 
                 if (!args) {
                     PyErr_WriteUnraisable(delegate.callable());
@@ -1206,7 +1134,9 @@ namespace py::impl::TestComponent
                     throw winrt::hresult_error();
                 }
 
-                return py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::hstring>>(return_value.get());
+                param1 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::hstring>>(return_value.get(), 1);
+
+                return py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::hstring>>(return_value.get(), 0);
             };
         };
     };
@@ -1228,14 +1158,7 @@ namespace py::impl::TestComponent
                     throw std::invalid_argument("param0");
                 }
 
-                py::pyobj_handle py_param1{ py::convert(param1) };
-
-                if (!py_param1) {
-                    PyErr_WriteUnraisable(delegate.callable());
-                    throw std::invalid_argument("param1");
-                }
-
-                py::pyobj_handle args{ PyTuple_Pack(2, py_param0.get(), py_param1.get()) };
+                py::pyobj_handle args{ PyTuple_Pack(1, py_param0.get()) };
 
                 if (!args) {
                     PyErr_WriteUnraisable(delegate.callable());
@@ -1250,7 +1173,9 @@ namespace py::impl::TestComponent
                     throw winrt::hresult_error();
                 }
 
-                return py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::hstring>>(return_value.get());
+                param1 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::hstring>>(return_value.get(), 1);
+
+                return py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::hstring>>(return_value.get(), 0);
             };
         };
     };
@@ -1272,14 +1197,7 @@ namespace py::impl::TestComponent
                     throw std::invalid_argument("param0");
                 }
 
-                py::pyobj_handle py_param1{ py::convert(param1) };
-
-                if (!py_param1) {
-                    PyErr_WriteUnraisable(delegate.callable());
-                    throw std::invalid_argument("param1");
-                }
-
-                py::pyobj_handle args{ PyTuple_Pack(2, py_param0.get(), py_param1.get()) };
+                py::pyobj_handle args{ PyTuple_Pack(1, py_param0.get()) };
 
                 if (!args) {
                     PyErr_WriteUnraisable(delegate.callable());
@@ -1294,7 +1212,9 @@ namespace py::impl::TestComponent
                     throw winrt::hresult_error();
                 }
 
-                return py::convert_to<double>(return_value.get());
+                param1 = py::convert_to<double>(return_value.get(), 1);
+
+                return py::convert_to<double>(return_value.get(), 0);
             };
         };
     };
@@ -1316,14 +1236,7 @@ namespace py::impl::TestComponent
                     throw std::invalid_argument("param0");
                 }
 
-                py::pyobj_handle py_param1{ py::convert(param1) };
-
-                if (!py_param1) {
-                    PyErr_WriteUnraisable(delegate.callable());
-                    throw std::invalid_argument("param1");
-                }
-
-                py::pyobj_handle args{ PyTuple_Pack(2, py_param0.get(), py_param1.get()) };
+                py::pyobj_handle args{ PyTuple_Pack(1, py_param0.get()) };
 
                 if (!args) {
                     PyErr_WriteUnraisable(delegate.callable());
@@ -1338,7 +1251,9 @@ namespace py::impl::TestComponent
                     throw winrt::hresult_error();
                 }
 
-                return py::convert_to<char16_t>(return_value.get());
+                param1 = py::convert_to<char16_t>(return_value.get(), 1);
+
+                return py::convert_to<char16_t>(return_value.get(), 0);
             };
         };
     };
@@ -1360,14 +1275,7 @@ namespace py::impl::TestComponent
                     throw std::invalid_argument("param0");
                 }
 
-                py::pyobj_handle py_param1{ py::convert(param1) };
-
-                if (!py_param1) {
-                    PyErr_WriteUnraisable(delegate.callable());
-                    throw std::invalid_argument("param1");
-                }
-
-                py::pyobj_handle args{ PyTuple_Pack(2, py_param0.get(), py_param1.get()) };
+                py::pyobj_handle args{ PyTuple_Pack(1, py_param0.get()) };
 
                 if (!args) {
                     PyErr_WriteUnraisable(delegate.callable());
@@ -1382,7 +1290,9 @@ namespace py::impl::TestComponent
                     throw winrt::hresult_error();
                 }
 
-                return py::convert_to<winrt::hstring>(return_value.get());
+                param1 = py::convert_to<winrt::hstring>(return_value.get(), 1);
+
+                return py::convert_to<winrt::hstring>(return_value.get(), 0);
             };
         };
     };
@@ -1411,14 +1321,7 @@ namespace py::impl::TestComponent
                     throw std::invalid_argument("param1");
                 }
 
-                py::pyobj_handle py_param2{ py::convert(param2) };
-
-                if (!py_param2) {
-                    PyErr_WriteUnraisable(delegate.callable());
-                    throw std::invalid_argument("param2");
-                }
-
-                py::pyobj_handle args{ PyTuple_Pack(3, py_param0.get(), py_param1.get(), py_param2.get()) };
+                py::pyobj_handle args{ PyTuple_Pack(2, py_param0.get(), py_param1.get()) };
 
                 if (!args) {
                     PyErr_WriteUnraisable(delegate.callable());
@@ -1433,7 +1336,9 @@ namespace py::impl::TestComponent
                     throw winrt::hresult_error();
                 }
 
-                return py::convert_to<winrt::TestComponent::Blittable>(return_value.get());
+                param2 = py::convert_to<winrt::TestComponent::Blittable>(return_value.get(), 1);
+
+                return py::convert_to<winrt::TestComponent::Blittable>(return_value.get(), 0);
             };
         };
     };
@@ -1462,14 +1367,7 @@ namespace py::impl::TestComponent
                     throw std::invalid_argument("param1");
                 }
 
-                py::pyobj_handle py_param2{ py::convert(param2) };
-
-                if (!py_param2) {
-                    PyErr_WriteUnraisable(delegate.callable());
-                    throw std::invalid_argument("param2");
-                }
-
-                py::pyobj_handle args{ PyTuple_Pack(3, py_param0.get(), py_param1.get(), py_param2.get()) };
+                py::pyobj_handle args{ PyTuple_Pack(2, py_param0.get(), py_param1.get()) };
 
                 if (!args) {
                     PyErr_WriteUnraisable(delegate.callable());
@@ -1484,7 +1382,9 @@ namespace py::impl::TestComponent
                     throw winrt::hresult_error();
                 }
 
-                return py::convert_to<winrt::TestComponent::NonBlittable>(return_value.get());
+                param2 = py::convert_to<winrt::TestComponent::NonBlittable>(return_value.get(), 1);
+
+                return py::convert_to<winrt::TestComponent::NonBlittable>(return_value.get(), 0);
             };
         };
     };
@@ -1513,14 +1413,7 @@ namespace py::impl::TestComponent
                     throw std::invalid_argument("param1");
                 }
 
-                py::pyobj_handle py_param2{ py::convert(param2) };
-
-                if (!py_param2) {
-                    PyErr_WriteUnraisable(delegate.callable());
-                    throw std::invalid_argument("param2");
-                }
-
-                py::pyobj_handle args{ PyTuple_Pack(3, py_param0.get(), py_param1.get(), py_param2.get()) };
+                py::pyobj_handle args{ PyTuple_Pack(2, py_param0.get(), py_param1.get()) };
 
                 if (!args) {
                     PyErr_WriteUnraisable(delegate.callable());
@@ -1535,7 +1428,9 @@ namespace py::impl::TestComponent
                     throw winrt::hresult_error();
                 }
 
-                return py::convert_to<winrt::TestComponent::Nested>(return_value.get());
+                param2 = py::convert_to<winrt::TestComponent::Nested>(return_value.get(), 1);
+
+                return py::convert_to<winrt::TestComponent::Nested>(return_value.get(), 0);
             };
         };
     };
@@ -1557,14 +1452,7 @@ namespace py::impl::TestComponent
                     throw std::invalid_argument("param0");
                 }
 
-                py::pyobj_handle py_param1{ py::convert(param1) };
-
-                if (!py_param1) {
-                    PyErr_WriteUnraisable(delegate.callable());
-                    throw std::invalid_argument("param1");
-                }
-
-                py::pyobj_handle args{ PyTuple_Pack(2, py_param0.get(), py_param1.get()) };
+                py::pyobj_handle args{ PyTuple_Pack(1, py_param0.get()) };
 
                 if (!args) {
                     PyErr_WriteUnraisable(delegate.callable());
@@ -1579,7 +1467,9 @@ namespace py::impl::TestComponent
                     throw winrt::hresult_error();
                 }
 
-                return py::convert_to<bool>(return_value.get());
+                param1 = py::convert_to<bool>(return_value.get(), 1);
+
+                return py::convert_to<bool>(return_value.get(), 0);
             };
         };
     };
@@ -1601,14 +1491,7 @@ namespace py::impl::TestComponent
                     throw std::invalid_argument("param0");
                 }
 
-                py::pyobj_handle py_param1{ py::convert(param1) };
-
-                if (!py_param1) {
-                    PyErr_WriteUnraisable(delegate.callable());
-                    throw std::invalid_argument("param1");
-                }
-
-                py::pyobj_handle args{ PyTuple_Pack(2, py_param0.get(), py_param1.get()) };
+                py::pyobj_handle args{ PyTuple_Pack(1, py_param0.get()) };
 
                 if (!args) {
                     PyErr_WriteUnraisable(delegate.callable());
@@ -1623,7 +1506,9 @@ namespace py::impl::TestComponent
                     throw winrt::hresult_error();
                 }
 
-                return py::convert_to<uint8_t>(return_value.get());
+                param1 = py::convert_to<uint8_t>(return_value.get(), 1);
+
+                return py::convert_to<uint8_t>(return_value.get(), 0);
             };
         };
     };
@@ -1645,14 +1530,7 @@ namespace py::impl::TestComponent
                     throw std::invalid_argument("param0");
                 }
 
-                py::pyobj_handle py_param1{ py::convert(param1) };
-
-                if (!py_param1) {
-                    PyErr_WriteUnraisable(delegate.callable());
-                    throw std::invalid_argument("param1");
-                }
-
-                py::pyobj_handle args{ PyTuple_Pack(2, py_param0.get(), py_param1.get()) };
+                py::pyobj_handle args{ PyTuple_Pack(1, py_param0.get()) };
 
                 if (!args) {
                     PyErr_WriteUnraisable(delegate.callable());
@@ -1667,7 +1545,9 @@ namespace py::impl::TestComponent
                     throw winrt::hresult_error();
                 }
 
-                return py::convert_to<uint16_t>(return_value.get());
+                param1 = py::convert_to<uint16_t>(return_value.get(), 1);
+
+                return py::convert_to<uint16_t>(return_value.get(), 0);
             };
         };
     };
@@ -1689,14 +1569,7 @@ namespace py::impl::TestComponent
                     throw std::invalid_argument("param0");
                 }
 
-                py::pyobj_handle py_param1{ py::convert(param1) };
-
-                if (!py_param1) {
-                    PyErr_WriteUnraisable(delegate.callable());
-                    throw std::invalid_argument("param1");
-                }
-
-                py::pyobj_handle args{ PyTuple_Pack(2, py_param0.get(), py_param1.get()) };
+                py::pyobj_handle args{ PyTuple_Pack(1, py_param0.get()) };
 
                 if (!args) {
                     PyErr_WriteUnraisable(delegate.callable());
@@ -1711,7 +1584,9 @@ namespace py::impl::TestComponent
                     throw winrt::hresult_error();
                 }
 
-                return py::convert_to<uint32_t>(return_value.get());
+                param1 = py::convert_to<uint32_t>(return_value.get(), 1);
+
+                return py::convert_to<uint32_t>(return_value.get(), 0);
             };
         };
     };
@@ -1733,14 +1608,7 @@ namespace py::impl::TestComponent
                     throw std::invalid_argument("param0");
                 }
 
-                py::pyobj_handle py_param1{ py::convert(param1) };
-
-                if (!py_param1) {
-                    PyErr_WriteUnraisable(delegate.callable());
-                    throw std::invalid_argument("param1");
-                }
-
-                py::pyobj_handle args{ PyTuple_Pack(2, py_param0.get(), py_param1.get()) };
+                py::pyobj_handle args{ PyTuple_Pack(1, py_param0.get()) };
 
                 if (!args) {
                     PyErr_WriteUnraisable(delegate.callable());
@@ -1755,7 +1623,9 @@ namespace py::impl::TestComponent
                     throw winrt::hresult_error();
                 }
 
-                return py::convert_to<uint64_t>(return_value.get());
+                param1 = py::convert_to<uint64_t>(return_value.get(), 1);
+
+                return py::convert_to<uint64_t>(return_value.get(), 0);
             };
         };
     };
@@ -1777,14 +1647,7 @@ namespace py::impl::TestComponent
                     throw std::invalid_argument("param0");
                 }
 
-                py::pyobj_handle py_param1{ py::convert(param1) };
-
-                if (!py_param1) {
-                    PyErr_WriteUnraisable(delegate.callable());
-                    throw std::invalid_argument("param1");
-                }
-
-                py::pyobj_handle args{ PyTuple_Pack(2, py_param0.get(), py_param1.get()) };
+                py::pyobj_handle args{ PyTuple_Pack(1, py_param0.get()) };
 
                 if (!args) {
                     PyErr_WriteUnraisable(delegate.callable());
@@ -1799,7 +1662,9 @@ namespace py::impl::TestComponent
                     throw winrt::hresult_error();
                 }
 
-                return py::convert_to<int16_t>(return_value.get());
+                param1 = py::convert_to<int16_t>(return_value.get(), 1);
+
+                return py::convert_to<int16_t>(return_value.get(), 0);
             };
         };
     };
@@ -1821,14 +1686,7 @@ namespace py::impl::TestComponent
                     throw std::invalid_argument("param0");
                 }
 
-                py::pyobj_handle py_param1{ py::convert(param1) };
-
-                if (!py_param1) {
-                    PyErr_WriteUnraisable(delegate.callable());
-                    throw std::invalid_argument("param1");
-                }
-
-                py::pyobj_handle args{ PyTuple_Pack(2, py_param0.get(), py_param1.get()) };
+                py::pyobj_handle args{ PyTuple_Pack(1, py_param0.get()) };
 
                 if (!args) {
                     PyErr_WriteUnraisable(delegate.callable());
@@ -1843,7 +1701,9 @@ namespace py::impl::TestComponent
                     throw winrt::hresult_error();
                 }
 
-                return py::convert_to<int32_t>(return_value.get());
+                param1 = py::convert_to<int32_t>(return_value.get(), 1);
+
+                return py::convert_to<int32_t>(return_value.get(), 0);
             };
         };
     };
@@ -1865,14 +1725,7 @@ namespace py::impl::TestComponent
                     throw std::invalid_argument("param0");
                 }
 
-                py::pyobj_handle py_param1{ py::convert(param1) };
-
-                if (!py_param1) {
-                    PyErr_WriteUnraisable(delegate.callable());
-                    throw std::invalid_argument("param1");
-                }
-
-                py::pyobj_handle args{ PyTuple_Pack(2, py_param0.get(), py_param1.get()) };
+                py::pyobj_handle args{ PyTuple_Pack(1, py_param0.get()) };
 
                 if (!args) {
                     PyErr_WriteUnraisable(delegate.callable());
@@ -1887,7 +1740,9 @@ namespace py::impl::TestComponent
                     throw winrt::hresult_error();
                 }
 
-                return py::convert_to<int64_t>(return_value.get());
+                param1 = py::convert_to<int64_t>(return_value.get(), 1);
+
+                return py::convert_to<int64_t>(return_value.get(), 0);
             };
         };
     };
@@ -1909,14 +1764,7 @@ namespace py::impl::TestComponent
                     throw std::invalid_argument("param0");
                 }
 
-                py::pyobj_handle py_param1{ py::convert(param1) };
-
-                if (!py_param1) {
-                    PyErr_WriteUnraisable(delegate.callable());
-                    throw std::invalid_argument("param1");
-                }
-
-                py::pyobj_handle args{ PyTuple_Pack(2, py_param0.get(), py_param1.get()) };
+                py::pyobj_handle args{ PyTuple_Pack(1, py_param0.get()) };
 
                 if (!args) {
                     PyErr_WriteUnraisable(delegate.callable());
@@ -1931,7 +1779,9 @@ namespace py::impl::TestComponent
                     throw winrt::hresult_error();
                 }
 
-                return py::convert_to<float>(return_value.get());
+                param1 = py::convert_to<float>(return_value.get(), 1);
+
+                return py::convert_to<float>(return_value.get(), 0);
             };
         };
     };

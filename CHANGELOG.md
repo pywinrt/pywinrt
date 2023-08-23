@@ -20,6 +20,7 @@
 - Fixed `NotImplementedError` for delegates with `array_view`.
 - Fixed possible crash due to not checking return value of `convert()` in some places.
 - Fixed memory leak in wrapped struct types.
+- Fixed generating delegates with out parameters are return arrays.
 
 ### Removed
 - Removed generation of base/core files.
