@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.24)
+cmake_minimum_required(VERSION 3.25)
 cmake_policy(SET CMP0091 NEW)
 project(pywinrt-projection LANGUAGES CXX)
 
@@ -33,18 +33,41 @@ endif()
 
 find_package(Python3 REQUIRED COMPONENTS Development.Module)
 
+# helper functions
+################################################################################
+
 set(WINRT_SDK_PATH "winrt-sdk/src/winrt_sdk")
+
+function(pywinrt_add_library target sources)
+    Python3_add_library(${target} MODULE "${sources}")
+    set_target_properties(${target} PROPERTIES LIBRARY_OUTPUT_NAME_DEBUG ${target}_d)
+    target_include_directories(${target} PRIVATE "${WINRT_SDK_PATH}/cppwinrt" "${WINRT_SDK_PATH}/pywinrt")
+endfunction()
+
+function(pywinrt_add_namespace_package package)
+    get_filename_component(package_name "${package}" NAME)
+    string(REPLACE "winrt-" "" package_namespace "${package_name}")
+    string(TOLOWER "${package_namespace}" package_namespace_lower)
+    string(REPLACE "." "/" package_path_suffix "${package_namespace_lower}")
+    string(REPLACE "." "_" package_target_suffix "${package_namespace_lower}")
+    set(package_target "_winrt_${package_target_suffix}" )
+    set(package_sources "${package}/py.${package_namespace}.cpp")
+
+    pywinrt_add_library(${package_target} "${package_sources}")
+    target_include_directories(${package_target} PRIVATE "${package}/cppwinrt" "${package}")
+
+    install(TARGETS ${package_target} DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winrt/${package_path_suffix}")
+    install(DIRECTORY "${package}/winrt/" DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winrt")
+
+    return(PROPAGATE package_target)
+endfunction()
 
 # main runtime package
 ################################################################################
 
 set(WINRT_RUNTIME_PATH "winrt-runtime")
 set(WINRT_RUNTIME_SOURCES "${WINRT_RUNTIME_PATH}/_winrt.cpp" "${WINRT_RUNTIME_PATH}/_winrt_array.cpp" "${WINRT_RUNTIME_PATH}/runtime.cpp")
-
-Python3_add_library(_winrt MODULE "${WINRT_RUNTIME_SOURCES}")
-set_target_properties(_winrt PROPERTIES LIBRARY_OUTPUT_NAME_DEBUG _winrt_d)
-target_include_directories(_winrt PRIVATE "${WINRT_SDK_PATH}/cppwinrt" "${WINRT_SDK_PATH}/pywinrt")
-
+pywinrt_add_library(_winrt "${WINRT_RUNTIME_SOURCES}")
 install(TARGETS _winrt DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winrt")
 install(DIRECTORY "${WINRT_RUNTIME_PATH}/src/winrt/" DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winrt")
 
@@ -76,21 +99,7 @@ else()
 endif()
 
 foreach(package ${packages} ${interop_packages})
-    get_filename_component(package_name "${package}" NAME)
-    string(REPLACE "winrt-" "" package_namespace "${package_name}")
-    string(TOLOWER "${package_namespace}" package_namespace_lower)
-    string(REPLACE "." "/" package_path_suffix "${package_namespace_lower}")
-    string(REPLACE "." "_" package_target_suffix "${package_namespace_lower}")
-    set(package_target "_winrt_${package_target_suffix}")
-    set(package_sources "${package}/py.${package_namespace}.cpp")
-
-    Python3_add_library(${package_target} MODULE ${package_sources})
-    set_target_properties(${package_target} PROPERTIES
-        LIBRARY_OUTPUT_NAME_DEBUG ${package_target}_d
-        # don't define ${package_target}_EXPORTS symbol to avoid shared precompiled header warning
-        DEFINE_SYMBOL ""
-    )
-    target_include_directories(${package_target} PRIVATE "${WINRT_SDK_PATH}/cppwinrt" "${WINRT_SDK_PATH}/pywinrt")
+    pywinrt_add_namespace_package(${package})
 
     # speed up builds by precompiling frequently used headers
     if (package IN_LIST packages)
@@ -105,17 +114,11 @@ foreach(package ${packages} ${interop_packages})
         endif()
     endif()
 
-    install(TARGETS ${package_target} DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winrt/${package_path_suffix}")
-    install(DIRECTORY "${package}/winrt/" DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winrt")
+    # don't define ${package_target}_EXPORTS symbol to avoid shared precompiled header warning
+    set_target_properties(${package_target} PROPERTIES DEFINE_SYMBOL "")
 endforeach()
 
 # test component package
 ################################################################################
 
-Python3_add_library(_winrt_testcomponent MODULE "winrt-TestComponent/py.TestComponent.cpp")
-set_target_properties(_winrt_testcomponent PROPERTIES LIBRARY_OUTPUT_NAME_DEBUG _winrt_testcomponent_d)
-target_include_directories(_winrt_testcomponent PRIVATE "winrt-TestComponent/cppwinrt" "winrt-TestComponent")
-target_include_directories(_winrt_testcomponent PRIVATE "${WINRT_SDK_PATH}/cppwinrt" "${WINRT_SDK_PATH}/pywinrt")
-
-install(TARGETS _winrt_testcomponent DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winrt/testcomponent")
-install(DIRECTORY "winrt-TestComponent/winrt/" DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winrt")
+pywinrt_add_namespace_package("winrt-TestComponent")
