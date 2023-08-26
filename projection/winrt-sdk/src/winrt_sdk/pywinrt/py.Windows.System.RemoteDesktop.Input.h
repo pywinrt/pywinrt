@@ -18,7 +18,7 @@ namespace py::impl::Windows::System::RemoteDesktop::Input
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0)
+            return [delegate = std::move(_delegate)](winrt::array_view<uint8_t const> param0)
             {
                 auto gil = py::ensure_gil();
 

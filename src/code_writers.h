@@ -3406,7 +3406,34 @@ struct delegate_python_type<%%>
 
     void write_delegate_param(writer& w, method_signature::param_t const& p)
     {
-        w.write("auto %", bind<write_param_name>(p));
+        auto [param, sig] = p;
+
+        // compilers don't always infer the correct types if we use auto here
+        // so we need to explicitly specify the type
+
+        switch (get_param_category(p))
+        {
+        case param_category::in:
+            // REVISIT: would be nice to have real type here instead of auto
+            // but that means we would need to copy `consumes_type` writer
+            // handling from cppwinrt
+            // https://github.com/microsoft/cppwinrt/blob/9b453cfc518bdaa7e2ff590526c4883457fd6065/cppwinrt/code_writers.h#L896
+            w.write("auto %", bind<write_param_name>(p));
+            break;
+        case param_category::out:
+            w.write("%& %", sig->Type(), bind<write_param_name>(p));
+            break;
+        case param_category::pass_array:
+            w.write(
+                "winrt::array_view<% const> %", sig->Type(), bind<write_param_name>(p));
+            break;
+        case param_category::fill_array:
+            w.write("winrt::array_view<%> %", sig->Type(), bind<write_param_name>(p));
+            break;
+        case param_category::receive_array:
+            w.write("winrt::com_array<%>& %", sig->Type(), bind<write_param_name>(p));
+            break;
+        }
     }
 
     void write_delegate_callable_wrapper(writer& w, TypeDef const& type)
@@ -3521,8 +3548,7 @@ if (!return_value)
                                 p.second->Type(),
                                 i++);
                             w.write(
-                                "static_cast<winrt::com_array<%>&>(%) = winrt::com_array<%>{%_buf.begin(), %_buf.end()};\n",
-                                p.second->Type(),
+                                "% = winrt::com_array<%>{%_buf.begin(), %_buf.end()};\n",
                                 bind<write_param_name>(p),
                                 p.second->Type(),
                                 bind<write_param_name>(p),

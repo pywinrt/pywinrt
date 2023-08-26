@@ -28,7 +28,7 @@ namespace py::impl::TestComponent
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1, auto param2)
+            return [delegate = std::move(_delegate)](winrt::array_view<double const> param0, winrt::array_view<double> param1, winrt::com_array<double>& param2)
             {
                 auto gil = py::ensure_gil();
 
@@ -62,7 +62,7 @@ namespace py::impl::TestComponent
                 }
 
                 auto param2_buf = py::convert_to<py::pybuf_view<double, false>>(return_value.get(), 1);
-                static_cast<winrt::com_array<double>&>(param2) = winrt::com_array<double>{param2_buf.begin(), param2_buf.end()};
+                param2 = winrt::com_array<double>{param2_buf.begin(), param2_buf.end()};
 
                 auto return_buf = py::convert_to<py::pybuf_view<double, false>>(return_value.get(), 0);
                 return winrt::com_array<double>{return_buf.begin(), return_buf.end()};
@@ -76,7 +76,7 @@ namespace py::impl::TestComponent
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1, auto param2)
+            return [delegate = std::move(_delegate)](winrt::array_view<char16_t const> param0, winrt::array_view<char16_t> param1, winrt::com_array<char16_t>& param2)
             {
                 auto gil = py::ensure_gil();
 
@@ -110,7 +110,7 @@ namespace py::impl::TestComponent
                 }
 
                 auto param2_buf = py::convert_to<py::pybuf_view<char16_t, false>>(return_value.get(), 1);
-                static_cast<winrt::com_array<char16_t>&>(param2) = winrt::com_array<char16_t>{param2_buf.begin(), param2_buf.end()};
+                param2 = winrt::com_array<char16_t>{param2_buf.begin(), param2_buf.end()};
 
                 auto return_buf = py::convert_to<py::pybuf_view<char16_t, false>>(return_value.get(), 0);
                 return winrt::com_array<char16_t>{return_buf.begin(), return_buf.end()};
@@ -124,7 +124,7 @@ namespace py::impl::TestComponent
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1, auto param2)
+            return [delegate = std::move(_delegate)](winrt::array_view<winrt::hstring const> param0, winrt::array_view<winrt::hstring> param1, winrt::com_array<winrt::hstring>& param2)
             {
                 auto gil = py::ensure_gil();
 
@@ -158,7 +158,7 @@ namespace py::impl::TestComponent
                 }
 
                 auto param2_buf = py::convert_to<py::pybuf_view<winrt::hstring, false>>(return_value.get(), 1);
-                static_cast<winrt::com_array<winrt::hstring>&>(param2) = winrt::com_array<winrt::hstring>{param2_buf.begin(), param2_buf.end()};
+                param2 = winrt::com_array<winrt::hstring>{param2_buf.begin(), param2_buf.end()};
 
                 auto return_buf = py::convert_to<py::pybuf_view<winrt::hstring, false>>(return_value.get(), 0);
                 return winrt::com_array<winrt::hstring>{return_buf.begin(), return_buf.end()};
@@ -172,7 +172,7 @@ namespace py::impl::TestComponent
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1, auto param2)
+            return [delegate = std::move(_delegate)](winrt::array_view<winrt::TestComponent::Blittable const> param0, winrt::array_view<winrt::TestComponent::Blittable> param1, winrt::com_array<winrt::TestComponent::Blittable>& param2)
             {
                 auto gil = py::ensure_gil();
 
@@ -206,7 +206,7 @@ namespace py::impl::TestComponent
                 }
 
                 auto param2_buf = py::convert_to<py::pybuf_view<winrt::TestComponent::Blittable, false>>(return_value.get(), 1);
-                static_cast<winrt::com_array<winrt::TestComponent::Blittable>&>(param2) = winrt::com_array<winrt::TestComponent::Blittable>{param2_buf.begin(), param2_buf.end()};
+                param2 = winrt::com_array<winrt::TestComponent::Blittable>{param2_buf.begin(), param2_buf.end()};
 
                 auto return_buf = py::convert_to<py::pybuf_view<winrt::TestComponent::Blittable, false>>(return_value.get(), 0);
                 return winrt::com_array<winrt::TestComponent::Blittable>{return_buf.begin(), return_buf.end()};
@@ -220,7 +220,7 @@ namespace py::impl::TestComponent
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1, auto param2)
+            return [delegate = std::move(_delegate)](winrt::array_view<winrt::TestComponent::NonBlittable const> param0, winrt::array_view<winrt::TestComponent::NonBlittable> param1, winrt::com_array<winrt::TestComponent::NonBlittable>& param2)
             {
                 auto gil = py::ensure_gil();
 
@@ -254,7 +254,7 @@ namespace py::impl::TestComponent
                 }
 
                 auto param2_buf = py::convert_to<py::pybuf_view<winrt::TestComponent::NonBlittable, false>>(return_value.get(), 1);
-                static_cast<winrt::com_array<winrt::TestComponent::NonBlittable>&>(param2) = winrt::com_array<winrt::TestComponent::NonBlittable>{param2_buf.begin(), param2_buf.end()};
+                param2 = winrt::com_array<winrt::TestComponent::NonBlittable>{param2_buf.begin(), param2_buf.end()};
 
                 auto return_buf = py::convert_to<py::pybuf_view<winrt::TestComponent::NonBlittable, false>>(return_value.get(), 0);
                 return winrt::com_array<winrt::TestComponent::NonBlittable>{return_buf.begin(), return_buf.end()};
@@ -268,7 +268,7 @@ namespace py::impl::TestComponent
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1, auto param2)
+            return [delegate = std::move(_delegate)](winrt::array_view<winrt::TestComponent::Nested const> param0, winrt::array_view<winrt::TestComponent::Nested> param1, winrt::com_array<winrt::TestComponent::Nested>& param2)
             {
                 auto gil = py::ensure_gil();
 
@@ -302,7 +302,7 @@ namespace py::impl::TestComponent
                 }
 
                 auto param2_buf = py::convert_to<py::pybuf_view<winrt::TestComponent::Nested, false>>(return_value.get(), 1);
-                static_cast<winrt::com_array<winrt::TestComponent::Nested>&>(param2) = winrt::com_array<winrt::TestComponent::Nested>{param2_buf.begin(), param2_buf.end()};
+                param2 = winrt::com_array<winrt::TestComponent::Nested>{param2_buf.begin(), param2_buf.end()};
 
                 auto return_buf = py::convert_to<py::pybuf_view<winrt::TestComponent::Nested, false>>(return_value.get(), 0);
                 return winrt::com_array<winrt::TestComponent::Nested>{return_buf.begin(), return_buf.end()};
@@ -316,7 +316,7 @@ namespace py::impl::TestComponent
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1, auto param2)
+            return [delegate = std::move(_delegate)](winrt::array_view<bool const> param0, winrt::array_view<bool> param1, winrt::com_array<bool>& param2)
             {
                 auto gil = py::ensure_gil();
 
@@ -350,7 +350,7 @@ namespace py::impl::TestComponent
                 }
 
                 auto param2_buf = py::convert_to<py::pybuf_view<bool, false>>(return_value.get(), 1);
-                static_cast<winrt::com_array<bool>&>(param2) = winrt::com_array<bool>{param2_buf.begin(), param2_buf.end()};
+                param2 = winrt::com_array<bool>{param2_buf.begin(), param2_buf.end()};
 
                 auto return_buf = py::convert_to<py::pybuf_view<bool, false>>(return_value.get(), 0);
                 return winrt::com_array<bool>{return_buf.begin(), return_buf.end()};
@@ -364,7 +364,7 @@ namespace py::impl::TestComponent
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1, auto param2)
+            return [delegate = std::move(_delegate)](winrt::array_view<uint8_t const> param0, winrt::array_view<uint8_t> param1, winrt::com_array<uint8_t>& param2)
             {
                 auto gil = py::ensure_gil();
 
@@ -398,7 +398,7 @@ namespace py::impl::TestComponent
                 }
 
                 auto param2_buf = py::convert_to<py::pybuf_view<uint8_t, false>>(return_value.get(), 1);
-                static_cast<winrt::com_array<uint8_t>&>(param2) = winrt::com_array<uint8_t>{param2_buf.begin(), param2_buf.end()};
+                param2 = winrt::com_array<uint8_t>{param2_buf.begin(), param2_buf.end()};
 
                 auto return_buf = py::convert_to<py::pybuf_view<uint8_t, false>>(return_value.get(), 0);
                 return winrt::com_array<uint8_t>{return_buf.begin(), return_buf.end()};
@@ -412,7 +412,7 @@ namespace py::impl::TestComponent
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1, auto param2)
+            return [delegate = std::move(_delegate)](winrt::array_view<uint16_t const> param0, winrt::array_view<uint16_t> param1, winrt::com_array<uint16_t>& param2)
             {
                 auto gil = py::ensure_gil();
 
@@ -446,7 +446,7 @@ namespace py::impl::TestComponent
                 }
 
                 auto param2_buf = py::convert_to<py::pybuf_view<uint16_t, false>>(return_value.get(), 1);
-                static_cast<winrt::com_array<uint16_t>&>(param2) = winrt::com_array<uint16_t>{param2_buf.begin(), param2_buf.end()};
+                param2 = winrt::com_array<uint16_t>{param2_buf.begin(), param2_buf.end()};
 
                 auto return_buf = py::convert_to<py::pybuf_view<uint16_t, false>>(return_value.get(), 0);
                 return winrt::com_array<uint16_t>{return_buf.begin(), return_buf.end()};
@@ -460,7 +460,7 @@ namespace py::impl::TestComponent
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1, auto param2)
+            return [delegate = std::move(_delegate)](winrt::array_view<uint32_t const> param0, winrt::array_view<uint32_t> param1, winrt::com_array<uint32_t>& param2)
             {
                 auto gil = py::ensure_gil();
 
@@ -494,7 +494,7 @@ namespace py::impl::TestComponent
                 }
 
                 auto param2_buf = py::convert_to<py::pybuf_view<uint32_t, false>>(return_value.get(), 1);
-                static_cast<winrt::com_array<uint32_t>&>(param2) = winrt::com_array<uint32_t>{param2_buf.begin(), param2_buf.end()};
+                param2 = winrt::com_array<uint32_t>{param2_buf.begin(), param2_buf.end()};
 
                 auto return_buf = py::convert_to<py::pybuf_view<uint32_t, false>>(return_value.get(), 0);
                 return winrt::com_array<uint32_t>{return_buf.begin(), return_buf.end()};
@@ -508,7 +508,7 @@ namespace py::impl::TestComponent
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1, auto param2)
+            return [delegate = std::move(_delegate)](winrt::array_view<uint64_t const> param0, winrt::array_view<uint64_t> param1, winrt::com_array<uint64_t>& param2)
             {
                 auto gil = py::ensure_gil();
 
@@ -542,7 +542,7 @@ namespace py::impl::TestComponent
                 }
 
                 auto param2_buf = py::convert_to<py::pybuf_view<uint64_t, false>>(return_value.get(), 1);
-                static_cast<winrt::com_array<uint64_t>&>(param2) = winrt::com_array<uint64_t>{param2_buf.begin(), param2_buf.end()};
+                param2 = winrt::com_array<uint64_t>{param2_buf.begin(), param2_buf.end()};
 
                 auto return_buf = py::convert_to<py::pybuf_view<uint64_t, false>>(return_value.get(), 0);
                 return winrt::com_array<uint64_t>{return_buf.begin(), return_buf.end()};
@@ -556,7 +556,7 @@ namespace py::impl::TestComponent
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1, auto param2)
+            return [delegate = std::move(_delegate)](winrt::array_view<int16_t const> param0, winrt::array_view<int16_t> param1, winrt::com_array<int16_t>& param2)
             {
                 auto gil = py::ensure_gil();
 
@@ -590,7 +590,7 @@ namespace py::impl::TestComponent
                 }
 
                 auto param2_buf = py::convert_to<py::pybuf_view<int16_t, false>>(return_value.get(), 1);
-                static_cast<winrt::com_array<int16_t>&>(param2) = winrt::com_array<int16_t>{param2_buf.begin(), param2_buf.end()};
+                param2 = winrt::com_array<int16_t>{param2_buf.begin(), param2_buf.end()};
 
                 auto return_buf = py::convert_to<py::pybuf_view<int16_t, false>>(return_value.get(), 0);
                 return winrt::com_array<int16_t>{return_buf.begin(), return_buf.end()};
@@ -604,7 +604,7 @@ namespace py::impl::TestComponent
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1, auto param2)
+            return [delegate = std::move(_delegate)](winrt::array_view<int32_t const> param0, winrt::array_view<int32_t> param1, winrt::com_array<int32_t>& param2)
             {
                 auto gil = py::ensure_gil();
 
@@ -638,7 +638,7 @@ namespace py::impl::TestComponent
                 }
 
                 auto param2_buf = py::convert_to<py::pybuf_view<int32_t, false>>(return_value.get(), 1);
-                static_cast<winrt::com_array<int32_t>&>(param2) = winrt::com_array<int32_t>{param2_buf.begin(), param2_buf.end()};
+                param2 = winrt::com_array<int32_t>{param2_buf.begin(), param2_buf.end()};
 
                 auto return_buf = py::convert_to<py::pybuf_view<int32_t, false>>(return_value.get(), 0);
                 return winrt::com_array<int32_t>{return_buf.begin(), return_buf.end()};
@@ -652,7 +652,7 @@ namespace py::impl::TestComponent
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1, auto param2)
+            return [delegate = std::move(_delegate)](winrt::array_view<int64_t const> param0, winrt::array_view<int64_t> param1, winrt::com_array<int64_t>& param2)
             {
                 auto gil = py::ensure_gil();
 
@@ -686,7 +686,7 @@ namespace py::impl::TestComponent
                 }
 
                 auto param2_buf = py::convert_to<py::pybuf_view<int64_t, false>>(return_value.get(), 1);
-                static_cast<winrt::com_array<int64_t>&>(param2) = winrt::com_array<int64_t>{param2_buf.begin(), param2_buf.end()};
+                param2 = winrt::com_array<int64_t>{param2_buf.begin(), param2_buf.end()};
 
                 auto return_buf = py::convert_to<py::pybuf_view<int64_t, false>>(return_value.get(), 0);
                 return winrt::com_array<int64_t>{return_buf.begin(), return_buf.end()};
@@ -700,7 +700,7 @@ namespace py::impl::TestComponent
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1, auto param2)
+            return [delegate = std::move(_delegate)](winrt::array_view<float const> param0, winrt::array_view<float> param1, winrt::com_array<float>& param2)
             {
                 auto gil = py::ensure_gil();
 
@@ -734,7 +734,7 @@ namespace py::impl::TestComponent
                 }
 
                 auto param2_buf = py::convert_to<py::pybuf_view<float, false>>(return_value.get(), 1);
-                static_cast<winrt::com_array<float>&>(param2) = winrt::com_array<float>{param2_buf.begin(), param2_buf.end()};
+                param2 = winrt::com_array<float>{param2_buf.begin(), param2_buf.end()};
 
                 auto return_buf = py::convert_to<py::pybuf_view<float, false>>(return_value.get(), 0);
                 return winrt::com_array<float>{return_buf.begin(), return_buf.end()};
@@ -952,7 +952,7 @@ namespace py::impl::TestComponent
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](auto param0, winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -991,7 +991,7 @@ namespace py::impl::TestComponent
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](auto param0, winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::hstring>>& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -1030,7 +1030,7 @@ namespace py::impl::TestComponent
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](auto param0, winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::hstring>& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -1069,7 +1069,7 @@ namespace py::impl::TestComponent
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](auto param0, winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::hstring>& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -1108,7 +1108,7 @@ namespace py::impl::TestComponent
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](auto param0, winrt::Windows::Foundation::Collections::IVector<winrt::hstring>& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -1147,7 +1147,7 @@ namespace py::impl::TestComponent
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](auto param0, winrt::Windows::Foundation::Collections::IVectorView<winrt::hstring>& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -1186,7 +1186,7 @@ namespace py::impl::TestComponent
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](auto param0, double& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -1225,7 +1225,7 @@ namespace py::impl::TestComponent
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](auto param0, char16_t& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -1264,7 +1264,7 @@ namespace py::impl::TestComponent
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](auto param0, winrt::hstring& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -1303,7 +1303,7 @@ namespace py::impl::TestComponent
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1, auto param2)
+            return [delegate = std::move(_delegate)](auto param0, auto param1, winrt::TestComponent::Blittable& param2)
             {
                 auto gil = py::ensure_gil();
 
@@ -1349,7 +1349,7 @@ namespace py::impl::TestComponent
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1, auto param2)
+            return [delegate = std::move(_delegate)](auto param0, auto param1, winrt::TestComponent::NonBlittable& param2)
             {
                 auto gil = py::ensure_gil();
 
@@ -1395,7 +1395,7 @@ namespace py::impl::TestComponent
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1, auto param2)
+            return [delegate = std::move(_delegate)](auto param0, auto param1, winrt::TestComponent::Nested& param2)
             {
                 auto gil = py::ensure_gil();
 
@@ -1441,7 +1441,7 @@ namespace py::impl::TestComponent
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](auto param0, bool& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -1480,7 +1480,7 @@ namespace py::impl::TestComponent
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](auto param0, uint8_t& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -1519,7 +1519,7 @@ namespace py::impl::TestComponent
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](auto param0, uint16_t& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -1558,7 +1558,7 @@ namespace py::impl::TestComponent
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](auto param0, uint32_t& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -1597,7 +1597,7 @@ namespace py::impl::TestComponent
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](auto param0, uint64_t& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -1636,7 +1636,7 @@ namespace py::impl::TestComponent
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](auto param0, int16_t& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -1675,7 +1675,7 @@ namespace py::impl::TestComponent
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](auto param0, int32_t& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -1714,7 +1714,7 @@ namespace py::impl::TestComponent
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](auto param0, int64_t& param1)
             {
                 auto gil = py::ensure_gil();
 
@@ -1753,7 +1753,7 @@ namespace py::impl::TestComponent
         {
             py::delegate_callable _delegate{ callable };
 
-            return [delegate = std::move(_delegate)](auto param0, auto param1)
+            return [delegate = std::move(_delegate)](auto param0, float& param1)
             {
                 auto gil = py::ensure_gil();
 
