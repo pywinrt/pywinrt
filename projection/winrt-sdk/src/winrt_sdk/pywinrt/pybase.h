@@ -2028,8 +2028,8 @@ namespace py
     {
         completion_callback() noexcept = default;
 
-        explicit completion_callback(pyobj_handle& loop, pyobj_handle& future)
-            : _loop(loop.detach()), _future(future.detach())
+        explicit completion_callback(PyObject* loop, PyObject* future) noexcept
+            : _loop(Py_NewRef(loop)), _future(Py_NewRef(future))
         {
         }
 
@@ -2088,11 +2088,7 @@ namespace py
             return nullptr;
         }
 
-        // make a copy of future to pass into completed lambda
-        pyobj_handle future_copy{future.get()};
-        Py_INCREF(future_copy.get());
-
-        completion_callback cb{loop, future_copy};
+        completion_callback cb{loop.get(), future.get()};
 
         try
         {

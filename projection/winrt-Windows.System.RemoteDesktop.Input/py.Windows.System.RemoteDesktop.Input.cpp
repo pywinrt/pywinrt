@@ -247,8 +247,7 @@ namespace py::cpp::Windows::System::RemoteDesktop::Input
 
     static PyObject* _enter_RemoteTextConnection(py::wrapper::Windows::System::RemoteDesktop::Input::RemoteTextConnection* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_RemoteTextConnection(py::wrapper::Windows::System::RemoteDesktop::Input::RemoteTextConnection* self) noexcept

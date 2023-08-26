@@ -914,8 +914,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* _enter_MiracastReceiverConnection(py::wrapper::Windows::Media::Miracast::MiracastReceiverConnection* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_MiracastReceiverConnection(py::wrapper::Windows::Media::Miracast::MiracastReceiverConnection* self) noexcept
@@ -2678,8 +2677,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* _enter_MiracastReceiverSession(py::wrapper::Windows::Media::Miracast::MiracastReceiverSession* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_MiracastReceiverSession(py::wrapper::Windows::Media::Miracast::MiracastReceiverSession* self) noexcept

@@ -403,8 +403,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* _enter_ControlChannelTrigger(py::wrapper::Windows::Networking::Sockets::ControlChannelTrigger* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_ControlChannelTrigger(py::wrapper::Windows::Networking::Sockets::ControlChannelTrigger* self) noexcept
@@ -1092,8 +1091,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* _enter_DatagramSocket(py::wrapper::Windows::Networking::Sockets::DatagramSocket* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_DatagramSocket(py::wrapper::Windows::Networking::Sockets::DatagramSocket* self) noexcept
@@ -2231,8 +2229,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* _enter_MessageWebSocket(py::wrapper::Windows::Networking::Sockets::MessageWebSocket* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_MessageWebSocket(py::wrapper::Windows::Networking::Sockets::MessageWebSocket* self) noexcept
@@ -3422,8 +3419,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* _enter_ServerMessageWebSocket(py::wrapper::Windows::Networking::Sockets::ServerMessageWebSocket* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_ServerMessageWebSocket(py::wrapper::Windows::Networking::Sockets::ServerMessageWebSocket* self) noexcept
@@ -3919,8 +3915,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* _enter_ServerStreamWebSocket(py::wrapper::Windows::Networking::Sockets::ServerStreamWebSocket* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_ServerStreamWebSocket(py::wrapper::Windows::Networking::Sockets::ServerStreamWebSocket* self) noexcept
@@ -5153,8 +5148,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* _enter_StreamSocket(py::wrapper::Windows::Networking::Sockets::StreamSocket* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_StreamSocket(py::wrapper::Windows::Networking::Sockets::StreamSocket* self) noexcept
@@ -6453,8 +6447,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* _enter_StreamSocketListener(py::wrapper::Windows::Networking::Sockets::StreamSocketListener* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_StreamSocketListener(py::wrapper::Windows::Networking::Sockets::StreamSocketListener* self) noexcept
@@ -7341,8 +7334,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* _enter_StreamWebSocket(py::wrapper::Windows::Networking::Sockets::StreamWebSocket* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_StreamWebSocket(py::wrapper::Windows::Networking::Sockets::StreamWebSocket* self) noexcept
@@ -8974,8 +8966,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* _enter_IWebSocket(py::wrapper::Windows::Networking::Sockets::IWebSocket* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_IWebSocket(py::wrapper::Windows::Networking::Sockets::IWebSocket* self) noexcept

@@ -3809,8 +3809,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* _enter_FaceDetectionEffectFrame(py::wrapper::Windows::Media::Core::FaceDetectionEffectFrame* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_FaceDetectionEffectFrame(py::wrapper::Windows::Media::Core::FaceDetectionEffectFrame* self) noexcept
@@ -4828,8 +4827,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* _enter_LowLightFusionResult(py::wrapper::Windows::Media::Core::LowLightFusionResult* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_LowLightFusionResult(py::wrapper::Windows::Media::Core::LowLightFusionResult* self) noexcept
@@ -6305,8 +6303,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* _enter_MediaSource(py::wrapper::Windows::Media::Core::MediaSource* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_MediaSource(py::wrapper::Windows::Media::Core::MediaSource* self) noexcept
@@ -12342,8 +12339,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* _enter_SceneAnalysisEffectFrame(py::wrapper::Windows::Media::Core::SceneAnalysisEffectFrame* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_SceneAnalysisEffectFrame(py::wrapper::Windows::Media::Core::SceneAnalysisEffectFrame* self) noexcept

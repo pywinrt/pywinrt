@@ -403,8 +403,7 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution
 
     static PyObject* _enter_ExtendedExecutionSession(py::wrapper::Windows::ApplicationModel::ExtendedExecution::ExtendedExecutionSession* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_ExtendedExecutionSession(py::wrapper::Windows::ApplicationModel::ExtendedExecution::ExtendedExecutionSession* self) noexcept

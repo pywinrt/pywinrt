@@ -410,8 +410,7 @@ namespace py::cpp::Windows::Media::Protection
 
     static PyObject* _enter_HdcpSession(py::wrapper::Windows::Media::Protection::HdcpSession* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_HdcpSession(py::wrapper::Windows::Media::Protection::HdcpSession* self) noexcept

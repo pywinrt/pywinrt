@@ -827,8 +827,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* _enter_ApplicationData(py::wrapper::Windows::Storage::ApplicationData* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_ApplicationData(py::wrapper::Windows::Storage::ApplicationData* self) noexcept
@@ -1601,8 +1600,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* _enter_ApplicationDataContainer(py::wrapper::Windows::Storage::ApplicationDataContainer* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_ApplicationDataContainer(py::wrapper::Windows::Storage::ApplicationDataContainer* self) noexcept
@@ -8258,8 +8256,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* _enter_StorageStreamTransaction(py::wrapper::Windows::Storage::StorageStreamTransaction* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_StorageStreamTransaction(py::wrapper::Windows::Storage::StorageStreamTransaction* self) noexcept
@@ -8474,8 +8471,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* _enter_StreamedFileDataRequest(py::wrapper::Windows::Storage::StreamedFileDataRequest* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_StreamedFileDataRequest(py::wrapper::Windows::Storage::StreamedFileDataRequest* self) noexcept

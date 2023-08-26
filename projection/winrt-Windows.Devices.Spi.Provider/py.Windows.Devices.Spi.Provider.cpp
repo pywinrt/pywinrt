@@ -681,8 +681,7 @@ namespace py::cpp::Windows::Devices::Spi::Provider
 
     static PyObject* _enter_ISpiDeviceProvider(py::wrapper::Windows::Devices::Spi::Provider::ISpiDeviceProvider* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_ISpiDeviceProvider(py::wrapper::Windows::Devices::Spi::Provider::ISpiDeviceProvider* self) noexcept

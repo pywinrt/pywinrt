@@ -358,8 +358,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* _enter_HttpBufferContent(py::wrapper::Windows::Web::Http::HttpBufferContent* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_HttpBufferContent(py::wrapper::Windows::Web::Http::HttpBufferContent* self) noexcept
@@ -1218,8 +1217,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* _enter_HttpClient(py::wrapper::Windows::Web::Http::HttpClient* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_HttpClient(py::wrapper::Windows::Web::Http::HttpClient* self) noexcept
@@ -2555,8 +2553,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* _enter_HttpFormUrlEncodedContent(py::wrapper::Windows::Web::Http::HttpFormUrlEncodedContent* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_HttpFormUrlEncodedContent(py::wrapper::Windows::Web::Http::HttpFormUrlEncodedContent* self) noexcept
@@ -2823,8 +2820,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* _enter_HttpGetBufferResult(py::wrapper::Windows::Web::Http::HttpGetBufferResult* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_HttpGetBufferResult(py::wrapper::Windows::Web::Http::HttpGetBufferResult* self) noexcept
@@ -3089,8 +3085,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* _enter_HttpGetInputStreamResult(py::wrapper::Windows::Web::Http::HttpGetInputStreamResult* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_HttpGetInputStreamResult(py::wrapper::Windows::Web::Http::HttpGetInputStreamResult* self) noexcept
@@ -3355,8 +3350,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* _enter_HttpGetStringResult(py::wrapper::Windows::Web::Http::HttpGetStringResult* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_HttpGetStringResult(py::wrapper::Windows::Web::Http::HttpGetStringResult* self) noexcept
@@ -4166,8 +4160,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* _enter_HttpMultipartContent(py::wrapper::Windows::Web::Http::HttpMultipartContent* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_HttpMultipartContent(py::wrapper::Windows::Web::Http::HttpMultipartContent* self) noexcept
@@ -4707,8 +4700,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* _enter_HttpMultipartFormDataContent(py::wrapper::Windows::Web::Http::HttpMultipartFormDataContent* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_HttpMultipartFormDataContent(py::wrapper::Windows::Web::Http::HttpMultipartFormDataContent* self) noexcept
@@ -5179,8 +5171,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* _enter_HttpRequestMessage(py::wrapper::Windows::Web::Http::HttpRequestMessage* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_HttpRequestMessage(py::wrapper::Windows::Web::Http::HttpRequestMessage* self) noexcept
@@ -5428,8 +5419,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* _enter_HttpRequestResult(py::wrapper::Windows::Web::Http::HttpRequestResult* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_HttpRequestResult(py::wrapper::Windows::Web::Http::HttpRequestResult* self) noexcept
@@ -5984,8 +5974,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* _enter_HttpResponseMessage(py::wrapper::Windows::Web::Http::HttpResponseMessage* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_HttpResponseMessage(py::wrapper::Windows::Web::Http::HttpResponseMessage* self) noexcept
@@ -6392,8 +6381,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* _enter_HttpStreamContent(py::wrapper::Windows::Web::Http::HttpStreamContent* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_HttpStreamContent(py::wrapper::Windows::Web::Http::HttpStreamContent* self) noexcept
@@ -6831,8 +6819,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* _enter_HttpStringContent(py::wrapper::Windows::Web::Http::HttpStringContent* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_HttpStringContent(py::wrapper::Windows::Web::Http::HttpStringContent* self) noexcept
@@ -7377,8 +7364,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* _enter_IHttpContent(py::wrapper::Windows::Web::Http::IHttpContent* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_IHttpContent(py::wrapper::Windows::Web::Http::IHttpContent* self) noexcept

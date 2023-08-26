@@ -1073,8 +1073,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static PyObject* _enter_WiFiDirectConnectionRequest(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectConnectionRequest* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_WiFiDirectConnectionRequest(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectConnectionRequest* self) noexcept
@@ -1506,8 +1505,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static PyObject* _enter_WiFiDirectDevice(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectDevice* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_WiFiDirectDevice(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectDevice* self) noexcept

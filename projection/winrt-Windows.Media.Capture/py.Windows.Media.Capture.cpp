@@ -8995,8 +8995,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* _enter_AppCaptureMetadataWriter(py::wrapper::Windows::Media::Capture::AppCaptureMetadataWriter* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_AppCaptureMetadataWriter(py::wrapper::Windows::Media::Capture::AppCaptureMetadataWriter* self) noexcept
@@ -12698,8 +12697,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* _enter_CapturedFrame(py::wrapper::Windows::Media::Capture::CapturedFrame* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_CapturedFrame(py::wrapper::Windows::Media::Capture::CapturedFrame* self) noexcept
@@ -16600,8 +16598,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* _enter_MediaCapture(py::wrapper::Windows::Media::Capture::MediaCapture* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_MediaCapture(py::wrapper::Windows::Media::Capture::MediaCapture* self) noexcept
@@ -18085,8 +18082,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* _enter_MediaCapturePauseResult(py::wrapper::Windows::Media::Capture::MediaCapturePauseResult* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_MediaCapturePauseResult(py::wrapper::Windows::Media::Capture::MediaCapturePauseResult* self) noexcept
@@ -18331,8 +18327,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* _enter_MediaCaptureRelativePanelWatcher(py::wrapper::Windows::Media::Capture::MediaCaptureRelativePanelWatcher* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_MediaCaptureRelativePanelWatcher(py::wrapper::Windows::Media::Capture::MediaCaptureRelativePanelWatcher* self) noexcept
@@ -18845,8 +18840,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* _enter_MediaCaptureStopResult(py::wrapper::Windows::Media::Capture::MediaCaptureStopResult* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_MediaCaptureStopResult(py::wrapper::Windows::Media::Capture::MediaCaptureStopResult* self) noexcept

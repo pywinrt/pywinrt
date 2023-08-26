@@ -8523,8 +8523,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyObject* _enter_LoadedImageSurface(py::wrapper::Windows::UI::Xaml::Media::LoadedImageSurface* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_LoadedImageSurface(py::wrapper::Windows::UI::Xaml::Media::LoadedImageSurface* self) noexcept

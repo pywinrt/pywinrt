@@ -1281,8 +1281,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* _enter_DisplayManager(py::wrapper::Windows::Devices::Display::Core::DisplayManager* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_DisplayManager(py::wrapper::Windows::Devices::Display::Core::DisplayManager* self) noexcept

@@ -3638,8 +3638,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* _enter_ThreadNetworkContext(py::wrapper::Windows::Security::EnterpriseData::ThreadNetworkContext* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_ThreadNetworkContext(py::wrapper::Windows::Security::EnterpriseData::ThreadNetworkContext* self) noexcept

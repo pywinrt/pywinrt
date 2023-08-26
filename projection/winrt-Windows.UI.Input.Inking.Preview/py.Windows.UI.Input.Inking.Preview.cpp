@@ -134,8 +134,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Preview
 
     static PyObject* _enter_PalmRejectionDelayZonePreview(py::wrapper::Windows::UI::Input::Inking::Preview::PalmRejectionDelayZonePreview* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_PalmRejectionDelayZonePreview(py::wrapper::Windows::UI::Input::Inking::Preview::PalmRejectionDelayZonePreview* self) noexcept

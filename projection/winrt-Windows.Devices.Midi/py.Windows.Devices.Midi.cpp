@@ -912,8 +912,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* _enter_MidiInPort(py::wrapper::Windows::Devices::Midi::MidiInPort* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_MidiInPort(py::wrapper::Windows::Devices::Midi::MidiInPort* self) noexcept
@@ -1701,8 +1700,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* _enter_MidiOutPort(py::wrapper::Windows::Devices::Midi::MidiOutPort* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_MidiOutPort(py::wrapper::Windows::Devices::Midi::MidiOutPort* self) noexcept
@@ -3308,8 +3306,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* _enter_MidiSynthesizer(py::wrapper::Windows::Devices::Midi::MidiSynthesizer* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_MidiSynthesizer(py::wrapper::Windows::Devices::Midi::MidiSynthesizer* self) noexcept
@@ -4449,8 +4446,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* _enter_IMidiOutPort(py::wrapper::Windows::Devices::Midi::IMidiOutPort* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_IMidiOutPort(py::wrapper::Windows::Devices::Midi::IMidiOutPort* self) noexcept

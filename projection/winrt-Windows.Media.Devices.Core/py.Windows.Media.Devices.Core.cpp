@@ -715,8 +715,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     static PyObject* _enter_DepthCorrelatedCoordinateMapper(py::wrapper::Windows::Media::Devices::Core::DepthCorrelatedCoordinateMapper* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_DepthCorrelatedCoordinateMapper(py::wrapper::Windows::Media::Devices::Core::DepthCorrelatedCoordinateMapper* self) noexcept

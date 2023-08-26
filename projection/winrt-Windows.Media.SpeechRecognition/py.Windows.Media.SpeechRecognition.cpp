@@ -2979,8 +2979,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static PyObject* _enter_SpeechRecognizer(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognizer* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_SpeechRecognizer(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognizer* self) noexcept

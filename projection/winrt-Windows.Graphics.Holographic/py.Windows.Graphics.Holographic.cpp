@@ -2174,8 +2174,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyObject* _enter_HolographicFramePresentationMonitor(py::wrapper::Windows::Graphics::Holographic::HolographicFramePresentationMonitor* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_HolographicFramePresentationMonitor(py::wrapper::Windows::Graphics::Holographic::HolographicFramePresentationMonitor* self) noexcept
@@ -2664,8 +2663,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyObject* _enter_HolographicFrameScanoutMonitor(py::wrapper::Windows::Graphics::Holographic::HolographicFrameScanoutMonitor* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_HolographicFrameScanoutMonitor(py::wrapper::Windows::Graphics::Holographic::HolographicFrameScanoutMonitor* self) noexcept
@@ -3034,8 +3032,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyObject* _enter_HolographicQuadLayer(py::wrapper::Windows::Graphics::Holographic::HolographicQuadLayer* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_HolographicQuadLayer(py::wrapper::Windows::Graphics::Holographic::HolographicQuadLayer* self) noexcept

@@ -2775,8 +2775,7 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* _enter_PhotoImportSession(py::wrapper::Windows::Media::Import::PhotoImportSession* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_PhotoImportSession(py::wrapper::Windows::Media::Import::PhotoImportSession* self) noexcept

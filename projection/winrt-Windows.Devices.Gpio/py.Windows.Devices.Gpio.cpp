@@ -287,8 +287,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static PyObject* _enter_GpioChangeCounter(py::wrapper::Windows::Devices::Gpio::GpioChangeCounter* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_GpioChangeCounter(py::wrapper::Windows::Devices::Gpio::GpioChangeCounter* self) noexcept
@@ -805,8 +804,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static PyObject* _enter_GpioChangeReader(py::wrapper::Windows::Devices::Gpio::GpioChangeReader* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_GpioChangeReader(py::wrapper::Windows::Devices::Gpio::GpioChangeReader* self) noexcept
@@ -1507,8 +1505,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static PyObject* _enter_GpioPin(py::wrapper::Windows::Devices::Gpio::GpioPin* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_GpioPin(py::wrapper::Windows::Devices::Gpio::GpioPin* self) noexcept

@@ -174,8 +174,7 @@ namespace py::cpp::Windows::Media
 
     static PyObject* _enter_AudioBuffer(py::wrapper::Windows::Media::AudioBuffer* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_AudioBuffer(py::wrapper::Windows::Media::AudioBuffer* self) noexcept
@@ -599,8 +598,7 @@ namespace py::cpp::Windows::Media
 
     static PyObject* _enter_AudioFrame(py::wrapper::Windows::Media::AudioFrame* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_AudioFrame(py::wrapper::Windows::Media::AudioFrame* self) noexcept
@@ -6510,8 +6508,7 @@ namespace py::cpp::Windows::Media
 
     static PyObject* _enter_VideoFrame(py::wrapper::Windows::Media::VideoFrame* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_VideoFrame(py::wrapper::Windows::Media::VideoFrame* self) noexcept
@@ -6992,8 +6989,7 @@ namespace py::cpp::Windows::Media
 
     static PyObject* _enter_IMediaFrame(py::wrapper::Windows::Media::IMediaFrame* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_IMediaFrame(py::wrapper::Windows::Media::IMediaFrame* self) noexcept

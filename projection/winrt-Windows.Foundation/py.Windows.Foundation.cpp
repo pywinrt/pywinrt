@@ -153,8 +153,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* _enter_Deferral(py::wrapper::Windows::Foundation::Deferral* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_Deferral(py::wrapper::Windows::Foundation::Deferral* self) noexcept
@@ -466,8 +465,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* _enter_MemoryBuffer(py::wrapper::Windows::Foundation::MemoryBuffer* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_MemoryBuffer(py::wrapper::Windows::Foundation::MemoryBuffer* self) noexcept
@@ -3900,8 +3898,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* _enter_IClosable(py::wrapper::Windows::Foundation::IClosable* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_IClosable(py::wrapper::Windows::Foundation::IClosable* self) noexcept
@@ -4152,8 +4149,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* _enter_IMemoryBuffer(py::wrapper::Windows::Foundation::IMemoryBuffer* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_IMemoryBuffer(py::wrapper::Windows::Foundation::IMemoryBuffer* self) noexcept
@@ -4337,8 +4333,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* _enter_IMemoryBufferReference(py::wrapper::Windows::Foundation::IMemoryBufferReference* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_IMemoryBufferReference(py::wrapper::Windows::Foundation::IMemoryBufferReference* self) noexcept

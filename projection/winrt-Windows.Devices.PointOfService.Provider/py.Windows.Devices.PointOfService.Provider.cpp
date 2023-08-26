@@ -806,8 +806,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* _enter_BarcodeScannerFrameReader(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReader* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_BarcodeScannerFrameReader(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReader* self) noexcept
@@ -2390,8 +2389,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* _enter_BarcodeScannerProviderConnection(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_BarcodeScannerProviderConnection(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection* self) noexcept
@@ -3920,8 +3918,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* _enter_BarcodeScannerVideoFrame(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerVideoFrame* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_BarcodeScannerVideoFrame(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerVideoFrame* self) noexcept

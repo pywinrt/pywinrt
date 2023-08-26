@@ -607,8 +607,7 @@ namespace py::cpp::Windows::ApplicationModel::AppService
 
     static PyObject* _enter_AppServiceConnection(py::wrapper::Windows::ApplicationModel::AppService::AppServiceConnection* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_AppServiceConnection(py::wrapper::Windows::ApplicationModel::AppService::AppServiceConnection* self) noexcept

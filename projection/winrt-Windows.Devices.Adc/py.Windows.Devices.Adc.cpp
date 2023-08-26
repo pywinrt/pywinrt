@@ -156,8 +156,7 @@ namespace py::cpp::Windows::Devices::Adc
 
     static PyObject* _enter_AdcChannel(py::wrapper::Windows::Devices::Adc::AdcChannel* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_AdcChannel(py::wrapper::Windows::Devices::Adc::AdcChannel* self) noexcept

@@ -2501,8 +2501,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* _enter_RemoteSystemSession(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSession* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_RemoteSystemSession(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSession* self) noexcept

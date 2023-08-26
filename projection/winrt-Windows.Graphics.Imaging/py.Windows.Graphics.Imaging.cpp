@@ -168,8 +168,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* _enter_BitmapBuffer(py::wrapper::Windows::Graphics::Imaging::BitmapBuffer* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_BitmapBuffer(py::wrapper::Windows::Graphics::Imaging::BitmapBuffer* self) noexcept
@@ -3933,8 +3932,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* _enter_ImageStream(py::wrapper::Windows::Graphics::Imaging::ImageStream* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_ImageStream(py::wrapper::Windows::Graphics::Imaging::ImageStream* self) noexcept
@@ -4750,8 +4748,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* _enter_SoftwareBitmap(py::wrapper::Windows::Graphics::Imaging::SoftwareBitmap* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_SoftwareBitmap(py::wrapper::Windows::Graphics::Imaging::SoftwareBitmap* self) noexcept

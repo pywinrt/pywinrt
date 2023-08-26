@@ -499,8 +499,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* _enter_BarcodeScanner(py::wrapper::Windows::Devices::PointOfService::BarcodeScanner* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_BarcodeScanner(py::wrapper::Windows::Devices::PointOfService::BarcodeScanner* self) noexcept
@@ -4069,8 +4068,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* _enter_CashDrawer(py::wrapper::Windows::Devices::PointOfService::CashDrawer* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_CashDrawer(py::wrapper::Windows::Devices::PointOfService::CashDrawer* self) noexcept
@@ -6136,8 +6134,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* _enter_ClaimedBarcodeScanner(py::wrapper::Windows::Devices::PointOfService::ClaimedBarcodeScanner* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_ClaimedBarcodeScanner(py::wrapper::Windows::Devices::PointOfService::ClaimedBarcodeScanner* self) noexcept
@@ -6699,8 +6696,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* _enter_ClaimedCashDrawer(py::wrapper::Windows::Devices::PointOfService::ClaimedCashDrawer* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_ClaimedCashDrawer(py::wrapper::Windows::Devices::PointOfService::ClaimedCashDrawer* self) noexcept
@@ -8222,8 +8218,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* _enter_ClaimedLineDisplay(py::wrapper::Windows::Devices::PointOfService::ClaimedLineDisplay* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_ClaimedLineDisplay(py::wrapper::Windows::Devices::PointOfService::ClaimedLineDisplay* self) noexcept
@@ -9298,8 +9293,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* _enter_ClaimedMagneticStripeReader(py::wrapper::Windows::Devices::PointOfService::ClaimedMagneticStripeReader* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_ClaimedMagneticStripeReader(py::wrapper::Windows::Devices::PointOfService::ClaimedMagneticStripeReader* self) noexcept
@@ -10009,8 +10003,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* _enter_ClaimedPosPrinter(py::wrapper::Windows::Devices::PointOfService::ClaimedPosPrinter* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_ClaimedPosPrinter(py::wrapper::Windows::Devices::PointOfService::ClaimedPosPrinter* self) noexcept
@@ -12719,8 +12712,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* _enter_LineDisplay(py::wrapper::Windows::Devices::PointOfService::LineDisplay* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_LineDisplay(py::wrapper::Windows::Devices::PointOfService::LineDisplay* self) noexcept
@@ -15452,8 +15444,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* _enter_LineDisplayWindow(py::wrapper::Windows::Devices::PointOfService::LineDisplayWindow* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_LineDisplayWindow(py::wrapper::Windows::Devices::PointOfService::LineDisplayWindow* self) noexcept
@@ -15934,8 +15925,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* _enter_MagneticStripeReader(py::wrapper::Windows::Devices::PointOfService::MagneticStripeReader* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_MagneticStripeReader(py::wrapper::Windows::Devices::PointOfService::MagneticStripeReader* self) noexcept
@@ -18457,8 +18447,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* _enter_PosPrinter(py::wrapper::Windows::Devices::PointOfService::PosPrinter* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_PosPrinter(py::wrapper::Windows::Devices::PointOfService::PosPrinter* self) noexcept

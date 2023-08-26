@@ -319,8 +319,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
     static PyObject* _enter_DesignerAppManager(py::wrapper::Windows::UI::Xaml::Hosting::DesignerAppManager* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_DesignerAppManager(py::wrapper::Windows::UI::Xaml::Hosting::DesignerAppManager* self) noexcept
@@ -554,8 +553,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
     static PyObject* _enter_DesignerAppView(py::wrapper::Windows::UI::Xaml::Hosting::DesignerAppView* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_DesignerAppView(py::wrapper::Windows::UI::Xaml::Hosting::DesignerAppView* self) noexcept
@@ -886,8 +884,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
     static PyObject* _enter_DesktopWindowXamlSource(py::wrapper::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_DesktopWindowXamlSource(py::wrapper::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource* self) noexcept
@@ -1621,8 +1618,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
     static PyObject* _enter_WindowsXamlManager(py::wrapper::Windows::UI::Xaml::Hosting::WindowsXamlManager* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_WindowsXamlManager(py::wrapper::Windows::UI::Xaml::Hosting::WindowsXamlManager* self) noexcept

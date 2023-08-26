@@ -1839,8 +1839,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* _enter_UsbDevice(py::wrapper::Windows::Devices::Usb::UsbDevice* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_UsbDevice(py::wrapper::Windows::Devices::Usb::UsbDevice* self) noexcept

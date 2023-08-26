@@ -704,8 +704,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* _enter_FileLoggingSession(py::wrapper::Windows::Foundation::Diagnostics::FileLoggingSession* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_FileLoggingSession(py::wrapper::Windows::Foundation::Diagnostics::FileLoggingSession* self) noexcept
@@ -1365,8 +1364,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* _enter_LoggingActivity(py::wrapper::Windows::Foundation::Diagnostics::LoggingActivity* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_LoggingActivity(py::wrapper::Windows::Foundation::Diagnostics::LoggingActivity* self) noexcept
@@ -2048,8 +2046,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* _enter_LoggingChannel(py::wrapper::Windows::Foundation::Diagnostics::LoggingChannel* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_LoggingChannel(py::wrapper::Windows::Foundation::Diagnostics::LoggingChannel* self) noexcept
@@ -6092,8 +6089,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* _enter_LoggingSession(py::wrapper::Windows::Foundation::Diagnostics::LoggingSession* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_LoggingSession(py::wrapper::Windows::Foundation::Diagnostics::LoggingSession* self) noexcept
@@ -6790,8 +6786,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* _enter_IFileLoggingSession(py::wrapper::Windows::Foundation::Diagnostics::IFileLoggingSession* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_IFileLoggingSession(py::wrapper::Windows::Foundation::Diagnostics::IFileLoggingSession* self) noexcept
@@ -7128,8 +7123,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* _enter_ILoggingChannel(py::wrapper::Windows::Foundation::Diagnostics::ILoggingChannel* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_ILoggingChannel(py::wrapper::Windows::Foundation::Diagnostics::ILoggingChannel* self) noexcept
@@ -7394,8 +7388,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* _enter_ILoggingSession(py::wrapper::Windows::Foundation::Diagnostics::ILoggingSession* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_ILoggingSession(py::wrapper::Windows::Foundation::Diagnostics::ILoggingSession* self) noexcept

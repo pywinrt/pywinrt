@@ -474,12 +474,10 @@ namespace py::cpp::_winrt
 
     static int Array_bf_getbuffer(Array* self, Py_buffer* view, int flags) noexcept
     {
-        view->obj = nullptr;
         view->readonly = 0;
 
         // required fields
-        Py_INCREF(self);
-        view->obj = reinterpret_cast<PyObject*>(self);
+        view->obj = Py_NewRef(self);
         view->buf = reinterpret_cast<void*>(self->array->Data());
         view->len
             = static_cast<Py_ssize_t>(self->array->Size()) * self->array->ValueSize();

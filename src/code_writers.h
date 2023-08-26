@@ -1744,8 +1744,7 @@ return 0;
             w.write("{\n");
             {
                 writer::indent_guard g{w};
-                w.write("Py_INCREF(self);\n");
-                w.write("return reinterpret_cast<PyObject*>(self);\n");
+                w.write("return Py_NewRef(self);\n");
             }
             w.write("}\n");
 

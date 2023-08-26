@@ -1469,8 +1469,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* _enter_BluetoothDevice(py::wrapper::Windows::Devices::Bluetooth::BluetoothDevice* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_BluetoothDevice(py::wrapper::Windows::Devices::Bluetooth::BluetoothDevice* self) noexcept
@@ -4413,8 +4412,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* _enter_BluetoothLEDevice(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEDevice* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_BluetoothLEDevice(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEDevice* self) noexcept
@@ -4819,8 +4817,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* _enter_BluetoothLEPreferredConnectionParametersRequest(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEPreferredConnectionParametersRequest* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_BluetoothLEPreferredConnectionParametersRequest(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEPreferredConnectionParametersRequest* self) noexcept

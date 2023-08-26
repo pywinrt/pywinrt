@@ -3117,8 +3117,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* _enter_StorePackageLicense(py::wrapper::Windows::Services::Store::StorePackageLicense* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_StorePackageLicense(py::wrapper::Windows::Services::Store::StorePackageLicense* self) noexcept

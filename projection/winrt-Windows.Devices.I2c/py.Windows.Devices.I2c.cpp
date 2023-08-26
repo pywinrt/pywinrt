@@ -789,8 +789,7 @@ namespace py::cpp::Windows::Devices::I2c
 
     static PyObject* _enter_I2cDevice(py::wrapper::Windows::Devices::I2c::I2cDevice* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_I2cDevice(py::wrapper::Windows::Devices::I2c::I2cDevice* self) noexcept

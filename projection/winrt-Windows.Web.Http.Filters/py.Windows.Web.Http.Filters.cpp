@@ -782,8 +782,7 @@ namespace py::cpp::Windows::Web::Http::Filters
 
     static PyObject* _enter_HttpBaseProtocolFilter(py::wrapper::Windows::Web::Http::Filters::HttpBaseProtocolFilter* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_HttpBaseProtocolFilter(py::wrapper::Windows::Web::Http::Filters::HttpBaseProtocolFilter* self) noexcept
@@ -1349,8 +1348,7 @@ namespace py::cpp::Windows::Web::Http::Filters
 
     static PyObject* _enter_IHttpFilter(py::wrapper::Windows::Web::Http::Filters::IHttpFilter* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_IHttpFilter(py::wrapper::Windows::Web::Http::Filters::IHttpFilter* self) noexcept

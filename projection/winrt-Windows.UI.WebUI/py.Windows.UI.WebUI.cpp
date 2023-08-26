@@ -892,8 +892,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* _enter_HtmlPrintDocumentSource(py::wrapper::Windows::UI::WebUI::HtmlPrintDocumentSource* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_HtmlPrintDocumentSource(py::wrapper::Windows::UI::WebUI::HtmlPrintDocumentSource* self) noexcept

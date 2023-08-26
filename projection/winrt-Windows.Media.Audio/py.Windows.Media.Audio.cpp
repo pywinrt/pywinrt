@@ -508,8 +508,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* _enter_AudioDeviceInputNode(py::wrapper::Windows::Media::Audio::AudioDeviceInputNode* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_AudioDeviceInputNode(py::wrapper::Windows::Media::Audio::AudioDeviceInputNode* self) noexcept
@@ -996,8 +995,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* _enter_AudioDeviceOutputNode(py::wrapper::Windows::Media::Audio::AudioDeviceOutputNode* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_AudioDeviceOutputNode(py::wrapper::Windows::Media::Audio::AudioDeviceOutputNode* self) noexcept
@@ -1859,8 +1857,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* _enter_AudioFileInputNode(py::wrapper::Windows::Media::Audio::AudioFileInputNode* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_AudioFileInputNode(py::wrapper::Windows::Media::Audio::AudioFileInputNode* self) noexcept
@@ -2357,8 +2354,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* _enter_AudioFileOutputNode(py::wrapper::Windows::Media::Audio::AudioFileOutputNode* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_AudioFileOutputNode(py::wrapper::Windows::Media::Audio::AudioFileOutputNode* self) noexcept
@@ -3204,8 +3200,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* _enter_AudioFrameInputNode(py::wrapper::Windows::Media::Audio::AudioFrameInputNode* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_AudioFrameInputNode(py::wrapper::Windows::Media::Audio::AudioFrameInputNode* self) noexcept
@@ -3662,8 +3657,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* _enter_AudioFrameOutputNode(py::wrapper::Windows::Media::Audio::AudioFrameOutputNode* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_AudioFrameOutputNode(py::wrapper::Windows::Media::Audio::AudioFrameOutputNode* self) noexcept
@@ -4658,8 +4652,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* _enter_AudioGraph(py::wrapper::Windows::Media::Audio::AudioGraph* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_AudioGraph(py::wrapper::Windows::Media::Audio::AudioGraph* self) noexcept
@@ -4805,8 +4798,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* _enter_AudioGraphBatchUpdater(py::wrapper::Windows::Media::Audio::AudioGraphBatchUpdater* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_AudioGraphBatchUpdater(py::wrapper::Windows::Media::Audio::AudioGraphBatchUpdater* self) noexcept
@@ -7255,8 +7247,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* _enter_AudioPlaybackConnection(py::wrapper::Windows::Media::Audio::AudioPlaybackConnection* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_AudioPlaybackConnection(py::wrapper::Windows::Media::Audio::AudioPlaybackConnection* self) noexcept
@@ -8248,8 +8239,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* _enter_AudioSubmixNode(py::wrapper::Windows::Media::Audio::AudioSubmixNode* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_AudioSubmixNode(py::wrapper::Windows::Media::Audio::AudioSubmixNode* self) noexcept
@@ -10848,8 +10838,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* _enter_MediaSourceAudioInputNode(py::wrapper::Windows::Media::Audio::MediaSourceAudioInputNode* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_MediaSourceAudioInputNode(py::wrapper::Windows::Media::Audio::MediaSourceAudioInputNode* self) noexcept
@@ -13405,8 +13394,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* _enter_IAudioInputNode(py::wrapper::Windows::Media::Audio::IAudioInputNode* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_IAudioInputNode(py::wrapper::Windows::Media::Audio::IAudioInputNode* self) noexcept
@@ -13949,8 +13937,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* _enter_IAudioInputNode2(py::wrapper::Windows::Media::Audio::IAudioInputNode2* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_IAudioInputNode2(py::wrapper::Windows::Media::Audio::IAudioInputNode2* self) noexcept
@@ -14370,8 +14357,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* _enter_IAudioNode(py::wrapper::Windows::Media::Audio::IAudioNode* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_IAudioNode(py::wrapper::Windows::Media::Audio::IAudioNode* self) noexcept
@@ -14834,8 +14820,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* _enter_IAudioNodeWithListener(py::wrapper::Windows::Media::Audio::IAudioNodeWithListener* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_IAudioNodeWithListener(py::wrapper::Windows::Media::Audio::IAudioNodeWithListener* self) noexcept

@@ -1183,8 +1183,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* _enter_HidDevice(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidDevice* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_HidDevice(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidDevice* self) noexcept

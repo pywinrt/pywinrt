@@ -3941,8 +3941,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* _enter_DeviceThumbnail(py::wrapper::Windows::Devices::Enumeration::DeviceThumbnail* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_DeviceThumbnail(py::wrapper::Windows::Devices::Enumeration::DeviceThumbnail* self) noexcept

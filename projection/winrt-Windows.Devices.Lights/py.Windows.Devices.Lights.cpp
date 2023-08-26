@@ -390,8 +390,7 @@ namespace py::cpp::Windows::Devices::Lights
 
     static PyObject* _enter_Lamp(py::wrapper::Windows::Devices::Lights::Lamp* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_Lamp(py::wrapper::Windows::Devices::Lights::Lamp* self) noexcept

@@ -829,8 +829,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* _enter_LearningModel(py::wrapper::Windows::AI::MachineLearning::LearningModel* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_LearningModel(py::wrapper::Windows::AI::MachineLearning::LearningModel* self) noexcept
@@ -1929,8 +1928,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* _enter_LearningModelSession(py::wrapper::Windows::AI::MachineLearning::LearningModelSession* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_LearningModelSession(py::wrapper::Windows::AI::MachineLearning::LearningModelSession* self) noexcept
@@ -2929,8 +2927,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* _enter_TensorBoolean(py::wrapper::Windows::AI::MachineLearning::TensorBoolean* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_TensorBoolean(py::wrapper::Windows::AI::MachineLearning::TensorBoolean* self) noexcept
@@ -3353,8 +3350,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* _enter_TensorDouble(py::wrapper::Windows::AI::MachineLearning::TensorDouble* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_TensorDouble(py::wrapper::Windows::AI::MachineLearning::TensorDouble* self) noexcept
@@ -3966,8 +3962,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* _enter_TensorFloat(py::wrapper::Windows::AI::MachineLearning::TensorFloat* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_TensorFloat(py::wrapper::Windows::AI::MachineLearning::TensorFloat* self) noexcept
@@ -4390,8 +4385,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* _enter_TensorFloat16Bit(py::wrapper::Windows::AI::MachineLearning::TensorFloat16Bit* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_TensorFloat16Bit(py::wrapper::Windows::AI::MachineLearning::TensorFloat16Bit* self) noexcept
@@ -4814,8 +4808,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* _enter_TensorInt16Bit(py::wrapper::Windows::AI::MachineLearning::TensorInt16Bit* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_TensorInt16Bit(py::wrapper::Windows::AI::MachineLearning::TensorInt16Bit* self) noexcept
@@ -5238,8 +5231,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* _enter_TensorInt32Bit(py::wrapper::Windows::AI::MachineLearning::TensorInt32Bit* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_TensorInt32Bit(py::wrapper::Windows::AI::MachineLearning::TensorInt32Bit* self) noexcept
@@ -5662,8 +5654,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* _enter_TensorInt64Bit(py::wrapper::Windows::AI::MachineLearning::TensorInt64Bit* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_TensorInt64Bit(py::wrapper::Windows::AI::MachineLearning::TensorInt64Bit* self) noexcept
@@ -6086,8 +6077,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* _enter_TensorInt8Bit(py::wrapper::Windows::AI::MachineLearning::TensorInt8Bit* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_TensorInt8Bit(py::wrapper::Windows::AI::MachineLearning::TensorInt8Bit* self) noexcept
@@ -6478,8 +6468,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* _enter_TensorString(py::wrapper::Windows::AI::MachineLearning::TensorString* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_TensorString(py::wrapper::Windows::AI::MachineLearning::TensorString* self) noexcept
@@ -6901,8 +6890,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* _enter_TensorUInt16Bit(py::wrapper::Windows::AI::MachineLearning::TensorUInt16Bit* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_TensorUInt16Bit(py::wrapper::Windows::AI::MachineLearning::TensorUInt16Bit* self) noexcept
@@ -7325,8 +7313,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* _enter_TensorUInt32Bit(py::wrapper::Windows::AI::MachineLearning::TensorUInt32Bit* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_TensorUInt32Bit(py::wrapper::Windows::AI::MachineLearning::TensorUInt32Bit* self) noexcept
@@ -7749,8 +7736,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* _enter_TensorUInt64Bit(py::wrapper::Windows::AI::MachineLearning::TensorUInt64Bit* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_TensorUInt64Bit(py::wrapper::Windows::AI::MachineLearning::TensorUInt64Bit* self) noexcept
@@ -8173,8 +8159,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* _enter_TensorUInt8Bit(py::wrapper::Windows::AI::MachineLearning::TensorUInt8Bit* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_TensorUInt8Bit(py::wrapper::Windows::AI::MachineLearning::TensorUInt8Bit* self) noexcept

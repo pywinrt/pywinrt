@@ -1825,8 +1825,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
     static PyObject* _enter_PerceptionVideoFrameAllocator(py::wrapper::Windows::Devices::Perception::Provider::PerceptionVideoFrameAllocator* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_PerceptionVideoFrameAllocator(py::wrapper::Windows::Devices::Perception::Provider::PerceptionVideoFrameAllocator* self) noexcept
@@ -2098,8 +2097,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
     static PyObject* _enter_IPerceptionFrameProvider(py::wrapper::Windows::Devices::Perception::Provider::IPerceptionFrameProvider* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_IPerceptionFrameProvider(py::wrapper::Windows::Devices::Perception::Provider::IPerceptionFrameProvider* self) noexcept
@@ -2257,8 +2255,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
     static PyObject* _enter_IPerceptionFrameProviderManager(py::wrapper::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_IPerceptionFrameProviderManager(py::wrapper::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager* self) noexcept

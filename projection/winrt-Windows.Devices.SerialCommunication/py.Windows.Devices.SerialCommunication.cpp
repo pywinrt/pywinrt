@@ -1096,8 +1096,7 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static PyObject* _enter_SerialDevice(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_SerialDevice(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice* self) noexcept

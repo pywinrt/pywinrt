@@ -456,8 +456,7 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static PyObject* _enter_SpeechSynthesisStream(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesisStream* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_SpeechSynthesisStream(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesisStream* self) noexcept
@@ -811,8 +810,7 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static PyObject* _enter_SpeechSynthesizer(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesizer* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_SpeechSynthesizer(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesizer* self) noexcept

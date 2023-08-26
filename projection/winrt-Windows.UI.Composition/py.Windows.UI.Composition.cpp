@@ -9103,8 +9103,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyObject* _enter_CompositionObject(py::wrapper::Windows::UI::Composition::CompositionObject* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_CompositionObject(py::wrapper::Windows::UI::Composition::CompositionObject* self) noexcept
@@ -18315,8 +18314,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyObject* _enter_Compositor(py::wrapper::Windows::UI::Composition::Compositor* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_Compositor(py::wrapper::Windows::UI::Composition::Compositor* self) noexcept

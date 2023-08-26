@@ -1100,8 +1100,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* _enter_DataReader(py::wrapper::Windows::Storage::Streams::DataReader* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_DataReader(py::wrapper::Windows::Storage::Streams::DataReader* self) noexcept
@@ -2352,8 +2351,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* _enter_DataWriter(py::wrapper::Windows::Storage::Streams::DataWriter* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_DataWriter(py::wrapper::Windows::Storage::Streams::DataWriter* self) noexcept
@@ -2806,8 +2804,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* _enter_FileInputStream(py::wrapper::Windows::Storage::Streams::FileInputStream* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_FileInputStream(py::wrapper::Windows::Storage::Streams::FileInputStream* self) noexcept
@@ -2989,8 +2986,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* _enter_FileOutputStream(py::wrapper::Windows::Storage::Streams::FileOutputStream* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_FileOutputStream(py::wrapper::Windows::Storage::Streams::FileOutputStream* self) noexcept
@@ -3653,8 +3649,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* _enter_FileRandomAccessStream(py::wrapper::Windows::Storage::Streams::FileRandomAccessStream* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_FileRandomAccessStream(py::wrapper::Windows::Storage::Streams::FileRandomAccessStream* self) noexcept
@@ -4132,8 +4127,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* _enter_InMemoryRandomAccessStream(py::wrapper::Windows::Storage::Streams::InMemoryRandomAccessStream* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_InMemoryRandomAccessStream(py::wrapper::Windows::Storage::Streams::InMemoryRandomAccessStream* self) noexcept
@@ -4298,8 +4292,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* _enter_InputStreamOverStream(py::wrapper::Windows::Storage::Streams::InputStreamOverStream* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_InputStreamOverStream(py::wrapper::Windows::Storage::Streams::InputStreamOverStream* self) noexcept
@@ -4481,8 +4474,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* _enter_OutputStreamOverStream(py::wrapper::Windows::Storage::Streams::OutputStreamOverStream* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_OutputStreamOverStream(py::wrapper::Windows::Storage::Streams::OutputStreamOverStream* self) noexcept
@@ -5047,8 +5039,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* _enter_RandomAccessStreamOverStream(py::wrapper::Windows::Storage::Streams::RandomAccessStreamOverStream* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_RandomAccessStreamOverStream(py::wrapper::Windows::Storage::Streams::RandomAccessStreamOverStream* self) noexcept
@@ -7354,8 +7345,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* _enter_IInputStream(py::wrapper::Windows::Storage::Streams::IInputStream* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_IInputStream(py::wrapper::Windows::Storage::Streams::IInputStream* self) noexcept
@@ -7636,8 +7626,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* _enter_IOutputStream(py::wrapper::Windows::Storage::Streams::IOutputStream* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_IOutputStream(py::wrapper::Windows::Storage::Streams::IOutputStream* self) noexcept
@@ -8215,8 +8204,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* _enter_IRandomAccessStream(py::wrapper::Windows::Storage::Streams::IRandomAccessStream* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_IRandomAccessStream(py::wrapper::Windows::Storage::Streams::IRandomAccessStream* self) noexcept
@@ -8786,8 +8774,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* _enter_IRandomAccessStreamWithContentType(py::wrapper::Windows::Storage::Streams::IRandomAccessStreamWithContentType* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_IRandomAccessStreamWithContentType(py::wrapper::Windows::Storage::Streams::IRandomAccessStreamWithContentType* self) noexcept

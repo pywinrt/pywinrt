@@ -222,8 +222,7 @@ namespace py::cpp::Windows::UI::Composition::Core
 
     static PyObject* _enter_CompositorController(py::wrapper::Windows::UI::Composition::Core::CompositorController* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_CompositorController(py::wrapper::Windows::UI::Composition::Core::CompositorController* self) noexcept

@@ -1569,8 +1569,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* _enter_SoftwareBitmapSource(py::wrapper::Windows::UI::Xaml::Media::Imaging::SoftwareBitmapSource* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_SoftwareBitmapSource(py::wrapper::Windows::UI::Xaml::Media::Imaging::SoftwareBitmapSource* self) noexcept

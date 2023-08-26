@@ -1116,8 +1116,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* _enter_PerceptionColorFrame(py::wrapper::Windows::Devices::Perception::PerceptionColorFrame* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_PerceptionColorFrame(py::wrapper::Windows::Devices::Perception::PerceptionColorFrame* self) noexcept
@@ -1496,8 +1495,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* _enter_PerceptionColorFrameReader(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameReader* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_PerceptionColorFrameReader(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameReader* self) noexcept
@@ -3130,8 +3128,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* _enter_PerceptionControlSession(py::wrapper::Windows::Devices::Perception::PerceptionControlSession* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_PerceptionControlSession(py::wrapper::Windows::Devices::Perception::PerceptionControlSession* self) noexcept
@@ -3682,8 +3679,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* _enter_PerceptionDepthFrame(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrame* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_PerceptionDepthFrame(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrame* self) noexcept
@@ -4062,8 +4058,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* _enter_PerceptionDepthFrameReader(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameReader* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_PerceptionDepthFrameReader(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameReader* self) noexcept
@@ -5858,8 +5853,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* _enter_PerceptionInfraredFrame(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrame* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_PerceptionInfraredFrame(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrame* self) noexcept
@@ -6238,8 +6232,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* _enter_PerceptionInfraredFrameReader(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameReader* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_PerceptionInfraredFrameReader(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameReader* self) noexcept

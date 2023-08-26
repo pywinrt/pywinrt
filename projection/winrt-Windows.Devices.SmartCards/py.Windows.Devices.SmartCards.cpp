@@ -1914,8 +1914,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* _enter_SmartCardChallengeContext(py::wrapper::Windows::Devices::SmartCards::SmartCardChallengeContext* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_SmartCardChallengeContext(py::wrapper::Windows::Devices::SmartCards::SmartCardChallengeContext* self) noexcept
@@ -2071,8 +2070,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* _enter_SmartCardConnection(py::wrapper::Windows::Devices::SmartCards::SmartCardConnection* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_SmartCardConnection(py::wrapper::Windows::Devices::SmartCards::SmartCardConnection* self) noexcept

@@ -11612,8 +11612,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* _enter_MediaPlayer(py::wrapper::Windows::Media::Playback::MediaPlayer* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_MediaPlayer(py::wrapper::Windows::Media::Playback::MediaPlayer* self) noexcept
@@ -12172,8 +12171,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* _enter_MediaPlayerSurface(py::wrapper::Windows::Media::Playback::MediaPlayerSurface* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_MediaPlayerSurface(py::wrapper::Windows::Media::Playback::MediaPlayerSurface* self) noexcept

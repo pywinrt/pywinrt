@@ -79,8 +79,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* _enter_AttachableInputObject(py::wrapper::Windows::UI::Input::AttachableInputObject* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_AttachableInputObject(py::wrapper::Windows::UI::Input::AttachableInputObject* self) noexcept

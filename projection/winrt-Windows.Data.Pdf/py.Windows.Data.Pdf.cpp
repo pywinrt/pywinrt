@@ -502,8 +502,7 @@ namespace py::cpp::Windows::Data::Pdf
 
     static PyObject* _enter_PdfPage(py::wrapper::Windows::Data::Pdf::PdfPage* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_PdfPage(py::wrapper::Windows::Data::Pdf::PdfPage* self) noexcept

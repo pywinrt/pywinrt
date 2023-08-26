@@ -3833,8 +3833,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
 
     static PyObject* _enter_IItemsRangeInfo(py::wrapper::Windows::UI::Xaml::Data::IItemsRangeInfo* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_IItemsRangeInfo(py::wrapper::Windows::UI::Xaml::Data::IItemsRangeInfo* self) noexcept

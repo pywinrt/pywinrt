@@ -4151,8 +4151,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* _enter_GattDeviceService(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_GattDeviceService(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService* self) noexcept
@@ -9711,8 +9710,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* _enter_GattSession(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSession* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_GattSession(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSession* self) noexcept

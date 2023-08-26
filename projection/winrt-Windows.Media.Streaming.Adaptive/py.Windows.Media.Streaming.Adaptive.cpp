@@ -934,8 +934,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* _enter_AdaptiveMediaSource(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_AdaptiveMediaSource(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource* self) noexcept

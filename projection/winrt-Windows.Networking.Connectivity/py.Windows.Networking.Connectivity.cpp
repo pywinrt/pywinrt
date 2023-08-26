@@ -2089,8 +2089,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* _enter_ConnectionSession(py::wrapper::Windows::Networking::Connectivity::ConnectionSession* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_ConnectionSession(py::wrapper::Windows::Networking::Connectivity::ConnectionSession* self) noexcept

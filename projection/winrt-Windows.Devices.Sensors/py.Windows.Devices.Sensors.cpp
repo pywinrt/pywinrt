@@ -12396,8 +12396,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* _enter_ProximitySensorDisplayOnOffController(py::wrapper::Windows::Devices::Sensors::ProximitySensorDisplayOnOffController* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_ProximitySensorDisplayOnOffController(py::wrapper::Windows::Devices::Sensors::ProximitySensorDisplayOnOffController* self) noexcept

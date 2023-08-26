@@ -238,8 +238,7 @@ namespace py::cpp::Windows::Storage::Compression
 
     static PyObject* _enter_Compressor(py::wrapper::Windows::Storage::Compression::Compressor* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_Compressor(py::wrapper::Windows::Storage::Compression::Compressor* self) noexcept
@@ -450,8 +449,7 @@ namespace py::cpp::Windows::Storage::Compression
 
     static PyObject* _enter_Decompressor(py::wrapper::Windows::Storage::Compression::Decompressor* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_Decompressor(py::wrapper::Windows::Storage::Compression::Decompressor* self) noexcept

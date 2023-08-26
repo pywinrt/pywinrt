@@ -642,8 +642,7 @@ namespace py::cpp::Windows::Devices::Pwm
 
     static PyObject* _enter_PwmPin(py::wrapper::Windows::Devices::Pwm::PwmPin* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_PwmPin(py::wrapper::Windows::Devices::Pwm::PwmPin* self) noexcept

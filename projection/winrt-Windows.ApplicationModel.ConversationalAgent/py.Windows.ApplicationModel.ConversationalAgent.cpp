@@ -845,8 +845,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* _enter_ActivationSignalDetectionConfiguration(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_ActivationSignalDetectionConfiguration(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration* self) noexcept
@@ -3253,8 +3252,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* _enter_ConversationalAgentSession(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_ConversationalAgentSession(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession* self) noexcept

@@ -310,8 +310,7 @@ namespace py::cpp::Windows::Media::Casting
 
     static PyObject* _enter_CastingConnection(py::wrapper::Windows::Media::Casting::CastingConnection* self) noexcept
     {
-        Py_INCREF(self);
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(self);
     }
 
     static PyObject* _exit_CastingConnection(py::wrapper::Windows::Media::Casting::CastingConnection* self) noexcept
