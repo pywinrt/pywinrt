@@ -135,7 +135,7 @@ namespace py::impl::Windows::UI::Xaml
 
             return [delegate = std::move(_delegate)](auto param0)
             {
-                winrt::handle_type<py::gil_state_traits> gil_state{ PyGILState_Ensure() };
+                auto gil = py::ensure_gil();
 
                 py::pyobj_handle py_param0{ py::convert(param0) };
 
@@ -170,7 +170,7 @@ namespace py::impl::Windows::UI::Xaml
 
             return [delegate = std::move(_delegate)](auto param0, auto param1)
             {
-                winrt::handle_type<py::gil_state_traits> gil_state{ PyGILState_Ensure() };
+                auto gil = py::ensure_gil();
 
                 py::pyobj_handle py_param0{ py::convert(param0) };
 
@@ -212,7 +212,7 @@ namespace py::impl::Windows::UI::Xaml
 
             return [delegate = std::move(_delegate)]()
             {
-                winrt::handle_type<py::gil_state_traits> gil_state{ PyGILState_Ensure() };
+                auto gil = py::ensure_gil();
 
                 py::pyobj_handle args{ nullptr };
                 py::pyobj_handle return_value{ PyObject_CallObject(delegate.callable(), args.get()) };
@@ -236,7 +236,7 @@ namespace py::impl::Windows::UI::Xaml
 
             return [delegate = std::move(_delegate)](auto param0, auto param1)
             {
-                winrt::handle_type<py::gil_state_traits> gil_state{ PyGILState_Ensure() };
+                auto gil = py::ensure_gil();
 
                 py::pyobj_handle py_param0{ py::convert(param0) };
 
@@ -278,7 +278,7 @@ namespace py::impl::Windows::UI::Xaml
 
             return [delegate = std::move(_delegate)](auto param0, auto param1)
             {
-                winrt::handle_type<py::gil_state_traits> gil_state{ PyGILState_Ensure() };
+                auto gil = py::ensure_gil();
 
                 py::pyobj_handle py_param0{ py::convert(param0) };
 
@@ -320,7 +320,7 @@ namespace py::impl::Windows::UI::Xaml
 
             return [delegate = std::move(_delegate)](auto param0, auto param1)
             {
-                winrt::handle_type<py::gil_state_traits> gil_state{ PyGILState_Ensure() };
+                auto gil = py::ensure_gil();
 
                 py::pyobj_handle py_param0{ py::convert(param0) };
 
@@ -362,7 +362,7 @@ namespace py::impl::Windows::UI::Xaml
 
             return [delegate = std::move(_delegate)](auto param0, auto param1)
             {
-                winrt::handle_type<py::gil_state_traits> gil_state{ PyGILState_Ensure() };
+                auto gil = py::ensure_gil();
 
                 py::pyobj_handle py_param0{ py::convert(param0) };
 
@@ -404,7 +404,7 @@ namespace py::impl::Windows::UI::Xaml
 
             return [delegate = std::move(_delegate)](auto param0, auto param1)
             {
-                winrt::handle_type<py::gil_state_traits> gil_state{ PyGILState_Ensure() };
+                auto gil = py::ensure_gil();
 
                 py::pyobj_handle py_param0{ py::convert(param0) };
 
@@ -446,7 +446,7 @@ namespace py::impl::Windows::UI::Xaml
 
             return [delegate = std::move(_delegate)](auto param0, auto param1)
             {
-                winrt::handle_type<py::gil_state_traits> gil_state{ PyGILState_Ensure() };
+                auto gil = py::ensure_gil();
 
                 py::pyobj_handle py_param0{ py::convert(param0) };
 
@@ -488,7 +488,7 @@ namespace py::impl::Windows::UI::Xaml
 
             return [delegate = std::move(_delegate)](auto param0, auto param1)
             {
-                winrt::handle_type<py::gil_state_traits> gil_state{ PyGILState_Ensure() };
+                auto gil = py::ensure_gil();
 
                 py::pyobj_handle py_param0{ py::convert(param0) };
 
@@ -530,7 +530,7 @@ namespace py::impl::Windows::UI::Xaml
 
             return [delegate = std::move(_delegate)](auto param0, auto param1)
             {
-                winrt::handle_type<py::gil_state_traits> gil_state{ PyGILState_Ensure() };
+                auto gil = py::ensure_gil();
 
                 py::pyobj_handle py_param0{ py::convert(param0) };
 
@@ -572,7 +572,7 @@ namespace py::impl::Windows::UI::Xaml
 
             return [delegate = std::move(_delegate)](auto param0, auto param1)
             {
-                winrt::handle_type<py::gil_state_traits> gil_state{ PyGILState_Ensure() };
+                auto gil = py::ensure_gil();
 
                 py::pyobj_handle py_param0{ py::convert(param0) };
 
@@ -614,7 +614,7 @@ namespace py::impl::Windows::UI::Xaml
 
             return [delegate = std::move(_delegate)](auto param0, auto param1)
             {
-                winrt::handle_type<py::gil_state_traits> gil_state{ PyGILState_Ensure() };
+                auto gil = py::ensure_gil();
 
                 py::pyobj_handle py_param0{ py::convert(param0) };
 
@@ -656,7 +656,7 @@ namespace py::impl::Windows::UI::Xaml
 
             return [delegate = std::move(_delegate)](auto param0, auto param1)
             {
-                winrt::handle_type<py::gil_state_traits> gil_state{ PyGILState_Ensure() };
+                auto gil = py::ensure_gil();
 
                 py::pyobj_handle py_param0{ py::convert(param0) };
 
@@ -698,7 +698,7 @@ namespace py::impl::Windows::UI::Xaml
 
             return [delegate = std::move(_delegate)](auto param0, auto param1)
             {
-                winrt::handle_type<py::gil_state_traits> gil_state{ PyGILState_Ensure() };
+                auto gil = py::ensure_gil();
 
                 py::pyobj_handle py_param0{ py::convert(param0) };
 
@@ -740,7 +740,7 @@ namespace py::impl::Windows::UI::Xaml
 
             return [delegate = std::move(_delegate)](auto param0, auto param1)
             {
-                winrt::handle_type<py::gil_state_traits> gil_state{ PyGILState_Ensure() };
+                auto gil = py::ensure_gil();
 
                 py::pyobj_handle py_param0{ py::convert(param0) };
 
@@ -782,7 +782,7 @@ namespace py::impl::Windows::UI::Xaml
 
             return [delegate = std::move(_delegate)](auto param0, auto param1)
             {
-                winrt::handle_type<py::gil_state_traits> gil_state{ PyGILState_Ensure() };
+                auto gil = py::ensure_gil();
 
                 py::pyobj_handle py_param0{ py::convert(param0) };
 
@@ -824,7 +824,7 @@ namespace py::impl::Windows::UI::Xaml
 
             return [delegate = std::move(_delegate)](auto param0, auto param1)
             {
-                winrt::handle_type<py::gil_state_traits> gil_state{ PyGILState_Ensure() };
+                auto gil = py::ensure_gil();
 
                 py::pyobj_handle py_param0{ py::convert(param0) };
 
@@ -866,7 +866,7 @@ namespace py::impl::Windows::UI::Xaml
 
             return [delegate = std::move(_delegate)](auto param0, auto param1)
             {
-                winrt::handle_type<py::gil_state_traits> gil_state{ PyGILState_Ensure() };
+                auto gil = py::ensure_gil();
 
                 py::pyobj_handle py_param0{ py::convert(param0) };
 

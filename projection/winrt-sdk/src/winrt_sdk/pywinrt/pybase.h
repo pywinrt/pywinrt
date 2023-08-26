@@ -29,6 +29,9 @@ namespace py
         }
     };
 
+    /**
+     * Traits for use with winrt::handle_type.
+     */
     struct gil_state_traits
     {
         using type = PyGILState_STATE;
@@ -43,6 +46,19 @@ namespace py
             return static_cast<PyGILState_STATE>(0);
         }
     };
+
+    /**
+     * Type alias for Python GIL state handle.
+     */
+    using gil_handle = winrt::handle_type<gil_state_traits>;
+
+    /**
+     * Helper function for ensuring a block of code runs with the Python GIL held.
+     */
+    static inline auto ensure_gil()
+    {
+        return gil_handle{PyGILState_Ensure()};
+    }
 
     template<typename Category>
     struct pinterface_checker
@@ -131,7 +147,7 @@ namespace py
 
         ~delegate_callable()
         {
-            winrt::handle_type<py::gil_state_traits> gil_state{PyGILState_Ensure()};
+            auto gil = ensure_gil();
             Py_CLEAR(_callable);
         }
 
@@ -2025,7 +2041,7 @@ namespace py
 
         ~completion_callback()
         {
-            winrt::handle_type<py::gil_state_traits> gil_state{PyGILState_Ensure()};
+            auto gil = ensure_gil();
             Py_CLEAR(_loop);
             Py_CLEAR(_future);
         }
@@ -2083,8 +2099,7 @@ namespace py
             async.Completed(
                 [cb = std::move(cb)](auto const& operation, auto status) mutable
                 {
-                    winrt::handle_type<py::gil_state_traits> gil_state{
-                        PyGILState_Ensure()};
+                    auto gil = ensure_gil();
 
                     if (status == winrt::Windows::Foundation::AsyncStatus::Completed)
                     {

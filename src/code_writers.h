@@ -3472,8 +3472,7 @@ return [delegate = std::move(_delegate)](%)
                 {
                     writer::indent_guard ggg{w};
 
-                    w.write(
-                        "winrt::handle_type<py::gil_state_traits> gil_state{ PyGILState_Ensure() };\n\n");
+                    w.write("auto gil = py::ensure_gil();\n\n");
 
                     std::vector<std::string> tuple_params{};
                     for (auto&& p : filter_py_in_params(signature.params()))
