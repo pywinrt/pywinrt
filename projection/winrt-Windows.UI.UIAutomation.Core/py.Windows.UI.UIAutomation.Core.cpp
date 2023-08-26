@@ -1724,6 +1724,21 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         Py_DECREF(tp);
     }
 
+    static PyObject* _assign_array_AutomationAnnotationTypeRegistration(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_AutomationAnnotationTypeRegistration[] = {
+        { "_assign_array_", _assign_array_AutomationAnnotationTypeRegistration, METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyObject* AutomationAnnotationTypeRegistration_get_LocalId(py::wrapper::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration* self, void* /*unused*/) noexcept
     {
         try
@@ -1767,6 +1782,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         { Py_tp_new, reinterpret_cast<void*>(_new_AutomationAnnotationTypeRegistration) },
         { Py_tp_init, reinterpret_cast<void*>(_init_AutomationAnnotationTypeRegistration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AutomationAnnotationTypeRegistration) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_AutomationAnnotationTypeRegistration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AutomationAnnotationTypeRegistration) },
         { },
     };
@@ -1834,6 +1850,21 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         Py_DECREF(tp);
     }
 
+    static PyObject* _assign_array_AutomationRemoteOperationOperandId(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_AutomationRemoteOperationOperandId[] = {
+        { "_assign_array_", _assign_array_AutomationRemoteOperationOperandId, METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyObject* AutomationRemoteOperationOperandId_get_Value(py::wrapper::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId* self, void* /*unused*/) noexcept
     {
         try
@@ -1877,6 +1908,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         { Py_tp_new, reinterpret_cast<void*>(_new_AutomationRemoteOperationOperandId) },
         { Py_tp_init, reinterpret_cast<void*>(_init_AutomationRemoteOperationOperandId) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AutomationRemoteOperationOperandId) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_AutomationRemoteOperationOperandId) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AutomationRemoteOperationOperandId) },
         { },
     };

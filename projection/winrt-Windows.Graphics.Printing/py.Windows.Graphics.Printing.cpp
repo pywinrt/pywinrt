@@ -4243,6 +4243,21 @@ namespace py::cpp::Windows::Graphics::Printing
         Py_DECREF(tp);
     }
 
+    static PyObject* _assign_array_PrintPageDescription(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Graphics::Printing::PrintPageDescription>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_PrintPageDescription[] = {
+        { "_assign_array_", _assign_array_PrintPageDescription, METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyObject* PrintPageDescription_get_PageSize(py::wrapper::Windows::Graphics::Printing::PrintPageDescription* self, void* /*unused*/) noexcept
     {
         try
@@ -4388,6 +4403,7 @@ namespace py::cpp::Windows::Graphics::Printing
         { Py_tp_new, reinterpret_cast<void*>(_new_PrintPageDescription) },
         { Py_tp_init, reinterpret_cast<void*>(_init_PrintPageDescription) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintPageDescription) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintPageDescription) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintPageDescription) },
         { },
     };

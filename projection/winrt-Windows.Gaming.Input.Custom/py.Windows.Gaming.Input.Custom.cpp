@@ -2167,6 +2167,21 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         Py_DECREF(tp);
     }
 
+    static PyObject* _assign_array_GameControllerVersionInfo(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Gaming::Input::Custom::GameControllerVersionInfo>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_GameControllerVersionInfo[] = {
+        { "_assign_array_", _assign_array_GameControllerVersionInfo, METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyObject* GameControllerVersionInfo_get_Major(py::wrapper::Windows::Gaming::Input::Custom::GameControllerVersionInfo* self, void* /*unused*/) noexcept
     {
         try
@@ -2312,6 +2327,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         { Py_tp_new, reinterpret_cast<void*>(_new_GameControllerVersionInfo) },
         { Py_tp_init, reinterpret_cast<void*>(_init_GameControllerVersionInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GameControllerVersionInfo) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_GameControllerVersionInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GameControllerVersionInfo) },
         { },
     };
@@ -2379,6 +2395,21 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         tp->tp_free(self);
         Py_DECREF(tp);
     }
+
+    static PyObject* _assign_array_GipFirmwareUpdateProgress(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_GipFirmwareUpdateProgress[] = {
+        { "_assign_array_", _assign_array_GipFirmwareUpdateProgress, METH_O | METH_STATIC, nullptr },
+        { }
+    };
 
     static PyObject* GipFirmwareUpdateProgress_get_PercentCompleted(py::wrapper::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress* self, void* /*unused*/) noexcept
     {
@@ -2457,6 +2488,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         { Py_tp_new, reinterpret_cast<void*>(_new_GipFirmwareUpdateProgress) },
         { Py_tp_init, reinterpret_cast<void*>(_init_GipFirmwareUpdateProgress) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GipFirmwareUpdateProgress) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_GipFirmwareUpdateProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GipFirmwareUpdateProgress) },
         { },
     };

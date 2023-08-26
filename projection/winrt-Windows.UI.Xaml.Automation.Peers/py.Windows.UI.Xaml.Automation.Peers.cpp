@@ -15659,6 +15659,21 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         Py_DECREF(tp);
     }
 
+    static PyObject* _assign_array_RawElementProviderRuntimeId(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Automation::Peers::RawElementProviderRuntimeId>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_RawElementProviderRuntimeId[] = {
+        { "_assign_array_", _assign_array_RawElementProviderRuntimeId, METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyObject* RawElementProviderRuntimeId_get_Part1(py::wrapper::Windows::UI::Xaml::Automation::Peers::RawElementProviderRuntimeId* self, void* /*unused*/) noexcept
     {
         try
@@ -15736,6 +15751,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { Py_tp_new, reinterpret_cast<void*>(_new_RawElementProviderRuntimeId) },
         { Py_tp_init, reinterpret_cast<void*>(_init_RawElementProviderRuntimeId) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RawElementProviderRuntimeId) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_RawElementProviderRuntimeId) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RawElementProviderRuntimeId) },
         { },
     };

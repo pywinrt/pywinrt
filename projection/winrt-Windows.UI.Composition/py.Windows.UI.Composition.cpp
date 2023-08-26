@@ -28926,6 +28926,21 @@ namespace py::cpp::Windows::UI::Composition
         Py_DECREF(tp);
     }
 
+    static PyObject* _assign_array_InkTrailPoint(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Composition::InkTrailPoint>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_InkTrailPoint[] = {
+        { "_assign_array_", _assign_array_InkTrailPoint, METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyObject* InkTrailPoint_get_Point(py::wrapper::Windows::UI::Composition::InkTrailPoint* self, void* /*unused*/) noexcept
     {
         try
@@ -29003,6 +29018,7 @@ namespace py::cpp::Windows::UI::Composition
         { Py_tp_new, reinterpret_cast<void*>(_new_InkTrailPoint) },
         { Py_tp_init, reinterpret_cast<void*>(_init_InkTrailPoint) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InkTrailPoint) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_InkTrailPoint) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InkTrailPoint) },
         { },
     };

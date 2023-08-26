@@ -8811,6 +8811,21 @@ namespace py::cpp::Windows::Devices::Sms
         Py_DECREF(tp);
     }
 
+    static PyObject* _assign_array_SmsEncodedLength(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Sms::SmsEncodedLength>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_SmsEncodedLength[] = {
+        { "_assign_array_", _assign_array_SmsEncodedLength, METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyObject* SmsEncodedLength_get_SegmentCount(py::wrapper::Windows::Devices::Sms::SmsEncodedLength* self, void* /*unused*/) noexcept
     {
         try
@@ -8990,6 +9005,7 @@ namespace py::cpp::Windows::Devices::Sms
         { Py_tp_new, reinterpret_cast<void*>(_new_SmsEncodedLength) },
         { Py_tp_init, reinterpret_cast<void*>(_init_SmsEncodedLength) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmsEncodedLength) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_SmsEncodedLength) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmsEncodedLength) },
         { },
     };

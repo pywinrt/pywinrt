@@ -22049,6 +22049,21 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         Py_DECREF(tp);
     }
 
+    static PyObject* _assign_array_GeneratorPosition(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Controls::Primitives::GeneratorPosition>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_GeneratorPosition[] = {
+        { "_assign_array_", _assign_array_GeneratorPosition, METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyObject* GeneratorPosition_get_Index(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GeneratorPosition* self, void* /*unused*/) noexcept
     {
         try
@@ -22126,6 +22141,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { Py_tp_new, reinterpret_cast<void*>(_new_GeneratorPosition) },
         { Py_tp_init, reinterpret_cast<void*>(_init_GeneratorPosition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GeneratorPosition) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_GeneratorPosition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GeneratorPosition) },
         { },
     };

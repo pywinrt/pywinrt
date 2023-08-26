@@ -3254,6 +3254,21 @@ namespace py::cpp::Windows::UI::Text::Core
         Py_DECREF(tp);
     }
 
+    static PyObject* _assign_array_CoreTextRange(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Text::Core::CoreTextRange>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_CoreTextRange[] = {
+        { "_assign_array_", _assign_array_CoreTextRange, METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyObject* CoreTextRange_get_StartCaretPosition(py::wrapper::Windows::UI::Text::Core::CoreTextRange* self, void* /*unused*/) noexcept
     {
         try
@@ -3331,6 +3346,7 @@ namespace py::cpp::Windows::UI::Text::Core
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreTextRange) },
         { Py_tp_init, reinterpret_cast<void*>(_init_CoreTextRange) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreTextRange) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreTextRange) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreTextRange) },
         { },
     };

@@ -3170,6 +3170,21 @@ namespace py::cpp::Windows::Graphics::Display
         Py_DECREF(tp);
     }
 
+    static PyObject* _assign_array_NitRange(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Graphics::Display::NitRange>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_NitRange[] = {
+        { "_assign_array_", _assign_array_NitRange, METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyObject* NitRange_get_MinNits(py::wrapper::Windows::Graphics::Display::NitRange* self, void* /*unused*/) noexcept
     {
         try
@@ -3281,6 +3296,7 @@ namespace py::cpp::Windows::Graphics::Display
         { Py_tp_new, reinterpret_cast<void*>(_new_NitRange) },
         { Py_tp_init, reinterpret_cast<void*>(_init_NitRange) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NitRange) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_NitRange) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NitRange) },
         { },
     };

@@ -1264,6 +1264,26 @@ static PyObject* _new_@(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject
         w.write("}\n");
     }
 
+    void write_assign_array_method(writer& w, TypeDef const& type)
+    {
+
+        w.write(
+            "\nstatic PyObject* _assign_array_@(PyObject* /*unused*/, PyObject* arg) noexcept\n{\n",
+            type.TypeName());
+        {
+            writer::indent_guard g{w};
+            w.write("auto array = std::make_unique<py::ComArray<%>>();\n", type);
+            w.write("if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))\n{\n");
+            {
+                writer::indent_guard gg{w};
+                w.write("return nullptr;\n");
+            }
+            w.write("}\n");
+            w.write("Py_RETURN_NONE;\n");
+        }
+        w.write("}\n");
+    }
+
     /**
      * Writes the body of the tp_iter slot for the __iter__ special method.
      */
@@ -1692,25 +1712,10 @@ return 0;
 
         if (!(is_ptype(type) || is_static_class(type)))
         {
-            w.write(
-                "\nstatic PyObject* _assign_array_@(PyObject* /*unused*/, PyObject* arg) noexcept\n{\n",
-                type.TypeName());
-            {
-                writer::indent_guard g{w};
-                w.write("auto array = std::make_unique<py::ComArray<%>>();\n", type);
-                w.write(
-                    "if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))\n{\n");
-                {
-                    writer::indent_guard gg{w};
-                    w.write("return nullptr;\n");
-                }
-                w.write("}\n");
-                w.write("Py_RETURN_NONE;\n");
-            }
-            w.write("}\n");
+            write_assign_array_method(w, type);
         }
 
-        if (!(is_ptype(type) || is_static_class(type)))
+        if (is_iunknown(type) && !(is_ptype(type) || is_static_class(type)))
         {
             w.write(
                 "\nstatic PyObject* _from_@(PyObject* /*unused*/, PyObject* arg) noexcept\n{\n",
@@ -2079,7 +2084,7 @@ return 0;
             }
 
             // TODO: support _from for ptypes
-            if (!(is_ptype(type) || is_static_class(type)))
+            if (is_iunknown(type) && !(is_ptype(type) || is_static_class(type)))
             {
                 w.write(
                     "{ \"_from\", reinterpret_cast<PyCFunction>(_from_@), METH_O | METH_STATIC, nullptr },\n",
@@ -2192,12 +2197,8 @@ return 0;
                 w.write(
                     "{ Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_@) },\n", name);
             }
-            if ((category == category::class_type)
-                || (category == category::interface_type))
-            {
-                w.write(
-                    "{ Py_tp_methods, reinterpret_cast<void*>(_methods_@) },\n", name);
-            }
+
+            w.write("{ Py_tp_methods, reinterpret_cast<void*>(_methods_@) },\n", name);
             w.write("{ Py_tp_getset, reinterpret_cast<void*>(_getset_@) },\n", name);
 
             if (implements_ibuffer(type) || implements_imemorybufferreference(type))
@@ -3390,6 +3391,8 @@ if (!PyArg_ParseTupleAndKeywords(args, kwds, "%", const_cast<char**>(kwlist)%))
         w.write("\n// ----- % struct --------------------\n", type.TypeName());
         write_struct_constructor(w, type);
         write_dealloc_function(w, type);
+        write_method_functions(w, type);
+        write_method_table(w, type);
         write_struct_getset_functions(w, type);
         write_getset_table(w, type);
         write_type_slot_table(w, type);

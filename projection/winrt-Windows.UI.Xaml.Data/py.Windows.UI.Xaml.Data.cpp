@@ -4508,6 +4508,21 @@ namespace py::cpp::Windows::UI::Xaml::Data
         Py_DECREF(tp);
     }
 
+    static PyObject* _assign_array_LoadMoreItemsResult(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Data::LoadMoreItemsResult>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_LoadMoreItemsResult[] = {
+        { "_assign_array_", _assign_array_LoadMoreItemsResult, METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyObject* LoadMoreItemsResult_get_Count(py::wrapper::Windows::UI::Xaml::Data::LoadMoreItemsResult* self, void* /*unused*/) noexcept
     {
         try
@@ -4551,6 +4566,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         { Py_tp_new, reinterpret_cast<void*>(_new_LoadMoreItemsResult) },
         { Py_tp_init, reinterpret_cast<void*>(_init_LoadMoreItemsResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LoadMoreItemsResult) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_LoadMoreItemsResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_LoadMoreItemsResult) },
         { },
     };

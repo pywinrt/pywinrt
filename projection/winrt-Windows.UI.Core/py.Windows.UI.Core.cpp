@@ -11297,6 +11297,21 @@ namespace py::cpp::Windows::UI::Core
         Py_DECREF(tp);
     }
 
+    static PyObject* _assign_array_CorePhysicalKeyStatus(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Core::CorePhysicalKeyStatus>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_CorePhysicalKeyStatus[] = {
+        { "_assign_array_", _assign_array_CorePhysicalKeyStatus, METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyObject* CorePhysicalKeyStatus_get_RepeatCount(py::wrapper::Windows::UI::Core::CorePhysicalKeyStatus* self, void* /*unused*/) noexcept
     {
         try
@@ -11510,6 +11525,7 @@ namespace py::cpp::Windows::UI::Core
         { Py_tp_new, reinterpret_cast<void*>(_new_CorePhysicalKeyStatus) },
         { Py_tp_init, reinterpret_cast<void*>(_init_CorePhysicalKeyStatus) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CorePhysicalKeyStatus) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_CorePhysicalKeyStatus) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CorePhysicalKeyStatus) },
         { },
     };
@@ -11577,6 +11593,21 @@ namespace py::cpp::Windows::UI::Core
         tp->tp_free(self);
         Py_DECREF(tp);
     }
+
+    static PyObject* _assign_array_CoreProximityEvaluation(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Core::CoreProximityEvaluation>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_CoreProximityEvaluation[] = {
+        { "_assign_array_", _assign_array_CoreProximityEvaluation, METH_O | METH_STATIC, nullptr },
+        { }
+    };
 
     static PyObject* CoreProximityEvaluation_get_Score(py::wrapper::Windows::UI::Core::CoreProximityEvaluation* self, void* /*unused*/) noexcept
     {
@@ -11655,6 +11686,7 @@ namespace py::cpp::Windows::UI::Core
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreProximityEvaluation) },
         { Py_tp_init, reinterpret_cast<void*>(_init_CoreProximityEvaluation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreProximityEvaluation) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreProximityEvaluation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreProximityEvaluation) },
         { },
     };

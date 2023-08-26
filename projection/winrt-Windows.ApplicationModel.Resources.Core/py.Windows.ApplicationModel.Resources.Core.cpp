@@ -4438,6 +4438,21 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         Py_DECREF(tp);
     }
 
+    static PyObject* _assign_array_ResourceLayoutInfo(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_ResourceLayoutInfo[] = {
+        { "_assign_array_", _assign_array_ResourceLayoutInfo, METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyObject* ResourceLayoutInfo_get_MajorVersion(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo* self, void* /*unused*/) noexcept
     {
         try
@@ -4617,6 +4632,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         { Py_tp_new, reinterpret_cast<void*>(_new_ResourceLayoutInfo) },
         { Py_tp_init, reinterpret_cast<void*>(_init_ResourceLayoutInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ResourceLayoutInfo) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_ResourceLayoutInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ResourceLayoutInfo) },
         { },
     };

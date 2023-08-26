@@ -3689,6 +3689,21 @@ namespace py::cpp::TestComponent
         Py_DECREF(tp);
     }
 
+    static PyObject* _assign_array_Blittable(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::TestComponent::Blittable>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_Blittable[] = {
+        { "_assign_array_", _assign_array_Blittable, METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyObject* Blittable_get_A(py::wrapper::TestComponent::Blittable* self, void* /*unused*/) noexcept
     {
         try
@@ -4038,6 +4053,7 @@ namespace py::cpp::TestComponent
         { Py_tp_new, reinterpret_cast<void*>(_new_Blittable) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Blittable) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Blittable) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_Blittable) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Blittable) },
         { },
     };
@@ -4105,6 +4121,21 @@ namespace py::cpp::TestComponent
         tp->tp_free(self);
         Py_DECREF(tp);
     }
+
+    static PyObject* _assign_array_Nested(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::TestComponent::Nested>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_Nested[] = {
+        { "_assign_array_", _assign_array_Nested, METH_O | METH_STATIC, nullptr },
+        { }
+    };
 
     static PyObject* Nested_get_Blittable(py::wrapper::TestComponent::Nested* self, void* /*unused*/) noexcept
     {
@@ -4183,6 +4214,7 @@ namespace py::cpp::TestComponent
         { Py_tp_new, reinterpret_cast<void*>(_new_Nested) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Nested) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Nested) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_Nested) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Nested) },
         { },
     };
@@ -4252,6 +4284,21 @@ namespace py::cpp::TestComponent
         tp->tp_free(self);
         Py_DECREF(tp);
     }
+
+    static PyObject* _assign_array_NonBlittable(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::TestComponent::NonBlittable>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_NonBlittable[] = {
+        { "_assign_array_", _assign_array_NonBlittable, METH_O | METH_STATIC, nullptr },
+        { }
+    };
 
     static PyObject* NonBlittable_get_A(py::wrapper::TestComponent::NonBlittable* self, void* /*unused*/) noexcept
     {
@@ -4398,6 +4445,7 @@ namespace py::cpp::TestComponent
         { Py_tp_new, reinterpret_cast<void*>(_new_NonBlittable) },
         { Py_tp_init, reinterpret_cast<void*>(_init_NonBlittable) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NonBlittable) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_NonBlittable) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NonBlittable) },
         { },
     };

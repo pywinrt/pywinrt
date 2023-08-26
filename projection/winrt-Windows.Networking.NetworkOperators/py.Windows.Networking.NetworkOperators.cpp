@@ -15396,6 +15396,21 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         Py_DECREF(tp);
     }
 
+    static PyObject* _assign_array_ESimProfileInstallProgress(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Networking::NetworkOperators::ESimProfileInstallProgress>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_ESimProfileInstallProgress[] = {
+        { "_assign_array_", _assign_array_ESimProfileInstallProgress, METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyObject* ESimProfileInstallProgress_get_TotalSizeInBytes(py::wrapper::Windows::Networking::NetworkOperators::ESimProfileInstallProgress* self, void* /*unused*/) noexcept
     {
         try
@@ -15473,6 +15488,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { Py_tp_new, reinterpret_cast<void*>(_new_ESimProfileInstallProgress) },
         { Py_tp_init, reinterpret_cast<void*>(_init_ESimProfileInstallProgress) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ESimProfileInstallProgress) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_ESimProfileInstallProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ESimProfileInstallProgress) },
         { },
     };
@@ -15540,6 +15556,21 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         tp->tp_free(self);
         Py_DECREF(tp);
     }
+
+    static PyObject* _assign_array_ProfileUsage(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Networking::NetworkOperators::ProfileUsage>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_ProfileUsage[] = {
+        { "_assign_array_", _assign_array_ProfileUsage, METH_O | METH_STATIC, nullptr },
+        { }
+    };
 
     static PyObject* ProfileUsage_get_UsageInMegabytes(py::wrapper::Windows::Networking::NetworkOperators::ProfileUsage* self, void* /*unused*/) noexcept
     {
@@ -15618,6 +15649,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { Py_tp_new, reinterpret_cast<void*>(_new_ProfileUsage) },
         { Py_tp_init, reinterpret_cast<void*>(_init_ProfileUsage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProfileUsage) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_ProfileUsage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProfileUsage) },
         { },
     };

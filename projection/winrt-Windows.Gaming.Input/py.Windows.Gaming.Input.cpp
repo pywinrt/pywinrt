@@ -4107,6 +4107,21 @@ namespace py::cpp::Windows::Gaming::Input
         Py_DECREF(tp);
     }
 
+    static PyObject* _assign_array_ArcadeStickReading(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Gaming::Input::ArcadeStickReading>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_ArcadeStickReading[] = {
+        { "_assign_array_", _assign_array_ArcadeStickReading, METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyObject* ArcadeStickReading_get_Timestamp(py::wrapper::Windows::Gaming::Input::ArcadeStickReading* self, void* /*unused*/) noexcept
     {
         try
@@ -4184,6 +4199,7 @@ namespace py::cpp::Windows::Gaming::Input
         { Py_tp_new, reinterpret_cast<void*>(_new_ArcadeStickReading) },
         { Py_tp_init, reinterpret_cast<void*>(_init_ArcadeStickReading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ArcadeStickReading) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_ArcadeStickReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ArcadeStickReading) },
         { },
     };
@@ -4256,6 +4272,21 @@ namespace py::cpp::Windows::Gaming::Input
         tp->tp_free(self);
         Py_DECREF(tp);
     }
+
+    static PyObject* _assign_array_FlightStickReading(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Gaming::Input::FlightStickReading>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_FlightStickReading[] = {
+        { "_assign_array_", _assign_array_FlightStickReading, METH_O | METH_STATIC, nullptr },
+        { }
+    };
 
     static PyObject* FlightStickReading_get_Timestamp(py::wrapper::Windows::Gaming::Input::FlightStickReading* self, void* /*unused*/) noexcept
     {
@@ -4504,6 +4535,7 @@ namespace py::cpp::Windows::Gaming::Input
         { Py_tp_new, reinterpret_cast<void*>(_new_FlightStickReading) },
         { Py_tp_init, reinterpret_cast<void*>(_init_FlightStickReading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FlightStickReading) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_FlightStickReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FlightStickReading) },
         { },
     };
@@ -4577,6 +4609,21 @@ namespace py::cpp::Windows::Gaming::Input
         tp->tp_free(self);
         Py_DECREF(tp);
     }
+
+    static PyObject* _assign_array_GamepadReading(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Gaming::Input::GamepadReading>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_GamepadReading[] = {
+        { "_assign_array_", _assign_array_GamepadReading, METH_O | METH_STATIC, nullptr },
+        { }
+    };
 
     static PyObject* GamepadReading_get_Timestamp(py::wrapper::Windows::Gaming::Input::GamepadReading* self, void* /*unused*/) noexcept
     {
@@ -4859,6 +4906,7 @@ namespace py::cpp::Windows::Gaming::Input
         { Py_tp_new, reinterpret_cast<void*>(_new_GamepadReading) },
         { Py_tp_init, reinterpret_cast<void*>(_init_GamepadReading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GamepadReading) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_GamepadReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GamepadReading) },
         { },
     };
@@ -4928,6 +4976,21 @@ namespace py::cpp::Windows::Gaming::Input
         tp->tp_free(self);
         Py_DECREF(tp);
     }
+
+    static PyObject* _assign_array_GamepadVibration(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Gaming::Input::GamepadVibration>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_GamepadVibration[] = {
+        { "_assign_array_", _assign_array_GamepadVibration, METH_O | METH_STATIC, nullptr },
+        { }
+    };
 
     static PyObject* GamepadVibration_get_LeftMotor(py::wrapper::Windows::Gaming::Input::GamepadVibration* self, void* /*unused*/) noexcept
     {
@@ -5074,6 +5137,7 @@ namespace py::cpp::Windows::Gaming::Input
         { Py_tp_new, reinterpret_cast<void*>(_new_GamepadVibration) },
         { Py_tp_init, reinterpret_cast<void*>(_init_GamepadVibration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GamepadVibration) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_GamepadVibration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GamepadVibration) },
         { },
     };
@@ -5147,6 +5211,21 @@ namespace py::cpp::Windows::Gaming::Input
         tp->tp_free(self);
         Py_DECREF(tp);
     }
+
+    static PyObject* _assign_array_RacingWheelReading(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Gaming::Input::RacingWheelReading>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_RacingWheelReading[] = {
+        { "_assign_array_", _assign_array_RacingWheelReading, METH_O | METH_STATIC, nullptr },
+        { }
+    };
 
     static PyObject* RacingWheelReading_get_Timestamp(py::wrapper::Windows::Gaming::Input::RacingWheelReading* self, void* /*unused*/) noexcept
     {
@@ -5429,6 +5508,7 @@ namespace py::cpp::Windows::Gaming::Input
         { Py_tp_new, reinterpret_cast<void*>(_new_RacingWheelReading) },
         { Py_tp_init, reinterpret_cast<void*>(_init_RacingWheelReading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RacingWheelReading) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_RacingWheelReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RacingWheelReading) },
         { },
     };
@@ -5497,6 +5577,21 @@ namespace py::cpp::Windows::Gaming::Input
         tp->tp_free(self);
         Py_DECREF(tp);
     }
+
+    static PyObject* _assign_array_UINavigationReading(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Gaming::Input::UINavigationReading>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_UINavigationReading[] = {
+        { "_assign_array_", _assign_array_UINavigationReading, METH_O | METH_STATIC, nullptr },
+        { }
+    };
 
     static PyObject* UINavigationReading_get_Timestamp(py::wrapper::Windows::Gaming::Input::UINavigationReading* self, void* /*unused*/) noexcept
     {
@@ -5609,6 +5704,7 @@ namespace py::cpp::Windows::Gaming::Input
         { Py_tp_new, reinterpret_cast<void*>(_new_UINavigationReading) },
         { Py_tp_init, reinterpret_cast<void*>(_init_UINavigationReading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UINavigationReading) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_UINavigationReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UINavigationReading) },
         { },
     };

@@ -6686,6 +6686,21 @@ namespace py::cpp::Windows::Foundation
         Py_DECREF(tp);
     }
 
+    static PyObject* _assign_array_EventRegistrationToken(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::event_token>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_EventRegistrationToken[] = {
+        { "_assign_array_", _assign_array_EventRegistrationToken, METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyObject* EventRegistrationToken_get_Value(py::wrapper::Windows::Foundation::EventRegistrationToken* self, void* /*unused*/) noexcept
     {
         try
@@ -6729,6 +6744,7 @@ namespace py::cpp::Windows::Foundation
         { Py_tp_new, reinterpret_cast<void*>(_new_EventRegistrationToken) },
         { Py_tp_init, reinterpret_cast<void*>(_init_EventRegistrationToken) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EventRegistrationToken) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_EventRegistrationToken) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EventRegistrationToken) },
         { },
     };
@@ -6796,6 +6812,21 @@ namespace py::cpp::Windows::Foundation
         Py_DECREF(tp);
     }
 
+    static PyObject* _assign_array_HResult(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::hresult>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_HResult[] = {
+        { "_assign_array_", _assign_array_HResult, METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyObject* HResult_get_Value(py::wrapper::Windows::Foundation::HResult* self, void* /*unused*/) noexcept
     {
         try
@@ -6839,6 +6870,7 @@ namespace py::cpp::Windows::Foundation
         { Py_tp_new, reinterpret_cast<void*>(_new_HResult) },
         { Py_tp_init, reinterpret_cast<void*>(_init_HResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HResult) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_HResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HResult) },
         { },
     };
@@ -6906,6 +6938,21 @@ namespace py::cpp::Windows::Foundation
         tp->tp_free(self);
         Py_DECREF(tp);
     }
+
+    static PyObject* _assign_array_Point(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::Point>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_Point[] = {
+        { "_assign_array_", _assign_array_Point, METH_O | METH_STATIC, nullptr },
+        { }
+    };
 
     static PyObject* Point_get_X(py::wrapper::Windows::Foundation::Point* self, void* /*unused*/) noexcept
     {
@@ -6984,6 +7031,7 @@ namespace py::cpp::Windows::Foundation
         { Py_tp_new, reinterpret_cast<void*>(_new_Point) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Point) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Point) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_Point) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Point) },
         { },
     };
@@ -7053,6 +7101,21 @@ namespace py::cpp::Windows::Foundation
         tp->tp_free(self);
         Py_DECREF(tp);
     }
+
+    static PyObject* _assign_array_Rect(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::Rect>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_Rect[] = {
+        { "_assign_array_", _assign_array_Rect, METH_O | METH_STATIC, nullptr },
+        { }
+    };
 
     static PyObject* Rect_get_X(py::wrapper::Windows::Foundation::Rect* self, void* /*unused*/) noexcept
     {
@@ -7199,6 +7262,7 @@ namespace py::cpp::Windows::Foundation
         { Py_tp_new, reinterpret_cast<void*>(_new_Rect) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Rect) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Rect) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_Rect) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Rect) },
         { },
     };
@@ -7266,6 +7330,21 @@ namespace py::cpp::Windows::Foundation
         tp->tp_free(self);
         Py_DECREF(tp);
     }
+
+    static PyObject* _assign_array_Size(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::Size>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_Size[] = {
+        { "_assign_array_", _assign_array_Size, METH_O | METH_STATIC, nullptr },
+        { }
+    };
 
     static PyObject* Size_get_Width(py::wrapper::Windows::Foundation::Size* self, void* /*unused*/) noexcept
     {
@@ -7344,6 +7423,7 @@ namespace py::cpp::Windows::Foundation
         { Py_tp_new, reinterpret_cast<void*>(_new_Size) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Size) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Size) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_Size) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Size) },
         { },
     };

@@ -72,6 +72,19 @@ namespace pywinrt
                && get_attribute(type, "System", "FlagsAttribute");
     }
 
+    /**
+     * Tests if a type is a WinRT object type.
+     */
+    bool is_iunknown(TypeDef const& type)
+    {
+        auto category = get_category(type);
+        return category == category::class_type || category == category::interface_type
+               || category == category::delegate_type;
+    }
+
+    /**
+     * Tests if a type is a WinRT parameterized (generic) object type.
+     */
     bool is_ptype(TypeDef const& type)
     {
         return distance(type.GenericParam()) > 0;

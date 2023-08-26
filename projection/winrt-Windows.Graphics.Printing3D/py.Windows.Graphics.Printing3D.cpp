@@ -5884,6 +5884,21 @@ namespace py::cpp::Windows::Graphics::Printing3D
         Py_DECREF(tp);
     }
 
+    static PyObject* _assign_array_Printing3DBufferDescription(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Graphics::Printing3D::Printing3DBufferDescription>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_Printing3DBufferDescription[] = {
+        { "_assign_array_", _assign_array_Printing3DBufferDescription, METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyObject* Printing3DBufferDescription_get_Format(py::wrapper::Windows::Graphics::Printing3D::Printing3DBufferDescription* self, void* /*unused*/) noexcept
     {
         try
@@ -5961,6 +5976,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
         { Py_tp_new, reinterpret_cast<void*>(_new_Printing3DBufferDescription) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Printing3DBufferDescription) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Printing3DBufferDescription) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_Printing3DBufferDescription) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Printing3DBufferDescription) },
         { },
     };

@@ -21817,6 +21817,21 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         Py_DECREF(tp);
     }
 
+    static PyObject* _assign_array_KeyTime(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Media::Animation::KeyTime>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_KeyTime[] = {
+        { "_assign_array_", _assign_array_KeyTime, METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyObject* KeyTime_get_TimeSpan(py::wrapper::Windows::UI::Xaml::Media::Animation::KeyTime* self, void* /*unused*/) noexcept
     {
         try
@@ -21860,6 +21875,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         { Py_tp_new, reinterpret_cast<void*>(_new_KeyTime) },
         { Py_tp_init, reinterpret_cast<void*>(_init_KeyTime) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_KeyTime) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_KeyTime) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KeyTime) },
         { },
     };
@@ -21928,6 +21944,21 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         tp->tp_free(self);
         Py_DECREF(tp);
     }
+
+    static PyObject* _assign_array_RepeatBehavior(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Media::Animation::RepeatBehavior>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_RepeatBehavior[] = {
+        { "_assign_array_", _assign_array_RepeatBehavior, METH_O | METH_STATIC, nullptr },
+        { }
+    };
 
     static PyObject* RepeatBehavior_get_Count(py::wrapper::Windows::UI::Xaml::Media::Animation::RepeatBehavior* self, void* /*unused*/) noexcept
     {
@@ -22040,6 +22071,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         { Py_tp_new, reinterpret_cast<void*>(_new_RepeatBehavior) },
         { Py_tp_init, reinterpret_cast<void*>(_init_RepeatBehavior) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RepeatBehavior) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_RepeatBehavior) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RepeatBehavior) },
         { },
     };

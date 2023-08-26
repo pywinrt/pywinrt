@@ -7492,6 +7492,21 @@ namespace py::cpp::Windows::Web::Http
         Py_DECREF(tp);
     }
 
+    static PyObject* _assign_array_HttpProgress(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Web::Http::HttpProgress>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_HttpProgress[] = {
+        { "_assign_array_", _assign_array_HttpProgress, METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyObject* HttpProgress_get_Stage(py::wrapper::Windows::Web::Http::HttpProgress* self, void* /*unused*/) noexcept
     {
         try
@@ -7705,6 +7720,7 @@ namespace py::cpp::Windows::Web::Http
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpProgress) },
         { Py_tp_init, reinterpret_cast<void*>(_init_HttpProgress) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpProgress) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpProgress) },
         { },
     };

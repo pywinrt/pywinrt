@@ -28492,6 +28492,21 @@ namespace py::cpp::Windows::UI::Xaml
         Py_DECREF(tp);
     }
 
+    static PyObject* _assign_array_CornerRadius(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::CornerRadius>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_CornerRadius[] = {
+        { "_assign_array_", _assign_array_CornerRadius, METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyObject* CornerRadius_get_TopLeft(py::wrapper::Windows::UI::Xaml::CornerRadius* self, void* /*unused*/) noexcept
     {
         try
@@ -28637,6 +28652,7 @@ namespace py::cpp::Windows::UI::Xaml
         { Py_tp_new, reinterpret_cast<void*>(_new_CornerRadius) },
         { Py_tp_init, reinterpret_cast<void*>(_init_CornerRadius) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CornerRadius) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_CornerRadius) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CornerRadius) },
         { },
     };
@@ -28704,6 +28720,21 @@ namespace py::cpp::Windows::UI::Xaml
         tp->tp_free(self);
         Py_DECREF(tp);
     }
+
+    static PyObject* _assign_array_Duration(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Duration>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_Duration[] = {
+        { "_assign_array_", _assign_array_Duration, METH_O | METH_STATIC, nullptr },
+        { }
+    };
 
     static PyObject* Duration_get_TimeSpan(py::wrapper::Windows::UI::Xaml::Duration* self, void* /*unused*/) noexcept
     {
@@ -28782,6 +28813,7 @@ namespace py::cpp::Windows::UI::Xaml
         { Py_tp_new, reinterpret_cast<void*>(_new_Duration) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Duration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Duration) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_Duration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Duration) },
         { },
     };
@@ -28849,6 +28881,21 @@ namespace py::cpp::Windows::UI::Xaml
         tp->tp_free(self);
         Py_DECREF(tp);
     }
+
+    static PyObject* _assign_array_GridLength(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::GridLength>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_GridLength[] = {
+        { "_assign_array_", _assign_array_GridLength, METH_O | METH_STATIC, nullptr },
+        { }
+    };
 
     static PyObject* GridLength_get_Value(py::wrapper::Windows::UI::Xaml::GridLength* self, void* /*unused*/) noexcept
     {
@@ -28927,6 +28974,7 @@ namespace py::cpp::Windows::UI::Xaml
         { Py_tp_new, reinterpret_cast<void*>(_new_GridLength) },
         { Py_tp_init, reinterpret_cast<void*>(_init_GridLength) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GridLength) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_GridLength) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GridLength) },
         { },
     };
@@ -28996,6 +29044,21 @@ namespace py::cpp::Windows::UI::Xaml
         tp->tp_free(self);
         Py_DECREF(tp);
     }
+
+    static PyObject* _assign_array_Thickness(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Thickness>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_Thickness[] = {
+        { "_assign_array_", _assign_array_Thickness, METH_O | METH_STATIC, nullptr },
+        { }
+    };
 
     static PyObject* Thickness_get_Left(py::wrapper::Windows::UI::Xaml::Thickness* self, void* /*unused*/) noexcept
     {
@@ -29142,6 +29205,7 @@ namespace py::cpp::Windows::UI::Xaml
         { Py_tp_new, reinterpret_cast<void*>(_new_Thickness) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Thickness) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Thickness) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_Thickness) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Thickness) },
         { },
     };

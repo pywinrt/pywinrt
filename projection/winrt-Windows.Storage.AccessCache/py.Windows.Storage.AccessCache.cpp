@@ -2259,6 +2259,21 @@ namespace py::cpp::Windows::Storage::AccessCache
         Py_DECREF(tp);
     }
 
+    static PyObject* _assign_array_AccessListEntry(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::AccessCache::AccessListEntry>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_AccessListEntry[] = {
+        { "_assign_array_", _assign_array_AccessListEntry, METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyObject* AccessListEntry_get_Token(py::wrapper::Windows::Storage::AccessCache::AccessListEntry* self, void* /*unused*/) noexcept
     {
         try
@@ -2336,6 +2351,7 @@ namespace py::cpp::Windows::Storage::AccessCache
         { Py_tp_new, reinterpret_cast<void*>(_new_AccessListEntry) },
         { Py_tp_init, reinterpret_cast<void*>(_init_AccessListEntry) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AccessListEntry) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_AccessListEntry) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AccessListEntry) },
         { },
     };

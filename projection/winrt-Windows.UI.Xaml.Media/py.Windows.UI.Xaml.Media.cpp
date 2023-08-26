@@ -19866,6 +19866,21 @@ namespace py::cpp::Windows::UI::Xaml::Media
         Py_DECREF(tp);
     }
 
+    static PyObject* _assign_array_Matrix(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Media::Matrix>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_Matrix[] = {
+        { "_assign_array_", _assign_array_Matrix, METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyObject* Matrix_get_M11(py::wrapper::Windows::UI::Xaml::Media::Matrix* self, void* /*unused*/) noexcept
     {
         try
@@ -20079,6 +20094,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { Py_tp_new, reinterpret_cast<void*>(_new_Matrix) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Matrix) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Matrix) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_Matrix) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Matrix) },
         { },
     };

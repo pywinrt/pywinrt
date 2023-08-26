@@ -2057,6 +2057,21 @@ namespace py::cpp::Windows::Devices::Input
         Py_DECREF(tp);
     }
 
+    static PyObject* _assign_array_MouseDelta(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Input::MouseDelta>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_MouseDelta[] = {
+        { "_assign_array_", _assign_array_MouseDelta, METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyObject* MouseDelta_get_X(py::wrapper::Windows::Devices::Input::MouseDelta* self, void* /*unused*/) noexcept
     {
         try
@@ -2134,6 +2149,7 @@ namespace py::cpp::Windows::Devices::Input
         { Py_tp_new, reinterpret_cast<void*>(_new_MouseDelta) },
         { Py_tp_init, reinterpret_cast<void*>(_init_MouseDelta) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MouseDelta) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_MouseDelta) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MouseDelta) },
         { },
     };
@@ -2207,6 +2223,21 @@ namespace py::cpp::Windows::Devices::Input
         tp->tp_free(self);
         Py_DECREF(tp);
     }
+
+    static PyObject* _assign_array_PointerDeviceUsage(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Input::PointerDeviceUsage>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_PointerDeviceUsage[] = {
+        { "_assign_array_", _assign_array_PointerDeviceUsage, METH_O | METH_STATIC, nullptr },
+        { }
+    };
 
     static PyObject* PointerDeviceUsage_get_UsagePage(py::wrapper::Windows::Devices::Input::PointerDeviceUsage* self, void* /*unused*/) noexcept
     {
@@ -2489,6 +2520,7 @@ namespace py::cpp::Windows::Devices::Input
         { Py_tp_new, reinterpret_cast<void*>(_new_PointerDeviceUsage) },
         { Py_tp_init, reinterpret_cast<void*>(_init_PointerDeviceUsage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PointerDeviceUsage) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_PointerDeviceUsage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PointerDeviceUsage) },
         { },
     };

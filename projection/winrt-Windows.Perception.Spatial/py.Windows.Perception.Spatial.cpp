@@ -3850,6 +3850,21 @@ namespace py::cpp::Windows::Perception::Spatial
         Py_DECREF(tp);
     }
 
+    static PyObject* _assign_array_SpatialBoundingBox(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Perception::Spatial::SpatialBoundingBox>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_SpatialBoundingBox[] = {
+        { "_assign_array_", _assign_array_SpatialBoundingBox, METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyObject* SpatialBoundingBox_get_Center(py::wrapper::Windows::Perception::Spatial::SpatialBoundingBox* self, void* /*unused*/) noexcept
     {
         try
@@ -3927,6 +3942,7 @@ namespace py::cpp::Windows::Perception::Spatial
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialBoundingBox) },
         { Py_tp_init, reinterpret_cast<void*>(_init_SpatialBoundingBox) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialBoundingBox) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialBoundingBox) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialBoundingBox) },
         { },
     };
@@ -3998,6 +4014,21 @@ namespace py::cpp::Windows::Perception::Spatial
         tp->tp_free(self);
         Py_DECREF(tp);
     }
+
+    static PyObject* _assign_array_SpatialBoundingFrustum(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Perception::Spatial::SpatialBoundingFrustum>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_SpatialBoundingFrustum[] = {
+        { "_assign_array_", _assign_array_SpatialBoundingFrustum, METH_O | METH_STATIC, nullptr },
+        { }
+    };
 
     static PyObject* SpatialBoundingFrustum_get_Near(py::wrapper::Windows::Perception::Spatial::SpatialBoundingFrustum* self, void* /*unused*/) noexcept
     {
@@ -4212,6 +4243,7 @@ namespace py::cpp::Windows::Perception::Spatial
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialBoundingFrustum) },
         { Py_tp_init, reinterpret_cast<void*>(_init_SpatialBoundingFrustum) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialBoundingFrustum) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialBoundingFrustum) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialBoundingFrustum) },
         { },
     };
@@ -4280,6 +4312,21 @@ namespace py::cpp::Windows::Perception::Spatial
         tp->tp_free(self);
         Py_DECREF(tp);
     }
+
+    static PyObject* _assign_array_SpatialBoundingOrientedBox(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Perception::Spatial::SpatialBoundingOrientedBox>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_SpatialBoundingOrientedBox[] = {
+        { "_assign_array_", _assign_array_SpatialBoundingOrientedBox, METH_O | METH_STATIC, nullptr },
+        { }
+    };
 
     static PyObject* SpatialBoundingOrientedBox_get_Center(py::wrapper::Windows::Perception::Spatial::SpatialBoundingOrientedBox* self, void* /*unused*/) noexcept
     {
@@ -4392,6 +4439,7 @@ namespace py::cpp::Windows::Perception::Spatial
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialBoundingOrientedBox) },
         { Py_tp_init, reinterpret_cast<void*>(_init_SpatialBoundingOrientedBox) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialBoundingOrientedBox) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialBoundingOrientedBox) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialBoundingOrientedBox) },
         { },
     };
@@ -4459,6 +4507,21 @@ namespace py::cpp::Windows::Perception::Spatial
         tp->tp_free(self);
         Py_DECREF(tp);
     }
+
+    static PyObject* _assign_array_SpatialBoundingSphere(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Perception::Spatial::SpatialBoundingSphere>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_SpatialBoundingSphere[] = {
+        { "_assign_array_", _assign_array_SpatialBoundingSphere, METH_O | METH_STATIC, nullptr },
+        { }
+    };
 
     static PyObject* SpatialBoundingSphere_get_Center(py::wrapper::Windows::Perception::Spatial::SpatialBoundingSphere* self, void* /*unused*/) noexcept
     {
@@ -4537,6 +4600,7 @@ namespace py::cpp::Windows::Perception::Spatial
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialBoundingSphere) },
         { Py_tp_init, reinterpret_cast<void*>(_init_SpatialBoundingSphere) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialBoundingSphere) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialBoundingSphere) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialBoundingSphere) },
         { },
     };
@@ -4604,6 +4668,21 @@ namespace py::cpp::Windows::Perception::Spatial
         tp->tp_free(self);
         Py_DECREF(tp);
     }
+
+    static PyObject* _assign_array_SpatialRay(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Perception::Spatial::SpatialRay>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_SpatialRay[] = {
+        { "_assign_array_", _assign_array_SpatialRay, METH_O | METH_STATIC, nullptr },
+        { }
+    };
 
     static PyObject* SpatialRay_get_Origin(py::wrapper::Windows::Perception::Spatial::SpatialRay* self, void* /*unused*/) noexcept
     {
@@ -4682,6 +4761,7 @@ namespace py::cpp::Windows::Perception::Spatial
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialRay) },
         { Py_tp_init, reinterpret_cast<void*>(_init_SpatialRay) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialRay) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_SpatialRay) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialRay) },
         { },
     };

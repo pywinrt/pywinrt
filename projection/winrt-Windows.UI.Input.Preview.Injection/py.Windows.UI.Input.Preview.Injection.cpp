@@ -2344,6 +2344,21 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         Py_DECREF(tp);
     }
 
+    static PyObject* _assign_array_InjectedInputPoint(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPoint>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_InjectedInputPoint[] = {
+        { "_assign_array_", _assign_array_InjectedInputPoint, METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyObject* InjectedInputPoint_get_PositionX(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPoint* self, void* /*unused*/) noexcept
     {
         try
@@ -2421,6 +2436,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         { Py_tp_new, reinterpret_cast<void*>(_new_InjectedInputPoint) },
         { Py_tp_init, reinterpret_cast<void*>(_init_InjectedInputPoint) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InjectedInputPoint) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_InjectedInputPoint) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InjectedInputPoint) },
         { },
     };
@@ -2491,6 +2507,21 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         tp->tp_free(self);
         Py_DECREF(tp);
     }
+
+    static PyObject* _assign_array_InjectedInputPointerInfo(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_InjectedInputPointerInfo[] = {
+        { "_assign_array_", _assign_array_InjectedInputPointerInfo, METH_O | METH_STATIC, nullptr },
+        { }
+    };
 
     static PyObject* InjectedInputPointerInfo_get_PointerId(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo* self, void* /*unused*/) noexcept
     {
@@ -2671,6 +2702,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         { Py_tp_new, reinterpret_cast<void*>(_new_InjectedInputPointerInfo) },
         { Py_tp_init, reinterpret_cast<void*>(_init_InjectedInputPointerInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InjectedInputPointerInfo) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_InjectedInputPointerInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InjectedInputPointerInfo) },
         { },
     };
@@ -2740,6 +2772,21 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         tp->tp_free(self);
         Py_DECREF(tp);
     }
+
+    static PyObject* _assign_array_InjectedInputRectangle(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Input::Preview::Injection::InjectedInputRectangle>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_InjectedInputRectangle[] = {
+        { "_assign_array_", _assign_array_InjectedInputRectangle, METH_O | METH_STATIC, nullptr },
+        { }
+    };
 
     static PyObject* InjectedInputRectangle_get_Left(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputRectangle* self, void* /*unused*/) noexcept
     {
@@ -2886,6 +2933,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         { Py_tp_new, reinterpret_cast<void*>(_new_InjectedInputRectangle) },
         { Py_tp_init, reinterpret_cast<void*>(_init_InjectedInputRectangle) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InjectedInputRectangle) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_InjectedInputRectangle) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InjectedInputRectangle) },
         { },
     };

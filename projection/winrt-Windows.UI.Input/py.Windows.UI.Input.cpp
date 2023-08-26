@@ -9436,6 +9436,21 @@ namespace py::cpp::Windows::UI::Input
         Py_DECREF(tp);
     }
 
+    static PyObject* _assign_array_CrossSlideThresholds(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Input::CrossSlideThresholds>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_CrossSlideThresholds[] = {
+        { "_assign_array_", _assign_array_CrossSlideThresholds, METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyObject* CrossSlideThresholds_get_SelectionStart(py::wrapper::Windows::UI::Input::CrossSlideThresholds* self, void* /*unused*/) noexcept
     {
         try
@@ -9581,6 +9596,7 @@ namespace py::cpp::Windows::UI::Input
         { Py_tp_new, reinterpret_cast<void*>(_new_CrossSlideThresholds) },
         { Py_tp_init, reinterpret_cast<void*>(_init_CrossSlideThresholds) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CrossSlideThresholds) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_CrossSlideThresholds) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CrossSlideThresholds) },
         { },
     };
@@ -9650,6 +9666,21 @@ namespace py::cpp::Windows::UI::Input
         tp->tp_free(self);
         Py_DECREF(tp);
     }
+
+    static PyObject* _assign_array_ManipulationDelta(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Input::ManipulationDelta>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_ManipulationDelta[] = {
+        { "_assign_array_", _assign_array_ManipulationDelta, METH_O | METH_STATIC, nullptr },
+        { }
+    };
 
     static PyObject* ManipulationDelta_get_Translation(py::wrapper::Windows::UI::Input::ManipulationDelta* self, void* /*unused*/) noexcept
     {
@@ -9796,6 +9827,7 @@ namespace py::cpp::Windows::UI::Input
         { Py_tp_new, reinterpret_cast<void*>(_new_ManipulationDelta) },
         { Py_tp_init, reinterpret_cast<void*>(_init_ManipulationDelta) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ManipulationDelta) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_ManipulationDelta) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ManipulationDelta) },
         { },
     };
@@ -9864,6 +9896,21 @@ namespace py::cpp::Windows::UI::Input
         tp->tp_free(self);
         Py_DECREF(tp);
     }
+
+    static PyObject* _assign_array_ManipulationVelocities(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Input::ManipulationVelocities>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_ManipulationVelocities[] = {
+        { "_assign_array_", _assign_array_ManipulationVelocities, METH_O | METH_STATIC, nullptr },
+        { }
+    };
 
     static PyObject* ManipulationVelocities_get_Linear(py::wrapper::Windows::UI::Input::ManipulationVelocities* self, void* /*unused*/) noexcept
     {
@@ -9976,6 +10023,7 @@ namespace py::cpp::Windows::UI::Input
         { Py_tp_new, reinterpret_cast<void*>(_new_ManipulationVelocities) },
         { Py_tp_init, reinterpret_cast<void*>(_init_ManipulationVelocities) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ManipulationVelocities) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_ManipulationVelocities) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ManipulationVelocities) },
         { },
     };

@@ -3266,6 +3266,21 @@ namespace py::cpp::Windows::UI
         Py_DECREF(tp);
     }
 
+    static PyObject* _assign_array_Color(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Color>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_Color[] = {
+        { "_assign_array_", _assign_array_Color, METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyObject* Color_get_A(py::wrapper::Windows::UI::Color* self, void* /*unused*/) noexcept
     {
         try
@@ -3411,6 +3426,7 @@ namespace py::cpp::Windows::UI
         { Py_tp_new, reinterpret_cast<void*>(_new_Color) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Color) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Color) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_Color) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Color) },
         { },
     };
@@ -3478,6 +3494,21 @@ namespace py::cpp::Windows::UI
         Py_DECREF(tp);
     }
 
+    static PyObject* _assign_array_WindowId(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::WindowId>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_WindowId[] = {
+        { "_assign_array_", _assign_array_WindowId, METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyObject* WindowId_get_Value(py::wrapper::Windows::UI::WindowId* self, void* /*unused*/) noexcept
     {
         try
@@ -3521,6 +3552,7 @@ namespace py::cpp::Windows::UI
         { Py_tp_new, reinterpret_cast<void*>(_new_WindowId) },
         { Py_tp_init, reinterpret_cast<void*>(_init_WindowId) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WindowId) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_WindowId) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WindowId) },
         { },
     };

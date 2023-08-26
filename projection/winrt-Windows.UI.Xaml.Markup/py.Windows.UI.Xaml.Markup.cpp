@@ -3252,6 +3252,21 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         Py_DECREF(tp);
     }
 
+    static PyObject* _assign_array_XamlBinaryWriterErrorInformation(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Markup::XamlBinaryWriterErrorInformation>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_XamlBinaryWriterErrorInformation[] = {
+        { "_assign_array_", _assign_array_XamlBinaryWriterErrorInformation, METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyObject* XamlBinaryWriterErrorInformation_get_InputStreamIndex(py::wrapper::Windows::UI::Xaml::Markup::XamlBinaryWriterErrorInformation* self, void* /*unused*/) noexcept
     {
         try
@@ -3363,6 +3378,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         { Py_tp_new, reinterpret_cast<void*>(_new_XamlBinaryWriterErrorInformation) },
         { Py_tp_init, reinterpret_cast<void*>(_init_XamlBinaryWriterErrorInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XamlBinaryWriterErrorInformation) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_XamlBinaryWriterErrorInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XamlBinaryWriterErrorInformation) },
         { },
     };
@@ -3430,6 +3446,21 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         tp->tp_free(self);
         Py_DECREF(tp);
     }
+
+    static PyObject* _assign_array_XmlnsDefinition(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Markup::XmlnsDefinition>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_XmlnsDefinition[] = {
+        { "_assign_array_", _assign_array_XmlnsDefinition, METH_O | METH_STATIC, nullptr },
+        { }
+    };
 
     static PyObject* XmlnsDefinition_get_XmlNamespace(py::wrapper::Windows::UI::Xaml::Markup::XmlnsDefinition* self, void* /*unused*/) noexcept
     {
@@ -3508,6 +3539,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         { Py_tp_new, reinterpret_cast<void*>(_new_XmlnsDefinition) },
         { Py_tp_init, reinterpret_cast<void*>(_init_XmlnsDefinition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XmlnsDefinition) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_XmlnsDefinition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XmlnsDefinition) },
         { },
     };

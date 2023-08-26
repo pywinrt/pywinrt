@@ -8289,6 +8289,21 @@ namespace py::cpp::Windows::Web::Syndication
         Py_DECREF(tp);
     }
 
+    static PyObject* _assign_array_RetrievalProgress(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Web::Syndication::RetrievalProgress>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_RetrievalProgress[] = {
+        { "_assign_array_", _assign_array_RetrievalProgress, METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyObject* RetrievalProgress_get_BytesRetrieved(py::wrapper::Windows::Web::Syndication::RetrievalProgress* self, void* /*unused*/) noexcept
     {
         try
@@ -8366,6 +8381,7 @@ namespace py::cpp::Windows::Web::Syndication
         { Py_tp_new, reinterpret_cast<void*>(_new_RetrievalProgress) },
         { Py_tp_init, reinterpret_cast<void*>(_init_RetrievalProgress) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RetrievalProgress) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_RetrievalProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RetrievalProgress) },
         { },
     };
@@ -8435,6 +8451,21 @@ namespace py::cpp::Windows::Web::Syndication
         tp->tp_free(self);
         Py_DECREF(tp);
     }
+
+    static PyObject* _assign_array_TransferProgress(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Web::Syndication::TransferProgress>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_TransferProgress[] = {
+        { "_assign_array_", _assign_array_TransferProgress, METH_O | METH_STATIC, nullptr },
+        { }
+    };
 
     static PyObject* TransferProgress_get_BytesSent(py::wrapper::Windows::Web::Syndication::TransferProgress* self, void* /*unused*/) noexcept
     {
@@ -8581,6 +8612,7 @@ namespace py::cpp::Windows::Web::Syndication
         { Py_tp_new, reinterpret_cast<void*>(_new_TransferProgress) },
         { Py_tp_init, reinterpret_cast<void*>(_init_TransferProgress) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TransferProgress) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_TransferProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TransferProgress) },
         { },
     };

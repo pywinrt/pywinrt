@@ -19666,6 +19666,21 @@ namespace py::cpp::Windows::Media::Core
         Py_DECREF(tp);
     }
 
+    static PyObject* _assign_array_MseTimeRange(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Core::MseTimeRange>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_MseTimeRange[] = {
+        { "_assign_array_", _assign_array_MseTimeRange, METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyObject* MseTimeRange_get_Start(py::wrapper::Windows::Media::Core::MseTimeRange* self, void* /*unused*/) noexcept
     {
         try
@@ -19743,6 +19758,7 @@ namespace py::cpp::Windows::Media::Core
         { Py_tp_new, reinterpret_cast<void*>(_new_MseTimeRange) },
         { Py_tp_init, reinterpret_cast<void*>(_init_MseTimeRange) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MseTimeRange) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_MseTimeRange) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MseTimeRange) },
         { },
     };
@@ -19810,6 +19826,21 @@ namespace py::cpp::Windows::Media::Core
         tp->tp_free(self);
         Py_DECREF(tp);
     }
+
+    static PyObject* _assign_array_TimedTextDouble(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Core::TimedTextDouble>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_TimedTextDouble[] = {
+        { "_assign_array_", _assign_array_TimedTextDouble, METH_O | METH_STATIC, nullptr },
+        { }
+    };
 
     static PyObject* TimedTextDouble_get_Value(py::wrapper::Windows::Media::Core::TimedTextDouble* self, void* /*unused*/) noexcept
     {
@@ -19888,6 +19919,7 @@ namespace py::cpp::Windows::Media::Core
         { Py_tp_new, reinterpret_cast<void*>(_new_TimedTextDouble) },
         { Py_tp_init, reinterpret_cast<void*>(_init_TimedTextDouble) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TimedTextDouble) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_TimedTextDouble) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TimedTextDouble) },
         { },
     };
@@ -19958,6 +19990,21 @@ namespace py::cpp::Windows::Media::Core
         tp->tp_free(self);
         Py_DECREF(tp);
     }
+
+    static PyObject* _assign_array_TimedTextPadding(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Core::TimedTextPadding>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_TimedTextPadding[] = {
+        { "_assign_array_", _assign_array_TimedTextPadding, METH_O | METH_STATIC, nullptr },
+        { }
+    };
 
     static PyObject* TimedTextPadding_get_Before(py::wrapper::Windows::Media::Core::TimedTextPadding* self, void* /*unused*/) noexcept
     {
@@ -20138,6 +20185,7 @@ namespace py::cpp::Windows::Media::Core
         { Py_tp_new, reinterpret_cast<void*>(_new_TimedTextPadding) },
         { Py_tp_init, reinterpret_cast<void*>(_init_TimedTextPadding) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TimedTextPadding) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_TimedTextPadding) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TimedTextPadding) },
         { },
     };
@@ -20206,6 +20254,21 @@ namespace py::cpp::Windows::Media::Core
         tp->tp_free(self);
         Py_DECREF(tp);
     }
+
+    static PyObject* _assign_array_TimedTextPoint(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Core::TimedTextPoint>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_TimedTextPoint[] = {
+        { "_assign_array_", _assign_array_TimedTextPoint, METH_O | METH_STATIC, nullptr },
+        { }
+    };
 
     static PyObject* TimedTextPoint_get_X(py::wrapper::Windows::Media::Core::TimedTextPoint* self, void* /*unused*/) noexcept
     {
@@ -20318,6 +20381,7 @@ namespace py::cpp::Windows::Media::Core
         { Py_tp_new, reinterpret_cast<void*>(_new_TimedTextPoint) },
         { Py_tp_init, reinterpret_cast<void*>(_init_TimedTextPoint) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TimedTextPoint) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_TimedTextPoint) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TimedTextPoint) },
         { },
     };
@@ -20386,6 +20450,21 @@ namespace py::cpp::Windows::Media::Core
         tp->tp_free(self);
         Py_DECREF(tp);
     }
+
+    static PyObject* _assign_array_TimedTextSize(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Core::TimedTextSize>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_TimedTextSize[] = {
+        { "_assign_array_", _assign_array_TimedTextSize, METH_O | METH_STATIC, nullptr },
+        { }
+    };
 
     static PyObject* TimedTextSize_get_Height(py::wrapper::Windows::Media::Core::TimedTextSize* self, void* /*unused*/) noexcept
     {
@@ -20498,6 +20577,7 @@ namespace py::cpp::Windows::Media::Core
         { Py_tp_new, reinterpret_cast<void*>(_new_TimedTextSize) },
         { Py_tp_init, reinterpret_cast<void*>(_init_TimedTextSize) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TimedTextSize) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_TimedTextSize) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TimedTextSize) },
         { },
     };

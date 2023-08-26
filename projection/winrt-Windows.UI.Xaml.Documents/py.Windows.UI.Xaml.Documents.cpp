@@ -13196,6 +13196,21 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         Py_DECREF(tp);
     }
 
+    static PyObject* _assign_array_TextRange(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Documents::TextRange>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_TextRange[] = {
+        { "_assign_array_", _assign_array_TextRange, METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyObject* TextRange_get_StartIndex(py::wrapper::Windows::UI::Xaml::Documents::TextRange* self, void* /*unused*/) noexcept
     {
         try
@@ -13273,6 +13288,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         { Py_tp_new, reinterpret_cast<void*>(_new_TextRange) },
         { Py_tp_init, reinterpret_cast<void*>(_init_TextRange) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TextRange) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_TextRange) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TextRange) },
         { },
     };

@@ -5714,6 +5714,21 @@ namespace py::cpp::Windows::Graphics::Imaging
         Py_DECREF(tp);
     }
 
+    static PyObject* _assign_array_BitmapBounds(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Graphics::Imaging::BitmapBounds>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_BitmapBounds[] = {
+        { "_assign_array_", _assign_array_BitmapBounds, METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyObject* BitmapBounds_get_X(py::wrapper::Windows::Graphics::Imaging::BitmapBounds* self, void* /*unused*/) noexcept
     {
         try
@@ -5859,6 +5874,7 @@ namespace py::cpp::Windows::Graphics::Imaging
         { Py_tp_new, reinterpret_cast<void*>(_new_BitmapBounds) },
         { Py_tp_init, reinterpret_cast<void*>(_init_BitmapBounds) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BitmapBounds) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_BitmapBounds) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BitmapBounds) },
         { },
     };
@@ -5928,6 +5944,21 @@ namespace py::cpp::Windows::Graphics::Imaging
         tp->tp_free(self);
         Py_DECREF(tp);
     }
+
+    static PyObject* _assign_array_BitmapPlaneDescription(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Graphics::Imaging::BitmapPlaneDescription>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_BitmapPlaneDescription[] = {
+        { "_assign_array_", _assign_array_BitmapPlaneDescription, METH_O | METH_STATIC, nullptr },
+        { }
+    };
 
     static PyObject* BitmapPlaneDescription_get_StartIndex(py::wrapper::Windows::Graphics::Imaging::BitmapPlaneDescription* self, void* /*unused*/) noexcept
     {
@@ -6074,6 +6105,7 @@ namespace py::cpp::Windows::Graphics::Imaging
         { Py_tp_new, reinterpret_cast<void*>(_new_BitmapPlaneDescription) },
         { Py_tp_init, reinterpret_cast<void*>(_init_BitmapPlaneDescription) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BitmapPlaneDescription) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_BitmapPlaneDescription) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BitmapPlaneDescription) },
         { },
     };
@@ -6141,6 +6173,21 @@ namespace py::cpp::Windows::Graphics::Imaging
         tp->tp_free(self);
         Py_DECREF(tp);
     }
+
+    static PyObject* _assign_array_BitmapSize(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Graphics::Imaging::BitmapSize>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_BitmapSize[] = {
+        { "_assign_array_", _assign_array_BitmapSize, METH_O | METH_STATIC, nullptr },
+        { }
+    };
 
     static PyObject* BitmapSize_get_Width(py::wrapper::Windows::Graphics::Imaging::BitmapSize* self, void* /*unused*/) noexcept
     {
@@ -6219,6 +6266,7 @@ namespace py::cpp::Windows::Graphics::Imaging
         { Py_tp_new, reinterpret_cast<void*>(_new_BitmapSize) },
         { Py_tp_init, reinterpret_cast<void*>(_init_BitmapSize) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BitmapSize) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_BitmapSize) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BitmapSize) },
         { },
     };

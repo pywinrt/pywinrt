@@ -4614,6 +4614,21 @@ namespace py::cpp::Windows::Graphics::Holographic
         Py_DECREF(tp);
     }
 
+    static PyObject* _assign_array_HolographicAdapterId(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Graphics::Holographic::HolographicAdapterId>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_HolographicAdapterId[] = {
+        { "_assign_array_", _assign_array_HolographicAdapterId, METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyObject* HolographicAdapterId_get_LowPart(py::wrapper::Windows::Graphics::Holographic::HolographicAdapterId* self, void* /*unused*/) noexcept
     {
         try
@@ -4691,6 +4706,7 @@ namespace py::cpp::Windows::Graphics::Holographic
         { Py_tp_new, reinterpret_cast<void*>(_new_HolographicAdapterId) },
         { Py_tp_init, reinterpret_cast<void*>(_init_HolographicAdapterId) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HolographicAdapterId) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_HolographicAdapterId) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HolographicAdapterId) },
         { },
     };
@@ -4758,6 +4774,21 @@ namespace py::cpp::Windows::Graphics::Holographic
         Py_DECREF(tp);
     }
 
+    static PyObject* _assign_array_HolographicFrameId(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Graphics::Holographic::HolographicFrameId>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_HolographicFrameId[] = {
+        { "_assign_array_", _assign_array_HolographicFrameId, METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyObject* HolographicFrameId_get_Value(py::wrapper::Windows::Graphics::Holographic::HolographicFrameId* self, void* /*unused*/) noexcept
     {
         try
@@ -4801,6 +4832,7 @@ namespace py::cpp::Windows::Graphics::Holographic
         { Py_tp_new, reinterpret_cast<void*>(_new_HolographicFrameId) },
         { Py_tp_init, reinterpret_cast<void*>(_init_HolographicFrameId) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HolographicFrameId) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_HolographicFrameId) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HolographicFrameId) },
         { },
     };
@@ -4868,6 +4900,21 @@ namespace py::cpp::Windows::Graphics::Holographic
         tp->tp_free(self);
         Py_DECREF(tp);
     }
+
+    static PyObject* _assign_array_HolographicStereoTransform(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Graphics::Holographic::HolographicStereoTransform>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_HolographicStereoTransform[] = {
+        { "_assign_array_", _assign_array_HolographicStereoTransform, METH_O | METH_STATIC, nullptr },
+        { }
+    };
 
     static PyObject* HolographicStereoTransform_get_Left(py::wrapper::Windows::Graphics::Holographic::HolographicStereoTransform* self, void* /*unused*/) noexcept
     {
@@ -4946,6 +4993,7 @@ namespace py::cpp::Windows::Graphics::Holographic
         { Py_tp_new, reinterpret_cast<void*>(_new_HolographicStereoTransform) },
         { Py_tp_init, reinterpret_cast<void*>(_init_HolographicStereoTransform) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HolographicStereoTransform) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_HolographicStereoTransform) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HolographicStereoTransform) },
         { },
     };

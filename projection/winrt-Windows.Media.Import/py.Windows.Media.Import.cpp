@@ -3912,6 +3912,21 @@ namespace py::cpp::Windows::Media::Import
         Py_DECREF(tp);
     }
 
+    static PyObject* _assign_array_PhotoImportProgress(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Import::PhotoImportProgress>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_PhotoImportProgress[] = {
+        { "_assign_array_", _assign_array_PhotoImportProgress, METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyObject* PhotoImportProgress_get_ItemsImported(py::wrapper::Windows::Media::Import::PhotoImportProgress* self, void* /*unused*/) noexcept
     {
         try
@@ -4091,6 +4106,7 @@ namespace py::cpp::Windows::Media::Import
         { Py_tp_new, reinterpret_cast<void*>(_new_PhotoImportProgress) },
         { Py_tp_init, reinterpret_cast<void*>(_init_PhotoImportProgress) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhotoImportProgress) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_PhotoImportProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhotoImportProgress) },
         { },
     };

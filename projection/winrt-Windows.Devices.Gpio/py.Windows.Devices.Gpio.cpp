@@ -1710,6 +1710,21 @@ namespace py::cpp::Windows::Devices::Gpio
         Py_DECREF(tp);
     }
 
+    static PyObject* _assign_array_GpioChangeCount(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Gpio::GpioChangeCount>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_GpioChangeCount[] = {
+        { "_assign_array_", _assign_array_GpioChangeCount, METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyObject* GpioChangeCount_get_Count(py::wrapper::Windows::Devices::Gpio::GpioChangeCount* self, void* /*unused*/) noexcept
     {
         try
@@ -1787,6 +1802,7 @@ namespace py::cpp::Windows::Devices::Gpio
         { Py_tp_new, reinterpret_cast<void*>(_new_GpioChangeCount) },
         { Py_tp_init, reinterpret_cast<void*>(_init_GpioChangeCount) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GpioChangeCount) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_GpioChangeCount) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GpioChangeCount) },
         { },
     };
@@ -1854,6 +1870,21 @@ namespace py::cpp::Windows::Devices::Gpio
         tp->tp_free(self);
         Py_DECREF(tp);
     }
+
+    static PyObject* _assign_array_GpioChangeRecord(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Gpio::GpioChangeRecord>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_GpioChangeRecord[] = {
+        { "_assign_array_", _assign_array_GpioChangeRecord, METH_O | METH_STATIC, nullptr },
+        { }
+    };
 
     static PyObject* GpioChangeRecord_get_RelativeTime(py::wrapper::Windows::Devices::Gpio::GpioChangeRecord* self, void* /*unused*/) noexcept
     {
@@ -1932,6 +1963,7 @@ namespace py::cpp::Windows::Devices::Gpio
         { Py_tp_new, reinterpret_cast<void*>(_new_GpioChangeRecord) },
         { Py_tp_init, reinterpret_cast<void*>(_init_GpioChangeRecord) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GpioChangeRecord) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_GpioChangeRecord) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GpioChangeRecord) },
         { },
     };

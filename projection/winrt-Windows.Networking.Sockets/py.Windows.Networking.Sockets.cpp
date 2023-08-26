@@ -9911,6 +9911,21 @@ namespace py::cpp::Windows::Networking::Sockets
         Py_DECREF(tp);
     }
 
+    static PyObject* _assign_array_BandwidthStatistics(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Networking::Sockets::BandwidthStatistics>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_BandwidthStatistics[] = {
+        { "_assign_array_", _assign_array_BandwidthStatistics, METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyObject* BandwidthStatistics_get_OutboundBitsPerSecond(py::wrapper::Windows::Networking::Sockets::BandwidthStatistics* self, void* /*unused*/) noexcept
     {
         try
@@ -10124,6 +10139,7 @@ namespace py::cpp::Windows::Networking::Sockets
         { Py_tp_new, reinterpret_cast<void*>(_new_BandwidthStatistics) },
         { Py_tp_init, reinterpret_cast<void*>(_init_BandwidthStatistics) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BandwidthStatistics) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_BandwidthStatistics) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BandwidthStatistics) },
         { },
     };
@@ -10193,6 +10209,21 @@ namespace py::cpp::Windows::Networking::Sockets
         tp->tp_free(self);
         Py_DECREF(tp);
     }
+
+    static PyObject* _assign_array_RoundTripTimeStatistics(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Networking::Sockets::RoundTripTimeStatistics>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_RoundTripTimeStatistics[] = {
+        { "_assign_array_", _assign_array_RoundTripTimeStatistics, METH_O | METH_STATIC, nullptr },
+        { }
+    };
 
     static PyObject* RoundTripTimeStatistics_get_Variance(py::wrapper::Windows::Networking::Sockets::RoundTripTimeStatistics* self, void* /*unused*/) noexcept
     {
@@ -10339,6 +10370,7 @@ namespace py::cpp::Windows::Networking::Sockets
         { Py_tp_new, reinterpret_cast<void*>(_new_RoundTripTimeStatistics) },
         { Py_tp_init, reinterpret_cast<void*>(_init_RoundTripTimeStatistics) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RoundTripTimeStatistics) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_RoundTripTimeStatistics) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RoundTripTimeStatistics) },
         { },
     };

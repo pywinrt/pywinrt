@@ -1671,6 +1671,21 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
         Py_DECREF(tp);
     }
 
+    static PyObject* _assign_array_Matrix3D(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Media::Media3D::Matrix3D>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_Matrix3D[] = {
+        { "_assign_array_", _assign_array_Matrix3D, METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyObject* Matrix3D_get_M11(py::wrapper::Windows::UI::Xaml::Media::Media3D::Matrix3D* self, void* /*unused*/) noexcept
     {
         try
@@ -2224,6 +2239,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
         { Py_tp_new, reinterpret_cast<void*>(_new_Matrix3D) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Matrix3D) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Matrix3D) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_Matrix3D) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Matrix3D) },
         { },
     };

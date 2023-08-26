@@ -7582,6 +7582,21 @@ namespace py::cpp::Windows::ApplicationModel
         Py_DECREF(tp);
     }
 
+    static PyObject* _assign_array_PackageInstallProgress(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::PackageInstallProgress>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_PackageInstallProgress[] = {
+        { "_assign_array_", _assign_array_PackageInstallProgress, METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyObject* PackageInstallProgress_get_PercentComplete(py::wrapper::Windows::ApplicationModel::PackageInstallProgress* self, void* /*unused*/) noexcept
     {
         try
@@ -7625,6 +7640,7 @@ namespace py::cpp::Windows::ApplicationModel
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageInstallProgress) },
         { Py_tp_init, reinterpret_cast<void*>(_init_PackageInstallProgress) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PackageInstallProgress) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageInstallProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageInstallProgress) },
         { },
     };
@@ -7694,6 +7710,21 @@ namespace py::cpp::Windows::ApplicationModel
         tp->tp_free(self);
         Py_DECREF(tp);
     }
+
+    static PyObject* _assign_array_PackageVersion(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::PackageVersion>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_PackageVersion[] = {
+        { "_assign_array_", _assign_array_PackageVersion, METH_O | METH_STATIC, nullptr },
+        { }
+    };
 
     static PyObject* PackageVersion_get_Major(py::wrapper::Windows::ApplicationModel::PackageVersion* self, void* /*unused*/) noexcept
     {
@@ -7840,6 +7871,7 @@ namespace py::cpp::Windows::ApplicationModel
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageVersion) },
         { Py_tp_init, reinterpret_cast<void*>(_init_PackageVersion) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PackageVersion) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageVersion) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageVersion) },
         { },
     };

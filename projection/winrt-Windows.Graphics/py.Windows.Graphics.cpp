@@ -130,6 +130,21 @@ namespace py::cpp::Windows::Graphics
         Py_DECREF(tp);
     }
 
+    static PyObject* _assign_array_DisplayAdapterId(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Graphics::DisplayAdapterId>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_DisplayAdapterId[] = {
+        { "_assign_array_", _assign_array_DisplayAdapterId, METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyObject* DisplayAdapterId_get_LowPart(py::wrapper::Windows::Graphics::DisplayAdapterId* self, void* /*unused*/) noexcept
     {
         try
@@ -207,6 +222,7 @@ namespace py::cpp::Windows::Graphics
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayAdapterId) },
         { Py_tp_init, reinterpret_cast<void*>(_init_DisplayAdapterId) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplayAdapterId) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayAdapterId) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayAdapterId) },
         { },
     };
@@ -274,6 +290,21 @@ namespace py::cpp::Windows::Graphics
         Py_DECREF(tp);
     }
 
+    static PyObject* _assign_array_DisplayId(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Graphics::DisplayId>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_DisplayId[] = {
+        { "_assign_array_", _assign_array_DisplayId, METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyObject* DisplayId_get_Value(py::wrapper::Windows::Graphics::DisplayId* self, void* /*unused*/) noexcept
     {
         try
@@ -317,6 +348,7 @@ namespace py::cpp::Windows::Graphics
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayId) },
         { Py_tp_init, reinterpret_cast<void*>(_init_DisplayId) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplayId) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayId) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayId) },
         { },
     };
@@ -384,6 +416,21 @@ namespace py::cpp::Windows::Graphics
         tp->tp_free(self);
         Py_DECREF(tp);
     }
+
+    static PyObject* _assign_array_PointInt32(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Graphics::PointInt32>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_PointInt32[] = {
+        { "_assign_array_", _assign_array_PointInt32, METH_O | METH_STATIC, nullptr },
+        { }
+    };
 
     static PyObject* PointInt32_get_X(py::wrapper::Windows::Graphics::PointInt32* self, void* /*unused*/) noexcept
     {
@@ -462,6 +509,7 @@ namespace py::cpp::Windows::Graphics
         { Py_tp_new, reinterpret_cast<void*>(_new_PointInt32) },
         { Py_tp_init, reinterpret_cast<void*>(_init_PointInt32) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PointInt32) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_PointInt32) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PointInt32) },
         { },
     };
@@ -531,6 +579,21 @@ namespace py::cpp::Windows::Graphics
         tp->tp_free(self);
         Py_DECREF(tp);
     }
+
+    static PyObject* _assign_array_RectInt32(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Graphics::RectInt32>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_RectInt32[] = {
+        { "_assign_array_", _assign_array_RectInt32, METH_O | METH_STATIC, nullptr },
+        { }
+    };
 
     static PyObject* RectInt32_get_X(py::wrapper::Windows::Graphics::RectInt32* self, void* /*unused*/) noexcept
     {
@@ -677,6 +740,7 @@ namespace py::cpp::Windows::Graphics
         { Py_tp_new, reinterpret_cast<void*>(_new_RectInt32) },
         { Py_tp_init, reinterpret_cast<void*>(_init_RectInt32) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RectInt32) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_RectInt32) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RectInt32) },
         { },
     };
@@ -744,6 +808,21 @@ namespace py::cpp::Windows::Graphics
         tp->tp_free(self);
         Py_DECREF(tp);
     }
+
+    static PyObject* _assign_array_SizeInt32(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Graphics::SizeInt32>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_SizeInt32[] = {
+        { "_assign_array_", _assign_array_SizeInt32, METH_O | METH_STATIC, nullptr },
+        { }
+    };
 
     static PyObject* SizeInt32_get_Width(py::wrapper::Windows::Graphics::SizeInt32* self, void* /*unused*/) noexcept
     {
@@ -822,6 +901,7 @@ namespace py::cpp::Windows::Graphics
         { Py_tp_new, reinterpret_cast<void*>(_new_SizeInt32) },
         { Py_tp_init, reinterpret_cast<void*>(_init_SizeInt32) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SizeInt32) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_SizeInt32) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SizeInt32) },
         { },
     };

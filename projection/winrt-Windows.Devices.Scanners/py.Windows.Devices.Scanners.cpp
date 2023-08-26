@@ -3822,6 +3822,21 @@ namespace py::cpp::Windows::Devices::Scanners
         Py_DECREF(tp);
     }
 
+    static PyObject* _assign_array_ImageScannerResolution(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Scanners::ImageScannerResolution>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_ImageScannerResolution[] = {
+        { "_assign_array_", _assign_array_ImageScannerResolution, METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyObject* ImageScannerResolution_get_DpiX(py::wrapper::Windows::Devices::Scanners::ImageScannerResolution* self, void* /*unused*/) noexcept
     {
         try
@@ -3899,6 +3914,7 @@ namespace py::cpp::Windows::Devices::Scanners
         { Py_tp_new, reinterpret_cast<void*>(_new_ImageScannerResolution) },
         { Py_tp_init, reinterpret_cast<void*>(_init_ImageScannerResolution) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ImageScannerResolution) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_ImageScannerResolution) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ImageScannerResolution) },
         { },
     };

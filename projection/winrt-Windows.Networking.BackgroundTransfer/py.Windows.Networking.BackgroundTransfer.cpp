@@ -5232,6 +5232,21 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         Py_DECREF(tp);
     }
 
+    static PyObject* _assign_array_BackgroundDownloadProgress(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Networking::BackgroundTransfer::BackgroundDownloadProgress>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_BackgroundDownloadProgress[] = {
+        { "_assign_array_", _assign_array_BackgroundDownloadProgress, METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyObject* BackgroundDownloadProgress_get_BytesReceived(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloadProgress* self, void* /*unused*/) noexcept
     {
         try
@@ -5411,6 +5426,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { Py_tp_new, reinterpret_cast<void*>(_new_BackgroundDownloadProgress) },
         { Py_tp_init, reinterpret_cast<void*>(_init_BackgroundDownloadProgress) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BackgroundDownloadProgress) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_BackgroundDownloadProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BackgroundDownloadProgress) },
         { },
     };
@@ -5478,6 +5494,21 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         tp->tp_free(self);
         Py_DECREF(tp);
     }
+
+    static PyObject* _assign_array_BackgroundTransferFileRange(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_BackgroundTransferFileRange[] = {
+        { "_assign_array_", _assign_array_BackgroundTransferFileRange, METH_O | METH_STATIC, nullptr },
+        { }
+    };
 
     static PyObject* BackgroundTransferFileRange_get_Offset(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange* self, void* /*unused*/) noexcept
     {
@@ -5556,6 +5587,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { Py_tp_new, reinterpret_cast<void*>(_new_BackgroundTransferFileRange) },
         { Py_tp_init, reinterpret_cast<void*>(_init_BackgroundTransferFileRange) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BackgroundTransferFileRange) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_BackgroundTransferFileRange) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BackgroundTransferFileRange) },
         { },
     };
@@ -5628,6 +5660,21 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         tp->tp_free(self);
         Py_DECREF(tp);
     }
+
+    static PyObject* _assign_array_BackgroundUploadProgress(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_BackgroundUploadProgress[] = {
+        { "_assign_array_", _assign_array_BackgroundUploadProgress, METH_O | METH_STATIC, nullptr },
+        { }
+    };
 
     static PyObject* BackgroundUploadProgress_get_BytesReceived(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress* self, void* /*unused*/) noexcept
     {
@@ -5876,6 +5923,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { Py_tp_new, reinterpret_cast<void*>(_new_BackgroundUploadProgress) },
         { Py_tp_init, reinterpret_cast<void*>(_init_BackgroundUploadProgress) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BackgroundUploadProgress) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_BackgroundUploadProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BackgroundUploadProgress) },
         { },
     };

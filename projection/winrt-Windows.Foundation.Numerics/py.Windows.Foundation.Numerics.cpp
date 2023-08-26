@@ -65,6 +65,21 @@ namespace py::cpp::Windows::Foundation::Numerics
         Py_DECREF(tp);
     }
 
+    static PyObject* _assign_array_Matrix3x2(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::Numerics::float3x2>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_Matrix3x2[] = {
+        { "_assign_array_", _assign_array_Matrix3x2, METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyObject* Matrix3x2_get_M11(py::wrapper::Windows::Foundation::Numerics::Matrix3x2* self, void* /*unused*/) noexcept
     {
         try
@@ -278,6 +293,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { Py_tp_new, reinterpret_cast<void*>(_new_Matrix3x2) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Matrix3x2) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Matrix3x2) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_Matrix3x2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Matrix3x2) },
         { },
     };
@@ -359,6 +375,21 @@ namespace py::cpp::Windows::Foundation::Numerics
         tp->tp_free(self);
         Py_DECREF(tp);
     }
+
+    static PyObject* _assign_array_Matrix4x4(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::Numerics::float4x4>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_Matrix4x4[] = {
+        { "_assign_array_", _assign_array_Matrix4x4, METH_O | METH_STATIC, nullptr },
+        { }
+    };
 
     static PyObject* Matrix4x4_get_M11(py::wrapper::Windows::Foundation::Numerics::Matrix4x4* self, void* /*unused*/) noexcept
     {
@@ -913,6 +944,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { Py_tp_new, reinterpret_cast<void*>(_new_Matrix4x4) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Matrix4x4) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Matrix4x4) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_Matrix4x4) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Matrix4x4) },
         { },
     };
@@ -980,6 +1012,21 @@ namespace py::cpp::Windows::Foundation::Numerics
         tp->tp_free(self);
         Py_DECREF(tp);
     }
+
+    static PyObject* _assign_array_Plane(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::Numerics::plane>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_Plane[] = {
+        { "_assign_array_", _assign_array_Plane, METH_O | METH_STATIC, nullptr },
+        { }
+    };
 
     static PyObject* Plane_get_Normal(py::wrapper::Windows::Foundation::Numerics::Plane* self, void* /*unused*/) noexcept
     {
@@ -1058,6 +1105,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { Py_tp_new, reinterpret_cast<void*>(_new_Plane) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Plane) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Plane) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_Plane) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Plane) },
         { },
     };
@@ -1127,6 +1175,21 @@ namespace py::cpp::Windows::Foundation::Numerics
         tp->tp_free(self);
         Py_DECREF(tp);
     }
+
+    static PyObject* _assign_array_Quaternion(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::Numerics::quaternion>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_Quaternion[] = {
+        { "_assign_array_", _assign_array_Quaternion, METH_O | METH_STATIC, nullptr },
+        { }
+    };
 
     static PyObject* Quaternion_get_X(py::wrapper::Windows::Foundation::Numerics::Quaternion* self, void* /*unused*/) noexcept
     {
@@ -1273,6 +1336,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { Py_tp_new, reinterpret_cast<void*>(_new_Quaternion) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Quaternion) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Quaternion) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_Quaternion) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Quaternion) },
         { },
     };
@@ -1340,6 +1404,21 @@ namespace py::cpp::Windows::Foundation::Numerics
         tp->tp_free(self);
         Py_DECREF(tp);
     }
+
+    static PyObject* _assign_array_Rational(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::Numerics::Rational>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_Rational[] = {
+        { "_assign_array_", _assign_array_Rational, METH_O | METH_STATIC, nullptr },
+        { }
+    };
 
     static PyObject* Rational_get_Numerator(py::wrapper::Windows::Foundation::Numerics::Rational* self, void* /*unused*/) noexcept
     {
@@ -1418,6 +1497,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { Py_tp_new, reinterpret_cast<void*>(_new_Rational) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Rational) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Rational) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_Rational) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Rational) },
         { },
     };
@@ -1485,6 +1565,21 @@ namespace py::cpp::Windows::Foundation::Numerics
         tp->tp_free(self);
         Py_DECREF(tp);
     }
+
+    static PyObject* _assign_array_Vector2(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::Numerics::float2>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_Vector2[] = {
+        { "_assign_array_", _assign_array_Vector2, METH_O | METH_STATIC, nullptr },
+        { }
+    };
 
     static PyObject* Vector2_get_X(py::wrapper::Windows::Foundation::Numerics::Vector2* self, void* /*unused*/) noexcept
     {
@@ -1563,6 +1658,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { Py_tp_new, reinterpret_cast<void*>(_new_Vector2) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Vector2) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Vector2) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_Vector2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Vector2) },
         { },
     };
@@ -1631,6 +1727,21 @@ namespace py::cpp::Windows::Foundation::Numerics
         tp->tp_free(self);
         Py_DECREF(tp);
     }
+
+    static PyObject* _assign_array_Vector3(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::Numerics::float3>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_Vector3[] = {
+        { "_assign_array_", _assign_array_Vector3, METH_O | METH_STATIC, nullptr },
+        { }
+    };
 
     static PyObject* Vector3_get_X(py::wrapper::Windows::Foundation::Numerics::Vector3* self, void* /*unused*/) noexcept
     {
@@ -1743,6 +1854,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { Py_tp_new, reinterpret_cast<void*>(_new_Vector3) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Vector3) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Vector3) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_Vector3) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Vector3) },
         { },
     };
@@ -1812,6 +1924,21 @@ namespace py::cpp::Windows::Foundation::Numerics
         tp->tp_free(self);
         Py_DECREF(tp);
     }
+
+    static PyObject* _assign_array_Vector4(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::Numerics::float4>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_Vector4[] = {
+        { "_assign_array_", _assign_array_Vector4, METH_O | METH_STATIC, nullptr },
+        { }
+    };
 
     static PyObject* Vector4_get_X(py::wrapper::Windows::Foundation::Numerics::Vector4* self, void* /*unused*/) noexcept
     {
@@ -1958,6 +2085,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { Py_tp_new, reinterpret_cast<void*>(_new_Vector4) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Vector4) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Vector4) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_Vector4) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Vector4) },
         { },
     };

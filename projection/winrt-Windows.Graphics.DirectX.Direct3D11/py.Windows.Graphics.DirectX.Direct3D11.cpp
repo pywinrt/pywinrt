@@ -356,6 +356,21 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
         Py_DECREF(tp);
     }
 
+    static PyObject* _assign_array_Direct3DMultisampleDescription(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_Direct3DMultisampleDescription[] = {
+        { "_assign_array_", _assign_array_Direct3DMultisampleDescription, METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyObject* Direct3DMultisampleDescription_get_Count(py::wrapper::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription* self, void* /*unused*/) noexcept
     {
         try
@@ -433,6 +448,7 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
         { Py_tp_new, reinterpret_cast<void*>(_new_Direct3DMultisampleDescription) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Direct3DMultisampleDescription) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Direct3DMultisampleDescription) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_Direct3DMultisampleDescription) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Direct3DMultisampleDescription) },
         { },
     };
@@ -502,6 +518,21 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
         tp->tp_free(self);
         Py_DECREF(tp);
     }
+
+    static PyObject* _assign_array_Direct3DSurfaceDescription(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_Direct3DSurfaceDescription[] = {
+        { "_assign_array_", _assign_array_Direct3DSurfaceDescription, METH_O | METH_STATIC, nullptr },
+        { }
+    };
 
     static PyObject* Direct3DSurfaceDescription_get_Width(py::wrapper::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription* self, void* /*unused*/) noexcept
     {
@@ -648,6 +679,7 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
         { Py_tp_new, reinterpret_cast<void*>(_new_Direct3DSurfaceDescription) },
         { Py_tp_init, reinterpret_cast<void*>(_init_Direct3DSurfaceDescription) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Direct3DSurfaceDescription) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_Direct3DSurfaceDescription) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Direct3DSurfaceDescription) },
         { },
     };

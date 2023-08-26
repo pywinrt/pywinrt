@@ -7827,6 +7827,21 @@ namespace py::cpp::Windows::Management::Deployment
         Py_DECREF(tp);
     }
 
+    static PyObject* _assign_array_DeploymentProgress(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Management::Deployment::DeploymentProgress>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyMethodDef _methods_DeploymentProgress[] = {
+        { "_assign_array_", _assign_array_DeploymentProgress, METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
     static PyObject* DeploymentProgress_get_state(py::wrapper::Windows::Management::Deployment::DeploymentProgress* self, void* /*unused*/) noexcept
     {
         try
@@ -7904,6 +7919,7 @@ namespace py::cpp::Windows::Management::Deployment
         { Py_tp_new, reinterpret_cast<void*>(_new_DeploymentProgress) },
         { Py_tp_init, reinterpret_cast<void*>(_init_DeploymentProgress) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeploymentProgress) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_DeploymentProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeploymentProgress) },
         { },
     };
