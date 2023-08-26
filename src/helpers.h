@@ -836,13 +836,6 @@ namespace pywinrt
         return false;
     }
 
-    bool has_dealloc(TypeDef const& type)
-    {
-        auto category = get_category(type);
-        return category == category::struct_type || category == category::interface_type
-               || (category == category::class_type && !type.Flags().Abstract());
-    }
-
     bool has_custom_conversion(TypeDef const& type)
     {
         static const std::set<std::string_view> custom_converters
