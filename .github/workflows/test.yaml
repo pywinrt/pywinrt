@@ -1,68 +1,54 @@
 name: test
-on: 
+concurrency:
+  group: test-${{ github.ref }}
+  cancel-in-progress: true
+
+on:
   push:
-    branches:
-      - main
+    paths:
+      - .github/workflows/test.yaml
+      - projection/**
+      - test/**
   pull_request:
     paths:
       - .github/workflows/test.yaml
-      - scripts/**
-      - src/**
+      - projection/**
       - test/**
 
 jobs:
-  generate:
-    runs-on: windows-2022
-    steps:
-      - uses: actions/checkout@v3
-      - name: Build pywinrt.exe
-        run: ./scripts/build_pywinrt_nuget.cmd
-      - name: Fetch tools
-        run: ./scripts/fetch-tools.ps1 -useLocalPyWinRT -PyWinRTVersion 1.2.3.4
-      - name: generate
-        working-directory: projection
-        run: ./generate.ps1 -usePyWinRTNuget
-      - uses: actions/upload-artifact@v3
-        with:
-          name: generated
-          path: |
-            projection/cppwinrt/
-            projection/pywinrt/
   msvc:
     runs-on: windows-2022
-    needs: generate
     strategy:
       fail-fast: false
       matrix:
         python-version: ['3.8', '3.9', '3.10', "3.11", "3.12"]
         architecture: ['x86', 'x64']
         release-type: ['Release'] # no "Debug" - https://github.com/actions/setup-python/issues/86
+        include:
+          - architecture: 'x86'
+            vs-arch: 'Win32'
+          - architecture: 'x64'
+            vs-arch: 'x64'
     name: Python ${{ matrix.python-version }} ${{ matrix.architecture }} ${{ matrix.release-type }}
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/download-artifact@v3
-        with:
-          name: generated
-          path: projection/
       - uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
           allow-prereleases: true
           architecture: ${{ matrix.architecture }}
+      - name: configure
+        run: cmake -S projection -B _build/projection -DPYWINRT_FULL_PROJECTION=OFF -A ${{ matrix.vs-arch }}
       - name: build
-        run: |
-          Import-Module "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\Tools\Microsoft.VisualStudio.DevShell.dll"
-          Enter-VsDevShell -SkipAutomaticLocation -VsInstallPath "C:\Program Files\Microsoft Visual Studio\2022\Enterprise" -DevCmdArguments '-arch=${{ matrix.architecture }}'
-          cd projection
-          ./build.ps1 -buildType ${{ matrix.release-type }} -pythonVersion ${{ matrix.python-version }}
-        shell: powershell
+        run: cmake --build _build/projection --config ${{ matrix.release-type }} --parallel --verbose
+      - name: install
+        run: cmake --install _build/projection --prefix _install/projection
       - name: test
         env:
-          PYTHONPATH: projection/pywinrt
-        run: python -m unittest -v
+          PYTHONPATH: _install/projection
+        run: python -X dev -m unittest -v
   mingw:
     runs-on: windows-2022
-    needs: generate
     strategy:
       fail-fast: false
       matrix:
@@ -78,10 +64,6 @@ jobs:
         shell: msys2 {0}
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/download-artifact@v3
-        with:
-          name: generated
-          path: projection/
       - uses: msys2/setup-msys2@v2
         with:
           msystem: ${{matrix.sys}}
@@ -90,26 +72,25 @@ jobs:
             cc:p
             cmake:p
             python:p
+      - name: configure
+        run: ${MINGW_PREFIX}/bin/cmake -S projection -B _build/projection -DPYWINRT_FULL_PROJECTION=OFF -DPython3_ROOT_DIR=${MINGW_PREFIX}
       - name: build
-        run: |
-          ${MINGW_PREFIX}/bin/cmake -S projection -B _build/${MSYSTEM} -DPython3_ROOT_DIR=${MINGW_PREFIX}
-          ${MINGW_PREFIX}/bin/cmake --build _build/${MSYSTEM} -v
-          cp _build/${MSYSTEM}/_winrt.pyd projection/pywinrt/winrt/
+        run: ${MINGW_PREFIX}/bin/cmake --build _build/projection --verbose
+      - name: install
+        run: ${MINGW_PREFIX}/bin/cmake --install _build/projection --prefix _install/projection
       - name: test
         env:
-          PYTHONPATH: projection/pywinrt
-        run: ${MINGW_PREFIX}/bin/python -m unittest -v
+          PYTHONPATH: _install/projection
+        run: ${MINGW_PREFIX}/bin/python -X dev -m unittest -v
   lint:
-    runs-on: windows-2022
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Build pywinrt
-        run: ./scripts/vsdevcmd-build.cmd
-      - name: Generate full projection
+      - name: merge packages
         run: |
-          cd projection
-          ./generate -fullProjection
+          mkdir -p _install/lint
+          find projection -type d -name "cppwinrt" -prune -o -type d -name ".mypy_cache" -prune -o -type d -name "winrt" -exec cp -r {} _install/lint/ \;
       - name: Run mypy
-        run: |
-          cd projection
-          pipx run mypy -p winrt
+        env:
+          MYPYPATH: _install/lint
+        run: pipx run mypy -p winrt
