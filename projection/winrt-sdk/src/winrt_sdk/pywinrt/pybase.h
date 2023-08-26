@@ -1568,12 +1568,11 @@ namespace py
                     }
                     else
                     {
-                        return {};
+                        return std::nullopt;
                     }
                 }
 
-                return std::move(
-                    std::optional<T>{converter<T>::convert_to(next.get())});
+                return converter<T>::convert_to(next.get());
             }
 
             iterator(PyObject* i) : _iterator(i)
