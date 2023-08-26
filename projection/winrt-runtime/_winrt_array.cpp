@@ -277,7 +277,7 @@ namespace py::cpp::_winrt
 
                 auto size = static_cast<uint32_t>(count);
 
-                if (size != count)
+                if (static_cast<Py_ssize_t>(size) != count)
                 {
                     PyErr_SetString(PyExc_OverflowError, "count exceeds max size");
                     return nullptr;
@@ -328,7 +328,7 @@ namespace py::cpp::_winrt
 
             auto const size = static_cast<uint32_t>(view.len / view.itemsize);
 
-            if (size != view.len / view.itemsize)
+            if (static_cast<Py_ssize_t>(size) != view.len / view.itemsize)
             {
                 PyErr_SetString(PyExc_OverflowError, "count exceeds max size");
                 return nullptr;
@@ -372,7 +372,7 @@ namespace py::cpp::_winrt
 
             auto size = static_cast<uint32_t>(count);
 
-            if (size != count)
+            if (static_cast<Py_ssize_t>(size) != count)
             {
                 PyErr_SetString(PyExc_OverflowError, "count exceeds max size");
                 return nullptr;

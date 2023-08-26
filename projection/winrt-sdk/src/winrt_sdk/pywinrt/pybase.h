@@ -2227,7 +2227,7 @@ namespace py
                 index = array.size() + index;
             }
 
-            if (index < 0 || index >= array.size())
+            if (index < 0 || static_cast<uint32_t>(index) >= array.size())
             {
                 PyErr_SetString(PyExc_IndexError, "index out of range");
                 return false;

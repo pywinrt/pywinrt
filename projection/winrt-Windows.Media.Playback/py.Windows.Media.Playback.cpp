@@ -2341,7 +2341,7 @@ namespace py::cpp::Windows::Media::Playback
 
             auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
-            if (count != length)
+            if (count != static_cast<uint32_t>(length))
             {
                 PyErr_Format(
                     PyExc_RuntimeError,
@@ -8817,7 +8817,7 @@ namespace py::cpp::Windows::Media::Playback
 
             auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
-            if (count != length)
+            if (count != static_cast<uint32_t>(length))
             {
                 PyErr_Format(
                     PyExc_RuntimeError,
@@ -9253,7 +9253,7 @@ namespace py::cpp::Windows::Media::Playback
 
             auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
-            if (count != length)
+            if (count != static_cast<uint32_t>(length))
             {
                 PyErr_Format(
                     PyExc_RuntimeError,
