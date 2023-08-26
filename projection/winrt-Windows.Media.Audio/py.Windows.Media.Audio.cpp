@@ -506,12 +506,12 @@ namespace py::cpp::Windows::Media::Audio
         }
     }
 
-    static PyObject* _enter_AudioDeviceInputNode(py::wrapper::Windows::Media::Audio::AudioDeviceInputNode* self) noexcept
+    static PyObject* _enter_AudioDeviceInputNode(py::wrapper::Windows::Media::Audio::AudioDeviceInputNode* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_AudioDeviceInputNode(py::wrapper::Windows::Media::Audio::AudioDeviceInputNode* self) noexcept
+    static PyObject* _exit_AudioDeviceInputNode(py::wrapper::Windows::Media::Audio::AudioDeviceInputNode* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -993,12 +993,12 @@ namespace py::cpp::Windows::Media::Audio
         }
     }
 
-    static PyObject* _enter_AudioDeviceOutputNode(py::wrapper::Windows::Media::Audio::AudioDeviceOutputNode* self) noexcept
+    static PyObject* _enter_AudioDeviceOutputNode(py::wrapper::Windows::Media::Audio::AudioDeviceOutputNode* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_AudioDeviceOutputNode(py::wrapper::Windows::Media::Audio::AudioDeviceOutputNode* self) noexcept
+    static PyObject* _exit_AudioDeviceOutputNode(py::wrapper::Windows::Media::Audio::AudioDeviceOutputNode* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -1855,12 +1855,12 @@ namespace py::cpp::Windows::Media::Audio
         }
     }
 
-    static PyObject* _enter_AudioFileInputNode(py::wrapper::Windows::Media::Audio::AudioFileInputNode* self) noexcept
+    static PyObject* _enter_AudioFileInputNode(py::wrapper::Windows::Media::Audio::AudioFileInputNode* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_AudioFileInputNode(py::wrapper::Windows::Media::Audio::AudioFileInputNode* self) noexcept
+    static PyObject* _exit_AudioFileInputNode(py::wrapper::Windows::Media::Audio::AudioFileInputNode* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -2352,12 +2352,12 @@ namespace py::cpp::Windows::Media::Audio
         }
     }
 
-    static PyObject* _enter_AudioFileOutputNode(py::wrapper::Windows::Media::Audio::AudioFileOutputNode* self) noexcept
+    static PyObject* _enter_AudioFileOutputNode(py::wrapper::Windows::Media::Audio::AudioFileOutputNode* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_AudioFileOutputNode(py::wrapper::Windows::Media::Audio::AudioFileOutputNode* self) noexcept
+    static PyObject* _exit_AudioFileOutputNode(py::wrapper::Windows::Media::Audio::AudioFileOutputNode* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -3198,12 +3198,12 @@ namespace py::cpp::Windows::Media::Audio
         }
     }
 
-    static PyObject* _enter_AudioFrameInputNode(py::wrapper::Windows::Media::Audio::AudioFrameInputNode* self) noexcept
+    static PyObject* _enter_AudioFrameInputNode(py::wrapper::Windows::Media::Audio::AudioFrameInputNode* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_AudioFrameInputNode(py::wrapper::Windows::Media::Audio::AudioFrameInputNode* self) noexcept
+    static PyObject* _exit_AudioFrameInputNode(py::wrapper::Windows::Media::Audio::AudioFrameInputNode* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -3655,12 +3655,12 @@ namespace py::cpp::Windows::Media::Audio
         }
     }
 
-    static PyObject* _enter_AudioFrameOutputNode(py::wrapper::Windows::Media::Audio::AudioFrameOutputNode* self) noexcept
+    static PyObject* _enter_AudioFrameOutputNode(py::wrapper::Windows::Media::Audio::AudioFrameOutputNode* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_AudioFrameOutputNode(py::wrapper::Windows::Media::Audio::AudioFrameOutputNode* self) noexcept
+    static PyObject* _exit_AudioFrameOutputNode(py::wrapper::Windows::Media::Audio::AudioFrameOutputNode* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -4650,12 +4650,12 @@ namespace py::cpp::Windows::Media::Audio
         }
     }
 
-    static PyObject* _enter_AudioGraph(py::wrapper::Windows::Media::Audio::AudioGraph* self) noexcept
+    static PyObject* _enter_AudioGraph(py::wrapper::Windows::Media::Audio::AudioGraph* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_AudioGraph(py::wrapper::Windows::Media::Audio::AudioGraph* self) noexcept
+    static PyObject* _exit_AudioGraph(py::wrapper::Windows::Media::Audio::AudioGraph* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -4796,12 +4796,12 @@ namespace py::cpp::Windows::Media::Audio
         }
     }
 
-    static PyObject* _enter_AudioGraphBatchUpdater(py::wrapper::Windows::Media::Audio::AudioGraphBatchUpdater* self) noexcept
+    static PyObject* _enter_AudioGraphBatchUpdater(py::wrapper::Windows::Media::Audio::AudioGraphBatchUpdater* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_AudioGraphBatchUpdater(py::wrapper::Windows::Media::Audio::AudioGraphBatchUpdater* self) noexcept
+    static PyObject* _exit_AudioGraphBatchUpdater(py::wrapper::Windows::Media::Audio::AudioGraphBatchUpdater* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -7245,12 +7245,12 @@ namespace py::cpp::Windows::Media::Audio
         }
     }
 
-    static PyObject* _enter_AudioPlaybackConnection(py::wrapper::Windows::Media::Audio::AudioPlaybackConnection* self) noexcept
+    static PyObject* _enter_AudioPlaybackConnection(py::wrapper::Windows::Media::Audio::AudioPlaybackConnection* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_AudioPlaybackConnection(py::wrapper::Windows::Media::Audio::AudioPlaybackConnection* self) noexcept
+    static PyObject* _exit_AudioPlaybackConnection(py::wrapper::Windows::Media::Audio::AudioPlaybackConnection* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -8237,12 +8237,12 @@ namespace py::cpp::Windows::Media::Audio
         }
     }
 
-    static PyObject* _enter_AudioSubmixNode(py::wrapper::Windows::Media::Audio::AudioSubmixNode* self) noexcept
+    static PyObject* _enter_AudioSubmixNode(py::wrapper::Windows::Media::Audio::AudioSubmixNode* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_AudioSubmixNode(py::wrapper::Windows::Media::Audio::AudioSubmixNode* self) noexcept
+    static PyObject* _exit_AudioSubmixNode(py::wrapper::Windows::Media::Audio::AudioSubmixNode* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -10836,12 +10836,12 @@ namespace py::cpp::Windows::Media::Audio
         }
     }
 
-    static PyObject* _enter_MediaSourceAudioInputNode(py::wrapper::Windows::Media::Audio::MediaSourceAudioInputNode* self) noexcept
+    static PyObject* _enter_MediaSourceAudioInputNode(py::wrapper::Windows::Media::Audio::MediaSourceAudioInputNode* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_MediaSourceAudioInputNode(py::wrapper::Windows::Media::Audio::MediaSourceAudioInputNode* self) noexcept
+    static PyObject* _exit_MediaSourceAudioInputNode(py::wrapper::Windows::Media::Audio::MediaSourceAudioInputNode* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -13392,12 +13392,12 @@ namespace py::cpp::Windows::Media::Audio
         }
     }
 
-    static PyObject* _enter_IAudioInputNode(py::wrapper::Windows::Media::Audio::IAudioInputNode* self) noexcept
+    static PyObject* _enter_IAudioInputNode(py::wrapper::Windows::Media::Audio::IAudioInputNode* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_IAudioInputNode(py::wrapper::Windows::Media::Audio::IAudioInputNode* self) noexcept
+    static PyObject* _exit_IAudioInputNode(py::wrapper::Windows::Media::Audio::IAudioInputNode* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -13935,12 +13935,12 @@ namespace py::cpp::Windows::Media::Audio
         }
     }
 
-    static PyObject* _enter_IAudioInputNode2(py::wrapper::Windows::Media::Audio::IAudioInputNode2* self) noexcept
+    static PyObject* _enter_IAudioInputNode2(py::wrapper::Windows::Media::Audio::IAudioInputNode2* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_IAudioInputNode2(py::wrapper::Windows::Media::Audio::IAudioInputNode2* self) noexcept
+    static PyObject* _exit_IAudioInputNode2(py::wrapper::Windows::Media::Audio::IAudioInputNode2* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -14355,12 +14355,12 @@ namespace py::cpp::Windows::Media::Audio
         }
     }
 
-    static PyObject* _enter_IAudioNode(py::wrapper::Windows::Media::Audio::IAudioNode* self) noexcept
+    static PyObject* _enter_IAudioNode(py::wrapper::Windows::Media::Audio::IAudioNode* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_IAudioNode(py::wrapper::Windows::Media::Audio::IAudioNode* self) noexcept
+    static PyObject* _exit_IAudioNode(py::wrapper::Windows::Media::Audio::IAudioNode* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -14818,12 +14818,12 @@ namespace py::cpp::Windows::Media::Audio
         }
     }
 
-    static PyObject* _enter_IAudioNodeWithListener(py::wrapper::Windows::Media::Audio::IAudioNodeWithListener* self) noexcept
+    static PyObject* _enter_IAudioNodeWithListener(py::wrapper::Windows::Media::Audio::IAudioNodeWithListener* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_IAudioNodeWithListener(py::wrapper::Windows::Media::Audio::IAudioNodeWithListener* self) noexcept
+    static PyObject* _exit_IAudioNodeWithListener(py::wrapper::Windows::Media::Audio::IAudioNodeWithListener* self, PyObject* /*unused*/) noexcept
     {
         try
         {

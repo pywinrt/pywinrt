@@ -1279,12 +1279,12 @@ namespace py::cpp::Windows::Devices::Display::Core
         }
     }
 
-    static PyObject* _enter_DisplayManager(py::wrapper::Windows::Devices::Display::Core::DisplayManager* self) noexcept
+    static PyObject* _enter_DisplayManager(py::wrapper::Windows::Devices::Display::Core::DisplayManager* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_DisplayManager(py::wrapper::Windows::Devices::Display::Core::DisplayManager* self) noexcept
+    static PyObject* _exit_DisplayManager(py::wrapper::Windows::Devices::Display::Core::DisplayManager* self, PyObject* /*unused*/) noexcept
     {
         try
         {

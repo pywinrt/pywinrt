@@ -1071,12 +1071,12 @@ namespace py::cpp::Windows::Devices::WiFiDirect
         }
     }
 
-    static PyObject* _enter_WiFiDirectConnectionRequest(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectConnectionRequest* self) noexcept
+    static PyObject* _enter_WiFiDirectConnectionRequest(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectConnectionRequest* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_WiFiDirectConnectionRequest(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectConnectionRequest* self) noexcept
+    static PyObject* _exit_WiFiDirectConnectionRequest(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectConnectionRequest* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -1503,12 +1503,12 @@ namespace py::cpp::Windows::Devices::WiFiDirect
         }
     }
 
-    static PyObject* _enter_WiFiDirectDevice(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectDevice* self) noexcept
+    static PyObject* _enter_WiFiDirectDevice(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectDevice* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_WiFiDirectDevice(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectDevice* self) noexcept
+    static PyObject* _exit_WiFiDirectDevice(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectDevice* self, PyObject* /*unused*/) noexcept
     {
         try
         {

@@ -285,12 +285,12 @@ namespace py::cpp::Windows::Devices::Gpio
         }
     }
 
-    static PyObject* _enter_GpioChangeCounter(py::wrapper::Windows::Devices::Gpio::GpioChangeCounter* self) noexcept
+    static PyObject* _enter_GpioChangeCounter(py::wrapper::Windows::Devices::Gpio::GpioChangeCounter* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_GpioChangeCounter(py::wrapper::Windows::Devices::Gpio::GpioChangeCounter* self) noexcept
+    static PyObject* _exit_GpioChangeCounter(py::wrapper::Windows::Devices::Gpio::GpioChangeCounter* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -802,12 +802,12 @@ namespace py::cpp::Windows::Devices::Gpio
         }
     }
 
-    static PyObject* _enter_GpioChangeReader(py::wrapper::Windows::Devices::Gpio::GpioChangeReader* self) noexcept
+    static PyObject* _enter_GpioChangeReader(py::wrapper::Windows::Devices::Gpio::GpioChangeReader* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_GpioChangeReader(py::wrapper::Windows::Devices::Gpio::GpioChangeReader* self) noexcept
+    static PyObject* _exit_GpioChangeReader(py::wrapper::Windows::Devices::Gpio::GpioChangeReader* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -1503,12 +1503,12 @@ namespace py::cpp::Windows::Devices::Gpio
         }
     }
 
-    static PyObject* _enter_GpioPin(py::wrapper::Windows::Devices::Gpio::GpioPin* self) noexcept
+    static PyObject* _enter_GpioPin(py::wrapper::Windows::Devices::Gpio::GpioPin* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_GpioPin(py::wrapper::Windows::Devices::Gpio::GpioPin* self) noexcept
+    static PyObject* _exit_GpioPin(py::wrapper::Windows::Devices::Gpio::GpioPin* self, PyObject* /*unused*/) noexcept
     {
         try
         {

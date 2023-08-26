@@ -1200,12 +1200,12 @@ namespace py::cpp::Windows::Media::Capture::Frames
         }
     }
 
-    static PyObject* _enter_MediaFrameReader(py::wrapper::Windows::Media::Capture::Frames::MediaFrameReader* self) noexcept
+    static PyObject* _enter_MediaFrameReader(py::wrapper::Windows::Media::Capture::Frames::MediaFrameReader* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_MediaFrameReader(py::wrapper::Windows::Media::Capture::Frames::MediaFrameReader* self) noexcept
+    static PyObject* _exit_MediaFrameReader(py::wrapper::Windows::Media::Capture::Frames::MediaFrameReader* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -1498,12 +1498,12 @@ namespace py::cpp::Windows::Media::Capture::Frames
         }
     }
 
-    static PyObject* _enter_MediaFrameReference(py::wrapper::Windows::Media::Capture::Frames::MediaFrameReference* self) noexcept
+    static PyObject* _enter_MediaFrameReference(py::wrapper::Windows::Media::Capture::Frames::MediaFrameReference* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_MediaFrameReference(py::wrapper::Windows::Media::Capture::Frames::MediaFrameReference* self) noexcept
+    static PyObject* _exit_MediaFrameReference(py::wrapper::Windows::Media::Capture::Frames::MediaFrameReference* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -3003,12 +3003,12 @@ namespace py::cpp::Windows::Media::Capture::Frames
         }
     }
 
-    static PyObject* _enter_MultiSourceMediaFrameReader(py::wrapper::Windows::Media::Capture::Frames::MultiSourceMediaFrameReader* self) noexcept
+    static PyObject* _enter_MultiSourceMediaFrameReader(py::wrapper::Windows::Media::Capture::Frames::MultiSourceMediaFrameReader* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_MultiSourceMediaFrameReader(py::wrapper::Windows::Media::Capture::Frames::MultiSourceMediaFrameReader* self) noexcept
+    static PyObject* _exit_MultiSourceMediaFrameReader(py::wrapper::Windows::Media::Capture::Frames::MultiSourceMediaFrameReader* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -3161,12 +3161,12 @@ namespace py::cpp::Windows::Media::Capture::Frames
         }
     }
 
-    static PyObject* _enter_MultiSourceMediaFrameReference(py::wrapper::Windows::Media::Capture::Frames::MultiSourceMediaFrameReference* self) noexcept
+    static PyObject* _enter_MultiSourceMediaFrameReference(py::wrapper::Windows::Media::Capture::Frames::MultiSourceMediaFrameReference* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_MultiSourceMediaFrameReference(py::wrapper::Windows::Media::Capture::Frames::MultiSourceMediaFrameReference* self) noexcept
+    static PyObject* _exit_MultiSourceMediaFrameReference(py::wrapper::Windows::Media::Capture::Frames::MultiSourceMediaFrameReference* self, PyObject* /*unused*/) noexcept
     {
         try
         {

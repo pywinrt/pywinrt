@@ -3640,12 +3640,12 @@ namespace py::cpp::Windows::UI::Core
         }
     }
 
-    static PyObject* _enter_CoreIndependentInputSourceController(py::wrapper::Windows::UI::Core::CoreIndependentInputSourceController* self) noexcept
+    static PyObject* _enter_CoreIndependentInputSourceController(py::wrapper::Windows::UI::Core::CoreIndependentInputSourceController* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_CoreIndependentInputSourceController(py::wrapper::Windows::UI::Core::CoreIndependentInputSourceController* self) noexcept
+    static PyObject* _exit_CoreIndependentInputSourceController(py::wrapper::Windows::UI::Core::CoreIndependentInputSourceController* self, PyObject* /*unused*/) noexcept
     {
         try
         {

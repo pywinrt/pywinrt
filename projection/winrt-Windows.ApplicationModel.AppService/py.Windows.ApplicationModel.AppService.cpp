@@ -605,12 +605,12 @@ namespace py::cpp::Windows::ApplicationModel::AppService
         }
     }
 
-    static PyObject* _enter_AppServiceConnection(py::wrapper::Windows::ApplicationModel::AppService::AppServiceConnection* self) noexcept
+    static PyObject* _enter_AppServiceConnection(py::wrapper::Windows::ApplicationModel::AppService::AppServiceConnection* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_AppServiceConnection(py::wrapper::Windows::ApplicationModel::AppService::AppServiceConnection* self) noexcept
+    static PyObject* _exit_AppServiceConnection(py::wrapper::Windows::ApplicationModel::AppService::AppServiceConnection* self, PyObject* /*unused*/) noexcept
     {
         try
         {

@@ -4149,12 +4149,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         }
     }
 
-    static PyObject* _enter_GattDeviceService(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService* self) noexcept
+    static PyObject* _enter_GattDeviceService(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_GattDeviceService(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService* self) noexcept
+    static PyObject* _exit_GattDeviceService(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -9708,12 +9708,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         }
     }
 
-    static PyObject* _enter_GattSession(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSession* self) noexcept
+    static PyObject* _enter_GattSession(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSession* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_GattSession(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSession* self) noexcept
+    static PyObject* _exit_GattSession(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSession* self, PyObject* /*unused*/) noexcept
     {
         try
         {

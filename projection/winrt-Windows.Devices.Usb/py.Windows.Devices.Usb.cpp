@@ -1837,12 +1837,12 @@ namespace py::cpp::Windows::Devices::Usb
         }
     }
 
-    static PyObject* _enter_UsbDevice(py::wrapper::Windows::Devices::Usb::UsbDevice* self) noexcept
+    static PyObject* _enter_UsbDevice(py::wrapper::Windows::Devices::Usb::UsbDevice* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_UsbDevice(py::wrapper::Windows::Devices::Usb::UsbDevice* self) noexcept
+    static PyObject* _exit_UsbDevice(py::wrapper::Windows::Devices::Usb::UsbDevice* self, PyObject* /*unused*/) noexcept
     {
         try
         {

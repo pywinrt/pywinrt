@@ -317,12 +317,12 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         }
     }
 
-    static PyObject* _enter_DesignerAppManager(py::wrapper::Windows::UI::Xaml::Hosting::DesignerAppManager* self) noexcept
+    static PyObject* _enter_DesignerAppManager(py::wrapper::Windows::UI::Xaml::Hosting::DesignerAppManager* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_DesignerAppManager(py::wrapper::Windows::UI::Xaml::Hosting::DesignerAppManager* self) noexcept
+    static PyObject* _exit_DesignerAppManager(py::wrapper::Windows::UI::Xaml::Hosting::DesignerAppManager* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -551,12 +551,12 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         }
     }
 
-    static PyObject* _enter_DesignerAppView(py::wrapper::Windows::UI::Xaml::Hosting::DesignerAppView* self) noexcept
+    static PyObject* _enter_DesignerAppView(py::wrapper::Windows::UI::Xaml::Hosting::DesignerAppView* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_DesignerAppView(py::wrapper::Windows::UI::Xaml::Hosting::DesignerAppView* self) noexcept
+    static PyObject* _exit_DesignerAppView(py::wrapper::Windows::UI::Xaml::Hosting::DesignerAppView* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -882,12 +882,12 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         }
     }
 
-    static PyObject* _enter_DesktopWindowXamlSource(py::wrapper::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource* self) noexcept
+    static PyObject* _enter_DesktopWindowXamlSource(py::wrapper::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_DesktopWindowXamlSource(py::wrapper::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource* self) noexcept
+    static PyObject* _exit_DesktopWindowXamlSource(py::wrapper::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -1616,12 +1616,12 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         }
     }
 
-    static PyObject* _enter_WindowsXamlManager(py::wrapper::Windows::UI::Xaml::Hosting::WindowsXamlManager* self) noexcept
+    static PyObject* _enter_WindowsXamlManager(py::wrapper::Windows::UI::Xaml::Hosting::WindowsXamlManager* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_WindowsXamlManager(py::wrapper::Windows::UI::Xaml::Hosting::WindowsXamlManager* self) noexcept
+    static PyObject* _exit_WindowsXamlManager(py::wrapper::Windows::UI::Xaml::Hosting::WindowsXamlManager* self, PyObject* /*unused*/) noexcept
     {
         try
         {

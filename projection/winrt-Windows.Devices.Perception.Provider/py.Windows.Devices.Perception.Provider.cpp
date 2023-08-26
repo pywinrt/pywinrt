@@ -1823,12 +1823,12 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         }
     }
 
-    static PyObject* _enter_PerceptionVideoFrameAllocator(py::wrapper::Windows::Devices::Perception::Provider::PerceptionVideoFrameAllocator* self) noexcept
+    static PyObject* _enter_PerceptionVideoFrameAllocator(py::wrapper::Windows::Devices::Perception::Provider::PerceptionVideoFrameAllocator* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_PerceptionVideoFrameAllocator(py::wrapper::Windows::Devices::Perception::Provider::PerceptionVideoFrameAllocator* self) noexcept
+    static PyObject* _exit_PerceptionVideoFrameAllocator(py::wrapper::Windows::Devices::Perception::Provider::PerceptionVideoFrameAllocator* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -2095,12 +2095,12 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         }
     }
 
-    static PyObject* _enter_IPerceptionFrameProvider(py::wrapper::Windows::Devices::Perception::Provider::IPerceptionFrameProvider* self) noexcept
+    static PyObject* _enter_IPerceptionFrameProvider(py::wrapper::Windows::Devices::Perception::Provider::IPerceptionFrameProvider* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_IPerceptionFrameProvider(py::wrapper::Windows::Devices::Perception::Provider::IPerceptionFrameProvider* self) noexcept
+    static PyObject* _exit_IPerceptionFrameProvider(py::wrapper::Windows::Devices::Perception::Provider::IPerceptionFrameProvider* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -2253,12 +2253,12 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         }
     }
 
-    static PyObject* _enter_IPerceptionFrameProviderManager(py::wrapper::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager* self) noexcept
+    static PyObject* _enter_IPerceptionFrameProviderManager(py::wrapper::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_IPerceptionFrameProviderManager(py::wrapper::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager* self) noexcept
+    static PyObject* _exit_IPerceptionFrameProviderManager(py::wrapper::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager* self, PyObject* /*unused*/) noexcept
     {
         try
         {

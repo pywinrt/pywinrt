@@ -1002,12 +1002,12 @@ namespace py::cpp::Windows::Devices::Spi
         }
     }
 
-    static PyObject* _enter_SpiDevice(py::wrapper::Windows::Devices::Spi::SpiDevice* self) noexcept
+    static PyObject* _enter_SpiDevice(py::wrapper::Windows::Devices::Spi::SpiDevice* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_SpiDevice(py::wrapper::Windows::Devices::Spi::SpiDevice* self) noexcept
+    static PyObject* _exit_SpiDevice(py::wrapper::Windows::Devices::Spi::SpiDevice* self, PyObject* /*unused*/) noexcept
     {
         try
         {

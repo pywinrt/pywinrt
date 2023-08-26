@@ -3294,12 +3294,12 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         }
     }
 
-    static PyObject* _enter_ContactCardDelayedDataLoader(py::wrapper::Windows::ApplicationModel::Contacts::ContactCardDelayedDataLoader* self) noexcept
+    static PyObject* _enter_ContactCardDelayedDataLoader(py::wrapper::Windows::ApplicationModel::Contacts::ContactCardDelayedDataLoader* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_ContactCardDelayedDataLoader(py::wrapper::Windows::ApplicationModel::Contacts::ContactCardDelayedDataLoader* self) noexcept
+    static PyObject* _exit_ContactCardDelayedDataLoader(py::wrapper::Windows::ApplicationModel::Contacts::ContactCardDelayedDataLoader* self, PyObject* /*unused*/) noexcept
     {
         try
         {

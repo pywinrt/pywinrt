@@ -932,12 +932,12 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
         }
     }
 
-    static PyObject* _enter_AdaptiveMediaSource(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource* self) noexcept
+    static PyObject* _enter_AdaptiveMediaSource(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_AdaptiveMediaSource(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource* self) noexcept
+    static PyObject* _exit_AdaptiveMediaSource(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource* self, PyObject* /*unused*/) noexcept
     {
         try
         {

@@ -2773,12 +2773,12 @@ namespace py::cpp::Windows::Media::Import
         }
     }
 
-    static PyObject* _enter_PhotoImportSession(py::wrapper::Windows::Media::Import::PhotoImportSession* self) noexcept
+    static PyObject* _enter_PhotoImportSession(py::wrapper::Windows::Media::Import::PhotoImportSession* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_PhotoImportSession(py::wrapper::Windows::Media::Import::PhotoImportSession* self) noexcept
+    static PyObject* _exit_PhotoImportSession(py::wrapper::Windows::Media::Import::PhotoImportSession* self, PyObject* /*unused*/) noexcept
     {
         try
         {

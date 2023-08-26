@@ -9101,12 +9101,12 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* _enter_CompositionObject(py::wrapper::Windows::UI::Composition::CompositionObject* self) noexcept
+    static PyObject* _enter_CompositionObject(py::wrapper::Windows::UI::Composition::CompositionObject* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_CompositionObject(py::wrapper::Windows::UI::Composition::CompositionObject* self) noexcept
+    static PyObject* _exit_CompositionObject(py::wrapper::Windows::UI::Composition::CompositionObject* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -18312,12 +18312,12 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static PyObject* _enter_Compositor(py::wrapper::Windows::UI::Composition::Compositor* self) noexcept
+    static PyObject* _enter_Compositor(py::wrapper::Windows::UI::Composition::Compositor* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_Compositor(py::wrapper::Windows::UI::Composition::Compositor* self) noexcept
+    static PyObject* _exit_Compositor(py::wrapper::Windows::UI::Composition::Compositor* self, PyObject* /*unused*/) noexcept
     {
         try
         {

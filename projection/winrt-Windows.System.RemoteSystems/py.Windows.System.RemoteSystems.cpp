@@ -2499,12 +2499,12 @@ namespace py::cpp::Windows::System::RemoteSystems
         }
     }
 
-    static PyObject* _enter_RemoteSystemSession(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSession* self) noexcept
+    static PyObject* _enter_RemoteSystemSession(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSession* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_RemoteSystemSession(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSession* self) noexcept
+    static PyObject* _exit_RemoteSystemSession(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSession* self, PyObject* /*unused*/) noexcept
     {
         try
         {

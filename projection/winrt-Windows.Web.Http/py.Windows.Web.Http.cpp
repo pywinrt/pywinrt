@@ -356,12 +356,12 @@ namespace py::cpp::Windows::Web::Http
         }
     }
 
-    static PyObject* _enter_HttpBufferContent(py::wrapper::Windows::Web::Http::HttpBufferContent* self) noexcept
+    static PyObject* _enter_HttpBufferContent(py::wrapper::Windows::Web::Http::HttpBufferContent* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_HttpBufferContent(py::wrapper::Windows::Web::Http::HttpBufferContent* self) noexcept
+    static PyObject* _exit_HttpBufferContent(py::wrapper::Windows::Web::Http::HttpBufferContent* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -1215,12 +1215,12 @@ namespace py::cpp::Windows::Web::Http
         }
     }
 
-    static PyObject* _enter_HttpClient(py::wrapper::Windows::Web::Http::HttpClient* self) noexcept
+    static PyObject* _enter_HttpClient(py::wrapper::Windows::Web::Http::HttpClient* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_HttpClient(py::wrapper::Windows::Web::Http::HttpClient* self) noexcept
+    static PyObject* _exit_HttpClient(py::wrapper::Windows::Web::Http::HttpClient* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -2551,12 +2551,12 @@ namespace py::cpp::Windows::Web::Http
         }
     }
 
-    static PyObject* _enter_HttpFormUrlEncodedContent(py::wrapper::Windows::Web::Http::HttpFormUrlEncodedContent* self) noexcept
+    static PyObject* _enter_HttpFormUrlEncodedContent(py::wrapper::Windows::Web::Http::HttpFormUrlEncodedContent* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_HttpFormUrlEncodedContent(py::wrapper::Windows::Web::Http::HttpFormUrlEncodedContent* self) noexcept
+    static PyObject* _exit_HttpFormUrlEncodedContent(py::wrapper::Windows::Web::Http::HttpFormUrlEncodedContent* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -2818,12 +2818,12 @@ namespace py::cpp::Windows::Web::Http
         }
     }
 
-    static PyObject* _enter_HttpGetBufferResult(py::wrapper::Windows::Web::Http::HttpGetBufferResult* self) noexcept
+    static PyObject* _enter_HttpGetBufferResult(py::wrapper::Windows::Web::Http::HttpGetBufferResult* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_HttpGetBufferResult(py::wrapper::Windows::Web::Http::HttpGetBufferResult* self) noexcept
+    static PyObject* _exit_HttpGetBufferResult(py::wrapper::Windows::Web::Http::HttpGetBufferResult* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -3083,12 +3083,12 @@ namespace py::cpp::Windows::Web::Http
         }
     }
 
-    static PyObject* _enter_HttpGetInputStreamResult(py::wrapper::Windows::Web::Http::HttpGetInputStreamResult* self) noexcept
+    static PyObject* _enter_HttpGetInputStreamResult(py::wrapper::Windows::Web::Http::HttpGetInputStreamResult* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_HttpGetInputStreamResult(py::wrapper::Windows::Web::Http::HttpGetInputStreamResult* self) noexcept
+    static PyObject* _exit_HttpGetInputStreamResult(py::wrapper::Windows::Web::Http::HttpGetInputStreamResult* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -3348,12 +3348,12 @@ namespace py::cpp::Windows::Web::Http
         }
     }
 
-    static PyObject* _enter_HttpGetStringResult(py::wrapper::Windows::Web::Http::HttpGetStringResult* self) noexcept
+    static PyObject* _enter_HttpGetStringResult(py::wrapper::Windows::Web::Http::HttpGetStringResult* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_HttpGetStringResult(py::wrapper::Windows::Web::Http::HttpGetStringResult* self) noexcept
+    static PyObject* _exit_HttpGetStringResult(py::wrapper::Windows::Web::Http::HttpGetStringResult* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -4158,12 +4158,12 @@ namespace py::cpp::Windows::Web::Http
         }
     }
 
-    static PyObject* _enter_HttpMultipartContent(py::wrapper::Windows::Web::Http::HttpMultipartContent* self) noexcept
+    static PyObject* _enter_HttpMultipartContent(py::wrapper::Windows::Web::Http::HttpMultipartContent* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_HttpMultipartContent(py::wrapper::Windows::Web::Http::HttpMultipartContent* self) noexcept
+    static PyObject* _exit_HttpMultipartContent(py::wrapper::Windows::Web::Http::HttpMultipartContent* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -4698,12 +4698,12 @@ namespace py::cpp::Windows::Web::Http
         }
     }
 
-    static PyObject* _enter_HttpMultipartFormDataContent(py::wrapper::Windows::Web::Http::HttpMultipartFormDataContent* self) noexcept
+    static PyObject* _enter_HttpMultipartFormDataContent(py::wrapper::Windows::Web::Http::HttpMultipartFormDataContent* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_HttpMultipartFormDataContent(py::wrapper::Windows::Web::Http::HttpMultipartFormDataContent* self) noexcept
+    static PyObject* _exit_HttpMultipartFormDataContent(py::wrapper::Windows::Web::Http::HttpMultipartFormDataContent* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -5169,12 +5169,12 @@ namespace py::cpp::Windows::Web::Http
         }
     }
 
-    static PyObject* _enter_HttpRequestMessage(py::wrapper::Windows::Web::Http::HttpRequestMessage* self) noexcept
+    static PyObject* _enter_HttpRequestMessage(py::wrapper::Windows::Web::Http::HttpRequestMessage* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_HttpRequestMessage(py::wrapper::Windows::Web::Http::HttpRequestMessage* self) noexcept
+    static PyObject* _exit_HttpRequestMessage(py::wrapper::Windows::Web::Http::HttpRequestMessage* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -5417,12 +5417,12 @@ namespace py::cpp::Windows::Web::Http
         }
     }
 
-    static PyObject* _enter_HttpRequestResult(py::wrapper::Windows::Web::Http::HttpRequestResult* self) noexcept
+    static PyObject* _enter_HttpRequestResult(py::wrapper::Windows::Web::Http::HttpRequestResult* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_HttpRequestResult(py::wrapper::Windows::Web::Http::HttpRequestResult* self) noexcept
+    static PyObject* _exit_HttpRequestResult(py::wrapper::Windows::Web::Http::HttpRequestResult* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -5972,12 +5972,12 @@ namespace py::cpp::Windows::Web::Http
         }
     }
 
-    static PyObject* _enter_HttpResponseMessage(py::wrapper::Windows::Web::Http::HttpResponseMessage* self) noexcept
+    static PyObject* _enter_HttpResponseMessage(py::wrapper::Windows::Web::Http::HttpResponseMessage* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_HttpResponseMessage(py::wrapper::Windows::Web::Http::HttpResponseMessage* self) noexcept
+    static PyObject* _exit_HttpResponseMessage(py::wrapper::Windows::Web::Http::HttpResponseMessage* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -6379,12 +6379,12 @@ namespace py::cpp::Windows::Web::Http
         }
     }
 
-    static PyObject* _enter_HttpStreamContent(py::wrapper::Windows::Web::Http::HttpStreamContent* self) noexcept
+    static PyObject* _enter_HttpStreamContent(py::wrapper::Windows::Web::Http::HttpStreamContent* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_HttpStreamContent(py::wrapper::Windows::Web::Http::HttpStreamContent* self) noexcept
+    static PyObject* _exit_HttpStreamContent(py::wrapper::Windows::Web::Http::HttpStreamContent* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -6817,12 +6817,12 @@ namespace py::cpp::Windows::Web::Http
         }
     }
 
-    static PyObject* _enter_HttpStringContent(py::wrapper::Windows::Web::Http::HttpStringContent* self) noexcept
+    static PyObject* _enter_HttpStringContent(py::wrapper::Windows::Web::Http::HttpStringContent* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_HttpStringContent(py::wrapper::Windows::Web::Http::HttpStringContent* self) noexcept
+    static PyObject* _exit_HttpStringContent(py::wrapper::Windows::Web::Http::HttpStringContent* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -7362,12 +7362,12 @@ namespace py::cpp::Windows::Web::Http
         }
     }
 
-    static PyObject* _enter_IHttpContent(py::wrapper::Windows::Web::Http::IHttpContent* self) noexcept
+    static PyObject* _enter_IHttpContent(py::wrapper::Windows::Web::Http::IHttpContent* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_IHttpContent(py::wrapper::Windows::Web::Http::IHttpContent* self) noexcept
+    static PyObject* _exit_IHttpContent(py::wrapper::Windows::Web::Http::IHttpContent* self, PyObject* /*unused*/) noexcept
     {
         try
         {

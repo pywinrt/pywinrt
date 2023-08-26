@@ -1912,12 +1912,12 @@ namespace py::cpp::Windows::Devices::SmartCards
         }
     }
 
-    static PyObject* _enter_SmartCardChallengeContext(py::wrapper::Windows::Devices::SmartCards::SmartCardChallengeContext* self) noexcept
+    static PyObject* _enter_SmartCardChallengeContext(py::wrapper::Windows::Devices::SmartCards::SmartCardChallengeContext* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_SmartCardChallengeContext(py::wrapper::Windows::Devices::SmartCards::SmartCardChallengeContext* self) noexcept
+    static PyObject* _exit_SmartCardChallengeContext(py::wrapper::Windows::Devices::SmartCards::SmartCardChallengeContext* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -2068,12 +2068,12 @@ namespace py::cpp::Windows::Devices::SmartCards
         }
     }
 
-    static PyObject* _enter_SmartCardConnection(py::wrapper::Windows::Devices::SmartCards::SmartCardConnection* self) noexcept
+    static PyObject* _enter_SmartCardConnection(py::wrapper::Windows::Devices::SmartCards::SmartCardConnection* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_SmartCardConnection(py::wrapper::Windows::Devices::SmartCards::SmartCardConnection* self) noexcept
+    static PyObject* _exit_SmartCardConnection(py::wrapper::Windows::Devices::SmartCards::SmartCardConnection* self, PyObject* /*unused*/) noexcept
     {
         try
         {

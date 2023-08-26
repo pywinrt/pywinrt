@@ -1098,12 +1098,12 @@ namespace py::cpp::Windows::Storage::Streams
         }
     }
 
-    static PyObject* _enter_DataReader(py::wrapper::Windows::Storage::Streams::DataReader* self) noexcept
+    static PyObject* _enter_DataReader(py::wrapper::Windows::Storage::Streams::DataReader* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_DataReader(py::wrapper::Windows::Storage::Streams::DataReader* self) noexcept
+    static PyObject* _exit_DataReader(py::wrapper::Windows::Storage::Streams::DataReader* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -2349,12 +2349,12 @@ namespace py::cpp::Windows::Storage::Streams
         }
     }
 
-    static PyObject* _enter_DataWriter(py::wrapper::Windows::Storage::Streams::DataWriter* self) noexcept
+    static PyObject* _enter_DataWriter(py::wrapper::Windows::Storage::Streams::DataWriter* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_DataWriter(py::wrapper::Windows::Storage::Streams::DataWriter* self) noexcept
+    static PyObject* _exit_DataWriter(py::wrapper::Windows::Storage::Streams::DataWriter* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -2802,12 +2802,12 @@ namespace py::cpp::Windows::Storage::Streams
         }
     }
 
-    static PyObject* _enter_FileInputStream(py::wrapper::Windows::Storage::Streams::FileInputStream* self) noexcept
+    static PyObject* _enter_FileInputStream(py::wrapper::Windows::Storage::Streams::FileInputStream* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_FileInputStream(py::wrapper::Windows::Storage::Streams::FileInputStream* self) noexcept
+    static PyObject* _exit_FileInputStream(py::wrapper::Windows::Storage::Streams::FileInputStream* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -2984,12 +2984,12 @@ namespace py::cpp::Windows::Storage::Streams
         }
     }
 
-    static PyObject* _enter_FileOutputStream(py::wrapper::Windows::Storage::Streams::FileOutputStream* self) noexcept
+    static PyObject* _enter_FileOutputStream(py::wrapper::Windows::Storage::Streams::FileOutputStream* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_FileOutputStream(py::wrapper::Windows::Storage::Streams::FileOutputStream* self) noexcept
+    static PyObject* _exit_FileOutputStream(py::wrapper::Windows::Storage::Streams::FileOutputStream* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -3647,12 +3647,12 @@ namespace py::cpp::Windows::Storage::Streams
         }
     }
 
-    static PyObject* _enter_FileRandomAccessStream(py::wrapper::Windows::Storage::Streams::FileRandomAccessStream* self) noexcept
+    static PyObject* _enter_FileRandomAccessStream(py::wrapper::Windows::Storage::Streams::FileRandomAccessStream* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_FileRandomAccessStream(py::wrapper::Windows::Storage::Streams::FileRandomAccessStream* self) noexcept
+    static PyObject* _exit_FileRandomAccessStream(py::wrapper::Windows::Storage::Streams::FileRandomAccessStream* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -4125,12 +4125,12 @@ namespace py::cpp::Windows::Storage::Streams
         }
     }
 
-    static PyObject* _enter_InMemoryRandomAccessStream(py::wrapper::Windows::Storage::Streams::InMemoryRandomAccessStream* self) noexcept
+    static PyObject* _enter_InMemoryRandomAccessStream(py::wrapper::Windows::Storage::Streams::InMemoryRandomAccessStream* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_InMemoryRandomAccessStream(py::wrapper::Windows::Storage::Streams::InMemoryRandomAccessStream* self) noexcept
+    static PyObject* _exit_InMemoryRandomAccessStream(py::wrapper::Windows::Storage::Streams::InMemoryRandomAccessStream* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -4290,12 +4290,12 @@ namespace py::cpp::Windows::Storage::Streams
         }
     }
 
-    static PyObject* _enter_InputStreamOverStream(py::wrapper::Windows::Storage::Streams::InputStreamOverStream* self) noexcept
+    static PyObject* _enter_InputStreamOverStream(py::wrapper::Windows::Storage::Streams::InputStreamOverStream* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_InputStreamOverStream(py::wrapper::Windows::Storage::Streams::InputStreamOverStream* self) noexcept
+    static PyObject* _exit_InputStreamOverStream(py::wrapper::Windows::Storage::Streams::InputStreamOverStream* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -4472,12 +4472,12 @@ namespace py::cpp::Windows::Storage::Streams
         }
     }
 
-    static PyObject* _enter_OutputStreamOverStream(py::wrapper::Windows::Storage::Streams::OutputStreamOverStream* self) noexcept
+    static PyObject* _enter_OutputStreamOverStream(py::wrapper::Windows::Storage::Streams::OutputStreamOverStream* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_OutputStreamOverStream(py::wrapper::Windows::Storage::Streams::OutputStreamOverStream* self) noexcept
+    static PyObject* _exit_OutputStreamOverStream(py::wrapper::Windows::Storage::Streams::OutputStreamOverStream* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -5037,12 +5037,12 @@ namespace py::cpp::Windows::Storage::Streams
         }
     }
 
-    static PyObject* _enter_RandomAccessStreamOverStream(py::wrapper::Windows::Storage::Streams::RandomAccessStreamOverStream* self) noexcept
+    static PyObject* _enter_RandomAccessStreamOverStream(py::wrapper::Windows::Storage::Streams::RandomAccessStreamOverStream* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_RandomAccessStreamOverStream(py::wrapper::Windows::Storage::Streams::RandomAccessStreamOverStream* self) noexcept
+    static PyObject* _exit_RandomAccessStreamOverStream(py::wrapper::Windows::Storage::Streams::RandomAccessStreamOverStream* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -7343,12 +7343,12 @@ namespace py::cpp::Windows::Storage::Streams
         }
     }
 
-    static PyObject* _enter_IInputStream(py::wrapper::Windows::Storage::Streams::IInputStream* self) noexcept
+    static PyObject* _enter_IInputStream(py::wrapper::Windows::Storage::Streams::IInputStream* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_IInputStream(py::wrapper::Windows::Storage::Streams::IInputStream* self) noexcept
+    static PyObject* _exit_IInputStream(py::wrapper::Windows::Storage::Streams::IInputStream* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -7624,12 +7624,12 @@ namespace py::cpp::Windows::Storage::Streams
         }
     }
 
-    static PyObject* _enter_IOutputStream(py::wrapper::Windows::Storage::Streams::IOutputStream* self) noexcept
+    static PyObject* _enter_IOutputStream(py::wrapper::Windows::Storage::Streams::IOutputStream* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_IOutputStream(py::wrapper::Windows::Storage::Streams::IOutputStream* self) noexcept
+    static PyObject* _exit_IOutputStream(py::wrapper::Windows::Storage::Streams::IOutputStream* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -8202,12 +8202,12 @@ namespace py::cpp::Windows::Storage::Streams
         }
     }
 
-    static PyObject* _enter_IRandomAccessStream(py::wrapper::Windows::Storage::Streams::IRandomAccessStream* self) noexcept
+    static PyObject* _enter_IRandomAccessStream(py::wrapper::Windows::Storage::Streams::IRandomAccessStream* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_IRandomAccessStream(py::wrapper::Windows::Storage::Streams::IRandomAccessStream* self) noexcept
+    static PyObject* _exit_IRandomAccessStream(py::wrapper::Windows::Storage::Streams::IRandomAccessStream* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -8772,12 +8772,12 @@ namespace py::cpp::Windows::Storage::Streams
         }
     }
 
-    static PyObject* _enter_IRandomAccessStreamWithContentType(py::wrapper::Windows::Storage::Streams::IRandomAccessStreamWithContentType* self) noexcept
+    static PyObject* _enter_IRandomAccessStreamWithContentType(py::wrapper::Windows::Storage::Streams::IRandomAccessStreamWithContentType* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_IRandomAccessStreamWithContentType(py::wrapper::Windows::Storage::Streams::IRandomAccessStreamWithContentType* self) noexcept
+    static PyObject* _exit_IRandomAccessStreamWithContentType(py::wrapper::Windows::Storage::Streams::IRandomAccessStreamWithContentType* self, PyObject* /*unused*/) noexcept
     {
         try
         {

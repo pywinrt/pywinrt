@@ -454,12 +454,12 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
         }
     }
 
-    static PyObject* _enter_SpeechSynthesisStream(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesisStream* self) noexcept
+    static PyObject* _enter_SpeechSynthesisStream(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesisStream* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_SpeechSynthesisStream(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesisStream* self) noexcept
+    static PyObject* _exit_SpeechSynthesisStream(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesisStream* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -808,12 +808,12 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
         }
     }
 
-    static PyObject* _enter_SpeechSynthesizer(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesizer* self) noexcept
+    static PyObject* _enter_SpeechSynthesizer(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesizer* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_SpeechSynthesizer(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesizer* self) noexcept
+    static PyObject* _exit_SpeechSynthesizer(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesizer* self, PyObject* /*unused*/) noexcept
     {
         try
         {

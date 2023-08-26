@@ -912,12 +912,12 @@ namespace py::cpp::Windows::Media::Miracast
         }
     }
 
-    static PyObject* _enter_MiracastReceiverConnection(py::wrapper::Windows::Media::Miracast::MiracastReceiverConnection* self) noexcept
+    static PyObject* _enter_MiracastReceiverConnection(py::wrapper::Windows::Media::Miracast::MiracastReceiverConnection* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_MiracastReceiverConnection(py::wrapper::Windows::Media::Miracast::MiracastReceiverConnection* self) noexcept
+    static PyObject* _exit_MiracastReceiverConnection(py::wrapper::Windows::Media::Miracast::MiracastReceiverConnection* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -2675,12 +2675,12 @@ namespace py::cpp::Windows::Media::Miracast
         }
     }
 
-    static PyObject* _enter_MiracastReceiverSession(py::wrapper::Windows::Media::Miracast::MiracastReceiverSession* self) noexcept
+    static PyObject* _enter_MiracastReceiverSession(py::wrapper::Windows::Media::Miracast::MiracastReceiverSession* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_MiracastReceiverSession(py::wrapper::Windows::Media::Miracast::MiracastReceiverSession* self) noexcept
+    static PyObject* _exit_MiracastReceiverSession(py::wrapper::Windows::Media::Miracast::MiracastReceiverSession* self, PyObject* /*unused*/) noexcept
     {
         try
         {

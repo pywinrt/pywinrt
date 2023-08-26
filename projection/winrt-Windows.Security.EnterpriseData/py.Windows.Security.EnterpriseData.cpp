@@ -3636,12 +3636,12 @@ namespace py::cpp::Windows::Security::EnterpriseData
         }
     }
 
-    static PyObject* _enter_ThreadNetworkContext(py::wrapper::Windows::Security::EnterpriseData::ThreadNetworkContext* self) noexcept
+    static PyObject* _enter_ThreadNetworkContext(py::wrapper::Windows::Security::EnterpriseData::ThreadNetworkContext* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_ThreadNetworkContext(py::wrapper::Windows::Security::EnterpriseData::ThreadNetworkContext* self) noexcept
+    static PyObject* _exit_ThreadNetworkContext(py::wrapper::Windows::Security::EnterpriseData::ThreadNetworkContext* self, PyObject* /*unused*/) noexcept
     {
         try
         {

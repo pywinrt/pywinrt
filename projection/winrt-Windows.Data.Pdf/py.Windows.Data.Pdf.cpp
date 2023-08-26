@@ -500,12 +500,12 @@ namespace py::cpp::Windows::Data::Pdf
         }
     }
 
-    static PyObject* _enter_PdfPage(py::wrapper::Windows::Data::Pdf::PdfPage* self) noexcept
+    static PyObject* _enter_PdfPage(py::wrapper::Windows::Data::Pdf::PdfPage* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_PdfPage(py::wrapper::Windows::Data::Pdf::PdfPage* self) noexcept
+    static PyObject* _exit_PdfPage(py::wrapper::Windows::Data::Pdf::PdfPage* self, PyObject* /*unused*/) noexcept
     {
         try
         {

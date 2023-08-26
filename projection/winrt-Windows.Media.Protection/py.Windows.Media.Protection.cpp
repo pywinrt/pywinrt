@@ -408,12 +408,12 @@ namespace py::cpp::Windows::Media::Protection
         }
     }
 
-    static PyObject* _enter_HdcpSession(py::wrapper::Windows::Media::Protection::HdcpSession* self) noexcept
+    static PyObject* _enter_HdcpSession(py::wrapper::Windows::Media::Protection::HdcpSession* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_HdcpSession(py::wrapper::Windows::Media::Protection::HdcpSession* self) noexcept
+    static PyObject* _exit_HdcpSession(py::wrapper::Windows::Media::Protection::HdcpSession* self, PyObject* /*unused*/) noexcept
     {
         try
         {

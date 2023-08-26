@@ -1714,7 +1714,7 @@ return 0;
         if (implements_iclosable(type))
         {
             w.write(
-                "\nstatic PyObject* _enter_@(%* self) noexcept\n",
+                "\nstatic PyObject* _enter_@(%* self, PyObject* /*unused*/) noexcept\n",
                 type.TypeName(),
                 bind<write_pywrapper_type>(type));
             w.write("{\n");
@@ -1725,7 +1725,7 @@ return 0;
             w.write("}\n");
 
             w.write(
-                "\nstatic PyObject* _exit_@(%* self) noexcept\n",
+                "\nstatic PyObject* _exit_@(%* self, PyObject* /*unused*/) noexcept\n",
                 type.TypeName(),
                 bind<write_pywrapper_type>(type));
             w.write("{\n");

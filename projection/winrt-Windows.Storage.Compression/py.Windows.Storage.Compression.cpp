@@ -236,12 +236,12 @@ namespace py::cpp::Windows::Storage::Compression
         }
     }
 
-    static PyObject* _enter_Compressor(py::wrapper::Windows::Storage::Compression::Compressor* self) noexcept
+    static PyObject* _enter_Compressor(py::wrapper::Windows::Storage::Compression::Compressor* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_Compressor(py::wrapper::Windows::Storage::Compression::Compressor* self) noexcept
+    static PyObject* _exit_Compressor(py::wrapper::Windows::Storage::Compression::Compressor* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -447,12 +447,12 @@ namespace py::cpp::Windows::Storage::Compression
         }
     }
 
-    static PyObject* _enter_Decompressor(py::wrapper::Windows::Storage::Compression::Decompressor* self) noexcept
+    static PyObject* _enter_Decompressor(py::wrapper::Windows::Storage::Compression::Decompressor* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_Decompressor(py::wrapper::Windows::Storage::Compression::Decompressor* self) noexcept
+    static PyObject* _exit_Decompressor(py::wrapper::Windows::Storage::Compression::Decompressor* self, PyObject* /*unused*/) noexcept
     {
         try
         {

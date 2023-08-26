@@ -3115,12 +3115,12 @@ namespace py::cpp::Windows::Services::Store
         }
     }
 
-    static PyObject* _enter_StorePackageLicense(py::wrapper::Windows::Services::Store::StorePackageLicense* self) noexcept
+    static PyObject* _enter_StorePackageLicense(py::wrapper::Windows::Services::Store::StorePackageLicense* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_StorePackageLicense(py::wrapper::Windows::Services::Store::StorePackageLicense* self) noexcept
+    static PyObject* _exit_StorePackageLicense(py::wrapper::Windows::Services::Store::StorePackageLicense* self, PyObject* /*unused*/) noexcept
     {
         try
         {

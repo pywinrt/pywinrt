@@ -640,12 +640,12 @@ namespace py::cpp::Windows::Devices::Pwm
         }
     }
 
-    static PyObject* _enter_PwmPin(py::wrapper::Windows::Devices::Pwm::PwmPin* self) noexcept
+    static PyObject* _enter_PwmPin(py::wrapper::Windows::Devices::Pwm::PwmPin* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_PwmPin(py::wrapper::Windows::Devices::Pwm::PwmPin* self) noexcept
+    static PyObject* _exit_PwmPin(py::wrapper::Windows::Devices::Pwm::PwmPin* self, PyObject* /*unused*/) noexcept
     {
         try
         {

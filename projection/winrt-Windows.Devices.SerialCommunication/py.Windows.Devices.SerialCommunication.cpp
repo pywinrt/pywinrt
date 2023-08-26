@@ -1094,12 +1094,12 @@ namespace py::cpp::Windows::Devices::SerialCommunication
         }
     }
 
-    static PyObject* _enter_SerialDevice(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice* self) noexcept
+    static PyObject* _enter_SerialDevice(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_SerialDevice(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice* self) noexcept
+    static PyObject* _exit_SerialDevice(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice* self, PyObject* /*unused*/) noexcept
     {
         try
         {

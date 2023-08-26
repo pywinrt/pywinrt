@@ -1181,12 +1181,12 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
         }
     }
 
-    static PyObject* _enter_HidDevice(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidDevice* self) noexcept
+    static PyObject* _enter_HidDevice(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidDevice* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_HidDevice(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidDevice* self) noexcept
+    static PyObject* _exit_HidDevice(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidDevice* self, PyObject* /*unused*/) noexcept
     {
         try
         {

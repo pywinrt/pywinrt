@@ -166,12 +166,12 @@ namespace py::cpp::Windows::Graphics::Imaging
         }
     }
 
-    static PyObject* _enter_BitmapBuffer(py::wrapper::Windows::Graphics::Imaging::BitmapBuffer* self) noexcept
+    static PyObject* _enter_BitmapBuffer(py::wrapper::Windows::Graphics::Imaging::BitmapBuffer* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_BitmapBuffer(py::wrapper::Windows::Graphics::Imaging::BitmapBuffer* self) noexcept
+    static PyObject* _exit_BitmapBuffer(py::wrapper::Windows::Graphics::Imaging::BitmapBuffer* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -3930,12 +3930,12 @@ namespace py::cpp::Windows::Graphics::Imaging
         }
     }
 
-    static PyObject* _enter_ImageStream(py::wrapper::Windows::Graphics::Imaging::ImageStream* self) noexcept
+    static PyObject* _enter_ImageStream(py::wrapper::Windows::Graphics::Imaging::ImageStream* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_ImageStream(py::wrapper::Windows::Graphics::Imaging::ImageStream* self) noexcept
+    static PyObject* _exit_ImageStream(py::wrapper::Windows::Graphics::Imaging::ImageStream* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -4746,12 +4746,12 @@ namespace py::cpp::Windows::Graphics::Imaging
         }
     }
 
-    static PyObject* _enter_SoftwareBitmap(py::wrapper::Windows::Graphics::Imaging::SoftwareBitmap* self) noexcept
+    static PyObject* _enter_SoftwareBitmap(py::wrapper::Windows::Graphics::Imaging::SoftwareBitmap* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_SoftwareBitmap(py::wrapper::Windows::Graphics::Imaging::SoftwareBitmap* self) noexcept
+    static PyObject* _exit_SoftwareBitmap(py::wrapper::Windows::Graphics::Imaging::SoftwareBitmap* self, PyObject* /*unused*/) noexcept
     {
         try
         {

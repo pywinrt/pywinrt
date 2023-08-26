@@ -825,12 +825,12 @@ namespace py::cpp::Windows::Storage
         }
     }
 
-    static PyObject* _enter_ApplicationData(py::wrapper::Windows::Storage::ApplicationData* self) noexcept
+    static PyObject* _enter_ApplicationData(py::wrapper::Windows::Storage::ApplicationData* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_ApplicationData(py::wrapper::Windows::Storage::ApplicationData* self) noexcept
+    static PyObject* _exit_ApplicationData(py::wrapper::Windows::Storage::ApplicationData* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -1598,12 +1598,12 @@ namespace py::cpp::Windows::Storage
         }
     }
 
-    static PyObject* _enter_ApplicationDataContainer(py::wrapper::Windows::Storage::ApplicationDataContainer* self) noexcept
+    static PyObject* _enter_ApplicationDataContainer(py::wrapper::Windows::Storage::ApplicationDataContainer* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_ApplicationDataContainer(py::wrapper::Windows::Storage::ApplicationDataContainer* self) noexcept
+    static PyObject* _exit_ApplicationDataContainer(py::wrapper::Windows::Storage::ApplicationDataContainer* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -8254,12 +8254,12 @@ namespace py::cpp::Windows::Storage
         }
     }
 
-    static PyObject* _enter_StorageStreamTransaction(py::wrapper::Windows::Storage::StorageStreamTransaction* self) noexcept
+    static PyObject* _enter_StorageStreamTransaction(py::wrapper::Windows::Storage::StorageStreamTransaction* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_StorageStreamTransaction(py::wrapper::Windows::Storage::StorageStreamTransaction* self) noexcept
+    static PyObject* _exit_StorageStreamTransaction(py::wrapper::Windows::Storage::StorageStreamTransaction* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -8469,12 +8469,12 @@ namespace py::cpp::Windows::Storage
         }
     }
 
-    static PyObject* _enter_StreamedFileDataRequest(py::wrapper::Windows::Storage::StreamedFileDataRequest* self) noexcept
+    static PyObject* _enter_StreamedFileDataRequest(py::wrapper::Windows::Storage::StreamedFileDataRequest* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_StreamedFileDataRequest(py::wrapper::Windows::Storage::StreamedFileDataRequest* self) noexcept
+    static PyObject* _exit_StreamedFileDataRequest(py::wrapper::Windows::Storage::StreamedFileDataRequest* self, PyObject* /*unused*/) noexcept
     {
         try
         {

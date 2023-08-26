@@ -2977,12 +2977,12 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         }
     }
 
-    static PyObject* _enter_SpeechRecognizer(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognizer* self) noexcept
+    static PyObject* _enter_SpeechRecognizer(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognizer* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_SpeechRecognizer(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognizer* self) noexcept
+    static PyObject* _exit_SpeechRecognizer(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognizer* self, PyObject* /*unused*/) noexcept
     {
         try
         {

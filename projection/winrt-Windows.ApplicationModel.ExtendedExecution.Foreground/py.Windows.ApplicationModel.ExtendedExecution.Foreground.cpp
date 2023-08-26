@@ -354,12 +354,12 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution::Foreground
         }
     }
 
-    static PyObject* _enter_ExtendedExecutionForegroundSession(py::wrapper::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundSession* self) noexcept
+    static PyObject* _enter_ExtendedExecutionForegroundSession(py::wrapper::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundSession* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_ExtendedExecutionForegroundSession(py::wrapper::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundSession* self) noexcept
+    static PyObject* _exit_ExtendedExecutionForegroundSession(py::wrapper::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundSession* self, PyObject* /*unused*/) noexcept
     {
         try
         {

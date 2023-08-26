@@ -11610,12 +11610,12 @@ namespace py::cpp::Windows::Media::Playback
         }
     }
 
-    static PyObject* _enter_MediaPlayer(py::wrapper::Windows::Media::Playback::MediaPlayer* self) noexcept
+    static PyObject* _enter_MediaPlayer(py::wrapper::Windows::Media::Playback::MediaPlayer* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_MediaPlayer(py::wrapper::Windows::Media::Playback::MediaPlayer* self) noexcept
+    static PyObject* _exit_MediaPlayer(py::wrapper::Windows::Media::Playback::MediaPlayer* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -12169,12 +12169,12 @@ namespace py::cpp::Windows::Media::Playback
         }
     }
 
-    static PyObject* _enter_MediaPlayerSurface(py::wrapper::Windows::Media::Playback::MediaPlayerSurface* self) noexcept
+    static PyObject* _enter_MediaPlayerSurface(py::wrapper::Windows::Media::Playback::MediaPlayerSurface* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_MediaPlayerSurface(py::wrapper::Windows::Media::Playback::MediaPlayerSurface* self) noexcept
+    static PyObject* _exit_MediaPlayerSurface(py::wrapper::Windows::Media::Playback::MediaPlayerSurface* self, PyObject* /*unused*/) noexcept
     {
         try
         {

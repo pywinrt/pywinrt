@@ -713,12 +713,12 @@ namespace py::cpp::Windows::Media::Devices::Core
         }
     }
 
-    static PyObject* _enter_DepthCorrelatedCoordinateMapper(py::wrapper::Windows::Media::Devices::Core::DepthCorrelatedCoordinateMapper* self) noexcept
+    static PyObject* _enter_DepthCorrelatedCoordinateMapper(py::wrapper::Windows::Media::Devices::Core::DepthCorrelatedCoordinateMapper* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_DepthCorrelatedCoordinateMapper(py::wrapper::Windows::Media::Devices::Core::DepthCorrelatedCoordinateMapper* self) noexcept
+    static PyObject* _exit_DepthCorrelatedCoordinateMapper(py::wrapper::Windows::Media::Devices::Core::DepthCorrelatedCoordinateMapper* self, PyObject* /*unused*/) noexcept
     {
         try
         {

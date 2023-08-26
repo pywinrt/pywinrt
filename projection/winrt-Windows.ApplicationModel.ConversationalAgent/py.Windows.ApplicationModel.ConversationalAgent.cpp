@@ -843,12 +843,12 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         }
     }
 
-    static PyObject* _enter_ActivationSignalDetectionConfiguration(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration* self) noexcept
+    static PyObject* _enter_ActivationSignalDetectionConfiguration(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_ActivationSignalDetectionConfiguration(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration* self) noexcept
+    static PyObject* _exit_ActivationSignalDetectionConfiguration(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -3250,12 +3250,12 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         }
     }
 
-    static PyObject* _enter_ConversationalAgentSession(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession* self) noexcept
+    static PyObject* _enter_ConversationalAgentSession(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_ConversationalAgentSession(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession* self) noexcept
+    static PyObject* _exit_ConversationalAgentSession(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession* self, PyObject* /*unused*/) noexcept
     {
         try
         {

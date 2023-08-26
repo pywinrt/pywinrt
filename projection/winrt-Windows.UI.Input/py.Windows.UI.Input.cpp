@@ -77,12 +77,12 @@ namespace py::cpp::Windows::UI::Input
         }
     }
 
-    static PyObject* _enter_AttachableInputObject(py::wrapper::Windows::UI::Input::AttachableInputObject* self) noexcept
+    static PyObject* _enter_AttachableInputObject(py::wrapper::Windows::UI::Input::AttachableInputObject* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_AttachableInputObject(py::wrapper::Windows::UI::Input::AttachableInputObject* self) noexcept
+    static PyObject* _exit_AttachableInputObject(py::wrapper::Windows::UI::Input::AttachableInputObject* self, PyObject* /*unused*/) noexcept
     {
         try
         {

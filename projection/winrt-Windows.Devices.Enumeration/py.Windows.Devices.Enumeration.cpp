@@ -3939,12 +3939,12 @@ namespace py::cpp::Windows::Devices::Enumeration
         }
     }
 
-    static PyObject* _enter_DeviceThumbnail(py::wrapper::Windows::Devices::Enumeration::DeviceThumbnail* self) noexcept
+    static PyObject* _enter_DeviceThumbnail(py::wrapper::Windows::Devices::Enumeration::DeviceThumbnail* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_DeviceThumbnail(py::wrapper::Windows::Devices::Enumeration::DeviceThumbnail* self) noexcept
+    static PyObject* _exit_DeviceThumbnail(py::wrapper::Windows::Devices::Enumeration::DeviceThumbnail* self, PyObject* /*unused*/) noexcept
     {
         try
         {

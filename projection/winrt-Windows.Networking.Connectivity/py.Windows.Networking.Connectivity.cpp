@@ -2087,12 +2087,12 @@ namespace py::cpp::Windows::Networking::Connectivity
         }
     }
 
-    static PyObject* _enter_ConnectionSession(py::wrapper::Windows::Networking::Connectivity::ConnectionSession* self) noexcept
+    static PyObject* _enter_ConnectionSession(py::wrapper::Windows::Networking::Connectivity::ConnectionSession* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_ConnectionSession(py::wrapper::Windows::Networking::Connectivity::ConnectionSession* self) noexcept
+    static PyObject* _exit_ConnectionSession(py::wrapper::Windows::Networking::Connectivity::ConnectionSession* self, PyObject* /*unused*/) noexcept
     {
         try
         {

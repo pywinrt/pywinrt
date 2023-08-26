@@ -3807,12 +3807,12 @@ namespace py::cpp::Windows::Media::Core
         }
     }
 
-    static PyObject* _enter_FaceDetectionEffectFrame(py::wrapper::Windows::Media::Core::FaceDetectionEffectFrame* self) noexcept
+    static PyObject* _enter_FaceDetectionEffectFrame(py::wrapper::Windows::Media::Core::FaceDetectionEffectFrame* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_FaceDetectionEffectFrame(py::wrapper::Windows::Media::Core::FaceDetectionEffectFrame* self) noexcept
+    static PyObject* _exit_FaceDetectionEffectFrame(py::wrapper::Windows::Media::Core::FaceDetectionEffectFrame* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -4825,12 +4825,12 @@ namespace py::cpp::Windows::Media::Core
         }
     }
 
-    static PyObject* _enter_LowLightFusionResult(py::wrapper::Windows::Media::Core::LowLightFusionResult* self) noexcept
+    static PyObject* _enter_LowLightFusionResult(py::wrapper::Windows::Media::Core::LowLightFusionResult* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_LowLightFusionResult(py::wrapper::Windows::Media::Core::LowLightFusionResult* self) noexcept
+    static PyObject* _exit_LowLightFusionResult(py::wrapper::Windows::Media::Core::LowLightFusionResult* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -6301,12 +6301,12 @@ namespace py::cpp::Windows::Media::Core
         }
     }
 
-    static PyObject* _enter_MediaSource(py::wrapper::Windows::Media::Core::MediaSource* self) noexcept
+    static PyObject* _enter_MediaSource(py::wrapper::Windows::Media::Core::MediaSource* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_MediaSource(py::wrapper::Windows::Media::Core::MediaSource* self) noexcept
+    static PyObject* _exit_MediaSource(py::wrapper::Windows::Media::Core::MediaSource* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -12337,12 +12337,12 @@ namespace py::cpp::Windows::Media::Core
         }
     }
 
-    static PyObject* _enter_SceneAnalysisEffectFrame(py::wrapper::Windows::Media::Core::SceneAnalysisEffectFrame* self) noexcept
+    static PyObject* _enter_SceneAnalysisEffectFrame(py::wrapper::Windows::Media::Core::SceneAnalysisEffectFrame* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_SceneAnalysisEffectFrame(py::wrapper::Windows::Media::Core::SceneAnalysisEffectFrame* self) noexcept
+    static PyObject* _exit_SceneAnalysisEffectFrame(py::wrapper::Windows::Media::Core::SceneAnalysisEffectFrame* self, PyObject* /*unused*/) noexcept
     {
         try
         {

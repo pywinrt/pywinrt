@@ -220,12 +220,12 @@ namespace py::cpp::Windows::UI::Composition::Core
         }
     }
 
-    static PyObject* _enter_CompositorController(py::wrapper::Windows::UI::Composition::Core::CompositorController* self) noexcept
+    static PyObject* _enter_CompositorController(py::wrapper::Windows::UI::Composition::Core::CompositorController* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_CompositorController(py::wrapper::Windows::UI::Composition::Core::CompositorController* self) noexcept
+    static PyObject* _exit_CompositorController(py::wrapper::Windows::UI::Composition::Core::CompositorController* self, PyObject* /*unused*/) noexcept
     {
         try
         {

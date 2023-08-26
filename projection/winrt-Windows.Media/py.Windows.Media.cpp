@@ -172,12 +172,12 @@ namespace py::cpp::Windows::Media
         }
     }
 
-    static PyObject* _enter_AudioBuffer(py::wrapper::Windows::Media::AudioBuffer* self) noexcept
+    static PyObject* _enter_AudioBuffer(py::wrapper::Windows::Media::AudioBuffer* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_AudioBuffer(py::wrapper::Windows::Media::AudioBuffer* self) noexcept
+    static PyObject* _exit_AudioBuffer(py::wrapper::Windows::Media::AudioBuffer* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -596,12 +596,12 @@ namespace py::cpp::Windows::Media
         }
     }
 
-    static PyObject* _enter_AudioFrame(py::wrapper::Windows::Media::AudioFrame* self) noexcept
+    static PyObject* _enter_AudioFrame(py::wrapper::Windows::Media::AudioFrame* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_AudioFrame(py::wrapper::Windows::Media::AudioFrame* self) noexcept
+    static PyObject* _exit_AudioFrame(py::wrapper::Windows::Media::AudioFrame* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -6530,12 +6530,12 @@ namespace py::cpp::Windows::Media
         }
     }
 
-    static PyObject* _enter_VideoFrame(py::wrapper::Windows::Media::VideoFrame* self) noexcept
+    static PyObject* _enter_VideoFrame(py::wrapper::Windows::Media::VideoFrame* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_VideoFrame(py::wrapper::Windows::Media::VideoFrame* self) noexcept
+    static PyObject* _exit_VideoFrame(py::wrapper::Windows::Media::VideoFrame* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -7011,12 +7011,12 @@ namespace py::cpp::Windows::Media
         }
     }
 
-    static PyObject* _enter_IMediaFrame(py::wrapper::Windows::Media::IMediaFrame* self) noexcept
+    static PyObject* _enter_IMediaFrame(py::wrapper::Windows::Media::IMediaFrame* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_IMediaFrame(py::wrapper::Windows::Media::IMediaFrame* self) noexcept
+    static PyObject* _exit_IMediaFrame(py::wrapper::Windows::Media::IMediaFrame* self, PyObject* /*unused*/) noexcept
     {
         try
         {

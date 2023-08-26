@@ -134,12 +134,12 @@ namespace py::cpp::Windows::Graphics::Capture
         }
     }
 
-    static PyObject* _enter_Direct3D11CaptureFrame(py::wrapper::Windows::Graphics::Capture::Direct3D11CaptureFrame* self) noexcept
+    static PyObject* _enter_Direct3D11CaptureFrame(py::wrapper::Windows::Graphics::Capture::Direct3D11CaptureFrame* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_Direct3D11CaptureFrame(py::wrapper::Windows::Graphics::Capture::Direct3D11CaptureFrame* self) noexcept
+    static PyObject* _exit_Direct3D11CaptureFrame(py::wrapper::Windows::Graphics::Capture::Direct3D11CaptureFrame* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -483,12 +483,12 @@ namespace py::cpp::Windows::Graphics::Capture
         }
     }
 
-    static PyObject* _enter_Direct3D11CaptureFramePool(py::wrapper::Windows::Graphics::Capture::Direct3D11CaptureFramePool* self) noexcept
+    static PyObject* _enter_Direct3D11CaptureFramePool(py::wrapper::Windows::Graphics::Capture::Direct3D11CaptureFramePool* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_Direct3D11CaptureFramePool(py::wrapper::Windows::Graphics::Capture::Direct3D11CaptureFramePool* self) noexcept
+    static PyObject* _exit_Direct3D11CaptureFramePool(py::wrapper::Windows::Graphics::Capture::Direct3D11CaptureFramePool* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -1202,12 +1202,12 @@ namespace py::cpp::Windows::Graphics::Capture
         }
     }
 
-    static PyObject* _enter_GraphicsCaptureSession(py::wrapper::Windows::Graphics::Capture::GraphicsCaptureSession* self) noexcept
+    static PyObject* _enter_GraphicsCaptureSession(py::wrapper::Windows::Graphics::Capture::GraphicsCaptureSession* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_GraphicsCaptureSession(py::wrapper::Windows::Graphics::Capture::GraphicsCaptureSession* self) noexcept
+    static PyObject* _exit_GraphicsCaptureSession(py::wrapper::Windows::Graphics::Capture::GraphicsCaptureSession* self, PyObject* /*unused*/) noexcept
     {
         try
         {

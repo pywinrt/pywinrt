@@ -780,12 +780,12 @@ namespace py::cpp::Windows::Web::Http::Filters
         }
     }
 
-    static PyObject* _enter_HttpBaseProtocolFilter(py::wrapper::Windows::Web::Http::Filters::HttpBaseProtocolFilter* self) noexcept
+    static PyObject* _enter_HttpBaseProtocolFilter(py::wrapper::Windows::Web::Http::Filters::HttpBaseProtocolFilter* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_HttpBaseProtocolFilter(py::wrapper::Windows::Web::Http::Filters::HttpBaseProtocolFilter* self) noexcept
+    static PyObject* _exit_HttpBaseProtocolFilter(py::wrapper::Windows::Web::Http::Filters::HttpBaseProtocolFilter* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -1346,12 +1346,12 @@ namespace py::cpp::Windows::Web::Http::Filters
         }
     }
 
-    static PyObject* _enter_IHttpFilter(py::wrapper::Windows::Web::Http::Filters::IHttpFilter* self) noexcept
+    static PyObject* _enter_IHttpFilter(py::wrapper::Windows::Web::Http::Filters::IHttpFilter* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_IHttpFilter(py::wrapper::Windows::Web::Http::Filters::IHttpFilter* self) noexcept
+    static PyObject* _exit_IHttpFilter(py::wrapper::Windows::Web::Http::Filters::IHttpFilter* self, PyObject* /*unused*/) noexcept
     {
         try
         {

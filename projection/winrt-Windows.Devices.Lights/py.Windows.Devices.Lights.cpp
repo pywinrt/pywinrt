@@ -388,12 +388,12 @@ namespace py::cpp::Windows::Devices::Lights
         }
     }
 
-    static PyObject* _enter_Lamp(py::wrapper::Windows::Devices::Lights::Lamp* self) noexcept
+    static PyObject* _enter_Lamp(py::wrapper::Windows::Devices::Lights::Lamp* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_Lamp(py::wrapper::Windows::Devices::Lights::Lamp* self) noexcept
+    static PyObject* _exit_Lamp(py::wrapper::Windows::Devices::Lights::Lamp* self, PyObject* /*unused*/) noexcept
     {
         try
         {

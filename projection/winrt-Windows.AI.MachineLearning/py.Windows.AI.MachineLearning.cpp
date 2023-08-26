@@ -827,12 +827,12 @@ namespace py::cpp::Windows::AI::MachineLearning
         }
     }
 
-    static PyObject* _enter_LearningModel(py::wrapper::Windows::AI::MachineLearning::LearningModel* self) noexcept
+    static PyObject* _enter_LearningModel(py::wrapper::Windows::AI::MachineLearning::LearningModel* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_LearningModel(py::wrapper::Windows::AI::MachineLearning::LearningModel* self) noexcept
+    static PyObject* _exit_LearningModel(py::wrapper::Windows::AI::MachineLearning::LearningModel* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -1926,12 +1926,12 @@ namespace py::cpp::Windows::AI::MachineLearning
         }
     }
 
-    static PyObject* _enter_LearningModelSession(py::wrapper::Windows::AI::MachineLearning::LearningModelSession* self) noexcept
+    static PyObject* _enter_LearningModelSession(py::wrapper::Windows::AI::MachineLearning::LearningModelSession* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_LearningModelSession(py::wrapper::Windows::AI::MachineLearning::LearningModelSession* self) noexcept
+    static PyObject* _exit_LearningModelSession(py::wrapper::Windows::AI::MachineLearning::LearningModelSession* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -2925,12 +2925,12 @@ namespace py::cpp::Windows::AI::MachineLearning
         }
     }
 
-    static PyObject* _enter_TensorBoolean(py::wrapper::Windows::AI::MachineLearning::TensorBoolean* self) noexcept
+    static PyObject* _enter_TensorBoolean(py::wrapper::Windows::AI::MachineLearning::TensorBoolean* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_TensorBoolean(py::wrapper::Windows::AI::MachineLearning::TensorBoolean* self) noexcept
+    static PyObject* _exit_TensorBoolean(py::wrapper::Windows::AI::MachineLearning::TensorBoolean* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -3348,12 +3348,12 @@ namespace py::cpp::Windows::AI::MachineLearning
         }
     }
 
-    static PyObject* _enter_TensorDouble(py::wrapper::Windows::AI::MachineLearning::TensorDouble* self) noexcept
+    static PyObject* _enter_TensorDouble(py::wrapper::Windows::AI::MachineLearning::TensorDouble* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_TensorDouble(py::wrapper::Windows::AI::MachineLearning::TensorDouble* self) noexcept
+    static PyObject* _exit_TensorDouble(py::wrapper::Windows::AI::MachineLearning::TensorDouble* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -3960,12 +3960,12 @@ namespace py::cpp::Windows::AI::MachineLearning
         }
     }
 
-    static PyObject* _enter_TensorFloat(py::wrapper::Windows::AI::MachineLearning::TensorFloat* self) noexcept
+    static PyObject* _enter_TensorFloat(py::wrapper::Windows::AI::MachineLearning::TensorFloat* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_TensorFloat(py::wrapper::Windows::AI::MachineLearning::TensorFloat* self) noexcept
+    static PyObject* _exit_TensorFloat(py::wrapper::Windows::AI::MachineLearning::TensorFloat* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -4383,12 +4383,12 @@ namespace py::cpp::Windows::AI::MachineLearning
         }
     }
 
-    static PyObject* _enter_TensorFloat16Bit(py::wrapper::Windows::AI::MachineLearning::TensorFloat16Bit* self) noexcept
+    static PyObject* _enter_TensorFloat16Bit(py::wrapper::Windows::AI::MachineLearning::TensorFloat16Bit* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_TensorFloat16Bit(py::wrapper::Windows::AI::MachineLearning::TensorFloat16Bit* self) noexcept
+    static PyObject* _exit_TensorFloat16Bit(py::wrapper::Windows::AI::MachineLearning::TensorFloat16Bit* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -4806,12 +4806,12 @@ namespace py::cpp::Windows::AI::MachineLearning
         }
     }
 
-    static PyObject* _enter_TensorInt16Bit(py::wrapper::Windows::AI::MachineLearning::TensorInt16Bit* self) noexcept
+    static PyObject* _enter_TensorInt16Bit(py::wrapper::Windows::AI::MachineLearning::TensorInt16Bit* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_TensorInt16Bit(py::wrapper::Windows::AI::MachineLearning::TensorInt16Bit* self) noexcept
+    static PyObject* _exit_TensorInt16Bit(py::wrapper::Windows::AI::MachineLearning::TensorInt16Bit* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -5229,12 +5229,12 @@ namespace py::cpp::Windows::AI::MachineLearning
         }
     }
 
-    static PyObject* _enter_TensorInt32Bit(py::wrapper::Windows::AI::MachineLearning::TensorInt32Bit* self) noexcept
+    static PyObject* _enter_TensorInt32Bit(py::wrapper::Windows::AI::MachineLearning::TensorInt32Bit* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_TensorInt32Bit(py::wrapper::Windows::AI::MachineLearning::TensorInt32Bit* self) noexcept
+    static PyObject* _exit_TensorInt32Bit(py::wrapper::Windows::AI::MachineLearning::TensorInt32Bit* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -5652,12 +5652,12 @@ namespace py::cpp::Windows::AI::MachineLearning
         }
     }
 
-    static PyObject* _enter_TensorInt64Bit(py::wrapper::Windows::AI::MachineLearning::TensorInt64Bit* self) noexcept
+    static PyObject* _enter_TensorInt64Bit(py::wrapper::Windows::AI::MachineLearning::TensorInt64Bit* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_TensorInt64Bit(py::wrapper::Windows::AI::MachineLearning::TensorInt64Bit* self) noexcept
+    static PyObject* _exit_TensorInt64Bit(py::wrapper::Windows::AI::MachineLearning::TensorInt64Bit* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -6075,12 +6075,12 @@ namespace py::cpp::Windows::AI::MachineLearning
         }
     }
 
-    static PyObject* _enter_TensorInt8Bit(py::wrapper::Windows::AI::MachineLearning::TensorInt8Bit* self) noexcept
+    static PyObject* _enter_TensorInt8Bit(py::wrapper::Windows::AI::MachineLearning::TensorInt8Bit* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_TensorInt8Bit(py::wrapper::Windows::AI::MachineLearning::TensorInt8Bit* self) noexcept
+    static PyObject* _exit_TensorInt8Bit(py::wrapper::Windows::AI::MachineLearning::TensorInt8Bit* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -6466,12 +6466,12 @@ namespace py::cpp::Windows::AI::MachineLearning
         }
     }
 
-    static PyObject* _enter_TensorString(py::wrapper::Windows::AI::MachineLearning::TensorString* self) noexcept
+    static PyObject* _enter_TensorString(py::wrapper::Windows::AI::MachineLearning::TensorString* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_TensorString(py::wrapper::Windows::AI::MachineLearning::TensorString* self) noexcept
+    static PyObject* _exit_TensorString(py::wrapper::Windows::AI::MachineLearning::TensorString* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -6888,12 +6888,12 @@ namespace py::cpp::Windows::AI::MachineLearning
         }
     }
 
-    static PyObject* _enter_TensorUInt16Bit(py::wrapper::Windows::AI::MachineLearning::TensorUInt16Bit* self) noexcept
+    static PyObject* _enter_TensorUInt16Bit(py::wrapper::Windows::AI::MachineLearning::TensorUInt16Bit* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_TensorUInt16Bit(py::wrapper::Windows::AI::MachineLearning::TensorUInt16Bit* self) noexcept
+    static PyObject* _exit_TensorUInt16Bit(py::wrapper::Windows::AI::MachineLearning::TensorUInt16Bit* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -7311,12 +7311,12 @@ namespace py::cpp::Windows::AI::MachineLearning
         }
     }
 
-    static PyObject* _enter_TensorUInt32Bit(py::wrapper::Windows::AI::MachineLearning::TensorUInt32Bit* self) noexcept
+    static PyObject* _enter_TensorUInt32Bit(py::wrapper::Windows::AI::MachineLearning::TensorUInt32Bit* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_TensorUInt32Bit(py::wrapper::Windows::AI::MachineLearning::TensorUInt32Bit* self) noexcept
+    static PyObject* _exit_TensorUInt32Bit(py::wrapper::Windows::AI::MachineLearning::TensorUInt32Bit* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -7734,12 +7734,12 @@ namespace py::cpp::Windows::AI::MachineLearning
         }
     }
 
-    static PyObject* _enter_TensorUInt64Bit(py::wrapper::Windows::AI::MachineLearning::TensorUInt64Bit* self) noexcept
+    static PyObject* _enter_TensorUInt64Bit(py::wrapper::Windows::AI::MachineLearning::TensorUInt64Bit* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_TensorUInt64Bit(py::wrapper::Windows::AI::MachineLearning::TensorUInt64Bit* self) noexcept
+    static PyObject* _exit_TensorUInt64Bit(py::wrapper::Windows::AI::MachineLearning::TensorUInt64Bit* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -8157,12 +8157,12 @@ namespace py::cpp::Windows::AI::MachineLearning
         }
     }
 
-    static PyObject* _enter_TensorUInt8Bit(py::wrapper::Windows::AI::MachineLearning::TensorUInt8Bit* self) noexcept
+    static PyObject* _enter_TensorUInt8Bit(py::wrapper::Windows::AI::MachineLearning::TensorUInt8Bit* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_TensorUInt8Bit(py::wrapper::Windows::AI::MachineLearning::TensorUInt8Bit* self) noexcept
+    static PyObject* _exit_TensorUInt8Bit(py::wrapper::Windows::AI::MachineLearning::TensorUInt8Bit* self, PyObject* /*unused*/) noexcept
     {
         try
         {

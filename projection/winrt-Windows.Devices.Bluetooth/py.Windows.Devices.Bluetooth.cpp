@@ -1467,12 +1467,12 @@ namespace py::cpp::Windows::Devices::Bluetooth
         }
     }
 
-    static PyObject* _enter_BluetoothDevice(py::wrapper::Windows::Devices::Bluetooth::BluetoothDevice* self) noexcept
+    static PyObject* _enter_BluetoothDevice(py::wrapper::Windows::Devices::Bluetooth::BluetoothDevice* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_BluetoothDevice(py::wrapper::Windows::Devices::Bluetooth::BluetoothDevice* self) noexcept
+    static PyObject* _exit_BluetoothDevice(py::wrapper::Windows::Devices::Bluetooth::BluetoothDevice* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -4410,12 +4410,12 @@ namespace py::cpp::Windows::Devices::Bluetooth
         }
     }
 
-    static PyObject* _enter_BluetoothLEDevice(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEDevice* self) noexcept
+    static PyObject* _enter_BluetoothLEDevice(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEDevice* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_BluetoothLEDevice(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEDevice* self) noexcept
+    static PyObject* _exit_BluetoothLEDevice(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEDevice* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -4815,12 +4815,12 @@ namespace py::cpp::Windows::Devices::Bluetooth
         }
     }
 
-    static PyObject* _enter_BluetoothLEPreferredConnectionParametersRequest(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEPreferredConnectionParametersRequest* self) noexcept
+    static PyObject* _enter_BluetoothLEPreferredConnectionParametersRequest(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEPreferredConnectionParametersRequest* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_BluetoothLEPreferredConnectionParametersRequest(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEPreferredConnectionParametersRequest* self) noexcept
+    static PyObject* _exit_BluetoothLEPreferredConnectionParametersRequest(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEPreferredConnectionParametersRequest* self, PyObject* /*unused*/) noexcept
     {
         try
         {

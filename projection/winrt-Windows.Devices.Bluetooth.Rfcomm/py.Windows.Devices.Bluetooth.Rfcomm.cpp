@@ -456,12 +456,12 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
         }
     }
 
-    static PyObject* _enter_RfcommDeviceService(py::wrapper::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService* self) noexcept
+    static PyObject* _enter_RfcommDeviceService(py::wrapper::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_RfcommDeviceService(py::wrapper::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService* self) noexcept
+    static PyObject* _exit_RfcommDeviceService(py::wrapper::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService* self, PyObject* /*unused*/) noexcept
     {
         try
         {

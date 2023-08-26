@@ -3831,12 +3831,12 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     }
 
-    static PyObject* _enter_IItemsRangeInfo(py::wrapper::Windows::UI::Xaml::Data::IItemsRangeInfo* self) noexcept
+    static PyObject* _enter_IItemsRangeInfo(py::wrapper::Windows::UI::Xaml::Data::IItemsRangeInfo* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_IItemsRangeInfo(py::wrapper::Windows::UI::Xaml::Data::IItemsRangeInfo* self) noexcept
+    static PyObject* _exit_IItemsRangeInfo(py::wrapper::Windows::UI::Xaml::Data::IItemsRangeInfo* self, PyObject* /*unused*/) noexcept
     {
         try
         {

@@ -154,12 +154,12 @@ namespace py::cpp::Windows::Devices::Adc
         }
     }
 
-    static PyObject* _enter_AdcChannel(py::wrapper::Windows::Devices::Adc::AdcChannel* self) noexcept
+    static PyObject* _enter_AdcChannel(py::wrapper::Windows::Devices::Adc::AdcChannel* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_AdcChannel(py::wrapper::Windows::Devices::Adc::AdcChannel* self) noexcept
+    static PyObject* _exit_AdcChannel(py::wrapper::Windows::Devices::Adc::AdcChannel* self, PyObject* /*unused*/) noexcept
     {
         try
         {

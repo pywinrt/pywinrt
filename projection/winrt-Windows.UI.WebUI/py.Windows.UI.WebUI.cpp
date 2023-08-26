@@ -890,12 +890,12 @@ namespace py::cpp::Windows::UI::WebUI
         }
     }
 
-    static PyObject* _enter_HtmlPrintDocumentSource(py::wrapper::Windows::UI::WebUI::HtmlPrintDocumentSource* self) noexcept
+    static PyObject* _enter_HtmlPrintDocumentSource(py::wrapper::Windows::UI::WebUI::HtmlPrintDocumentSource* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_HtmlPrintDocumentSource(py::wrapper::Windows::UI::WebUI::HtmlPrintDocumentSource* self) noexcept
+    static PyObject* _exit_HtmlPrintDocumentSource(py::wrapper::Windows::UI::WebUI::HtmlPrintDocumentSource* self, PyObject* /*unused*/) noexcept
     {
         try
         {

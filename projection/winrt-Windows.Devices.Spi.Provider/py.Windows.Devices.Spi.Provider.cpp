@@ -679,12 +679,12 @@ namespace py::cpp::Windows::Devices::Spi::Provider
         }
     }
 
-    static PyObject* _enter_ISpiDeviceProvider(py::wrapper::Windows::Devices::Spi::Provider::ISpiDeviceProvider* self) noexcept
+    static PyObject* _enter_ISpiDeviceProvider(py::wrapper::Windows::Devices::Spi::Provider::ISpiDeviceProvider* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_ISpiDeviceProvider(py::wrapper::Windows::Devices::Spi::Provider::ISpiDeviceProvider* self) noexcept
+    static PyObject* _exit_ISpiDeviceProvider(py::wrapper::Windows::Devices::Spi::Provider::ISpiDeviceProvider* self, PyObject* /*unused*/) noexcept
     {
         try
         {

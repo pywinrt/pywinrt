@@ -2172,12 +2172,12 @@ namespace py::cpp::Windows::Graphics::Holographic
         }
     }
 
-    static PyObject* _enter_HolographicFramePresentationMonitor(py::wrapper::Windows::Graphics::Holographic::HolographicFramePresentationMonitor* self) noexcept
+    static PyObject* _enter_HolographicFramePresentationMonitor(py::wrapper::Windows::Graphics::Holographic::HolographicFramePresentationMonitor* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_HolographicFramePresentationMonitor(py::wrapper::Windows::Graphics::Holographic::HolographicFramePresentationMonitor* self) noexcept
+    static PyObject* _exit_HolographicFramePresentationMonitor(py::wrapper::Windows::Graphics::Holographic::HolographicFramePresentationMonitor* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -2661,12 +2661,12 @@ namespace py::cpp::Windows::Graphics::Holographic
         }
     }
 
-    static PyObject* _enter_HolographicFrameScanoutMonitor(py::wrapper::Windows::Graphics::Holographic::HolographicFrameScanoutMonitor* self) noexcept
+    static PyObject* _enter_HolographicFrameScanoutMonitor(py::wrapper::Windows::Graphics::Holographic::HolographicFrameScanoutMonitor* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_HolographicFrameScanoutMonitor(py::wrapper::Windows::Graphics::Holographic::HolographicFrameScanoutMonitor* self) noexcept
+    static PyObject* _exit_HolographicFrameScanoutMonitor(py::wrapper::Windows::Graphics::Holographic::HolographicFrameScanoutMonitor* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -3030,12 +3030,12 @@ namespace py::cpp::Windows::Graphics::Holographic
         }
     }
 
-    static PyObject* _enter_HolographicQuadLayer(py::wrapper::Windows::Graphics::Holographic::HolographicQuadLayer* self) noexcept
+    static PyObject* _enter_HolographicQuadLayer(py::wrapper::Windows::Graphics::Holographic::HolographicQuadLayer* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_HolographicQuadLayer(py::wrapper::Windows::Graphics::Holographic::HolographicQuadLayer* self) noexcept
+    static PyObject* _exit_HolographicQuadLayer(py::wrapper::Windows::Graphics::Holographic::HolographicQuadLayer* self, PyObject* /*unused*/) noexcept
     {
         try
         {

@@ -107,12 +107,12 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
         }
     }
 
-    static PyObject* _enter_IDirect3DDevice(py::wrapper::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice* self) noexcept
+    static PyObject* _enter_IDirect3DDevice(py::wrapper::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_IDirect3DDevice(py::wrapper::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice* self) noexcept
+    static PyObject* _exit_IDirect3DDevice(py::wrapper::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -248,12 +248,12 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
         }
     }
 
-    static PyObject* _enter_IDirect3DSurface(py::wrapper::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface* self) noexcept
+    static PyObject* _enter_IDirect3DSurface(py::wrapper::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_IDirect3DSurface(py::wrapper::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface* self) noexcept
+    static PyObject* _exit_IDirect3DSurface(py::wrapper::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface* self, PyObject* /*unused*/) noexcept
     {
         try
         {

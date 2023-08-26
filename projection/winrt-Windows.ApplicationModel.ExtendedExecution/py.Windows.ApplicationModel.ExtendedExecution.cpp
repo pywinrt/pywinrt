@@ -401,12 +401,12 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution
         }
     }
 
-    static PyObject* _enter_ExtendedExecutionSession(py::wrapper::Windows::ApplicationModel::ExtendedExecution::ExtendedExecutionSession* self) noexcept
+    static PyObject* _enter_ExtendedExecutionSession(py::wrapper::Windows::ApplicationModel::ExtendedExecution::ExtendedExecutionSession* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_ExtendedExecutionSession(py::wrapper::Windows::ApplicationModel::ExtendedExecution::ExtendedExecutionSession* self) noexcept
+    static PyObject* _exit_ExtendedExecutionSession(py::wrapper::Windows::ApplicationModel::ExtendedExecution::ExtendedExecutionSession* self, PyObject* /*unused*/) noexcept
     {
         try
         {

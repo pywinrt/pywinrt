@@ -2647,12 +2647,12 @@ namespace py::cpp::Windows::Storage::FileProperties
         }
     }
 
-    static PyObject* _enter_StorageItemThumbnail(py::wrapper::Windows::Storage::FileProperties::StorageItemThumbnail* self) noexcept
+    static PyObject* _enter_StorageItemThumbnail(py::wrapper::Windows::Storage::FileProperties::StorageItemThumbnail* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_StorageItemThumbnail(py::wrapper::Windows::Storage::FileProperties::StorageItemThumbnail* self) noexcept
+    static PyObject* _exit_StorageItemThumbnail(py::wrapper::Windows::Storage::FileProperties::StorageItemThumbnail* self, PyObject* /*unused*/) noexcept
     {
         try
         {

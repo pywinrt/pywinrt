@@ -804,12 +804,12 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
         }
     }
 
-    static PyObject* _enter_BarcodeScannerFrameReader(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReader* self) noexcept
+    static PyObject* _enter_BarcodeScannerFrameReader(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReader* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_BarcodeScannerFrameReader(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReader* self) noexcept
+    static PyObject* _exit_BarcodeScannerFrameReader(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReader* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -2387,12 +2387,12 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
         }
     }
 
-    static PyObject* _enter_BarcodeScannerProviderConnection(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection* self) noexcept
+    static PyObject* _enter_BarcodeScannerProviderConnection(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_BarcodeScannerProviderConnection(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection* self) noexcept
+    static PyObject* _exit_BarcodeScannerProviderConnection(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection* self, PyObject* /*unused*/) noexcept
     {
         try
         {
@@ -3916,12 +3916,12 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
         }
     }
 
-    static PyObject* _enter_BarcodeScannerVideoFrame(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerVideoFrame* self) noexcept
+    static PyObject* _enter_BarcodeScannerVideoFrame(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerVideoFrame* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_BarcodeScannerVideoFrame(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerVideoFrame* self) noexcept
+    static PyObject* _exit_BarcodeScannerVideoFrame(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerVideoFrame* self, PyObject* /*unused*/) noexcept
     {
         try
         {

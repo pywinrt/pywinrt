@@ -12394,12 +12394,12 @@ namespace py::cpp::Windows::Devices::Sensors
         }
     }
 
-    static PyObject* _enter_ProximitySensorDisplayOnOffController(py::wrapper::Windows::Devices::Sensors::ProximitySensorDisplayOnOffController* self) noexcept
+    static PyObject* _enter_ProximitySensorDisplayOnOffController(py::wrapper::Windows::Devices::Sensors::ProximitySensorDisplayOnOffController* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_ProximitySensorDisplayOnOffController(py::wrapper::Windows::Devices::Sensors::ProximitySensorDisplayOnOffController* self) noexcept
+    static PyObject* _exit_ProximitySensorDisplayOnOffController(py::wrapper::Windows::Devices::Sensors::ProximitySensorDisplayOnOffController* self, PyObject* /*unused*/) noexcept
     {
         try
         {

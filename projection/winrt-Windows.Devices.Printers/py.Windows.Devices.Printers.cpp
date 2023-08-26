@@ -3528,12 +3528,12 @@ namespace py::cpp::Windows::Devices::Printers
         }
     }
 
-    static PyObject* _enter_PdlPassthroughTarget(py::wrapper::Windows::Devices::Printers::PdlPassthroughTarget* self) noexcept
+    static PyObject* _enter_PdlPassthroughTarget(py::wrapper::Windows::Devices::Printers::PdlPassthroughTarget* self, PyObject* /*unused*/) noexcept
     {
         return Py_NewRef(self);
     }
 
-    static PyObject* _exit_PdlPassthroughTarget(py::wrapper::Windows::Devices::Printers::PdlPassthroughTarget* self) noexcept
+    static PyObject* _exit_PdlPassthroughTarget(py::wrapper::Windows::Devices::Printers::PdlPassthroughTarget* self, PyObject* /*unused*/) noexcept
     {
         try
         {
