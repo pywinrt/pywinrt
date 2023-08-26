@@ -305,6 +305,12 @@ namespace py::cpp::_winrt
                 = std::unique_ptr<Py_buffer, decltype(&PyBuffer_Release)>;
             py_buffer_ptr{&view, &PyBuffer_Release};
 
+            if (view.ndim != 1)
+            {
+                PyErr_SetString(PyExc_TypeError, "ndim must be 1");
+                return nullptr;
+            }
+
             if (view.itemsize != static_cast<Py_ssize_t>(self->array->ValueSize()))
             {
                 PyErr_SetString(PyExc_TypeError, "itemsize is incorrect");
