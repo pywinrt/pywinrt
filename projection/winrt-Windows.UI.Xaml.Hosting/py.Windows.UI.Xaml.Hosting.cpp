@@ -2398,12 +2398,18 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         }
     }
 
-    static PyObject* XamlUIPresenter_put_CompleteTimelinesAutomatically(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
+    static int XamlUIPresenter_put_CompleteTimelinesAutomatically(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
         if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Hosting.XamlUIPresenter", L"CompleteTimelinesAutomatically"))
         {
             PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
+            return -1;
+        }
+
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
         }
 
         try
@@ -2411,12 +2417,12 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
             auto param0 = py::convert_to<bool>(arg);
 
             winrt::Windows::UI::Xaml::Hosting::XamlUIPresenter::CompleteTimelinesAutomatically(param0);
-            Py_RETURN_NONE;
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 

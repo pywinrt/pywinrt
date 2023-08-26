@@ -1544,12 +1544,18 @@ namespace py::cpp::Windows::Phone::Notification::Management
         }
     }
 
-    static PyObject* AccessoryManager_put_PhoneMute(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
+    static int AccessoryManager_put_PhoneMute(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
         if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"PhoneMute"))
         {
             PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
+            return -1;
+        }
+
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
         }
 
         try
@@ -1557,12 +1563,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
             auto param0 = py::convert_to<bool>(arg);
 
             winrt::Windows::Phone::Notification::Management::AccessoryManager::PhoneMute(param0);
-            Py_RETURN_NONE;
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -1585,12 +1591,18 @@ namespace py::cpp::Windows::Phone::Notification::Management
         }
     }
 
-    static PyObject* AccessoryManager_put_PhoneCallAudioEndpoint(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
+    static int AccessoryManager_put_PhoneCallAudioEndpoint(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
         if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"PhoneCallAudioEndpoint"))
         {
             PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
+            return -1;
+        }
+
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
         }
 
         try
@@ -1598,12 +1610,12 @@ namespace py::cpp::Windows::Phone::Notification::Management
             auto param0 = py::convert_to<winrt::Windows::Phone::Notification::Management::PhoneCallAudioEndpoint>(arg);
 
             winrt::Windows::Phone::Notification::Management::AccessoryManager::PhoneCallAudioEndpoint(param0);
-            Py_RETURN_NONE;
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 

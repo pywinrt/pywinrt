@@ -936,12 +936,18 @@ namespace py::cpp::Windows::Media
         }
     }
 
-    static PyObject* MediaControl_put_TrackName(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
+    static int MediaControl_put_TrackName(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
         if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaControl", L"TrackName"))
         {
             PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
+            return -1;
+        }
+
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
         }
 
         try
@@ -949,12 +955,12 @@ namespace py::cpp::Windows::Media
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             winrt::Windows::Media::MediaControl::TrackName(param0);
-            Py_RETURN_NONE;
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -977,12 +983,18 @@ namespace py::cpp::Windows::Media
         }
     }
 
-    static PyObject* MediaControl_put_IsPlaying(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
+    static int MediaControl_put_IsPlaying(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
         if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaControl", L"IsPlaying"))
         {
             PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
+            return -1;
+        }
+
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
         }
 
         try
@@ -990,12 +1002,12 @@ namespace py::cpp::Windows::Media
             auto param0 = py::convert_to<bool>(arg);
 
             winrt::Windows::Media::MediaControl::IsPlaying(param0);
-            Py_RETURN_NONE;
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -1018,12 +1030,18 @@ namespace py::cpp::Windows::Media
         }
     }
 
-    static PyObject* MediaControl_put_ArtistName(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
+    static int MediaControl_put_ArtistName(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
         if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaControl", L"ArtistName"))
         {
             PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
+            return -1;
+        }
+
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
         }
 
         try
@@ -1031,12 +1049,12 @@ namespace py::cpp::Windows::Media
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             winrt::Windows::Media::MediaControl::ArtistName(param0);
-            Py_RETURN_NONE;
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -1059,12 +1077,18 @@ namespace py::cpp::Windows::Media
         }
     }
 
-    static PyObject* MediaControl_put_AlbumArt(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
+    static int MediaControl_put_AlbumArt(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
         if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaControl", L"AlbumArt"))
         {
             PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
+            return -1;
+        }
+
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
         }
 
         try
@@ -1072,12 +1096,12 @@ namespace py::cpp::Windows::Media
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             winrt::Windows::Media::MediaControl::AlbumArt(param0);
-            Py_RETURN_NONE;
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 

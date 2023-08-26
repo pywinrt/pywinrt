@@ -10194,12 +10194,18 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         }
     }
 
-    static PyObject* ContactManager_put_SystemSortOrder(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
+    static int ContactManager_put_SystemSortOrder(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
         if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactManager", L"SystemSortOrder"))
         {
             PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
+            return -1;
+        }
+
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
         }
 
         try
@@ -10207,12 +10213,12 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactNameOrder>(arg);
 
             winrt::Windows::ApplicationModel::Contacts::ContactManager::SystemSortOrder(param0);
-            Py_RETURN_NONE;
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -10235,12 +10241,18 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         }
     }
 
-    static PyObject* ContactManager_put_SystemDisplayNameOrder(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
+    static int ContactManager_put_SystemDisplayNameOrder(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
         if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactManager", L"SystemDisplayNameOrder"))
         {
             PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
+            return -1;
+        }
+
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
         }
 
         try
@@ -10248,12 +10260,12 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactNameOrder>(arg);
 
             winrt::Windows::ApplicationModel::Contacts::ContactManager::SystemDisplayNameOrder(param0);
-            Py_RETURN_NONE;
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -10276,12 +10288,18 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         }
     }
 
-    static PyObject* ContactManager_put_IncludeMiddleNameInSystemDisplayAndSort(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
+    static int ContactManager_put_IncludeMiddleNameInSystemDisplayAndSort(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
         if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.ContactManager", L"IncludeMiddleNameInSystemDisplayAndSort"))
         {
             PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
+            return -1;
+        }
+
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
         }
 
         try
@@ -10289,12 +10307,12 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
             auto param0 = py::convert_to<bool>(arg);
 
             winrt::Windows::ApplicationModel::Contacts::ContactManager::IncludeMiddleNameInSystemDisplayAndSort(param0);
-            Py_RETURN_NONE;
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 

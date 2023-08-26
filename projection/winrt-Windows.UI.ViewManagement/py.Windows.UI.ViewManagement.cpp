@@ -1377,12 +1377,18 @@ namespace py::cpp::Windows::UI::ViewManagement
         }
     }
 
-    static PyObject* ApplicationView_put_TerminateAppOnFinalViewClose(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
+    static int ApplicationView_put_TerminateAppOnFinalViewClose(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
         if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ViewManagement.ApplicationView", L"TerminateAppOnFinalViewClose"))
         {
             PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
+            return -1;
+        }
+
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
         }
 
         try
@@ -1390,12 +1396,12 @@ namespace py::cpp::Windows::UI::ViewManagement
             auto param0 = py::convert_to<bool>(arg);
 
             winrt::Windows::UI::ViewManagement::ApplicationView::TerminateAppOnFinalViewClose(param0);
-            Py_RETURN_NONE;
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -1418,12 +1424,18 @@ namespace py::cpp::Windows::UI::ViewManagement
         }
     }
 
-    static PyObject* ApplicationView_put_PreferredLaunchWindowingMode(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
+    static int ApplicationView_put_PreferredLaunchWindowingMode(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
         if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ViewManagement.ApplicationView", L"PreferredLaunchWindowingMode"))
         {
             PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
+            return -1;
+        }
+
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
         }
 
         try
@@ -1431,12 +1443,12 @@ namespace py::cpp::Windows::UI::ViewManagement
             auto param0 = py::convert_to<winrt::Windows::UI::ViewManagement::ApplicationViewWindowingMode>(arg);
 
             winrt::Windows::UI::ViewManagement::ApplicationView::PreferredLaunchWindowingMode(param0);
-            Py_RETURN_NONE;
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -1459,12 +1471,18 @@ namespace py::cpp::Windows::UI::ViewManagement
         }
     }
 
-    static PyObject* ApplicationView_put_PreferredLaunchViewSize(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
+    static int ApplicationView_put_PreferredLaunchViewSize(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
         if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ViewManagement.ApplicationView", L"PreferredLaunchViewSize"))
         {
             PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
+            return -1;
+        }
+
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
         }
 
         try
@@ -1472,12 +1490,12 @@ namespace py::cpp::Windows::UI::ViewManagement
             auto param0 = py::convert_to<winrt::Windows::Foundation::Size>(arg);
 
             winrt::Windows::UI::ViewManagement::ApplicationView::PreferredLaunchViewSize(param0);
-            Py_RETURN_NONE;
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 

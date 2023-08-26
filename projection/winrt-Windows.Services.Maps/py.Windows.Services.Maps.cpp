@@ -2741,12 +2741,18 @@ namespace py::cpp::Windows::Services::Maps
         }
     }
 
-    static PyObject* MapService_put_ServiceToken(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
+    static int MapService_put_ServiceToken(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
         if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapService", L"ServiceToken"))
         {
             PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
+            return -1;
+        }
+
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
         }
 
         try
@@ -2754,12 +2760,12 @@ namespace py::cpp::Windows::Services::Maps
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             winrt::Windows::Services::Maps::MapService::ServiceToken(param0);
-            Py_RETURN_NONE;
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -2820,12 +2826,18 @@ namespace py::cpp::Windows::Services::Maps
         }
     }
 
-    static PyObject* MapService_put_DataUsagePreference(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
+    static int MapService_put_DataUsagePreference(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
         if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.MapService", L"DataUsagePreference"))
         {
             PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
+            return -1;
+        }
+
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
         }
 
         try
@@ -2833,12 +2845,12 @@ namespace py::cpp::Windows::Services::Maps
             auto param0 = py::convert_to<winrt::Windows::Services::Maps::MapServiceDataUsagePreference>(arg);
 
             winrt::Windows::Services::Maps::MapService::DataUsagePreference(param0);
-            Py_RETURN_NONE;
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 

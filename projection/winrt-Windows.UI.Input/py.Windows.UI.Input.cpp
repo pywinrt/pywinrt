@@ -6770,12 +6770,18 @@ namespace py::cpp::Windows::UI::Input
         }
     }
 
-    static PyObject* RadialControllerConfiguration_put_IsAppControllerEnabled(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
+    static int RadialControllerConfiguration_put_IsAppControllerEnabled(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
         if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerConfiguration", L"IsAppControllerEnabled"))
         {
             PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
+            return -1;
+        }
+
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
         }
 
         try
@@ -6783,12 +6789,12 @@ namespace py::cpp::Windows::UI::Input
             auto param0 = py::convert_to<bool>(arg);
 
             winrt::Windows::UI::Input::RadialControllerConfiguration::IsAppControllerEnabled(param0);
-            Py_RETURN_NONE;
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -6811,12 +6817,18 @@ namespace py::cpp::Windows::UI::Input
         }
     }
 
-    static PyObject* RadialControllerConfiguration_put_AppController(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
+    static int RadialControllerConfiguration_put_AppController(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
         if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.RadialControllerConfiguration", L"AppController"))
         {
             PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
+            return -1;
+        }
+
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
         }
 
         try
@@ -6824,12 +6836,12 @@ namespace py::cpp::Windows::UI::Input
             auto param0 = py::convert_to<winrt::Windows::UI::Input::RadialController>(arg);
 
             winrt::Windows::UI::Input::RadialControllerConfiguration::AppController(param0);
-            Py_RETURN_NONE;
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 

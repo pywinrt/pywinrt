@@ -2185,12 +2185,18 @@ namespace py::cpp::Windows::Graphics::Display
         }
     }
 
-    static PyObject* DisplayInformation_put_AutoRotationPreferences(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
+    static int DisplayInformation_put_AutoRotationPreferences(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
         if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayInformation", L"AutoRotationPreferences"))
         {
             PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
+            return -1;
+        }
+
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
         }
 
         try
@@ -2198,12 +2204,12 @@ namespace py::cpp::Windows::Graphics::Display
             auto param0 = py::convert_to<winrt::Windows::Graphics::Display::DisplayOrientations>(arg);
 
             winrt::Windows::Graphics::Display::DisplayInformation::AutoRotationPreferences(param0);
-            Py_RETURN_NONE;
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -2621,12 +2627,18 @@ namespace py::cpp::Windows::Graphics::Display
         }
     }
 
-    static PyObject* DisplayProperties_put_AutoRotationPreferences(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
+    static int DisplayProperties_put_AutoRotationPreferences(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
         if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayProperties", L"AutoRotationPreferences"))
         {
             PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
+            return -1;
+        }
+
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
         }
 
         try
@@ -2634,12 +2646,12 @@ namespace py::cpp::Windows::Graphics::Display
             auto param0 = py::convert_to<winrt::Windows::Graphics::Display::DisplayOrientations>(arg);
 
             winrt::Windows::Graphics::Display::DisplayProperties::AutoRotationPreferences(param0);
-            Py_RETURN_NONE;
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 

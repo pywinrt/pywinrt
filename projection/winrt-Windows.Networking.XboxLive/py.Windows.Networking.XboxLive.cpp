@@ -2189,12 +2189,18 @@ namespace py::cpp::Windows::Networking::XboxLive
         }
     }
 
-    static PyObject* XboxLiveQualityOfServiceMeasurement_put_PublishedPrivatePayload(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
+    static int XboxLiveQualityOfServiceMeasurement_put_PublishedPrivatePayload(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
         if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"PublishedPrivatePayload"))
         {
             PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
+            return -1;
+        }
+
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
         }
 
         try
@@ -2202,12 +2208,12 @@ namespace py::cpp::Windows::Networking::XboxLive
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(arg);
 
             winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement::PublishedPrivatePayload(param0);
-            Py_RETURN_NONE;
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -2230,12 +2236,18 @@ namespace py::cpp::Windows::Networking::XboxLive
         }
     }
 
-    static PyObject* XboxLiveQualityOfServiceMeasurement_put_MaxSimultaneousProbeConnections(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
+    static int XboxLiveQualityOfServiceMeasurement_put_MaxSimultaneousProbeConnections(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
         if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"MaxSimultaneousProbeConnections"))
         {
             PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
+            return -1;
+        }
+
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
         }
 
         try
@@ -2243,12 +2255,12 @@ namespace py::cpp::Windows::Networking::XboxLive
             auto param0 = py::convert_to<uint32_t>(arg);
 
             winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement::MaxSimultaneousProbeConnections(param0);
-            Py_RETURN_NONE;
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -2271,12 +2283,18 @@ namespace py::cpp::Windows::Networking::XboxLive
         }
     }
 
-    static PyObject* XboxLiveQualityOfServiceMeasurement_put_IsSystemOutboundBandwidthConstrained(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
+    static int XboxLiveQualityOfServiceMeasurement_put_IsSystemOutboundBandwidthConstrained(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
         if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"IsSystemOutboundBandwidthConstrained"))
         {
             PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
+            return -1;
+        }
+
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
         }
 
         try
@@ -2284,12 +2302,12 @@ namespace py::cpp::Windows::Networking::XboxLive
             auto param0 = py::convert_to<bool>(arg);
 
             winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement::IsSystemOutboundBandwidthConstrained(param0);
-            Py_RETURN_NONE;
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -2312,12 +2330,18 @@ namespace py::cpp::Windows::Networking::XboxLive
         }
     }
 
-    static PyObject* XboxLiveQualityOfServiceMeasurement_put_IsSystemInboundBandwidthConstrained(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
+    static int XboxLiveQualityOfServiceMeasurement_put_IsSystemInboundBandwidthConstrained(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
         if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"IsSystemInboundBandwidthConstrained"))
         {
             PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
+            return -1;
+        }
+
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
         }
 
         try
@@ -2325,12 +2349,12 @@ namespace py::cpp::Windows::Networking::XboxLive
             auto param0 = py::convert_to<bool>(arg);
 
             winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement::IsSystemInboundBandwidthConstrained(param0);
-            Py_RETURN_NONE;
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 

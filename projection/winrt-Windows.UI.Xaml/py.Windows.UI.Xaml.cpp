@@ -8849,12 +8849,18 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* ElementSoundPlayer_put_Volume(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
+    static int ElementSoundPlayer_put_Volume(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
         if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.ElementSoundPlayer", L"Volume"))
         {
             PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
+            return -1;
+        }
+
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
         }
 
         try
@@ -8862,12 +8868,12 @@ namespace py::cpp::Windows::UI::Xaml
             auto param0 = py::convert_to<double>(arg);
 
             winrt::Windows::UI::Xaml::ElementSoundPlayer::Volume(param0);
-            Py_RETURN_NONE;
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -8890,12 +8896,18 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* ElementSoundPlayer_put_State(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
+    static int ElementSoundPlayer_put_State(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
         if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.ElementSoundPlayer", L"State"))
         {
             PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
+            return -1;
+        }
+
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
         }
 
         try
@@ -8903,12 +8915,12 @@ namespace py::cpp::Windows::UI::Xaml
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::ElementSoundPlayerState>(arg);
 
             winrt::Windows::UI::Xaml::ElementSoundPlayer::State(param0);
-            Py_RETURN_NONE;
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -8931,12 +8943,18 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static PyObject* ElementSoundPlayer_put_SpatialAudioMode(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
+    static int ElementSoundPlayer_put_SpatialAudioMode(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
         if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.ElementSoundPlayer", L"SpatialAudioMode"))
         {
             PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
+            return -1;
+        }
+
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
         }
 
         try
@@ -8944,12 +8962,12 @@ namespace py::cpp::Windows::UI::Xaml
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::ElementSpatialAudioMode>(arg);
 
             winrt::Windows::UI::Xaml::ElementSoundPlayer::SpatialAudioMode(param0);
-            Py_RETURN_NONE;
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 

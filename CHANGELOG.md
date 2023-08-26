@@ -24,6 +24,7 @@
 - Fixed possible crash due to not checking return value of `convert()` in some places.
 - Fixed memory leak in wrapped struct types.
 - Fixed generating delegates with out parameters are return arrays.
+- Fixed setters of static properties.
 
 ### Removed
 - Removed generation of base/core files.

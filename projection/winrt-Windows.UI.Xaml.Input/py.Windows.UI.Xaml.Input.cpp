@@ -432,12 +432,18 @@ namespace py::cpp::Windows::UI::Xaml::Input
         }
     }
 
-    static PyObject* AccessKeyManager_put_AreKeyTipsEnabled(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
+    static int AccessKeyManager_put_AreKeyTipsEnabled(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
         if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Input.AccessKeyManager", L"AreKeyTipsEnabled"))
         {
             PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
+            return -1;
+        }
+
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
         }
 
         try
@@ -445,12 +451,12 @@ namespace py::cpp::Windows::UI::Xaml::Input
             auto param0 = py::convert_to<bool>(arg);
 
             winrt::Windows::UI::Xaml::Input::AccessKeyManager::AreKeyTipsEnabled(param0);
-            Py_RETURN_NONE;
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 

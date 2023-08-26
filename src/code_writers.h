@@ -797,10 +797,9 @@ static PyModuleDef module_def
         auto write_void_return
             = [](writer& w, MethodDef const& method, bool set_property_method)
         {
-            // instance property set methods are projected as Python setters, thus
-            // return 0 to indicate success static property set methods are projected as
-            // normal Python methods that return None
-            if (set_property_method && !is_static(method))
+            // instance property set methods are projected as Python setters,
+            // thus return 0 to indicate success
+            if (set_property_method)
             {
                 w.write("return 0;\n");
             }
@@ -1151,11 +1150,8 @@ static PyObject* _new_@(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject
         if (!method)
             return;
 
-        auto return_type = is_static(method) ? "PyObject*" : "int";
-
         w.write(
-            "\nstatic % @_%(%, PyObject* arg, void* /*unused*/) noexcept\n{\n",
-            return_type,
+            "\nstatic int @_%(%, PyObject* arg, void* /*unused*/) noexcept\n{\n",
             type.TypeName(),
             method.Name(),
             bind<write_method_self_param>(type, is_static(method)));
@@ -1172,15 +1168,7 @@ static PyObject* _new_@(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject
                 w.write(
                     "PyErr_SetString(PyExc_AttributeError, \"property is not available in this version of Windows\");\n");
 
-                if (is_static(method))
-                {
-                    // static properties are implemented as methods
-                    w.write("return nullptr;\n");
-                }
-                else
-                {
-                    w.write("return -1;\n");
-                }
+                w.write("return -1;\n");
             }
             w.write("}\n\n");
 
@@ -1190,24 +1178,12 @@ static PyObject* _new_@(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject
             }
             else
             {
-                if (is_static(method))
-                {
-                    write_try_catch(
-                        w,
-                        [&](writer& w)
-                        {
-                            write_method_body_contents(w, type, method, true);
-                        });
-                }
-                else
-                {
-                    write_setter_try_catch(
-                        w,
-                        [&](writer& w)
-                        {
-                            write_method_body_contents(w, type, method, true);
-                        });
-                }
+                write_setter_try_catch(
+                    w,
+                    [&](writer& w)
+                    {
+                        write_method_body_contents(w, type, method, true);
+                    });
             }
         }
         w.write("}\n");
