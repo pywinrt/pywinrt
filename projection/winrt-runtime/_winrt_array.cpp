@@ -413,7 +413,8 @@ namespace py::cpp::_winrt
         Py_DECREF(tp);
     }
 
-    static PyObject* Array_get_winrt_element_type_name(Array* self) noexcept
+    static PyObject* Array_get_winrt_element_type_name(
+        Array* self, void* /*unused*/) noexcept
     {
         auto type = self->array->WinrtElementTypeName();
         return PyUnicode_FromWideChar(type.data(), type.size());
