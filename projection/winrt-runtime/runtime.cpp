@@ -12,14 +12,12 @@
 static PyObject* PyType_FromMetaclass(
     PyTypeObject* metaclass, PyObject* module, PyType_Spec* spec, PyObject* bases)
 {
-    py::pyobj_handle temp
-    {
 #if PY_VERSION_HEX >= 0x03090000
-        PyType_FromModuleAndSpec(module, spec, bases)
+    py::pyobj_handle temp{PyType_FromModuleAndSpec(module, spec, bases)};
 #else
-        PyType_FromSpecWithBases(spec, bases)
+    (void)module;
+    py::pyobj_handle temp{PyType_FromSpecWithBases(spec, bases)};
 #endif
-    };
 
     if (!temp)
     {
