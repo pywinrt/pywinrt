@@ -2024,10 +2024,16 @@ namespace py
         }
     }
 
+    /**
+     * Wrapper to hold Python asyncio Loop and Future objects for async operations.
+     */
     struct completion_callback
     {
         completion_callback() noexcept = default;
 
+        /**
+         * Creates a completion_callback with the given loop and future.
+         */
         explicit completion_callback(PyObject* loop, PyObject* future) noexcept
             : _loop(Py_NewRef(loop)), _future(Py_NewRef(future))
         {
@@ -2046,16 +2052,25 @@ namespace py
             Py_CLEAR(_future);
         }
 
+        /**
+         * Returns a borrowed reference to the asyncio loop object.
+         */
         PyObject* loop() const noexcept
         {
             return _loop;
         }
 
+        /**
+         * Returns a borrowed reference to the asyncio future object.
+         */
         PyObject* future() const noexcept
         {
             return _future;
         }
 
+        /**
+         * Returns a borrowed reference to the asyncio Future type object.
+         */
         PyObject* future_type() const noexcept
         {
             return reinterpret_cast<PyObject*>(Py_TYPE(_future));
