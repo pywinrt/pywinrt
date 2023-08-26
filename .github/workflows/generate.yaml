@@ -1,0 +1,42 @@
+name: generate
+concurrency:
+  group: generate-${{ github.ref }}
+  cancel-in-progress: true
+
+on:
+  push:
+    paths:
+      - .github/workflows/generate.yaml
+      - projection/winrt-sdk/src/winrt_sdk/cppwinrt/**
+      - projection/winrt-sdk/src/winrt_sdk/pywrint/**
+      - projection/winrt-*/py.*.cpp
+      - src/**
+      - scripts/build.cmd
+      - scripts/fetch-tools.ps1
+      - scripts/vsdevcmd-build.cmd
+      - scripts/generate-cppwinrt.py
+      - scripts/generate-pywinrt.py
+  pull_request:
+    paths:
+      - .github/workflows/generate.yaml
+      - projection/winrt-sdk/src/winrt_sdk/cppwinrt/**
+      - projection/winrt-sdk/src/winrt_sdk/pywrint/**
+      - projection/winrt-*/py.*.cpp
+      - src/**
+      - scripts/build.cmd
+      - scripts/fetch-tools.ps1
+      - scripts/vsdevcmd-build.cmd
+      - scripts/generate-cppwinrt.py
+      - scripts/generate-pywinrt.py
+
+jobs:
+  generate:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: ./scripts/vsdevcmd-build.cmd
+      - run: ./scripts/fetch-tools.ps1
+      - run: python3 ./scripts/generate-cppwinrt.py
+      - run: python3 ./scripts/generate-pywinrt.py --debug
+      # fail if there are changes
+      - run: git diff --exit-code
