@@ -272,4 +272,32 @@ static void custom_set(winrt::hresult& instance, int32_t value)
         auto file_name = w.write_temp("%.pyi", bind<write_ns_module_name>(ns));
         w.flush_to_file(folder / file_name);
     }
+
+    /**
+     * Writes a `all-requirements.txt` file for the given namespaces.
+     *
+     * No file is written if the set of namespaces is empty.
+     *
+     * @param folder The folder to write the file to.
+     * @param needed_namespaces The set of namespaces that are needed by the caller.
+     */
+    inline void write_all_requirements_txt(
+        stdfs::path const& folder, std::set<std::string> const& needed_namespaces)
+    {
+        if (needed_namespaces.empty())
+        {
+            return;
+        }
+
+        writer w{};
+
+        write_license(w, "#");
+
+        for (auto&& ns : needed_namespaces)
+        {
+            w.write("winrt-%[all]==%\n", ns, PYWINRT_VERSION_STRING);
+        }
+
+        w.flush_to_file(folder / "all-requirements.txt");
+    }
 } // namespace pywinrt
