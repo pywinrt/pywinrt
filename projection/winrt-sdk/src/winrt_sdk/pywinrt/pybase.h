@@ -1642,7 +1642,7 @@ namespace py
 
         if (result == 0)
         {
-            return {};
+            return std::nullopt;
         }
 
         return reinterpret_cast<winrt_wrapper<winrt::Windows::Foundation::IUnknown>*>(
@@ -1948,7 +1948,7 @@ namespace py
 
             if (Py_IsNone(obj))
             {
-                return {};
+                return std::nullopt;
             }
 
             return converter<T>::convert_to(obj);
