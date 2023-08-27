@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools", "setuptools-scm", "winrt_sdk"]
+requires = ["setuptools", "setuptools-scm", "winrt-sdk"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -16,6 +16,7 @@ classifiers = [
     "Target Audience :: Developers",
 ]
 dynamic = ["version"]
+requires-python = ">=3.9,<3.13"
 
 [project.urls]
 # Homepage = "https://github.com/pywrint/pywrinrt"
@@ -25,3 +26,14 @@ Changelog = "https://github.com/pywinrt/pywinrt/blob/main/CHANGELOG.md"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.cibuildwheel]
+# use local winrt-sdk build dependency
+environment = { PYTHONPATH="../winrt-sdk/src" }
+# don't install winrt-sdk from PyPI
+build-frontend = "build; args: --skip-dependency-check --no-isolation"
+# don't build for PyPy
+skip = "pp*"
+
+[tool.cibuildwheel.windows]
+archs = ["x86", "AMD64", "ARM64"]

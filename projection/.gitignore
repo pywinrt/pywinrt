@@ -1,3 +1,5 @@
 *.egg-info
 *.tar.gz
 *.whl
+build/
+dist/
