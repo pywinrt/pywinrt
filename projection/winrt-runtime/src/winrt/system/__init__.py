@@ -1,8 +1,7 @@
 from collections.abc import Mapping, MutableMapping, MutableSequence, Sequence
 from typing import Annotated
 
-from .._winrt import Array as Array
-from .._winrt import Object as Object
+from .. import _winrt
 
 # NB: The types implemented in C cannot inherit from abc.ABC since Python 3.12
 # so we have to implement the protocols like this instead.
@@ -143,4 +142,22 @@ Single = Annotated[float, "f"]
 Double = Annotated[float, "d"]
 Char16 = Annotated[str, "u"]
 
+Object = _winrt.Object
+Array = _winrt.Array
 _mixin_mutable_sequence(Array)
+
+__all__ = [
+    "Int8",
+    "UInt8",
+    "Int16",
+    "UInt16",
+    "Int32",
+    "UInt32",
+    "Int64",
+    "UInt64",
+    "Single",
+    "Double",
+    "Char16",
+    "Object",
+    "Array",
+]
