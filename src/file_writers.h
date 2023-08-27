@@ -152,7 +152,6 @@ static void custom_set(winrt::hresult& instance, int32_t value)
 
     inline void write_namespace_dunder_init_py(
         stdfs::path const& folder,
-        std::set<std::string> const& needed_namespaces,
         std::string_view const& ns,
         cache::namespace_members const& members)
     {

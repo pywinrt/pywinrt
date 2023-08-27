@@ -247,7 +247,7 @@ Where <spec> is one or more of:
                         auto namespaces
                             = write_namespace_cpp(ns_package_dir, ns, members);
                         write_namespace_h(header_dir, ns, namespaces, members);
-                        write_namespace_dunder_init_py(ns_dir, namespaces, ns, members);
+                        write_namespace_dunder_init_py(ns_dir, ns, members);
                         write_namespace_pyi(ns_dir, namespaces, ns, members);
                     });
             }
