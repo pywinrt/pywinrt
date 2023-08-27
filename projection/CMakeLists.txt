@@ -23,6 +23,13 @@ else()
     endif()
 endif()
 
+if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+    # GCC 13 complains about error: 'this' pointer is null [-Werror=nonnull]
+    # in cppwrint/winrt/base.h
+    # https://github.com/microsoft/cppwinrt/issues/1349
+    add_compile_options(-Wno-nonnull)
+endif()
+
 # work around https://gitlab.kitware.com/cmake/cmake/-/issues/24587
 if(CMAKE_VERSION VERSION_LESS 3.27 AND (NOT CMAKE_GENERATOR_PLATFORM AND CMAKE_SYSTEM_PROCESSOR MATCHES "ARM64" OR CMAKE_GENERATOR_PLATFORM MATCHES "ARM64"))
     set(Python3_ROOT_DIR
@@ -105,10 +112,18 @@ foreach(package ${packages} ${interop_packages})
     if (package IN_LIST packages)
         if (NOT first_target)
             set(first_target ${package_target})
-            target_precompile_headers(${first_target} PRIVATE
-                "${WINRT_SDK_PATH}/pywinrt/py.Windows.Foundation.h"
-                "${WINRT_SDK_PATH}/pywinrt/py.Windows.Storage.Streams.h"
-            )
+
+            if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+                # GCC can't allocate enough memory for more than this
+                target_precompile_headers(${first_target} PRIVATE
+                    "${WINRT_SDK_PATH}/pywinrt/py.Windows.Foundation.h"
+                )
+            else()
+                target_precompile_headers(${first_target} PRIVATE
+                    "${WINRT_SDK_PATH}/pywinrt/py.Windows.Foundation.h"
+                    "${WINRT_SDK_PATH}/pywinrt/py.Windows.Storage.Streams.h"
+                )
+            endif()
         else()
             target_precompile_headers(${package_target} REUSE_FROM ${first_target})
         endif()
