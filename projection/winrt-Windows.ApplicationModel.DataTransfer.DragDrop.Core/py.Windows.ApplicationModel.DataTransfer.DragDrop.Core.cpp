@@ -1366,56 +1366,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_datatransfer_dragdrop_core
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_CoreDragDropManager, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_CoreDragDropManager, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_CoreDragInfo, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_CoreDragInfo, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_CoreDragOperation, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_CoreDragOperation, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_CoreDragUIOverride, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_CoreDragUIOverride, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_CoreDropOperationTargetRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_CoreDropOperationTargetRequestedEventArgs, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_ICoreDropOperationTarget, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_ICoreDropOperationTarget, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }

@@ -1960,11 +1960,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_store_preview(void) noexce
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_DeliveryOptimizationSettings, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_DeliveryOptimizationSettings, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -1975,65 +1971,37 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_store_preview(void) noexce
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_StoreConfiguration, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StoreConfiguration_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_StoreConfiguration, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StoreConfiguration_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_StoreHardwareManufacturerInfo, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_StoreHardwareManufacturerInfo, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_StorePreview, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_StorePreview, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_StorePreviewProductInfo, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_StorePreviewProductInfo, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_StorePreviewPurchaseResults, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_StorePreviewPurchaseResults, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_StorePreviewSkuInfo, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_StorePreviewSkuInfo, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_WebAuthenticationCoreManagerHelper, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_WebAuthenticationCoreManagerHelper, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }

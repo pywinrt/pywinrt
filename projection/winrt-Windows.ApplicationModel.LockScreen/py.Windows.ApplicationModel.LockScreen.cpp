@@ -955,47 +955,27 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_lockscreen(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_LockApplicationHost, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_LockApplicationHost, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_LockScreenBadge, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_LockScreenBadge, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_LockScreenInfo, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_LockScreenInfo, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_LockScreenUnlockingDeferral, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_LockScreenUnlockingDeferral, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_LockScreenUnlockingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_LockScreenUnlockingEventArgs, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }

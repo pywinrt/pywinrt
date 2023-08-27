@@ -2993,83 +2993,47 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input_preview_injection(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_InjectedInputGamepadInfo, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_InjectedInputGamepadInfo, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_InjectedInputKeyboardInfo, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_InjectedInputKeyboardInfo, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_InjectedInputMouseInfo, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_InjectedInputMouseInfo, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_InjectedInputPenInfo, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_InjectedInputPenInfo, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_InjectedInputTouchInfo, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_InjectedInputTouchInfo, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_InputInjector, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_InputInjector, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_InjectedInputPoint, nullptr, nullptr, nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_InjectedInputPoint, nullptr, nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_InjectedInputPointerInfo, nullptr, nullptr, nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_InjectedInputPointerInfo, nullptr, nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_InjectedInputRectangle, nullptr, nullptr, nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_InjectedInputRectangle, nullptr, nullptr) == -1)
-    #endif
     {
         return nullptr;
     }

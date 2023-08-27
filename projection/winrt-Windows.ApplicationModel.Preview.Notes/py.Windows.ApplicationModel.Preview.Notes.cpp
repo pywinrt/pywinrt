@@ -1014,38 +1014,22 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_preview_notes(void) noexce
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_NotePlacementChangedPreviewEventArgs, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_NotePlacementChangedPreviewEventArgs, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_NoteVisibilityChangedPreviewEventArgs, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_NoteVisibilityChangedPreviewEventArgs, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_NotesWindowManagerPreview, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_NotesWindowManagerPreview, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_NotesWindowManagerPreviewShowNoteOptions, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_NotesWindowManagerPreviewShowNoteOptions, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }

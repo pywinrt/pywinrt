@@ -3368,65 +3368,37 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_display(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_AdvancedColorInfo, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_AdvancedColorInfo, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_BrightnessOverride, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_BrightnessOverride, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_BrightnessOverrideSettings, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_BrightnessOverrideSettings, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_ColorOverrideSettings, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_ColorOverrideSettings, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_DisplayEnhancementOverride, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_DisplayEnhancementOverride, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_DisplayEnhancementOverrideCapabilities, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_DisplayEnhancementOverrideCapabilities, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_DisplayEnhancementOverrideCapabilitiesChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_DisplayEnhancementOverrideCapabilitiesChangedEventArgs, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -3437,11 +3409,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_display(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_DisplayInformation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DisplayInformation_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_DisplayInformation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DisplayInformation_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -3452,29 +3420,17 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_display(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_DisplayProperties, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DisplayProperties_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_DisplayProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DisplayProperties_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_DisplayServices, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_DisplayServices, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_NitRange, nullptr, nullptr, nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_NitRange, nullptr, nullptr) == -1)
-    #endif
     {
         return nullptr;
     }

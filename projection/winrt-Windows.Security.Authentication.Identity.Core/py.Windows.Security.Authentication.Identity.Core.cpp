@@ -1069,47 +1069,27 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_identity_core(void)
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_MicrosoftAccountMultiFactorAuthenticationManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MicrosoftAccountMultiFactorAuthenticationManager_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_MicrosoftAccountMultiFactorAuthenticationManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MicrosoftAccountMultiFactorAuthenticationManager_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_MicrosoftAccountMultiFactorGetSessionsResult, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_MicrosoftAccountMultiFactorGetSessionsResult, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_MicrosoftAccountMultiFactorOneTimeCodedInfo, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_MicrosoftAccountMultiFactorOneTimeCodedInfo, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_MicrosoftAccountMultiFactorSessionInfo, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_MicrosoftAccountMultiFactorSessionInfo, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }

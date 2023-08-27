@@ -17,9 +17,7 @@ _T = typing.TypeVar("_T")
 
 class Array(typing.MutableSequence[_T]):
     _winrt_element_type_name_: str
-    if sys.version_info >= (3, 9):
-        def __class_getitem__(cls, key: typing.Any) -> types.GenericAlias: ...
-
+    def __class_getitem__(cls, key: typing.Any) -> types.GenericAlias: ...
     @typing.overload
     def __new__(
         cls: typing.Type[_Self],

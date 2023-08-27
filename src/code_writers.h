@@ -428,28 +428,11 @@ struct py_type<%>
                 "reinterpret_cast<PyTypeObject*>(type_%_Meta.get())", type.TypeName());
         }
 
-        std::string buffer_procs{"nullptr"};
-
-        if (implements_ibuffer(type) || implements_imemorybufferreference(type))
-        {
-            buffer_procs = w.write_temp("&_PyBufferProcs_@", type.TypeName());
-        }
-
-        // workaround for https://bugs.python.org/issue40724
-        w.write("#if PY_VERSION_HEX < 0x03090000\n");
-        w.write(
-            "if (py::register_python_type(module.get(), &type_spec_@, %, %, %) == -1)\n",
-            type.TypeName(),
-            buffer_procs,
-            bind<write_type_base>(type),
-            metaclass);
-        w.write("#else\n");
         w.write(
             "if (py::register_python_type(module.get(), &type_spec_@, %, %) == -1)\n",
             type.TypeName(),
             bind<write_type_base>(type),
             metaclass);
-        w.write("#endif\n");
 
         w.write("{\n");
         {
@@ -1772,14 +1755,6 @@ return 0;
                 w.write("}\n");
             }
             w.write("}\n");
-
-            // workaround for https://bugs.python.org/issue40724
-            w.write("\n#if PY_VERSION_HEX < 0x03090000\n");
-            w.write(
-                "static PyBufferProcs _PyBufferProcs_@ = { reinterpret_cast<getbufferproc>(_get_buffer_@), nullptr };\n",
-                type.TypeName(),
-                type.TypeName());
-            w.write("#endif\n");
         }
 
         if (implements_istringable(type))
@@ -2078,10 +2053,8 @@ return 0;
 
             if (is_ptype(type))
             {
-                w.write("#if PY_VERSION_HEX >= 0x03090000\n");
                 w.write(
                     "{ \"__class_getitem__\", Py_GenericAlias, METH_O | METH_CLASS, PyDoc_STR(\"See PEP 585\") },\n");
-                w.write("#endif\n");
             }
 
             w.write("{ }\n");
@@ -2178,12 +2151,9 @@ return 0;
 
             if (implements_ibuffer(type) || implements_imemorybufferreference(type))
             {
-                // this slot was enabled in 3.9 - https://bugs.python.org/issue40724
-                w.write("#if PY_VERSION_HEX >= 0x03090000\n");
                 w.write(
                     "{ Py_bf_getbuffer, reinterpret_cast<void*>(_get_buffer_@) },\n",
                     name);
-                w.write("#endif\n");
             }
 
             if (implements_istringable(type))
@@ -4107,12 +4077,8 @@ if (!return_value)
 
             if (is_ptype(type))
             {
-                w.write("if sys.version_info >= (3, 9):\n");
-                {
-                    writer::indent_guard gg{w};
-                    w.write(
-                        "def __class_getitem__(cls, key: typing.Any) -> types.GenericAlias: ...\n");
-                }
+                w.write(
+                    "def __class_getitem__(cls, key: typing.Any) -> types.GenericAlias: ...\n");
             }
 
             // TODO: this should use the implements_x helpers but we need to

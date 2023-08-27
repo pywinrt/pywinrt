@@ -2358,47 +2358,27 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_userprofile(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_AdvertisingManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AdvertisingManager_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_AdvertisingManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AdvertisingManager_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_AdvertisingManagerForUser, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_AdvertisingManagerForUser, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_AssignedAccessSettings, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_AssignedAccessSettings, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_DiagnosticsSettings, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_DiagnosticsSettings, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_FirstSignInSettings, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_FirstSignInSettings, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -2409,20 +2389,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_userprofile(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_GlobalizationPreferences, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GlobalizationPreferences_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_GlobalizationPreferences, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GlobalizationPreferences_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_GlobalizationPreferencesForUser, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_GlobalizationPreferencesForUser, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -2433,11 +2405,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_userprofile(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_LockScreen, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LockScreen_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_LockScreen, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LockScreen_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -2448,11 +2416,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_userprofile(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_UserInformation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UserInformation_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_UserInformation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UserInformation_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -2463,11 +2427,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_userprofile(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_UserProfilePersonalizationSettings, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UserProfilePersonalizationSettings_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_UserProfilePersonalizationSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UserProfilePersonalizationSettings_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }

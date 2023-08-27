@@ -2318,11 +2318,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_diagnostics(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_DiagnosticActionResult, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_DiagnosticActionResult, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -2333,92 +2329,52 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_diagnostics(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_DiagnosticInvoker, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DiagnosticInvoker_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_DiagnosticInvoker, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DiagnosticInvoker_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_ProcessCpuUsage, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_ProcessCpuUsage, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_ProcessCpuUsageReport, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_ProcessCpuUsageReport, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_ProcessDiagnosticInfo, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_ProcessDiagnosticInfo, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_ProcessDiskUsage, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_ProcessDiskUsage, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_ProcessDiskUsageReport, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_ProcessDiskUsageReport, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_ProcessMemoryUsage, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_ProcessMemoryUsage, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_ProcessMemoryUsageReport, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_ProcessMemoryUsageReport, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_SystemCpuUsage, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_SystemCpuUsage, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_SystemCpuUsageReport, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_SystemCpuUsageReport, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -2429,29 +2385,17 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_diagnostics(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_SystemDiagnosticInfo, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemDiagnosticInfo_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_SystemDiagnosticInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemDiagnosticInfo_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_SystemMemoryUsage, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_SystemMemoryUsage, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_SystemMemoryUsageReport, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_SystemMemoryUsageReport, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }

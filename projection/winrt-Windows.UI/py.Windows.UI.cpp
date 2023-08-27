@@ -3612,11 +3612,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_ColorHelper, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_ColorHelper, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -3627,47 +3623,27 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_Colors, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Colors_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_Colors, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Colors_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_UIContentRoot, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_UIContentRoot, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_UIContext, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_UIContext, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_Color, nullptr, nullptr, nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_Color, nullptr, nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_WindowId, nullptr, nullptr, nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_WindowId, nullptr, nullptr) == -1)
-    #endif
     {
         return nullptr;
     }

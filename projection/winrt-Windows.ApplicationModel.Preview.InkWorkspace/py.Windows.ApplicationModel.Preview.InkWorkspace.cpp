@@ -183,11 +183,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_preview_inkworkspace(void)
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_InkWorkspaceHostedAppManager, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_InkWorkspaceHostedAppManager, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }

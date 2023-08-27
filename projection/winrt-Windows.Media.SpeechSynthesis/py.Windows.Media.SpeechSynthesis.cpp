@@ -1505,11 +1505,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_speechsynthesis(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_SpeechSynthesisStream, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_SpeechSynthesisStream, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -1520,29 +1516,17 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_speechsynthesis(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_SpeechSynthesizer, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpeechSynthesizer_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_SpeechSynthesizer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpeechSynthesizer_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_SpeechSynthesizerOptions, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_SpeechSynthesizerOptions, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_VoiceInformation, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_VoiceInformation, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }

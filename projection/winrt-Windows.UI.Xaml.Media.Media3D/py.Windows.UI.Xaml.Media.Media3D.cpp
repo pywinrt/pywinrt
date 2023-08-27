@@ -2305,11 +2305,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_media3d(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_CompositeTransform3D, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositeTransform3D_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_CompositeTransform3D, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositeTransform3D_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -2320,11 +2316,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_media3d(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_Matrix3DHelper, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Matrix3DHelper_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_Matrix3DHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Matrix3DHelper_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -2335,29 +2327,17 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_media3d(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_PerspectiveTransform3D, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PerspectiveTransform3D_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_PerspectiveTransform3D, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PerspectiveTransform3D_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_Transform3D, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_Transform3D, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_Matrix3D, nullptr, nullptr, nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_Matrix3D, nullptr, nullptr) == -1)
-    #endif
     {
         return nullptr;
     }

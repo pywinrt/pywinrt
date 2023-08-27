@@ -213,10 +213,6 @@ namespace py::cpp::Windows::Storage::Streams
         }
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    static PyBufferProcs _PyBufferProcs_Buffer = { reinterpret_cast<getbufferproc>(_get_buffer_Buffer), nullptr };
-    #endif
-
     static PyMethodDef _methods_Buffer[] = {
         { "create_copy_from_memory_buffer", reinterpret_cast<PyCFunction>(Buffer_CreateCopyFromMemoryBuffer), METH_VARARGS | METH_STATIC, nullptr },
         { "create_memory_buffer_over_i_buffer", reinterpret_cast<PyCFunction>(Buffer_CreateMemoryBufferOverIBuffer), METH_VARARGS | METH_STATIC, nullptr },
@@ -237,9 +233,7 @@ namespace py::cpp::Windows::Storage::Streams
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Buffer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Buffer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Buffer) },
-        #if PY_VERSION_HEX >= 0x03090000
         { Py_bf_getbuffer, reinterpret_cast<void*>(_get_buffer_Buffer) },
-        #endif
         { },
     };
 
@@ -5414,10 +5408,6 @@ namespace py::cpp::Windows::Storage::Streams
         }
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    static PyBufferProcs _PyBufferProcs_IBuffer = { reinterpret_cast<getbufferproc>(_get_buffer_IBuffer), nullptr };
-    #endif
-
     static PyMethodDef _methods_IBuffer[] = {
         { "_assign_array_", _assign_array_IBuffer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IBuffer), METH_O | METH_STATIC, nullptr },
@@ -5436,9 +5426,7 @@ namespace py::cpp::Windows::Storage::Streams
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBuffer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBuffer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBuffer) },
-        #if PY_VERSION_HEX >= 0x03090000
         { Py_bf_getbuffer, reinterpret_cast<void*>(_get_buffer_IBuffer) },
-        #endif
         { },
     };
 
@@ -8880,227 +8868,127 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_streams(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_Buffer, &_PyBufferProcs_Buffer, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_Buffer, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_DataReader, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_DataReader, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_DataReaderLoadOperation, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_DataReaderLoadOperation, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_DataWriter, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_DataWriter, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_DataWriterStoreOperation, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_DataWriterStoreOperation, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_FileInputStream, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_FileInputStream, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_FileOutputStream, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_FileOutputStream, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_FileRandomAccessStream, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_FileRandomAccessStream, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_InMemoryRandomAccessStream, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_InMemoryRandomAccessStream, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_InputStreamOverStream, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_InputStreamOverStream, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_OutputStreamOverStream, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_OutputStreamOverStream, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_RandomAccessStream, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_RandomAccessStream, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_RandomAccessStreamOverStream, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_RandomAccessStreamOverStream, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_RandomAccessStreamReference, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_RandomAccessStreamReference, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_IBuffer, &_PyBufferProcs_IBuffer, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_IBuffer, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_IContentTypeProvider, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_IContentTypeProvider, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_IDataReader, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_IDataReader, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_IDataWriter, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_IDataWriter, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_IInputStream, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_IInputStream, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_IInputStreamReference, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_IInputStreamReference, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_IOutputStream, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_IOutputStream, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_IPropertySetSerializer, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_IPropertySetSerializer, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_IRandomAccessStream, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_IRandomAccessStream, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_IRandomAccessStreamReference, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_IRandomAccessStreamReference, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_IRandomAccessStreamWithContentType, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_IRandomAccessStreamWithContentType, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }

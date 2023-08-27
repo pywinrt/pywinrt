@@ -49,9 +49,6 @@ namespace py::cpp::_winrt
     // BEGIN: class _winrt.Array:
 
     extern PyType_Spec Array_type_spec;
-#if PY_VERSION_HEX < 0x03090000
-    extern PyBufferProcs Array_buffer_procs;
-#endif
 
     // END: class _winrt.Array:
 
@@ -280,40 +277,20 @@ namespace py::cpp::_winrt
             return nullptr;
         }
 
-        if (py::register_python_type(
-                module.get(),
-                &Object_type_spec,
-#if PY_VERSION_HEX < 0x03090000
-                nullptr,
-#endif
-                nullptr,
-                nullptr)
+        if (py::register_python_type(module.get(), &Object_type_spec, nullptr, nullptr)
+            == -1)
+        {
+            return nullptr;
+        }
+
+        if (py::register_python_type(module.get(), &Array_type_spec, nullptr, nullptr)
             == -1)
         {
             return nullptr;
         }
 
         if (py::register_python_type(
-                module.get(),
-                &Array_type_spec,
-#if PY_VERSION_HEX < 0x03090000
-                &Array_buffer_procs,
-#endif
-                nullptr,
-                nullptr)
-            == -1)
-        {
-            return nullptr;
-        }
-
-        if (py::register_python_type(
-                module.get(),
-                &MappingIter_type_spec,
-#if PY_VERSION_HEX < 0x03090000
-                nullptr,
-#endif
-                nullptr,
-                nullptr)
+                module.get(), &MappingIter_type_spec, nullptr, nullptr)
             == -1)
         {
             return nullptr;

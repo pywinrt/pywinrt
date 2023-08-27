@@ -2127,47 +2127,27 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_voicecommands(void) noexce
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_VoiceCommand, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_VoiceCommand, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_VoiceCommandCompletedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_VoiceCommandCompletedEventArgs, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_VoiceCommandConfirmationResult, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_VoiceCommandConfirmationResult, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_VoiceCommandContentTile, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_VoiceCommandContentTile, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_VoiceCommandDefinition, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_VoiceCommandDefinition, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -2178,20 +2158,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_voicecommands(void) noexce
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_VoiceCommandDefinitionManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VoiceCommandDefinitionManager_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_VoiceCommandDefinitionManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VoiceCommandDefinitionManager_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_VoiceCommandDisambiguationResult, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_VoiceCommandDisambiguationResult, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -2202,29 +2174,17 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_voicecommands(void) noexce
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_VoiceCommandResponse, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VoiceCommandResponse_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_VoiceCommandResponse, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VoiceCommandResponse_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_VoiceCommandServiceConnection, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_VoiceCommandServiceConnection, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_VoiceCommandUserMessage, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_VoiceCommandUserMessage, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }

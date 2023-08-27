@@ -2799,38 +2799,22 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_xboxlive(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_XboxLiveDeviceAddress, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XboxLiveDeviceAddress_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_XboxLiveDeviceAddress, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XboxLiveDeviceAddress_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_XboxLiveEndpointPair, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_XboxLiveEndpointPair, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_XboxLiveEndpointPairCreationResult, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_XboxLiveEndpointPairCreationResult, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_XboxLiveEndpointPairStateChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_XboxLiveEndpointPairStateChangedEventArgs, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -2841,20 +2825,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_xboxlive(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_XboxLiveEndpointPairTemplate, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XboxLiveEndpointPairTemplate_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_XboxLiveEndpointPairTemplate, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XboxLiveEndpointPairTemplate_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_XboxLiveInboundEndpointPairCreatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_XboxLiveInboundEndpointPairCreatedEventArgs, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -2865,29 +2841,17 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_xboxlive(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_XboxLiveQualityOfServiceMeasurement, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XboxLiveQualityOfServiceMeasurement_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_XboxLiveQualityOfServiceMeasurement, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XboxLiveQualityOfServiceMeasurement_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_XboxLiveQualityOfServiceMetricResult, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_XboxLiveQualityOfServiceMetricResult, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_XboxLiveQualityOfServicePrivatePayloadResult, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_XboxLiveQualityOfServicePrivatePayloadResult, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }

@@ -22137,11 +22137,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_AddDeleteThemeTransition, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_AddDeleteThemeTransition, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -22152,20 +22148,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_BackEase, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BackEase_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_BackEase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BackEase_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_BasicConnectedAnimationConfiguration, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_BasicConnectedAnimationConfiguration, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -22176,11 +22164,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_BeginStoryboard, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BeginStoryboard_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_BeginStoryboard, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BeginStoryboard_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -22191,20 +22175,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_BounceEase, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BounceEase_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_BounceEase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BounceEase_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_CircleEase, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_CircleEase, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -22215,11 +22191,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_ColorAnimation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorAnimation_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_ColorAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorAnimation_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -22230,11 +22202,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_ColorAnimationUsingKeyFrames, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorAnimationUsingKeyFrames_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_ColorAnimationUsingKeyFrames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorAnimationUsingKeyFrames_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -22245,20 +22213,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_ColorKeyFrame, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorKeyFrame_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_ColorKeyFrame, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorKeyFrame_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_ColorKeyFrameCollection, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_ColorKeyFrameCollection, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -22269,38 +22229,22 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_CommonNavigationTransitionInfo, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CommonNavigationTransitionInfo_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_CommonNavigationTransitionInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CommonNavigationTransitionInfo_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_ConnectedAnimation, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_ConnectedAnimation, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_ConnectedAnimationConfiguration, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_ConnectedAnimationConfiguration, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_ConnectedAnimationService, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_ConnectedAnimationService, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -22311,11 +22255,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_ContentThemeTransition, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContentThemeTransition_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_ContentThemeTransition, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContentThemeTransition_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -22326,65 +22266,37 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_ContinuumNavigationTransitionInfo, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContinuumNavigationTransitionInfo_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_ContinuumNavigationTransitionInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContinuumNavigationTransitionInfo_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_CubicEase, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_CubicEase, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_DirectConnectedAnimationConfiguration, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_DirectConnectedAnimationConfiguration, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_DiscreteColorKeyFrame, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_DiscreteColorKeyFrame, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_DiscreteDoubleKeyFrame, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_DiscreteDoubleKeyFrame, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_DiscreteObjectKeyFrame, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_DiscreteObjectKeyFrame, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_DiscretePointKeyFrame, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_DiscretePointKeyFrame, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -22395,11 +22307,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_DoubleAnimation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DoubleAnimation_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_DoubleAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DoubleAnimation_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -22410,11 +22318,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_DoubleAnimationUsingKeyFrames, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DoubleAnimationUsingKeyFrames_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_DoubleAnimationUsingKeyFrames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DoubleAnimationUsingKeyFrames_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -22425,20 +22329,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_DoubleKeyFrame, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DoubleKeyFrame_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_DoubleKeyFrame, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DoubleKeyFrame_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_DoubleKeyFrameCollection, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_DoubleKeyFrameCollection, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -22449,11 +22345,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_DragItemThemeAnimation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DragItemThemeAnimation_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_DragItemThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DragItemThemeAnimation_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -22464,20 +22356,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_DragOverThemeAnimation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DragOverThemeAnimation_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_DragOverThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DragOverThemeAnimation_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_DrillInNavigationTransitionInfo, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_DrillInNavigationTransitionInfo, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -22488,11 +22372,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_DrillInThemeAnimation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DrillInThemeAnimation_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_DrillInThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DrillInThemeAnimation_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -22503,11 +22383,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_DrillOutThemeAnimation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DrillOutThemeAnimation_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_DrillOutThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DrillOutThemeAnimation_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -22518,11 +22394,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_DropTargetItemThemeAnimation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DropTargetItemThemeAnimation_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_DropTargetItemThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DropTargetItemThemeAnimation_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -22533,11 +22405,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_EasingColorKeyFrame, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EasingColorKeyFrame_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_EasingColorKeyFrame, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EasingColorKeyFrame_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -22548,11 +22416,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_EasingDoubleKeyFrame, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EasingDoubleKeyFrame_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_EasingDoubleKeyFrame, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EasingDoubleKeyFrame_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -22563,11 +22427,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_EasingFunctionBase, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EasingFunctionBase_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_EasingFunctionBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EasingFunctionBase_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -22578,11 +22438,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_EasingPointKeyFrame, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EasingPointKeyFrame_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_EasingPointKeyFrame, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EasingPointKeyFrame_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -22593,11 +22449,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_EdgeUIThemeTransition, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EdgeUIThemeTransition_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_EdgeUIThemeTransition, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EdgeUIThemeTransition_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -22608,11 +22460,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_ElasticEase, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ElasticEase_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_ElasticEase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ElasticEase_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -22623,11 +22471,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_EntranceNavigationTransitionInfo, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EntranceNavigationTransitionInfo_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_EntranceNavigationTransitionInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EntranceNavigationTransitionInfo_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -22638,11 +22482,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_EntranceThemeTransition, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EntranceThemeTransition_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_EntranceThemeTransition, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EntranceThemeTransition_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -22653,11 +22493,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_ExponentialEase, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ExponentialEase_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_ExponentialEase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ExponentialEase_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -22668,11 +22504,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_FadeInThemeAnimation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FadeInThemeAnimation_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_FadeInThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FadeInThemeAnimation_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -22683,65 +22515,37 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_FadeOutThemeAnimation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FadeOutThemeAnimation_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_FadeOutThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FadeOutThemeAnimation_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_GravityConnectedAnimationConfiguration, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_GravityConnectedAnimationConfiguration, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_KeySpline, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_KeySpline, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_KeyTimeHelper, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_KeyTimeHelper, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_LinearColorKeyFrame, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_LinearColorKeyFrame, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_LinearDoubleKeyFrame, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_LinearDoubleKeyFrame, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_LinearPointKeyFrame, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_LinearPointKeyFrame, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -22752,20 +22556,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_NavigationThemeTransition, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NavigationThemeTransition_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_NavigationThemeTransition, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NavigationThemeTransition_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_NavigationTransitionInfo, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_NavigationTransitionInfo, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -22776,11 +22572,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_ObjectAnimationUsingKeyFrames, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ObjectAnimationUsingKeyFrames_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_ObjectAnimationUsingKeyFrames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ObjectAnimationUsingKeyFrames_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -22791,20 +22583,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_ObjectKeyFrame, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ObjectKeyFrame_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_ObjectKeyFrame, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ObjectKeyFrame_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_ObjectKeyFrameCollection, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_ObjectKeyFrameCollection, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -22815,11 +22599,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_PaneThemeTransition, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PaneThemeTransition_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_PaneThemeTransition, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PaneThemeTransition_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -22830,11 +22610,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_PointAnimation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PointAnimation_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_PointAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PointAnimation_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -22845,11 +22621,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_PointAnimationUsingKeyFrames, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PointAnimationUsingKeyFrames_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_PointAnimationUsingKeyFrames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PointAnimationUsingKeyFrames_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -22860,20 +22632,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_PointKeyFrame, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PointKeyFrame_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_PointKeyFrame, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PointKeyFrame_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_PointKeyFrameCollection, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_PointKeyFrameCollection, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -22884,11 +22648,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_PointerDownThemeAnimation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PointerDownThemeAnimation_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_PointerDownThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PointerDownThemeAnimation_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -22899,11 +22659,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_PointerUpThemeAnimation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PointerUpThemeAnimation_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_PointerUpThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PointerUpThemeAnimation_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -22914,11 +22670,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_PopInThemeAnimation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PopInThemeAnimation_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_PopInThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PopInThemeAnimation_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -22929,11 +22681,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_PopOutThemeAnimation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PopOutThemeAnimation_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_PopOutThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PopOutThemeAnimation_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -22944,11 +22692,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_PopupThemeTransition, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PopupThemeTransition_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_PopupThemeTransition, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PopupThemeTransition_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -22959,47 +22703,27 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_PowerEase, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PowerEase_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_PowerEase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PowerEase_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_QuadraticEase, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_QuadraticEase, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_QuarticEase, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_QuarticEase, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_QuinticEase, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_QuinticEase, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_ReorderThemeTransition, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_ReorderThemeTransition, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -23010,11 +22734,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_RepeatBehaviorHelper, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RepeatBehaviorHelper_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_RepeatBehaviorHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RepeatBehaviorHelper_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -23025,11 +22745,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_RepositionThemeAnimation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RepositionThemeAnimation_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_RepositionThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RepositionThemeAnimation_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -23040,20 +22756,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_RepositionThemeTransition, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RepositionThemeTransition_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_RepositionThemeTransition, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RepositionThemeTransition_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_SineEase, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_SineEase, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -23064,11 +22772,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_SlideNavigationTransitionInfo, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SlideNavigationTransitionInfo_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_SlideNavigationTransitionInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SlideNavigationTransitionInfo_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -23079,11 +22783,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_SplineColorKeyFrame, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SplineColorKeyFrame_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_SplineColorKeyFrame, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SplineColorKeyFrame_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -23094,11 +22794,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_SplineDoubleKeyFrame, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SplineDoubleKeyFrame_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_SplineDoubleKeyFrame, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SplineDoubleKeyFrame_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -23109,11 +22805,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_SplinePointKeyFrame, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SplinePointKeyFrame_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_SplinePointKeyFrame, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SplinePointKeyFrame_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -23124,11 +22816,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_SplitCloseThemeAnimation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SplitCloseThemeAnimation_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_SplitCloseThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SplitCloseThemeAnimation_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -23139,11 +22827,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_SplitOpenThemeAnimation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SplitOpenThemeAnimation_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_SplitOpenThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SplitOpenThemeAnimation_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -23154,20 +22838,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_Storyboard, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Storyboard_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_Storyboard, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Storyboard_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_SuppressNavigationTransitionInfo, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_SuppressNavigationTransitionInfo, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -23178,11 +22854,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_SwipeBackThemeAnimation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SwipeBackThemeAnimation_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_SwipeBackThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SwipeBackThemeAnimation_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -23193,11 +22865,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_SwipeHintThemeAnimation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SwipeHintThemeAnimation_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_SwipeHintThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SwipeHintThemeAnimation_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -23208,56 +22876,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_Timeline, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Timeline_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_Timeline, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Timeline_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_TimelineCollection, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_TimelineCollection, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_Transition, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_Transition, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_TransitionCollection, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_TransitionCollection, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_KeyTime, nullptr, nullptr, nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_KeyTime, nullptr, nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_RepeatBehavior, nullptr, nullptr, nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_RepeatBehavior, nullptr, nullptr) == -1)
-    #endif
     {
         return nullptr;
     }

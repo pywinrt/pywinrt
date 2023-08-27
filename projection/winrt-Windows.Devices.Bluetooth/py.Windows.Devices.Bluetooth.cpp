@@ -5293,47 +5293,27 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_BluetoothAdapter, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_BluetoothAdapter, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_BluetoothClassOfDevice, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_BluetoothClassOfDevice, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_BluetoothDevice, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_BluetoothDevice, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_BluetoothDeviceId, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_BluetoothDeviceId, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_BluetoothLEAppearance, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_BluetoothLEAppearance, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -5344,11 +5324,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_BluetoothLEAppearanceCategories, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BluetoothLEAppearanceCategories_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_BluetoothLEAppearanceCategories, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BluetoothLEAppearanceCategories_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -5359,47 +5335,27 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_BluetoothLEAppearanceSubcategories, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BluetoothLEAppearanceSubcategories_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_BluetoothLEAppearanceSubcategories, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BluetoothLEAppearanceSubcategories_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_BluetoothLEConnectionParameters, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_BluetoothLEConnectionParameters, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_BluetoothLEConnectionPhy, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_BluetoothLEConnectionPhy, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_BluetoothLEConnectionPhyInfo, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_BluetoothLEConnectionPhyInfo, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_BluetoothLEDevice, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_BluetoothLEDevice, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -5410,38 +5366,22 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_BluetoothLEPreferredConnectionParameters, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BluetoothLEPreferredConnectionParameters_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_BluetoothLEPreferredConnectionParameters, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BluetoothLEPreferredConnectionParameters_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_BluetoothLEPreferredConnectionParametersRequest, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_BluetoothLEPreferredConnectionParametersRequest, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_BluetoothSignalStrengthFilter, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_BluetoothSignalStrengthFilter, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_BluetoothUuidHelper, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_BluetoothUuidHelper, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }

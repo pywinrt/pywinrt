@@ -680,38 +680,22 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_ocr(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_OcrEngine, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_OcrEngine_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_OcrEngine, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_OcrEngine_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_OcrLine, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_OcrLine, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_OcrResult, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_OcrResult, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_OcrWord, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_OcrWord, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }

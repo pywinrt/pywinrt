@@ -1005,38 +1005,22 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_navigation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_FrameNavigationOptions, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_FrameNavigationOptions, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_NavigatingCancelEventArgs, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_NavigatingCancelEventArgs, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_NavigationEventArgs, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_NavigationEventArgs, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_NavigationFailedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_NavigationFailedEventArgs, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -1047,11 +1031,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_navigation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_PageStackEntry, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PageStackEntry_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_PageStackEntry, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PageStackEntry_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }

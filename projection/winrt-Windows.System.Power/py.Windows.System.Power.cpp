@@ -1005,11 +1005,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_power(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_BackgroundEnergyManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BackgroundEnergyManager_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_BackgroundEnergyManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BackgroundEnergyManager_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -1020,11 +1016,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_power(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_ForegroundEnergyManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ForegroundEnergyManager_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_ForegroundEnergyManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ForegroundEnergyManager_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -1035,11 +1027,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_power(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_PowerManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PowerManager_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_PowerManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PowerManager_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }

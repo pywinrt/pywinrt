@@ -6642,20 +6642,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_certificates(void) no
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_Certificate, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_Certificate, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_CertificateChain, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_CertificateChain, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -6666,56 +6658,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_certificates(void) no
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_CertificateEnrollmentManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CertificateEnrollmentManager_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_CertificateEnrollmentManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CertificateEnrollmentManager_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_CertificateExtension, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_CertificateExtension, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_CertificateKeyUsages, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_CertificateKeyUsages, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_CertificateQuery, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_CertificateQuery, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_CertificateRequestProperties, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_CertificateRequestProperties, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_CertificateStore, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_CertificateStore, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -6726,65 +6694,37 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_certificates(void) no
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_CertificateStores, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CertificateStores_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_CertificateStores, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CertificateStores_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_ChainBuildingParameters, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_ChainBuildingParameters, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_ChainValidationParameters, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_ChainValidationParameters, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_CmsAttachedSignature, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_CmsAttachedSignature, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_CmsDetachedSignature, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_CmsDetachedSignature, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_CmsSignerInfo, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_CmsSignerInfo, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_CmsTimestampInfo, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_CmsTimestampInfo, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -6795,20 +6735,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_certificates(void) no
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_KeyAlgorithmNames, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KeyAlgorithmNames_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_KeyAlgorithmNames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KeyAlgorithmNames_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_KeyAttestationHelper, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_KeyAttestationHelper, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -6819,20 +6751,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_certificates(void) no
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_KeyStorageProviderNames, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KeyStorageProviderNames_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_KeyStorageProviderNames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KeyStorageProviderNames_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_PfxImportParameters, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_PfxImportParameters, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -6843,38 +6767,22 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_certificates(void) no
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_StandardCertificateStoreNames, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StandardCertificateStoreNames_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_StandardCertificateStoreNames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StandardCertificateStoreNames_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_SubjectAlternativeNameInfo, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_SubjectAlternativeNameInfo, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_UserCertificateEnrollmentManager, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_UserCertificateEnrollmentManager, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_UserCertificateStore, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_UserCertificateStore, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }

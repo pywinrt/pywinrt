@@ -2749,11 +2749,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_imaging(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_BitmapImage, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BitmapImage_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_BitmapImage, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BitmapImage_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -2764,20 +2760,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_imaging(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_BitmapSource, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BitmapSource_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_BitmapSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BitmapSource_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_DownloadProgressEventArgs, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_DownloadProgressEventArgs, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -2788,29 +2776,17 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_imaging(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_RenderTargetBitmap, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RenderTargetBitmap_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_RenderTargetBitmap, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RenderTargetBitmap_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_SoftwareBitmapSource, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_SoftwareBitmapSource, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_SurfaceImageSource, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_SurfaceImageSource, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -2821,56 +2797,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_imaging(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_SvgImageSource, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SvgImageSource_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_SvgImageSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SvgImageSource_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_SvgImageSourceFailedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_SvgImageSourceFailedEventArgs, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_SvgImageSourceOpenedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_SvgImageSourceOpenedEventArgs, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_VirtualSurfaceImageSource, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_VirtualSurfaceImageSource, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_WriteableBitmap, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_WriteableBitmap, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_XamlRenderingBackgroundTask, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_XamlRenderingBackgroundTask, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }

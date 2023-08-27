@@ -578,11 +578,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_profile_systemmanufacturers(void) no
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_OemSupportInfo, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_OemSupportInfo, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -593,20 +589,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_profile_systemmanufacturers(void) no
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_SmbiosInformation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SmbiosInformation_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_SmbiosInformation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SmbiosInformation_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_SystemSupportDeviceInfo, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_SystemSupportDeviceInfo, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -617,11 +605,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_profile_systemmanufacturers(void) no
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_SystemSupportInfo, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemSupportInfo_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_SystemSupportInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemSupportInfo_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }

@@ -6936,11 +6936,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_AnnotationPatternIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AnnotationPatternIdentifiers_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_AnnotationPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AnnotationPatternIdentifiers_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -6951,11 +6947,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_AutomationAnnotation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AutomationAnnotation_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_AutomationAnnotation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AutomationAnnotation_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -6966,11 +6958,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_AutomationElementIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AutomationElementIdentifiers_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_AutomationElementIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AutomationElementIdentifiers_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -6981,20 +6969,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_AutomationProperties, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AutomationProperties_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_AutomationProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AutomationProperties_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_AutomationProperty, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_AutomationProperty, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -7005,11 +6985,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_DockPatternIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DockPatternIdentifiers_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_DockPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DockPatternIdentifiers_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -7020,11 +6996,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_DragPatternIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DragPatternIdentifiers_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_DragPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DragPatternIdentifiers_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -7035,11 +7007,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_DropTargetPatternIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DropTargetPatternIdentifiers_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_DropTargetPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DropTargetPatternIdentifiers_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -7050,11 +7018,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_ExpandCollapsePatternIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ExpandCollapsePatternIdentifiers_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_ExpandCollapsePatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ExpandCollapsePatternIdentifiers_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -7065,11 +7029,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_GridItemPatternIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridItemPatternIdentifiers_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_GridItemPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridItemPatternIdentifiers_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -7080,11 +7040,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_GridPatternIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridPatternIdentifiers_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_GridPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridPatternIdentifiers_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -7095,11 +7051,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_MultipleViewPatternIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MultipleViewPatternIdentifiers_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_MultipleViewPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MultipleViewPatternIdentifiers_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -7110,11 +7062,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_RangeValuePatternIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RangeValuePatternIdentifiers_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_RangeValuePatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RangeValuePatternIdentifiers_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -7125,11 +7073,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_ScrollPatternIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ScrollPatternIdentifiers_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_ScrollPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ScrollPatternIdentifiers_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -7140,11 +7084,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_SelectionItemPatternIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SelectionItemPatternIdentifiers_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_SelectionItemPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SelectionItemPatternIdentifiers_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -7155,11 +7095,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_SelectionPatternIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SelectionPatternIdentifiers_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_SelectionPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SelectionPatternIdentifiers_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -7170,11 +7106,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_SpreadsheetItemPatternIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpreadsheetItemPatternIdentifiers_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_SpreadsheetItemPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpreadsheetItemPatternIdentifiers_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -7185,11 +7117,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_StylesPatternIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StylesPatternIdentifiers_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_StylesPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StylesPatternIdentifiers_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -7200,11 +7128,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_TableItemPatternIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TableItemPatternIdentifiers_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_TableItemPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TableItemPatternIdentifiers_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -7215,11 +7139,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_TablePatternIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TablePatternIdentifiers_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_TablePatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TablePatternIdentifiers_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -7230,11 +7150,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_TogglePatternIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TogglePatternIdentifiers_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_TogglePatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TogglePatternIdentifiers_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -7245,11 +7161,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_TransformPattern2Identifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TransformPattern2Identifiers_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_TransformPattern2Identifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TransformPattern2Identifiers_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -7260,11 +7172,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_TransformPatternIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TransformPatternIdentifiers_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_TransformPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TransformPatternIdentifiers_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -7275,11 +7183,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_ValuePatternIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ValuePatternIdentifiers_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_ValuePatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ValuePatternIdentifiers_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -7290,11 +7194,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_WindowPatternIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WindowPatternIdentifiers_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_WindowPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WindowPatternIdentifiers_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }

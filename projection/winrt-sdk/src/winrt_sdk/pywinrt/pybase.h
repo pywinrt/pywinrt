@@ -9,6 +9,8 @@
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Metadata.h>
 
+static_assert(PY_VERSION_HEX >= 0x03090000, "Python 3.9 or later is required");
+
 namespace py
 {
     template<typename T, typename = std::void_t<>>
@@ -329,9 +331,6 @@ namespace py
     int register_python_type(
         PyObject* module,
         PyType_Spec* type_spec,
-#if PY_VERSION_HEX < 0x03090000
-        PyBufferProcs* buffer_procs,
-#endif
         PyObject* base_type,
         PyTypeObject* metaclass) noexcept;
     PyObject* wrap_mapping_iter(PyObject* iter) noexcept;
@@ -408,21 +407,12 @@ namespace py
     inline int register_python_type(
         PyObject* module,
         PyType_Spec* type_spec,
-#if PY_VERSION_HEX < 0x03090000
-        PyBufferProcs* buffer_procs,
-#endif
         PyObject* base_type,
         PyTypeObject* metaclass) noexcept
     {
         WINRT_ASSERT(PyWinRT_API && PyWinRT_API->register_python_type);
         return (*PyWinRT_API->register_python_type)(
-            module,
-            type_spec,
-#if PY_VERSION_HEX < 0x03090000
-            buffer_procs,
-#endif
-            base_type,
-            metaclass);
+            module, type_spec, base_type, metaclass);
     }
 
     inline PyObject* wrap_mapping_iter(PyObject* iter) noexcept

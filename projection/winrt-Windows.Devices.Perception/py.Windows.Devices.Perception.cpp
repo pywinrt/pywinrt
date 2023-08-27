@@ -7970,11 +7970,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_perception(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_KnownCameraIntrinsicsProperties, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownCameraIntrinsicsProperties_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_KnownCameraIntrinsicsProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownCameraIntrinsicsProperties_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -7985,11 +7981,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_perception(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_KnownPerceptionColorFrameSourceProperties, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionColorFrameSourceProperties_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_KnownPerceptionColorFrameSourceProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionColorFrameSourceProperties_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -8000,11 +7992,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_perception(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_KnownPerceptionDepthFrameSourceProperties, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionDepthFrameSourceProperties_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_KnownPerceptionDepthFrameSourceProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionDepthFrameSourceProperties_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -8015,11 +8003,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_perception(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_KnownPerceptionFrameSourceProperties, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionFrameSourceProperties_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_KnownPerceptionFrameSourceProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionFrameSourceProperties_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -8030,11 +8014,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_perception(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_KnownPerceptionInfraredFrameSourceProperties, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionInfraredFrameSourceProperties_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_KnownPerceptionInfraredFrameSourceProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionInfraredFrameSourceProperties_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -8045,11 +8025,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_perception(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_KnownPerceptionVideoFrameSourceProperties, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionVideoFrameSourceProperties_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_KnownPerceptionVideoFrameSourceProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionVideoFrameSourceProperties_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -8060,254 +8036,142 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_perception(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_KnownPerceptionVideoProfileProperties, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionVideoProfileProperties_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_KnownPerceptionVideoProfileProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionVideoProfileProperties_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_PerceptionColorFrame, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_PerceptionColorFrame, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_PerceptionColorFrameArrivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_PerceptionColorFrameArrivedEventArgs, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_PerceptionColorFrameReader, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_PerceptionColorFrameReader, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_PerceptionColorFrameSource, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_PerceptionColorFrameSource, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_PerceptionColorFrameSourceAddedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_PerceptionColorFrameSourceAddedEventArgs, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_PerceptionColorFrameSourceRemovedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_PerceptionColorFrameSourceRemovedEventArgs, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_PerceptionColorFrameSourceWatcher, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_PerceptionColorFrameSourceWatcher, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_PerceptionControlSession, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_PerceptionControlSession, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_PerceptionDepthCorrelatedCameraIntrinsics, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_PerceptionDepthCorrelatedCameraIntrinsics, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_PerceptionDepthCorrelatedCoordinateMapper, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_PerceptionDepthCorrelatedCoordinateMapper, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_PerceptionDepthFrame, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_PerceptionDepthFrame, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_PerceptionDepthFrameArrivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_PerceptionDepthFrameArrivedEventArgs, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_PerceptionDepthFrameReader, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_PerceptionDepthFrameReader, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_PerceptionDepthFrameSource, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_PerceptionDepthFrameSource, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_PerceptionDepthFrameSourceAddedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_PerceptionDepthFrameSourceAddedEventArgs, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_PerceptionDepthFrameSourceRemovedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_PerceptionDepthFrameSourceRemovedEventArgs, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_PerceptionDepthFrameSourceWatcher, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_PerceptionDepthFrameSourceWatcher, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_PerceptionFrameSourcePropertiesChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_PerceptionFrameSourcePropertiesChangedEventArgs, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_PerceptionFrameSourcePropertyChangeResult, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_PerceptionFrameSourcePropertyChangeResult, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_PerceptionInfraredFrame, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_PerceptionInfraredFrame, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_PerceptionInfraredFrameArrivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_PerceptionInfraredFrameArrivedEventArgs, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_PerceptionInfraredFrameReader, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_PerceptionInfraredFrameReader, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_PerceptionInfraredFrameSource, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_PerceptionInfraredFrameSource, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_PerceptionInfraredFrameSourceAddedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_PerceptionInfraredFrameSourceAddedEventArgs, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_PerceptionInfraredFrameSourceRemovedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_PerceptionInfraredFrameSourceRemovedEventArgs, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_PerceptionInfraredFrameSourceWatcher, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_PerceptionInfraredFrameSourceWatcher, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_PerceptionVideoProfile, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_PerceptionVideoProfile, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }

@@ -12,12 +12,7 @@
 static PyObject* PyType_FromMetaclass(
     PyTypeObject* metaclass, PyObject* module, PyType_Spec* spec, PyObject* bases)
 {
-#if PY_VERSION_HEX >= 0x03090000
     py::pyobj_handle temp{PyType_FromModuleAndSpec(module, spec, bases)};
-#else
-    (void)module;
-    py::pyobj_handle temp{PyType_FromSpecWithBases(spec, bases)};
-#endif
 
     if (!temp)
     {
@@ -54,15 +49,12 @@ static PyObject* PyType_FromMetaclass(
     Py_INCREF(temp_ht->ht_name);
     Py_INCREF(temp_ht->ht_qualname);
     Py_XINCREF(temp_ht->ht_slots);
+    Py_XINCREF(temp_ht->ht_module);
 
     ht->ht_name = temp_ht->ht_name;
     ht->ht_qualname = temp_ht->ht_qualname;
     ht->ht_slots = temp_ht->ht_slots;
-
-#if PY_VERSION_HEX >= 0x03090000
-    Py_XINCREF(temp_ht->ht_module);
     ht->ht_module = temp_ht->ht_module;
-#endif
 
     auto tp_name = PyUnicode_AsUTF8AndSize(temp_ht->ht_name, nullptr);
 
@@ -182,9 +174,6 @@ static PyObject* PyType_FromMetaclass(
 int py::register_python_type(
     PyObject* module,
     PyType_Spec* type_spec,
-#if PY_VERSION_HEX < 0x03090000
-    PyBufferProcs* buffer_procs,
-#endif
     PyObject* base_type,
     PyTypeObject* metaclass) noexcept
 {
@@ -195,11 +184,6 @@ int py::register_python_type(
     {
         return -1;
     }
-
-#if PY_VERSION_HEX < 0x03090000
-    // workaround for https://bugs.python.org/issue40724
-    reinterpret_cast<PyTypeObject*>(type_object.get())->tp_as_buffer = buffer_procs;
-#endif
 
     if (PyModule_AddType(module, reinterpret_cast<PyTypeObject*>(type_object.get()))
         == -1)

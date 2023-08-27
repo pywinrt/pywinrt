@@ -1458,9 +1458,7 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyMethodDef _methods_IIterable[] = {
         { "first", reinterpret_cast<PyCFunction>(IIterable_First), METH_VARARGS, nullptr },
-        #if PY_VERSION_HEX >= 0x03090000
         { "__class_getitem__", Py_GenericAlias, METH_O | METH_CLASS, PyDoc_STR("See PEP 585") },
-        #endif
         { }
     };
 
@@ -1550,9 +1548,7 @@ namespace py::cpp::Windows::Foundation::Collections
     static PyMethodDef _methods_IIterator[] = {
         { "get_many", reinterpret_cast<PyCFunction>(IIterator_GetMany), METH_VARARGS, nullptr },
         { "move_next", reinterpret_cast<PyCFunction>(IIterator_MoveNext), METH_VARARGS, nullptr },
-        #if PY_VERSION_HEX >= 0x03090000
         { "__class_getitem__", Py_GenericAlias, METH_O | METH_CLASS, PyDoc_STR("See PEP 585") },
-        #endif
         { }
     };
 
@@ -1623,9 +1619,7 @@ namespace py::cpp::Windows::Foundation::Collections
     }
 
     static PyMethodDef _methods_IKeyValuePair[] = {
-        #if PY_VERSION_HEX >= 0x03090000
         { "__class_getitem__", Py_GenericAlias, METH_O | METH_CLASS, PyDoc_STR("See PEP 585") },
-        #endif
         { }
     };
 
@@ -1694,9 +1688,7 @@ namespace py::cpp::Windows::Foundation::Collections
     }
 
     static PyMethodDef _methods_IMapChangedEventArgs[] = {
-        #if PY_VERSION_HEX >= 0x03090000
         { "__class_getitem__", Py_GenericAlias, METH_O | METH_CLASS, PyDoc_STR("See PEP 585") },
-        #endif
         { }
     };
 
@@ -1798,9 +1790,7 @@ namespace py::cpp::Windows::Foundation::Collections
         { "has_key", reinterpret_cast<PyCFunction>(IMapView_HasKey), METH_VARARGS, nullptr },
         { "lookup", reinterpret_cast<PyCFunction>(IMapView_Lookup), METH_VARARGS, nullptr },
         { "split", reinterpret_cast<PyCFunction>(IMapView_Split), METH_VARARGS, nullptr },
-        #if PY_VERSION_HEX >= 0x03090000
         { "__class_getitem__", Py_GenericAlias, METH_O | METH_CLASS, PyDoc_STR("See PEP 585") },
-        #endif
         { }
     };
 
@@ -1928,9 +1918,7 @@ namespace py::cpp::Windows::Foundation::Collections
         { "insert", reinterpret_cast<PyCFunction>(IMap_Insert), METH_VARARGS, nullptr },
         { "lookup", reinterpret_cast<PyCFunction>(IMap_Lookup), METH_VARARGS, nullptr },
         { "remove", reinterpret_cast<PyCFunction>(IMap_Remove), METH_VARARGS, nullptr },
-        #if PY_VERSION_HEX >= 0x03090000
         { "__class_getitem__", Py_GenericAlias, METH_O | METH_CLASS, PyDoc_STR("See PEP 585") },
-        #endif
         { }
     };
 
@@ -2083,9 +2071,7 @@ namespace py::cpp::Windows::Foundation::Collections
         { "remove", reinterpret_cast<PyCFunction>(IObservableMap_Remove), METH_VARARGS, nullptr },
         { "add_map_changed", reinterpret_cast<PyCFunction>(IObservableMap_add_MapChanged), METH_O, nullptr },
         { "remove_map_changed", reinterpret_cast<PyCFunction>(IObservableMap_remove_MapChanged), METH_O, nullptr },
-        #if PY_VERSION_HEX >= 0x03090000
         { "__class_getitem__", Py_GenericAlias, METH_O | METH_CLASS, PyDoc_STR("See PEP 585") },
-        #endif
         { }
     };
 
@@ -2268,9 +2254,7 @@ namespace py::cpp::Windows::Foundation::Collections
         { "set_at", reinterpret_cast<PyCFunction>(IObservableVector_SetAt), METH_VARARGS, nullptr },
         { "add_vector_changed", reinterpret_cast<PyCFunction>(IObservableVector_add_VectorChanged), METH_O, nullptr },
         { "remove_vector_changed", reinterpret_cast<PyCFunction>(IObservableVector_remove_VectorChanged), METH_O, nullptr },
-        #if PY_VERSION_HEX >= 0x03090000
         { "__class_getitem__", Py_GenericAlias, METH_O | METH_CLASS, PyDoc_STR("See PEP 585") },
-        #endif
         { }
     };
 
@@ -2937,9 +2921,7 @@ namespace py::cpp::Windows::Foundation::Collections
         { "get_at", reinterpret_cast<PyCFunction>(IVectorView_GetAt), METH_VARARGS, nullptr },
         { "get_many", reinterpret_cast<PyCFunction>(IVectorView_GetMany), METH_VARARGS, nullptr },
         { "index_of", reinterpret_cast<PyCFunction>(IVectorView_IndexOf), METH_VARARGS, nullptr },
-        #if PY_VERSION_HEX >= 0x03090000
         { "__class_getitem__", Py_GenericAlias, METH_O | METH_CLASS, PyDoc_STR("See PEP 585") },
-        #endif
         { }
     };
 
@@ -3097,9 +3079,7 @@ namespace py::cpp::Windows::Foundation::Collections
         { "remove_at_end", reinterpret_cast<PyCFunction>(IVector_RemoveAtEnd), METH_VARARGS, nullptr },
         { "replace_all", reinterpret_cast<PyCFunction>(IVector_ReplaceAll), METH_VARARGS, nullptr },
         { "set_at", reinterpret_cast<PyCFunction>(IVector_SetAt), METH_VARARGS, nullptr },
-        #if PY_VERSION_HEX >= 0x03090000
         { "__class_getitem__", Py_GenericAlias, METH_O | METH_CLASS, PyDoc_STR("See PEP 585") },
-        #endif
         { }
     };
 
@@ -3177,137 +3157,77 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation_collections(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_PropertySet, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_PropertySet, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_StringMap, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_StringMap, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_ValueSet, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_ValueSet, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_IIterable, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_IIterable, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_IIterator, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_IIterator, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_IKeyValuePair, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_IKeyValuePair, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_IMapChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_IMapChangedEventArgs, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_IMapView, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_IMapView, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_IMap, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_IMap, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_IObservableMap, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_IObservableMap, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_IObservableVector, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_IObservableVector, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_IPropertySet, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_IPropertySet, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_IVectorChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_IVectorChangedEventArgs, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_IVectorView, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_IVectorView, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_IVector, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_IVector, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }

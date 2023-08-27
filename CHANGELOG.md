@@ -31,6 +31,7 @@
 - Removed `-module` option from `pywinrt.exe`.
 - Removed `winrt.system.Guid` type alias.
 - Removed `winrt.system.Boolean` type alias.
+- Removed support for Python 3.8.
 
 ## [v1.0.0-beta.10] - 2023-08-11
 

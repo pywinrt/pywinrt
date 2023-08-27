@@ -5071,47 +5071,27 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_core(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_AsymmetricAlgorithmNames, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AsymmetricAlgorithmNames_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_AsymmetricAlgorithmNames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AsymmetricAlgorithmNames_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_AsymmetricKeyAlgorithmProvider, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_AsymmetricKeyAlgorithmProvider, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_CryptographicEngine, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_CryptographicEngine, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_CryptographicHash, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_CryptographicHash, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_CryptographicKey, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_CryptographicKey, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -5122,20 +5102,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_core(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_EccCurveNames, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EccCurveNames_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_EccCurveNames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EccCurveNames_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_EncryptedAndAuthenticatedData, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_EncryptedAndAuthenticatedData, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -5146,20 +5118,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_core(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_HashAlgorithmNames, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HashAlgorithmNames_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_HashAlgorithmNames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HashAlgorithmNames_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_HashAlgorithmProvider, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_HashAlgorithmProvider, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -5170,29 +5134,17 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_core(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_KeyDerivationAlgorithmNames, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KeyDerivationAlgorithmNames_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_KeyDerivationAlgorithmNames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KeyDerivationAlgorithmNames_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_KeyDerivationAlgorithmProvider, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_KeyDerivationAlgorithmProvider, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_KeyDerivationParameters, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_KeyDerivationParameters, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -5203,29 +5155,17 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_core(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_MacAlgorithmNames, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MacAlgorithmNames_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_MacAlgorithmNames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MacAlgorithmNames_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_MacAlgorithmProvider, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_MacAlgorithmProvider, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_PersistedKeyProvider, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_PersistedKeyProvider, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -5236,20 +5176,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_core(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_SymmetricAlgorithmNames, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SymmetricAlgorithmNames_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_SymmetricAlgorithmNames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SymmetricAlgorithmNames_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_SymmetricKeyAlgorithmProvider, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_SymmetricKeyAlgorithmProvider, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }

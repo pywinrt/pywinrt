@@ -1128,38 +1128,22 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_haptics(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_KnownSimpleHapticsControllerWaveforms, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownSimpleHapticsControllerWaveforms_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_KnownSimpleHapticsControllerWaveforms, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownSimpleHapticsControllerWaveforms_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_SimpleHapticsController, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_SimpleHapticsController, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_SimpleHapticsControllerFeedback, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_SimpleHapticsControllerFeedback, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_VibrationDevice, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_VibrationDevice, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }

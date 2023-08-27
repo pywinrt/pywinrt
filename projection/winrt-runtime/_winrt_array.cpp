@@ -436,12 +436,10 @@ namespace py::cpp::_winrt
     }
 
     static PyMethodDef Array_tp_methods[] = {
-#if PY_VERSION_HEX >= 0x03090000
         {"__class_getitem__",
          Py_GenericAlias,
          METH_O | METH_CLASS,
          PyDoc_STR("See PEP 585")},
-#endif
         {"insert", Array_insert, METH_VARARGS, PyDoc_STR("inserting is not supported")},
         {}};
 
@@ -522,11 +520,6 @@ namespace py::cpp::_winrt
         return 0;
     }
 
-#if PY_VERSION_HEX < 0x03090000
-    PyBufferProcs Array_buffer_procs
-        = {reinterpret_cast<getbufferproc>(Array_bf_getbuffer), nullptr};
-#endif
-
     static PyType_Slot Array_type_slots[] = {
         {Py_tp_doc, const_cast<char*>(Array_doc)},
         {Py_tp_new, reinterpret_cast<void*>(Array_tp_new)},
@@ -536,9 +529,7 @@ namespace py::cpp::_winrt
         {Py_sq_length, reinterpret_cast<void*>(Array_sq_length)},
         {Py_sq_item, reinterpret_cast<void*>(Array_sq_item)},
         {Py_sq_ass_item, reinterpret_cast<void*>(Array_sq_ass_item)},
-#if PY_VERSION_HEX >= 0x03090000
         {Py_bf_getbuffer, reinterpret_cast<void*>(Array_bf_getbuffer)},
-#endif
         {},
     };
 

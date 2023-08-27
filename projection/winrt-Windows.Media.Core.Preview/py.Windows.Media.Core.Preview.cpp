@@ -177,11 +177,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_core_preview(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_SoundLevelBroker, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SoundLevelBroker_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_SoundLevelBroker, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SoundLevelBroker_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }

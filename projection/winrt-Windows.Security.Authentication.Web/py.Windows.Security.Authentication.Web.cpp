@@ -432,20 +432,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_web(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_WebAuthenticationBroker, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_WebAuthenticationBroker, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_WebAuthenticationResult, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_WebAuthenticationResult, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }

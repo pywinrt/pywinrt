@@ -5622,20 +5622,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_mediaproperties(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_AudioEncodingProperties, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_AudioEncodingProperties, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_ContainerEncodingProperties, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_ContainerEncodingProperties, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -5646,29 +5638,17 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_mediaproperties(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_H264ProfileIds, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_H264ProfileIds_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_H264ProfileIds, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_H264ProfileIds_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_ImageEncodingProperties, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_ImageEncodingProperties, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_MediaEncodingProfile, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_MediaEncodingProfile, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -5679,29 +5659,17 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_mediaproperties(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_MediaEncodingSubtypes, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MediaEncodingSubtypes_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_MediaEncodingSubtypes, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MediaEncodingSubtypes_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_MediaPropertySet, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_MediaPropertySet, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_MediaRatio, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_MediaRatio, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -5712,38 +5680,22 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_mediaproperties(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_Mpeg2ProfileIds, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Mpeg2ProfileIds_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_Mpeg2ProfileIds, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Mpeg2ProfileIds_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_TimedMetadataEncodingProperties, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_TimedMetadataEncodingProperties, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_VideoEncodingProperties, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_VideoEncodingProperties, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_IMediaEncodingProperties, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_IMediaEncodingProperties, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }

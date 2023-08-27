@@ -13354,38 +13354,22 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_documents(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_Block, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Block_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_Block, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Block_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_BlockCollection, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_BlockCollection, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_Bold, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_Bold, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_ContactContentLinkProvider, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_ContactContentLinkProvider, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -13396,38 +13380,22 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_documents(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_ContentLink, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContentLink_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_ContentLink, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContentLink_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_ContentLinkInvokedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_ContentLinkInvokedEventArgs, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_ContentLinkProvider, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_ContentLinkProvider, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_ContentLinkProviderCollection, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_ContentLinkProviderCollection, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -13438,11 +13406,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_documents(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_Glyphs, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Glyphs_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_Glyphs, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Glyphs_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -13453,65 +13417,37 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_documents(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_Hyperlink, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Hyperlink_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_Hyperlink, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Hyperlink_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_HyperlinkClickEventArgs, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_HyperlinkClickEventArgs, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_Inline, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_Inline, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_InlineCollection, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_InlineCollection, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_InlineUIContainer, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_InlineUIContainer, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_Italic, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_Italic, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_LineBreak, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_LineBreak, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -13522,20 +13458,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_documents(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_Paragraph, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Paragraph_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_Paragraph, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Paragraph_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_PlaceContentLinkProvider, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_PlaceContentLinkProvider, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -13546,20 +13474,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_documents(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_Run, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Run_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_Run, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Run_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_Span, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_Span, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -13570,11 +13490,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_documents(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_TextElement, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TextElement_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_TextElement, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TextElement_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -13585,29 +13501,17 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_documents(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_TextHighlighter, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TextHighlighter_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_TextHighlighter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TextHighlighter_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_TextHighlighterBase, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_TextHighlighterBase, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_TextPointer, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_TextPointer, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -13618,29 +13522,17 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_documents(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_Typography, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Typography_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_Typography, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Typography_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_Underline, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_Underline, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_TextRange, nullptr, nullptr, nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_TextRange, nullptr, nullptr) == -1)
-    #endif
     {
         return nullptr;
     }

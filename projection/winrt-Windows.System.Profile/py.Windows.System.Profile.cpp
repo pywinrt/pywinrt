@@ -2212,29 +2212,17 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_profile(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_AnalyticsInfo, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AnalyticsInfo_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_AnalyticsInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AnalyticsInfo_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_AnalyticsVersionInfo, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_AnalyticsVersionInfo, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_AppApplicability, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_AppApplicability, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -2245,29 +2233,17 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_profile(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_EducationSettings, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EducationSettings_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_EducationSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EducationSettings_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_HardwareIdentification, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_HardwareIdentification, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_HardwareToken, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_HardwareToken, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -2278,11 +2254,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_profile(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_KnownRetailInfoProperties, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownRetailInfoProperties_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_KnownRetailInfoProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownRetailInfoProperties_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -2293,11 +2265,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_profile(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_PlatformDiagnosticsAndUsageDataSettings, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PlatformDiagnosticsAndUsageDataSettings_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_PlatformDiagnosticsAndUsageDataSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PlatformDiagnosticsAndUsageDataSettings_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -2308,11 +2276,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_profile(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_RetailInfo, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RetailInfo_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_RetailInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RetailInfo_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -2323,11 +2287,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_profile(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_SharedModeSettings, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SharedModeSettings_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_SharedModeSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SharedModeSettings_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -2338,29 +2298,17 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_profile(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_SmartAppControlPolicy, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SmartAppControlPolicy_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_SmartAppControlPolicy, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SmartAppControlPolicy_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_SystemIdentification, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_SystemIdentification, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_SystemIdentificationInfo, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_SystemIdentificationInfo, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -2371,20 +2319,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_profile(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_SystemSetupInfo, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemSetupInfo_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_SystemSetupInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemSetupInfo_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_UnsupportedAppRequirement, nullptr, object_bases.get(), nullptr) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_UnsupportedAppRequirement, object_bases.get(), nullptr) == -1)
-    #endif
     {
         return nullptr;
     }
@@ -2395,11 +2335,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_profile(void) noexcept
         return nullptr;
     }
 
-    #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), &type_spec_WindowsIntegrityPolicy, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WindowsIntegrityPolicy_Meta.get())) == -1)
-    #else
     if (py::register_python_type(module.get(), &type_spec_WindowsIntegrityPolicy, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WindowsIntegrityPolicy_Meta.get())) == -1)
-    #endif
     {
         return nullptr;
     }
