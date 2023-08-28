@@ -310,7 +310,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
     static PyType_Spec type_spec_BluetoothLEAdvertisement =
     {
-        "_winrt_windows_devices_bluetooth_advertisement.BluetoothLEAdvertisement",
+        "winrt._winrt_windows_devices_bluetooth_advertisement.BluetoothLEAdvertisement",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisement),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -562,7 +562,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
     static PyType_Spec type_spec_BluetoothLEAdvertisementBytePattern =
     {
-        "_winrt_windows_devices_bluetooth_advertisement.BluetoothLEAdvertisementBytePattern",
+        "winrt._winrt_windows_devices_bluetooth_advertisement.BluetoothLEAdvertisementBytePattern",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementBytePattern),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -765,7 +765,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
     static PyType_Spec type_spec_BluetoothLEAdvertisementDataSection =
     {
-        "_winrt_windows_devices_bluetooth_advertisement.BluetoothLEAdvertisementDataSection",
+        "winrt._winrt_windows_devices_bluetooth_advertisement.BluetoothLEAdvertisementDataSection",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementDataSection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1217,7 +1217,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
     static PyType_Spec type_spec_BluetoothLEAdvertisementDataTypes =
     {
-        "_winrt_windows_devices_bluetooth_advertisement.BluetoothLEAdvertisementDataTypes",
+        "winrt._winrt_windows_devices_bluetooth_advertisement.BluetoothLEAdvertisementDataTypes",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1259,7 +1259,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
     static PyType_Spec type_spec_BluetoothLEAdvertisementDataTypes_Meta =
     {
-        "_winrt_windows_devices_bluetooth_advertisement.BluetoothLEAdvertisementDataTypes_Meta",
+        "winrt._winrt_windows_devices_bluetooth_advertisement.BluetoothLEAdvertisementDataTypes_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1418,7 +1418,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
     static PyType_Spec type_spec_BluetoothLEAdvertisementFilter =
     {
-        "_winrt_windows_devices_bluetooth_advertisement.BluetoothLEAdvertisementFilter",
+        "winrt._winrt_windows_devices_bluetooth_advertisement.BluetoothLEAdvertisementFilter",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementFilter),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1863,7 +1863,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
     static PyType_Spec type_spec_BluetoothLEAdvertisementPublisher =
     {
-        "_winrt_windows_devices_bluetooth_advertisement.BluetoothLEAdvertisementPublisher",
+        "winrt._winrt_windows_devices_bluetooth_advertisement.BluetoothLEAdvertisementPublisher",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementPublisher),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1992,7 +1992,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
     static PyType_Spec type_spec_BluetoothLEAdvertisementPublisherStatusChangedEventArgs =
     {
-        "_winrt_windows_devices_bluetooth_advertisement.BluetoothLEAdvertisementPublisherStatusChangedEventArgs",
+        "winrt._winrt_windows_devices_bluetooth_advertisement.BluetoothLEAdvertisementPublisherStatusChangedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementPublisherStatusChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2301,7 +2301,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
     static PyType_Spec type_spec_BluetoothLEAdvertisementReceivedEventArgs =
     {
-        "_winrt_windows_devices_bluetooth_advertisement.BluetoothLEAdvertisementReceivedEventArgs",
+        "winrt._winrt_windows_devices_bluetooth_advertisement.BluetoothLEAdvertisementReceivedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementReceivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2851,7 +2851,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
     static PyType_Spec type_spec_BluetoothLEAdvertisementWatcher =
     {
-        "_winrt_windows_devices_bluetooth_advertisement.BluetoothLEAdvertisementWatcher",
+        "winrt._winrt_windows_devices_bluetooth_advertisement.BluetoothLEAdvertisementWatcher",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementWatcher),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2940,7 +2940,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
     static PyType_Spec type_spec_BluetoothLEAdvertisementWatcherStoppedEventArgs =
     {
-        "_winrt_windows_devices_bluetooth_advertisement.BluetoothLEAdvertisementWatcherStoppedEventArgs",
+        "winrt._winrt_windows_devices_bluetooth_advertisement.BluetoothLEAdvertisementWatcherStoppedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementWatcherStoppedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3143,7 +3143,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
     static PyType_Spec type_spec_BluetoothLEManufacturerData =
     {
-        "_winrt_windows_devices_bluetooth_advertisement.BluetoothLEManufacturerData",
+        "winrt._winrt_windows_devices_bluetooth_advertisement.BluetoothLEManufacturerData",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::Advertisement::BluetoothLEManufacturerData),
         0,
         Py_TPFLAGS_DEFAULT,

@@ -236,7 +236,7 @@ namespace py::cpp::Windows::Devices::I2c
 
     static PyType_Spec type_spec_I2cConnectionSettings =
     {
-        "_winrt_windows_devices_i2c.I2cConnectionSettings",
+        "winrt._winrt_windows_devices_i2c.I2cConnectionSettings",
         sizeof(py::wrapper::Windows::Devices::I2c::I2cConnectionSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -399,7 +399,7 @@ namespace py::cpp::Windows::Devices::I2c
 
     static PyType_Spec type_spec_I2cController =
     {
-        "_winrt_windows_devices_i2c.I2cController",
+        "winrt._winrt_windows_devices_i2c.I2cController",
         sizeof(py::wrapper::Windows::Devices::I2c::I2cController),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -840,7 +840,7 @@ namespace py::cpp::Windows::Devices::I2c
 
     static PyType_Spec type_spec_I2cDevice =
     {
-        "_winrt_windows_devices_i2c.I2cDevice",
+        "winrt._winrt_windows_devices_i2c.I2cDevice",
         sizeof(py::wrapper::Windows::Devices::I2c::I2cDevice),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -992,7 +992,7 @@ namespace py::cpp::Windows::Devices::I2c
 
     static PyType_Spec type_spec_II2cDeviceStatics =
     {
-        "_winrt_windows_devices_i2c.II2cDeviceStatics",
+        "winrt._winrt_windows_devices_i2c.II2cDeviceStatics",
         sizeof(py::wrapper::Windows::Devices::I2c::II2cDeviceStatics),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1153,7 +1153,7 @@ namespace py::cpp::Windows::Devices::I2c
 
     static PyType_Spec type_spec_I2cTransferResult =
     {
-        "_winrt_windows_devices_i2c.I2cTransferResult",
+        "winrt._winrt_windows_devices_i2c.I2cTransferResult",
         sizeof(py::wrapper::Windows::Devices::I2c::I2cTransferResult),
         0,
         Py_TPFLAGS_DEFAULT,

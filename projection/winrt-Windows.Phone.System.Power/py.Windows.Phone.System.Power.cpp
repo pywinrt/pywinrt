@@ -116,7 +116,7 @@ namespace py::cpp::Windows::Phone::System::Power
 
     static PyType_Spec type_spec_PowerManager =
     {
-        "_winrt_windows_phone_system_power.PowerManager",
+        "winrt._winrt_windows_phone_system_power.PowerManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -138,7 +138,7 @@ namespace py::cpp::Windows::Phone::System::Power
 
     static PyType_Spec type_spec_PowerManager_Meta =
     {
-        "_winrt_windows_phone_system_power.PowerManager_Meta",
+        "winrt._winrt_windows_phone_system_power.PowerManager_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,

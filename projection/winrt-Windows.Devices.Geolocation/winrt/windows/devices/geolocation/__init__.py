@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_devices_geolocation
+from winrt import _winrt_windows_devices_geolocation
 
 __all__ = [
     "AltitudeReferenceSystem",

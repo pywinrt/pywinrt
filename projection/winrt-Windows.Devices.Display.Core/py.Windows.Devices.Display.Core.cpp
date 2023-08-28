@@ -260,7 +260,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyType_Spec type_spec_DisplayAdapter =
     {
-        "_winrt_windows_devices_display_core.DisplayAdapter",
+        "winrt._winrt_windows_devices_display_core.DisplayAdapter",
         sizeof(py::wrapper::Windows::Devices::Display::Core::DisplayAdapter),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -594,7 +594,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyType_Spec type_spec_DisplayDevice =
     {
-        "_winrt_windows_devices_display_core.DisplayDevice",
+        "winrt._winrt_windows_devices_display_core.DisplayDevice",
         sizeof(py::wrapper::Windows::Devices::Display::Core::DisplayDevice),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -663,7 +663,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyType_Spec type_spec_DisplayFence =
     {
-        "_winrt_windows_devices_display_core.DisplayFence",
+        "winrt._winrt_windows_devices_display_core.DisplayFence",
         sizeof(py::wrapper::Windows::Devices::Display::Core::DisplayFence),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1342,7 +1342,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyType_Spec type_spec_DisplayManager =
     {
-        "_winrt_windows_devices_display_core.DisplayManager",
+        "winrt._winrt_windows_devices_display_core.DisplayManager",
         sizeof(py::wrapper::Windows::Devices::Display::Core::DisplayManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1489,7 +1489,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyType_Spec type_spec_DisplayManagerChangedEventArgs =
     {
-        "_winrt_windows_devices_display_core.DisplayManagerChangedEventArgs",
+        "winrt._winrt_windows_devices_display_core.DisplayManagerChangedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Display::Core::DisplayManagerChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1636,7 +1636,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyType_Spec type_spec_DisplayManagerDisabledEventArgs =
     {
-        "_winrt_windows_devices_display_core.DisplayManagerDisabledEventArgs",
+        "winrt._winrt_windows_devices_display_core.DisplayManagerDisabledEventArgs",
         sizeof(py::wrapper::Windows::Devices::Display::Core::DisplayManagerDisabledEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1783,7 +1783,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyType_Spec type_spec_DisplayManagerEnabledEventArgs =
     {
-        "_winrt_windows_devices_display_core.DisplayManagerEnabledEventArgs",
+        "winrt._winrt_windows_devices_display_core.DisplayManagerEnabledEventArgs",
         sizeof(py::wrapper::Windows::Devices::Display::Core::DisplayManagerEnabledEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1930,7 +1930,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyType_Spec type_spec_DisplayManagerPathsFailedOrInvalidatedEventArgs =
     {
-        "_winrt_windows_devices_display_core.DisplayManagerPathsFailedOrInvalidatedEventArgs",
+        "winrt._winrt_windows_devices_display_core.DisplayManagerPathsFailedOrInvalidatedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Display::Core::DisplayManagerPathsFailedOrInvalidatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2059,7 +2059,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyType_Spec type_spec_DisplayManagerResultWithState =
     {
-        "_winrt_windows_devices_display_core.DisplayManagerResultWithState",
+        "winrt._winrt_windows_devices_display_core.DisplayManagerResultWithState",
         sizeof(py::wrapper::Windows::Devices::Display::Core::DisplayManagerResultWithState),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2352,7 +2352,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyType_Spec type_spec_DisplayModeInfo =
     {
-        "_winrt_windows_devices_display_core.DisplayModeInfo",
+        "winrt._winrt_windows_devices_display_core.DisplayModeInfo",
         sizeof(py::wrapper::Windows::Devices::Display::Core::DisplayModeInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3046,7 +3046,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyType_Spec type_spec_DisplayPath =
     {
-        "_winrt_windows_devices_display_core.DisplayPath",
+        "winrt._winrt_windows_devices_display_core.DisplayPath",
         sizeof(py::wrapper::Windows::Devices::Display::Core::DisplayPath),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3322,7 +3322,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyType_Spec type_spec_DisplayPrimaryDescription =
     {
-        "_winrt_windows_devices_display_core.DisplayPrimaryDescription",
+        "winrt._winrt_windows_devices_display_core.DisplayPrimaryDescription",
         sizeof(py::wrapper::Windows::Devices::Display::Core::DisplayPrimaryDescription),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3391,7 +3391,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyType_Spec type_spec_DisplayScanout =
     {
-        "_winrt_windows_devices_display_core.DisplayScanout",
+        "winrt._winrt_windows_devices_display_core.DisplayScanout",
         sizeof(py::wrapper::Windows::Devices::Display::Core::DisplayScanout),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3597,7 +3597,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyType_Spec type_spec_DisplaySource =
     {
-        "_winrt_windows_devices_display_core.DisplaySource",
+        "winrt._winrt_windows_devices_display_core.DisplaySource",
         sizeof(py::wrapper::Windows::Devices::Display::Core::DisplaySource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4043,7 +4043,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyType_Spec type_spec_DisplayState =
     {
-        "_winrt_windows_devices_display_core.DisplayState",
+        "winrt._winrt_windows_devices_display_core.DisplayState",
         sizeof(py::wrapper::Windows::Devices::Display::Core::DisplayState),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4152,7 +4152,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyType_Spec type_spec_DisplayStateOperationResult =
     {
-        "_winrt_windows_devices_display_core.DisplayStateOperationResult",
+        "winrt._winrt_windows_devices_display_core.DisplayStateOperationResult",
         sizeof(py::wrapper::Windows::Devices::Display::Core::DisplayStateOperationResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4221,7 +4221,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyType_Spec type_spec_DisplaySurface =
     {
-        "_winrt_windows_devices_display_core.DisplaySurface",
+        "winrt._winrt_windows_devices_display_core.DisplaySurface",
         sizeof(py::wrapper::Windows::Devices::Display::Core::DisplaySurface),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4604,7 +4604,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyType_Spec type_spec_DisplayTarget =
     {
-        "_winrt_windows_devices_display_core.DisplayTarget",
+        "winrt._winrt_windows_devices_display_core.DisplayTarget",
         sizeof(py::wrapper::Windows::Devices::Display::Core::DisplayTarget),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4774,7 +4774,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyType_Spec type_spec_DisplayTask =
     {
-        "_winrt_windows_devices_display_core.DisplayTask",
+        "winrt._winrt_windows_devices_display_core.DisplayTask",
         sizeof(py::wrapper::Windows::Devices::Display::Core::DisplayTask),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4938,7 +4938,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyType_Spec type_spec_DisplayTaskPool =
     {
-        "_winrt_windows_devices_display_core.DisplayTaskPool",
+        "winrt._winrt_windows_devices_display_core.DisplayTaskPool",
         sizeof(py::wrapper::Windows::Devices::Display::Core::DisplayTaskPool),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5067,7 +5067,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyType_Spec type_spec_DisplayTaskResult =
     {
-        "_winrt_windows_devices_display_core.DisplayTaskResult",
+        "winrt._winrt_windows_devices_display_core.DisplayTaskResult",
         sizeof(py::wrapper::Windows::Devices::Display::Core::DisplayTaskResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5257,7 +5257,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyType_Spec type_spec_DisplayView =
     {
-        "_winrt_windows_devices_display_core.DisplayView",
+        "winrt._winrt_windows_devices_display_core.DisplayView",
         sizeof(py::wrapper::Windows::Devices::Display::Core::DisplayView),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5511,7 +5511,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyType_Spec type_spec_DisplayWireFormat =
     {
-        "_winrt_windows_devices_display_core.DisplayWireFormat",
+        "winrt._winrt_windows_devices_display_core.DisplayWireFormat",
         sizeof(py::wrapper::Windows::Devices::Display::Core::DisplayWireFormat),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5672,7 +5672,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyType_Spec type_spec_DisplayPresentationRate =
     {
-        "_winrt_windows_devices_display_core.DisplayPresentationRate",
+        "winrt._winrt_windows_devices_display_core.DisplayPresentationRate",
         sizeof(py::wrapper::Windows::Devices::Display::Core::DisplayPresentationRate),
         0,
         Py_TPFLAGS_DEFAULT,

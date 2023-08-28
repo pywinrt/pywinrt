@@ -275,7 +275,7 @@ namespace py::cpp::Windows::System::Power
 
     static PyType_Spec type_spec_BackgroundEnergyManager =
     {
-        "_winrt_windows_system_power.BackgroundEnergyManager",
+        "winrt._winrt_windows_system_power.BackgroundEnergyManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -303,7 +303,7 @@ namespace py::cpp::Windows::System::Power
 
     static PyType_Spec type_spec_BackgroundEnergyManager_Meta =
     {
-        "_winrt_windows_system_power.BackgroundEnergyManager_Meta",
+        "winrt._winrt_windows_system_power.BackgroundEnergyManager_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -541,7 +541,7 @@ namespace py::cpp::Windows::System::Power
 
     static PyType_Spec type_spec_ForegroundEnergyManager =
     {
-        "_winrt_windows_system_power.ForegroundEnergyManager",
+        "winrt._winrt_windows_system_power.ForegroundEnergyManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -567,7 +567,7 @@ namespace py::cpp::Windows::System::Power
 
     static PyType_Spec type_spec_ForegroundEnergyManager_Meta =
     {
-        "_winrt_windows_system_power.ForegroundEnergyManager_Meta",
+        "winrt._winrt_windows_system_power.ForegroundEnergyManager_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -921,7 +921,7 @@ namespace py::cpp::Windows::System::Power
 
     static PyType_Spec type_spec_PowerManager =
     {
-        "_winrt_windows_system_power.PowerManager",
+        "winrt._winrt_windows_system_power.PowerManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -946,7 +946,7 @@ namespace py::cpp::Windows::System::Power
 
     static PyType_Spec type_spec_PowerManager_Meta =
     {
-        "_winrt_windows_system_power.PowerManager_Meta",
+        "winrt._winrt_windows_system_power.PowerManager_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,

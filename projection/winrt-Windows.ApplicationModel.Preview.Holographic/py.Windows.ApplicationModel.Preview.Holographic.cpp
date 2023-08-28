@@ -95,7 +95,7 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Holographic
 
     static PyType_Spec type_spec_HolographicApplicationPreview =
     {
-        "_winrt_windows_applicationmodel_preview_holographic.HolographicApplicationPreview",
+        "winrt._winrt_windows_applicationmodel_preview_holographic.HolographicApplicationPreview",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -284,7 +284,7 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Holographic
 
     static PyType_Spec type_spec_HolographicKeyboardPlacementOverridePreview =
     {
-        "_winrt_windows_applicationmodel_preview_holographic.HolographicKeyboardPlacementOverridePreview",
+        "winrt._winrt_windows_applicationmodel_preview_holographic.HolographicKeyboardPlacementOverridePreview",
         sizeof(py::wrapper::Windows::ApplicationModel::Preview::Holographic::HolographicKeyboardPlacementOverridePreview),
         0,
         Py_TPFLAGS_DEFAULT,

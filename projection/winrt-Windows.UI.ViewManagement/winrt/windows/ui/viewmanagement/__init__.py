@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_ui_viewmanagement
+from winrt import _winrt_windows_ui_viewmanagement
 
 __all__ = [
     "ApplicationViewBoundsMode",

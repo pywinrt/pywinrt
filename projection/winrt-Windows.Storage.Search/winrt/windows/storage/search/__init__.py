@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_storage_search
+from winrt import _winrt_windows_storage_search
 
 __all__ = [
     "CommonFileQuery",

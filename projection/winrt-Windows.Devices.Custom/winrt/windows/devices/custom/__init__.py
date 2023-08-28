@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_devices_custom
+from winrt import _winrt_windows_devices_custom
 
 __all__ = [
     "DeviceAccessMode",

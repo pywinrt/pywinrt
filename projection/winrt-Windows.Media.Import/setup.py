@@ -6,7 +6,7 @@ from winrt_sdk import get_include_dirs
 setup(
     ext_modules=[
         Extension(
-            "winrt.windows.media.import._winrt_windows_media_import",
+            "winrt._winrt_windows_media_import",
             sources=["py.Windows.Media.Import.cpp"],
             include_dirs=get_include_dirs(),
             extra_compile_args=["/std:c++20", "/permissive-"],

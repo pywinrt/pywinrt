@@ -279,7 +279,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
     static PyType_Spec type_spec_ContactDataProviderConnection =
     {
-        "_winrt_windows_applicationmodel_contacts_dataprovider.ContactDataProviderConnection",
+        "winrt._winrt_windows_applicationmodel_contacts_dataprovider.ContactDataProviderConnection",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -368,7 +368,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
     static PyType_Spec type_spec_ContactDataProviderTriggerDetails =
     {
-        "_winrt_windows_applicationmodel_contacts_dataprovider.ContactDataProviderTriggerDetails",
+        "winrt._winrt_windows_applicationmodel_contacts_dataprovider.ContactDataProviderTriggerDetails",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -539,7 +539,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
     static PyType_Spec type_spec_ContactListCreateOrUpdateContactRequest =
     {
-        "_winrt_windows_applicationmodel_contacts_dataprovider.ContactListCreateOrUpdateContactRequest",
+        "winrt._winrt_windows_applicationmodel_contacts_dataprovider.ContactListCreateOrUpdateContactRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactListCreateOrUpdateContactRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -658,7 +658,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
     static PyType_Spec type_spec_ContactListCreateOrUpdateContactRequestEventArgs =
     {
-        "_winrt_windows_applicationmodel_contacts_dataprovider.ContactListCreateOrUpdateContactRequestEventArgs",
+        "winrt._winrt_windows_applicationmodel_contacts_dataprovider.ContactListCreateOrUpdateContactRequestEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactListCreateOrUpdateContactRequestEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -827,7 +827,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
     static PyType_Spec type_spec_ContactListDeleteContactRequest =
     {
-        "_winrt_windows_applicationmodel_contacts_dataprovider.ContactListDeleteContactRequest",
+        "winrt._winrt_windows_applicationmodel_contacts_dataprovider.ContactListDeleteContactRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactListDeleteContactRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -946,7 +946,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
     static PyType_Spec type_spec_ContactListDeleteContactRequestEventArgs =
     {
-        "_winrt_windows_applicationmodel_contacts_dataprovider.ContactListDeleteContactRequestEventArgs",
+        "winrt._winrt_windows_applicationmodel_contacts_dataprovider.ContactListDeleteContactRequestEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactListDeleteContactRequestEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1189,7 +1189,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
     static PyType_Spec type_spec_ContactListServerSearchReadBatchRequest =
     {
-        "_winrt_windows_applicationmodel_contacts_dataprovider.ContactListServerSearchReadBatchRequest",
+        "winrt._winrt_windows_applicationmodel_contacts_dataprovider.ContactListServerSearchReadBatchRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactListServerSearchReadBatchRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1308,7 +1308,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
     static PyType_Spec type_spec_ContactListServerSearchReadBatchRequestEventArgs =
     {
-        "_winrt_windows_applicationmodel_contacts_dataprovider.ContactListServerSearchReadBatchRequestEventArgs",
+        "winrt._winrt_windows_applicationmodel_contacts_dataprovider.ContactListServerSearchReadBatchRequestEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactListServerSearchReadBatchRequestEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1457,7 +1457,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
     static PyType_Spec type_spec_ContactListSyncManagerSyncRequest =
     {
-        "_winrt_windows_applicationmodel_contacts_dataprovider.ContactListSyncManagerSyncRequest",
+        "winrt._winrt_windows_applicationmodel_contacts_dataprovider.ContactListSyncManagerSyncRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactListSyncManagerSyncRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1576,7 +1576,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
     static PyType_Spec type_spec_ContactListSyncManagerSyncRequestEventArgs =
     {
-        "_winrt_windows_applicationmodel_contacts_dataprovider.ContactListSyncManagerSyncRequestEventArgs",
+        "winrt._winrt_windows_applicationmodel_contacts_dataprovider.ContactListSyncManagerSyncRequestEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactListSyncManagerSyncRequestEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,

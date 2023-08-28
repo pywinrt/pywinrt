@@ -200,7 +200,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Management
 
     static PyType_Spec type_spec_IndexedResourceCandidate =
     {
-        "_winrt_windows_applicationmodel_resources_management.IndexedResourceCandidate",
+        "winrt._winrt_windows_applicationmodel_resources_management.IndexedResourceCandidate",
         sizeof(py::wrapper::Windows::ApplicationModel::Resources::Management::IndexedResourceCandidate),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -309,7 +309,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Management
 
     static PyType_Spec type_spec_IndexedResourceQualifier =
     {
-        "_winrt_windows_applicationmodel_resources_management.IndexedResourceQualifier",
+        "winrt._winrt_windows_applicationmodel_resources_management.IndexedResourceQualifier",
         sizeof(py::wrapper::Windows::ApplicationModel::Resources::Management::IndexedResourceQualifier),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -482,7 +482,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Management
 
     static PyType_Spec type_spec_ResourceIndexer =
     {
-        "_winrt_windows_applicationmodel_resources_management.ResourceIndexer",
+        "winrt._winrt_windows_applicationmodel_resources_management.ResourceIndexer",
         sizeof(py::wrapper::Windows::ApplicationModel::Resources::Management::ResourceIndexer),
         0,
         Py_TPFLAGS_DEFAULT,

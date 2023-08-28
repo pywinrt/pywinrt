@@ -291,7 +291,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::Provider
 
     static PyType_Spec type_spec_ContactPickerUI =
     {
-        "_winrt_windows_applicationmodel_contacts_provider.ContactPickerUI",
+        "winrt._winrt_windows_applicationmodel_contacts_provider.ContactPickerUI",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::Provider::ContactPickerUI),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -380,7 +380,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::Provider
 
     static PyType_Spec type_spec_ContactRemovedEventArgs =
     {
-        "_winrt_windows_applicationmodel_contacts_provider.ContactRemovedEventArgs",
+        "winrt._winrt_windows_applicationmodel_contacts_provider.ContactRemovedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::Provider::ContactRemovedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,

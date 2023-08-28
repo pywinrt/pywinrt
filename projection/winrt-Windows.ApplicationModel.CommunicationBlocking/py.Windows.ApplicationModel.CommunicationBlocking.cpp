@@ -210,7 +210,7 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
 
     static PyType_Spec type_spec_CommunicationBlockingAccessManager =
     {
-        "_winrt_windows_applicationmodel_communicationblocking.CommunicationBlockingAccessManager",
+        "winrt._winrt_windows_applicationmodel_communicationblocking.CommunicationBlockingAccessManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -231,7 +231,7 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
 
     static PyType_Spec type_spec_CommunicationBlockingAccessManager_Meta =
     {
-        "_winrt_windows_applicationmodel_communicationblocking.CommunicationBlockingAccessManager_Meta",
+        "winrt._winrt_windows_applicationmodel_communicationblocking.CommunicationBlockingAccessManager_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -345,7 +345,7 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
 
     static PyType_Spec type_spec_CommunicationBlockingAppManager =
     {
-        "_winrt_windows_applicationmodel_communicationblocking.CommunicationBlockingAppManager",
+        "winrt._winrt_windows_applicationmodel_communicationblocking.CommunicationBlockingAppManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -366,7 +366,7 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
 
     static PyType_Spec type_spec_CommunicationBlockingAppManager_Meta =
     {
-        "_winrt_windows_applicationmodel_communicationblocking.CommunicationBlockingAppManager_Meta",
+        "winrt._winrt_windows_applicationmodel_communicationblocking.CommunicationBlockingAppManager_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,

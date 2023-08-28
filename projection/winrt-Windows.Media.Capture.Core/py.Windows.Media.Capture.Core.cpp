@@ -148,7 +148,7 @@ namespace py::cpp::Windows::Media::Capture::Core
 
     static PyType_Spec type_spec_VariablePhotoCapturedEventArgs =
     {
-        "_winrt_windows_media_capture_core.VariablePhotoCapturedEventArgs",
+        "winrt._winrt_windows_media_capture_core.VariablePhotoCapturedEventArgs",
         sizeof(py::wrapper::Windows::Media::Capture::Core::VariablePhotoCapturedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -427,7 +427,7 @@ namespace py::cpp::Windows::Media::Capture::Core
 
     static PyType_Spec type_spec_VariablePhotoSequenceCapture =
     {
-        "_winrt_windows_media_capture_core.VariablePhotoSequenceCapture",
+        "winrt._winrt_windows_media_capture_core.VariablePhotoSequenceCapture",
         sizeof(py::wrapper::Windows::Media::Capture::Core::VariablePhotoSequenceCapture),
         0,
         Py_TPFLAGS_DEFAULT,

@@ -563,7 +563,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyType_Spec type_spec_AudioDeviceInputNode =
     {
-        "_winrt_windows_media_audio.AudioDeviceInputNode",
+        "winrt._winrt_windows_media_audio.AudioDeviceInputNode",
         sizeof(py::wrapper::Windows::Media::Audio::AudioDeviceInputNode),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1047,7 +1047,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyType_Spec type_spec_AudioDeviceOutputNode =
     {
-        "_winrt_windows_media_audio.AudioDeviceOutputNode",
+        "winrt._winrt_windows_media_audio.AudioDeviceOutputNode",
         sizeof(py::wrapper::Windows::Media::Audio::AudioDeviceOutputNode),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1921,7 +1921,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyType_Spec type_spec_AudioFileInputNode =
     {
-        "_winrt_windows_media_audio.AudioFileInputNode",
+        "winrt._winrt_windows_media_audio.AudioFileInputNode",
         sizeof(py::wrapper::Windows::Media::Audio::AudioFileInputNode),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2407,7 +2407,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyType_Spec type_spec_AudioFileOutputNode =
     {
-        "_winrt_windows_media_audio.AudioFileOutputNode",
+        "winrt._winrt_windows_media_audio.AudioFileOutputNode",
         sizeof(py::wrapper::Windows::Media::Audio::AudioFileOutputNode),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2496,7 +2496,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyType_Spec type_spec_AudioFrameCompletedEventArgs =
     {
-        "_winrt_windows_media_audio.AudioFrameCompletedEventArgs",
+        "winrt._winrt_windows_media_audio.AudioFrameCompletedEventArgs",
         sizeof(py::wrapper::Windows::Media::Audio::AudioFrameCompletedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3262,7 +3262,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyType_Spec type_spec_AudioFrameInputNode =
     {
-        "_winrt_windows_media_audio.AudioFrameInputNode",
+        "winrt._winrt_windows_media_audio.AudioFrameInputNode",
         sizeof(py::wrapper::Windows::Media::Audio::AudioFrameInputNode),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3708,7 +3708,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyType_Spec type_spec_AudioFrameOutputNode =
     {
-        "_winrt_windows_media_audio.AudioFrameOutputNode",
+        "winrt._winrt_windows_media_audio.AudioFrameOutputNode",
         sizeof(py::wrapper::Windows::Media::Audio::AudioFrameOutputNode),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4718,7 +4718,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyType_Spec type_spec_AudioGraph =
     {
-        "_winrt_windows_media_audio.AudioGraph",
+        "winrt._winrt_windows_media_audio.AudioGraph",
         sizeof(py::wrapper::Windows::Media::Audio::AudioGraph),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4839,7 +4839,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyType_Spec type_spec_AudioGraphBatchUpdater =
     {
-        "_winrt_windows_media_audio.AudioGraphBatchUpdater",
+        "winrt._winrt_windows_media_audio.AudioGraphBatchUpdater",
         sizeof(py::wrapper::Windows::Media::Audio::AudioGraphBatchUpdater),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4976,7 +4976,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyType_Spec type_spec_AudioGraphConnection =
     {
-        "_winrt_windows_media_audio.AudioGraphConnection",
+        "winrt._winrt_windows_media_audio.AudioGraphConnection",
         sizeof(py::wrapper::Windows::Media::Audio::AudioGraphConnection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5405,7 +5405,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyType_Spec type_spec_AudioGraphSettings =
     {
-        "_winrt_windows_media_audio.AudioGraphSettings",
+        "winrt._winrt_windows_media_audio.AudioGraphSettings",
         sizeof(py::wrapper::Windows::Media::Audio::AudioGraphSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5494,7 +5494,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyType_Spec type_spec_AudioGraphUnrecoverableErrorOccurredEventArgs =
     {
-        "_winrt_windows_media_audio.AudioGraphUnrecoverableErrorOccurredEventArgs",
+        "winrt._winrt_windows_media_audio.AudioGraphUnrecoverableErrorOccurredEventArgs",
         sizeof(py::wrapper::Windows::Media::Audio::AudioGraphUnrecoverableErrorOccurredEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5998,7 +5998,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyType_Spec type_spec_AudioNodeEmitter =
     {
-        "_winrt_windows_media_audio.AudioNodeEmitter",
+        "winrt._winrt_windows_media_audio.AudioNodeEmitter",
         sizeof(py::wrapper::Windows::Media::Audio::AudioNodeEmitter),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6127,7 +6127,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyType_Spec type_spec_AudioNodeEmitterConeProperties =
     {
-        "_winrt_windows_media_audio.AudioNodeEmitterConeProperties",
+        "winrt._winrt_windows_media_audio.AudioNodeEmitterConeProperties",
         sizeof(py::wrapper::Windows::Media::Audio::AudioNodeEmitterConeProperties),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6344,7 +6344,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyType_Spec type_spec_AudioNodeEmitterDecayModel =
     {
-        "_winrt_windows_media_audio.AudioNodeEmitterDecayModel",
+        "winrt._winrt_windows_media_audio.AudioNodeEmitterDecayModel",
         sizeof(py::wrapper::Windows::Media::Audio::AudioNodeEmitterDecayModel),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6453,7 +6453,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyType_Spec type_spec_AudioNodeEmitterNaturalDecayModelProperties =
     {
-        "_winrt_windows_media_audio.AudioNodeEmitterNaturalDecayModelProperties",
+        "winrt._winrt_windows_media_audio.AudioNodeEmitterNaturalDecayModelProperties",
         sizeof(py::wrapper::Windows::Media::Audio::AudioNodeEmitterNaturalDecayModelProperties),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6626,7 +6626,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyType_Spec type_spec_AudioNodeEmitterShape =
     {
-        "_winrt_windows_media_audio.AudioNodeEmitterShape",
+        "winrt._winrt_windows_media_audio.AudioNodeEmitterShape",
         sizeof(py::wrapper::Windows::Media::Audio::AudioNodeEmitterShape),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6909,7 +6909,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyType_Spec type_spec_AudioNodeListener =
     {
-        "_winrt_windows_media_audio.AudioNodeListener",
+        "winrt._winrt_windows_media_audio.AudioNodeListener",
         sizeof(py::wrapper::Windows::Media::Audio::AudioNodeListener),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7298,7 +7298,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyType_Spec type_spec_AudioPlaybackConnection =
     {
-        "_winrt_windows_media_audio.AudioPlaybackConnection",
+        "winrt._winrt_windows_media_audio.AudioPlaybackConnection",
         sizeof(py::wrapper::Windows::Media::Audio::AudioPlaybackConnection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7407,7 +7407,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyType_Spec type_spec_AudioPlaybackConnectionOpenResult =
     {
-        "_winrt_windows_media_audio.AudioPlaybackConnectionOpenResult",
+        "winrt._winrt_windows_media_audio.AudioPlaybackConnectionOpenResult",
         sizeof(py::wrapper::Windows::Media::Audio::AudioPlaybackConnectionOpenResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7749,7 +7749,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyType_Spec type_spec_AudioStateMonitor =
     {
-        "_winrt_windows_media_audio.AudioStateMonitor",
+        "winrt._winrt_windows_media_audio.AudioStateMonitor",
         sizeof(py::wrapper::Windows::Media::Audio::AudioStateMonitor),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8293,7 +8293,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyType_Spec type_spec_AudioSubmixNode =
     {
-        "_winrt_windows_media_audio.AudioSubmixNode",
+        "winrt._winrt_windows_media_audio.AudioSubmixNode",
         sizeof(py::wrapper::Windows::Media::Audio::AudioSubmixNode),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8422,7 +8422,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyType_Spec type_spec_CreateAudioDeviceInputNodeResult =
     {
-        "_winrt_windows_media_audio.CreateAudioDeviceInputNodeResult",
+        "winrt._winrt_windows_media_audio.CreateAudioDeviceInputNodeResult",
         sizeof(py::wrapper::Windows::Media::Audio::CreateAudioDeviceInputNodeResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8551,7 +8551,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyType_Spec type_spec_CreateAudioDeviceOutputNodeResult =
     {
-        "_winrt_windows_media_audio.CreateAudioDeviceOutputNodeResult",
+        "winrt._winrt_windows_media_audio.CreateAudioDeviceOutputNodeResult",
         sizeof(py::wrapper::Windows::Media::Audio::CreateAudioDeviceOutputNodeResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8680,7 +8680,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyType_Spec type_spec_CreateAudioFileInputNodeResult =
     {
-        "_winrt_windows_media_audio.CreateAudioFileInputNodeResult",
+        "winrt._winrt_windows_media_audio.CreateAudioFileInputNodeResult",
         sizeof(py::wrapper::Windows::Media::Audio::CreateAudioFileInputNodeResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8809,7 +8809,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyType_Spec type_spec_CreateAudioFileOutputNodeResult =
     {
-        "_winrt_windows_media_audio.CreateAudioFileOutputNodeResult",
+        "winrt._winrt_windows_media_audio.CreateAudioFileOutputNodeResult",
         sizeof(py::wrapper::Windows::Media::Audio::CreateAudioFileOutputNodeResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8938,7 +8938,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyType_Spec type_spec_CreateAudioGraphResult =
     {
-        "_winrt_windows_media_audio.CreateAudioGraphResult",
+        "winrt._winrt_windows_media_audio.CreateAudioGraphResult",
         sizeof(py::wrapper::Windows::Media::Audio::CreateAudioGraphResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9067,7 +9067,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyType_Spec type_spec_CreateMediaSourceAudioInputNodeResult =
     {
-        "_winrt_windows_media_audio.CreateMediaSourceAudioInputNodeResult",
+        "winrt._winrt_windows_media_audio.CreateMediaSourceAudioInputNodeResult",
         sizeof(py::wrapper::Windows::Media::Audio::CreateMediaSourceAudioInputNodeResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9344,7 +9344,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyType_Spec type_spec_EchoEffectDefinition =
     {
-        "_winrt_windows_media_audio.EchoEffectDefinition",
+        "winrt._winrt_windows_media_audio.EchoEffectDefinition",
         sizeof(py::wrapper::Windows::Media::Audio::EchoEffectDefinition),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9557,7 +9557,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyType_Spec type_spec_EqualizerBand =
     {
-        "_winrt_windows_media_audio.EqualizerBand",
+        "winrt._winrt_windows_media_audio.EqualizerBand",
         sizeof(py::wrapper::Windows::Media::Audio::EqualizerBand),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9710,7 +9710,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyType_Spec type_spec_EqualizerEffectDefinition =
     {
-        "_winrt_windows_media_audio.EqualizerEffectDefinition",
+        "winrt._winrt_windows_media_audio.EqualizerEffectDefinition",
         sizeof(py::wrapper::Windows::Media::Audio::EqualizerEffectDefinition),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9799,7 +9799,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyType_Spec type_spec_FrameInputNodeQuantumStartedEventArgs =
     {
-        "_winrt_windows_media_audio.FrameInputNodeQuantumStartedEventArgs",
+        "winrt._winrt_windows_media_audio.FrameInputNodeQuantumStartedEventArgs",
         sizeof(py::wrapper::Windows::Media::Audio::FrameInputNodeQuantumStartedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10028,7 +10028,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyType_Spec type_spec_LimiterEffectDefinition =
     {
-        "_winrt_windows_media_audio.LimiterEffectDefinition",
+        "winrt._winrt_windows_media_audio.LimiterEffectDefinition",
         sizeof(py::wrapper::Windows::Media::Audio::LimiterEffectDefinition),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10902,7 +10902,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyType_Spec type_spec_MediaSourceAudioInputNode =
     {
-        "_winrt_windows_media_audio.MediaSourceAudioInputNode",
+        "winrt._winrt_windows_media_audio.MediaSourceAudioInputNode",
         sizeof(py::wrapper::Windows::Media::Audio::MediaSourceAudioInputNode),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12139,7 +12139,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyType_Spec type_spec_ReverbEffectDefinition =
     {
-        "_winrt_windows_media_audio.ReverbEffectDefinition",
+        "winrt._winrt_windows_media_audio.ReverbEffectDefinition",
         sizeof(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12228,7 +12228,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyType_Spec type_spec_SetDefaultSpatialAudioFormatResult =
     {
-        "_winrt_windows_media_audio.SetDefaultSpatialAudioFormatResult",
+        "winrt._winrt_windows_media_audio.SetDefaultSpatialAudioFormatResult",
         sizeof(py::wrapper::Windows::Media::Audio::SetDefaultSpatialAudioFormatResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12518,7 +12518,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyType_Spec type_spec_SpatialAudioDeviceConfiguration =
     {
-        "_winrt_windows_media_audio.SpatialAudioDeviceConfiguration",
+        "winrt._winrt_windows_media_audio.SpatialAudioDeviceConfiguration",
         sizeof(py::wrapper::Windows::Media::Audio::SpatialAudioDeviceConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12729,7 +12729,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyType_Spec type_spec_SpatialAudioFormatConfiguration =
     {
-        "_winrt_windows_media_audio.SpatialAudioFormatConfiguration",
+        "winrt._winrt_windows_media_audio.SpatialAudioFormatConfiguration",
         sizeof(py::wrapper::Windows::Media::Audio::SpatialAudioFormatConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12896,7 +12896,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyType_Spec type_spec_SpatialAudioFormatSubtype =
     {
-        "_winrt_windows_media_audio.SpatialAudioFormatSubtype",
+        "winrt._winrt_windows_media_audio.SpatialAudioFormatSubtype",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12923,7 +12923,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyType_Spec type_spec_SpatialAudioFormatSubtype_Meta =
     {
-        "_winrt_windows_media_audio.SpatialAudioFormatSubtype_Meta",
+        "winrt._winrt_windows_media_audio.SpatialAudioFormatSubtype_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -13447,7 +13447,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyType_Spec type_spec_IAudioInputNode =
     {
-        "_winrt_windows_media_audio.IAudioInputNode",
+        "winrt._winrt_windows_media_audio.IAudioInputNode",
         sizeof(py::wrapper::Windows::Media::Audio::IAudioInputNode),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13991,7 +13991,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyType_Spec type_spec_IAudioInputNode2 =
     {
-        "_winrt_windows_media_audio.IAudioInputNode2",
+        "winrt._winrt_windows_media_audio.IAudioInputNode2",
         sizeof(py::wrapper::Windows::Media::Audio::IAudioInputNode2),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14407,7 +14407,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyType_Spec type_spec_IAudioNode =
     {
-        "_winrt_windows_media_audio.IAudioNode",
+        "winrt._winrt_windows_media_audio.IAudioNode",
         sizeof(py::wrapper::Windows::Media::Audio::IAudioNode),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14871,7 +14871,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyType_Spec type_spec_IAudioNodeWithListener =
     {
-        "_winrt_windows_media_audio.IAudioNodeWithListener",
+        "winrt._winrt_windows_media_audio.IAudioNodeWithListener",
         sizeof(py::wrapper::Windows::Media::Audio::IAudioNodeWithListener),
         0,
         Py_TPFLAGS_DEFAULT,

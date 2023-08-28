@@ -6,7 +6,7 @@ from winrt_sdk import get_include_dirs
 setup(
     ext_modules=[
         Extension(
-            "winrt.windows.ui.core.preview.communications._winrt_windows_ui_core_preview_communications",
+            "winrt._winrt_windows_ui_core_preview_communications",
             sources=["py.Windows.UI.Core.Preview.Communications.cpp"],
             include_dirs=get_include_dirs(),
             extra_compile_args=["/std:c++20", "/permissive-"],

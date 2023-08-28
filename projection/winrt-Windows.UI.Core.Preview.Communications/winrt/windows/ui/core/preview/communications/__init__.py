@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_ui_core_preview_communications
+from winrt import _winrt_windows_ui_core_preview_communications
 
 __all__ = [
     "PreviewMeetingInfoDisplayKind",

@@ -65,7 +65,7 @@ namespace py::cpp::Windows::Web
 
     static PyType_Spec type_spec_WebError =
     {
-        "_winrt_windows_web.WebError",
+        "winrt._winrt_windows_web.WebError",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -166,7 +166,7 @@ namespace py::cpp::Windows::Web
 
     static PyType_Spec type_spec_IUriToStreamResolver =
     {
-        "_winrt_windows_web.IUriToStreamResolver",
+        "winrt._winrt_windows_web.IUriToStreamResolver",
         sizeof(py::wrapper::Windows::Web::IUriToStreamResolver),
         0,
         Py_TPFLAGS_DEFAULT,

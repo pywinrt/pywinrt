@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_devices_midi
+from winrt import _winrt_windows_devices_midi
 
 __all__ = [
     "MidiMessageType",

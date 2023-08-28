@@ -6,7 +6,7 @@ from winrt_sdk import get_include_dirs
 setup(
     ext_modules=[
         Extension(
-            "winrt.windows.perception.automation.core._winrt_windows_perception_automation_core",
+            "winrt._winrt_windows_perception_automation_core",
             sources=["py.Windows.Perception.Automation.Core.cpp"],
             include_dirs=get_include_dirs(),
             extra_compile_args=["/std:c++20", "/permissive-"],

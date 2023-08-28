@@ -222,7 +222,7 @@ namespace py::cpp::Windows::System::Inventory
 
     static PyType_Spec type_spec_InstalledDesktopApp =
     {
-        "_winrt_windows_system_inventory.InstalledDesktopApp",
+        "winrt._winrt_windows_system_inventory.InstalledDesktopApp",
         sizeof(py::wrapper::Windows::System::Inventory::InstalledDesktopApp),
         0,
         Py_TPFLAGS_DEFAULT,

@@ -178,7 +178,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyType_Spec type_spec_WalletBarcode =
     {
-        "_winrt_windows_applicationmodel_wallet.WalletBarcode",
+        "winrt._winrt_windows_applicationmodel_wallet.WalletBarcode",
         sizeof(py::wrapper::Windows::ApplicationModel::Wallet::WalletBarcode),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1496,7 +1496,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyType_Spec type_spec_WalletItem =
     {
-        "_winrt_windows_applicationmodel_wallet.WalletItem",
+        "winrt._winrt_windows_applicationmodel_wallet.WalletItem",
         sizeof(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1830,7 +1830,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyType_Spec type_spec_WalletItemCustomProperty =
     {
-        "_winrt_windows_applicationmodel_wallet.WalletItemCustomProperty",
+        "winrt._winrt_windows_applicationmodel_wallet.WalletItemCustomProperty",
         sizeof(py::wrapper::Windows::ApplicationModel::Wallet::WalletItemCustomProperty),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2190,7 +2190,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyType_Spec type_spec_WalletItemStore =
     {
-        "_winrt_windows_applicationmodel_wallet.WalletItemStore",
+        "winrt._winrt_windows_applicationmodel_wallet.WalletItemStore",
         sizeof(py::wrapper::Windows::ApplicationModel::Wallet::WalletItemStore),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2254,7 +2254,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyType_Spec type_spec_WalletManager =
     {
-        "_winrt_windows_applicationmodel_wallet.WalletManager",
+        "winrt._winrt_windows_applicationmodel_wallet.WalletManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2441,7 +2441,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyType_Spec type_spec_WalletRelevantLocation =
     {
-        "_winrt_windows_applicationmodel_wallet.WalletRelevantLocation",
+        "winrt._winrt_windows_applicationmodel_wallet.WalletRelevantLocation",
         sizeof(py::wrapper::Windows::ApplicationModel::Wallet::WalletRelevantLocation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2820,7 +2820,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyType_Spec type_spec_WalletTransaction =
     {
-        "_winrt_windows_applicationmodel_wallet.WalletTransaction",
+        "winrt._winrt_windows_applicationmodel_wallet.WalletTransaction",
         sizeof(py::wrapper::Windows::ApplicationModel::Wallet::WalletTransaction),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2961,7 +2961,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyType_Spec type_spec_WalletVerb =
     {
-        "_winrt_windows_applicationmodel_wallet.WalletVerb",
+        "winrt._winrt_windows_applicationmodel_wallet.WalletVerb",
         sizeof(py::wrapper::Windows::ApplicationModel::Wallet::WalletVerb),
         0,
         Py_TPFLAGS_DEFAULT,

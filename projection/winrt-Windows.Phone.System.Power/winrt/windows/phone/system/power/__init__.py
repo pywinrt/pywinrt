@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_phone_system_power
+from winrt import _winrt_windows_phone_system_power
 
 __all__ = [
     "PowerSavingMode",

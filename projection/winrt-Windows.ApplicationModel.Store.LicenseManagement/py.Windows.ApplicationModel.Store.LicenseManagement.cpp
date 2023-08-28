@@ -130,7 +130,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
 
     static PyType_Spec type_spec_LicenseManager =
     {
-        "_winrt_windows_applicationmodel_store_licensemanagement.LicenseManager",
+        "winrt._winrt_windows_applicationmodel_store_licensemanagement.LicenseManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -339,7 +339,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
 
     static PyType_Spec type_spec_LicenseSatisfactionInfo =
     {
-        "_winrt_windows_applicationmodel_store_licensemanagement.LicenseSatisfactionInfo",
+        "winrt._winrt_windows_applicationmodel_store_licensemanagement.LicenseSatisfactionInfo",
         sizeof(py::wrapper::Windows::ApplicationModel::Store::LicenseManagement::LicenseSatisfactionInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -448,7 +448,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
 
     static PyType_Spec type_spec_LicenseSatisfactionResult =
     {
-        "_winrt_windows_applicationmodel_store_licensemanagement.LicenseSatisfactionResult",
+        "winrt._winrt_windows_applicationmodel_store_licensemanagement.LicenseSatisfactionResult",
         sizeof(py::wrapper::Windows::ApplicationModel::Store::LicenseManagement::LicenseSatisfactionResult),
         0,
         Py_TPFLAGS_DEFAULT,

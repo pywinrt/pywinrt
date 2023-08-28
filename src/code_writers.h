@@ -2227,7 +2227,7 @@ return 0;
         auto format = R"(
 static PyType_Spec type_spec_@ =
 {
-    "%.@",
+    "winrt.%.@",
     %,
     0,
     Py_TPFLAGS_DEFAULT,
@@ -2307,7 +2307,7 @@ static PyType_Spec type_spec_@ =
         auto format = R"(
 static PyType_Spec type_spec_@_Meta =
 {
-    "%.@_Meta",
+    "winrt.%.@_Meta",
     static_cast<int>(PyType_Type.tp_basicsize),
     static_cast<int>(PyType_Type.tp_itemsize),
     Py_TPFLAGS_DEFAULT,

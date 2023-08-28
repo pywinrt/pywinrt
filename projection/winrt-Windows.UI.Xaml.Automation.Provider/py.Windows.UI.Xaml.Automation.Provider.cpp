@@ -68,7 +68,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     static PyType_Spec type_spec_IRawElementProviderSimple =
     {
-        "_winrt_windows_ui_xaml_automation_provider.IRawElementProviderSimple",
+        "winrt._winrt_windows_ui_xaml_automation_provider.IRawElementProviderSimple",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::IRawElementProviderSimple),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -237,7 +237,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     static PyType_Spec type_spec_IAnnotationProvider =
     {
-        "_winrt_windows_ui_xaml_automation_provider.IAnnotationProvider",
+        "winrt._winrt_windows_ui_xaml_automation_provider.IAnnotationProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::IAnnotationProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -338,7 +338,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     static PyType_Spec type_spec_ICustomNavigationProvider =
     {
-        "_winrt_windows_ui_xaml_automation_provider.ICustomNavigationProvider",
+        "winrt._winrt_windows_ui_xaml_automation_provider.ICustomNavigationProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::ICustomNavigationProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -460,7 +460,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     static PyType_Spec type_spec_IDockProvider =
     {
-        "_winrt_windows_ui_xaml_automation_provider.IDockProvider",
+        "winrt._winrt_windows_ui_xaml_automation_provider.IDockProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::IDockProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -619,7 +619,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     static PyType_Spec type_spec_IDragProvider =
     {
-        "_winrt_windows_ui_xaml_automation_provider.IDragProvider",
+        "winrt._winrt_windows_ui_xaml_automation_provider.IDragProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::IDragProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -728,7 +728,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     static PyType_Spec type_spec_IDropTargetProvider =
     {
-        "_winrt_windows_ui_xaml_automation_provider.IDropTargetProvider",
+        "winrt._winrt_windows_ui_xaml_automation_provider.IDropTargetProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::IDropTargetProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -879,7 +879,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     static PyType_Spec type_spec_IExpandCollapseProvider =
     {
-        "_winrt_windows_ui_xaml_automation_provider.IExpandCollapseProvider",
+        "winrt._winrt_windows_ui_xaml_automation_provider.IExpandCollapseProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::IExpandCollapseProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1048,7 +1048,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     static PyType_Spec type_spec_IGridItemProvider =
     {
-        "_winrt_windows_ui_xaml_automation_provider.IGridItemProvider",
+        "winrt._winrt_windows_ui_xaml_automation_provider.IGridItemProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::IGridItemProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1190,7 +1190,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     static PyType_Spec type_spec_IGridProvider =
     {
-        "_winrt_windows_ui_xaml_automation_provider.IGridProvider",
+        "winrt._winrt_windows_ui_xaml_automation_provider.IGridProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::IGridProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1290,7 +1290,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     static PyType_Spec type_spec_IInvokeProvider =
     {
-        "_winrt_windows_ui_xaml_automation_provider.IInvokeProvider",
+        "winrt._winrt_windows_ui_xaml_automation_provider.IInvokeProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::IInvokeProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1393,7 +1393,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     static PyType_Spec type_spec_IItemContainerProvider =
     {
-        "_winrt_windows_ui_xaml_automation_provider.IItemContainerProvider",
+        "winrt._winrt_windows_ui_xaml_automation_provider.IItemContainerProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::IItemContainerProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1577,7 +1577,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     static PyType_Spec type_spec_IMultipleViewProvider =
     {
-        "_winrt_windows_ui_xaml_automation_provider.IMultipleViewProvider",
+        "winrt._winrt_windows_ui_xaml_automation_provider.IMultipleViewProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::IMultipleViewProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1676,7 +1676,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     static PyType_Spec type_spec_IObjectModelProvider =
     {
-        "_winrt_windows_ui_xaml_automation_provider.IObjectModelProvider",
+        "winrt._winrt_windows_ui_xaml_automation_provider.IObjectModelProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::IObjectModelProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1898,7 +1898,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     static PyType_Spec type_spec_IRangeValueProvider =
     {
-        "_winrt_windows_ui_xaml_automation_provider.IRangeValueProvider",
+        "winrt._winrt_windows_ui_xaml_automation_provider.IRangeValueProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::IRangeValueProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1998,7 +1998,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     static PyType_Spec type_spec_IScrollItemProvider =
     {
-        "_winrt_windows_ui_xaml_automation_provider.IScrollItemProvider",
+        "winrt._winrt_windows_ui_xaml_automation_provider.IScrollItemProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::IScrollItemProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2255,7 +2255,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     static PyType_Spec type_spec_IScrollProvider =
     {
-        "_winrt_windows_ui_xaml_automation_provider.IScrollProvider",
+        "winrt._winrt_windows_ui_xaml_automation_provider.IScrollProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::IScrollProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2457,7 +2457,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     static PyType_Spec type_spec_ISelectionItemProvider =
     {
-        "_winrt_windows_ui_xaml_automation_provider.ISelectionItemProvider",
+        "winrt._winrt_windows_ui_xaml_automation_provider.ISelectionItemProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::ISelectionItemProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2596,7 +2596,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     static PyType_Spec type_spec_ISelectionProvider =
     {
-        "_winrt_windows_ui_xaml_automation_provider.ISelectionProvider",
+        "winrt._winrt_windows_ui_xaml_automation_provider.ISelectionProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::ISelectionProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2745,7 +2745,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     static PyType_Spec type_spec_ISpreadsheetItemProvider =
     {
-        "_winrt_windows_ui_xaml_automation_provider.ISpreadsheetItemProvider",
+        "winrt._winrt_windows_ui_xaml_automation_provider.ISpreadsheetItemProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::ISpreadsheetItemProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2846,7 +2846,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     static PyType_Spec type_spec_ISpreadsheetProvider =
     {
-        "_winrt_windows_ui_xaml_automation_provider.ISpreadsheetProvider",
+        "winrt._winrt_windows_ui_xaml_automation_provider.ISpreadsheetProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::ISpreadsheetProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3055,7 +3055,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     static PyType_Spec type_spec_IStylesProvider =
     {
-        "_winrt_windows_ui_xaml_automation_provider.IStylesProvider",
+        "winrt._winrt_windows_ui_xaml_automation_provider.IStylesProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::IStylesProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3188,7 +3188,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     static PyType_Spec type_spec_ISynchronizedInputProvider =
     {
-        "_winrt_windows_ui_xaml_automation_provider.ISynchronizedInputProvider",
+        "winrt._winrt_windows_ui_xaml_automation_provider.ISynchronizedInputProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::ISynchronizedInputProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3317,7 +3317,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     static PyType_Spec type_spec_ITableItemProvider =
     {
-        "_winrt_windows_ui_xaml_automation_provider.ITableItemProvider",
+        "winrt._winrt_windows_ui_xaml_automation_provider.ITableItemProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::ITableItemProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3466,7 +3466,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     static PyType_Spec type_spec_ITableProvider =
     {
-        "_winrt_windows_ui_xaml_automation_provider.ITableProvider",
+        "winrt._winrt_windows_ui_xaml_automation_provider.ITableProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::ITableProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3575,7 +3575,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     static PyType_Spec type_spec_ITextChildProvider =
     {
-        "_winrt_windows_ui_xaml_automation_provider.ITextChildProvider",
+        "winrt._winrt_windows_ui_xaml_automation_provider.ITextChildProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::ITextChildProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3868,7 +3868,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     static PyType_Spec type_spec_ITextEditProvider =
     {
-        "_winrt_windows_ui_xaml_automation_provider.ITextEditProvider",
+        "winrt._winrt_windows_ui_xaml_automation_provider.ITextEditProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::ITextEditProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4101,7 +4101,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     static PyType_Spec type_spec_ITextProvider =
     {
-        "_winrt_windows_ui_xaml_automation_provider.ITextProvider",
+        "winrt._winrt_windows_ui_xaml_automation_provider.ITextProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::ITextProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4410,7 +4410,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     static PyType_Spec type_spec_ITextProvider2 =
     {
-        "_winrt_windows_ui_xaml_automation_provider.ITextProvider2",
+        "winrt._winrt_windows_ui_xaml_automation_provider.ITextProvider2",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::ITextProvider2),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5067,7 +5067,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     static PyType_Spec type_spec_ITextRangeProvider =
     {
-        "_winrt_windows_ui_xaml_automation_provider.ITextRangeProvider",
+        "winrt._winrt_windows_ui_xaml_automation_provider.ITextRangeProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5755,7 +5755,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     static PyType_Spec type_spec_ITextRangeProvider2 =
     {
-        "_winrt_windows_ui_xaml_automation_provider.ITextRangeProvider2",
+        "winrt._winrt_windows_ui_xaml_automation_provider.ITextRangeProvider2",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider2),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5875,7 +5875,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     static PyType_Spec type_spec_IToggleProvider =
     {
-        "_winrt_windows_ui_xaml_automation_provider.IToggleProvider",
+        "winrt._winrt_windows_ui_xaml_automation_provider.IToggleProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::IToggleProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6105,7 +6105,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     static PyType_Spec type_spec_ITransformProvider =
     {
-        "_winrt_windows_ui_xaml_automation_provider.ITransformProvider",
+        "winrt._winrt_windows_ui_xaml_automation_provider.ITransformProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::ITransformProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6481,7 +6481,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     static PyType_Spec type_spec_ITransformProvider2 =
     {
-        "_winrt_windows_ui_xaml_automation_provider.ITransformProvider2",
+        "winrt._winrt_windows_ui_xaml_automation_provider.ITransformProvider2",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::ITransformProvider2),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6623,7 +6623,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     static PyType_Spec type_spec_IValueProvider =
     {
-        "_winrt_windows_ui_xaml_automation_provider.IValueProvider",
+        "winrt._winrt_windows_ui_xaml_automation_provider.IValueProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::IValueProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6723,7 +6723,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     static PyType_Spec type_spec_IVirtualizedItemProvider =
     {
-        "_winrt_windows_ui_xaml_automation_provider.IVirtualizedItemProvider",
+        "winrt._winrt_windows_ui_xaml_automation_provider.IVirtualizedItemProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::IVirtualizedItemProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7008,7 +7008,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     static PyType_Spec type_spec_IWindowProvider =
     {
-        "_winrt_windows_ui_xaml_automation_provider.IWindowProvider",
+        "winrt._winrt_windows_ui_xaml_automation_provider.IWindowProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::IWindowProvider),
         0,
         Py_TPFLAGS_DEFAULT,

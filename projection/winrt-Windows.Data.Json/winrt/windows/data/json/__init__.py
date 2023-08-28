@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_data_json
+from winrt import _winrt_windows_data_json
 
 __all__ = [
     "JsonErrorStatus",

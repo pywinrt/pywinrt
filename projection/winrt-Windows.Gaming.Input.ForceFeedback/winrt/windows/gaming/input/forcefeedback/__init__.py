@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_gaming_input_forcefeedback
+from winrt import _winrt_windows_gaming_input_forcefeedback
 
 __all__ = [
     "ConditionForceEffectKind",

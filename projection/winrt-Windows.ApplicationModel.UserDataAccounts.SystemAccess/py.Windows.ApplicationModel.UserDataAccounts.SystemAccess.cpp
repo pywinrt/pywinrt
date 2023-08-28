@@ -2194,7 +2194,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static PyType_Spec type_spec_DeviceAccountConfiguration =
     {
-        "_winrt_windows_applicationmodel_userdataaccounts_systemaccess.DeviceAccountConfiguration",
+        "winrt._winrt_windows_applicationmodel_userdataaccounts_systemaccess.DeviceAccountConfiguration",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2388,7 +2388,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static PyType_Spec type_spec_UserDataAccountSystemAccessManager =
     {
-        "_winrt_windows_applicationmodel_userdataaccounts_systemaccess.UserDataAccountSystemAccessManager",
+        "winrt._winrt_windows_applicationmodel_userdataaccounts_systemaccess.UserDataAccountSystemAccessManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,

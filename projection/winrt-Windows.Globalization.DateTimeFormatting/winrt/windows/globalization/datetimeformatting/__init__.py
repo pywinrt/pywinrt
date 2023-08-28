@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_globalization_datetimeformatting
+from winrt import _winrt_windows_globalization_datetimeformatting
 
 __all__ = [
     "DayFormat",

@@ -172,7 +172,7 @@ namespace py::cpp::Windows::UI::Xaml::Resources
 
     static PyType_Spec type_spec_CustomXamlResourceLoader =
     {
-        "_winrt_windows_ui_xaml_resources.CustomXamlResourceLoader",
+        "winrt._winrt_windows_ui_xaml_resources.CustomXamlResourceLoader",
         sizeof(py::wrapper::Windows::UI::Xaml::Resources::CustomXamlResourceLoader),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -193,7 +193,7 @@ namespace py::cpp::Windows::UI::Xaml::Resources
 
     static PyType_Spec type_spec_CustomXamlResourceLoader_Meta =
     {
-        "_winrt_windows_ui_xaml_resources.CustomXamlResourceLoader_Meta",
+        "winrt._winrt_windows_ui_xaml_resources.CustomXamlResourceLoader_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,

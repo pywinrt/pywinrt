@@ -192,7 +192,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyType_Spec type_spec_AutomationRemoteOperationResult =
     {
-        "_winrt_windows_ui_uiautomation_core.AutomationRemoteOperationResult",
+        "winrt._winrt_windows_ui_uiautomation_core.AutomationRemoteOperationResult",
         sizeof(py::wrapper::Windows::UI::UIAutomation::Core::AutomationRemoteOperationResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -291,7 +291,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyType_Spec type_spec_CoreAutomationRegistrar =
     {
-        "_winrt_windows_ui_uiautomation_core.CoreAutomationRegistrar",
+        "winrt._winrt_windows_ui_uiautomation_core.CoreAutomationRegistrar",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -581,7 +581,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyType_Spec type_spec_CoreAutomationRemoteOperation =
     {
-        "_winrt_windows_ui_uiautomation_core.CoreAutomationRemoteOperation",
+        "winrt._winrt_windows_ui_uiautomation_core.CoreAutomationRemoteOperation",
         sizeof(py::wrapper::Windows::UI::UIAutomation::Core::CoreAutomationRemoteOperation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -739,7 +739,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyType_Spec type_spec_CoreAutomationRemoteOperationContext =
     {
-        "_winrt_windows_ui_uiautomation_core.CoreAutomationRemoteOperationContext",
+        "winrt._winrt_windows_ui_uiautomation_core.CoreAutomationRemoteOperationContext",
         sizeof(py::wrapper::Windows::UI::UIAutomation::Core::CoreAutomationRemoteOperationContext),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1054,7 +1054,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyType_Spec type_spec_RemoteAutomationClientSession =
     {
-        "_winrt_windows_ui_uiautomation_core.RemoteAutomationClientSession",
+        "winrt._winrt_windows_ui_uiautomation_core.RemoteAutomationClientSession",
         sizeof(py::wrapper::Windows::UI::UIAutomation::Core::RemoteAutomationClientSession),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1163,7 +1163,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyType_Spec type_spec_RemoteAutomationConnectionRequestedEventArgs =
     {
-        "_winrt_windows_ui_uiautomation_core.RemoteAutomationConnectionRequestedEventArgs",
+        "winrt._winrt_windows_ui_uiautomation_core.RemoteAutomationConnectionRequestedEventArgs",
         sizeof(py::wrapper::Windows::UI::UIAutomation::Core::RemoteAutomationConnectionRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1252,7 +1252,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyType_Spec type_spec_RemoteAutomationDisconnectedEventArgs =
     {
-        "_winrt_windows_ui_uiautomation_core.RemoteAutomationDisconnectedEventArgs",
+        "winrt._winrt_windows_ui_uiautomation_core.RemoteAutomationDisconnectedEventArgs",
         sizeof(py::wrapper::Windows::UI::UIAutomation::Core::RemoteAutomationDisconnectedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1319,7 +1319,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyType_Spec type_spec_RemoteAutomationServer =
     {
-        "_winrt_windows_ui_uiautomation_core.RemoteAutomationServer",
+        "winrt._winrt_windows_ui_uiautomation_core.RemoteAutomationServer",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1438,7 +1438,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyType_Spec type_spec_RemoteAutomationWindow =
     {
-        "_winrt_windows_ui_uiautomation_core.RemoteAutomationWindow",
+        "winrt._winrt_windows_ui_uiautomation_core.RemoteAutomationWindow",
         sizeof(py::wrapper::Windows::UI::UIAutomation::Core::RemoteAutomationWindow),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1527,7 +1527,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyType_Spec type_spec_ICoreAutomationConnectionBoundObjectProvider =
     {
-        "_winrt_windows_ui_uiautomation_core.ICoreAutomationConnectionBoundObjectProvider",
+        "winrt._winrt_windows_ui_uiautomation_core.ICoreAutomationConnectionBoundObjectProvider",
         sizeof(py::wrapper::Windows::UI::UIAutomation::Core::ICoreAutomationConnectionBoundObjectProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1663,7 +1663,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyType_Spec type_spec_ICoreAutomationRemoteOperationExtensionProvider =
     {
-        "_winrt_windows_ui_uiautomation_core.ICoreAutomationRemoteOperationExtensionProvider",
+        "winrt._winrt_windows_ui_uiautomation_core.ICoreAutomationRemoteOperationExtensionProvider",
         sizeof(py::wrapper::Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperationExtensionProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1789,7 +1789,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyType_Spec type_spec_AutomationAnnotationTypeRegistration =
     {
-        "_winrt_windows_ui_uiautomation_core.AutomationAnnotationTypeRegistration",
+        "winrt._winrt_windows_ui_uiautomation_core.AutomationAnnotationTypeRegistration",
         sizeof(py::wrapper::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1915,7 +1915,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyType_Spec type_spec_AutomationRemoteOperationOperandId =
     {
-        "_winrt_windows_ui_uiautomation_core.AutomationRemoteOperationOperandId",
+        "winrt._winrt_windows_ui_uiautomation_core.AutomationRemoteOperationOperandId",
         sizeof(py::wrapper::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId),
         0,
         Py_TPFLAGS_DEFAULT,

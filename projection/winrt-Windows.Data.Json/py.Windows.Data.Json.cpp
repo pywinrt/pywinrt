@@ -1119,7 +1119,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyType_Spec type_spec_JsonArray =
     {
-        "_winrt_windows_data_json.JsonArray",
+        "winrt._winrt_windows_data_json.JsonArray",
         sizeof(py::wrapper::Windows::Data::Json::JsonArray),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1185,7 +1185,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyType_Spec type_spec_JsonError =
     {
-        "_winrt_windows_data_json.JsonError",
+        "winrt._winrt_windows_data_json.JsonError",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2287,7 +2287,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyType_Spec type_spec_JsonObject =
     {
-        "_winrt_windows_data_json.JsonObject",
+        "winrt._winrt_windows_data_json.JsonObject",
         sizeof(py::wrapper::Windows::Data::Json::JsonObject),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2803,7 +2803,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyType_Spec type_spec_JsonValue =
     {
-        "_winrt_windows_data_json.JsonValue",
+        "winrt._winrt_windows_data_json.JsonValue",
         sizeof(py::wrapper::Windows::Data::Json::JsonValue),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3072,7 +3072,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyType_Spec type_spec_IJsonValue =
     {
-        "_winrt_windows_data_json.IJsonValue",
+        "winrt._winrt_windows_data_json.IJsonValue",
         sizeof(py::wrapper::Windows::Data::Json::IJsonValue),
         0,
         Py_TPFLAGS_DEFAULT,

@@ -250,7 +250,7 @@ namespace py::cpp::Windows::Security::Authentication::Web
 
     static PyType_Spec type_spec_WebAuthenticationBroker =
     {
-        "_winrt_windows_security_authentication_web.WebAuthenticationBroker",
+        "winrt._winrt_windows_security_authentication_web.WebAuthenticationBroker",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -379,7 +379,7 @@ namespace py::cpp::Windows::Security::Authentication::Web
 
     static PyType_Spec type_spec_WebAuthenticationResult =
     {
-        "_winrt_windows_security_authentication_web.WebAuthenticationResult",
+        "winrt._winrt_windows_security_authentication_web.WebAuthenticationResult",
         sizeof(py::wrapper::Windows::Security::Authentication::Web::WebAuthenticationResult),
         0,
         Py_TPFLAGS_DEFAULT,

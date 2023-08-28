@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_services_maps
+from winrt import _winrt_windows_services_maps
 
 __all__ = [
     "ManeuverWarningKind",

@@ -66,7 +66,7 @@ from winrt_sdk import get_include_dirs
 setup(
     ext_modules=[
         Extension(
-            "{ext_module}",
+            "winrt.{ext_module}",
             sources=[{sources}],
             include_dirs=get_include_dirs(),
             extra_compile_args=["/std:c++20", "/permissive-"],
@@ -91,7 +91,7 @@ with open(PROJECTION_PATH / "winrt-runtime" / "pyproject.toml", "w") as f:
 with open(PROJECTION_PATH / "winrt-runtime" / "setup.py", "w") as f:
     f.write(
         SETUP_PY_TEMPLATE.format(
-            ext_module="winrt._winrt",
+            ext_module="_winrt",
             sources='"_winrt.cpp", "_winrt_array.cpp", "runtime.cpp"',
         )
     )
@@ -112,7 +112,7 @@ for package in glob("winrt-*", root_dir=str(PROJECTION_PATH / "interop")):
     with open(PROJECTION_PATH / "interop" / package / "setup.py", "w") as f:
         f.write(
             SETUP_PY_TEMPLATE.format(
-                ext_module=f"{module}._{module.replace('.', '_')}",
+                ext_module=f"_{module.replace('.', '_')}",
                 sources=f'"py.{ns}.cpp"',
             )
         )
@@ -142,7 +142,7 @@ for package in glob("winrt-Windows.*", root_dir=str(PROJECTION_PATH)):
     with open(PROJECTION_PATH / package / "setup.py", "w") as f:
         f.write(
             SETUP_PY_TEMPLATE.format(
-                ext_module=f"{module}._{module.replace('.', '_')}",
+                ext_module=f"_{module.replace('.', '_')}",
                 sources=f'"py.{ns}.cpp"',
             )
         )
@@ -159,7 +159,7 @@ with open(PROJECTION_PATH / "winrt-TestComponent" / "pyproject.toml", "w") as f:
     with open(PROJECTION_PATH / "winrt-TestComponent" / "setup.py", "w") as f:
         f.write(
             SETUP_PY_TEMPLATE.format(
-                ext_module="_winrt.testcomponent._winrt_testcomponent",
+                ext_module="_winrt_testcomponent",
                 sources='"py.TestComponent.cpp"',
             )
         )

@@ -128,7 +128,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
 
     static PyType_Spec type_spec_BluetoothLEAdvertisementPublisherTriggerDetails =
     {
-        "_winrt_windows_devices_bluetooth_background.BluetoothLEAdvertisementPublisherTriggerDetails",
+        "winrt._winrt_windows_devices_bluetooth_background.BluetoothLEAdvertisementPublisherTriggerDetails",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::Background::BluetoothLEAdvertisementPublisherTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -257,7 +257,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
 
     static PyType_Spec type_spec_BluetoothLEAdvertisementWatcherTriggerDetails =
     {
-        "_winrt_windows_devices_bluetooth_background.BluetoothLEAdvertisementWatcherTriggerDetails",
+        "winrt._winrt_windows_devices_bluetooth_background.BluetoothLEAdvertisementWatcherTriggerDetails",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::Background::BluetoothLEAdvertisementWatcherTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -426,7 +426,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
 
     static PyType_Spec type_spec_GattCharacteristicNotificationTriggerDetails =
     {
-        "_winrt_windows_devices_bluetooth_background.GattCharacteristicNotificationTriggerDetails",
+        "winrt._winrt_windows_devices_bluetooth_background.GattCharacteristicNotificationTriggerDetails",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::Background::GattCharacteristicNotificationTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -585,7 +585,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
 
     static PyType_Spec type_spec_GattServiceProviderConnection =
     {
-        "_winrt_windows_devices_bluetooth_background.GattServiceProviderConnection",
+        "winrt._winrt_windows_devices_bluetooth_background.GattServiceProviderConnection",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::Background::GattServiceProviderConnection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -606,7 +606,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
 
     static PyType_Spec type_spec_GattServiceProviderConnection_Meta =
     {
-        "_winrt_windows_devices_bluetooth_background.GattServiceProviderConnection_Meta",
+        "winrt._winrt_windows_devices_bluetooth_background.GattServiceProviderConnection_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -695,7 +695,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
 
     static PyType_Spec type_spec_GattServiceProviderTriggerDetails =
     {
-        "_winrt_windows_devices_bluetooth_background.GattServiceProviderTriggerDetails",
+        "winrt._winrt_windows_devices_bluetooth_background.GattServiceProviderTriggerDetails",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::Background::GattServiceProviderTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -824,7 +824,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
 
     static PyType_Spec type_spec_RfcommConnectionTriggerDetails =
     {
-        "_winrt_windows_devices_bluetooth_background.RfcommConnectionTriggerDetails",
+        "winrt._winrt_windows_devices_bluetooth_background.RfcommConnectionTriggerDetails",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::Background::RfcommConnectionTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1037,7 +1037,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
 
     static PyType_Spec type_spec_RfcommInboundConnectionInformation =
     {
-        "_winrt_windows_devices_bluetooth_background.RfcommInboundConnectionInformation",
+        "winrt._winrt_windows_devices_bluetooth_background.RfcommInboundConnectionInformation",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::Background::RfcommInboundConnectionInformation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1154,7 +1154,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
 
     static PyType_Spec type_spec_RfcommOutboundConnectionInformation =
     {
-        "_winrt_windows_devices_bluetooth_background.RfcommOutboundConnectionInformation",
+        "winrt._winrt_windows_devices_bluetooth_background.RfcommOutboundConnectionInformation",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::Background::RfcommOutboundConnectionInformation),
         0,
         Py_TPFLAGS_DEFAULT,

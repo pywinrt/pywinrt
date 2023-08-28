@@ -135,7 +135,7 @@ namespace py::cpp::Windows::UI
 
     static PyType_Spec type_spec_ColorHelper =
     {
-        "_winrt_windows_ui.ColorHelper",
+        "winrt._winrt_windows_ui.ColorHelper",
         sizeof(py::wrapper::Windows::UI::ColorHelper),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2883,7 +2883,7 @@ namespace py::cpp::Windows::UI
 
     static PyType_Spec type_spec_Colors =
     {
-        "_winrt_windows_ui.Colors",
+        "winrt._winrt_windows_ui.Colors",
         sizeof(py::wrapper::Windows::UI::Colors),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3044,7 +3044,7 @@ namespace py::cpp::Windows::UI
 
     static PyType_Spec type_spec_Colors_Meta =
     {
-        "_winrt_windows_ui.Colors_Meta",
+        "winrt._winrt_windows_ui.Colors_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -3133,7 +3133,7 @@ namespace py::cpp::Windows::UI
 
     static PyType_Spec type_spec_UIContentRoot =
     {
-        "_winrt_windows_ui.UIContentRoot",
+        "winrt._winrt_windows_ui.UIContentRoot",
         sizeof(py::wrapper::Windows::UI::UIContentRoot),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3202,7 +3202,7 @@ namespace py::cpp::Windows::UI
 
     static PyType_Spec type_spec_UIContext =
     {
-        "_winrt_windows_ui.UIContext",
+        "winrt._winrt_windows_ui.UIContext",
         sizeof(py::wrapper::Windows::UI::UIContext),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3433,7 +3433,7 @@ namespace py::cpp::Windows::UI
 
     static PyType_Spec type_spec_Color =
     {
-        "_winrt_windows_ui.Color",
+        "winrt._winrt_windows_ui.Color",
         sizeof(py::wrapper::Windows::UI::Color),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3559,7 +3559,7 @@ namespace py::cpp::Windows::UI
 
     static PyType_Spec type_spec_WindowId =
     {
-        "_winrt_windows_ui.WindowId",
+        "winrt._winrt_windows_ui.WindowId",
         sizeof(py::wrapper::Windows::UI::WindowId),
         0,
         Py_TPFLAGS_DEFAULT,

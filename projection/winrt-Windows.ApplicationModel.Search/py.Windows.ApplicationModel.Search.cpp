@@ -226,7 +226,7 @@ namespace py::cpp::Windows::ApplicationModel::Search
 
     static PyType_Spec type_spec_LocalContentSuggestionSettings =
     {
-        "_winrt_windows_applicationmodel_search.LocalContentSuggestionSettings",
+        "winrt._winrt_windows_applicationmodel_search.LocalContentSuggestionSettings",
         sizeof(py::wrapper::Windows::ApplicationModel::Search::LocalContentSuggestionSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -950,7 +950,7 @@ namespace py::cpp::Windows::ApplicationModel::Search
 
     static PyType_Spec type_spec_SearchPane =
     {
-        "_winrt_windows_applicationmodel_search.SearchPane",
+        "winrt._winrt_windows_applicationmodel_search.SearchPane",
         sizeof(py::wrapper::Windows::ApplicationModel::Search::SearchPane),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1079,7 +1079,7 @@ namespace py::cpp::Windows::ApplicationModel::Search
 
     static PyType_Spec type_spec_SearchPaneQueryChangedEventArgs =
     {
-        "_winrt_windows_applicationmodel_search.SearchPaneQueryChangedEventArgs",
+        "winrt._winrt_windows_applicationmodel_search.SearchPaneQueryChangedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Search::SearchPaneQueryChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1208,7 +1208,7 @@ namespace py::cpp::Windows::ApplicationModel::Search
 
     static PyType_Spec type_spec_SearchPaneQueryLinguisticDetails =
     {
-        "_winrt_windows_applicationmodel_search.SearchPaneQueryLinguisticDetails",
+        "winrt._winrt_windows_applicationmodel_search.SearchPaneQueryLinguisticDetails",
         sizeof(py::wrapper::Windows::ApplicationModel::Search::SearchPaneQueryLinguisticDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1337,7 +1337,7 @@ namespace py::cpp::Windows::ApplicationModel::Search
 
     static PyType_Spec type_spec_SearchPaneQuerySubmittedEventArgs =
     {
-        "_winrt_windows_applicationmodel_search.SearchPaneQuerySubmittedEventArgs",
+        "winrt._winrt_windows_applicationmodel_search.SearchPaneQuerySubmittedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Search::SearchPaneQuerySubmittedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1426,7 +1426,7 @@ namespace py::cpp::Windows::ApplicationModel::Search
 
     static PyType_Spec type_spec_SearchPaneResultSuggestionChosenEventArgs =
     {
-        "_winrt_windows_applicationmodel_search.SearchPaneResultSuggestionChosenEventArgs",
+        "winrt._winrt_windows_applicationmodel_search.SearchPaneResultSuggestionChosenEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Search::SearchPaneResultSuggestionChosenEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1565,7 +1565,7 @@ namespace py::cpp::Windows::ApplicationModel::Search
 
     static PyType_Spec type_spec_SearchPaneSuggestionsRequest =
     {
-        "_winrt_windows_applicationmodel_search.SearchPaneSuggestionsRequest",
+        "winrt._winrt_windows_applicationmodel_search.SearchPaneSuggestionsRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::Search::SearchPaneSuggestionsRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1665,7 +1665,7 @@ namespace py::cpp::Windows::ApplicationModel::Search
 
     static PyType_Spec type_spec_SearchPaneSuggestionsRequestDeferral =
     {
-        "_winrt_windows_applicationmodel_search.SearchPaneSuggestionsRequestDeferral",
+        "winrt._winrt_windows_applicationmodel_search.SearchPaneSuggestionsRequestDeferral",
         sizeof(py::wrapper::Windows::ApplicationModel::Search::SearchPaneSuggestionsRequestDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1814,7 +1814,7 @@ namespace py::cpp::Windows::ApplicationModel::Search
 
     static PyType_Spec type_spec_SearchPaneSuggestionsRequestedEventArgs =
     {
-        "_winrt_windows_applicationmodel_search.SearchPaneSuggestionsRequestedEventArgs",
+        "winrt._winrt_windows_applicationmodel_search.SearchPaneSuggestionsRequestedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Search::SearchPaneSuggestionsRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1903,7 +1903,7 @@ namespace py::cpp::Windows::ApplicationModel::Search
 
     static PyType_Spec type_spec_SearchPaneVisibilityChangedEventArgs =
     {
-        "_winrt_windows_applicationmodel_search.SearchPaneVisibilityChangedEventArgs",
+        "winrt._winrt_windows_applicationmodel_search.SearchPaneVisibilityChangedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Search::SearchPaneVisibilityChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2058,7 +2058,7 @@ namespace py::cpp::Windows::ApplicationModel::Search
 
     static PyType_Spec type_spec_SearchQueryLinguisticDetails =
     {
-        "_winrt_windows_applicationmodel_search.SearchQueryLinguisticDetails",
+        "winrt._winrt_windows_applicationmodel_search.SearchQueryLinguisticDetails",
         sizeof(py::wrapper::Windows::ApplicationModel::Search::SearchQueryLinguisticDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2283,7 +2283,7 @@ namespace py::cpp::Windows::ApplicationModel::Search
 
     static PyType_Spec type_spec_SearchSuggestionCollection =
     {
-        "_winrt_windows_applicationmodel_search.SearchSuggestionCollection",
+        "winrt._winrt_windows_applicationmodel_search.SearchSuggestionCollection",
         sizeof(py::wrapper::Windows::ApplicationModel::Search::SearchSuggestionCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2422,7 +2422,7 @@ namespace py::cpp::Windows::ApplicationModel::Search
 
     static PyType_Spec type_spec_SearchSuggestionsRequest =
     {
-        "_winrt_windows_applicationmodel_search.SearchSuggestionsRequest",
+        "winrt._winrt_windows_applicationmodel_search.SearchSuggestionsRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::Search::SearchSuggestionsRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2522,7 +2522,7 @@ namespace py::cpp::Windows::ApplicationModel::Search
 
     static PyType_Spec type_spec_SearchSuggestionsRequestDeferral =
     {
-        "_winrt_windows_applicationmodel_search.SearchSuggestionsRequestDeferral",
+        "winrt._winrt_windows_applicationmodel_search.SearchSuggestionsRequestDeferral",
         sizeof(py::wrapper::Windows::ApplicationModel::Search::SearchSuggestionsRequestDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2651,7 +2651,7 @@ namespace py::cpp::Windows::ApplicationModel::Search
 
     static PyType_Spec type_spec_ISearchPaneQueryChangedEventArgs =
     {
-        "_winrt_windows_applicationmodel_search.ISearchPaneQueryChangedEventArgs",
+        "winrt._winrt_windows_applicationmodel_search.ISearchPaneQueryChangedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Search::ISearchPaneQueryChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,

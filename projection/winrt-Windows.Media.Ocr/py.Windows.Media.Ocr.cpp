@@ -252,7 +252,7 @@ namespace py::cpp::Windows::Media::Ocr
 
     static PyType_Spec type_spec_OcrEngine =
     {
-        "_winrt_windows_media_ocr.OcrEngine",
+        "winrt._winrt_windows_media_ocr.OcrEngine",
         sizeof(py::wrapper::Windows::Media::Ocr::OcrEngine),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -274,7 +274,7 @@ namespace py::cpp::Windows::Media::Ocr
 
     static PyType_Spec type_spec_OcrEngine_Meta =
     {
-        "_winrt_windows_media_ocr.OcrEngine_Meta",
+        "winrt._winrt_windows_media_ocr.OcrEngine_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -383,7 +383,7 @@ namespace py::cpp::Windows::Media::Ocr
 
     static PyType_Spec type_spec_OcrLine =
     {
-        "_winrt_windows_media_ocr.OcrLine",
+        "winrt._winrt_windows_media_ocr.OcrLine",
         sizeof(py::wrapper::Windows::Media::Ocr::OcrLine),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -512,7 +512,7 @@ namespace py::cpp::Windows::Media::Ocr
 
     static PyType_Spec type_spec_OcrResult =
     {
-        "_winrt_windows_media_ocr.OcrResult",
+        "winrt._winrt_windows_media_ocr.OcrResult",
         sizeof(py::wrapper::Windows::Media::Ocr::OcrResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -621,7 +621,7 @@ namespace py::cpp::Windows::Media::Ocr
 
     static PyType_Spec type_spec_OcrWord =
     {
-        "_winrt_windows_media_ocr.OcrWord",
+        "winrt._winrt_windows_media_ocr.OcrWord",
         sizeof(py::wrapper::Windows::Media::Ocr::OcrWord),
         0,
         Py_TPFLAGS_DEFAULT,

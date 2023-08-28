@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_globalization_phonenumberformatting
+from winrt import _winrt_windows_globalization_phonenumberformatting
 
 __all__ = [
     "PhoneNumberFormat",

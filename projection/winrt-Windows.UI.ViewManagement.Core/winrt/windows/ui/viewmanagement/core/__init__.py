@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_ui_viewmanagement_core
+from winrt import _winrt_windows_ui_viewmanagement_core
 
 __all__ = [
     "CoreInputViewKind",

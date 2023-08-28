@@ -169,7 +169,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyType_Spec type_spec_BarcodeScannerDisableScannerRequest =
     {
-        "_winrt_windows_devices_pointofservice_provider.BarcodeScannerDisableScannerRequest",
+        "winrt._winrt_windows_devices_pointofservice_provider.BarcodeScannerDisableScannerRequest",
         sizeof(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerDisableScannerRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -288,7 +288,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyType_Spec type_spec_BarcodeScannerDisableScannerRequestEventArgs =
     {
-        "_winrt_windows_devices_pointofservice_provider.BarcodeScannerDisableScannerRequestEventArgs",
+        "winrt._winrt_windows_devices_pointofservice_provider.BarcodeScannerDisableScannerRequestEventArgs",
         sizeof(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerDisableScannerRequestEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -458,7 +458,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyType_Spec type_spec_BarcodeScannerEnableScannerRequest =
     {
-        "_winrt_windows_devices_pointofservice_provider.BarcodeScannerEnableScannerRequest",
+        "winrt._winrt_windows_devices_pointofservice_provider.BarcodeScannerEnableScannerRequest",
         sizeof(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerEnableScannerRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -577,7 +577,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyType_Spec type_spec_BarcodeScannerEnableScannerRequestEventArgs =
     {
-        "_winrt_windows_devices_pointofservice_provider.BarcodeScannerEnableScannerRequestEventArgs",
+        "winrt._winrt_windows_devices_pointofservice_provider.BarcodeScannerEnableScannerRequestEventArgs",
         sizeof(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerEnableScannerRequestEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -853,7 +853,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyType_Spec type_spec_BarcodeScannerFrameReader =
     {
-        "_winrt_windows_devices_pointofservice_provider.BarcodeScannerFrameReader",
+        "winrt._winrt_windows_devices_pointofservice_provider.BarcodeScannerFrameReader",
         sizeof(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReader),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -952,7 +952,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyType_Spec type_spec_BarcodeScannerFrameReaderFrameArrivedEventArgs =
     {
-        "_winrt_windows_devices_pointofservice_provider.BarcodeScannerFrameReaderFrameArrivedEventArgs",
+        "winrt._winrt_windows_devices_pointofservice_provider.BarcodeScannerFrameReaderFrameArrivedEventArgs",
         sizeof(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReaderFrameArrivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1144,7 +1144,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyType_Spec type_spec_BarcodeScannerGetSymbologyAttributesRequest =
     {
-        "_winrt_windows_devices_pointofservice_provider.BarcodeScannerGetSymbologyAttributesRequest",
+        "winrt._winrt_windows_devices_pointofservice_provider.BarcodeScannerGetSymbologyAttributesRequest",
         sizeof(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerGetSymbologyAttributesRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1263,7 +1263,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyType_Spec type_spec_BarcodeScannerGetSymbologyAttributesRequestEventArgs =
     {
-        "_winrt_windows_devices_pointofservice_provider.BarcodeScannerGetSymbologyAttributesRequestEventArgs",
+        "winrt._winrt_windows_devices_pointofservice_provider.BarcodeScannerGetSymbologyAttributesRequestEventArgs",
         sizeof(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerGetSymbologyAttributesRequestEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1433,7 +1433,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyType_Spec type_spec_BarcodeScannerHideVideoPreviewRequest =
     {
-        "_winrt_windows_devices_pointofservice_provider.BarcodeScannerHideVideoPreviewRequest",
+        "winrt._winrt_windows_devices_pointofservice_provider.BarcodeScannerHideVideoPreviewRequest",
         sizeof(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerHideVideoPreviewRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1552,7 +1552,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyType_Spec type_spec_BarcodeScannerHideVideoPreviewRequestEventArgs =
     {
-        "_winrt_windows_devices_pointofservice_provider.BarcodeScannerHideVideoPreviewRequestEventArgs",
+        "winrt._winrt_windows_devices_pointofservice_provider.BarcodeScannerHideVideoPreviewRequestEventArgs",
         sizeof(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerHideVideoPreviewRequestEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2457,7 +2457,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyType_Spec type_spec_BarcodeScannerProviderConnection =
     {
-        "_winrt_windows_devices_pointofservice_provider.BarcodeScannerProviderConnection",
+        "winrt._winrt_windows_devices_pointofservice_provider.BarcodeScannerProviderConnection",
         sizeof(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2546,7 +2546,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyType_Spec type_spec_BarcodeScannerProviderTriggerDetails =
     {
-        "_winrt_windows_devices_pointofservice_provider.BarcodeScannerProviderTriggerDetails",
+        "winrt._winrt_windows_devices_pointofservice_provider.BarcodeScannerProviderTriggerDetails",
         sizeof(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2736,7 +2736,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyType_Spec type_spec_BarcodeScannerSetActiveSymbologiesRequest =
     {
-        "_winrt_windows_devices_pointofservice_provider.BarcodeScannerSetActiveSymbologiesRequest",
+        "winrt._winrt_windows_devices_pointofservice_provider.BarcodeScannerSetActiveSymbologiesRequest",
         sizeof(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerSetActiveSymbologiesRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2855,7 +2855,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyType_Spec type_spec_BarcodeScannerSetActiveSymbologiesRequestEventArgs =
     {
-        "_winrt_windows_devices_pointofservice_provider.BarcodeScannerSetActiveSymbologiesRequestEventArgs",
+        "winrt._winrt_windows_devices_pointofservice_provider.BarcodeScannerSetActiveSymbologiesRequestEventArgs",
         sizeof(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerSetActiveSymbologiesRequestEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3065,7 +3065,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyType_Spec type_spec_BarcodeScannerSetSymbologyAttributesRequest =
     {
-        "_winrt_windows_devices_pointofservice_provider.BarcodeScannerSetSymbologyAttributesRequest",
+        "winrt._winrt_windows_devices_pointofservice_provider.BarcodeScannerSetSymbologyAttributesRequest",
         sizeof(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerSetSymbologyAttributesRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3184,7 +3184,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyType_Spec type_spec_BarcodeScannerSetSymbologyAttributesRequestEventArgs =
     {
-        "_winrt_windows_devices_pointofservice_provider.BarcodeScannerSetSymbologyAttributesRequestEventArgs",
+        "winrt._winrt_windows_devices_pointofservice_provider.BarcodeScannerSetSymbologyAttributesRequestEventArgs",
         sizeof(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerSetSymbologyAttributesRequestEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3354,7 +3354,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyType_Spec type_spec_BarcodeScannerStartSoftwareTriggerRequest =
     {
-        "_winrt_windows_devices_pointofservice_provider.BarcodeScannerStartSoftwareTriggerRequest",
+        "winrt._winrt_windows_devices_pointofservice_provider.BarcodeScannerStartSoftwareTriggerRequest",
         sizeof(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerStartSoftwareTriggerRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3473,7 +3473,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyType_Spec type_spec_BarcodeScannerStartSoftwareTriggerRequestEventArgs =
     {
-        "_winrt_windows_devices_pointofservice_provider.BarcodeScannerStartSoftwareTriggerRequestEventArgs",
+        "winrt._winrt_windows_devices_pointofservice_provider.BarcodeScannerStartSoftwareTriggerRequestEventArgs",
         sizeof(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerStartSoftwareTriggerRequestEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3643,7 +3643,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyType_Spec type_spec_BarcodeScannerStopSoftwareTriggerRequest =
     {
-        "_winrt_windows_devices_pointofservice_provider.BarcodeScannerStopSoftwareTriggerRequest",
+        "winrt._winrt_windows_devices_pointofservice_provider.BarcodeScannerStopSoftwareTriggerRequest",
         sizeof(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerStopSoftwareTriggerRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3762,7 +3762,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyType_Spec type_spec_BarcodeScannerStopSoftwareTriggerRequestEventArgs =
     {
-        "_winrt_windows_devices_pointofservice_provider.BarcodeScannerStopSoftwareTriggerRequestEventArgs",
+        "winrt._winrt_windows_devices_pointofservice_provider.BarcodeScannerStopSoftwareTriggerRequestEventArgs",
         sizeof(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerStopSoftwareTriggerRequestEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3963,7 +3963,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyType_Spec type_spec_BarcodeScannerVideoFrame =
     {
-        "_winrt_windows_devices_pointofservice_provider.BarcodeScannerVideoFrame",
+        "winrt._winrt_windows_devices_pointofservice_provider.BarcodeScannerVideoFrame",
         sizeof(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerVideoFrame),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4228,7 +4228,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyType_Spec type_spec_BarcodeSymbologyAttributesBuilder =
     {
-        "_winrt_windows_devices_pointofservice_provider.BarcodeSymbologyAttributesBuilder",
+        "winrt._winrt_windows_devices_pointofservice_provider.BarcodeSymbologyAttributesBuilder",
         sizeof(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeSymbologyAttributesBuilder),
         0,
         Py_TPFLAGS_DEFAULT,

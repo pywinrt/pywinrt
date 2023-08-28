@@ -915,7 +915,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyType_Spec type_spec_ActivationSignalDetectionConfiguration =
     {
-        "_winrt_windows_applicationmodel_conversationalagent.ActivationSignalDetectionConfiguration",
+        "winrt._winrt_windows_applicationmodel_conversationalagent.ActivationSignalDetectionConfiguration",
         sizeof(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1024,7 +1024,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyType_Spec type_spec_ActivationSignalDetectionConfigurationCreationResult =
     {
-        "_winrt_windows_applicationmodel_conversationalagent.ActivationSignalDetectionConfigurationCreationResult",
+        "winrt._winrt_windows_applicationmodel_conversationalagent.ActivationSignalDetectionConfigurationCreationResult",
         sizeof(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfigurationCreationResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1757,7 +1757,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyType_Spec type_spec_ActivationSignalDetector =
     {
-        "_winrt_windows_applicationmodel_conversationalagent.ActivationSignalDetector",
+        "winrt._winrt_windows_applicationmodel_conversationalagent.ActivationSignalDetector",
         sizeof(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetector),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2033,7 +2033,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyType_Spec type_spec_ConversationalAgentDetectorManager =
     {
-        "_winrt_windows_applicationmodel_conversationalagent.ConversationalAgentDetectorManager",
+        "winrt._winrt_windows_applicationmodel_conversationalagent.ConversationalAgentDetectorManager",
         sizeof(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentDetectorManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2054,7 +2054,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyType_Spec type_spec_ConversationalAgentDetectorManager_Meta =
     {
-        "_winrt_windows_applicationmodel_conversationalagent.ConversationalAgentDetectorManager_Meta",
+        "winrt._winrt_windows_applicationmodel_conversationalagent.ConversationalAgentDetectorManager_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -3335,7 +3335,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyType_Spec type_spec_ConversationalAgentSession =
     {
-        "_winrt_windows_applicationmodel_conversationalagent.ConversationalAgentSession",
+        "winrt._winrt_windows_applicationmodel_conversationalagent.ConversationalAgentSession",
         sizeof(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3404,7 +3404,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyType_Spec type_spec_ConversationalAgentSessionInterruptedEventArgs =
     {
-        "_winrt_windows_applicationmodel_conversationalagent.ConversationalAgentSessionInterruptedEventArgs",
+        "winrt._winrt_windows_applicationmodel_conversationalagent.ConversationalAgentSessionInterruptedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSessionInterruptedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3801,7 +3801,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyType_Spec type_spec_ConversationalAgentSignal =
     {
-        "_winrt_windows_applicationmodel_conversationalagent.ConversationalAgentSignal",
+        "winrt._winrt_windows_applicationmodel_conversationalagent.ConversationalAgentSignal",
         sizeof(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSignal),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3870,7 +3870,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyType_Spec type_spec_ConversationalAgentSignalDetectedEventArgs =
     {
-        "_winrt_windows_applicationmodel_conversationalagent.ConversationalAgentSignalDetectedEventArgs",
+        "winrt._winrt_windows_applicationmodel_conversationalagent.ConversationalAgentSignalDetectedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSignalDetectedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3959,7 +3959,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyType_Spec type_spec_ConversationalAgentSystemStateChangedEventArgs =
     {
-        "_winrt_windows_applicationmodel_conversationalagent.ConversationalAgentSystemStateChangedEventArgs",
+        "winrt._winrt_windows_applicationmodel_conversationalagent.ConversationalAgentSystemStateChangedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSystemStateChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4048,7 +4048,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyType_Spec type_spec_DetectionConfigurationAvailabilityChangedEventArgs =
     {
-        "_winrt_windows_applicationmodel_conversationalagent.DetectionConfigurationAvailabilityChangedEventArgs",
+        "winrt._winrt_windows_applicationmodel_conversationalagent.DetectionConfigurationAvailabilityChangedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationAvailabilityChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4217,7 +4217,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyType_Spec type_spec_DetectionConfigurationAvailabilityInfo =
     {
-        "_winrt_windows_applicationmodel_conversationalagent.DetectionConfigurationAvailabilityInfo",
+        "winrt._winrt_windows_applicationmodel_conversationalagent.DetectionConfigurationAvailabilityInfo",
         sizeof(py::wrapper::Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationAvailabilityInfo),
         0,
         Py_TPFLAGS_DEFAULT,

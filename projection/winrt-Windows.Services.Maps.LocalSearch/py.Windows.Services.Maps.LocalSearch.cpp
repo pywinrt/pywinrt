@@ -185,7 +185,7 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
 
     static PyType_Spec type_spec_LocalCategories =
     {
-        "_winrt_windows_services_maps_localsearch.LocalCategories",
+        "winrt._winrt_windows_services_maps_localsearch.LocalCategories",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -213,7 +213,7 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
 
     static PyType_Spec type_spec_LocalCategories_Meta =
     {
-        "_winrt_windows_services_maps_localsearch.LocalCategories_Meta",
+        "winrt._winrt_windows_services_maps_localsearch.LocalCategories_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -482,7 +482,7 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
 
     static PyType_Spec type_spec_LocalLocation =
     {
-        "_winrt_windows_services_maps_localsearch.LocalLocation",
+        "winrt._winrt_windows_services_maps_localsearch.LocalLocation",
         sizeof(py::wrapper::Windows::Services::Maps::LocalSearch::LocalLocation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -551,7 +551,7 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
 
     static PyType_Spec type_spec_LocalLocationFinder =
     {
-        "_winrt_windows_services_maps_localsearch.LocalLocationFinder",
+        "winrt._winrt_windows_services_maps_localsearch.LocalLocationFinder",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -660,7 +660,7 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
 
     static PyType_Spec type_spec_LocalLocationFinderResult =
     {
-        "_winrt_windows_services_maps_localsearch.LocalLocationFinderResult",
+        "winrt._winrt_windows_services_maps_localsearch.LocalLocationFinderResult",
         sizeof(py::wrapper::Windows::Services::Maps::LocalSearch::LocalLocationFinderResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -789,7 +789,7 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
 
     static PyType_Spec type_spec_LocalLocationHoursOfOperationItem =
     {
-        "_winrt_windows_services_maps_localsearch.LocalLocationHoursOfOperationItem",
+        "winrt._winrt_windows_services_maps_localsearch.LocalLocationHoursOfOperationItem",
         sizeof(py::wrapper::Windows::Services::Maps::LocalSearch::LocalLocationHoursOfOperationItem),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -918,7 +918,7 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
 
     static PyType_Spec type_spec_LocalLocationRatingInfo =
     {
-        "_winrt_windows_services_maps_localsearch.LocalLocationRatingInfo",
+        "winrt._winrt_windows_services_maps_localsearch.LocalLocationRatingInfo",
         sizeof(py::wrapper::Windows::Services::Maps::LocalSearch::LocalLocationRatingInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -984,7 +984,7 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
 
     static PyType_Spec type_spec_PlaceInfoHelper =
     {
-        "_winrt_windows_services_maps_localsearch.PlaceInfoHelper",
+        "winrt._winrt_windows_services_maps_localsearch.PlaceInfoHelper",
         0,
         0,
         Py_TPFLAGS_DEFAULT,

@@ -581,7 +581,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyType_Spec type_spec_WebUICommandBar =
     {
-        "_winrt_windows_ui_webui_core.WebUICommandBar",
+        "winrt._winrt_windows_ui_webui_core.WebUICommandBar",
         sizeof(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBar),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -735,7 +735,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyType_Spec type_spec_WebUICommandBarBitmapIcon =
     {
-        "_winrt_windows_ui_webui_core.WebUICommandBarBitmapIcon",
+        "winrt._winrt_windows_ui_webui_core.WebUICommandBarBitmapIcon",
         sizeof(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarBitmapIcon),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -919,7 +919,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyType_Spec type_spec_WebUICommandBarConfirmationButton =
     {
-        "_winrt_windows_ui_webui_core.WebUICommandBarConfirmationButton",
+        "winrt._winrt_windows_ui_webui_core.WebUICommandBarConfirmationButton",
         sizeof(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarConfirmationButton),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1295,7 +1295,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyType_Spec type_spec_WebUICommandBarIconButton =
     {
-        "_winrt_windows_ui_webui_core.WebUICommandBarIconButton",
+        "winrt._winrt_windows_ui_webui_core.WebUICommandBarIconButton",
         sizeof(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarIconButton),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1384,7 +1384,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyType_Spec type_spec_WebUICommandBarItemInvokedEventArgs =
     {
-        "_winrt_windows_ui_webui_core.WebUICommandBarItemInvokedEventArgs",
+        "winrt._winrt_windows_ui_webui_core.WebUICommandBarItemInvokedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarItemInvokedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1473,7 +1473,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyType_Spec type_spec_WebUICommandBarSizeChangedEventArgs =
     {
-        "_winrt_windows_ui_webui_core.WebUICommandBarSizeChangedEventArgs",
+        "winrt._winrt_windows_ui_webui_core.WebUICommandBarSizeChangedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarSizeChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1627,7 +1627,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyType_Spec type_spec_WebUICommandBarSymbolIcon =
     {
-        "_winrt_windows_ui_webui_core.WebUICommandBarSymbolIcon",
+        "winrt._winrt_windows_ui_webui_core.WebUICommandBarSymbolIcon",
         sizeof(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarSymbolIcon),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1696,7 +1696,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyType_Spec type_spec_IWebUICommandBarElement =
     {
-        "_winrt_windows_ui_webui_core.IWebUICommandBarElement",
+        "winrt._winrt_windows_ui_webui_core.IWebUICommandBarElement",
         sizeof(py::wrapper::Windows::UI::WebUI::Core::IWebUICommandBarElement),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1765,7 +1765,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyType_Spec type_spec_IWebUICommandBarIcon =
     {
-        "_winrt_windows_ui_webui_core.IWebUICommandBarIcon",
+        "winrt._winrt_windows_ui_webui_core.IWebUICommandBarIcon",
         sizeof(py::wrapper::Windows::UI::WebUI::Core::IWebUICommandBarIcon),
         0,
         Py_TPFLAGS_DEFAULT,

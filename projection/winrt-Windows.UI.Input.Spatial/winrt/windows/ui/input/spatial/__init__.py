@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_ui_input_spatial
+from winrt import _winrt_windows_ui_input_spatial
 
 __all__ = [
     "SpatialGestureSettings",

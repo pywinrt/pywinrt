@@ -392,7 +392,7 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
 
     static PyType_Spec type_spec_AppCapability =
     {
-        "_winrt_windows_security_authorization_appcapabilityaccess.AppCapability",
+        "winrt._winrt_windows_security_authorization_appcapabilityaccess.AppCapability",
         sizeof(py::wrapper::Windows::Security::Authorization::AppCapabilityAccess::AppCapability),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -461,7 +461,7 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
 
     static PyType_Spec type_spec_AppCapabilityAccessChangedEventArgs =
     {
-        "_winrt_windows_security_authorization_appcapabilityaccess.AppCapabilityAccessChangedEventArgs",
+        "winrt._winrt_windows_security_authorization_appcapabilityaccess.AppCapabilityAccessChangedEventArgs",
         sizeof(py::wrapper::Windows::Security::Authorization::AppCapabilityAccess::AppCapabilityAccessChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,

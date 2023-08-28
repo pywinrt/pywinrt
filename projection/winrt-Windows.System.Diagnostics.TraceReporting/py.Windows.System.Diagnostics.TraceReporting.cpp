@@ -300,7 +300,7 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
 
     static PyType_Spec type_spec_PlatformDiagnosticActions =
     {
-        "_winrt_windows_system_diagnostics_tracereporting.PlatformDiagnosticActions",
+        "winrt._winrt_windows_system_diagnostics_tracereporting.PlatformDiagnosticActions",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -489,7 +489,7 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
 
     static PyType_Spec type_spec_PlatformDiagnosticTraceInfo =
     {
-        "_winrt_windows_system_diagnostics_tracereporting.PlatformDiagnosticTraceInfo",
+        "winrt._winrt_windows_system_diagnostics_tracereporting.PlatformDiagnosticTraceInfo",
         sizeof(py::wrapper::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -598,7 +598,7 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
 
     static PyType_Spec type_spec_PlatformDiagnosticTraceRuntimeInfo =
     {
-        "_winrt_windows_system_diagnostics_tracereporting.PlatformDiagnosticTraceRuntimeInfo",
+        "winrt._winrt_windows_system_diagnostics_tracereporting.PlatformDiagnosticTraceRuntimeInfo",
         sizeof(py::wrapper::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceRuntimeInfo),
         0,
         Py_TPFLAGS_DEFAULT,

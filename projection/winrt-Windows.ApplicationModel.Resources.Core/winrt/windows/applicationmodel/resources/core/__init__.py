@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_applicationmodel_resources_core
+from winrt import _winrt_windows_applicationmodel_resources_core
 
 __all__ = [
     "ResourceCandidateKind",

@@ -191,7 +191,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
     static PyType_Spec type_spec_CoreDragDropManager =
     {
-        "_winrt_windows_applicationmodel_datatransfer_dragdrop_core.CoreDragDropManager",
+        "winrt._winrt_windows_applicationmodel_datatransfer_dragdrop_core.CoreDragDropManager",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragDropManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -340,7 +340,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
     static PyType_Spec type_spec_CoreDragInfo =
     {
-        "_winrt_windows_applicationmodel_datatransfer_dragdrop_core.CoreDragInfo",
+        "winrt._winrt_windows_applicationmodel_datatransfer_dragdrop_core.CoreDragInfo",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -665,7 +665,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
     static PyType_Spec type_spec_CoreDragOperation =
     {
-        "_winrt_windows_applicationmodel_datatransfer_dragdrop_core.CoreDragOperation",
+        "winrt._winrt_windows_applicationmodel_datatransfer_dragdrop_core.CoreDragOperation",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragOperation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1012,7 +1012,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
     static PyType_Spec type_spec_CoreDragUIOverride =
     {
-        "_winrt_windows_applicationmodel_datatransfer_dragdrop_core.CoreDragUIOverride",
+        "winrt._winrt_windows_applicationmodel_datatransfer_dragdrop_core.CoreDragUIOverride",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragUIOverride),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1114,7 +1114,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
     static PyType_Spec type_spec_CoreDropOperationTargetRequestedEventArgs =
     {
-        "_winrt_windows_applicationmodel_datatransfer_dragdrop_core.CoreDropOperationTargetRequestedEventArgs",
+        "winrt._winrt_windows_applicationmodel_datatransfer_dragdrop_core.CoreDropOperationTargetRequestedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDropOperationTargetRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1313,7 +1313,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
     static PyType_Spec type_spec_ICoreDropOperationTarget =
     {
-        "_winrt_windows_applicationmodel_datatransfer_dragdrop_core.ICoreDropOperationTarget",
+        "winrt._winrt_windows_applicationmodel_datatransfer_dragdrop_core.ICoreDropOperationTarget",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::DragDrop::Core::ICoreDropOperationTarget),
         0,
         Py_TPFLAGS_DEFAULT,

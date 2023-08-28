@@ -86,7 +86,7 @@ namespace py::cpp::Windows::System::Diagnostics::Telemetry
 
     static PyType_Spec type_spec_PlatformTelemetryClient =
     {
-        "_winrt_windows_system_diagnostics_telemetry.PlatformTelemetryClient",
+        "winrt._winrt_windows_system_diagnostics_telemetry.PlatformTelemetryClient",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -175,7 +175,7 @@ namespace py::cpp::Windows::System::Diagnostics::Telemetry
 
     static PyType_Spec type_spec_PlatformTelemetryRegistrationResult =
     {
-        "_winrt_windows_system_diagnostics_telemetry.PlatformTelemetryRegistrationResult",
+        "winrt._winrt_windows_system_diagnostics_telemetry.PlatformTelemetryRegistrationResult",
         sizeof(py::wrapper::Windows::System::Diagnostics::Telemetry::PlatformTelemetryRegistrationResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -362,7 +362,7 @@ namespace py::cpp::Windows::System::Diagnostics::Telemetry
 
     static PyType_Spec type_spec_PlatformTelemetryRegistrationSettings =
     {
-        "_winrt_windows_system_diagnostics_telemetry.PlatformTelemetryRegistrationSettings",
+        "winrt._winrt_windows_system_diagnostics_telemetry.PlatformTelemetryRegistrationSettings",
         sizeof(py::wrapper::Windows::System::Diagnostics::Telemetry::PlatformTelemetryRegistrationSettings),
         0,
         Py_TPFLAGS_DEFAULT,

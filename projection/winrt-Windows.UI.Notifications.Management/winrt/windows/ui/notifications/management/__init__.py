@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_ui_notifications_management
+from winrt import _winrt_windows_ui_notifications_management
 
 __all__ = [
     "UserNotificationListenerAccessStatus",

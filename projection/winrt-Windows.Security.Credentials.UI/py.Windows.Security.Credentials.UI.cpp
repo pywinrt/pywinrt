@@ -108,7 +108,7 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
     static PyType_Spec type_spec_CredentialPicker =
     {
-        "_winrt_windows_security_credentials_ui.CredentialPicker",
+        "winrt._winrt_windows_security_credentials_ui.CredentialPicker",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -679,7 +679,7 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
     static PyType_Spec type_spec_CredentialPickerOptions =
     {
-        "_winrt_windows_security_credentials_ui.CredentialPickerOptions",
+        "winrt._winrt_windows_security_credentials_ui.CredentialPickerOptions",
         sizeof(py::wrapper::Windows::Security::Credentials::UI::CredentialPickerOptions),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -888,7 +888,7 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
     static PyType_Spec type_spec_CredentialPickerResults =
     {
-        "_winrt_windows_security_credentials_ui.CredentialPickerResults",
+        "winrt._winrt_windows_security_credentials_ui.CredentialPickerResults",
         sizeof(py::wrapper::Windows::Security::Credentials::UI::CredentialPickerResults),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -984,7 +984,7 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
     static PyType_Spec type_spec_UserConsentVerifier =
     {
-        "_winrt_windows_security_credentials_ui.UserConsentVerifier",
+        "winrt._winrt_windows_security_credentials_ui.UserConsentVerifier",
         0,
         0,
         Py_TPFLAGS_DEFAULT,

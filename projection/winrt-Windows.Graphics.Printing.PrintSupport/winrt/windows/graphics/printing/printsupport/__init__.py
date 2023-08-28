@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_graphics_printing_printsupport
+from winrt import _winrt_windows_graphics_printing_printsupport
 
 __all__ = [
     "SettingsLaunchKind",

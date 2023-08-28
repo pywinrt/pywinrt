@@ -360,7 +360,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static PyType_Spec type_spec_ImageScanner =
     {
-        "_winrt_windows_devices_scanners.ImageScanner",
+        "winrt._winrt_windows_devices_scanners.ImageScanner",
         sizeof(py::wrapper::Windows::Devices::Scanners::ImageScanner),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -529,7 +529,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static PyType_Spec type_spec_ImageScannerAutoConfiguration =
     {
-        "_winrt_windows_devices_scanners.ImageScannerAutoConfiguration",
+        "winrt._winrt_windows_devices_scanners.ImageScannerAutoConfiguration",
         sizeof(py::wrapper::Windows::Devices::Scanners::ImageScannerAutoConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1751,7 +1751,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static PyType_Spec type_spec_ImageScannerFeederConfiguration =
     {
-        "_winrt_windows_devices_scanners.ImageScannerFeederConfiguration",
+        "winrt._winrt_windows_devices_scanners.ImageScannerFeederConfiguration",
         sizeof(py::wrapper::Windows::Devices::Scanners::ImageScannerFeederConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2572,7 +2572,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static PyType_Spec type_spec_ImageScannerFlatbedConfiguration =
     {
-        "_winrt_windows_devices_scanners.ImageScannerFlatbedConfiguration",
+        "winrt._winrt_windows_devices_scanners.ImageScannerFlatbedConfiguration",
         sizeof(py::wrapper::Windows::Devices::Scanners::ImageScannerFlatbedConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2681,7 +2681,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static PyType_Spec type_spec_ImageScannerPreviewResult =
     {
-        "_winrt_windows_devices_scanners.ImageScannerPreviewResult",
+        "winrt._winrt_windows_devices_scanners.ImageScannerPreviewResult",
         sizeof(py::wrapper::Windows::Devices::Scanners::ImageScannerPreviewResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2770,7 +2770,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static PyType_Spec type_spec_ImageScannerScanResult =
     {
-        "_winrt_windows_devices_scanners.ImageScannerScanResult",
+        "winrt._winrt_windows_devices_scanners.ImageScannerScanResult",
         sizeof(py::wrapper::Windows::Devices::Scanners::ImageScannerScanResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2939,7 +2939,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static PyType_Spec type_spec_IImageScannerFormatConfiguration =
     {
-        "_winrt_windows_devices_scanners.IImageScannerFormatConfiguration",
+        "winrt._winrt_windows_devices_scanners.IImageScannerFormatConfiguration",
         sizeof(py::wrapper::Windows::Devices::Scanners::IImageScannerFormatConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3760,7 +3760,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static PyType_Spec type_spec_IImageScannerSourceConfiguration =
     {
-        "_winrt_windows_devices_scanners.IImageScannerSourceConfiguration",
+        "winrt._winrt_windows_devices_scanners.IImageScannerSourceConfiguration",
         sizeof(py::wrapper::Windows::Devices::Scanners::IImageScannerSourceConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3921,7 +3921,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static PyType_Spec type_spec_ImageScannerResolution =
     {
-        "_winrt_windows_devices_scanners.ImageScannerResolution",
+        "winrt._winrt_windows_devices_scanners.ImageScannerResolution",
         sizeof(py::wrapper::Windows::Devices::Scanners::ImageScannerResolution),
         0,
         Py_TPFLAGS_DEFAULT,

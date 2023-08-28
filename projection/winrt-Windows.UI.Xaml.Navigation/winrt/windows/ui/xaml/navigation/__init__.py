@@ -5,7 +5,7 @@ import typing
 import uuid as _uuid
 
 import winrt.system
-from . import _winrt_windows_ui_xaml_navigation
+from winrt import _winrt_windows_ui_xaml_navigation
 
 __all__ = [
     "NavigationCacheMode",

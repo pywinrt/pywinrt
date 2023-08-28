@@ -244,7 +244,7 @@ namespace py::cpp::Windows::Devices::Power
 
     static PyType_Spec type_spec_Battery =
     {
-        "_winrt_windows_devices_power.Battery",
+        "winrt._winrt_windows_devices_power.Battery",
         sizeof(py::wrapper::Windows::Devices::Power::Battery),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -265,7 +265,7 @@ namespace py::cpp::Windows::Devices::Power
 
     static PyType_Spec type_spec_Battery_Meta =
     {
-        "_winrt_windows_devices_power.Battery_Meta",
+        "winrt._winrt_windows_devices_power.Battery_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -434,7 +434,7 @@ namespace py::cpp::Windows::Devices::Power
 
     static PyType_Spec type_spec_BatteryReport =
     {
-        "_winrt_windows_devices_power.BatteryReport",
+        "winrt._winrt_windows_devices_power.BatteryReport",
         sizeof(py::wrapper::Windows::Devices::Power::BatteryReport),
         0,
         Py_TPFLAGS_DEFAULT,

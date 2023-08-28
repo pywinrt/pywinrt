@@ -6,7 +6,7 @@ from winrt_sdk import get_include_dirs
 setup(
     ext_modules=[
         Extension(
-            "winrt.windows.ui.notifications.management._winrt_windows_ui_notifications_management",
+            "winrt._winrt_windows_ui_notifications_management",
             sources=["py.Windows.UI.Notifications.Management.cpp"],
             include_dirs=get_include_dirs(),
             extra_compile_args=["/std:c++20", "/permissive-"],

@@ -6,7 +6,7 @@ from winrt_sdk import get_include_dirs
 setup(
     ext_modules=[
         Extension(
-            "winrt.windows.applicationmodel.calls._winrt_windows_applicationmodel_calls",
+            "winrt._winrt_windows_applicationmodel_calls",
             sources=["py.Windows.ApplicationModel.Calls.cpp"],
             include_dirs=get_include_dirs(),
             extra_compile_args=["/std:c++20", "/permissive-"],

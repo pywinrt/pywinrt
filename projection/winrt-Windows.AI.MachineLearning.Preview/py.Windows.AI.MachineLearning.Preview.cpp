@@ -208,7 +208,7 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyType_Spec type_spec_ImageVariableDescriptorPreview =
     {
-        "_winrt_windows_ai_machinelearning_preview.ImageVariableDescriptorPreview",
+        "winrt._winrt_windows_ai_machinelearning_preview.ImageVariableDescriptorPreview",
         sizeof(py::wrapper::Windows::AI::MachineLearning::Preview::ImageVariableDescriptorPreview),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -517,7 +517,7 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyType_Spec type_spec_InferencingOptionsPreview =
     {
-        "_winrt_windows_ai_machinelearning_preview.InferencingOptionsPreview",
+        "winrt._winrt_windows_ai_machinelearning_preview.InferencingOptionsPreview",
         sizeof(py::wrapper::Windows::AI::MachineLearning::Preview::InferencingOptionsPreview),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -927,7 +927,7 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyType_Spec type_spec_LearningModelBindingPreview =
     {
-        "_winrt_windows_ai_machinelearning_preview.LearningModelBindingPreview",
+        "winrt._winrt_windows_ai_machinelearning_preview.LearningModelBindingPreview",
         sizeof(py::wrapper::Windows::AI::MachineLearning::Preview::LearningModelBindingPreview),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1156,7 +1156,7 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyType_Spec type_spec_LearningModelDescriptionPreview =
     {
-        "_winrt_windows_ai_machinelearning_preview.LearningModelDescriptionPreview",
+        "winrt._winrt_windows_ai_machinelearning_preview.LearningModelDescriptionPreview",
         sizeof(py::wrapper::Windows::AI::MachineLearning::Preview::LearningModelDescriptionPreview),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1265,7 +1265,7 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyType_Spec type_spec_LearningModelEvaluationResultPreview =
     {
-        "_winrt_windows_ai_machinelearning_preview.LearningModelEvaluationResultPreview",
+        "winrt._winrt_windows_ai_machinelearning_preview.LearningModelEvaluationResultPreview",
         sizeof(py::wrapper::Windows::AI::MachineLearning::Preview::LearningModelEvaluationResultPreview),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1532,7 +1532,7 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyType_Spec type_spec_LearningModelPreview =
     {
-        "_winrt_windows_ai_machinelearning_preview.LearningModelPreview",
+        "winrt._winrt_windows_ai_machinelearning_preview.LearningModelPreview",
         sizeof(py::wrapper::Windows::AI::MachineLearning::Preview::LearningModelPreview),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1681,7 +1681,7 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyType_Spec type_spec_LearningModelVariableDescriptorPreview =
     {
-        "_winrt_windows_ai_machinelearning_preview.LearningModelVariableDescriptorPreview",
+        "winrt._winrt_windows_ai_machinelearning_preview.LearningModelVariableDescriptorPreview",
         sizeof(py::wrapper::Windows::AI::MachineLearning::Preview::LearningModelVariableDescriptorPreview),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1910,7 +1910,7 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyType_Spec type_spec_MapVariableDescriptorPreview =
     {
-        "_winrt_windows_ai_machinelearning_preview.MapVariableDescriptorPreview",
+        "winrt._winrt_windows_ai_machinelearning_preview.MapVariableDescriptorPreview",
         sizeof(py::wrapper::Windows::AI::MachineLearning::Preview::MapVariableDescriptorPreview),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2079,7 +2079,7 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyType_Spec type_spec_SequenceVariableDescriptorPreview =
     {
-        "_winrt_windows_ai_machinelearning_preview.SequenceVariableDescriptorPreview",
+        "winrt._winrt_windows_ai_machinelearning_preview.SequenceVariableDescriptorPreview",
         sizeof(py::wrapper::Windows::AI::MachineLearning::Preview::SequenceVariableDescriptorPreview),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2268,7 +2268,7 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyType_Spec type_spec_TensorVariableDescriptorPreview =
     {
-        "_winrt_windows_ai_machinelearning_preview.TensorVariableDescriptorPreview",
+        "winrt._winrt_windows_ai_machinelearning_preview.TensorVariableDescriptorPreview",
         sizeof(py::wrapper::Windows::AI::MachineLearning::Preview::TensorVariableDescriptorPreview),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2417,7 +2417,7 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyType_Spec type_spec_ILearningModelVariableDescriptorPreview =
     {
-        "_winrt_windows_ai_machinelearning_preview.ILearningModelVariableDescriptorPreview",
+        "winrt._winrt_windows_ai_machinelearning_preview.ILearningModelVariableDescriptorPreview",
         sizeof(py::wrapper::Windows::AI::MachineLearning::Preview::ILearningModelVariableDescriptorPreview),
         0,
         Py_TPFLAGS_DEFAULT,

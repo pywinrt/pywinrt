@@ -6,7 +6,7 @@ from winrt_sdk import get_include_dirs
 setup(
     ext_modules=[
         Extension(
-            "winrt.windows.ui.xaml.media.media3d._winrt_windows_ui_xaml_media_media3d",
+            "winrt._winrt_windows_ui_xaml_media_media3d",
             sources=["py.Windows.UI.Xaml.Media.Media3D.cpp"],
             include_dirs=get_include_dirs(),
             extra_compile_args=["/std:c++20", "/permissive-"],

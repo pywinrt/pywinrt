@@ -168,7 +168,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyType_Spec type_spec_ChatCapabilities =
     {
-        "_winrt_windows_applicationmodel_chat.ChatCapabilities",
+        "winrt._winrt_windows_applicationmodel_chat.ChatCapabilities",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::ChatCapabilities),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -308,7 +308,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyType_Spec type_spec_ChatCapabilitiesManager =
     {
-        "_winrt_windows_applicationmodel_chat.ChatCapabilitiesManager",
+        "winrt._winrt_windows_applicationmodel_chat.ChatCapabilitiesManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -896,7 +896,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyType_Spec type_spec_ChatConversation =
     {
-        "_winrt_windows_applicationmodel_chat.ChatConversation",
+        "winrt._winrt_windows_applicationmodel_chat.ChatConversation",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::ChatConversation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1015,7 +1015,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyType_Spec type_spec_ChatConversationReader =
     {
-        "_winrt_windows_applicationmodel_chat.ChatConversationReader",
+        "winrt._winrt_windows_applicationmodel_chat.ChatConversationReader",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::ChatConversationReader),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1318,7 +1318,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyType_Spec type_spec_ChatConversationThreadingInfo =
     {
-        "_winrt_windows_applicationmodel_chat.ChatConversationThreadingInfo",
+        "winrt._winrt_windows_applicationmodel_chat.ChatConversationThreadingInfo",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::ChatConversationThreadingInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2549,7 +2549,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyType_Spec type_spec_ChatMessage =
     {
-        "_winrt_windows_applicationmodel_chat.ChatMessage",
+        "winrt._winrt_windows_applicationmodel_chat.ChatMessage",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::ChatMessage),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2979,7 +2979,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyType_Spec type_spec_ChatMessageAttachment =
     {
-        "_winrt_windows_applicationmodel_chat.ChatMessageAttachment",
+        "winrt._winrt_windows_applicationmodel_chat.ChatMessageAttachment",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageAttachment),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3046,7 +3046,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyType_Spec type_spec_ChatMessageBlocking =
     {
-        "_winrt_windows_applicationmodel_chat.ChatMessageBlocking",
+        "winrt._winrt_windows_applicationmodel_chat.ChatMessageBlocking",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3155,7 +3155,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyType_Spec type_spec_ChatMessageChange =
     {
-        "_winrt_windows_applicationmodel_chat.ChatMessageChange",
+        "winrt._winrt_windows_applicationmodel_chat.ChatMessageChange",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageChange),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3318,7 +3318,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyType_Spec type_spec_ChatMessageChangeReader =
     {
-        "_winrt_windows_applicationmodel_chat.ChatMessageChangeReader",
+        "winrt._winrt_windows_applicationmodel_chat.ChatMessageChangeReader",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageChangeReader),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3479,7 +3479,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyType_Spec type_spec_ChatMessageChangeTracker =
     {
-        "_winrt_windows_applicationmodel_chat.ChatMessageChangeTracker",
+        "winrt._winrt_windows_applicationmodel_chat.ChatMessageChangeTracker",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageChangeTracker),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3579,7 +3579,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyType_Spec type_spec_ChatMessageChangedDeferral =
     {
-        "_winrt_windows_applicationmodel_chat.ChatMessageChangedDeferral",
+        "winrt._winrt_windows_applicationmodel_chat.ChatMessageChangedDeferral",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageChangedDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3678,7 +3678,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyType_Spec type_spec_ChatMessageChangedEventArgs =
     {
-        "_winrt_windows_applicationmodel_chat.ChatMessageChangedEventArgs",
+        "winrt._winrt_windows_applicationmodel_chat.ChatMessageChangedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3927,7 +3927,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyType_Spec type_spec_ChatMessageManager =
     {
-        "_winrt_windows_applicationmodel_chat.ChatMessageManager",
+        "winrt._winrt_windows_applicationmodel_chat.ChatMessageManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4096,7 +4096,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyType_Spec type_spec_ChatMessageNotificationTriggerDetails =
     {
-        "_winrt_windows_applicationmodel_chat.ChatMessageNotificationTriggerDetails",
+        "winrt._winrt_windows_applicationmodel_chat.ChatMessageNotificationTriggerDetails",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageNotificationTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4215,7 +4215,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyType_Spec type_spec_ChatMessageReader =
     {
-        "_winrt_windows_applicationmodel_chat.ChatMessageReader",
+        "winrt._winrt_windows_applicationmodel_chat.ChatMessageReader",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageReader),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5129,7 +5129,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyType_Spec type_spec_ChatMessageStore =
     {
-        "_winrt_windows_applicationmodel_chat.ChatMessageStore",
+        "winrt._winrt_windows_applicationmodel_chat.ChatMessageStore",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageStore),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5238,7 +5238,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyType_Spec type_spec_ChatMessageStoreChangedEventArgs =
     {
-        "_winrt_windows_applicationmodel_chat.ChatMessageStoreChangedEventArgs",
+        "winrt._winrt_windows_applicationmodel_chat.ChatMessageStoreChangedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageStoreChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5457,7 +5457,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyType_Spec type_spec_ChatMessageTransport =
     {
-        "_winrt_windows_applicationmodel_chat.ChatMessageTransport",
+        "winrt._winrt_windows_applicationmodel_chat.ChatMessageTransport",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageTransport),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5626,7 +5626,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyType_Spec type_spec_ChatMessageTransportConfiguration =
     {
-        "_winrt_windows_applicationmodel_chat.ChatMessageTransportConfiguration",
+        "winrt._winrt_windows_applicationmodel_chat.ChatMessageTransportConfiguration",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageTransportConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5775,7 +5775,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyType_Spec type_spec_ChatMessageValidationResult =
     {
-        "_winrt_windows_applicationmodel_chat.ChatMessageValidationResult",
+        "winrt._winrt_windows_applicationmodel_chat.ChatMessageValidationResult",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageValidationResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5914,7 +5914,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyType_Spec type_spec_ChatQueryOptions =
     {
-        "_winrt_windows_applicationmodel_chat.ChatQueryOptions",
+        "winrt._winrt_windows_applicationmodel_chat.ChatQueryOptions",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::ChatQueryOptions),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6249,7 +6249,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyType_Spec type_spec_ChatRecipientDeliveryInfo =
     {
-        "_winrt_windows_applicationmodel_chat.ChatRecipientDeliveryInfo",
+        "winrt._winrt_windows_applicationmodel_chat.ChatRecipientDeliveryInfo",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::ChatRecipientDeliveryInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6368,7 +6368,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyType_Spec type_spec_ChatSearchReader =
     {
-        "_winrt_windows_applicationmodel_chat.ChatSearchReader",
+        "winrt._winrt_windows_applicationmodel_chat.ChatSearchReader",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::ChatSearchReader),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6533,7 +6533,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyType_Spec type_spec_ChatSyncConfiguration =
     {
-        "_winrt_windows_applicationmodel_chat.ChatSyncConfiguration",
+        "winrt._winrt_windows_applicationmodel_chat.ChatSyncConfiguration",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::ChatSyncConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6779,7 +6779,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyType_Spec type_spec_ChatSyncManager =
     {
-        "_winrt_windows_applicationmodel_chat.ChatSyncManager",
+        "winrt._winrt_windows_applicationmodel_chat.ChatSyncManager",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::ChatSyncManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7013,7 +7013,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyType_Spec type_spec_RcsEndUserMessage =
     {
-        "_winrt_windows_applicationmodel_chat.RcsEndUserMessage",
+        "winrt._winrt_windows_applicationmodel_chat.RcsEndUserMessage",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::RcsEndUserMessage),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7102,7 +7102,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyType_Spec type_spec_RcsEndUserMessageAction =
     {
-        "_winrt_windows_applicationmodel_chat.RcsEndUserMessageAction",
+        "winrt._winrt_windows_applicationmodel_chat.RcsEndUserMessageAction",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::RcsEndUserMessageAction),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7211,7 +7211,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyType_Spec type_spec_RcsEndUserMessageAvailableEventArgs =
     {
-        "_winrt_windows_applicationmodel_chat.RcsEndUserMessageAvailableEventArgs",
+        "winrt._winrt_windows_applicationmodel_chat.RcsEndUserMessageAvailableEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::RcsEndUserMessageAvailableEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7320,7 +7320,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyType_Spec type_spec_RcsEndUserMessageAvailableTriggerDetails =
     {
-        "_winrt_windows_applicationmodel_chat.RcsEndUserMessageAvailableTriggerDetails",
+        "winrt._winrt_windows_applicationmodel_chat.RcsEndUserMessageAvailableTriggerDetails",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::RcsEndUserMessageAvailableTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7434,7 +7434,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyType_Spec type_spec_RcsEndUserMessageManager =
     {
-        "_winrt_windows_applicationmodel_chat.RcsEndUserMessageManager",
+        "winrt._winrt_windows_applicationmodel_chat.RcsEndUserMessageManager",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::RcsEndUserMessageManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7637,7 +7637,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyType_Spec type_spec_RcsManager =
     {
-        "_winrt_windows_applicationmodel_chat.RcsManager",
+        "winrt._winrt_windows_applicationmodel_chat.RcsManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7726,7 +7726,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyType_Spec type_spec_RcsServiceKindSupportedChangedEventArgs =
     {
-        "_winrt_windows_applicationmodel_chat.RcsServiceKindSupportedChangedEventArgs",
+        "winrt._winrt_windows_applicationmodel_chat.RcsServiceKindSupportedChangedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::RcsServiceKindSupportedChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8004,7 +8004,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyType_Spec type_spec_RcsTransport =
     {
-        "_winrt_windows_applicationmodel_chat.RcsTransport",
+        "winrt._winrt_windows_applicationmodel_chat.RcsTransport",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::RcsTransport),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8193,7 +8193,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyType_Spec type_spec_RcsTransportConfiguration =
     {
-        "_winrt_windows_applicationmodel_chat.RcsTransportConfiguration",
+        "winrt._winrt_windows_applicationmodel_chat.RcsTransportConfiguration",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::RcsTransportConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8322,7 +8322,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyType_Spec type_spec_RemoteParticipantComposingChangedEventArgs =
     {
-        "_winrt_windows_applicationmodel_chat.RemoteParticipantComposingChangedEventArgs",
+        "winrt._winrt_windows_applicationmodel_chat.RemoteParticipantComposingChangedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::RemoteParticipantComposingChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8411,7 +8411,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyType_Spec type_spec_IChatItem =
     {
-        "_winrt_windows_applicationmodel_chat.IChatItem",
+        "winrt._winrt_windows_applicationmodel_chat.IChatItem",
         sizeof(py::wrapper::Windows::ApplicationModel::Chat::IChatItem),
         0,
         Py_TPFLAGS_DEFAULT,

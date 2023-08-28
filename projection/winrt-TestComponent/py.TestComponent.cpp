@@ -249,7 +249,7 @@ namespace py::cpp::TestComponent
 
     static PyType_Spec type_spec_TestRunner =
     {
-        "_winrt_testcomponent.TestRunner",
+        "winrt._winrt_testcomponent.TestRunner",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3619,7 +3619,7 @@ namespace py::cpp::TestComponent
 
     static PyType_Spec type_spec_ITests =
     {
-        "_winrt_testcomponent.ITests",
+        "winrt._winrt_testcomponent.ITests",
         sizeof(py::wrapper::TestComponent::ITests),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4060,7 +4060,7 @@ namespace py::cpp::TestComponent
 
     static PyType_Spec type_spec_Blittable =
     {
-        "_winrt_testcomponent.Blittable",
+        "winrt._winrt_testcomponent.Blittable",
         sizeof(py::wrapper::TestComponent::Blittable),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4221,7 +4221,7 @@ namespace py::cpp::TestComponent
 
     static PyType_Spec type_spec_Nested =
     {
-        "_winrt_testcomponent.Nested",
+        "winrt._winrt_testcomponent.Nested",
         sizeof(py::wrapper::TestComponent::Nested),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4452,7 +4452,7 @@ namespace py::cpp::TestComponent
 
     static PyType_Spec type_spec_NonBlittable =
     {
-        "_winrt_testcomponent.NonBlittable",
+        "winrt._winrt_testcomponent.NonBlittable",
         sizeof(py::wrapper::TestComponent::NonBlittable),
         0,
         Py_TPFLAGS_DEFAULT,

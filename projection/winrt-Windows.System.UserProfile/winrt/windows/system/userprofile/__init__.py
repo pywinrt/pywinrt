@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_system_userprofile
+from winrt import _winrt_windows_system_userprofile
 
 __all__ = [
     "AccountPictureKind",

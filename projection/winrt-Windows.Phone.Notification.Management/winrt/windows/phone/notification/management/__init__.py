@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_phone_notification_management
+from winrt import _winrt_windows_phone_notification_management
 
 __all__ = [
     "AccessoryNotificationType",

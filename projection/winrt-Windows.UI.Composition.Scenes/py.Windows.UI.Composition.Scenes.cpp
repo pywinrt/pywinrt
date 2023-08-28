@@ -168,7 +168,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static PyType_Spec type_spec_SceneBoundingBox =
     {
-        "_winrt_windows_ui_composition_scenes.SceneBoundingBox",
+        "winrt._winrt_windows_ui_composition_scenes.SceneBoundingBox",
         sizeof(py::wrapper::Windows::UI::Composition::Scenes::SceneBoundingBox),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -257,7 +257,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static PyType_Spec type_spec_SceneComponent =
     {
-        "_winrt_windows_ui_composition_scenes.SceneComponent",
+        "winrt._winrt_windows_ui_composition_scenes.SceneComponent",
         sizeof(py::wrapper::Windows::UI::Composition::Scenes::SceneComponent),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -874,7 +874,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static PyType_Spec type_spec_SceneComponentCollection =
     {
-        "_winrt_windows_ui_composition_scenes.SceneComponentCollection",
+        "winrt._winrt_windows_ui_composition_scenes.SceneComponentCollection",
         sizeof(py::wrapper::Windows::UI::Composition::Scenes::SceneComponentCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -943,7 +943,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static PyType_Spec type_spec_SceneMaterial =
     {
-        "_winrt_windows_ui_composition_scenes.SceneMaterial",
+        "winrt._winrt_windows_ui_composition_scenes.SceneMaterial",
         sizeof(py::wrapper::Windows::UI::Composition::Scenes::SceneMaterial),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1012,7 +1012,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static PyType_Spec type_spec_SceneMaterialInput =
     {
-        "_winrt_windows_ui_composition_scenes.SceneMaterialInput",
+        "winrt._winrt_windows_ui_composition_scenes.SceneMaterialInput",
         sizeof(py::wrapper::Windows::UI::Composition::Scenes::SceneMaterialInput),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1216,7 +1216,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static PyType_Spec type_spec_SceneMesh =
     {
-        "_winrt_windows_ui_composition_scenes.SceneMesh",
+        "winrt._winrt_windows_ui_composition_scenes.SceneMesh",
         sizeof(py::wrapper::Windows::UI::Composition::Scenes::SceneMesh),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1623,7 +1623,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static PyType_Spec type_spec_SceneMeshMaterialAttributeMap =
     {
-        "_winrt_windows_ui_composition_scenes.SceneMeshMaterialAttributeMap",
+        "winrt._winrt_windows_ui_composition_scenes.SceneMeshMaterialAttributeMap",
         sizeof(py::wrapper::Windows::UI::Composition::Scenes::SceneMeshMaterialAttributeMap),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1840,7 +1840,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static PyType_Spec type_spec_SceneMeshRendererComponent =
     {
-        "_winrt_windows_ui_composition_scenes.SceneMeshRendererComponent",
+        "winrt._winrt_windows_ui_composition_scenes.SceneMeshRendererComponent",
         sizeof(py::wrapper::Windows::UI::Composition::Scenes::SceneMeshRendererComponent),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2181,7 +2181,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static PyType_Spec type_spec_SceneMetallicRoughnessMaterial =
     {
-        "_winrt_windows_ui_composition_scenes.SceneMetallicRoughnessMaterial",
+        "winrt._winrt_windows_ui_composition_scenes.SceneMetallicRoughnessMaterial",
         sizeof(py::wrapper::Windows::UI::Composition::Scenes::SceneMetallicRoughnessMaterial),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2538,7 +2538,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static PyType_Spec type_spec_SceneModelTransform =
     {
-        "_winrt_windows_ui_composition_scenes.SceneModelTransform",
+        "winrt._winrt_windows_ui_composition_scenes.SceneModelTransform",
         sizeof(py::wrapper::Windows::UI::Composition::Scenes::SceneModelTransform),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2751,7 +2751,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static PyType_Spec type_spec_SceneNode =
     {
-        "_winrt_windows_ui_composition_scenes.SceneNode",
+        "winrt._winrt_windows_ui_composition_scenes.SceneNode",
         sizeof(py::wrapper::Windows::UI::Composition::Scenes::SceneNode),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3368,7 +3368,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static PyType_Spec type_spec_SceneNodeCollection =
     {
-        "_winrt_windows_ui_composition_scenes.SceneNodeCollection",
+        "winrt._winrt_windows_ui_composition_scenes.SceneNodeCollection",
         sizeof(py::wrapper::Windows::UI::Composition::Scenes::SceneNodeCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3437,7 +3437,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static PyType_Spec type_spec_SceneObject =
     {
-        "_winrt_windows_ui_composition_scenes.SceneObject",
+        "winrt._winrt_windows_ui_composition_scenes.SceneObject",
         sizeof(py::wrapper::Windows::UI::Composition::Scenes::SceneObject),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3938,7 +3938,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static PyType_Spec type_spec_ScenePbrMaterial =
     {
-        "_winrt_windows_ui_composition_scenes.ScenePbrMaterial",
+        "winrt._winrt_windows_ui_composition_scenes.ScenePbrMaterial",
         sizeof(py::wrapper::Windows::UI::Composition::Scenes::ScenePbrMaterial),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4007,7 +4007,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static PyType_Spec type_spec_SceneRendererComponent =
     {
-        "_winrt_windows_ui_composition_scenes.SceneRendererComponent",
+        "winrt._winrt_windows_ui_composition_scenes.SceneRendererComponent",
         sizeof(py::wrapper::Windows::UI::Composition::Scenes::SceneRendererComponent),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4300,7 +4300,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static PyType_Spec type_spec_SceneSurfaceMaterialInput =
     {
-        "_winrt_windows_ui_composition_scenes.SceneSurfaceMaterialInput",
+        "winrt._winrt_windows_ui_composition_scenes.SceneSurfaceMaterialInput",
         sizeof(py::wrapper::Windows::UI::Composition::Scenes::SceneSurfaceMaterialInput),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4449,7 +4449,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
     static PyType_Spec type_spec_SceneVisual =
     {
-        "_winrt_windows_ui_composition_scenes.SceneVisual",
+        "winrt._winrt_windows_ui_composition_scenes.SceneVisual",
         sizeof(py::wrapper::Windows::UI::Composition::Scenes::SceneVisual),
         0,
         Py_TPFLAGS_DEFAULT,

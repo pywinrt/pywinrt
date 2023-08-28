@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_media_protection_playready
+from winrt import _winrt_windows_media_protection_playready
 
 __all__ = [
     "NDCertificateFeature",

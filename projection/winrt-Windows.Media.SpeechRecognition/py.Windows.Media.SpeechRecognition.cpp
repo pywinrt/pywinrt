@@ -88,7 +88,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static PyType_Spec type_spec_SpeechContinuousRecognitionCompletedEventArgs =
     {
-        "_winrt_windows_media_speechrecognition.SpeechContinuousRecognitionCompletedEventArgs",
+        "winrt._winrt_windows_media_speechrecognition.SpeechContinuousRecognitionCompletedEventArgs",
         sizeof(py::wrapper::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionCompletedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -177,7 +177,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static PyType_Spec type_spec_SpeechContinuousRecognitionResultGeneratedEventArgs =
     {
-        "_winrt_windows_media_speechrecognition.SpeechContinuousRecognitionResultGeneratedEventArgs",
+        "winrt._winrt_windows_media_speechrecognition.SpeechContinuousRecognitionResultGeneratedEventArgs",
         sizeof(py::wrapper::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionResultGeneratedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -555,7 +555,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static PyType_Spec type_spec_SpeechContinuousRecognitionSession =
     {
-        "_winrt_windows_media_speechrecognition.SpeechContinuousRecognitionSession",
+        "winrt._winrt_windows_media_speechrecognition.SpeechContinuousRecognitionSession",
         sizeof(py::wrapper::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionSession),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -644,7 +644,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static PyType_Spec type_spec_SpeechRecognitionCompilationResult =
     {
-        "_winrt_windows_media_speechrecognition.SpeechRecognitionCompilationResult",
+        "winrt._winrt_windows_media_speechrecognition.SpeechRecognitionCompilationResult",
         sizeof(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognitionCompilationResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -937,7 +937,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static PyType_Spec type_spec_SpeechRecognitionGrammarFileConstraint =
     {
-        "_winrt_windows_media_speechrecognition.SpeechRecognitionGrammarFileConstraint",
+        "winrt._winrt_windows_media_speechrecognition.SpeechRecognitionGrammarFileConstraint",
         sizeof(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognitionGrammarFileConstraint),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1026,7 +1026,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static PyType_Spec type_spec_SpeechRecognitionHypothesis =
     {
-        "_winrt_windows_media_speechrecognition.SpeechRecognitionHypothesis",
+        "winrt._winrt_windows_media_speechrecognition.SpeechRecognitionHypothesis",
         sizeof(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognitionHypothesis),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1115,7 +1115,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static PyType_Spec type_spec_SpeechRecognitionHypothesisGeneratedEventArgs =
     {
-        "_winrt_windows_media_speechrecognition.SpeechRecognitionHypothesisGeneratedEventArgs",
+        "winrt._winrt_windows_media_speechrecognition.SpeechRecognitionHypothesisGeneratedEventArgs",
         sizeof(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognitionHypothesisGeneratedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1408,7 +1408,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static PyType_Spec type_spec_SpeechRecognitionListConstraint =
     {
-        "_winrt_windows_media_speechrecognition.SpeechRecognitionListConstraint",
+        "winrt._winrt_windows_media_speechrecognition.SpeechRecognitionListConstraint",
         sizeof(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognitionListConstraint),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1497,7 +1497,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static PyType_Spec type_spec_SpeechRecognitionQualityDegradingEventArgs =
     {
-        "_winrt_windows_media_speechrecognition.SpeechRecognitionQualityDegradingEventArgs",
+        "winrt._winrt_windows_media_speechrecognition.SpeechRecognitionQualityDegradingEventArgs",
         sizeof(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognitionQualityDegradingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1778,7 +1778,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static PyType_Spec type_spec_SpeechRecognitionResult =
     {
-        "_winrt_windows_media_speechrecognition.SpeechRecognitionResult",
+        "winrt._winrt_windows_media_speechrecognition.SpeechRecognitionResult",
         sizeof(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognitionResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1867,7 +1867,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static PyType_Spec type_spec_SpeechRecognitionSemanticInterpretation =
     {
-        "_winrt_windows_media_speechrecognition.SpeechRecognitionSemanticInterpretation",
+        "winrt._winrt_windows_media_speechrecognition.SpeechRecognitionSemanticInterpretation",
         sizeof(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognitionSemanticInterpretation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2182,7 +2182,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static PyType_Spec type_spec_SpeechRecognitionTopicConstraint =
     {
-        "_winrt_windows_media_speechrecognition.SpeechRecognitionTopicConstraint",
+        "winrt._winrt_windows_media_speechrecognition.SpeechRecognitionTopicConstraint",
         sizeof(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognitionTopicConstraint),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2415,7 +2415,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static PyType_Spec type_spec_SpeechRecognitionVoiceCommandDefinitionConstraint =
     {
-        "_winrt_windows_media_speechrecognition.SpeechRecognitionVoiceCommandDefinitionConstraint",
+        "winrt._winrt_windows_media_speechrecognition.SpeechRecognitionVoiceCommandDefinitionConstraint",
         sizeof(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognitionVoiceCommandDefinitionConstraint),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3037,7 +3037,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static PyType_Spec type_spec_SpeechRecognizer =
     {
-        "_winrt_windows_media_speechrecognition.SpeechRecognizer",
+        "winrt._winrt_windows_media_speechrecognition.SpeechRecognizer",
         sizeof(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognizer),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3060,7 +3060,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static PyType_Spec type_spec_SpeechRecognizer_Meta =
     {
-        "_winrt_windows_media_speechrecognition.SpeechRecognizer_Meta",
+        "winrt._winrt_windows_media_speechrecognition.SpeechRecognizer_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -3149,7 +3149,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static PyType_Spec type_spec_SpeechRecognizerStateChangedEventArgs =
     {
-        "_winrt_windows_media_speechrecognition.SpeechRecognizerStateChangedEventArgs",
+        "winrt._winrt_windows_media_speechrecognition.SpeechRecognizerStateChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognizerStateChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3362,7 +3362,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static PyType_Spec type_spec_SpeechRecognizerTimeouts =
     {
-        "_winrt_windows_media_speechrecognition.SpeechRecognizerTimeouts",
+        "winrt._winrt_windows_media_speechrecognition.SpeechRecognizerTimeouts",
         sizeof(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognizerTimeouts),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3623,7 +3623,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static PyType_Spec type_spec_SpeechRecognizerUIOptions =
     {
-        "_winrt_windows_media_speechrecognition.SpeechRecognizerUIOptions",
+        "winrt._winrt_windows_media_speechrecognition.SpeechRecognizerUIOptions",
         sizeof(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognizerUIOptions),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3708,7 +3708,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static PyType_Spec type_spec_VoiceCommandManager =
     {
-        "_winrt_windows_media_speechrecognition.VoiceCommandManager",
+        "winrt._winrt_windows_media_speechrecognition.VoiceCommandManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3729,7 +3729,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static PyType_Spec type_spec_VoiceCommandManager_Meta =
     {
-        "_winrt_windows_media_speechrecognition.VoiceCommandManager_Meta",
+        "winrt._winrt_windows_media_speechrecognition.VoiceCommandManager_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -3871,7 +3871,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static PyType_Spec type_spec_VoiceCommandSet =
     {
-        "_winrt_windows_media_speechrecognition.VoiceCommandSet",
+        "winrt._winrt_windows_media_speechrecognition.VoiceCommandSet",
         sizeof(py::wrapper::Windows::Media::SpeechRecognition::VoiceCommandSet),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4104,7 +4104,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static PyType_Spec type_spec_ISpeechRecognitionConstraint =
     {
-        "_winrt_windows_media_speechrecognition.ISpeechRecognitionConstraint",
+        "winrt._winrt_windows_media_speechrecognition.ISpeechRecognitionConstraint",
         sizeof(py::wrapper::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint),
         0,
         Py_TPFLAGS_DEFAULT,

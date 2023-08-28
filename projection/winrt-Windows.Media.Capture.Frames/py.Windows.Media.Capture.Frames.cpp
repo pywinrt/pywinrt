@@ -138,7 +138,7 @@ namespace py::cpp::Windows::Media::Capture::Frames
 
     static PyType_Spec type_spec_AudioMediaFrame =
     {
-        "_winrt_windows_media_capture_frames.AudioMediaFrame",
+        "winrt._winrt_windows_media_capture_frames.AudioMediaFrame",
         sizeof(py::wrapper::Windows::Media::Capture::Frames::AudioMediaFrame),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -247,7 +247,7 @@ namespace py::cpp::Windows::Media::Capture::Frames
 
     static PyType_Spec type_spec_BufferMediaFrame =
     {
-        "_winrt_windows_media_capture_frames.BufferMediaFrame",
+        "winrt._winrt_windows_media_capture_frames.BufferMediaFrame",
         sizeof(py::wrapper::Windows::Media::Capture::Frames::BufferMediaFrame),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -449,7 +449,7 @@ namespace py::cpp::Windows::Media::Capture::Frames
 
     static PyType_Spec type_spec_DepthMediaFrame =
     {
-        "_winrt_windows_media_capture_frames.DepthMediaFrame",
+        "winrt._winrt_windows_media_capture_frames.DepthMediaFrame",
         sizeof(py::wrapper::Windows::Media::Capture::Frames::DepthMediaFrame),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -558,7 +558,7 @@ namespace py::cpp::Windows::Media::Capture::Frames
 
     static PyType_Spec type_spec_DepthMediaFrameFormat =
     {
-        "_winrt_windows_media_capture_frames.DepthMediaFrameFormat",
+        "winrt._winrt_windows_media_capture_frames.DepthMediaFrameFormat",
         sizeof(py::wrapper::Windows::Media::Capture::Frames::DepthMediaFrameFormat),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -687,7 +687,7 @@ namespace py::cpp::Windows::Media::Capture::Frames
 
     static PyType_Spec type_spec_InfraredMediaFrame =
     {
-        "_winrt_windows_media_capture_frames.InfraredMediaFrame",
+        "winrt._winrt_windows_media_capture_frames.InfraredMediaFrame",
         sizeof(py::wrapper::Windows::Media::Capture::Frames::InfraredMediaFrame),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -756,7 +756,7 @@ namespace py::cpp::Windows::Media::Capture::Frames
 
     static PyType_Spec type_spec_MediaFrameArrivedEventArgs =
     {
-        "_winrt_windows_media_capture_frames.MediaFrameArrivedEventArgs",
+        "winrt._winrt_windows_media_capture_frames.MediaFrameArrivedEventArgs",
         sizeof(py::wrapper::Windows::Media::Capture::Frames::MediaFrameArrivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -945,7 +945,7 @@ namespace py::cpp::Windows::Media::Capture::Frames
 
     static PyType_Spec type_spec_MediaFrameFormat =
     {
-        "_winrt_windows_media_capture_frames.MediaFrameFormat",
+        "winrt._winrt_windows_media_capture_frames.MediaFrameFormat",
         sizeof(py::wrapper::Windows::Media::Capture::Frames::MediaFrameFormat),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1249,7 +1249,7 @@ namespace py::cpp::Windows::Media::Capture::Frames
 
     static PyType_Spec type_spec_MediaFrameReader =
     {
-        "_winrt_windows_media_capture_frames.MediaFrameReader",
+        "winrt._winrt_windows_media_capture_frames.MediaFrameReader",
         sizeof(py::wrapper::Windows::Media::Capture::Frames::MediaFrameReader),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1550,7 +1550,7 @@ namespace py::cpp::Windows::Media::Capture::Frames
 
     static PyType_Spec type_spec_MediaFrameReference =
     {
-        "_winrt_windows_media_capture_frames.MediaFrameReference",
+        "winrt._winrt_windows_media_capture_frames.MediaFrameReference",
         sizeof(py::wrapper::Windows::Media::Capture::Frames::MediaFrameReference),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1808,7 +1808,7 @@ namespace py::cpp::Windows::Media::Capture::Frames
 
     static PyType_Spec type_spec_MediaFrameSource =
     {
-        "_winrt_windows_media_capture_frames.MediaFrameSource",
+        "winrt._winrt_windows_media_capture_frames.MediaFrameSource",
         sizeof(py::wrapper::Windows::Media::Capture::Frames::MediaFrameSource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2048,7 +2048,7 @@ namespace py::cpp::Windows::Media::Capture::Frames
 
     static PyType_Spec type_spec_MediaFrameSourceController =
     {
-        "_winrt_windows_media_capture_frames.MediaFrameSourceController",
+        "winrt._winrt_windows_media_capture_frames.MediaFrameSourceController",
         sizeof(py::wrapper::Windows::Media::Capture::Frames::MediaFrameSourceController),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2157,7 +2157,7 @@ namespace py::cpp::Windows::Media::Capture::Frames
 
     static PyType_Spec type_spec_MediaFrameSourceGetPropertyResult =
     {
-        "_winrt_windows_media_capture_frames.MediaFrameSourceGetPropertyResult",
+        "winrt._winrt_windows_media_capture_frames.MediaFrameSourceGetPropertyResult",
         sizeof(py::wrapper::Windows::Media::Capture::Frames::MediaFrameSourceGetPropertyResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2378,7 +2378,7 @@ namespace py::cpp::Windows::Media::Capture::Frames
 
     static PyType_Spec type_spec_MediaFrameSourceGroup =
     {
-        "_winrt_windows_media_capture_frames.MediaFrameSourceGroup",
+        "winrt._winrt_windows_media_capture_frames.MediaFrameSourceGroup",
         sizeof(py::wrapper::Windows::Media::Capture::Frames::MediaFrameSourceGroup),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2679,7 +2679,7 @@ namespace py::cpp::Windows::Media::Capture::Frames
 
     static PyType_Spec type_spec_MediaFrameSourceInfo =
     {
-        "_winrt_windows_media_capture_frames.MediaFrameSourceInfo",
+        "winrt._winrt_windows_media_capture_frames.MediaFrameSourceInfo",
         sizeof(py::wrapper::Windows::Media::Capture::Frames::MediaFrameSourceInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2748,7 +2748,7 @@ namespace py::cpp::Windows::Media::Capture::Frames
 
     static PyType_Spec type_spec_MultiSourceMediaFrameArrivedEventArgs =
     {
-        "_winrt_windows_media_capture_frames.MultiSourceMediaFrameArrivedEventArgs",
+        "winrt._winrt_windows_media_capture_frames.MultiSourceMediaFrameArrivedEventArgs",
         sizeof(py::wrapper::Windows::Media::Capture::Frames::MultiSourceMediaFrameArrivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3052,7 +3052,7 @@ namespace py::cpp::Windows::Media::Capture::Frames
 
     static PyType_Spec type_spec_MultiSourceMediaFrameReader =
     {
-        "_winrt_windows_media_capture_frames.MultiSourceMediaFrameReader",
+        "winrt._winrt_windows_media_capture_frames.MultiSourceMediaFrameReader",
         sizeof(py::wrapper::Windows::Media::Capture::Frames::MultiSourceMediaFrameReader),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3205,7 +3205,7 @@ namespace py::cpp::Windows::Media::Capture::Frames
 
     static PyType_Spec type_spec_MultiSourceMediaFrameReference =
     {
-        "_winrt_windows_media_capture_frames.MultiSourceMediaFrameReference",
+        "winrt._winrt_windows_media_capture_frames.MultiSourceMediaFrameReference",
         sizeof(py::wrapper::Windows::Media::Capture::Frames::MultiSourceMediaFrameReference),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3444,7 +3444,7 @@ namespace py::cpp::Windows::Media::Capture::Frames
 
     static PyType_Spec type_spec_VideoMediaFrame =
     {
-        "_winrt_windows_media_capture_frames.VideoMediaFrame",
+        "winrt._winrt_windows_media_capture_frames.VideoMediaFrame",
         sizeof(py::wrapper::Windows::Media::Capture::Frames::VideoMediaFrame),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3593,7 +3593,7 @@ namespace py::cpp::Windows::Media::Capture::Frames
 
     static PyType_Spec type_spec_VideoMediaFrameFormat =
     {
-        "_winrt_windows_media_capture_frames.VideoMediaFrameFormat",
+        "winrt._winrt_windows_media_capture_frames.VideoMediaFrameFormat",
         sizeof(py::wrapper::Windows::Media::Capture::Frames::VideoMediaFrameFormat),
         0,
         Py_TPFLAGS_DEFAULT,

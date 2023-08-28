@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_devices_portable
+from winrt import _winrt_windows_devices_portable
 
 __all__ = [
     "ServiceDeviceType",

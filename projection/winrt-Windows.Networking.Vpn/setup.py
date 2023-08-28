@@ -6,7 +6,7 @@ from winrt_sdk import get_include_dirs
 setup(
     ext_modules=[
         Extension(
-            "winrt.windows.networking.vpn._winrt_windows_networking_vpn",
+            "winrt._winrt_windows_networking_vpn",
             sources=["py.Windows.Networking.Vpn.cpp"],
             include_dirs=get_include_dirs(),
             extra_compile_args=["/std:c++20", "/permissive-"],

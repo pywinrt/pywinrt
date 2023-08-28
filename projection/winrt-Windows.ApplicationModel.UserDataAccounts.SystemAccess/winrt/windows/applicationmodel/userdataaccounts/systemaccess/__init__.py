@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_applicationmodel_userdataaccounts_systemaccess
+from winrt import _winrt_windows_applicationmodel_userdataaccounts_systemaccess
 
 __all__ = [
     "DeviceAccountAuthenticationType",

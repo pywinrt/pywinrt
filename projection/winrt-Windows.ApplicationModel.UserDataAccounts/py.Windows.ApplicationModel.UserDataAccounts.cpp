@@ -746,7 +746,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static PyType_Spec type_spec_UserDataAccount =
     {
-        "_winrt_windows_applicationmodel_userdataaccounts.UserDataAccount",
+        "winrt._winrt_windows_applicationmodel_userdataaccounts.UserDataAccount",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccount),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -940,7 +940,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static PyType_Spec type_spec_UserDataAccountManager =
     {
-        "_winrt_windows_applicationmodel_userdataaccounts.UserDataAccountManager",
+        "winrt._winrt_windows_applicationmodel_userdataaccounts.UserDataAccountManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1061,7 +1061,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static PyType_Spec type_spec_UserDataAccountManagerForUser =
     {
-        "_winrt_windows_applicationmodel_userdataaccounts.UserDataAccountManagerForUser",
+        "winrt._winrt_windows_applicationmodel_userdataaccounts.UserDataAccountManagerForUser",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccountManagerForUser),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1312,7 +1312,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static PyType_Spec type_spec_UserDataAccountStore =
     {
-        "_winrt_windows_applicationmodel_userdataaccounts.UserDataAccountStore",
+        "winrt._winrt_windows_applicationmodel_userdataaccounts.UserDataAccountStore",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStore),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1411,7 +1411,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static PyType_Spec type_spec_UserDataAccountStoreChangedEventArgs =
     {
-        "_winrt_windows_applicationmodel_userdataaccounts.UserDataAccountStoreChangedEventArgs",
+        "winrt._winrt_windows_applicationmodel_userdataaccounts.UserDataAccountStoreChangedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStoreChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,

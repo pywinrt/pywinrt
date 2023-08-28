@@ -6,7 +6,7 @@ from winrt_sdk import get_include_dirs
 setup(
     ext_modules=[
         Extension(
-            "winrt.windows.system.diagnostics.tracereporting._winrt_windows_system_diagnostics_tracereporting",
+            "winrt._winrt_windows_system_diagnostics_tracereporting",
             sources=["py.Windows.System.Diagnostics.TraceReporting.cpp"],
             include_dirs=get_include_dirs(),
             extra_compile_args=["/std:c++20", "/permissive-"],

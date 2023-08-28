@@ -6,7 +6,7 @@ from winrt_sdk import get_include_dirs
 setup(
     ext_modules=[
         Extension(
-            "winrt.windows.system.remotesystems._winrt_windows_system_remotesystems",
+            "winrt._winrt_windows_system_remotesystems",
             sources=["py.Windows.System.RemoteSystems.cpp"],
             include_dirs=get_include_dirs(),
             extra_compile_args=["/std:c++20", "/permissive-"],

@@ -376,7 +376,7 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
     static PyType_Spec type_spec_PhoneNumberFormatter =
     {
-        "_winrt_windows_globalization_phonenumberformatting.PhoneNumberFormatter",
+        "winrt._winrt_windows_globalization_phonenumberformatting.PhoneNumberFormatter",
         sizeof(py::wrapper::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormatter),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -814,7 +814,7 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
     static PyType_Spec type_spec_PhoneNumberInfo =
     {
-        "_winrt_windows_globalization_phonenumberformatting.PhoneNumberInfo",
+        "winrt._winrt_windows_globalization_phonenumberformatting.PhoneNumberInfo",
         sizeof(py::wrapper::Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo),
         0,
         Py_TPFLAGS_DEFAULT,

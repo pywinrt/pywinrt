@@ -842,7 +842,7 @@ namespace py::cpp::Windows::Web::Http::Filters
 
     static PyType_Spec type_spec_HttpBaseProtocolFilter =
     {
-        "_winrt_windows_web_http_filters.HttpBaseProtocolFilter",
+        "winrt._winrt_windows_web_http_filters.HttpBaseProtocolFilter",
         sizeof(py::wrapper::Windows::Web::Http::Filters::HttpBaseProtocolFilter),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1007,7 +1007,7 @@ namespace py::cpp::Windows::Web::Http::Filters
 
     static PyType_Spec type_spec_HttpCacheControl =
     {
-        "_winrt_windows_web_http_filters.HttpCacheControl",
+        "winrt._winrt_windows_web_http_filters.HttpCacheControl",
         sizeof(py::wrapper::Windows::Web::Http::Filters::HttpCacheControl),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1237,7 +1237,7 @@ namespace py::cpp::Windows::Web::Http::Filters
 
     static PyType_Spec type_spec_HttpServerCustomValidationRequestedEventArgs =
     {
-        "_winrt_windows_web_http_filters.HttpServerCustomValidationRequestedEventArgs",
+        "winrt._winrt_windows_web_http_filters.HttpServerCustomValidationRequestedEventArgs",
         sizeof(py::wrapper::Windows::Web::Http::Filters::HttpServerCustomValidationRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1390,7 +1390,7 @@ namespace py::cpp::Windows::Web::Http::Filters
 
     static PyType_Spec type_spec_IHttpFilter =
     {
-        "_winrt_windows_web_http_filters.IHttpFilter",
+        "winrt._winrt_windows_web_http_filters.IHttpFilter",
         sizeof(py::wrapper::Windows::Web::Http::Filters::IHttpFilter),
         0,
         Py_TPFLAGS_DEFAULT,

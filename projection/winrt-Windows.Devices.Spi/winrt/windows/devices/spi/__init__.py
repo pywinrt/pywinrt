@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_devices_spi
+from winrt import _winrt_windows_devices_spi
 
 __all__ = [
     "SpiMode",

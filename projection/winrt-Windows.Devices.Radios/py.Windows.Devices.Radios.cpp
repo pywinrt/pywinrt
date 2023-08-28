@@ -327,7 +327,7 @@ namespace py::cpp::Windows::Devices::Radios
 
     static PyType_Spec type_spec_Radio =
     {
-        "_winrt_windows_devices_radios.Radio",
+        "winrt._winrt_windows_devices_radios.Radio",
         sizeof(py::wrapper::Windows::Devices::Radios::Radio),
         0,
         Py_TPFLAGS_DEFAULT,

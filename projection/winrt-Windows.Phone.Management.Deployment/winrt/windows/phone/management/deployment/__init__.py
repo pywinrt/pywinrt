@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_phone_management_deployment
+from winrt import _winrt_windows_phone_management_deployment
 
 __all__ = [
     "EnterpriseEnrollmentStatus",

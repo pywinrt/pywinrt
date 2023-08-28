@@ -5,7 +5,7 @@ import typing
 import uuid as _uuid
 
 import winrt.system
-from . import _winrt_windows_foundation_collections
+from winrt import _winrt_windows_foundation_collections
 
 __all__ = [
     "CollectionChange",

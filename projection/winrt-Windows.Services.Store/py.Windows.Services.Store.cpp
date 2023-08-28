@@ -108,7 +108,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyType_Spec type_spec_StoreAcquireLicenseResult =
     {
-        "_winrt_windows_services_store.StoreAcquireLicenseResult",
+        "winrt._winrt_windows_services_store.StoreAcquireLicenseResult",
         sizeof(py::wrapper::Windows::Services::Store::StoreAcquireLicenseResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -377,7 +377,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyType_Spec type_spec_StoreAppLicense =
     {
-        "_winrt_windows_services_store.StoreAppLicense",
+        "winrt._winrt_windows_services_store.StoreAppLicense",
         sizeof(py::wrapper::Windows::Services::Store::StoreAppLicense),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -576,7 +576,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyType_Spec type_spec_StoreAvailability =
     {
-        "_winrt_windows_services_store.StoreAvailability",
+        "winrt._winrt_windows_services_store.StoreAvailability",
         sizeof(py::wrapper::Windows::Services::Store::StoreAvailability),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -705,7 +705,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyType_Spec type_spec_StoreCanAcquireLicenseResult =
     {
-        "_winrt_windows_services_store.StoreCanAcquireLicenseResult",
+        "winrt._winrt_windows_services_store.StoreCanAcquireLicenseResult",
         sizeof(py::wrapper::Windows::Services::Store::StoreCanAcquireLicenseResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -934,7 +934,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyType_Spec type_spec_StoreCollectionData =
     {
-        "_winrt_windows_services_store.StoreCollectionData",
+        "winrt._winrt_windows_services_store.StoreCollectionData",
         sizeof(py::wrapper::Windows::Services::Store::StoreCollectionData),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1083,7 +1083,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyType_Spec type_spec_StoreConsumableResult =
     {
-        "_winrt_windows_services_store.StoreConsumableResult",
+        "winrt._winrt_windows_services_store.StoreConsumableResult",
         sizeof(py::wrapper::Windows::Services::Store::StoreConsumableResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2449,7 +2449,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyType_Spec type_spec_StoreContext =
     {
-        "_winrt_windows_services_store.StoreContext",
+        "winrt._winrt_windows_services_store.StoreContext",
         sizeof(py::wrapper::Windows::Services::Store::StoreContext),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2618,7 +2618,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyType_Spec type_spec_StoreImage =
     {
-        "_winrt_windows_services_store.StoreImage",
+        "winrt._winrt_windows_services_store.StoreImage",
         sizeof(py::wrapper::Windows::Services::Store::StoreImage),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2787,7 +2787,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyType_Spec type_spec_StoreLicense =
     {
-        "_winrt_windows_services_store.StoreLicense",
+        "winrt._winrt_windows_services_store.StoreLicense",
         sizeof(py::wrapper::Windows::Services::Store::StoreLicense),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2926,7 +2926,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyType_Spec type_spec_StorePackageInstallOptions =
     {
-        "_winrt_windows_services_store.StorePackageInstallOptions",
+        "winrt._winrt_windows_services_store.StorePackageInstallOptions",
         sizeof(py::wrapper::Windows::Services::Store::StorePackageInstallOptions),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3163,7 +3163,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyType_Spec type_spec_StorePackageLicense =
     {
-        "_winrt_windows_services_store.StorePackageLicense",
+        "winrt._winrt_windows_services_store.StorePackageLicense",
         sizeof(py::wrapper::Windows::Services::Store::StorePackageLicense),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3272,7 +3272,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyType_Spec type_spec_StorePackageUpdate =
     {
-        "_winrt_windows_services_store.StorePackageUpdate",
+        "winrt._winrt_windows_services_store.StorePackageUpdate",
         sizeof(py::wrapper::Windows::Services::Store::StorePackageUpdate),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3401,7 +3401,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyType_Spec type_spec_StorePackageUpdateResult =
     {
-        "_winrt_windows_services_store.StorePackageUpdateResult",
+        "winrt._winrt_windows_services_store.StorePackageUpdateResult",
         sizeof(py::wrapper::Windows::Services::Store::StorePackageUpdateResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3650,7 +3650,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyType_Spec type_spec_StorePrice =
     {
-        "_winrt_windows_services_store.StorePrice",
+        "winrt._winrt_windows_services_store.StorePrice",
         sizeof(py::wrapper::Windows::Services::Store::StorePrice),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4099,7 +4099,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyType_Spec type_spec_StoreProduct =
     {
-        "_winrt_windows_services_store.StoreProduct",
+        "winrt._winrt_windows_services_store.StoreProduct",
         sizeof(py::wrapper::Windows::Services::Store::StoreProduct),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4210,7 +4210,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyType_Spec type_spec_StoreProductOptions =
     {
-        "_winrt_windows_services_store.StoreProductOptions",
+        "winrt._winrt_windows_services_store.StoreProductOptions",
         sizeof(py::wrapper::Windows::Services::Store::StoreProductOptions),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4369,7 +4369,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyType_Spec type_spec_StoreProductPagedQueryResult =
     {
-        "_winrt_windows_services_store.StoreProductPagedQueryResult",
+        "winrt._winrt_windows_services_store.StoreProductPagedQueryResult",
         sizeof(py::wrapper::Windows::Services::Store::StoreProductPagedQueryResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4478,7 +4478,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyType_Spec type_spec_StoreProductQueryResult =
     {
-        "_winrt_windows_services_store.StoreProductQueryResult",
+        "winrt._winrt_windows_services_store.StoreProductQueryResult",
         sizeof(py::wrapper::Windows::Services::Store::StoreProductQueryResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4587,7 +4587,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyType_Spec type_spec_StoreProductResult =
     {
-        "_winrt_windows_services_store.StoreProductResult",
+        "winrt._winrt_windows_services_store.StoreProductResult",
         sizeof(py::wrapper::Windows::Services::Store::StoreProductResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4789,7 +4789,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyType_Spec type_spec_StorePurchaseProperties =
     {
-        "_winrt_windows_services_store.StorePurchaseProperties",
+        "winrt._winrt_windows_services_store.StorePurchaseProperties",
         sizeof(py::wrapper::Windows::Services::Store::StorePurchaseProperties),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4898,7 +4898,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyType_Spec type_spec_StorePurchaseResult =
     {
-        "_winrt_windows_services_store.StorePurchaseResult",
+        "winrt._winrt_windows_services_store.StorePurchaseResult",
         sizeof(py::wrapper::Windows::Services::Store::StorePurchaseResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5237,7 +5237,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyType_Spec type_spec_StoreQueueItem =
     {
-        "_winrt_windows_services_store.StoreQueueItem",
+        "winrt._winrt_windows_services_store.StoreQueueItem",
         sizeof(py::wrapper::Windows::Services::Store::StoreQueueItem),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5326,7 +5326,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyType_Spec type_spec_StoreQueueItemCompletedEventArgs =
     {
-        "_winrt_windows_services_store.StoreQueueItemCompletedEventArgs",
+        "winrt._winrt_windows_services_store.StoreQueueItemCompletedEventArgs",
         sizeof(py::wrapper::Windows::Services::Store::StoreQueueItemCompletedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5475,7 +5475,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyType_Spec type_spec_StoreQueueItemStatus =
     {
-        "_winrt_windows_services_store.StoreQueueItemStatus",
+        "winrt._winrt_windows_services_store.StoreQueueItemStatus",
         sizeof(py::wrapper::Windows::Services::Store::StoreQueueItemStatus),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5624,7 +5624,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyType_Spec type_spec_StoreRateAndReviewResult =
     {
-        "_winrt_windows_services_store.StoreRateAndReviewResult",
+        "winrt._winrt_windows_services_store.StoreRateAndReviewResult",
         sizeof(py::wrapper::Windows::Services::Store::StoreRateAndReviewResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5692,7 +5692,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyType_Spec type_spec_StoreRequestHelper =
     {
-        "_winrt_windows_services_store.StoreRequestHelper",
+        "winrt._winrt_windows_services_store.StoreRequestHelper",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5821,7 +5821,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyType_Spec type_spec_StoreSendRequestResult =
     {
-        "_winrt_windows_services_store.StoreSendRequestResult",
+        "winrt._winrt_windows_services_store.StoreSendRequestResult",
         sizeof(py::wrapper::Windows::Services::Store::StoreSendRequestResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6290,7 +6290,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyType_Spec type_spec_StoreSku =
     {
-        "_winrt_windows_services_store.StoreSku",
+        "winrt._winrt_windows_services_store.StoreSku",
         sizeof(py::wrapper::Windows::Services::Store::StoreSku),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6459,7 +6459,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyType_Spec type_spec_StoreSubscriptionInfo =
     {
-        "_winrt_windows_services_store.StoreSubscriptionInfo",
+        "winrt._winrt_windows_services_store.StoreSubscriptionInfo",
         sizeof(py::wrapper::Windows::Services::Store::StoreSubscriptionInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6568,7 +6568,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyType_Spec type_spec_StoreUninstallStorePackageResult =
     {
-        "_winrt_windows_services_store.StoreUninstallStorePackageResult",
+        "winrt._winrt_windows_services_store.StoreUninstallStorePackageResult",
         sizeof(py::wrapper::Windows::Services::Store::StoreUninstallStorePackageResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6757,7 +6757,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyType_Spec type_spec_StoreVideo =
     {
-        "_winrt_windows_services_store.StoreVideo",
+        "winrt._winrt_windows_services_store.StoreVideo",
         sizeof(py::wrapper::Windows::Services::Store::StoreVideo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7058,7 +7058,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyType_Spec type_spec_StorePackageUpdateStatus =
     {
-        "_winrt_windows_services_store.StorePackageUpdateStatus",
+        "winrt._winrt_windows_services_store.StorePackageUpdateStatus",
         sizeof(py::wrapper::Windows::Services::Store::StorePackageUpdateStatus),
         0,
         Py_TPFLAGS_DEFAULT,

@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_storage_streams
+from winrt import _winrt_windows_storage_streams
 
 __all__ = [
     "ByteOrder",

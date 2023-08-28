@@ -594,7 +594,7 @@ namespace py::cpp::Windows::Devices::Display
 
     static PyType_Spec type_spec_DisplayMonitor =
     {
-        "_winrt_windows_devices_display.DisplayMonitor",
+        "winrt._winrt_windows_devices_display.DisplayMonitor",
         sizeof(py::wrapper::Windows::Devices::Display::DisplayMonitor),
         0,
         Py_TPFLAGS_DEFAULT,

@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_media_import
+from winrt import _winrt_windows_media_import
 
 __all__ = [
     "PhotoImportAccessMode",

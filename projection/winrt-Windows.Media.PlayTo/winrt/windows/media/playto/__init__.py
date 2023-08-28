@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_media_playto
+from winrt import _winrt_windows_media_playto
 
 __all__ = [
     "PlayToConnectionError",

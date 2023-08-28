@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_storage_pickers
+from winrt import _winrt_windows_storage_pickers
 
 __all__ = [
     "PickerLocationId",

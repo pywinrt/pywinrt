@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_applicationmodel_resources_management
+from winrt import _winrt_windows_applicationmodel_resources_management
 
 __all__ = [
     "IndexedResourceType",

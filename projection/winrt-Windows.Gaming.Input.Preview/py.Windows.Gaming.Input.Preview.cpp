@@ -97,7 +97,7 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
     static PyType_Spec type_spec_GameControllerProviderInfo =
     {
-        "_winrt_windows_gaming_input_preview.GameControllerProviderInfo",
+        "winrt._winrt_windows_gaming_input_preview.GameControllerProviderInfo",
         0,
         0,
         Py_TPFLAGS_DEFAULT,

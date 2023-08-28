@@ -196,7 +196,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyType_Spec type_spec_CompositionConditionalValue =
     {
-        "_winrt_windows_ui_composition_interactions.CompositionConditionalValue",
+        "winrt._winrt_windows_ui_composition_interactions.CompositionConditionalValue",
         sizeof(py::wrapper::Windows::UI::Composition::Interactions::CompositionConditionalValue),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -426,7 +426,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyType_Spec type_spec_CompositionInteractionSourceCollection =
     {
-        "_winrt_windows_ui_composition_interactions.CompositionInteractionSourceCollection",
+        "winrt._winrt_windows_ui_composition_interactions.CompositionInteractionSourceCollection",
         sizeof(py::wrapper::Windows::UI::Composition::Interactions::CompositionInteractionSourceCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -639,7 +639,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyType_Spec type_spec_InteractionSourceConfiguration =
     {
-        "_winrt_windows_ui_composition_interactions.InteractionSourceConfiguration",
+        "winrt._winrt_windows_ui_composition_interactions.InteractionSourceConfiguration",
         sizeof(py::wrapper::Windows::UI::Composition::Interactions::InteractionSourceConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1886,7 +1886,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyType_Spec type_spec_InteractionTracker =
     {
-        "_winrt_windows_ui_composition_interactions.InteractionTracker",
+        "winrt._winrt_windows_ui_composition_interactions.InteractionTracker",
         sizeof(py::wrapper::Windows::UI::Composition::Interactions::InteractionTracker),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1995,7 +1995,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyType_Spec type_spec_InteractionTrackerCustomAnimationStateEnteredArgs =
     {
-        "_winrt_windows_ui_composition_interactions.InteractionTrackerCustomAnimationStateEnteredArgs",
+        "winrt._winrt_windows_ui_composition_interactions.InteractionTrackerCustomAnimationStateEnteredArgs",
         sizeof(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerCustomAnimationStateEnteredArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2104,7 +2104,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyType_Spec type_spec_InteractionTrackerIdleStateEnteredArgs =
     {
-        "_winrt_windows_ui_composition_interactions.InteractionTrackerIdleStateEnteredArgs",
+        "winrt._winrt_windows_ui_composition_interactions.InteractionTrackerIdleStateEnteredArgs",
         sizeof(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerIdleStateEnteredArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2173,7 +2173,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyType_Spec type_spec_InteractionTrackerInertiaModifier =
     {
-        "_winrt_windows_ui_composition_interactions.InteractionTrackerInertiaModifier",
+        "winrt._winrt_windows_ui_composition_interactions.InteractionTrackerInertiaModifier",
         sizeof(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInertiaModifier),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2370,7 +2370,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyType_Spec type_spec_InteractionTrackerInertiaMotion =
     {
-        "_winrt_windows_ui_composition_interactions.InteractionTrackerInertiaMotion",
+        "winrt._winrt_windows_ui_composition_interactions.InteractionTrackerInertiaMotion",
         sizeof(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInertiaMotion),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2567,7 +2567,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyType_Spec type_spec_InteractionTrackerInertiaNaturalMotion =
     {
-        "_winrt_windows_ui_composition_interactions.InteractionTrackerInertiaNaturalMotion",
+        "winrt._winrt_windows_ui_composition_interactions.InteractionTrackerInertiaNaturalMotion",
         sizeof(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInertiaNaturalMotion),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2764,7 +2764,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyType_Spec type_spec_InteractionTrackerInertiaRestingValue =
     {
-        "_winrt_windows_ui_composition_interactions.InteractionTrackerInertiaRestingValue",
+        "winrt._winrt_windows_ui_composition_interactions.InteractionTrackerInertiaRestingValue",
         sizeof(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInertiaRestingValue),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3013,7 +3013,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyType_Spec type_spec_InteractionTrackerInertiaStateEnteredArgs =
     {
-        "_winrt_windows_ui_composition_interactions.InteractionTrackerInertiaStateEnteredArgs",
+        "winrt._winrt_windows_ui_composition_interactions.InteractionTrackerInertiaStateEnteredArgs",
         sizeof(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInertiaStateEnteredArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3122,7 +3122,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyType_Spec type_spec_InteractionTrackerInteractingStateEnteredArgs =
     {
-        "_winrt_windows_ui_composition_interactions.InteractionTrackerInteractingStateEnteredArgs",
+        "winrt._winrt_windows_ui_composition_interactions.InteractionTrackerInteractingStateEnteredArgs",
         sizeof(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInteractingStateEnteredArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3211,7 +3211,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyType_Spec type_spec_InteractionTrackerRequestIgnoredArgs =
     {
-        "_winrt_windows_ui_composition_interactions.InteractionTrackerRequestIgnoredArgs",
+        "winrt._winrt_windows_ui_composition_interactions.InteractionTrackerRequestIgnoredArgs",
         sizeof(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerRequestIgnoredArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3340,7 +3340,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyType_Spec type_spec_InteractionTrackerValuesChangedArgs =
     {
-        "_winrt_windows_ui_composition_interactions.InteractionTrackerValuesChangedArgs",
+        "winrt._winrt_windows_ui_composition_interactions.InteractionTrackerValuesChangedArgs",
         sizeof(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerValuesChangedArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3409,7 +3409,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyType_Spec type_spec_InteractionTrackerVector2InertiaModifier =
     {
-        "_winrt_windows_ui_composition_interactions.InteractionTrackerVector2InertiaModifier",
+        "winrt._winrt_windows_ui_composition_interactions.InteractionTrackerVector2InertiaModifier",
         sizeof(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaModifier),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3606,7 +3606,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyType_Spec type_spec_InteractionTrackerVector2InertiaNaturalMotion =
     {
-        "_winrt_windows_ui_composition_interactions.InteractionTrackerVector2InertiaNaturalMotion",
+        "winrt._winrt_windows_ui_composition_interactions.InteractionTrackerVector2InertiaNaturalMotion",
         sizeof(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaNaturalMotion),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4529,7 +4529,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyType_Spec type_spec_VisualInteractionSource =
     {
-        "_winrt_windows_ui_composition_interactions.VisualInteractionSource",
+        "winrt._winrt_windows_ui_composition_interactions.VisualInteractionSource",
         sizeof(py::wrapper::Windows::UI::Composition::Interactions::VisualInteractionSource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4598,7 +4598,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyType_Spec type_spec_ICompositionInteractionSource =
     {
-        "_winrt_windows_ui_composition_interactions.ICompositionInteractionSource",
+        "winrt._winrt_windows_ui_composition_interactions.ICompositionInteractionSource",
         sizeof(py::wrapper::Windows::UI::Composition::Interactions::ICompositionInteractionSource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4871,7 +4871,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyType_Spec type_spec_IInteractionTrackerOwner =
     {
-        "_winrt_windows_ui_composition_interactions.IInteractionTrackerOwner",
+        "winrt._winrt_windows_ui_composition_interactions.IInteractionTrackerOwner",
         sizeof(py::wrapper::Windows::UI::Composition::Interactions::IInteractionTrackerOwner),
         0,
         Py_TPFLAGS_DEFAULT,

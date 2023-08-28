@@ -88,7 +88,7 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
     static PyType_Spec type_spec_DetectedFace =
     {
-        "_winrt_windows_media_faceanalysis.DetectedFace",
+        "winrt._winrt_windows_media_faceanalysis.DetectedFace",
         sizeof(py::wrapper::Windows::Media::FaceAnalysis::DetectedFace),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -417,7 +417,7 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
     static PyType_Spec type_spec_FaceDetector =
     {
-        "_winrt_windows_media_faceanalysis.FaceDetector",
+        "winrt._winrt_windows_media_faceanalysis.FaceDetector",
         sizeof(py::wrapper::Windows::Media::FaceAnalysis::FaceDetector),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -438,7 +438,7 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
     static PyType_Spec type_spec_FaceDetector_Meta =
     {
-        "_winrt_windows_media_faceanalysis.FaceDetector_Meta",
+        "winrt._winrt_windows_media_faceanalysis.FaceDetector_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -746,7 +746,7 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
     static PyType_Spec type_spec_FaceTracker =
     {
-        "_winrt_windows_media_faceanalysis.FaceTracker",
+        "winrt._winrt_windows_media_faceanalysis.FaceTracker",
         sizeof(py::wrapper::Windows::Media::FaceAnalysis::FaceTracker),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -767,7 +767,7 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
     static PyType_Spec type_spec_FaceTracker_Meta =
     {
-        "_winrt_windows_media_faceanalysis.FaceTracker_Meta",
+        "winrt._winrt_windows_media_faceanalysis.FaceTracker_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,

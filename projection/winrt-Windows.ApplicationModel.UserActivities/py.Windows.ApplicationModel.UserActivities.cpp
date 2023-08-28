@@ -626,7 +626,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyType_Spec type_spec_UserActivity =
     {
-        "_winrt_windows_applicationmodel_useractivities.UserActivity",
+        "winrt._winrt_windows_applicationmodel_useractivities.UserActivity",
         sizeof(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivity),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -876,7 +876,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyType_Spec type_spec_UserActivityAttribution =
     {
-        "_winrt_windows_applicationmodel_useractivities.UserActivityAttribution",
+        "winrt._winrt_windows_applicationmodel_useractivities.UserActivityAttribution",
         sizeof(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityAttribution),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1229,7 +1229,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyType_Spec type_spec_UserActivityChannel =
     {
-        "_winrt_windows_applicationmodel_useractivities.UserActivityChannel",
+        "winrt._winrt_windows_applicationmodel_useractivities.UserActivityChannel",
         sizeof(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityChannel),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1360,7 +1360,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyType_Spec type_spec_UserActivityContentInfo =
     {
-        "_winrt_windows_applicationmodel_useractivities.UserActivityContentInfo",
+        "winrt._winrt_windows_applicationmodel_useractivities.UserActivityContentInfo",
         sizeof(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityContentInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1462,7 +1462,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyType_Spec type_spec_UserActivityRequest =
     {
-        "_winrt_windows_applicationmodel_useractivities.UserActivityRequest",
+        "winrt._winrt_windows_applicationmodel_useractivities.UserActivityRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1606,7 +1606,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyType_Spec type_spec_UserActivityRequestManager =
     {
-        "_winrt_windows_applicationmodel_useractivities.UserActivityRequestManager",
+        "winrt._winrt_windows_applicationmodel_useractivities.UserActivityRequestManager",
         sizeof(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityRequestManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1725,7 +1725,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyType_Spec type_spec_UserActivityRequestedEventArgs =
     {
-        "_winrt_windows_applicationmodel_useractivities.UserActivityRequestedEventArgs",
+        "winrt._winrt_windows_applicationmodel_useractivities.UserActivityRequestedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1866,7 +1866,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyType_Spec type_spec_UserActivitySession =
     {
-        "_winrt_windows_applicationmodel_useractivities.UserActivitySession",
+        "winrt._winrt_windows_applicationmodel_useractivities.UserActivitySession",
         sizeof(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivitySession),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1995,7 +1995,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyType_Spec type_spec_UserActivitySessionHistoryItem =
     {
-        "_winrt_windows_applicationmodel_useractivities.UserActivitySessionHistoryItem",
+        "winrt._winrt_windows_applicationmodel_useractivities.UserActivitySessionHistoryItem",
         sizeof(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivitySessionHistoryItem),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2352,7 +2352,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyType_Spec type_spec_UserActivityVisualElements =
     {
-        "_winrt_windows_applicationmodel_useractivities.UserActivityVisualElements",
+        "winrt._winrt_windows_applicationmodel_useractivities.UserActivityVisualElements",
         sizeof(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityVisualElements),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2451,7 +2451,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyType_Spec type_spec_IUserActivityContentInfo =
     {
-        "_winrt_windows_applicationmodel_useractivities.IUserActivityContentInfo",
+        "winrt._winrt_windows_applicationmodel_useractivities.IUserActivityContentInfo",
         sizeof(py::wrapper::Windows::ApplicationModel::UserActivities::IUserActivityContentInfo),
         0,
         Py_TPFLAGS_DEFAULT,

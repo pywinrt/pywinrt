@@ -6,7 +6,7 @@ from winrt_sdk import get_include_dirs
 setup(
     ext_modules=[
         Extension(
-            "winrt.windows.services.maps._winrt_windows_services_maps",
+            "winrt._winrt_windows_services_maps",
             sources=["py.Windows.Services.Maps.cpp"],
             include_dirs=get_include_dirs(),
             extra_compile_args=["/std:c++20", "/permissive-"],

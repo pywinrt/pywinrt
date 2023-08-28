@@ -274,7 +274,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
 
     static PyType_Spec type_spec_QuickLink =
     {
-        "_winrt_windows_applicationmodel_datatransfer_sharetarget.QuickLink",
+        "winrt._winrt_windows_applicationmodel_datatransfer_sharetarget.QuickLink",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::ShareTarget::QuickLink),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -643,7 +643,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
 
     static PyType_Spec type_spec_ShareOperation =
     {
-        "_winrt_windows_applicationmodel_datatransfer_sharetarget.ShareOperation",
+        "winrt._winrt_windows_applicationmodel_datatransfer_sharetarget.ShareOperation",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::ShareTarget::ShareOperation),
         0,
         Py_TPFLAGS_DEFAULT,

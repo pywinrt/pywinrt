@@ -116,7 +116,7 @@ namespace py::cpp::Windows::Graphics::Effects
 
     static PyType_Spec type_spec_IGraphicsEffect =
     {
-        "_winrt_windows_graphics_effects.IGraphicsEffect",
+        "winrt._winrt_windows_graphics_effects.IGraphicsEffect",
         sizeof(py::wrapper::Windows::Graphics::Effects::IGraphicsEffect),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -185,7 +185,7 @@ namespace py::cpp::Windows::Graphics::Effects
 
     static PyType_Spec type_spec_IGraphicsEffectSource =
     {
-        "_winrt_windows_graphics_effects.IGraphicsEffectSource",
+        "winrt._winrt_windows_graphics_effects.IGraphicsEffectSource",
         sizeof(py::wrapper::Windows::Graphics::Effects::IGraphicsEffectSource),
         0,
         Py_TPFLAGS_DEFAULT,

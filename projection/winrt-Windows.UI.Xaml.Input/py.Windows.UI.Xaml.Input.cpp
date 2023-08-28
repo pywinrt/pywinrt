@@ -90,7 +90,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyType_Spec type_spec_AccessKeyDisplayDismissedEventArgs =
     {
-        "_winrt_windows_ui_xaml_input.AccessKeyDisplayDismissedEventArgs",
+        "winrt._winrt_windows_ui_xaml_input.AccessKeyDisplayDismissedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Input::AccessKeyDisplayDismissedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -201,7 +201,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyType_Spec type_spec_AccessKeyDisplayRequestedEventArgs =
     {
-        "_winrt_windows_ui_xaml_input.AccessKeyDisplayRequestedEventArgs",
+        "winrt._winrt_windows_ui_xaml_input.AccessKeyDisplayRequestedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Input::AccessKeyDisplayRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -340,7 +340,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyType_Spec type_spec_AccessKeyInvokedEventArgs =
     {
-        "_winrt_windows_ui_xaml_input.AccessKeyInvokedEventArgs",
+        "winrt._winrt_windows_ui_xaml_input.AccessKeyInvokedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Input::AccessKeyInvokedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -551,7 +551,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyType_Spec type_spec_AccessKeyManager =
     {
-        "_winrt_windows_ui_xaml_input.AccessKeyManager",
+        "winrt._winrt_windows_ui_xaml_input.AccessKeyManager",
         sizeof(py::wrapper::Windows::UI::Xaml::Input::AccessKeyManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -573,7 +573,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyType_Spec type_spec_AccessKeyManager_Meta =
     {
-        "_winrt_windows_ui_xaml_input.AccessKeyManager_Meta",
+        "winrt._winrt_windows_ui_xaml_input.AccessKeyManager_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -710,7 +710,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyType_Spec type_spec_CanExecuteRequestedEventArgs =
     {
-        "_winrt_windows_ui_xaml_input.CanExecuteRequestedEventArgs",
+        "winrt._winrt_windows_ui_xaml_input.CanExecuteRequestedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Input::CanExecuteRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -867,7 +867,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyType_Spec type_spec_CharacterReceivedRoutedEventArgs =
     {
-        "_winrt_windows_ui_xaml_input.CharacterReceivedRoutedEventArgs",
+        "winrt._winrt_windows_ui_xaml_input.CharacterReceivedRoutedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Input::CharacterReceivedRoutedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1051,7 +1051,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyType_Spec type_spec_ContextRequestedEventArgs =
     {
-        "_winrt_windows_ui_xaml_input.ContextRequestedEventArgs",
+        "winrt._winrt_windows_ui_xaml_input.ContextRequestedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Input::ContextRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1242,7 +1242,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyType_Spec type_spec_DoubleTappedRoutedEventArgs =
     {
-        "_winrt_windows_ui_xaml_input.DoubleTappedRoutedEventArgs",
+        "winrt._winrt_windows_ui_xaml_input.DoubleTappedRoutedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Input::DoubleTappedRoutedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1331,7 +1331,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyType_Spec type_spec_ExecuteRequestedEventArgs =
     {
-        "_winrt_windows_ui_xaml_input.ExecuteRequestedEventArgs",
+        "winrt._winrt_windows_ui_xaml_input.ExecuteRequestedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Input::ExecuteRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1614,7 +1614,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyType_Spec type_spec_FindNextElementOptions =
     {
-        "_winrt_windows_ui_xaml_input.FindNextElementOptions",
+        "winrt._winrt_windows_ui_xaml_input.FindNextElementOptions",
         sizeof(py::wrapper::Windows::UI::Xaml::Input::FindNextElementOptions),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2222,7 +2222,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyType_Spec type_spec_FocusManager =
     {
-        "_winrt_windows_ui_xaml_input.FocusManager",
+        "winrt._winrt_windows_ui_xaml_input.FocusManager",
         sizeof(py::wrapper::Windows::UI::Xaml::Input::FocusManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2331,7 +2331,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyType_Spec type_spec_FocusManagerGotFocusEventArgs =
     {
-        "_winrt_windows_ui_xaml_input.FocusManagerGotFocusEventArgs",
+        "winrt._winrt_windows_ui_xaml_input.FocusManagerGotFocusEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Input::FocusManagerGotFocusEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2440,7 +2440,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyType_Spec type_spec_FocusManagerLostFocusEventArgs =
     {
-        "_winrt_windows_ui_xaml_input.FocusManagerLostFocusEventArgs",
+        "winrt._winrt_windows_ui_xaml_input.FocusManagerLostFocusEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Input::FocusManagerLostFocusEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2529,7 +2529,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyType_Spec type_spec_FocusMovementResult =
     {
-        "_winrt_windows_ui_xaml_input.FocusMovementResult",
+        "winrt._winrt_windows_ui_xaml_input.FocusMovementResult",
         sizeof(py::wrapper::Windows::UI::Xaml::Input::FocusMovementResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2904,7 +2904,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyType_Spec type_spec_GettingFocusEventArgs =
     {
-        "_winrt_windows_ui_xaml_input.GettingFocusEventArgs",
+        "winrt._winrt_windows_ui_xaml_input.GettingFocusEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Input::GettingFocusEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3115,7 +3115,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyType_Spec type_spec_HoldingRoutedEventArgs =
     {
-        "_winrt_windows_ui_xaml_input.HoldingRoutedEventArgs",
+        "winrt._winrt_windows_ui_xaml_input.HoldingRoutedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Input::HoldingRoutedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3280,7 +3280,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyType_Spec type_spec_InertiaExpansionBehavior =
     {
-        "_winrt_windows_ui_xaml_input.InertiaExpansionBehavior",
+        "winrt._winrt_windows_ui_xaml_input.InertiaExpansionBehavior",
         sizeof(py::wrapper::Windows::UI::Xaml::Input::InertiaExpansionBehavior),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3445,7 +3445,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyType_Spec type_spec_InertiaRotationBehavior =
     {
-        "_winrt_windows_ui_xaml_input.InertiaRotationBehavior",
+        "winrt._winrt_windows_ui_xaml_input.InertiaRotationBehavior",
         sizeof(py::wrapper::Windows::UI::Xaml::Input::InertiaRotationBehavior),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3610,7 +3610,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyType_Spec type_spec_InertiaTranslationBehavior =
     {
-        "_winrt_windows_ui_xaml_input.InertiaTranslationBehavior",
+        "winrt._winrt_windows_ui_xaml_input.InertiaTranslationBehavior",
         sizeof(py::wrapper::Windows::UI::Xaml::Input::InertiaTranslationBehavior),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3721,7 +3721,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyType_Spec type_spec_InputScope =
     {
-        "_winrt_windows_ui_xaml_input.InputScope",
+        "winrt._winrt_windows_ui_xaml_input.InputScope",
         sizeof(py::wrapper::Windows::UI::Xaml::Input::InputScope),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3875,7 +3875,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyType_Spec type_spec_InputScopeName =
     {
-        "_winrt_windows_ui_xaml_input.InputScopeName",
+        "winrt._winrt_windows_ui_xaml_input.InputScopeName",
         sizeof(py::wrapper::Windows::UI::Xaml::Input::InputScopeName),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4072,7 +4072,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyType_Spec type_spec_KeyRoutedEventArgs =
     {
-        "_winrt_windows_ui_xaml_input.KeyRoutedEventArgs",
+        "winrt._winrt_windows_ui_xaml_input.KeyRoutedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Input::KeyRoutedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4476,7 +4476,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyType_Spec type_spec_KeyboardAccelerator =
     {
-        "_winrt_windows_ui_xaml_input.KeyboardAccelerator",
+        "winrt._winrt_windows_ui_xaml_input.KeyboardAccelerator",
         sizeof(py::wrapper::Windows::UI::Xaml::Input::KeyboardAccelerator),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4500,7 +4500,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyType_Spec type_spec_KeyboardAccelerator_Meta =
     {
-        "_winrt_windows_ui_xaml_input.KeyboardAccelerator_Meta",
+        "winrt._winrt_windows_ui_xaml_input.KeyboardAccelerator_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -4657,7 +4657,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyType_Spec type_spec_KeyboardAcceleratorInvokedEventArgs =
     {
-        "_winrt_windows_ui_xaml_input.KeyboardAcceleratorInvokedEventArgs",
+        "winrt._winrt_windows_ui_xaml_input.KeyboardAcceleratorInvokedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Input::KeyboardAcceleratorInvokedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5032,7 +5032,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyType_Spec type_spec_LosingFocusEventArgs =
     {
-        "_winrt_windows_ui_xaml_input.LosingFocusEventArgs",
+        "winrt._winrt_windows_ui_xaml_input.LosingFocusEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Input::LosingFocusEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5291,7 +5291,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyType_Spec type_spec_ManipulationCompletedRoutedEventArgs =
     {
-        "_winrt_windows_ui_xaml_input.ManipulationCompletedRoutedEventArgs",
+        "winrt._winrt_windows_ui_xaml_input.ManipulationCompletedRoutedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Input::ManipulationCompletedRoutedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5601,7 +5601,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyType_Spec type_spec_ManipulationDeltaRoutedEventArgs =
     {
-        "_winrt_windows_ui_xaml_input.ManipulationDeltaRoutedEventArgs",
+        "winrt._winrt_windows_ui_xaml_input.ManipulationDeltaRoutedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Input::ManipulationDeltaRoutedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5984,7 +5984,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyType_Spec type_spec_ManipulationInertiaStartingRoutedEventArgs =
     {
-        "_winrt_windows_ui_xaml_input.ManipulationInertiaStartingRoutedEventArgs",
+        "winrt._winrt_windows_ui_xaml_input.ManipulationInertiaStartingRoutedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Input::ManipulationInertiaStartingRoutedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6187,7 +6187,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyType_Spec type_spec_ManipulationPivot =
     {
-        "_winrt_windows_ui_xaml_input.ManipulationPivot",
+        "winrt._winrt_windows_ui_xaml_input.ManipulationPivot",
         sizeof(py::wrapper::Windows::UI::Xaml::Input::ManipulationPivot),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6437,7 +6437,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyType_Spec type_spec_ManipulationStartedRoutedEventArgs =
     {
-        "_winrt_windows_ui_xaml_input.ManipulationStartedRoutedEventArgs",
+        "winrt._winrt_windows_ui_xaml_input.ManipulationStartedRoutedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Input::ManipulationStartedRoutedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6720,7 +6720,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyType_Spec type_spec_ManipulationStartingRoutedEventArgs =
     {
-        "_winrt_windows_ui_xaml_input.ManipulationStartingRoutedEventArgs",
+        "winrt._winrt_windows_ui_xaml_input.ManipulationStartingRoutedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Input::ManipulationStartingRoutedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6877,7 +6877,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyType_Spec type_spec_NoFocusCandidateFoundEventArgs =
     {
-        "_winrt_windows_ui_xaml_input.NoFocusCandidateFoundEventArgs",
+        "winrt._winrt_windows_ui_xaml_input.NoFocusCandidateFoundEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Input::NoFocusCandidateFoundEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7026,7 +7026,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyType_Spec type_spec_Pointer =
     {
-        "_winrt_windows_ui_xaml_input.Pointer",
+        "winrt._winrt_windows_ui_xaml_input.Pointer",
         sizeof(py::wrapper::Windows::UI::Xaml::Input::Pointer),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7267,7 +7267,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyType_Spec type_spec_PointerRoutedEventArgs =
     {
-        "_winrt_windows_ui_xaml_input.PointerRoutedEventArgs",
+        "winrt._winrt_windows_ui_xaml_input.PointerRoutedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Input::PointerRoutedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7424,7 +7424,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyType_Spec type_spec_ProcessKeyboardAcceleratorEventArgs =
     {
-        "_winrt_windows_ui_xaml_input.ProcessKeyboardAcceleratorEventArgs",
+        "winrt._winrt_windows_ui_xaml_input.ProcessKeyboardAcceleratorEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7615,7 +7615,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyType_Spec type_spec_RightTappedRoutedEventArgs =
     {
-        "_winrt_windows_ui_xaml_input.RightTappedRoutedEventArgs",
+        "winrt._winrt_windows_ui_xaml_input.RightTappedRoutedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Input::RightTappedRoutedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7788,7 +7788,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyType_Spec type_spec_StandardUICommand =
     {
-        "_winrt_windows_ui_xaml_input.StandardUICommand",
+        "winrt._winrt_windows_ui_xaml_input.StandardUICommand",
         sizeof(py::wrapper::Windows::UI::Xaml::Input::StandardUICommand),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7809,7 +7809,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyType_Spec type_spec_StandardUICommand_Meta =
     {
-        "_winrt_windows_ui_xaml_input.StandardUICommand_Meta",
+        "winrt._winrt_windows_ui_xaml_input.StandardUICommand_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -8000,7 +8000,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyType_Spec type_spec_TappedRoutedEventArgs =
     {
-        "_winrt_windows_ui_xaml_input.TappedRoutedEventArgs",
+        "winrt._winrt_windows_ui_xaml_input.TappedRoutedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Input::TappedRoutedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8696,7 +8696,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyType_Spec type_spec_XamlUICommand =
     {
-        "_winrt_windows_ui_xaml_input.XamlUICommand",
+        "winrt._winrt_windows_ui_xaml_input.XamlUICommand",
         sizeof(py::wrapper::Windows::UI::Xaml::Input::XamlUICommand),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8722,7 +8722,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyType_Spec type_spec_XamlUICommand_Meta =
     {
-        "_winrt_windows_ui_xaml_input.XamlUICommand_Meta",
+        "winrt._winrt_windows_ui_xaml_input.XamlUICommand_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -8901,7 +8901,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyType_Spec type_spec_ICommand =
     {
-        "_winrt_windows_ui_xaml_input.ICommand",
+        "winrt._winrt_windows_ui_xaml_input.ICommand",
         sizeof(py::wrapper::Windows::UI::Xaml::Input::ICommand),
         0,
         Py_TPFLAGS_DEFAULT,

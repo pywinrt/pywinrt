@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_storage_compression
+from winrt import _winrt_windows_storage_compression
 
 __all__ = [
     "CompressAlgorithm",

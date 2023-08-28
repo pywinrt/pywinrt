@@ -4,7 +4,7 @@ import typing
 import uuid as _uuid
 
 import winrt.system
-from . import _winrt_windows_system_remotedesktop_input
+from winrt import _winrt_windows_system_remotedesktop_input
 
 __all__ = [
     "RemoteTextConnection",

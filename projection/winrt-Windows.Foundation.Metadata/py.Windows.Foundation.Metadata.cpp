@@ -340,7 +340,7 @@ namespace py::cpp::Windows::Foundation::Metadata
 
     static PyType_Spec type_spec_ApiInformation =
     {
-        "_winrt_windows_foundation_metadata.ApiInformation",
+        "winrt._winrt_windows_foundation_metadata.ApiInformation",
         0,
         0,
         Py_TPFLAGS_DEFAULT,

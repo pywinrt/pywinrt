@@ -5,7 +5,7 @@ import typing
 import uuid as _uuid
 
 import winrt.system
-from . import _winrt_windows_applicationmodel_datatransfer
+from winrt import _winrt_windows_applicationmodel_datatransfer
 
 __all__ = [
     "ClipboardHistoryItemsResultStatus",

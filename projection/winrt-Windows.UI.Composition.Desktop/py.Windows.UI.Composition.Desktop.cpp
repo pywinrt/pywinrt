@@ -88,7 +88,7 @@ namespace py::cpp::Windows::UI::Composition::Desktop
 
     static PyType_Spec type_spec_DesktopWindowTarget =
     {
-        "_winrt_windows_ui_composition_desktop.DesktopWindowTarget",
+        "winrt._winrt_windows_ui_composition_desktop.DesktopWindowTarget",
         sizeof(py::wrapper::Windows::UI::Composition::Desktop::DesktopWindowTarget),
         0,
         Py_TPFLAGS_DEFAULT,

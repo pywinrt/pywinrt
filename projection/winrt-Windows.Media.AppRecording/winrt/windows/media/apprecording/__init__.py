@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_media_apprecording
+from winrt import _winrt_windows_media_apprecording
 
 __all__ = [
     "AppRecordingSaveScreenshotOption",

@@ -6,7 +6,7 @@ from winrt_sdk import get_include_dirs
 setup(
     ext_modules=[
         Extension(
-            "winrt.windows.management.deployment._winrt_windows_management_deployment",
+            "winrt._winrt_windows_management_deployment",
             sources=["py.Windows.Management.Deployment.cpp"],
             include_dirs=get_include_dirs(),
             extra_compile_args=["/std:c++20", "/permissive-"],

@@ -110,7 +110,7 @@ namespace py::cpp::Windows::UI::Xaml::Printing
 
     static PyType_Spec type_spec_AddPagesEventArgs =
     {
-        "_winrt_windows_ui_xaml_printing.AddPagesEventArgs",
+        "winrt._winrt_windows_ui_xaml_printing.AddPagesEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Printing::AddPagesEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -221,7 +221,7 @@ namespace py::cpp::Windows::UI::Xaml::Printing
 
     static PyType_Spec type_spec_GetPreviewPageEventArgs =
     {
-        "_winrt_windows_ui_xaml_printing.GetPreviewPageEventArgs",
+        "winrt._winrt_windows_ui_xaml_printing.GetPreviewPageEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Printing::GetPreviewPageEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -352,7 +352,7 @@ namespace py::cpp::Windows::UI::Xaml::Printing
 
     static PyType_Spec type_spec_PaginateEventArgs =
     {
-        "_winrt_windows_ui_xaml_printing.PaginateEventArgs",
+        "winrt._winrt_windows_ui_xaml_printing.PaginateEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Printing::PaginateEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -780,7 +780,7 @@ namespace py::cpp::Windows::UI::Xaml::Printing
 
     static PyType_Spec type_spec_PrintDocument =
     {
-        "_winrt_windows_ui_xaml_printing.PrintDocument",
+        "winrt._winrt_windows_ui_xaml_printing.PrintDocument",
         sizeof(py::wrapper::Windows::UI::Xaml::Printing::PrintDocument),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -801,7 +801,7 @@ namespace py::cpp::Windows::UI::Xaml::Printing
 
     static PyType_Spec type_spec_PrintDocument_Meta =
     {
-        "_winrt_windows_ui_xaml_printing.PrintDocument_Meta",
+        "winrt._winrt_windows_ui_xaml_printing.PrintDocument_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,

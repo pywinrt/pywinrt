@@ -175,7 +175,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyType_Spec type_spec_AccessibilitySettings =
     {
-        "_winrt_windows_ui_viewmanagement.AccessibilitySettings",
+        "winrt._winrt_windows_ui_viewmanagement.AccessibilitySettings",
         sizeof(py::wrapper::Windows::UI::ViewManagement::AccessibilitySettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -329,7 +329,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyType_Spec type_spec_ActivationViewSwitcher =
     {
-        "_winrt_windows_ui_viewmanagement.ActivationViewSwitcher",
+        "winrt._winrt_windows_ui_viewmanagement.ActivationViewSwitcher",
         sizeof(py::wrapper::Windows::UI::ViewManagement::ActivationViewSwitcher),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1668,7 +1668,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyType_Spec type_spec_ApplicationView =
     {
-        "_winrt_windows_ui_viewmanagement.ApplicationView",
+        "winrt._winrt_windows_ui_viewmanagement.ApplicationView",
         sizeof(py::wrapper::Windows::UI::ViewManagement::ApplicationView),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1692,7 +1692,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyType_Spec type_spec_ApplicationView_Meta =
     {
-        "_winrt_windows_ui_viewmanagement.ApplicationView_Meta",
+        "winrt._winrt_windows_ui_viewmanagement.ApplicationView_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1801,7 +1801,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyType_Spec type_spec_ApplicationViewConsolidatedEventArgs =
     {
-        "_winrt_windows_ui_viewmanagement.ApplicationViewConsolidatedEventArgs",
+        "winrt._winrt_windows_ui_viewmanagement.ApplicationViewConsolidatedEventArgs",
         sizeof(py::wrapper::Windows::UI::ViewManagement::ApplicationViewConsolidatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1921,7 +1921,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyType_Spec type_spec_ApplicationViewScaling =
     {
-        "_winrt_windows_ui_viewmanagement.ApplicationViewScaling",
+        "winrt._winrt_windows_ui_viewmanagement.ApplicationViewScaling",
         sizeof(py::wrapper::Windows::UI::ViewManagement::ApplicationViewScaling),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1942,7 +1942,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyType_Spec type_spec_ApplicationViewScaling_Meta =
     {
-        "_winrt_windows_ui_viewmanagement.ApplicationViewScaling_Meta",
+        "winrt._winrt_windows_ui_viewmanagement.ApplicationViewScaling_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -2278,7 +2278,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyType_Spec type_spec_ApplicationViewSwitcher =
     {
-        "_winrt_windows_ui_viewmanagement.ApplicationViewSwitcher",
+        "winrt._winrt_windows_ui_viewmanagement.ApplicationViewSwitcher",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2923,7 +2923,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyType_Spec type_spec_ApplicationViewTitleBar =
     {
-        "_winrt_windows_ui_viewmanagement.ApplicationViewTitleBar",
+        "winrt._winrt_windows_ui_viewmanagement.ApplicationViewTitleBar",
         sizeof(py::wrapper::Windows::UI::ViewManagement::ApplicationViewTitleBar),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3081,7 +3081,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyType_Spec type_spec_ApplicationViewTransferContext =
     {
-        "_winrt_windows_ui_viewmanagement.ApplicationViewTransferContext",
+        "winrt._winrt_windows_ui_viewmanagement.ApplicationViewTransferContext",
         sizeof(py::wrapper::Windows::UI::ViewManagement::ApplicationViewTransferContext),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3102,7 +3102,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyType_Spec type_spec_ApplicationViewTransferContext_Meta =
     {
-        "_winrt_windows_ui_viewmanagement.ApplicationViewTransferContext_Meta",
+        "winrt._winrt_windows_ui_viewmanagement.ApplicationViewTransferContext_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -3451,7 +3451,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyType_Spec type_spec_InputPane =
     {
-        "_winrt_windows_ui_viewmanagement.InputPane",
+        "winrt._winrt_windows_ui_viewmanagement.InputPane",
         sizeof(py::wrapper::Windows::UI::ViewManagement::InputPane),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3588,7 +3588,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyType_Spec type_spec_InputPaneVisibilityEventArgs =
     {
-        "_winrt_windows_ui_viewmanagement.InputPaneVisibilityEventArgs",
+        "winrt._winrt_windows_ui_viewmanagement.InputPaneVisibilityEventArgs",
         sizeof(py::wrapper::Windows::UI::ViewManagement::InputPaneVisibilityEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3894,7 +3894,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyType_Spec type_spec_ProjectionManager =
     {
-        "_winrt_windows_ui_viewmanagement.ProjectionManager",
+        "winrt._winrt_windows_ui_viewmanagement.ProjectionManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3915,7 +3915,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyType_Spec type_spec_ProjectionManager_Meta =
     {
-        "_winrt_windows_ui_viewmanagement.ProjectionManager_Meta",
+        "winrt._winrt_windows_ui_viewmanagement.ProjectionManager_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -4348,7 +4348,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyType_Spec type_spec_StatusBar =
     {
-        "_winrt_windows_ui_viewmanagement.StatusBar",
+        "winrt._winrt_windows_ui_viewmanagement.StatusBar",
         sizeof(py::wrapper::Windows::UI::ViewManagement::StatusBar),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4573,7 +4573,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyType_Spec type_spec_StatusBarProgressIndicator =
     {
-        "_winrt_windows_ui_viewmanagement.StatusBarProgressIndicator",
+        "winrt._winrt_windows_ui_viewmanagement.StatusBarProgressIndicator",
         sizeof(py::wrapper::Windows::UI::ViewManagement::StatusBarProgressIndicator),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5298,7 +5298,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyType_Spec type_spec_UISettings =
     {
-        "_winrt_windows_ui_viewmanagement.UISettings",
+        "winrt._winrt_windows_ui_viewmanagement.UISettings",
         sizeof(py::wrapper::Windows::UI::ViewManagement::UISettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5367,7 +5367,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyType_Spec type_spec_UISettingsAnimationsEnabledChangedEventArgs =
     {
-        "_winrt_windows_ui_viewmanagement.UISettingsAnimationsEnabledChangedEventArgs",
+        "winrt._winrt_windows_ui_viewmanagement.UISettingsAnimationsEnabledChangedEventArgs",
         sizeof(py::wrapper::Windows::UI::ViewManagement::UISettingsAnimationsEnabledChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5436,7 +5436,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyType_Spec type_spec_UISettingsAutoHideScrollBarsChangedEventArgs =
     {
-        "_winrt_windows_ui_viewmanagement.UISettingsAutoHideScrollBarsChangedEventArgs",
+        "winrt._winrt_windows_ui_viewmanagement.UISettingsAutoHideScrollBarsChangedEventArgs",
         sizeof(py::wrapper::Windows::UI::ViewManagement::UISettingsAutoHideScrollBarsChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5505,7 +5505,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyType_Spec type_spec_UISettingsMessageDurationChangedEventArgs =
     {
-        "_winrt_windows_ui_viewmanagement.UISettingsMessageDurationChangedEventArgs",
+        "winrt._winrt_windows_ui_viewmanagement.UISettingsMessageDurationChangedEventArgs",
         sizeof(py::wrapper::Windows::UI::ViewManagement::UISettingsMessageDurationChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5624,7 +5624,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyType_Spec type_spec_UIViewSettings =
     {
-        "_winrt_windows_ui_viewmanagement.UIViewSettings",
+        "winrt._winrt_windows_ui_viewmanagement.UIViewSettings",
         sizeof(py::wrapper::Windows::UI::ViewManagement::UIViewSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5821,7 +5821,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyType_Spec type_spec_ViewModePreferences =
     {
-        "_winrt_windows_ui_viewmanagement.ViewModePreferences",
+        "winrt._winrt_windows_ui_viewmanagement.ViewModePreferences",
         sizeof(py::wrapper::Windows::UI::ViewManagement::ViewModePreferences),
         0,
         Py_TPFLAGS_DEFAULT,

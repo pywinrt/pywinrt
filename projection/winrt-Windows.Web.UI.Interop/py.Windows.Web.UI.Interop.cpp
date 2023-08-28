@@ -1915,7 +1915,7 @@ namespace py::cpp::Windows::Web::UI::Interop
 
     static PyType_Spec type_spec_WebViewControl =
     {
-        "_winrt_windows_web_ui_interop.WebViewControl",
+        "winrt._winrt_windows_web_ui_interop.WebViewControl",
         sizeof(py::wrapper::Windows::Web::UI::Interop::WebViewControl),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2112,7 +2112,7 @@ namespace py::cpp::Windows::Web::UI::Interop
 
     static PyType_Spec type_spec_WebViewControlAcceleratorKeyPressedEventArgs =
     {
-        "_winrt_windows_web_ui_interop.WebViewControlAcceleratorKeyPressedEventArgs",
+        "winrt._winrt_windows_web_ui_interop.WebViewControlAcceleratorKeyPressedEventArgs",
         sizeof(py::wrapper::Windows::Web::UI::Interop::WebViewControlAcceleratorKeyPressedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2201,7 +2201,7 @@ namespace py::cpp::Windows::Web::UI::Interop
 
     static PyType_Spec type_spec_WebViewControlMoveFocusRequestedEventArgs =
     {
-        "_winrt_windows_web_ui_interop.WebViewControlMoveFocusRequestedEventArgs",
+        "winrt._winrt_windows_web_ui_interop.WebViewControlMoveFocusRequestedEventArgs",
         sizeof(py::wrapper::Windows::Web::UI::Interop::WebViewControlMoveFocusRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2506,7 +2506,7 @@ namespace py::cpp::Windows::Web::UI::Interop
 
     static PyType_Spec type_spec_WebViewControlProcess =
     {
-        "_winrt_windows_web_ui_interop.WebViewControlProcess",
+        "winrt._winrt_windows_web_ui_interop.WebViewControlProcess",
         sizeof(py::wrapper::Windows::Web::UI::Interop::WebViewControlProcess),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2693,7 +2693,7 @@ namespace py::cpp::Windows::Web::UI::Interop
 
     static PyType_Spec type_spec_WebViewControlProcessOptions =
     {
-        "_winrt_windows_web_ui_interop.WebViewControlProcessOptions",
+        "winrt._winrt_windows_web_ui_interop.WebViewControlProcessOptions",
         sizeof(py::wrapper::Windows::Web::UI::Interop::WebViewControlProcessOptions),
         0,
         Py_TPFLAGS_DEFAULT,

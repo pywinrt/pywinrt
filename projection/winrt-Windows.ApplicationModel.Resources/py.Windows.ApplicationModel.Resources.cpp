@@ -365,7 +365,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources
 
     static PyType_Spec type_spec_ResourceLoader =
     {
-        "_winrt_windows_applicationmodel_resources.ResourceLoader",
+        "winrt._winrt_windows_applicationmodel_resources.ResourceLoader",
         sizeof(py::wrapper::Windows::ApplicationModel::Resources::ResourceLoader),
         0,
         Py_TPFLAGS_DEFAULT,

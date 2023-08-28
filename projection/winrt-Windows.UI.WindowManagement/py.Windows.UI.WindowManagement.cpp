@@ -904,7 +904,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     static PyType_Spec type_spec_AppWindow =
     {
-        "_winrt_windows_ui_windowmanagement.AppWindow",
+        "winrt._winrt_windows_ui_windowmanagement.AppWindow",
         sizeof(py::wrapper::Windows::UI::WindowManagement::AppWindow),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1133,7 +1133,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     static PyType_Spec type_spec_AppWindowChangedEventArgs =
     {
-        "_winrt_windows_ui_windowmanagement.AppWindowChangedEventArgs",
+        "winrt._winrt_windows_ui_windowmanagement.AppWindowChangedEventArgs",
         sizeof(py::wrapper::Windows::UI::WindowManagement::AppWindowChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1280,7 +1280,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     static PyType_Spec type_spec_AppWindowCloseRequestedEventArgs =
     {
-        "_winrt_windows_ui_windowmanagement.AppWindowCloseRequestedEventArgs",
+        "winrt._winrt_windows_ui_windowmanagement.AppWindowCloseRequestedEventArgs",
         sizeof(py::wrapper::Windows::UI::WindowManagement::AppWindowCloseRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1369,7 +1369,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     static PyType_Spec type_spec_AppWindowClosedEventArgs =
     {
-        "_winrt_windows_ui_windowmanagement.AppWindowClosedEventArgs",
+        "winrt._winrt_windows_ui_windowmanagement.AppWindowClosedEventArgs",
         sizeof(py::wrapper::Windows::UI::WindowManagement::AppWindowClosedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1521,7 +1521,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     static PyType_Spec type_spec_AppWindowFrame =
     {
-        "_winrt_windows_ui_windowmanagement.AppWindowFrame",
+        "winrt._winrt_windows_ui_windowmanagement.AppWindowFrame",
         sizeof(py::wrapper::Windows::UI::WindowManagement::AppWindowFrame),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1650,7 +1650,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     static PyType_Spec type_spec_AppWindowPlacement =
     {
-        "_winrt_windows_ui_windowmanagement.AppWindowPlacement",
+        "winrt._winrt_windows_ui_windowmanagement.AppWindowPlacement",
         sizeof(py::wrapper::Windows::UI::WindowManagement::AppWindowPlacement),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1739,7 +1739,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     static PyType_Spec type_spec_AppWindowPresentationConfiguration =
     {
-        "_winrt_windows_ui_windowmanagement.AppWindowPresentationConfiguration",
+        "winrt._winrt_windows_ui_windowmanagement.AppWindowPresentationConfiguration",
         sizeof(py::wrapper::Windows::UI::WindowManagement::AppWindowPresentationConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1902,7 +1902,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     static PyType_Spec type_spec_AppWindowPresenter =
     {
-        "_winrt_windows_ui_windowmanagement.AppWindowPresenter",
+        "winrt._winrt_windows_ui_windowmanagement.AppWindowPresenter",
         sizeof(py::wrapper::Windows::UI::WindowManagement::AppWindowPresenter),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2708,7 +2708,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     static PyType_Spec type_spec_AppWindowTitleBar =
     {
-        "_winrt_windows_ui_windowmanagement.AppWindowTitleBar",
+        "winrt._winrt_windows_ui_windowmanagement.AppWindowTitleBar",
         sizeof(py::wrapper::Windows::UI::WindowManagement::AppWindowTitleBar),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2797,7 +2797,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     static PyType_Spec type_spec_AppWindowTitleBarOcclusion =
     {
-        "_winrt_windows_ui_windowmanagement.AppWindowTitleBarOcclusion",
+        "winrt._winrt_windows_ui_windowmanagement.AppWindowTitleBarOcclusion",
         sizeof(py::wrapper::Windows::UI::WindowManagement::AppWindowTitleBarOcclusion),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2888,7 +2888,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     static PyType_Spec type_spec_CompactOverlayPresentationConfiguration =
     {
-        "_winrt_windows_ui_windowmanagement.CompactOverlayPresentationConfiguration",
+        "winrt._winrt_windows_ui_windowmanagement.CompactOverlayPresentationConfiguration",
         sizeof(py::wrapper::Windows::UI::WindowManagement::CompactOverlayPresentationConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2979,7 +2979,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     static PyType_Spec type_spec_DefaultPresentationConfiguration =
     {
-        "_winrt_windows_ui_windowmanagement.DefaultPresentationConfiguration",
+        "winrt._winrt_windows_ui_windowmanagement.DefaultPresentationConfiguration",
         sizeof(py::wrapper::Windows::UI::WindowManagement::DefaultPresentationConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3193,7 +3193,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     static PyType_Spec type_spec_DisplayRegion =
     {
-        "_winrt_windows_ui_windowmanagement.DisplayRegion",
+        "winrt._winrt_windows_ui_windowmanagement.DisplayRegion",
         sizeof(py::wrapper::Windows::UI::WindowManagement::DisplayRegion),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3332,7 +3332,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     static PyType_Spec type_spec_FullScreenPresentationConfiguration =
     {
-        "_winrt_windows_ui_windowmanagement.FullScreenPresentationConfiguration",
+        "winrt._winrt_windows_ui_windowmanagement.FullScreenPresentationConfiguration",
         sizeof(py::wrapper::Windows::UI::WindowManagement::FullScreenPresentationConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3396,7 +3396,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     static PyType_Spec type_spec_WindowServices =
     {
-        "_winrt_windows_ui_windowmanagement.WindowServices",
+        "winrt._winrt_windows_ui_windowmanagement.WindowServices",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3630,7 +3630,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     static PyType_Spec type_spec_WindowingEnvironment =
     {
-        "_winrt_windows_ui_windowmanagement.WindowingEnvironment",
+        "winrt._winrt_windows_ui_windowmanagement.WindowingEnvironment",
         sizeof(py::wrapper::Windows::UI::WindowManagement::WindowingEnvironment),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3719,7 +3719,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     static PyType_Spec type_spec_WindowingEnvironmentAddedEventArgs =
     {
-        "_winrt_windows_ui_windowmanagement.WindowingEnvironmentAddedEventArgs",
+        "winrt._winrt_windows_ui_windowmanagement.WindowingEnvironmentAddedEventArgs",
         sizeof(py::wrapper::Windows::UI::WindowManagement::WindowingEnvironmentAddedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3788,7 +3788,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     static PyType_Spec type_spec_WindowingEnvironmentChangedEventArgs =
     {
-        "_winrt_windows_ui_windowmanagement.WindowingEnvironmentChangedEventArgs",
+        "winrt._winrt_windows_ui_windowmanagement.WindowingEnvironmentChangedEventArgs",
         sizeof(py::wrapper::Windows::UI::WindowManagement::WindowingEnvironmentChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3877,7 +3877,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     static PyType_Spec type_spec_WindowingEnvironmentRemovedEventArgs =
     {
-        "_winrt_windows_ui_windowmanagement.WindowingEnvironmentRemovedEventArgs",
+        "winrt._winrt_windows_ui_windowmanagement.WindowingEnvironmentRemovedEventArgs",
         sizeof(py::wrapper::Windows::UI::WindowManagement::WindowingEnvironmentRemovedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,

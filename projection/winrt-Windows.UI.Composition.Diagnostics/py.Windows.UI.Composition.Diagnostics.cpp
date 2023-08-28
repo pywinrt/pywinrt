@@ -201,7 +201,7 @@ namespace py::cpp::Windows::UI::Composition::Diagnostics
 
     static PyType_Spec type_spec_CompositionDebugHeatMaps =
     {
-        "_winrt_windows_ui_composition_diagnostics.CompositionDebugHeatMaps",
+        "winrt._winrt_windows_ui_composition_diagnostics.CompositionDebugHeatMaps",
         sizeof(py::wrapper::Windows::UI::Composition::Diagnostics::CompositionDebugHeatMaps),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -322,7 +322,7 @@ namespace py::cpp::Windows::UI::Composition::Diagnostics
 
     static PyType_Spec type_spec_CompositionDebugSettings =
     {
-        "_winrt_windows_ui_composition_diagnostics.CompositionDebugSettings",
+        "winrt._winrt_windows_ui_composition_diagnostics.CompositionDebugSettings",
         sizeof(py::wrapper::Windows::UI::Composition::Diagnostics::CompositionDebugSettings),
         0,
         Py_TPFLAGS_DEFAULT,

@@ -6,7 +6,7 @@ from winrt_sdk import get_include_dirs
 setup(
     ext_modules=[
         Extension(
-            "winrt.windows.media.audio._winrt_windows_media_audio",
+            "winrt._winrt_windows_media_audio",
             sources=["py.Windows.Media.Audio.cpp"],
             include_dirs=get_include_dirs(),
             extra_compile_args=["/std:c++20", "/permissive-"],

@@ -6,7 +6,7 @@ from winrt_sdk import get_include_dirs
 setup(
     ext_modules=[
         Extension(
-            "winrt.windows.storage.pickers._winrt_windows_storage_pickers",
+            "winrt._winrt_windows_storage_pickers",
             sources=["py.Windows.Storage.Pickers.cpp"],
             include_dirs=get_include_dirs(),
             extra_compile_args=["/std:c++20", "/permissive-"],

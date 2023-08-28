@@ -6,7 +6,7 @@ from winrt_sdk import get_include_dirs
 setup(
     ext_modules=[
         Extension(
-            "winrt.windows.data.json._winrt_windows_data_json",
+            "winrt._winrt_windows_data_json",
             sources=["py.Windows.Data.Json.cpp"],
             include_dirs=get_include_dirs(),
             extra_compile_args=["/std:c++20", "/permissive-"],

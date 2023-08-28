@@ -377,7 +377,7 @@ namespace py
         if (PyWinRT_API->runtime_api_guid != runtime_api_guid)
         {
             PyErr_SetString(
-                PyExc_RuntimeError, "_winrt._C_API capsule has invalid data");
+                PyExc_RuntimeError, "winrt._winrt._C_API capsule has invalid data");
             return -1;
         }
 
@@ -385,7 +385,7 @@ namespace py
         {
             PyErr_Format(
                 PyExc_RuntimeError,
-                "_winrt._C_API ABI major version mismatch: expected %d, got %d",
+                "winrt._winrt._C_API ABI major version mismatch: expected %d, got %d",
                 runtime_abi_version_major,
                 PyWinRT_API->abi_version_major);
             return -1;

@@ -200,7 +200,7 @@ namespace py::cpp::Windows::Devices::Adc
 
     static PyType_Spec type_spec_AdcChannel =
     {
-        "_winrt_windows_devices_adc.AdcChannel",
+        "winrt._winrt_windows_devices_adc.AdcChannel",
         sizeof(py::wrapper::Windows::Devices::Adc::AdcChannel),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -523,7 +523,7 @@ namespace py::cpp::Windows::Devices::Adc
 
     static PyType_Spec type_spec_AdcController =
     {
-        "_winrt_windows_devices_adc.AdcController",
+        "winrt._winrt_windows_devices_adc.AdcController",
         sizeof(py::wrapper::Windows::Devices::Adc::AdcController),
         0,
         Py_TPFLAGS_DEFAULT,

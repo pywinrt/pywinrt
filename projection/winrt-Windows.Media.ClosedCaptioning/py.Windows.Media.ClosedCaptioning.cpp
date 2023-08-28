@@ -306,7 +306,7 @@ namespace py::cpp::Windows::Media::ClosedCaptioning
 
     static PyType_Spec type_spec_ClosedCaptionProperties =
     {
-        "_winrt_windows_media_closedcaptioning.ClosedCaptionProperties",
+        "winrt._winrt_windows_media_closedcaptioning.ClosedCaptionProperties",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -338,7 +338,7 @@ namespace py::cpp::Windows::Media::ClosedCaptioning
 
     static PyType_Spec type_spec_ClosedCaptionProperties_Meta =
     {
-        "_winrt_windows_media_closedcaptioning.ClosedCaptionProperties_Meta",
+        "winrt._winrt_windows_media_closedcaptioning.ClosedCaptionProperties_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,

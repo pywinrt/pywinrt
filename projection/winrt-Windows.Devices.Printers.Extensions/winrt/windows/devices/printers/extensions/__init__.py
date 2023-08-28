@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_devices_printers_extensions
+from winrt import _winrt_windows_devices_printers_extensions
 
 __all__ = [
     "Print3DWorkflowDetail",

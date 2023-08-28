@@ -6,7 +6,7 @@ from winrt_sdk import get_include_dirs
 setup(
     ext_modules=[
         Extension(
-            "winrt.windows.ui.core.preview._winrt_windows_ui_core_preview",
+            "winrt._winrt_windows_ui_core_preview",
             sources=["py.Windows.UI.Core.Preview.cpp"],
             include_dirs=get_include_dirs(),
             extra_compile_args=["/std:c++20", "/permissive-"],

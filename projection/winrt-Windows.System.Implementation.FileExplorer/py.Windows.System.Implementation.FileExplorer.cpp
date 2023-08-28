@@ -112,7 +112,7 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
 
     static PyType_Spec type_spec_SysStorageProviderEventReceivedEventArgs =
     {
-        "_winrt_windows_system_implementation_fileexplorer.SysStorageProviderEventReceivedEventArgs",
+        "winrt._winrt_windows_system_implementation_fileexplorer.SysStorageProviderEventReceivedEventArgs",
         sizeof(py::wrapper::Windows::System::Implementation::FileExplorer::SysStorageProviderEventReceivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -226,7 +226,7 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
 
     static PyType_Spec type_spec_ISysStorageProviderEventSource =
     {
-        "_winrt_windows_system_implementation_fileexplorer.ISysStorageProviderEventSource",
+        "winrt._winrt_windows_system_implementation_fileexplorer.ISysStorageProviderEventSource",
         sizeof(py::wrapper::Windows::System::Implementation::FileExplorer::ISysStorageProviderEventSource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -360,7 +360,7 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
 
     static PyType_Spec type_spec_ISysStorageProviderHandlerFactory =
     {
-        "_winrt_windows_system_implementation_fileexplorer.ISysStorageProviderHandlerFactory",
+        "winrt._winrt_windows_system_implementation_fileexplorer.ISysStorageProviderHandlerFactory",
         sizeof(py::wrapper::Windows::System::Implementation::FileExplorer::ISysStorageProviderHandlerFactory),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -461,7 +461,7 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
 
     static PyType_Spec type_spec_ISysStorageProviderHttpRequestProvider =
     {
-        "_winrt_windows_system_implementation_fileexplorer.ISysStorageProviderHttpRequestProvider",
+        "winrt._winrt_windows_system_implementation_fileexplorer.ISysStorageProviderHttpRequestProvider",
         sizeof(py::wrapper::Windows::System::Implementation::FileExplorer::ISysStorageProviderHttpRequestProvider),
         0,
         Py_TPFLAGS_DEFAULT,

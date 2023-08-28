@@ -108,7 +108,7 @@ namespace py::cpp::Windows::UI::Accessibility
 
     static PyType_Spec type_spec_ScreenReaderPositionChangedEventArgs =
     {
-        "_winrt_windows_ui_accessibility.ScreenReaderPositionChangedEventArgs",
+        "winrt._winrt_windows_ui_accessibility.ScreenReaderPositionChangedEventArgs",
         sizeof(py::wrapper::Windows::UI::Accessibility::ScreenReaderPositionChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -264,7 +264,7 @@ namespace py::cpp::Windows::UI::Accessibility
 
     static PyType_Spec type_spec_ScreenReaderService =
     {
-        "_winrt_windows_ui_accessibility.ScreenReaderService",
+        "winrt._winrt_windows_ui_accessibility.ScreenReaderService",
         sizeof(py::wrapper::Windows::UI::Accessibility::ScreenReaderService),
         0,
         Py_TPFLAGS_DEFAULT,

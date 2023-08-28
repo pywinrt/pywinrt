@@ -128,7 +128,7 @@ namespace py::cpp::Windows::Devices::Background
 
     static PyType_Spec type_spec_DeviceServicingDetails =
     {
-        "_winrt_windows_devices_background.DeviceServicingDetails",
+        "winrt._winrt_windows_devices_background.DeviceServicingDetails",
         sizeof(py::wrapper::Windows::Devices::Background::DeviceServicingDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -237,7 +237,7 @@ namespace py::cpp::Windows::Devices::Background
 
     static PyType_Spec type_spec_DeviceUseDetails =
     {
-        "_winrt_windows_devices_background.DeviceUseDetails",
+        "winrt._winrt_windows_devices_background.DeviceUseDetails",
         sizeof(py::wrapper::Windows::Devices::Background::DeviceUseDetails),
         0,
         Py_TPFLAGS_DEFAULT,

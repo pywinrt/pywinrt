@@ -426,7 +426,7 @@ namespace py::cpp::Windows::UI::Composition::Effects
 
     static PyType_Spec type_spec_SceneLightingEffect =
     {
-        "_winrt_windows_ui_composition_effects.SceneLightingEffect",
+        "winrt._winrt_windows_ui_composition_effects.SceneLightingEffect",
         sizeof(py::wrapper::Windows::UI::Composition::Effects::SceneLightingEffect),
         0,
         Py_TPFLAGS_DEFAULT,

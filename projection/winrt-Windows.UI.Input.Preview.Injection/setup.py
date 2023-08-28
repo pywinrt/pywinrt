@@ -6,7 +6,7 @@ from winrt_sdk import get_include_dirs
 setup(
     ext_modules=[
         Extension(
-            "winrt.windows.ui.input.preview.injection._winrt_windows_ui_input_preview_injection",
+            "winrt._winrt_windows_ui_input_preview_injection",
             sources=["py.Windows.UI.Input.Preview.Injection.cpp"],
             include_dirs=get_include_dirs(),
             extra_compile_args=["/std:c++20", "/permissive-"],

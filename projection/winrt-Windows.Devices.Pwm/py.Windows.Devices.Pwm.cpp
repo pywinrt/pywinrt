@@ -356,7 +356,7 @@ namespace py::cpp::Windows::Devices::Pwm
 
     static PyType_Spec type_spec_PwmController =
     {
-        "_winrt_windows_devices_pwm.PwmController",
+        "winrt._winrt_windows_devices_pwm.PwmController",
         sizeof(py::wrapper::Windows::Devices::Pwm::PwmController),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -690,7 +690,7 @@ namespace py::cpp::Windows::Devices::Pwm
 
     static PyType_Spec type_spec_PwmPin =
     {
-        "_winrt_windows_devices_pwm.PwmPin",
+        "winrt._winrt_windows_devices_pwm.PwmPin",
         sizeof(py::wrapper::Windows::Devices::Pwm::PwmPin),
         0,
         Py_TPFLAGS_DEFAULT,

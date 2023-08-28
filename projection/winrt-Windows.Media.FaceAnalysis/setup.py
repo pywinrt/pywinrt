@@ -6,7 +6,7 @@ from winrt_sdk import get_include_dirs
 setup(
     ext_modules=[
         Extension(
-            "winrt.windows.media.faceanalysis._winrt_windows_media_faceanalysis",
+            "winrt._winrt_windows_media_faceanalysis",
             sources=["py.Windows.Media.FaceAnalysis.cpp"],
             include_dirs=get_include_dirs(),
             extra_compile_args=["/std:c++20", "/permissive-"],

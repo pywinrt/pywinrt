@@ -52,7 +52,7 @@ namespace py::cpp::Windows::Phone::System::Profile
 
     static PyType_Spec type_spec_RetailMode =
     {
-        "_winrt_windows_phone_system_profile.RetailMode",
+        "winrt._winrt_windows_phone_system_profile.RetailMode",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -73,7 +73,7 @@ namespace py::cpp::Windows::Phone::System::Profile
 
     static PyType_Spec type_spec_RetailMode_Meta =
     {
-        "_winrt_windows_phone_system_profile.RetailMode_Meta",
+        "winrt._winrt_windows_phone_system_profile.RetailMode_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,

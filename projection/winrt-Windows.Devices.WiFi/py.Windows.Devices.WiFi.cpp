@@ -470,7 +470,7 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyType_Spec type_spec_WiFiAdapter =
     {
-        "_winrt_windows_devices_wifi.WiFiAdapter",
+        "winrt._winrt_windows_devices_wifi.WiFiAdapter",
         sizeof(py::wrapper::Windows::Devices::WiFi::WiFiAdapter),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -759,7 +759,7 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyType_Spec type_spec_WiFiAvailableNetwork =
     {
-        "_winrt_windows_devices_wifi.WiFiAvailableNetwork",
+        "winrt._winrt_windows_devices_wifi.WiFiAvailableNetwork",
         sizeof(py::wrapper::Windows::Devices::WiFi::WiFiAvailableNetwork),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -848,7 +848,7 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyType_Spec type_spec_WiFiConnectionResult =
     {
-        "_winrt_windows_devices_wifi.WiFiConnectionResult",
+        "winrt._winrt_windows_devices_wifi.WiFiConnectionResult",
         sizeof(py::wrapper::Windows::Devices::WiFi::WiFiConnectionResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -957,7 +957,7 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyType_Spec type_spec_WiFiNetworkReport =
     {
-        "_winrt_windows_devices_wifi.WiFiNetworkReport",
+        "winrt._winrt_windows_devices_wifi.WiFiNetworkReport",
         sizeof(py::wrapper::Windows::Devices::WiFi::WiFiNetworkReport),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1139,7 +1139,7 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyType_Spec type_spec_WiFiOnDemandHotspotConnectTriggerDetails =
     {
-        "_winrt_windows_devices_wifi.WiFiOnDemandHotspotConnectTriggerDetails",
+        "winrt._winrt_windows_devices_wifi.WiFiOnDemandHotspotConnectTriggerDetails",
         sizeof(py::wrapper::Windows::Devices::WiFi::WiFiOnDemandHotspotConnectTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1228,7 +1228,7 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyType_Spec type_spec_WiFiOnDemandHotspotConnectionResult =
     {
-        "_winrt_windows_devices_wifi.WiFiOnDemandHotspotConnectionResult",
+        "winrt._winrt_windows_devices_wifi.WiFiOnDemandHotspotConnectionResult",
         sizeof(py::wrapper::Windows::Devices::WiFi::WiFiOnDemandHotspotConnectionResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1412,7 +1412,7 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyType_Spec type_spec_WiFiOnDemandHotspotNetwork =
     {
-        "_winrt_windows_devices_wifi.WiFiOnDemandHotspotNetwork",
+        "winrt._winrt_windows_devices_wifi.WiFiOnDemandHotspotNetwork",
         sizeof(py::wrapper::Windows::Devices::WiFi::WiFiOnDemandHotspotNetwork),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1817,7 +1817,7 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyType_Spec type_spec_WiFiOnDemandHotspotNetworkProperties =
     {
-        "_winrt_windows_devices_wifi.WiFiOnDemandHotspotNetworkProperties",
+        "winrt._winrt_windows_devices_wifi.WiFiOnDemandHotspotNetworkProperties",
         sizeof(py::wrapper::Windows::Devices::WiFi::WiFiOnDemandHotspotNetworkProperties),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1926,7 +1926,7 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyType_Spec type_spec_WiFiWpsConfigurationResult =
     {
-        "_winrt_windows_devices_wifi.WiFiWpsConfigurationResult",
+        "winrt._winrt_windows_devices_wifi.WiFiWpsConfigurationResult",
         sizeof(py::wrapper::Windows::Devices::WiFi::WiFiWpsConfigurationResult),
         0,
         Py_TPFLAGS_DEFAULT,

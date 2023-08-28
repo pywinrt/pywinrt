@@ -394,7 +394,7 @@ namespace py::cpp::Windows::Security::Cryptography
 
     static PyType_Spec type_spec_CryptographicBuffer =
     {
-        "_winrt_windows_security_cryptography.CryptographicBuffer",
+        "winrt._winrt_windows_security_cryptography.CryptographicBuffer",
         0,
         0,
         Py_TPFLAGS_DEFAULT,

@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_phone_system_userprofile_gameservices_core
+from winrt import _winrt_windows_phone_system_userprofile_gameservices_core
 
 __all__ = [
     "GameServiceGameOutcome",

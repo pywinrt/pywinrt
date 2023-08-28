@@ -6,7 +6,7 @@ from winrt_sdk import get_include_dirs
 setup(
     ext_modules=[
         Extension(
-            "winrt.windows.perception.spatial._winrt_windows_perception_spatial",
+            "winrt._winrt_windows_perception_spatial",
             sources=["py.Windows.Perception.Spatial.cpp"],
             include_dirs=get_include_dirs(),
             extra_compile_args=["/std:c++20", "/permissive-"],

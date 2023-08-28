@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_system_diagnostics_tracereporting
+from winrt import _winrt_windows_system_diagnostics_tracereporting
 
 __all__ = [
     "PlatformDiagnosticActionState",

@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_management_update
+from winrt import _winrt_windows_management_update
 
 __all__ = [
     "WindowsUpdateAdministratorOptions",

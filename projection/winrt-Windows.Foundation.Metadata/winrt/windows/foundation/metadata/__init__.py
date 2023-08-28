@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_foundation_metadata
+from winrt import _winrt_windows_foundation_metadata
 
 __all__ = [
     "AttributeTargets",

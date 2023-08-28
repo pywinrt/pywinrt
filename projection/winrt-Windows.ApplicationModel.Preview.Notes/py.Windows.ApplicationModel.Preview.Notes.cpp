@@ -88,7 +88,7 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
 
     static PyType_Spec type_spec_NotePlacementChangedPreviewEventArgs =
     {
-        "_winrt_windows_applicationmodel_preview_notes.NotePlacementChangedPreviewEventArgs",
+        "winrt._winrt_windows_applicationmodel_preview_notes.NotePlacementChangedPreviewEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Preview::Notes::NotePlacementChangedPreviewEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -197,7 +197,7 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
 
     static PyType_Spec type_spec_NoteVisibilityChangedPreviewEventArgs =
     {
-        "_winrt_windows_applicationmodel_preview_notes.NoteVisibilityChangedPreviewEventArgs",
+        "winrt._winrt_windows_applicationmodel_preview_notes.NoteVisibilityChangedPreviewEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Preview::Notes::NoteVisibilityChangedPreviewEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -822,7 +822,7 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
 
     static PyType_Spec type_spec_NotesWindowManagerPreview =
     {
-        "_winrt_windows_applicationmodel_preview_notes.NotesWindowManagerPreview",
+        "winrt._winrt_windows_applicationmodel_preview_notes.NotesWindowManagerPreview",
         sizeof(py::wrapper::Windows::ApplicationModel::Preview::Notes::NotesWindowManagerPreview),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -961,7 +961,7 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
 
     static PyType_Spec type_spec_NotesWindowManagerPreviewShowNoteOptions =
     {
-        "_winrt_windows_applicationmodel_preview_notes.NotesWindowManagerPreviewShowNoteOptions",
+        "winrt._winrt_windows_applicationmodel_preview_notes.NotesWindowManagerPreviewShowNoteOptions",
         sizeof(py::wrapper::Windows::ApplicationModel::Preview::Notes::NotesWindowManagerPreviewShowNoteOptions),
         0,
         Py_TPFLAGS_DEFAULT,

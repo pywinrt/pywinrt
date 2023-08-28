@@ -5,7 +5,7 @@ import typing
 import uuid as _uuid
 
 import winrt.system
-from . import _winrt_windows_gaming_preview_gamesenumeration
+from winrt import _winrt_windows_gaming_preview_gamesenumeration
 
 __all__ = [
     "GameListCategory",

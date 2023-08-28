@@ -138,7 +138,7 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyType_Spec type_spec_AdvancedPhotoCaptureSettings =
     {
-        "_winrt_windows_media_devices.AdvancedPhotoCaptureSettings",
+        "winrt._winrt_windows_media_devices.AdvancedPhotoCaptureSettings",
         sizeof(py::wrapper::Windows::Media::Devices::AdvancedPhotoCaptureSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -300,7 +300,7 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyType_Spec type_spec_AdvancedPhotoControl =
     {
-        "_winrt_windows_media_devices.AdvancedPhotoControl",
+        "winrt._winrt_windows_media_devices.AdvancedPhotoControl",
         sizeof(py::wrapper::Windows::Media::Devices::AdvancedPhotoControl),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -562,7 +562,7 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyType_Spec type_spec_AudioDeviceController =
     {
-        "_winrt_windows_media_devices.AudioDeviceController",
+        "winrt._winrt_windows_media_devices.AudioDeviceController",
         sizeof(py::wrapper::Windows::Media::Devices::AudioDeviceController),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -763,7 +763,7 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyType_Spec type_spec_AudioDeviceModule =
     {
-        "_winrt_windows_media_devices.AudioDeviceModule",
+        "winrt._winrt_windows_media_devices.AudioDeviceModule",
         sizeof(py::wrapper::Windows::Media::Devices::AudioDeviceModule),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -872,7 +872,7 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyType_Spec type_spec_AudioDeviceModuleNotificationEventArgs =
     {
-        "_winrt_windows_media_devices.AudioDeviceModuleNotificationEventArgs",
+        "winrt._winrt_windows_media_devices.AudioDeviceModuleNotificationEventArgs",
         sizeof(py::wrapper::Windows::Media::Devices::AudioDeviceModuleNotificationEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1072,7 +1072,7 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyType_Spec type_spec_AudioDeviceModulesManager =
     {
-        "_winrt_windows_media_devices.AudioDeviceModulesManager",
+        "winrt._winrt_windows_media_devices.AudioDeviceModulesManager",
         sizeof(py::wrapper::Windows::Media::Devices::AudioDeviceModulesManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1622,7 +1622,7 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyType_Spec type_spec_CallControl =
     {
-        "_winrt_windows_media_devices.CallControl",
+        "winrt._winrt_windows_media_devices.CallControl",
         sizeof(py::wrapper::Windows::Media::Devices::CallControl),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1798,7 +1798,7 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyType_Spec type_spec_CameraOcclusionInfo =
     {
-        "_winrt_windows_media_devices.CameraOcclusionInfo",
+        "winrt._winrt_windows_media_devices.CameraOcclusionInfo",
         sizeof(py::wrapper::Windows::Media::Devices::CameraOcclusionInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1919,7 +1919,7 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyType_Spec type_spec_CameraOcclusionState =
     {
-        "_winrt_windows_media_devices.CameraOcclusionState",
+        "winrt._winrt_windows_media_devices.CameraOcclusionState",
         sizeof(py::wrapper::Windows::Media::Devices::CameraOcclusionState),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2008,7 +2008,7 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyType_Spec type_spec_CameraOcclusionStateChangedEventArgs =
     {
-        "_winrt_windows_media_devices.CameraOcclusionStateChangedEventArgs",
+        "winrt._winrt_windows_media_devices.CameraOcclusionStateChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::Devices::CameraOcclusionStateChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2117,7 +2117,7 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyType_Spec type_spec_DefaultAudioCaptureDeviceChangedEventArgs =
     {
-        "_winrt_windows_media_devices.DefaultAudioCaptureDeviceChangedEventArgs",
+        "winrt._winrt_windows_media_devices.DefaultAudioCaptureDeviceChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::Devices::DefaultAudioCaptureDeviceChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2226,7 +2226,7 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyType_Spec type_spec_DefaultAudioRenderDeviceChangedEventArgs =
     {
-        "_winrt_windows_media_devices.DefaultAudioRenderDeviceChangedEventArgs",
+        "winrt._winrt_windows_media_devices.DefaultAudioRenderDeviceChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::Devices::DefaultAudioRenderDeviceChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2346,7 +2346,7 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyType_Spec type_spec_DialRequestedEventArgs =
     {
-        "_winrt_windows_media_devices.DialRequestedEventArgs",
+        "winrt._winrt_windows_media_devices.DialRequestedEventArgs",
         sizeof(py::wrapper::Windows::Media::Devices::DialRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2581,7 +2581,7 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyType_Spec type_spec_DigitalWindowBounds =
     {
-        "_winrt_windows_media_devices.DigitalWindowBounds",
+        "winrt._winrt_windows_media_devices.DigitalWindowBounds",
         sizeof(py::wrapper::Windows::Media::Devices::DigitalWindowBounds),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2770,7 +2770,7 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyType_Spec type_spec_DigitalWindowCapability =
     {
-        "_winrt_windows_media_devices.DigitalWindowCapability",
+        "winrt._winrt_windows_media_devices.DigitalWindowCapability",
         sizeof(py::wrapper::Windows::Media::Devices::DigitalWindowCapability),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3037,7 +3037,7 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyType_Spec type_spec_DigitalWindowControl =
     {
-        "_winrt_windows_media_devices.DigitalWindowControl",
+        "winrt._winrt_windows_media_devices.DigitalWindowControl",
         sizeof(py::wrapper::Windows::Media::Devices::DigitalWindowControl),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3238,7 +3238,7 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyType_Spec type_spec_ExposureCompensationControl =
     {
-        "_winrt_windows_media_devices.ExposureCompensationControl",
+        "winrt._winrt_windows_media_devices.ExposureCompensationControl",
         sizeof(py::wrapper::Windows::Media::Devices::ExposureCompensationControl),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3491,7 +3491,7 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyType_Spec type_spec_ExposureControl =
     {
-        "_winrt_windows_media_devices.ExposureControl",
+        "winrt._winrt_windows_media_devices.ExposureControl",
         sizeof(py::wrapper::Windows::Media::Devices::ExposureControl),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3628,7 +3628,7 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyType_Spec type_spec_ExposurePriorityVideoControl =
     {
-        "_winrt_windows_media_devices.ExposurePriorityVideoControl",
+        "winrt._winrt_windows_media_devices.ExposurePriorityVideoControl",
         sizeof(py::wrapper::Windows::Media::Devices::ExposurePriorityVideoControl),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4017,7 +4017,7 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyType_Spec type_spec_FlashControl =
     {
-        "_winrt_windows_media_devices.FlashControl",
+        "winrt._winrt_windows_media_devices.FlashControl",
         sizeof(py::wrapper::Windows::Media::Devices::FlashControl),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4574,7 +4574,7 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyType_Spec type_spec_FocusControl =
     {
-        "_winrt_windows_media_devices.FocusControl",
+        "winrt._winrt_windows_media_devices.FocusControl",
         sizeof(py::wrapper::Windows::Media::Devices::FocusControl),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4953,7 +4953,7 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyType_Spec type_spec_FocusSettings =
     {
-        "_winrt_windows_media_devices.FocusSettings",
+        "winrt._winrt_windows_media_devices.FocusSettings",
         sizeof(py::wrapper::Windows::Media::Devices::FocusSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5110,7 +5110,7 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyType_Spec type_spec_HdrVideoControl =
     {
-        "_winrt_windows_media_devices.HdrVideoControl",
+        "winrt._winrt_windows_media_devices.HdrVideoControl",
         sizeof(py::wrapper::Windows::Media::Devices::HdrVideoControl),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5375,7 +5375,7 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyType_Spec type_spec_InfraredTorchControl =
     {
-        "_winrt_windows_media_devices.InfraredTorchControl",
+        "winrt._winrt_windows_media_devices.InfraredTorchControl",
         sizeof(py::wrapper::Windows::Media::Devices::InfraredTorchControl),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5698,7 +5698,7 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyType_Spec type_spec_IsoSpeedControl =
     {
-        "_winrt_windows_media_devices.IsoSpeedControl",
+        "winrt._winrt_windows_media_devices.IsoSpeedControl",
         sizeof(py::wrapper::Windows::Media::Devices::IsoSpeedControl),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5787,7 +5787,7 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyType_Spec type_spec_KeypadPressedEventArgs =
     {
-        "_winrt_windows_media_devices.KeypadPressedEventArgs",
+        "winrt._winrt_windows_media_devices.KeypadPressedEventArgs",
         sizeof(py::wrapper::Windows::Media::Devices::KeypadPressedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6082,7 +6082,7 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyType_Spec type_spec_LowLagPhotoControl =
     {
-        "_winrt_windows_media_devices.LowLagPhotoControl",
+        "winrt._winrt_windows_media_devices.LowLagPhotoControl",
         sizeof(py::wrapper::Windows::Media::Devices::LowLagPhotoControl),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6533,7 +6533,7 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyType_Spec type_spec_LowLagPhotoSequenceControl =
     {
-        "_winrt_windows_media_devices.LowLagPhotoSequenceControl",
+        "winrt._winrt_windows_media_devices.LowLagPhotoSequenceControl",
         sizeof(py::wrapper::Windows::Media::Devices::LowLagPhotoSequenceControl),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6811,7 +6811,7 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyType_Spec type_spec_MediaDevice =
     {
-        "_winrt_windows_media_devices.MediaDevice",
+        "winrt._winrt_windows_media_devices.MediaDevice",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7052,7 +7052,7 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyType_Spec type_spec_MediaDeviceControl =
     {
-        "_winrt_windows_media_devices.MediaDeviceControl",
+        "winrt._winrt_windows_media_devices.MediaDeviceControl",
         sizeof(py::wrapper::Windows::Media::Devices::MediaDeviceControl),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7241,7 +7241,7 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyType_Spec type_spec_MediaDeviceControlCapabilities =
     {
-        "_winrt_windows_media_devices.MediaDeviceControlCapabilities",
+        "winrt._winrt_windows_media_devices.MediaDeviceControlCapabilities",
         sizeof(py::wrapper::Windows::Media::Devices::MediaDeviceControlCapabilities),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7350,7 +7350,7 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyType_Spec type_spec_ModuleCommandResult =
     {
-        "_winrt_windows_media_devices.ModuleCommandResult",
+        "winrt._winrt_windows_media_devices.ModuleCommandResult",
         sizeof(py::wrapper::Windows::Media::Devices::ModuleCommandResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7507,7 +7507,7 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyType_Spec type_spec_OpticalImageStabilizationControl =
     {
-        "_winrt_windows_media_devices.OpticalImageStabilizationControl",
+        "winrt._winrt_windows_media_devices.OpticalImageStabilizationControl",
         sizeof(py::wrapper::Windows::Media::Devices::OpticalImageStabilizationControl),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7644,7 +7644,7 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyType_Spec type_spec_PanelBasedOptimizationControl =
     {
-        "_winrt_windows_media_devices.PanelBasedOptimizationControl",
+        "winrt._winrt_windows_media_devices.PanelBasedOptimizationControl",
         sizeof(py::wrapper::Windows::Media::Devices::PanelBasedOptimizationControl),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7829,7 +7829,7 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyType_Spec type_spec_PhotoConfirmationControl =
     {
-        "_winrt_windows_media_devices.PhotoConfirmationControl",
+        "winrt._winrt_windows_media_devices.PhotoConfirmationControl",
         sizeof(py::wrapper::Windows::Media::Devices::PhotoConfirmationControl),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7929,7 +7929,7 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyType_Spec type_spec_RedialRequestedEventArgs =
     {
-        "_winrt_windows_media_devices.RedialRequestedEventArgs",
+        "winrt._winrt_windows_media_devices.RedialRequestedEventArgs",
         sizeof(py::wrapper::Windows::Media::Devices::RedialRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8356,7 +8356,7 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyType_Spec type_spec_RegionOfInterest =
     {
-        "_winrt_windows_media_devices.RegionOfInterest",
+        "winrt._winrt_windows_media_devices.RegionOfInterest",
         sizeof(py::wrapper::Windows::Media::Devices::RegionOfInterest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8588,7 +8588,7 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyType_Spec type_spec_RegionsOfInterestControl =
     {
-        "_winrt_windows_media_devices.RegionsOfInterestControl",
+        "winrt._winrt_windows_media_devices.RegionsOfInterestControl",
         sizeof(py::wrapper::Windows::Media::Devices::RegionsOfInterestControl),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8729,7 +8729,7 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyType_Spec type_spec_SceneModeControl =
     {
-        "_winrt_windows_media_devices.SceneModeControl",
+        "winrt._winrt_windows_media_devices.SceneModeControl",
         sizeof(py::wrapper::Windows::Media::Devices::SceneModeControl),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8934,7 +8934,7 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyType_Spec type_spec_TorchControl =
     {
-        "_winrt_windows_media_devices.TorchControl",
+        "winrt._winrt_windows_media_devices.TorchControl",
         sizeof(py::wrapper::Windows::Media::Devices::TorchControl),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10203,7 +10203,7 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyType_Spec type_spec_VideoDeviceController =
     {
-        "_winrt_windows_media_devices.VideoDeviceController",
+        "winrt._winrt_windows_media_devices.VideoDeviceController",
         sizeof(py::wrapper::Windows::Media::Devices::VideoDeviceController),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10312,7 +10312,7 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyType_Spec type_spec_VideoDeviceControllerGetDevicePropertyResult =
     {
-        "_winrt_windows_media_devices.VideoDeviceControllerGetDevicePropertyResult",
+        "winrt._winrt_windows_media_devices.VideoDeviceControllerGetDevicePropertyResult",
         sizeof(py::wrapper::Windows::Media::Devices::VideoDeviceControllerGetDevicePropertyResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10469,7 +10469,7 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyType_Spec type_spec_VideoTemporalDenoisingControl =
     {
-        "_winrt_windows_media_devices.VideoTemporalDenoisingControl",
+        "winrt._winrt_windows_media_devices.VideoTemporalDenoisingControl",
         sizeof(py::wrapper::Windows::Media::Devices::VideoTemporalDenoisingControl),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10722,7 +10722,7 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyType_Spec type_spec_WhiteBalanceControl =
     {
-        "_winrt_windows_media_devices.WhiteBalanceControl",
+        "winrt._winrt_windows_media_devices.WhiteBalanceControl",
         sizeof(py::wrapper::Windows::Media::Devices::WhiteBalanceControl),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10992,7 +10992,7 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyType_Spec type_spec_ZoomControl =
     {
-        "_winrt_windows_media_devices.ZoomControl",
+        "winrt._winrt_windows_media_devices.ZoomControl",
         sizeof(py::wrapper::Windows::Media::Devices::ZoomControl),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11179,7 +11179,7 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyType_Spec type_spec_ZoomSettings =
     {
-        "_winrt_windows_media_devices.ZoomSettings",
+        "winrt._winrt_windows_media_devices.ZoomSettings",
         sizeof(py::wrapper::Windows::Media::Devices::ZoomSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11288,7 +11288,7 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyType_Spec type_spec_IDefaultAudioDeviceChangedEventArgs =
     {
-        "_winrt_windows_media_devices.IDefaultAudioDeviceChangedEventArgs",
+        "winrt._winrt_windows_media_devices.IDefaultAudioDeviceChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::Devices::IDefaultAudioDeviceChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11454,7 +11454,7 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyType_Spec type_spec_IMediaDeviceController =
     {
-        "_winrt_windows_media_devices.IMediaDeviceController",
+        "winrt._winrt_windows_media_devices.IMediaDeviceController",
         sizeof(py::wrapper::Windows::Media::Devices::IMediaDeviceController),
         0,
         Py_TPFLAGS_DEFAULT,

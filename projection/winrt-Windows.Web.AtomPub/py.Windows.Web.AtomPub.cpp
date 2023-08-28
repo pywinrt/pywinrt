@@ -770,7 +770,7 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyType_Spec type_spec_AtomPubClient =
     {
-        "_winrt_windows_web_atompub.AtomPubClient",
+        "winrt._winrt_windows_web_atompub.AtomPubClient",
         sizeof(py::wrapper::Windows::Web::AtomPub::AtomPubClient),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1231,7 +1231,7 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyType_Spec type_spec_ResourceCollection =
     {
-        "_winrt_windows_web_atompub.ResourceCollection",
+        "winrt._winrt_windows_web_atompub.ResourceCollection",
         sizeof(py::wrapper::Windows::Web::AtomPub::ResourceCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1632,7 +1632,7 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyType_Spec type_spec_ServiceDocument =
     {
-        "_winrt_windows_web_atompub.ServiceDocument",
+        "winrt._winrt_windows_web_atompub.ServiceDocument",
         sizeof(py::wrapper::Windows::Web::AtomPub::ServiceDocument),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2053,7 +2053,7 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyType_Spec type_spec_Workspace =
     {
-        "_winrt_windows_web_atompub.Workspace",
+        "winrt._winrt_windows_web_atompub.Workspace",
         sizeof(py::wrapper::Windows::Web::AtomPub::Workspace),
         0,
         Py_TPFLAGS_DEFAULT,

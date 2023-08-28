@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_web_http_diagnostics
+from winrt import _winrt_windows_web_http_diagnostics
 
 __all__ = [
     "HttpDiagnosticRequestInitiator",

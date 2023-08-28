@@ -193,7 +193,7 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
 
     static PyType_Spec type_spec_SpatialSurfaceInfo =
     {
-        "_winrt_windows_perception_spatial_surfaces.SpatialSurfaceInfo",
+        "winrt._winrt_windows_perception_spatial_surfaces.SpatialSurfaceInfo",
         sizeof(py::wrapper::Windows::Perception::Spatial::Surfaces::SpatialSurfaceInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -382,7 +382,7 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
 
     static PyType_Spec type_spec_SpatialSurfaceMesh =
     {
-        "_winrt_windows_perception_spatial_surfaces.SpatialSurfaceMesh",
+        "winrt._winrt_windows_perception_spatial_surfaces.SpatialSurfaceMesh",
         sizeof(py::wrapper::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMesh),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -531,7 +531,7 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
 
     static PyType_Spec type_spec_SpatialSurfaceMeshBuffer =
     {
-        "_winrt_windows_perception_spatial_surfaces.SpatialSurfaceMeshBuffer",
+        "winrt._winrt_windows_perception_spatial_surfaces.SpatialSurfaceMeshBuffer",
         sizeof(py::wrapper::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMeshBuffer),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -871,7 +871,7 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
 
     static PyType_Spec type_spec_SpatialSurfaceMeshOptions =
     {
-        "_winrt_windows_perception_spatial_surfaces.SpatialSurfaceMeshOptions",
+        "winrt._winrt_windows_perception_spatial_surfaces.SpatialSurfaceMeshOptions",
         sizeof(py::wrapper::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMeshOptions),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -894,7 +894,7 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
 
     static PyType_Spec type_spec_SpatialSurfaceMeshOptions_Meta =
     {
-        "_winrt_windows_perception_spatial_surfaces.SpatialSurfaceMeshOptions_Meta",
+        "winrt._winrt_windows_perception_spatial_surfaces.SpatialSurfaceMeshOptions_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1186,7 +1186,7 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
 
     static PyType_Spec type_spec_SpatialSurfaceObserver =
     {
-        "_winrt_windows_perception_spatial_surfaces.SpatialSurfaceObserver",
+        "winrt._winrt_windows_perception_spatial_surfaces.SpatialSurfaceObserver",
         sizeof(py::wrapper::Windows::Perception::Spatial::Surfaces::SpatialSurfaceObserver),
         0,
         Py_TPFLAGS_DEFAULT,

@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_applicationmodel_core
+from winrt import _winrt_windows_applicationmodel_core
 
 __all__ = [
     "AppRestartFailureReason",

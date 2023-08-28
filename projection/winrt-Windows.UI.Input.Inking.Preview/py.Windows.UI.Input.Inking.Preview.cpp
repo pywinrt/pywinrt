@@ -176,7 +176,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Preview
 
     static PyType_Spec type_spec_PalmRejectionDelayZonePreview =
     {
-        "_winrt_windows_ui_input_inking_preview.PalmRejectionDelayZonePreview",
+        "winrt._winrt_windows_ui_input_inking_preview.PalmRejectionDelayZonePreview",
         sizeof(py::wrapper::Windows::UI::Input::Inking::Preview::PalmRejectionDelayZonePreview),
         0,
         Py_TPFLAGS_DEFAULT,

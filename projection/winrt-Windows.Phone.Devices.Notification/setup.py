@@ -6,7 +6,7 @@ from winrt_sdk import get_include_dirs
 setup(
     ext_modules=[
         Extension(
-            "winrt.windows.phone.devices.notification._winrt_windows_phone_devices_notification",
+            "winrt._winrt_windows_phone_devices_notification",
             sources=["py.Windows.Phone.Devices.Notification.cpp"],
             include_dirs=get_include_dirs(),
             extra_compile_args=["/std:c++20", "/permissive-"],

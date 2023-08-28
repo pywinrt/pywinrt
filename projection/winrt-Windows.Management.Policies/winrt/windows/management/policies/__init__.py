@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_management_policies
+from winrt import _winrt_windows_management_policies
 
 __all__ = [
     "NamedPolicyKind",

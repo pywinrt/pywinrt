@@ -512,7 +512,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
     static PyType_Spec type_spec_RfcommDeviceService =
     {
-        "_winrt_windows_devices_bluetooth_rfcomm.RfcommDeviceService",
+        "winrt._winrt_windows_devices_bluetooth_rfcomm.RfcommDeviceService",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -621,7 +621,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
     static PyType_Spec type_spec_RfcommDeviceServicesResult =
     {
-        "_winrt_windows_devices_bluetooth_rfcomm.RfcommDeviceServicesResult",
+        "winrt._winrt_windows_devices_bluetooth_rfcomm.RfcommDeviceServicesResult",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceServicesResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -948,7 +948,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
     static PyType_Spec type_spec_RfcommServiceId =
     {
-        "_winrt_windows_devices_bluetooth_rfcomm.RfcommServiceId",
+        "winrt._winrt_windows_devices_bluetooth_rfcomm.RfcommServiceId",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -974,7 +974,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
     static PyType_Spec type_spec_RfcommServiceId_Meta =
     {
-        "_winrt_windows_devices_bluetooth_rfcomm.RfcommServiceId_Meta",
+        "winrt._winrt_windows_devices_bluetooth_rfcomm.RfcommServiceId_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1201,7 +1201,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
     static PyType_Spec type_spec_RfcommServiceProvider =
     {
-        "_winrt_windows_devices_bluetooth_rfcomm.RfcommServiceProvider",
+        "winrt._winrt_windows_devices_bluetooth_rfcomm.RfcommServiceProvider",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceProvider),
         0,
         Py_TPFLAGS_DEFAULT,

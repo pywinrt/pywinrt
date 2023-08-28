@@ -98,7 +98,7 @@ namespace py::cpp::Windows::Security::DataProtection
 
     static PyType_Spec type_spec_UserDataAvailabilityStateChangedEventArgs =
     {
-        "_winrt_windows_security_dataprotection.UserDataAvailabilityStateChangedEventArgs",
+        "winrt._winrt_windows_security_dataprotection.UserDataAvailabilityStateChangedEventArgs",
         sizeof(py::wrapper::Windows::Security::DataProtection::UserDataAvailabilityStateChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -207,7 +207,7 @@ namespace py::cpp::Windows::Security::DataProtection
 
     static PyType_Spec type_spec_UserDataBufferUnprotectResult =
     {
-        "_winrt_windows_security_dataprotection.UserDataBufferUnprotectResult",
+        "winrt._winrt_windows_security_dataprotection.UserDataBufferUnprotectResult",
         sizeof(py::wrapper::Windows::Security::DataProtection::UserDataBufferUnprotectResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -545,7 +545,7 @@ namespace py::cpp::Windows::Security::DataProtection
 
     static PyType_Spec type_spec_UserDataProtectionManager =
     {
-        "_winrt_windows_security_dataprotection.UserDataProtectionManager",
+        "winrt._winrt_windows_security_dataprotection.UserDataProtectionManager",
         sizeof(py::wrapper::Windows::Security::DataProtection::UserDataProtectionManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -634,7 +634,7 @@ namespace py::cpp::Windows::Security::DataProtection
 
     static PyType_Spec type_spec_UserDataStorageItemProtectionInfo =
     {
-        "_winrt_windows_security_dataprotection.UserDataStorageItemProtectionInfo",
+        "winrt._winrt_windows_security_dataprotection.UserDataStorageItemProtectionInfo",
         sizeof(py::wrapper::Windows::Security::DataProtection::UserDataStorageItemProtectionInfo),
         0,
         Py_TPFLAGS_DEFAULT,

@@ -113,7 +113,7 @@ namespace py::cpp::Windows::System::Power::Diagnostics
 
     static PyType_Spec type_spec_BackgroundEnergyDiagnostics =
     {
-        "_winrt_windows_system_power_diagnostics.BackgroundEnergyDiagnostics",
+        "winrt._winrt_windows_system_power_diagnostics.BackgroundEnergyDiagnostics",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -134,7 +134,7 @@ namespace py::cpp::Windows::System::Power::Diagnostics
 
     static PyType_Spec type_spec_BackgroundEnergyDiagnostics_Meta =
     {
-        "_winrt_windows_system_power_diagnostics.BackgroundEnergyDiagnostics_Meta",
+        "winrt._winrt_windows_system_power_diagnostics.BackgroundEnergyDiagnostics_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -248,7 +248,7 @@ namespace py::cpp::Windows::System::Power::Diagnostics
 
     static PyType_Spec type_spec_ForegroundEnergyDiagnostics =
     {
-        "_winrt_windows_system_power_diagnostics.ForegroundEnergyDiagnostics",
+        "winrt._winrt_windows_system_power_diagnostics.ForegroundEnergyDiagnostics",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -269,7 +269,7 @@ namespace py::cpp::Windows::System::Power::Diagnostics
 
     static PyType_Spec type_spec_ForegroundEnergyDiagnostics_Meta =
     {
-        "_winrt_windows_system_power_diagnostics.ForegroundEnergyDiagnostics_Meta",
+        "winrt._winrt_windows_system_power_diagnostics.ForegroundEnergyDiagnostics_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,

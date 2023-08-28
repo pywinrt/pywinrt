@@ -449,7 +449,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_NDClient =
     {
-        "_winrt_windows_media_protection_playready.NDClient",
+        "winrt._winrt_windows_media_protection_playready.NDClient",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::NDClient),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -583,7 +583,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_NDCustomData =
     {
-        "_winrt_windows_media_protection_playready.NDCustomData",
+        "winrt._winrt_windows_media_protection_playready.NDCustomData",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::NDCustomData),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -867,7 +867,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_NDDownloadEngineNotifier =
     {
-        "_winrt_windows_media_protection_playready.NDDownloadEngineNotifier",
+        "winrt._winrt_windows_media_protection_playready.NDDownloadEngineNotifier",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::NDDownloadEngineNotifier),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1050,7 +1050,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_NDLicenseFetchDescriptor =
     {
-        "_winrt_windows_media_protection_playready.NDLicenseFetchDescriptor",
+        "winrt._winrt_windows_media_protection_playready.NDLicenseFetchDescriptor",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::NDLicenseFetchDescriptor),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1173,7 +1173,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_NDStorageFileHelper =
     {
-        "_winrt_windows_media_protection_playready.NDStorageFileHelper",
+        "winrt._winrt_windows_media_protection_playready.NDStorageFileHelper",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::NDStorageFileHelper),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1404,7 +1404,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_NDStreamParserNotifier =
     {
-        "_winrt_windows_media_protection_playready.NDStreamParserNotifier",
+        "winrt._winrt_windows_media_protection_playready.NDStreamParserNotifier",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::NDStreamParserNotifier),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1634,7 +1634,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_NDTCPMessenger =
     {
-        "_winrt_windows_media_protection_playready.NDTCPMessenger",
+        "winrt._winrt_windows_media_protection_playready.NDTCPMessenger",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::NDTCPMessenger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2039,7 +2039,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_PlayReadyContentHeader =
     {
-        "_winrt_windows_media_protection_playready.PlayReadyContentHeader",
+        "winrt._winrt_windows_media_protection_playready.PlayReadyContentHeader",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyContentHeader),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2105,7 +2105,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_PlayReadyContentResolver =
     {
-        "_winrt_windows_media_protection_playready.PlayReadyContentResolver",
+        "winrt._winrt_windows_media_protection_playready.PlayReadyContentResolver",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2274,7 +2274,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_PlayReadyDomain =
     {
-        "_winrt_windows_media_protection_playready.PlayReadyDomain",
+        "winrt._winrt_windows_media_protection_playready.PlayReadyDomain",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyDomain),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2411,7 +2411,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_PlayReadyDomainIterable =
     {
-        "_winrt_windows_media_protection_playready.PlayReadyDomainIterable",
+        "winrt._winrt_windows_media_protection_playready.PlayReadyDomainIterable",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyDomainIterable),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2610,7 +2610,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_PlayReadyDomainIterator =
     {
-        "_winrt_windows_media_protection_playready.PlayReadyDomainIterator",
+        "winrt._winrt_windows_media_protection_playready.PlayReadyDomainIterator",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyDomainIterator),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3123,7 +3123,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_PlayReadyDomainJoinServiceRequest =
     {
-        "_winrt_windows_media_protection_playready.PlayReadyDomainJoinServiceRequest",
+        "winrt._winrt_windows_media_protection_playready.PlayReadyDomainJoinServiceRequest",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyDomainJoinServiceRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3588,7 +3588,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_PlayReadyDomainLeaveServiceRequest =
     {
-        "_winrt_windows_media_protection_playready.PlayReadyDomainLeaveServiceRequest",
+        "winrt._winrt_windows_media_protection_playready.PlayReadyDomainLeaveServiceRequest",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyDomainLeaveServiceRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3714,7 +3714,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_PlayReadyITADataGenerator =
     {
-        "_winrt_windows_media_protection_playready.PlayReadyITADataGenerator",
+        "winrt._winrt_windows_media_protection_playready.PlayReadyITADataGenerator",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyITADataGenerator),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4083,7 +4083,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_PlayReadyIndividualizationServiceRequest =
     {
-        "_winrt_windows_media_protection_playready.PlayReadyIndividualizationServiceRequest",
+        "winrt._winrt_windows_media_protection_playready.PlayReadyIndividualizationServiceRequest",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyIndividualizationServiceRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4384,7 +4384,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_PlayReadyLicense =
     {
-        "_winrt_windows_media_protection_playready.PlayReadyLicense",
+        "winrt._winrt_windows_media_protection_playready.PlayReadyLicense",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyLicense),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4902,7 +4902,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_PlayReadyLicenseAcquisitionServiceRequest =
     {
-        "_winrt_windows_media_protection_playready.PlayReadyLicenseAcquisitionServiceRequest",
+        "winrt._winrt_windows_media_protection_playready.PlayReadyLicenseAcquisitionServiceRequest",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyLicenseAcquisitionServiceRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5053,7 +5053,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_PlayReadyLicenseIterable =
     {
-        "_winrt_windows_media_protection_playready.PlayReadyLicenseIterable",
+        "winrt._winrt_windows_media_protection_playready.PlayReadyLicenseIterable",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyLicenseIterable),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5252,7 +5252,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_PlayReadyLicenseIterator =
     {
-        "_winrt_windows_media_protection_playready.PlayReadyLicenseIterator",
+        "winrt._winrt_windows_media_protection_playready.PlayReadyLicenseIterator",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyLicenseIterator),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5318,7 +5318,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_PlayReadyLicenseManagement =
     {
-        "_winrt_windows_media_protection_playready.PlayReadyLicenseManagement",
+        "winrt._winrt_windows_media_protection_playready.PlayReadyLicenseManagement",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5507,7 +5507,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_PlayReadyLicenseSession =
     {
-        "_winrt_windows_media_protection_playready.PlayReadyLicenseSession",
+        "winrt._winrt_windows_media_protection_playready.PlayReadyLicenseSession",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyLicenseSession),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5924,7 +5924,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_PlayReadyMeteringReportServiceRequest =
     {
-        "_winrt_windows_media_protection_playready.PlayReadyMeteringReportServiceRequest",
+        "winrt._winrt_windows_media_protection_playready.PlayReadyMeteringReportServiceRequest",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyMeteringReportServiceRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6293,7 +6293,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_PlayReadyRevocationServiceRequest =
     {
-        "_winrt_windows_media_protection_playready.PlayReadyRevocationServiceRequest",
+        "winrt._winrt_windows_media_protection_playready.PlayReadyRevocationServiceRequest",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyRevocationServiceRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6430,7 +6430,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_PlayReadySecureStopIterable =
     {
-        "_winrt_windows_media_protection_playready.PlayReadySecureStopIterable",
+        "winrt._winrt_windows_media_protection_playready.PlayReadySecureStopIterable",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadySecureStopIterable),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6629,7 +6629,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_PlayReadySecureStopIterator =
     {
-        "_winrt_windows_media_protection_playready.PlayReadySecureStopIterator",
+        "winrt._winrt_windows_media_protection_playready.PlayReadySecureStopIterator",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadySecureStopIterator),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7116,7 +7116,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_PlayReadySecureStopServiceRequest =
     {
-        "_winrt_windows_media_protection_playready.PlayReadySecureStopServiceRequest",
+        "winrt._winrt_windows_media_protection_playready.PlayReadySecureStopServiceRequest",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadySecureStopServiceRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7255,7 +7255,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_PlayReadySoapMessage =
     {
-        "_winrt_windows_media_protection_playready.PlayReadySoapMessage",
+        "winrt._winrt_windows_media_protection_playready.PlayReadySoapMessage",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadySoapMessage),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7618,7 +7618,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_PlayReadyStatics =
     {
-        "_winrt_windows_media_protection_playready.PlayReadyStatics",
+        "winrt._winrt_windows_media_protection_playready.PlayReadyStatics",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7652,7 +7652,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_PlayReadyStatics_Meta =
     {
-        "_winrt_windows_media_protection_playready.PlayReadyStatics_Meta",
+        "winrt._winrt_windows_media_protection_playready.PlayReadyStatics_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -7781,7 +7781,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_INDClosedCaptionDataReceivedEventArgs =
     {
-        "_winrt_windows_media_protection_playready.INDClosedCaptionDataReceivedEventArgs",
+        "winrt._winrt_windows_media_protection_playready.INDClosedCaptionDataReceivedEventArgs",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::INDClosedCaptionDataReceivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7890,7 +7890,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_INDCustomData =
     {
-        "_winrt_windows_media_protection_playready.INDCustomData",
+        "winrt._winrt_windows_media_protection_playready.INDCustomData",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::INDCustomData),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8199,7 +8199,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_INDDownloadEngine =
     {
-        "_winrt_windows_media_protection_playready.INDDownloadEngine",
+        "winrt._winrt_windows_media_protection_playready.INDDownloadEngine",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::INDDownloadEngine),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8461,7 +8461,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_INDDownloadEngineNotifier =
     {
-        "_winrt_windows_media_protection_playready.INDDownloadEngineNotifier",
+        "winrt._winrt_windows_media_protection_playready.INDDownloadEngineNotifier",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::INDDownloadEngineNotifier),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8550,7 +8550,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_INDLicenseFetchCompletedEventArgs =
     {
-        "_winrt_windows_media_protection_playready.INDLicenseFetchCompletedEventArgs",
+        "winrt._winrt_windows_media_protection_playready.INDLicenseFetchCompletedEventArgs",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::INDLicenseFetchCompletedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8707,7 +8707,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_INDLicenseFetchDescriptor =
     {
-        "_winrt_windows_media_protection_playready.INDLicenseFetchDescriptor",
+        "winrt._winrt_windows_media_protection_playready.INDLicenseFetchDescriptor",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::INDLicenseFetchDescriptor),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8796,7 +8796,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_INDLicenseFetchResult =
     {
-        "_winrt_windows_media_protection_playready.INDLicenseFetchResult",
+        "winrt._winrt_windows_media_protection_playready.INDLicenseFetchResult",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::INDLicenseFetchResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9001,7 +9001,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_INDMessenger =
     {
-        "_winrt_windows_media_protection_playready.INDMessenger",
+        "winrt._winrt_windows_media_protection_playready.INDMessenger",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::INDMessenger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9090,7 +9090,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_INDProximityDetectionCompletedEventArgs =
     {
-        "_winrt_windows_media_protection_playready.INDProximityDetectionCompletedEventArgs",
+        "winrt._winrt_windows_media_protection_playready.INDProximityDetectionCompletedEventArgs",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::INDProximityDetectionCompletedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9247,7 +9247,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_INDRegistrationCompletedEventArgs =
     {
-        "_winrt_windows_media_protection_playready.INDRegistrationCompletedEventArgs",
+        "winrt._winrt_windows_media_protection_playready.INDRegistrationCompletedEventArgs",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::INDRegistrationCompletedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9336,7 +9336,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_INDSendResult =
     {
-        "_winrt_windows_media_protection_playready.INDSendResult",
+        "winrt._winrt_windows_media_protection_playready.INDSendResult",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::INDSendResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9425,7 +9425,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_INDStartResult =
     {
-        "_winrt_windows_media_protection_playready.INDStartResult",
+        "winrt._winrt_windows_media_protection_playready.INDStartResult",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::INDStartResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9526,7 +9526,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_INDStorageFileHelper =
     {
-        "_winrt_windows_media_protection_playready.INDStorageFileHelper",
+        "winrt._winrt_windows_media_protection_playready.INDStorageFileHelper",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::INDStorageFileHelper),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9755,7 +9755,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_INDStreamParser =
     {
-        "_winrt_windows_media_protection_playready.INDStreamParser",
+        "winrt._winrt_windows_media_protection_playready.INDStreamParser",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::INDStreamParser),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9964,7 +9964,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_INDStreamParserNotifier =
     {
-        "_winrt_windows_media_protection_playready.INDStreamParserNotifier",
+        "winrt._winrt_windows_media_protection_playready.INDStreamParserNotifier",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::INDStreamParserNotifier),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10253,7 +10253,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_INDTransmitterProperties =
     {
-        "_winrt_windows_media_protection_playready.INDTransmitterProperties",
+        "winrt._winrt_windows_media_protection_playready.INDTransmitterProperties",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::INDTransmitterProperties),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10422,7 +10422,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_IPlayReadyDomain =
     {
-        "_winrt_windows_media_protection_playready.IPlayReadyDomain",
+        "winrt._winrt_windows_media_protection_playready.IPlayReadyDomain",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadyDomain),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10643,7 +10643,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_IPlayReadyLicense =
     {
-        "_winrt_windows_media_protection_playready.IPlayReadyLicense",
+        "winrt._winrt_windows_media_protection_playready.IPlayReadyLicense",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadyLicense),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11086,7 +11086,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_IPlayReadyLicenseAcquisitionServiceRequest =
     {
-        "_winrt_windows_media_protection_playready.IPlayReadyLicenseAcquisitionServiceRequest",
+        "winrt._winrt_windows_media_protection_playready.IPlayReadyLicenseAcquisitionServiceRequest",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadyLicenseAcquisitionServiceRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11218,7 +11218,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_IPlayReadyLicenseSession =
     {
-        "_winrt_windows_media_protection_playready.IPlayReadyLicenseSession",
+        "winrt._winrt_windows_media_protection_playready.IPlayReadyLicenseSession",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSession),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11383,7 +11383,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_IPlayReadyLicenseSession2 =
     {
-        "_winrt_windows_media_protection_playready.IPlayReadyLicenseSession2",
+        "winrt._winrt_windows_media_protection_playready.IPlayReadyLicenseSession2",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSession2),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11830,7 +11830,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_IPlayReadySecureStopServiceRequest =
     {
-        "_winrt_windows_media_protection_playready.IPlayReadySecureStopServiceRequest",
+        "winrt._winrt_windows_media_protection_playready.IPlayReadySecureStopServiceRequest",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadySecureStopServiceRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12177,7 +12177,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyType_Spec type_spec_IPlayReadyServiceRequest =
     {
-        "_winrt_windows_media_protection_playready.IPlayReadyServiceRequest",
+        "winrt._winrt_windows_media_protection_playready.IPlayReadyServiceRequest",
         sizeof(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest),
         0,
         Py_TPFLAGS_DEFAULT,

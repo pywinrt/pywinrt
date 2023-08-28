@@ -121,7 +121,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
 
     static PyType_Spec type_spec_PaymentAppCanMakePaymentTriggerDetails =
     {
-        "_winrt_windows_applicationmodel_payments_provider.PaymentAppCanMakePaymentTriggerDetails",
+        "winrt._winrt_windows_applicationmodel_payments_provider.PaymentAppCanMakePaymentTriggerDetails",
         sizeof(py::wrapper::Windows::ApplicationModel::Payments::Provider::PaymentAppCanMakePaymentTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -271,7 +271,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
 
     static PyType_Spec type_spec_PaymentAppManager =
     {
-        "_winrt_windows_applicationmodel_payments_provider.PaymentAppManager",
+        "winrt._winrt_windows_applicationmodel_payments_provider.PaymentAppManager",
         sizeof(py::wrapper::Windows::ApplicationModel::Payments::Provider::PaymentAppManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -292,7 +292,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
 
     static PyType_Spec type_spec_PaymentAppManager_Meta =
     {
-        "_winrt_windows_applicationmodel_payments_provider.PaymentAppManager_Meta",
+        "winrt._winrt_windows_applicationmodel_payments_provider.PaymentAppManager_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -684,7 +684,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
 
     static PyType_Spec type_spec_PaymentTransaction =
     {
-        "_winrt_windows_applicationmodel_payments_provider.PaymentTransaction",
+        "winrt._winrt_windows_applicationmodel_payments_provider.PaymentTransaction",
         sizeof(py::wrapper::Windows::ApplicationModel::Payments::Provider::PaymentTransaction),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -773,7 +773,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
 
     static PyType_Spec type_spec_PaymentTransactionAcceptResult =
     {
-        "_winrt_windows_applicationmodel_payments_provider.PaymentTransactionAcceptResult",
+        "winrt._winrt_windows_applicationmodel_payments_provider.PaymentTransactionAcceptResult",
         sizeof(py::wrapper::Windows::ApplicationModel::Payments::Provider::PaymentTransactionAcceptResult),
         0,
         Py_TPFLAGS_DEFAULT,

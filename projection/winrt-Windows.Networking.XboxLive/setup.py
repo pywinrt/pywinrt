@@ -6,7 +6,7 @@ from winrt_sdk import get_include_dirs
 setup(
     ext_modules=[
         Extension(
-            "winrt.windows.networking.xboxlive._winrt_windows_networking_xboxlive",
+            "winrt._winrt_windows_networking_xboxlive",
             sources=["py.Windows.Networking.XboxLive.cpp"],
             include_dirs=get_include_dirs(),
             extra_compile_args=["/std:c++20", "/permissive-"],

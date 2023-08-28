@@ -226,7 +226,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyType_Spec type_spec_AdaptiveNotificationText =
     {
-        "_winrt_windows_ui_notifications.AdaptiveNotificationText",
+        "winrt._winrt_windows_ui_notifications.AdaptiveNotificationText",
         sizeof(py::wrapper::Windows::UI::Notifications::AdaptiveNotificationText),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -387,7 +387,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyType_Spec type_spec_BadgeNotification =
     {
-        "_winrt_windows_ui_notifications.BadgeNotification",
+        "winrt._winrt_windows_ui_notifications.BadgeNotification",
         sizeof(py::wrapper::Windows::UI::Notifications::BadgeNotification),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -567,7 +567,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyType_Spec type_spec_BadgeUpdateManager =
     {
-        "_winrt_windows_ui_notifications.BadgeUpdateManager",
+        "winrt._winrt_windows_ui_notifications.BadgeUpdateManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -738,7 +738,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyType_Spec type_spec_BadgeUpdateManagerForUser =
     {
-        "_winrt_windows_ui_notifications.BadgeUpdateManagerForUser",
+        "winrt._winrt_windows_ui_notifications.BadgeUpdateManagerForUser",
         sizeof(py::wrapper::Windows::UI::Notifications::BadgeUpdateManagerForUser),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -959,7 +959,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyType_Spec type_spec_BadgeUpdater =
     {
-        "_winrt_windows_ui_notifications.BadgeUpdater",
+        "winrt._winrt_windows_ui_notifications.BadgeUpdater",
         sizeof(py::wrapper::Windows::UI::Notifications::BadgeUpdater),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1107,7 +1107,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyType_Spec type_spec_KnownAdaptiveNotificationHints =
     {
-        "_winrt_windows_ui_notifications.KnownAdaptiveNotificationHints",
+        "winrt._winrt_windows_ui_notifications.KnownAdaptiveNotificationHints",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1133,7 +1133,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyType_Spec type_spec_KnownAdaptiveNotificationHints_Meta =
     {
-        "_winrt_windows_ui_notifications.KnownAdaptiveNotificationHints_Meta",
+        "winrt._winrt_windows_ui_notifications.KnownAdaptiveNotificationHints_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1528,7 +1528,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyType_Spec type_spec_KnownAdaptiveNotificationTextStyles =
     {
-        "_winrt_windows_ui_notifications.KnownAdaptiveNotificationTextStyles",
+        "winrt._winrt_windows_ui_notifications.KnownAdaptiveNotificationTextStyles",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1567,7 +1567,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyType_Spec type_spec_KnownAdaptiveNotificationTextStyles_Meta =
     {
-        "_winrt_windows_ui_notifications.KnownAdaptiveNotificationTextStyles_Meta",
+        "winrt._winrt_windows_ui_notifications.KnownAdaptiveNotificationTextStyles_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1620,7 +1620,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyType_Spec type_spec_KnownNotificationBindings =
     {
-        "_winrt_windows_ui_notifications.KnownNotificationBindings",
+        "winrt._winrt_windows_ui_notifications.KnownNotificationBindings",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1641,7 +1641,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyType_Spec type_spec_KnownNotificationBindings_Meta =
     {
-        "_winrt_windows_ui_notifications.KnownNotificationBindings_Meta",
+        "winrt._winrt_windows_ui_notifications.KnownNotificationBindings_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1828,7 +1828,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyType_Spec type_spec_Notification =
     {
-        "_winrt_windows_ui_notifications.Notification",
+        "winrt._winrt_windows_ui_notifications.Notification",
         sizeof(py::wrapper::Windows::UI::Notifications::Notification),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2043,7 +2043,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyType_Spec type_spec_NotificationBinding =
     {
-        "_winrt_windows_ui_notifications.NotificationBinding",
+        "winrt._winrt_windows_ui_notifications.NotificationBinding",
         sizeof(py::wrapper::Windows::UI::Notifications::NotificationBinding),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2233,7 +2233,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyType_Spec type_spec_NotificationData =
     {
-        "_winrt_windows_ui_notifications.NotificationData",
+        "winrt._winrt_windows_ui_notifications.NotificationData",
         sizeof(py::wrapper::Windows::UI::Notifications::NotificationData),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2402,7 +2402,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyType_Spec type_spec_NotificationVisual =
     {
-        "_winrt_windows_ui_notifications.NotificationVisual",
+        "winrt._winrt_windows_ui_notifications.NotificationVisual",
         sizeof(py::wrapper::Windows::UI::Notifications::NotificationVisual),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2680,7 +2680,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyType_Spec type_spec_ScheduledTileNotification =
     {
-        "_winrt_windows_ui_notifications.ScheduledTileNotification",
+        "winrt._winrt_windows_ui_notifications.ScheduledTileNotification",
         sizeof(py::wrapper::Windows::UI::Notifications::ScheduledTileNotification),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3208,7 +3208,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyType_Spec type_spec_ScheduledToastNotification =
     {
-        "_winrt_windows_ui_notifications.ScheduledToastNotification",
+        "winrt._winrt_windows_ui_notifications.ScheduledToastNotification",
         sizeof(py::wrapper::Windows::UI::Notifications::ScheduledToastNotification),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3375,7 +3375,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyType_Spec type_spec_ScheduledToastNotificationShowingEventArgs =
     {
-        "_winrt_windows_ui_notifications.ScheduledToastNotificationShowingEventArgs",
+        "winrt._winrt_windows_ui_notifications.ScheduledToastNotificationShowingEventArgs",
         sizeof(py::wrapper::Windows::UI::Notifications::ScheduledToastNotificationShowingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3464,7 +3464,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyType_Spec type_spec_ShownTileNotification =
     {
-        "_winrt_windows_ui_notifications.ShownTileNotification",
+        "winrt._winrt_windows_ui_notifications.ShownTileNotification",
         sizeof(py::wrapper::Windows::UI::Notifications::ShownTileNotification),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3625,7 +3625,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyType_Spec type_spec_TileFlyoutNotification =
     {
-        "_winrt_windows_ui_notifications.TileFlyoutNotification",
+        "winrt._winrt_windows_ui_notifications.TileFlyoutNotification",
         sizeof(py::wrapper::Windows::UI::Notifications::TileFlyoutNotification),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3773,7 +3773,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyType_Spec type_spec_TileFlyoutUpdateManager =
     {
-        "_winrt_windows_ui_notifications.TileFlyoutUpdateManager",
+        "winrt._winrt_windows_ui_notifications.TileFlyoutUpdateManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4014,7 +4014,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyType_Spec type_spec_TileFlyoutUpdater =
     {
-        "_winrt_windows_ui_notifications.TileFlyoutUpdater",
+        "winrt._winrt_windows_ui_notifications.TileFlyoutUpdater",
         sizeof(py::wrapper::Windows::UI::Notifications::TileFlyoutUpdater),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4223,7 +4223,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyType_Spec type_spec_TileNotification =
     {
-        "_winrt_windows_ui_notifications.TileNotification",
+        "winrt._winrt_windows_ui_notifications.TileNotification",
         sizeof(py::wrapper::Windows::UI::Notifications::TileNotification),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4403,7 +4403,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyType_Spec type_spec_TileUpdateManager =
     {
-        "_winrt_windows_ui_notifications.TileUpdateManager",
+        "winrt._winrt_windows_ui_notifications.TileUpdateManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4586,7 +4586,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyType_Spec type_spec_TileUpdateManagerForUser =
     {
-        "_winrt_windows_ui_notifications.TileUpdateManagerForUser",
+        "winrt._winrt_windows_ui_notifications.TileUpdateManagerForUser",
         sizeof(py::wrapper::Windows::UI::Notifications::TileUpdateManagerForUser),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5112,7 +5112,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyType_Spec type_spec_TileUpdater =
     {
-        "_winrt_windows_ui_notifications.TileUpdater",
+        "winrt._winrt_windows_ui_notifications.TileUpdater",
         sizeof(py::wrapper::Windows::UI::Notifications::TileUpdater),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5221,7 +5221,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyType_Spec type_spec_ToastActivatedEventArgs =
     {
-        "_winrt_windows_ui_notifications.ToastActivatedEventArgs",
+        "winrt._winrt_windows_ui_notifications.ToastActivatedEventArgs",
         sizeof(py::wrapper::Windows::UI::Notifications::ToastActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5481,7 +5481,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyType_Spec type_spec_ToastCollection =
     {
-        "_winrt_windows_ui_notifications.ToastCollection",
+        "winrt._winrt_windows_ui_notifications.ToastCollection",
         sizeof(py::wrapper::Windows::UI::Notifications::ToastCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5746,7 +5746,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyType_Spec type_spec_ToastCollectionManager =
     {
-        "_winrt_windows_ui_notifications.ToastCollectionManager",
+        "winrt._winrt_windows_ui_notifications.ToastCollectionManager",
         sizeof(py::wrapper::Windows::UI::Notifications::ToastCollectionManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5835,7 +5835,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyType_Spec type_spec_ToastDismissedEventArgs =
     {
-        "_winrt_windows_ui_notifications.ToastDismissedEventArgs",
+        "winrt._winrt_windows_ui_notifications.ToastDismissedEventArgs",
         sizeof(py::wrapper::Windows::UI::Notifications::ToastDismissedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5924,7 +5924,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyType_Spec type_spec_ToastFailedEventArgs =
     {
-        "_winrt_windows_ui_notifications.ToastFailedEventArgs",
+        "winrt._winrt_windows_ui_notifications.ToastFailedEventArgs",
         sizeof(py::wrapper::Windows::UI::Notifications::ToastFailedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6604,7 +6604,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyType_Spec type_spec_ToastNotification =
     {
-        "_winrt_windows_ui_notifications.ToastNotification",
+        "winrt._winrt_windows_ui_notifications.ToastNotification",
         sizeof(py::wrapper::Windows::UI::Notifications::ToastNotification),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6713,7 +6713,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyType_Spec type_spec_ToastNotificationActionTriggerDetail =
     {
-        "_winrt_windows_ui_notifications.ToastNotificationActionTriggerDetail",
+        "winrt._winrt_windows_ui_notifications.ToastNotificationActionTriggerDetail",
         sizeof(py::wrapper::Windows::UI::Notifications::ToastNotificationActionTriggerDetail),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7017,7 +7017,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyType_Spec type_spec_ToastNotificationHistory =
     {
-        "_winrt_windows_ui_notifications.ToastNotificationHistory",
+        "winrt._winrt_windows_ui_notifications.ToastNotificationHistory",
         sizeof(py::wrapper::Windows::UI::Notifications::ToastNotificationHistory),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7126,7 +7126,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyType_Spec type_spec_ToastNotificationHistoryChangedTriggerDetail =
     {
-        "_winrt_windows_ui_notifications.ToastNotificationHistoryChangedTriggerDetail",
+        "winrt._winrt_windows_ui_notifications.ToastNotificationHistoryChangedTriggerDetail",
         sizeof(py::wrapper::Windows::UI::Notifications::ToastNotificationHistoryChangedTriggerDetail),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7356,7 +7356,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyType_Spec type_spec_ToastNotificationManager =
     {
-        "_winrt_windows_ui_notifications.ToastNotificationManager",
+        "winrt._winrt_windows_ui_notifications.ToastNotificationManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7377,7 +7377,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyType_Spec type_spec_ToastNotificationManager_Meta =
     {
-        "_winrt_windows_ui_notifications.ToastNotificationManager_Meta",
+        "winrt._winrt_windows_ui_notifications.ToastNotificationManager_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -7715,7 +7715,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyType_Spec type_spec_ToastNotificationManagerForUser =
     {
-        "_winrt_windows_ui_notifications.ToastNotificationManagerForUser",
+        "winrt._winrt_windows_ui_notifications.ToastNotificationManagerForUser",
         sizeof(py::wrapper::Windows::UI::Notifications::ToastNotificationManagerForUser),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8066,7 +8066,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyType_Spec type_spec_ToastNotifier =
     {
-        "_winrt_windows_ui_notifications.ToastNotifier",
+        "winrt._winrt_windows_ui_notifications.ToastNotifier",
         sizeof(py::wrapper::Windows::UI::Notifications::ToastNotifier),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8215,7 +8215,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyType_Spec type_spec_UserNotification =
     {
-        "_winrt_windows_ui_notifications.UserNotification",
+        "winrt._winrt_windows_ui_notifications.UserNotification",
         sizeof(py::wrapper::Windows::UI::Notifications::UserNotification),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8324,7 +8324,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyType_Spec type_spec_UserNotificationChangedEventArgs =
     {
-        "_winrt_windows_ui_notifications.UserNotificationChangedEventArgs",
+        "winrt._winrt_windows_ui_notifications.UserNotificationChangedEventArgs",
         sizeof(py::wrapper::Windows::UI::Notifications::UserNotificationChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8433,7 +8433,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyType_Spec type_spec_IAdaptiveNotificationContent =
     {
-        "_winrt_windows_ui_notifications.IAdaptiveNotificationContent",
+        "winrt._winrt_windows_ui_notifications.IAdaptiveNotificationContent",
         sizeof(py::wrapper::Windows::UI::Notifications::IAdaptiveNotificationContent),
         0,
         Py_TPFLAGS_DEFAULT,

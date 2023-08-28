@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_security_authentication_identity_provider
+from winrt import _winrt_windows_security_authentication_identity_provider
 
 __all__ = [
     "SecondaryAuthenticationFactorAuthenticationMessage",

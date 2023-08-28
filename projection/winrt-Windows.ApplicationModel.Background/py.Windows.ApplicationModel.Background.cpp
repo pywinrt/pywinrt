@@ -172,7 +172,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_ActivitySensorTrigger =
     {
-        "_winrt_windows_applicationmodel_background.ActivitySensorTrigger",
+        "winrt._winrt_windows_applicationmodel_background.ActivitySensorTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::ActivitySensorTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -266,7 +266,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_AlarmApplicationManager =
     {
-        "_winrt_windows_applicationmodel_background.AlarmApplicationManager",
+        "winrt._winrt_windows_applicationmodel_background.AlarmApplicationManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -407,7 +407,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_AppBroadcastTrigger =
     {
-        "_winrt_windows_applicationmodel_background.AppBroadcastTrigger",
+        "winrt._winrt_windows_applicationmodel_background.AppBroadcastTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::AppBroadcastTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -764,7 +764,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_AppBroadcastTriggerProviderInfo =
     {
-        "_winrt_windows_applicationmodel_background.AppBroadcastTriggerProviderInfo",
+        "winrt._winrt_windows_applicationmodel_background.AppBroadcastTriggerProviderInfo",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::AppBroadcastTriggerProviderInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -905,7 +905,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_ApplicationTrigger =
     {
-        "_winrt_windows_applicationmodel_background.ApplicationTrigger",
+        "winrt._winrt_windows_applicationmodel_background.ApplicationTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::ApplicationTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -994,7 +994,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_ApplicationTriggerDetails =
     {
-        "_winrt_windows_applicationmodel_background.ApplicationTriggerDetails",
+        "winrt._winrt_windows_applicationmodel_background.ApplicationTriggerDetails",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::ApplicationTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1085,7 +1085,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_AppointmentStoreNotificationTrigger =
     {
-        "_winrt_windows_applicationmodel_background.AppointmentStoreNotificationTrigger",
+        "winrt._winrt_windows_applicationmodel_background.AppointmentStoreNotificationTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::AppointmentStoreNotificationTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1387,7 +1387,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_BackgroundExecutionManager =
     {
-        "_winrt_windows_applicationmodel_background.BackgroundExecutionManager",
+        "winrt._winrt_windows_applicationmodel_background.BackgroundExecutionManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1847,7 +1847,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_BackgroundTaskBuilder =
     {
-        "_winrt_windows_applicationmodel_background.BackgroundTaskBuilder",
+        "winrt._winrt_windows_applicationmodel_background.BackgroundTaskBuilder",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::BackgroundTaskBuilder),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1967,7 +1967,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_BackgroundTaskCompletedEventArgs =
     {
-        "_winrt_windows_applicationmodel_background.BackgroundTaskCompletedEventArgs",
+        "winrt._winrt_windows_applicationmodel_background.BackgroundTaskCompletedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::BackgroundTaskCompletedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2067,7 +2067,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_BackgroundTaskDeferral =
     {
-        "_winrt_windows_applicationmodel_background.BackgroundTaskDeferral",
+        "winrt._winrt_windows_applicationmodel_background.BackgroundTaskDeferral",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::BackgroundTaskDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2176,7 +2176,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_BackgroundTaskProgressEventArgs =
     {
-        "_winrt_windows_applicationmodel_background.BackgroundTaskProgressEventArgs",
+        "winrt._winrt_windows_applicationmodel_background.BackgroundTaskProgressEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::BackgroundTaskProgressEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2518,7 +2518,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_BackgroundTaskRegistration =
     {
-        "_winrt_windows_applicationmodel_background.BackgroundTaskRegistration",
+        "winrt._winrt_windows_applicationmodel_background.BackgroundTaskRegistration",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::BackgroundTaskRegistration),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2540,7 +2540,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_BackgroundTaskRegistration_Meta =
     {
-        "_winrt_windows_applicationmodel_background.BackgroundTaskRegistration_Meta",
+        "winrt._winrt_windows_applicationmodel_background.BackgroundTaskRegistration_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -2754,7 +2754,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_BackgroundTaskRegistrationGroup =
     {
-        "_winrt_windows_applicationmodel_background.BackgroundTaskRegistrationGroup",
+        "winrt._winrt_windows_applicationmodel_background.BackgroundTaskRegistrationGroup",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::BackgroundTaskRegistrationGroup),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2807,7 +2807,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_BackgroundWorkCost =
     {
-        "_winrt_windows_applicationmodel_background.BackgroundWorkCost",
+        "winrt._winrt_windows_applicationmodel_background.BackgroundWorkCost",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2828,7 +2828,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_BackgroundWorkCost_Meta =
     {
-        "_winrt_windows_applicationmodel_background.BackgroundWorkCost_Meta",
+        "winrt._winrt_windows_applicationmodel_background.BackgroundWorkCost_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -3131,7 +3131,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_BluetoothLEAdvertisementPublisherTrigger =
     {
-        "_winrt_windows_applicationmodel_background.BluetoothLEAdvertisementPublisherTrigger",
+        "winrt._winrt_windows_applicationmodel_background.BluetoothLEAdvertisementPublisherTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::BluetoothLEAdvertisementPublisherTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3446,7 +3446,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_BluetoothLEAdvertisementWatcherTrigger =
     {
-        "_winrt_windows_applicationmodel_background.BluetoothLEAdvertisementWatcherTrigger",
+        "winrt._winrt_windows_applicationmodel_background.BluetoothLEAdvertisementWatcherTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::BluetoothLEAdvertisementWatcherTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3537,7 +3537,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_CachedFileUpdaterTrigger =
     {
-        "_winrt_windows_applicationmodel_background.CachedFileUpdaterTrigger",
+        "winrt._winrt_windows_applicationmodel_background.CachedFileUpdaterTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::CachedFileUpdaterTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3666,7 +3666,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_CachedFileUpdaterTriggerDetails =
     {
-        "_winrt_windows_applicationmodel_background.CachedFileUpdaterTriggerDetails",
+        "winrt._winrt_windows_applicationmodel_background.CachedFileUpdaterTriggerDetails",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::CachedFileUpdaterTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3757,7 +3757,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_ChatMessageNotificationTrigger =
     {
-        "_winrt_windows_applicationmodel_background.ChatMessageNotificationTrigger",
+        "winrt._winrt_windows_applicationmodel_background.ChatMessageNotificationTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::ChatMessageNotificationTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3848,7 +3848,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_ChatMessageReceivedNotificationTrigger =
     {
-        "_winrt_windows_applicationmodel_background.ChatMessageReceivedNotificationTrigger",
+        "winrt._winrt_windows_applicationmodel_background.ChatMessageReceivedNotificationTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::ChatMessageReceivedNotificationTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3939,7 +3939,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_CommunicationBlockingAppSetAsActiveTrigger =
     {
-        "_winrt_windows_applicationmodel_background.CommunicationBlockingAppSetAsActiveTrigger",
+        "winrt._winrt_windows_applicationmodel_background.CommunicationBlockingAppSetAsActiveTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::CommunicationBlockingAppSetAsActiveTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4030,7 +4030,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_ContactStoreNotificationTrigger =
     {
-        "_winrt_windows_applicationmodel_background.ContactStoreNotificationTrigger",
+        "winrt._winrt_windows_applicationmodel_background.ContactStoreNotificationTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::ContactStoreNotificationTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4156,7 +4156,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_ContentPrefetchTrigger =
     {
-        "_winrt_windows_applicationmodel_background.ContentPrefetchTrigger",
+        "winrt._winrt_windows_applicationmodel_background.ContentPrefetchTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::ContentPrefetchTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4247,7 +4247,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_ConversationalAgentTrigger =
     {
-        "_winrt_windows_applicationmodel_background.ConversationalAgentTrigger",
+        "winrt._winrt_windows_applicationmodel_background.ConversationalAgentTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::ConversationalAgentTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4381,7 +4381,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_CustomSystemEventTrigger =
     {
-        "_winrt_windows_applicationmodel_background.CustomSystemEventTrigger",
+        "winrt._winrt_windows_applicationmodel_background.CustomSystemEventTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::CustomSystemEventTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4570,7 +4570,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_DeviceConnectionChangeTrigger =
     {
-        "_winrt_windows_applicationmodel_background.DeviceConnectionChangeTrigger",
+        "winrt._winrt_windows_applicationmodel_background.DeviceConnectionChangeTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::DeviceConnectionChangeTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4704,7 +4704,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_DeviceManufacturerNotificationTrigger =
     {
-        "_winrt_windows_applicationmodel_background.DeviceManufacturerNotificationTrigger",
+        "winrt._winrt_windows_applicationmodel_background.DeviceManufacturerNotificationTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::DeviceManufacturerNotificationTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4850,7 +4850,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_DeviceServicingTrigger =
     {
-        "_winrt_windows_applicationmodel_background.DeviceServicingTrigger",
+        "winrt._winrt_windows_applicationmodel_background.DeviceServicingTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::DeviceServicingTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4994,7 +4994,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_DeviceUseTrigger =
     {
-        "_winrt_windows_applicationmodel_background.DeviceUseTrigger",
+        "winrt._winrt_windows_applicationmodel_background.DeviceUseTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::DeviceUseTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5063,7 +5063,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_DeviceWatcherTrigger =
     {
-        "_winrt_windows_applicationmodel_background.DeviceWatcherTrigger",
+        "winrt._winrt_windows_applicationmodel_background.DeviceWatcherTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::DeviceWatcherTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5154,7 +5154,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_EmailStoreNotificationTrigger =
     {
-        "_winrt_windows_applicationmodel_background.EmailStoreNotificationTrigger",
+        "winrt._winrt_windows_applicationmodel_background.EmailStoreNotificationTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::EmailStoreNotificationTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5303,7 +5303,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_GattCharacteristicNotificationTrigger =
     {
-        "_winrt_windows_applicationmodel_background.GattCharacteristicNotificationTrigger",
+        "winrt._winrt_windows_applicationmodel_background.GattCharacteristicNotificationTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::GattCharacteristicNotificationTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5493,7 +5493,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_GattServiceProviderTrigger =
     {
-        "_winrt_windows_applicationmodel_background.GattServiceProviderTrigger",
+        "winrt._winrt_windows_applicationmodel_background.GattServiceProviderTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::GattServiceProviderTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5602,7 +5602,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_GattServiceProviderTriggerResult =
     {
-        "_winrt_windows_applicationmodel_background.GattServiceProviderTriggerResult",
+        "winrt._winrt_windows_applicationmodel_background.GattServiceProviderTriggerResult",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::GattServiceProviderTriggerResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5741,7 +5741,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_GeovisitTrigger =
     {
-        "_winrt_windows_applicationmodel_background.GeovisitTrigger",
+        "winrt._winrt_windows_applicationmodel_background.GeovisitTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::GeovisitTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5854,7 +5854,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_LocationTrigger =
     {
-        "_winrt_windows_applicationmodel_background.LocationTrigger",
+        "winrt._winrt_windows_applicationmodel_background.LocationTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::LocationTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5988,7 +5988,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_MaintenanceTrigger =
     {
-        "_winrt_windows_applicationmodel_background.MaintenanceTrigger",
+        "winrt._winrt_windows_applicationmodel_background.MaintenanceTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::MaintenanceTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6129,7 +6129,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_MediaProcessingTrigger =
     {
-        "_winrt_windows_applicationmodel_background.MediaProcessingTrigger",
+        "winrt._winrt_windows_applicationmodel_background.MediaProcessingTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::MediaProcessingTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6220,7 +6220,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_MobileBroadbandDeviceServiceNotificationTrigger =
     {
-        "_winrt_windows_applicationmodel_background.MobileBroadbandDeviceServiceNotificationTrigger",
+        "winrt._winrt_windows_applicationmodel_background.MobileBroadbandDeviceServiceNotificationTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::MobileBroadbandDeviceServiceNotificationTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6311,7 +6311,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_MobileBroadbandPcoDataChangeTrigger =
     {
-        "_winrt_windows_applicationmodel_background.MobileBroadbandPcoDataChangeTrigger",
+        "winrt._winrt_windows_applicationmodel_background.MobileBroadbandPcoDataChangeTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::MobileBroadbandPcoDataChangeTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6402,7 +6402,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_MobileBroadbandPinLockStateChangeTrigger =
     {
-        "_winrt_windows_applicationmodel_background.MobileBroadbandPinLockStateChangeTrigger",
+        "winrt._winrt_windows_applicationmodel_background.MobileBroadbandPinLockStateChangeTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::MobileBroadbandPinLockStateChangeTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6493,7 +6493,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_MobileBroadbandRadioStateChangeTrigger =
     {
-        "_winrt_windows_applicationmodel_background.MobileBroadbandRadioStateChangeTrigger",
+        "winrt._winrt_windows_applicationmodel_background.MobileBroadbandRadioStateChangeTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::MobileBroadbandRadioStateChangeTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6584,7 +6584,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_MobileBroadbandRegistrationStateChangeTrigger =
     {
-        "_winrt_windows_applicationmodel_background.MobileBroadbandRegistrationStateChangeTrigger",
+        "winrt._winrt_windows_applicationmodel_background.MobileBroadbandRegistrationStateChangeTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::MobileBroadbandRegistrationStateChangeTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6675,7 +6675,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_NetworkOperatorDataUsageTrigger =
     {
-        "_winrt_windows_applicationmodel_background.NetworkOperatorDataUsageTrigger",
+        "winrt._winrt_windows_applicationmodel_background.NetworkOperatorDataUsageTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::NetworkOperatorDataUsageTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6766,7 +6766,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_NetworkOperatorHotspotAuthenticationTrigger =
     {
-        "_winrt_windows_applicationmodel_background.NetworkOperatorHotspotAuthenticationTrigger",
+        "winrt._winrt_windows_applicationmodel_background.NetworkOperatorHotspotAuthenticationTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::NetworkOperatorHotspotAuthenticationTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6879,7 +6879,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_NetworkOperatorNotificationTrigger =
     {
-        "_winrt_windows_applicationmodel_background.NetworkOperatorNotificationTrigger",
+        "winrt._winrt_windows_applicationmodel_background.NetworkOperatorNotificationTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::NetworkOperatorNotificationTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6970,7 +6970,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_PaymentAppCanMakePaymentTrigger =
     {
-        "_winrt_windows_applicationmodel_background.PaymentAppCanMakePaymentTrigger",
+        "winrt._winrt_windows_applicationmodel_background.PaymentAppCanMakePaymentTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::PaymentAppCanMakePaymentTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7104,7 +7104,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_PhoneTrigger =
     {
-        "_winrt_windows_applicationmodel_background.PhoneTrigger",
+        "winrt._winrt_windows_applicationmodel_background.PhoneTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::PhoneTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7210,7 +7210,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_PushNotificationTrigger =
     {
-        "_winrt_windows_applicationmodel_background.PushNotificationTrigger",
+        "winrt._winrt_windows_applicationmodel_background.PushNotificationTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::PushNotificationTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7301,7 +7301,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_RcsEndUserMessageAvailableTrigger =
     {
-        "_winrt_windows_applicationmodel_background.RcsEndUserMessageAvailableTrigger",
+        "winrt._winrt_windows_applicationmodel_background.RcsEndUserMessageAvailableTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::RcsEndUserMessageAvailableTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7576,7 +7576,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_RfcommConnectionTrigger =
     {
-        "_winrt_windows_applicationmodel_background.RfcommConnectionTrigger",
+        "winrt._winrt_windows_applicationmodel_background.RfcommConnectionTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::RfcommConnectionTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7667,7 +7667,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_SecondaryAuthenticationFactorAuthenticationTrigger =
     {
-        "_winrt_windows_applicationmodel_background.SecondaryAuthenticationFactorAuthenticationTrigger",
+        "winrt._winrt_windows_applicationmodel_background.SecondaryAuthenticationFactorAuthenticationTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::SecondaryAuthenticationFactorAuthenticationTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7760,7 +7760,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_SensorDataThresholdTrigger =
     {
-        "_winrt_windows_applicationmodel_background.SensorDataThresholdTrigger",
+        "winrt._winrt_windows_applicationmodel_background.SensorDataThresholdTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::SensorDataThresholdTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7873,7 +7873,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_SmartCardTrigger =
     {
-        "_winrt_windows_applicationmodel_background.SmartCardTrigger",
+        "winrt._winrt_windows_applicationmodel_background.SmartCardTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::SmartCardTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7966,7 +7966,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_SmsMessageReceivedTrigger =
     {
-        "_winrt_windows_applicationmodel_background.SmsMessageReceivedTrigger",
+        "winrt._winrt_windows_applicationmodel_background.SmsMessageReceivedTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::SmsMessageReceivedTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8077,7 +8077,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_SocketActivityTrigger =
     {
-        "_winrt_windows_applicationmodel_background.SocketActivityTrigger",
+        "winrt._winrt_windows_applicationmodel_background.SocketActivityTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::SocketActivityTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8170,7 +8170,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_StorageLibraryChangeTrackerTrigger =
     {
-        "_winrt_windows_applicationmodel_background.StorageLibraryChangeTrackerTrigger",
+        "winrt._winrt_windows_applicationmodel_background.StorageLibraryChangeTrackerTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::StorageLibraryChangeTrackerTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8303,7 +8303,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_StorageLibraryContentChangedTrigger =
     {
-        "_winrt_windows_applicationmodel_background.StorageLibraryContentChangedTrigger",
+        "winrt._winrt_windows_applicationmodel_background.StorageLibraryContentChangedTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::StorageLibraryContentChangedTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8416,7 +8416,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_SystemCondition =
     {
-        "_winrt_windows_applicationmodel_background.SystemCondition",
+        "winrt._winrt_windows_applicationmodel_background.SystemCondition",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::SystemCondition),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8550,7 +8550,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_SystemTrigger =
     {
-        "_winrt_windows_applicationmodel_background.SystemTrigger",
+        "winrt._winrt_windows_applicationmodel_background.SystemTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::SystemTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8641,7 +8641,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_TetheringEntitlementCheckTrigger =
     {
-        "_winrt_windows_applicationmodel_background.TetheringEntitlementCheckTrigger",
+        "winrt._winrt_windows_applicationmodel_background.TetheringEntitlementCheckTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::TetheringEntitlementCheckTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8775,7 +8775,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_TimeTrigger =
     {
-        "_winrt_windows_applicationmodel_background.TimeTrigger",
+        "winrt._winrt_windows_applicationmodel_background.TimeTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::TimeTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8881,7 +8881,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_ToastNotificationActionTrigger =
     {
-        "_winrt_windows_applicationmodel_background.ToastNotificationActionTrigger",
+        "winrt._winrt_windows_applicationmodel_background.ToastNotificationActionTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::ToastNotificationActionTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8987,7 +8987,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_ToastNotificationHistoryChangedTrigger =
     {
-        "_winrt_windows_applicationmodel_background.ToastNotificationHistoryChangedTrigger",
+        "winrt._winrt_windows_applicationmodel_background.ToastNotificationHistoryChangedTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::ToastNotificationHistoryChangedTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9080,7 +9080,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_UserNotificationChangedTrigger =
     {
-        "_winrt_windows_applicationmodel_background.UserNotificationChangedTrigger",
+        "winrt._winrt_windows_applicationmodel_background.UserNotificationChangedTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::UserNotificationChangedTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9171,7 +9171,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_WiFiOnDemandHotspotConnectTrigger =
     {
-        "_winrt_windows_applicationmodel_background.WiFiOnDemandHotspotConnectTrigger",
+        "winrt._winrt_windows_applicationmodel_background.WiFiOnDemandHotspotConnectTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::WiFiOnDemandHotspotConnectTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9262,7 +9262,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_WiFiOnDemandHotspotUpdateMetadataTrigger =
     {
-        "_winrt_windows_applicationmodel_background.WiFiOnDemandHotspotUpdateMetadataTrigger",
+        "winrt._winrt_windows_applicationmodel_background.WiFiOnDemandHotspotUpdateMetadataTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::WiFiOnDemandHotspotUpdateMetadataTrigger),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9331,7 +9331,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_IBackgroundCondition =
     {
-        "_winrt_windows_applicationmodel_background.IBackgroundCondition",
+        "winrt._winrt_windows_applicationmodel_background.IBackgroundCondition",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::IBackgroundCondition),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9433,7 +9433,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_IBackgroundTask =
     {
-        "_winrt_windows_applicationmodel_background.IBackgroundTask",
+        "winrt._winrt_windows_applicationmodel_background.IBackgroundTask",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTask),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9705,7 +9705,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_IBackgroundTaskInstance =
     {
-        "_winrt_windows_applicationmodel_background.IBackgroundTaskInstance",
+        "winrt._winrt_windows_applicationmodel_background.IBackgroundTaskInstance",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTaskInstance),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10009,7 +10009,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_IBackgroundTaskInstance2 =
     {
-        "_winrt_windows_applicationmodel_background.IBackgroundTaskInstance2",
+        "winrt._winrt_windows_applicationmodel_background.IBackgroundTaskInstance2",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTaskInstance2),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10301,7 +10301,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_IBackgroundTaskInstance4 =
     {
-        "_winrt_windows_applicationmodel_background.IBackgroundTaskInstance4",
+        "winrt._winrt_windows_applicationmodel_background.IBackgroundTaskInstance4",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTaskInstance4),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10533,7 +10533,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_IBackgroundTaskRegistration =
     {
-        "_winrt_windows_applicationmodel_background.IBackgroundTaskRegistration",
+        "winrt._winrt_windows_applicationmodel_background.IBackgroundTaskRegistration",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTaskRegistration),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10785,7 +10785,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_IBackgroundTaskRegistration2 =
     {
-        "_winrt_windows_applicationmodel_background.IBackgroundTaskRegistration2",
+        "winrt._winrt_windows_applicationmodel_background.IBackgroundTaskRegistration2",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTaskRegistration2),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11037,7 +11037,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_IBackgroundTaskRegistration3 =
     {
-        "_winrt_windows_applicationmodel_background.IBackgroundTaskRegistration3",
+        "winrt._winrt_windows_applicationmodel_background.IBackgroundTaskRegistration3",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTaskRegistration3),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11106,7 +11106,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyType_Spec type_spec_IBackgroundTrigger =
     {
-        "_winrt_windows_applicationmodel_background.IBackgroundTrigger",
+        "winrt._winrt_windows_applicationmodel_background.IBackgroundTrigger",
         sizeof(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTrigger),
         0,
         Py_TPFLAGS_DEFAULT,

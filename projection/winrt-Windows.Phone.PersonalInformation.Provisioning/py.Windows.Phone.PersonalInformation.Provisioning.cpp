@@ -133,7 +133,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation::Provisioning
 
     static PyType_Spec type_spec_ContactPartnerProvisioningManager =
     {
-        "_winrt_windows_phone_personalinformation_provisioning.ContactPartnerProvisioningManager",
+        "winrt._winrt_windows_phone_personalinformation_provisioning.ContactPartnerProvisioningManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -242,7 +242,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation::Provisioning
 
     static PyType_Spec type_spec_MessagePartnerProvisioningManager =
     {
-        "_winrt_windows_phone_personalinformation_provisioning.MessagePartnerProvisioningManager",
+        "winrt._winrt_windows_phone_personalinformation_provisioning.MessagePartnerProvisioningManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,

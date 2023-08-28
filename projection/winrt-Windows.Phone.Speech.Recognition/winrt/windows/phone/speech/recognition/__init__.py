@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_phone_speech_recognition
+from winrt import _winrt_windows_phone_speech_recognition
 
 __all__ = [
     "SpeechRecognitionUIStatus",

@@ -97,7 +97,7 @@ namespace py::cpp::Windows::Media::Core::Preview
 
     static PyType_Spec type_spec_SoundLevelBroker =
     {
-        "_winrt_windows_media_core_preview.SoundLevelBroker",
+        "winrt._winrt_windows_media_core_preview.SoundLevelBroker",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -118,7 +118,7 @@ namespace py::cpp::Windows::Media::Core::Preview
 
     static PyType_Spec type_spec_SoundLevelBroker_Meta =
     {
-        "_winrt_windows_media_core_preview.SoundLevelBroker_Meta",
+        "winrt._winrt_windows_media_core_preview.SoundLevelBroker_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,

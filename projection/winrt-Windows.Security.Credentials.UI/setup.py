@@ -6,7 +6,7 @@ from winrt_sdk import get_include_dirs
 setup(
     ext_modules=[
         Extension(
-            "winrt.windows.security.credentials.ui._winrt_windows_security_credentials_ui",
+            "winrt._winrt_windows_security_credentials_ui",
             sources=["py.Windows.Security.Credentials.UI.cpp"],
             include_dirs=get_include_dirs(),
             extra_compile_args=["/std:c++20", "/permissive-"],

@@ -339,7 +339,7 @@ namespace py::cpp::Windows::Services::Cortana
 
     static PyType_Spec type_spec_CortanaActionableInsights =
     {
-        "_winrt_windows_services_cortana.CortanaActionableInsights",
+        "winrt._winrt_windows_services_cortana.CortanaActionableInsights",
         sizeof(py::wrapper::Windows::Services::Cortana::CortanaActionableInsights),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -526,7 +526,7 @@ namespace py::cpp::Windows::Services::Cortana
 
     static PyType_Spec type_spec_CortanaActionableInsightsOptions =
     {
-        "_winrt_windows_services_cortana.CortanaActionableInsightsOptions",
+        "winrt._winrt_windows_services_cortana.CortanaActionableInsightsOptions",
         sizeof(py::wrapper::Windows::Services::Cortana::CortanaActionableInsightsOptions),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -751,7 +751,7 @@ namespace py::cpp::Windows::Services::Cortana
 
     static PyType_Spec type_spec_CortanaPermissionsManager =
     {
-        "_winrt_windows_services_cortana.CortanaPermissionsManager",
+        "winrt._winrt_windows_services_cortana.CortanaPermissionsManager",
         sizeof(py::wrapper::Windows::Services::Cortana::CortanaPermissionsManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -948,7 +948,7 @@ namespace py::cpp::Windows::Services::Cortana
 
     static PyType_Spec type_spec_CortanaSettings =
     {
-        "_winrt_windows_services_cortana.CortanaSettings",
+        "winrt._winrt_windows_services_cortana.CortanaSettings",
         sizeof(py::wrapper::Windows::Services::Cortana::CortanaSettings),
         0,
         Py_TPFLAGS_DEFAULT,

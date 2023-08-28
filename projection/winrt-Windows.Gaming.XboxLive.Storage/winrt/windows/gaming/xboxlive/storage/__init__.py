@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_gaming_xboxlive_storage
+from winrt import _winrt_windows_gaming_xboxlive_storage
 
 __all__ = [
     "GameSaveErrorStatus",

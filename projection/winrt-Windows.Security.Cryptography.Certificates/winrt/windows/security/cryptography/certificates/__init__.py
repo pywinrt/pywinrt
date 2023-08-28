@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_security_cryptography_certificates
+from winrt import _winrt_windows_security_cryptography_certificates
 
 __all__ = [
     "CertificateChainPolicy",

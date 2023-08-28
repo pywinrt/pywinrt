@@ -894,7 +894,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
     static PyType_Spec type_spec_CompositeTransform3D =
     {
-        "_winrt_windows_ui_xaml_media_media3d.CompositeTransform3D",
+        "winrt._winrt_windows_ui_xaml_media_media3d.CompositeTransform3D",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Media3D::CompositeTransform3D),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -926,7 +926,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
     static PyType_Spec type_spec_CompositeTransform3D_Meta =
     {
-        "_winrt_windows_ui_xaml_media_media3d.CompositeTransform3D_Meta",
+        "winrt._winrt_windows_ui_xaml_media_media3d.CompositeTransform3D_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1190,7 +1190,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
     static PyType_Spec type_spec_Matrix3DHelper =
     {
-        "_winrt_windows_ui_xaml_media_media3d.Matrix3DHelper",
+        "winrt._winrt_windows_ui_xaml_media_media3d.Matrix3DHelper",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Media3D::Matrix3DHelper),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1211,7 +1211,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
     static PyType_Spec type_spec_Matrix3DHelper_Meta =
     {
-        "_winrt_windows_ui_xaml_media_media3d.Matrix3DHelper_Meta",
+        "winrt._winrt_windows_ui_xaml_media_media3d.Matrix3DHelper_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1503,7 +1503,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
     static PyType_Spec type_spec_PerspectiveTransform3D =
     {
-        "_winrt_windows_ui_xaml_media_media3d.PerspectiveTransform3D",
+        "winrt._winrt_windows_ui_xaml_media_media3d.PerspectiveTransform3D",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Media3D::PerspectiveTransform3D),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1526,7 +1526,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
     static PyType_Spec type_spec_PerspectiveTransform3D_Meta =
     {
-        "_winrt_windows_ui_xaml_media_media3d.PerspectiveTransform3D_Meta",
+        "winrt._winrt_windows_ui_xaml_media_media3d.PerspectiveTransform3D_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1595,7 +1595,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
     static PyType_Spec type_spec_Transform3D =
     {
-        "_winrt_windows_ui_xaml_media_media3d.Transform3D",
+        "winrt._winrt_windows_ui_xaml_media_media3d.Transform3D",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Media3D::Transform3D),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2246,7 +2246,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
     static PyType_Spec type_spec_Matrix3D =
     {
-        "_winrt_windows_ui_xaml_media_media3d.Matrix3D",
+        "winrt._winrt_windows_ui_xaml_media_media3d.Matrix3D",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Media3D::Matrix3D),
         0,
         Py_TPFLAGS_DEFAULT,

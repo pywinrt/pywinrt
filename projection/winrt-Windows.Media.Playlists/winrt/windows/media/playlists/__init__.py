@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_media_playlists
+from winrt import _winrt_windows_media_playlists
 
 __all__ = [
     "PlaylistFormat",

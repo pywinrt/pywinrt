@@ -6,7 +6,7 @@ from winrt_sdk import get_include_dirs
 setup(
     ext_modules=[
         Extension(
-            "winrt.windows.phone.ui.input._winrt_windows_phone_ui_input",
+            "winrt._winrt_windows_phone_ui_input",
             sources=["py.Windows.Phone.UI.Input.cpp"],
             include_dirs=get_include_dirs(),
             extra_compile_args=["/std:c++20", "/permissive-"],

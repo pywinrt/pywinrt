@@ -782,7 +782,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyType_Spec type_spec_BitmapImage =
     {
-        "_winrt_windows_ui_xaml_media_imaging.BitmapImage",
+        "winrt._winrt_windows_ui_xaml_media_imaging.BitmapImage",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Imaging::BitmapImage),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -810,7 +810,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyType_Spec type_spec_BitmapImage_Meta =
     {
-        "_winrt_windows_ui_xaml_media_imaging.BitmapImage_Meta",
+        "winrt._winrt_windows_ui_xaml_media_imaging.BitmapImage_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1022,7 +1022,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyType_Spec type_spec_BitmapSource =
     {
-        "_winrt_windows_ui_xaml_media_imaging.BitmapSource",
+        "winrt._winrt_windows_ui_xaml_media_imaging.BitmapSource",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Imaging::BitmapSource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1044,7 +1044,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyType_Spec type_spec_BitmapSource_Meta =
     {
-        "_winrt_windows_ui_xaml_media_imaging.BitmapSource_Meta",
+        "winrt._winrt_windows_ui_xaml_media_imaging.BitmapSource_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1161,7 +1161,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyType_Spec type_spec_DownloadProgressEventArgs =
     {
-        "_winrt_windows_ui_xaml_media_imaging.DownloadProgressEventArgs",
+        "winrt._winrt_windows_ui_xaml_media_imaging.DownloadProgressEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Imaging::DownloadProgressEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1414,7 +1414,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyType_Spec type_spec_RenderTargetBitmap =
     {
-        "_winrt_windows_ui_xaml_media_imaging.RenderTargetBitmap",
+        "winrt._winrt_windows_ui_xaml_media_imaging.RenderTargetBitmap",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Imaging::RenderTargetBitmap),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1436,7 +1436,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyType_Spec type_spec_RenderTargetBitmap_Meta =
     {
-        "_winrt_windows_ui_xaml_media_imaging.RenderTargetBitmap_Meta",
+        "winrt._winrt_windows_ui_xaml_media_imaging.RenderTargetBitmap_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1611,7 +1611,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyType_Spec type_spec_SoftwareBitmapSource =
     {
-        "_winrt_windows_ui_xaml_media_imaging.SoftwareBitmapSource",
+        "winrt._winrt_windows_ui_xaml_media_imaging.SoftwareBitmapSource",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Imaging::SoftwareBitmapSource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1722,7 +1722,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyType_Spec type_spec_SurfaceImageSource =
     {
-        "_winrt_windows_ui_xaml_media_imaging.SurfaceImageSource",
+        "winrt._winrt_windows_ui_xaml_media_imaging.SurfaceImageSource",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Imaging::SurfaceImageSource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2151,7 +2151,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyType_Spec type_spec_SvgImageSource =
     {
-        "_winrt_windows_ui_xaml_media_imaging.SvgImageSource",
+        "winrt._winrt_windows_ui_xaml_media_imaging.SvgImageSource",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Imaging::SvgImageSource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2174,7 +2174,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyType_Spec type_spec_SvgImageSource_Meta =
     {
-        "_winrt_windows_ui_xaml_media_imaging.SvgImageSource_Meta",
+        "winrt._winrt_windows_ui_xaml_media_imaging.SvgImageSource_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -2263,7 +2263,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyType_Spec type_spec_SvgImageSourceFailedEventArgs =
     {
-        "_winrt_windows_ui_xaml_media_imaging.SvgImageSourceFailedEventArgs",
+        "winrt._winrt_windows_ui_xaml_media_imaging.SvgImageSourceFailedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Imaging::SvgImageSourceFailedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2332,7 +2332,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyType_Spec type_spec_SvgImageSourceOpenedEventArgs =
     {
-        "_winrt_windows_ui_xaml_media_imaging.SvgImageSourceOpenedEventArgs",
+        "winrt._winrt_windows_ui_xaml_media_imaging.SvgImageSourceOpenedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Imaging::SvgImageSourceOpenedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2443,7 +2443,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyType_Spec type_spec_VirtualSurfaceImageSource =
     {
-        "_winrt_windows_ui_xaml_media_imaging.VirtualSurfaceImageSource",
+        "winrt._winrt_windows_ui_xaml_media_imaging.VirtualSurfaceImageSource",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Imaging::VirtualSurfaceImageSource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2588,7 +2588,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyType_Spec type_spec_WriteableBitmap =
     {
-        "_winrt_windows_ui_xaml_media_imaging.WriteableBitmap",
+        "winrt._winrt_windows_ui_xaml_media_imaging.WriteableBitmap",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Imaging::WriteableBitmap),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2690,7 +2690,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyType_Spec type_spec_XamlRenderingBackgroundTask =
     {
-        "_winrt_windows_ui_xaml_media_imaging.XamlRenderingBackgroundTask",
+        "winrt._winrt_windows_ui_xaml_media_imaging.XamlRenderingBackgroundTask",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Imaging::XamlRenderingBackgroundTask),
         0,
         Py_TPFLAGS_DEFAULT,

@@ -6,7 +6,7 @@ from winrt_sdk import get_include_dirs
 setup(
     ext_modules=[
         Extension(
-            "winrt.windows.security.cryptography.certificates._winrt_windows_security_cryptography_certificates",
+            "winrt._winrt_windows_security_cryptography_certificates",
             sources=["py.Windows.Security.Cryptography.Certificates.cpp"],
             include_dirs=get_include_dirs(),
             extra_compile_args=["/std:c++20", "/permissive-"],

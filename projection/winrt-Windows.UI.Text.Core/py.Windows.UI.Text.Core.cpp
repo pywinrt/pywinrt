@@ -138,7 +138,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyType_Spec type_spec_CoreTextCompositionCompletedEventArgs =
     {
-        "_winrt_windows_ui_text_core.CoreTextCompositionCompletedEventArgs",
+        "winrt._winrt_windows_ui_text_core.CoreTextCompositionCompletedEventArgs",
         sizeof(py::wrapper::Windows::UI::Text::Core::CoreTextCompositionCompletedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -247,7 +247,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyType_Spec type_spec_CoreTextCompositionSegment =
     {
-        "_winrt_windows_ui_text_core.CoreTextCompositionSegment",
+        "winrt._winrt_windows_ui_text_core.CoreTextCompositionSegment",
         sizeof(py::wrapper::Windows::UI::Text::Core::CoreTextCompositionSegment),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -366,7 +366,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyType_Spec type_spec_CoreTextCompositionStartedEventArgs =
     {
-        "_winrt_windows_ui_text_core.CoreTextCompositionStartedEventArgs",
+        "winrt._winrt_windows_ui_text_core.CoreTextCompositionStartedEventArgs",
         sizeof(py::wrapper::Windows::UI::Text::Core::CoreTextCompositionStartedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1238,7 +1238,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyType_Spec type_spec_CoreTextEditContext =
     {
-        "_winrt_windows_ui_text_core.CoreTextEditContext",
+        "winrt._winrt_windows_ui_text_core.CoreTextEditContext",
         sizeof(py::wrapper::Windows::UI::Text::Core::CoreTextEditContext),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1525,7 +1525,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyType_Spec type_spec_CoreTextFormatUpdatingEventArgs =
     {
-        "_winrt_windows_ui_text_core.CoreTextFormatUpdatingEventArgs",
+        "winrt._winrt_windows_ui_text_core.CoreTextFormatUpdatingEventArgs",
         sizeof(py::wrapper::Windows::UI::Text::Core::CoreTextFormatUpdatingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1690,7 +1690,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyType_Spec type_spec_CoreTextLayoutBounds =
     {
-        "_winrt_windows_ui_text_core.CoreTextLayoutBounds",
+        "winrt._winrt_windows_ui_text_core.CoreTextLayoutBounds",
         sizeof(py::wrapper::Windows::UI::Text::Core::CoreTextLayoutBounds),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1869,7 +1869,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyType_Spec type_spec_CoreTextLayoutRequest =
     {
-        "_winrt_windows_ui_text_core.CoreTextLayoutRequest",
+        "winrt._winrt_windows_ui_text_core.CoreTextLayoutRequest",
         sizeof(py::wrapper::Windows::UI::Text::Core::CoreTextLayoutRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1958,7 +1958,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyType_Spec type_spec_CoreTextLayoutRequestedEventArgs =
     {
-        "_winrt_windows_ui_text_core.CoreTextLayoutRequestedEventArgs",
+        "winrt._winrt_windows_ui_text_core.CoreTextLayoutRequestedEventArgs",
         sizeof(py::wrapper::Windows::UI::Text::Core::CoreTextLayoutRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2125,7 +2125,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyType_Spec type_spec_CoreTextSelectionRequest =
     {
-        "_winrt_windows_ui_text_core.CoreTextSelectionRequest",
+        "winrt._winrt_windows_ui_text_core.CoreTextSelectionRequest",
         sizeof(py::wrapper::Windows::UI::Text::Core::CoreTextSelectionRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2214,7 +2214,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyType_Spec type_spec_CoreTextSelectionRequestedEventArgs =
     {
-        "_winrt_windows_ui_text_core.CoreTextSelectionRequestedEventArgs",
+        "winrt._winrt_windows_ui_text_core.CoreTextSelectionRequestedEventArgs",
         sizeof(py::wrapper::Windows::UI::Text::Core::CoreTextSelectionRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2401,7 +2401,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyType_Spec type_spec_CoreTextSelectionUpdatingEventArgs =
     {
-        "_winrt_windows_ui_text_core.CoreTextSelectionUpdatingEventArgs",
+        "winrt._winrt_windows_ui_text_core.CoreTextSelectionUpdatingEventArgs",
         sizeof(py::wrapper::Windows::UI::Text::Core::CoreTextSelectionUpdatingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2454,7 +2454,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyType_Spec type_spec_CoreTextServicesConstants =
     {
-        "_winrt_windows_ui_text_core.CoreTextServicesConstants",
+        "winrt._winrt_windows_ui_text_core.CoreTextServicesConstants",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2475,7 +2475,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyType_Spec type_spec_CoreTextServicesConstants_Meta =
     {
-        "_winrt_windows_ui_text_core.CoreTextServicesConstants_Meta",
+        "winrt._winrt_windows_ui_text_core.CoreTextServicesConstants_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -2669,7 +2669,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyType_Spec type_spec_CoreTextServicesManager =
     {
-        "_winrt_windows_ui_text_core.CoreTextServicesManager",
+        "winrt._winrt_windows_ui_text_core.CoreTextServicesManager",
         sizeof(py::wrapper::Windows::UI::Text::Core::CoreTextServicesManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2856,7 +2856,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyType_Spec type_spec_CoreTextTextRequest =
     {
-        "_winrt_windows_ui_text_core.CoreTextTextRequest",
+        "winrt._winrt_windows_ui_text_core.CoreTextTextRequest",
         sizeof(py::wrapper::Windows::UI::Text::Core::CoreTextTextRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2945,7 +2945,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyType_Spec type_spec_CoreTextTextRequestedEventArgs =
     {
-        "_winrt_windows_ui_text_core.CoreTextTextRequestedEventArgs",
+        "winrt._winrt_windows_ui_text_core.CoreTextTextRequestedEventArgs",
         sizeof(py::wrapper::Windows::UI::Text::Core::CoreTextTextRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3192,7 +3192,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyType_Spec type_spec_CoreTextTextUpdatingEventArgs =
     {
-        "_winrt_windows_ui_text_core.CoreTextTextUpdatingEventArgs",
+        "winrt._winrt_windows_ui_text_core.CoreTextTextUpdatingEventArgs",
         sizeof(py::wrapper::Windows::UI::Text::Core::CoreTextTextUpdatingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3353,7 +3353,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyType_Spec type_spec_CoreTextRange =
     {
-        "_winrt_windows_ui_text_core.CoreTextRange",
+        "winrt._winrt_windows_ui_text_core.CoreTextRange",
         sizeof(py::wrapper::Windows::UI::Text::Core::CoreTextRange),
         0,
         Py_TPFLAGS_DEFAULT,

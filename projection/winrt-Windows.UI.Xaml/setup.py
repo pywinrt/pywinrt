@@ -6,7 +6,7 @@ from winrt_sdk import get_include_dirs
 setup(
     ext_modules=[
         Extension(
-            "winrt.windows.ui.xaml._winrt_windows_ui_xaml",
+            "winrt._winrt_windows_ui_xaml",
             sources=["py.Windows.UI.Xaml.cpp"],
             include_dirs=get_include_dirs(),
             extra_compile_args=["/std:c++20", "/permissive-"],

@@ -6,7 +6,7 @@ from winrt_sdk import get_include_dirs
 setup(
     ext_modules=[
         Extension(
-            "winrt.windows.devices.pwm.provider._winrt_windows_devices_pwm_provider",
+            "winrt._winrt_windows_devices_pwm_provider",
             sources=["py.Windows.Devices.Pwm.Provider.cpp"],
             include_dirs=get_include_dirs(),
             extra_compile_args=["/std:c++20", "/permissive-"],

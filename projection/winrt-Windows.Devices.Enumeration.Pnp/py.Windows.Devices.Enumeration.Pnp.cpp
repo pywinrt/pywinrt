@@ -305,7 +305,7 @@ namespace py::cpp::Windows::Devices::Enumeration::Pnp
 
     static PyType_Spec type_spec_PnpObject =
     {
-        "_winrt_windows_devices_enumeration_pnp.PnpObject",
+        "winrt._winrt_windows_devices_enumeration_pnp.PnpObject",
         sizeof(py::wrapper::Windows::Devices::Enumeration::Pnp::PnpObject),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -647,7 +647,7 @@ namespace py::cpp::Windows::Devices::Enumeration::Pnp
 
     static PyType_Spec type_spec_PnpObjectCollection =
     {
-        "_winrt_windows_devices_enumeration_pnp.PnpObjectCollection",
+        "winrt._winrt_windows_devices_enumeration_pnp.PnpObjectCollection",
         sizeof(py::wrapper::Windows::Devices::Enumeration::Pnp::PnpObjectCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -776,7 +776,7 @@ namespace py::cpp::Windows::Devices::Enumeration::Pnp
 
     static PyType_Spec type_spec_PnpObjectUpdate =
     {
-        "_winrt_windows_devices_enumeration_pnp.PnpObjectUpdate",
+        "winrt._winrt_windows_devices_enumeration_pnp.PnpObjectUpdate",
         sizeof(py::wrapper::Windows::Devices::Enumeration::Pnp::PnpObjectUpdate),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1152,7 +1152,7 @@ namespace py::cpp::Windows::Devices::Enumeration::Pnp
 
     static PyType_Spec type_spec_PnpObjectWatcher =
     {
-        "_winrt_windows_devices_enumeration_pnp.PnpObjectWatcher",
+        "winrt._winrt_windows_devices_enumeration_pnp.PnpObjectWatcher",
         sizeof(py::wrapper::Windows::Devices::Enumeration::Pnp::PnpObjectWatcher),
         0,
         Py_TPFLAGS_DEFAULT,

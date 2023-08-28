@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_devices_alljoyn
+from winrt import _winrt_windows_devices_alljoyn
 
 __all__ = [
     "AllJoynAuthenticationMechanism",

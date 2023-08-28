@@ -917,7 +917,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyType_Spec type_spec_HttpCacheDirectiveHeaderValueCollection =
     {
-        "_winrt_windows_web_http_headers.HttpCacheDirectiveHeaderValueCollection",
+        "winrt._winrt_windows_web_http_headers.HttpCacheDirectiveHeaderValueCollection",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpCacheDirectiveHeaderValueCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1207,7 +1207,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyType_Spec type_spec_HttpChallengeHeaderValue =
     {
-        "_winrt_windows_web_http_headers.HttpChallengeHeaderValue",
+        "winrt._winrt_windows_web_http_headers.HttpChallengeHeaderValue",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpChallengeHeaderValue),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1933,7 +1933,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyType_Spec type_spec_HttpChallengeHeaderValueCollection =
     {
-        "_winrt_windows_web_http_headers.HttpChallengeHeaderValueCollection",
+        "winrt._winrt_windows_web_http_headers.HttpChallengeHeaderValueCollection",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpChallengeHeaderValueCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2167,7 +2167,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyType_Spec type_spec_HttpConnectionOptionHeaderValue =
     {
-        "_winrt_windows_web_http_headers.HttpConnectionOptionHeaderValue",
+        "winrt._winrt_windows_web_http_headers.HttpConnectionOptionHeaderValue",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2893,7 +2893,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyType_Spec type_spec_HttpConnectionOptionHeaderValueCollection =
     {
-        "_winrt_windows_web_http_headers.HttpConnectionOptionHeaderValueCollection",
+        "winrt._winrt_windows_web_http_headers.HttpConnectionOptionHeaderValueCollection",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValueCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3127,7 +3127,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyType_Spec type_spec_HttpContentCodingHeaderValue =
     {
-        "_winrt_windows_web_http_headers.HttpContentCodingHeaderValue",
+        "winrt._winrt_windows_web_http_headers.HttpContentCodingHeaderValue",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpContentCodingHeaderValue),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3853,7 +3853,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyType_Spec type_spec_HttpContentCodingHeaderValueCollection =
     {
-        "_winrt_windows_web_http_headers.HttpContentCodingHeaderValueCollection",
+        "winrt._winrt_windows_web_http_headers.HttpContentCodingHeaderValueCollection",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpContentCodingHeaderValueCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4123,7 +4123,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyType_Spec type_spec_HttpContentCodingWithQualityHeaderValue =
     {
-        "_winrt_windows_web_http_headers.HttpContentCodingWithQualityHeaderValue",
+        "winrt._winrt_windows_web_http_headers.HttpContentCodingWithQualityHeaderValue",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4849,7 +4849,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyType_Spec type_spec_HttpContentCodingWithQualityHeaderValueCollection =
     {
-        "_winrt_windows_web_http_headers.HttpContentCodingWithQualityHeaderValueCollection",
+        "winrt._winrt_windows_web_http_headers.HttpContentCodingWithQualityHeaderValueCollection",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValueCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5323,7 +5323,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyType_Spec type_spec_HttpContentDispositionHeaderValue =
     {
-        "_winrt_windows_web_http_headers.HttpContentDispositionHeaderValue",
+        "winrt._winrt_windows_web_http_headers.HttpContentDispositionHeaderValue",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpContentDispositionHeaderValue),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6287,7 +6287,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyType_Spec type_spec_HttpContentHeaderCollection =
     {
-        "_winrt_windows_web_http_headers.HttpContentHeaderCollection",
+        "winrt._winrt_windows_web_http_headers.HttpContentHeaderCollection",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpContentHeaderCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6642,7 +6642,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyType_Spec type_spec_HttpContentRangeHeaderValue =
     {
-        "_winrt_windows_web_http_headers.HttpContentRangeHeaderValue",
+        "winrt._winrt_windows_web_http_headers.HttpContentRangeHeaderValue",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpContentRangeHeaderValue),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6940,7 +6940,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyType_Spec type_spec_HttpCookiePairHeaderValue =
     {
-        "_winrt_windows_web_http_headers.HttpCookiePairHeaderValue",
+        "winrt._winrt_windows_web_http_headers.HttpCookiePairHeaderValue",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpCookiePairHeaderValue),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7666,7 +7666,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyType_Spec type_spec_HttpCookiePairHeaderValueCollection =
     {
-        "_winrt_windows_web_http_headers.HttpCookiePairHeaderValueCollection",
+        "winrt._winrt_windows_web_http_headers.HttpCookiePairHeaderValueCollection",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpCookiePairHeaderValueCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7956,7 +7956,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyType_Spec type_spec_HttpCredentialsHeaderValue =
     {
-        "_winrt_windows_web_http_headers.HttpCredentialsHeaderValue",
+        "winrt._winrt_windows_web_http_headers.HttpCredentialsHeaderValue",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpCredentialsHeaderValue),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8186,7 +8186,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyType_Spec type_spec_HttpDateOrDeltaHeaderValue =
     {
-        "_winrt_windows_web_http_headers.HttpDateOrDeltaHeaderValue",
+        "winrt._winrt_windows_web_http_headers.HttpDateOrDeltaHeaderValue",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpDateOrDeltaHeaderValue),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8504,7 +8504,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyType_Spec type_spec_HttpExpectationHeaderValue =
     {
-        "_winrt_windows_web_http_headers.HttpExpectationHeaderValue",
+        "winrt._winrt_windows_web_http_headers.HttpExpectationHeaderValue",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpExpectationHeaderValue),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9230,7 +9230,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyType_Spec type_spec_HttpExpectationHeaderValueCollection =
     {
-        "_winrt_windows_web_http_headers.HttpExpectationHeaderValueCollection",
+        "winrt._winrt_windows_web_http_headers.HttpExpectationHeaderValueCollection",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpExpectationHeaderValueCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9956,7 +9956,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyType_Spec type_spec_HttpLanguageHeaderValueCollection =
     {
-        "_winrt_windows_web_http_headers.HttpLanguageHeaderValueCollection",
+        "winrt._winrt_windows_web_http_headers.HttpLanguageHeaderValueCollection",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpLanguageHeaderValueCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10226,7 +10226,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyType_Spec type_spec_HttpLanguageRangeWithQualityHeaderValue =
     {
-        "_winrt_windows_web_http_headers.HttpLanguageRangeWithQualityHeaderValue",
+        "winrt._winrt_windows_web_http_headers.HttpLanguageRangeWithQualityHeaderValue",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10952,7 +10952,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyType_Spec type_spec_HttpLanguageRangeWithQualityHeaderValueCollection =
     {
-        "_winrt_windows_web_http_headers.HttpLanguageRangeWithQualityHeaderValueCollection",
+        "winrt._winrt_windows_web_http_headers.HttpLanguageRangeWithQualityHeaderValueCollection",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValueCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11282,7 +11282,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyType_Spec type_spec_HttpMediaTypeHeaderValue =
     {
-        "_winrt_windows_web_http_headers.HttpMediaTypeHeaderValue",
+        "winrt._winrt_windows_web_http_headers.HttpMediaTypeHeaderValue",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpMediaTypeHeaderValue),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11676,7 +11676,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyType_Spec type_spec_HttpMediaTypeWithQualityHeaderValue =
     {
-        "_winrt_windows_web_http_headers.HttpMediaTypeWithQualityHeaderValue",
+        "winrt._winrt_windows_web_http_headers.HttpMediaTypeWithQualityHeaderValue",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12402,7 +12402,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyType_Spec type_spec_HttpMediaTypeWithQualityHeaderValueCollection =
     {
-        "_winrt_windows_web_http_headers.HttpMediaTypeWithQualityHeaderValueCollection",
+        "winrt._winrt_windows_web_http_headers.HttpMediaTypeWithQualityHeaderValueCollection",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValueCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13128,7 +13128,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyType_Spec type_spec_HttpMethodHeaderValueCollection =
     {
-        "_winrt_windows_web_http_headers.HttpMethodHeaderValueCollection",
+        "winrt._winrt_windows_web_http_headers.HttpMethodHeaderValueCollection",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpMethodHeaderValueCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13426,7 +13426,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyType_Spec type_spec_HttpNameValueHeaderValue =
     {
-        "_winrt_windows_web_http_headers.HttpNameValueHeaderValue",
+        "winrt._winrt_windows_web_http_headers.HttpNameValueHeaderValue",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpNameValueHeaderValue),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13696,7 +13696,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyType_Spec type_spec_HttpProductHeaderValue =
     {
-        "_winrt_windows_web_http_headers.HttpProductHeaderValue",
+        "winrt._winrt_windows_web_http_headers.HttpProductHeaderValue",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpProductHeaderValue),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13966,7 +13966,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyType_Spec type_spec_HttpProductInfoHeaderValue =
     {
-        "_winrt_windows_web_http_headers.HttpProductInfoHeaderValue",
+        "winrt._winrt_windows_web_http_headers.HttpProductInfoHeaderValue",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpProductInfoHeaderValue),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14692,7 +14692,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyType_Spec type_spec_HttpProductInfoHeaderValueCollection =
     {
-        "_winrt_windows_web_http_headers.HttpProductInfoHeaderValueCollection",
+        "winrt._winrt_windows_web_http_headers.HttpProductInfoHeaderValueCollection",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpProductInfoHeaderValueCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -15822,7 +15822,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyType_Spec type_spec_HttpRequestHeaderCollection =
     {
-        "_winrt_windows_web_http_headers.HttpRequestHeaderCollection",
+        "winrt._winrt_windows_web_http_headers.HttpRequestHeaderCollection",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpRequestHeaderCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -16652,7 +16652,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyType_Spec type_spec_HttpResponseHeaderCollection =
     {
-        "_winrt_windows_web_http_headers.HttpResponseHeaderCollection",
+        "winrt._winrt_windows_web_http_headers.HttpResponseHeaderCollection",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpResponseHeaderCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -16906,7 +16906,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyType_Spec type_spec_HttpTransferCodingHeaderValue =
     {
-        "_winrt_windows_web_http_headers.HttpTransferCodingHeaderValue",
+        "winrt._winrt_windows_web_http_headers.HttpTransferCodingHeaderValue",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -17632,7 +17632,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyType_Spec type_spec_HttpTransferCodingHeaderValueCollection =
     {
-        "_winrt_windows_web_http_headers.HttpTransferCodingHeaderValueCollection",
+        "winrt._winrt_windows_web_http_headers.HttpTransferCodingHeaderValueCollection",
         sizeof(py::wrapper::Windows::Web::Http::Headers::HttpTransferCodingHeaderValueCollection),
         0,
         Py_TPFLAGS_DEFAULT,

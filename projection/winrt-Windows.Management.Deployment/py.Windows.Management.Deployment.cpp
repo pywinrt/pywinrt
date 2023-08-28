@@ -862,7 +862,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyType_Spec type_spec_AddPackageOptions =
     {
-        "_winrt_windows_management_deployment.AddPackageOptions",
+        "winrt._winrt_windows_management_deployment.AddPackageOptions",
         sizeof(py::wrapper::Windows::Management::Deployment::AddPackageOptions),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1092,7 +1092,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyType_Spec type_spec_AppInstallerManager =
     {
-        "_winrt_windows_management_deployment.AppInstallerManager",
+        "winrt._winrt_windows_management_deployment.AppInstallerManager",
         sizeof(py::wrapper::Windows::Management::Deployment::AppInstallerManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1727,7 +1727,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyType_Spec type_spec_AutoUpdateSettingsOptions =
     {
-        "_winrt_windows_management_deployment.AutoUpdateSettingsOptions",
+        "winrt._winrt_windows_management_deployment.AutoUpdateSettingsOptions",
         sizeof(py::wrapper::Windows::Management::Deployment::AutoUpdateSettingsOptions),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1934,7 +1934,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyType_Spec type_spec_CreateSharedPackageContainerOptions =
     {
-        "_winrt_windows_management_deployment.CreateSharedPackageContainerOptions",
+        "winrt._winrt_windows_management_deployment.CreateSharedPackageContainerOptions",
         sizeof(py::wrapper::Windows::Management::Deployment::CreateSharedPackageContainerOptions),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2063,7 +2063,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyType_Spec type_spec_CreateSharedPackageContainerResult =
     {
-        "_winrt_windows_management_deployment.CreateSharedPackageContainerResult",
+        "winrt._winrt_windows_management_deployment.CreateSharedPackageContainerResult",
         sizeof(py::wrapper::Windows::Management::Deployment::CreateSharedPackageContainerResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2250,7 +2250,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyType_Spec type_spec_DeleteSharedPackageContainerOptions =
     {
-        "_winrt_windows_management_deployment.DeleteSharedPackageContainerOptions",
+        "winrt._winrt_windows_management_deployment.DeleteSharedPackageContainerOptions",
         sizeof(py::wrapper::Windows::Management::Deployment::DeleteSharedPackageContainerOptions),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2359,7 +2359,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyType_Spec type_spec_DeleteSharedPackageContainerResult =
     {
-        "_winrt_windows_management_deployment.DeleteSharedPackageContainerResult",
+        "winrt._winrt_windows_management_deployment.DeleteSharedPackageContainerResult",
         sizeof(py::wrapper::Windows::Management::Deployment::DeleteSharedPackageContainerResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2508,7 +2508,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyType_Spec type_spec_DeploymentResult =
     {
-        "_winrt_windows_management_deployment.DeploymentResult",
+        "winrt._winrt_windows_management_deployment.DeploymentResult",
         sizeof(py::wrapper::Windows::Management::Deployment::DeploymentResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2695,7 +2695,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyType_Spec type_spec_FindSharedPackageContainerOptions =
     {
-        "_winrt_windows_management_deployment.FindSharedPackageContainerOptions",
+        "winrt._winrt_windows_management_deployment.FindSharedPackageContainerOptions",
         sizeof(py::wrapper::Windows::Management::Deployment::FindSharedPackageContainerOptions),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2826,7 +2826,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyType_Spec type_spec_PackageAllUserProvisioningOptions =
     {
-        "_winrt_windows_management_deployment.PackageAllUserProvisioningOptions",
+        "winrt._winrt_windows_management_deployment.PackageAllUserProvisioningOptions",
         sizeof(py::wrapper::Windows::Management::Deployment::PackageAllUserProvisioningOptions),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4733,7 +4733,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyType_Spec type_spec_PackageManager =
     {
-        "_winrt_windows_management_deployment.PackageManager",
+        "winrt._winrt_windows_management_deployment.PackageManager",
         sizeof(py::wrapper::Windows::Management::Deployment::PackageManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4859,7 +4859,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyType_Spec type_spec_PackageManagerDebugSettings =
     {
-        "_winrt_windows_management_deployment.PackageManagerDebugSettings",
+        "winrt._winrt_windows_management_deployment.PackageManagerDebugSettings",
         sizeof(py::wrapper::Windows::Management::Deployment::PackageManagerDebugSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4968,7 +4968,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyType_Spec type_spec_PackageUserInformation =
     {
-        "_winrt_windows_management_deployment.PackageUserInformation",
+        "winrt._winrt_windows_management_deployment.PackageUserInformation",
         sizeof(py::wrapper::Windows::Management::Deployment::PackageUserInformation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5591,7 +5591,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyType_Spec type_spec_PackageVolume =
     {
-        "_winrt_windows_management_deployment.PackageVolume",
+        "winrt._winrt_windows_management_deployment.PackageVolume",
         sizeof(py::wrapper::Windows::Management::Deployment::PackageVolume),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6222,7 +6222,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyType_Spec type_spec_RegisterPackageOptions =
     {
-        "_winrt_windows_management_deployment.RegisterPackageOptions",
+        "winrt._winrt_windows_management_deployment.RegisterPackageOptions",
         sizeof(py::wrapper::Windows::Management::Deployment::RegisterPackageOptions),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6424,7 +6424,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyType_Spec type_spec_SharedPackageContainer =
     {
-        "_winrt_windows_management_deployment.SharedPackageContainer",
+        "winrt._winrt_windows_management_deployment.SharedPackageContainer",
         sizeof(py::wrapper::Windows::Management::Deployment::SharedPackageContainer),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6733,7 +6733,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyType_Spec type_spec_SharedPackageContainerManager =
     {
-        "_winrt_windows_management_deployment.SharedPackageContainerManager",
+        "winrt._winrt_windows_management_deployment.SharedPackageContainerManager",
         sizeof(py::wrapper::Windows::Management::Deployment::SharedPackageContainerManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6846,7 +6846,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyType_Spec type_spec_SharedPackageContainerMember =
     {
-        "_winrt_windows_management_deployment.SharedPackageContainerMember",
+        "winrt._winrt_windows_management_deployment.SharedPackageContainerMember",
         sizeof(py::wrapper::Windows::Management::Deployment::SharedPackageContainerMember),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7469,7 +7469,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyType_Spec type_spec_StagePackageOptions =
     {
-        "_winrt_windows_management_deployment.StagePackageOptions",
+        "winrt._winrt_windows_management_deployment.StagePackageOptions",
         sizeof(py::wrapper::Windows::Management::Deployment::StagePackageOptions),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7656,7 +7656,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyType_Spec type_spec_UpdateSharedPackageContainerOptions =
     {
-        "_winrt_windows_management_deployment.UpdateSharedPackageContainerOptions",
+        "winrt._winrt_windows_management_deployment.UpdateSharedPackageContainerOptions",
         sizeof(py::wrapper::Windows::Management::Deployment::UpdateSharedPackageContainerOptions),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7765,7 +7765,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyType_Spec type_spec_UpdateSharedPackageContainerResult =
     {
-        "_winrt_windows_management_deployment.UpdateSharedPackageContainerResult",
+        "winrt._winrt_windows_management_deployment.UpdateSharedPackageContainerResult",
         sizeof(py::wrapper::Windows::Management::Deployment::UpdateSharedPackageContainerResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7926,7 +7926,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyType_Spec type_spec_DeploymentProgress =
     {
-        "_winrt_windows_management_deployment.DeploymentProgress",
+        "winrt._winrt_windows_management_deployment.DeploymentProgress",
         sizeof(py::wrapper::Windows::Management::Deployment::DeploymentProgress),
         0,
         Py_TPFLAGS_DEFAULT,

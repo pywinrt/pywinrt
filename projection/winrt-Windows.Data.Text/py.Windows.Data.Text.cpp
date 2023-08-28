@@ -128,7 +128,7 @@ namespace py::cpp::Windows::Data::Text
 
     static PyType_Spec type_spec_AlternateWordForm =
     {
-        "_winrt_windows_data_text.AlternateWordForm",
+        "winrt._winrt_windows_data_text.AlternateWordForm",
         sizeof(py::wrapper::Windows::Data::Text::AlternateWordForm),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -237,7 +237,7 @@ namespace py::cpp::Windows::Data::Text
 
     static PyType_Spec type_spec_SelectableWordSegment =
     {
-        "_winrt_windows_data_text.SelectableWordSegment",
+        "winrt._winrt_windows_data_text.SelectableWordSegment",
         sizeof(py::wrapper::Windows::Data::Text::SelectableWordSegment),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -450,7 +450,7 @@ namespace py::cpp::Windows::Data::Text
 
     static PyType_Spec type_spec_SelectableWordsSegmenter =
     {
-        "_winrt_windows_data_text.SelectableWordsSegmenter",
+        "winrt._winrt_windows_data_text.SelectableWordsSegmenter",
         sizeof(py::wrapper::Windows::Data::Text::SelectableWordsSegmenter),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -624,7 +624,7 @@ namespace py::cpp::Windows::Data::Text
 
     static PyType_Spec type_spec_SemanticTextQuery =
     {
-        "_winrt_windows_data_text.SemanticTextQuery",
+        "winrt._winrt_windows_data_text.SemanticTextQuery",
         sizeof(py::wrapper::Windows::Data::Text::SemanticTextQuery),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -810,7 +810,7 @@ namespace py::cpp::Windows::Data::Text
 
     static PyType_Spec type_spec_TextConversionGenerator =
     {
-        "_winrt_windows_data_text.TextConversionGenerator",
+        "winrt._winrt_windows_data_text.TextConversionGenerator",
         sizeof(py::wrapper::Windows::Data::Text::TextConversionGenerator),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -919,7 +919,7 @@ namespace py::cpp::Windows::Data::Text
 
     static PyType_Spec type_spec_TextPhoneme =
     {
-        "_winrt_windows_data_text.TextPhoneme",
+        "winrt._winrt_windows_data_text.TextPhoneme",
         sizeof(py::wrapper::Windows::Data::Text::TextPhoneme),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1209,7 +1209,7 @@ namespace py::cpp::Windows::Data::Text
 
     static PyType_Spec type_spec_TextPredictionGenerator =
     {
-        "_winrt_windows_data_text.TextPredictionGenerator",
+        "winrt._winrt_windows_data_text.TextPredictionGenerator",
         sizeof(py::wrapper::Windows::Data::Text::TextPredictionGenerator),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1406,7 +1406,7 @@ namespace py::cpp::Windows::Data::Text
 
     static PyType_Spec type_spec_TextReverseConversionGenerator =
     {
-        "_winrt_windows_data_text.TextReverseConversionGenerator",
+        "winrt._winrt_windows_data_text.TextReverseConversionGenerator",
         sizeof(py::wrapper::Windows::Data::Text::TextReverseConversionGenerator),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1999,7 +1999,7 @@ namespace py::cpp::Windows::Data::Text
 
     static PyType_Spec type_spec_UnicodeCharacters =
     {
-        "_winrt_windows_data_text.UnicodeCharacters",
+        "winrt._winrt_windows_data_text.UnicodeCharacters",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2128,7 +2128,7 @@ namespace py::cpp::Windows::Data::Text
 
     static PyType_Spec type_spec_WordSegment =
     {
-        "_winrt_windows_data_text.WordSegment",
+        "winrt._winrt_windows_data_text.WordSegment",
         sizeof(py::wrapper::Windows::Data::Text::WordSegment),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2341,7 +2341,7 @@ namespace py::cpp::Windows::Data::Text
 
     static PyType_Spec type_spec_WordsSegmenter =
     {
-        "_winrt_windows_data_text.WordsSegmenter",
+        "winrt._winrt_windows_data_text.WordsSegmenter",
         sizeof(py::wrapper::Windows::Data::Text::WordsSegmenter),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2502,7 +2502,7 @@ namespace py::cpp::Windows::Data::Text
 
     static PyType_Spec type_spec_TextSegment =
     {
-        "_winrt_windows_data_text.TextSegment",
+        "winrt._winrt_windows_data_text.TextSegment",
         sizeof(py::wrapper::Windows::Data::Text::TextSegment),
         0,
         Py_TPFLAGS_DEFAULT,

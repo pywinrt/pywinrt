@@ -128,7 +128,7 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 
     static PyType_Spec type_spec_ContentRestrictionsBrowsePolicy =
     {
-        "_winrt_windows_media_contentrestrictions.ContentRestrictionsBrowsePolicy",
+        "winrt._winrt_windows_media_contentrestrictions.ContentRestrictionsBrowsePolicy",
         sizeof(py::wrapper::Windows::Media::ContentRestrictions::ContentRestrictionsBrowsePolicy),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -463,7 +463,7 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 
     static PyType_Spec type_spec_RatedContentDescription =
     {
-        "_winrt_windows_media_contentrestrictions.RatedContentDescription",
+        "winrt._winrt_windows_media_contentrestrictions.RatedContentDescription",
         sizeof(py::wrapper::Windows::Media::ContentRestrictions::RatedContentDescription),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -708,7 +708,7 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 
     static PyType_Spec type_spec_RatedContentRestrictions =
     {
-        "_winrt_windows_media_contentrestrictions.RatedContentRestrictions",
+        "winrt._winrt_windows_media_contentrestrictions.RatedContentRestrictions",
         sizeof(py::wrapper::Windows::Media::ContentRestrictions::RatedContentRestrictions),
         0,
         Py_TPFLAGS_DEFAULT,

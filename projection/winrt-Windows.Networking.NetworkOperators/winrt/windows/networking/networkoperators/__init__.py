@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_networking_networkoperators
+from winrt import _winrt_windows_networking_networkoperators
 
 __all__ = [
     "DataClasses",

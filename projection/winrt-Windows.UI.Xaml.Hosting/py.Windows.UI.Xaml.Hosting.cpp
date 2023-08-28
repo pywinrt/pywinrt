@@ -88,7 +88,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
     static PyType_Spec type_spec_DesignerAppExitedEventArgs =
     {
-        "_winrt_windows_ui_xaml_hosting.DesignerAppExitedEventArgs",
+        "winrt._winrt_windows_ui_xaml_hosting.DesignerAppExitedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Hosting::DesignerAppExitedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -365,7 +365,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
     static PyType_Spec type_spec_DesignerAppManager =
     {
-        "_winrt_windows_ui_xaml_hosting.DesignerAppManager",
+        "winrt._winrt_windows_ui_xaml_hosting.DesignerAppManager",
         sizeof(py::wrapper::Windows::UI::Xaml::Hosting::DesignerAppManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -599,7 +599,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
     static PyType_Spec type_spec_DesignerAppView =
     {
-        "_winrt_windows_ui_xaml_hosting.DesignerAppView",
+        "winrt._winrt_windows_ui_xaml_hosting.DesignerAppView",
         sizeof(py::wrapper::Windows::UI::Xaml::Hosting::DesignerAppView),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -932,7 +932,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
     static PyType_Spec type_spec_DesktopWindowXamlSource =
     {
-        "_winrt_windows_ui_xaml_hosting.DesktopWindowXamlSource",
+        "winrt._winrt_windows_ui_xaml_hosting.DesktopWindowXamlSource",
         sizeof(py::wrapper::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1021,7 +1021,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
     static PyType_Spec type_spec_DesktopWindowXamlSourceGotFocusEventArgs =
     {
-        "_winrt_windows_ui_xaml_hosting.DesktopWindowXamlSourceGotFocusEventArgs",
+        "winrt._winrt_windows_ui_xaml_hosting.DesktopWindowXamlSourceGotFocusEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Hosting::DesktopWindowXamlSourceGotFocusEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1110,7 +1110,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
     static PyType_Spec type_spec_DesktopWindowXamlSourceTakeFocusRequestedEventArgs =
     {
-        "_winrt_windows_ui_xaml_hosting.DesktopWindowXamlSourceTakeFocusRequestedEventArgs",
+        "winrt._winrt_windows_ui_xaml_hosting.DesktopWindowXamlSourceTakeFocusRequestedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Hosting::DesktopWindowXamlSourceTakeFocusRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1509,7 +1509,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
     static PyType_Spec type_spec_ElementCompositionPreview =
     {
-        "_winrt_windows_ui_xaml_hosting.ElementCompositionPreview",
+        "winrt._winrt_windows_ui_xaml_hosting.ElementCompositionPreview",
         sizeof(py::wrapper::Windows::UI::Xaml::Hosting::ElementCompositionPreview),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1660,7 +1660,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
     static PyType_Spec type_spec_WindowsXamlManager =
     {
-        "_winrt_windows_ui_xaml_hosting.WindowsXamlManager",
+        "winrt._winrt_windows_ui_xaml_hosting.WindowsXamlManager",
         sizeof(py::wrapper::Windows::UI::Xaml::Hosting::WindowsXamlManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1846,7 +1846,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
     static PyType_Spec type_spec_XamlSourceFocusNavigationRequest =
     {
-        "_winrt_windows_ui_xaml_hosting.XamlSourceFocusNavigationRequest",
+        "winrt._winrt_windows_ui_xaml_hosting.XamlSourceFocusNavigationRequest",
         sizeof(py::wrapper::Windows::UI::Xaml::Hosting::XamlSourceFocusNavigationRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1959,7 +1959,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
     static PyType_Spec type_spec_XamlSourceFocusNavigationResult =
     {
-        "_winrt_windows_ui_xaml_hosting.XamlSourceFocusNavigationResult",
+        "winrt._winrt_windows_ui_xaml_hosting.XamlSourceFocusNavigationResult",
         sizeof(py::wrapper::Windows::UI::Xaml::Hosting::XamlSourceFocusNavigationResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2481,7 +2481,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
     static PyType_Spec type_spec_XamlUIPresenter =
     {
-        "_winrt_windows_ui_xaml_hosting.XamlUIPresenter",
+        "winrt._winrt_windows_ui_xaml_hosting.XamlUIPresenter",
         sizeof(py::wrapper::Windows::UI::Xaml::Hosting::XamlUIPresenter),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2502,7 +2502,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
     static PyType_Spec type_spec_XamlUIPresenter_Meta =
     {
-        "_winrt_windows_ui_xaml_hosting.XamlUIPresenter_Meta",
+        "winrt._winrt_windows_ui_xaml_hosting.XamlUIPresenter_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -2603,7 +2603,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
     static PyType_Spec type_spec_IXamlUIPresenterHost =
     {
-        "_winrt_windows_ui_xaml_hosting.IXamlUIPresenterHost",
+        "winrt._winrt_windows_ui_xaml_hosting.IXamlUIPresenterHost",
         sizeof(py::wrapper::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2702,7 +2702,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
     static PyType_Spec type_spec_IXamlUIPresenterHost2 =
     {
-        "_winrt_windows_ui_xaml_hosting.IXamlUIPresenterHost2",
+        "winrt._winrt_windows_ui_xaml_hosting.IXamlUIPresenterHost2",
         sizeof(py::wrapper::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost2),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2805,7 +2805,7 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
     static PyType_Spec type_spec_IXamlUIPresenterHost3 =
     {
-        "_winrt_windows_ui_xaml_hosting.IXamlUIPresenterHost3",
+        "winrt._winrt_windows_ui_xaml_hosting.IXamlUIPresenterHost3",
         sizeof(py::wrapper::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost3),
         0,
         Py_TPFLAGS_DEFAULT,

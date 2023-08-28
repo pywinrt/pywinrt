@@ -464,7 +464,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyType_Spec type_spec_BackgroundAudioTrack =
     {
-        "_winrt_windows_media_editing.BackgroundAudioTrack",
+        "winrt._winrt_windows_media_editing.BackgroundAudioTrack",
         sizeof(py::wrapper::Windows::Media::Editing::BackgroundAudioTrack),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -563,7 +563,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyType_Spec type_spec_EmbeddedAudioTrack =
     {
-        "_winrt_windows_media_editing.EmbeddedAudioTrack",
+        "winrt._winrt_windows_media_editing.EmbeddedAudioTrack",
         sizeof(py::wrapper::Windows::Media::Editing::EmbeddedAudioTrack),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1175,7 +1175,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyType_Spec type_spec_MediaClip =
     {
-        "_winrt_windows_media_editing.MediaClip",
+        "winrt._winrt_windows_media_editing.MediaClip",
         sizeof(py::wrapper::Windows::Media::Editing::MediaClip),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1718,7 +1718,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyType_Spec type_spec_MediaComposition =
     {
-        "_winrt_windows_media_editing.MediaComposition",
+        "winrt._winrt_windows_media_editing.MediaComposition",
         sizeof(py::wrapper::Windows::Media::Editing::MediaComposition),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2070,7 +2070,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyType_Spec type_spec_MediaOverlay =
     {
-        "_winrt_windows_media_editing.MediaOverlay",
+        "winrt._winrt_windows_media_editing.MediaOverlay",
         sizeof(py::wrapper::Windows::Media::Editing::MediaOverlay),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2246,7 +2246,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyType_Spec type_spec_MediaOverlayLayer =
     {
-        "_winrt_windows_media_editing.MediaOverlayLayer",
+        "winrt._winrt_windows_media_editing.MediaOverlayLayer",
         sizeof(py::wrapper::Windows::Media::Editing::MediaOverlayLayer),
         0,
         Py_TPFLAGS_DEFAULT,

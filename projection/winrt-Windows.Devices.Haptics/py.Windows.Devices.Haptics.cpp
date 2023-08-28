@@ -318,7 +318,7 @@ namespace py::cpp::Windows::Devices::Haptics
 
     static PyType_Spec type_spec_KnownSimpleHapticsControllerWaveforms =
     {
-        "_winrt_windows_devices_haptics.KnownSimpleHapticsControllerWaveforms",
+        "winrt._winrt_windows_devices_haptics.KnownSimpleHapticsControllerWaveforms",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -353,7 +353,7 @@ namespace py::cpp::Windows::Devices::Haptics
 
     static PyType_Spec type_spec_KnownSimpleHapticsControllerWaveforms_Meta =
     {
-        "_winrt_windows_devices_haptics.KnownSimpleHapticsControllerWaveforms_Meta",
+        "winrt._winrt_windows_devices_haptics.KnownSimpleHapticsControllerWaveforms_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -699,7 +699,7 @@ namespace py::cpp::Windows::Devices::Haptics
 
     static PyType_Spec type_spec_SimpleHapticsController =
     {
-        "_winrt_windows_devices_haptics.SimpleHapticsController",
+        "winrt._winrt_windows_devices_haptics.SimpleHapticsController",
         sizeof(py::wrapper::Windows::Devices::Haptics::SimpleHapticsController),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -808,7 +808,7 @@ namespace py::cpp::Windows::Devices::Haptics
 
     static PyType_Spec type_spec_SimpleHapticsControllerFeedback =
     {
-        "_winrt_windows_devices_haptics.SimpleHapticsControllerFeedback",
+        "winrt._winrt_windows_devices_haptics.SimpleHapticsControllerFeedback",
         sizeof(py::wrapper::Windows::Devices::Haptics::SimpleHapticsControllerFeedback),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1069,7 +1069,7 @@ namespace py::cpp::Windows::Devices::Haptics
 
     static PyType_Spec type_spec_VibrationDevice =
     {
-        "_winrt_windows_devices_haptics.VibrationDevice",
+        "winrt._winrt_windows_devices_haptics.VibrationDevice",
         sizeof(py::wrapper::Windows::Devices::Haptics::VibrationDevice),
         0,
         Py_TPFLAGS_DEFAULT,

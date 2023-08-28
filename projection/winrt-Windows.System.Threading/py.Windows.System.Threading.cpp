@@ -108,7 +108,7 @@ namespace py::cpp::Windows::System::Threading
 
     static PyType_Spec type_spec_ThreadPool =
     {
-        "_winrt_windows_system_threading.ThreadPool",
+        "winrt._winrt_windows_system_threading.ThreadPool",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -358,7 +358,7 @@ namespace py::cpp::Windows::System::Threading
 
     static PyType_Spec type_spec_ThreadPoolTimer =
     {
-        "_winrt_windows_system_threading.ThreadPoolTimer",
+        "winrt._winrt_windows_system_threading.ThreadPoolTimer",
         sizeof(py::wrapper::Windows::System::Threading::ThreadPoolTimer),
         0,
         Py_TPFLAGS_DEFAULT,

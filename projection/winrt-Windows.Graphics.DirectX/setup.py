@@ -6,7 +6,7 @@ from winrt_sdk import get_include_dirs
 setup(
     ext_modules=[
         Extension(
-            "winrt.windows.graphics.directx._winrt_windows_graphics_directx",
+            "winrt._winrt_windows_graphics_directx",
             sources=["py.Windows.Graphics.DirectX.cpp"],
             include_dirs=get_include_dirs(),
             extra_compile_args=["/std:c++20", "/permissive-"],

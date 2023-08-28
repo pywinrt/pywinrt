@@ -6,7 +6,7 @@ from winrt_sdk import get_include_dirs
 setup(
     ext_modules=[
         Extension(
-            "winrt.windows.security.authorization.appcapabilityaccess._winrt_windows_security_authorization_appcapabilityaccess",
+            "winrt._winrt_windows_security_authorization_appcapabilityaccess",
             sources=["py.Windows.Security.Authorization.AppCapabilityAccess.cpp"],
             include_dirs=get_include_dirs(),
             extra_compile_args=["/std:c++20", "/permissive-"],

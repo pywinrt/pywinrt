@@ -6,7 +6,7 @@ from winrt_sdk import get_include_dirs
 setup(
     ext_modules=[
         Extension(
-            "winrt.windows.phone.devices.power._winrt_windows_phone_devices_power",
+            "winrt._winrt_windows_phone_devices_power",
             sources=["py.Windows.Phone.Devices.Power.cpp"],
             include_dirs=get_include_dirs(),
             extra_compile_args=["/std:c++20", "/permissive-"],

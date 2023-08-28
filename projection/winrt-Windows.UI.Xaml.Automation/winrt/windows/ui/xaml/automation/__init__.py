@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_ui_xaml_automation
+from winrt import _winrt_windows_ui_xaml_automation
 
 __all__ = [
     "AnnotationType",

@@ -168,7 +168,7 @@ namespace py::cpp::Windows::Globalization::Fonts
 
     static PyType_Spec type_spec_LanguageFont =
     {
-        "_winrt_windows_globalization_fonts.LanguageFont",
+        "winrt._winrt_windows_globalization_fonts.LanguageFont",
         sizeof(py::wrapper::Windows::Globalization::Fonts::LanguageFont),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -481,7 +481,7 @@ namespace py::cpp::Windows::Globalization::Fonts
 
     static PyType_Spec type_spec_LanguageFontGroup =
     {
-        "_winrt_windows_globalization_fonts.LanguageFontGroup",
+        "winrt._winrt_windows_globalization_fonts.LanguageFontGroup",
         sizeof(py::wrapper::Windows::Globalization::Fonts::LanguageFontGroup),
         0,
         Py_TPFLAGS_DEFAULT,

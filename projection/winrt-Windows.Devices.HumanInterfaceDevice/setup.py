@@ -6,7 +6,7 @@ from winrt_sdk import get_include_dirs
 setup(
     ext_modules=[
         Extension(
-            "winrt.windows.devices.humaninterfacedevice._winrt_windows_devices_humaninterfacedevice",
+            "winrt._winrt_windows_devices_humaninterfacedevice",
             sources=["py.Windows.Devices.HumanInterfaceDevice.cpp"],
             include_dirs=get_include_dirs(),
             extra_compile_args=["/std:c++20", "/permissive-"],

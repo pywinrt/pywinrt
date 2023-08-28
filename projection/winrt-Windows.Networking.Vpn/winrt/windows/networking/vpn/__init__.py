@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_networking_vpn
+from winrt import _winrt_windows_networking_vpn
 
 __all__ = [
     "VpnAppIdType",

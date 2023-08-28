@@ -324,7 +324,7 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
 
     static PyType_Spec type_spec_DevicePortalConnection =
     {
-        "_winrt_windows_system_diagnostics_deviceportal.DevicePortalConnection",
+        "winrt._winrt_windows_system_diagnostics_deviceportal.DevicePortalConnection",
         sizeof(py::wrapper::Windows::System::Diagnostics::DevicePortal::DevicePortalConnection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -413,7 +413,7 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
 
     static PyType_Spec type_spec_DevicePortalConnectionClosedEventArgs =
     {
-        "_winrt_windows_system_diagnostics_deviceportal.DevicePortalConnectionClosedEventArgs",
+        "winrt._winrt_windows_system_diagnostics_deviceportal.DevicePortalConnectionClosedEventArgs",
         sizeof(py::wrapper::Windows::System::Diagnostics::DevicePortal::DevicePortalConnectionClosedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -592,7 +592,7 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
 
     static PyType_Spec type_spec_DevicePortalConnectionRequestReceivedEventArgs =
     {
-        "_winrt_windows_system_diagnostics_deviceportal.DevicePortalConnectionRequestReceivedEventArgs",
+        "winrt._winrt_windows_system_diagnostics_deviceportal.DevicePortalConnectionRequestReceivedEventArgs",
         sizeof(py::wrapper::Windows::System::Diagnostics::DevicePortal::DevicePortalConnectionRequestReceivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,

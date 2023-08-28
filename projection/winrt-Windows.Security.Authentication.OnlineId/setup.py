@@ -6,7 +6,7 @@ from winrt_sdk import get_include_dirs
 setup(
     ext_modules=[
         Extension(
-            "winrt.windows.security.authentication.onlineid._winrt_windows_security_authentication_onlineid",
+            "winrt._winrt_windows_security_authentication_onlineid",
             sources=["py.Windows.Security.Authentication.OnlineId.cpp"],
             include_dirs=get_include_dirs(),
             extra_compile_args=["/std:c++20", "/permissive-"],

@@ -100,7 +100,7 @@ namespace py::cpp::Windows::Management::Core
 
     static PyType_Spec type_spec_ApplicationDataManager =
     {
-        "_winrt_windows_management_core.ApplicationDataManager",
+        "winrt._winrt_windows_management_core.ApplicationDataManager",
         sizeof(py::wrapper::Windows::Management::Core::ApplicationDataManager),
         0,
         Py_TPFLAGS_DEFAULT,

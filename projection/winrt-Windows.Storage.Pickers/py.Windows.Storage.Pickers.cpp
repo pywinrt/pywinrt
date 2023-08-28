@@ -616,7 +616,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static PyType_Spec type_spec_FileExtensionVector =
     {
-        "_winrt_windows_storage_pickers.FileExtensionVector",
+        "winrt._winrt_windows_storage_pickers.FileExtensionVector",
         sizeof(py::wrapper::Windows::Storage::Pickers::FileExtensionVector),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1163,7 +1163,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static PyType_Spec type_spec_FileOpenPicker =
     {
-        "_winrt_windows_storage_pickers.FileOpenPicker",
+        "winrt._winrt_windows_storage_pickers.FileOpenPicker",
         sizeof(py::wrapper::Windows::Storage::Pickers::FileOpenPicker),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1570,7 +1570,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static PyType_Spec type_spec_FilePickerFileTypesOrderedMap =
     {
-        "_winrt_windows_storage_pickers.FilePickerFileTypesOrderedMap",
+        "winrt._winrt_windows_storage_pickers.FilePickerFileTypesOrderedMap",
         sizeof(py::wrapper::Windows::Storage::Pickers::FilePickerFileTypesOrderedMap),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1912,7 +1912,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static PyType_Spec type_spec_FilePickerSelectedFilesArray =
     {
-        "_winrt_windows_storage_pickers.FilePickerSelectedFilesArray",
+        "winrt._winrt_windows_storage_pickers.FilePickerSelectedFilesArray",
         sizeof(py::wrapper::Windows::Storage::Pickers::FilePickerSelectedFilesArray),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2492,7 +2492,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static PyType_Spec type_spec_FileSavePicker =
     {
-        "_winrt_windows_storage_pickers.FileSavePicker",
+        "winrt._winrt_windows_storage_pickers.FileSavePicker",
         sizeof(py::wrapper::Windows::Storage::Pickers::FileSavePicker),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2928,7 +2928,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static PyType_Spec type_spec_FolderPicker =
     {
-        "_winrt_windows_storage_pickers.FolderPicker",
+        "winrt._winrt_windows_storage_pickers.FolderPicker",
         sizeof(py::wrapper::Windows::Storage::Pickers::FolderPicker),
         0,
         Py_TPFLAGS_DEFAULT,

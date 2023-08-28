@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_devices_sensors
+from winrt import _winrt_windows_devices_sensors
 
 __all__ = [
     "AccelerometerReadingType",

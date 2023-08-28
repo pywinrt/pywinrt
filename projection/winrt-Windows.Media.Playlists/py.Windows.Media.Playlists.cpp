@@ -229,7 +229,7 @@ namespace py::cpp::Windows::Media::Playlists
 
     static PyType_Spec type_spec_Playlist =
     {
-        "_winrt_windows_media_playlists.Playlist",
+        "winrt._winrt_windows_media_playlists.Playlist",
         sizeof(py::wrapper::Windows::Media::Playlists::Playlist),
         0,
         Py_TPFLAGS_DEFAULT,

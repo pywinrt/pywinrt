@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_web
+from winrt import _winrt_windows_web
 
 __all__ = [
     "WebErrorStatus",

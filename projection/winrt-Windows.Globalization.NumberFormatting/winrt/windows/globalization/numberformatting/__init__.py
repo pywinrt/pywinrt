@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_globalization_numberformatting
+from winrt import _winrt_windows_globalization_numberformatting
 
 __all__ = [
     "CurrencyFormatterMode",

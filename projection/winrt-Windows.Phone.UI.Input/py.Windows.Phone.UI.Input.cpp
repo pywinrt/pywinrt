@@ -116,7 +116,7 @@ namespace py::cpp::Windows::Phone::UI::Input
 
     static PyType_Spec type_spec_BackPressedEventArgs =
     {
-        "_winrt_windows_phone_ui_input.BackPressedEventArgs",
+        "winrt._winrt_windows_phone_ui_input.BackPressedEventArgs",
         sizeof(py::wrapper::Windows::Phone::UI::Input::BackPressedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -185,7 +185,7 @@ namespace py::cpp::Windows::Phone::UI::Input
 
     static PyType_Spec type_spec_CameraEventArgs =
     {
-        "_winrt_windows_phone_ui_input.CameraEventArgs",
+        "winrt._winrt_windows_phone_ui_input.CameraEventArgs",
         sizeof(py::wrapper::Windows::Phone::UI::Input::CameraEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -399,7 +399,7 @@ namespace py::cpp::Windows::Phone::UI::Input
 
     static PyType_Spec type_spec_HardwareButtons =
     {
-        "_winrt_windows_phone_ui_input.HardwareButtons",
+        "winrt._winrt_windows_phone_ui_input.HardwareButtons",
         0,
         0,
         Py_TPFLAGS_DEFAULT,

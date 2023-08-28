@@ -6,7 +6,7 @@ from winrt_sdk import get_include_dirs
 setup(
     ext_modules=[
         Extension(
-            "winrt.windows.devices.bluetooth.advertisement._winrt_windows_devices_bluetooth_advertisement",
+            "winrt._winrt_windows_devices_bluetooth_advertisement",
             sources=["py.Windows.Devices.Bluetooth.Advertisement.cpp"],
             include_dirs=get_include_dirs(),
             extra_compile_args=["/std:c++20", "/permissive-"],

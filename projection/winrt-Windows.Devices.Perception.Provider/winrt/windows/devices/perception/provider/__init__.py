@@ -4,7 +4,7 @@ import typing
 import uuid as _uuid
 
 import winrt.system
-from . import _winrt_windows_devices_perception_provider
+from winrt import _winrt_windows_devices_perception_provider
 
 __all__ = [
     "KnownPerceptionFrameKind",

@@ -341,7 +341,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyType_Spec type_spec_AccessListEntryView =
     {
-        "_winrt_windows_storage_accesscache.AccessListEntryView",
+        "winrt._winrt_windows_storage_accesscache.AccessListEntryView",
         sizeof(py::wrapper::Windows::Storage::AccessCache::AccessListEntryView),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -430,7 +430,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyType_Spec type_spec_ItemRemovedEventArgs =
     {
-        "_winrt_windows_storage_accesscache.ItemRemovedEventArgs",
+        "winrt._winrt_windows_storage_accesscache.ItemRemovedEventArgs",
         sizeof(py::wrapper::Windows::Storage::AccessCache::ItemRemovedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -566,7 +566,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyType_Spec type_spec_StorageApplicationPermissions =
     {
-        "_winrt_windows_storage_accesscache.StorageApplicationPermissions",
+        "winrt._winrt_windows_storage_accesscache.StorageApplicationPermissions",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -588,7 +588,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyType_Spec type_spec_StorageApplicationPermissions_Meta =
     {
-        "_winrt_windows_storage_accesscache.StorageApplicationPermissions_Meta",
+        "winrt._winrt_windows_storage_accesscache.StorageApplicationPermissions_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1094,7 +1094,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyType_Spec type_spec_StorageItemAccessList =
     {
-        "_winrt_windows_storage_accesscache.StorageItemAccessList",
+        "winrt._winrt_windows_storage_accesscache.StorageItemAccessList",
         sizeof(py::wrapper::Windows::Storage::AccessCache::StorageItemAccessList),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1691,7 +1691,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyType_Spec type_spec_StorageItemMostRecentlyUsedList =
     {
-        "_winrt_windows_storage_accesscache.StorageItemMostRecentlyUsedList",
+        "winrt._winrt_windows_storage_accesscache.StorageItemMostRecentlyUsedList",
         sizeof(py::wrapper::Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2197,7 +2197,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyType_Spec type_spec_IStorageItemAccessList =
     {
-        "_winrt_windows_storage_accesscache.IStorageItemAccessList",
+        "winrt._winrt_windows_storage_accesscache.IStorageItemAccessList",
         sizeof(py::wrapper::Windows::Storage::AccessCache::IStorageItemAccessList),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2358,7 +2358,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyType_Spec type_spec_AccessListEntry =
     {
-        "_winrt_windows_storage_accesscache.AccessListEntry",
+        "winrt._winrt_windows_storage_accesscache.AccessListEntry",
         sizeof(py::wrapper::Windows::Storage::AccessCache::AccessListEntry),
         0,
         Py_TPFLAGS_DEFAULT,

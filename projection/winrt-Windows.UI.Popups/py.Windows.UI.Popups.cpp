@@ -398,7 +398,7 @@ namespace py::cpp::Windows::UI::Popups
 
     static PyType_Spec type_spec_MessageDialog =
     {
-        "_winrt_windows_ui_popups.MessageDialog",
+        "winrt._winrt_windows_ui_popups.MessageDialog",
         sizeof(py::wrapper::Windows::UI::Popups::MessageDialog),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -594,7 +594,7 @@ namespace py::cpp::Windows::UI::Popups
 
     static PyType_Spec type_spec_PopupMenu =
     {
-        "_winrt_windows_ui_popups.PopupMenu",
+        "winrt._winrt_windows_ui_popups.PopupMenu",
         sizeof(py::wrapper::Windows::UI::Popups::PopupMenu),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -877,7 +877,7 @@ namespace py::cpp::Windows::UI::Popups
 
     static PyType_Spec type_spec_UICommand =
     {
-        "_winrt_windows_ui_popups.UICommand",
+        "winrt._winrt_windows_ui_popups.UICommand",
         sizeof(py::wrapper::Windows::UI::Popups::UICommand),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1112,7 +1112,7 @@ namespace py::cpp::Windows::UI::Popups
 
     static PyType_Spec type_spec_UICommandSeparator =
     {
-        "_winrt_windows_ui_popups.UICommandSeparator",
+        "winrt._winrt_windows_ui_popups.UICommandSeparator",
         sizeof(py::wrapper::Windows::UI::Popups::UICommandSeparator),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1325,7 +1325,7 @@ namespace py::cpp::Windows::UI::Popups
 
     static PyType_Spec type_spec_IUICommand =
     {
-        "_winrt_windows_ui_popups.IUICommand",
+        "winrt._winrt_windows_ui_popups.IUICommand",
         sizeof(py::wrapper::Windows::UI::Popups::IUICommand),
         0,
         Py_TPFLAGS_DEFAULT,

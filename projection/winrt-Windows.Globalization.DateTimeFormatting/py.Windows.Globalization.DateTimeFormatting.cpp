@@ -686,7 +686,7 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
 
     static PyType_Spec type_spec_DateTimeFormatter =
     {
-        "_winrt_windows_globalization_datetimeformatting.DateTimeFormatter",
+        "winrt._winrt_windows_globalization_datetimeformatting.DateTimeFormatter",
         sizeof(py::wrapper::Windows::Globalization::DateTimeFormatting::DateTimeFormatter),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -710,7 +710,7 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
 
     static PyType_Spec type_spec_DateTimeFormatter_Meta =
     {
-        "_winrt_windows_globalization_datetimeformatting.DateTimeFormatter_Meta",
+        "winrt._winrt_windows_globalization_datetimeformatting.DateTimeFormatter_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,

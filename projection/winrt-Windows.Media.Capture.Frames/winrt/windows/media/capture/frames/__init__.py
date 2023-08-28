@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_media_capture_frames
+from winrt import _winrt_windows_media_capture_frames
 
 __all__ = [
     "MediaFrameReaderAcquisitionMode",

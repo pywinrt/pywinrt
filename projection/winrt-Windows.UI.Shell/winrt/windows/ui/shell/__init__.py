@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_ui_shell
+from winrt import _winrt_windows_ui_shell
 
 __all__ = [
     "SecurityAppKind",

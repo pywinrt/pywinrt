@@ -148,7 +148,7 @@ namespace py::cpp::Windows::Devices::Spi
 
     static PyType_Spec type_spec_SpiBusInfo =
     {
-        "_winrt_windows_devices_spi.SpiBusInfo",
+        "winrt._winrt_windows_devices_spi.SpiBusInfo",
         sizeof(py::wrapper::Windows::Devices::Spi::SpiBusInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -481,7 +481,7 @@ namespace py::cpp::Windows::Devices::Spi
 
     static PyType_Spec type_spec_SpiConnectionSettings =
     {
-        "_winrt_windows_devices_spi.SpiConnectionSettings",
+        "winrt._winrt_windows_devices_spi.SpiConnectionSettings",
         sizeof(py::wrapper::Windows::Devices::Spi::SpiConnectionSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -644,7 +644,7 @@ namespace py::cpp::Windows::Devices::Spi
 
     static PyType_Spec type_spec_SpiController =
     {
-        "_winrt_windows_devices_spi.SpiController",
+        "winrt._winrt_windows_devices_spi.SpiController",
         sizeof(py::wrapper::Windows::Devices::Spi::SpiController),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1054,7 +1054,7 @@ namespace py::cpp::Windows::Devices::Spi
 
     static PyType_Spec type_spec_SpiDevice =
     {
-        "_winrt_windows_devices_spi.SpiDevice",
+        "winrt._winrt_windows_devices_spi.SpiDevice",
         sizeof(py::wrapper::Windows::Devices::Spi::SpiDevice),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1238,7 +1238,7 @@ namespace py::cpp::Windows::Devices::Spi
 
     static PyType_Spec type_spec_ISpiDeviceStatics =
     {
-        "_winrt_windows_devices_spi.ISpiDeviceStatics",
+        "winrt._winrt_windows_devices_spi.ISpiDeviceStatics",
         sizeof(py::wrapper::Windows::Devices::Spi::ISpiDeviceStatics),
         0,
         Py_TPFLAGS_DEFAULT,

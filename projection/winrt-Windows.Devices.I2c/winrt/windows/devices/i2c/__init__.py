@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_devices_i2c
+from winrt import _winrt_windows_devices_i2c
 
 __all__ = [
     "I2cBusSpeed",

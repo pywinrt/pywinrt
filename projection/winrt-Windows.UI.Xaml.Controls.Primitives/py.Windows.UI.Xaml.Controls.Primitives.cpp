@@ -88,7 +88,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_AppBarButtonTemplateSettings =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.AppBarButtonTemplateSettings",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.AppBarButtonTemplateSettings",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::AppBarButtonTemplateSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -357,7 +357,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_AppBarTemplateSettings =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.AppBarTemplateSettings",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.AppBarTemplateSettings",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::AppBarTemplateSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -446,7 +446,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_AppBarToggleButtonTemplateSettings =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.AppBarToggleButtonTemplateSettings",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.AppBarToggleButtonTemplateSettings",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::AppBarToggleButtonTemplateSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -839,7 +839,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_ButtonBase =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.ButtonBase",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.ButtonBase",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ButtonBase),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -864,7 +864,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_ButtonBase_Meta =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.ButtonBase_Meta",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.ButtonBase_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -955,7 +955,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_CalendarPanel =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.CalendarPanel",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.CalendarPanel",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CalendarPanel),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1324,7 +1324,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_CalendarViewTemplateSettings =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.CalendarViewTemplateSettings",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.CalendarViewTemplateSettings",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CalendarViewTemplateSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2359,7 +2359,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_CarouselPanel =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.CarouselPanel",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.CarouselPanel",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CarouselPanel),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2517,7 +2517,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_ColorPickerSlider =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.ColorPickerSlider",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.ColorPickerSlider",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ColorPickerSlider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2538,7 +2538,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_ColorPickerSlider_Meta =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.ColorPickerSlider_Meta",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.ColorPickerSlider_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -3344,7 +3344,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_ColorSpectrum =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.ColorSpectrum",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.ColorSpectrum",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3374,7 +3374,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_ColorSpectrum_Meta =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.ColorSpectrum_Meta",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.ColorSpectrum_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -3543,7 +3543,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_ComboBoxTemplateSettings =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.ComboBoxTemplateSettings",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.ComboBoxTemplateSettings",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ComboBoxTemplateSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3654,7 +3654,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_CommandBarFlyoutCommandBar =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.CommandBarFlyoutCommandBar",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.CommandBarFlyoutCommandBar",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBar),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4123,7 +4123,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_CommandBarFlyoutCommandBarTemplateSettings =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.CommandBarFlyoutCommandBarTemplateSettings",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.CommandBarFlyoutCommandBarTemplateSettings",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBarTemplateSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4432,7 +4432,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_CommandBarTemplateSettings =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.CommandBarTemplateSettings",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.CommandBarTemplateSettings",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CommandBarTemplateSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4587,7 +4587,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_DragCompletedEventArgs =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.DragCompletedEventArgs",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.DragCompletedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::DragCompletedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4721,7 +4721,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_DragDeltaEventArgs =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.DragDeltaEventArgs",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.DragDeltaEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::DragDeltaEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4855,7 +4855,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_DragStartedEventArgs =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.DragStartedEventArgs",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.DragStartedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::DragStartedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6192,7 +6192,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_FlyoutBase =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.FlyoutBase",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.FlyoutBase",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::FlyoutBase),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6225,7 +6225,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_FlyoutBase_Meta =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.FlyoutBase_Meta",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.FlyoutBase_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -6342,7 +6342,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_FlyoutBaseClosingEventArgs =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.FlyoutBaseClosingEventArgs",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.FlyoutBaseClosingEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::FlyoutBaseClosingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6625,7 +6625,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_FlyoutShowOptions =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.FlyoutShowOptions",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.FlyoutShowOptions",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::FlyoutShowOptions),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6727,7 +6727,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_GeneratorPositionHelper =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.GeneratorPositionHelper",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.GeneratorPositionHelper",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GeneratorPositionHelper),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8292,7 +8292,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_GridViewItemPresenter =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.GridViewItemPresenter",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.GridViewItemPresenter",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8334,7 +8334,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_GridViewItemPresenter_Meta =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.GridViewItemPresenter_Meta",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.GridViewItemPresenter_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -8423,7 +8423,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_GridViewItemTemplateSettings =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.GridViewItemTemplateSettings",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.GridViewItemTemplateSettings",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GridViewItemTemplateSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8592,7 +8592,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_ItemsChangedEventArgs =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.ItemsChangedEventArgs",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.ItemsChangedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ItemsChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8887,7 +8887,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_JumpListItemBackgroundConverter =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.JumpListItemBackgroundConverter",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.JumpListItemBackgroundConverter",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::JumpListItemBackgroundConverter),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8909,7 +8909,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_JumpListItemBackgroundConverter_Meta =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.JumpListItemBackgroundConverter_Meta",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.JumpListItemBackgroundConverter_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -9204,7 +9204,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_JumpListItemForegroundConverter =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.JumpListItemForegroundConverter",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.JumpListItemForegroundConverter",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::JumpListItemForegroundConverter),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9226,7 +9226,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_JumpListItemForegroundConverter_Meta =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.JumpListItemForegroundConverter_Meta",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.JumpListItemForegroundConverter_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -9391,7 +9391,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_LayoutInformation =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.LayoutInformation",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.LayoutInformation",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::LayoutInformation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13435,7 +13435,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_ListViewItemPresenter =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.ListViewItemPresenter",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.ListViewItemPresenter",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13514,7 +13514,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_ListViewItemPresenter_Meta =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.ListViewItemPresenter_Meta",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.ListViewItemPresenter_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -13603,7 +13603,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_ListViewItemTemplateSettings =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.ListViewItemTemplateSettings",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.ListViewItemTemplateSettings",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemTemplateSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14186,7 +14186,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_LoopingSelector =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.LoopingSelector",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.LoopingSelector",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::LoopingSelector),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14213,7 +14213,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_LoopingSelector_Meta =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.LoopingSelector_Meta",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.LoopingSelector_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -14282,7 +14282,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_LoopingSelectorItem =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.LoopingSelectorItem",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.LoopingSelectorItem",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::LoopingSelectorItem),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14560,7 +14560,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_LoopingSelectorPanel =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.LoopingSelectorPanel",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.LoopingSelectorPanel",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::LoopingSelectorPanel),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14649,7 +14649,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_MenuFlyoutItemTemplateSettings =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.MenuFlyoutItemTemplateSettings",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.MenuFlyoutItemTemplateSettings",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::MenuFlyoutItemTemplateSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14738,7 +14738,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_MenuFlyoutPresenterTemplateSettings =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.MenuFlyoutPresenterTemplateSettings",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.MenuFlyoutPresenterTemplateSettings",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::MenuFlyoutPresenterTemplateSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14896,7 +14896,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_NavigationViewItemPresenter =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.NavigationViewItemPresenter",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.NavigationViewItemPresenter",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::NavigationViewItemPresenter),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14917,7 +14917,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_NavigationViewItemPresenter_Meta =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.NavigationViewItemPresenter_Meta",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.NavigationViewItemPresenter_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -15976,7 +15976,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_OrientedVirtualizingPanel =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.OrientedVirtualizingPanel",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.OrientedVirtualizingPanel",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -16191,7 +16191,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_PickerFlyoutBase =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.PickerFlyoutBase",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.PickerFlyoutBase",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::PickerFlyoutBase),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -16212,7 +16212,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_PickerFlyoutBase_Meta =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.PickerFlyoutBase_Meta",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.PickerFlyoutBase_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -16303,7 +16303,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_PivotHeaderItem =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.PivotHeaderItem",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.PivotHeaderItem",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::PivotHeaderItem),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -16394,7 +16394,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_PivotHeaderPanel =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.PivotHeaderPanel",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.PivotHeaderPanel",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::PivotHeaderPanel),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -16694,7 +16694,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_PivotPanel =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.PivotPanel",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.PivotPanel",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::PivotPanel),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -17630,7 +17630,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_Popup =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.Popup",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.Popup",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Popup),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -17660,7 +17660,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_Popup_Meta =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.Popup_Meta",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.Popup_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -17869,7 +17869,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_ProgressBarTemplateSettings =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.ProgressBarTemplateSettings",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.ProgressBarTemplateSettings",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ProgressBarTemplateSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -17998,7 +17998,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_ProgressRingTemplateSettings =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.ProgressRingTemplateSettings",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.ProgressRingTemplateSettings",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ProgressRingTemplateSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -18549,7 +18549,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_RangeBase =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.RangeBase",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.RangeBase",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::RangeBase),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -18574,7 +18574,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_RangeBase_Meta =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.RangeBase_Meta",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.RangeBase_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -18683,7 +18683,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_RangeBaseValueChangedEventArgs =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.RangeBaseValueChangedEventArgs",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.RangeBaseValueChangedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::RangeBaseValueChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -18908,7 +18908,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_RepeatButton =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.RepeatButton",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.RepeatButton",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::RepeatButton),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -18930,7 +18930,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_RepeatButton_Meta =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.RepeatButton_Meta",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.RepeatButton_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -19267,7 +19267,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_ScrollBar =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.ScrollBar",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.ScrollBar",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ScrollBar),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -19290,7 +19290,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_ScrollBar_Meta =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.ScrollBar_Meta",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.ScrollBar_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -19421,7 +19421,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_ScrollEventArgs =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.ScrollEventArgs",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.ScrollEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ScrollEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -19902,7 +19902,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_Selector =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.Selector",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.Selector",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Selector),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -19927,7 +19927,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_Selector_Meta =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.Selector_Meta",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.Selector_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -20063,7 +20063,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_SelectorItem =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.SelectorItem",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.SelectorItem",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::SelectorItem),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -20084,7 +20084,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_SelectorItem_Meta =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.SelectorItem_Meta",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.SelectorItem_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -20273,7 +20273,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_SettingsFlyoutTemplateSettings =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.SettingsFlyoutTemplateSettings",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.SettingsFlyoutTemplateSettings",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::SettingsFlyoutTemplateSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -20462,7 +20462,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_SplitViewTemplateSettings =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.SplitViewTemplateSettings",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.SplitViewTemplateSettings",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::SplitViewTemplateSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -20758,7 +20758,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_Thumb =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.Thumb",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.Thumb",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Thumb),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -20779,7 +20779,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_Thumb_Meta =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.Thumb_Meta",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.Thumb_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -20937,7 +20937,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_TickBar =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.TickBar",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.TickBar",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::TickBar),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -20958,7 +20958,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_TickBar_Meta =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.TickBar_Meta",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.TickBar_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -21349,7 +21349,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_ToggleButton =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.ToggleButton",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.ToggleButton",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ToggleButton),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -21371,7 +21371,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_ToggleButton_Meta =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.ToggleButton_Meta",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.ToggleButton_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -21600,7 +21600,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_ToggleSwitchTemplateSettings =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.ToggleSwitchTemplateSettings",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.ToggleSwitchTemplateSettings",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ToggleSwitchTemplateSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -21709,7 +21709,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_ToolTipTemplateSettings =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.ToolTipTemplateSettings",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.ToolTipTemplateSettings",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ToolTipTemplateSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -21987,7 +21987,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_IScrollSnapPointsInfo =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.IScrollSnapPointsInfo",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.IScrollSnapPointsInfo",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -22148,7 +22148,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyType_Spec type_spec_GeneratorPosition =
     {
-        "_winrt_windows_ui_xaml_controls_primitives.GeneratorPosition",
+        "winrt._winrt_windows_ui_xaml_controls_primitives.GeneratorPosition",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GeneratorPosition),
         0,
         Py_TPFLAGS_DEFAULT,

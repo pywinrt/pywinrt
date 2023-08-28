@@ -340,7 +340,7 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
 
     static PyType_Spec type_spec_GameService =
     {
-        "_winrt_windows_phone_system_userprofile_gameservices_core.GameService",
+        "winrt._winrt_windows_phone_system_userprofile_gameservices_core.GameService",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -361,7 +361,7 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
 
     static PyType_Spec type_spec_GameService_Meta =
     {
-        "_winrt_windows_phone_system_userprofile_gameservices_core.GameService_Meta",
+        "winrt._winrt_windows_phone_system_userprofile_gameservices_core.GameService_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -462,7 +462,7 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
 
     static PyType_Spec type_spec_GameServicePropertyCollection =
     {
-        "_winrt_windows_phone_system_userprofile_gameservices_core.GameServicePropertyCollection",
+        "winrt._winrt_windows_phone_system_userprofile_gameservices_core.GameServicePropertyCollection",
         sizeof(py::wrapper::Windows::Phone::System::UserProfile::GameServices::Core::GameServicePropertyCollection),
         0,
         Py_TPFLAGS_DEFAULT,

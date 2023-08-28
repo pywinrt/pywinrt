@@ -283,7 +283,7 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyType_Spec type_spec_GameList =
     {
-        "_winrt_windows_gaming_preview_gamesenumeration.GameList",
+        "winrt._winrt_windows_gaming_preview_gamesenumeration.GameList",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -659,7 +659,7 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyType_Spec type_spec_GameListEntry =
     {
-        "_winrt_windows_gaming_preview_gamesenumeration.GameListEntry",
+        "winrt._winrt_windows_gaming_preview_gamesenumeration.GameListEntry",
         sizeof(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameListEntry),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1162,7 +1162,7 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyType_Spec type_spec_GameModeConfiguration =
     {
-        "_winrt_windows_gaming_preview_gamesenumeration.GameModeConfiguration",
+        "winrt._winrt_windows_gaming_preview_gamesenumeration.GameModeConfiguration",
         sizeof(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameModeConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1311,7 +1311,7 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyType_Spec type_spec_GameModeUserConfiguration =
     {
-        "_winrt_windows_gaming_preview_gamesenumeration.GameModeUserConfiguration",
+        "winrt._winrt_windows_gaming_preview_gamesenumeration.GameModeUserConfiguration",
         sizeof(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameModeUserConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1502,7 +1502,7 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyType_Spec type_spec_IGameListEntry =
     {
-        "_winrt_windows_gaming_preview_gamesenumeration.IGameListEntry",
+        "winrt._winrt_windows_gaming_preview_gamesenumeration.IGameListEntry",
         sizeof(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry),
         0,
         Py_TPFLAGS_DEFAULT,

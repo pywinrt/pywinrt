@@ -179,7 +179,7 @@ static void custom_set(winrt::hresult& instance, int32_t value)
         }
 
         w.write("import winrt.system\n");
-        w.write("from . import %\n", bind<write_ns_module_name>(ns));
+        w.write("from winrt import %\n", bind<write_ns_module_name>(ns));
 
         w.write("\n");
         w.write("__all__ = [\n");
@@ -245,14 +245,19 @@ static void custom_set(winrt::hresult& instance, int32_t value)
         auto enum_types = filter_types(settings.filter, members.enums);
         if (!enum_types.empty())
         {
-            w.write("from . import %\n", bind_list<write_type_name>(", ", enum_types));
+            w.write(
+                "from winrt.% import %\n",
+                bind<write_lower_case>(ns),
+                bind_list<write_type_name>(", ", enum_types));
         }
 
         auto delegate_types = filter_types(settings.filter, members.delegates);
         if (!delegate_types.empty())
         {
             w.write(
-                "from . import %\n", bind_list<write_type_name>(", ", delegate_types));
+                "from winrt.% import %\n",
+                bind<write_lower_case>(ns),
+                bind_list<write_type_name>(", ", delegate_types));
         }
 
         if (!enum_types.empty() || !delegate_types.empty())

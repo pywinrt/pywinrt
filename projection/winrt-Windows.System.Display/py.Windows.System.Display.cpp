@@ -152,7 +152,7 @@ namespace py::cpp::Windows::System::Display
 
     static PyType_Spec type_spec_DisplayRequest =
     {
-        "_winrt_windows_system_display.DisplayRequest",
+        "winrt._winrt_windows_system_display.DisplayRequest",
         sizeof(py::wrapper::Windows::System::Display::DisplayRequest),
         0,
         Py_TPFLAGS_DEFAULT,

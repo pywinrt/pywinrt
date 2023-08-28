@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_system_preview
+from winrt import _winrt_windows_system_preview
 
 __all__ = [
     "HingeState",

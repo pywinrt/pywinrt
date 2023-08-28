@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_applicationmodel_appointments
+from winrt import _winrt_windows_applicationmodel_appointments
 
 __all__ = [
     "AppointmentBusyStatus",

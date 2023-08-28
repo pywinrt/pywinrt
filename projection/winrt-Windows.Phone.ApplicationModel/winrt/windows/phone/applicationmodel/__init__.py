@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_phone_applicationmodel
+from winrt import _winrt_windows_phone_applicationmodel
 
 __all__ = [
     "ApplicationProfileModes",

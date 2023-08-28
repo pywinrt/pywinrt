@@ -6,7 +6,7 @@ from winrt_sdk import get_include_dirs
 setup(
     ext_modules=[
         Extension(
-            "_winrt.testcomponent._winrt_testcomponent",
+            "winrt._winrt_testcomponent",
             sources=["py.TestComponent.cpp"],
             include_dirs=get_include_dirs(),
             extra_compile_args=["/std:c++20", "/permissive-"],

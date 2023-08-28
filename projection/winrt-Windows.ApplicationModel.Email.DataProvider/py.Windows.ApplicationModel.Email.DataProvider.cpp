@@ -774,7 +774,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyType_Spec type_spec_EmailDataProviderConnection =
     {
-        "_winrt_windows_applicationmodel_email_dataprovider.EmailDataProviderConnection",
+        "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailDataProviderConnection",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -863,7 +863,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyType_Spec type_spec_EmailDataProviderTriggerDetails =
     {
-        "_winrt_windows_applicationmodel_email_dataprovider.EmailDataProviderTriggerDetails",
+        "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailDataProviderTriggerDetails",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1056,7 +1056,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyType_Spec type_spec_EmailMailboxCreateFolderRequest =
     {
-        "_winrt_windows_applicationmodel_email_dataprovider.EmailMailboxCreateFolderRequest",
+        "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxCreateFolderRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxCreateFolderRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1175,7 +1175,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyType_Spec type_spec_EmailMailboxCreateFolderRequestEventArgs =
     {
-        "_winrt_windows_applicationmodel_email_dataprovider.EmailMailboxCreateFolderRequestEventArgs",
+        "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxCreateFolderRequestEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxCreateFolderRequestEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1346,7 +1346,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyType_Spec type_spec_EmailMailboxDeleteFolderRequest =
     {
-        "_winrt_windows_applicationmodel_email_dataprovider.EmailMailboxDeleteFolderRequest",
+        "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxDeleteFolderRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDeleteFolderRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1465,7 +1465,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyType_Spec type_spec_EmailMailboxDeleteFolderRequestEventArgs =
     {
-        "_winrt_windows_applicationmodel_email_dataprovider.EmailMailboxDeleteFolderRequestEventArgs",
+        "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxDeleteFolderRequestEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDeleteFolderRequestEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1654,7 +1654,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyType_Spec type_spec_EmailMailboxDownloadAttachmentRequest =
     {
-        "_winrt_windows_applicationmodel_email_dataprovider.EmailMailboxDownloadAttachmentRequest",
+        "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxDownloadAttachmentRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadAttachmentRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1773,7 +1773,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyType_Spec type_spec_EmailMailboxDownloadAttachmentRequestEventArgs =
     {
-        "_winrt_windows_applicationmodel_email_dataprovider.EmailMailboxDownloadAttachmentRequestEventArgs",
+        "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxDownloadAttachmentRequestEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadAttachmentRequestEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1942,7 +1942,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyType_Spec type_spec_EmailMailboxDownloadMessageRequest =
     {
-        "_winrt_windows_applicationmodel_email_dataprovider.EmailMailboxDownloadMessageRequest",
+        "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxDownloadMessageRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadMessageRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2061,7 +2061,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyType_Spec type_spec_EmailMailboxDownloadMessageRequestEventArgs =
     {
-        "_winrt_windows_applicationmodel_email_dataprovider.EmailMailboxDownloadMessageRequestEventArgs",
+        "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxDownloadMessageRequestEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadMessageRequestEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2232,7 +2232,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyType_Spec type_spec_EmailMailboxEmptyFolderRequest =
     {
-        "_winrt_windows_applicationmodel_email_dataprovider.EmailMailboxEmptyFolderRequest",
+        "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxEmptyFolderRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxEmptyFolderRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2351,7 +2351,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyType_Spec type_spec_EmailMailboxEmptyFolderRequestEventArgs =
     {
-        "_winrt_windows_applicationmodel_email_dataprovider.EmailMailboxEmptyFolderRequestEventArgs",
+        "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxEmptyFolderRequestEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxEmptyFolderRequestEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2620,7 +2620,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyType_Spec type_spec_EmailMailboxForwardMeetingRequest =
     {
-        "_winrt_windows_applicationmodel_email_dataprovider.EmailMailboxForwardMeetingRequest",
+        "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxForwardMeetingRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxForwardMeetingRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2739,7 +2739,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyType_Spec type_spec_EmailMailboxForwardMeetingRequestEventArgs =
     {
-        "_winrt_windows_applicationmodel_email_dataprovider.EmailMailboxForwardMeetingRequestEventArgs",
+        "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxForwardMeetingRequestEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxForwardMeetingRequestEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2910,7 +2910,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyType_Spec type_spec_EmailMailboxGetAutoReplySettingsRequest =
     {
-        "_winrt_windows_applicationmodel_email_dataprovider.EmailMailboxGetAutoReplySettingsRequest",
+        "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxGetAutoReplySettingsRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxGetAutoReplySettingsRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3029,7 +3029,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyType_Spec type_spec_EmailMailboxGetAutoReplySettingsRequestEventArgs =
     {
-        "_winrt_windows_applicationmodel_email_dataprovider.EmailMailboxGetAutoReplySettingsRequestEventArgs",
+        "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxGetAutoReplySettingsRequestEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxGetAutoReplySettingsRequestEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3238,7 +3238,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyType_Spec type_spec_EmailMailboxMoveFolderRequest =
     {
-        "_winrt_windows_applicationmodel_email_dataprovider.EmailMailboxMoveFolderRequest",
+        "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxMoveFolderRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxMoveFolderRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3357,7 +3357,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyType_Spec type_spec_EmailMailboxMoveFolderRequestEventArgs =
     {
-        "_winrt_windows_applicationmodel_email_dataprovider.EmailMailboxMoveFolderRequestEventArgs",
+        "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxMoveFolderRequestEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxMoveFolderRequestEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3606,7 +3606,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyType_Spec type_spec_EmailMailboxProposeNewTimeForMeetingRequest =
     {
-        "_winrt_windows_applicationmodel_email_dataprovider.EmailMailboxProposeNewTimeForMeetingRequest",
+        "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxProposeNewTimeForMeetingRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxProposeNewTimeForMeetingRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3725,7 +3725,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyType_Spec type_spec_EmailMailboxProposeNewTimeForMeetingRequestEventArgs =
     {
-        "_winrt_windows_applicationmodel_email_dataprovider.EmailMailboxProposeNewTimeForMeetingRequestEventArgs",
+        "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxProposeNewTimeForMeetingRequestEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxProposeNewTimeForMeetingRequestEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3896,7 +3896,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyType_Spec type_spec_EmailMailboxResolveRecipientsRequest =
     {
-        "_winrt_windows_applicationmodel_email_dataprovider.EmailMailboxResolveRecipientsRequest",
+        "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxResolveRecipientsRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxResolveRecipientsRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4015,7 +4015,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyType_Spec type_spec_EmailMailboxResolveRecipientsRequestEventArgs =
     {
-        "_winrt_windows_applicationmodel_email_dataprovider.EmailMailboxResolveRecipientsRequestEventArgs",
+        "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxResolveRecipientsRequestEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxResolveRecipientsRequestEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4278,7 +4278,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyType_Spec type_spec_EmailMailboxServerSearchReadBatchRequest =
     {
-        "_winrt_windows_applicationmodel_email_dataprovider.EmailMailboxServerSearchReadBatchRequest",
+        "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxServerSearchReadBatchRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxServerSearchReadBatchRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4397,7 +4397,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyType_Spec type_spec_EmailMailboxServerSearchReadBatchRequestEventArgs =
     {
-        "_winrt_windows_applicationmodel_email_dataprovider.EmailMailboxServerSearchReadBatchRequestEventArgs",
+        "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxServerSearchReadBatchRequestEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxServerSearchReadBatchRequestEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4566,7 +4566,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyType_Spec type_spec_EmailMailboxSetAutoReplySettingsRequest =
     {
-        "_winrt_windows_applicationmodel_email_dataprovider.EmailMailboxSetAutoReplySettingsRequest",
+        "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxSetAutoReplySettingsRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxSetAutoReplySettingsRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4685,7 +4685,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyType_Spec type_spec_EmailMailboxSetAutoReplySettingsRequestEventArgs =
     {
-        "_winrt_windows_applicationmodel_email_dataprovider.EmailMailboxSetAutoReplySettingsRequestEventArgs",
+        "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxSetAutoReplySettingsRequestEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxSetAutoReplySettingsRequestEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4834,7 +4834,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyType_Spec type_spec_EmailMailboxSyncManagerSyncRequest =
     {
-        "_winrt_windows_applicationmodel_email_dataprovider.EmailMailboxSyncManagerSyncRequest",
+        "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxSyncManagerSyncRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxSyncManagerSyncRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4953,7 +4953,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyType_Spec type_spec_EmailMailboxSyncManagerSyncRequestEventArgs =
     {
-        "_winrt_windows_applicationmodel_email_dataprovider.EmailMailboxSyncManagerSyncRequestEventArgs",
+        "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxSyncManagerSyncRequestEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxSyncManagerSyncRequestEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5202,7 +5202,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyType_Spec type_spec_EmailMailboxUpdateMeetingResponseRequest =
     {
-        "_winrt_windows_applicationmodel_email_dataprovider.EmailMailboxUpdateMeetingResponseRequest",
+        "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxUpdateMeetingResponseRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxUpdateMeetingResponseRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5321,7 +5321,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyType_Spec type_spec_EmailMailboxUpdateMeetingResponseRequestEventArgs =
     {
-        "_winrt_windows_applicationmodel_email_dataprovider.EmailMailboxUpdateMeetingResponseRequestEventArgs",
+        "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxUpdateMeetingResponseRequestEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxUpdateMeetingResponseRequestEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5492,7 +5492,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyType_Spec type_spec_EmailMailboxValidateCertificatesRequest =
     {
-        "_winrt_windows_applicationmodel_email_dataprovider.EmailMailboxValidateCertificatesRequest",
+        "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxValidateCertificatesRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxValidateCertificatesRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5611,7 +5611,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     static PyType_Spec type_spec_EmailMailboxValidateCertificatesRequestEventArgs =
     {
-        "_winrt_windows_applicationmodel_email_dataprovider.EmailMailboxValidateCertificatesRequestEventArgs",
+        "winrt._winrt_windows_applicationmodel_email_dataprovider.EmailMailboxValidateCertificatesRequestEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::DataProvider::EmailMailboxValidateCertificatesRequestEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,

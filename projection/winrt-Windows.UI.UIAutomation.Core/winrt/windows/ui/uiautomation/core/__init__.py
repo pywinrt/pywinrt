@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_ui_uiautomation_core
+from winrt import _winrt_windows_ui_uiautomation_core
 
 __all__ = [
     "AutomationRemoteOperationStatus",

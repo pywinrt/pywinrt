@@ -297,7 +297,7 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
     static PyType_Spec type_spec_HttpDiagnosticProvider =
     {
-        "_winrt_windows_web_http_diagnostics.HttpDiagnosticProvider",
+        "winrt._winrt_windows_web_http_diagnostics.HttpDiagnosticProvider",
         sizeof(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -506,7 +506,7 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
     static PyType_Spec type_spec_HttpDiagnosticProviderRequestResponseCompletedEventArgs =
     {
-        "_winrt_windows_web_http_diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs",
+        "winrt._winrt_windows_web_http_diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs",
         sizeof(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestResponseCompletedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -755,7 +755,7 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
     static PyType_Spec type_spec_HttpDiagnosticProviderRequestResponseTimestamps =
     {
-        "_winrt_windows_web_http_diagnostics.HttpDiagnosticProviderRequestResponseTimestamps",
+        "winrt._winrt_windows_web_http_diagnostics.HttpDiagnosticProviderRequestResponseTimestamps",
         sizeof(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestResponseTimestamps),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -964,7 +964,7 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
     static PyType_Spec type_spec_HttpDiagnosticProviderRequestSentEventArgs =
     {
-        "_winrt_windows_web_http_diagnostics.HttpDiagnosticProviderRequestSentEventArgs",
+        "winrt._winrt_windows_web_http_diagnostics.HttpDiagnosticProviderRequestSentEventArgs",
         sizeof(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestSentEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1093,7 +1093,7 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
     static PyType_Spec type_spec_HttpDiagnosticProviderResponseReceivedEventArgs =
     {
-        "_winrt_windows_web_http_diagnostics.HttpDiagnosticProviderResponseReceivedEventArgs",
+        "winrt._winrt_windows_web_http_diagnostics.HttpDiagnosticProviderResponseReceivedEventArgs",
         sizeof(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderResponseReceivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1222,7 +1222,7 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
     static PyType_Spec type_spec_HttpDiagnosticSourceLocation =
     {
-        "_winrt_windows_web_http_diagnostics.HttpDiagnosticSourceLocation",
+        "winrt._winrt_windows_web_http_diagnostics.HttpDiagnosticSourceLocation",
         sizeof(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticSourceLocation),
         0,
         Py_TPFLAGS_DEFAULT,

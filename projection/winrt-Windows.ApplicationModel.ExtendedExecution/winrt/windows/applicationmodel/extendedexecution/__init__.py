@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_applicationmodel_extendedexecution
+from winrt import _winrt_windows_applicationmodel_extendedexecution
 
 __all__ = [
     "ExtendedExecutionReason",

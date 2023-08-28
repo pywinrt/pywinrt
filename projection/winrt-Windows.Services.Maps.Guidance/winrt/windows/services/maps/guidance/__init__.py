@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_services_maps_guidance
+from winrt import _winrt_windows_services_maps_guidance
 
 __all__ = [
     "GuidanceAudioMeasurementSystem",

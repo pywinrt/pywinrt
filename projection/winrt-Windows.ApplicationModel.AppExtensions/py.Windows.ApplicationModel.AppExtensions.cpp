@@ -248,7 +248,7 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
 
     static PyType_Spec type_spec_AppExtension =
     {
-        "_winrt_windows_applicationmodel_appextensions.AppExtension",
+        "winrt._winrt_windows_applicationmodel_appextensions.AppExtension",
         sizeof(py::wrapper::Windows::ApplicationModel::AppExtensions::AppExtension),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -636,7 +636,7 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
 
     static PyType_Spec type_spec_AppExtensionCatalog =
     {
-        "_winrt_windows_applicationmodel_appextensions.AppExtensionCatalog",
+        "winrt._winrt_windows_applicationmodel_appextensions.AppExtensionCatalog",
         sizeof(py::wrapper::Windows::ApplicationModel::AppExtensions::AppExtensionCatalog),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -765,7 +765,7 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
 
     static PyType_Spec type_spec_AppExtensionPackageInstalledEventArgs =
     {
-        "_winrt_windows_applicationmodel_appextensions.AppExtensionPackageInstalledEventArgs",
+        "winrt._winrt_windows_applicationmodel_appextensions.AppExtensionPackageInstalledEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::AppExtensions::AppExtensionPackageInstalledEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -874,7 +874,7 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
 
     static PyType_Spec type_spec_AppExtensionPackageStatusChangedEventArgs =
     {
-        "_winrt_windows_applicationmodel_appextensions.AppExtensionPackageStatusChangedEventArgs",
+        "winrt._winrt_windows_applicationmodel_appextensions.AppExtensionPackageStatusChangedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::AppExtensions::AppExtensionPackageStatusChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -983,7 +983,7 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
 
     static PyType_Spec type_spec_AppExtensionPackageUninstallingEventArgs =
     {
-        "_winrt_windows_applicationmodel_appextensions.AppExtensionPackageUninstallingEventArgs",
+        "winrt._winrt_windows_applicationmodel_appextensions.AppExtensionPackageUninstallingEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::AppExtensions::AppExtensionPackageUninstallingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1112,7 +1112,7 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
 
     static PyType_Spec type_spec_AppExtensionPackageUpdatedEventArgs =
     {
-        "_winrt_windows_applicationmodel_appextensions.AppExtensionPackageUpdatedEventArgs",
+        "winrt._winrt_windows_applicationmodel_appextensions.AppExtensionPackageUpdatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::AppExtensions::AppExtensionPackageUpdatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1221,7 +1221,7 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
 
     static PyType_Spec type_spec_AppExtensionPackageUpdatingEventArgs =
     {
-        "_winrt_windows_applicationmodel_appextensions.AppExtensionPackageUpdatingEventArgs",
+        "winrt._winrt_windows_applicationmodel_appextensions.AppExtensionPackageUpdatingEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::AppExtensions::AppExtensionPackageUpdatingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,

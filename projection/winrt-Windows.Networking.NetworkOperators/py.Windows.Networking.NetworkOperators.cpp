@@ -479,7 +479,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_ESim =
     {
-        "_winrt_windows_networking_networkoperators.ESim",
+        "winrt._winrt_windows_networking_networkoperators.ESim",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::ESim),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -568,7 +568,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_ESimAddedEventArgs =
     {
-        "_winrt_windows_networking_networkoperators.ESimAddedEventArgs",
+        "winrt._winrt_windows_networking_networkoperators.ESimAddedEventArgs",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::ESimAddedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -677,7 +677,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_ESimDiscoverEvent =
     {
-        "_winrt_windows_networking_networkoperators.ESimDiscoverEvent",
+        "winrt._winrt_windows_networking_networkoperators.ESimDiscoverEvent",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::ESimDiscoverEvent),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -826,7 +826,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_ESimDiscoverResult =
     {
-        "_winrt_windows_networking_networkoperators.ESimDiscoverResult",
+        "winrt._winrt_windows_networking_networkoperators.ESimDiscoverResult",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::ESimDiscoverResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -935,7 +935,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_ESimDownloadProfileMetadataResult =
     {
-        "_winrt_windows_networking_networkoperators.ESimDownloadProfileMetadataResult",
+        "winrt._winrt_windows_networking_networkoperators.ESimDownloadProfileMetadataResult",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::ESimDownloadProfileMetadataResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1063,7 +1063,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_ESimManager =
     {
-        "_winrt_windows_networking_networkoperators.ESimManager",
+        "winrt._winrt_windows_networking_networkoperators.ESimManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1084,7 +1084,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_ESimManager_Meta =
     {
-        "_winrt_windows_networking_networkoperators.ESimManager_Meta",
+        "winrt._winrt_windows_networking_networkoperators.ESimManager_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1173,7 +1173,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_ESimOperationResult =
     {
-        "_winrt_windows_networking_networkoperators.ESimOperationResult",
+        "winrt._winrt_windows_networking_networkoperators.ESimOperationResult",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::ESimOperationResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1262,7 +1262,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_ESimPolicy =
     {
-        "_winrt_windows_networking_networkoperators.ESimPolicy",
+        "winrt._winrt_windows_networking_networkoperators.ESimPolicy",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::ESimPolicy),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1583,7 +1583,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_ESimProfile =
     {
-        "_winrt_windows_networking_networkoperators.ESimProfile",
+        "winrt._winrt_windows_networking_networkoperators.ESimProfile",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::ESimProfile),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1947,7 +1947,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_ESimProfileMetadata =
     {
-        "_winrt_windows_networking_networkoperators.ESimProfileMetadata",
+        "winrt._winrt_windows_networking_networkoperators.ESimProfileMetadata",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::ESimProfileMetadata),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2076,7 +2076,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_ESimProfilePolicy =
     {
-        "_winrt_windows_networking_networkoperators.ESimProfilePolicy",
+        "winrt._winrt_windows_networking_networkoperators.ESimProfilePolicy",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::ESimProfilePolicy),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2165,7 +2165,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_ESimRemovedEventArgs =
     {
-        "_winrt_windows_networking_networkoperators.ESimRemovedEventArgs",
+        "winrt._winrt_windows_networking_networkoperators.ESimRemovedEventArgs",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::ESimRemovedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2274,7 +2274,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_ESimServiceInfo =
     {
-        "_winrt_windows_networking_networkoperators.ESimServiceInfo",
+        "winrt._winrt_windows_networking_networkoperators.ESimServiceInfo",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::ESimServiceInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2363,7 +2363,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_ESimUpdatedEventArgs =
     {
-        "_winrt_windows_networking_networkoperators.ESimUpdatedEventArgs",
+        "winrt._winrt_windows_networking_networkoperators.ESimUpdatedEventArgs",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::ESimUpdatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2739,7 +2739,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_ESimWatcher =
     {
-        "_winrt_windows_networking_networkoperators.ESimWatcher",
+        "winrt._winrt_windows_networking_networkoperators.ESimWatcher",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::ESimWatcher),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2805,7 +2805,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_FdnAccessManager =
     {
-        "_winrt_windows_networking_networkoperators.FdnAccessManager",
+        "winrt._winrt_windows_networking_networkoperators.FdnAccessManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3188,7 +3188,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_HotspotAuthenticationContext =
     {
-        "_winrt_windows_networking_networkoperators.HotspotAuthenticationContext",
+        "winrt._winrt_windows_networking_networkoperators.HotspotAuthenticationContext",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::HotspotAuthenticationContext),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3277,7 +3277,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_HotspotAuthenticationEventDetails =
     {
-        "_winrt_windows_networking_networkoperators.HotspotAuthenticationEventDetails",
+        "winrt._winrt_windows_networking_networkoperators.HotspotAuthenticationEventDetails",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::HotspotAuthenticationEventDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3426,7 +3426,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_HotspotCredentialsAuthenticationResult =
     {
-        "_winrt_windows_networking_networkoperators.HotspotCredentialsAuthenticationResult",
+        "winrt._winrt_windows_networking_networkoperators.HotspotCredentialsAuthenticationResult",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::HotspotCredentialsAuthenticationResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3517,7 +3517,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_KnownCSimFilePaths =
     {
-        "_winrt_windows_networking_networkoperators.KnownCSimFilePaths",
+        "winrt._winrt_windows_networking_networkoperators.KnownCSimFilePaths",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3540,7 +3540,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_KnownCSimFilePaths_Meta =
     {
-        "_winrt_windows_networking_networkoperators.KnownCSimFilePaths_Meta",
+        "winrt._winrt_windows_networking_networkoperators.KnownCSimFilePaths_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -3631,7 +3631,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_KnownRuimFilePaths =
     {
-        "_winrt_windows_networking_networkoperators.KnownRuimFilePaths",
+        "winrt._winrt_windows_networking_networkoperators.KnownRuimFilePaths",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3654,7 +3654,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_KnownRuimFilePaths_Meta =
     {
-        "_winrt_windows_networking_networkoperators.KnownRuimFilePaths_Meta",
+        "winrt._winrt_windows_networking_networkoperators.KnownRuimFilePaths_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -3764,7 +3764,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_KnownSimFilePaths =
     {
-        "_winrt_windows_networking_networkoperators.KnownSimFilePaths",
+        "winrt._winrt_windows_networking_networkoperators.KnownSimFilePaths",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3788,7 +3788,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_KnownSimFilePaths_Meta =
     {
-        "_winrt_windows_networking_networkoperators.KnownSimFilePaths_Meta",
+        "winrt._winrt_windows_networking_networkoperators.KnownSimFilePaths_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -3917,7 +3917,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_KnownUSimFilePaths =
     {
-        "_winrt_windows_networking_networkoperators.KnownUSimFilePaths",
+        "winrt._winrt_windows_networking_networkoperators.KnownUSimFilePaths",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3942,7 +3942,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_KnownUSimFilePaths_Meta =
     {
-        "_winrt_windows_networking_networkoperators.KnownUSimFilePaths_Meta",
+        "winrt._winrt_windows_networking_networkoperators.KnownUSimFilePaths_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -4212,7 +4212,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_MobileBroadbandAccount =
     {
-        "_winrt_windows_networking_networkoperators.MobileBroadbandAccount",
+        "winrt._winrt_windows_networking_networkoperators.MobileBroadbandAccount",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandAccount),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4233,7 +4233,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_MobileBroadbandAccount_Meta =
     {
-        "_winrt_windows_networking_networkoperators.MobileBroadbandAccount_Meta",
+        "winrt._winrt_windows_networking_networkoperators.MobileBroadbandAccount_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -4322,7 +4322,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_MobileBroadbandAccountEventArgs =
     {
-        "_winrt_windows_networking_networkoperators.MobileBroadbandAccountEventArgs",
+        "winrt._winrt_windows_networking_networkoperators.MobileBroadbandAccountEventArgs",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandAccountEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4451,7 +4451,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_MobileBroadbandAccountUpdatedEventArgs =
     {
-        "_winrt_windows_networking_networkoperators.MobileBroadbandAccountUpdatedEventArgs",
+        "winrt._winrt_windows_networking_networkoperators.MobileBroadbandAccountUpdatedEventArgs",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandAccountUpdatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4849,7 +4849,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_MobileBroadbandAccountWatcher =
     {
-        "_winrt_windows_networking_networkoperators.MobileBroadbandAccountWatcher",
+        "winrt._winrt_windows_networking_networkoperators.MobileBroadbandAccountWatcher",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandAccountWatcher),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4983,7 +4983,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_MobileBroadbandAntennaSar =
     {
-        "_winrt_windows_networking_networkoperators.MobileBroadbandAntennaSar",
+        "winrt._winrt_windows_networking_networkoperators.MobileBroadbandAntennaSar",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandAntennaSar),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5212,7 +5212,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_MobileBroadbandCellCdma =
     {
-        "_winrt_windows_networking_networkoperators.MobileBroadbandCellCdma",
+        "winrt._winrt_windows_networking_networkoperators.MobileBroadbandCellCdma",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellCdma),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5421,7 +5421,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_MobileBroadbandCellGsm =
     {
-        "_winrt_windows_networking_networkoperators.MobileBroadbandCellGsm",
+        "winrt._winrt_windows_networking_networkoperators.MobileBroadbandCellGsm",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellGsm),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5650,7 +5650,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_MobileBroadbandCellLte =
     {
-        "_winrt_windows_networking_networkoperators.MobileBroadbandCellLte",
+        "winrt._winrt_windows_networking_networkoperators.MobileBroadbandCellLte",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellLte),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5899,7 +5899,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_MobileBroadbandCellNR =
     {
-        "_winrt_windows_networking_networkoperators.MobileBroadbandCellNR",
+        "winrt._winrt_windows_networking_networkoperators.MobileBroadbandCellNR",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellNR),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6128,7 +6128,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_MobileBroadbandCellTdscdma =
     {
-        "_winrt_windows_networking_networkoperators.MobileBroadbandCellTdscdma",
+        "winrt._winrt_windows_networking_networkoperators.MobileBroadbandCellTdscdma",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellTdscdma),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6357,7 +6357,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_MobileBroadbandCellUmts =
     {
-        "_winrt_windows_networking_networkoperators.MobileBroadbandCellUmts",
+        "winrt._winrt_windows_networking_networkoperators.MobileBroadbandCellUmts",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellUmts),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6666,7 +6666,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_MobileBroadbandCellsInfo =
     {
-        "_winrt_windows_networking_networkoperators.MobileBroadbandCellsInfo",
+        "winrt._winrt_windows_networking_networkoperators.MobileBroadbandCellsInfo",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellsInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6755,7 +6755,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_MobileBroadbandCurrentSlotIndexChangedEventArgs =
     {
-        "_winrt_windows_networking_networkoperators.MobileBroadbandCurrentSlotIndexChangedEventArgs",
+        "winrt._winrt_windows_networking_networkoperators.MobileBroadbandCurrentSlotIndexChangedEventArgs",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCurrentSlotIndexChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7244,7 +7244,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_MobileBroadbandDeviceInformation =
     {
-        "_winrt_windows_networking_networkoperators.MobileBroadbandDeviceInformation",
+        "winrt._winrt_windows_networking_networkoperators.MobileBroadbandDeviceInformation",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceInformation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7413,7 +7413,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_MobileBroadbandDeviceService =
     {
-        "_winrt_windows_networking_networkoperators.MobileBroadbandDeviceService",
+        "winrt._winrt_windows_networking_networkoperators.MobileBroadbandDeviceService",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceService),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7522,7 +7522,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_MobileBroadbandDeviceServiceCommandResult =
     {
-        "_winrt_windows_networking_networkoperators.MobileBroadbandDeviceServiceCommandResult",
+        "winrt._winrt_windows_networking_networkoperators.MobileBroadbandDeviceServiceCommandResult",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7688,7 +7688,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_MobileBroadbandDeviceServiceCommandSession =
     {
-        "_winrt_windows_networking_networkoperators.MobileBroadbandDeviceServiceCommandSession",
+        "winrt._winrt_windows_networking_networkoperators.MobileBroadbandDeviceServiceCommandSession",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandSession),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7777,7 +7777,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_MobileBroadbandDeviceServiceDataReceivedEventArgs =
     {
-        "_winrt_windows_networking_networkoperators.MobileBroadbandDeviceServiceDataReceivedEventArgs",
+        "winrt._winrt_windows_networking_networkoperators.MobileBroadbandDeviceServiceDataReceivedEventArgs",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceDataReceivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7954,7 +7954,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_MobileBroadbandDeviceServiceDataSession =
     {
-        "_winrt_windows_networking_networkoperators.MobileBroadbandDeviceServiceDataSession",
+        "winrt._winrt_windows_networking_networkoperators.MobileBroadbandDeviceServiceDataSession",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceDataSession),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8083,7 +8083,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_MobileBroadbandDeviceServiceInformation =
     {
-        "_winrt_windows_networking_networkoperators.MobileBroadbandDeviceServiceInformation",
+        "winrt._winrt_windows_networking_networkoperators.MobileBroadbandDeviceServiceInformation",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceInformation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8232,7 +8232,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_MobileBroadbandDeviceServiceTriggerDetails =
     {
-        "_winrt_windows_networking_networkoperators.MobileBroadbandDeviceServiceTriggerDetails",
+        "winrt._winrt_windows_networking_networkoperators.MobileBroadbandDeviceServiceTriggerDetails",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8888,7 +8888,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_MobileBroadbandModem =
     {
-        "_winrt_windows_networking_networkoperators.MobileBroadbandModem",
+        "winrt._winrt_windows_networking_networkoperators.MobileBroadbandModem",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandModem),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9037,7 +9037,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_MobileBroadbandModemConfiguration =
     {
-        "_winrt_windows_networking_networkoperators.MobileBroadbandModemConfiguration",
+        "winrt._winrt_windows_networking_networkoperators.MobileBroadbandModemConfiguration",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandModemConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9258,7 +9258,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_MobileBroadbandModemIsolation =
     {
-        "_winrt_windows_networking_networkoperators.MobileBroadbandModemIsolation",
+        "winrt._winrt_windows_networking_networkoperators.MobileBroadbandModemIsolation",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandModemIsolation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9618,7 +9618,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_MobileBroadbandNetwork =
     {
-        "_winrt_windows_networking_networkoperators.MobileBroadbandNetwork",
+        "winrt._winrt_windows_networking_networkoperators.MobileBroadbandNetwork",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandNetwork),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9727,7 +9727,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_MobileBroadbandNetworkRegistrationStateChange =
     {
-        "_winrt_windows_networking_networkoperators.MobileBroadbandNetworkRegistrationStateChange",
+        "winrt._winrt_windows_networking_networkoperators.MobileBroadbandNetworkRegistrationStateChange",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandNetworkRegistrationStateChange),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9816,7 +9816,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_MobileBroadbandNetworkRegistrationStateChangeTriggerDetails =
     {
-        "_winrt_windows_networking_networkoperators.MobileBroadbandNetworkRegistrationStateChangeTriggerDetails",
+        "winrt._winrt_windows_networking_networkoperators.MobileBroadbandNetworkRegistrationStateChangeTriggerDetails",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandNetworkRegistrationStateChangeTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9945,7 +9945,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_MobileBroadbandPco =
     {
-        "_winrt_windows_networking_networkoperators.MobileBroadbandPco",
+        "winrt._winrt_windows_networking_networkoperators.MobileBroadbandPco",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandPco),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10034,7 +10034,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_MobileBroadbandPcoDataChangeTriggerDetails =
     {
-        "_winrt_windows_networking_networkoperators.MobileBroadbandPcoDataChangeTriggerDetails",
+        "winrt._winrt_windows_networking_networkoperators.MobileBroadbandPcoDataChangeTriggerDetails",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandPcoDataChangeTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10405,7 +10405,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_MobileBroadbandPin =
     {
-        "_winrt_windows_networking_networkoperators.MobileBroadbandPin",
+        "winrt._winrt_windows_networking_networkoperators.MobileBroadbandPin",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandPin),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10534,7 +10534,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_MobileBroadbandPinLockStateChange =
     {
-        "_winrt_windows_networking_networkoperators.MobileBroadbandPinLockStateChange",
+        "winrt._winrt_windows_networking_networkoperators.MobileBroadbandPinLockStateChange",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandPinLockStateChange),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10623,7 +10623,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_MobileBroadbandPinLockStateChangeTriggerDetails =
     {
-        "_winrt_windows_networking_networkoperators.MobileBroadbandPinLockStateChangeTriggerDetails",
+        "winrt._winrt_windows_networking_networkoperators.MobileBroadbandPinLockStateChangeTriggerDetails",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandPinLockStateChangeTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10744,7 +10744,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_MobileBroadbandPinManager =
     {
-        "_winrt_windows_networking_networkoperators.MobileBroadbandPinManager",
+        "winrt._winrt_windows_networking_networkoperators.MobileBroadbandPinManager",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandPinManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10853,7 +10853,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_MobileBroadbandPinOperationResult =
     {
-        "_winrt_windows_networking_networkoperators.MobileBroadbandPinOperationResult",
+        "winrt._winrt_windows_networking_networkoperators.MobileBroadbandPinOperationResult",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandPinOperationResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10962,7 +10962,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_MobileBroadbandRadioStateChange =
     {
-        "_winrt_windows_networking_networkoperators.MobileBroadbandRadioStateChange",
+        "winrt._winrt_windows_networking_networkoperators.MobileBroadbandRadioStateChange",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandRadioStateChange),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11051,7 +11051,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_MobileBroadbandRadioStateChangeTriggerDetails =
     {
-        "_winrt_windows_networking_networkoperators.MobileBroadbandRadioStateChangeTriggerDetails",
+        "winrt._winrt_windows_networking_networkoperators.MobileBroadbandRadioStateChangeTriggerDetails",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandRadioStateChangeTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11511,7 +11511,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_MobileBroadbandSarManager =
     {
-        "_winrt_windows_networking_networkoperators.MobileBroadbandSarManager",
+        "winrt._winrt_windows_networking_networkoperators.MobileBroadbandSarManager",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandSarManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11640,7 +11640,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_MobileBroadbandSlotInfo =
     {
-        "_winrt_windows_networking_networkoperators.MobileBroadbandSlotInfo",
+        "winrt._winrt_windows_networking_networkoperators.MobileBroadbandSlotInfo",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandSlotInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11729,7 +11729,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_MobileBroadbandSlotInfoChangedEventArgs =
     {
-        "_winrt_windows_networking_networkoperators.MobileBroadbandSlotInfoChangedEventArgs",
+        "winrt._winrt_windows_networking_networkoperators.MobileBroadbandSlotInfoChangedEventArgs",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandSlotInfoChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11992,7 +11992,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_MobileBroadbandSlotManager =
     {
-        "_winrt_windows_networking_networkoperators.MobileBroadbandSlotManager",
+        "winrt._winrt_windows_networking_networkoperators.MobileBroadbandSlotManager",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandSlotManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12081,7 +12081,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_MobileBroadbandTransmissionStateChangedEventArgs =
     {
-        "_winrt_windows_networking_networkoperators.MobileBroadbandTransmissionStateChangedEventArgs",
+        "winrt._winrt_windows_networking_networkoperators.MobileBroadbandTransmissionStateChangedEventArgs",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandTransmissionStateChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12200,7 +12200,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_MobileBroadbandUicc =
     {
-        "_winrt_windows_networking_networkoperators.MobileBroadbandUicc",
+        "winrt._winrt_windows_networking_networkoperators.MobileBroadbandUicc",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandUicc),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12374,7 +12374,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_MobileBroadbandUiccApp =
     {
-        "_winrt_windows_networking_networkoperators.MobileBroadbandUiccApp",
+        "winrt._winrt_windows_networking_networkoperators.MobileBroadbandUiccApp",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandUiccApp),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12483,7 +12483,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_MobileBroadbandUiccAppReadRecordResult =
     {
-        "_winrt_windows_networking_networkoperators.MobileBroadbandUiccAppReadRecordResult",
+        "winrt._winrt_windows_networking_networkoperators.MobileBroadbandUiccAppReadRecordResult",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandUiccAppReadRecordResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12672,7 +12672,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_MobileBroadbandUiccAppRecordDetailsResult =
     {
-        "_winrt_windows_networking_networkoperators.MobileBroadbandUiccAppRecordDetailsResult",
+        "winrt._winrt_windows_networking_networkoperators.MobileBroadbandUiccAppRecordDetailsResult",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandUiccAppRecordDetailsResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12781,7 +12781,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_MobileBroadbandUiccAppsResult =
     {
-        "_winrt_windows_networking_networkoperators.MobileBroadbandUiccAppsResult",
+        "winrt._winrt_windows_networking_networkoperators.MobileBroadbandUiccAppsResult",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandUiccAppsResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12870,7 +12870,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_NetworkOperatorDataUsageTriggerDetails =
     {
-        "_winrt_windows_networking_networkoperators.NetworkOperatorDataUsageTriggerDetails",
+        "winrt._winrt_windows_networking_networkoperators.NetworkOperatorDataUsageTriggerDetails",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorDataUsageTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13093,7 +13093,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_NetworkOperatorNotificationEventDetails =
     {
-        "_winrt_windows_networking_networkoperators.NetworkOperatorNotificationEventDetails",
+        "winrt._winrt_windows_networking_networkoperators.NetworkOperatorNotificationEventDetails",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorNotificationEventDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13392,7 +13392,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_NetworkOperatorTetheringAccessPointConfiguration =
     {
-        "_winrt_windows_networking_networkoperators.NetworkOperatorTetheringAccessPointConfiguration",
+        "winrt._winrt_windows_networking_networkoperators.NetworkOperatorTetheringAccessPointConfiguration",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringAccessPointConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13501,7 +13501,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_NetworkOperatorTetheringClient =
     {
-        "_winrt_windows_networking_networkoperators.NetworkOperatorTetheringClient",
+        "winrt._winrt_windows_networking_networkoperators.NetworkOperatorTetheringClient",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringClient),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14083,7 +14083,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_NetworkOperatorTetheringManager =
     {
-        "_winrt_windows_networking_networkoperators.NetworkOperatorTetheringManager",
+        "winrt._winrt_windows_networking_networkoperators.NetworkOperatorTetheringManager",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14192,7 +14192,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_NetworkOperatorTetheringOperationResult =
     {
-        "_winrt_windows_networking_networkoperators.NetworkOperatorTetheringOperationResult",
+        "winrt._winrt_windows_networking_networkoperators.NetworkOperatorTetheringOperationResult",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringOperationResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14301,7 +14301,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_ProvisionFromXmlDocumentResults =
     {
-        "_winrt_windows_networking_networkoperators.ProvisionFromXmlDocumentResults",
+        "winrt._winrt_windows_networking_networkoperators.ProvisionFromXmlDocumentResults",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::ProvisionFromXmlDocumentResults),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14436,7 +14436,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_ProvisionedProfile =
     {
-        "_winrt_windows_networking_networkoperators.ProvisionedProfile",
+        "winrt._winrt_windows_networking_networkoperators.ProvisionedProfile",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::ProvisionedProfile),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14624,7 +14624,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_ProvisioningAgent =
     {
-        "_winrt_windows_networking_networkoperators.ProvisioningAgent",
+        "winrt._winrt_windows_networking_networkoperators.ProvisioningAgent",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::ProvisioningAgent),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14777,7 +14777,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_TetheringEntitlementCheckTriggerDetails =
     {
-        "_winrt_windows_networking_networkoperators.TetheringEntitlementCheckTriggerDetails",
+        "winrt._winrt_windows_networking_networkoperators.TetheringEntitlementCheckTriggerDetails",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::TetheringEntitlementCheckTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -15029,7 +15029,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_UssdMessage =
     {
-        "_winrt_windows_networking_networkoperators.UssdMessage",
+        "winrt._winrt_windows_networking_networkoperators.UssdMessage",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::UssdMessage),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -15138,7 +15138,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_UssdReply =
     {
-        "_winrt_windows_networking_networkoperators.UssdReply",
+        "winrt._winrt_windows_networking_networkoperators.UssdReply",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::UssdReply),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -15334,7 +15334,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_UssdSession =
     {
-        "_winrt_windows_networking_networkoperators.UssdSession",
+        "winrt._winrt_windows_networking_networkoperators.UssdSession",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::UssdSession),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -15495,7 +15495,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_ESimProfileInstallProgress =
     {
-        "_winrt_windows_networking_networkoperators.ESimProfileInstallProgress",
+        "winrt._winrt_windows_networking_networkoperators.ESimProfileInstallProgress",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::ESimProfileInstallProgress),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -15656,7 +15656,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyType_Spec type_spec_ProfileUsage =
     {
-        "_winrt_windows_networking_networkoperators.ProfileUsage",
+        "winrt._winrt_windows_networking_networkoperators.ProfileUsage",
         sizeof(py::wrapper::Windows::Networking::NetworkOperators::ProfileUsage),
         0,
         Py_TPFLAGS_DEFAULT,

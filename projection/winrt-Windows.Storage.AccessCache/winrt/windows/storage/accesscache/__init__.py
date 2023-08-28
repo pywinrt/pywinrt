@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_storage_accesscache
+from winrt import _winrt_windows_storage_accesscache
 
 __all__ = [
     "AccessCacheOptions",

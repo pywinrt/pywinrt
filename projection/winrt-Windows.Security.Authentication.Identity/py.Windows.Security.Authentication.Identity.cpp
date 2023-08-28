@@ -168,7 +168,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity
 
     static PyType_Spec type_spec_EnterpriseKeyCredentialRegistrationInfo =
     {
-        "_winrt_windows_security_authentication_identity.EnterpriseKeyCredentialRegistrationInfo",
+        "winrt._winrt_windows_security_authentication_identity.EnterpriseKeyCredentialRegistrationInfo",
         sizeof(py::wrapper::Windows::Security::Authentication::Identity::EnterpriseKeyCredentialRegistrationInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -286,7 +286,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity
 
     static PyType_Spec type_spec_EnterpriseKeyCredentialRegistrationManager =
     {
-        "_winrt_windows_security_authentication_identity.EnterpriseKeyCredentialRegistrationManager",
+        "winrt._winrt_windows_security_authentication_identity.EnterpriseKeyCredentialRegistrationManager",
         sizeof(py::wrapper::Windows::Security::Authentication::Identity::EnterpriseKeyCredentialRegistrationManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -307,7 +307,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity
 
     static PyType_Spec type_spec_EnterpriseKeyCredentialRegistrationManager_Meta =
     {
-        "_winrt_windows_security_authentication_identity.EnterpriseKeyCredentialRegistrationManager_Meta",
+        "winrt._winrt_windows_security_authentication_identity.EnterpriseKeyCredentialRegistrationManager_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,

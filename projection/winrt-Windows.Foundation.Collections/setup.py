@@ -6,7 +6,7 @@ from winrt_sdk import get_include_dirs
 setup(
     ext_modules=[
         Extension(
-            "winrt.windows.foundation.collections._winrt_windows_foundation_collections",
+            "winrt._winrt_windows_foundation_collections",
             sources=["py.Windows.Foundation.Collections.cpp"],
             include_dirs=get_include_dirs(),
             extra_compile_args=["/std:c++20", "/permissive-"],

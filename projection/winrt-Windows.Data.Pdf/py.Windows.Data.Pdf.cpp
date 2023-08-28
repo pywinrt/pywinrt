@@ -246,7 +246,7 @@ namespace py::cpp::Windows::Data::Pdf
 
     static PyType_Spec type_spec_PdfDocument =
     {
-        "_winrt_windows_data_pdf.PdfDocument",
+        "winrt._winrt_windows_data_pdf.PdfDocument",
         sizeof(py::wrapper::Windows::Data::Pdf::PdfDocument),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -550,7 +550,7 @@ namespace py::cpp::Windows::Data::Pdf
 
     static PyType_Spec type_spec_PdfPage =
     {
-        "_winrt_windows_data_pdf.PdfPage",
+        "winrt._winrt_windows_data_pdf.PdfPage",
         sizeof(py::wrapper::Windows::Data::Pdf::PdfPage),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -719,7 +719,7 @@ namespace py::cpp::Windows::Data::Pdf
 
     static PyType_Spec type_spec_PdfPageDimensions =
     {
-        "_winrt_windows_data_pdf.PdfPageDimensions",
+        "winrt._winrt_windows_data_pdf.PdfPageDimensions",
         sizeof(py::wrapper::Windows::Data::Pdf::PdfPageDimensions),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1098,7 +1098,7 @@ namespace py::cpp::Windows::Data::Pdf
 
     static PyType_Spec type_spec_PdfPageRenderOptions =
     {
-        "_winrt_windows_data_pdf.PdfPageRenderOptions",
+        "winrt._winrt_windows_data_pdf.PdfPageRenderOptions",
         sizeof(py::wrapper::Windows::Data::Pdf::PdfPageRenderOptions),
         0,
         Py_TPFLAGS_DEFAULT,

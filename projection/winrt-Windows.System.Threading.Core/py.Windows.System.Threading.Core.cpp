@@ -155,7 +155,7 @@ namespace py::cpp::Windows::System::Threading::Core
 
     static PyType_Spec type_spec_PreallocatedWorkItem =
     {
-        "_winrt_windows_system_threading_core.PreallocatedWorkItem",
+        "winrt._winrt_windows_system_threading_core.PreallocatedWorkItem",
         sizeof(py::wrapper::Windows::System::Threading::Core::PreallocatedWorkItem),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -396,7 +396,7 @@ namespace py::cpp::Windows::System::Threading::Core
 
     static PyType_Spec type_spec_SignalNotifier =
     {
-        "_winrt_windows_system_threading_core.SignalNotifier",
+        "winrt._winrt_windows_system_threading_core.SignalNotifier",
         sizeof(py::wrapper::Windows::System::Threading::Core::SignalNotifier),
         0,
         Py_TPFLAGS_DEFAULT,

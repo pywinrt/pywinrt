@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_storage_fileproperties
+from winrt import _winrt_windows_storage_fileproperties
 
 __all__ = [
     "PhotoOrientation",

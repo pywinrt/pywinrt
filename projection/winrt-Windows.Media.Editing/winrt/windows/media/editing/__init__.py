@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_media_editing
+from winrt import _winrt_windows_media_editing
 
 __all__ = [
     "MediaTrimmingPreference",

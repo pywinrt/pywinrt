@@ -196,7 +196,7 @@ namespace py::cpp::Windows::Devices
 
     static PyType_Spec type_spec_LowLevelDevicesAggregateProvider =
     {
-        "_winrt_windows_devices.LowLevelDevicesAggregateProvider",
+        "winrt._winrt_windows_devices.LowLevelDevicesAggregateProvider",
         sizeof(py::wrapper::Windows::Devices::LowLevelDevicesAggregateProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -312,7 +312,7 @@ namespace py::cpp::Windows::Devices
 
     static PyType_Spec type_spec_LowLevelDevicesController =
     {
-        "_winrt_windows_devices.LowLevelDevicesController",
+        "winrt._winrt_windows_devices.LowLevelDevicesController",
         sizeof(py::wrapper::Windows::Devices::LowLevelDevicesController),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -333,7 +333,7 @@ namespace py::cpp::Windows::Devices
 
     static PyType_Spec type_spec_LowLevelDevicesController_Meta =
     {
-        "_winrt_windows_devices.LowLevelDevicesController_Meta",
+        "winrt._winrt_windows_devices.LowLevelDevicesController_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -502,7 +502,7 @@ namespace py::cpp::Windows::Devices
 
     static PyType_Spec type_spec_ILowLevelDevicesAggregateProvider =
     {
-        "_winrt_windows_devices.ILowLevelDevicesAggregateProvider",
+        "winrt._winrt_windows_devices.ILowLevelDevicesAggregateProvider",
         sizeof(py::wrapper::Windows::Devices::ILowLevelDevicesAggregateProvider),
         0,
         Py_TPFLAGS_DEFAULT,

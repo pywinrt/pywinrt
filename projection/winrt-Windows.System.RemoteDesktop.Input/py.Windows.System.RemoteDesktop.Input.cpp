@@ -292,7 +292,7 @@ namespace py::cpp::Windows::System::RemoteDesktop::Input
 
     static PyType_Spec type_spec_RemoteTextConnection =
     {
-        "_winrt_windows_system_remotedesktop_input.RemoteTextConnection",
+        "winrt._winrt_windows_system_remotedesktop_input.RemoteTextConnection",
         sizeof(py::wrapper::Windows::System::RemoteDesktop::Input::RemoteTextConnection),
         0,
         Py_TPFLAGS_DEFAULT,

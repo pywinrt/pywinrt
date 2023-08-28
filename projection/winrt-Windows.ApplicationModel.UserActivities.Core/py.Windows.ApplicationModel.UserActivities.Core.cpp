@@ -99,7 +99,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities::Core
 
     static PyType_Spec type_spec_CoreUserActivityManager =
     {
-        "_winrt_windows_applicationmodel_useractivities_core.CoreUserActivityManager",
+        "winrt._winrt_windows_applicationmodel_useractivities_core.CoreUserActivityManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,

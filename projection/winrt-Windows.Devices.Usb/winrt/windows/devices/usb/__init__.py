@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_devices_usb
+from winrt import _winrt_windows_devices_usb
 
 __all__ = [
     "UsbControlRecipient",

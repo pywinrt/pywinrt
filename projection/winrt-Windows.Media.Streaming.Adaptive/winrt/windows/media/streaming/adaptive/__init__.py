@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_media_streaming_adaptive
+from winrt import _winrt_windows_media_streaming_adaptive
 
 __all__ = [
     "AdaptiveMediaSourceCreationStatus",

@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_security_authentication_web_provider
+from winrt import _winrt_windows_security_authentication_web_provider
 
 __all__ = [
     "WebAccountClientViewType",

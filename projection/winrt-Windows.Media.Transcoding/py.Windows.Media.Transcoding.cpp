@@ -575,7 +575,7 @@ namespace py::cpp::Windows::Media::Transcoding
 
     static PyType_Spec type_spec_MediaTranscoder =
     {
-        "_winrt_windows_media_transcoding.MediaTranscoder",
+        "winrt._winrt_windows_media_transcoding.MediaTranscoder",
         sizeof(py::wrapper::Windows::Media::Transcoding::MediaTranscoder),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -714,7 +714,7 @@ namespace py::cpp::Windows::Media::Transcoding
 
     static PyType_Spec type_spec_PrepareTranscodeResult =
     {
-        "_winrt_windows_media_transcoding.PrepareTranscodeResult",
+        "winrt._winrt_windows_media_transcoding.PrepareTranscodeResult",
         sizeof(py::wrapper::Windows::Media::Transcoding::PrepareTranscodeResult),
         0,
         Py_TPFLAGS_DEFAULT,

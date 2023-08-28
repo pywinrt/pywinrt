@@ -128,7 +128,7 @@ namespace py::cpp::Windows::UI::UIAutomation
 
     static PyType_Spec type_spec_AutomationConnection =
     {
-        "_winrt_windows_ui_uiautomation.AutomationConnection",
+        "winrt._winrt_windows_ui_uiautomation.AutomationConnection",
         sizeof(py::wrapper::Windows::UI::UIAutomation::AutomationConnection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -217,7 +217,7 @@ namespace py::cpp::Windows::UI::UIAutomation
 
     static PyType_Spec type_spec_AutomationConnectionBoundObject =
     {
-        "_winrt_windows_ui_uiautomation.AutomationConnectionBoundObject",
+        "winrt._winrt_windows_ui_uiautomation.AutomationConnectionBoundObject",
         sizeof(py::wrapper::Windows::UI::UIAutomation::AutomationConnectionBoundObject),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -346,7 +346,7 @@ namespace py::cpp::Windows::UI::UIAutomation
 
     static PyType_Spec type_spec_AutomationElement =
     {
-        "_winrt_windows_ui_uiautomation.AutomationElement",
+        "winrt._winrt_windows_ui_uiautomation.AutomationElement",
         sizeof(py::wrapper::Windows::UI::UIAutomation::AutomationElement),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -415,7 +415,7 @@ namespace py::cpp::Windows::UI::UIAutomation
 
     static PyType_Spec type_spec_AutomationTextRange =
     {
-        "_winrt_windows_ui_uiautomation.AutomationTextRange",
+        "winrt._winrt_windows_ui_uiautomation.AutomationTextRange",
         sizeof(py::wrapper::Windows::UI::UIAutomation::AutomationTextRange),
         0,
         Py_TPFLAGS_DEFAULT,

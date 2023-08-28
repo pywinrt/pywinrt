@@ -196,7 +196,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyType_Spec type_spec_HidBooleanControl =
     {
-        "_winrt_windows_devices_humaninterfacedevice.HidBooleanControl",
+        "winrt._winrt_windows_devices_humaninterfacedevice.HidBooleanControl",
         sizeof(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidBooleanControl),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -405,7 +405,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyType_Spec type_spec_HidBooleanControlDescription =
     {
-        "_winrt_windows_devices_humaninterfacedevice.HidBooleanControlDescription",
+        "winrt._winrt_windows_devices_humaninterfacedevice.HidBooleanControlDescription",
         sizeof(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidBooleanControlDescription),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -554,7 +554,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyType_Spec type_spec_HidCollection =
     {
-        "_winrt_windows_devices_humaninterfacedevice.HidCollection",
+        "winrt._winrt_windows_devices_humaninterfacedevice.HidCollection",
         sizeof(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1241,7 +1241,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyType_Spec type_spec_HidDevice =
     {
-        "_winrt_windows_devices_humaninterfacedevice.HidDevice",
+        "winrt._winrt_windows_devices_humaninterfacedevice.HidDevice",
         sizeof(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidDevice),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1508,7 +1508,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyType_Spec type_spec_HidFeatureReport =
     {
-        "_winrt_windows_devices_humaninterfacedevice.HidFeatureReport",
+        "winrt._winrt_windows_devices_humaninterfacedevice.HidFeatureReport",
         sizeof(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidFeatureReport),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1787,7 +1787,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyType_Spec type_spec_HidInputReport =
     {
-        "_winrt_windows_devices_humaninterfacedevice.HidInputReport",
+        "winrt._winrt_windows_devices_humaninterfacedevice.HidInputReport",
         sizeof(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidInputReport),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1876,7 +1876,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyType_Spec type_spec_HidInputReportReceivedEventArgs =
     {
-        "_winrt_windows_devices_humaninterfacedevice.HidInputReportReceivedEventArgs",
+        "winrt._winrt_windows_devices_humaninterfacedevice.HidInputReportReceivedEventArgs",
         sizeof(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidInputReportReceivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2141,7 +2141,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyType_Spec type_spec_HidNumericControl =
     {
-        "_winrt_windows_devices_humaninterfacedevice.HidNumericControl",
+        "winrt._winrt_windows_devices_humaninterfacedevice.HidNumericControl",
         sizeof(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidNumericControl),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2530,7 +2530,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyType_Spec type_spec_HidNumericControlDescription =
     {
-        "_winrt_windows_devices_humaninterfacedevice.HidNumericControlDescription",
+        "winrt._winrt_windows_devices_humaninterfacedevice.HidNumericControlDescription",
         sizeof(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2797,7 +2797,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyType_Spec type_spec_HidOutputReport =
     {
-        "_winrt_windows_devices_humaninterfacedevice.HidOutputReport",
+        "winrt._winrt_windows_devices_humaninterfacedevice.HidOutputReport",
         sizeof(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidOutputReport),
         0,
         Py_TPFLAGS_DEFAULT,

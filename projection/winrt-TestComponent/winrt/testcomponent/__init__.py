@@ -4,7 +4,7 @@ import typing
 import uuid as _uuid
 
 import winrt.system
-from . import _winrt_testcomponent
+from winrt import _winrt_testcomponent
 
 __all__ = [
     "Blittable",

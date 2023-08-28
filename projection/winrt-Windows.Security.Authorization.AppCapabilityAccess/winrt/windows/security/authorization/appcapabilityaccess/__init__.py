@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_security_authorization_appcapabilityaccess
+from winrt import _winrt_windows_security_authorization_appcapabilityaccess
 
 __all__ = [
     "AppCapabilityAccessStatus",

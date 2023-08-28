@@ -402,7 +402,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_AudioStreamDescriptor =
     {
-        "_winrt_windows_media_core.AudioStreamDescriptor",
+        "winrt._winrt_windows_media_core.AudioStreamDescriptor",
         sizeof(py::wrapper::Windows::Media::Core::AudioStreamDescriptor),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -714,7 +714,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_AudioTrack =
     {
-        "_winrt_windows_media_core.AudioTrack",
+        "winrt._winrt_windows_media_core.AudioTrack",
         sizeof(py::wrapper::Windows::Media::Core::AudioTrack),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -803,7 +803,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_AudioTrackOpenFailedEventArgs =
     {
-        "_winrt_windows_media_core.AudioTrackOpenFailedEventArgs",
+        "winrt._winrt_windows_media_core.AudioTrackOpenFailedEventArgs",
         sizeof(py::wrapper::Windows::Media::Core::AudioTrackOpenFailedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -952,7 +952,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_AudioTrackSupportInfo =
     {
-        "_winrt_windows_media_core.AudioTrackSupportInfo",
+        "winrt._winrt_windows_media_core.AudioTrackSupportInfo",
         sizeof(py::wrapper::Windows::Media::Core::AudioTrackSupportInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1235,7 +1235,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_ChapterCue =
     {
-        "_winrt_windows_media_core.ChapterCue",
+        "winrt._winrt_windows_media_core.ChapterCue",
         sizeof(py::wrapper::Windows::Media::Core::ChapterCue),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1404,7 +1404,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_CodecInfo =
     {
-        "_winrt_windows_media_core.CodecInfo",
+        "winrt._winrt_windows_media_core.CodecInfo",
         sizeof(py::wrapper::Windows::Media::Core::CodecInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1529,7 +1529,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_CodecQuery =
     {
-        "_winrt_windows_media_core.CodecQuery",
+        "winrt._winrt_windows_media_core.CodecQuery",
         sizeof(py::wrapper::Windows::Media::Core::CodecQuery),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2532,7 +2532,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_CodecSubtypes =
     {
-        "_winrt_windows_media_core.CodecSubtypes",
+        "winrt._winrt_windows_media_core.CodecSubtypes",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2603,7 +2603,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_CodecSubtypes_Meta =
     {
-        "_winrt_windows_media_core.CodecSubtypes_Meta",
+        "winrt._winrt_windows_media_core.CodecSubtypes_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -2906,7 +2906,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_DataCue =
     {
-        "_winrt_windows_media_core.DataCue",
+        "winrt._winrt_windows_media_core.DataCue",
         sizeof(py::wrapper::Windows::Media::Core::DataCue),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2995,7 +2995,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_FaceDetectedEventArgs =
     {
-        "_winrt_windows_media_core.FaceDetectedEventArgs",
+        "winrt._winrt_windows_media_core.FaceDetectedEventArgs",
         sizeof(py::wrapper::Windows::Media::Core::FaceDetectedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3238,7 +3238,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_FaceDetectionEffect =
     {
-        "_winrt_windows_media_core.FaceDetectionEffect",
+        "winrt._winrt_windows_media_core.FaceDetectionEffect",
         sizeof(py::wrapper::Windows::Media::Core::FaceDetectionEffect),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3465,7 +3465,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_FaceDetectionEffectDefinition =
     {
-        "_winrt_windows_media_core.FaceDetectionEffectDefinition",
+        "winrt._winrt_windows_media_core.FaceDetectionEffectDefinition",
         sizeof(py::wrapper::Windows::Media::Core::FaceDetectionEffectDefinition),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3858,7 +3858,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_FaceDetectionEffectFrame =
     {
-        "_winrt_windows_media_core.FaceDetectionEffectFrame",
+        "winrt._winrt_windows_media_core.FaceDetectionEffectFrame",
         sizeof(py::wrapper::Windows::Media::Core::FaceDetectionEffectFrame),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3975,7 +3975,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_HighDynamicRangeControl =
     {
-        "_winrt_windows_media_core.HighDynamicRangeControl",
+        "winrt._winrt_windows_media_core.HighDynamicRangeControl",
         sizeof(py::wrapper::Windows::Media::Core::HighDynamicRangeControl),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4084,7 +4084,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_HighDynamicRangeOutput =
     {
-        "_winrt_windows_media_core.HighDynamicRangeOutput",
+        "winrt._winrt_windows_media_core.HighDynamicRangeOutput",
         sizeof(py::wrapper::Windows::Media::Core::HighDynamicRangeOutput),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4463,7 +4463,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_ImageCue =
     {
-        "_winrt_windows_media_core.ImageCue",
+        "winrt._winrt_windows_media_core.ImageCue",
         sizeof(py::wrapper::Windows::Media::Core::ImageCue),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4602,7 +4602,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_InitializeMediaStreamSourceRequestedEventArgs =
     {
-        "_winrt_windows_media_core.InitializeMediaStreamSourceRequestedEventArgs",
+        "winrt._winrt_windows_media_core.InitializeMediaStreamSourceRequestedEventArgs",
         sizeof(py::wrapper::Windows::Media::Core::InitializeMediaStreamSourceRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4706,7 +4706,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_LowLightFusion =
     {
-        "_winrt_windows_media_core.LowLightFusion",
+        "winrt._winrt_windows_media_core.LowLightFusion",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4728,7 +4728,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_LowLightFusion_Meta =
     {
-        "_winrt_windows_media_core.LowLightFusion_Meta",
+        "winrt._winrt_windows_media_core.LowLightFusion_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -4869,7 +4869,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_LowLightFusionResult =
     {
-        "_winrt_windows_media_core.LowLightFusionResult",
+        "winrt._winrt_windows_media_core.LowLightFusionResult",
         sizeof(py::wrapper::Windows::Media::Core::LowLightFusionResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5073,7 +5073,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_MediaBinder =
     {
-        "_winrt_windows_media_core.MediaBinder",
+        "winrt._winrt_windows_media_core.MediaBinder",
         sizeof(py::wrapper::Windows::Media::Core::MediaBinder),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5437,7 +5437,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_MediaBindingEventArgs =
     {
-        "_winrt_windows_media_core.MediaBindingEventArgs",
+        "winrt._winrt_windows_media_core.MediaBindingEventArgs",
         sizeof(py::wrapper::Windows::Media::Core::MediaBindingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5526,7 +5526,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_MediaCueEventArgs =
     {
-        "_winrt_windows_media_core.MediaCueEventArgs",
+        "winrt._winrt_windows_media_core.MediaCueEventArgs",
         sizeof(py::wrapper::Windows::Media::Core::MediaCueEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6372,7 +6372,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_MediaSource =
     {
-        "_winrt_windows_media_core.MediaSource",
+        "winrt._winrt_windows_media_core.MediaSource",
         sizeof(py::wrapper::Windows::Media::Core::MediaSource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6541,7 +6541,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_MediaSourceAppServiceConnection =
     {
-        "_winrt_windows_media_core.MediaSourceAppServiceConnection",
+        "winrt._winrt_windows_media_core.MediaSourceAppServiceConnection",
         sizeof(py::wrapper::Windows::Media::Core::MediaSourceAppServiceConnection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6630,7 +6630,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_MediaSourceError =
     {
-        "_winrt_windows_media_core.MediaSourceError",
+        "winrt._winrt_windows_media_core.MediaSourceError",
         sizeof(py::wrapper::Windows::Media::Core::MediaSourceError),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6719,7 +6719,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_MediaSourceOpenOperationCompletedEventArgs =
     {
-        "_winrt_windows_media_core.MediaSourceOpenOperationCompletedEventArgs",
+        "winrt._winrt_windows_media_core.MediaSourceOpenOperationCompletedEventArgs",
         sizeof(py::wrapper::Windows::Media::Core::MediaSourceOpenOperationCompletedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6828,7 +6828,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_MediaSourceStateChangedEventArgs =
     {
-        "_winrt_windows_media_core.MediaSourceStateChangedEventArgs",
+        "winrt._winrt_windows_media_core.MediaSourceStateChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::Core::MediaSourceStateChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7334,7 +7334,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_MediaStreamSample =
     {
-        "_winrt_windows_media_core.MediaStreamSample",
+        "winrt._winrt_windows_media_core.MediaStreamSample",
         sizeof(py::wrapper::Windows::Media::Core::MediaStreamSample),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7741,7 +7741,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_MediaStreamSamplePropertySet =
     {
-        "_winrt_windows_media_core.MediaStreamSamplePropertySet",
+        "winrt._winrt_windows_media_core.MediaStreamSamplePropertySet",
         sizeof(py::wrapper::Windows::Media::Core::MediaStreamSamplePropertySet),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8026,7 +8026,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_MediaStreamSampleProtectionProperties =
     {
-        "_winrt_windows_media_core.MediaStreamSampleProtectionProperties",
+        "winrt._winrt_windows_media_core.MediaStreamSampleProtectionProperties",
         sizeof(py::wrapper::Windows::Media::Core::MediaStreamSampleProtectionProperties),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8916,7 +8916,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_MediaStreamSource =
     {
-        "_winrt_windows_media_core.MediaStreamSource",
+        "winrt._winrt_windows_media_core.MediaStreamSource",
         sizeof(py::wrapper::Windows::Media::Core::MediaStreamSource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9005,7 +9005,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_MediaStreamSourceClosedEventArgs =
     {
-        "_winrt_windows_media_core.MediaStreamSourceClosedEventArgs",
+        "winrt._winrt_windows_media_core.MediaStreamSourceClosedEventArgs",
         sizeof(py::wrapper::Windows::Media::Core::MediaStreamSourceClosedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9094,7 +9094,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_MediaStreamSourceClosedRequest =
     {
-        "_winrt_windows_media_core.MediaStreamSourceClosedRequest",
+        "winrt._winrt_windows_media_core.MediaStreamSourceClosedRequest",
         sizeof(py::wrapper::Windows::Media::Core::MediaStreamSourceClosedRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9183,7 +9183,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_MediaStreamSourceSampleRenderedEventArgs =
     {
-        "_winrt_windows_media_core.MediaStreamSourceSampleRenderedEventArgs",
+        "winrt._winrt_windows_media_core.MediaStreamSourceSampleRenderedEventArgs",
         sizeof(py::wrapper::Windows::Media::Core::MediaStreamSourceSampleRenderedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9383,7 +9383,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_MediaStreamSourceSampleRequest =
     {
-        "_winrt_windows_media_core.MediaStreamSourceSampleRequest",
+        "winrt._winrt_windows_media_core.MediaStreamSourceSampleRequest",
         sizeof(py::wrapper::Windows::Media::Core::MediaStreamSourceSampleRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9483,7 +9483,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_MediaStreamSourceSampleRequestDeferral =
     {
-        "_winrt_windows_media_core.MediaStreamSourceSampleRequestDeferral",
+        "winrt._winrt_windows_media_core.MediaStreamSourceSampleRequestDeferral",
         sizeof(py::wrapper::Windows::Media::Core::MediaStreamSourceSampleRequestDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9572,7 +9572,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_MediaStreamSourceSampleRequestedEventArgs =
     {
-        "_winrt_windows_media_core.MediaStreamSourceSampleRequestedEventArgs",
+        "winrt._winrt_windows_media_core.MediaStreamSourceSampleRequestedEventArgs",
         sizeof(py::wrapper::Windows::Media::Core::MediaStreamSourceSampleRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9661,7 +9661,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_MediaStreamSourceStartingEventArgs =
     {
-        "_winrt_windows_media_core.MediaStreamSourceStartingEventArgs",
+        "winrt._winrt_windows_media_core.MediaStreamSourceStartingEventArgs",
         sizeof(py::wrapper::Windows::Media::Core::MediaStreamSourceStartingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9813,7 +9813,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_MediaStreamSourceStartingRequest =
     {
-        "_winrt_windows_media_core.MediaStreamSourceStartingRequest",
+        "winrt._winrt_windows_media_core.MediaStreamSourceStartingRequest",
         sizeof(py::wrapper::Windows::Media::Core::MediaStreamSourceStartingRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9913,7 +9913,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_MediaStreamSourceStartingRequestDeferral =
     {
-        "_winrt_windows_media_core.MediaStreamSourceStartingRequestDeferral",
+        "winrt._winrt_windows_media_core.MediaStreamSourceStartingRequestDeferral",
         sizeof(py::wrapper::Windows::Media::Core::MediaStreamSourceStartingRequestDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10052,7 +10052,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_MediaStreamSourceSwitchStreamsRequest =
     {
-        "_winrt_windows_media_core.MediaStreamSourceSwitchStreamsRequest",
+        "winrt._winrt_windows_media_core.MediaStreamSourceSwitchStreamsRequest",
         sizeof(py::wrapper::Windows::Media::Core::MediaStreamSourceSwitchStreamsRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10152,7 +10152,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_MediaStreamSourceSwitchStreamsRequestDeferral =
     {
-        "_winrt_windows_media_core.MediaStreamSourceSwitchStreamsRequestDeferral",
+        "winrt._winrt_windows_media_core.MediaStreamSourceSwitchStreamsRequestDeferral",
         sizeof(py::wrapper::Windows::Media::Core::MediaStreamSourceSwitchStreamsRequestDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10241,7 +10241,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_MediaStreamSourceSwitchStreamsRequestedEventArgs =
     {
-        "_winrt_windows_media_core.MediaStreamSourceSwitchStreamsRequestedEventArgs",
+        "winrt._winrt_windows_media_core.MediaStreamSourceSwitchStreamsRequestedEventArgs",
         sizeof(py::wrapper::Windows::Media::Core::MediaStreamSourceSwitchStreamsRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10920,7 +10920,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_MseSourceBuffer =
     {
-        "_winrt_windows_media_core.MseSourceBuffer",
+        "winrt._winrt_windows_media_core.MseSourceBuffer",
         sizeof(py::wrapper::Windows::Media::Core::MseSourceBuffer),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11099,7 +11099,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_MseSourceBufferList =
     {
-        "_winrt_windows_media_core.MseSourceBufferList",
+        "winrt._winrt_windows_media_core.MseSourceBufferList",
         sizeof(py::wrapper::Windows::Media::Core::MseSourceBufferList),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11611,7 +11611,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_MseStreamSource =
     {
-        "_winrt_windows_media_core.MseStreamSource",
+        "winrt._winrt_windows_media_core.MseStreamSource",
         sizeof(py::wrapper::Windows::Media::Core::MseStreamSource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11826,7 +11826,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_SceneAnalysisEffect =
     {
-        "_winrt_windows_media_core.SceneAnalysisEffect",
+        "winrt._winrt_windows_media_core.SceneAnalysisEffect",
         sizeof(py::wrapper::Windows::Media::Core::SceneAnalysisEffect),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11957,7 +11957,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_SceneAnalysisEffectDefinition =
     {
-        "_winrt_windows_media_core.SceneAnalysisEffectDefinition",
+        "winrt._winrt_windows_media_core.SceneAnalysisEffectDefinition",
         sizeof(py::wrapper::Windows::Media::Core::SceneAnalysisEffectDefinition),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12390,7 +12390,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_SceneAnalysisEffectFrame =
     {
-        "_winrt_windows_media_core.SceneAnalysisEffectFrame",
+        "winrt._winrt_windows_media_core.SceneAnalysisEffectFrame",
         sizeof(py::wrapper::Windows::Media::Core::SceneAnalysisEffectFrame),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12479,7 +12479,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_SceneAnalyzedEventArgs =
     {
-        "_winrt_windows_media_core.SceneAnalyzedEventArgs",
+        "winrt._winrt_windows_media_core.SceneAnalyzedEventArgs",
         sizeof(py::wrapper::Windows::Media::Core::SceneAnalyzedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12858,7 +12858,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_SpeechCue =
     {
-        "_winrt_windows_media_core.SpeechCue",
+        "winrt._winrt_windows_media_core.SpeechCue",
         sizeof(py::wrapper::Windows::Media::Core::SpeechCue),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13165,7 +13165,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_TimedMetadataStreamDescriptor =
     {
-        "_winrt_windows_media_core.TimedMetadataStreamDescriptor",
+        "winrt._winrt_windows_media_core.TimedMetadataStreamDescriptor",
         sizeof(py::wrapper::Windows::Media::Core::TimedMetadataStreamDescriptor),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13689,7 +13689,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_TimedMetadataTrack =
     {
-        "_winrt_windows_media_core.TimedMetadataTrack",
+        "winrt._winrt_windows_media_core.TimedMetadataTrack",
         sizeof(py::wrapper::Windows::Media::Core::TimedMetadataTrack),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13798,7 +13798,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_TimedMetadataTrackError =
     {
-        "_winrt_windows_media_core.TimedMetadataTrackError",
+        "winrt._winrt_windows_media_core.TimedMetadataTrackError",
         sizeof(py::wrapper::Windows::Media::Core::TimedMetadataTrackError),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13887,7 +13887,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_TimedMetadataTrackFailedEventArgs =
     {
-        "_winrt_windows_media_core.TimedMetadataTrackFailedEventArgs",
+        "winrt._winrt_windows_media_core.TimedMetadataTrackFailedEventArgs",
         sizeof(py::wrapper::Windows::Media::Core::TimedMetadataTrackFailedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14100,7 +14100,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_TimedTextBouten =
     {
-        "_winrt_windows_media_core.TimedTextBouten",
+        "winrt._winrt_windows_media_core.TimedTextBouten",
         sizeof(py::wrapper::Windows::Media::Core::TimedTextBouten),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14451,7 +14451,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_TimedTextCue =
     {
-        "_winrt_windows_media_core.TimedTextCue",
+        "winrt._winrt_windows_media_core.TimedTextCue",
         sizeof(py::wrapper::Windows::Media::Core::TimedTextCue),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14610,7 +14610,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_TimedTextLine =
     {
-        "_winrt_windows_media_core.TimedTextLine",
+        "winrt._winrt_windows_media_core.TimedTextLine",
         sizeof(py::wrapper::Windows::Media::Core::TimedTextLine),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -15277,7 +15277,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_TimedTextRegion =
     {
-        "_winrt_windows_media_core.TimedTextRegion",
+        "winrt._winrt_windows_media_core.TimedTextRegion",
         sizeof(py::wrapper::Windows::Media::Core::TimedTextRegion),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -15538,7 +15538,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_TimedTextRuby =
     {
-        "_winrt_windows_media_core.TimedTextRuby",
+        "winrt._winrt_windows_media_core.TimedTextRuby",
         sizeof(py::wrapper::Windows::Media::Core::TimedTextRuby),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -15868,7 +15868,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_TimedTextSource =
     {
-        "_winrt_windows_media_core.TimedTextSource",
+        "winrt._winrt_windows_media_core.TimedTextSource",
         sizeof(py::wrapper::Windows::Media::Core::TimedTextSource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -15977,7 +15977,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_TimedTextSourceResolveResultEventArgs =
     {
-        "_winrt_windows_media_core.TimedTextSourceResolveResultEventArgs",
+        "winrt._winrt_windows_media_core.TimedTextSourceResolveResultEventArgs",
         sizeof(py::wrapper::Windows::Media::Core::TimedTextSourceResolveResultEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -16972,7 +16972,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_TimedTextStyle =
     {
-        "_winrt_windows_media_core.TimedTextStyle",
+        "winrt._winrt_windows_media_core.TimedTextStyle",
         sizeof(py::wrapper::Windows::Media::Core::TimedTextStyle),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -17207,7 +17207,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_TimedTextSubformat =
     {
-        "_winrt_windows_media_core.TimedTextSubformat",
+        "winrt._winrt_windows_media_core.TimedTextSubformat",
         sizeof(py::wrapper::Windows::Media::Core::TimedTextSubformat),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -17435,7 +17435,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_VideoStabilizationEffect =
     {
-        "_winrt_windows_media_core.VideoStabilizationEffect",
+        "winrt._winrt_windows_media_core.VideoStabilizationEffect",
         sizeof(py::wrapper::Windows::Media::Core::VideoStabilizationEffect),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -17566,7 +17566,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_VideoStabilizationEffectDefinition =
     {
-        "_winrt_windows_media_core.VideoStabilizationEffectDefinition",
+        "winrt._winrt_windows_media_core.VideoStabilizationEffectDefinition",
         sizeof(py::wrapper::Windows::Media::Core::VideoStabilizationEffectDefinition),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -17655,7 +17655,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_VideoStabilizationEffectEnabledChangedEventArgs =
     {
-        "_winrt_windows_media_core.VideoStabilizationEffectEnabledChangedEventArgs",
+        "winrt._winrt_windows_media_core.VideoStabilizationEffectEnabledChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::Core::VideoStabilizationEffectEnabledChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -17962,7 +17962,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_VideoStreamDescriptor =
     {
-        "_winrt_windows_media_core.VideoStreamDescriptor",
+        "winrt._winrt_windows_media_core.VideoStreamDescriptor",
         sizeof(py::wrapper::Windows::Media::Core::VideoStreamDescriptor),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -18274,7 +18274,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_VideoTrack =
     {
-        "_winrt_windows_media_core.VideoTrack",
+        "winrt._winrt_windows_media_core.VideoTrack",
         sizeof(py::wrapper::Windows::Media::Core::VideoTrack),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -18363,7 +18363,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_VideoTrackOpenFailedEventArgs =
     {
-        "_winrt_windows_media_core.VideoTrackOpenFailedEventArgs",
+        "winrt._winrt_windows_media_core.VideoTrackOpenFailedEventArgs",
         sizeof(py::wrapper::Windows::Media::Core::VideoTrackOpenFailedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -18472,7 +18472,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_VideoTrackSupportInfo =
     {
-        "_winrt_windows_media_core.VideoTrackSupportInfo",
+        "winrt._winrt_windows_media_core.VideoTrackSupportInfo",
         sizeof(py::wrapper::Windows::Media::Core::VideoTrackSupportInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -18685,7 +18685,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_IMediaCue =
     {
-        "_winrt_windows_media_core.IMediaCue",
+        "winrt._winrt_windows_media_core.IMediaCue",
         sizeof(py::wrapper::Windows::Media::Core::IMediaCue),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -18754,7 +18754,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_IMediaSource =
     {
-        "_winrt_windows_media_core.IMediaSource",
+        "winrt._winrt_windows_media_core.IMediaSource",
         sizeof(py::wrapper::Windows::Media::Core::IMediaSource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -18939,7 +18939,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_IMediaStreamDescriptor =
     {
-        "_winrt_windows_media_core.IMediaStreamDescriptor",
+        "winrt._winrt_windows_media_core.IMediaStreamDescriptor",
         sizeof(py::wrapper::Windows::Media::Core::IMediaStreamDescriptor),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -19172,7 +19172,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_IMediaStreamDescriptor2 =
     {
-        "_winrt_windows_media_core.IMediaStreamDescriptor2",
+        "winrt._winrt_windows_media_core.IMediaStreamDescriptor2",
         sizeof(py::wrapper::Windows::Media::Core::IMediaStreamDescriptor2),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -19349,7 +19349,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_IMediaTrack =
     {
-        "_winrt_windows_media_core.IMediaTrack",
+        "winrt._winrt_windows_media_core.IMediaTrack",
         sizeof(py::wrapper::Windows::Media::Core::IMediaTrack),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -19511,7 +19511,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_ISingleSelectMediaTrackList =
     {
-        "_winrt_windows_media_core.ISingleSelectMediaTrackList",
+        "winrt._winrt_windows_media_core.ISingleSelectMediaTrackList",
         sizeof(py::wrapper::Windows::Media::Core::ISingleSelectMediaTrackList),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -19600,7 +19600,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_ITimedMetadataTrackProvider =
     {
-        "_winrt_windows_media_core.ITimedMetadataTrackProvider",
+        "winrt._winrt_windows_media_core.ITimedMetadataTrackProvider",
         sizeof(py::wrapper::Windows::Media::Core::ITimedMetadataTrackProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -19761,7 +19761,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_MseTimeRange =
     {
-        "_winrt_windows_media_core.MseTimeRange",
+        "winrt._winrt_windows_media_core.MseTimeRange",
         sizeof(py::wrapper::Windows::Media::Core::MseTimeRange),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -19922,7 +19922,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_TimedTextDouble =
     {
-        "_winrt_windows_media_core.TimedTextDouble",
+        "winrt._winrt_windows_media_core.TimedTextDouble",
         sizeof(py::wrapper::Windows::Media::Core::TimedTextDouble),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -20188,7 +20188,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_TimedTextPadding =
     {
-        "_winrt_windows_media_core.TimedTextPadding",
+        "winrt._winrt_windows_media_core.TimedTextPadding",
         sizeof(py::wrapper::Windows::Media::Core::TimedTextPadding),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -20384,7 +20384,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_TimedTextPoint =
     {
-        "_winrt_windows_media_core.TimedTextPoint",
+        "winrt._winrt_windows_media_core.TimedTextPoint",
         sizeof(py::wrapper::Windows::Media::Core::TimedTextPoint),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -20580,7 +20580,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Spec type_spec_TimedTextSize =
     {
-        "_winrt_windows_media_core.TimedTextSize",
+        "winrt._winrt_windows_media_core.TimedTextSize",
         sizeof(py::wrapper::Windows::Media::Core::TimedTextSize),
         0,
         Py_TPFLAGS_DEFAULT,

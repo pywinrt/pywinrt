@@ -90,7 +90,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_AddDeleteThemeTransition =
     {
-        "_winrt_windows_ui_xaml_media_animation.AddDeleteThemeTransition",
+        "winrt._winrt_windows_ui_xaml_media_animation.AddDeleteThemeTransition",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::AddDeleteThemeTransition),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -248,7 +248,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_BackEase =
     {
-        "_winrt_windows_ui_xaml_media_animation.BackEase",
+        "winrt._winrt_windows_ui_xaml_media_animation.BackEase",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::BackEase),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -269,7 +269,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_BackEase_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.BackEase_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.BackEase_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -360,7 +360,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_BasicConnectedAnimationConfiguration =
     {
-        "_winrt_windows_ui_xaml_media_animation.BasicConnectedAnimationConfiguration",
+        "winrt._winrt_windows_ui_xaml_media_animation.BasicConnectedAnimationConfiguration",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::BasicConnectedAnimationConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -518,7 +518,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_BeginStoryboard =
     {
-        "_winrt_windows_ui_xaml_media_animation.BeginStoryboard",
+        "winrt._winrt_windows_ui_xaml_media_animation.BeginStoryboard",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::BeginStoryboard),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -539,7 +539,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_BeginStoryboard_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.BeginStoryboard_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.BeginStoryboard_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -764,7 +764,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_BounceEase =
     {
-        "_winrt_windows_ui_xaml_media_animation.BounceEase",
+        "winrt._winrt_windows_ui_xaml_media_animation.BounceEase",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::BounceEase),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -786,7 +786,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_BounceEase_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.BounceEase_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.BounceEase_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -877,7 +877,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_CircleEase =
     {
-        "_winrt_windows_ui_xaml_media_animation.CircleEase",
+        "winrt._winrt_windows_ui_xaml_media_animation.CircleEase",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::CircleEase),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1303,7 +1303,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_ColorAnimation =
     {
-        "_winrt_windows_ui_xaml_media_animation.ColorAnimation",
+        "winrt._winrt_windows_ui_xaml_media_animation.ColorAnimation",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1328,7 +1328,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_ColorAnimation_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.ColorAnimation_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.ColorAnimation_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1506,7 +1506,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_ColorAnimationUsingKeyFrames =
     {
-        "_winrt_windows_ui_xaml_media_animation.ColorAnimationUsingKeyFrames",
+        "winrt._winrt_windows_ui_xaml_media_animation.ColorAnimationUsingKeyFrames",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorAnimationUsingKeyFrames),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1527,7 +1527,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_ColorAnimationUsingKeyFrames_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.ColorAnimationUsingKeyFrames_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.ColorAnimationUsingKeyFrames_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1730,7 +1730,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_ColorKeyFrame =
     {
-        "_winrt_windows_ui_xaml_media_animation.ColorKeyFrame",
+        "winrt._winrt_windows_ui_xaml_media_animation.ColorKeyFrame",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorKeyFrame),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1752,7 +1752,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_ColorKeyFrame_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.ColorKeyFrame_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.ColorKeyFrame_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -2391,7 +2391,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_ColorKeyFrameCollection =
     {
-        "_winrt_windows_ui_xaml_media_animation.ColorKeyFrameCollection",
+        "winrt._winrt_windows_ui_xaml_media_animation.ColorKeyFrameCollection",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorKeyFrameCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2634,7 +2634,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_CommonNavigationTransitionInfo =
     {
-        "_winrt_windows_ui_xaml_media_animation.CommonNavigationTransitionInfo",
+        "winrt._winrt_windows_ui_xaml_media_animation.CommonNavigationTransitionInfo",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::CommonNavigationTransitionInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2656,7 +2656,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_CommonNavigationTransitionInfo_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.CommonNavigationTransitionInfo_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.CommonNavigationTransitionInfo_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -2984,7 +2984,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_ConnectedAnimation =
     {
-        "_winrt_windows_ui_xaml_media_animation.ConnectedAnimation",
+        "winrt._winrt_windows_ui_xaml_media_animation.ConnectedAnimation",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::ConnectedAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3053,7 +3053,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_ConnectedAnimationConfiguration =
     {
-        "_winrt_windows_ui_xaml_media_animation.ConnectedAnimationConfiguration",
+        "winrt._winrt_windows_ui_xaml_media_animation.ConnectedAnimationConfiguration",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::ConnectedAnimationConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3313,7 +3313,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_ConnectedAnimationService =
     {
-        "_winrt_windows_ui_xaml_media_animation.ConnectedAnimationService",
+        "winrt._winrt_windows_ui_xaml_media_animation.ConnectedAnimationService",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::ConnectedAnimationService),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3538,7 +3538,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_ContentThemeTransition =
     {
-        "_winrt_windows_ui_xaml_media_animation.ContentThemeTransition",
+        "winrt._winrt_windows_ui_xaml_media_animation.ContentThemeTransition",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::ContentThemeTransition),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3560,7 +3560,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_ContentThemeTransition_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.ContentThemeTransition_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.ContentThemeTransition_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -3973,7 +3973,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_ContinuumNavigationTransitionInfo =
     {
-        "_winrt_windows_ui_xaml_media_animation.ContinuumNavigationTransitionInfo",
+        "winrt._winrt_windows_ui_xaml_media_animation.ContinuumNavigationTransitionInfo",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::ContinuumNavigationTransitionInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3997,7 +3997,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_ContinuumNavigationTransitionInfo_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.ContinuumNavigationTransitionInfo_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.ContinuumNavigationTransitionInfo_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -4088,7 +4088,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_CubicEase =
     {
-        "_winrt_windows_ui_xaml_media_animation.CubicEase",
+        "winrt._winrt_windows_ui_xaml_media_animation.CubicEase",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::CubicEase),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4179,7 +4179,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_DirectConnectedAnimationConfiguration =
     {
-        "_winrt_windows_ui_xaml_media_animation.DirectConnectedAnimationConfiguration",
+        "winrt._winrt_windows_ui_xaml_media_animation.DirectConnectedAnimationConfiguration",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::DirectConnectedAnimationConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4270,7 +4270,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_DiscreteColorKeyFrame =
     {
-        "_winrt_windows_ui_xaml_media_animation.DiscreteColorKeyFrame",
+        "winrt._winrt_windows_ui_xaml_media_animation.DiscreteColorKeyFrame",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::DiscreteColorKeyFrame),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4361,7 +4361,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_DiscreteDoubleKeyFrame =
     {
-        "_winrt_windows_ui_xaml_media_animation.DiscreteDoubleKeyFrame",
+        "winrt._winrt_windows_ui_xaml_media_animation.DiscreteDoubleKeyFrame",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::DiscreteDoubleKeyFrame),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4452,7 +4452,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_DiscreteObjectKeyFrame =
     {
-        "_winrt_windows_ui_xaml_media_animation.DiscreteObjectKeyFrame",
+        "winrt._winrt_windows_ui_xaml_media_animation.DiscreteObjectKeyFrame",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::DiscreteObjectKeyFrame),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4543,7 +4543,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_DiscretePointKeyFrame =
     {
-        "_winrt_windows_ui_xaml_media_animation.DiscretePointKeyFrame",
+        "winrt._winrt_windows_ui_xaml_media_animation.DiscretePointKeyFrame",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::DiscretePointKeyFrame),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4969,7 +4969,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_DoubleAnimation =
     {
-        "_winrt_windows_ui_xaml_media_animation.DoubleAnimation",
+        "winrt._winrt_windows_ui_xaml_media_animation.DoubleAnimation",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4994,7 +4994,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_DoubleAnimation_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.DoubleAnimation_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.DoubleAnimation_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -5172,7 +5172,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_DoubleAnimationUsingKeyFrames =
     {
-        "_winrt_windows_ui_xaml_media_animation.DoubleAnimationUsingKeyFrames",
+        "winrt._winrt_windows_ui_xaml_media_animation.DoubleAnimationUsingKeyFrames",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleAnimationUsingKeyFrames),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5193,7 +5193,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_DoubleAnimationUsingKeyFrames_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.DoubleAnimationUsingKeyFrames_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.DoubleAnimationUsingKeyFrames_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -5396,7 +5396,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_DoubleKeyFrame =
     {
-        "_winrt_windows_ui_xaml_media_animation.DoubleKeyFrame",
+        "winrt._winrt_windows_ui_xaml_media_animation.DoubleKeyFrame",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleKeyFrame),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5418,7 +5418,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_DoubleKeyFrame_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.DoubleKeyFrame_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.DoubleKeyFrame_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -6057,7 +6057,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_DoubleKeyFrameCollection =
     {
-        "_winrt_windows_ui_xaml_media_animation.DoubleKeyFrameCollection",
+        "winrt._winrt_windows_ui_xaml_media_animation.DoubleKeyFrameCollection",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleKeyFrameCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6215,7 +6215,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_DragItemThemeAnimation =
     {
-        "_winrt_windows_ui_xaml_media_animation.DragItemThemeAnimation",
+        "winrt._winrt_windows_ui_xaml_media_animation.DragItemThemeAnimation",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::DragItemThemeAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6236,7 +6236,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_DragItemThemeAnimation_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.DragItemThemeAnimation_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.DragItemThemeAnimation_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -6528,7 +6528,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_DragOverThemeAnimation =
     {
-        "_winrt_windows_ui_xaml_media_animation.DragOverThemeAnimation",
+        "winrt._winrt_windows_ui_xaml_media_animation.DragOverThemeAnimation",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::DragOverThemeAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6551,7 +6551,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_DragOverThemeAnimation_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.DragOverThemeAnimation_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.DragOverThemeAnimation_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -6642,7 +6642,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_DrillInNavigationTransitionInfo =
     {
-        "_winrt_windows_ui_xaml_media_animation.DrillInNavigationTransitionInfo",
+        "winrt._winrt_windows_ui_xaml_media_animation.DrillInNavigationTransitionInfo",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillInNavigationTransitionInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7001,7 +7001,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_DrillInThemeAnimation =
     {
-        "_winrt_windows_ui_xaml_media_animation.DrillInThemeAnimation",
+        "winrt._winrt_windows_ui_xaml_media_animation.DrillInThemeAnimation",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillInThemeAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7025,7 +7025,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_DrillInThemeAnimation_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.DrillInThemeAnimation_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.DrillInThemeAnimation_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -7384,7 +7384,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_DrillOutThemeAnimation =
     {
-        "_winrt_windows_ui_xaml_media_animation.DrillOutThemeAnimation",
+        "winrt._winrt_windows_ui_xaml_media_animation.DrillOutThemeAnimation",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillOutThemeAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7408,7 +7408,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_DrillOutThemeAnimation_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.DrillOutThemeAnimation_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.DrillOutThemeAnimation_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -7566,7 +7566,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_DropTargetItemThemeAnimation =
     {
-        "_winrt_windows_ui_xaml_media_animation.DropTargetItemThemeAnimation",
+        "winrt._winrt_windows_ui_xaml_media_animation.DropTargetItemThemeAnimation",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::DropTargetItemThemeAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7587,7 +7587,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_DropTargetItemThemeAnimation_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.DropTargetItemThemeAnimation_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.DropTargetItemThemeAnimation_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -7745,7 +7745,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_EasingColorKeyFrame =
     {
-        "_winrt_windows_ui_xaml_media_animation.EasingColorKeyFrame",
+        "winrt._winrt_windows_ui_xaml_media_animation.EasingColorKeyFrame",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::EasingColorKeyFrame),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7766,7 +7766,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_EasingColorKeyFrame_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.EasingColorKeyFrame_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.EasingColorKeyFrame_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -7924,7 +7924,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_EasingDoubleKeyFrame =
     {
-        "_winrt_windows_ui_xaml_media_animation.EasingDoubleKeyFrame",
+        "winrt._winrt_windows_ui_xaml_media_animation.EasingDoubleKeyFrame",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::EasingDoubleKeyFrame),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7945,7 +7945,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_EasingDoubleKeyFrame_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.EasingDoubleKeyFrame_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.EasingDoubleKeyFrame_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -8113,7 +8113,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_EasingFunctionBase =
     {
-        "_winrt_windows_ui_xaml_media_animation.EasingFunctionBase",
+        "winrt._winrt_windows_ui_xaml_media_animation.EasingFunctionBase",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::EasingFunctionBase),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8134,7 +8134,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_EasingFunctionBase_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.EasingFunctionBase_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.EasingFunctionBase_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -8292,7 +8292,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_EasingPointKeyFrame =
     {
-        "_winrt_windows_ui_xaml_media_animation.EasingPointKeyFrame",
+        "winrt._winrt_windows_ui_xaml_media_animation.EasingPointKeyFrame",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::EasingPointKeyFrame),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8313,7 +8313,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_EasingPointKeyFrame_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.EasingPointKeyFrame_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.EasingPointKeyFrame_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -8471,7 +8471,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_EdgeUIThemeTransition =
     {
-        "_winrt_windows_ui_xaml_media_animation.EdgeUIThemeTransition",
+        "winrt._winrt_windows_ui_xaml_media_animation.EdgeUIThemeTransition",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::EdgeUIThemeTransition),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8492,7 +8492,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_EdgeUIThemeTransition_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.EdgeUIThemeTransition_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.EdgeUIThemeTransition_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -8717,7 +8717,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_ElasticEase =
     {
-        "_winrt_windows_ui_xaml_media_animation.ElasticEase",
+        "winrt._winrt_windows_ui_xaml_media_animation.ElasticEase",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::ElasticEase),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8739,7 +8739,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_ElasticEase_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.ElasticEase_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.ElasticEase_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -8915,7 +8915,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_EntranceNavigationTransitionInfo =
     {
-        "_winrt_windows_ui_xaml_media_animation.EntranceNavigationTransitionInfo",
+        "winrt._winrt_windows_ui_xaml_media_animation.EntranceNavigationTransitionInfo",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::EntranceNavigationTransitionInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8936,7 +8936,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_EntranceNavigationTransitionInfo_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.EntranceNavigationTransitionInfo_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.EntranceNavigationTransitionInfo_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -9228,7 +9228,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_EntranceThemeTransition =
     {
-        "_winrt_windows_ui_xaml_media_animation.EntranceThemeTransition",
+        "winrt._winrt_windows_ui_xaml_media_animation.EntranceThemeTransition",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::EntranceThemeTransition),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9251,7 +9251,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_EntranceThemeTransition_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.EntranceThemeTransition_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.EntranceThemeTransition_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -9409,7 +9409,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_ExponentialEase =
     {
-        "_winrt_windows_ui_xaml_media_animation.ExponentialEase",
+        "winrt._winrt_windows_ui_xaml_media_animation.ExponentialEase",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::ExponentialEase),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9430,7 +9430,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_ExponentialEase_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.ExponentialEase_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.ExponentialEase_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -9588,7 +9588,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_FadeInThemeAnimation =
     {
-        "_winrt_windows_ui_xaml_media_animation.FadeInThemeAnimation",
+        "winrt._winrt_windows_ui_xaml_media_animation.FadeInThemeAnimation",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::FadeInThemeAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9609,7 +9609,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_FadeInThemeAnimation_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.FadeInThemeAnimation_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.FadeInThemeAnimation_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -9767,7 +9767,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_FadeOutThemeAnimation =
     {
-        "_winrt_windows_ui_xaml_media_animation.FadeOutThemeAnimation",
+        "winrt._winrt_windows_ui_xaml_media_animation.FadeOutThemeAnimation",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::FadeOutThemeAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9788,7 +9788,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_FadeOutThemeAnimation_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.FadeOutThemeAnimation_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.FadeOutThemeAnimation_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -9927,7 +9927,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_GravityConnectedAnimationConfiguration =
     {
-        "_winrt_windows_ui_xaml_media_animation.GravityConnectedAnimationConfiguration",
+        "winrt._winrt_windows_ui_xaml_media_animation.GravityConnectedAnimationConfiguration",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::GravityConnectedAnimationConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10114,7 +10114,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_KeySpline =
     {
-        "_winrt_windows_ui_xaml_media_animation.KeySpline",
+        "winrt._winrt_windows_ui_xaml_media_animation.KeySpline",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::KeySpline),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10215,7 +10215,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_KeyTimeHelper =
     {
-        "_winrt_windows_ui_xaml_media_animation.KeyTimeHelper",
+        "winrt._winrt_windows_ui_xaml_media_animation.KeyTimeHelper",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::KeyTimeHelper),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10306,7 +10306,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_LinearColorKeyFrame =
     {
-        "_winrt_windows_ui_xaml_media_animation.LinearColorKeyFrame",
+        "winrt._winrt_windows_ui_xaml_media_animation.LinearColorKeyFrame",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::LinearColorKeyFrame),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10397,7 +10397,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_LinearDoubleKeyFrame =
     {
-        "_winrt_windows_ui_xaml_media_animation.LinearDoubleKeyFrame",
+        "winrt._winrt_windows_ui_xaml_media_animation.LinearDoubleKeyFrame",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::LinearDoubleKeyFrame),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10488,7 +10488,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_LinearPointKeyFrame =
     {
-        "_winrt_windows_ui_xaml_media_animation.LinearPointKeyFrame",
+        "winrt._winrt_windows_ui_xaml_media_animation.LinearPointKeyFrame",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::LinearPointKeyFrame),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10646,7 +10646,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_NavigationThemeTransition =
     {
-        "_winrt_windows_ui_xaml_media_animation.NavigationThemeTransition",
+        "winrt._winrt_windows_ui_xaml_media_animation.NavigationThemeTransition",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::NavigationThemeTransition),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10667,7 +10667,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_NavigationThemeTransition_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.NavigationThemeTransition_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.NavigationThemeTransition_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -10799,7 +10799,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_NavigationTransitionInfo =
     {
-        "_winrt_windows_ui_xaml_media_animation.NavigationTransitionInfo",
+        "winrt._winrt_windows_ui_xaml_media_animation.NavigationTransitionInfo",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10977,7 +10977,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_ObjectAnimationUsingKeyFrames =
     {
-        "_winrt_windows_ui_xaml_media_animation.ObjectAnimationUsingKeyFrames",
+        "winrt._winrt_windows_ui_xaml_media_animation.ObjectAnimationUsingKeyFrames",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::ObjectAnimationUsingKeyFrames),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10998,7 +10998,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_ObjectAnimationUsingKeyFrames_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.ObjectAnimationUsingKeyFrames_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.ObjectAnimationUsingKeyFrames_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -11201,7 +11201,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_ObjectKeyFrame =
     {
-        "_winrt_windows_ui_xaml_media_animation.ObjectKeyFrame",
+        "winrt._winrt_windows_ui_xaml_media_animation.ObjectKeyFrame",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::ObjectKeyFrame),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11223,7 +11223,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_ObjectKeyFrame_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.ObjectKeyFrame_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.ObjectKeyFrame_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -11862,7 +11862,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_ObjectKeyFrameCollection =
     {
-        "_winrt_windows_ui_xaml_media_animation.ObjectKeyFrameCollection",
+        "winrt._winrt_windows_ui_xaml_media_animation.ObjectKeyFrameCollection",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::ObjectKeyFrameCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12020,7 +12020,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_PaneThemeTransition =
     {
-        "_winrt_windows_ui_xaml_media_animation.PaneThemeTransition",
+        "winrt._winrt_windows_ui_xaml_media_animation.PaneThemeTransition",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::PaneThemeTransition),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12041,7 +12041,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_PaneThemeTransition_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.PaneThemeTransition_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.PaneThemeTransition_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -12467,7 +12467,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_PointAnimation =
     {
-        "_winrt_windows_ui_xaml_media_animation.PointAnimation",
+        "winrt._winrt_windows_ui_xaml_media_animation.PointAnimation",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::PointAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12492,7 +12492,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_PointAnimation_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.PointAnimation_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.PointAnimation_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -12670,7 +12670,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_PointAnimationUsingKeyFrames =
     {
-        "_winrt_windows_ui_xaml_media_animation.PointAnimationUsingKeyFrames",
+        "winrt._winrt_windows_ui_xaml_media_animation.PointAnimationUsingKeyFrames",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::PointAnimationUsingKeyFrames),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12691,7 +12691,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_PointAnimationUsingKeyFrames_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.PointAnimationUsingKeyFrames_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.PointAnimationUsingKeyFrames_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -12894,7 +12894,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_PointKeyFrame =
     {
-        "_winrt_windows_ui_xaml_media_animation.PointKeyFrame",
+        "winrt._winrt_windows_ui_xaml_media_animation.PointKeyFrame",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::PointKeyFrame),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12916,7 +12916,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_PointKeyFrame_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.PointKeyFrame_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.PointKeyFrame_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -13555,7 +13555,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_PointKeyFrameCollection =
     {
-        "_winrt_windows_ui_xaml_media_animation.PointKeyFrameCollection",
+        "winrt._winrt_windows_ui_xaml_media_animation.PointKeyFrameCollection",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::PointKeyFrameCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13713,7 +13713,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_PointerDownThemeAnimation =
     {
-        "_winrt_windows_ui_xaml_media_animation.PointerDownThemeAnimation",
+        "winrt._winrt_windows_ui_xaml_media_animation.PointerDownThemeAnimation",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::PointerDownThemeAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13734,7 +13734,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_PointerDownThemeAnimation_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.PointerDownThemeAnimation_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.PointerDownThemeAnimation_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -13892,7 +13892,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_PointerUpThemeAnimation =
     {
-        "_winrt_windows_ui_xaml_media_animation.PointerUpThemeAnimation",
+        "winrt._winrt_windows_ui_xaml_media_animation.PointerUpThemeAnimation",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::PointerUpThemeAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13913,7 +13913,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_PointerUpThemeAnimation_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.PointerUpThemeAnimation_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.PointerUpThemeAnimation_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -14205,7 +14205,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_PopInThemeAnimation =
     {
-        "_winrt_windows_ui_xaml_media_animation.PopInThemeAnimation",
+        "winrt._winrt_windows_ui_xaml_media_animation.PopInThemeAnimation",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::PopInThemeAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14228,7 +14228,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_PopInThemeAnimation_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.PopInThemeAnimation_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.PopInThemeAnimation_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -14386,7 +14386,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_PopOutThemeAnimation =
     {
-        "_winrt_windows_ui_xaml_media_animation.PopOutThemeAnimation",
+        "winrt._winrt_windows_ui_xaml_media_animation.PopOutThemeAnimation",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::PopOutThemeAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14407,7 +14407,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_PopOutThemeAnimation_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.PopOutThemeAnimation_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.PopOutThemeAnimation_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -14632,7 +14632,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_PopupThemeTransition =
     {
-        "_winrt_windows_ui_xaml_media_animation.PopupThemeTransition",
+        "winrt._winrt_windows_ui_xaml_media_animation.PopupThemeTransition",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::PopupThemeTransition),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14654,7 +14654,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_PopupThemeTransition_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.PopupThemeTransition_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.PopupThemeTransition_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -14812,7 +14812,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_PowerEase =
     {
-        "_winrt_windows_ui_xaml_media_animation.PowerEase",
+        "winrt._winrt_windows_ui_xaml_media_animation.PowerEase",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::PowerEase),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14833,7 +14833,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_PowerEase_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.PowerEase_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.PowerEase_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -14924,7 +14924,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_QuadraticEase =
     {
-        "_winrt_windows_ui_xaml_media_animation.QuadraticEase",
+        "winrt._winrt_windows_ui_xaml_media_animation.QuadraticEase",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::QuadraticEase),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -15015,7 +15015,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_QuarticEase =
     {
-        "_winrt_windows_ui_xaml_media_animation.QuarticEase",
+        "winrt._winrt_windows_ui_xaml_media_animation.QuarticEase",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::QuarticEase),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -15106,7 +15106,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_QuinticEase =
     {
-        "_winrt_windows_ui_xaml_media_animation.QuinticEase",
+        "winrt._winrt_windows_ui_xaml_media_animation.QuinticEase",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::QuinticEase),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -15197,7 +15197,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_ReorderThemeTransition =
     {
-        "_winrt_windows_ui_xaml_media_animation.ReorderThemeTransition",
+        "winrt._winrt_windows_ui_xaml_media_animation.ReorderThemeTransition",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::ReorderThemeTransition),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -15446,7 +15446,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_RepeatBehaviorHelper =
     {
-        "_winrt_windows_ui_xaml_media_animation.RepeatBehaviorHelper",
+        "winrt._winrt_windows_ui_xaml_media_animation.RepeatBehaviorHelper",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::RepeatBehaviorHelper),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -15467,7 +15467,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_RepeatBehaviorHelper_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.RepeatBehaviorHelper_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.RepeatBehaviorHelper_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -15759,7 +15759,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_RepositionThemeAnimation =
     {
-        "_winrt_windows_ui_xaml_media_animation.RepositionThemeAnimation",
+        "winrt._winrt_windows_ui_xaml_media_animation.RepositionThemeAnimation",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::RepositionThemeAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -15782,7 +15782,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_RepositionThemeAnimation_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.RepositionThemeAnimation_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.RepositionThemeAnimation_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -15940,7 +15940,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_RepositionThemeTransition =
     {
-        "_winrt_windows_ui_xaml_media_animation.RepositionThemeTransition",
+        "winrt._winrt_windows_ui_xaml_media_animation.RepositionThemeTransition",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::RepositionThemeTransition),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -15961,7 +15961,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_RepositionThemeTransition_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.RepositionThemeTransition_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.RepositionThemeTransition_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -16052,7 +16052,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_SineEase =
     {
-        "_winrt_windows_ui_xaml_media_animation.SineEase",
+        "winrt._winrt_windows_ui_xaml_media_animation.SineEase",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::SineEase),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -16210,7 +16210,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_SlideNavigationTransitionInfo =
     {
-        "_winrt_windows_ui_xaml_media_animation.SlideNavigationTransitionInfo",
+        "winrt._winrt_windows_ui_xaml_media_animation.SlideNavigationTransitionInfo",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::SlideNavigationTransitionInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -16231,7 +16231,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_SlideNavigationTransitionInfo_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.SlideNavigationTransitionInfo_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.SlideNavigationTransitionInfo_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -16389,7 +16389,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_SplineColorKeyFrame =
     {
-        "_winrt_windows_ui_xaml_media_animation.SplineColorKeyFrame",
+        "winrt._winrt_windows_ui_xaml_media_animation.SplineColorKeyFrame",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::SplineColorKeyFrame),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -16410,7 +16410,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_SplineColorKeyFrame_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.SplineColorKeyFrame_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.SplineColorKeyFrame_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -16568,7 +16568,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_SplineDoubleKeyFrame =
     {
-        "_winrt_windows_ui_xaml_media_animation.SplineDoubleKeyFrame",
+        "winrt._winrt_windows_ui_xaml_media_animation.SplineDoubleKeyFrame",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::SplineDoubleKeyFrame),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -16589,7 +16589,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_SplineDoubleKeyFrame_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.SplineDoubleKeyFrame_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.SplineDoubleKeyFrame_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -16747,7 +16747,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_SplinePointKeyFrame =
     {
-        "_winrt_windows_ui_xaml_media_animation.SplinePointKeyFrame",
+        "winrt._winrt_windows_ui_xaml_media_animation.SplinePointKeyFrame",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::SplinePointKeyFrame),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -16768,7 +16768,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_SplinePointKeyFrame_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.SplinePointKeyFrame_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.SplinePointKeyFrame_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -17596,7 +17596,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_SplitCloseThemeAnimation =
     {
-        "_winrt_windows_ui_xaml_media_animation.SplitCloseThemeAnimation",
+        "winrt._winrt_windows_ui_xaml_media_animation.SplitCloseThemeAnimation",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -17627,7 +17627,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_SplitCloseThemeAnimation_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.SplitCloseThemeAnimation_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.SplitCloseThemeAnimation_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -18455,7 +18455,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_SplitOpenThemeAnimation =
     {
-        "_winrt_windows_ui_xaml_media_animation.SplitOpenThemeAnimation",
+        "winrt._winrt_windows_ui_xaml_media_animation.SplitOpenThemeAnimation",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -18486,7 +18486,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_SplitOpenThemeAnimation_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.SplitOpenThemeAnimation_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.SplitOpenThemeAnimation_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -19082,7 +19082,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_Storyboard =
     {
-        "_winrt_windows_ui_xaml_media_animation.Storyboard",
+        "winrt._winrt_windows_ui_xaml_media_animation.Storyboard",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::Storyboard),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -19104,7 +19104,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_Storyboard_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.Storyboard_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.Storyboard_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -19195,7 +19195,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_SuppressNavigationTransitionInfo =
     {
-        "_winrt_windows_ui_xaml_media_animation.SuppressNavigationTransitionInfo",
+        "winrt._winrt_windows_ui_xaml_media_animation.SuppressNavigationTransitionInfo",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::SuppressNavigationTransitionInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -19487,7 +19487,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_SwipeBackThemeAnimation =
     {
-        "_winrt_windows_ui_xaml_media_animation.SwipeBackThemeAnimation",
+        "winrt._winrt_windows_ui_xaml_media_animation.SwipeBackThemeAnimation",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::SwipeBackThemeAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -19510,7 +19510,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_SwipeBackThemeAnimation_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.SwipeBackThemeAnimation_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.SwipeBackThemeAnimation_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -19802,7 +19802,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_SwipeHintThemeAnimation =
     {
-        "_winrt_windows_ui_xaml_media_animation.SwipeHintThemeAnimation",
+        "winrt._winrt_windows_ui_xaml_media_animation.SwipeHintThemeAnimation",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::SwipeHintThemeAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -19825,7 +19825,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_SwipeHintThemeAnimation_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.SwipeHintThemeAnimation_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.SwipeHintThemeAnimation_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -20388,7 +20388,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_Timeline =
     {
-        "_winrt_windows_ui_xaml_media_animation.Timeline",
+        "winrt._winrt_windows_ui_xaml_media_animation.Timeline",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::Timeline),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -20415,7 +20415,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_Timeline_Meta =
     {
-        "_winrt_windows_ui_xaml_media_animation.Timeline_Meta",
+        "winrt._winrt_windows_ui_xaml_media_animation.Timeline_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -21054,7 +21054,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_TimelineCollection =
     {
-        "_winrt_windows_ui_xaml_media_animation.TimelineCollection",
+        "winrt._winrt_windows_ui_xaml_media_animation.TimelineCollection",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::TimelineCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -21123,7 +21123,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_Transition =
     {
-        "_winrt_windows_ui_xaml_media_animation.Transition",
+        "winrt._winrt_windows_ui_xaml_media_animation.Transition",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::Transition),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -21762,7 +21762,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_TransitionCollection =
     {
-        "_winrt_windows_ui_xaml_media_animation.TransitionCollection",
+        "winrt._winrt_windows_ui_xaml_media_animation.TransitionCollection",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::TransitionCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -21888,7 +21888,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_KeyTime =
     {
-        "_winrt_windows_ui_xaml_media_animation.KeyTime",
+        "winrt._winrt_windows_ui_xaml_media_animation.KeyTime",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::KeyTime),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -22084,7 +22084,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Spec type_spec_RepeatBehavior =
     {
-        "_winrt_windows_ui_xaml_media_animation.RepeatBehavior",
+        "winrt._winrt_windows_ui_xaml_media_animation.RepeatBehavior",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Animation::RepeatBehavior),
         0,
         Py_TPFLAGS_DEFAULT,

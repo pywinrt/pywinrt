@@ -6,7 +6,7 @@ from winrt_sdk import get_include_dirs
 setup(
     ext_modules=[
         Extension(
-            "winrt.windows.ui.shell._winrt_windows_ui_shell",
+            "winrt._winrt_windows_ui_shell",
             sources=["py.Windows.UI.Shell.cpp"],
             include_dirs=get_include_dirs(),
             extra_compile_args=["/std:c++20", "/permissive-"],

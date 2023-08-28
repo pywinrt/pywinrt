@@ -156,7 +156,7 @@ namespace py::cpp::Windows::Data::Xml::Xsl
 
     static PyType_Spec type_spec_XsltProcessor =
     {
-        "_winrt_windows_data_xml_xsl.XsltProcessor",
+        "winrt._winrt_windows_data_xml_xsl.XsltProcessor",
         sizeof(py::wrapper::Windows::Data::Xml::Xsl::XsltProcessor),
         0,
         Py_TPFLAGS_DEFAULT,

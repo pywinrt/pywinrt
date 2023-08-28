@@ -100,7 +100,7 @@ namespace py::cpp::Windows::UI::Core::Preview
 
     static PyType_Spec type_spec_CoreAppWindowPreview =
     {
-        "_winrt_windows_ui_core_preview.CoreAppWindowPreview",
+        "winrt._winrt_windows_ui_core_preview.CoreAppWindowPreview",
         sizeof(py::wrapper::Windows::UI::Core::Preview::CoreAppWindowPreview),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -247,7 +247,7 @@ namespace py::cpp::Windows::UI::Core::Preview
 
     static PyType_Spec type_spec_SystemNavigationCloseRequestedPreviewEventArgs =
     {
-        "_winrt_windows_ui_core_preview.SystemNavigationCloseRequestedPreviewEventArgs",
+        "winrt._winrt_windows_ui_core_preview.SystemNavigationCloseRequestedPreviewEventArgs",
         sizeof(py::wrapper::Windows::UI::Core::Preview::SystemNavigationCloseRequestedPreviewEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -391,7 +391,7 @@ namespace py::cpp::Windows::UI::Core::Preview
 
     static PyType_Spec type_spec_SystemNavigationManagerPreview =
     {
-        "_winrt_windows_ui_core_preview.SystemNavigationManagerPreview",
+        "winrt._winrt_windows_ui_core_preview.SystemNavigationManagerPreview",
         sizeof(py::wrapper::Windows::UI::Core::Preview::SystemNavigationManagerPreview),
         0,
         Py_TPFLAGS_DEFAULT,

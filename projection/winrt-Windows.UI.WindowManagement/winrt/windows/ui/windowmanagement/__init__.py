@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_ui_windowmanagement
+from winrt import _winrt_windows_ui_windowmanagement
 
 __all__ = [
     "AppWindowClosedReason",

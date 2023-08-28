@@ -287,7 +287,7 @@ namespace py::cpp::Windows::Networking
 
     static PyType_Spec type_spec_EndpointPair =
     {
-        "_winrt_windows_networking.EndpointPair",
+        "winrt._winrt_windows_networking.EndpointPair",
         sizeof(py::wrapper::Windows::Networking::EndpointPair),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -589,7 +589,7 @@ namespace py::cpp::Windows::Networking
 
     static PyType_Spec type_spec_HostName =
     {
-        "_winrt_windows_networking.HostName",
+        "winrt._winrt_windows_networking.HostName",
         sizeof(py::wrapper::Windows::Networking::HostName),
         0,
         Py_TPFLAGS_DEFAULT,

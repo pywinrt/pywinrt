@@ -174,7 +174,7 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
 
     static PyType_Spec type_spec_LockApplicationHost =
     {
-        "_winrt_windows_applicationmodel_lockscreen.LockApplicationHost",
+        "winrt._winrt_windows_applicationmodel_lockscreen.LockApplicationHost",
         sizeof(py::wrapper::Windows::ApplicationModel::LockScreen::LockApplicationHost),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -354,7 +354,7 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
 
     static PyType_Spec type_spec_LockScreenBadge =
     {
-        "_winrt_windows_applicationmodel_lockscreen.LockScreenBadge",
+        "winrt._winrt_windows_applicationmodel_lockscreen.LockScreenBadge",
         sizeof(py::wrapper::Windows::ApplicationModel::LockScreen::LockScreenBadge),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -683,7 +683,7 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
 
     static PyType_Spec type_spec_LockScreenInfo =
     {
-        "_winrt_windows_applicationmodel_lockscreen.LockScreenInfo",
+        "winrt._winrt_windows_applicationmodel_lockscreen.LockScreenInfo",
         sizeof(py::wrapper::Windows::ApplicationModel::LockScreen::LockScreenInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -783,7 +783,7 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
 
     static PyType_Spec type_spec_LockScreenUnlockingDeferral =
     {
-        "_winrt_windows_applicationmodel_lockscreen.LockScreenUnlockingDeferral",
+        "winrt._winrt_windows_applicationmodel_lockscreen.LockScreenUnlockingDeferral",
         sizeof(py::wrapper::Windows::ApplicationModel::LockScreen::LockScreenUnlockingDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -902,7 +902,7 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
 
     static PyType_Spec type_spec_LockScreenUnlockingEventArgs =
     {
-        "_winrt_windows_applicationmodel_lockscreen.LockScreenUnlockingEventArgs",
+        "winrt._winrt_windows_applicationmodel_lockscreen.LockScreenUnlockingEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::LockScreen::LockScreenUnlockingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,

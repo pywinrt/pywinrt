@@ -173,7 +173,7 @@ namespace py::cpp::Windows::System::Preview
 
     static PyType_Spec type_spec_TwoPanelHingedDevicePosturePreview =
     {
-        "_winrt_windows_system_preview.TwoPanelHingedDevicePosturePreview",
+        "winrt._winrt_windows_system_preview.TwoPanelHingedDevicePosturePreview",
         sizeof(py::wrapper::Windows::System::Preview::TwoPanelHingedDevicePosturePreview),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -362,7 +362,7 @@ namespace py::cpp::Windows::System::Preview
 
     static PyType_Spec type_spec_TwoPanelHingedDevicePosturePreviewReading =
     {
-        "_winrt_windows_system_preview.TwoPanelHingedDevicePosturePreviewReading",
+        "winrt._winrt_windows_system_preview.TwoPanelHingedDevicePosturePreviewReading",
         sizeof(py::wrapper::Windows::System::Preview::TwoPanelHingedDevicePosturePreviewReading),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -451,7 +451,7 @@ namespace py::cpp::Windows::System::Preview
 
     static PyType_Spec type_spec_TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs =
     {
-        "_winrt_windows_system_preview.TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs",
+        "winrt._winrt_windows_system_preview.TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs",
         sizeof(py::wrapper::Windows::System::Preview::TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,

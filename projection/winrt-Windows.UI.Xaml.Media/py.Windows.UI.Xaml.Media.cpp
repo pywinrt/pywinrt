@@ -492,7 +492,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_AcrylicBrush =
     {
-        "_winrt_windows_ui_xaml_media.AcrylicBrush",
+        "winrt._winrt_windows_ui_xaml_media.AcrylicBrush",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::AcrylicBrush),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -518,7 +518,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_AcrylicBrush_Meta =
     {
-        "_winrt_windows_ui_xaml_media.AcrylicBrush_Meta",
+        "winrt._winrt_windows_ui_xaml_media.AcrylicBrush_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -944,7 +944,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_ArcSegment =
     {
-        "_winrt_windows_ui_xaml_media.ArcSegment",
+        "winrt._winrt_windows_ui_xaml_media.ArcSegment",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::ArcSegment),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -969,7 +969,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_ArcSegment_Meta =
     {
-        "_winrt_windows_ui_xaml_media.ArcSegment_Meta",
+        "winrt._winrt_windows_ui_xaml_media.ArcSegment_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1261,7 +1261,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_BezierSegment =
     {
-        "_winrt_windows_ui_xaml_media.BezierSegment",
+        "winrt._winrt_windows_ui_xaml_media.BezierSegment",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::BezierSegment),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1284,7 +1284,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_BezierSegment_Meta =
     {
-        "_winrt_windows_ui_xaml_media.BezierSegment_Meta",
+        "winrt._winrt_windows_ui_xaml_media.BezierSegment_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1375,7 +1375,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_BitmapCache =
     {
-        "_winrt_windows_ui_xaml_media.BitmapCache",
+        "winrt._winrt_windows_ui_xaml_media.BitmapCache",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::BitmapCache),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1713,7 +1713,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_Brush =
     {
-        "_winrt_windows_ui_xaml_media.Brush",
+        "winrt._winrt_windows_ui_xaml_media.Brush",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Brush),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1736,7 +1736,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_Brush_Meta =
     {
-        "_winrt_windows_ui_xaml_media.Brush_Meta",
+        "winrt._winrt_windows_ui_xaml_media.Brush_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -2375,7 +2375,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_BrushCollection =
     {
-        "_winrt_windows_ui_xaml_media.BrushCollection",
+        "winrt._winrt_windows_ui_xaml_media.BrushCollection",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::BrushCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2444,7 +2444,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_CacheMode =
     {
-        "_winrt_windows_ui_xaml_media.CacheMode",
+        "winrt._winrt_windows_ui_xaml_media.CacheMode",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::CacheMode),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3138,7 +3138,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_CompositeTransform =
     {
-        "_winrt_windows_ui_xaml_media.CompositeTransform",
+        "winrt._winrt_windows_ui_xaml_media.CompositeTransform",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::CompositeTransform),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3167,7 +3167,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_CompositeTransform_Meta =
     {
-        "_winrt_windows_ui_xaml_media.CompositeTransform_Meta",
+        "winrt._winrt_windows_ui_xaml_media.CompositeTransform_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -3371,7 +3371,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_CompositionTarget =
     {
-        "_winrt_windows_ui_xaml_media.CompositionTarget",
+        "winrt._winrt_windows_ui_xaml_media.CompositionTarget",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::CompositionTarget),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4010,7 +4010,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_DoubleCollection =
     {
-        "_winrt_windows_ui_xaml_media.DoubleCollection",
+        "winrt._winrt_windows_ui_xaml_media.DoubleCollection",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::DoubleCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4302,7 +4302,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_EllipseGeometry =
     {
-        "_winrt_windows_ui_xaml_media.EllipseGeometry",
+        "winrt._winrt_windows_ui_xaml_media.EllipseGeometry",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::EllipseGeometry),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4325,7 +4325,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_EllipseGeometry_Meta =
     {
-        "_winrt_windows_ui_xaml_media.EllipseGeometry_Meta",
+        "winrt._winrt_windows_ui_xaml_media.EllipseGeometry_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -4457,7 +4457,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_FontFamily =
     {
-        "_winrt_windows_ui_xaml_media.FontFamily",
+        "winrt._winrt_windows_ui_xaml_media.FontFamily",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::FontFamily),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4478,7 +4478,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_FontFamily_Meta =
     {
-        "_winrt_windows_ui_xaml_media.FontFamily_Meta",
+        "winrt._winrt_windows_ui_xaml_media.FontFamily_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -4773,7 +4773,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_GeneralTransform =
     {
-        "_winrt_windows_ui_xaml_media.GeneralTransform",
+        "winrt._winrt_windows_ui_xaml_media.GeneralTransform",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::GeneralTransform),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4967,7 +4967,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_Geometry =
     {
-        "_winrt_windows_ui_xaml_media.Geometry",
+        "winrt._winrt_windows_ui_xaml_media.Geometry",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Geometry),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4990,7 +4990,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_Geometry_Meta =
     {
-        "_winrt_windows_ui_xaml_media.Geometry_Meta",
+        "winrt._winrt_windows_ui_xaml_media.Geometry_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -5629,7 +5629,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_GeometryCollection =
     {
-        "_winrt_windows_ui_xaml_media.GeometryCollection",
+        "winrt._winrt_windows_ui_xaml_media.GeometryCollection",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::GeometryCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5854,7 +5854,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_GeometryGroup =
     {
-        "_winrt_windows_ui_xaml_media.GeometryGroup",
+        "winrt._winrt_windows_ui_xaml_media.GeometryGroup",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::GeometryGroup),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5876,7 +5876,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_GeometryGroup_Meta =
     {
-        "_winrt_windows_ui_xaml_media.GeometryGroup_Meta",
+        "winrt._winrt_windows_ui_xaml_media.GeometryGroup_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -6213,7 +6213,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_GradientBrush =
     {
-        "_winrt_windows_ui_xaml_media.GradientBrush",
+        "winrt._winrt_windows_ui_xaml_media.GradientBrush",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::GradientBrush),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6237,7 +6237,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_GradientBrush_Meta =
     {
-        "_winrt_windows_ui_xaml_media.GradientBrush_Meta",
+        "winrt._winrt_windows_ui_xaml_media.GradientBrush_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -6462,7 +6462,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_GradientStop =
     {
-        "_winrt_windows_ui_xaml_media.GradientStop",
+        "winrt._winrt_windows_ui_xaml_media.GradientStop",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::GradientStop),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6484,7 +6484,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_GradientStop_Meta =
     {
-        "_winrt_windows_ui_xaml_media.GradientStop_Meta",
+        "winrt._winrt_windows_ui_xaml_media.GradientStop_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -7123,7 +7123,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_GradientStopCollection =
     {
-        "_winrt_windows_ui_xaml_media.GradientStopCollection",
+        "winrt._winrt_windows_ui_xaml_media.GradientStopCollection",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::GradientStopCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7371,7 +7371,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_ImageBrush =
     {
-        "_winrt_windows_ui_xaml_media.ImageBrush",
+        "winrt._winrt_windows_ui_xaml_media.ImageBrush",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::ImageBrush),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7392,7 +7392,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_ImageBrush_Meta =
     {
-        "_winrt_windows_ui_xaml_media.ImageBrush_Meta",
+        "winrt._winrt_windows_ui_xaml_media.ImageBrush_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -7461,7 +7461,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_ImageSource =
     {
-        "_winrt_windows_ui_xaml_media.ImageSource",
+        "winrt._winrt_windows_ui_xaml_media.ImageSource",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::ImageSource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7686,7 +7686,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_LineGeometry =
     {
-        "_winrt_windows_ui_xaml_media.LineGeometry",
+        "winrt._winrt_windows_ui_xaml_media.LineGeometry",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::LineGeometry),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7708,7 +7708,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_LineGeometry_Meta =
     {
-        "_winrt_windows_ui_xaml_media.LineGeometry_Meta",
+        "winrt._winrt_windows_ui_xaml_media.LineGeometry_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -7866,7 +7866,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_LineSegment =
     {
-        "_winrt_windows_ui_xaml_media.LineSegment",
+        "winrt._winrt_windows_ui_xaml_media.LineSegment",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::LineSegment),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7887,7 +7887,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_LineSegment_Meta =
     {
-        "_winrt_windows_ui_xaml_media.LineSegment_Meta",
+        "winrt._winrt_windows_ui_xaml_media.LineSegment_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -8128,7 +8128,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_LinearGradientBrush =
     {
-        "_winrt_windows_ui_xaml_media.LinearGradientBrush",
+        "winrt._winrt_windows_ui_xaml_media.LinearGradientBrush",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::LinearGradientBrush),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8150,7 +8150,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_LinearGradientBrush_Meta =
     {
-        "_winrt_windows_ui_xaml_media.LinearGradientBrush_Meta",
+        "winrt._winrt_windows_ui_xaml_media.LinearGradientBrush_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -8239,7 +8239,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_LoadedImageSourceLoadCompletedEventArgs =
     {
-        "_winrt_windows_ui_xaml_media.LoadedImageSourceLoadCompletedEventArgs",
+        "winrt._winrt_windows_ui_xaml_media.LoadedImageSourceLoadCompletedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::LoadedImageSourceLoadCompletedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8571,7 +8571,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_LoadedImageSurface =
     {
-        "_winrt_windows_ui_xaml_media.LoadedImageSurface",
+        "winrt._winrt_windows_ui_xaml_media.LoadedImageSurface",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::LoadedImageSurface),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8729,7 +8729,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_Matrix3DProjection =
     {
-        "_winrt_windows_ui_xaml_media.Matrix3DProjection",
+        "winrt._winrt_windows_ui_xaml_media.Matrix3DProjection",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Matrix3DProjection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8750,7 +8750,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_Matrix3DProjection_Meta =
     {
-        "_winrt_windows_ui_xaml_media.Matrix3DProjection_Meta",
+        "winrt._winrt_windows_ui_xaml_media.Matrix3DProjection_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -8940,7 +8940,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_MatrixHelper =
     {
-        "_winrt_windows_ui_xaml_media.MatrixHelper",
+        "winrt._winrt_windows_ui_xaml_media.MatrixHelper",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::MatrixHelper),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8961,7 +8961,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_MatrixHelper_Meta =
     {
-        "_winrt_windows_ui_xaml_media.MatrixHelper_Meta",
+        "winrt._winrt_windows_ui_xaml_media.MatrixHelper_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -9119,7 +9119,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_MatrixTransform =
     {
-        "_winrt_windows_ui_xaml_media.MatrixTransform",
+        "winrt._winrt_windows_ui_xaml_media.MatrixTransform",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::MatrixTransform),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9140,7 +9140,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_MatrixTransform_Meta =
     {
-        "_winrt_windows_ui_xaml_media.MatrixTransform_Meta",
+        "winrt._winrt_windows_ui_xaml_media.MatrixTransform_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -9272,7 +9272,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_MediaTransportControlsThumbnailRequestedEventArgs =
     {
-        "_winrt_windows_ui_xaml_media.MediaTransportControlsThumbnailRequestedEventArgs",
+        "winrt._winrt_windows_ui_xaml_media.MediaTransportControlsThumbnailRequestedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::MediaTransportControlsThumbnailRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9403,7 +9403,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_PartialMediaFailureDetectedEventArgs =
     {
-        "_winrt_windows_ui_xaml_media.PartialMediaFailureDetectedEventArgs",
+        "winrt._winrt_windows_ui_xaml_media.PartialMediaFailureDetectedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::PartialMediaFailureDetectedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9762,7 +9762,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_PathFigure =
     {
-        "_winrt_windows_ui_xaml_media.PathFigure",
+        "winrt._winrt_windows_ui_xaml_media.PathFigure",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::PathFigure),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9786,7 +9786,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_PathFigure_Meta =
     {
-        "_winrt_windows_ui_xaml_media.PathFigure_Meta",
+        "winrt._winrt_windows_ui_xaml_media.PathFigure_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -10425,7 +10425,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_PathFigureCollection =
     {
-        "_winrt_windows_ui_xaml_media.PathFigureCollection",
+        "winrt._winrt_windows_ui_xaml_media.PathFigureCollection",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::PathFigureCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10650,7 +10650,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_PathGeometry =
     {
-        "_winrt_windows_ui_xaml_media.PathGeometry",
+        "winrt._winrt_windows_ui_xaml_media.PathGeometry",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::PathGeometry),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10672,7 +10672,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_PathGeometry_Meta =
     {
-        "_winrt_windows_ui_xaml_media.PathGeometry_Meta",
+        "winrt._winrt_windows_ui_xaml_media.PathGeometry_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -10741,7 +10741,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_PathSegment =
     {
-        "_winrt_windows_ui_xaml_media.PathSegment",
+        "winrt._winrt_windows_ui_xaml_media.PathSegment",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::PathSegment),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11380,7 +11380,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_PathSegmentCollection =
     {
-        "_winrt_windows_ui_xaml_media.PathSegmentCollection",
+        "winrt._winrt_windows_ui_xaml_media.PathSegmentCollection",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::PathSegmentCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12314,7 +12314,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_PlaneProjection =
     {
-        "_winrt_windows_ui_xaml_media.PlaneProjection",
+        "winrt._winrt_windows_ui_xaml_media.PlaneProjection",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::PlaneProjection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12347,7 +12347,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_PlaneProjection_Meta =
     {
-        "_winrt_windows_ui_xaml_media.PlaneProjection_Meta",
+        "winrt._winrt_windows_ui_xaml_media.PlaneProjection_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -12986,7 +12986,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_PointCollection =
     {
-        "_winrt_windows_ui_xaml_media.PointCollection",
+        "winrt._winrt_windows_ui_xaml_media.PointCollection",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::PointCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13144,7 +13144,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_PolyBezierSegment =
     {
-        "_winrt_windows_ui_xaml_media.PolyBezierSegment",
+        "winrt._winrt_windows_ui_xaml_media.PolyBezierSegment",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::PolyBezierSegment),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13165,7 +13165,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_PolyBezierSegment_Meta =
     {
-        "_winrt_windows_ui_xaml_media.PolyBezierSegment_Meta",
+        "winrt._winrt_windows_ui_xaml_media.PolyBezierSegment_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -13323,7 +13323,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_PolyLineSegment =
     {
-        "_winrt_windows_ui_xaml_media.PolyLineSegment",
+        "winrt._winrt_windows_ui_xaml_media.PolyLineSegment",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::PolyLineSegment),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13344,7 +13344,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_PolyLineSegment_Meta =
     {
-        "_winrt_windows_ui_xaml_media.PolyLineSegment_Meta",
+        "winrt._winrt_windows_ui_xaml_media.PolyLineSegment_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -13502,7 +13502,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_PolyQuadraticBezierSegment =
     {
-        "_winrt_windows_ui_xaml_media.PolyQuadraticBezierSegment",
+        "winrt._winrt_windows_ui_xaml_media.PolyQuadraticBezierSegment",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::PolyQuadraticBezierSegment),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13523,7 +13523,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_PolyQuadraticBezierSegment_Meta =
     {
-        "_winrt_windows_ui_xaml_media.PolyQuadraticBezierSegment_Meta",
+        "winrt._winrt_windows_ui_xaml_media.PolyQuadraticBezierSegment_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -13592,7 +13592,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_Projection =
     {
-        "_winrt_windows_ui_xaml_media.Projection",
+        "winrt._winrt_windows_ui_xaml_media.Projection",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Projection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13817,7 +13817,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_QuadraticBezierSegment =
     {
-        "_winrt_windows_ui_xaml_media.QuadraticBezierSegment",
+        "winrt._winrt_windows_ui_xaml_media.QuadraticBezierSegment",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::QuadraticBezierSegment),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13839,7 +13839,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_QuadraticBezierSegment_Meta =
     {
-        "_winrt_windows_ui_xaml_media.QuadraticBezierSegment_Meta",
+        "winrt._winrt_windows_ui_xaml_media.QuadraticBezierSegment_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -13930,7 +13930,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_RateChangedRoutedEventArgs =
     {
-        "_winrt_windows_ui_xaml_media.RateChangedRoutedEventArgs",
+        "winrt._winrt_windows_ui_xaml_media.RateChangedRoutedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::RateChangedRoutedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14088,7 +14088,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_RectangleGeometry =
     {
-        "_winrt_windows_ui_xaml_media.RectangleGeometry",
+        "winrt._winrt_windows_ui_xaml_media.RectangleGeometry",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::RectangleGeometry),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14109,7 +14109,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_RectangleGeometry_Meta =
     {
-        "_winrt_windows_ui_xaml_media.RectangleGeometry_Meta",
+        "winrt._winrt_windows_ui_xaml_media.RectangleGeometry_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -14198,7 +14198,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_RenderedEventArgs =
     {
-        "_winrt_windows_ui_xaml_media.RenderedEventArgs",
+        "winrt._winrt_windows_ui_xaml_media.RenderedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::RenderedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14287,7 +14287,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_RenderingEventArgs =
     {
-        "_winrt_windows_ui_xaml_media.RenderingEventArgs",
+        "winrt._winrt_windows_ui_xaml_media.RenderingEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::RenderingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14378,7 +14378,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_RevealBackgroundBrush =
     {
-        "_winrt_windows_ui_xaml_media.RevealBackgroundBrush",
+        "winrt._winrt_windows_ui_xaml_media.RevealBackgroundBrush",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::RevealBackgroundBrush),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14469,7 +14469,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_RevealBorderBrush =
     {
-        "_winrt_windows_ui_xaml_media.RevealBorderBrush",
+        "winrt._winrt_windows_ui_xaml_media.RevealBorderBrush",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::RevealBorderBrush),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14824,7 +14824,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_RevealBrush =
     {
-        "_winrt_windows_ui_xaml_media.RevealBrush",
+        "winrt._winrt_windows_ui_xaml_media.RevealBrush",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::RevealBrush),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14848,7 +14848,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_RevealBrush_Meta =
     {
-        "_winrt_windows_ui_xaml_media.RevealBrush_Meta",
+        "winrt._winrt_windows_ui_xaml_media.RevealBrush_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -15140,7 +15140,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_RotateTransform =
     {
-        "_winrt_windows_ui_xaml_media.RotateTransform",
+        "winrt._winrt_windows_ui_xaml_media.RotateTransform",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::RotateTransform),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -15163,7 +15163,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_RotateTransform_Meta =
     {
-        "_winrt_windows_ui_xaml_media.RotateTransform_Meta",
+        "winrt._winrt_windows_ui_xaml_media.RotateTransform_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -15522,7 +15522,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_ScaleTransform =
     {
-        "_winrt_windows_ui_xaml_media.ScaleTransform",
+        "winrt._winrt_windows_ui_xaml_media.ScaleTransform",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::ScaleTransform),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -15546,7 +15546,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_ScaleTransform_Meta =
     {
-        "_winrt_windows_ui_xaml_media.ScaleTransform_Meta",
+        "winrt._winrt_windows_ui_xaml_media.ScaleTransform_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -15615,7 +15615,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_Shadow =
     {
-        "_winrt_windows_ui_xaml_media.Shadow",
+        "winrt._winrt_windows_ui_xaml_media.Shadow",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Shadow),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -15974,7 +15974,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_SkewTransform =
     {
-        "_winrt_windows_ui_xaml_media.SkewTransform",
+        "winrt._winrt_windows_ui_xaml_media.SkewTransform",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::SkewTransform),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -15998,7 +15998,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_SkewTransform_Meta =
     {
-        "_winrt_windows_ui_xaml_media.SkewTransform_Meta",
+        "winrt._winrt_windows_ui_xaml_media.SkewTransform_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -16171,7 +16171,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_SolidColorBrush =
     {
-        "_winrt_windows_ui_xaml_media.SolidColorBrush",
+        "winrt._winrt_windows_ui_xaml_media.SolidColorBrush",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::SolidColorBrush),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -16192,7 +16192,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_SolidColorBrush_Meta =
     {
-        "_winrt_windows_ui_xaml_media.SolidColorBrush_Meta",
+        "winrt._winrt_windows_ui_xaml_media.SolidColorBrush_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -16303,7 +16303,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_ThemeShadow =
     {
-        "_winrt_windows_ui_xaml_media.ThemeShadow",
+        "winrt._winrt_windows_ui_xaml_media.ThemeShadow",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::ThemeShadow),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -16573,7 +16573,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_TileBrush =
     {
-        "_winrt_windows_ui_xaml_media.TileBrush",
+        "winrt._winrt_windows_ui_xaml_media.TileBrush",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::TileBrush),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -16596,7 +16596,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_TileBrush_Meta =
     {
-        "_winrt_windows_ui_xaml_media.TileBrush_Meta",
+        "winrt._winrt_windows_ui_xaml_media.TileBrush_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -16888,7 +16888,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_TimelineMarker =
     {
-        "_winrt_windows_ui_xaml_media.TimelineMarker",
+        "winrt._winrt_windows_ui_xaml_media.TimelineMarker",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::TimelineMarker),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -16911,7 +16911,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_TimelineMarker_Meta =
     {
-        "_winrt_windows_ui_xaml_media.TimelineMarker_Meta",
+        "winrt._winrt_windows_ui_xaml_media.TimelineMarker_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -17550,7 +17550,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_TimelineMarkerCollection =
     {
-        "_winrt_windows_ui_xaml_media.TimelineMarkerCollection",
+        "winrt._winrt_windows_ui_xaml_media.TimelineMarkerCollection",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::TimelineMarkerCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -17689,7 +17689,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_TimelineMarkerRoutedEventArgs =
     {
-        "_winrt_windows_ui_xaml_media.TimelineMarkerRoutedEventArgs",
+        "winrt._winrt_windows_ui_xaml_media.TimelineMarkerRoutedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::TimelineMarkerRoutedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -17758,7 +17758,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_Transform =
     {
-        "_winrt_windows_ui_xaml_media.Transform",
+        "winrt._winrt_windows_ui_xaml_media.Transform",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Transform),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -18397,7 +18397,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_TransformCollection =
     {
-        "_winrt_windows_ui_xaml_media.TransformCollection",
+        "winrt._winrt_windows_ui_xaml_media.TransformCollection",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::TransformCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -18575,7 +18575,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_TransformGroup =
     {
-        "_winrt_windows_ui_xaml_media.TransformGroup",
+        "winrt._winrt_windows_ui_xaml_media.TransformGroup",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::TransformGroup),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -18596,7 +18596,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_TransformGroup_Meta =
     {
-        "_winrt_windows_ui_xaml_media.TransformGroup_Meta",
+        "winrt._winrt_windows_ui_xaml_media.TransformGroup_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -18821,7 +18821,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_TranslateTransform =
     {
-        "_winrt_windows_ui_xaml_media.TranslateTransform",
+        "winrt._winrt_windows_ui_xaml_media.TranslateTransform",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::TranslateTransform),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -18843,7 +18843,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_TranslateTransform_Meta =
     {
-        "_winrt_windows_ui_xaml_media.TranslateTransform_Meta",
+        "winrt._winrt_windows_ui_xaml_media.TranslateTransform_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -19161,7 +19161,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_VisualTreeHelper =
     {
-        "_winrt_windows_ui_xaml_media.VisualTreeHelper",
+        "winrt._winrt_windows_ui_xaml_media.VisualTreeHelper",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::VisualTreeHelper),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -19407,7 +19407,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_XamlCompositionBrushBase =
     {
-        "_winrt_windows_ui_xaml_media.XamlCompositionBrushBase",
+        "winrt._winrt_windows_ui_xaml_media.XamlCompositionBrushBase",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::XamlCompositionBrushBase),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -19428,7 +19428,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_XamlCompositionBrushBase_Meta =
     {
-        "_winrt_windows_ui_xaml_media.XamlCompositionBrushBase_Meta",
+        "winrt._winrt_windows_ui_xaml_media.XamlCompositionBrushBase_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -19799,7 +19799,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_XamlLight =
     {
-        "_winrt_windows_ui_xaml_media.XamlLight",
+        "winrt._winrt_windows_ui_xaml_media.XamlLight",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::XamlLight),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -20100,7 +20100,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyType_Spec type_spec_Matrix =
     {
-        "_winrt_windows_ui_xaml_media.Matrix",
+        "winrt._winrt_windows_ui_xaml_media.Matrix",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Matrix),
         0,
         Py_TPFLAGS_DEFAULT,

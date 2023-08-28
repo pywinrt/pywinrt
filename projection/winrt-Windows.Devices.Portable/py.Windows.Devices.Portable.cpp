@@ -97,7 +97,7 @@ namespace py::cpp::Windows::Devices::Portable
 
     static PyType_Spec type_spec_ServiceDevice =
     {
-        "_winrt_windows_devices_portable.ServiceDevice",
+        "winrt._winrt_windows_devices_portable.ServiceDevice",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -193,7 +193,7 @@ namespace py::cpp::Windows::Devices::Portable
 
     static PyType_Spec type_spec_StorageDevice =
     {
-        "_winrt_windows_devices_portable.StorageDevice",
+        "winrt._winrt_windows_devices_portable.StorageDevice",
         0,
         0,
         Py_TPFLAGS_DEFAULT,

@@ -312,7 +312,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyType_Spec type_spec_AdvancedColorInfo =
     {
-        "_winrt_windows_graphics_display.AdvancedColorInfo",
+        "winrt._winrt_windows_graphics_display.AdvancedColorInfo",
         sizeof(py::wrapper::Windows::Graphics::Display::AdvancedColorInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -830,7 +830,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyType_Spec type_spec_BrightnessOverride =
     {
-        "_winrt_windows_graphics_display.BrightnessOverride",
+        "winrt._winrt_windows_graphics_display.BrightnessOverride",
         sizeof(py::wrapper::Windows::Graphics::Display::BrightnessOverride),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1035,7 +1035,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyType_Spec type_spec_BrightnessOverrideSettings =
     {
-        "_winrt_windows_graphics_display.BrightnessOverrideSettings",
+        "winrt._winrt_windows_graphics_display.BrightnessOverrideSettings",
         sizeof(py::wrapper::Windows::Graphics::Display::BrightnessOverrideSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1156,7 +1156,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyType_Spec type_spec_ColorOverrideSettings =
     {
-        "_winrt_windows_graphics_display.ColorOverrideSettings",
+        "winrt._winrt_windows_graphics_display.ColorOverrideSettings",
         sizeof(py::wrapper::Windows::Graphics::Display::ColorOverrideSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1618,7 +1618,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyType_Spec type_spec_DisplayEnhancementOverride =
     {
-        "_winrt_windows_graphics_display.DisplayEnhancementOverride",
+        "winrt._winrt_windows_graphics_display.DisplayEnhancementOverride",
         sizeof(py::wrapper::Windows::Graphics::Display::DisplayEnhancementOverride),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1757,7 +1757,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyType_Spec type_spec_DisplayEnhancementOverrideCapabilities =
     {
-        "_winrt_windows_graphics_display.DisplayEnhancementOverrideCapabilities",
+        "winrt._winrt_windows_graphics_display.DisplayEnhancementOverrideCapabilities",
         sizeof(py::wrapper::Windows::Graphics::Display::DisplayEnhancementOverrideCapabilities),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1846,7 +1846,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyType_Spec type_spec_DisplayEnhancementOverrideCapabilitiesChangedEventArgs =
     {
-        "_winrt_windows_graphics_display.DisplayEnhancementOverrideCapabilitiesChangedEventArgs",
+        "winrt._winrt_windows_graphics_display.DisplayEnhancementOverrideCapabilitiesChangedEventArgs",
         sizeof(py::wrapper::Windows::Graphics::Display::DisplayEnhancementOverrideCapabilitiesChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2542,7 +2542,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyType_Spec type_spec_DisplayInformation =
     {
-        "_winrt_windows_graphics_display.DisplayInformation",
+        "winrt._winrt_windows_graphics_display.DisplayInformation",
         sizeof(py::wrapper::Windows::Graphics::Display::DisplayInformation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2563,7 +2563,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyType_Spec type_spec_DisplayInformation_Meta =
     {
-        "_winrt_windows_graphics_display.DisplayInformation_Meta",
+        "winrt._winrt_windows_graphics_display.DisplayInformation_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -2994,7 +2994,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyType_Spec type_spec_DisplayProperties =
     {
-        "_winrt_windows_graphics_display.DisplayProperties",
+        "winrt._winrt_windows_graphics_display.DisplayProperties",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3020,7 +3020,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyType_Spec type_spec_DisplayProperties_Meta =
     {
-        "_winrt_windows_graphics_display.DisplayProperties_Meta",
+        "winrt._winrt_windows_graphics_display.DisplayProperties_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -3119,7 +3119,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyType_Spec type_spec_DisplayServices =
     {
-        "_winrt_windows_graphics_display.DisplayServices",
+        "winrt._winrt_windows_graphics_display.DisplayServices",
         sizeof(py::wrapper::Windows::Graphics::Display::DisplayServices),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3315,7 +3315,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyType_Spec type_spec_NitRange =
     {
-        "_winrt_windows_graphics_display.NitRange",
+        "winrt._winrt_windows_graphics_display.NitRange",
         sizeof(py::wrapper::Windows::Graphics::Display::NitRange),
         0,
         Py_TPFLAGS_DEFAULT,

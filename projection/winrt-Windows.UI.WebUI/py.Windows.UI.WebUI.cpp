@@ -99,7 +99,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_ActivatedDeferral =
     {
-        "_winrt_windows_ui_webui.ActivatedDeferral",
+        "winrt._winrt_windows_ui_webui.ActivatedDeferral",
         sizeof(py::wrapper::Windows::UI::WebUI::ActivatedDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -198,7 +198,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_ActivatedOperation =
     {
-        "_winrt_windows_ui_webui.ActivatedOperation",
+        "winrt._winrt_windows_ui_webui.ActivatedOperation",
         sizeof(py::wrapper::Windows::UI::WebUI::ActivatedOperation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -287,7 +287,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_BackgroundActivatedEventArgs =
     {
-        "_winrt_windows_ui_webui.BackgroundActivatedEventArgs",
+        "winrt._winrt_windows_ui_webui.BackgroundActivatedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::BackgroundActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -386,7 +386,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_EnteredBackgroundEventArgs =
     {
-        "_winrt_windows_ui_webui.EnteredBackgroundEventArgs",
+        "winrt._winrt_windows_ui_webui.EnteredBackgroundEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::EnteredBackgroundEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -943,7 +943,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_HtmlPrintDocumentSource =
     {
-        "_winrt_windows_ui_webui.HtmlPrintDocumentSource",
+        "winrt._winrt_windows_ui_webui.HtmlPrintDocumentSource",
         sizeof(py::wrapper::Windows::UI::WebUI::HtmlPrintDocumentSource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1042,7 +1042,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_LeavingBackgroundEventArgs =
     {
-        "_winrt_windows_ui_webui.LeavingBackgroundEventArgs",
+        "winrt._winrt_windows_ui_webui.LeavingBackgroundEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::LeavingBackgroundEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1201,7 +1201,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_NewWebUIViewCreatedEventArgs =
     {
-        "_winrt_windows_ui_webui.NewWebUIViewCreatedEventArgs",
+        "winrt._winrt_windows_ui_webui.NewWebUIViewCreatedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::NewWebUIViewCreatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1301,7 +1301,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_SuspendingDeferral =
     {
-        "_winrt_windows_ui_webui.SuspendingDeferral",
+        "winrt._winrt_windows_ui_webui.SuspendingDeferral",
         sizeof(py::wrapper::Windows::UI::WebUI::SuspendingDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1390,7 +1390,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_SuspendingEventArgs =
     {
-        "_winrt_windows_ui_webui.SuspendingEventArgs",
+        "winrt._winrt_windows_ui_webui.SuspendingEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::SuspendingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1509,7 +1509,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_SuspendingOperation =
     {
-        "_winrt_windows_ui_webui.SuspendingOperation",
+        "winrt._winrt_windows_ui_webui.SuspendingOperation",
         sizeof(py::wrapper::Windows::UI::WebUI::SuspendingOperation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2001,7 +2001,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUIApplication =
     {
-        "_winrt_windows_ui_webui.WebUIApplication",
+        "winrt._winrt_windows_ui_webui.WebUIApplication",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2210,7 +2210,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUIAppointmentsProviderAddAppointmentActivatedEventArgs =
     {
-        "_winrt_windows_ui_webui.WebUIAppointmentsProviderAddAppointmentActivatedEventArgs",
+        "winrt._winrt_windows_ui_webui.WebUIAppointmentsProviderAddAppointmentActivatedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::WebUIAppointmentsProviderAddAppointmentActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2419,7 +2419,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs =
     {
-        "_winrt_windows_ui_webui.WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs",
+        "winrt._winrt_windows_ui_webui.WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2628,7 +2628,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs =
     {
-        "_winrt_windows_ui_webui.WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs",
+        "winrt._winrt_windows_ui_webui.WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2877,7 +2877,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs =
     {
-        "_winrt_windows_ui_webui.WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs",
+        "winrt._winrt_windows_ui_webui.WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3106,7 +3106,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs =
     {
-        "_winrt_windows_ui_webui.WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs",
+        "winrt._winrt_windows_ui_webui.WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3159,7 +3159,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUIBackgroundTaskInstance =
     {
-        "_winrt_windows_ui_webui.WebUIBackgroundTaskInstance",
+        "winrt._winrt_windows_ui_webui.WebUIBackgroundTaskInstance",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3180,7 +3180,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUIBackgroundTaskInstance_Meta =
     {
-        "_winrt_windows_ui_webui.WebUIBackgroundTaskInstance_Meta",
+        "winrt._winrt_windows_ui_webui.WebUIBackgroundTaskInstance_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -3500,7 +3500,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUIBackgroundTaskInstanceRuntimeClass =
     {
-        "_winrt_windows_ui_webui.WebUIBackgroundTaskInstanceRuntimeClass",
+        "winrt._winrt_windows_ui_webui.WebUIBackgroundTaskInstanceRuntimeClass",
         sizeof(py::wrapper::Windows::UI::WebUI::WebUIBackgroundTaskInstanceRuntimeClass),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3689,7 +3689,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUIBarcodeScannerPreviewActivatedEventArgs =
     {
-        "_winrt_windows_ui_webui.WebUIBarcodeScannerPreviewActivatedEventArgs",
+        "winrt._winrt_windows_ui_webui.WebUIBarcodeScannerPreviewActivatedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::WebUIBarcodeScannerPreviewActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3878,7 +3878,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUICachedFileUpdaterActivatedEventArgs =
     {
-        "_winrt_windows_ui_webui.WebUICachedFileUpdaterActivatedEventArgs",
+        "winrt._winrt_windows_ui_webui.WebUICachedFileUpdaterActivatedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::WebUICachedFileUpdaterActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4067,7 +4067,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUICameraSettingsActivatedEventArgs =
     {
-        "_winrt_windows_ui_webui.WebUICameraSettingsActivatedEventArgs",
+        "winrt._winrt_windows_ui_webui.WebUICameraSettingsActivatedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::WebUICameraSettingsActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4256,7 +4256,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUICommandLineActivatedEventArgs =
     {
-        "_winrt_windows_ui_webui.WebUICommandLineActivatedEventArgs",
+        "winrt._winrt_windows_ui_webui.WebUICommandLineActivatedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::WebUICommandLineActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4485,7 +4485,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUIContactCallActivatedEventArgs =
     {
-        "_winrt_windows_ui_webui.WebUIContactCallActivatedEventArgs",
+        "winrt._winrt_windows_ui_webui.WebUIContactCallActivatedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::WebUIContactCallActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4694,7 +4694,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUIContactMapActivatedEventArgs =
     {
-        "_winrt_windows_ui_webui.WebUIContactMapActivatedEventArgs",
+        "winrt._winrt_windows_ui_webui.WebUIContactMapActivatedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::WebUIContactMapActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4923,7 +4923,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUIContactMessageActivatedEventArgs =
     {
-        "_winrt_windows_ui_webui.WebUIContactMessageActivatedEventArgs",
+        "winrt._winrt_windows_ui_webui.WebUIContactMessageActivatedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::WebUIContactMessageActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5132,7 +5132,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUIContactPanelActivatedEventArgs =
     {
-        "_winrt_windows_ui_webui.WebUIContactPanelActivatedEventArgs",
+        "winrt._winrt_windows_ui_webui.WebUIContactPanelActivatedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::WebUIContactPanelActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5301,7 +5301,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUIContactPickerActivatedEventArgs =
     {
-        "_winrt_windows_ui_webui.WebUIContactPickerActivatedEventArgs",
+        "winrt._winrt_windows_ui_webui.WebUIContactPickerActivatedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::WebUIContactPickerActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5530,7 +5530,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUIContactPostActivatedEventArgs =
     {
-        "_winrt_windows_ui_webui.WebUIContactPostActivatedEventArgs",
+        "winrt._winrt_windows_ui_webui.WebUIContactPostActivatedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::WebUIContactPostActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5759,7 +5759,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUIContactVideoCallActivatedEventArgs =
     {
-        "_winrt_windows_ui_webui.WebUIContactVideoCallActivatedEventArgs",
+        "winrt._winrt_windows_ui_webui.WebUIContactVideoCallActivatedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::WebUIContactVideoCallActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5988,7 +5988,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUIDeviceActivatedEventArgs =
     {
-        "_winrt_windows_ui_webui.WebUIDeviceActivatedEventArgs",
+        "winrt._winrt_windows_ui_webui.WebUIDeviceActivatedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::WebUIDeviceActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6177,7 +6177,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUIDevicePairingActivatedEventArgs =
     {
-        "_winrt_windows_ui_webui.WebUIDevicePairingActivatedEventArgs",
+        "winrt._winrt_windows_ui_webui.WebUIDevicePairingActivatedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::WebUIDevicePairingActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6426,7 +6426,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUIDialReceiverActivatedEventArgs =
     {
-        "_winrt_windows_ui_webui.WebUIDialReceiverActivatedEventArgs",
+        "winrt._winrt_windows_ui_webui.WebUIDialReceiverActivatedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::WebUIDialReceiverActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6675,7 +6675,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUIFileActivatedEventArgs =
     {
-        "_winrt_windows_ui_webui.WebUIFileActivatedEventArgs",
+        "winrt._winrt_windows_ui_webui.WebUIFileActivatedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::WebUIFileActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6884,7 +6884,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUIFileOpenPickerActivatedEventArgs =
     {
-        "_winrt_windows_ui_webui.WebUIFileOpenPickerActivatedEventArgs",
+        "winrt._winrt_windows_ui_webui.WebUIFileOpenPickerActivatedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::WebUIFileOpenPickerActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7093,7 +7093,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUIFileOpenPickerContinuationEventArgs =
     {
-        "_winrt_windows_ui_webui.WebUIFileOpenPickerContinuationEventArgs",
+        "winrt._winrt_windows_ui_webui.WebUIFileOpenPickerContinuationEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::WebUIFileOpenPickerContinuationEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7322,7 +7322,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUIFileSavePickerActivatedEventArgs =
     {
-        "_winrt_windows_ui_webui.WebUIFileSavePickerActivatedEventArgs",
+        "winrt._winrt_windows_ui_webui.WebUIFileSavePickerActivatedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::WebUIFileSavePickerActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7531,7 +7531,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUIFileSavePickerContinuationEventArgs =
     {
-        "_winrt_windows_ui_webui.WebUIFileSavePickerContinuationEventArgs",
+        "winrt._winrt_windows_ui_webui.WebUIFileSavePickerContinuationEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::WebUIFileSavePickerContinuationEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7740,7 +7740,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUIFolderPickerContinuationEventArgs =
     {
-        "_winrt_windows_ui_webui.WebUIFolderPickerContinuationEventArgs",
+        "winrt._winrt_windows_ui_webui.WebUIFolderPickerContinuationEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::WebUIFolderPickerContinuationEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8009,7 +8009,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUILaunchActivatedEventArgs =
     {
-        "_winrt_windows_ui_webui.WebUILaunchActivatedEventArgs",
+        "winrt._winrt_windows_ui_webui.WebUILaunchActivatedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::WebUILaunchActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8218,7 +8218,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUILockScreenActivatedEventArgs =
     {
-        "_winrt_windows_ui_webui.WebUILockScreenActivatedEventArgs",
+        "winrt._winrt_windows_ui_webui.WebUILockScreenActivatedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::WebUILockScreenActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8447,7 +8447,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUILockScreenCallActivatedEventArgs =
     {
-        "_winrt_windows_ui_webui.WebUILockScreenCallActivatedEventArgs",
+        "winrt._winrt_windows_ui_webui.WebUILockScreenCallActivatedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::WebUILockScreenCallActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8596,7 +8596,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUILockScreenComponentActivatedEventArgs =
     {
-        "_winrt_windows_ui_webui.WebUILockScreenComponentActivatedEventArgs",
+        "winrt._winrt_windows_ui_webui.WebUILockScreenComponentActivatedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::WebUILockScreenComponentActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8696,7 +8696,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUINavigatedDeferral =
     {
-        "_winrt_windows_ui_webui.WebUINavigatedDeferral",
+        "winrt._winrt_windows_ui_webui.WebUINavigatedDeferral",
         sizeof(py::wrapper::Windows::UI::WebUI::WebUINavigatedDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8785,7 +8785,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUINavigatedEventArgs =
     {
-        "_winrt_windows_ui_webui.WebUINavigatedEventArgs",
+        "winrt._winrt_windows_ui_webui.WebUINavigatedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::WebUINavigatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8884,7 +8884,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUINavigatedOperation =
     {
-        "_winrt_windows_ui_webui.WebUINavigatedOperation",
+        "winrt._winrt_windows_ui_webui.WebUINavigatedOperation",
         sizeof(py::wrapper::Windows::UI::WebUI::WebUINavigatedOperation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9073,7 +9073,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUIPhoneCallActivatedEventArgs =
     {
-        "_winrt_windows_ui_webui.WebUIPhoneCallActivatedEventArgs",
+        "winrt._winrt_windows_ui_webui.WebUIPhoneCallActivatedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::WebUIPhoneCallActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9242,7 +9242,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUIPrint3DWorkflowActivatedEventArgs =
     {
-        "_winrt_windows_ui_webui.WebUIPrint3DWorkflowActivatedEventArgs",
+        "winrt._winrt_windows_ui_webui.WebUIPrint3DWorkflowActivatedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::WebUIPrint3DWorkflowActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9411,7 +9411,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUIPrintTaskSettingsActivatedEventArgs =
     {
-        "_winrt_windows_ui_webui.WebUIPrintTaskSettingsActivatedEventArgs",
+        "winrt._winrt_windows_ui_webui.WebUIPrintTaskSettingsActivatedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::WebUIPrintTaskSettingsActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9560,7 +9560,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUIPrintWorkflowForegroundTaskActivatedEventArgs =
     {
-        "_winrt_windows_ui_webui.WebUIPrintWorkflowForegroundTaskActivatedEventArgs",
+        "winrt._winrt_windows_ui_webui.WebUIPrintWorkflowForegroundTaskActivatedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::WebUIPrintWorkflowForegroundTaskActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9809,7 +9809,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUIProtocolActivatedEventArgs =
     {
-        "_winrt_windows_ui_webui.WebUIProtocolActivatedEventArgs",
+        "winrt._winrt_windows_ui_webui.WebUIProtocolActivatedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::WebUIProtocolActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10078,7 +10078,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUIProtocolForResultsActivatedEventArgs =
     {
-        "_winrt_windows_ui_webui.WebUIProtocolForResultsActivatedEventArgs",
+        "winrt._winrt_windows_ui_webui.WebUIProtocolForResultsActivatedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::WebUIProtocolForResultsActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10267,7 +10267,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUIRestrictedLaunchActivatedEventArgs =
     {
-        "_winrt_windows_ui_webui.WebUIRestrictedLaunchActivatedEventArgs",
+        "winrt._winrt_windows_ui_webui.WebUIRestrictedLaunchActivatedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::WebUIRestrictedLaunchActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10496,7 +10496,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUISearchActivatedEventArgs =
     {
-        "_winrt_windows_ui_webui.WebUISearchActivatedEventArgs",
+        "winrt._winrt_windows_ui_webui.WebUISearchActivatedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::WebUISearchActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10685,7 +10685,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUIShareTargetActivatedEventArgs =
     {
-        "_winrt_windows_ui_webui.WebUIShareTargetActivatedEventArgs",
+        "winrt._winrt_windows_ui_webui.WebUIShareTargetActivatedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::WebUIShareTargetActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10874,7 +10874,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUIStartupTaskActivatedEventArgs =
     {
-        "_winrt_windows_ui_webui.WebUIStartupTaskActivatedEventArgs",
+        "winrt._winrt_windows_ui_webui.WebUIStartupTaskActivatedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::WebUIStartupTaskActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11083,7 +11083,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUIToastNotificationActivatedEventArgs =
     {
-        "_winrt_windows_ui_webui.WebUIToastNotificationActivatedEventArgs",
+        "winrt._winrt_windows_ui_webui.WebUIToastNotificationActivatedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::WebUIToastNotificationActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11252,7 +11252,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUIUserDataAccountProviderActivatedEventArgs =
     {
-        "_winrt_windows_ui_webui.WebUIUserDataAccountProviderActivatedEventArgs",
+        "winrt._winrt_windows_ui_webui.WebUIUserDataAccountProviderActivatedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::WebUIUserDataAccountProviderActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12968,7 +12968,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUIView =
     {
-        "_winrt_windows_ui_webui.WebUIView",
+        "winrt._winrt_windows_ui_webui.WebUIView",
         sizeof(py::wrapper::Windows::UI::WebUI::WebUIView),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13157,7 +13157,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUIVoiceCommandActivatedEventArgs =
     {
-        "_winrt_windows_ui_webui.WebUIVoiceCommandActivatedEventArgs",
+        "winrt._winrt_windows_ui_webui.WebUIVoiceCommandActivatedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::WebUIVoiceCommandActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13366,7 +13366,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUIWalletActionActivatedEventArgs =
     {
-        "_winrt_windows_ui_webui.WebUIWalletActionActivatedEventArgs",
+        "winrt._winrt_windows_ui_webui.WebUIWalletActionActivatedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::WebUIWalletActionActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13555,7 +13555,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUIWebAccountProviderActivatedEventArgs =
     {
-        "_winrt_windows_ui_webui.WebUIWebAccountProviderActivatedEventArgs",
+        "winrt._winrt_windows_ui_webui.WebUIWebAccountProviderActivatedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::WebUIWebAccountProviderActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13744,7 +13744,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_WebUIWebAuthenticationBrokerContinuationEventArgs =
     {
-        "_winrt_windows_ui_webui.WebUIWebAuthenticationBrokerContinuationEventArgs",
+        "winrt._winrt_windows_ui_webui.WebUIWebAuthenticationBrokerContinuationEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::WebUIWebAuthenticationBrokerContinuationEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13833,7 +13833,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_IActivatedEventArgsDeferral =
     {
-        "_winrt_windows_ui_webui.IActivatedEventArgsDeferral",
+        "winrt._winrt_windows_ui_webui.IActivatedEventArgsDeferral",
         sizeof(py::wrapper::Windows::UI::WebUI::IActivatedEventArgsDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13950,7 +13950,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_IWebUIBackgroundTaskInstance =
     {
-        "_winrt_windows_ui_webui.IWebUIBackgroundTaskInstance",
+        "winrt._winrt_windows_ui_webui.IWebUIBackgroundTaskInstance",
         sizeof(py::wrapper::Windows::UI::WebUI::IWebUIBackgroundTaskInstance),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14039,7 +14039,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyType_Spec type_spec_IWebUINavigatedEventArgs =
     {
-        "_winrt_windows_ui_webui.IWebUINavigatedEventArgs",
+        "winrt._winrt_windows_ui_webui.IWebUINavigatedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::IWebUINavigatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,

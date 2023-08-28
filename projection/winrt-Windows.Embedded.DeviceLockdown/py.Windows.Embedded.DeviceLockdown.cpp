@@ -157,7 +157,7 @@ namespace py::cpp::Windows::Embedded::DeviceLockdown
 
     static PyType_Spec type_spec_DeviceLockdownProfile =
     {
-        "_winrt_windows_embedded_devicelockdown.DeviceLockdownProfile",
+        "winrt._winrt_windows_embedded_devicelockdown.DeviceLockdownProfile",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -246,7 +246,7 @@ namespace py::cpp::Windows::Embedded::DeviceLockdown
 
     static PyType_Spec type_spec_DeviceLockdownProfileInformation =
     {
-        "_winrt_windows_embedded_devicelockdown.DeviceLockdownProfileInformation",
+        "winrt._winrt_windows_embedded_devicelockdown.DeviceLockdownProfileInformation",
         sizeof(py::wrapper::Windows::Embedded::DeviceLockdown::DeviceLockdownProfileInformation),
         0,
         Py_TPFLAGS_DEFAULT,

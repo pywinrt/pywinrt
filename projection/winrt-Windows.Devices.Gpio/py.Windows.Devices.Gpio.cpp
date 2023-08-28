@@ -334,7 +334,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static PyType_Spec type_spec_GpioChangeCounter =
     {
-        "_winrt_windows_devices_gpio.GpioChangeCounter",
+        "winrt._winrt_windows_devices_gpio.GpioChangeCounter",
         sizeof(py::wrapper::Windows::Devices::Gpio::GpioChangeCounter),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -858,7 +858,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static PyType_Spec type_spec_GpioChangeReader =
     {
-        "_winrt_windows_devices_gpio.GpioChangeReader",
+        "winrt._winrt_windows_devices_gpio.GpioChangeReader",
         sizeof(py::wrapper::Windows::Devices::Gpio::GpioChangeReader),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1144,7 +1144,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static PyType_Spec type_spec_GpioController =
     {
-        "_winrt_windows_devices_gpio.GpioController",
+        "winrt._winrt_windows_devices_gpio.GpioController",
         sizeof(py::wrapper::Windows::Devices::Gpio::GpioController),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1556,7 +1556,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static PyType_Spec type_spec_GpioPin =
     {
-        "_winrt_windows_devices_gpio.GpioPin",
+        "winrt._winrt_windows_devices_gpio.GpioPin",
         sizeof(py::wrapper::Windows::Devices::Gpio::GpioPin),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1645,7 +1645,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static PyType_Spec type_spec_GpioPinValueChangedEventArgs =
     {
-        "_winrt_windows_devices_gpio.GpioPinValueChangedEventArgs",
+        "winrt._winrt_windows_devices_gpio.GpioPinValueChangedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Gpio::GpioPinValueChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1806,7 +1806,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static PyType_Spec type_spec_GpioChangeCount =
     {
-        "_winrt_windows_devices_gpio.GpioChangeCount",
+        "winrt._winrt_windows_devices_gpio.GpioChangeCount",
         sizeof(py::wrapper::Windows::Devices::Gpio::GpioChangeCount),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1967,7 +1967,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static PyType_Spec type_spec_GpioChangeRecord =
     {
-        "_winrt_windows_devices_gpio.GpioChangeRecord",
+        "winrt._winrt_windows_devices_gpio.GpioChangeRecord",
         sizeof(py::wrapper::Windows::Devices::Gpio::GpioChangeRecord),
         0,
         Py_TPFLAGS_DEFAULT,

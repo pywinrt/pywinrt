@@ -330,7 +330,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyType_Spec type_spec_ContactAddress =
     {
-        "_winrt_windows_phone_personalinformation.ContactAddress",
+        "winrt._winrt_windows_phone_personalinformation.ContactAddress",
         sizeof(py::wrapper::Windows::Phone::PersonalInformation::ContactAddress),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -479,7 +479,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyType_Spec type_spec_ContactChangeRecord =
     {
-        "_winrt_windows_phone_personalinformation.ContactChangeRecord",
+        "winrt._winrt_windows_phone_personalinformation.ContactChangeRecord",
         sizeof(py::wrapper::Windows::Phone::PersonalInformation::ContactChangeRecord),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1004,7 +1004,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyType_Spec type_spec_ContactInformation =
     {
-        "_winrt_windows_phone_personalinformation.ContactInformation",
+        "winrt._winrt_windows_phone_personalinformation.ContactInformation",
         sizeof(py::wrapper::Windows::Phone::PersonalInformation::ContactInformation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1163,7 +1163,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyType_Spec type_spec_ContactQueryOptions =
     {
-        "_winrt_windows_phone_personalinformation.ContactQueryOptions",
+        "winrt._winrt_windows_phone_personalinformation.ContactQueryOptions",
         sizeof(py::wrapper::Windows::Phone::PersonalInformation::ContactQueryOptions),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1343,7 +1343,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyType_Spec type_spec_ContactQueryResult =
     {
-        "_winrt_windows_phone_personalinformation.ContactQueryResult",
+        "winrt._winrt_windows_phone_personalinformation.ContactQueryResult",
         sizeof(py::wrapper::Windows::Phone::PersonalInformation::ContactQueryResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1785,7 +1785,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyType_Spec type_spec_ContactStore =
     {
-        "_winrt_windows_phone_personalinformation.ContactStore",
+        "winrt._winrt_windows_phone_personalinformation.ContactStore",
         sizeof(py::wrapper::Windows::Phone::PersonalInformation::ContactStore),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2484,7 +2484,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyType_Spec type_spec_KnownContactProperties =
     {
-        "_winrt_windows_phone_personalinformation.KnownContactProperties",
+        "winrt._winrt_windows_phone_personalinformation.KnownContactProperties",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2539,7 +2539,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyType_Spec type_spec_KnownContactProperties_Meta =
     {
-        "_winrt_windows_phone_personalinformation.KnownContactProperties_Meta",
+        "winrt._winrt_windows_phone_personalinformation.KnownContactProperties_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -3278,7 +3278,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyType_Spec type_spec_StoredContact =
     {
-        "_winrt_windows_phone_personalinformation.StoredContact",
+        "winrt._winrt_windows_phone_personalinformation.StoredContact",
         sizeof(py::wrapper::Windows::Phone::PersonalInformation::StoredContact),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3749,7 +3749,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyType_Spec type_spec_IContactInformation =
     {
-        "_winrt_windows_phone_personalinformation.IContactInformation",
+        "winrt._winrt_windows_phone_personalinformation.IContactInformation",
         sizeof(py::wrapper::Windows::Phone::PersonalInformation::IContactInformation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3866,7 +3866,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyType_Spec type_spec_IContactInformation2 =
     {
-        "_winrt_windows_phone_personalinformation.IContactInformation2",
+        "winrt._winrt_windows_phone_personalinformation.IContactInformation2",
         sizeof(py::wrapper::Windows::Phone::PersonalInformation::IContactInformation2),
         0,
         Py_TPFLAGS_DEFAULT,

@@ -100,7 +100,7 @@ namespace py::cpp::Windows::Management::Policies
 
     static PyType_Spec type_spec_NamedPolicy =
     {
-        "_winrt_windows_management_policies.NamedPolicy",
+        "winrt._winrt_windows_management_policies.NamedPolicy",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -484,7 +484,7 @@ namespace py::cpp::Windows::Management::Policies
 
     static PyType_Spec type_spec_NamedPolicyData =
     {
-        "_winrt_windows_management_policies.NamedPolicyData",
+        "winrt._winrt_windows_management_policies.NamedPolicyData",
         sizeof(py::wrapper::Windows::Management::Policies::NamedPolicyData),
         0,
         Py_TPFLAGS_DEFAULT,

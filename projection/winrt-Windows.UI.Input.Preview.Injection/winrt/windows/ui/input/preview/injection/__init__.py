@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_ui_input_preview_injection
+from winrt import _winrt_windows_ui_input_preview_injection
 
 __all__ = [
     "InjectedInputButtonChangeKind",

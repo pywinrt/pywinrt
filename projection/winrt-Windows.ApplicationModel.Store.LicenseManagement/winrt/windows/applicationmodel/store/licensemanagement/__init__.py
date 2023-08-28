@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_applicationmodel_store_licensemanagement
+from winrt import _winrt_windows_applicationmodel_store_licensemanagement
 
 __all__ = [
     "LicenseRefreshOption",

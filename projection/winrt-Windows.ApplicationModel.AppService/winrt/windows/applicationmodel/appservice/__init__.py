@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_applicationmodel_appservice
+from winrt import _winrt_windows_applicationmodel_appservice
 
 __all__ = [
     "AppServiceClosedStatus",

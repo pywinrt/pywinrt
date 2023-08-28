@@ -108,7 +108,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyType_Spec type_spec_DeviceAccessChangedEventArgs =
     {
-        "_winrt_windows_devices_enumeration.DeviceAccessChangedEventArgs",
+        "winrt._winrt_windows_devices_enumeration.DeviceAccessChangedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Enumeration::DeviceAccessChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -338,7 +338,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyType_Spec type_spec_DeviceAccessInformation =
     {
-        "_winrt_windows_devices_enumeration.DeviceAccessInformation",
+        "winrt._winrt_windows_devices_enumeration.DeviceAccessInformation",
         sizeof(py::wrapper::Windows::Devices::Enumeration::DeviceAccessInformation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -427,7 +427,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyType_Spec type_spec_DeviceConnectionChangeTriggerDetails =
     {
-        "_winrt_windows_devices_enumeration.DeviceConnectionChangeTriggerDetails",
+        "winrt._winrt_windows_devices_enumeration.DeviceConnectionChangeTriggerDetails",
         sizeof(py::wrapper::Windows::Devices::Enumeration::DeviceConnectionChangeTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -516,7 +516,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyType_Spec type_spec_DeviceDisconnectButtonClickedEventArgs =
     {
-        "_winrt_windows_devices_enumeration.DeviceDisconnectButtonClickedEventArgs",
+        "winrt._winrt_windows_devices_enumeration.DeviceDisconnectButtonClickedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Enumeration::DeviceDisconnectButtonClickedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1131,7 +1131,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyType_Spec type_spec_DeviceInformation =
     {
-        "_winrt_windows_devices_enumeration.DeviceInformation",
+        "winrt._winrt_windows_devices_enumeration.DeviceInformation",
         sizeof(py::wrapper::Windows::Devices::Enumeration::DeviceInformation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1473,7 +1473,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyType_Spec type_spec_DeviceInformationCollection =
     {
-        "_winrt_windows_devices_enumeration.DeviceInformationCollection",
+        "winrt._winrt_windows_devices_enumeration.DeviceInformationCollection",
         sizeof(py::wrapper::Windows::Devices::Enumeration::DeviceInformationCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1662,7 +1662,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyType_Spec type_spec_DeviceInformationCustomPairing =
     {
-        "_winrt_windows_devices_enumeration.DeviceInformationCustomPairing",
+        "winrt._winrt_windows_devices_enumeration.DeviceInformationCustomPairing",
         sizeof(py::wrapper::Windows::Devices::Enumeration::DeviceInformationCustomPairing),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1977,7 +1977,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyType_Spec type_spec_DeviceInformationPairing =
     {
-        "_winrt_windows_devices_enumeration.DeviceInformationPairing",
+        "winrt._winrt_windows_devices_enumeration.DeviceInformationPairing",
         sizeof(py::wrapper::Windows::Devices::Enumeration::DeviceInformationPairing),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2106,7 +2106,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyType_Spec type_spec_DeviceInformationUpdate =
     {
-        "_winrt_windows_devices_enumeration.DeviceInformationUpdate",
+        "winrt._winrt_windows_devices_enumeration.DeviceInformationUpdate",
         sizeof(py::wrapper::Windows::Devices::Enumeration::DeviceInformationUpdate),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2350,7 +2350,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyType_Spec type_spec_DevicePairingRequestedEventArgs =
     {
-        "_winrt_windows_devices_enumeration.DevicePairingRequestedEventArgs",
+        "winrt._winrt_windows_devices_enumeration.DevicePairingRequestedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Enumeration::DevicePairingRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2459,7 +2459,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyType_Spec type_spec_DevicePairingResult =
     {
-        "_winrt_windows_devices_enumeration.DevicePairingResult",
+        "winrt._winrt_windows_devices_enumeration.DevicePairingResult",
         sizeof(py::wrapper::Windows::Devices::Enumeration::DevicePairingResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2919,7 +2919,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyType_Spec type_spec_DevicePicker =
     {
-        "_winrt_windows_devices_enumeration.DevicePicker",
+        "winrt._winrt_windows_devices_enumeration.DevicePicker",
         sizeof(py::wrapper::Windows::Devices::Enumeration::DevicePicker),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3324,7 +3324,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyType_Spec type_spec_DevicePickerAppearance =
     {
-        "_winrt_windows_devices_enumeration.DevicePickerAppearance",
+        "winrt._winrt_windows_devices_enumeration.DevicePickerAppearance",
         sizeof(py::wrapper::Windows::Devices::Enumeration::DevicePickerAppearance),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3433,7 +3433,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyType_Spec type_spec_DevicePickerFilter =
     {
-        "_winrt_windows_devices_enumeration.DevicePickerFilter",
+        "winrt._winrt_windows_devices_enumeration.DevicePickerFilter",
         sizeof(py::wrapper::Windows::Devices::Enumeration::DevicePickerFilter),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3522,7 +3522,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyType_Spec type_spec_DeviceSelectedEventArgs =
     {
-        "_winrt_windows_devices_enumeration.DeviceSelectedEventArgs",
+        "winrt._winrt_windows_devices_enumeration.DeviceSelectedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Enumeration::DeviceSelectedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3994,7 +3994,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyType_Spec type_spec_DeviceThumbnail =
     {
-        "_winrt_windows_devices_enumeration.DeviceThumbnail",
+        "winrt._winrt_windows_devices_enumeration.DeviceThumbnail",
         sizeof(py::wrapper::Windows::Devices::Enumeration::DeviceThumbnail),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4083,7 +4083,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyType_Spec type_spec_DeviceUnpairingResult =
     {
-        "_winrt_windows_devices_enumeration.DeviceUnpairingResult",
+        "winrt._winrt_windows_devices_enumeration.DeviceUnpairingResult",
         sizeof(py::wrapper::Windows::Devices::Enumeration::DeviceUnpairingResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4491,7 +4491,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyType_Spec type_spec_DeviceWatcher =
     {
-        "_winrt_windows_devices_enumeration.DeviceWatcher",
+        "winrt._winrt_windows_devices_enumeration.DeviceWatcher",
         sizeof(py::wrapper::Windows::Devices::Enumeration::DeviceWatcher),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4620,7 +4620,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyType_Spec type_spec_DeviceWatcherEvent =
     {
-        "_winrt_windows_devices_enumeration.DeviceWatcherEvent",
+        "winrt._winrt_windows_devices_enumeration.DeviceWatcherEvent",
         sizeof(py::wrapper::Windows::Devices::Enumeration::DeviceWatcherEvent),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4709,7 +4709,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyType_Spec type_spec_DeviceWatcherTriggerDetails =
     {
-        "_winrt_windows_devices_enumeration.DeviceWatcherTriggerDetails",
+        "winrt._winrt_windows_devices_enumeration.DeviceWatcherTriggerDetails",
         sizeof(py::wrapper::Windows::Devices::Enumeration::DeviceWatcherTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4858,7 +4858,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyType_Spec type_spec_EnclosureLocation =
     {
-        "_winrt_windows_devices_enumeration.EnclosureLocation",
+        "winrt._winrt_windows_devices_enumeration.EnclosureLocation",
         sizeof(py::wrapper::Windows::Devices::Enumeration::EnclosureLocation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4927,7 +4927,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyType_Spec type_spec_IDevicePairingSettings =
     {
-        "_winrt_windows_devices_enumeration.IDevicePairingSettings",
+        "winrt._winrt_windows_devices_enumeration.IDevicePairingSettings",
         sizeof(py::wrapper::Windows::Devices::Enumeration::IDevicePairingSettings),
         0,
         Py_TPFLAGS_DEFAULT,

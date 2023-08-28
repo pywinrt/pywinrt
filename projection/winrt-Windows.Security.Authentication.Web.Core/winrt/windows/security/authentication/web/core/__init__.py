@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_security_authentication_web_core
+from winrt import _winrt_windows_security_authentication_web_core
 
 __all__ = [
     "FindAllWebAccountsStatus",

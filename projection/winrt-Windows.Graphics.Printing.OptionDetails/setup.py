@@ -6,7 +6,7 @@ from winrt_sdk import get_include_dirs
 setup(
     ext_modules=[
         Extension(
-            "winrt.windows.graphics.printing.optiondetails._winrt_windows_graphics_printing_optiondetails",
+            "winrt._winrt_windows_graphics_printing_optiondetails",
             sources=["py.Windows.Graphics.Printing.OptionDetails.cpp"],
             include_dirs=get_include_dirs(),
             extra_compile_args=["/std:c++20", "/permissive-"],

@@ -6,7 +6,7 @@ from winrt_sdk import get_include_dirs
 setup(
     ext_modules=[
         Extension(
-            "winrt.windows.foundation.numerics._winrt_windows_foundation_numerics",
+            "winrt._winrt_windows_foundation_numerics",
             sources=["py.Windows.Foundation.Numerics.cpp"],
             include_dirs=get_include_dirs(),
             extra_compile_args=["/std:c++20", "/permissive-"],

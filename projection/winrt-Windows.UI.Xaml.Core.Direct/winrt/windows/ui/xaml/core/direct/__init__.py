@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_ui_xaml_core_direct
+from winrt import _winrt_windows_ui_xaml_core_direct
 
 __all__ = [
     "XamlEventIndex",

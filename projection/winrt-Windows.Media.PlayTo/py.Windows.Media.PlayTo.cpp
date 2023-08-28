@@ -88,7 +88,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyType_Spec type_spec_CurrentTimeChangeRequestedEventArgs =
     {
-        "_winrt_windows_media_playto.CurrentTimeChangeRequestedEventArgs",
+        "winrt._winrt_windows_media_playto.CurrentTimeChangeRequestedEventArgs",
         sizeof(py::wrapper::Windows::Media::PlayTo::CurrentTimeChangeRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -177,7 +177,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyType_Spec type_spec_MuteChangeRequestedEventArgs =
     {
-        "_winrt_windows_media_playto.MuteChangeRequestedEventArgs",
+        "winrt._winrt_windows_media_playto.MuteChangeRequestedEventArgs",
         sizeof(py::wrapper::Windows::Media::PlayTo::MuteChangeRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -401,7 +401,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyType_Spec type_spec_PlayToConnection =
     {
-        "_winrt_windows_media_playto.PlayToConnection",
+        "winrt._winrt_windows_media_playto.PlayToConnection",
         sizeof(py::wrapper::Windows::Media::PlayTo::PlayToConnection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -510,7 +510,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyType_Spec type_spec_PlayToConnectionErrorEventArgs =
     {
-        "_winrt_windows_media_playto.PlayToConnectionErrorEventArgs",
+        "winrt._winrt_windows_media_playto.PlayToConnectionErrorEventArgs",
         sizeof(py::wrapper::Windows::Media::PlayTo::PlayToConnectionErrorEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -619,7 +619,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyType_Spec type_spec_PlayToConnectionStateChangedEventArgs =
     {
-        "_winrt_windows_media_playto.PlayToConnectionStateChangedEventArgs",
+        "winrt._winrt_windows_media_playto.PlayToConnectionStateChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::PlayTo::PlayToConnectionStateChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -728,7 +728,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyType_Spec type_spec_PlayToConnectionTransferredEventArgs =
     {
-        "_winrt_windows_media_playto.PlayToConnectionTransferredEventArgs",
+        "winrt._winrt_windows_media_playto.PlayToConnectionTransferredEventArgs",
         sizeof(py::wrapper::Windows::Media::PlayTo::PlayToConnectionTransferredEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -996,7 +996,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyType_Spec type_spec_PlayToManager =
     {
-        "_winrt_windows_media_playto.PlayToManager",
+        "winrt._winrt_windows_media_playto.PlayToManager",
         sizeof(py::wrapper::Windows::Media::PlayTo::PlayToManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2145,7 +2145,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyType_Spec type_spec_PlayToReceiver =
     {
-        "_winrt_windows_media_playto.PlayToReceiver",
+        "winrt._winrt_windows_media_playto.PlayToReceiver",
         sizeof(py::wrapper::Windows::Media::PlayTo::PlayToReceiver),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2361,7 +2361,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyType_Spec type_spec_PlayToSource =
     {
-        "_winrt_windows_media_playto.PlayToSource",
+        "winrt._winrt_windows_media_playto.PlayToSource",
         sizeof(py::wrapper::Windows::Media::PlayTo::PlayToSource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2461,7 +2461,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyType_Spec type_spec_PlayToSourceDeferral =
     {
-        "_winrt_windows_media_playto.PlayToSourceDeferral",
+        "winrt._winrt_windows_media_playto.PlayToSourceDeferral",
         sizeof(py::wrapper::Windows::Media::PlayTo::PlayToSourceDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2646,7 +2646,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyType_Spec type_spec_PlayToSourceRequest =
     {
-        "_winrt_windows_media_playto.PlayToSourceRequest",
+        "winrt._winrt_windows_media_playto.PlayToSourceRequest",
         sizeof(py::wrapper::Windows::Media::PlayTo::PlayToSourceRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2735,7 +2735,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyType_Spec type_spec_PlayToSourceRequestedEventArgs =
     {
-        "_winrt_windows_media_playto.PlayToSourceRequestedEventArgs",
+        "winrt._winrt_windows_media_playto.PlayToSourceRequestedEventArgs",
         sizeof(py::wrapper::Windows::Media::PlayTo::PlayToSourceRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2904,7 +2904,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyType_Spec type_spec_PlayToSourceSelectedEventArgs =
     {
-        "_winrt_windows_media_playto.PlayToSourceSelectedEventArgs",
+        "winrt._winrt_windows_media_playto.PlayToSourceSelectedEventArgs",
         sizeof(py::wrapper::Windows::Media::PlayTo::PlayToSourceSelectedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2993,7 +2993,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyType_Spec type_spec_PlaybackRateChangeRequestedEventArgs =
     {
-        "_winrt_windows_media_playto.PlaybackRateChangeRequestedEventArgs",
+        "winrt._winrt_windows_media_playto.PlaybackRateChangeRequestedEventArgs",
         sizeof(py::wrapper::Windows::Media::PlayTo::PlaybackRateChangeRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3262,7 +3262,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyType_Spec type_spec_SourceChangeRequestedEventArgs =
     {
-        "_winrt_windows_media_playto.SourceChangeRequestedEventArgs",
+        "winrt._winrt_windows_media_playto.SourceChangeRequestedEventArgs",
         sizeof(py::wrapper::Windows::Media::PlayTo::SourceChangeRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3351,7 +3351,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyType_Spec type_spec_VolumeChangeRequestedEventArgs =
     {
-        "_winrt_windows_media_playto.VolumeChangeRequestedEventArgs",
+        "winrt._winrt_windows_media_playto.VolumeChangeRequestedEventArgs",
         sizeof(py::wrapper::Windows::Media::PlayTo::VolumeChangeRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,

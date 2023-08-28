@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_security_credentials_ui
+from winrt import _winrt_windows_security_credentials_ui
 
 __all__ = [
     "AuthenticationProtocol",

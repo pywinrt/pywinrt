@@ -184,7 +184,7 @@ namespace py::cpp::Windows::Networking::PushNotifications
 
     static PyType_Spec type_spec_PushNotificationChannel =
     {
-        "_winrt_windows_networking_pushnotifications.PushNotificationChannel",
+        "winrt._winrt_windows_networking_pushnotifications.PushNotificationChannel",
         sizeof(py::wrapper::Windows::Networking::PushNotifications::PushNotificationChannel),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -407,7 +407,7 @@ namespace py::cpp::Windows::Networking::PushNotifications
 
     static PyType_Spec type_spec_PushNotificationChannelManager =
     {
-        "_winrt_windows_networking_pushnotifications.PushNotificationChannelManager",
+        "winrt._winrt_windows_networking_pushnotifications.PushNotificationChannelManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -633,7 +633,7 @@ namespace py::cpp::Windows::Networking::PushNotifications
 
     static PyType_Spec type_spec_PushNotificationChannelManagerForUser =
     {
-        "_winrt_windows_networking_pushnotifications.PushNotificationChannelManagerForUser",
+        "winrt._winrt_windows_networking_pushnotifications.PushNotificationChannelManagerForUser",
         sizeof(py::wrapper::Windows::Networking::PushNotifications::PushNotificationChannelManagerForUser),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -702,7 +702,7 @@ namespace py::cpp::Windows::Networking::PushNotifications
 
     static PyType_Spec type_spec_PushNotificationChannelsRevokedEventArgs =
     {
-        "_winrt_windows_networking_pushnotifications.PushNotificationChannelsRevokedEventArgs",
+        "winrt._winrt_windows_networking_pushnotifications.PushNotificationChannelsRevokedEventArgs",
         sizeof(py::wrapper::Windows::Networking::PushNotifications::PushNotificationChannelsRevokedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -919,7 +919,7 @@ namespace py::cpp::Windows::Networking::PushNotifications
 
     static PyType_Spec type_spec_PushNotificationReceivedEventArgs =
     {
-        "_winrt_windows_networking_pushnotifications.PushNotificationReceivedEventArgs",
+        "winrt._winrt_windows_networking_pushnotifications.PushNotificationReceivedEventArgs",
         sizeof(py::wrapper::Windows::Networking::PushNotifications::PushNotificationReceivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1068,7 +1068,7 @@ namespace py::cpp::Windows::Networking::PushNotifications
 
     static PyType_Spec type_spec_RawNotification =
     {
-        "_winrt_windows_networking_pushnotifications.RawNotification",
+        "winrt._winrt_windows_networking_pushnotifications.RawNotification",
         sizeof(py::wrapper::Windows::Networking::PushNotifications::RawNotification),
         0,
         Py_TPFLAGS_DEFAULT,

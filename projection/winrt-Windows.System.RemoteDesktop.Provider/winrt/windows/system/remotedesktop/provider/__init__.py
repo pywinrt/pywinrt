@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_system_remotedesktop_provider
+from winrt import _winrt_windows_system_remotedesktop_provider
 
 __all__ = [
     "RemoteDesktopConnectionStatus",

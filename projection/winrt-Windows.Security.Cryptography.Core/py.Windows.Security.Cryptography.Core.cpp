@@ -432,7 +432,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyType_Spec type_spec_AsymmetricAlgorithmNames =
     {
-        "_winrt_windows_security_cryptography_core.AsymmetricAlgorithmNames",
+        "winrt._winrt_windows_security_cryptography_core.AsymmetricAlgorithmNames",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -473,7 +473,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyType_Spec type_spec_AsymmetricAlgorithmNames_Meta =
     {
-        "_winrt_windows_security_cryptography_core.AsymmetricAlgorithmNames_Meta",
+        "winrt._winrt_windows_security_cryptography_core.AsymmetricAlgorithmNames_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -796,7 +796,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyType_Spec type_spec_AsymmetricKeyAlgorithmProvider =
     {
-        "_winrt_windows_security_cryptography_core.AsymmetricKeyAlgorithmProvider",
+        "winrt._winrt_windows_security_cryptography_core.AsymmetricKeyAlgorithmProvider",
         sizeof(py::wrapper::Windows::Security::Cryptography::Core::AsymmetricKeyAlgorithmProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1237,7 +1237,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyType_Spec type_spec_CryptographicEngine =
     {
-        "_winrt_windows_security_cryptography_core.CryptographicEngine",
+        "winrt._winrt_windows_security_cryptography_core.CryptographicEngine",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1369,7 +1369,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyType_Spec type_spec_CryptographicHash =
     {
-        "_winrt_windows_security_cryptography_core.CryptographicHash",
+        "winrt._winrt_windows_security_cryptography_core.CryptographicHash",
         sizeof(py::wrapper::Windows::Security::Cryptography::Core::CryptographicHash),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1558,7 +1558,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyType_Spec type_spec_CryptographicKey =
     {
-        "_winrt_windows_security_cryptography_core.CryptographicKey",
+        "winrt._winrt_windows_security_cryptography_core.CryptographicKey",
         sizeof(py::wrapper::Windows::Security::Cryptography::Core::CryptographicKey),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2466,7 +2466,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyType_Spec type_spec_EccCurveNames =
     {
-        "_winrt_windows_security_cryptography_core.EccCurveNames",
+        "winrt._winrt_windows_security_cryptography_core.EccCurveNames",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2532,7 +2532,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyType_Spec type_spec_EccCurveNames_Meta =
     {
-        "_winrt_windows_security_cryptography_core.EccCurveNames_Meta",
+        "winrt._winrt_windows_security_cryptography_core.EccCurveNames_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -2641,7 +2641,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyType_Spec type_spec_EncryptedAndAuthenticatedData =
     {
-        "_winrt_windows_security_cryptography_core.EncryptedAndAuthenticatedData",
+        "winrt._winrt_windows_security_cryptography_core.EncryptedAndAuthenticatedData",
         sizeof(py::wrapper::Windows::Security::Cryptography::Core::EncryptedAndAuthenticatedData),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2770,7 +2770,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyType_Spec type_spec_HashAlgorithmNames =
     {
-        "_winrt_windows_security_cryptography_core.HashAlgorithmNames",
+        "winrt._winrt_windows_security_cryptography_core.HashAlgorithmNames",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2795,7 +2795,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyType_Spec type_spec_HashAlgorithmNames_Meta =
     {
-        "_winrt_windows_security_cryptography_core.HashAlgorithmNames_Meta",
+        "winrt._winrt_windows_security_cryptography_core.HashAlgorithmNames_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -2998,7 +2998,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyType_Spec type_spec_HashAlgorithmProvider =
     {
-        "_winrt_windows_security_cryptography_core.HashAlgorithmProvider",
+        "winrt._winrt_windows_security_cryptography_core.HashAlgorithmProvider",
         sizeof(py::wrapper::Windows::Security::Cryptography::Core::HashAlgorithmProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3412,7 +3412,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyType_Spec type_spec_KeyDerivationAlgorithmNames =
     {
-        "_winrt_windows_security_cryptography_core.KeyDerivationAlgorithmNames",
+        "winrt._winrt_windows_security_cryptography_core.KeyDerivationAlgorithmNames",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3452,7 +3452,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyType_Spec type_spec_KeyDerivationAlgorithmNames_Meta =
     {
-        "_winrt_windows_security_cryptography_core.KeyDerivationAlgorithmNames_Meta",
+        "winrt._winrt_windows_security_cryptography_core.KeyDerivationAlgorithmNames_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -3605,7 +3605,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyType_Spec type_spec_KeyDerivationAlgorithmProvider =
     {
-        "_winrt_windows_security_cryptography_core.KeyDerivationAlgorithmProvider",
+        "winrt._winrt_windows_security_cryptography_core.KeyDerivationAlgorithmProvider",
         sizeof(py::wrapper::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3924,7 +3924,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyType_Spec type_spec_KeyDerivationParameters =
     {
-        "_winrt_windows_security_cryptography_core.KeyDerivationParameters",
+        "winrt._winrt_windows_security_cryptography_core.KeyDerivationParameters",
         sizeof(py::wrapper::Windows::Security::Cryptography::Core::KeyDerivationParameters),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4072,7 +4072,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyType_Spec type_spec_MacAlgorithmNames =
     {
-        "_winrt_windows_security_cryptography_core.MacAlgorithmNames",
+        "winrt._winrt_windows_security_cryptography_core.MacAlgorithmNames",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4098,7 +4098,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyType_Spec type_spec_MacAlgorithmNames_Meta =
     {
-        "_winrt_windows_security_cryptography_core.MacAlgorithmNames_Meta",
+        "winrt._winrt_windows_security_cryptography_core.MacAlgorithmNames_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -4303,7 +4303,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyType_Spec type_spec_MacAlgorithmProvider =
     {
-        "_winrt_windows_security_cryptography_core.MacAlgorithmProvider",
+        "winrt._winrt_windows_security_cryptography_core.MacAlgorithmProvider",
         sizeof(py::wrapper::Windows::Security::Cryptography::Core::MacAlgorithmProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4405,7 +4405,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyType_Spec type_spec_PersistedKeyProvider =
     {
-        "_winrt_windows_security_cryptography_core.PersistedKeyProvider",
+        "winrt._winrt_windows_security_cryptography_core.PersistedKeyProvider",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4800,7 +4800,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyType_Spec type_spec_SymmetricAlgorithmNames =
     {
-        "_winrt_windows_security_cryptography_core.SymmetricAlgorithmNames",
+        "winrt._winrt_windows_security_cryptography_core.SymmetricAlgorithmNames",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4839,7 +4839,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyType_Spec type_spec_SymmetricAlgorithmNames_Meta =
     {
-        "_winrt_windows_security_cryptography_core.SymmetricAlgorithmNames_Meta",
+        "winrt._winrt_windows_security_cryptography_core.SymmetricAlgorithmNames_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -5012,7 +5012,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyType_Spec type_spec_SymmetricKeyAlgorithmProvider =
     {
-        "_winrt_windows_security_cryptography_core.SymmetricKeyAlgorithmProvider",
+        "winrt._winrt_windows_security_cryptography_core.SymmetricKeyAlgorithmProvider",
         sizeof(py::wrapper::Windows::Security::Cryptography::Core::SymmetricKeyAlgorithmProvider),
         0,
         Py_TPFLAGS_DEFAULT,

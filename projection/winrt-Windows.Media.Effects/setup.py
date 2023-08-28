@@ -6,7 +6,7 @@ from winrt_sdk import get_include_dirs
 setup(
     ext_modules=[
         Extension(
-            "winrt.windows.media.effects._winrt_windows_media_effects",
+            "winrt._winrt_windows_media_effects",
             sources=["py.Windows.Media.Effects.cpp"],
             include_dirs=get_include_dirs(),
             extra_compile_args=["/std:c++20", "/permissive-"],

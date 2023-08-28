@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_services_maps_localsearch
+from winrt import _winrt_windows_services_maps_localsearch
 
 __all__ = [
     "LocalLocationFinderStatus",

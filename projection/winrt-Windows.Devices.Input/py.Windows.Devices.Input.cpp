@@ -110,7 +110,7 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyType_Spec type_spec_KeyboardCapabilities =
     {
-        "_winrt_windows_devices_input.KeyboardCapabilities",
+        "winrt._winrt_windows_devices_input.KeyboardCapabilities",
         sizeof(py::wrapper::Windows::Devices::Input::KeyboardCapabilities),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -301,7 +301,7 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyType_Spec type_spec_MouseCapabilities =
     {
-        "_winrt_windows_devices_input.MouseCapabilities",
+        "winrt._winrt_windows_devices_input.MouseCapabilities",
         sizeof(py::wrapper::Windows::Devices::Input::MouseCapabilities),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -445,7 +445,7 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyType_Spec type_spec_MouseDevice =
     {
-        "_winrt_windows_devices_input.MouseDevice",
+        "winrt._winrt_windows_devices_input.MouseDevice",
         sizeof(py::wrapper::Windows::Devices::Input::MouseDevice),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -534,7 +534,7 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyType_Spec type_spec_MouseEventArgs =
     {
-        "_winrt_windows_devices_input.MouseEventArgs",
+        "winrt._winrt_windows_devices_input.MouseEventArgs",
         sizeof(py::wrapper::Windows::Devices::Input::MouseEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -843,7 +843,7 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyType_Spec type_spec_PenButtonListener =
     {
-        "_winrt_windows_devices_input.PenButtonListener",
+        "winrt._winrt_windows_devices_input.PenButtonListener",
         sizeof(py::wrapper::Windows::Devices::Input::PenButtonListener),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -984,7 +984,7 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyType_Spec type_spec_PenDevice =
     {
-        "_winrt_windows_devices_input.PenDevice",
+        "winrt._winrt_windows_devices_input.PenDevice",
         sizeof(py::wrapper::Windows::Devices::Input::PenDevice),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1248,7 +1248,7 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyType_Spec type_spec_PenDockListener =
     {
-        "_winrt_windows_devices_input.PenDockListener",
+        "winrt._winrt_windows_devices_input.PenDockListener",
         sizeof(py::wrapper::Windows::Devices::Input::PenDockListener),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1317,7 +1317,7 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyType_Spec type_spec_PenDockedEventArgs =
     {
-        "_winrt_windows_devices_input.PenDockedEventArgs",
+        "winrt._winrt_windows_devices_input.PenDockedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Input::PenDockedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1386,7 +1386,7 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyType_Spec type_spec_PenTailButtonClickedEventArgs =
     {
-        "_winrt_windows_devices_input.PenTailButtonClickedEventArgs",
+        "winrt._winrt_windows_devices_input.PenTailButtonClickedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Input::PenTailButtonClickedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1455,7 +1455,7 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyType_Spec type_spec_PenTailButtonDoubleClickedEventArgs =
     {
-        "_winrt_windows_devices_input.PenTailButtonDoubleClickedEventArgs",
+        "winrt._winrt_windows_devices_input.PenTailButtonDoubleClickedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Input::PenTailButtonDoubleClickedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1524,7 +1524,7 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyType_Spec type_spec_PenTailButtonLongPressedEventArgs =
     {
-        "_winrt_windows_devices_input.PenTailButtonLongPressedEventArgs",
+        "winrt._winrt_windows_devices_input.PenTailButtonLongPressedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Input::PenTailButtonLongPressedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1593,7 +1593,7 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyType_Spec type_spec_PenUndockedEventArgs =
     {
-        "_winrt_windows_devices_input.PenUndockedEventArgs",
+        "winrt._winrt_windows_devices_input.PenUndockedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Input::PenUndockedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1864,7 +1864,7 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyType_Spec type_spec_PointerDevice =
     {
-        "_winrt_windows_devices_input.PointerDevice",
+        "winrt._winrt_windows_devices_input.PointerDevice",
         sizeof(py::wrapper::Windows::Devices::Input::PointerDevice),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1995,7 +1995,7 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyType_Spec type_spec_TouchCapabilities =
     {
-        "_winrt_windows_devices_input.TouchCapabilities",
+        "winrt._winrt_windows_devices_input.TouchCapabilities",
         sizeof(py::wrapper::Windows::Devices::Input::TouchCapabilities),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2156,7 +2156,7 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyType_Spec type_spec_MouseDelta =
     {
-        "_winrt_windows_devices_input.MouseDelta",
+        "winrt._winrt_windows_devices_input.MouseDelta",
         sizeof(py::wrapper::Windows::Devices::Input::MouseDelta),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2527,7 +2527,7 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyType_Spec type_spec_PointerDeviceUsage =
     {
-        "_winrt_windows_devices_input.PointerDeviceUsage",
+        "winrt._winrt_windows_devices_input.PointerDeviceUsage",
         sizeof(py::wrapper::Windows::Devices::Input::PointerDeviceUsage),
         0,
         Py_TPFLAGS_DEFAULT,

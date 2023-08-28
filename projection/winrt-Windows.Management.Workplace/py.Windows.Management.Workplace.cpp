@@ -183,7 +183,7 @@ namespace py::cpp::Windows::Management::Workplace
 
     static PyType_Spec type_spec_MdmPolicy =
     {
-        "_winrt_windows_management_workplace.MdmPolicy",
+        "winrt._winrt_windows_management_workplace.MdmPolicy",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -236,7 +236,7 @@ namespace py::cpp::Windows::Management::Workplace
 
     static PyType_Spec type_spec_WorkplaceSettings =
     {
-        "_winrt_windows_management_workplace.WorkplaceSettings",
+        "winrt._winrt_windows_management_workplace.WorkplaceSettings",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -257,7 +257,7 @@ namespace py::cpp::Windows::Management::Workplace
 
     static PyType_Spec type_spec_WorkplaceSettings_Meta =
     {
-        "_winrt_windows_management_workplace.WorkplaceSettings_Meta",
+        "winrt._winrt_windows_management_workplace.WorkplaceSettings_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,

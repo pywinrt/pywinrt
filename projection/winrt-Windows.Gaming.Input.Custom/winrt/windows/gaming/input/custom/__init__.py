@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_gaming_input_custom
+from winrt import _winrt_windows_gaming_input_custom
 
 __all__ = [
     "GipFirmwareUpdateStatus",

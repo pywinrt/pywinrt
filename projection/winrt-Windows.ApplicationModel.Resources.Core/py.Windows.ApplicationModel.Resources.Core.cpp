@@ -208,7 +208,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyType_Spec type_spec_NamedResource =
     {
-        "_winrt_windows_applicationmodel_resources_core.NamedResource",
+        "winrt._winrt_windows_applicationmodel_resources_core.NamedResource",
         sizeof(py::wrapper::Windows::ApplicationModel::Resources::Core::NamedResource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -489,7 +489,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyType_Spec type_spec_ResourceCandidate =
     {
-        "_winrt_windows_applicationmodel_resources_core.ResourceCandidate",
+        "winrt._winrt_windows_applicationmodel_resources_core.ResourceCandidate",
         sizeof(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceCandidate),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -831,7 +831,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyType_Spec type_spec_ResourceCandidateVectorView =
     {
-        "_winrt_windows_applicationmodel_resources_core.ResourceCandidateVectorView",
+        "winrt._winrt_windows_applicationmodel_resources_core.ResourceCandidateVectorView",
         sizeof(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceCandidateVectorView),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1338,7 +1338,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyType_Spec type_spec_ResourceContext =
     {
-        "_winrt_windows_applicationmodel_resources_core.ResourceContext",
+        "winrt._winrt_windows_applicationmodel_resources_core.ResourceContext",
         sizeof(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceContext),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1680,7 +1680,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyType_Spec type_spec_ResourceContextLanguagesVectorView =
     {
-        "_winrt_windows_applicationmodel_resources_core.ResourceContextLanguagesVectorView",
+        "winrt._winrt_windows_applicationmodel_resources_core.ResourceContextLanguagesVectorView",
         sizeof(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceContextLanguagesVectorView),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1992,7 +1992,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyType_Spec type_spec_ResourceManager =
     {
-        "_winrt_windows_applicationmodel_resources_core.ResourceManager",
+        "winrt._winrt_windows_applicationmodel_resources_core.ResourceManager",
         sizeof(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2013,7 +2013,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyType_Spec type_spec_ResourceManager_Meta =
     {
-        "_winrt_windows_applicationmodel_resources_core.ResourceManager_Meta",
+        "winrt._winrt_windows_applicationmodel_resources_core.ResourceManager_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -2416,7 +2416,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyType_Spec type_spec_ResourceMap =
     {
-        "_winrt_windows_applicationmodel_resources_core.ResourceMap",
+        "winrt._winrt_windows_applicationmodel_resources_core.ResourceMap",
         sizeof(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceMap),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2615,7 +2615,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyType_Spec type_spec_ResourceMapIterator =
     {
-        "_winrt_windows_applicationmodel_resources_core.ResourceMapIterator",
+        "winrt._winrt_windows_applicationmodel_resources_core.ResourceMapIterator",
         sizeof(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceMapIterator),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2913,7 +2913,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyType_Spec type_spec_ResourceMapMapView =
     {
-        "_winrt_windows_applicationmodel_resources_core.ResourceMapMapView",
+        "winrt._winrt_windows_applicationmodel_resources_core.ResourceMapMapView",
         sizeof(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceMapMapView),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3112,7 +3112,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyType_Spec type_spec_ResourceMapMapViewIterator =
     {
-        "_winrt_windows_applicationmodel_resources_core.ResourceMapMapViewIterator",
+        "winrt._winrt_windows_applicationmodel_resources_core.ResourceMapMapViewIterator",
         sizeof(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceMapMapViewIterator),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3281,7 +3281,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyType_Spec type_spec_ResourceQualifier =
     {
-        "_winrt_windows_applicationmodel_resources_core.ResourceQualifier",
+        "winrt._winrt_windows_applicationmodel_resources_core.ResourceQualifier",
         sizeof(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceQualifier),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3579,7 +3579,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyType_Spec type_spec_ResourceQualifierMapView =
     {
-        "_winrt_windows_applicationmodel_resources_core.ResourceQualifierMapView",
+        "winrt._winrt_windows_applicationmodel_resources_core.ResourceQualifierMapView",
         sizeof(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceQualifierMapView),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4031,7 +4031,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyType_Spec type_spec_ResourceQualifierObservableMap =
     {
-        "_winrt_windows_applicationmodel_resources_core.ResourceQualifierObservableMap",
+        "winrt._winrt_windows_applicationmodel_resources_core.ResourceQualifierObservableMap",
         sizeof(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceQualifierObservableMap),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4373,7 +4373,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyType_Spec type_spec_ResourceQualifierVectorView =
     {
-        "_winrt_windows_applicationmodel_resources_core.ResourceQualifierVectorView",
+        "winrt._winrt_windows_applicationmodel_resources_core.ResourceQualifierVectorView",
         sizeof(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceQualifierVectorView),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4639,7 +4639,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyType_Spec type_spec_ResourceLayoutInfo =
     {
-        "_winrt_windows_applicationmodel_resources_core.ResourceLayoutInfo",
+        "winrt._winrt_windows_applicationmodel_resources_core.ResourceLayoutInfo",
         sizeof(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo),
         0,
         Py_TPFLAGS_DEFAULT,

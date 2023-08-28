@@ -65,7 +65,7 @@ namespace py::cpp::Windows::Data::Html
 
     static PyType_Spec type_spec_HtmlUtilities =
     {
-        "_winrt_windows_data_html.HtmlUtilities",
+        "winrt._winrt_windows_data_html.HtmlUtilities",
         0,
         0,
         Py_TPFLAGS_DEFAULT,

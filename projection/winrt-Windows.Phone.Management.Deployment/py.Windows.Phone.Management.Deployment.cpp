@@ -188,7 +188,7 @@ namespace py::cpp::Windows::Phone::Management::Deployment
 
     static PyType_Spec type_spec_Enterprise =
     {
-        "_winrt_windows_phone_management_deployment.Enterprise",
+        "winrt._winrt_windows_phone_management_deployment.Enterprise",
         sizeof(py::wrapper::Windows::Phone::Management::Deployment::Enterprise),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -354,7 +354,7 @@ namespace py::cpp::Windows::Phone::Management::Deployment
 
     static PyType_Spec type_spec_EnterpriseEnrollmentManager =
     {
-        "_winrt_windows_phone_management_deployment.EnterpriseEnrollmentManager",
+        "winrt._winrt_windows_phone_management_deployment.EnterpriseEnrollmentManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -376,7 +376,7 @@ namespace py::cpp::Windows::Phone::Management::Deployment
 
     static PyType_Spec type_spec_EnterpriseEnrollmentManager_Meta =
     {
-        "_winrt_windows_phone_management_deployment.EnterpriseEnrollmentManager_Meta",
+        "winrt._winrt_windows_phone_management_deployment.EnterpriseEnrollmentManager_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -485,7 +485,7 @@ namespace py::cpp::Windows::Phone::Management::Deployment
 
     static PyType_Spec type_spec_EnterpriseEnrollmentResult =
     {
-        "_winrt_windows_phone_management_deployment.EnterpriseEnrollmentResult",
+        "winrt._winrt_windows_phone_management_deployment.EnterpriseEnrollmentResult",
         sizeof(py::wrapper::Windows::Phone::Management::Deployment::EnterpriseEnrollmentResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -754,7 +754,7 @@ namespace py::cpp::Windows::Phone::Management::Deployment
 
     static PyType_Spec type_spec_InstallationManager =
     {
-        "_winrt_windows_phone_management_deployment.InstallationManager",
+        "winrt._winrt_windows_phone_management_deployment.InstallationManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -883,7 +883,7 @@ namespace py::cpp::Windows::Phone::Management::Deployment
 
     static PyType_Spec type_spec_PackageInstallResult =
     {
-        "_winrt_windows_phone_management_deployment.PackageInstallResult",
+        "winrt._winrt_windows_phone_management_deployment.PackageInstallResult",
         sizeof(py::wrapper::Windows::Phone::Management::Deployment::PackageInstallResult),
         0,
         Py_TPFLAGS_DEFAULT,

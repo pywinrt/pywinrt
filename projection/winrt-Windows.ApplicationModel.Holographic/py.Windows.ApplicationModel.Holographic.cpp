@@ -188,7 +188,7 @@ namespace py::cpp::Windows::ApplicationModel::Holographic
 
     static PyType_Spec type_spec_HolographicKeyboard =
     {
-        "_winrt_windows_applicationmodel_holographic.HolographicKeyboard",
+        "winrt._winrt_windows_applicationmodel_holographic.HolographicKeyboard",
         sizeof(py::wrapper::Windows::ApplicationModel::Holographic::HolographicKeyboard),
         0,
         Py_TPFLAGS_DEFAULT,

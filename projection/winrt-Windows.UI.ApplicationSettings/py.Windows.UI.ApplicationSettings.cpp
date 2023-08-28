@@ -298,7 +298,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyType_Spec type_spec_AccountsSettingsPane =
     {
-        "_winrt_windows_ui_applicationsettings.AccountsSettingsPane",
+        "winrt._winrt_windows_ui_applicationsettings.AccountsSettingsPane",
         sizeof(py::wrapper::Windows::UI::ApplicationSettings::AccountsSettingsPane),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -545,7 +545,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyType_Spec type_spec_AccountsSettingsPaneCommandsRequestedEventArgs =
     {
-        "_winrt_windows_ui_applicationsettings.AccountsSettingsPaneCommandsRequestedEventArgs",
+        "winrt._winrt_windows_ui_applicationsettings.AccountsSettingsPaneCommandsRequestedEventArgs",
         sizeof(py::wrapper::Windows::UI::ApplicationSettings::AccountsSettingsPaneCommandsRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -645,7 +645,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyType_Spec type_spec_AccountsSettingsPaneEventDeferral =
     {
-        "_winrt_windows_ui_applicationsettings.AccountsSettingsPaneEventDeferral",
+        "winrt._winrt_windows_ui_applicationsettings.AccountsSettingsPaneEventDeferral",
         sizeof(py::wrapper::Windows::UI::ApplicationSettings::AccountsSettingsPaneEventDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -794,7 +794,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyType_Spec type_spec_CredentialCommand =
     {
-        "_winrt_windows_ui_applicationsettings.CredentialCommand",
+        "winrt._winrt_windows_ui_applicationsettings.CredentialCommand",
         sizeof(py::wrapper::Windows::UI::ApplicationSettings::CredentialCommand),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1052,7 +1052,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyType_Spec type_spec_SettingsCommand =
     {
-        "_winrt_windows_ui_applicationsettings.SettingsCommand",
+        "winrt._winrt_windows_ui_applicationsettings.SettingsCommand",
         sizeof(py::wrapper::Windows::UI::ApplicationSettings::SettingsCommand),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1073,7 +1073,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyType_Spec type_spec_SettingsCommand_Meta =
     {
-        "_winrt_windows_ui_applicationsettings.SettingsCommand_Meta",
+        "winrt._winrt_windows_ui_applicationsettings.SettingsCommand_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1267,7 +1267,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyType_Spec type_spec_SettingsPane =
     {
-        "_winrt_windows_ui_applicationsettings.SettingsPane",
+        "winrt._winrt_windows_ui_applicationsettings.SettingsPane",
         sizeof(py::wrapper::Windows::UI::ApplicationSettings::SettingsPane),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1288,7 +1288,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyType_Spec type_spec_SettingsPane_Meta =
     {
-        "_winrt_windows_ui_applicationsettings.SettingsPane_Meta",
+        "winrt._winrt_windows_ui_applicationsettings.SettingsPane_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1377,7 +1377,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyType_Spec type_spec_SettingsPaneCommandsRequest =
     {
-        "_winrt_windows_ui_applicationsettings.SettingsPaneCommandsRequest",
+        "winrt._winrt_windows_ui_applicationsettings.SettingsPaneCommandsRequest",
         sizeof(py::wrapper::Windows::UI::ApplicationSettings::SettingsPaneCommandsRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1466,7 +1466,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyType_Spec type_spec_SettingsPaneCommandsRequestedEventArgs =
     {
-        "_winrt_windows_ui_applicationsettings.SettingsPaneCommandsRequestedEventArgs",
+        "winrt._winrt_windows_ui_applicationsettings.SettingsPaneCommandsRequestedEventArgs",
         sizeof(py::wrapper::Windows::UI::ApplicationSettings::SettingsPaneCommandsRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1621,7 +1621,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyType_Spec type_spec_WebAccountCommand =
     {
-        "_winrt_windows_ui_applicationsettings.WebAccountCommand",
+        "winrt._winrt_windows_ui_applicationsettings.WebAccountCommand",
         sizeof(py::wrapper::Windows::UI::ApplicationSettings::WebAccountCommand),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1710,7 +1710,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyType_Spec type_spec_WebAccountInvokedArgs =
     {
-        "_winrt_windows_ui_applicationsettings.WebAccountInvokedArgs",
+        "winrt._winrt_windows_ui_applicationsettings.WebAccountInvokedArgs",
         sizeof(py::wrapper::Windows::UI::ApplicationSettings::WebAccountInvokedArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1844,7 +1844,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyType_Spec type_spec_WebAccountProviderCommand =
     {
-        "_winrt_windows_ui_applicationsettings.WebAccountProviderCommand",
+        "winrt._winrt_windows_ui_applicationsettings.WebAccountProviderCommand",
         sizeof(py::wrapper::Windows::UI::ApplicationSettings::WebAccountProviderCommand),
         0,
         Py_TPFLAGS_DEFAULT,

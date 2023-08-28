@@ -441,7 +441,7 @@ namespace py::cpp::Windows::Devices::Lights
 
     static PyType_Spec type_spec_Lamp =
     {
-        "_winrt_windows_devices_lights.Lamp",
+        "winrt._winrt_windows_devices_lights.Lamp",
         sizeof(py::wrapper::Windows::Devices::Lights::Lamp),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1266,7 +1266,7 @@ namespace py::cpp::Windows::Devices::Lights
 
     static PyType_Spec type_spec_LampArray =
     {
-        "_winrt_windows_devices_lights.LampArray",
+        "winrt._winrt_windows_devices_lights.LampArray",
         sizeof(py::wrapper::Windows::Devices::Lights::LampArray),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1355,7 +1355,7 @@ namespace py::cpp::Windows::Devices::Lights
 
     static PyType_Spec type_spec_LampAvailabilityChangedEventArgs =
     {
-        "_winrt_windows_devices_lights.LampAvailabilityChangedEventArgs",
+        "winrt._winrt_windows_devices_lights.LampAvailabilityChangedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Lights::LampAvailabilityChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1636,7 +1636,7 @@ namespace py::cpp::Windows::Devices::Lights
 
     static PyType_Spec type_spec_LampInfo =
     {
-        "_winrt_windows_devices_lights.LampInfo",
+        "winrt._winrt_windows_devices_lights.LampInfo",
         sizeof(py::wrapper::Windows::Devices::Lights::LampInfo),
         0,
         Py_TPFLAGS_DEFAULT,

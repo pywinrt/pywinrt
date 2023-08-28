@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_devices_scanners
+from winrt import _winrt_windows_devices_scanners
 
 __all__ = [
     "ImageScannerAutoCroppingMode",

@@ -332,7 +332,7 @@ namespace py::cpp::Windows::Devices::Spi::Provider
 
     static PyType_Spec type_spec_ProviderSpiConnectionSettings =
     {
-        "_winrt_windows_devices_spi_provider.ProviderSpiConnectionSettings",
+        "winrt._winrt_windows_devices_spi_provider.ProviderSpiConnectionSettings",
         sizeof(py::wrapper::Windows::Devices::Spi::Provider::ProviderSpiConnectionSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -433,7 +433,7 @@ namespace py::cpp::Windows::Devices::Spi::Provider
 
     static PyType_Spec type_spec_ISpiControllerProvider =
     {
-        "_winrt_windows_devices_spi_provider.ISpiControllerProvider",
+        "winrt._winrt_windows_devices_spi_provider.ISpiControllerProvider",
         sizeof(py::wrapper::Windows::Devices::Spi::Provider::ISpiControllerProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -728,7 +728,7 @@ namespace py::cpp::Windows::Devices::Spi::Provider
 
     static PyType_Spec type_spec_ISpiDeviceProvider =
     {
-        "_winrt_windows_devices_spi_provider.ISpiDeviceProvider",
+        "winrt._winrt_windows_devices_spi_provider.ISpiDeviceProvider",
         sizeof(py::wrapper::Windows::Devices::Spi::Provider::ISpiDeviceProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -827,7 +827,7 @@ namespace py::cpp::Windows::Devices::Spi::Provider
 
     static PyType_Spec type_spec_ISpiProvider =
     {
-        "_winrt_windows_devices_spi_provider.ISpiProvider",
+        "winrt._winrt_windows_devices_spi_provider.ISpiProvider",
         sizeof(py::wrapper::Windows::Devices::Spi::Provider::ISpiProvider),
         0,
         Py_TPFLAGS_DEFAULT,

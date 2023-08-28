@@ -161,7 +161,7 @@ namespace py::cpp::Windows::Gaming::UI
 
     static PyType_Spec type_spec_GameBar =
     {
-        "_winrt_windows_gaming_ui.GameBar",
+        "winrt._winrt_windows_gaming_ui.GameBar",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -183,7 +183,7 @@ namespace py::cpp::Windows::Gaming::UI
 
     static PyType_Spec type_spec_GameBar_Meta =
     {
-        "_winrt_windows_gaming_ui.GameBar_Meta",
+        "winrt._winrt_windows_gaming_ui.GameBar_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -352,7 +352,7 @@ namespace py::cpp::Windows::Gaming::UI
 
     static PyType_Spec type_spec_GameChatMessageReceivedEventArgs =
     {
-        "_winrt_windows_gaming_ui.GameChatMessageReceivedEventArgs",
+        "winrt._winrt_windows_gaming_ui.GameChatMessageReceivedEventArgs",
         sizeof(py::wrapper::Windows::Gaming::UI::GameChatMessageReceivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -534,7 +534,7 @@ namespace py::cpp::Windows::Gaming::UI
 
     static PyType_Spec type_spec_GameChatOverlay =
     {
-        "_winrt_windows_gaming_ui.GameChatOverlay",
+        "winrt._winrt_windows_gaming_ui.GameChatOverlay",
         sizeof(py::wrapper::Windows::Gaming::UI::GameChatOverlay),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -703,7 +703,7 @@ namespace py::cpp::Windows::Gaming::UI
 
     static PyType_Spec type_spec_GameChatOverlayMessageSource =
     {
-        "_winrt_windows_gaming_ui.GameChatOverlayMessageSource",
+        "winrt._winrt_windows_gaming_ui.GameChatOverlayMessageSource",
         sizeof(py::wrapper::Windows::Gaming::UI::GameChatOverlayMessageSource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -885,7 +885,7 @@ namespace py::cpp::Windows::Gaming::UI
 
     static PyType_Spec type_spec_GameUIProviderActivatedEventArgs =
     {
-        "_winrt_windows_gaming_ui.GameUIProviderActivatedEventArgs",
+        "winrt._winrt_windows_gaming_ui.GameUIProviderActivatedEventArgs",
         sizeof(py::wrapper::Windows::Gaming::UI::GameUIProviderActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,

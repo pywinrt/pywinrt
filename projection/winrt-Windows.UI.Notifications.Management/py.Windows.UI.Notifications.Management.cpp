@@ -320,7 +320,7 @@ namespace py::cpp::Windows::UI::Notifications::Management
 
     static PyType_Spec type_spec_UserNotificationListener =
     {
-        "_winrt_windows_ui_notifications_management.UserNotificationListener",
+        "winrt._winrt_windows_ui_notifications_management.UserNotificationListener",
         sizeof(py::wrapper::Windows::UI::Notifications::Management::UserNotificationListener),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -341,7 +341,7 @@ namespace py::cpp::Windows::UI::Notifications::Management
 
     static PyType_Spec type_spec_UserNotificationListener_Meta =
     {
-        "_winrt_windows_ui_notifications_management.UserNotificationListener_Meta",
+        "winrt._winrt_windows_ui_notifications_management.UserNotificationListener_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,

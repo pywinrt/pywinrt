@@ -6,7 +6,7 @@ from winrt_sdk import get_include_dirs
 setup(
     ext_modules=[
         Extension(
-            "winrt.windows.data.html._winrt_windows_data_html",
+            "winrt._winrt_windows_data_html",
             sources=["py.Windows.Data.Html.cpp"],
             include_dirs=get_include_dirs(),
             extra_compile_args=["/std:c++20", "/permissive-"],

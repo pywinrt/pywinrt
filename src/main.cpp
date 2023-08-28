@@ -221,7 +221,8 @@ Where <spec> is one or more of:
 
                 auto ns_package_name = w.write_temp("winrt-%", ns);
                 auto ns_package_dir = settings.output_folder / ns_package_name;
-                auto ns_dir = ns_package_dir / "winrt";
+                auto ns_winrt_dir = ns_package_dir / "winrt";
+                auto ns_dir = ns_winrt_dir;
 
                 for (auto&& ns_segment : get_dotted_name_segments(ns))
                 {
@@ -240,7 +241,7 @@ Where <spec> is one or more of:
                 create_directories(ns_dir);
 
                 group.add(
-                    [ns_package_dir, ns_dir, ns = ns, members = members]
+                    [ns_package_dir, ns_winrt_dir, ns_dir, ns = ns, members = members]
                     {
                         auto header_dir = settings.header_path.value_or(ns_package_dir);
 
@@ -248,7 +249,7 @@ Where <spec> is one or more of:
                             = write_namespace_cpp(ns_package_dir, ns, members);
                         write_namespace_h(header_dir, ns, namespaces, members);
                         write_namespace_dunder_init_py(ns_dir, ns, members);
-                        write_namespace_pyi(ns_dir, namespaces, ns, members);
+                        write_namespace_pyi(ns_winrt_dir, namespaces, ns, members);
                         write_all_requirements_txt(ns_package_dir, namespaces);
                     });
             }

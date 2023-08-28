@@ -108,7 +108,7 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyType_Spec type_spec_DiagnosticActionResult =
     {
-        "_winrt_windows_system_diagnostics.DiagnosticActionResult",
+        "winrt._winrt_windows_system_diagnostics.DiagnosticActionResult",
         sizeof(py::wrapper::Windows::System::Diagnostics::DiagnosticActionResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -322,7 +322,7 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyType_Spec type_spec_DiagnosticInvoker =
     {
-        "_winrt_windows_system_diagnostics.DiagnosticInvoker",
+        "winrt._winrt_windows_system_diagnostics.DiagnosticInvoker",
         sizeof(py::wrapper::Windows::System::Diagnostics::DiagnosticInvoker),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -343,7 +343,7 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyType_Spec type_spec_DiagnosticInvoker_Meta =
     {
-        "_winrt_windows_system_diagnostics.DiagnosticInvoker_Meta",
+        "winrt._winrt_windows_system_diagnostics.DiagnosticInvoker_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -442,7 +442,7 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyType_Spec type_spec_ProcessCpuUsage =
     {
-        "_winrt_windows_system_diagnostics.ProcessCpuUsage",
+        "winrt._winrt_windows_system_diagnostics.ProcessCpuUsage",
         sizeof(py::wrapper::Windows::System::Diagnostics::ProcessCpuUsage),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -551,7 +551,7 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyType_Spec type_spec_ProcessCpuUsageReport =
     {
-        "_winrt_windows_system_diagnostics.ProcessCpuUsageReport",
+        "winrt._winrt_windows_system_diagnostics.ProcessCpuUsageReport",
         sizeof(py::wrapper::Windows::System::Diagnostics::ProcessCpuUsageReport),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -902,7 +902,7 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyType_Spec type_spec_ProcessDiagnosticInfo =
     {
-        "_winrt_windows_system_diagnostics.ProcessDiagnosticInfo",
+        "winrt._winrt_windows_system_diagnostics.ProcessDiagnosticInfo",
         sizeof(py::wrapper::Windows::System::Diagnostics::ProcessDiagnosticInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1001,7 +1001,7 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyType_Spec type_spec_ProcessDiskUsage =
     {
-        "_winrt_windows_system_diagnostics.ProcessDiskUsage",
+        "winrt._winrt_windows_system_diagnostics.ProcessDiskUsage",
         sizeof(py::wrapper::Windows::System::Diagnostics::ProcessDiskUsage),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1190,7 +1190,7 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyType_Spec type_spec_ProcessDiskUsageReport =
     {
-        "_winrt_windows_system_diagnostics.ProcessDiskUsageReport",
+        "winrt._winrt_windows_system_diagnostics.ProcessDiskUsageReport",
         sizeof(py::wrapper::Windows::System::Diagnostics::ProcessDiskUsageReport),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1289,7 +1289,7 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyType_Spec type_spec_ProcessMemoryUsage =
     {
-        "_winrt_windows_system_diagnostics.ProcessMemoryUsage",
+        "winrt._winrt_windows_system_diagnostics.ProcessMemoryUsage",
         sizeof(py::wrapper::Windows::System::Diagnostics::ProcessMemoryUsage),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1598,7 +1598,7 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyType_Spec type_spec_ProcessMemoryUsageReport =
     {
-        "_winrt_windows_system_diagnostics.ProcessMemoryUsageReport",
+        "winrt._winrt_windows_system_diagnostics.ProcessMemoryUsageReport",
         sizeof(py::wrapper::Windows::System::Diagnostics::ProcessMemoryUsageReport),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1697,7 +1697,7 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyType_Spec type_spec_SystemCpuUsage =
     {
-        "_winrt_windows_system_diagnostics.SystemCpuUsage",
+        "winrt._winrt_windows_system_diagnostics.SystemCpuUsage",
         sizeof(py::wrapper::Windows::System::Diagnostics::SystemCpuUsage),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1826,7 +1826,7 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyType_Spec type_spec_SystemCpuUsageReport =
     {
-        "_winrt_windows_system_diagnostics.SystemCpuUsageReport",
+        "winrt._winrt_windows_system_diagnostics.SystemCpuUsageReport",
         sizeof(py::wrapper::Windows::System::Diagnostics::SystemCpuUsageReport),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2016,7 +2016,7 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyType_Spec type_spec_SystemDiagnosticInfo =
     {
-        "_winrt_windows_system_diagnostics.SystemDiagnosticInfo",
+        "winrt._winrt_windows_system_diagnostics.SystemDiagnosticInfo",
         sizeof(py::wrapper::Windows::System::Diagnostics::SystemDiagnosticInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2037,7 +2037,7 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyType_Spec type_spec_SystemDiagnosticInfo_Meta =
     {
-        "_winrt_windows_system_diagnostics.SystemDiagnosticInfo_Meta",
+        "winrt._winrt_windows_system_diagnostics.SystemDiagnosticInfo_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -2136,7 +2136,7 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyType_Spec type_spec_SystemMemoryUsage =
     {
-        "_winrt_windows_system_diagnostics.SystemMemoryUsage",
+        "winrt._winrt_windows_system_diagnostics.SystemMemoryUsage",
         sizeof(py::wrapper::Windows::System::Diagnostics::SystemMemoryUsage),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2265,7 +2265,7 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyType_Spec type_spec_SystemMemoryUsageReport =
     {
-        "_winrt_windows_system_diagnostics.SystemMemoryUsageReport",
+        "winrt._winrt_windows_system_diagnostics.SystemMemoryUsageReport",
         sizeof(py::wrapper::Windows::System::Diagnostics::SystemMemoryUsageReport),
         0,
         Py_TPFLAGS_DEFAULT,

@@ -128,7 +128,7 @@ namespace py::cpp::Windows::Perception::Spatial::Preview
 
     static PyType_Spec type_spec_SpatialGraphInteropFrameOfReferencePreview =
     {
-        "_winrt_windows_perception_spatial_preview.SpatialGraphInteropFrameOfReferencePreview",
+        "winrt._winrt_windows_perception_spatial_preview.SpatialGraphInteropFrameOfReferencePreview",
         sizeof(py::wrapper::Windows::Perception::Spatial::Preview::SpatialGraphInteropFrameOfReferencePreview),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -344,7 +344,7 @@ namespace py::cpp::Windows::Perception::Spatial::Preview
 
     static PyType_Spec type_spec_SpatialGraphInteropPreview =
     {
-        "_winrt_windows_perception_spatial_preview.SpatialGraphInteropPreview",
+        "winrt._winrt_windows_perception_spatial_preview.SpatialGraphInteropPreview",
         0,
         0,
         Py_TPFLAGS_DEFAULT,

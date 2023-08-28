@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_system_remotesystems
+from winrt import _winrt_windows_system_remotesystems
 
 __all__ = [
     "RemoteSystemAccessStatus",

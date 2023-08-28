@@ -398,7 +398,7 @@ namespace py::cpp::Windows::Management
 
     static PyType_Spec type_spec_MdmAlert =
     {
-        "_winrt_windows_management.MdmAlert",
+        "winrt._winrt_windows_management.MdmAlert",
         sizeof(py::wrapper::Windows::Management::MdmAlert),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -658,7 +658,7 @@ namespace py::cpp::Windows::Management
 
     static PyType_Spec type_spec_MdmSession =
     {
-        "_winrt_windows_management.MdmSession",
+        "winrt._winrt_windows_management.MdmSession",
         sizeof(py::wrapper::Windows::Management::MdmSession),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -806,7 +806,7 @@ namespace py::cpp::Windows::Management
 
     static PyType_Spec type_spec_MdmSessionManager =
     {
-        "_winrt_windows_management.MdmSessionManager",
+        "winrt._winrt_windows_management.MdmSessionManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -827,7 +827,7 @@ namespace py::cpp::Windows::Management
 
     static PyType_Spec type_spec_MdmSessionManager_Meta =
     {
-        "_winrt_windows_management.MdmSessionManager_Meta",
+        "winrt._winrt_windows_management.MdmSessionManager_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,

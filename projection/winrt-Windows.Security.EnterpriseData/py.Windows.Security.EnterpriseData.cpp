@@ -108,7 +108,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyType_Spec type_spec_BufferProtectUnprotectResult =
     {
-        "_winrt_windows_security_enterprisedata.BufferProtectUnprotectResult",
+        "winrt._winrt_windows_security_enterprisedata.BufferProtectUnprotectResult",
         sizeof(py::wrapper::Windows::Security::EnterpriseData::BufferProtectUnprotectResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -217,7 +217,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyType_Spec type_spec_DataProtectionInfo =
     {
-        "_winrt_windows_security_enterprisedata.DataProtectionInfo",
+        "winrt._winrt_windows_security_enterprisedata.DataProtectionInfo",
         sizeof(py::wrapper::Windows::Security::EnterpriseData::DataProtectionInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -447,7 +447,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyType_Spec type_spec_DataProtectionManager =
     {
-        "_winrt_windows_security_enterprisedata.DataProtectionManager",
+        "winrt._winrt_windows_security_enterprisedata.DataProtectionManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -596,7 +596,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyType_Spec type_spec_FileProtectionInfo =
     {
-        "_winrt_windows_security_enterprisedata.FileProtectionInfo",
+        "winrt._winrt_windows_security_enterprisedata.FileProtectionInfo",
         sizeof(py::wrapper::Windows::Security::EnterpriseData::FileProtectionInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -976,7 +976,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyType_Spec type_spec_FileProtectionManager =
     {
-        "_winrt_windows_security_enterprisedata.FileProtectionManager",
+        "winrt._winrt_windows_security_enterprisedata.FileProtectionManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1141,7 +1141,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyType_Spec type_spec_FileRevocationManager =
     {
-        "_winrt_windows_security_enterprisedata.FileRevocationManager",
+        "winrt._winrt_windows_security_enterprisedata.FileRevocationManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1282,7 +1282,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyType_Spec type_spec_FileUnprotectOptions =
     {
-        "_winrt_windows_security_enterprisedata.FileUnprotectOptions",
+        "winrt._winrt_windows_security_enterprisedata.FileUnprotectOptions",
         sizeof(py::wrapper::Windows::Security::EnterpriseData::FileUnprotectOptions),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1371,7 +1371,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyType_Spec type_spec_ProtectedAccessResumedEventArgs =
     {
-        "_winrt_windows_security_enterprisedata.ProtectedAccessResumedEventArgs",
+        "winrt._winrt_windows_security_enterprisedata.ProtectedAccessResumedEventArgs",
         sizeof(py::wrapper::Windows::Security::EnterpriseData::ProtectedAccessResumedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1510,7 +1510,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyType_Spec type_spec_ProtectedAccessSuspendingEventArgs =
     {
-        "_winrt_windows_security_enterprisedata.ProtectedAccessSuspendingEventArgs",
+        "winrt._winrt_windows_security_enterprisedata.ProtectedAccessSuspendingEventArgs",
         sizeof(py::wrapper::Windows::Security::EnterpriseData::ProtectedAccessSuspendingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1619,7 +1619,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyType_Spec type_spec_ProtectedContainerExportResult =
     {
-        "_winrt_windows_security_enterprisedata.ProtectedContainerExportResult",
+        "winrt._winrt_windows_security_enterprisedata.ProtectedContainerExportResult",
         sizeof(py::wrapper::Windows::Security::EnterpriseData::ProtectedContainerExportResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1728,7 +1728,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyType_Spec type_spec_ProtectedContainerImportResult =
     {
-        "_winrt_windows_security_enterprisedata.ProtectedContainerImportResult",
+        "winrt._winrt_windows_security_enterprisedata.ProtectedContainerImportResult",
         sizeof(py::wrapper::Windows::Security::EnterpriseData::ProtectedContainerImportResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1817,7 +1817,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyType_Spec type_spec_ProtectedContentRevokedEventArgs =
     {
-        "_winrt_windows_security_enterprisedata.ProtectedContentRevokedEventArgs",
+        "winrt._winrt_windows_security_enterprisedata.ProtectedContentRevokedEventArgs",
         sizeof(py::wrapper::Windows::Security::EnterpriseData::ProtectedContentRevokedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1946,7 +1946,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyType_Spec type_spec_ProtectedFileCreateResult =
     {
-        "_winrt_windows_security_enterprisedata.ProtectedFileCreateResult",
+        "winrt._winrt_windows_security_enterprisedata.ProtectedFileCreateResult",
         sizeof(py::wrapper::Windows::Security::EnterpriseData::ProtectedFileCreateResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2250,7 +2250,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyType_Spec type_spec_ProtectionPolicyAuditInfo =
     {
-        "_winrt_windows_security_enterprisedata.ProtectionPolicyAuditInfo",
+        "winrt._winrt_windows_security_enterprisedata.ProtectionPolicyAuditInfo",
         sizeof(py::wrapper::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3536,7 +3536,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyType_Spec type_spec_ProtectionPolicyManager =
     {
-        "_winrt_windows_security_enterprisedata.ProtectionPolicyManager",
+        "winrt._winrt_windows_security_enterprisedata.ProtectionPolicyManager",
         sizeof(py::wrapper::Windows::Security::EnterpriseData::ProtectionPolicyManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3558,7 +3558,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyType_Spec type_spec_ProtectionPolicyManager_Meta =
     {
-        "_winrt_windows_security_enterprisedata.ProtectionPolicyManager_Meta",
+        "winrt._winrt_windows_security_enterprisedata.ProtectionPolicyManager_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -3679,7 +3679,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyType_Spec type_spec_ThreadNetworkContext =
     {
-        "_winrt_windows_security_enterprisedata.ThreadNetworkContext",
+        "winrt._winrt_windows_security_enterprisedata.ThreadNetworkContext",
         sizeof(py::wrapper::Windows::Security::EnterpriseData::ThreadNetworkContext),
         0,
         Py_TPFLAGS_DEFAULT,

@@ -249,7 +249,7 @@ namespace py::cpp::Windows::Media::AppRecording
 
     static PyType_Spec type_spec_AppRecordingManager =
     {
-        "_winrt_windows_media_apprecording.AppRecordingManager",
+        "winrt._winrt_windows_media_apprecording.AppRecordingManager",
         sizeof(py::wrapper::Windows::Media::AppRecording::AppRecordingManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -398,7 +398,7 @@ namespace py::cpp::Windows::Media::AppRecording
 
     static PyType_Spec type_spec_AppRecordingResult =
     {
-        "_winrt_windows_media_apprecording.AppRecordingResult",
+        "winrt._winrt_windows_media_apprecording.AppRecordingResult",
         sizeof(py::wrapper::Windows::Media::AppRecording::AppRecordingResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -527,7 +527,7 @@ namespace py::cpp::Windows::Media::AppRecording
 
     static PyType_Spec type_spec_AppRecordingSaveScreenshotResult =
     {
-        "_winrt_windows_media_apprecording.AppRecordingSaveScreenshotResult",
+        "winrt._winrt_windows_media_apprecording.AppRecordingSaveScreenshotResult",
         sizeof(py::wrapper::Windows::Media::AppRecording::AppRecordingSaveScreenshotResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -636,7 +636,7 @@ namespace py::cpp::Windows::Media::AppRecording
 
     static PyType_Spec type_spec_AppRecordingSavedScreenshotInfo =
     {
-        "_winrt_windows_media_apprecording.AppRecordingSavedScreenshotInfo",
+        "winrt._winrt_windows_media_apprecording.AppRecordingSavedScreenshotInfo",
         sizeof(py::wrapper::Windows::Media::AppRecording::AppRecordingSavedScreenshotInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -785,7 +785,7 @@ namespace py::cpp::Windows::Media::AppRecording
 
     static PyType_Spec type_spec_AppRecordingStatus =
     {
-        "_winrt_windows_media_apprecording.AppRecordingStatus",
+        "winrt._winrt_windows_media_apprecording.AppRecordingStatus",
         sizeof(py::wrapper::Windows::Media::AppRecording::AppRecordingStatus),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1034,7 +1034,7 @@ namespace py::cpp::Windows::Media::AppRecording
 
     static PyType_Spec type_spec_AppRecordingStatusDetails =
     {
-        "_winrt_windows_media_apprecording.AppRecordingStatusDetails",
+        "winrt._winrt_windows_media_apprecording.AppRecordingStatusDetails",
         sizeof(py::wrapper::Windows::Media::AppRecording::AppRecordingStatusDetails),
         0,
         Py_TPFLAGS_DEFAULT,

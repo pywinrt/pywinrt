@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_phone_media_devices
+from winrt import _winrt_windows_phone_media_devices
 
 __all__ = [
     "AudioRoutingEndpoint",

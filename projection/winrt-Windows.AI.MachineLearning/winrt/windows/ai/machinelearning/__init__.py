@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_ai_machinelearning
+from winrt import _winrt_windows_ai_machinelearning
 
 __all__ = [
     "LearningModelDeviceKind",

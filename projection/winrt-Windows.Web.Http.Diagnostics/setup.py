@@ -6,7 +6,7 @@ from winrt_sdk import get_include_dirs
 setup(
     ext_modules=[
         Extension(
-            "winrt.windows.web.http.diagnostics._winrt_windows_web_http_diagnostics",
+            "winrt._winrt_windows_web_http_diagnostics",
             sources=["py.Windows.Web.Http.Diagnostics.cpp"],
             include_dirs=get_include_dirs(),
             extra_compile_args=["/std:c++20", "/permissive-"],

@@ -170,7 +170,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyType_Spec type_spec_GameControllerFactoryManager =
     {
-        "_winrt_windows_gaming_input_custom.GameControllerFactoryManager",
+        "winrt._winrt_windows_gaming_input_custom.GameControllerFactoryManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -299,7 +299,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyType_Spec type_spec_GipFirmwareUpdateResult =
     {
-        "_winrt_windows_gaming_input_custom.GipFirmwareUpdateResult",
+        "winrt._winrt_windows_gaming_input_custom.GipFirmwareUpdateResult",
         sizeof(py::wrapper::Windows::Gaming::Input::Custom::GipFirmwareUpdateResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -571,7 +571,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyType_Spec type_spec_GipGameControllerProvider =
     {
-        "_winrt_windows_gaming_input_custom.GipGameControllerProvider",
+        "winrt._winrt_windows_gaming_input_custom.GipGameControllerProvider",
         sizeof(py::wrapper::Windows::Gaming::Input::Custom::GipGameControllerProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -882,7 +882,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyType_Spec type_spec_HidGameControllerProvider =
     {
-        "_winrt_windows_gaming_input_custom.HidGameControllerProvider",
+        "winrt._winrt_windows_gaming_input_custom.HidGameControllerProvider",
         sizeof(py::wrapper::Windows::Gaming::Input::Custom::HidGameControllerProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1085,7 +1085,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyType_Spec type_spec_XusbGameControllerProvider =
     {
-        "_winrt_windows_gaming_input_custom.XusbGameControllerProvider",
+        "winrt._winrt_windows_gaming_input_custom.XusbGameControllerProvider",
         sizeof(py::wrapper::Windows::Gaming::Input::Custom::XusbGameControllerProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1252,7 +1252,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyType_Spec type_spec_ICustomGameControllerFactory =
     {
-        "_winrt_windows_gaming_input_custom.ICustomGameControllerFactory",
+        "winrt._winrt_windows_gaming_input_custom.ICustomGameControllerFactory",
         sizeof(py::wrapper::Windows::Gaming::Input::Custom::ICustomGameControllerFactory),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1387,7 +1387,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyType_Spec type_spec_IGameControllerInputSink =
     {
-        "_winrt_windows_gaming_input_custom.IGameControllerInputSink",
+        "winrt._winrt_windows_gaming_input_custom.IGameControllerInputSink",
         sizeof(py::wrapper::Windows::Gaming::Input::Custom::IGameControllerInputSink),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1556,7 +1556,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyType_Spec type_spec_IGameControllerProvider =
     {
-        "_winrt_windows_gaming_input_custom.IGameControllerProvider",
+        "winrt._winrt_windows_gaming_input_custom.IGameControllerProvider",
         sizeof(py::wrapper::Windows::Gaming::Input::Custom::IGameControllerProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1763,7 +1763,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyType_Spec type_spec_IGipGameControllerInputSink =
     {
-        "_winrt_windows_gaming_input_custom.IGipGameControllerInputSink",
+        "winrt._winrt_windows_gaming_input_custom.IGipGameControllerInputSink",
         sizeof(py::wrapper::Windows::Gaming::Input::Custom::IGipGameControllerInputSink),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1933,7 +1933,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyType_Spec type_spec_IHidGameControllerInputSink =
     {
-        "_winrt_windows_gaming_input_custom.IHidGameControllerInputSink",
+        "winrt._winrt_windows_gaming_input_custom.IHidGameControllerInputSink",
         sizeof(py::wrapper::Windows::Gaming::Input::Custom::IHidGameControllerInputSink),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2103,7 +2103,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyType_Spec type_spec_IXusbGameControllerInputSink =
     {
-        "_winrt_windows_gaming_input_custom.IXusbGameControllerInputSink",
+        "winrt._winrt_windows_gaming_input_custom.IXusbGameControllerInputSink",
         sizeof(py::wrapper::Windows::Gaming::Input::Custom::IXusbGameControllerInputSink),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2334,7 +2334,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyType_Spec type_spec_GameControllerVersionInfo =
     {
-        "_winrt_windows_gaming_input_custom.GameControllerVersionInfo",
+        "winrt._winrt_windows_gaming_input_custom.GameControllerVersionInfo",
         sizeof(py::wrapper::Windows::Gaming::Input::Custom::GameControllerVersionInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2495,7 +2495,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyType_Spec type_spec_GipFirmwareUpdateProgress =
     {
-        "_winrt_windows_gaming_input_custom.GipFirmwareUpdateProgress",
+        "winrt._winrt_windows_gaming_input_custom.GipFirmwareUpdateProgress",
         sizeof(py::wrapper::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress),
         0,
         Py_TPFLAGS_DEFAULT,

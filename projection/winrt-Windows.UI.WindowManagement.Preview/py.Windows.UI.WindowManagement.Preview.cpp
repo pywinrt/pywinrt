@@ -102,7 +102,7 @@ namespace py::cpp::Windows::UI::WindowManagement::Preview
 
     static PyType_Spec type_spec_WindowManagementPreview =
     {
-        "_winrt_windows_ui_windowmanagement_preview.WindowManagementPreview",
+        "winrt._winrt_windows_ui_windowmanagement_preview.WindowManagementPreview",
         sizeof(py::wrapper::Windows::UI::WindowManagement::Preview::WindowManagementPreview),
         0,
         Py_TPFLAGS_DEFAULT,

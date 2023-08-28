@@ -212,7 +212,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyType_Spec type_spec_BitmapBuffer =
     {
-        "_winrt_windows_graphics_imaging.BitmapBuffer",
+        "winrt._winrt_windows_graphics_imaging.BitmapBuffer",
         sizeof(py::wrapper::Windows::Graphics::Imaging::BitmapBuffer),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -361,7 +361,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyType_Spec type_spec_BitmapCodecInformation =
     {
-        "_winrt_windows_graphics_imaging.BitmapCodecInformation",
+        "winrt._winrt_windows_graphics_imaging.BitmapCodecInformation",
         sizeof(py::wrapper::Windows::Graphics::Imaging::BitmapCodecInformation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1145,7 +1145,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyType_Spec type_spec_BitmapDecoder =
     {
-        "_winrt_windows_graphics_imaging.BitmapDecoder",
+        "winrt._winrt_windows_graphics_imaging.BitmapDecoder",
         sizeof(py::wrapper::Windows::Graphics::Imaging::BitmapDecoder),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1174,7 +1174,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyType_Spec type_spec_BitmapDecoder_Meta =
     {
-        "_winrt_windows_graphics_imaging.BitmapDecoder_Meta",
+        "winrt._winrt_windows_graphics_imaging.BitmapDecoder_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1902,7 +1902,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyType_Spec type_spec_BitmapEncoder =
     {
-        "_winrt_windows_graphics_imaging.BitmapEncoder",
+        "winrt._winrt_windows_graphics_imaging.BitmapEncoder",
         sizeof(py::wrapper::Windows::Graphics::Imaging::BitmapEncoder),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1929,7 +1929,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyType_Spec type_spec_BitmapEncoder_Meta =
     {
-        "_winrt_windows_graphics_imaging.BitmapEncoder_Meta",
+        "winrt._winrt_windows_graphics_imaging.BitmapEncoder_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -2337,7 +2337,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyType_Spec type_spec_BitmapFrame =
     {
-        "_winrt_windows_graphics_imaging.BitmapFrame",
+        "winrt._winrt_windows_graphics_imaging.BitmapFrame",
         sizeof(py::wrapper::Windows::Graphics::Imaging::BitmapFrame),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2470,7 +2470,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyType_Spec type_spec_BitmapProperties =
     {
-        "_winrt_windows_graphics_imaging.BitmapProperties",
+        "winrt._winrt_windows_graphics_imaging.BitmapProperties",
         sizeof(py::wrapper::Windows::Graphics::Imaging::BitmapProperties),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2571,7 +2571,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyType_Spec type_spec_BitmapPropertiesView =
     {
-        "_winrt_windows_graphics_imaging.BitmapPropertiesView",
+        "winrt._winrt_windows_graphics_imaging.BitmapPropertiesView",
         sizeof(py::wrapper::Windows::Graphics::Imaging::BitmapPropertiesView),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3000,7 +3000,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyType_Spec type_spec_BitmapPropertySet =
     {
-        "_winrt_windows_graphics_imaging.BitmapPropertySet",
+        "winrt._winrt_windows_graphics_imaging.BitmapPropertySet",
         sizeof(py::wrapper::Windows::Graphics::Imaging::BitmapPropertySet),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3379,7 +3379,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyType_Spec type_spec_BitmapTransform =
     {
-        "_winrt_windows_graphics_imaging.BitmapTransform",
+        "winrt._winrt_windows_graphics_imaging.BitmapTransform",
         sizeof(py::wrapper::Windows::Graphics::Imaging::BitmapTransform),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3513,7 +3513,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyType_Spec type_spec_BitmapTypedValue =
     {
-        "_winrt_windows_graphics_imaging.BitmapTypedValue",
+        "winrt._winrt_windows_graphics_imaging.BitmapTypedValue",
         sizeof(py::wrapper::Windows::Graphics::Imaging::BitmapTypedValue),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3985,7 +3985,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyType_Spec type_spec_ImageStream =
     {
-        "_winrt_windows_graphics_imaging.ImageStream",
+        "winrt._winrt_windows_graphics_imaging.ImageStream",
         sizeof(py::wrapper::Windows::Graphics::Imaging::ImageStream),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4084,7 +4084,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyType_Spec type_spec_PixelDataProvider =
     {
-        "_winrt_windows_graphics_imaging.PixelDataProvider",
+        "winrt._winrt_windows_graphics_imaging.PixelDataProvider",
         sizeof(py::wrapper::Windows::Graphics::Imaging::PixelDataProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4805,7 +4805,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyType_Spec type_spec_SoftwareBitmap =
     {
-        "_winrt_windows_graphics_imaging.SoftwareBitmap",
+        "winrt._winrt_windows_graphics_imaging.SoftwareBitmap",
         sizeof(py::wrapper::Windows::Graphics::Imaging::SoftwareBitmap),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5138,7 +5138,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyType_Spec type_spec_IBitmapFrame =
     {
-        "_winrt_windows_graphics_imaging.IBitmapFrame",
+        "winrt._winrt_windows_graphics_imaging.IBitmapFrame",
         sizeof(py::wrapper::Windows::Graphics::Imaging::IBitmapFrame),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5546,7 +5546,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyType_Spec type_spec_IBitmapFrameWithSoftwareBitmap =
     {
-        "_winrt_windows_graphics_imaging.IBitmapFrameWithSoftwareBitmap",
+        "winrt._winrt_windows_graphics_imaging.IBitmapFrameWithSoftwareBitmap",
         sizeof(py::wrapper::Windows::Graphics::Imaging::IBitmapFrameWithSoftwareBitmap),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5647,7 +5647,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyType_Spec type_spec_IBitmapPropertiesView =
     {
-        "_winrt_windows_graphics_imaging.IBitmapPropertiesView",
+        "winrt._winrt_windows_graphics_imaging.IBitmapPropertiesView",
         sizeof(py::wrapper::Windows::Graphics::Imaging::IBitmapPropertiesView),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5878,7 +5878,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyType_Spec type_spec_BitmapBounds =
     {
-        "_winrt_windows_graphics_imaging.BitmapBounds",
+        "winrt._winrt_windows_graphics_imaging.BitmapBounds",
         sizeof(py::wrapper::Windows::Graphics::Imaging::BitmapBounds),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6109,7 +6109,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyType_Spec type_spec_BitmapPlaneDescription =
     {
-        "_winrt_windows_graphics_imaging.BitmapPlaneDescription",
+        "winrt._winrt_windows_graphics_imaging.BitmapPlaneDescription",
         sizeof(py::wrapper::Windows::Graphics::Imaging::BitmapPlaneDescription),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6270,7 +6270,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyType_Spec type_spec_BitmapSize =
     {
-        "_winrt_windows_graphics_imaging.BitmapSize",
+        "winrt._winrt_windows_graphics_imaging.BitmapSize",
         sizeof(py::wrapper::Windows::Graphics::Imaging::BitmapSize),
         0,
         Py_TPFLAGS_DEFAULT,

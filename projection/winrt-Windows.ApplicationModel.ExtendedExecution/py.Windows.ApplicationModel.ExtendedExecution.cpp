@@ -88,7 +88,7 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution
 
     static PyType_Spec type_spec_ExtendedExecutionRevokedEventArgs =
     {
-        "_winrt_windows_applicationmodel_extendedexecution.ExtendedExecutionRevokedEventArgs",
+        "winrt._winrt_windows_applicationmodel_extendedexecution.ExtendedExecutionRevokedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::ExtendedExecution::ExtendedExecutionRevokedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -450,7 +450,7 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution
 
     static PyType_Spec type_spec_ExtendedExecutionSession =
     {
-        "_winrt_windows_applicationmodel_extendedexecution.ExtendedExecutionSession",
+        "winrt._winrt_windows_applicationmodel_extendedexecution.ExtendedExecutionSession",
         sizeof(py::wrapper::Windows::ApplicationModel::ExtendedExecution::ExtendedExecutionSession),
         0,
         Py_TPFLAGS_DEFAULT,

@@ -134,7 +134,7 @@ namespace py::cpp::Windows::System::RemoteDesktop::Provider
 
     static PyType_Spec type_spec_RemoteDesktopConnectionInfo =
     {
-        "_winrt_windows_system_remotedesktop_provider.RemoteDesktopConnectionInfo",
+        "winrt._winrt_windows_system_remotedesktop_provider.RemoteDesktopConnectionInfo",
         sizeof(py::wrapper::Windows::System::RemoteDesktop::Provider::RemoteDesktopConnectionInfo),
         0,
         Py_TPFLAGS_DEFAULT,

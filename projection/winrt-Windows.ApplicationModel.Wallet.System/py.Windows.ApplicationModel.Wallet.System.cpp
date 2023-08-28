@@ -271,7 +271,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet::System
 
     static PyType_Spec type_spec_WalletItemSystemStore =
     {
-        "_winrt_windows_applicationmodel_wallet_system.WalletItemSystemStore",
+        "winrt._winrt_windows_applicationmodel_wallet_system.WalletItemSystemStore",
         sizeof(py::wrapper::Windows::ApplicationModel::Wallet::System::WalletItemSystemStore),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -335,7 +335,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet::System
 
     static PyType_Spec type_spec_WalletManagerSystem =
     {
-        "_winrt_windows_applicationmodel_wallet_system.WalletManagerSystem",
+        "winrt._winrt_windows_applicationmodel_wallet_system.WalletManagerSystem",
         0,
         0,
         Py_TPFLAGS_DEFAULT,

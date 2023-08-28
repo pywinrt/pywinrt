@@ -3,7 +3,7 @@
 import enum
 
 import winrt.system
-from . import _winrt_windows_media_playback
+from winrt import _winrt_windows_media_playback
 
 __all__ = [
     "AutoLoadedDisplayPropertyKind",

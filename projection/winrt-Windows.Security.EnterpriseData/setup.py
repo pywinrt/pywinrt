@@ -6,7 +6,7 @@ from winrt_sdk import get_include_dirs
 setup(
     ext_modules=[
         Extension(
-            "winrt.windows.security.enterprisedata._winrt_windows_security_enterprisedata",
+            "winrt._winrt_windows_security_enterprisedata",
             sources=["py.Windows.Security.EnterpriseData.cpp"],
             include_dirs=get_include_dirs(),
             extra_compile_args=["/std:c++20", "/permissive-"],

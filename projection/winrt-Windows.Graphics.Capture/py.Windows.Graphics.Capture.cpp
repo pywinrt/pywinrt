@@ -180,7 +180,7 @@ namespace py::cpp::Windows::Graphics::Capture
 
     static PyType_Spec type_spec_Direct3D11CaptureFrame =
     {
-        "_winrt_windows_graphics_capture.Direct3D11CaptureFrame",
+        "winrt._winrt_windows_graphics_capture.Direct3D11CaptureFrame",
         sizeof(py::wrapper::Windows::Graphics::Capture::Direct3D11CaptureFrame),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -534,7 +534,7 @@ namespace py::cpp::Windows::Graphics::Capture
 
     static PyType_Spec type_spec_Direct3D11CaptureFramePool =
     {
-        "_winrt_windows_graphics_capture.Direct3D11CaptureFramePool",
+        "winrt._winrt_windows_graphics_capture.Direct3D11CaptureFramePool",
         sizeof(py::wrapper::Windows::Graphics::Capture::Direct3D11CaptureFramePool),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -600,7 +600,7 @@ namespace py::cpp::Windows::Graphics::Capture
 
     static PyType_Spec type_spec_GraphicsCaptureAccess =
     {
-        "_winrt_windows_graphics_capture.GraphicsCaptureAccess",
+        "winrt._winrt_windows_graphics_capture.GraphicsCaptureAccess",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -850,7 +850,7 @@ namespace py::cpp::Windows::Graphics::Capture
 
     static PyType_Spec type_spec_GraphicsCaptureItem =
     {
-        "_winrt_windows_graphics_capture.GraphicsCaptureItem",
+        "winrt._winrt_windows_graphics_capture.GraphicsCaptureItem",
         sizeof(py::wrapper::Windows::Graphics::Capture::GraphicsCaptureItem),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -971,7 +971,7 @@ namespace py::cpp::Windows::Graphics::Capture
 
     static PyType_Spec type_spec_GraphicsCapturePicker =
     {
-        "_winrt_windows_graphics_capture.GraphicsCapturePicker",
+        "winrt._winrt_windows_graphics_capture.GraphicsCapturePicker",
         sizeof(py::wrapper::Windows::Graphics::Capture::GraphicsCapturePicker),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1249,7 +1249,7 @@ namespace py::cpp::Windows::Graphics::Capture
 
     static PyType_Spec type_spec_GraphicsCaptureSession =
     {
-        "_winrt_windows_graphics_capture.GraphicsCaptureSession",
+        "winrt._winrt_windows_graphics_capture.GraphicsCaptureSession",
         sizeof(py::wrapper::Windows::Graphics::Capture::GraphicsCaptureSession),
         0,
         Py_TPFLAGS_DEFAULT,

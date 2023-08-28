@@ -215,7 +215,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
 
     static PyType_Spec type_spec_CoreIncrementalInkStroke =
     {
-        "_winrt_windows_ui_input_inking_core.CoreIncrementalInkStroke",
+        "winrt._winrt_windows_ui_input_inking_core.CoreIncrementalInkStroke",
         sizeof(py::wrapper::Windows::UI::Input::Inking::Core::CoreIncrementalInkStroke),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -699,7 +699,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
 
     static PyType_Spec type_spec_CoreInkIndependentInputSource =
     {
-        "_winrt_windows_ui_input_inking_core.CoreInkIndependentInputSource",
+        "winrt._winrt_windows_ui_input_inking_core.CoreInkIndependentInputSource",
         sizeof(py::wrapper::Windows::UI::Input::Inking::Core::CoreInkIndependentInputSource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -858,7 +858,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
 
     static PyType_Spec type_spec_CoreInkPresenterHost =
     {
-        "_winrt_windows_ui_input_inking_core.CoreInkPresenterHost",
+        "winrt._winrt_windows_ui_input_inking_core.CoreInkPresenterHost",
         sizeof(py::wrapper::Windows::UI::Input::Inking::Core::CoreInkPresenterHost),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1015,7 +1015,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
 
     static PyType_Spec type_spec_CoreWetStrokeUpdateEventArgs =
     {
-        "_winrt_windows_ui_input_inking_core.CoreWetStrokeUpdateEventArgs",
+        "winrt._winrt_windows_ui_input_inking_core.CoreWetStrokeUpdateEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::Inking::Core::CoreWetStrokeUpdateEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1361,7 +1361,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
 
     static PyType_Spec type_spec_CoreWetStrokeUpdateSource =
     {
-        "_winrt_windows_ui_input_inking_core.CoreWetStrokeUpdateSource",
+        "winrt._winrt_windows_ui_input_inking_core.CoreWetStrokeUpdateSource",
         sizeof(py::wrapper::Windows::UI::Input::Inking::Core::CoreWetStrokeUpdateSource),
         0,
         Py_TPFLAGS_DEFAULT,

@@ -1197,7 +1197,7 @@ namespace py::cpp::Windows::Storage::BulkAccess
 
     static PyType_Spec type_spec_FileInformation =
     {
-        "_winrt_windows_storage_bulkaccess.FileInformation",
+        "winrt._winrt_windows_storage_bulkaccess.FileInformation",
         sizeof(py::wrapper::Windows::Storage::BulkAccess::FileInformation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1588,7 +1588,7 @@ namespace py::cpp::Windows::Storage::BulkAccess
 
     static PyType_Spec type_spec_FileInformationFactory =
     {
-        "_winrt_windows_storage_bulkaccess.FileInformationFactory",
+        "winrt._winrt_windows_storage_bulkaccess.FileInformationFactory",
         sizeof(py::wrapper::Windows::Storage::BulkAccess::FileInformationFactory),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3130,7 +3130,7 @@ namespace py::cpp::Windows::Storage::BulkAccess
 
     static PyType_Spec type_spec_FolderInformation =
     {
-        "_winrt_windows_storage_bulkaccess.FolderInformation",
+        "winrt._winrt_windows_storage_bulkaccess.FolderInformation",
         sizeof(py::wrapper::Windows::Storage::BulkAccess::FolderInformation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3409,7 +3409,7 @@ namespace py::cpp::Windows::Storage::BulkAccess
 
     static PyType_Spec type_spec_IStorageItemInformation =
     {
-        "_winrt_windows_storage_bulkaccess.IStorageItemInformation",
+        "winrt._winrt_windows_storage_bulkaccess.IStorageItemInformation",
         sizeof(py::wrapper::Windows::Storage::BulkAccess::IStorageItemInformation),
         0,
         Py_TPFLAGS_DEFAULT,

@@ -196,7 +196,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
 
     static PyType_Spec type_spec_NotifyCollectionChangedEventArgs =
     {
-        "_winrt_windows_ui_xaml_interop.NotifyCollectionChangedEventArgs",
+        "winrt._winrt_windows_ui_xaml_interop.NotifyCollectionChangedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Interop::NotifyCollectionChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -295,7 +295,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
 
     static PyType_Spec type_spec_IBindableIterable =
     {
-        "_winrt_windows_ui_xaml_interop.IBindableIterable",
+        "winrt._winrt_windows_ui_xaml_interop.IBindableIterable",
         sizeof(py::wrapper::Windows::UI::Xaml::Interop::IBindableIterable),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -434,7 +434,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
 
     static PyType_Spec type_spec_IBindableIterator =
     {
-        "_winrt_windows_ui_xaml_interop.IBindableIterator",
+        "winrt._winrt_windows_ui_xaml_interop.IBindableIterator",
         sizeof(py::wrapper::Windows::UI::Xaml::Interop::IBindableIterator),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -901,7 +901,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
 
     static PyType_Spec type_spec_IBindableObservableVector =
     {
-        "_winrt_windows_ui_xaml_interop.IBindableObservableVector",
+        "winrt._winrt_windows_ui_xaml_interop.IBindableObservableVector",
         sizeof(py::wrapper::Windows::UI::Xaml::Interop::IBindableObservableVector),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1323,7 +1323,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
 
     static PyType_Spec type_spec_IBindableVector =
     {
-        "_winrt_windows_ui_xaml_interop.IBindableVector",
+        "winrt._winrt_windows_ui_xaml_interop.IBindableVector",
         sizeof(py::wrapper::Windows::UI::Xaml::Interop::IBindableVector),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1519,7 +1519,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
 
     static PyType_Spec type_spec_IBindableVectorView =
     {
-        "_winrt_windows_ui_xaml_interop.IBindableVectorView",
+        "winrt._winrt_windows_ui_xaml_interop.IBindableVectorView",
         sizeof(py::wrapper::Windows::UI::Xaml::Interop::IBindableVectorView),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1633,7 +1633,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
 
     static PyType_Spec type_spec_INotifyCollectionChanged =
     {
-        "_winrt_windows_ui_xaml_interop.INotifyCollectionChanged",
+        "winrt._winrt_windows_ui_xaml_interop.INotifyCollectionChanged",
         sizeof(py::wrapper::Windows::UI::Xaml::Interop::INotifyCollectionChanged),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1794,7 +1794,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
 
     static PyType_Spec type_spec_TypeName =
     {
-        "_winrt_windows_ui_xaml_interop.TypeName",
+        "winrt._winrt_windows_ui_xaml_interop.TypeName",
         sizeof(py::wrapper::Windows::UI::Xaml::Interop::TypeName),
         0,
         Py_TPFLAGS_DEFAULT,
