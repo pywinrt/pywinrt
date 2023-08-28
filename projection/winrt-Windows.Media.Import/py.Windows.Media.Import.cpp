@@ -328,7 +328,7 @@ namespace py::cpp::Windows::Media::Import
 
     static PyType_Spec type_spec_PhotoImportDeleteImportedItemsFromSourceResult =
     {
-        "winrt._winrt_windows_media_import.PhotoImportDeleteImportedItemsFromSourceResult",
+        "winrt._winrt_windows_media_import_.PhotoImportDeleteImportedItemsFromSourceResult",
         sizeof(py::wrapper::Windows::Media::Import::PhotoImportDeleteImportedItemsFromSourceResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1156,7 +1156,7 @@ namespace py::cpp::Windows::Media::Import
 
     static PyType_Spec type_spec_PhotoImportFindItemsResult =
     {
-        "winrt._winrt_windows_media_import.PhotoImportFindItemsResult",
+        "winrt._winrt_windows_media_import_.PhotoImportFindItemsResult",
         sizeof(py::wrapper::Windows::Media::Import::PhotoImportFindItemsResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1515,7 +1515,7 @@ namespace py::cpp::Windows::Media::Import
 
     static PyType_Spec type_spec_PhotoImportImportItemsResult =
     {
-        "winrt._winrt_windows_media_import.PhotoImportImportItemsResult",
+        "winrt._winrt_windows_media_import_.PhotoImportImportItemsResult",
         sizeof(py::wrapper::Windows::Media::Import::PhotoImportImportItemsResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1872,7 +1872,7 @@ namespace py::cpp::Windows::Media::Import
 
     static PyType_Spec type_spec_PhotoImportItem =
     {
-        "winrt._winrt_windows_media_import.PhotoImportItem",
+        "winrt._winrt_windows_media_import_.PhotoImportItem",
         sizeof(py::wrapper::Windows::Media::Import::PhotoImportItem),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1961,7 +1961,7 @@ namespace py::cpp::Windows::Media::Import
 
     static PyType_Spec type_spec_PhotoImportItemImportedEventArgs =
     {
-        "winrt._winrt_windows_media_import.PhotoImportItemImportedEventArgs",
+        "winrt._winrt_windows_media_import_.PhotoImportItemImportedEventArgs",
         sizeof(py::wrapper::Windows::Media::Import::PhotoImportItemImportedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2085,7 +2085,7 @@ namespace py::cpp::Windows::Media::Import
 
     static PyType_Spec type_spec_PhotoImportManager =
     {
-        "winrt._winrt_windows_media_import.PhotoImportManager",
+        "winrt._winrt_windows_media_import_.PhotoImportManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2254,7 +2254,7 @@ namespace py::cpp::Windows::Media::Import
 
     static PyType_Spec type_spec_PhotoImportOperation =
     {
-        "winrt._winrt_windows_media_import.PhotoImportOperation",
+        "winrt._winrt_windows_media_import_.PhotoImportOperation",
         sizeof(py::wrapper::Windows::Media::Import::PhotoImportOperation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2343,7 +2343,7 @@ namespace py::cpp::Windows::Media::Import
 
     static PyType_Spec type_spec_PhotoImportSelectionChangedEventArgs =
     {
-        "winrt._winrt_windows_media_import.PhotoImportSelectionChangedEventArgs",
+        "winrt._winrt_windows_media_import_.PhotoImportSelectionChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::Import::PhotoImportSelectionChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2825,7 +2825,7 @@ namespace py::cpp::Windows::Media::Import
 
     static PyType_Spec type_spec_PhotoImportSession =
     {
-        "winrt._winrt_windows_media_import.PhotoImportSession",
+        "winrt._winrt_windows_media_import_.PhotoImportSession",
         sizeof(py::wrapper::Windows::Media::Import::PhotoImportSession),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2954,7 +2954,7 @@ namespace py::cpp::Windows::Media::Import
 
     static PyType_Spec type_spec_PhotoImportSidecar =
     {
-        "winrt._winrt_windows_media_import.PhotoImportSidecar",
+        "winrt._winrt_windows_media_import_.PhotoImportSidecar",
         sizeof(py::wrapper::Windows::Media::Import::PhotoImportSidecar),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3437,7 +3437,7 @@ namespace py::cpp::Windows::Media::Import
 
     static PyType_Spec type_spec_PhotoImportSource =
     {
-        "winrt._winrt_windows_media_import.PhotoImportSource",
+        "winrt._winrt_windows_media_import_.PhotoImportSource",
         sizeof(py::wrapper::Windows::Media::Import::PhotoImportSource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3677,7 +3677,7 @@ namespace py::cpp::Windows::Media::Import
 
     static PyType_Spec type_spec_PhotoImportStorageMedium =
     {
-        "winrt._winrt_windows_media_import.PhotoImportStorageMedium",
+        "winrt._winrt_windows_media_import_.PhotoImportStorageMedium",
         sizeof(py::wrapper::Windows::Media::Import::PhotoImportStorageMedium),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3846,7 +3846,7 @@ namespace py::cpp::Windows::Media::Import
 
     static PyType_Spec type_spec_PhotoImportVideoSegment =
     {
-        "winrt._winrt_windows_media_import.PhotoImportVideoSegment",
+        "winrt._winrt_windows_media_import_.PhotoImportVideoSegment",
         sizeof(py::wrapper::Windows::Media::Import::PhotoImportVideoSegment),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4112,7 +4112,7 @@ namespace py::cpp::Windows::Media::Import
 
     static PyType_Spec type_spec_PhotoImportProgress =
     {
-        "winrt._winrt_windows_media_import.PhotoImportProgress",
+        "winrt._winrt_windows_media_import_.PhotoImportProgress",
         sizeof(py::wrapper::Windows::Media::Import::PhotoImportProgress),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4125,7 +4125,7 @@ namespace py::cpp::Windows::Media::Import
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_windows_media_import",
+           "_winrt_windows_media_import_",
            module_doc,
            0,
            nullptr,
@@ -4136,7 +4136,7 @@ namespace py::cpp::Windows::Media::Import
 
 } // py::cpp::Windows::Media::Import
 
-PyMODINIT_FUNC PyInit__winrt_windows_media_import(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_media_import_(void) noexcept
 {
     using namespace py::cpp::Windows::Media::Import;
 

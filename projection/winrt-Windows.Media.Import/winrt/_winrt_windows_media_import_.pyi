@@ -13,7 +13,7 @@ import winrt.windows.foundation.collections
 import winrt.windows.storage
 import winrt.windows.storage.streams
 
-from winrt.windows.media.import import PhotoImportAccessMode, PhotoImportConnectionTransport, PhotoImportContentType, PhotoImportContentTypeFilter, PhotoImportImportMode, PhotoImportItemSelectionMode, PhotoImportPowerSource, PhotoImportSourceType, PhotoImportStage, PhotoImportStorageMediumType, PhotoImportSubfolderCreationMode, PhotoImportSubfolderDateFormat
+from winrt.windows.media.import_ import PhotoImportAccessMode, PhotoImportConnectionTransport, PhotoImportContentType, PhotoImportContentTypeFilter, PhotoImportImportMode, PhotoImportItemSelectionMode, PhotoImportPowerSource, PhotoImportSourceType, PhotoImportStage, PhotoImportStorageMediumType, PhotoImportSubfolderCreationMode, PhotoImportSubfolderDateFormat
 
 Self = typing.TypeVar('Self')
 

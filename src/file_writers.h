@@ -247,7 +247,7 @@ static void custom_set(winrt::hresult& instance, int32_t value)
         {
             w.write(
                 "from winrt.% import %\n",
-                bind<write_lower_case>(ns),
+                bind<write_python_subpackage>(ns),
                 bind_list<write_type_name>(", ", enum_types));
         }
 
@@ -256,7 +256,7 @@ static void custom_set(winrt::hresult& instance, int32_t value)
         {
             w.write(
                 "from winrt.% import %\n",
-                bind<write_lower_case>(ns),
+                bind<write_python_subpackage>(ns),
                 bind_list<write_type_name>(", ", delegate_types));
         }
 

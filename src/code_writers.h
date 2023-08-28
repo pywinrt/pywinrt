@@ -55,15 +55,26 @@ namespace pywinrt
     }
 
     /**
-     * Converts @p name to lower_snake_case and adds a trailing underscore if
-     * @p name is a Python keyword.
+     * Writes a string as lower case.
+     */
+    void write_lower_case(writer& w, std::string_view const& ns)
+    {
+        for (auto c : ns)
+        {
+            w.write(static_cast<char>(::tolower(c)));
+        }
+    }
+
+    /**
+     * Writes a Python identifier name, avoiding Python keywords.
+     *
+     * If @p name is a Python keyword, a trailing underscore is added.
      *
      * https://docs.python.org/3/reference/lexical_analysis.html#keywords
      */
-    void write_lower_snake_case_python_identifier(
-        writer& w, std::string_view const& name)
+    void write_python_identifier(writer& w, std::string_view const& name)
     {
-        auto identifier = w.write_temp("%", bind<write_lower_snake_case>(name));
+        auto identifier = w.write_temp("%", bind<write_lower_case>(name));
 
         w.write(identifier);
 
@@ -82,12 +93,27 @@ namespace pywinrt
         }
     }
 
-    void write_lower_case(writer& w, std::string_view const& ns)
+    /**
+     * Converts @p name to lower_snake_case and adds a trailing underscore if
+     * @p name is a Python keyword.
+     */
+    void write_lower_snake_case_python_identifier(
+        writer& w, std::string_view const& name)
     {
-        for (auto c : ns)
-        {
-            w.write(static_cast<char>(::tolower(c)));
-        }
+        auto identifier = w.write_temp("%", bind<write_lower_snake_case>(name));
+
+        w.write("%", bind<write_python_identifier>(identifier));
+    }
+
+    /**
+     * Writes a namespace as a Python dotted package name.
+     *
+     * If any package name is a Python keyword, a trailing underscore is added.
+     */
+    void write_python_subpackage(writer& w, std::string_view const& ns)
+    {
+        auto segments = get_dotted_name_segments(ns);
+        w.write("%", bind_list<write_python_identifier>(".", segments));
     }
 
     void write_license(writer& w, std::string_view comment_marker = "//")
@@ -134,7 +160,7 @@ namespace pywinrt
     void write_ns_module_name(writer& w, std::string_view const& ns)
     {
         auto segments = get_dotted_name_segments(ns);
-        w.write("_winrt_%", bind_list<write_lower_case>("_", segments));
+        w.write("_winrt_%", bind_list<write_python_identifier>("_", segments));
     }
 
     void write_python_import_type(writer& w, TypeDef const& type)
@@ -178,7 +204,7 @@ namespace pywinrt
      */
     void write_python_import_namespace(writer& w, std::string_view const& ns)
     {
-        w.write("import winrt.%\n", bind<write_lower_case>(ns));
+        w.write("import winrt.%\n", bind<write_python_subpackage>(ns));
     }
 
     void write_python_enum(writer& w, TypeDef const& type)
@@ -336,7 +362,7 @@ struct py_type<%>
         w.write(
             format,
             bind<write_python_wrapper_template_type>(type),
-            bind<write_lower_case>(type.TypeNamespace()),
+            bind<write_python_subpackage>(type.TypeNamespace()),
             type.TypeName());
     }
 

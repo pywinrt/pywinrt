@@ -78,6 +78,52 @@ setup(
 
 PROJECTION_PATH = (Path(__file__).parent.parent / "projection").resolve()
 
+PYTHON_KEYWORDS = {
+    "and",
+    "as",
+    "assert",
+    "async",
+    "await",
+    "break",
+    "class",
+    "continue",
+    "def",
+    "del",
+    "elif",
+    "else",
+    "except",
+    "finally",
+    "for",
+    "from",
+    "global",
+    "if",
+    "import",
+    "in",
+    "is",
+    "lambda",
+    "nonlocal",
+    "not",
+    "or",
+    "pass",
+    "raise",
+    "return",
+    "try",
+    "while",
+    "with",
+    "yield",
+}
+
+
+def avoid_keyword(name: str) -> str:
+    if name in PYTHON_KEYWORDS:
+        return f"{name}_"
+
+    return name
+
+
+def winrt_ns_to_py_package(ns: str) -> str:
+    return ".".join(avoid_keyword(x.lower()) for x in ns.split("."))
+
 
 with open(PROJECTION_PATH / "winrt-runtime" / "pyproject.toml", "w") as f:
     f.write(
@@ -98,7 +144,7 @@ with open(PROJECTION_PATH / "winrt-runtime" / "setup.py", "w") as f:
 
 for package in glob("winrt-*", root_dir=str(PROJECTION_PATH / "interop")):
     ns = package.removeprefix("winrt-")
-    module = f"winrt.{ns.lower()}"
+    module = f"winrt.{winrt_ns_to_py_package(ns)}"
 
     with open(PROJECTION_PATH / "interop" / package / "pyproject.toml", "w") as f:
         f.write(
@@ -119,7 +165,7 @@ for package in glob("winrt-*", root_dir=str(PROJECTION_PATH / "interop")):
 
 for package in glob("winrt-Windows.*", root_dir=str(PROJECTION_PATH)):
     ns = package.removeprefix("winrt-")
-    module = f"winrt.{ns.lower()}"
+    module = f"winrt.{winrt_ns_to_py_package(ns)}"
 
     with open(PROJECTION_PATH / package / "pyproject.toml", "w") as f:
         optional_dependencies = (

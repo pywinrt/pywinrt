@@ -226,15 +226,8 @@ Where <spec> is one or more of:
 
                 for (auto&& ns_segment : get_dotted_name_segments(ns))
                 {
-                    std::string segment{ns_segment};
-                    std::transform(
-                        segment.begin(),
-                        segment.end(),
-                        segment.begin(),
-                        [](char c)
-                        {
-                            return static_cast<char>(::tolower(c));
-                        });
+                    auto segment
+                        = w.write_temp("%", bind<write_python_identifier>(ns_segment));
                     ns_dir /= segment;
                 }
 

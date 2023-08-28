@@ -25,6 +25,7 @@
 - Fixed memory leak in wrapped struct types.
 - Fixed generating delegates with out parameters are return arrays.
 - Fixed setters of static properties.
+- Fixed subpackage names that are Python keywords.
 
 ### Removed
 - Removed generation of base/core files.
