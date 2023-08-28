@@ -1,4 +1,4 @@
-from glob import glob
+from glob import iglob
 from pathlib import Path
 
 PYPROJECT_TOML_TEMPLATE = """\
@@ -125,7 +125,7 @@ def winrt_ns_to_py_package(ns: str) -> str:
     return ".".join(avoid_keyword(x.lower()) for x in ns.split("."))
 
 
-with open(PROJECTION_PATH / "winrt-runtime" / "pyproject.toml", "w") as f:
+with open(PROJECTION_PATH / "winrt-runtime" / "pyproject.toml", "w", newline="\n") as f:
     f.write(
         PYPROJECT_TOML_TEMPLATE.format(
             package_name="winrt-runtime",
@@ -134,7 +134,7 @@ with open(PROJECTION_PATH / "winrt-runtime" / "pyproject.toml", "w") as f:
         )
     )
 
-with open(PROJECTION_PATH / "winrt-runtime" / "setup.py", "w") as f:
+with open(PROJECTION_PATH / "winrt-runtime" / "setup.py", "w", newline="\n") as f:
     f.write(
         SETUP_PY_TEMPLATE.format(
             ext_module="_winrt",
@@ -142,11 +142,14 @@ with open(PROJECTION_PATH / "winrt-runtime" / "setup.py", "w") as f:
         )
     )
 
-for package in glob("winrt-*", root_dir=str(PROJECTION_PATH / "interop")):
+for package_path in iglob(str(PROJECTION_PATH / "interop" / "winrt-*")):
+    package = Path(package_path).name
     ns = package.removeprefix("winrt-")
     module = f"winrt.{winrt_ns_to_py_package(ns)}"
 
-    with open(PROJECTION_PATH / "interop" / package / "pyproject.toml", "w") as f:
+    with open(
+        PROJECTION_PATH / "interop" / package / "pyproject.toml", "w", newline="\n"
+    ) as f:
         f.write(
             PYPROJECT_TOML_TEMPLATE.format(
                 package_name=package,
@@ -155,7 +158,9 @@ for package in glob("winrt-*", root_dir=str(PROJECTION_PATH / "interop")):
             )
         )
 
-    with open(PROJECTION_PATH / "interop" / package / "setup.py", "w") as f:
+    with open(
+        PROJECTION_PATH / "interop" / package / "setup.py", "w", newline="\n"
+    ) as f:
         f.write(
             SETUP_PY_TEMPLATE.format(
                 ext_module=f"_{module.replace('.', '_')}",
@@ -163,11 +168,12 @@ for package in glob("winrt-*", root_dir=str(PROJECTION_PATH / "interop")):
             )
         )
 
-for package in glob("winrt-Windows.*", root_dir=str(PROJECTION_PATH)):
+for package_path in iglob(str(PROJECTION_PATH / "winrt-Windows.*")):
+    package = Path(package_path).name
     ns = package.removeprefix("winrt-")
     module = f"winrt.{winrt_ns_to_py_package(ns)}"
 
-    with open(PROJECTION_PATH / package / "pyproject.toml", "w") as f:
+    with open(PROJECTION_PATH / package / "pyproject.toml", "w", newline="\n") as f:
         optional_dependencies = (
             dict(
                 optional_dependencies=OPTIONAL_DEPENDENCIES,
@@ -185,7 +191,7 @@ for package in glob("winrt-Windows.*", root_dir=str(PROJECTION_PATH)):
             )
         )
 
-    with open(PROJECTION_PATH / package / "setup.py", "w") as f:
+    with open(PROJECTION_PATH / package / "setup.py", "w", newline="\n") as f:
         f.write(
             SETUP_PY_TEMPLATE.format(
                 ext_module=f"_{module.replace('.', '_')}",
@@ -193,7 +199,9 @@ for package in glob("winrt-Windows.*", root_dir=str(PROJECTION_PATH)):
             )
         )
 
-with open(PROJECTION_PATH / "winrt-TestComponent" / "pyproject.toml", "w") as f:
+with open(
+    PROJECTION_PATH / "winrt-TestComponent" / "pyproject.toml", "w", newline="\n"
+) as f:
     f.write(
         PYPROJECT_TOML_TEMPLATE.format(
             package_name="winrt-TestComponent",
@@ -202,7 +210,9 @@ with open(PROJECTION_PATH / "winrt-TestComponent" / "pyproject.toml", "w") as f:
         )
     )
 
-    with open(PROJECTION_PATH / "winrt-TestComponent" / "setup.py", "w") as f:
+    with open(
+        PROJECTION_PATH / "winrt-TestComponent" / "setup.py", "w", newline="\n"
+    ) as f:
         f.write(
             SETUP_PY_TEMPLATE.format(
                 ext_module="_winrt_testcomponent",
