@@ -39,7 +39,7 @@ jobs:
       - run: ./scripts/vsdevcmd-build.cmd
       - run: ./scripts/fetch-tools.ps1
       - run: python3 ./scripts/generate-cppwinrt.py
-      - run: python3 ./scripts/generate-pywinrt.py --debug
+      - run: python3 ./scripts/generate-pywinrt.py
       - run: python3 ./scripts/generate-pyproject.py
       # fail if there are changes
       - run: git diff --exit-code

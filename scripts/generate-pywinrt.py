@@ -5,9 +5,9 @@ import sys
 REPO_ROOT_PATH = pathlib.Path(__file__).parent.parent.resolve()
 PROJECTION_PATH = REPO_ROOT_PATH / "projection"
 PYWINRT_EXE = (
-    (REPO_ROOT_PATH / "_build" / "Windows" / "x86" / "Debug" / "pywinrt.exe")
-    if "--debug" in sys.argv
-    else (REPO_ROOT_PATH / "_tools" / "PyWinRT" / "bin" / "pywinrt.exe")
+    (REPO_ROOT_PATH / "_tools" / "PyWinRT" / "bin" / "pywinrt.exe")
+    if "--nuget" in sys.argv
+    else (REPO_ROOT_PATH / "_build" / "Windows" / "x86" / "Debug" / "pywinrt.exe")
 )
 
 if not PYWINRT_EXE.exists():

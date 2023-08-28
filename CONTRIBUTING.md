@@ -46,7 +46,7 @@ Once a local debug build of `pywinrt.exe` is built, it can be used to update
 the generated files of the projection. This requires that the Windows SDK is
 installed either via the Visual Studio Installer or standalone.
 
-    py .\scripts\generate-python.py --debug
+    py .\scripts\generate-python.py
 
 ## Regenerating other upstream code
 
