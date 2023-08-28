@@ -433,8 +433,6 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyMethodDef _methods_BackgroundAudioTrack[] = {
         { "clone", reinterpret_cast<PyCFunction>(BackgroundAudioTrack_Clone), METH_VARARGS, nullptr },
-        { "create_from_embedded_audio_track", reinterpret_cast<PyCFunction>(BackgroundAudioTrack_CreateFromEmbeddedAudioTrack), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_from_file_async", reinterpret_cast<PyCFunction>(BackgroundAudioTrack_CreateFromFileAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "get_audio_encoding_properties", reinterpret_cast<PyCFunction>(BackgroundAudioTrack_GetAudioEncodingProperties), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_BackgroundAudioTrack, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BackgroundAudioTrack), METH_O | METH_STATIC, nullptr },
@@ -469,6 +467,33 @@ namespace py::cpp::Windows::Media::Editing
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_BackgroundAudioTrack
+    };
+
+    static PyGetSetDef getset_BackgroundAudioTrack_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_BackgroundAudioTrack_Static[] = {
+        { "create_from_embedded_audio_track", reinterpret_cast<PyCFunction>(BackgroundAudioTrack_CreateFromEmbeddedAudioTrack), METH_VARARGS, nullptr },
+        { "create_from_file_async", reinterpret_cast<PyCFunction>(BackgroundAudioTrack_CreateFromFileAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_BackgroundAudioTrack_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_BackgroundAudioTrack_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_BackgroundAudioTrack_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_BackgroundAudioTrack_Static =
+    {
+        "winrt._winrt_windows_media_editing.BackgroundAudioTrack_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_BackgroundAudioTrack_Static
     };
 
     // ----- EmbeddedAudioTrack class --------------------
@@ -1138,10 +1163,6 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyMethodDef _methods_MediaClip[] = {
         { "clone", reinterpret_cast<PyCFunction>(MediaClip_Clone), METH_VARARGS, nullptr },
-        { "create_from_color", reinterpret_cast<PyCFunction>(MediaClip_CreateFromColor), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_from_file_async", reinterpret_cast<PyCFunction>(MediaClip_CreateFromFileAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_from_image_file_async", reinterpret_cast<PyCFunction>(MediaClip_CreateFromImageFileAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_from_surface", reinterpret_cast<PyCFunction>(MediaClip_CreateFromSurface), METH_VARARGS | METH_STATIC, nullptr },
         { "get_video_encoding_properties", reinterpret_cast<PyCFunction>(MediaClip_GetVideoEncodingProperties), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MediaClip, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaClip), METH_O | METH_STATIC, nullptr },
@@ -1180,6 +1201,35 @@ namespace py::cpp::Windows::Media::Editing
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_MediaClip
+    };
+
+    static PyGetSetDef getset_MediaClip_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_MediaClip_Static[] = {
+        { "create_from_color", reinterpret_cast<PyCFunction>(MediaClip_CreateFromColor), METH_VARARGS, nullptr },
+        { "create_from_file_async", reinterpret_cast<PyCFunction>(MediaClip_CreateFromFileAsync), METH_VARARGS, nullptr },
+        { "create_from_image_file_async", reinterpret_cast<PyCFunction>(MediaClip_CreateFromImageFileAsync), METH_VARARGS, nullptr },
+        { "create_from_surface", reinterpret_cast<PyCFunction>(MediaClip_CreateFromSurface), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_MediaClip_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_MediaClip_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_MediaClip_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_MediaClip_Static =
+    {
+        "winrt._winrt_windows_media_editing.MediaClip_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_MediaClip_Static
     };
 
     // ----- MediaComposition class --------------------
@@ -1690,7 +1740,6 @@ namespace py::cpp::Windows::Media::Editing
         { "generate_preview_media_stream_source", reinterpret_cast<PyCFunction>(MediaComposition_GeneratePreviewMediaStreamSource), METH_VARARGS, nullptr },
         { "get_thumbnail_async", reinterpret_cast<PyCFunction>(MediaComposition_GetThumbnailAsync), METH_VARARGS, nullptr },
         { "get_thumbnails_async", reinterpret_cast<PyCFunction>(MediaComposition_GetThumbnailsAsync), METH_VARARGS, nullptr },
-        { "load_async", reinterpret_cast<PyCFunction>(MediaComposition_LoadAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "render_to_file_async", reinterpret_cast<PyCFunction>(MediaComposition_RenderToFileAsync), METH_VARARGS, nullptr },
         { "save_async", reinterpret_cast<PyCFunction>(MediaComposition_SaveAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MediaComposition, METH_O | METH_STATIC, nullptr },
@@ -1723,6 +1772,32 @@ namespace py::cpp::Windows::Media::Editing
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_MediaComposition
+    };
+
+    static PyGetSetDef getset_MediaComposition_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_MediaComposition_Static[] = {
+        { "load_async", reinterpret_cast<PyCFunction>(MediaComposition_LoadAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_MediaComposition_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_MediaComposition_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_MediaComposition_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_MediaComposition_Static =
+    {
+        "winrt._winrt_windows_media_editing.MediaComposition_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_MediaComposition_Static
     };
 
     // ----- MediaOverlay class --------------------
@@ -2299,7 +2374,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_editing(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BackgroundAudioTrack, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_BackgroundAudioTrack_Static{PyType_FromSpec(&type_spec_BackgroundAudioTrack_Static)};
+    if (!type_BackgroundAudioTrack_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_BackgroundAudioTrack, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BackgroundAudioTrack_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -2309,12 +2390,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_editing(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MediaClip, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_MediaClip_Static{PyType_FromSpec(&type_spec_MediaClip_Static)};
+    if (!type_MediaClip_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MediaComposition, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaClip, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MediaClip_Static.get())) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MediaComposition_Static{PyType_FromSpec(&type_spec_MediaComposition_Static)};
+    if (!type_MediaComposition_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_MediaComposition, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MediaComposition_Static.get())) == -1)
     {
         return nullptr;
     }

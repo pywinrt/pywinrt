@@ -646,12 +646,6 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
     }
 
     static PyMethodDef _methods_SocialInfoProviderManager[] = {
-        { "create_dashboard_item_updater_async", reinterpret_cast<PyCFunction>(SocialInfoProviderManager_CreateDashboardItemUpdaterAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_social_feed_updater_async", reinterpret_cast<PyCFunction>(SocialInfoProviderManager_CreateSocialFeedUpdaterAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "deprovision_async", reinterpret_cast<PyCFunction>(SocialInfoProviderManager_DeprovisionAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "provision_async", reinterpret_cast<PyCFunction>(SocialInfoProviderManager_ProvisionAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "report_new_content_available", reinterpret_cast<PyCFunction>(SocialInfoProviderManager_ReportNewContentAvailable), METH_VARARGS | METH_STATIC, nullptr },
-        { "update_badge_count_value", reinterpret_cast<PyCFunction>(SocialInfoProviderManager_UpdateBadgeCountValue), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -674,6 +668,37 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_SocialInfoProviderManager
+    };
+
+    static PyGetSetDef getset_SocialInfoProviderManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_SocialInfoProviderManager_Static[] = {
+        { "create_dashboard_item_updater_async", reinterpret_cast<PyCFunction>(SocialInfoProviderManager_CreateDashboardItemUpdaterAsync), METH_VARARGS, nullptr },
+        { "create_social_feed_updater_async", reinterpret_cast<PyCFunction>(SocialInfoProviderManager_CreateSocialFeedUpdaterAsync), METH_VARARGS, nullptr },
+        { "deprovision_async", reinterpret_cast<PyCFunction>(SocialInfoProviderManager_DeprovisionAsync), METH_VARARGS, nullptr },
+        { "provision_async", reinterpret_cast<PyCFunction>(SocialInfoProviderManager_ProvisionAsync), METH_VARARGS, nullptr },
+        { "report_new_content_available", reinterpret_cast<PyCFunction>(SocialInfoProviderManager_ReportNewContentAvailable), METH_VARARGS, nullptr },
+        { "update_badge_count_value", reinterpret_cast<PyCFunction>(SocialInfoProviderManager_UpdateBadgeCountValue), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_SocialInfoProviderManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SocialInfoProviderManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SocialInfoProviderManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SocialInfoProviderManager_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_socialinfo_provider.SocialInfoProviderManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_SocialInfoProviderManager_Static
     };
 
     // ----- Windows.ApplicationModel.SocialInfo.Provider Initialization --------------------
@@ -732,7 +757,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_socialinfo_provider(void) 
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SocialInfoProviderManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_SocialInfoProviderManager_Static{PyType_FromSpec(&type_spec_SocialInfoProviderManager_Static)};
+    if (!type_SocialInfoProviderManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_SocialInfoProviderManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SocialInfoProviderManager_Static.get())) == -1)
     {
         return nullptr;
     }

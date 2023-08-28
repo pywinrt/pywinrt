@@ -136,7 +136,6 @@ namespace py::cpp::Windows::UI::Input::Core
     }
 
     static PyMethodDef _methods_RadialControllerIndependentInputSource[] = {
-        { "create_for_view", reinterpret_cast<PyCFunction>(RadialControllerIndependentInputSource_CreateForView), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_RadialControllerIndependentInputSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RadialControllerIndependentInputSource), METH_O | METH_STATIC, nullptr },
         { }
@@ -165,6 +164,32 @@ namespace py::cpp::Windows::UI::Input::Core
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_RadialControllerIndependentInputSource
+    };
+
+    static PyGetSetDef getset_RadialControllerIndependentInputSource_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_RadialControllerIndependentInputSource_Static[] = {
+        { "create_for_view", reinterpret_cast<PyCFunction>(RadialControllerIndependentInputSource_CreateForView), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_RadialControllerIndependentInputSource_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_RadialControllerIndependentInputSource_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_RadialControllerIndependentInputSource_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_RadialControllerIndependentInputSource_Static =
+    {
+        "winrt._winrt_windows_ui_input_core.RadialControllerIndependentInputSource_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_RadialControllerIndependentInputSource_Static
     };
 
     // ----- Windows.UI.Input.Core Initialization --------------------
@@ -213,7 +238,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input_core(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RadialControllerIndependentInputSource, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_RadialControllerIndependentInputSource_Static{PyType_FromSpec(&type_spec_RadialControllerIndependentInputSource_Static)};
+    if (!type_RadialControllerIndependentInputSource_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_RadialControllerIndependentInputSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RadialControllerIndependentInputSource_Static.get())) == -1)
     {
         return nullptr;
     }

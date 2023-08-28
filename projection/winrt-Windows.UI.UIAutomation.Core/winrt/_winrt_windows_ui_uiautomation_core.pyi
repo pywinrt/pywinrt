@@ -35,13 +35,13 @@ class AutomationRemoteOperationResult(winrt.system.Object):
     @_property
     def status(self) -> AutomationRemoteOperationStatus: ...
 
-class CoreAutomationRegistrar(winrt.system.Object):
+class CoreAutomationRegistrar_Static(type):
+    def register_annotation_type(cls, guid: _uuid.UUID, /) -> AutomationAnnotationTypeRegistration: ...
+    def unregister_annotation_type(cls, registration: AutomationAnnotationTypeRegistration, /) -> None: ...
+
+class CoreAutomationRegistrar(winrt.system.Object, metaclass=CoreAutomationRegistrar_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreAutomationRegistrar: ...
-    @staticmethod
-    def register_annotation_type(guid: _uuid.UUID, /) -> AutomationAnnotationTypeRegistration: ...
-    @staticmethod
-    def unregister_annotation_type(registration: AutomationAnnotationTypeRegistration, /) -> None: ...
 
 class CoreAutomationRemoteOperation(winrt.system.Object):
     @staticmethod
@@ -94,11 +94,12 @@ class RemoteAutomationDisconnectedEventArgs(winrt.system.Object):
     @_property
     def local_pipe_name(self) -> str: ...
 
-class RemoteAutomationServer(winrt.system.Object):
+class RemoteAutomationServer_Static(type):
+    def report_session(cls, session_id: _uuid.UUID, /) -> None: ...
+
+class RemoteAutomationServer(winrt.system.Object, metaclass=RemoteAutomationServer_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteAutomationServer: ...
-    @staticmethod
-    def report_session(session_id: _uuid.UUID, /) -> None: ...
 
 class RemoteAutomationWindow(winrt.system.Object):
     @staticmethod

@@ -1429,7 +1429,6 @@ namespace py::cpp::Windows::Networking::Vpn
         { "get_vpn_receive_packet_buffer", reinterpret_cast<PyCFunction>(VpnChannel_GetVpnReceivePacketBuffer), METH_VARARGS, nullptr },
         { "get_vpn_send_packet_buffer", reinterpret_cast<PyCFunction>(VpnChannel_GetVpnSendPacketBuffer), METH_VARARGS, nullptr },
         { "log_diagnostic_message", reinterpret_cast<PyCFunction>(VpnChannel_LogDiagnosticMessage), METH_VARARGS, nullptr },
-        { "process_event_async", reinterpret_cast<PyCFunction>(VpnChannel_ProcessEventAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "replace_and_associate_transport", reinterpret_cast<PyCFunction>(VpnChannel_ReplaceAndAssociateTransport), METH_VARARGS, nullptr },
         { "request_credentials", reinterpret_cast<PyCFunction>(VpnChannel_RequestCredentials), METH_VARARGS, nullptr },
         { "request_credentials_async", reinterpret_cast<PyCFunction>(VpnChannel_RequestCredentialsAsync), METH_VARARGS, nullptr },
@@ -1479,6 +1478,32 @@ namespace py::cpp::Windows::Networking::Vpn
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_VpnChannel
+    };
+
+    static PyGetSetDef getset_VpnChannel_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_VpnChannel_Static[] = {
+        { "process_event_async", reinterpret_cast<PyCFunction>(VpnChannel_ProcessEventAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_VpnChannel_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_VpnChannel_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_VpnChannel_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_VpnChannel_Static =
+    {
+        "winrt._winrt_windows_networking_vpn.VpnChannel_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_VpnChannel_Static
     };
 
     // ----- VpnChannelActivityEventArgs class --------------------
@@ -11125,7 +11150,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_vpn(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VpnChannel, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_VpnChannel_Static{PyType_FromSpec(&type_spec_VpnChannel_Static)};
+    if (!type_VpnChannel_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_VpnChannel, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VpnChannel_Static.get())) == -1)
     {
         return nullptr;
     }

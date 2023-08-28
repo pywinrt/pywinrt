@@ -409,9 +409,6 @@ namespace py::cpp::Windows::Devices::Lights
 
     static PyMethodDef _methods_Lamp[] = {
         { "close", reinterpret_cast<PyCFunction>(Lamp_Close), METH_VARARGS, nullptr },
-        { "from_id_async", reinterpret_cast<PyCFunction>(Lamp_FromIdAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_default_async", reinterpret_cast<PyCFunction>(Lamp_GetDefaultAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_device_selector", reinterpret_cast<PyCFunction>(Lamp_GetDeviceSelector), METH_VARARGS | METH_STATIC, nullptr },
         { "add_availability_changed", reinterpret_cast<PyCFunction>(Lamp_add_AvailabilityChanged), METH_O, nullptr },
         { "remove_availability_changed", reinterpret_cast<PyCFunction>(Lamp_remove_AvailabilityChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_Lamp, METH_O | METH_STATIC, nullptr },
@@ -446,6 +443,34 @@ namespace py::cpp::Windows::Devices::Lights
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_Lamp
+    };
+
+    static PyGetSetDef getset_Lamp_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_Lamp_Static[] = {
+        { "from_id_async", reinterpret_cast<PyCFunction>(Lamp_FromIdAsync), METH_VARARGS, nullptr },
+        { "get_default_async", reinterpret_cast<PyCFunction>(Lamp_GetDefaultAsync), METH_VARARGS, nullptr },
+        { "get_device_selector", reinterpret_cast<PyCFunction>(Lamp_GetDeviceSelector), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_Lamp_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Lamp_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Lamp_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Lamp_Static =
+    {
+        "winrt._winrt_windows_devices_lights.Lamp_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_Lamp_Static
     };
 
     // ----- LampArray class --------------------
@@ -1220,8 +1245,6 @@ namespace py::cpp::Windows::Devices::Lights
     }
 
     static PyMethodDef _methods_LampArray[] = {
-        { "from_id_async", reinterpret_cast<PyCFunction>(LampArray_FromIdAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_device_selector", reinterpret_cast<PyCFunction>(LampArray_GetDeviceSelector), METH_VARARGS | METH_STATIC, nullptr },
         { "get_indices_for_key", reinterpret_cast<PyCFunction>(LampArray_GetIndicesForKey), METH_VARARGS, nullptr },
         { "get_indices_for_purposes", reinterpret_cast<PyCFunction>(LampArray_GetIndicesForPurposes), METH_VARARGS, nullptr },
         { "get_lamp_info", reinterpret_cast<PyCFunction>(LampArray_GetLampInfo), METH_VARARGS, nullptr },
@@ -1271,6 +1294,33 @@ namespace py::cpp::Windows::Devices::Lights
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_LampArray
+    };
+
+    static PyGetSetDef getset_LampArray_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_LampArray_Static[] = {
+        { "from_id_async", reinterpret_cast<PyCFunction>(LampArray_FromIdAsync), METH_VARARGS, nullptr },
+        { "get_device_selector", reinterpret_cast<PyCFunction>(LampArray_GetDeviceSelector), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_LampArray_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_LampArray_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_LampArray_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_LampArray_Static =
+    {
+        "winrt._winrt_windows_devices_lights.LampArray_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_LampArray_Static
     };
 
     // ----- LampAvailabilityChangedEventArgs class --------------------
@@ -1689,12 +1739,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_lights(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Lamp, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_Lamp_Static{PyType_FromSpec(&type_spec_Lamp_Static)};
+    if (!type_Lamp_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LampArray, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Lamp, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Lamp_Static.get())) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_LampArray_Static{PyType_FromSpec(&type_spec_LampArray_Static)};
+    if (!type_LampArray_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_LampArray, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LampArray_Static.get())) == -1)
     {
         return nullptr;
     }

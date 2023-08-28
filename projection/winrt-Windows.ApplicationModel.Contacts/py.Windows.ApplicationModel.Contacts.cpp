@@ -6703,7 +6703,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         _type_slots_ContactLaunchActionVerbs
     };
 
-    static PyGetSetDef getset_ContactLaunchActionVerbs_Meta[] = {
+    static PyGetSetDef getset_ContactLaunchActionVerbs_Static[] = {
         { "call", reinterpret_cast<getter>(ContactLaunchActionVerbs_get_Call), nullptr, nullptr, nullptr },
         { "map", reinterpret_cast<getter>(ContactLaunchActionVerbs_get_Map), nullptr, nullptr, nullptr },
         { "message", reinterpret_cast<getter>(ContactLaunchActionVerbs_get_Message), nullptr, nullptr, nullptr },
@@ -6712,20 +6712,25 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { }
     };
 
-    static PyType_Slot type_slots_ContactLaunchActionVerbs_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_ContactLaunchActionVerbs_Meta) },
+    static PyMethodDef methods_ContactLaunchActionVerbs_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_ContactLaunchActionVerbs_Meta =
+    static PyType_Slot type_slots_ContactLaunchActionVerbs_Static[] = 
     {
-        "winrt._winrt_windows_applicationmodel_contacts.ContactLaunchActionVerbs_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ContactLaunchActionVerbs_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ContactLaunchActionVerbs_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ContactLaunchActionVerbs_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_contacts.ContactLaunchActionVerbs_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ContactLaunchActionVerbs_Meta
+        type_slots_ContactLaunchActionVerbs_Static
     };
 
     // ----- ContactList class --------------------
@@ -10317,17 +10322,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     }
 
     static PyMethodDef _methods_ContactManager[] = {
-        { "convert_contact_to_v_card_async", reinterpret_cast<PyCFunction>(ContactManager_ConvertContactToVCardAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "convert_v_card_to_contact_async", reinterpret_cast<PyCFunction>(ContactManager_ConvertVCardToContactAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_for_user", reinterpret_cast<PyCFunction>(ContactManager_GetForUser), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_show_contact_card_supported", reinterpret_cast<PyCFunction>(ContactManager_IsShowContactCardSupported), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_show_delay_loaded_contact_card_supported", reinterpret_cast<PyCFunction>(ContactManager_IsShowDelayLoadedContactCardSupported), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_show_full_contact_card_supported_async", reinterpret_cast<PyCFunction>(ContactManager_IsShowFullContactCardSupportedAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "request_annotation_store_async", reinterpret_cast<PyCFunction>(ContactManager_RequestAnnotationStoreAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "request_store_async", reinterpret_cast<PyCFunction>(ContactManager_RequestStoreAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "show_contact_card", reinterpret_cast<PyCFunction>(ContactManager_ShowContactCard), METH_VARARGS | METH_STATIC, nullptr },
-        { "show_delay_loaded_contact_card", reinterpret_cast<PyCFunction>(ContactManager_ShowDelayLoadedContactCard), METH_VARARGS | METH_STATIC, nullptr },
-        { "show_full_contact_card", reinterpret_cast<PyCFunction>(ContactManager_ShowFullContactCard), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -10352,27 +10346,43 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         _type_slots_ContactManager
     };
 
-    static PyGetSetDef getset_ContactManager_Meta[] = {
+    static PyGetSetDef getset_ContactManager_Static[] = {
         { "system_sort_order", reinterpret_cast<getter>(ContactManager_get_SystemSortOrder), reinterpret_cast<setter>(ContactManager_put_SystemSortOrder), nullptr, nullptr },
         { "system_display_name_order", reinterpret_cast<getter>(ContactManager_get_SystemDisplayNameOrder), reinterpret_cast<setter>(ContactManager_put_SystemDisplayNameOrder), nullptr, nullptr },
         { "include_middle_name_in_system_display_and_sort", reinterpret_cast<getter>(ContactManager_get_IncludeMiddleNameInSystemDisplayAndSort), reinterpret_cast<setter>(ContactManager_put_IncludeMiddleNameInSystemDisplayAndSort), nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_ContactManager_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_ContactManager_Meta) },
+    static PyMethodDef methods_ContactManager_Static[] = {
+        { "convert_contact_to_v_card_async", reinterpret_cast<PyCFunction>(ContactManager_ConvertContactToVCardAsync), METH_VARARGS, nullptr },
+        { "convert_v_card_to_contact_async", reinterpret_cast<PyCFunction>(ContactManager_ConvertVCardToContactAsync), METH_VARARGS, nullptr },
+        { "get_for_user", reinterpret_cast<PyCFunction>(ContactManager_GetForUser), METH_VARARGS, nullptr },
+        { "is_show_contact_card_supported", reinterpret_cast<PyCFunction>(ContactManager_IsShowContactCardSupported), METH_VARARGS, nullptr },
+        { "is_show_delay_loaded_contact_card_supported", reinterpret_cast<PyCFunction>(ContactManager_IsShowDelayLoadedContactCardSupported), METH_VARARGS, nullptr },
+        { "is_show_full_contact_card_supported_async", reinterpret_cast<PyCFunction>(ContactManager_IsShowFullContactCardSupportedAsync), METH_VARARGS, nullptr },
+        { "request_annotation_store_async", reinterpret_cast<PyCFunction>(ContactManager_RequestAnnotationStoreAsync), METH_VARARGS, nullptr },
+        { "request_store_async", reinterpret_cast<PyCFunction>(ContactManager_RequestStoreAsync), METH_VARARGS, nullptr },
+        { "show_contact_card", reinterpret_cast<PyCFunction>(ContactManager_ShowContactCard), METH_VARARGS, nullptr },
+        { "show_delay_loaded_contact_card", reinterpret_cast<PyCFunction>(ContactManager_ShowDelayLoadedContactCard), METH_VARARGS, nullptr },
+        { "show_full_contact_card", reinterpret_cast<PyCFunction>(ContactManager_ShowFullContactCard), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_ContactManager_Meta =
+    static PyType_Slot type_slots_ContactManager_Static[] = 
     {
-        "winrt._winrt_windows_applicationmodel_contacts.ContactManager_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ContactManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ContactManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ContactManager_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_contacts.ContactManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ContactManager_Meta
+        type_slots_ContactManager_Static
     };
 
     // ----- ContactManagerForUser class --------------------
@@ -11952,8 +11962,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     }
 
     static PyMethodDef _methods_ContactPicker[] = {
-        { "create_for_user", reinterpret_cast<PyCFunction>(ContactPicker_CreateForUser), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_supported_async", reinterpret_cast<PyCFunction>(ContactPicker_IsSupportedAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "pick_contact_async", reinterpret_cast<PyCFunction>(ContactPicker_PickContactAsync), METH_VARARGS, nullptr },
         { "pick_contacts_async", reinterpret_cast<PyCFunction>(ContactPicker_PickContactsAsync), METH_VARARGS, nullptr },
         { "pick_multiple_contacts_async", reinterpret_cast<PyCFunction>(ContactPicker_PickMultipleContactsAsync), METH_VARARGS, nullptr },
@@ -11988,6 +11996,33 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ContactPicker
+    };
+
+    static PyGetSetDef getset_ContactPicker_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ContactPicker_Static[] = {
+        { "create_for_user", reinterpret_cast<PyCFunction>(ContactPicker_CreateForUser), METH_VARARGS, nullptr },
+        { "is_supported_async", reinterpret_cast<PyCFunction>(ContactPicker_IsSupportedAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_ContactPicker_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ContactPicker_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ContactPicker_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ContactPicker_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_contacts.ContactPicker_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ContactPicker_Static
     };
 
     // ----- ContactQueryOptions class --------------------
@@ -13949,8 +13984,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     }
 
     static PyMethodDef _methods_KnownContactField[] = {
-        { "convert_name_to_type", reinterpret_cast<PyCFunction>(KnownContactField_ConvertNameToType), METH_VARARGS | METH_STATIC, nullptr },
-        { "convert_type_to_name", reinterpret_cast<PyCFunction>(KnownContactField_ConvertTypeToName), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -13975,7 +14008,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         _type_slots_KnownContactField
     };
 
-    static PyGetSetDef getset_KnownContactField_Meta[] = {
+    static PyGetSetDef getset_KnownContactField_Static[] = {
         { "email", reinterpret_cast<getter>(KnownContactField_get_Email), nullptr, nullptr, nullptr },
         { "instant_message", reinterpret_cast<getter>(KnownContactField_get_InstantMessage), nullptr, nullptr, nullptr },
         { "location", reinterpret_cast<getter>(KnownContactField_get_Location), nullptr, nullptr, nullptr },
@@ -13983,20 +14016,27 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { }
     };
 
-    static PyType_Slot type_slots_KnownContactField_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_KnownContactField_Meta) },
+    static PyMethodDef methods_KnownContactField_Static[] = {
+        { "convert_name_to_type", reinterpret_cast<PyCFunction>(KnownContactField_ConvertNameToType), METH_VARARGS, nullptr },
+        { "convert_type_to_name", reinterpret_cast<PyCFunction>(KnownContactField_ConvertTypeToName), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_KnownContactField_Meta =
+    static PyType_Slot type_slots_KnownContactField_Static[] = 
     {
-        "winrt._winrt_windows_applicationmodel_contacts.KnownContactField_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_KnownContactField_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_KnownContactField_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_KnownContactField_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_contacts.KnownContactField_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_KnownContactField_Meta
+        type_slots_KnownContactField_Static
     };
 
     // ----- PinnedContactIdsQueryResult class --------------------
@@ -14458,12 +14498,9 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     }
 
     static PyMethodDef _methods_PinnedContactManager[] = {
-        { "get_default", reinterpret_cast<PyCFunction>(PinnedContactManager_GetDefault), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_for_user", reinterpret_cast<PyCFunction>(PinnedContactManager_GetForUser), METH_VARARGS | METH_STATIC, nullptr },
         { "get_pinned_contact_ids_async", reinterpret_cast<PyCFunction>(PinnedContactManager_GetPinnedContactIdsAsync), METH_VARARGS, nullptr },
         { "is_contact_pinned", reinterpret_cast<PyCFunction>(PinnedContactManager_IsContactPinned), METH_VARARGS, nullptr },
         { "is_pin_surface_supported", reinterpret_cast<PyCFunction>(PinnedContactManager_IsPinSurfaceSupported), METH_VARARGS, nullptr },
-        { "is_supported", reinterpret_cast<PyCFunction>(PinnedContactManager_IsSupported), METH_VARARGS | METH_STATIC, nullptr },
         { "request_pin_contact_async", reinterpret_cast<PyCFunction>(PinnedContactManager_RequestPinContactAsync), METH_VARARGS, nullptr },
         { "request_pin_contacts_async", reinterpret_cast<PyCFunction>(PinnedContactManager_RequestPinContactsAsync), METH_VARARGS, nullptr },
         { "request_unpin_contact_async", reinterpret_cast<PyCFunction>(PinnedContactManager_RequestUnpinContactAsync), METH_VARARGS, nullptr },
@@ -14494,6 +14531,34 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_PinnedContactManager
+    };
+
+    static PyGetSetDef getset_PinnedContactManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_PinnedContactManager_Static[] = {
+        { "get_default", reinterpret_cast<PyCFunction>(PinnedContactManager_GetDefault), METH_VARARGS, nullptr },
+        { "get_for_user", reinterpret_cast<PyCFunction>(PinnedContactManager_GetForUser), METH_VARARGS, nullptr },
+        { "is_supported", reinterpret_cast<PyCFunction>(PinnedContactManager_IsSupported), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_PinnedContactManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PinnedContactManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PinnedContactManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PinnedContactManager_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_contacts.PinnedContactManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_PinnedContactManager_Static
     };
 
     // ----- IContactField interface --------------------
@@ -15247,13 +15312,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_contacts(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_ContactLaunchActionVerbs_Meta{PyType_FromSpec(&type_spec_ContactLaunchActionVerbs_Meta)};
-    if (!type_ContactLaunchActionVerbs_Meta)
+    py::pyobj_handle type_ContactLaunchActionVerbs_Static{PyType_FromSpec(&type_spec_ContactLaunchActionVerbs_Static)};
+    if (!type_ContactLaunchActionVerbs_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactLaunchActionVerbs, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContactLaunchActionVerbs_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactLaunchActionVerbs, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContactLaunchActionVerbs_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -15283,13 +15348,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_contacts(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_ContactManager_Meta{PyType_FromSpec(&type_spec_ContactManager_Meta)};
-    if (!type_ContactManager_Meta)
+    py::pyobj_handle type_ContactManager_Static{PyType_FromSpec(&type_spec_ContactManager_Static)};
+    if (!type_ContactManager_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContactManager_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContactManager_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -15324,7 +15389,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_contacts(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactPicker, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_ContactPicker_Static{PyType_FromSpec(&type_spec_ContactPicker_Static)};
+    if (!type_ContactPicker_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_ContactPicker, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContactPicker_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -15369,13 +15440,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_contacts(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_KnownContactField_Meta{PyType_FromSpec(&type_spec_KnownContactField_Meta)};
-    if (!type_KnownContactField_Meta)
+    py::pyobj_handle type_KnownContactField_Static{PyType_FromSpec(&type_spec_KnownContactField_Static)};
+    if (!type_KnownContactField_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_KnownContactField, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownContactField_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_KnownContactField, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownContactField_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -15385,7 +15456,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_contacts(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PinnedContactManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_PinnedContactManager_Static{PyType_FromSpec(&type_spec_PinnedContactManager_Static)};
+    if (!type_PinnedContactManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_PinnedContactManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PinnedContactManager_Static.get())) == -1)
     {
         return nullptr;
     }

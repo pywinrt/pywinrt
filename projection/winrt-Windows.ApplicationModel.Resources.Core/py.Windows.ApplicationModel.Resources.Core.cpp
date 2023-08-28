@@ -1308,14 +1308,8 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyMethodDef _methods_ResourceContext[] = {
         { "clone", reinterpret_cast<PyCFunction>(ResourceContext_Clone), METH_VARARGS, nullptr },
-        { "create_matching_context", reinterpret_cast<PyCFunction>(ResourceContext_CreateMatchingContext), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_for_current_view", reinterpret_cast<PyCFunction>(ResourceContext_GetForCurrentView), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_for_u_i_context", reinterpret_cast<PyCFunction>(ResourceContext_GetForUIContext), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_for_view_independent_use", reinterpret_cast<PyCFunction>(ResourceContext_GetForViewIndependentUse), METH_VARARGS | METH_STATIC, nullptr },
         { "override_to_match", reinterpret_cast<PyCFunction>(ResourceContext_OverrideToMatch), METH_VARARGS, nullptr },
         { "reset", reinterpret_cast<PyCFunction>(ResourceContext_Reset), METH_VARARGS, nullptr },
-        { "reset_global_qualifier_values", reinterpret_cast<PyCFunction>(ResourceContext_ResetGlobalQualifierValues), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_global_qualifier_value", reinterpret_cast<PyCFunction>(ResourceContext_SetGlobalQualifierValue), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_ResourceContext, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ResourceContext), METH_O | METH_STATIC, nullptr },
         { }
@@ -1343,6 +1337,37 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ResourceContext
+    };
+
+    static PyGetSetDef getset_ResourceContext_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ResourceContext_Static[] = {
+        { "create_matching_context", reinterpret_cast<PyCFunction>(ResourceContext_CreateMatchingContext), METH_VARARGS, nullptr },
+        { "get_for_current_view", reinterpret_cast<PyCFunction>(ResourceContext_GetForCurrentView), METH_VARARGS, nullptr },
+        { "get_for_u_i_context", reinterpret_cast<PyCFunction>(ResourceContext_GetForUIContext), METH_VARARGS, nullptr },
+        { "get_for_view_independent_use", reinterpret_cast<PyCFunction>(ResourceContext_GetForViewIndependentUse), METH_VARARGS, nullptr },
+        { "reset_global_qualifier_values", reinterpret_cast<PyCFunction>(ResourceContext_ResetGlobalQualifierValues), METH_VARARGS, nullptr },
+        { "set_global_qualifier_value", reinterpret_cast<PyCFunction>(ResourceContext_SetGlobalQualifierValue), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_ResourceContext_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ResourceContext_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ResourceContext_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ResourceContext_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_resources_core.ResourceContext_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ResourceContext_Static
     };
 
     // ----- ResourceContextLanguagesVectorView class --------------------
@@ -1966,7 +1991,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     static PyMethodDef _methods_ResourceManager[] = {
         { "get_all_named_resources_for_package", reinterpret_cast<PyCFunction>(ResourceManager_GetAllNamedResourcesForPackage), METH_VARARGS, nullptr },
         { "get_all_subtrees_for_package", reinterpret_cast<PyCFunction>(ResourceManager_GetAllSubtreesForPackage), METH_VARARGS, nullptr },
-        { "is_resource_reference", reinterpret_cast<PyCFunction>(ResourceManager_IsResourceReference), METH_VARARGS | METH_STATIC, nullptr },
         { "load_pri_files", reinterpret_cast<PyCFunction>(ResourceManager_LoadPriFiles), METH_VARARGS, nullptr },
         { "unload_pri_files", reinterpret_cast<PyCFunction>(ResourceManager_UnloadPriFiles), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ResourceManager, METH_O | METH_STATIC, nullptr },
@@ -1999,25 +2023,31 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         _type_slots_ResourceManager
     };
 
-    static PyGetSetDef getset_ResourceManager_Meta[] = {
+    static PyGetSetDef getset_ResourceManager_Static[] = {
         { "current", reinterpret_cast<getter>(ResourceManager_get_Current), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_ResourceManager_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_ResourceManager_Meta) },
+    static PyMethodDef methods_ResourceManager_Static[] = {
+        { "is_resource_reference", reinterpret_cast<PyCFunction>(ResourceManager_IsResourceReference), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_ResourceManager_Meta =
+    static PyType_Slot type_slots_ResourceManager_Static[] = 
     {
-        "winrt._winrt_windows_applicationmodel_resources_core.ResourceManager_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ResourceManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ResourceManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ResourceManager_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_resources_core.ResourceManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ResourceManager_Meta
+        type_slots_ResourceManager_Static
     };
 
     // ----- ResourceMap class --------------------
@@ -4707,7 +4737,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_resources_core(void) noexc
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ResourceContext, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_ResourceContext_Static{PyType_FromSpec(&type_spec_ResourceContext_Static)};
+    if (!type_ResourceContext_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_ResourceContext, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ResourceContext_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -4717,13 +4753,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_resources_core(void) noexc
         return nullptr;
     }
 
-    py::pyobj_handle type_ResourceManager_Meta{PyType_FromSpec(&type_spec_ResourceManager_Meta)};
-    if (!type_ResourceManager_Meta)
+    py::pyobj_handle type_ResourceManager_Static{PyType_FromSpec(&type_spec_ResourceManager_Static)};
+    if (!type_ResourceManager_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ResourceManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ResourceManager_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ResourceManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ResourceManager_Static.get())) == -1)
     {
         return nullptr;
     }

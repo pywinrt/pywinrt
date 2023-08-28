@@ -81,7 +81,6 @@ namespace py::cpp::Windows::UI::WindowManagement::Preview
     }
 
     static PyMethodDef _methods_WindowManagementPreview[] = {
-        { "set_preferred_min_size", reinterpret_cast<PyCFunction>(WindowManagementPreview_SetPreferredMinSize), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_WindowManagementPreview, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WindowManagementPreview), METH_O | METH_STATIC, nullptr },
         { }
@@ -107,6 +106,32 @@ namespace py::cpp::Windows::UI::WindowManagement::Preview
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_WindowManagementPreview
+    };
+
+    static PyGetSetDef getset_WindowManagementPreview_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_WindowManagementPreview_Static[] = {
+        { "set_preferred_min_size", reinterpret_cast<PyCFunction>(WindowManagementPreview_SetPreferredMinSize), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_WindowManagementPreview_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_WindowManagementPreview_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_WindowManagementPreview_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_WindowManagementPreview_Static =
+    {
+        "winrt._winrt_windows_ui_windowmanagement_preview.WindowManagementPreview_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_WindowManagementPreview_Static
     };
 
     // ----- Windows.UI.WindowManagement.Preview Initialization --------------------
@@ -155,7 +180,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_windowmanagement_preview(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WindowManagementPreview, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_WindowManagementPreview_Static{PyType_FromSpec(&type_spec_WindowManagementPreview_Static)};
+    if (!type_WindowManagementPreview_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_WindowManagementPreview, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WindowManagementPreview_Static.get())) == -1)
     {
         return nullptr;
     }

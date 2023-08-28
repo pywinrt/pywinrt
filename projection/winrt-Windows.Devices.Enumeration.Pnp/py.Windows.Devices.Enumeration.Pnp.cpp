@@ -278,9 +278,6 @@ namespace py::cpp::Windows::Devices::Enumeration::Pnp
     }
 
     static PyMethodDef _methods_PnpObject[] = {
-        { "create_from_id_async", reinterpret_cast<PyCFunction>(PnpObject_CreateFromIdAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_watcher", reinterpret_cast<PyCFunction>(PnpObject_CreateWatcher), METH_VARARGS | METH_STATIC, nullptr },
-        { "find_all_async", reinterpret_cast<PyCFunction>(PnpObject_FindAllAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "update", reinterpret_cast<PyCFunction>(PnpObject_Update), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PnpObject, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PnpObject), METH_O | METH_STATIC, nullptr },
@@ -310,6 +307,34 @@ namespace py::cpp::Windows::Devices::Enumeration::Pnp
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_PnpObject
+    };
+
+    static PyGetSetDef getset_PnpObject_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_PnpObject_Static[] = {
+        { "create_from_id_async", reinterpret_cast<PyCFunction>(PnpObject_CreateFromIdAsync), METH_VARARGS, nullptr },
+        { "create_watcher", reinterpret_cast<PyCFunction>(PnpObject_CreateWatcher), METH_VARARGS, nullptr },
+        { "find_all_async", reinterpret_cast<PyCFunction>(PnpObject_FindAllAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_PnpObject_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PnpObject_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PnpObject_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PnpObject_Static =
+    {
+        "winrt._winrt_windows_devices_enumeration_pnp.PnpObject_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_PnpObject_Static
     };
 
     // ----- PnpObjectCollection class --------------------
@@ -1205,7 +1230,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_enumeration_pnp(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PnpObject, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_PnpObject_Static{PyType_FromSpec(&type_spec_PnpObject_Static)};
+    if (!type_PnpObject_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_PnpObject, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PnpObject_Static.get())) == -1)
     {
         return nullptr;
     }

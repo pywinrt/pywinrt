@@ -13,11 +13,12 @@ import winrt.windows.ui.windowmanagement
 
 Self = typing.TypeVar('Self')
 
-class CoreAppWindowPreview(winrt.system.Object):
+class CoreAppWindowPreview_Static(type):
+    def get_id_from_window(cls, window: typing.Optional[winrt.windows.ui.windowmanagement.AppWindow], /) -> winrt.system.Int32: ...
+
+class CoreAppWindowPreview(winrt.system.Object, metaclass=CoreAppWindowPreview_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreAppWindowPreview: ...
-    @staticmethod
-    def get_id_from_window(window: typing.Optional[winrt.windows.ui.windowmanagement.AppWindow], /) -> winrt.system.Int32: ...
 
 class SystemNavigationCloseRequestedPreviewEventArgs(winrt.system.Object):
     @staticmethod
@@ -28,11 +29,12 @@ class SystemNavigationCloseRequestedPreviewEventArgs(winrt.system.Object):
     @handled.setter
     def handled(self, value: bool) -> None: ...
 
-class SystemNavigationManagerPreview(winrt.system.Object):
+class SystemNavigationManagerPreview_Static(type):
+    def get_for_current_view(cls) -> typing.Optional[SystemNavigationManagerPreview]: ...
+
+class SystemNavigationManagerPreview(winrt.system.Object, metaclass=SystemNavigationManagerPreview_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SystemNavigationManagerPreview: ...
-    @staticmethod
-    def get_for_current_view() -> typing.Optional[SystemNavigationManagerPreview]: ...
     def add_close_requested(self, handler: winrt.windows.foundation.EventHandler[SystemNavigationCloseRequestedPreviewEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_close_requested(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 

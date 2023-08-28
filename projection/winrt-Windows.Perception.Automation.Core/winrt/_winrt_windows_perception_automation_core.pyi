@@ -12,9 +12,10 @@ import winrt.windows.foundation
 
 Self = typing.TypeVar('Self')
 
-class CorePerceptionAutomation(winrt.system.Object):
+class CorePerceptionAutomation_Static(type):
+    def set_activation_factory_provider(cls, provider: typing.Optional[winrt.windows.foundation.IGetActivationFactory], /) -> None: ...
+
+class CorePerceptionAutomation(winrt.system.Object, metaclass=CorePerceptionAutomation_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CorePerceptionAutomation: ...
-    @staticmethod
-    def set_activation_factory_provider(provider: typing.Optional[winrt.windows.foundation.IGetActivationFactory], /) -> None: ...
 

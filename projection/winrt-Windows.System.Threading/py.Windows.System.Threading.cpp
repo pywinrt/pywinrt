@@ -90,7 +90,6 @@ namespace py::cpp::Windows::System::Threading
     }
 
     static PyMethodDef _methods_ThreadPool[] = {
-        { "run_async", reinterpret_cast<PyCFunction>(ThreadPool_RunAsync), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -113,6 +112,32 @@ namespace py::cpp::Windows::System::Threading
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ThreadPool
+    };
+
+    static PyGetSetDef getset_ThreadPool_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ThreadPool_Static[] = {
+        { "run_async", reinterpret_cast<PyCFunction>(ThreadPool_RunAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_ThreadPool_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ThreadPool_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ThreadPool_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ThreadPool_Static =
+    {
+        "winrt._winrt_windows_system_threading.ThreadPool_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ThreadPool_Static
     };
 
     // ----- ThreadPoolTimer class --------------------
@@ -334,8 +359,6 @@ namespace py::cpp::Windows::System::Threading
 
     static PyMethodDef _methods_ThreadPoolTimer[] = {
         { "cancel", reinterpret_cast<PyCFunction>(ThreadPoolTimer_Cancel), METH_VARARGS, nullptr },
-        { "create_periodic_timer", reinterpret_cast<PyCFunction>(ThreadPoolTimer_CreatePeriodicTimer), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_timer", reinterpret_cast<PyCFunction>(ThreadPoolTimer_CreateTimer), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_ThreadPoolTimer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ThreadPoolTimer), METH_O | METH_STATIC, nullptr },
         { }
@@ -363,6 +386,33 @@ namespace py::cpp::Windows::System::Threading
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ThreadPoolTimer
+    };
+
+    static PyGetSetDef getset_ThreadPoolTimer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ThreadPoolTimer_Static[] = {
+        { "create_periodic_timer", reinterpret_cast<PyCFunction>(ThreadPoolTimer_CreatePeriodicTimer), METH_VARARGS, nullptr },
+        { "create_timer", reinterpret_cast<PyCFunction>(ThreadPoolTimer_CreateTimer), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_ThreadPoolTimer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ThreadPoolTimer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ThreadPoolTimer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ThreadPoolTimer_Static =
+    {
+        "winrt._winrt_windows_system_threading.ThreadPoolTimer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ThreadPoolTimer_Static
     };
 
     // ----- Windows.System.Threading Initialization --------------------
@@ -411,12 +461,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_threading(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ThreadPool, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_ThreadPool_Static{PyType_FromSpec(&type_spec_ThreadPool_Static)};
+    if (!type_ThreadPool_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ThreadPoolTimer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ThreadPool, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ThreadPool_Static.get())) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ThreadPoolTimer_Static{PyType_FromSpec(&type_spec_ThreadPoolTimer_Static)};
+    if (!type_ThreadPoolTimer_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_ThreadPoolTimer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ThreadPoolTimer_Static.get())) == -1)
     {
         return nullptr;
     }

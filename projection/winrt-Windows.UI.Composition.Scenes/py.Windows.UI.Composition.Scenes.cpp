@@ -1192,7 +1192,6 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     }
 
     static PyMethodDef _methods_SceneMesh[] = {
-        { "create", reinterpret_cast<PyCFunction>(SceneMesh_Create), METH_VARARGS | METH_STATIC, nullptr },
         { "fill_mesh_attribute", reinterpret_cast<PyCFunction>(SceneMesh_FillMeshAttribute), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SceneMesh, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SceneMesh), METH_O | METH_STATIC, nullptr },
@@ -1221,6 +1220,32 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_SceneMesh
+    };
+
+    static PyGetSetDef getset_SceneMesh_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_SceneMesh_Static[] = {
+        { "create", reinterpret_cast<PyCFunction>(SceneMesh_Create), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_SceneMesh_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SceneMesh_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SceneMesh_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SceneMesh_Static =
+    {
+        "winrt._winrt_windows_ui_composition_scenes.SceneMesh_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_SceneMesh_Static
     };
 
     // ----- SceneMeshMaterialAttributeMap class --------------------
@@ -1816,7 +1841,6 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     }
 
     static PyMethodDef _methods_SceneMeshRendererComponent[] = {
-        { "create", reinterpret_cast<PyCFunction>(SceneMeshRendererComponent_Create), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_SceneMeshRendererComponent, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SceneMeshRendererComponent), METH_O | METH_STATIC, nullptr },
         { }
@@ -1845,6 +1869,32 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_SceneMeshRendererComponent
+    };
+
+    static PyGetSetDef getset_SceneMeshRendererComponent_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_SceneMeshRendererComponent_Static[] = {
+        { "create", reinterpret_cast<PyCFunction>(SceneMeshRendererComponent_Create), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_SceneMeshRendererComponent_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SceneMeshRendererComponent_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SceneMeshRendererComponent_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SceneMeshRendererComponent_Static =
+    {
+        "winrt._winrt_windows_ui_composition_scenes.SceneMeshRendererComponent_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_SceneMeshRendererComponent_Static
     };
 
     // ----- SceneMetallicRoughnessMaterial class --------------------
@@ -2155,7 +2205,6 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     }
 
     static PyMethodDef _methods_SceneMetallicRoughnessMaterial[] = {
-        { "create", reinterpret_cast<PyCFunction>(SceneMetallicRoughnessMaterial_Create), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_SceneMetallicRoughnessMaterial, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SceneMetallicRoughnessMaterial), METH_O | METH_STATIC, nullptr },
         { }
@@ -2186,6 +2235,32 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_SceneMetallicRoughnessMaterial
+    };
+
+    static PyGetSetDef getset_SceneMetallicRoughnessMaterial_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_SceneMetallicRoughnessMaterial_Static[] = {
+        { "create", reinterpret_cast<PyCFunction>(SceneMetallicRoughnessMaterial_Create), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_SceneMetallicRoughnessMaterial_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SceneMetallicRoughnessMaterial_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SceneMetallicRoughnessMaterial_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SceneMetallicRoughnessMaterial_Static =
+    {
+        "winrt._winrt_windows_ui_composition_scenes.SceneMetallicRoughnessMaterial_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_SceneMetallicRoughnessMaterial_Static
     };
 
     // ----- SceneModelTransform class --------------------
@@ -2725,7 +2800,6 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     }
 
     static PyMethodDef _methods_SceneNode[] = {
-        { "create", reinterpret_cast<PyCFunction>(SceneNode_Create), METH_VARARGS | METH_STATIC, nullptr },
         { "find_first_component_of_type", reinterpret_cast<PyCFunction>(SceneNode_FindFirstComponentOfType), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SceneNode, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SceneNode), METH_O | METH_STATIC, nullptr },
@@ -2756,6 +2830,32 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_SceneNode
+    };
+
+    static PyGetSetDef getset_SceneNode_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_SceneNode_Static[] = {
+        { "create", reinterpret_cast<PyCFunction>(SceneNode_Create), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_SceneNode_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SceneNode_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SceneNode_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SceneNode_Static =
+    {
+        "winrt._winrt_windows_ui_composition_scenes.SceneNode_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_SceneNode_Static
     };
 
     // ----- SceneNodeCollection class --------------------
@@ -4275,7 +4375,6 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     }
 
     static PyMethodDef _methods_SceneSurfaceMaterialInput[] = {
-        { "create", reinterpret_cast<PyCFunction>(SceneSurfaceMaterialInput_Create), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_SceneSurfaceMaterialInput, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SceneSurfaceMaterialInput), METH_O | METH_STATIC, nullptr },
         { }
@@ -4305,6 +4404,32 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_SceneSurfaceMaterialInput
+    };
+
+    static PyGetSetDef getset_SceneSurfaceMaterialInput_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_SceneSurfaceMaterialInput_Static[] = {
+        { "create", reinterpret_cast<PyCFunction>(SceneSurfaceMaterialInput_Create), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_SceneSurfaceMaterialInput_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SceneSurfaceMaterialInput_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SceneSurfaceMaterialInput_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SceneSurfaceMaterialInput_Static =
+    {
+        "winrt._winrt_windows_ui_composition_scenes.SceneSurfaceMaterialInput_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_SceneSurfaceMaterialInput_Static
     };
 
     // ----- SceneVisual class --------------------
@@ -4427,7 +4552,6 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     }
 
     static PyMethodDef _methods_SceneVisual[] = {
-        { "create", reinterpret_cast<PyCFunction>(SceneVisual_Create), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_SceneVisual, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SceneVisual), METH_O | METH_STATIC, nullptr },
         { }
@@ -4454,6 +4578,32 @@ namespace py::cpp::Windows::UI::Composition::Scenes
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_SceneVisual
+    };
+
+    static PyGetSetDef getset_SceneVisual_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_SceneVisual_Static[] = {
+        { "create", reinterpret_cast<PyCFunction>(SceneVisual_Create), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_SceneVisual_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SceneVisual_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SceneVisual_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SceneVisual_Static =
+    {
+        "winrt._winrt_windows_ui_composition_scenes.SceneVisual_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_SceneVisual_Static
     };
 
     // ----- Windows.UI.Composition.Scenes Initialization --------------------
@@ -4527,7 +4677,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_composition_scenes(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SceneMesh, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_SceneMesh_Static{PyType_FromSpec(&type_spec_SceneMesh_Static)};
+    if (!type_SceneMesh_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_SceneMesh, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SceneMesh_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -4537,12 +4693,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_composition_scenes(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SceneMeshRendererComponent, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_SceneMeshRendererComponent_Static{PyType_FromSpec(&type_spec_SceneMeshRendererComponent_Static)};
+    if (!type_SceneMeshRendererComponent_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SceneMetallicRoughnessMaterial, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SceneMeshRendererComponent, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SceneMeshRendererComponent_Static.get())) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SceneMetallicRoughnessMaterial_Static{PyType_FromSpec(&type_spec_SceneMetallicRoughnessMaterial_Static)};
+    if (!type_SceneMetallicRoughnessMaterial_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_SceneMetallicRoughnessMaterial, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SceneMetallicRoughnessMaterial_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -4552,7 +4720,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_composition_scenes(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SceneNode, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_SceneNode_Static{PyType_FromSpec(&type_spec_SceneNode_Static)};
+    if (!type_SceneNode_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_SceneNode, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SceneNode_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -4577,12 +4751,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_composition_scenes(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SceneSurfaceMaterialInput, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_SceneSurfaceMaterialInput_Static{PyType_FromSpec(&type_spec_SceneSurfaceMaterialInput_Static)};
+    if (!type_SceneSurfaceMaterialInput_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SceneVisual, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SceneSurfaceMaterialInput, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SceneSurfaceMaterialInput_Static.get())) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SceneVisual_Static{PyType_FromSpec(&type_spec_SceneVisual_Static)};
+    if (!type_SceneVisual_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_SceneVisual, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SceneVisual_Static.get())) == -1)
     {
         return nullptr;
     }

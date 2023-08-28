@@ -1204,9 +1204,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
         { "close", reinterpret_cast<PyCFunction>(HidDevice_Close), METH_VARARGS, nullptr },
         { "create_feature_report", reinterpret_cast<PyCFunction>(HidDevice_CreateFeatureReport), METH_VARARGS, nullptr },
         { "create_output_report", reinterpret_cast<PyCFunction>(HidDevice_CreateOutputReport), METH_VARARGS, nullptr },
-        { "from_id_async", reinterpret_cast<PyCFunction>(HidDevice_FromIdAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "get_boolean_control_descriptions", reinterpret_cast<PyCFunction>(HidDevice_GetBooleanControlDescriptions), METH_VARARGS, nullptr },
-        { "get_device_selector", reinterpret_cast<PyCFunction>(HidDevice_GetDeviceSelector), METH_VARARGS | METH_STATIC, nullptr },
         { "get_feature_report_async", reinterpret_cast<PyCFunction>(HidDevice_GetFeatureReportAsync), METH_VARARGS, nullptr },
         { "get_input_report_async", reinterpret_cast<PyCFunction>(HidDevice_GetInputReportAsync), METH_VARARGS, nullptr },
         { "get_numeric_control_descriptions", reinterpret_cast<PyCFunction>(HidDevice_GetNumericControlDescriptions), METH_VARARGS, nullptr },
@@ -1246,6 +1244,33 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_HidDevice
+    };
+
+    static PyGetSetDef getset_HidDevice_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_HidDevice_Static[] = {
+        { "from_id_async", reinterpret_cast<PyCFunction>(HidDevice_FromIdAsync), METH_VARARGS, nullptr },
+        { "get_device_selector", reinterpret_cast<PyCFunction>(HidDevice_GetDeviceSelector), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_HidDevice_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_HidDevice_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_HidDevice_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_HidDevice_Static =
+    {
+        "winrt._winrt_windows_devices_humaninterfacedevice.HidDevice_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_HidDevice_Static
     };
 
     // ----- HidFeatureReport class --------------------
@@ -2865,7 +2890,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_humaninterfacedevice(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HidDevice, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_HidDevice_Static{PyType_FromSpec(&type_spec_HidDevice_Static)};
+    if (!type_HidDevice_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_HidDevice, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HidDevice_Static.get())) == -1)
     {
         return nullptr;
     }

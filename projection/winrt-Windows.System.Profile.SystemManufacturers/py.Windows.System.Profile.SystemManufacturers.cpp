@@ -188,25 +188,30 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
         _type_slots_SmbiosInformation
     };
 
-    static PyGetSetDef getset_SmbiosInformation_Meta[] = {
+    static PyGetSetDef getset_SmbiosInformation_Static[] = {
         { "serial_number", reinterpret_cast<getter>(SmbiosInformation_get_SerialNumber), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_SmbiosInformation_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_SmbiosInformation_Meta) },
+    static PyMethodDef methods_SmbiosInformation_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_SmbiosInformation_Meta =
+    static PyType_Slot type_slots_SmbiosInformation_Static[] = 
     {
-        "winrt._winrt_windows_system_profile_systemmanufacturers.SmbiosInformation_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SmbiosInformation_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SmbiosInformation_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SmbiosInformation_Static =
+    {
+        "winrt._winrt_windows_system_profile_systemmanufacturers.SmbiosInformation_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SmbiosInformation_Meta
+        type_slots_SmbiosInformation_Static
     };
 
     // ----- SystemSupportDeviceInfo class --------------------
@@ -509,27 +514,32 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
         _type_slots_SystemSupportInfo
     };
 
-    static PyGetSetDef getset_SystemSupportInfo_Meta[] = {
+    static PyGetSetDef getset_SystemSupportInfo_Static[] = {
         { "local_system_edition", reinterpret_cast<getter>(SystemSupportInfo_get_LocalSystemEdition), nullptr, nullptr, nullptr },
         { "oem_support_info", reinterpret_cast<getter>(SystemSupportInfo_get_OemSupportInfo), nullptr, nullptr, nullptr },
         { "local_device_info", reinterpret_cast<getter>(SystemSupportInfo_get_LocalDeviceInfo), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_SystemSupportInfo_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_SystemSupportInfo_Meta) },
+    static PyMethodDef methods_SystemSupportInfo_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_SystemSupportInfo_Meta =
+    static PyType_Slot type_slots_SystemSupportInfo_Static[] = 
     {
-        "winrt._winrt_windows_system_profile_systemmanufacturers.SystemSupportInfo_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SystemSupportInfo_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SystemSupportInfo_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SystemSupportInfo_Static =
+    {
+        "winrt._winrt_windows_system_profile_systemmanufacturers.SystemSupportInfo_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SystemSupportInfo_Meta
+        type_slots_SystemSupportInfo_Static
     };
 
     // ----- Windows.System.Profile.SystemManufacturers Initialization --------------------
@@ -583,13 +593,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_profile_systemmanufacturers(void) no
         return nullptr;
     }
 
-    py::pyobj_handle type_SmbiosInformation_Meta{PyType_FromSpec(&type_spec_SmbiosInformation_Meta)};
-    if (!type_SmbiosInformation_Meta)
+    py::pyobj_handle type_SmbiosInformation_Static{PyType_FromSpec(&type_spec_SmbiosInformation_Static)};
+    if (!type_SmbiosInformation_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SmbiosInformation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SmbiosInformation_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SmbiosInformation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SmbiosInformation_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -599,13 +609,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_profile_systemmanufacturers(void) no
         return nullptr;
     }
 
-    py::pyobj_handle type_SystemSupportInfo_Meta{PyType_FromSpec(&type_spec_SystemSupportInfo_Meta)};
-    if (!type_SystemSupportInfo_Meta)
+    py::pyobj_handle type_SystemSupportInfo_Static{PyType_FromSpec(&type_spec_SystemSupportInfo_Static)};
+    if (!type_SystemSupportInfo_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SystemSupportInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemSupportInfo_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SystemSupportInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemSupportInfo_Static.get())) == -1)
     {
         return nullptr;
     }

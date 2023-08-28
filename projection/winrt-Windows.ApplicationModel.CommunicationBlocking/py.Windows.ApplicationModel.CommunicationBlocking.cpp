@@ -188,11 +188,6 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
     }
 
     static PyMethodDef _methods_CommunicationBlockingAccessManager[] = {
-        { "is_blocked_number_async", reinterpret_cast<PyCFunction>(CommunicationBlockingAccessManager_IsBlockedNumberAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "show_block_numbers_u_i", reinterpret_cast<PyCFunction>(CommunicationBlockingAccessManager_ShowBlockNumbersUI), METH_VARARGS | METH_STATIC, nullptr },
-        { "show_blocked_calls_u_i", reinterpret_cast<PyCFunction>(CommunicationBlockingAccessManager_ShowBlockedCallsUI), METH_VARARGS | METH_STATIC, nullptr },
-        { "show_blocked_messages_u_i", reinterpret_cast<PyCFunction>(CommunicationBlockingAccessManager_ShowBlockedMessagesUI), METH_VARARGS | METH_STATIC, nullptr },
-        { "show_unblock_numbers_u_i", reinterpret_cast<PyCFunction>(CommunicationBlockingAccessManager_ShowUnblockNumbersUI), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -217,25 +212,35 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
         _type_slots_CommunicationBlockingAccessManager
     };
 
-    static PyGetSetDef getset_CommunicationBlockingAccessManager_Meta[] = {
+    static PyGetSetDef getset_CommunicationBlockingAccessManager_Static[] = {
         { "is_blocking_active", reinterpret_cast<getter>(CommunicationBlockingAccessManager_get_IsBlockingActive), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_CommunicationBlockingAccessManager_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_CommunicationBlockingAccessManager_Meta) },
+    static PyMethodDef methods_CommunicationBlockingAccessManager_Static[] = {
+        { "is_blocked_number_async", reinterpret_cast<PyCFunction>(CommunicationBlockingAccessManager_IsBlockedNumberAsync), METH_VARARGS, nullptr },
+        { "show_block_numbers_u_i", reinterpret_cast<PyCFunction>(CommunicationBlockingAccessManager_ShowBlockNumbersUI), METH_VARARGS, nullptr },
+        { "show_blocked_calls_u_i", reinterpret_cast<PyCFunction>(CommunicationBlockingAccessManager_ShowBlockedCallsUI), METH_VARARGS, nullptr },
+        { "show_blocked_messages_u_i", reinterpret_cast<PyCFunction>(CommunicationBlockingAccessManager_ShowBlockedMessagesUI), METH_VARARGS, nullptr },
+        { "show_unblock_numbers_u_i", reinterpret_cast<PyCFunction>(CommunicationBlockingAccessManager_ShowUnblockNumbersUI), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_CommunicationBlockingAccessManager_Meta =
+    static PyType_Slot type_slots_CommunicationBlockingAccessManager_Static[] = 
     {
-        "winrt._winrt_windows_applicationmodel_communicationblocking.CommunicationBlockingAccessManager_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CommunicationBlockingAccessManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CommunicationBlockingAccessManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CommunicationBlockingAccessManager_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_communicationblocking.CommunicationBlockingAccessManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_CommunicationBlockingAccessManager_Meta
+        type_slots_CommunicationBlockingAccessManager_Static
     };
 
     // ----- CommunicationBlockingAppManager class --------------------
@@ -326,8 +331,6 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
     }
 
     static PyMethodDef _methods_CommunicationBlockingAppManager[] = {
-        { "request_set_as_active_blocking_app_async", reinterpret_cast<PyCFunction>(CommunicationBlockingAppManager_RequestSetAsActiveBlockingAppAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "show_communication_blocking_settings_u_i", reinterpret_cast<PyCFunction>(CommunicationBlockingAppManager_ShowCommunicationBlockingSettingsUI), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -352,25 +355,32 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
         _type_slots_CommunicationBlockingAppManager
     };
 
-    static PyGetSetDef getset_CommunicationBlockingAppManager_Meta[] = {
+    static PyGetSetDef getset_CommunicationBlockingAppManager_Static[] = {
         { "is_current_app_active_blocking_app", reinterpret_cast<getter>(CommunicationBlockingAppManager_get_IsCurrentAppActiveBlockingApp), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_CommunicationBlockingAppManager_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_CommunicationBlockingAppManager_Meta) },
+    static PyMethodDef methods_CommunicationBlockingAppManager_Static[] = {
+        { "request_set_as_active_blocking_app_async", reinterpret_cast<PyCFunction>(CommunicationBlockingAppManager_RequestSetAsActiveBlockingAppAsync), METH_VARARGS, nullptr },
+        { "show_communication_blocking_settings_u_i", reinterpret_cast<PyCFunction>(CommunicationBlockingAppManager_ShowCommunicationBlockingSettingsUI), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_CommunicationBlockingAppManager_Meta =
+    static PyType_Slot type_slots_CommunicationBlockingAppManager_Static[] = 
     {
-        "winrt._winrt_windows_applicationmodel_communicationblocking.CommunicationBlockingAppManager_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CommunicationBlockingAppManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CommunicationBlockingAppManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CommunicationBlockingAppManager_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_communicationblocking.CommunicationBlockingAppManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_CommunicationBlockingAppManager_Meta
+        type_slots_CommunicationBlockingAppManager_Static
     };
 
     // ----- Windows.ApplicationModel.CommunicationBlocking Initialization --------------------
@@ -419,24 +429,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_communicationblocking(void
         return nullptr;
     }
 
-    py::pyobj_handle type_CommunicationBlockingAccessManager_Meta{PyType_FromSpec(&type_spec_CommunicationBlockingAccessManager_Meta)};
-    if (!type_CommunicationBlockingAccessManager_Meta)
+    py::pyobj_handle type_CommunicationBlockingAccessManager_Static{PyType_FromSpec(&type_spec_CommunicationBlockingAccessManager_Static)};
+    if (!type_CommunicationBlockingAccessManager_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CommunicationBlockingAccessManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CommunicationBlockingAccessManager_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CommunicationBlockingAccessManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CommunicationBlockingAccessManager_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_CommunicationBlockingAppManager_Meta{PyType_FromSpec(&type_spec_CommunicationBlockingAppManager_Meta)};
-    if (!type_CommunicationBlockingAppManager_Meta)
+    py::pyobj_handle type_CommunicationBlockingAppManager_Static{PyType_FromSpec(&type_spec_CommunicationBlockingAppManager_Static)};
+    if (!type_CommunicationBlockingAppManager_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CommunicationBlockingAppManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CommunicationBlockingAppManager_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CommunicationBlockingAppManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CommunicationBlockingAppManager_Static.get())) == -1)
     {
         return nullptr;
     }

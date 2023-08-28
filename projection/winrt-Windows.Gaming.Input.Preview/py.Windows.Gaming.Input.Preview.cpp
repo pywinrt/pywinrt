@@ -78,8 +78,6 @@ namespace py::cpp::Windows::Gaming::Input::Preview
     }
 
     static PyMethodDef _methods_GameControllerProviderInfo[] = {
-        { "get_parent_provider_id", reinterpret_cast<PyCFunction>(GameControllerProviderInfo_GetParentProviderId), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_provider_id", reinterpret_cast<PyCFunction>(GameControllerProviderInfo_GetProviderId), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -102,6 +100,33 @@ namespace py::cpp::Windows::Gaming::Input::Preview
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_GameControllerProviderInfo
+    };
+
+    static PyGetSetDef getset_GameControllerProviderInfo_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_GameControllerProviderInfo_Static[] = {
+        { "get_parent_provider_id", reinterpret_cast<PyCFunction>(GameControllerProviderInfo_GetParentProviderId), METH_VARARGS, nullptr },
+        { "get_provider_id", reinterpret_cast<PyCFunction>(GameControllerProviderInfo_GetProviderId), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_GameControllerProviderInfo_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_GameControllerProviderInfo_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_GameControllerProviderInfo_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_GameControllerProviderInfo_Static =
+    {
+        "winrt._winrt_windows_gaming_input_preview.GameControllerProviderInfo_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_GameControllerProviderInfo_Static
     };
 
     // ----- Windows.Gaming.Input.Preview Initialization --------------------
@@ -150,7 +175,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_input_preview(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GameControllerProviderInfo, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_GameControllerProviderInfo_Static{PyType_FromSpec(&type_spec_GameControllerProviderInfo_Static)};
+    if (!type_GameControllerProviderInfo_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_GameControllerProviderInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GameControllerProviderInfo_Static.get())) == -1)
     {
         return nullptr;
     }

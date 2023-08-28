@@ -1584,8 +1584,6 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyMethodDef _methods_CallControl[] = {
         { "end_call", reinterpret_cast<PyCFunction>(CallControl_EndCall), METH_VARARGS, nullptr },
-        { "from_id", reinterpret_cast<PyCFunction>(CallControl_FromId), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_default", reinterpret_cast<PyCFunction>(CallControl_GetDefault), METH_VARARGS | METH_STATIC, nullptr },
         { "indicate_active_call", reinterpret_cast<PyCFunction>(CallControl_IndicateActiveCall), METH_VARARGS, nullptr },
         { "indicate_new_incoming_call", reinterpret_cast<PyCFunction>(CallControl_IndicateNewIncomingCall), METH_VARARGS, nullptr },
         { "indicate_new_outgoing_call", reinterpret_cast<PyCFunction>(CallControl_IndicateNewOutgoingCall), METH_VARARGS, nullptr },
@@ -1627,6 +1625,33 @@ namespace py::cpp::Windows::Media::Devices
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_CallControl
+    };
+
+    static PyGetSetDef getset_CallControl_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_CallControl_Static[] = {
+        { "from_id", reinterpret_cast<PyCFunction>(CallControl_FromId), METH_VARARGS, nullptr },
+        { "get_default", reinterpret_cast<PyCFunction>(CallControl_GetDefault), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_CallControl_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CallControl_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CallControl_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CallControl_Static =
+    {
+        "winrt._winrt_windows_media_devices.CallControl_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CallControl_Static
     };
 
     // ----- CameraOcclusionInfo class --------------------
@@ -6785,11 +6810,6 @@ namespace py::cpp::Windows::Media::Devices
     }
 
     static PyMethodDef _methods_MediaDevice[] = {
-        { "get_audio_capture_selector", reinterpret_cast<PyCFunction>(MediaDevice_GetAudioCaptureSelector), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_audio_render_selector", reinterpret_cast<PyCFunction>(MediaDevice_GetAudioRenderSelector), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_default_audio_capture_id", reinterpret_cast<PyCFunction>(MediaDevice_GetDefaultAudioCaptureId), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_default_audio_render_id", reinterpret_cast<PyCFunction>(MediaDevice_GetDefaultAudioRenderId), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_video_capture_selector", reinterpret_cast<PyCFunction>(MediaDevice_GetVideoCaptureSelector), METH_VARARGS | METH_STATIC, nullptr },
         { "add_default_audio_capture_device_changed", reinterpret_cast<PyCFunction>(MediaDevice_add_DefaultAudioCaptureDeviceChanged), METH_O | METH_STATIC, nullptr },
         { "remove_default_audio_capture_device_changed", reinterpret_cast<PyCFunction>(MediaDevice_remove_DefaultAudioCaptureDeviceChanged), METH_O | METH_STATIC, nullptr },
         { "add_default_audio_render_device_changed", reinterpret_cast<PyCFunction>(MediaDevice_add_DefaultAudioRenderDeviceChanged), METH_O | METH_STATIC, nullptr },
@@ -6816,6 +6836,36 @@ namespace py::cpp::Windows::Media::Devices
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_MediaDevice
+    };
+
+    static PyGetSetDef getset_MediaDevice_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_MediaDevice_Static[] = {
+        { "get_audio_capture_selector", reinterpret_cast<PyCFunction>(MediaDevice_GetAudioCaptureSelector), METH_VARARGS, nullptr },
+        { "get_audio_render_selector", reinterpret_cast<PyCFunction>(MediaDevice_GetAudioRenderSelector), METH_VARARGS, nullptr },
+        { "get_default_audio_capture_id", reinterpret_cast<PyCFunction>(MediaDevice_GetDefaultAudioCaptureId), METH_VARARGS, nullptr },
+        { "get_default_audio_render_id", reinterpret_cast<PyCFunction>(MediaDevice_GetDefaultAudioRenderId), METH_VARARGS, nullptr },
+        { "get_video_capture_selector", reinterpret_cast<PyCFunction>(MediaDevice_GetVideoCaptureSelector), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_MediaDevice_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_MediaDevice_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_MediaDevice_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_MediaDevice_Static =
+    {
+        "winrt._winrt_windows_media_devices.MediaDevice_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_MediaDevice_Static
     };
 
     // ----- MediaDeviceControl class --------------------
@@ -11537,7 +11587,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_devices(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CallControl, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_CallControl_Static{PyType_FromSpec(&type_spec_CallControl_Static)};
+    if (!type_CallControl_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_CallControl, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CallControl_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -11647,7 +11703,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_devices(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MediaDevice, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_MediaDevice_Static{PyType_FromSpec(&type_spec_MediaDevice_Static)};
+    if (!type_MediaDevice_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_MediaDevice, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MediaDevice_Static.get())) == -1)
     {
         return nullptr;
     }

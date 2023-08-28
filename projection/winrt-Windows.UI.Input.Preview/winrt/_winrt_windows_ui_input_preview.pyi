@@ -13,9 +13,10 @@ import winrt.windows.ui.windowmanagement
 
 Self = typing.TypeVar('Self')
 
-class InputActivationListenerPreview(winrt.system.Object):
+class InputActivationListenerPreview_Static(type):
+    def create_for_application_window(cls, window: typing.Optional[winrt.windows.ui.windowmanagement.AppWindow], /) -> typing.Optional[winrt.windows.ui.input.InputActivationListener]: ...
+
+class InputActivationListenerPreview(winrt.system.Object, metaclass=InputActivationListenerPreview_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InputActivationListenerPreview: ...
-    @staticmethod
-    def create_for_application_window(window: typing.Optional[winrt.windows.ui.windowmanagement.AppWindow], /) -> typing.Optional[winrt.windows.ui.input.InputActivationListener]: ...
 

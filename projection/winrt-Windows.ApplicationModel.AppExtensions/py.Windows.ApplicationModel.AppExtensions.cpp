@@ -604,7 +604,6 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
 
     static PyMethodDef _methods_AppExtensionCatalog[] = {
         { "find_all_async", reinterpret_cast<PyCFunction>(AppExtensionCatalog_FindAllAsync), METH_VARARGS, nullptr },
-        { "open", reinterpret_cast<PyCFunction>(AppExtensionCatalog_Open), METH_VARARGS | METH_STATIC, nullptr },
         { "request_remove_package_async", reinterpret_cast<PyCFunction>(AppExtensionCatalog_RequestRemovePackageAsync), METH_VARARGS, nullptr },
         { "add_package_installed", reinterpret_cast<PyCFunction>(AppExtensionCatalog_add_PackageInstalled), METH_O, nullptr },
         { "remove_package_installed", reinterpret_cast<PyCFunction>(AppExtensionCatalog_remove_PackageInstalled), METH_O, nullptr },
@@ -641,6 +640,32 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_AppExtensionCatalog
+    };
+
+    static PyGetSetDef getset_AppExtensionCatalog_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_AppExtensionCatalog_Static[] = {
+        { "open", reinterpret_cast<PyCFunction>(AppExtensionCatalog_Open), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_AppExtensionCatalog_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_AppExtensionCatalog_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_AppExtensionCatalog_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_AppExtensionCatalog_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_appextensions.AppExtensionCatalog_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_AppExtensionCatalog_Static
     };
 
     // ----- AppExtensionPackageInstalledEventArgs class --------------------
@@ -1279,7 +1304,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_appextensions(void) noexce
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppExtensionCatalog, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_AppExtensionCatalog_Static{PyType_FromSpec(&type_spec_AppExtensionCatalog_Static)};
+    if (!type_AppExtensionCatalog_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_AppExtensionCatalog, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppExtensionCatalog_Static.get())) == -1)
     {
         return nullptr;
     }

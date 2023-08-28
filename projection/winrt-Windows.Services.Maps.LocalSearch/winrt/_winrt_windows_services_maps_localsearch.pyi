@@ -18,17 +18,27 @@ from winrt.windows.services.maps.localsearch import LocalLocationFinderStatus
 
 Self = typing.TypeVar('Self')
 
-class LocalCategories(winrt.system.Object):
+class LocalCategories_Static(type):
+    @_property
+    def all(cls) -> str: ...
+    @_property
+    def bank_and_credit_unions(cls) -> str: ...
+    @_property
+    def eat_drink(cls) -> str: ...
+    @_property
+    def hospitals(cls) -> str: ...
+    @_property
+    def hotels_and_motels(cls) -> str: ...
+    @_property
+    def parking(cls) -> str: ...
+    @_property
+    def see_do(cls) -> str: ...
+    @_property
+    def shop(cls) -> str: ...
+
+class LocalCategories(winrt.system.Object, metaclass=LocalCategories_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LocalCategories: ...
-    all: typing.ClassVar[str]
-    bank_and_credit_unions: typing.ClassVar[str]
-    eat_drink: typing.ClassVar[str]
-    hospitals: typing.ClassVar[str]
-    hotels_and_motels: typing.ClassVar[str]
-    parking: typing.ClassVar[str]
-    see_do: typing.ClassVar[str]
-    shop: typing.ClassVar[str]
 
 class LocalLocation(winrt.system.Object):
     @staticmethod
@@ -54,11 +64,12 @@ class LocalLocation(winrt.system.Object):
     @_property
     def rating_info(self) -> typing.Optional[LocalLocationRatingInfo]: ...
 
-class LocalLocationFinder(winrt.system.Object):
+class LocalLocationFinder_Static(type):
+    def find_local_locations_async(cls, search_term: str, search_area: typing.Optional[winrt.windows.devices.geolocation.Geocircle], local_category: str, max_results: winrt.system.UInt32, /) -> winrt.windows.foundation.IAsyncOperation[LocalLocationFinderResult]: ...
+
+class LocalLocationFinder(winrt.system.Object, metaclass=LocalLocationFinder_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LocalLocationFinder: ...
-    @staticmethod
-    def find_local_locations_async(search_term: str, search_area: typing.Optional[winrt.windows.devices.geolocation.Geocircle], local_category: str, max_results: winrt.system.UInt32, /) -> winrt.windows.foundation.IAsyncOperation[LocalLocationFinderResult]: ...
 
 class LocalLocationFinderResult(winrt.system.Object):
     @staticmethod
@@ -88,9 +99,10 @@ class LocalLocationRatingInfo(winrt.system.Object):
     @_property
     def rating_count(self) -> typing.Optional[typing.Optional[winrt.system.Int32]]: ...
 
-class PlaceInfoHelper(winrt.system.Object):
+class PlaceInfoHelper_Static(type):
+    def create_from_local_location(cls, location: typing.Optional[LocalLocation], /) -> typing.Optional[winrt.windows.services.maps.PlaceInfo]: ...
+
+class PlaceInfoHelper(winrt.system.Object, metaclass=PlaceInfoHelper_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlaceInfoHelper: ...
-    @staticmethod
-    def create_from_local_location(location: typing.Optional[LocalLocation], /) -> typing.Optional[winrt.windows.services.maps.PlaceInfo]: ...
 

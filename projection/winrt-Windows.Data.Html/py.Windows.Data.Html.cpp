@@ -47,7 +47,6 @@ namespace py::cpp::Windows::Data::Html
     }
 
     static PyMethodDef _methods_HtmlUtilities[] = {
-        { "convert_to_text", reinterpret_cast<PyCFunction>(HtmlUtilities_ConvertToText), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -70,6 +69,32 @@ namespace py::cpp::Windows::Data::Html
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_HtmlUtilities
+    };
+
+    static PyGetSetDef getset_HtmlUtilities_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_HtmlUtilities_Static[] = {
+        { "convert_to_text", reinterpret_cast<PyCFunction>(HtmlUtilities_ConvertToText), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_HtmlUtilities_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_HtmlUtilities_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_HtmlUtilities_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_HtmlUtilities_Static =
+    {
+        "winrt._winrt_windows_data_html.HtmlUtilities_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_HtmlUtilities_Static
     };
 
     // ----- Windows.Data.Html Initialization --------------------
@@ -118,7 +143,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_data_html(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HtmlUtilities, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_HtmlUtilities_Static{PyType_FromSpec(&type_spec_HtmlUtilities_Static)};
+    if (!type_HtmlUtilities_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_HtmlUtilities, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HtmlUtilities_Static.get())) == -1)
     {
         return nullptr;
     }

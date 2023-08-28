@@ -270,12 +270,6 @@ namespace py::cpp::Windows::UI::ApplicationSettings
     }
 
     static PyMethodDef _methods_AccountsSettingsPane[] = {
-        { "get_for_current_view", reinterpret_cast<PyCFunction>(AccountsSettingsPane_GetForCurrentView), METH_VARARGS | METH_STATIC, nullptr },
-        { "show", reinterpret_cast<PyCFunction>(AccountsSettingsPane_Show), METH_VARARGS | METH_STATIC, nullptr },
-        { "show_add_account_async", reinterpret_cast<PyCFunction>(AccountsSettingsPane_ShowAddAccountAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "show_add_account_for_user_async", reinterpret_cast<PyCFunction>(AccountsSettingsPane_ShowAddAccountForUserAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "show_manage_accounts_async", reinterpret_cast<PyCFunction>(AccountsSettingsPane_ShowManageAccountsAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "show_manage_accounts_for_user_async", reinterpret_cast<PyCFunction>(AccountsSettingsPane_ShowManageAccountsForUserAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "add_account_commands_requested", reinterpret_cast<PyCFunction>(AccountsSettingsPane_add_AccountCommandsRequested), METH_O, nullptr },
         { "remove_account_commands_requested", reinterpret_cast<PyCFunction>(AccountsSettingsPane_remove_AccountCommandsRequested), METH_O, nullptr },
         { "_assign_array_", _assign_array_AccountsSettingsPane, METH_O | METH_STATIC, nullptr },
@@ -303,6 +297,37 @@ namespace py::cpp::Windows::UI::ApplicationSettings
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_AccountsSettingsPane
+    };
+
+    static PyGetSetDef getset_AccountsSettingsPane_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_AccountsSettingsPane_Static[] = {
+        { "get_for_current_view", reinterpret_cast<PyCFunction>(AccountsSettingsPane_GetForCurrentView), METH_VARARGS, nullptr },
+        { "show", reinterpret_cast<PyCFunction>(AccountsSettingsPane_Show), METH_VARARGS, nullptr },
+        { "show_add_account_async", reinterpret_cast<PyCFunction>(AccountsSettingsPane_ShowAddAccountAsync), METH_VARARGS, nullptr },
+        { "show_add_account_for_user_async", reinterpret_cast<PyCFunction>(AccountsSettingsPane_ShowAddAccountForUserAsync), METH_VARARGS, nullptr },
+        { "show_manage_accounts_async", reinterpret_cast<PyCFunction>(AccountsSettingsPane_ShowManageAccountsAsync), METH_VARARGS, nullptr },
+        { "show_manage_accounts_for_user_async", reinterpret_cast<PyCFunction>(AccountsSettingsPane_ShowManageAccountsForUserAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_AccountsSettingsPane_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_AccountsSettingsPane_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_AccountsSettingsPane_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_AccountsSettingsPane_Static =
+    {
+        "winrt._winrt_windows_ui_applicationsettings.AccountsSettingsPane_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_AccountsSettingsPane_Static
     };
 
     // ----- AccountsSettingsPaneCommandsRequestedEventArgs class --------------------
@@ -1059,25 +1084,30 @@ namespace py::cpp::Windows::UI::ApplicationSettings
         _type_slots_SettingsCommand
     };
 
-    static PyGetSetDef getset_SettingsCommand_Meta[] = {
+    static PyGetSetDef getset_SettingsCommand_Static[] = {
         { "accounts_command", reinterpret_cast<getter>(SettingsCommand_get_AccountsCommand), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_SettingsCommand_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_SettingsCommand_Meta) },
+    static PyMethodDef methods_SettingsCommand_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_SettingsCommand_Meta =
+    static PyType_Slot type_slots_SettingsCommand_Static[] = 
     {
-        "winrt._winrt_windows_ui_applicationsettings.SettingsCommand_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SettingsCommand_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SettingsCommand_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SettingsCommand_Static =
+    {
+        "winrt._winrt_windows_ui_applicationsettings.SettingsCommand_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SettingsCommand_Meta
+        type_slots_SettingsCommand_Static
     };
 
     // ----- SettingsPane class --------------------
@@ -1243,8 +1273,6 @@ namespace py::cpp::Windows::UI::ApplicationSettings
     }
 
     static PyMethodDef _methods_SettingsPane[] = {
-        { "get_for_current_view", reinterpret_cast<PyCFunction>(SettingsPane_GetForCurrentView), METH_VARARGS | METH_STATIC, nullptr },
-        { "show", reinterpret_cast<PyCFunction>(SettingsPane_Show), METH_VARARGS | METH_STATIC, nullptr },
         { "add_commands_requested", reinterpret_cast<PyCFunction>(SettingsPane_add_CommandsRequested), METH_O, nullptr },
         { "remove_commands_requested", reinterpret_cast<PyCFunction>(SettingsPane_remove_CommandsRequested), METH_O, nullptr },
         { "_assign_array_", _assign_array_SettingsPane, METH_O | METH_STATIC, nullptr },
@@ -1274,25 +1302,32 @@ namespace py::cpp::Windows::UI::ApplicationSettings
         _type_slots_SettingsPane
     };
 
-    static PyGetSetDef getset_SettingsPane_Meta[] = {
+    static PyGetSetDef getset_SettingsPane_Static[] = {
         { "edge", reinterpret_cast<getter>(SettingsPane_get_Edge), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_SettingsPane_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_SettingsPane_Meta) },
+    static PyMethodDef methods_SettingsPane_Static[] = {
+        { "get_for_current_view", reinterpret_cast<PyCFunction>(SettingsPane_GetForCurrentView), METH_VARARGS, nullptr },
+        { "show", reinterpret_cast<PyCFunction>(SettingsPane_Show), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_SettingsPane_Meta =
+    static PyType_Slot type_slots_SettingsPane_Static[] = 
     {
-        "winrt._winrt_windows_ui_applicationsettings.SettingsPane_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SettingsPane_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SettingsPane_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SettingsPane_Static =
+    {
+        "winrt._winrt_windows_ui_applicationsettings.SettingsPane_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SettingsPane_Meta
+        type_slots_SettingsPane_Static
     };
 
     // ----- SettingsPaneCommandsRequest class --------------------
@@ -1897,7 +1932,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_applicationsettings(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AccountsSettingsPane, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_AccountsSettingsPane_Static{PyType_FromSpec(&type_spec_AccountsSettingsPane_Static)};
+    if (!type_AccountsSettingsPane_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_AccountsSettingsPane, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AccountsSettingsPane_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -1917,24 +1958,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_applicationsettings(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_SettingsCommand_Meta{PyType_FromSpec(&type_spec_SettingsCommand_Meta)};
-    if (!type_SettingsCommand_Meta)
+    py::pyobj_handle type_SettingsCommand_Static{PyType_FromSpec(&type_spec_SettingsCommand_Static)};
+    if (!type_SettingsCommand_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SettingsCommand, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SettingsCommand_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SettingsCommand, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SettingsCommand_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SettingsPane_Meta{PyType_FromSpec(&type_spec_SettingsPane_Meta)};
-    if (!type_SettingsPane_Meta)
+    py::pyobj_handle type_SettingsPane_Static{PyType_FromSpec(&type_spec_SettingsPane_Static)};
+    if (!type_SettingsPane_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SettingsPane, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SettingsPane_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SettingsPane, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SettingsPane_Static.get())) == -1)
     {
         return nullptr;
     }

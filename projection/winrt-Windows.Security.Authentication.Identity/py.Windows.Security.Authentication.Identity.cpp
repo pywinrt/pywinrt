@@ -293,25 +293,30 @@ namespace py::cpp::Windows::Security::Authentication::Identity
         _type_slots_EnterpriseKeyCredentialRegistrationManager
     };
 
-    static PyGetSetDef getset_EnterpriseKeyCredentialRegistrationManager_Meta[] = {
+    static PyGetSetDef getset_EnterpriseKeyCredentialRegistrationManager_Static[] = {
         { "current", reinterpret_cast<getter>(EnterpriseKeyCredentialRegistrationManager_get_Current), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_EnterpriseKeyCredentialRegistrationManager_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_EnterpriseKeyCredentialRegistrationManager_Meta) },
+    static PyMethodDef methods_EnterpriseKeyCredentialRegistrationManager_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_EnterpriseKeyCredentialRegistrationManager_Meta =
+    static PyType_Slot type_slots_EnterpriseKeyCredentialRegistrationManager_Static[] = 
     {
-        "winrt._winrt_windows_security_authentication_identity.EnterpriseKeyCredentialRegistrationManager_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_EnterpriseKeyCredentialRegistrationManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_EnterpriseKeyCredentialRegistrationManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_EnterpriseKeyCredentialRegistrationManager_Static =
+    {
+        "winrt._winrt_windows_security_authentication_identity.EnterpriseKeyCredentialRegistrationManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_EnterpriseKeyCredentialRegistrationManager_Meta
+        type_slots_EnterpriseKeyCredentialRegistrationManager_Static
     };
 
     // ----- Windows.Security.Authentication.Identity Initialization --------------------
@@ -365,13 +370,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_identity(void) noex
         return nullptr;
     }
 
-    py::pyobj_handle type_EnterpriseKeyCredentialRegistrationManager_Meta{PyType_FromSpec(&type_spec_EnterpriseKeyCredentialRegistrationManager_Meta)};
-    if (!type_EnterpriseKeyCredentialRegistrationManager_Meta)
+    py::pyobj_handle type_EnterpriseKeyCredentialRegistrationManager_Static{PyType_FromSpec(&type_spec_EnterpriseKeyCredentialRegistrationManager_Static)};
+    if (!type_EnterpriseKeyCredentialRegistrationManager_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EnterpriseKeyCredentialRegistrationManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EnterpriseKeyCredentialRegistrationManager_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EnterpriseKeyCredentialRegistrationManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EnterpriseKeyCredentialRegistrationManager_Static.get())) == -1)
     {
         return nullptr;
     }

@@ -456,7 +456,7 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
         _type_slots_Line
     };
 
-    static PyGetSetDef getset_Line_Meta[] = {
+    static PyGetSetDef getset_Line_Static[] = {
         { "x1_property", reinterpret_cast<getter>(Line_get_X1Property), nullptr, nullptr, nullptr },
         { "x2_property", reinterpret_cast<getter>(Line_get_X2Property), nullptr, nullptr, nullptr },
         { "y1_property", reinterpret_cast<getter>(Line_get_Y1Property), nullptr, nullptr, nullptr },
@@ -464,20 +464,25 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
         { }
     };
 
-    static PyType_Slot type_slots_Line_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_Line_Meta) },
+    static PyMethodDef methods_Line_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_Line_Meta =
+    static PyType_Slot type_slots_Line_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_shapes.Line_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Line_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Line_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Line_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_shapes.Line_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Line_Meta
+        type_slots_Line_Static
     };
 
     // ----- Path class --------------------
@@ -638,25 +643,30 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
         _type_slots_Path
     };
 
-    static PyGetSetDef getset_Path_Meta[] = {
+    static PyGetSetDef getset_Path_Static[] = {
         { "data_property", reinterpret_cast<getter>(Path_get_DataProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_Path_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_Path_Meta) },
+    static PyMethodDef methods_Path_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_Path_Meta =
+    static PyType_Slot type_slots_Path_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_shapes.Path_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Path_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Path_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Path_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_shapes.Path_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Path_Meta
+        type_slots_Path_Static
     };
 
     // ----- Polygon class --------------------
@@ -884,26 +894,31 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
         _type_slots_Polygon
     };
 
-    static PyGetSetDef getset_Polygon_Meta[] = {
+    static PyGetSetDef getset_Polygon_Static[] = {
         { "fill_rule_property", reinterpret_cast<getter>(Polygon_get_FillRuleProperty), nullptr, nullptr, nullptr },
         { "points_property", reinterpret_cast<getter>(Polygon_get_PointsProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_Polygon_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_Polygon_Meta) },
+    static PyMethodDef methods_Polygon_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_Polygon_Meta =
+    static PyType_Slot type_slots_Polygon_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_shapes.Polygon_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Polygon_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Polygon_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Polygon_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_shapes.Polygon_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Polygon_Meta
+        type_slots_Polygon_Static
     };
 
     // ----- Polyline class --------------------
@@ -1131,26 +1146,31 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
         _type_slots_Polyline
     };
 
-    static PyGetSetDef getset_Polyline_Meta[] = {
+    static PyGetSetDef getset_Polyline_Static[] = {
         { "fill_rule_property", reinterpret_cast<getter>(Polyline_get_FillRuleProperty), nullptr, nullptr, nullptr },
         { "points_property", reinterpret_cast<getter>(Polyline_get_PointsProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_Polyline_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_Polyline_Meta) },
+    static PyMethodDef methods_Polyline_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_Polyline_Meta =
+    static PyType_Slot type_slots_Polyline_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_shapes.Polyline_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Polyline_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Polyline_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Polyline_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_shapes.Polyline_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Polyline_Meta
+        type_slots_Polyline_Static
     };
 
     // ----- Rectangle class --------------------
@@ -1378,26 +1398,31 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
         _type_slots_Rectangle
     };
 
-    static PyGetSetDef getset_Rectangle_Meta[] = {
+    static PyGetSetDef getset_Rectangle_Static[] = {
         { "radius_x_property", reinterpret_cast<getter>(Rectangle_get_RadiusXProperty), nullptr, nullptr, nullptr },
         { "radius_y_property", reinterpret_cast<getter>(Rectangle_get_RadiusYProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_Rectangle_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_Rectangle_Meta) },
+    static PyMethodDef methods_Rectangle_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_Rectangle_Meta =
+    static PyType_Slot type_slots_Rectangle_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_shapes.Rectangle_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Rectangle_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Rectangle_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Rectangle_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_shapes.Rectangle_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Rectangle_Meta
+        type_slots_Rectangle_Static
     };
 
     // ----- Shape class --------------------
@@ -2256,7 +2281,7 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
         _type_slots_Shape
     };
 
-    static PyGetSetDef getset_Shape_Meta[] = {
+    static PyGetSetDef getset_Shape_Static[] = {
         { "fill_property", reinterpret_cast<getter>(Shape_get_FillProperty), nullptr, nullptr, nullptr },
         { "stretch_property", reinterpret_cast<getter>(Shape_get_StretchProperty), nullptr, nullptr, nullptr },
         { "stroke_dash_array_property", reinterpret_cast<getter>(Shape_get_StrokeDashArrayProperty), nullptr, nullptr, nullptr },
@@ -2271,20 +2296,25 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
         { }
     };
 
-    static PyType_Slot type_slots_Shape_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_Shape_Meta) },
+    static PyMethodDef methods_Shape_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_Shape_Meta =
+    static PyType_Slot type_slots_Shape_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_shapes.Shape_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Shape_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Shape_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Shape_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_shapes.Shape_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Shape_Meta
+        type_slots_Shape_Static
     };
 
     // ----- Windows.UI.Xaml.Shapes Initialization --------------------
@@ -2338,68 +2368,68 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_shapes(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_Line_Meta{PyType_FromSpec(&type_spec_Line_Meta)};
-    if (!type_Line_Meta)
+    py::pyobj_handle type_Line_Static{PyType_FromSpec(&type_spec_Line_Static)};
+    if (!type_Line_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Line, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Line_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Line, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Line_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_Path_Meta{PyType_FromSpec(&type_spec_Path_Meta)};
-    if (!type_Path_Meta)
+    py::pyobj_handle type_Path_Static{PyType_FromSpec(&type_spec_Path_Static)};
+    if (!type_Path_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Path, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Path_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Path, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Path_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_Polygon_Meta{PyType_FromSpec(&type_spec_Polygon_Meta)};
-    if (!type_Polygon_Meta)
+    py::pyobj_handle type_Polygon_Static{PyType_FromSpec(&type_spec_Polygon_Static)};
+    if (!type_Polygon_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Polygon, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Polygon_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Polygon, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Polygon_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_Polyline_Meta{PyType_FromSpec(&type_spec_Polyline_Meta)};
-    if (!type_Polyline_Meta)
+    py::pyobj_handle type_Polyline_Static{PyType_FromSpec(&type_spec_Polyline_Static)};
+    if (!type_Polyline_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Polyline, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Polyline_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Polyline, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Polyline_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_Rectangle_Meta{PyType_FromSpec(&type_spec_Rectangle_Meta)};
-    if (!type_Rectangle_Meta)
+    py::pyobj_handle type_Rectangle_Static{PyType_FromSpec(&type_spec_Rectangle_Static)};
+    if (!type_Rectangle_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Rectangle, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Rectangle_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Rectangle, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Rectangle_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_Shape_Meta{PyType_FromSpec(&type_spec_Shape_Meta)};
-    if (!type_Shape_Meta)
+    py::pyobj_handle type_Shape_Static{PyType_FromSpec(&type_spec_Shape_Static)};
+    if (!type_Shape_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Shape, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Shape_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Shape, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Shape_Static.get())) == -1)
     {
         return nullptr;
     }

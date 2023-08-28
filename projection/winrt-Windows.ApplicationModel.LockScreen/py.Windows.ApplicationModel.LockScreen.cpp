@@ -150,7 +150,6 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
     }
 
     static PyMethodDef _methods_LockApplicationHost[] = {
-        { "get_for_current_view", reinterpret_cast<PyCFunction>(LockApplicationHost_GetForCurrentView), METH_VARARGS | METH_STATIC, nullptr },
         { "request_unlock", reinterpret_cast<PyCFunction>(LockApplicationHost_RequestUnlock), METH_VARARGS, nullptr },
         { "add_unlocking", reinterpret_cast<PyCFunction>(LockApplicationHost_add_Unlocking), METH_O, nullptr },
         { "remove_unlocking", reinterpret_cast<PyCFunction>(LockApplicationHost_remove_Unlocking), METH_O, nullptr },
@@ -179,6 +178,32 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_LockApplicationHost
+    };
+
+    static PyGetSetDef getset_LockApplicationHost_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_LockApplicationHost_Static[] = {
+        { "get_for_current_view", reinterpret_cast<PyCFunction>(LockApplicationHost_GetForCurrentView), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_LockApplicationHost_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_LockApplicationHost_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_LockApplicationHost_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_LockApplicationHost_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_lockscreen.LockApplicationHost_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_LockApplicationHost_Static
     };
 
     // ----- LockScreenBadge class --------------------
@@ -955,7 +980,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_lockscreen(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LockApplicationHost, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_LockApplicationHost_Static{PyType_FromSpec(&type_spec_LockApplicationHost_Static)};
+    if (!type_LockApplicationHost_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_LockApplicationHost, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LockApplicationHost_Static.get())) == -1)
     {
         return nullptr;
     }

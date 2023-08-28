@@ -503,6 +503,16 @@ namespace pywinrt
         return method.Flags().Static();
     }
 
+    inline bool is_static(Event const& event)
+    {
+        return event.MethodSemantic().first.Method().Flags().Static();
+    }
+
+    inline bool is_static(Property const& prop)
+    {
+        return prop.MethodSemantic().first.Method().Flags().Static();
+    }
+
     auto get_property_methods(Property const& prop)
     {
         MethodDef get_method{}, set_method{};
@@ -872,13 +882,27 @@ namespace pywinrt
      */
     bool requires_metaclass(TypeDef const& type)
     {
-        // types with static properties need a metaclass
+        // types with static methods or static properties need a metaclass
+
+        for (auto&& method : type.MethodList())
+        {
+            if (is_static(method))
+            {
+                return true;
+            }
+        }
+
+        for (auto&& event : type.EventList())
+        {
+            if (is_static(event))
+            {
+                return true;
+            }
+        }
 
         for (auto&& prop : type.PropertyList())
         {
-            auto&& [get_method, set_method] = get_property_methods(prop);
-
-            if (is_static(get_method))
+            if (is_static(prop))
             {
                 return true;
             }

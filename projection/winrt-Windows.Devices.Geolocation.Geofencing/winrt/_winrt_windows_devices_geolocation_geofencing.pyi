@@ -42,7 +42,11 @@ class Geofence(winrt.system.Object):
     @_property
     def start_time(self) -> datetime.datetime: ...
 
-class GeofenceMonitor(winrt.system.Object):
+class GeofenceMonitor_Static(type):
+    @_property
+    def current(cls) -> typing.Optional[GeofenceMonitor]: ...
+
+class GeofenceMonitor(winrt.system.Object, metaclass=GeofenceMonitor_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GeofenceMonitor: ...
     def read_reports(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[GeofenceStateChangeReport]]: ...
@@ -56,7 +60,6 @@ class GeofenceMonitor(winrt.system.Object):
     def last_known_geoposition(self) -> typing.Optional[winrt.windows.devices.geolocation.Geoposition]: ...
     @_property
     def status(self) -> GeofenceMonitorStatus: ...
-    current: typing.ClassVar[typing.Optional[GeofenceMonitor]]
 
 class GeofenceStateChangeReport(winrt.system.Object):
     @staticmethod

@@ -846,7 +846,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         _type_slots_ButtonBase
     };
 
-    static PyGetSetDef getset_ButtonBase_Meta[] = {
+    static PyGetSetDef getset_ButtonBase_Static[] = {
         { "click_mode_property", reinterpret_cast<getter>(ButtonBase_get_ClickModeProperty), nullptr, nullptr, nullptr },
         { "command_parameter_property", reinterpret_cast<getter>(ButtonBase_get_CommandParameterProperty), nullptr, nullptr, nullptr },
         { "command_property", reinterpret_cast<getter>(ButtonBase_get_CommandProperty), nullptr, nullptr, nullptr },
@@ -855,20 +855,25 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot type_slots_ButtonBase_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_ButtonBase_Meta) },
+    static PyMethodDef methods_ButtonBase_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_ButtonBase_Meta =
+    static PyType_Slot type_slots_ButtonBase_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_controls_primitives.ButtonBase_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ButtonBase_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ButtonBase_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ButtonBase_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_controls_primitives.ButtonBase_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ButtonBase_Meta
+        type_slots_ButtonBase_Static
     };
 
     // ----- CalendarPanel class --------------------
@@ -2524,25 +2529,30 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         _type_slots_ColorPickerSlider
     };
 
-    static PyGetSetDef getset_ColorPickerSlider_Meta[] = {
+    static PyGetSetDef getset_ColorPickerSlider_Static[] = {
         { "color_channel_property", reinterpret_cast<getter>(ColorPickerSlider_get_ColorChannelProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_ColorPickerSlider_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_ColorPickerSlider_Meta) },
+    static PyMethodDef methods_ColorPickerSlider_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_ColorPickerSlider_Meta =
+    static PyType_Slot type_slots_ColorPickerSlider_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_controls_primitives.ColorPickerSlider_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ColorPickerSlider_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ColorPickerSlider_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ColorPickerSlider_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_controls_primitives.ColorPickerSlider_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ColorPickerSlider_Meta
+        type_slots_ColorPickerSlider_Static
     };
 
     // ----- ColorSpectrum class --------------------
@@ -3351,7 +3361,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         _type_slots_ColorSpectrum
     };
 
-    static PyGetSetDef getset_ColorSpectrum_Meta[] = {
+    static PyGetSetDef getset_ColorSpectrum_Static[] = {
         { "color_property", reinterpret_cast<getter>(ColorSpectrum_get_ColorProperty), nullptr, nullptr, nullptr },
         { "components_property", reinterpret_cast<getter>(ColorSpectrum_get_ComponentsProperty), nullptr, nullptr, nullptr },
         { "hsv_color_property", reinterpret_cast<getter>(ColorSpectrum_get_HsvColorProperty), nullptr, nullptr, nullptr },
@@ -3365,20 +3375,25 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot type_slots_ColorSpectrum_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_ColorSpectrum_Meta) },
+    static PyMethodDef methods_ColorSpectrum_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_ColorSpectrum_Meta =
+    static PyType_Slot type_slots_ColorSpectrum_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_controls_primitives.ColorSpectrum_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ColorSpectrum_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ColorSpectrum_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ColorSpectrum_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_controls_primitives.ColorSpectrum_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ColorSpectrum_Meta
+        type_slots_ColorSpectrum_Static
     };
 
     // ----- ComboBoxTemplateSettings class --------------------
@@ -6143,12 +6158,9 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyMethodDef _methods_FlyoutBase[] = {
         { "create_presenter", reinterpret_cast<PyCFunction>(FlyoutBase_CreatePresenter), METH_VARARGS, nullptr },
-        { "get_attached_flyout", reinterpret_cast<PyCFunction>(FlyoutBase_GetAttachedFlyout), METH_VARARGS | METH_STATIC, nullptr },
         { "hide", reinterpret_cast<PyCFunction>(FlyoutBase_Hide), METH_VARARGS, nullptr },
         { "on_process_keyboard_accelerators", reinterpret_cast<PyCFunction>(FlyoutBase_OnProcessKeyboardAccelerators), METH_VARARGS, nullptr },
-        { "set_attached_flyout", reinterpret_cast<PyCFunction>(FlyoutBase_SetAttachedFlyout), METH_VARARGS | METH_STATIC, nullptr },
         { "show_at", reinterpret_cast<PyCFunction>(FlyoutBase_ShowAt), METH_VARARGS, nullptr },
-        { "show_attached_flyout", reinterpret_cast<PyCFunction>(FlyoutBase_ShowAttachedFlyout), METH_VARARGS | METH_STATIC, nullptr },
         { "try_invoke_keyboard_accelerator", reinterpret_cast<PyCFunction>(FlyoutBase_TryInvokeKeyboardAccelerator), METH_VARARGS, nullptr },
         { "add_closed", reinterpret_cast<PyCFunction>(FlyoutBase_add_Closed), METH_O, nullptr },
         { "remove_closed", reinterpret_cast<PyCFunction>(FlyoutBase_remove_Closed), METH_O, nullptr },
@@ -6199,7 +6211,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         _type_slots_FlyoutBase
     };
 
-    static PyGetSetDef getset_FlyoutBase_Meta[] = {
+    static PyGetSetDef getset_FlyoutBase_Static[] = {
         { "attached_flyout_property", reinterpret_cast<getter>(FlyoutBase_get_AttachedFlyoutProperty), nullptr, nullptr, nullptr },
         { "placement_property", reinterpret_cast<getter>(FlyoutBase_get_PlacementProperty), nullptr, nullptr, nullptr },
         { "allow_focus_on_interaction_property", reinterpret_cast<getter>(FlyoutBase_get_AllowFocusOnInteractionProperty), nullptr, nullptr, nullptr },
@@ -6216,20 +6228,28 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot type_slots_FlyoutBase_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_FlyoutBase_Meta) },
+    static PyMethodDef methods_FlyoutBase_Static[] = {
+        { "get_attached_flyout", reinterpret_cast<PyCFunction>(FlyoutBase_GetAttachedFlyout), METH_VARARGS, nullptr },
+        { "set_attached_flyout", reinterpret_cast<PyCFunction>(FlyoutBase_SetAttachedFlyout), METH_VARARGS, nullptr },
+        { "show_attached_flyout", reinterpret_cast<PyCFunction>(FlyoutBase_ShowAttachedFlyout), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_FlyoutBase_Meta =
+    static PyType_Slot type_slots_FlyoutBase_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_controls_primitives.FlyoutBase_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_FlyoutBase_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_FlyoutBase_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_FlyoutBase_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_controls_primitives.FlyoutBase_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_FlyoutBase_Meta
+        type_slots_FlyoutBase_Static
     };
 
     // ----- FlyoutBaseClosingEventArgs class --------------------
@@ -6706,7 +6726,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     }
 
     static PyMethodDef _methods_GeneratorPositionHelper[] = {
-        { "from_index_and_offset", reinterpret_cast<PyCFunction>(GeneratorPositionHelper_FromIndexAndOffset), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_GeneratorPositionHelper, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GeneratorPositionHelper), METH_O | METH_STATIC, nullptr },
         { }
@@ -6732,6 +6751,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_GeneratorPositionHelper
+    };
+
+    static PyGetSetDef getset_GeneratorPositionHelper_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_GeneratorPositionHelper_Static[] = {
+        { "from_index_and_offset", reinterpret_cast<PyCFunction>(GeneratorPositionHelper_FromIndexAndOffset), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_GeneratorPositionHelper_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_GeneratorPositionHelper_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_GeneratorPositionHelper_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_GeneratorPositionHelper_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_controls_primitives.GeneratorPositionHelper_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_GeneratorPositionHelper_Static
     };
 
     // ----- GridViewItemPresenter class --------------------
@@ -8299,7 +8344,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         _type_slots_GridViewItemPresenter
     };
 
-    static PyGetSetDef getset_GridViewItemPresenter_Meta[] = {
+    static PyGetSetDef getset_GridViewItemPresenter_Static[] = {
         { "check_brush_property", reinterpret_cast<getter>(GridViewItemPresenter_get_CheckBrushProperty), nullptr, nullptr, nullptr },
         { "check_hint_brush_property", reinterpret_cast<getter>(GridViewItemPresenter_get_CheckHintBrushProperty), nullptr, nullptr, nullptr },
         { "check_selecting_brush_property", reinterpret_cast<getter>(GridViewItemPresenter_get_CheckSelectingBrushProperty), nullptr, nullptr, nullptr },
@@ -8325,20 +8370,25 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot type_slots_GridViewItemPresenter_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_GridViewItemPresenter_Meta) },
+    static PyMethodDef methods_GridViewItemPresenter_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_GridViewItemPresenter_Meta =
+    static PyType_Slot type_slots_GridViewItemPresenter_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_controls_primitives.GridViewItemPresenter_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_GridViewItemPresenter_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_GridViewItemPresenter_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_GridViewItemPresenter_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_controls_primitives.GridViewItemPresenter_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_GridViewItemPresenter_Meta
+        type_slots_GridViewItemPresenter_Static
     };
 
     // ----- GridViewItemTemplateSettings class --------------------
@@ -8894,26 +8944,31 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         _type_slots_JumpListItemBackgroundConverter
     };
 
-    static PyGetSetDef getset_JumpListItemBackgroundConverter_Meta[] = {
+    static PyGetSetDef getset_JumpListItemBackgroundConverter_Static[] = {
         { "disabled_property", reinterpret_cast<getter>(JumpListItemBackgroundConverter_get_DisabledProperty), nullptr, nullptr, nullptr },
         { "enabled_property", reinterpret_cast<getter>(JumpListItemBackgroundConverter_get_EnabledProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_JumpListItemBackgroundConverter_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_JumpListItemBackgroundConverter_Meta) },
+    static PyMethodDef methods_JumpListItemBackgroundConverter_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_JumpListItemBackgroundConverter_Meta =
+    static PyType_Slot type_slots_JumpListItemBackgroundConverter_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_controls_primitives.JumpListItemBackgroundConverter_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_JumpListItemBackgroundConverter_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_JumpListItemBackgroundConverter_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_JumpListItemBackgroundConverter_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_controls_primitives.JumpListItemBackgroundConverter_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_JumpListItemBackgroundConverter_Meta
+        type_slots_JumpListItemBackgroundConverter_Static
     };
 
     // ----- JumpListItemForegroundConverter class --------------------
@@ -9211,26 +9266,31 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         _type_slots_JumpListItemForegroundConverter
     };
 
-    static PyGetSetDef getset_JumpListItemForegroundConverter_Meta[] = {
+    static PyGetSetDef getset_JumpListItemForegroundConverter_Static[] = {
         { "disabled_property", reinterpret_cast<getter>(JumpListItemForegroundConverter_get_DisabledProperty), nullptr, nullptr, nullptr },
         { "enabled_property", reinterpret_cast<getter>(JumpListItemForegroundConverter_get_EnabledProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_JumpListItemForegroundConverter_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_JumpListItemForegroundConverter_Meta) },
+    static PyMethodDef methods_JumpListItemForegroundConverter_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_JumpListItemForegroundConverter_Meta =
+    static PyType_Slot type_slots_JumpListItemForegroundConverter_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_controls_primitives.JumpListItemForegroundConverter_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_JumpListItemForegroundConverter_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_JumpListItemForegroundConverter_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_JumpListItemForegroundConverter_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_controls_primitives.JumpListItemForegroundConverter_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_JumpListItemForegroundConverter_Meta
+        type_slots_JumpListItemForegroundConverter_Static
     };
 
     // ----- LayoutInformation class --------------------
@@ -9368,9 +9428,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     }
 
     static PyMethodDef _methods_LayoutInformation[] = {
-        { "get_available_size", reinterpret_cast<PyCFunction>(LayoutInformation_GetAvailableSize), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_layout_exception_element", reinterpret_cast<PyCFunction>(LayoutInformation_GetLayoutExceptionElement), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_layout_slot", reinterpret_cast<PyCFunction>(LayoutInformation_GetLayoutSlot), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_LayoutInformation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LayoutInformation), METH_O | METH_STATIC, nullptr },
         { }
@@ -9396,6 +9453,34 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_LayoutInformation
+    };
+
+    static PyGetSetDef getset_LayoutInformation_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_LayoutInformation_Static[] = {
+        { "get_available_size", reinterpret_cast<PyCFunction>(LayoutInformation_GetAvailableSize), METH_VARARGS, nullptr },
+        { "get_layout_exception_element", reinterpret_cast<PyCFunction>(LayoutInformation_GetLayoutExceptionElement), METH_VARARGS, nullptr },
+        { "get_layout_slot", reinterpret_cast<PyCFunction>(LayoutInformation_GetLayoutSlot), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_LayoutInformation_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_LayoutInformation_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_LayoutInformation_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_LayoutInformation_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_controls_primitives.LayoutInformation_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_LayoutInformation_Static
     };
 
     // ----- ListViewItemPresenter class --------------------
@@ -13442,7 +13527,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         _type_slots_ListViewItemPresenter
     };
 
-    static PyGetSetDef getset_ListViewItemPresenter_Meta[] = {
+    static PyGetSetDef getset_ListViewItemPresenter_Static[] = {
         { "selected_pointer_over_border_brush_property", reinterpret_cast<getter>(ListViewItemPresenter_get_SelectedPointerOverBorderBrushProperty), nullptr, nullptr, nullptr },
         { "selected_pointer_over_background_property", reinterpret_cast<getter>(ListViewItemPresenter_get_SelectedPointerOverBackgroundProperty), nullptr, nullptr, nullptr },
         { "selected_foreground_property", reinterpret_cast<getter>(ListViewItemPresenter_get_SelectedForegroundProperty), nullptr, nullptr, nullptr },
@@ -13505,20 +13590,25 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot type_slots_ListViewItemPresenter_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_ListViewItemPresenter_Meta) },
+    static PyMethodDef methods_ListViewItemPresenter_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_ListViewItemPresenter_Meta =
+    static PyType_Slot type_slots_ListViewItemPresenter_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_controls_primitives.ListViewItemPresenter_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ListViewItemPresenter_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ListViewItemPresenter_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ListViewItemPresenter_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_controls_primitives.ListViewItemPresenter_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ListViewItemPresenter_Meta
+        type_slots_ListViewItemPresenter_Static
     };
 
     // ----- ListViewItemTemplateSettings class --------------------
@@ -14193,7 +14283,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         _type_slots_LoopingSelector
     };
 
-    static PyGetSetDef getset_LoopingSelector_Meta[] = {
+    static PyGetSetDef getset_LoopingSelector_Static[] = {
         { "item_height_property", reinterpret_cast<getter>(LoopingSelector_get_ItemHeightProperty), nullptr, nullptr, nullptr },
         { "item_template_property", reinterpret_cast<getter>(LoopingSelector_get_ItemTemplateProperty), nullptr, nullptr, nullptr },
         { "item_width_property", reinterpret_cast<getter>(LoopingSelector_get_ItemWidthProperty), nullptr, nullptr, nullptr },
@@ -14204,20 +14294,25 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot type_slots_LoopingSelector_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_LoopingSelector_Meta) },
+    static PyMethodDef methods_LoopingSelector_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_LoopingSelector_Meta =
+    static PyType_Slot type_slots_LoopingSelector_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_controls_primitives.LoopingSelector_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_LoopingSelector_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_LoopingSelector_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_LoopingSelector_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_controls_primitives.LoopingSelector_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_LoopingSelector_Meta
+        type_slots_LoopingSelector_Static
     };
 
     // ----- LoopingSelectorItem class --------------------
@@ -14903,25 +14998,30 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         _type_slots_NavigationViewItemPresenter
     };
 
-    static PyGetSetDef getset_NavigationViewItemPresenter_Meta[] = {
+    static PyGetSetDef getset_NavigationViewItemPresenter_Static[] = {
         { "icon_property", reinterpret_cast<getter>(NavigationViewItemPresenter_get_IconProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_NavigationViewItemPresenter_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_NavigationViewItemPresenter_Meta) },
+    static PyMethodDef methods_NavigationViewItemPresenter_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_NavigationViewItemPresenter_Meta =
+    static PyType_Slot type_slots_NavigationViewItemPresenter_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_controls_primitives.NavigationViewItemPresenter_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_NavigationViewItemPresenter_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_NavigationViewItemPresenter_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_NavigationViewItemPresenter_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_controls_primitives.NavigationViewItemPresenter_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_NavigationViewItemPresenter_Meta
+        type_slots_NavigationViewItemPresenter_Static
     };
 
     // ----- OrientedVirtualizingPanel class --------------------
@@ -16167,9 +16267,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     }
 
     static PyMethodDef _methods_PickerFlyoutBase[] = {
-        { "get_title", reinterpret_cast<PyCFunction>(PickerFlyoutBase_GetTitle), METH_VARARGS | METH_STATIC, nullptr },
         { "on_confirmed", reinterpret_cast<PyCFunction>(PickerFlyoutBase_OnConfirmed), METH_VARARGS, nullptr },
-        { "set_title", reinterpret_cast<PyCFunction>(PickerFlyoutBase_SetTitle), METH_VARARGS | METH_STATIC, nullptr },
         { "should_show_confirmation_buttons", reinterpret_cast<PyCFunction>(PickerFlyoutBase_ShouldShowConfirmationButtons), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PickerFlyoutBase, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PickerFlyoutBase), METH_O | METH_STATIC, nullptr },
@@ -16198,25 +16296,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         _type_slots_PickerFlyoutBase
     };
 
-    static PyGetSetDef getset_PickerFlyoutBase_Meta[] = {
+    static PyGetSetDef getset_PickerFlyoutBase_Static[] = {
         { "title_property", reinterpret_cast<getter>(PickerFlyoutBase_get_TitleProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_PickerFlyoutBase_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_PickerFlyoutBase_Meta) },
+    static PyMethodDef methods_PickerFlyoutBase_Static[] = {
+        { "get_title", reinterpret_cast<PyCFunction>(PickerFlyoutBase_GetTitle), METH_VARARGS, nullptr },
+        { "set_title", reinterpret_cast<PyCFunction>(PickerFlyoutBase_SetTitle), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_PickerFlyoutBase_Meta =
+    static PyType_Slot type_slots_PickerFlyoutBase_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_controls_primitives.PickerFlyoutBase_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PickerFlyoutBase_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PickerFlyoutBase_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PickerFlyoutBase_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_controls_primitives.PickerFlyoutBase_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PickerFlyoutBase_Meta
+        type_slots_PickerFlyoutBase_Static
     };
 
     // ----- PivotHeaderItem class --------------------
@@ -17637,7 +17742,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         _type_slots_Popup
     };
 
-    static PyGetSetDef getset_Popup_Meta[] = {
+    static PyGetSetDef getset_Popup_Static[] = {
         { "child_property", reinterpret_cast<getter>(Popup_get_ChildProperty), nullptr, nullptr, nullptr },
         { "child_transitions_property", reinterpret_cast<getter>(Popup_get_ChildTransitionsProperty), nullptr, nullptr, nullptr },
         { "horizontal_offset_property", reinterpret_cast<getter>(Popup_get_HorizontalOffsetProperty), nullptr, nullptr, nullptr },
@@ -17651,20 +17756,25 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot type_slots_Popup_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_Popup_Meta) },
+    static PyMethodDef methods_Popup_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_Popup_Meta =
+    static PyType_Slot type_slots_Popup_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_controls_primitives.Popup_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Popup_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Popup_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Popup_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_controls_primitives.Popup_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Popup_Meta
+        type_slots_Popup_Static
     };
 
     // ----- ProgressBarTemplateSettings class --------------------
@@ -18556,7 +18666,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         _type_slots_RangeBase
     };
 
-    static PyGetSetDef getset_RangeBase_Meta[] = {
+    static PyGetSetDef getset_RangeBase_Static[] = {
         { "large_change_property", reinterpret_cast<getter>(RangeBase_get_LargeChangeProperty), nullptr, nullptr, nullptr },
         { "maximum_property", reinterpret_cast<getter>(RangeBase_get_MaximumProperty), nullptr, nullptr, nullptr },
         { "minimum_property", reinterpret_cast<getter>(RangeBase_get_MinimumProperty), nullptr, nullptr, nullptr },
@@ -18565,20 +18675,25 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot type_slots_RangeBase_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_RangeBase_Meta) },
+    static PyMethodDef methods_RangeBase_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_RangeBase_Meta =
+    static PyType_Slot type_slots_RangeBase_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_controls_primitives.RangeBase_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_RangeBase_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_RangeBase_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_RangeBase_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_controls_primitives.RangeBase_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_RangeBase_Meta
+        type_slots_RangeBase_Static
     };
 
     // ----- RangeBaseValueChangedEventArgs class --------------------
@@ -18915,26 +19030,31 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         _type_slots_RepeatButton
     };
 
-    static PyGetSetDef getset_RepeatButton_Meta[] = {
+    static PyGetSetDef getset_RepeatButton_Static[] = {
         { "delay_property", reinterpret_cast<getter>(RepeatButton_get_DelayProperty), nullptr, nullptr, nullptr },
         { "interval_property", reinterpret_cast<getter>(RepeatButton_get_IntervalProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_RepeatButton_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_RepeatButton_Meta) },
+    static PyMethodDef methods_RepeatButton_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_RepeatButton_Meta =
+    static PyType_Slot type_slots_RepeatButton_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_controls_primitives.RepeatButton_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_RepeatButton_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_RepeatButton_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_RepeatButton_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_controls_primitives.RepeatButton_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_RepeatButton_Meta
+        type_slots_RepeatButton_Static
     };
 
     // ----- ScrollBar class --------------------
@@ -19274,27 +19394,32 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         _type_slots_ScrollBar
     };
 
-    static PyGetSetDef getset_ScrollBar_Meta[] = {
+    static PyGetSetDef getset_ScrollBar_Static[] = {
         { "indicator_mode_property", reinterpret_cast<getter>(ScrollBar_get_IndicatorModeProperty), nullptr, nullptr, nullptr },
         { "orientation_property", reinterpret_cast<getter>(ScrollBar_get_OrientationProperty), nullptr, nullptr, nullptr },
         { "viewport_size_property", reinterpret_cast<getter>(ScrollBar_get_ViewportSizeProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_ScrollBar_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_ScrollBar_Meta) },
+    static PyMethodDef methods_ScrollBar_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_ScrollBar_Meta =
+    static PyType_Slot type_slots_ScrollBar_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_controls_primitives.ScrollBar_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ScrollBar_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ScrollBar_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ScrollBar_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_controls_primitives.ScrollBar_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ScrollBar_Meta
+        type_slots_ScrollBar_Static
     };
 
     // ----- ScrollEventArgs class --------------------
@@ -19874,7 +19999,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     }
 
     static PyMethodDef _methods_Selector[] = {
-        { "get_is_selection_active", reinterpret_cast<PyCFunction>(Selector_GetIsSelectionActive), METH_VARARGS | METH_STATIC, nullptr },
         { "add_selection_changed", reinterpret_cast<PyCFunction>(Selector_add_SelectionChanged), METH_O, nullptr },
         { "remove_selection_changed", reinterpret_cast<PyCFunction>(Selector_remove_SelectionChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_Selector, METH_O | METH_STATIC, nullptr },
@@ -19909,7 +20033,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         _type_slots_Selector
     };
 
-    static PyGetSetDef getset_Selector_Meta[] = {
+    static PyGetSetDef getset_Selector_Static[] = {
         { "is_synchronized_with_current_item_property", reinterpret_cast<getter>(Selector_get_IsSynchronizedWithCurrentItemProperty), nullptr, nullptr, nullptr },
         { "selected_index_property", reinterpret_cast<getter>(Selector_get_SelectedIndexProperty), nullptr, nullptr, nullptr },
         { "selected_item_property", reinterpret_cast<getter>(Selector_get_SelectedItemProperty), nullptr, nullptr, nullptr },
@@ -19918,20 +20042,26 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         { }
     };
 
-    static PyType_Slot type_slots_Selector_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_Selector_Meta) },
+    static PyMethodDef methods_Selector_Static[] = {
+        { "get_is_selection_active", reinterpret_cast<PyCFunction>(Selector_GetIsSelectionActive), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_Selector_Meta =
+    static PyType_Slot type_slots_Selector_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_controls_primitives.Selector_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Selector_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Selector_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Selector_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_controls_primitives.Selector_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Selector_Meta
+        type_slots_Selector_Static
     };
 
     // ----- SelectorItem class --------------------
@@ -20070,25 +20200,30 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         _type_slots_SelectorItem
     };
 
-    static PyGetSetDef getset_SelectorItem_Meta[] = {
+    static PyGetSetDef getset_SelectorItem_Static[] = {
         { "is_selected_property", reinterpret_cast<getter>(SelectorItem_get_IsSelectedProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_SelectorItem_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_SelectorItem_Meta) },
+    static PyMethodDef methods_SelectorItem_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_SelectorItem_Meta =
+    static PyType_Slot type_slots_SelectorItem_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_controls_primitives.SelectorItem_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SelectorItem_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SelectorItem_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SelectorItem_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_controls_primitives.SelectorItem_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SelectorItem_Meta
+        type_slots_SelectorItem_Static
     };
 
     // ----- SettingsFlyoutTemplateSettings class --------------------
@@ -20765,25 +20900,30 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         _type_slots_Thumb
     };
 
-    static PyGetSetDef getset_Thumb_Meta[] = {
+    static PyGetSetDef getset_Thumb_Static[] = {
         { "is_dragging_property", reinterpret_cast<getter>(Thumb_get_IsDraggingProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_Thumb_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_Thumb_Meta) },
+    static PyMethodDef methods_Thumb_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_Thumb_Meta =
+    static PyType_Slot type_slots_Thumb_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_controls_primitives.Thumb_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Thumb_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Thumb_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Thumb_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_controls_primitives.Thumb_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Thumb_Meta
+        type_slots_Thumb_Static
     };
 
     // ----- TickBar class --------------------
@@ -20944,25 +21084,30 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         _type_slots_TickBar
     };
 
-    static PyGetSetDef getset_TickBar_Meta[] = {
+    static PyGetSetDef getset_TickBar_Static[] = {
         { "fill_property", reinterpret_cast<getter>(TickBar_get_FillProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_TickBar_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_TickBar_Meta) },
+    static PyMethodDef methods_TickBar_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_TickBar_Meta =
+    static PyType_Slot type_slots_TickBar_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_controls_primitives.TickBar_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_TickBar_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_TickBar_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_TickBar_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_controls_primitives.TickBar_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_TickBar_Meta
+        type_slots_TickBar_Static
     };
 
     // ----- ToggleButton class --------------------
@@ -21356,26 +21501,31 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         _type_slots_ToggleButton
     };
 
-    static PyGetSetDef getset_ToggleButton_Meta[] = {
+    static PyGetSetDef getset_ToggleButton_Static[] = {
         { "is_checked_property", reinterpret_cast<getter>(ToggleButton_get_IsCheckedProperty), nullptr, nullptr, nullptr },
         { "is_three_state_property", reinterpret_cast<getter>(ToggleButton_get_IsThreeStateProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_ToggleButton_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_ToggleButton_Meta) },
+    static PyMethodDef methods_ToggleButton_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_ToggleButton_Meta =
+    static PyType_Slot type_slots_ToggleButton_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_controls_primitives.ToggleButton_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ToggleButton_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ToggleButton_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ToggleButton_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_controls_primitives.ToggleButton_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ToggleButton_Meta
+        type_slots_ToggleButton_Static
     };
 
     // ----- ToggleSwitchTemplateSettings class --------------------
@@ -22216,13 +22366,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_primitives(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_ButtonBase_Meta{PyType_FromSpec(&type_spec_ButtonBase_Meta)};
-    if (!type_ButtonBase_Meta)
+    py::pyobj_handle type_ButtonBase_Static{PyType_FromSpec(&type_spec_ButtonBase_Static)};
+    if (!type_ButtonBase_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ButtonBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ButtonBase_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ButtonBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ButtonBase_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -22242,24 +22392,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_primitives(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_ColorPickerSlider_Meta{PyType_FromSpec(&type_spec_ColorPickerSlider_Meta)};
-    if (!type_ColorPickerSlider_Meta)
+    py::pyobj_handle type_ColorPickerSlider_Static{PyType_FromSpec(&type_spec_ColorPickerSlider_Static)};
+    if (!type_ColorPickerSlider_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ColorPickerSlider, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorPickerSlider_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ColorPickerSlider, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorPickerSlider_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ColorSpectrum_Meta{PyType_FromSpec(&type_spec_ColorSpectrum_Meta)};
-    if (!type_ColorSpectrum_Meta)
+    py::pyobj_handle type_ColorSpectrum_Static{PyType_FromSpec(&type_spec_ColorSpectrum_Static)};
+    if (!type_ColorSpectrum_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ColorSpectrum, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorSpectrum_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ColorSpectrum, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorSpectrum_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -22299,13 +22449,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_primitives(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_FlyoutBase_Meta{PyType_FromSpec(&type_spec_FlyoutBase_Meta)};
-    if (!type_FlyoutBase_Meta)
+    py::pyobj_handle type_FlyoutBase_Static{PyType_FromSpec(&type_spec_FlyoutBase_Static)};
+    if (!type_FlyoutBase_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FlyoutBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FlyoutBase_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FlyoutBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FlyoutBase_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -22320,18 +22470,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_primitives(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GeneratorPositionHelper, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_GeneratorPositionHelper_Static{PyType_FromSpec(&type_spec_GeneratorPositionHelper_Static)};
+    if (!type_GeneratorPositionHelper_Static)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_GridViewItemPresenter_Meta{PyType_FromSpec(&type_spec_GridViewItemPresenter_Meta)};
-    if (!type_GridViewItemPresenter_Meta)
+    if (py::register_python_type(module.get(), &type_spec_GeneratorPositionHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GeneratorPositionHelper_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GridViewItemPresenter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridViewItemPresenter_Meta.get())) == -1)
+    py::pyobj_handle type_GridViewItemPresenter_Static{PyType_FromSpec(&type_spec_GridViewItemPresenter_Static)};
+    if (!type_GridViewItemPresenter_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_GridViewItemPresenter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridViewItemPresenter_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -22346,40 +22502,46 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_primitives(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_JumpListItemBackgroundConverter_Meta{PyType_FromSpec(&type_spec_JumpListItemBackgroundConverter_Meta)};
-    if (!type_JumpListItemBackgroundConverter_Meta)
+    py::pyobj_handle type_JumpListItemBackgroundConverter_Static{PyType_FromSpec(&type_spec_JumpListItemBackgroundConverter_Static)};
+    if (!type_JumpListItemBackgroundConverter_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_JumpListItemBackgroundConverter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_JumpListItemBackgroundConverter_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_JumpListItemBackgroundConverter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_JumpListItemBackgroundConverter_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_JumpListItemForegroundConverter_Meta{PyType_FromSpec(&type_spec_JumpListItemForegroundConverter_Meta)};
-    if (!type_JumpListItemForegroundConverter_Meta)
+    py::pyobj_handle type_JumpListItemForegroundConverter_Static{PyType_FromSpec(&type_spec_JumpListItemForegroundConverter_Static)};
+    if (!type_JumpListItemForegroundConverter_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_JumpListItemForegroundConverter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_JumpListItemForegroundConverter_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_JumpListItemForegroundConverter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_JumpListItemForegroundConverter_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LayoutInformation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_LayoutInformation_Static{PyType_FromSpec(&type_spec_LayoutInformation_Static)};
+    if (!type_LayoutInformation_Static)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ListViewItemPresenter_Meta{PyType_FromSpec(&type_spec_ListViewItemPresenter_Meta)};
-    if (!type_ListViewItemPresenter_Meta)
+    if (py::register_python_type(module.get(), &type_spec_LayoutInformation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LayoutInformation_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ListViewItemPresenter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListViewItemPresenter_Meta.get())) == -1)
+    py::pyobj_handle type_ListViewItemPresenter_Static{PyType_FromSpec(&type_spec_ListViewItemPresenter_Static)};
+    if (!type_ListViewItemPresenter_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_ListViewItemPresenter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListViewItemPresenter_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -22389,13 +22551,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_primitives(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_LoopingSelector_Meta{PyType_FromSpec(&type_spec_LoopingSelector_Meta)};
-    if (!type_LoopingSelector_Meta)
+    py::pyobj_handle type_LoopingSelector_Static{PyType_FromSpec(&type_spec_LoopingSelector_Static)};
+    if (!type_LoopingSelector_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LoopingSelector, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LoopingSelector_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LoopingSelector, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LoopingSelector_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -22420,13 +22582,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_primitives(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_NavigationViewItemPresenter_Meta{PyType_FromSpec(&type_spec_NavigationViewItemPresenter_Meta)};
-    if (!type_NavigationViewItemPresenter_Meta)
+    py::pyobj_handle type_NavigationViewItemPresenter_Static{PyType_FromSpec(&type_spec_NavigationViewItemPresenter_Static)};
+    if (!type_NavigationViewItemPresenter_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_NavigationViewItemPresenter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NavigationViewItemPresenter_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_NavigationViewItemPresenter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NavigationViewItemPresenter_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -22436,13 +22598,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_primitives(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_PickerFlyoutBase_Meta{PyType_FromSpec(&type_spec_PickerFlyoutBase_Meta)};
-    if (!type_PickerFlyoutBase_Meta)
+    py::pyobj_handle type_PickerFlyoutBase_Static{PyType_FromSpec(&type_spec_PickerFlyoutBase_Static)};
+    if (!type_PickerFlyoutBase_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PickerFlyoutBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PickerFlyoutBase_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PickerFlyoutBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PickerFlyoutBase_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -22462,13 +22624,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_primitives(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_Popup_Meta{PyType_FromSpec(&type_spec_Popup_Meta)};
-    if (!type_Popup_Meta)
+    py::pyobj_handle type_Popup_Static{PyType_FromSpec(&type_spec_Popup_Static)};
+    if (!type_Popup_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Popup, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Popup_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Popup, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Popup_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -22483,13 +22645,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_primitives(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_RangeBase_Meta{PyType_FromSpec(&type_spec_RangeBase_Meta)};
-    if (!type_RangeBase_Meta)
+    py::pyobj_handle type_RangeBase_Static{PyType_FromSpec(&type_spec_RangeBase_Static)};
+    if (!type_RangeBase_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RangeBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RangeBase_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RangeBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RangeBase_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -22499,24 +22661,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_primitives(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_RepeatButton_Meta{PyType_FromSpec(&type_spec_RepeatButton_Meta)};
-    if (!type_RepeatButton_Meta)
+    py::pyobj_handle type_RepeatButton_Static{PyType_FromSpec(&type_spec_RepeatButton_Static)};
+    if (!type_RepeatButton_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RepeatButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RepeatButton_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RepeatButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RepeatButton_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ScrollBar_Meta{PyType_FromSpec(&type_spec_ScrollBar_Meta)};
-    if (!type_ScrollBar_Meta)
+    py::pyobj_handle type_ScrollBar_Static{PyType_FromSpec(&type_spec_ScrollBar_Static)};
+    if (!type_ScrollBar_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ScrollBar, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ScrollBar_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ScrollBar, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ScrollBar_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -22526,24 +22688,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_primitives(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_Selector_Meta{PyType_FromSpec(&type_spec_Selector_Meta)};
-    if (!type_Selector_Meta)
+    py::pyobj_handle type_Selector_Static{PyType_FromSpec(&type_spec_Selector_Static)};
+    if (!type_Selector_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Selector, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Selector_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Selector, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Selector_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SelectorItem_Meta{PyType_FromSpec(&type_spec_SelectorItem_Meta)};
-    if (!type_SelectorItem_Meta)
+    py::pyobj_handle type_SelectorItem_Static{PyType_FromSpec(&type_spec_SelectorItem_Static)};
+    if (!type_SelectorItem_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SelectorItem, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SelectorItem_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SelectorItem, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SelectorItem_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -22558,35 +22720,35 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_primitives(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_Thumb_Meta{PyType_FromSpec(&type_spec_Thumb_Meta)};
-    if (!type_Thumb_Meta)
+    py::pyobj_handle type_Thumb_Static{PyType_FromSpec(&type_spec_Thumb_Static)};
+    if (!type_Thumb_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Thumb, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Thumb_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Thumb, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Thumb_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_TickBar_Meta{PyType_FromSpec(&type_spec_TickBar_Meta)};
-    if (!type_TickBar_Meta)
+    py::pyobj_handle type_TickBar_Static{PyType_FromSpec(&type_spec_TickBar_Static)};
+    if (!type_TickBar_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_TickBar, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TickBar_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TickBar, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TickBar_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ToggleButton_Meta{PyType_FromSpec(&type_spec_ToggleButton_Meta)};
-    if (!type_ToggleButton_Meta)
+    py::pyobj_handle type_ToggleButton_Static{PyType_FromSpec(&type_spec_ToggleButton_Static)};
+    if (!type_ToggleButton_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ToggleButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ToggleButton_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ToggleButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ToggleButton_Static.get())) == -1)
     {
         return nullptr;
     }

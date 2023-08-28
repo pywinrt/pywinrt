@@ -47,7 +47,6 @@ namespace py::cpp::Windows::Web
     }
 
     static PyMethodDef _methods_WebError[] = {
-        { "get_status", reinterpret_cast<PyCFunction>(WebError_GetStatus), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -70,6 +69,32 @@ namespace py::cpp::Windows::Web
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_WebError
+    };
+
+    static PyGetSetDef getset_WebError_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_WebError_Static[] = {
+        { "get_status", reinterpret_cast<PyCFunction>(WebError_GetStatus), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_WebError_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_WebError_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_WebError_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_WebError_Static =
+    {
+        "winrt._winrt_windows_web.WebError_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_WebError_Static
     };
 
     // ----- IUriToStreamResolver interface --------------------
@@ -219,7 +244,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_web(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebError, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_WebError_Static{PyType_FromSpec(&type_spec_WebError_Static)};
+    if (!type_WebError_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_WebError, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WebError_Static.get())) == -1)
     {
         return nullptr;
     }

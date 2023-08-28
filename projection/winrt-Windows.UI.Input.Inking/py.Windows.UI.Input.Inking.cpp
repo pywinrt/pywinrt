@@ -532,7 +532,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     }
 
     static PyMethodDef _methods_InkDrawingAttributes[] = {
-        { "create_for_pencil", reinterpret_cast<PyCFunction>(InkDrawingAttributes_CreateForPencil), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_InkDrawingAttributes, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InkDrawingAttributes), METH_O | METH_STATIC, nullptr },
         { }
@@ -569,6 +568,32 @@ namespace py::cpp::Windows::UI::Input::Inking
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_InkDrawingAttributes
+    };
+
+    static PyGetSetDef getset_InkDrawingAttributes_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_InkDrawingAttributes_Static[] = {
+        { "create_for_pencil", reinterpret_cast<PyCFunction>(InkDrawingAttributes_CreateForPencil), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_InkDrawingAttributes_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_InkDrawingAttributes_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_InkDrawingAttributes_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_InkDrawingAttributes_Static =
+    {
+        "winrt._winrt_windows_ui_input_inking.InkDrawingAttributes_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_InkDrawingAttributes_Static
     };
 
     // ----- InkDrawingAttributesPencilProperties class --------------------
@@ -7260,7 +7285,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     }
 
     static PyMethodDef _methods_PenAndInkSettings[] = {
-        { "get_default", reinterpret_cast<PyCFunction>(PenAndInkSettings_GetDefault), METH_VARARGS | METH_STATIC, nullptr },
         { "set_pen_handedness", reinterpret_cast<PyCFunction>(PenAndInkSettings_SetPenHandedness), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PenAndInkSettings, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PenAndInkSettings), METH_O | METH_STATIC, nullptr },
@@ -7293,6 +7317,32 @@ namespace py::cpp::Windows::UI::Input::Inking
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_PenAndInkSettings
+    };
+
+    static PyGetSetDef getset_PenAndInkSettings_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_PenAndInkSettings_Static[] = {
+        { "get_default", reinterpret_cast<PyCFunction>(PenAndInkSettings_GetDefault), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_PenAndInkSettings_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PenAndInkSettings_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PenAndInkSettings_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PenAndInkSettings_Static =
+    {
+        "winrt._winrt_windows_ui_input_inking.PenAndInkSettings_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_PenAndInkSettings_Static
     };
 
     // ----- IInkPointFactory interface --------------------
@@ -8489,7 +8539,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input_inking(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InkDrawingAttributes, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_InkDrawingAttributes_Static{PyType_FromSpec(&type_spec_InkDrawingAttributes_Static)};
+    if (!type_InkDrawingAttributes_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_InkDrawingAttributes, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InkDrawingAttributes_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -8599,7 +8655,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input_inking(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PenAndInkSettings, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_PenAndInkSettings_Static{PyType_FromSpec(&type_spec_PenAndInkSettings_Static)};
+    if (!type_PenAndInkSettings_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_PenAndInkSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PenAndInkSettings_Static.get())) == -1)
     {
         return nullptr;
     }

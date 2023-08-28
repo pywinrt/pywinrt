@@ -22,10 +22,13 @@ class OemSupportInfo(winrt.system.Object):
     @_property
     def support_provider(self) -> str: ...
 
-class SmbiosInformation(winrt.system.Object):
+class SmbiosInformation_Static(type):
+    @_property
+    def serial_number(cls) -> str: ...
+
+class SmbiosInformation(winrt.system.Object, metaclass=SmbiosInformation_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmbiosInformation: ...
-    serial_number: typing.ClassVar[str]
 
 class SystemSupportDeviceInfo(winrt.system.Object):
     @staticmethod
@@ -45,10 +48,15 @@ class SystemSupportDeviceInfo(winrt.system.Object):
     @_property
     def system_sku(self) -> str: ...
 
-class SystemSupportInfo(winrt.system.Object):
+class SystemSupportInfo_Static(type):
+    @_property
+    def local_system_edition(cls) -> str: ...
+    @_property
+    def oem_support_info(cls) -> typing.Optional[OemSupportInfo]: ...
+    @_property
+    def local_device_info(cls) -> typing.Optional[SystemSupportDeviceInfo]: ...
+
+class SystemSupportInfo(winrt.system.Object, metaclass=SystemSupportInfo_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SystemSupportInfo: ...
-    local_system_edition: typing.ClassVar[str]
-    oem_support_info: typing.ClassVar[typing.Optional[OemSupportInfo]]
-    local_device_info: typing.ClassVar[typing.Optional[SystemSupportDeviceInfo]]
 

@@ -2065,9 +2065,6 @@ namespace py::cpp::Windows::Media::Import
     }
 
     static PyMethodDef _methods_PhotoImportManager[] = {
-        { "find_all_sources_async", reinterpret_cast<PyCFunction>(PhotoImportManager_FindAllSourcesAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_pending_operations", reinterpret_cast<PyCFunction>(PhotoImportManager_GetPendingOperations), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_supported_async", reinterpret_cast<PyCFunction>(PhotoImportManager_IsSupportedAsync), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -2090,6 +2087,34 @@ namespace py::cpp::Windows::Media::Import
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_PhotoImportManager
+    };
+
+    static PyGetSetDef getset_PhotoImportManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_PhotoImportManager_Static[] = {
+        { "find_all_sources_async", reinterpret_cast<PyCFunction>(PhotoImportManager_FindAllSourcesAsync), METH_VARARGS, nullptr },
+        { "get_pending_operations", reinterpret_cast<PyCFunction>(PhotoImportManager_GetPendingOperations), METH_VARARGS, nullptr },
+        { "is_supported_async", reinterpret_cast<PyCFunction>(PhotoImportManager_IsSupportedAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_PhotoImportManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PhotoImportManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PhotoImportManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PhotoImportManager_Static =
+    {
+        "winrt._winrt_windows_media_import_.PhotoImportManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_PhotoImportManager_Static
     };
 
     // ----- PhotoImportOperation class --------------------
@@ -3399,8 +3424,6 @@ namespace py::cpp::Windows::Media::Import
 
     static PyMethodDef _methods_PhotoImportSource[] = {
         { "create_import_session", reinterpret_cast<PyCFunction>(PhotoImportSource_CreateImportSession), METH_VARARGS, nullptr },
-        { "from_folder_async", reinterpret_cast<PyCFunction>(PhotoImportSource_FromFolderAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "from_id_async", reinterpret_cast<PyCFunction>(PhotoImportSource_FromIdAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_PhotoImportSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PhotoImportSource), METH_O | METH_STATIC, nullptr },
         { }
@@ -3442,6 +3465,33 @@ namespace py::cpp::Windows::Media::Import
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_PhotoImportSource
+    };
+
+    static PyGetSetDef getset_PhotoImportSource_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_PhotoImportSource_Static[] = {
+        { "from_folder_async", reinterpret_cast<PyCFunction>(PhotoImportSource_FromFolderAsync), METH_VARARGS, nullptr },
+        { "from_id_async", reinterpret_cast<PyCFunction>(PhotoImportSource_FromIdAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_PhotoImportSource_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PhotoImportSource_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PhotoImportSource_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PhotoImportSource_Static =
+    {
+        "winrt._winrt_windows_media_import_.PhotoImportSource_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_PhotoImportSource_Static
     };
 
     // ----- PhotoImportStorageMedium class --------------------
@@ -4190,7 +4240,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_import_(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhotoImportManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_PhotoImportManager_Static{PyType_FromSpec(&type_spec_PhotoImportManager_Static)};
+    if (!type_PhotoImportManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_PhotoImportManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PhotoImportManager_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -4215,7 +4271,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_import_(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhotoImportSource, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_PhotoImportSource_Static{PyType_FromSpec(&type_spec_PhotoImportSource_Static)};
+    if (!type_PhotoImportSource_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_PhotoImportSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PhotoImportSource_Static.get())) == -1)
     {
         return nullptr;
     }

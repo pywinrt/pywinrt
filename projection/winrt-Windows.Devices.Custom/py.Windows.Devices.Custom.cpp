@@ -216,8 +216,6 @@ namespace py::cpp::Windows::Devices::Custom
     }
 
     static PyMethodDef _methods_CustomDevice[] = {
-        { "from_id_async", reinterpret_cast<PyCFunction>(CustomDevice_FromIdAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_device_selector", reinterpret_cast<PyCFunction>(CustomDevice_GetDeviceSelector), METH_VARARGS | METH_STATIC, nullptr },
         { "send_i_o_control_async", reinterpret_cast<PyCFunction>(CustomDevice_SendIOControlAsync), METH_VARARGS, nullptr },
         { "try_send_i_o_control_async", reinterpret_cast<PyCFunction>(CustomDevice_TrySendIOControlAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CustomDevice, METH_O | METH_STATIC, nullptr },
@@ -247,6 +245,33 @@ namespace py::cpp::Windows::Devices::Custom
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_CustomDevice
+    };
+
+    static PyGetSetDef getset_CustomDevice_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_CustomDevice_Static[] = {
+        { "from_id_async", reinterpret_cast<PyCFunction>(CustomDevice_FromIdAsync), METH_VARARGS, nullptr },
+        { "get_device_selector", reinterpret_cast<PyCFunction>(CustomDevice_GetDeviceSelector), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_CustomDevice_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CustomDevice_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CustomDevice_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CustomDevice_Static =
+    {
+        "winrt._winrt_windows_devices_custom.CustomDevice_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CustomDevice_Static
     };
 
     // ----- IOControlCode class --------------------
@@ -498,25 +523,30 @@ namespace py::cpp::Windows::Devices::Custom
         _type_slots_KnownDeviceTypes
     };
 
-    static PyGetSetDef getset_KnownDeviceTypes_Meta[] = {
+    static PyGetSetDef getset_KnownDeviceTypes_Static[] = {
         { "unknown", reinterpret_cast<getter>(KnownDeviceTypes_get_Unknown), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_KnownDeviceTypes_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_KnownDeviceTypes_Meta) },
+    static PyMethodDef methods_KnownDeviceTypes_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_KnownDeviceTypes_Meta =
+    static PyType_Slot type_slots_KnownDeviceTypes_Static[] = 
     {
-        "winrt._winrt_windows_devices_custom.KnownDeviceTypes_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_KnownDeviceTypes_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_KnownDeviceTypes_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_KnownDeviceTypes_Static =
+    {
+        "winrt._winrt_windows_devices_custom.KnownDeviceTypes_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_KnownDeviceTypes_Meta
+        type_slots_KnownDeviceTypes_Static
     };
 
     // ----- IIOControlCode interface --------------------
@@ -734,7 +764,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_custom(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CustomDevice, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_CustomDevice_Static{PyType_FromSpec(&type_spec_CustomDevice_Static)};
+    if (!type_CustomDevice_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_CustomDevice, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CustomDevice_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -744,13 +780,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_custom(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_KnownDeviceTypes_Meta{PyType_FromSpec(&type_spec_KnownDeviceTypes_Meta)};
-    if (!type_KnownDeviceTypes_Meta)
+    py::pyobj_handle type_KnownDeviceTypes_Static{PyType_FromSpec(&type_spec_KnownDeviceTypes_Static)};
+    if (!type_KnownDeviceTypes_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_KnownDeviceTypes, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownDeviceTypes_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_KnownDeviceTypes, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownDeviceTypes_Static.get())) == -1)
     {
         return nullptr;
     }

@@ -528,7 +528,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     }
 
     static PyMethodDef _methods_AccessKeyManager[] = {
-        { "exit_display_mode", reinterpret_cast<PyCFunction>(AccessKeyManager_ExitDisplayMode), METH_VARARGS | METH_STATIC, nullptr },
         { "add_is_display_mode_enabled_changed", reinterpret_cast<PyCFunction>(AccessKeyManager_add_IsDisplayModeEnabledChanged), METH_O | METH_STATIC, nullptr },
         { "remove_is_display_mode_enabled_changed", reinterpret_cast<PyCFunction>(AccessKeyManager_remove_IsDisplayModeEnabledChanged), METH_O | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_AccessKeyManager, METH_O | METH_STATIC, nullptr },
@@ -558,26 +557,32 @@ namespace py::cpp::Windows::UI::Xaml::Input
         _type_slots_AccessKeyManager
     };
 
-    static PyGetSetDef getset_AccessKeyManager_Meta[] = {
+    static PyGetSetDef getset_AccessKeyManager_Static[] = {
         { "is_display_mode_enabled", reinterpret_cast<getter>(AccessKeyManager_get_IsDisplayModeEnabled), nullptr, nullptr, nullptr },
         { "are_key_tips_enabled", reinterpret_cast<getter>(AccessKeyManager_get_AreKeyTipsEnabled), reinterpret_cast<setter>(AccessKeyManager_put_AreKeyTipsEnabled), nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_AccessKeyManager_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_AccessKeyManager_Meta) },
+    static PyMethodDef methods_AccessKeyManager_Static[] = {
+        { "exit_display_mode", reinterpret_cast<PyCFunction>(AccessKeyManager_ExitDisplayMode), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_AccessKeyManager_Meta =
+    static PyType_Slot type_slots_AccessKeyManager_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_input.AccessKeyManager_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_AccessKeyManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_AccessKeyManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_AccessKeyManager_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_input.AccessKeyManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_AccessKeyManager_Meta
+        type_slots_AccessKeyManager_Static
     };
 
     // ----- CanExecuteRequestedEventArgs class --------------------
@@ -2186,14 +2191,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     }
 
     static PyMethodDef _methods_FocusManager[] = {
-        { "find_first_focusable_element", reinterpret_cast<PyCFunction>(FocusManager_FindFirstFocusableElement), METH_VARARGS | METH_STATIC, nullptr },
-        { "find_last_focusable_element", reinterpret_cast<PyCFunction>(FocusManager_FindLastFocusableElement), METH_VARARGS | METH_STATIC, nullptr },
-        { "find_next_element", reinterpret_cast<PyCFunction>(FocusManager_FindNextElement), METH_VARARGS | METH_STATIC, nullptr },
-        { "find_next_focusable_element", reinterpret_cast<PyCFunction>(FocusManager_FindNextFocusableElement), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_focused_element", reinterpret_cast<PyCFunction>(FocusManager_GetFocusedElement), METH_VARARGS | METH_STATIC, nullptr },
-        { "try_focus_async", reinterpret_cast<PyCFunction>(FocusManager_TryFocusAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "try_move_focus", reinterpret_cast<PyCFunction>(FocusManager_TryMoveFocus), METH_VARARGS | METH_STATIC, nullptr },
-        { "try_move_focus_async", reinterpret_cast<PyCFunction>(FocusManager_TryMoveFocusAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "add_getting_focus", reinterpret_cast<PyCFunction>(FocusManager_add_GettingFocus), METH_O | METH_STATIC, nullptr },
         { "remove_getting_focus", reinterpret_cast<PyCFunction>(FocusManager_remove_GettingFocus), METH_O | METH_STATIC, nullptr },
         { "add_got_focus", reinterpret_cast<PyCFunction>(FocusManager_add_GotFocus), METH_O | METH_STATIC, nullptr },
@@ -2227,6 +2224,39 @@ namespace py::cpp::Windows::UI::Xaml::Input
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_FocusManager
+    };
+
+    static PyGetSetDef getset_FocusManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_FocusManager_Static[] = {
+        { "find_first_focusable_element", reinterpret_cast<PyCFunction>(FocusManager_FindFirstFocusableElement), METH_VARARGS, nullptr },
+        { "find_last_focusable_element", reinterpret_cast<PyCFunction>(FocusManager_FindLastFocusableElement), METH_VARARGS, nullptr },
+        { "find_next_element", reinterpret_cast<PyCFunction>(FocusManager_FindNextElement), METH_VARARGS, nullptr },
+        { "find_next_focusable_element", reinterpret_cast<PyCFunction>(FocusManager_FindNextFocusableElement), METH_VARARGS, nullptr },
+        { "get_focused_element", reinterpret_cast<PyCFunction>(FocusManager_GetFocusedElement), METH_VARARGS, nullptr },
+        { "try_focus_async", reinterpret_cast<PyCFunction>(FocusManager_TryFocusAsync), METH_VARARGS, nullptr },
+        { "try_move_focus", reinterpret_cast<PyCFunction>(FocusManager_TryMoveFocus), METH_VARARGS, nullptr },
+        { "try_move_focus_async", reinterpret_cast<PyCFunction>(FocusManager_TryMoveFocusAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_FocusManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_FocusManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_FocusManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_FocusManager_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_input.FocusManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_FocusManager_Static
     };
 
     // ----- FocusManagerGotFocusEventArgs class --------------------
@@ -4483,7 +4513,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         _type_slots_KeyboardAccelerator
     };
 
-    static PyGetSetDef getset_KeyboardAccelerator_Meta[] = {
+    static PyGetSetDef getset_KeyboardAccelerator_Static[] = {
         { "is_enabled_property", reinterpret_cast<getter>(KeyboardAccelerator_get_IsEnabledProperty), nullptr, nullptr, nullptr },
         { "key_property", reinterpret_cast<getter>(KeyboardAccelerator_get_KeyProperty), nullptr, nullptr, nullptr },
         { "modifiers_property", reinterpret_cast<getter>(KeyboardAccelerator_get_ModifiersProperty), nullptr, nullptr, nullptr },
@@ -4491,20 +4521,25 @@ namespace py::cpp::Windows::UI::Xaml::Input
         { }
     };
 
-    static PyType_Slot type_slots_KeyboardAccelerator_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_KeyboardAccelerator_Meta) },
+    static PyMethodDef methods_KeyboardAccelerator_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_KeyboardAccelerator_Meta =
+    static PyType_Slot type_slots_KeyboardAccelerator_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_input.KeyboardAccelerator_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_KeyboardAccelerator_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_KeyboardAccelerator_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_KeyboardAccelerator_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_input.KeyboardAccelerator_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_KeyboardAccelerator_Meta
+        type_slots_KeyboardAccelerator_Static
     };
 
     // ----- KeyboardAcceleratorInvokedEventArgs class --------------------
@@ -7795,25 +7830,30 @@ namespace py::cpp::Windows::UI::Xaml::Input
         _type_slots_StandardUICommand
     };
 
-    static PyGetSetDef getset_StandardUICommand_Meta[] = {
+    static PyGetSetDef getset_StandardUICommand_Static[] = {
         { "kind_property", reinterpret_cast<getter>(StandardUICommand_get_KindProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_StandardUICommand_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_StandardUICommand_Meta) },
+    static PyMethodDef methods_StandardUICommand_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_StandardUICommand_Meta =
+    static PyType_Slot type_slots_StandardUICommand_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_input.StandardUICommand_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_StandardUICommand_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_StandardUICommand_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_StandardUICommand_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_input.StandardUICommand_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_StandardUICommand_Meta
+        type_slots_StandardUICommand_Static
     };
 
     // ----- TappedRoutedEventArgs class --------------------
@@ -8703,7 +8743,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
         _type_slots_XamlUICommand
     };
 
-    static PyGetSetDef getset_XamlUICommand_Meta[] = {
+    static PyGetSetDef getset_XamlUICommand_Static[] = {
         { "access_key_property", reinterpret_cast<getter>(XamlUICommand_get_AccessKeyProperty), nullptr, nullptr, nullptr },
         { "command_property", reinterpret_cast<getter>(XamlUICommand_get_CommandProperty), nullptr, nullptr, nullptr },
         { "description_property", reinterpret_cast<getter>(XamlUICommand_get_DescriptionProperty), nullptr, nullptr, nullptr },
@@ -8713,20 +8753,25 @@ namespace py::cpp::Windows::UI::Xaml::Input
         { }
     };
 
-    static PyType_Slot type_slots_XamlUICommand_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_XamlUICommand_Meta) },
+    static PyMethodDef methods_XamlUICommand_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_XamlUICommand_Meta =
+    static PyType_Slot type_slots_XamlUICommand_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_input.XamlUICommand_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_XamlUICommand_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_XamlUICommand_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_XamlUICommand_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_input.XamlUICommand_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_XamlUICommand_Meta
+        type_slots_XamlUICommand_Static
     };
 
     // ----- ICommand interface --------------------
@@ -8969,13 +9014,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_input(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_AccessKeyManager_Meta{PyType_FromSpec(&type_spec_AccessKeyManager_Meta)};
-    if (!type_AccessKeyManager_Meta)
+    py::pyobj_handle type_AccessKeyManager_Static{PyType_FromSpec(&type_spec_AccessKeyManager_Static)};
+    if (!type_AccessKeyManager_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AccessKeyManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AccessKeyManager_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AccessKeyManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AccessKeyManager_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -9010,7 +9055,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_input(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FocusManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_FocusManager_Static{PyType_FromSpec(&type_spec_FocusManager_Static)};
+    if (!type_FocusManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_FocusManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FocusManager_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -9070,13 +9121,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_input(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_KeyboardAccelerator_Meta{PyType_FromSpec(&type_spec_KeyboardAccelerator_Meta)};
-    if (!type_KeyboardAccelerator_Meta)
+    py::pyobj_handle type_KeyboardAccelerator_Static{PyType_FromSpec(&type_spec_KeyboardAccelerator_Static)};
+    if (!type_KeyboardAccelerator_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_KeyboardAccelerator, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KeyboardAccelerator_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_KeyboardAccelerator, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KeyboardAccelerator_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -9146,13 +9197,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_input(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_StandardUICommand_Meta{PyType_FromSpec(&type_spec_StandardUICommand_Meta)};
-    if (!type_StandardUICommand_Meta)
+    py::pyobj_handle type_StandardUICommand_Static{PyType_FromSpec(&type_spec_StandardUICommand_Static)};
+    if (!type_StandardUICommand_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StandardUICommand, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StandardUICommand_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StandardUICommand, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StandardUICommand_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -9162,13 +9213,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_input(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_XamlUICommand_Meta{PyType_FromSpec(&type_spec_XamlUICommand_Meta)};
-    if (!type_XamlUICommand_Meta)
+    py::pyobj_handle type_XamlUICommand_Static{PyType_FromSpec(&type_spec_XamlUICommand_Static)};
+    if (!type_XamlUICommand_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_XamlUICommand, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XamlUICommand_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_XamlUICommand, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XamlUICommand_Static.get())) == -1)
     {
         return nullptr;
     }

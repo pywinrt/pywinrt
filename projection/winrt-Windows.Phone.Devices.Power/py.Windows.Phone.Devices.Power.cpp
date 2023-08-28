@@ -158,7 +158,6 @@ namespace py::cpp::Windows::Phone::Devices::Power
     }
 
     static PyMethodDef _methods_Battery[] = {
-        { "get_default", reinterpret_cast<PyCFunction>(Battery_GetDefault), METH_VARARGS | METH_STATIC, nullptr },
         { "add_remaining_charge_percent_changed", reinterpret_cast<PyCFunction>(Battery_add_RemainingChargePercentChanged), METH_O, nullptr },
         { "remove_remaining_charge_percent_changed", reinterpret_cast<PyCFunction>(Battery_remove_RemainingChargePercentChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_Battery, METH_O | METH_STATIC, nullptr },
@@ -188,6 +187,32 @@ namespace py::cpp::Windows::Phone::Devices::Power
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_Battery
+    };
+
+    static PyGetSetDef getset_Battery_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_Battery_Static[] = {
+        { "get_default", reinterpret_cast<PyCFunction>(Battery_GetDefault), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_Battery_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Battery_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Battery_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Battery_Static =
+    {
+        "winrt._winrt_windows_phone_devices_power.Battery_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_Battery_Static
     };
 
     // ----- Windows.Phone.Devices.Power Initialization --------------------
@@ -236,7 +261,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_devices_power(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Battery, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_Battery_Static{PyType_FromSpec(&type_spec_Battery_Static)};
+    if (!type_Battery_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_Battery, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Battery_Static.get())) == -1)
     {
         return nullptr;
     }

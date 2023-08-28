@@ -1582,7 +1582,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     }
 
     static PyMethodDef _methods_HolographicDisplay[] = {
-        { "get_default", reinterpret_cast<PyCFunction>(HolographicDisplay_GetDefault), METH_VARARGS | METH_STATIC, nullptr },
         { "try_get_view_configuration", reinterpret_cast<PyCFunction>(HolographicDisplay_TryGetViewConfiguration), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HolographicDisplay, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HolographicDisplay), METH_O | METH_STATIC, nullptr },
@@ -1616,6 +1615,32 @@ namespace py::cpp::Windows::Graphics::Holographic
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_HolographicDisplay
+    };
+
+    static PyGetSetDef getset_HolographicDisplay_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_HolographicDisplay_Static[] = {
+        { "get_default", reinterpret_cast<PyCFunction>(HolographicDisplay_GetDefault), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_HolographicDisplay_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_HolographicDisplay_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_HolographicDisplay_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_HolographicDisplay_Static =
+    {
+        "winrt._winrt_windows_graphics_holographic.HolographicDisplay_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_HolographicDisplay_Static
     };
 
     // ----- HolographicFrame class --------------------
@@ -3924,7 +3949,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     }
 
     static PyMethodDef _methods_HolographicSpace[] = {
-        { "create_for_core_window", reinterpret_cast<PyCFunction>(HolographicSpace_CreateForCoreWindow), METH_VARARGS | METH_STATIC, nullptr },
         { "create_frame_presentation_monitor", reinterpret_cast<PyCFunction>(HolographicSpace_CreateFramePresentationMonitor), METH_VARARGS, nullptr },
         { "create_frame_scanout_monitor", reinterpret_cast<PyCFunction>(HolographicSpace_CreateFrameScanoutMonitor), METH_VARARGS, nullptr },
         { "create_next_frame", reinterpret_cast<PyCFunction>(HolographicSpace_CreateNextFrame), METH_VARARGS, nullptr },
@@ -3968,27 +3992,33 @@ namespace py::cpp::Windows::Graphics::Holographic
         _type_slots_HolographicSpace
     };
 
-    static PyGetSetDef getset_HolographicSpace_Meta[] = {
+    static PyGetSetDef getset_HolographicSpace_Static[] = {
         { "is_available", reinterpret_cast<getter>(HolographicSpace_get_IsAvailable), nullptr, nullptr, nullptr },
         { "is_supported", reinterpret_cast<getter>(HolographicSpace_get_IsSupported), nullptr, nullptr, nullptr },
         { "is_configured", reinterpret_cast<getter>(HolographicSpace_get_IsConfigured), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_HolographicSpace_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_HolographicSpace_Meta) },
+    static PyMethodDef methods_HolographicSpace_Static[] = {
+        { "create_for_core_window", reinterpret_cast<PyCFunction>(HolographicSpace_CreateForCoreWindow), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_HolographicSpace_Meta =
+    static PyType_Slot type_slots_HolographicSpace_Static[] = 
     {
-        "winrt._winrt_windows_graphics_holographic.HolographicSpace_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_HolographicSpace_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_HolographicSpace_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_HolographicSpace_Static =
+    {
+        "winrt._winrt_windows_graphics_holographic.HolographicSpace_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_HolographicSpace_Meta
+        type_slots_HolographicSpace_Static
     };
 
     // ----- HolographicSpaceCameraAddedEventArgs class --------------------
@@ -5070,7 +5100,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_holographic(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HolographicDisplay, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_HolographicDisplay_Static{PyType_FromSpec(&type_spec_HolographicDisplay_Static)};
+    if (!type_HolographicDisplay_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_HolographicDisplay, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HolographicDisplay_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -5120,13 +5156,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_holographic(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_HolographicSpace_Meta{PyType_FromSpec(&type_spec_HolographicSpace_Meta)};
-    if (!type_HolographicSpace_Meta)
+    py::pyobj_handle type_HolographicSpace_Static{PyType_FromSpec(&type_spec_HolographicSpace_Static)};
+    if (!type_HolographicSpace_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HolographicSpace, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HolographicSpace_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HolographicSpace, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HolographicSpace_Static.get())) == -1)
     {
         return nullptr;
     }

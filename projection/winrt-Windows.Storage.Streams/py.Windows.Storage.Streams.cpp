@@ -214,8 +214,6 @@ namespace py::cpp::Windows::Storage::Streams
     }
 
     static PyMethodDef _methods_Buffer[] = {
-        { "create_copy_from_memory_buffer", reinterpret_cast<PyCFunction>(Buffer_CreateCopyFromMemoryBuffer), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_memory_buffer_over_i_buffer", reinterpret_cast<PyCFunction>(Buffer_CreateMemoryBufferOverIBuffer), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_Buffer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Buffer), METH_O | METH_STATIC, nullptr },
         { }
@@ -244,6 +242,33 @@ namespace py::cpp::Windows::Storage::Streams
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_Buffer
+    };
+
+    static PyGetSetDef getset_Buffer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_Buffer_Static[] = {
+        { "create_copy_from_memory_buffer", reinterpret_cast<PyCFunction>(Buffer_CreateCopyFromMemoryBuffer), METH_VARARGS, nullptr },
+        { "create_memory_buffer_over_i_buffer", reinterpret_cast<PyCFunction>(Buffer_CreateMemoryBufferOverIBuffer), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_Buffer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Buffer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Buffer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Buffer_Static =
+    {
+        "winrt._winrt_windows_storage_streams.Buffer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_Buffer_Static
     };
 
     // ----- DataReader class --------------------
@@ -1115,7 +1140,6 @@ namespace py::cpp::Windows::Storage::Streams
         { "close", reinterpret_cast<PyCFunction>(DataReader_Close), METH_VARARGS, nullptr },
         { "detach_buffer", reinterpret_cast<PyCFunction>(DataReader_DetachBuffer), METH_VARARGS, nullptr },
         { "detach_stream", reinterpret_cast<PyCFunction>(DataReader_DetachStream), METH_VARARGS, nullptr },
-        { "from_buffer", reinterpret_cast<PyCFunction>(DataReader_FromBuffer), METH_VARARGS | METH_STATIC, nullptr },
         { "load_async", reinterpret_cast<PyCFunction>(DataReader_LoadAsync), METH_VARARGS, nullptr },
         { "read_boolean", reinterpret_cast<PyCFunction>(DataReader_ReadBoolean), METH_VARARGS, nullptr },
         { "read_buffer", reinterpret_cast<PyCFunction>(DataReader_ReadBuffer), METH_VARARGS, nullptr },
@@ -1164,6 +1188,32 @@ namespace py::cpp::Windows::Storage::Streams
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_DataReader
+    };
+
+    static PyGetSetDef getset_DataReader_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_DataReader_Static[] = {
+        { "from_buffer", reinterpret_cast<PyCFunction>(DataReader_FromBuffer), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_DataReader_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_DataReader_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_DataReader_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_DataReader_Static =
+    {
+        "winrt._winrt_windows_storage_streams.DataReader_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_DataReader_Static
     };
 
     // ----- DataReaderLoadOperation class --------------------
@@ -3666,10 +3716,6 @@ namespace py::cpp::Windows::Storage::Streams
         { "flush_async", reinterpret_cast<PyCFunction>(FileRandomAccessStream_FlushAsync), METH_VARARGS, nullptr },
         { "get_input_stream_at", reinterpret_cast<PyCFunction>(FileRandomAccessStream_GetInputStreamAt), METH_VARARGS, nullptr },
         { "get_output_stream_at", reinterpret_cast<PyCFunction>(FileRandomAccessStream_GetOutputStreamAt), METH_VARARGS, nullptr },
-        { "open_async", reinterpret_cast<PyCFunction>(FileRandomAccessStream_OpenAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "open_for_user_async", reinterpret_cast<PyCFunction>(FileRandomAccessStream_OpenForUserAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "open_transacted_write_async", reinterpret_cast<PyCFunction>(FileRandomAccessStream_OpenTransactedWriteAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "open_transacted_write_for_user_async", reinterpret_cast<PyCFunction>(FileRandomAccessStream_OpenTransactedWriteForUserAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "read_async", reinterpret_cast<PyCFunction>(FileRandomAccessStream_ReadAsync), METH_VARARGS, nullptr },
         { "seek", reinterpret_cast<PyCFunction>(FileRandomAccessStream_Seek), METH_VARARGS, nullptr },
         { "write_async", reinterpret_cast<PyCFunction>(FileRandomAccessStream_WriteAsync), METH_VARARGS, nullptr },
@@ -3704,6 +3750,35 @@ namespace py::cpp::Windows::Storage::Streams
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_FileRandomAccessStream
+    };
+
+    static PyGetSetDef getset_FileRandomAccessStream_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_FileRandomAccessStream_Static[] = {
+        { "open_async", reinterpret_cast<PyCFunction>(FileRandomAccessStream_OpenAsync), METH_VARARGS, nullptr },
+        { "open_for_user_async", reinterpret_cast<PyCFunction>(FileRandomAccessStream_OpenForUserAsync), METH_VARARGS, nullptr },
+        { "open_transacted_write_async", reinterpret_cast<PyCFunction>(FileRandomAccessStream_OpenTransactedWriteAsync), METH_VARARGS, nullptr },
+        { "open_transacted_write_for_user_async", reinterpret_cast<PyCFunction>(FileRandomAccessStream_OpenTransactedWriteForUserAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_FileRandomAccessStream_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_FileRandomAccessStream_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_FileRandomAccessStream_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_FileRandomAccessStream_Static =
+    {
+        "winrt._winrt_windows_storage_streams.FileRandomAccessStream_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_FileRandomAccessStream_Static
     };
 
     // ----- InMemoryRandomAccessStream class --------------------
@@ -4614,8 +4689,6 @@ namespace py::cpp::Windows::Storage::Streams
     }
 
     static PyMethodDef _methods_RandomAccessStream[] = {
-        { "copy_and_close_async", reinterpret_cast<PyCFunction>(RandomAccessStream_CopyAndCloseAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "copy_async", reinterpret_cast<PyCFunction>(RandomAccessStream_CopyAsync), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -4638,6 +4711,33 @@ namespace py::cpp::Windows::Storage::Streams
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_RandomAccessStream
+    };
+
+    static PyGetSetDef getset_RandomAccessStream_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_RandomAccessStream_Static[] = {
+        { "copy_and_close_async", reinterpret_cast<PyCFunction>(RandomAccessStream_CopyAndCloseAsync), METH_VARARGS, nullptr },
+        { "copy_async", reinterpret_cast<PyCFunction>(RandomAccessStream_CopyAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_RandomAccessStream_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_RandomAccessStream_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_RandomAccessStream_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_RandomAccessStream_Static =
+    {
+        "winrt._winrt_windows_storage_streams.RandomAccessStream_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_RandomAccessStream_Static
     };
 
     // ----- RandomAccessStreamOverStream class --------------------
@@ -5256,9 +5356,6 @@ namespace py::cpp::Windows::Storage::Streams
     }
 
     static PyMethodDef _methods_RandomAccessStreamReference[] = {
-        { "create_from_file", reinterpret_cast<PyCFunction>(RandomAccessStreamReference_CreateFromFile), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_from_stream", reinterpret_cast<PyCFunction>(RandomAccessStreamReference_CreateFromStream), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_from_uri", reinterpret_cast<PyCFunction>(RandomAccessStreamReference_CreateFromUri), METH_VARARGS | METH_STATIC, nullptr },
         { "open_read_async", reinterpret_cast<PyCFunction>(RandomAccessStreamReference_OpenReadAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_RandomAccessStreamReference, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RandomAccessStreamReference), METH_O | METH_STATIC, nullptr },
@@ -5285,6 +5382,34 @@ namespace py::cpp::Windows::Storage::Streams
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_RandomAccessStreamReference
+    };
+
+    static PyGetSetDef getset_RandomAccessStreamReference_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_RandomAccessStreamReference_Static[] = {
+        { "create_from_file", reinterpret_cast<PyCFunction>(RandomAccessStreamReference_CreateFromFile), METH_VARARGS, nullptr },
+        { "create_from_stream", reinterpret_cast<PyCFunction>(RandomAccessStreamReference_CreateFromStream), METH_VARARGS, nullptr },
+        { "create_from_uri", reinterpret_cast<PyCFunction>(RandomAccessStreamReference_CreateFromUri), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_RandomAccessStreamReference_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_RandomAccessStreamReference_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_RandomAccessStreamReference_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_RandomAccessStreamReference_Static =
+    {
+        "winrt._winrt_windows_storage_streams.RandomAccessStreamReference_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_RandomAccessStreamReference_Static
     };
 
     // ----- IBuffer interface --------------------
@@ -8868,12 +8993,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_streams(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Buffer, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_Buffer_Static{PyType_FromSpec(&type_spec_Buffer_Static)};
+    if (!type_Buffer_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DataReader, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Buffer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Buffer_Static.get())) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_DataReader_Static{PyType_FromSpec(&type_spec_DataReader_Static)};
+    if (!type_DataReader_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_DataReader, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DataReader_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -8903,7 +9040,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_streams(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FileRandomAccessStream, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_FileRandomAccessStream_Static{PyType_FromSpec(&type_spec_FileRandomAccessStream_Static)};
+    if (!type_FileRandomAccessStream_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_FileRandomAccessStream, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FileRandomAccessStream_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -8923,7 +9066,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_streams(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RandomAccessStream, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_RandomAccessStream_Static{PyType_FromSpec(&type_spec_RandomAccessStream_Static)};
+    if (!type_RandomAccessStream_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_RandomAccessStream, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RandomAccessStream_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -8933,7 +9082,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_streams(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RandomAccessStreamReference, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_RandomAccessStreamReference_Static{PyType_FromSpec(&type_spec_RandomAccessStreamReference_Static)};
+    if (!type_RandomAccessStreamReference_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_RandomAccessStreamReference, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RandomAccessStreamReference_Static.get())) == -1)
     {
         return nullptr;
     }

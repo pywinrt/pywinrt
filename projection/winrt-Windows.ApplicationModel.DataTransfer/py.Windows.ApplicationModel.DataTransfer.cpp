@@ -519,17 +519,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     }
 
     static PyMethodDef _methods_Clipboard[] = {
-        { "clear", reinterpret_cast<PyCFunction>(Clipboard_Clear), METH_VARARGS | METH_STATIC, nullptr },
-        { "clear_history", reinterpret_cast<PyCFunction>(Clipboard_ClearHistory), METH_VARARGS | METH_STATIC, nullptr },
-        { "delete_item_from_history", reinterpret_cast<PyCFunction>(Clipboard_DeleteItemFromHistory), METH_VARARGS | METH_STATIC, nullptr },
-        { "flush", reinterpret_cast<PyCFunction>(Clipboard_Flush), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_content", reinterpret_cast<PyCFunction>(Clipboard_GetContent), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_history_items_async", reinterpret_cast<PyCFunction>(Clipboard_GetHistoryItemsAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_history_enabled", reinterpret_cast<PyCFunction>(Clipboard_IsHistoryEnabled), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_roaming_enabled", reinterpret_cast<PyCFunction>(Clipboard_IsRoamingEnabled), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_content", reinterpret_cast<PyCFunction>(Clipboard_SetContent), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_content_with_options", reinterpret_cast<PyCFunction>(Clipboard_SetContentWithOptions), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_history_item_as_content", reinterpret_cast<PyCFunction>(Clipboard_SetHistoryItemAsContent), METH_VARARGS | METH_STATIC, nullptr },
         { "add_history_changed", reinterpret_cast<PyCFunction>(Clipboard_add_HistoryChanged), METH_O | METH_STATIC, nullptr },
         { "remove_history_changed", reinterpret_cast<PyCFunction>(Clipboard_remove_HistoryChanged), METH_O | METH_STATIC, nullptr },
         { "add_history_enabled_changed", reinterpret_cast<PyCFunction>(Clipboard_add_HistoryEnabledChanged), METH_O | METH_STATIC, nullptr },
@@ -560,6 +549,42 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_Clipboard
+    };
+
+    static PyGetSetDef getset_Clipboard_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_Clipboard_Static[] = {
+        { "clear", reinterpret_cast<PyCFunction>(Clipboard_Clear), METH_VARARGS, nullptr },
+        { "clear_history", reinterpret_cast<PyCFunction>(Clipboard_ClearHistory), METH_VARARGS, nullptr },
+        { "delete_item_from_history", reinterpret_cast<PyCFunction>(Clipboard_DeleteItemFromHistory), METH_VARARGS, nullptr },
+        { "flush", reinterpret_cast<PyCFunction>(Clipboard_Flush), METH_VARARGS, nullptr },
+        { "get_content", reinterpret_cast<PyCFunction>(Clipboard_GetContent), METH_VARARGS, nullptr },
+        { "get_history_items_async", reinterpret_cast<PyCFunction>(Clipboard_GetHistoryItemsAsync), METH_VARARGS, nullptr },
+        { "is_history_enabled", reinterpret_cast<PyCFunction>(Clipboard_IsHistoryEnabled), METH_VARARGS, nullptr },
+        { "is_roaming_enabled", reinterpret_cast<PyCFunction>(Clipboard_IsRoamingEnabled), METH_VARARGS, nullptr },
+        { "set_content", reinterpret_cast<PyCFunction>(Clipboard_SetContent), METH_VARARGS, nullptr },
+        { "set_content_with_options", reinterpret_cast<PyCFunction>(Clipboard_SetContentWithOptions), METH_VARARGS, nullptr },
+        { "set_history_item_as_content", reinterpret_cast<PyCFunction>(Clipboard_SetHistoryItemAsContent), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_Clipboard_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Clipboard_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Clipboard_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Clipboard_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_datatransfer.Clipboard_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_Clipboard_Static
     };
 
     // ----- ClipboardContentOptions class --------------------
@@ -4990,9 +5015,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     }
 
     static PyMethodDef _methods_DataTransferManager[] = {
-        { "get_for_current_view", reinterpret_cast<PyCFunction>(DataTransferManager_GetForCurrentView), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_supported", reinterpret_cast<PyCFunction>(DataTransferManager_IsSupported), METH_VARARGS | METH_STATIC, nullptr },
-        { "show_share_u_i", reinterpret_cast<PyCFunction>(DataTransferManager_ShowShareUI), METH_VARARGS | METH_STATIC, nullptr },
         { "add_data_requested", reinterpret_cast<PyCFunction>(DataTransferManager_add_DataRequested), METH_O, nullptr },
         { "remove_data_requested", reinterpret_cast<PyCFunction>(DataTransferManager_remove_DataRequested), METH_O, nullptr },
         { "add_target_application_chosen", reinterpret_cast<PyCFunction>(DataTransferManager_add_TargetApplicationChosen), METH_O, nullptr },
@@ -5024,6 +5046,34 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_DataTransferManager
+    };
+
+    static PyGetSetDef getset_DataTransferManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_DataTransferManager_Static[] = {
+        { "get_for_current_view", reinterpret_cast<PyCFunction>(DataTransferManager_GetForCurrentView), METH_VARARGS, nullptr },
+        { "is_supported", reinterpret_cast<PyCFunction>(DataTransferManager_IsSupported), METH_VARARGS, nullptr },
+        { "show_share_u_i", reinterpret_cast<PyCFunction>(DataTransferManager_ShowShareUI), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_DataTransferManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_DataTransferManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_DataTransferManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_DataTransferManager_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_datatransfer.DataTransferManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_DataTransferManager_Static
     };
 
     // ----- HtmlFormatHelper class --------------------
@@ -5098,8 +5148,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     }
 
     static PyMethodDef _methods_HtmlFormatHelper[] = {
-        { "create_html_format", reinterpret_cast<PyCFunction>(HtmlFormatHelper_CreateHtmlFormat), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_static_fragment", reinterpret_cast<PyCFunction>(HtmlFormatHelper_GetStaticFragment), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -5122,6 +5170,33 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_HtmlFormatHelper
+    };
+
+    static PyGetSetDef getset_HtmlFormatHelper_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_HtmlFormatHelper_Static[] = {
+        { "create_html_format", reinterpret_cast<PyCFunction>(HtmlFormatHelper_CreateHtmlFormat), METH_VARARGS, nullptr },
+        { "get_static_fragment", reinterpret_cast<PyCFunction>(HtmlFormatHelper_GetStaticFragment), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_HtmlFormatHelper_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_HtmlFormatHelper_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_HtmlFormatHelper_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_HtmlFormatHelper_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_datatransfer.HtmlFormatHelper_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_HtmlFormatHelper_Static
     };
 
     // ----- OperationCompletedEventArgs class --------------------
@@ -6205,9 +6280,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     }
 
     static PyMethodDef _methods_SharedStorageAccessManager[] = {
-        { "add_file", reinterpret_cast<PyCFunction>(SharedStorageAccessManager_AddFile), METH_VARARGS | METH_STATIC, nullptr },
-        { "redeem_token_for_file_async", reinterpret_cast<PyCFunction>(SharedStorageAccessManager_RedeemTokenForFileAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "remove_file", reinterpret_cast<PyCFunction>(SharedStorageAccessManager_RemoveFile), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -6230,6 +6302,34 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_SharedStorageAccessManager
+    };
+
+    static PyGetSetDef getset_SharedStorageAccessManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_SharedStorageAccessManager_Static[] = {
+        { "add_file", reinterpret_cast<PyCFunction>(SharedStorageAccessManager_AddFile), METH_VARARGS, nullptr },
+        { "redeem_token_for_file_async", reinterpret_cast<PyCFunction>(SharedStorageAccessManager_RedeemTokenForFileAsync), METH_VARARGS, nullptr },
+        { "remove_file", reinterpret_cast<PyCFunction>(SharedStorageAccessManager_RemoveFile), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_SharedStorageAccessManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SharedStorageAccessManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SharedStorageAccessManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SharedStorageAccessManager_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_datatransfer.SharedStorageAccessManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_SharedStorageAccessManager_Static
     };
 
     // ----- StandardDataFormats class --------------------
@@ -6437,7 +6537,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         _type_slots_StandardDataFormats
     };
 
-    static PyGetSetDef getset_StandardDataFormats_Meta[] = {
+    static PyGetSetDef getset_StandardDataFormats_Static[] = {
         { "bitmap", reinterpret_cast<getter>(StandardDataFormats_get_Bitmap), nullptr, nullptr, nullptr },
         { "html", reinterpret_cast<getter>(StandardDataFormats_get_Html), nullptr, nullptr, nullptr },
         { "rtf", reinterpret_cast<getter>(StandardDataFormats_get_Rtf), nullptr, nullptr, nullptr },
@@ -6450,20 +6550,25 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { }
     };
 
-    static PyType_Slot type_slots_StandardDataFormats_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_StandardDataFormats_Meta) },
+    static PyMethodDef methods_StandardDataFormats_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_StandardDataFormats_Meta =
+    static PyType_Slot type_slots_StandardDataFormats_Static[] = 
     {
-        "winrt._winrt_windows_applicationmodel_datatransfer.StandardDataFormats_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_StandardDataFormats_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_StandardDataFormats_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_StandardDataFormats_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_datatransfer.StandardDataFormats_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_StandardDataFormats_Meta
+        type_slots_StandardDataFormats_Static
     };
 
     // ----- TargetApplicationChosenEventArgs class --------------------
@@ -6601,7 +6706,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_datatransfer(void) noexcep
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Clipboard, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_Clipboard_Static{PyType_FromSpec(&type_spec_Clipboard_Static)};
+    if (!type_Clipboard_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_Clipboard, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Clipboard_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -6671,12 +6782,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_datatransfer(void) noexcep
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DataTransferManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_DataTransferManager_Static{PyType_FromSpec(&type_spec_DataTransferManager_Static)};
+    if (!type_DataTransferManager_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HtmlFormatHelper, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DataTransferManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DataTransferManager_Static.get())) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_HtmlFormatHelper_Static{PyType_FromSpec(&type_spec_HtmlFormatHelper_Static)};
+    if (!type_HtmlFormatHelper_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_HtmlFormatHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HtmlFormatHelper_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -6716,18 +6839,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_datatransfer(void) noexcep
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SharedStorageAccessManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_SharedStorageAccessManager_Static{PyType_FromSpec(&type_spec_SharedStorageAccessManager_Static)};
+    if (!type_SharedStorageAccessManager_Static)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_StandardDataFormats_Meta{PyType_FromSpec(&type_spec_StandardDataFormats_Meta)};
-    if (!type_StandardDataFormats_Meta)
+    if (py::register_python_type(module.get(), &type_spec_SharedStorageAccessManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SharedStorageAccessManager_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StandardDataFormats, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StandardDataFormats_Meta.get())) == -1)
+    py::pyobj_handle type_StandardDataFormats_Static{PyType_FromSpec(&type_spec_StandardDataFormats_Static)};
+    if (!type_StandardDataFormats_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_StandardDataFormats, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StandardDataFormats_Static.get())) == -1)
     {
         return nullptr;
     }

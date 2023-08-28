@@ -391,10 +391,7 @@ namespace py::cpp::Windows::Media::FaceAnalysis
     }
 
     static PyMethodDef _methods_FaceDetector[] = {
-        { "create_async", reinterpret_cast<PyCFunction>(FaceDetector_CreateAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "detect_faces_async", reinterpret_cast<PyCFunction>(FaceDetector_DetectFacesAsync), METH_VARARGS, nullptr },
-        { "get_supported_bitmap_pixel_formats", reinterpret_cast<PyCFunction>(FaceDetector_GetSupportedBitmapPixelFormats), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_bitmap_pixel_format_supported", reinterpret_cast<PyCFunction>(FaceDetector_IsBitmapPixelFormatSupported), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_FaceDetector, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FaceDetector), METH_O | METH_STATIC, nullptr },
         { }
@@ -424,25 +421,33 @@ namespace py::cpp::Windows::Media::FaceAnalysis
         _type_slots_FaceDetector
     };
 
-    static PyGetSetDef getset_FaceDetector_Meta[] = {
+    static PyGetSetDef getset_FaceDetector_Static[] = {
         { "is_supported", reinterpret_cast<getter>(FaceDetector_get_IsSupported), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_FaceDetector_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_FaceDetector_Meta) },
+    static PyMethodDef methods_FaceDetector_Static[] = {
+        { "create_async", reinterpret_cast<PyCFunction>(FaceDetector_CreateAsync), METH_VARARGS, nullptr },
+        { "get_supported_bitmap_pixel_formats", reinterpret_cast<PyCFunction>(FaceDetector_GetSupportedBitmapPixelFormats), METH_VARARGS, nullptr },
+        { "is_bitmap_pixel_format_supported", reinterpret_cast<PyCFunction>(FaceDetector_IsBitmapPixelFormatSupported), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_FaceDetector_Meta =
+    static PyType_Slot type_slots_FaceDetector_Static[] = 
     {
-        "winrt._winrt_windows_media_faceanalysis.FaceDetector_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_FaceDetector_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_FaceDetector_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_FaceDetector_Static =
+    {
+        "winrt._winrt_windows_media_faceanalysis.FaceDetector_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_FaceDetector_Meta
+        type_slots_FaceDetector_Static
     };
 
     // ----- FaceTracker class --------------------
@@ -720,9 +725,6 @@ namespace py::cpp::Windows::Media::FaceAnalysis
     }
 
     static PyMethodDef _methods_FaceTracker[] = {
-        { "create_async", reinterpret_cast<PyCFunction>(FaceTracker_CreateAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_supported_bitmap_pixel_formats", reinterpret_cast<PyCFunction>(FaceTracker_GetSupportedBitmapPixelFormats), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_bitmap_pixel_format_supported", reinterpret_cast<PyCFunction>(FaceTracker_IsBitmapPixelFormatSupported), METH_VARARGS | METH_STATIC, nullptr },
         { "process_next_frame_async", reinterpret_cast<PyCFunction>(FaceTracker_ProcessNextFrameAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_FaceTracker, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FaceTracker), METH_O | METH_STATIC, nullptr },
@@ -753,25 +755,33 @@ namespace py::cpp::Windows::Media::FaceAnalysis
         _type_slots_FaceTracker
     };
 
-    static PyGetSetDef getset_FaceTracker_Meta[] = {
+    static PyGetSetDef getset_FaceTracker_Static[] = {
         { "is_supported", reinterpret_cast<getter>(FaceTracker_get_IsSupported), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_FaceTracker_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_FaceTracker_Meta) },
+    static PyMethodDef methods_FaceTracker_Static[] = {
+        { "create_async", reinterpret_cast<PyCFunction>(FaceTracker_CreateAsync), METH_VARARGS, nullptr },
+        { "get_supported_bitmap_pixel_formats", reinterpret_cast<PyCFunction>(FaceTracker_GetSupportedBitmapPixelFormats), METH_VARARGS, nullptr },
+        { "is_bitmap_pixel_format_supported", reinterpret_cast<PyCFunction>(FaceTracker_IsBitmapPixelFormatSupported), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_FaceTracker_Meta =
+    static PyType_Slot type_slots_FaceTracker_Static[] = 
     {
-        "winrt._winrt_windows_media_faceanalysis.FaceTracker_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_FaceTracker_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_FaceTracker_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_FaceTracker_Static =
+    {
+        "winrt._winrt_windows_media_faceanalysis.FaceTracker_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_FaceTracker_Meta
+        type_slots_FaceTracker_Static
     };
 
     // ----- Windows.Media.FaceAnalysis Initialization --------------------
@@ -825,24 +835,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_faceanalysis(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_FaceDetector_Meta{PyType_FromSpec(&type_spec_FaceDetector_Meta)};
-    if (!type_FaceDetector_Meta)
+    py::pyobj_handle type_FaceDetector_Static{PyType_FromSpec(&type_spec_FaceDetector_Static)};
+    if (!type_FaceDetector_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FaceDetector, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FaceDetector_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FaceDetector, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FaceDetector_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_FaceTracker_Meta{PyType_FromSpec(&type_spec_FaceTracker_Meta)};
-    if (!type_FaceTracker_Meta)
+    py::pyobj_handle type_FaceTracker_Static{PyType_FromSpec(&type_spec_FaceTracker_Static)};
+    if (!type_FaceTracker_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FaceTracker, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FaceTracker_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FaceTracker, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FaceTracker_Static.get())) == -1)
     {
         return nullptr;
     }

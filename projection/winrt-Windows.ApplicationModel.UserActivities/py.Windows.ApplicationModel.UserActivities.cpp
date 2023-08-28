@@ -594,9 +594,6 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         { "create_session", reinterpret_cast<PyCFunction>(UserActivity_CreateSession), METH_VARARGS, nullptr },
         { "save_async", reinterpret_cast<PyCFunction>(UserActivity_SaveAsync), METH_VARARGS, nullptr },
         { "to_json", reinterpret_cast<PyCFunction>(UserActivity_ToJson), METH_VARARGS, nullptr },
-        { "to_json_array", reinterpret_cast<PyCFunction>(UserActivity_ToJsonArray), METH_VARARGS | METH_STATIC, nullptr },
-        { "try_parse_from_json", reinterpret_cast<PyCFunction>(UserActivity_TryParseFromJson), METH_VARARGS | METH_STATIC, nullptr },
-        { "try_parse_from_json_array", reinterpret_cast<PyCFunction>(UserActivity_TryParseFromJsonArray), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_UserActivity, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserActivity), METH_O | METH_STATIC, nullptr },
         { }
@@ -631,6 +628,34 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_UserActivity
+    };
+
+    static PyGetSetDef getset_UserActivity_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_UserActivity_Static[] = {
+        { "to_json_array", reinterpret_cast<PyCFunction>(UserActivity_ToJsonArray), METH_VARARGS, nullptr },
+        { "try_parse_from_json", reinterpret_cast<PyCFunction>(UserActivity_TryParseFromJson), METH_VARARGS, nullptr },
+        { "try_parse_from_json_array", reinterpret_cast<PyCFunction>(UserActivity_TryParseFromJsonArray), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_UserActivity_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_UserActivity_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_UserActivity_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_UserActivity_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_useractivities.UserActivity_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_UserActivity_Static
     };
 
     // ----- UserActivityAttribution class --------------------
@@ -1202,13 +1227,9 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
     static PyMethodDef _methods_UserActivityChannel[] = {
         { "delete_activity_async", reinterpret_cast<PyCFunction>(UserActivityChannel_DeleteActivityAsync), METH_VARARGS, nullptr },
         { "delete_all_activities_async", reinterpret_cast<PyCFunction>(UserActivityChannel_DeleteAllActivitiesAsync), METH_VARARGS, nullptr },
-        { "disable_auto_session_creation", reinterpret_cast<PyCFunction>(UserActivityChannel_DisableAutoSessionCreation), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_default", reinterpret_cast<PyCFunction>(UserActivityChannel_GetDefault), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_for_user", reinterpret_cast<PyCFunction>(UserActivityChannel_GetForUser), METH_VARARGS | METH_STATIC, nullptr },
         { "get_or_create_user_activity_async", reinterpret_cast<PyCFunction>(UserActivityChannel_GetOrCreateUserActivityAsync), METH_VARARGS, nullptr },
         { "get_recent_user_activities_async", reinterpret_cast<PyCFunction>(UserActivityChannel_GetRecentUserActivitiesAsync), METH_VARARGS, nullptr },
         { "get_session_history_items_for_user_activity_async", reinterpret_cast<PyCFunction>(UserActivityChannel_GetSessionHistoryItemsForUserActivityAsync), METH_VARARGS, nullptr },
-        { "try_get_for_web_account", reinterpret_cast<PyCFunction>(UserActivityChannel_TryGetForWebAccount), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_UserActivityChannel, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserActivityChannel), METH_O | METH_STATIC, nullptr },
         { }
@@ -1234,6 +1255,35 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_UserActivityChannel
+    };
+
+    static PyGetSetDef getset_UserActivityChannel_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_UserActivityChannel_Static[] = {
+        { "disable_auto_session_creation", reinterpret_cast<PyCFunction>(UserActivityChannel_DisableAutoSessionCreation), METH_VARARGS, nullptr },
+        { "get_default", reinterpret_cast<PyCFunction>(UserActivityChannel_GetDefault), METH_VARARGS, nullptr },
+        { "get_for_user", reinterpret_cast<PyCFunction>(UserActivityChannel_GetForUser), METH_VARARGS, nullptr },
+        { "try_get_for_web_account", reinterpret_cast<PyCFunction>(UserActivityChannel_TryGetForWebAccount), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_UserActivityChannel_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_UserActivityChannel_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_UserActivityChannel_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_UserActivityChannel_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_useractivities.UserActivityChannel_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_UserActivityChannel_Static
     };
 
     // ----- UserActivityContentInfo class --------------------
@@ -1338,7 +1388,6 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
     }
 
     static PyMethodDef _methods_UserActivityContentInfo[] = {
-        { "from_json", reinterpret_cast<PyCFunction>(UserActivityContentInfo_FromJson), METH_VARARGS | METH_STATIC, nullptr },
         { "to_json", reinterpret_cast<PyCFunction>(UserActivityContentInfo_ToJson), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_UserActivityContentInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserActivityContentInfo), METH_O | METH_STATIC, nullptr },
@@ -1365,6 +1414,32 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_UserActivityContentInfo
+    };
+
+    static PyGetSetDef getset_UserActivityContentInfo_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_UserActivityContentInfo_Static[] = {
+        { "from_json", reinterpret_cast<PyCFunction>(UserActivityContentInfo_FromJson), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_UserActivityContentInfo_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_UserActivityContentInfo_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_UserActivityContentInfo_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_UserActivityContentInfo_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_useractivities.UserActivityContentInfo_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_UserActivityContentInfo_Static
     };
 
     // ----- UserActivityRequest class --------------------
@@ -1583,7 +1658,6 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
     }
 
     static PyMethodDef _methods_UserActivityRequestManager[] = {
-        { "get_for_current_view", reinterpret_cast<PyCFunction>(UserActivityRequestManager_GetForCurrentView), METH_VARARGS | METH_STATIC, nullptr },
         { "add_user_activity_requested", reinterpret_cast<PyCFunction>(UserActivityRequestManager_add_UserActivityRequested), METH_O, nullptr },
         { "remove_user_activity_requested", reinterpret_cast<PyCFunction>(UserActivityRequestManager_remove_UserActivityRequested), METH_O, nullptr },
         { "_assign_array_", _assign_array_UserActivityRequestManager, METH_O | METH_STATIC, nullptr },
@@ -1611,6 +1685,32 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_UserActivityRequestManager
+    };
+
+    static PyGetSetDef getset_UserActivityRequestManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_UserActivityRequestManager_Static[] = {
+        { "get_for_current_view", reinterpret_cast<PyCFunction>(UserActivityRequestManager_GetForCurrentView), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_UserActivityRequestManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_UserActivityRequestManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_UserActivityRequestManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_UserActivityRequestManager_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_useractivities.UserActivityRequestManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_UserActivityRequestManager_Static
     };
 
     // ----- UserActivityRequestedEventArgs class --------------------
@@ -2504,7 +2604,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_useractivities(void) noexc
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserActivity, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_UserActivity_Static{PyType_FromSpec(&type_spec_UserActivity_Static)};
+    if (!type_UserActivity_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_UserActivity, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UserActivity_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -2514,12 +2620,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_useractivities(void) noexc
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserActivityChannel, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_UserActivityChannel_Static{PyType_FromSpec(&type_spec_UserActivityChannel_Static)};
+    if (!type_UserActivityChannel_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserActivityContentInfo, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserActivityChannel, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UserActivityChannel_Static.get())) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_UserActivityContentInfo_Static{PyType_FromSpec(&type_spec_UserActivityContentInfo_Static)};
+    if (!type_UserActivityContentInfo_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_UserActivityContentInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UserActivityContentInfo_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -2529,7 +2647,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_useractivities(void) noexc
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserActivityRequestManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_UserActivityRequestManager_Static{PyType_FromSpec(&type_spec_UserActivityRequestManager_Static)};
+    if (!type_UserActivityRequestManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_UserActivityRequestManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UserActivityRequestManager_Static.get())) == -1)
     {
         return nullptr;
     }

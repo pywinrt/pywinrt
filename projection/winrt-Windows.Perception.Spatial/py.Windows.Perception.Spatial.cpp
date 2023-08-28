@@ -222,7 +222,6 @@ namespace py::cpp::Windows::Perception::Spatial
     }
 
     static PyMethodDef _methods_SpatialAnchor[] = {
-        { "try_create_relative_to", reinterpret_cast<PyCFunction>(SpatialAnchor_TryCreateRelativeTo), METH_VARARGS | METH_STATIC, nullptr },
         { "add_raw_coordinate_system_adjusted", reinterpret_cast<PyCFunction>(SpatialAnchor_add_RawCoordinateSystemAdjusted), METH_O, nullptr },
         { "remove_raw_coordinate_system_adjusted", reinterpret_cast<PyCFunction>(SpatialAnchor_remove_RawCoordinateSystemAdjusted), METH_O, nullptr },
         { "_assign_array_", _assign_array_SpatialAnchor, METH_O | METH_STATIC, nullptr },
@@ -253,6 +252,32 @@ namespace py::cpp::Windows::Perception::Spatial
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_SpatialAnchor
+    };
+
+    static PyGetSetDef getset_SpatialAnchor_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_SpatialAnchor_Static[] = {
+        { "try_create_relative_to", reinterpret_cast<PyCFunction>(SpatialAnchor_TryCreateRelativeTo), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_SpatialAnchor_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SpatialAnchor_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SpatialAnchor_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SpatialAnchor_Static =
+    {
+        "winrt._winrt_windows_perception_spatial.SpatialAnchor_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_SpatialAnchor_Static
     };
 
     // ----- SpatialAnchorExportSufficiency class --------------------
@@ -550,8 +575,6 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyMethodDef _methods_SpatialAnchorExporter[] = {
         { "get_anchor_export_sufficiency_async", reinterpret_cast<PyCFunction>(SpatialAnchorExporter_GetAnchorExportSufficiencyAsync), METH_VARARGS, nullptr },
-        { "get_default", reinterpret_cast<PyCFunction>(SpatialAnchorExporter_GetDefault), METH_VARARGS | METH_STATIC, nullptr },
-        { "request_access_async", reinterpret_cast<PyCFunction>(SpatialAnchorExporter_RequestAccessAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "try_export_anchor_async", reinterpret_cast<PyCFunction>(SpatialAnchorExporter_TryExportAnchorAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SpatialAnchorExporter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpatialAnchorExporter), METH_O | METH_STATIC, nullptr },
@@ -578,6 +601,33 @@ namespace py::cpp::Windows::Perception::Spatial
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_SpatialAnchorExporter
+    };
+
+    static PyGetSetDef getset_SpatialAnchorExporter_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_SpatialAnchorExporter_Static[] = {
+        { "get_default", reinterpret_cast<PyCFunction>(SpatialAnchorExporter_GetDefault), METH_VARARGS, nullptr },
+        { "request_access_async", reinterpret_cast<PyCFunction>(SpatialAnchorExporter_RequestAccessAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_SpatialAnchorExporter_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SpatialAnchorExporter_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SpatialAnchorExporter_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SpatialAnchorExporter_Static =
+    {
+        "winrt._winrt_windows_perception_spatial.SpatialAnchorExporter_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_SpatialAnchorExporter_Static
     };
 
     // ----- SpatialAnchorManager class --------------------
@@ -619,7 +669,6 @@ namespace py::cpp::Windows::Perception::Spatial
     }
 
     static PyMethodDef _methods_SpatialAnchorManager[] = {
-        { "request_store_async", reinterpret_cast<PyCFunction>(SpatialAnchorManager_RequestStoreAsync), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -642,6 +691,32 @@ namespace py::cpp::Windows::Perception::Spatial
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_SpatialAnchorManager
+    };
+
+    static PyGetSetDef getset_SpatialAnchorManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_SpatialAnchorManager_Static[] = {
+        { "request_store_async", reinterpret_cast<PyCFunction>(SpatialAnchorManager_RequestStoreAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_SpatialAnchorManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SpatialAnchorManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SpatialAnchorManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SpatialAnchorManager_Static =
+    {
+        "winrt._winrt_windows_perception_spatial.SpatialAnchorManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_SpatialAnchorManager_Static
     };
 
     // ----- SpatialAnchorRawCoordinateSystemAdjustedEventArgs class --------------------
@@ -1031,9 +1106,6 @@ namespace py::cpp::Windows::Perception::Spatial
     }
 
     static PyMethodDef _methods_SpatialAnchorTransferManager[] = {
-        { "request_access_async", reinterpret_cast<PyCFunction>(SpatialAnchorTransferManager_RequestAccessAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "try_export_anchors_async", reinterpret_cast<PyCFunction>(SpatialAnchorTransferManager_TryExportAnchorsAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "try_import_anchors_async", reinterpret_cast<PyCFunction>(SpatialAnchorTransferManager_TryImportAnchorsAsync), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -1056,6 +1128,34 @@ namespace py::cpp::Windows::Perception::Spatial
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_SpatialAnchorTransferManager
+    };
+
+    static PyGetSetDef getset_SpatialAnchorTransferManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_SpatialAnchorTransferManager_Static[] = {
+        { "request_access_async", reinterpret_cast<PyCFunction>(SpatialAnchorTransferManager_RequestAccessAsync), METH_VARARGS, nullptr },
+        { "try_export_anchors_async", reinterpret_cast<PyCFunction>(SpatialAnchorTransferManager_TryExportAnchorsAsync), METH_VARARGS, nullptr },
+        { "try_import_anchors_async", reinterpret_cast<PyCFunction>(SpatialAnchorTransferManager_TryImportAnchorsAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_SpatialAnchorTransferManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SpatialAnchorTransferManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SpatialAnchorTransferManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SpatialAnchorTransferManager_Static =
+    {
+        "winrt._winrt_windows_perception_spatial.SpatialAnchorTransferManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_SpatialAnchorTransferManager_Static
     };
 
     // ----- SpatialBoundingVolume class --------------------
@@ -1228,10 +1328,6 @@ namespace py::cpp::Windows::Perception::Spatial
     }
 
     static PyMethodDef _methods_SpatialBoundingVolume[] = {
-        { "from_box", reinterpret_cast<PyCFunction>(SpatialBoundingVolume_FromBox), METH_VARARGS | METH_STATIC, nullptr },
-        { "from_frustum", reinterpret_cast<PyCFunction>(SpatialBoundingVolume_FromFrustum), METH_VARARGS | METH_STATIC, nullptr },
-        { "from_oriented_box", reinterpret_cast<PyCFunction>(SpatialBoundingVolume_FromOrientedBox), METH_VARARGS | METH_STATIC, nullptr },
-        { "from_sphere", reinterpret_cast<PyCFunction>(SpatialBoundingVolume_FromSphere), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_SpatialBoundingVolume, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpatialBoundingVolume), METH_O | METH_STATIC, nullptr },
         { }
@@ -1257,6 +1353,35 @@ namespace py::cpp::Windows::Perception::Spatial
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_SpatialBoundingVolume
+    };
+
+    static PyGetSetDef getset_SpatialBoundingVolume_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_SpatialBoundingVolume_Static[] = {
+        { "from_box", reinterpret_cast<PyCFunction>(SpatialBoundingVolume_FromBox), METH_VARARGS, nullptr },
+        { "from_frustum", reinterpret_cast<PyCFunction>(SpatialBoundingVolume_FromFrustum), METH_VARARGS, nullptr },
+        { "from_oriented_box", reinterpret_cast<PyCFunction>(SpatialBoundingVolume_FromOrientedBox), METH_VARARGS, nullptr },
+        { "from_sphere", reinterpret_cast<PyCFunction>(SpatialBoundingVolume_FromSphere), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_SpatialBoundingVolume_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SpatialBoundingVolume_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SpatialBoundingVolume_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SpatialBoundingVolume_Static =
+    {
+        "winrt._winrt_windows_perception_spatial.SpatialBoundingVolume_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_SpatialBoundingVolume_Static
     };
 
     // ----- SpatialCoordinateSystem class --------------------
@@ -1893,7 +2018,6 @@ namespace py::cpp::Windows::Perception::Spatial
         { "create_entity_watcher", reinterpret_cast<PyCFunction>(SpatialEntityStore_CreateEntityWatcher), METH_VARARGS, nullptr },
         { "remove_async", reinterpret_cast<PyCFunction>(SpatialEntityStore_RemoveAsync), METH_VARARGS, nullptr },
         { "save_async", reinterpret_cast<PyCFunction>(SpatialEntityStore_SaveAsync), METH_VARARGS, nullptr },
-        { "try_get", reinterpret_cast<PyCFunction>(SpatialEntityStore_TryGet), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_SpatialEntityStore, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpatialEntityStore), METH_O | METH_STATIC, nullptr },
         { }
@@ -1921,25 +2045,31 @@ namespace py::cpp::Windows::Perception::Spatial
         _type_slots_SpatialEntityStore
     };
 
-    static PyGetSetDef getset_SpatialEntityStore_Meta[] = {
+    static PyGetSetDef getset_SpatialEntityStore_Static[] = {
         { "is_supported", reinterpret_cast<getter>(SpatialEntityStore_get_IsSupported), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_SpatialEntityStore_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_SpatialEntityStore_Meta) },
+    static PyMethodDef methods_SpatialEntityStore_Static[] = {
+        { "try_get", reinterpret_cast<PyCFunction>(SpatialEntityStore_TryGet), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_SpatialEntityStore_Meta =
+    static PyType_Slot type_slots_SpatialEntityStore_Static[] = 
     {
-        "winrt._winrt_windows_perception_spatial.SpatialEntityStore_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SpatialEntityStore_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SpatialEntityStore_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SpatialEntityStore_Static =
+    {
+        "winrt._winrt_windows_perception_spatial.SpatialEntityStore_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SpatialEntityStore_Meta
+        type_slots_SpatialEntityStore_Static
     };
 
     // ----- SpatialEntityUpdatedEventArgs class --------------------
@@ -2985,7 +3115,6 @@ namespace py::cpp::Windows::Perception::Spatial
     static PyMethodDef _methods_SpatialLocator[] = {
         { "create_attached_frame_of_reference_at_current_heading", reinterpret_cast<PyCFunction>(SpatialLocator_CreateAttachedFrameOfReferenceAtCurrentHeading), METH_VARARGS, nullptr },
         { "create_stationary_frame_of_reference_at_current_location", reinterpret_cast<PyCFunction>(SpatialLocator_CreateStationaryFrameOfReferenceAtCurrentLocation), METH_VARARGS, nullptr },
-        { "get_default", reinterpret_cast<PyCFunction>(SpatialLocator_GetDefault), METH_VARARGS | METH_STATIC, nullptr },
         { "try_locate_at_timestamp", reinterpret_cast<PyCFunction>(SpatialLocator_TryLocateAtTimestamp), METH_VARARGS, nullptr },
         { "add_locatability_changed", reinterpret_cast<PyCFunction>(SpatialLocator_add_LocatabilityChanged), METH_O, nullptr },
         { "remove_locatability_changed", reinterpret_cast<PyCFunction>(SpatialLocator_remove_LocatabilityChanged), METH_O, nullptr },
@@ -3017,6 +3146,32 @@ namespace py::cpp::Windows::Perception::Spatial
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_SpatialLocator
+    };
+
+    static PyGetSetDef getset_SpatialLocator_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_SpatialLocator_Static[] = {
+        { "get_default", reinterpret_cast<PyCFunction>(SpatialLocator_GetDefault), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_SpatialLocator_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SpatialLocator_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SpatialLocator_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SpatialLocator_Static =
+    {
+        "winrt._winrt_windows_perception_spatial.SpatialLocator_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_SpatialLocator_Static
     };
 
     // ----- SpatialLocatorAttachedFrameOfReference class --------------------
@@ -3651,7 +3806,6 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyMethodDef _methods_SpatialStageFrameOfReference[] = {
         { "get_coordinate_system_at_current_location", reinterpret_cast<PyCFunction>(SpatialStageFrameOfReference_GetCoordinateSystemAtCurrentLocation), METH_VARARGS, nullptr },
-        { "request_new_stage_async", reinterpret_cast<PyCFunction>(SpatialStageFrameOfReference_RequestNewStageAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "try_get_movement_bounds", reinterpret_cast<PyCFunction>(SpatialStageFrameOfReference_TryGetMovementBounds), METH_VARARGS, nullptr },
         { "add_current_changed", reinterpret_cast<PyCFunction>(SpatialStageFrameOfReference_add_CurrentChanged), METH_O | METH_STATIC, nullptr },
         { "remove_current_changed", reinterpret_cast<PyCFunction>(SpatialStageFrameOfReference_remove_CurrentChanged), METH_O | METH_STATIC, nullptr },
@@ -3685,25 +3839,31 @@ namespace py::cpp::Windows::Perception::Spatial
         _type_slots_SpatialStageFrameOfReference
     };
 
-    static PyGetSetDef getset_SpatialStageFrameOfReference_Meta[] = {
+    static PyGetSetDef getset_SpatialStageFrameOfReference_Static[] = {
         { "current", reinterpret_cast<getter>(SpatialStageFrameOfReference_get_Current), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_SpatialStageFrameOfReference_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_SpatialStageFrameOfReference_Meta) },
+    static PyMethodDef methods_SpatialStageFrameOfReference_Static[] = {
+        { "request_new_stage_async", reinterpret_cast<PyCFunction>(SpatialStageFrameOfReference_RequestNewStageAsync), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_SpatialStageFrameOfReference_Meta =
+    static PyType_Slot type_slots_SpatialStageFrameOfReference_Static[] = 
     {
-        "winrt._winrt_windows_perception_spatial.SpatialStageFrameOfReference_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SpatialStageFrameOfReference_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SpatialStageFrameOfReference_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SpatialStageFrameOfReference_Static =
+    {
+        "winrt._winrt_windows_perception_spatial.SpatialStageFrameOfReference_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SpatialStageFrameOfReference_Meta
+        type_slots_SpatialStageFrameOfReference_Static
     };
 
     // ----- SpatialStationaryFrameOfReference class --------------------
@@ -4821,7 +4981,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_perception_spatial(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpatialAnchor, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_SpatialAnchor_Static{PyType_FromSpec(&type_spec_SpatialAnchor_Static)};
+    if (!type_SpatialAnchor_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_SpatialAnchor, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpatialAnchor_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -4831,12 +4997,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_perception_spatial(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpatialAnchorExporter, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_SpatialAnchorExporter_Static{PyType_FromSpec(&type_spec_SpatialAnchorExporter_Static)};
+    if (!type_SpatialAnchorExporter_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpatialAnchorManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpatialAnchorExporter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpatialAnchorExporter_Static.get())) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SpatialAnchorManager_Static{PyType_FromSpec(&type_spec_SpatialAnchorManager_Static)};
+    if (!type_SpatialAnchorManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_SpatialAnchorManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpatialAnchorManager_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -4851,12 +5029,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_perception_spatial(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpatialAnchorTransferManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_SpatialAnchorTransferManager_Static{PyType_FromSpec(&type_spec_SpatialAnchorTransferManager_Static)};
+    if (!type_SpatialAnchorTransferManager_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpatialBoundingVolume, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpatialAnchorTransferManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpatialAnchorTransferManager_Static.get())) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SpatialBoundingVolume_Static{PyType_FromSpec(&type_spec_SpatialBoundingVolume_Static)};
+    if (!type_SpatialBoundingVolume_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_SpatialBoundingVolume, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpatialBoundingVolume_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -4881,13 +5071,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_perception_spatial(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_SpatialEntityStore_Meta{PyType_FromSpec(&type_spec_SpatialEntityStore_Meta)};
-    if (!type_SpatialEntityStore_Meta)
+    py::pyobj_handle type_SpatialEntityStore_Static{PyType_FromSpec(&type_spec_SpatialEntityStore_Static)};
+    if (!type_SpatialEntityStore_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpatialEntityStore, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpatialEntityStore_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpatialEntityStore, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpatialEntityStore_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -4907,7 +5097,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_perception_spatial(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpatialLocator, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_SpatialLocator_Static{PyType_FromSpec(&type_spec_SpatialLocator_Static)};
+    if (!type_SpatialLocator_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_SpatialLocator, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpatialLocator_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -4922,13 +5118,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_perception_spatial(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_SpatialStageFrameOfReference_Meta{PyType_FromSpec(&type_spec_SpatialStageFrameOfReference_Meta)};
-    if (!type_SpatialStageFrameOfReference_Meta)
+    py::pyobj_handle type_SpatialStageFrameOfReference_Static{PyType_FromSpec(&type_spec_SpatialStageFrameOfReference_Static)};
+    if (!type_SpatialStageFrameOfReference_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpatialStageFrameOfReference, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpatialStageFrameOfReference_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpatialStageFrameOfReference, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpatialStageFrameOfReference_Static.get())) == -1)
     {
         return nullptr;
     }

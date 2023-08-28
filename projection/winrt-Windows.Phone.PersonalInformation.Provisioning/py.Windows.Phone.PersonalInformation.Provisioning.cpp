@@ -113,9 +113,6 @@ namespace py::cpp::Windows::Phone::PersonalInformation::Provisioning
     }
 
     static PyMethodDef _methods_ContactPartnerProvisioningManager[] = {
-        { "associate_network_account_async", reinterpret_cast<PyCFunction>(ContactPartnerProvisioningManager_AssociateNetworkAccountAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "associate_social_network_account_async", reinterpret_cast<PyCFunction>(ContactPartnerProvisioningManager_AssociateSocialNetworkAccountAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "import_vcard_to_system_async", reinterpret_cast<PyCFunction>(ContactPartnerProvisioningManager_ImportVcardToSystemAsync), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -138,6 +135,34 @@ namespace py::cpp::Windows::Phone::PersonalInformation::Provisioning
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ContactPartnerProvisioningManager
+    };
+
+    static PyGetSetDef getset_ContactPartnerProvisioningManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ContactPartnerProvisioningManager_Static[] = {
+        { "associate_network_account_async", reinterpret_cast<PyCFunction>(ContactPartnerProvisioningManager_AssociateNetworkAccountAsync), METH_VARARGS, nullptr },
+        { "associate_social_network_account_async", reinterpret_cast<PyCFunction>(ContactPartnerProvisioningManager_AssociateSocialNetworkAccountAsync), METH_VARARGS, nullptr },
+        { "import_vcard_to_system_async", reinterpret_cast<PyCFunction>(ContactPartnerProvisioningManager_ImportVcardToSystemAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_ContactPartnerProvisioningManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ContactPartnerProvisioningManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ContactPartnerProvisioningManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ContactPartnerProvisioningManager_Static =
+    {
+        "winrt._winrt_windows_phone_personalinformation_provisioning.ContactPartnerProvisioningManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ContactPartnerProvisioningManager_Static
     };
 
     // ----- MessagePartnerProvisioningManager class --------------------
@@ -223,8 +248,6 @@ namespace py::cpp::Windows::Phone::PersonalInformation::Provisioning
     }
 
     static PyMethodDef _methods_MessagePartnerProvisioningManager[] = {
-        { "import_mms_to_system_async", reinterpret_cast<PyCFunction>(MessagePartnerProvisioningManager_ImportMmsToSystemAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "import_sms_to_system_async", reinterpret_cast<PyCFunction>(MessagePartnerProvisioningManager_ImportSmsToSystemAsync), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -247,6 +270,33 @@ namespace py::cpp::Windows::Phone::PersonalInformation::Provisioning
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_MessagePartnerProvisioningManager
+    };
+
+    static PyGetSetDef getset_MessagePartnerProvisioningManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_MessagePartnerProvisioningManager_Static[] = {
+        { "import_mms_to_system_async", reinterpret_cast<PyCFunction>(MessagePartnerProvisioningManager_ImportMmsToSystemAsync), METH_VARARGS, nullptr },
+        { "import_sms_to_system_async", reinterpret_cast<PyCFunction>(MessagePartnerProvisioningManager_ImportSmsToSystemAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_MessagePartnerProvisioningManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_MessagePartnerProvisioningManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_MessagePartnerProvisioningManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_MessagePartnerProvisioningManager_Static =
+    {
+        "winrt._winrt_windows_phone_personalinformation_provisioning.MessagePartnerProvisioningManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_MessagePartnerProvisioningManager_Static
     };
 
     // ----- Windows.Phone.PersonalInformation.Provisioning Initialization --------------------
@@ -295,12 +345,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_personalinformation_provisioning(void
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactPartnerProvisioningManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_ContactPartnerProvisioningManager_Static{PyType_FromSpec(&type_spec_ContactPartnerProvisioningManager_Static)};
+    if (!type_ContactPartnerProvisioningManager_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MessagePartnerProvisioningManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactPartnerProvisioningManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContactPartnerProvisioningManager_Static.get())) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MessagePartnerProvisioningManager_Static{PyType_FromSpec(&type_spec_MessagePartnerProvisioningManager_Static)};
+    if (!type_MessagePartnerProvisioningManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_MessagePartnerProvisioningManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MessagePartnerProvisioningManager_Static.get())) == -1)
     {
         return nullptr;
     }

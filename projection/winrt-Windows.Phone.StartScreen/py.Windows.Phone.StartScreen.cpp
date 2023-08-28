@@ -458,16 +458,8 @@ namespace py::cpp::Windows::Phone::StartScreen
 
     static PyMethodDef _methods_DualSimTile[] = {
         { "create_async", reinterpret_cast<PyCFunction>(DualSimTile_CreateAsync), METH_VARARGS, nullptr },
-        { "create_badge_updater_for_sim1", reinterpret_cast<PyCFunction>(DualSimTile_CreateBadgeUpdaterForSim1), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_badge_updater_for_sim2", reinterpret_cast<PyCFunction>(DualSimTile_CreateBadgeUpdaterForSim2), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_tile_updater_for_sim1", reinterpret_cast<PyCFunction>(DualSimTile_CreateTileUpdaterForSim1), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_tile_updater_for_sim2", reinterpret_cast<PyCFunction>(DualSimTile_CreateTileUpdaterForSim2), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_toast_notifier_for_sim1", reinterpret_cast<PyCFunction>(DualSimTile_CreateToastNotifierForSim1), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_toast_notifier_for_sim2", reinterpret_cast<PyCFunction>(DualSimTile_CreateToastNotifierForSim2), METH_VARARGS | METH_STATIC, nullptr },
         { "delete_async", reinterpret_cast<PyCFunction>(DualSimTile_DeleteAsync), METH_VARARGS, nullptr },
-        { "get_tile_for_sim2", reinterpret_cast<PyCFunction>(DualSimTile_GetTileForSim2), METH_VARARGS | METH_STATIC, nullptr },
         { "update_async", reinterpret_cast<PyCFunction>(DualSimTile_UpdateAsync), METH_VARARGS, nullptr },
-        { "update_display_name_for_sim1_async", reinterpret_cast<PyCFunction>(DualSimTile_UpdateDisplayNameForSim1Async), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_DualSimTile, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DualSimTile), METH_O | METH_STATIC, nullptr },
         { }
@@ -495,6 +487,39 @@ namespace py::cpp::Windows::Phone::StartScreen
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_DualSimTile
+    };
+
+    static PyGetSetDef getset_DualSimTile_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_DualSimTile_Static[] = {
+        { "create_badge_updater_for_sim1", reinterpret_cast<PyCFunction>(DualSimTile_CreateBadgeUpdaterForSim1), METH_VARARGS, nullptr },
+        { "create_badge_updater_for_sim2", reinterpret_cast<PyCFunction>(DualSimTile_CreateBadgeUpdaterForSim2), METH_VARARGS, nullptr },
+        { "create_tile_updater_for_sim1", reinterpret_cast<PyCFunction>(DualSimTile_CreateTileUpdaterForSim1), METH_VARARGS, nullptr },
+        { "create_tile_updater_for_sim2", reinterpret_cast<PyCFunction>(DualSimTile_CreateTileUpdaterForSim2), METH_VARARGS, nullptr },
+        { "create_toast_notifier_for_sim1", reinterpret_cast<PyCFunction>(DualSimTile_CreateToastNotifierForSim1), METH_VARARGS, nullptr },
+        { "create_toast_notifier_for_sim2", reinterpret_cast<PyCFunction>(DualSimTile_CreateToastNotifierForSim2), METH_VARARGS, nullptr },
+        { "get_tile_for_sim2", reinterpret_cast<PyCFunction>(DualSimTile_GetTileForSim2), METH_VARARGS, nullptr },
+        { "update_display_name_for_sim1_async", reinterpret_cast<PyCFunction>(DualSimTile_UpdateDisplayNameForSim1Async), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_DualSimTile_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_DualSimTile_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_DualSimTile_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_DualSimTile_Static =
+    {
+        "winrt._winrt_windows_phone_startscreen.DualSimTile_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_DualSimTile_Static
     };
 
     // ----- IToastNotificationManagerStatics3 interface --------------------
@@ -644,7 +669,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_startscreen(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DualSimTile, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_DualSimTile_Static{PyType_FromSpec(&type_spec_DualSimTile_Static)};
+    if (!type_DualSimTile_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_DualSimTile, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DualSimTile_Static.get())) == -1)
     {
         return nullptr;
     }

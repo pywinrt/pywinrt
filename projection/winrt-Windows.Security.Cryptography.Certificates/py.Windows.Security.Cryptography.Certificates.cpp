@@ -947,9 +947,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     }
 
     static PyMethodDef _methods_CertificateEnrollmentManager[] = {
-        { "create_request_async", reinterpret_cast<PyCFunction>(CertificateEnrollmentManager_CreateRequestAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "import_pfx_data_async", reinterpret_cast<PyCFunction>(CertificateEnrollmentManager_ImportPfxDataAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "install_certificate_async", reinterpret_cast<PyCFunction>(CertificateEnrollmentManager_InstallCertificateAsync), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -974,25 +971,33 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         _type_slots_CertificateEnrollmentManager
     };
 
-    static PyGetSetDef getset_CertificateEnrollmentManager_Meta[] = {
+    static PyGetSetDef getset_CertificateEnrollmentManager_Static[] = {
         { "user_certificate_enrollment_manager", reinterpret_cast<getter>(CertificateEnrollmentManager_get_UserCertificateEnrollmentManager), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_CertificateEnrollmentManager_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_CertificateEnrollmentManager_Meta) },
+    static PyMethodDef methods_CertificateEnrollmentManager_Static[] = {
+        { "create_request_async", reinterpret_cast<PyCFunction>(CertificateEnrollmentManager_CreateRequestAsync), METH_VARARGS, nullptr },
+        { "import_pfx_data_async", reinterpret_cast<PyCFunction>(CertificateEnrollmentManager_ImportPfxDataAsync), METH_VARARGS, nullptr },
+        { "install_certificate_async", reinterpret_cast<PyCFunction>(CertificateEnrollmentManager_InstallCertificateAsync), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_CertificateEnrollmentManager_Meta =
+    static PyType_Slot type_slots_CertificateEnrollmentManager_Static[] = 
     {
-        "winrt._winrt_windows_security_cryptography_certificates.CertificateEnrollmentManager_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CertificateEnrollmentManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CertificateEnrollmentManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CertificateEnrollmentManager_Static =
+    {
+        "winrt._winrt_windows_security_cryptography_certificates.CertificateEnrollmentManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_CertificateEnrollmentManager_Meta
+        type_slots_CertificateEnrollmentManager_Static
     };
 
     // ----- CertificateExtension class --------------------
@@ -3466,9 +3471,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     }
 
     static PyMethodDef _methods_CertificateStores[] = {
-        { "find_all_async", reinterpret_cast<PyCFunction>(CertificateStores_FindAllAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_store_by_name", reinterpret_cast<PyCFunction>(CertificateStores_GetStoreByName), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_user_store_by_name", reinterpret_cast<PyCFunction>(CertificateStores_GetUserStoreByName), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -3493,26 +3495,34 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         _type_slots_CertificateStores
     };
 
-    static PyGetSetDef getset_CertificateStores_Meta[] = {
+    static PyGetSetDef getset_CertificateStores_Static[] = {
         { "intermediate_certification_authorities", reinterpret_cast<getter>(CertificateStores_get_IntermediateCertificationAuthorities), nullptr, nullptr, nullptr },
         { "trusted_root_certification_authorities", reinterpret_cast<getter>(CertificateStores_get_TrustedRootCertificationAuthorities), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_CertificateStores_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_CertificateStores_Meta) },
+    static PyMethodDef methods_CertificateStores_Static[] = {
+        { "find_all_async", reinterpret_cast<PyCFunction>(CertificateStores_FindAllAsync), METH_VARARGS, nullptr },
+        { "get_store_by_name", reinterpret_cast<PyCFunction>(CertificateStores_GetStoreByName), METH_VARARGS, nullptr },
+        { "get_user_store_by_name", reinterpret_cast<PyCFunction>(CertificateStores_GetUserStoreByName), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_CertificateStores_Meta =
+    static PyType_Slot type_slots_CertificateStores_Static[] = 
     {
-        "winrt._winrt_windows_security_cryptography_certificates.CertificateStores_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CertificateStores_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CertificateStores_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CertificateStores_Static =
+    {
+        "winrt._winrt_windows_security_cryptography_certificates.CertificateStores_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_CertificateStores_Meta
+        type_slots_CertificateStores_Static
     };
 
     // ----- ChainBuildingParameters class --------------------
@@ -4258,7 +4268,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     }
 
     static PyMethodDef _methods_CmsAttachedSignature[] = {
-        { "generate_signature_async", reinterpret_cast<PyCFunction>(CmsAttachedSignature_GenerateSignatureAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "verify_signature", reinterpret_cast<PyCFunction>(CmsAttachedSignature_VerifySignature), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CmsAttachedSignature, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CmsAttachedSignature), METH_O | METH_STATIC, nullptr },
@@ -4288,6 +4297,32 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_CmsAttachedSignature
+    };
+
+    static PyGetSetDef getset_CmsAttachedSignature_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_CmsAttachedSignature_Static[] = {
+        { "generate_signature_async", reinterpret_cast<PyCFunction>(CmsAttachedSignature_GenerateSignatureAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_CmsAttachedSignature_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CmsAttachedSignature_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CmsAttachedSignature_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CmsAttachedSignature_Static =
+    {
+        "winrt._winrt_windows_security_cryptography_certificates.CmsAttachedSignature_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CmsAttachedSignature_Static
     };
 
     // ----- CmsDetachedSignature class --------------------
@@ -4458,7 +4493,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     }
 
     static PyMethodDef _methods_CmsDetachedSignature[] = {
-        { "generate_signature_async", reinterpret_cast<PyCFunction>(CmsDetachedSignature_GenerateSignatureAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "verify_signature_async", reinterpret_cast<PyCFunction>(CmsDetachedSignature_VerifySignatureAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CmsDetachedSignature, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CmsDetachedSignature), METH_O | METH_STATIC, nullptr },
@@ -4487,6 +4521,32 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_CmsDetachedSignature
+    };
+
+    static PyGetSetDef getset_CmsDetachedSignature_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_CmsDetachedSignature_Static[] = {
+        { "generate_signature_async", reinterpret_cast<PyCFunction>(CmsDetachedSignature_GenerateSignatureAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_CmsDetachedSignature_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CmsDetachedSignature_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CmsDetachedSignature_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CmsDetachedSignature_Static =
+    {
+        "winrt._winrt_windows_security_cryptography_certificates.CmsDetachedSignature_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CmsDetachedSignature_Static
     };
 
     // ----- CmsSignerInfo class --------------------
@@ -5049,7 +5109,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         _type_slots_KeyAlgorithmNames
     };
 
-    static PyGetSetDef getset_KeyAlgorithmNames_Meta[] = {
+    static PyGetSetDef getset_KeyAlgorithmNames_Static[] = {
         { "dsa", reinterpret_cast<getter>(KeyAlgorithmNames_get_Dsa), nullptr, nullptr, nullptr },
         { "ecdh256", reinterpret_cast<getter>(KeyAlgorithmNames_get_Ecdh256), nullptr, nullptr, nullptr },
         { "ecdh384", reinterpret_cast<getter>(KeyAlgorithmNames_get_Ecdh384), nullptr, nullptr, nullptr },
@@ -5063,20 +5123,25 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         { }
     };
 
-    static PyType_Slot type_slots_KeyAlgorithmNames_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_KeyAlgorithmNames_Meta) },
+    static PyMethodDef methods_KeyAlgorithmNames_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_KeyAlgorithmNames_Meta =
+    static PyType_Slot type_slots_KeyAlgorithmNames_Static[] = 
     {
-        "winrt._winrt_windows_security_cryptography_certificates.KeyAlgorithmNames_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_KeyAlgorithmNames_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_KeyAlgorithmNames_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_KeyAlgorithmNames_Static =
+    {
+        "winrt._winrt_windows_security_cryptography_certificates.KeyAlgorithmNames_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_KeyAlgorithmNames_Meta
+        type_slots_KeyAlgorithmNames_Static
     };
 
     // ----- KeyAttestationHelper class --------------------
@@ -5172,8 +5237,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     }
 
     static PyMethodDef _methods_KeyAttestationHelper[] = {
-        { "decrypt_tpm_attestation_credential_async", reinterpret_cast<PyCFunction>(KeyAttestationHelper_DecryptTpmAttestationCredentialAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_tpm_attestation_credential_id", reinterpret_cast<PyCFunction>(KeyAttestationHelper_GetTpmAttestationCredentialId), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -5196,6 +5259,33 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_KeyAttestationHelper
+    };
+
+    static PyGetSetDef getset_KeyAttestationHelper_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_KeyAttestationHelper_Static[] = {
+        { "decrypt_tpm_attestation_credential_async", reinterpret_cast<PyCFunction>(KeyAttestationHelper_DecryptTpmAttestationCredentialAsync), METH_VARARGS, nullptr },
+        { "get_tpm_attestation_credential_id", reinterpret_cast<PyCFunction>(KeyAttestationHelper_GetTpmAttestationCredentialId), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_KeyAttestationHelper_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_KeyAttestationHelper_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_KeyAttestationHelper_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_KeyAttestationHelper_Static =
+    {
+        "winrt._winrt_windows_security_cryptography_certificates.KeyAttestationHelper_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_KeyAttestationHelper_Static
     };
 
     // ----- KeyStorageProviderNames class --------------------
@@ -5308,7 +5398,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         _type_slots_KeyStorageProviderNames
     };
 
-    static PyGetSetDef getset_KeyStorageProviderNames_Meta[] = {
+    static PyGetSetDef getset_KeyStorageProviderNames_Static[] = {
         { "platform_key_storage_provider", reinterpret_cast<getter>(KeyStorageProviderNames_get_PlatformKeyStorageProvider), nullptr, nullptr, nullptr },
         { "smartcard_key_storage_provider", reinterpret_cast<getter>(KeyStorageProviderNames_get_SmartcardKeyStorageProvider), nullptr, nullptr, nullptr },
         { "software_key_storage_provider", reinterpret_cast<getter>(KeyStorageProviderNames_get_SoftwareKeyStorageProvider), nullptr, nullptr, nullptr },
@@ -5316,20 +5406,25 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         { }
     };
 
-    static PyType_Slot type_slots_KeyStorageProviderNames_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_KeyStorageProviderNames_Meta) },
+    static PyMethodDef methods_KeyStorageProviderNames_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_KeyStorageProviderNames_Meta =
+    static PyType_Slot type_slots_KeyStorageProviderNames_Static[] = 
     {
-        "winrt._winrt_windows_security_cryptography_certificates.KeyStorageProviderNames_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_KeyStorageProviderNames_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_KeyStorageProviderNames_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_KeyStorageProviderNames_Static =
+    {
+        "winrt._winrt_windows_security_cryptography_certificates.KeyStorageProviderNames_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_KeyStorageProviderNames_Meta
+        type_slots_KeyStorageProviderNames_Static
     };
 
     // ----- PfxImportParameters class --------------------
@@ -5850,27 +5945,32 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         _type_slots_StandardCertificateStoreNames
     };
 
-    static PyGetSetDef getset_StandardCertificateStoreNames_Meta[] = {
+    static PyGetSetDef getset_StandardCertificateStoreNames_Static[] = {
         { "intermediate_certification_authorities", reinterpret_cast<getter>(StandardCertificateStoreNames_get_IntermediateCertificationAuthorities), nullptr, nullptr, nullptr },
         { "personal", reinterpret_cast<getter>(StandardCertificateStoreNames_get_Personal), nullptr, nullptr, nullptr },
         { "trusted_root_certification_authorities", reinterpret_cast<getter>(StandardCertificateStoreNames_get_TrustedRootCertificationAuthorities), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_StandardCertificateStoreNames_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_StandardCertificateStoreNames_Meta) },
+    static PyMethodDef methods_StandardCertificateStoreNames_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_StandardCertificateStoreNames_Meta =
+    static PyType_Slot type_slots_StandardCertificateStoreNames_Static[] = 
     {
-        "winrt._winrt_windows_security_cryptography_certificates.StandardCertificateStoreNames_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_StandardCertificateStoreNames_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_StandardCertificateStoreNames_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_StandardCertificateStoreNames_Static =
+    {
+        "winrt._winrt_windows_security_cryptography_certificates.StandardCertificateStoreNames_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_StandardCertificateStoreNames_Meta
+        type_slots_StandardCertificateStoreNames_Static
     };
 
     // ----- SubjectAlternativeNameInfo class --------------------
@@ -6652,13 +6752,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_certificates(void) no
         return nullptr;
     }
 
-    py::pyobj_handle type_CertificateEnrollmentManager_Meta{PyType_FromSpec(&type_spec_CertificateEnrollmentManager_Meta)};
-    if (!type_CertificateEnrollmentManager_Meta)
+    py::pyobj_handle type_CertificateEnrollmentManager_Static{PyType_FromSpec(&type_spec_CertificateEnrollmentManager_Static)};
+    if (!type_CertificateEnrollmentManager_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CertificateEnrollmentManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CertificateEnrollmentManager_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CertificateEnrollmentManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CertificateEnrollmentManager_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -6688,13 +6788,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_certificates(void) no
         return nullptr;
     }
 
-    py::pyobj_handle type_CertificateStores_Meta{PyType_FromSpec(&type_spec_CertificateStores_Meta)};
-    if (!type_CertificateStores_Meta)
+    py::pyobj_handle type_CertificateStores_Static{PyType_FromSpec(&type_spec_CertificateStores_Static)};
+    if (!type_CertificateStores_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CertificateStores, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CertificateStores_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CertificateStores, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CertificateStores_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -6709,12 +6809,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_certificates(void) no
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CmsAttachedSignature, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_CmsAttachedSignature_Static{PyType_FromSpec(&type_spec_CmsAttachedSignature_Static)};
+    if (!type_CmsAttachedSignature_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CmsDetachedSignature, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CmsAttachedSignature, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CmsAttachedSignature_Static.get())) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CmsDetachedSignature_Static{PyType_FromSpec(&type_spec_CmsDetachedSignature_Static)};
+    if (!type_CmsDetachedSignature_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_CmsDetachedSignature, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CmsDetachedSignature_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -6729,29 +6841,35 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_certificates(void) no
         return nullptr;
     }
 
-    py::pyobj_handle type_KeyAlgorithmNames_Meta{PyType_FromSpec(&type_spec_KeyAlgorithmNames_Meta)};
-    if (!type_KeyAlgorithmNames_Meta)
+    py::pyobj_handle type_KeyAlgorithmNames_Static{PyType_FromSpec(&type_spec_KeyAlgorithmNames_Static)};
+    if (!type_KeyAlgorithmNames_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_KeyAlgorithmNames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KeyAlgorithmNames_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_KeyAlgorithmNames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KeyAlgorithmNames_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_KeyAttestationHelper, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_KeyAttestationHelper_Static{PyType_FromSpec(&type_spec_KeyAttestationHelper_Static)};
+    if (!type_KeyAttestationHelper_Static)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_KeyStorageProviderNames_Meta{PyType_FromSpec(&type_spec_KeyStorageProviderNames_Meta)};
-    if (!type_KeyStorageProviderNames_Meta)
+    if (py::register_python_type(module.get(), &type_spec_KeyAttestationHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KeyAttestationHelper_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_KeyStorageProviderNames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KeyStorageProviderNames_Meta.get())) == -1)
+    py::pyobj_handle type_KeyStorageProviderNames_Static{PyType_FromSpec(&type_spec_KeyStorageProviderNames_Static)};
+    if (!type_KeyStorageProviderNames_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_KeyStorageProviderNames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KeyStorageProviderNames_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -6761,13 +6879,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_certificates(void) no
         return nullptr;
     }
 
-    py::pyobj_handle type_StandardCertificateStoreNames_Meta{PyType_FromSpec(&type_spec_StandardCertificateStoreNames_Meta)};
-    if (!type_StandardCertificateStoreNames_Meta)
+    py::pyobj_handle type_StandardCertificateStoreNames_Static{PyType_FromSpec(&type_spec_StandardCertificateStoreNames_Static)};
+    if (!type_StandardCertificateStoreNames_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StandardCertificateStoreNames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StandardCertificateStoreNames_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StandardCertificateStoreNames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StandardCertificateStoreNames_Static.get())) == -1)
     {
         return nullptr;
     }

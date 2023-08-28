@@ -89,13 +89,24 @@ class BindingExpressionBase(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BindingExpressionBase: ...
 
-class BindingOperations(winrt.system.Object):
+class BindingOperations_Static(type):
+    def set_binding(cls, target: typing.Optional[winrt.windows.ui.xaml.DependencyObject], dp: typing.Optional[winrt.windows.ui.xaml.DependencyProperty], binding: typing.Optional[BindingBase], /) -> None: ...
+
+class BindingOperations(winrt.system.Object, metaclass=BindingOperations_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BindingOperations: ...
-    @staticmethod
-    def set_binding(target: typing.Optional[winrt.windows.ui.xaml.DependencyObject], dp: typing.Optional[winrt.windows.ui.xaml.DependencyProperty], binding: typing.Optional[BindingBase], /) -> None: ...
 
-class CollectionViewSource(winrt.system.Object):
+class CollectionViewSource_Static(type):
+    @_property
+    def is_source_grouped_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
+    @_property
+    def items_path_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
+    @_property
+    def source_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
+    @_property
+    def view_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
+
+class CollectionViewSource(winrt.system.Object, metaclass=CollectionViewSource_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CollectionViewSource: ...
     def __new__(cls: typing.Type[CollectionViewSource]) -> CollectionViewSource:...
@@ -113,10 +124,6 @@ class CollectionViewSource(winrt.system.Object):
     def is_source_grouped(self, value: bool) -> None: ...
     @_property
     def view(self) -> typing.Optional[ICollectionView]: ...
-    is_source_grouped_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    items_path_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    source_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    view_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
 
 class CurrentChangingEventArgs(winrt.system.Object):
     @staticmethod

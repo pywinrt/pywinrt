@@ -275,14 +275,6 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
     }
 
     static PyMethodDef _methods_PlatformDiagnosticActions[] = {
-        { "download_latest_settings_for_namespace", reinterpret_cast<PyCFunction>(PlatformDiagnosticActions_DownloadLatestSettingsForNamespace), METH_VARARGS | METH_STATIC, nullptr },
-        { "force_upload", reinterpret_cast<PyCFunction>(PlatformDiagnosticActions_ForceUpload), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_active_scenario_list", reinterpret_cast<PyCFunction>(PlatformDiagnosticActions_GetActiveScenarioList), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_active_trace_runtime", reinterpret_cast<PyCFunction>(PlatformDiagnosticActions_GetActiveTraceRuntime), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_known_trace_list", reinterpret_cast<PyCFunction>(PlatformDiagnosticActions_GetKnownTraceList), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_scenario_enabled", reinterpret_cast<PyCFunction>(PlatformDiagnosticActions_IsScenarioEnabled), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_trace_running", reinterpret_cast<PyCFunction>(PlatformDiagnosticActions_IsTraceRunning), METH_VARARGS | METH_STATIC, nullptr },
-        { "try_escalate_scenario", reinterpret_cast<PyCFunction>(PlatformDiagnosticActions_TryEscalateScenario), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -305,6 +297,39 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_PlatformDiagnosticActions
+    };
+
+    static PyGetSetDef getset_PlatformDiagnosticActions_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_PlatformDiagnosticActions_Static[] = {
+        { "download_latest_settings_for_namespace", reinterpret_cast<PyCFunction>(PlatformDiagnosticActions_DownloadLatestSettingsForNamespace), METH_VARARGS, nullptr },
+        { "force_upload", reinterpret_cast<PyCFunction>(PlatformDiagnosticActions_ForceUpload), METH_VARARGS, nullptr },
+        { "get_active_scenario_list", reinterpret_cast<PyCFunction>(PlatformDiagnosticActions_GetActiveScenarioList), METH_VARARGS, nullptr },
+        { "get_active_trace_runtime", reinterpret_cast<PyCFunction>(PlatformDiagnosticActions_GetActiveTraceRuntime), METH_VARARGS, nullptr },
+        { "get_known_trace_list", reinterpret_cast<PyCFunction>(PlatformDiagnosticActions_GetKnownTraceList), METH_VARARGS, nullptr },
+        { "is_scenario_enabled", reinterpret_cast<PyCFunction>(PlatformDiagnosticActions_IsScenarioEnabled), METH_VARARGS, nullptr },
+        { "is_trace_running", reinterpret_cast<PyCFunction>(PlatformDiagnosticActions_IsTraceRunning), METH_VARARGS, nullptr },
+        { "try_escalate_scenario", reinterpret_cast<PyCFunction>(PlatformDiagnosticActions_TryEscalateScenario), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_PlatformDiagnosticActions_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PlatformDiagnosticActions_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PlatformDiagnosticActions_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PlatformDiagnosticActions_Static =
+    {
+        "winrt._winrt_windows_system_diagnostics_tracereporting.PlatformDiagnosticActions_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_PlatformDiagnosticActions_Static
     };
 
     // ----- PlatformDiagnosticTraceInfo class --------------------
@@ -651,7 +676,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_diagnostics_tracereporting(void) noe
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PlatformDiagnosticActions, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_PlatformDiagnosticActions_Static{PyType_FromSpec(&type_spec_PlatformDiagnosticActions_Static)};
+    if (!type_PlatformDiagnosticActions_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_PlatformDiagnosticActions, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PlatformDiagnosticActions_Static.get())) == -1)
     {
         return nullptr;
     }

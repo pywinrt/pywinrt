@@ -44,11 +44,12 @@ class Print3DWorkflowPrinterChangedEventArgs(winrt.system.Object):
     @_property
     def new_device_id(self) -> str: ...
 
-class PrintExtensionContext(winrt.system.Object):
+class PrintExtensionContext_Static(type):
+    def from_device_id(cls, device_id: str, /) -> typing.Optional[winrt.system.Object]: ...
+
+class PrintExtensionContext(winrt.system.Object, metaclass=PrintExtensionContext_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintExtensionContext: ...
-    @staticmethod
-    def from_device_id(device_id: str, /) -> typing.Optional[winrt.system.Object]: ...
 
 class PrintNotificationEventDetails(winrt.system.Object):
     @staticmethod

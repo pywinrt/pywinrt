@@ -953,10 +953,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyMethodDef _methods_AdaptiveMediaSource[] = {
         { "close", reinterpret_cast<PyCFunction>(AdaptiveMediaSource_Close), METH_VARARGS, nullptr },
-        { "create_from_stream_async", reinterpret_cast<PyCFunction>(AdaptiveMediaSource_CreateFromStreamAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_from_uri_async", reinterpret_cast<PyCFunction>(AdaptiveMediaSource_CreateFromUriAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "get_correlated_times", reinterpret_cast<PyCFunction>(AdaptiveMediaSource_GetCorrelatedTimes), METH_VARARGS, nullptr },
-        { "is_content_type_supported", reinterpret_cast<PyCFunction>(AdaptiveMediaSource_IsContentTypeSupported), METH_VARARGS | METH_STATIC, nullptr },
         { "add_download_bitrate_changed", reinterpret_cast<PyCFunction>(AdaptiveMediaSource_add_DownloadBitrateChanged), METH_O, nullptr },
         { "remove_download_bitrate_changed", reinterpret_cast<PyCFunction>(AdaptiveMediaSource_remove_DownloadBitrateChanged), METH_O, nullptr },
         { "add_download_completed", reinterpret_cast<PyCFunction>(AdaptiveMediaSource_add_DownloadCompleted), METH_O, nullptr },
@@ -1010,6 +1007,34 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_AdaptiveMediaSource
+    };
+
+    static PyGetSetDef getset_AdaptiveMediaSource_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_AdaptiveMediaSource_Static[] = {
+        { "create_from_stream_async", reinterpret_cast<PyCFunction>(AdaptiveMediaSource_CreateFromStreamAsync), METH_VARARGS, nullptr },
+        { "create_from_uri_async", reinterpret_cast<PyCFunction>(AdaptiveMediaSource_CreateFromUriAsync), METH_VARARGS, nullptr },
+        { "is_content_type_supported", reinterpret_cast<PyCFunction>(AdaptiveMediaSource_IsContentTypeSupported), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_AdaptiveMediaSource_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_AdaptiveMediaSource_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_AdaptiveMediaSource_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_AdaptiveMediaSource_Static =
+    {
+        "winrt._winrt_windows_media_streaming_adaptive.AdaptiveMediaSource_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_AdaptiveMediaSource_Static
     };
 
     // ----- AdaptiveMediaSourceAdvancedSettings class --------------------
@@ -3721,7 +3746,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_streaming_adaptive(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AdaptiveMediaSource, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_AdaptiveMediaSource_Static{PyType_FromSpec(&type_spec_AdaptiveMediaSource_Static)};
+    if (!type_AdaptiveMediaSource_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_AdaptiveMediaSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AdaptiveMediaSource_Static.get())) == -1)
     {
         return nullptr;
     }

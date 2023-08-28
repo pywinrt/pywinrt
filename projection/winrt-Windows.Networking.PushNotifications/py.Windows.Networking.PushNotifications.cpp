@@ -384,10 +384,6 @@ namespace py::cpp::Windows::Networking::PushNotifications
     }
 
     static PyMethodDef _methods_PushNotificationChannelManager[] = {
-        { "create_push_notification_channel_for_application_async", reinterpret_cast<PyCFunction>(PushNotificationChannelManager_CreatePushNotificationChannelForApplicationAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_push_notification_channel_for_secondary_tile_async", reinterpret_cast<PyCFunction>(PushNotificationChannelManager_CreatePushNotificationChannelForSecondaryTileAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_default", reinterpret_cast<PyCFunction>(PushNotificationChannelManager_GetDefault), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_for_user", reinterpret_cast<PyCFunction>(PushNotificationChannelManager_GetForUser), METH_VARARGS | METH_STATIC, nullptr },
         { "add_channels_revoked", reinterpret_cast<PyCFunction>(PushNotificationChannelManager_add_ChannelsRevoked), METH_O | METH_STATIC, nullptr },
         { "remove_channels_revoked", reinterpret_cast<PyCFunction>(PushNotificationChannelManager_remove_ChannelsRevoked), METH_O | METH_STATIC, nullptr },
         { }
@@ -412,6 +408,35 @@ namespace py::cpp::Windows::Networking::PushNotifications
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_PushNotificationChannelManager
+    };
+
+    static PyGetSetDef getset_PushNotificationChannelManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_PushNotificationChannelManager_Static[] = {
+        { "create_push_notification_channel_for_application_async", reinterpret_cast<PyCFunction>(PushNotificationChannelManager_CreatePushNotificationChannelForApplicationAsync), METH_VARARGS, nullptr },
+        { "create_push_notification_channel_for_secondary_tile_async", reinterpret_cast<PyCFunction>(PushNotificationChannelManager_CreatePushNotificationChannelForSecondaryTileAsync), METH_VARARGS, nullptr },
+        { "get_default", reinterpret_cast<PyCFunction>(PushNotificationChannelManager_GetDefault), METH_VARARGS, nullptr },
+        { "get_for_user", reinterpret_cast<PyCFunction>(PushNotificationChannelManager_GetForUser), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_PushNotificationChannelManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PushNotificationChannelManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PushNotificationChannelManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PushNotificationChannelManager_Static =
+    {
+        "winrt._winrt_windows_networking_pushnotifications.PushNotificationChannelManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_PushNotificationChannelManager_Static
     };
 
     // ----- PushNotificationChannelManagerForUser class --------------------
@@ -1126,7 +1151,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_pushnotifications(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PushNotificationChannelManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_PushNotificationChannelManager_Static{PyType_FromSpec(&type_spec_PushNotificationChannelManager_Static)};
+    if (!type_PushNotificationChannelManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_PushNotificationChannelManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PushNotificationChannelManager_Static.get())) == -1)
     {
         return nullptr;
     }

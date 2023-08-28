@@ -194,8 +194,6 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
     }
 
     static PyMethodDef _methods_CoreFrameworkInputView[] = {
-        { "get_for_current_view", reinterpret_cast<PyCFunction>(CoreFrameworkInputView_GetForCurrentView), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_for_u_i_context", reinterpret_cast<PyCFunction>(CoreFrameworkInputView_GetForUIContext), METH_VARARGS | METH_STATIC, nullptr },
         { "add_occlusions_changed", reinterpret_cast<PyCFunction>(CoreFrameworkInputView_add_OcclusionsChanged), METH_O, nullptr },
         { "remove_occlusions_changed", reinterpret_cast<PyCFunction>(CoreFrameworkInputView_remove_OcclusionsChanged), METH_O, nullptr },
         { "add_primary_view_animation_starting", reinterpret_cast<PyCFunction>(CoreFrameworkInputView_add_PrimaryViewAnimationStarting), METH_O, nullptr },
@@ -225,6 +223,33 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_CoreFrameworkInputView
+    };
+
+    static PyGetSetDef getset_CoreFrameworkInputView_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_CoreFrameworkInputView_Static[] = {
+        { "get_for_current_view", reinterpret_cast<PyCFunction>(CoreFrameworkInputView_GetForCurrentView), METH_VARARGS, nullptr },
+        { "get_for_u_i_context", reinterpret_cast<PyCFunction>(CoreFrameworkInputView_GetForUIContext), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_CoreFrameworkInputView_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CoreFrameworkInputView_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CoreFrameworkInputView_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CoreFrameworkInputView_Static =
+    {
+        "winrt._winrt_windows_ui_viewmanagement_core.CoreFrameworkInputView_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CoreFrameworkInputView_Static
     };
 
     // ----- CoreFrameworkInputViewAnimationStartingEventArgs class --------------------
@@ -1097,8 +1122,6 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
 
     static PyMethodDef _methods_CoreInputView[] = {
         { "get_core_input_view_occlusions", reinterpret_cast<PyCFunction>(CoreInputView_GetCoreInputViewOcclusions), METH_VARARGS, nullptr },
-        { "get_for_current_view", reinterpret_cast<PyCFunction>(CoreInputView_GetForCurrentView), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_for_u_i_context", reinterpret_cast<PyCFunction>(CoreInputView_GetForUIContext), METH_VARARGS | METH_STATIC, nullptr },
         { "is_kind_supported", reinterpret_cast<PyCFunction>(CoreInputView_IsKindSupported), METH_VARARGS, nullptr },
         { "try_hide", reinterpret_cast<PyCFunction>(CoreInputView_TryHide), METH_VARARGS, nullptr },
         { "try_hide_primary_view", reinterpret_cast<PyCFunction>(CoreInputView_TryHidePrimaryView), METH_VARARGS, nullptr },
@@ -1144,6 +1167,33 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_CoreInputView
+    };
+
+    static PyGetSetDef getset_CoreInputView_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_CoreInputView_Static[] = {
+        { "get_for_current_view", reinterpret_cast<PyCFunction>(CoreInputView_GetForCurrentView), METH_VARARGS, nullptr },
+        { "get_for_u_i_context", reinterpret_cast<PyCFunction>(CoreInputView_GetForUIContext), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_CoreInputView_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CoreInputView_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CoreInputView_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CoreInputView_Static =
+    {
+        "winrt._winrt_windows_ui_viewmanagement_core.CoreInputView_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CoreInputView_Static
     };
 
     // ----- CoreInputViewAnimationStartingEventArgs class --------------------
@@ -2183,7 +2233,6 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
     }
 
     static PyMethodDef _methods_UISettingsController[] = {
-        { "request_default_async", reinterpret_cast<PyCFunction>(UISettingsController_RequestDefaultAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "set_advanced_effects_enabled", reinterpret_cast<PyCFunction>(UISettingsController_SetAdvancedEffectsEnabled), METH_VARARGS, nullptr },
         { "set_animations_enabled", reinterpret_cast<PyCFunction>(UISettingsController_SetAnimationsEnabled), METH_VARARGS, nullptr },
         { "set_auto_hide_scroll_bars", reinterpret_cast<PyCFunction>(UISettingsController_SetAutoHideScrollBars), METH_VARARGS, nullptr },
@@ -2214,6 +2263,32 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_UISettingsController
+    };
+
+    static PyGetSetDef getset_UISettingsController_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_UISettingsController_Static[] = {
+        { "request_default_async", reinterpret_cast<PyCFunction>(UISettingsController_RequestDefaultAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_UISettingsController_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_UISettingsController_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_UISettingsController_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_UISettingsController_Static =
+    {
+        "winrt._winrt_windows_ui_viewmanagement_core.UISettingsController_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_UISettingsController_Static
     };
 
     // ----- Windows.UI.ViewManagement.Core Initialization --------------------
@@ -2262,7 +2337,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_viewmanagement_core(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreFrameworkInputView, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_CoreFrameworkInputView_Static{PyType_FromSpec(&type_spec_CoreFrameworkInputView_Static)};
+    if (!type_CoreFrameworkInputView_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_CoreFrameworkInputView, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CoreFrameworkInputView_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -2277,7 +2358,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_viewmanagement_core(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreInputView, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_CoreInputView_Static{PyType_FromSpec(&type_spec_CoreInputView_Static)};
+    if (!type_CoreInputView_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_CoreInputView, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CoreInputView_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -2312,7 +2399,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_viewmanagement_core(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UISettingsController, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_UISettingsController_Static{PyType_FromSpec(&type_spec_UISettingsController_Static)};
+    if (!type_UISettingsController_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_UISettingsController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UISettingsController_Static.get())) == -1)
     {
         return nullptr;
     }

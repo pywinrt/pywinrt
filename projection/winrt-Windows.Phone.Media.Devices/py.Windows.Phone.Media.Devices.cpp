@@ -201,7 +201,6 @@ namespace py::cpp::Windows::Phone::Media::Devices
 
     static PyMethodDef _methods_AudioRoutingManager[] = {
         { "get_audio_endpoint", reinterpret_cast<PyCFunction>(AudioRoutingManager_GetAudioEndpoint), METH_VARARGS, nullptr },
-        { "get_default", reinterpret_cast<PyCFunction>(AudioRoutingManager_GetDefault), METH_VARARGS | METH_STATIC, nullptr },
         { "set_audio_endpoint", reinterpret_cast<PyCFunction>(AudioRoutingManager_SetAudioEndpoint), METH_VARARGS, nullptr },
         { "add_audio_endpoint_changed", reinterpret_cast<PyCFunction>(AudioRoutingManager_add_AudioEndpointChanged), METH_O, nullptr },
         { "remove_audio_endpoint_changed", reinterpret_cast<PyCFunction>(AudioRoutingManager_remove_AudioEndpointChanged), METH_O, nullptr },
@@ -231,6 +230,32 @@ namespace py::cpp::Windows::Phone::Media::Devices
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_AudioRoutingManager
+    };
+
+    static PyGetSetDef getset_AudioRoutingManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_AudioRoutingManager_Static[] = {
+        { "get_default", reinterpret_cast<PyCFunction>(AudioRoutingManager_GetDefault), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_AudioRoutingManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_AudioRoutingManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_AudioRoutingManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_AudioRoutingManager_Static =
+    {
+        "winrt._winrt_windows_phone_media_devices.AudioRoutingManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_AudioRoutingManager_Static
     };
 
     // ----- Windows.Phone.Media.Devices Initialization --------------------
@@ -279,7 +304,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_media_devices(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AudioRoutingManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_AudioRoutingManager_Static{PyType_FromSpec(&type_spec_AudioRoutingManager_Static)};
+    if (!type_AudioRoutingManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_AudioRoutingManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AudioRoutingManager_Static.get())) == -1)
     {
         return nullptr;
     }

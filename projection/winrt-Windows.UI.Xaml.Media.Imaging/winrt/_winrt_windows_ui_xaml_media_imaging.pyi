@@ -19,7 +19,25 @@ from winrt.windows.ui.xaml.media.imaging import DownloadProgressEventHandler
 
 Self = typing.TypeVar('Self')
 
-class BitmapImage(winrt.system.Object):
+class BitmapImage_Static(type):
+    @_property
+    def create_options_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
+    @_property
+    def decode_pixel_height_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
+    @_property
+    def decode_pixel_width_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
+    @_property
+    def uri_source_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
+    @_property
+    def decode_pixel_type_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
+    @_property
+    def auto_play_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
+    @_property
+    def is_animated_bitmap_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
+    @_property
+    def is_playing_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
+
+class BitmapImage(winrt.system.Object, metaclass=BitmapImage_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BitmapImage: ...
     @typing.overload
@@ -62,16 +80,14 @@ class BitmapImage(winrt.system.Object):
     def is_animated_bitmap(self) -> bool: ...
     @_property
     def is_playing(self) -> bool: ...
-    create_options_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    decode_pixel_height_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    decode_pixel_width_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    uri_source_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    decode_pixel_type_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    auto_play_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    is_animated_bitmap_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    is_playing_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
 
-class BitmapSource(winrt.system.Object):
+class BitmapSource_Static(type):
+    @_property
+    def pixel_height_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
+    @_property
+    def pixel_width_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
+
+class BitmapSource(winrt.system.Object, metaclass=BitmapSource_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BitmapSource: ...
     def set_source(self, stream_source: typing.Optional[winrt.windows.storage.streams.IRandomAccessStream], /) -> None: ...
@@ -80,8 +96,6 @@ class BitmapSource(winrt.system.Object):
     def pixel_height(self) -> winrt.system.Int32: ...
     @_property
     def pixel_width(self) -> winrt.system.Int32: ...
-    pixel_height_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    pixel_width_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
 
 class DownloadProgressEventArgs(winrt.system.Object):
     @staticmethod
@@ -91,7 +105,13 @@ class DownloadProgressEventArgs(winrt.system.Object):
     @progress.setter
     def progress(self, value: winrt.system.Int32) -> None: ...
 
-class RenderTargetBitmap(winrt.system.Object):
+class RenderTargetBitmap_Static(type):
+    @_property
+    def pixel_height_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
+    @_property
+    def pixel_width_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
+
+class RenderTargetBitmap(winrt.system.Object, metaclass=RenderTargetBitmap_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RenderTargetBitmap: ...
     def __new__(cls: typing.Type[RenderTargetBitmap]) -> RenderTargetBitmap:...
@@ -104,8 +124,6 @@ class RenderTargetBitmap(winrt.system.Object):
     def pixel_height(self) -> winrt.system.Int32: ...
     @_property
     def pixel_width(self) -> winrt.system.Int32: ...
-    pixel_height_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    pixel_width_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
 
 class SoftwareBitmapSource(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
@@ -124,7 +142,15 @@ class SurfaceImageSource(winrt.system.Object):
     @typing.overload
     def __new__(cls: typing.Type[SurfaceImageSource], pixel_width: winrt.system.Int32, pixel_height: winrt.system.Int32, is_opaque: bool) -> SurfaceImageSource:...
 
-class SvgImageSource(winrt.system.Object):
+class SvgImageSource_Static(type):
+    @_property
+    def rasterize_pixel_height_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
+    @_property
+    def rasterize_pixel_width_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
+    @_property
+    def uri_source_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
+
+class SvgImageSource(winrt.system.Object, metaclass=SvgImageSource_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SvgImageSource: ...
     @typing.overload
@@ -148,9 +174,6 @@ class SvgImageSource(winrt.system.Object):
     def rasterize_pixel_height(self) -> winrt.system.Double: ...
     @rasterize_pixel_height.setter
     def rasterize_pixel_height(self, value: winrt.system.Double) -> None: ...
-    rasterize_pixel_height_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    rasterize_pixel_width_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    uri_source_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
 
 class SvgImageSourceFailedEventArgs(winrt.system.Object):
     @staticmethod

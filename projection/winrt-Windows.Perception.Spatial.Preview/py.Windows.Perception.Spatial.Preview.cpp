@@ -324,9 +324,6 @@ namespace py::cpp::Windows::Perception::Spatial::Preview
     }
 
     static PyMethodDef _methods_SpatialGraphInteropPreview[] = {
-        { "create_coordinate_system_for_node", reinterpret_cast<PyCFunction>(SpatialGraphInteropPreview_CreateCoordinateSystemForNode), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_locator_for_node", reinterpret_cast<PyCFunction>(SpatialGraphInteropPreview_CreateLocatorForNode), METH_VARARGS | METH_STATIC, nullptr },
-        { "try_create_frame_of_reference", reinterpret_cast<PyCFunction>(SpatialGraphInteropPreview_TryCreateFrameOfReference), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -349,6 +346,34 @@ namespace py::cpp::Windows::Perception::Spatial::Preview
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_SpatialGraphInteropPreview
+    };
+
+    static PyGetSetDef getset_SpatialGraphInteropPreview_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_SpatialGraphInteropPreview_Static[] = {
+        { "create_coordinate_system_for_node", reinterpret_cast<PyCFunction>(SpatialGraphInteropPreview_CreateCoordinateSystemForNode), METH_VARARGS, nullptr },
+        { "create_locator_for_node", reinterpret_cast<PyCFunction>(SpatialGraphInteropPreview_CreateLocatorForNode), METH_VARARGS, nullptr },
+        { "try_create_frame_of_reference", reinterpret_cast<PyCFunction>(SpatialGraphInteropPreview_TryCreateFrameOfReference), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_SpatialGraphInteropPreview_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SpatialGraphInteropPreview_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SpatialGraphInteropPreview_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SpatialGraphInteropPreview_Static =
+    {
+        "winrt._winrt_windows_perception_spatial_preview.SpatialGraphInteropPreview_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_SpatialGraphInteropPreview_Static
     };
 
     // ----- Windows.Perception.Spatial.Preview Initialization --------------------
@@ -402,7 +427,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_perception_spatial_preview(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpatialGraphInteropPreview, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_SpatialGraphInteropPreview_Static{PyType_FromSpec(&type_spec_SpatialGraphInteropPreview_Static)};
+    if (!type_SpatialGraphInteropPreview_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_SpatialGraphInteropPreview, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpatialGraphInteropPreview_Static.get())) == -1)
     {
         return nullptr;
     }

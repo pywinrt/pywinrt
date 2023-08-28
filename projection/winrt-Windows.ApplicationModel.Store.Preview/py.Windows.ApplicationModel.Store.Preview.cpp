@@ -115,7 +115,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
     }
 
     static PyMethodDef _methods_DeliveryOptimizationSettings[] = {
-        { "get_current_settings", reinterpret_cast<PyCFunction>(DeliveryOptimizationSettings_GetCurrentSettings), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_DeliveryOptimizationSettings, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DeliveryOptimizationSettings), METH_O | METH_STATIC, nullptr },
         { }
@@ -143,6 +142,32 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_DeliveryOptimizationSettings
+    };
+
+    static PyGetSetDef getset_DeliveryOptimizationSettings_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_DeliveryOptimizationSettings_Static[] = {
+        { "get_current_settings", reinterpret_cast<PyCFunction>(DeliveryOptimizationSettings_GetCurrentSettings), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_DeliveryOptimizationSettings_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_DeliveryOptimizationSettings_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_DeliveryOptimizationSettings_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_DeliveryOptimizationSettings_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_store_preview.DeliveryOptimizationSettings_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_DeliveryOptimizationSettings_Static
     };
 
     // ----- StoreConfiguration class --------------------
@@ -1001,31 +1026,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
     }
 
     static PyMethodDef _methods_StoreConfiguration[] = {
-        { "filter_unsupported_system_features_async", reinterpret_cast<PyCFunction>(StoreConfiguration_FilterUnsupportedSystemFeaturesAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_enterprise_store_web_account_id", reinterpret_cast<PyCFunction>(StoreConfiguration_GetEnterpriseStoreWebAccountId), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_enterprise_store_web_account_id_for_user", reinterpret_cast<PyCFunction>(StoreConfiguration_GetEnterpriseStoreWebAccountIdForUser), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_purchase_prompting_policy_for_user", reinterpret_cast<PyCFunction>(StoreConfiguration_GetPurchasePromptingPolicyForUser), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_store_log_data_async", reinterpret_cast<PyCFunction>(StoreConfiguration_GetStoreLogDataAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_store_web_account_id", reinterpret_cast<PyCFunction>(StoreConfiguration_GetStoreWebAccountId), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_store_web_account_id_for_user", reinterpret_cast<PyCFunction>(StoreConfiguration_GetStoreWebAccountIdForUser), METH_VARARGS | METH_STATIC, nullptr },
-        { "has_store_web_account", reinterpret_cast<PyCFunction>(StoreConfiguration_HasStoreWebAccount), METH_VARARGS | METH_STATIC, nullptr },
-        { "has_store_web_account_for_user", reinterpret_cast<PyCFunction>(StoreConfiguration_HasStoreWebAccountForUser), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_pin_to_desktop_supported", reinterpret_cast<PyCFunction>(StoreConfiguration_IsPinToDesktopSupported), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_pin_to_start_supported", reinterpret_cast<PyCFunction>(StoreConfiguration_IsPinToStartSupported), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_pin_to_taskbar_supported", reinterpret_cast<PyCFunction>(StoreConfiguration_IsPinToTaskbarSupported), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_store_web_account_id", reinterpret_cast<PyCFunction>(StoreConfiguration_IsStoreWebAccountId), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_store_web_account_id_for_user", reinterpret_cast<PyCFunction>(StoreConfiguration_IsStoreWebAccountIdForUser), METH_VARARGS | METH_STATIC, nullptr },
-        { "pin_to_desktop", reinterpret_cast<PyCFunction>(StoreConfiguration_PinToDesktop), METH_VARARGS | METH_STATIC, nullptr },
-        { "pin_to_desktop_for_user", reinterpret_cast<PyCFunction>(StoreConfiguration_PinToDesktopForUser), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_enterprise_store_web_account_id", reinterpret_cast<PyCFunction>(StoreConfiguration_SetEnterpriseStoreWebAccountId), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_enterprise_store_web_account_id_for_user", reinterpret_cast<PyCFunction>(StoreConfiguration_SetEnterpriseStoreWebAccountIdForUser), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_mobile_operator_configuration", reinterpret_cast<PyCFunction>(StoreConfiguration_SetMobileOperatorConfiguration), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_purchase_prompting_policy_for_user", reinterpret_cast<PyCFunction>(StoreConfiguration_SetPurchasePromptingPolicyForUser), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_store_web_account_id", reinterpret_cast<PyCFunction>(StoreConfiguration_SetStoreWebAccountId), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_store_web_account_id_for_user", reinterpret_cast<PyCFunction>(StoreConfiguration_SetStoreWebAccountIdForUser), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_system_configuration", reinterpret_cast<PyCFunction>(StoreConfiguration_SetSystemConfiguration), METH_VARARGS | METH_STATIC, nullptr },
-        { "should_restrict_to_enterprise_store_only", reinterpret_cast<PyCFunction>(StoreConfiguration_ShouldRestrictToEnterpriseStoreOnly), METH_VARARGS | METH_STATIC, nullptr },
-        { "should_restrict_to_enterprise_store_only_for_user", reinterpret_cast<PyCFunction>(StoreConfiguration_ShouldRestrictToEnterpriseStoreOnlyForUser), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -1050,26 +1050,56 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
         _type_slots_StoreConfiguration
     };
 
-    static PyGetSetDef getset_StoreConfiguration_Meta[] = {
+    static PyGetSetDef getset_StoreConfiguration_Static[] = {
         { "hardware_manufacturer_info", reinterpret_cast<getter>(StoreConfiguration_get_HardwareManufacturerInfo), nullptr, nullptr, nullptr },
         { "purchase_prompting_policy", reinterpret_cast<getter>(StoreConfiguration_get_PurchasePromptingPolicy), reinterpret_cast<setter>(StoreConfiguration_put_PurchasePromptingPolicy), nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_StoreConfiguration_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_StoreConfiguration_Meta) },
+    static PyMethodDef methods_StoreConfiguration_Static[] = {
+        { "filter_unsupported_system_features_async", reinterpret_cast<PyCFunction>(StoreConfiguration_FilterUnsupportedSystemFeaturesAsync), METH_VARARGS, nullptr },
+        { "get_enterprise_store_web_account_id", reinterpret_cast<PyCFunction>(StoreConfiguration_GetEnterpriseStoreWebAccountId), METH_VARARGS, nullptr },
+        { "get_enterprise_store_web_account_id_for_user", reinterpret_cast<PyCFunction>(StoreConfiguration_GetEnterpriseStoreWebAccountIdForUser), METH_VARARGS, nullptr },
+        { "get_purchase_prompting_policy_for_user", reinterpret_cast<PyCFunction>(StoreConfiguration_GetPurchasePromptingPolicyForUser), METH_VARARGS, nullptr },
+        { "get_store_log_data_async", reinterpret_cast<PyCFunction>(StoreConfiguration_GetStoreLogDataAsync), METH_VARARGS, nullptr },
+        { "get_store_web_account_id", reinterpret_cast<PyCFunction>(StoreConfiguration_GetStoreWebAccountId), METH_VARARGS, nullptr },
+        { "get_store_web_account_id_for_user", reinterpret_cast<PyCFunction>(StoreConfiguration_GetStoreWebAccountIdForUser), METH_VARARGS, nullptr },
+        { "has_store_web_account", reinterpret_cast<PyCFunction>(StoreConfiguration_HasStoreWebAccount), METH_VARARGS, nullptr },
+        { "has_store_web_account_for_user", reinterpret_cast<PyCFunction>(StoreConfiguration_HasStoreWebAccountForUser), METH_VARARGS, nullptr },
+        { "is_pin_to_desktop_supported", reinterpret_cast<PyCFunction>(StoreConfiguration_IsPinToDesktopSupported), METH_VARARGS, nullptr },
+        { "is_pin_to_start_supported", reinterpret_cast<PyCFunction>(StoreConfiguration_IsPinToStartSupported), METH_VARARGS, nullptr },
+        { "is_pin_to_taskbar_supported", reinterpret_cast<PyCFunction>(StoreConfiguration_IsPinToTaskbarSupported), METH_VARARGS, nullptr },
+        { "is_store_web_account_id", reinterpret_cast<PyCFunction>(StoreConfiguration_IsStoreWebAccountId), METH_VARARGS, nullptr },
+        { "is_store_web_account_id_for_user", reinterpret_cast<PyCFunction>(StoreConfiguration_IsStoreWebAccountIdForUser), METH_VARARGS, nullptr },
+        { "pin_to_desktop", reinterpret_cast<PyCFunction>(StoreConfiguration_PinToDesktop), METH_VARARGS, nullptr },
+        { "pin_to_desktop_for_user", reinterpret_cast<PyCFunction>(StoreConfiguration_PinToDesktopForUser), METH_VARARGS, nullptr },
+        { "set_enterprise_store_web_account_id", reinterpret_cast<PyCFunction>(StoreConfiguration_SetEnterpriseStoreWebAccountId), METH_VARARGS, nullptr },
+        { "set_enterprise_store_web_account_id_for_user", reinterpret_cast<PyCFunction>(StoreConfiguration_SetEnterpriseStoreWebAccountIdForUser), METH_VARARGS, nullptr },
+        { "set_mobile_operator_configuration", reinterpret_cast<PyCFunction>(StoreConfiguration_SetMobileOperatorConfiguration), METH_VARARGS, nullptr },
+        { "set_purchase_prompting_policy_for_user", reinterpret_cast<PyCFunction>(StoreConfiguration_SetPurchasePromptingPolicyForUser), METH_VARARGS, nullptr },
+        { "set_store_web_account_id", reinterpret_cast<PyCFunction>(StoreConfiguration_SetStoreWebAccountId), METH_VARARGS, nullptr },
+        { "set_store_web_account_id_for_user", reinterpret_cast<PyCFunction>(StoreConfiguration_SetStoreWebAccountIdForUser), METH_VARARGS, nullptr },
+        { "set_system_configuration", reinterpret_cast<PyCFunction>(StoreConfiguration_SetSystemConfiguration), METH_VARARGS, nullptr },
+        { "should_restrict_to_enterprise_store_only", reinterpret_cast<PyCFunction>(StoreConfiguration_ShouldRestrictToEnterpriseStoreOnly), METH_VARARGS, nullptr },
+        { "should_restrict_to_enterprise_store_only_for_user", reinterpret_cast<PyCFunction>(StoreConfiguration_ShouldRestrictToEnterpriseStoreOnlyForUser), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_StoreConfiguration_Meta =
+    static PyType_Slot type_slots_StoreConfiguration_Static[] = 
     {
-        "winrt._winrt_windows_applicationmodel_store_preview.StoreConfiguration_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_StoreConfiguration_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_StoreConfiguration_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_StoreConfiguration_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_store_preview.StoreConfiguration_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_StoreConfiguration_Meta
+        type_slots_StoreConfiguration_Static
     };
 
     // ----- StoreHardwareManufacturerInfo class --------------------
@@ -1292,8 +1322,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
     }
 
     static PyMethodDef _methods_StorePreview[] = {
-        { "load_add_on_product_infos_async", reinterpret_cast<PyCFunction>(StorePreview_LoadAddOnProductInfosAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "request_product_purchase_by_product_id_and_sku_id_async", reinterpret_cast<PyCFunction>(StorePreview_RequestProductPurchaseByProductIdAndSkuIdAsync), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -1316,6 +1344,33 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_StorePreview
+    };
+
+    static PyGetSetDef getset_StorePreview_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_StorePreview_Static[] = {
+        { "load_add_on_product_infos_async", reinterpret_cast<PyCFunction>(StorePreview_LoadAddOnProductInfosAsync), METH_VARARGS, nullptr },
+        { "request_product_purchase_by_product_id_and_sku_id_async", reinterpret_cast<PyCFunction>(StorePreview_RequestProductPurchaseByProductIdAndSkuIdAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_StorePreview_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_StorePreview_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_StorePreview_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_StorePreview_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_store_preview.StorePreview_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_StorePreview_Static
     };
 
     // ----- StorePreviewProductInfo class --------------------
@@ -1889,7 +1944,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
     }
 
     static PyMethodDef _methods_WebAuthenticationCoreManagerHelper[] = {
-        { "request_token_with_u_i_element_hosting_async", reinterpret_cast<PyCFunction>(WebAuthenticationCoreManagerHelper_RequestTokenWithUIElementHostingAsync), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -1912,6 +1966,32 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_WebAuthenticationCoreManagerHelper
+    };
+
+    static PyGetSetDef getset_WebAuthenticationCoreManagerHelper_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_WebAuthenticationCoreManagerHelper_Static[] = {
+        { "request_token_with_u_i_element_hosting_async", reinterpret_cast<PyCFunction>(WebAuthenticationCoreManagerHelper_RequestTokenWithUIElementHostingAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_WebAuthenticationCoreManagerHelper_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_WebAuthenticationCoreManagerHelper_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_WebAuthenticationCoreManagerHelper_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_WebAuthenticationCoreManagerHelper_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_store_preview.WebAuthenticationCoreManagerHelper_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_WebAuthenticationCoreManagerHelper_Static
     };
 
     // ----- Windows.ApplicationModel.Store.Preview Initialization --------------------
@@ -1960,18 +2040,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_store_preview(void) noexce
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DeliveryOptimizationSettings, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_DeliveryOptimizationSettings_Static{PyType_FromSpec(&type_spec_DeliveryOptimizationSettings_Static)};
+    if (!type_DeliveryOptimizationSettings_Static)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_StoreConfiguration_Meta{PyType_FromSpec(&type_spec_StoreConfiguration_Meta)};
-    if (!type_StoreConfiguration_Meta)
+    if (py::register_python_type(module.get(), &type_spec_DeliveryOptimizationSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DeliveryOptimizationSettings_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StoreConfiguration, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StoreConfiguration_Meta.get())) == -1)
+    py::pyobj_handle type_StoreConfiguration_Static{PyType_FromSpec(&type_spec_StoreConfiguration_Static)};
+    if (!type_StoreConfiguration_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_StoreConfiguration, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StoreConfiguration_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -1981,7 +2067,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_store_preview(void) noexce
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StorePreview, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_StorePreview_Static{PyType_FromSpec(&type_spec_StorePreview_Static)};
+    if (!type_StorePreview_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_StorePreview, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StorePreview_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -2001,7 +2093,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_store_preview(void) noexce
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebAuthenticationCoreManagerHelper, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_WebAuthenticationCoreManagerHelper_Static{PyType_FromSpec(&type_spec_WebAuthenticationCoreManagerHelper_Static)};
+    if (!type_WebAuthenticationCoreManagerHelper_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_WebAuthenticationCoreManagerHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WebAuthenticationCoreManagerHelper_Static.get())) == -1)
     {
         return nullptr;
     }

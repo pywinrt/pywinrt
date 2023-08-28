@@ -913,26 +913,6 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     }
 
     static PyMethodDef _methods_WebAccountManager[] = {
-        { "add_web_account_async", reinterpret_cast<PyCFunction>(WebAccountManager_AddWebAccountAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "add_web_account_for_user_async", reinterpret_cast<PyCFunction>(WebAccountManager_AddWebAccountForUserAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "clear_per_user_from_per_app_account_async", reinterpret_cast<PyCFunction>(WebAccountManager_ClearPerUserFromPerAppAccountAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "clear_view_async", reinterpret_cast<PyCFunction>(WebAccountManager_ClearViewAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "clear_web_account_picture_async", reinterpret_cast<PyCFunction>(WebAccountManager_ClearWebAccountPictureAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "delete_web_account_async", reinterpret_cast<PyCFunction>(WebAccountManager_DeleteWebAccountAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "find_all_provider_web_accounts_async", reinterpret_cast<PyCFunction>(WebAccountManager_FindAllProviderWebAccountsAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "find_all_provider_web_accounts_for_user_async", reinterpret_cast<PyCFunction>(WebAccountManager_FindAllProviderWebAccountsForUserAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_per_user_from_per_app_account_async", reinterpret_cast<PyCFunction>(WebAccountManager_GetPerUserFromPerAppAccountAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_scope", reinterpret_cast<PyCFunction>(WebAccountManager_GetScope), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_views_async", reinterpret_cast<PyCFunction>(WebAccountManager_GetViewsAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "invalidate_app_cache_for_account_async", reinterpret_cast<PyCFunction>(WebAccountManager_InvalidateAppCacheForAccountAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "invalidate_app_cache_for_all_accounts_async", reinterpret_cast<PyCFunction>(WebAccountManager_InvalidateAppCacheForAllAccountsAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "pull_cookies_async", reinterpret_cast<PyCFunction>(WebAccountManager_PullCookiesAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "push_cookies_async", reinterpret_cast<PyCFunction>(WebAccountManager_PushCookiesAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_per_app_to_per_user_account_async", reinterpret_cast<PyCFunction>(WebAccountManager_SetPerAppToPerUserAccountAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_scope_async", reinterpret_cast<PyCFunction>(WebAccountManager_SetScopeAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_view_async", reinterpret_cast<PyCFunction>(WebAccountManager_SetViewAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_web_account_picture_async", reinterpret_cast<PyCFunction>(WebAccountManager_SetWebAccountPictureAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "update_web_account_properties_async", reinterpret_cast<PyCFunction>(WebAccountManager_UpdateWebAccountPropertiesAsync), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -955,6 +935,51 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_WebAccountManager
+    };
+
+    static PyGetSetDef getset_WebAccountManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_WebAccountManager_Static[] = {
+        { "add_web_account_async", reinterpret_cast<PyCFunction>(WebAccountManager_AddWebAccountAsync), METH_VARARGS, nullptr },
+        { "add_web_account_for_user_async", reinterpret_cast<PyCFunction>(WebAccountManager_AddWebAccountForUserAsync), METH_VARARGS, nullptr },
+        { "clear_per_user_from_per_app_account_async", reinterpret_cast<PyCFunction>(WebAccountManager_ClearPerUserFromPerAppAccountAsync), METH_VARARGS, nullptr },
+        { "clear_view_async", reinterpret_cast<PyCFunction>(WebAccountManager_ClearViewAsync), METH_VARARGS, nullptr },
+        { "clear_web_account_picture_async", reinterpret_cast<PyCFunction>(WebAccountManager_ClearWebAccountPictureAsync), METH_VARARGS, nullptr },
+        { "delete_web_account_async", reinterpret_cast<PyCFunction>(WebAccountManager_DeleteWebAccountAsync), METH_VARARGS, nullptr },
+        { "find_all_provider_web_accounts_async", reinterpret_cast<PyCFunction>(WebAccountManager_FindAllProviderWebAccountsAsync), METH_VARARGS, nullptr },
+        { "find_all_provider_web_accounts_for_user_async", reinterpret_cast<PyCFunction>(WebAccountManager_FindAllProviderWebAccountsForUserAsync), METH_VARARGS, nullptr },
+        { "get_per_user_from_per_app_account_async", reinterpret_cast<PyCFunction>(WebAccountManager_GetPerUserFromPerAppAccountAsync), METH_VARARGS, nullptr },
+        { "get_scope", reinterpret_cast<PyCFunction>(WebAccountManager_GetScope), METH_VARARGS, nullptr },
+        { "get_views_async", reinterpret_cast<PyCFunction>(WebAccountManager_GetViewsAsync), METH_VARARGS, nullptr },
+        { "invalidate_app_cache_for_account_async", reinterpret_cast<PyCFunction>(WebAccountManager_InvalidateAppCacheForAccountAsync), METH_VARARGS, nullptr },
+        { "invalidate_app_cache_for_all_accounts_async", reinterpret_cast<PyCFunction>(WebAccountManager_InvalidateAppCacheForAllAccountsAsync), METH_VARARGS, nullptr },
+        { "pull_cookies_async", reinterpret_cast<PyCFunction>(WebAccountManager_PullCookiesAsync), METH_VARARGS, nullptr },
+        { "push_cookies_async", reinterpret_cast<PyCFunction>(WebAccountManager_PushCookiesAsync), METH_VARARGS, nullptr },
+        { "set_per_app_to_per_user_account_async", reinterpret_cast<PyCFunction>(WebAccountManager_SetPerAppToPerUserAccountAsync), METH_VARARGS, nullptr },
+        { "set_scope_async", reinterpret_cast<PyCFunction>(WebAccountManager_SetScopeAsync), METH_VARARGS, nullptr },
+        { "set_view_async", reinterpret_cast<PyCFunction>(WebAccountManager_SetViewAsync), METH_VARARGS, nullptr },
+        { "set_web_account_picture_async", reinterpret_cast<PyCFunction>(WebAccountManager_SetWebAccountPictureAsync), METH_VARARGS, nullptr },
+        { "update_web_account_properties_async", reinterpret_cast<PyCFunction>(WebAccountManager_UpdateWebAccountPropertiesAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_WebAccountManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_WebAccountManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_WebAccountManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_WebAccountManager_Static =
+    {
+        "winrt._winrt_windows_security_authentication_web_provider.WebAccountManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_WebAccountManager_Static
     };
 
     // ----- WebAccountProviderAddAccountOperation class --------------------
@@ -3935,7 +3960,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_web_provider(void) 
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebAccountManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_WebAccountManager_Static{PyType_FromSpec(&type_spec_WebAccountManager_Static)};
+    if (!type_WebAccountManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_WebAccountManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WebAccountManager_Static.get())) == -1)
     {
         return nullptr;
     }

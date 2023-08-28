@@ -581,7 +581,6 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
     }
 
     static PyMethodDef _methods_PrintExtensionContext[] = {
-        { "from_device_id", reinterpret_cast<PyCFunction>(PrintExtensionContext_FromDeviceId), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -604,6 +603,32 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_PrintExtensionContext
+    };
+
+    static PyGetSetDef getset_PrintExtensionContext_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_PrintExtensionContext_Static[] = {
+        { "from_device_id", reinterpret_cast<PyCFunction>(PrintExtensionContext_FromDeviceId), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_PrintExtensionContext_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PrintExtensionContext_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PrintExtensionContext_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PrintExtensionContext_Static =
+    {
+        "winrt._winrt_windows_devices_printers_extensions.PrintExtensionContext_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_PrintExtensionContext_Static
     };
 
     // ----- PrintNotificationEventDetails class --------------------
@@ -1310,7 +1335,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_printers_extensions(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintExtensionContext, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_PrintExtensionContext_Static{PyType_FromSpec(&type_spec_PrintExtensionContext_Static)};
+    if (!type_PrintExtensionContext_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_PrintExtensionContext, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PrintExtensionContext_Static.get())) == -1)
     {
         return nullptr;
     }

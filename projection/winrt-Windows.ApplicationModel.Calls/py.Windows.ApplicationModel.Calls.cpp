@@ -1693,7 +1693,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         { "change_audio_device_async", reinterpret_cast<PyCFunction>(PhoneCall_ChangeAudioDeviceAsync), METH_VARARGS, nullptr },
         { "end", reinterpret_cast<PyCFunction>(PhoneCall_End), METH_VARARGS, nullptr },
         { "end_async", reinterpret_cast<PyCFunction>(PhoneCall_EndAsync), METH_VARARGS, nullptr },
-        { "get_from_id", reinterpret_cast<PyCFunction>(PhoneCall_GetFromId), METH_VARARGS | METH_STATIC, nullptr },
         { "get_phone_call_info", reinterpret_cast<PyCFunction>(PhoneCall_GetPhoneCallInfo), METH_VARARGS, nullptr },
         { "get_phone_call_info_async", reinterpret_cast<PyCFunction>(PhoneCall_GetPhoneCallInfoAsync), METH_VARARGS, nullptr },
         { "hold", reinterpret_cast<PyCFunction>(PhoneCall_Hold), METH_VARARGS, nullptr },
@@ -1743,6 +1742,32 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_PhoneCall
+    };
+
+    static PyGetSetDef getset_PhoneCall_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_PhoneCall_Static[] = {
+        { "get_from_id", reinterpret_cast<PyCFunction>(PhoneCall_GetFromId), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_PhoneCall_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PhoneCall_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PhoneCall_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PhoneCall_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_calls.PhoneCall_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_PhoneCall_Static
     };
 
     // ----- PhoneCallBlocking class --------------------
@@ -1880,7 +1905,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     }
 
     static PyMethodDef _methods_PhoneCallBlocking[] = {
-        { "set_call_blocking_list_async", reinterpret_cast<PyCFunction>(PhoneCallBlocking_SetCallBlockingListAsync), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -1905,26 +1929,32 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         _type_slots_PhoneCallBlocking
     };
 
-    static PyGetSetDef getset_PhoneCallBlocking_Meta[] = {
+    static PyGetSetDef getset_PhoneCallBlocking_Static[] = {
         { "block_unknown_numbers", reinterpret_cast<getter>(PhoneCallBlocking_get_BlockUnknownNumbers), reinterpret_cast<setter>(PhoneCallBlocking_put_BlockUnknownNumbers), nullptr, nullptr },
         { "block_private_numbers", reinterpret_cast<getter>(PhoneCallBlocking_get_BlockPrivateNumbers), reinterpret_cast<setter>(PhoneCallBlocking_put_BlockPrivateNumbers), nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_PhoneCallBlocking_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_PhoneCallBlocking_Meta) },
+    static PyMethodDef methods_PhoneCallBlocking_Static[] = {
+        { "set_call_blocking_list_async", reinterpret_cast<PyCFunction>(PhoneCallBlocking_SetCallBlockingListAsync), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_PhoneCallBlocking_Meta =
+    static PyType_Slot type_slots_PhoneCallBlocking_Static[] = 
     {
-        "winrt._winrt_windows_applicationmodel_calls.PhoneCallBlocking_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PhoneCallBlocking_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PhoneCallBlocking_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PhoneCallBlocking_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_calls.PhoneCallBlocking_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PhoneCallBlocking_Meta
+        type_slots_PhoneCallBlocking_Static
     };
 
     // ----- PhoneCallHistoryEntry class --------------------
@@ -3455,8 +3485,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     }
 
     static PyMethodDef _methods_PhoneCallHistoryManager[] = {
-        { "get_for_user", reinterpret_cast<PyCFunction>(PhoneCallHistoryManager_GetForUser), METH_VARARGS | METH_STATIC, nullptr },
-        { "request_store_async", reinterpret_cast<PyCFunction>(PhoneCallHistoryManager_RequestStoreAsync), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -3479,6 +3507,33 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_PhoneCallHistoryManager
+    };
+
+    static PyGetSetDef getset_PhoneCallHistoryManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_PhoneCallHistoryManager_Static[] = {
+        { "get_for_user", reinterpret_cast<PyCFunction>(PhoneCallHistoryManager_GetForUser), METH_VARARGS, nullptr },
+        { "request_store_async", reinterpret_cast<PyCFunction>(PhoneCallHistoryManager_RequestStoreAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_PhoneCallHistoryManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PhoneCallHistoryManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PhoneCallHistoryManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PhoneCallHistoryManager_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_calls.PhoneCallHistoryManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_PhoneCallHistoryManager_Static
     };
 
     // ----- PhoneCallHistoryManagerForUser class --------------------
@@ -4409,9 +4464,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     }
 
     static PyMethodDef _methods_PhoneCallManager[] = {
-        { "request_store_async", reinterpret_cast<PyCFunction>(PhoneCallManager_RequestStoreAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "show_phone_call_settings_u_i", reinterpret_cast<PyCFunction>(PhoneCallManager_ShowPhoneCallSettingsUI), METH_VARARGS | METH_STATIC, nullptr },
-        { "show_phone_call_u_i", reinterpret_cast<PyCFunction>(PhoneCallManager_ShowPhoneCallUI), METH_VARARGS | METH_STATIC, nullptr },
         { "add_call_state_changed", reinterpret_cast<PyCFunction>(PhoneCallManager_add_CallStateChanged), METH_O | METH_STATIC, nullptr },
         { "remove_call_state_changed", reinterpret_cast<PyCFunction>(PhoneCallManager_remove_CallStateChanged), METH_O | METH_STATIC, nullptr },
         { }
@@ -4438,26 +4490,34 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         _type_slots_PhoneCallManager
     };
 
-    static PyGetSetDef getset_PhoneCallManager_Meta[] = {
+    static PyGetSetDef getset_PhoneCallManager_Static[] = {
         { "is_call_active", reinterpret_cast<getter>(PhoneCallManager_get_IsCallActive), nullptr, nullptr, nullptr },
         { "is_call_incoming", reinterpret_cast<getter>(PhoneCallManager_get_IsCallIncoming), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_PhoneCallManager_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_PhoneCallManager_Meta) },
+    static PyMethodDef methods_PhoneCallManager_Static[] = {
+        { "request_store_async", reinterpret_cast<PyCFunction>(PhoneCallManager_RequestStoreAsync), METH_VARARGS, nullptr },
+        { "show_phone_call_settings_u_i", reinterpret_cast<PyCFunction>(PhoneCallManager_ShowPhoneCallSettingsUI), METH_VARARGS, nullptr },
+        { "show_phone_call_u_i", reinterpret_cast<PyCFunction>(PhoneCallManager_ShowPhoneCallUI), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_PhoneCallManager_Meta =
+    static PyType_Slot type_slots_PhoneCallManager_Static[] = 
     {
-        "winrt._winrt_windows_applicationmodel_calls.PhoneCallManager_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PhoneCallManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PhoneCallManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PhoneCallManager_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_calls.PhoneCallManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PhoneCallManager_Meta
+        type_slots_PhoneCallManager_Static
     };
 
     // ----- PhoneCallStore class --------------------
@@ -4751,7 +4811,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     }
 
     static PyMethodDef _methods_PhoneCallVideoCapabilitiesManager[] = {
-        { "get_capabilities_async", reinterpret_cast<PyCFunction>(PhoneCallVideoCapabilitiesManager_GetCapabilitiesAsync), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -4774,6 +4833,32 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_PhoneCallVideoCapabilitiesManager
+    };
+
+    static PyGetSetDef getset_PhoneCallVideoCapabilitiesManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_PhoneCallVideoCapabilitiesManager_Static[] = {
+        { "get_capabilities_async", reinterpret_cast<PyCFunction>(PhoneCallVideoCapabilitiesManager_GetCapabilitiesAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_PhoneCallVideoCapabilitiesManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PhoneCallVideoCapabilitiesManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PhoneCallVideoCapabilitiesManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PhoneCallVideoCapabilitiesManager_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_calls.PhoneCallVideoCapabilitiesManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_PhoneCallVideoCapabilitiesManager_Static
     };
 
     // ----- PhoneCallsResult class --------------------
@@ -5882,7 +5967,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         { "dial_with_result", reinterpret_cast<PyCFunction>(PhoneLine_DialWithResult), METH_VARARGS, nullptr },
         { "dial_with_result_async", reinterpret_cast<PyCFunction>(PhoneLine_DialWithResultAsync), METH_VARARGS, nullptr },
         { "enable_text_reply", reinterpret_cast<PyCFunction>(PhoneLine_EnableTextReply), METH_VARARGS, nullptr },
-        { "from_id_async", reinterpret_cast<PyCFunction>(PhoneLine_FromIdAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "get_all_active_phone_calls", reinterpret_cast<PyCFunction>(PhoneLine_GetAllActivePhoneCalls), METH_VARARGS, nullptr },
         { "get_all_active_phone_calls_async", reinterpret_cast<PyCFunction>(PhoneLine_GetAllActivePhoneCallsAsync), METH_VARARGS, nullptr },
         { "is_immediate_dial_number_async", reinterpret_cast<PyCFunction>(PhoneLine_IsImmediateDialNumberAsync), METH_VARARGS, nullptr },
@@ -5926,6 +6010,32 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_PhoneLine
+    };
+
+    static PyGetSetDef getset_PhoneLine_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_PhoneLine_Static[] = {
+        { "from_id_async", reinterpret_cast<PyCFunction>(PhoneLine_FromIdAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_PhoneLine_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PhoneLine_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PhoneLine_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PhoneLine_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_calls.PhoneLine_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_PhoneLine_Static
     };
 
     // ----- PhoneLineCellularDetails class --------------------
@@ -6853,8 +6963,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     static PyMethodDef _methods_PhoneLineTransportDevice[] = {
         { "connect", reinterpret_cast<PyCFunction>(PhoneLineTransportDevice_Connect), METH_VARARGS, nullptr },
         { "connect_async", reinterpret_cast<PyCFunction>(PhoneLineTransportDevice_ConnectAsync), METH_VARARGS, nullptr },
-        { "from_id", reinterpret_cast<PyCFunction>(PhoneLineTransportDevice_FromId), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_device_selector", reinterpret_cast<PyCFunction>(PhoneLineTransportDevice_GetDeviceSelector), METH_VARARGS | METH_STATIC, nullptr },
         { "is_registered", reinterpret_cast<PyCFunction>(PhoneLineTransportDevice_IsRegistered), METH_VARARGS, nullptr },
         { "register_app", reinterpret_cast<PyCFunction>(PhoneLineTransportDevice_RegisterApp), METH_VARARGS, nullptr },
         { "register_app_for_user", reinterpret_cast<PyCFunction>(PhoneLineTransportDevice_RegisterAppForUser), METH_VARARGS, nullptr },
@@ -6894,6 +7002,33 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_PhoneLineTransportDevice
+    };
+
+    static PyGetSetDef getset_PhoneLineTransportDevice_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_PhoneLineTransportDevice_Static[] = {
+        { "from_id", reinterpret_cast<PyCFunction>(PhoneLineTransportDevice_FromId), METH_VARARGS, nullptr },
+        { "get_device_selector", reinterpret_cast<PyCFunction>(PhoneLineTransportDevice_GetDeviceSelector), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_PhoneLineTransportDevice_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PhoneLineTransportDevice_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PhoneLineTransportDevice_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PhoneLineTransportDevice_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_calls.PhoneLineTransportDevice_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_PhoneLineTransportDevice_Static
     };
 
     // ----- PhoneLineWatcher class --------------------
@@ -8055,7 +8190,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyMethodDef _methods_VoipCallCoordinator[] = {
         { "cancel_upgrade", reinterpret_cast<PyCFunction>(VoipCallCoordinator_CancelUpgrade), METH_VARARGS, nullptr },
-        { "get_default", reinterpret_cast<PyCFunction>(VoipCallCoordinator_GetDefault), METH_VARARGS | METH_STATIC, nullptr },
         { "notify_muted", reinterpret_cast<PyCFunction>(VoipCallCoordinator_NotifyMuted), METH_VARARGS, nullptr },
         { "notify_unmuted", reinterpret_cast<PyCFunction>(VoipCallCoordinator_NotifyUnmuted), METH_VARARGS, nullptr },
         { "request_incoming_upgrade_to_video_call", reinterpret_cast<PyCFunction>(VoipCallCoordinator_RequestIncomingUpgradeToVideoCall), METH_VARARGS, nullptr },
@@ -8093,6 +8227,32 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_VoipCallCoordinator
+    };
+
+    static PyGetSetDef getset_VoipCallCoordinator_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_VoipCallCoordinator_Static[] = {
+        { "get_default", reinterpret_cast<PyCFunction>(VoipCallCoordinator_GetDefault), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_VoipCallCoordinator_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_VoipCallCoordinator_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_VoipCallCoordinator_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_VoipCallCoordinator_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_calls.VoipCallCoordinator_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_VoipCallCoordinator_Static
     };
 
     // ----- VoipPhoneCall class --------------------
@@ -8802,18 +8962,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_calls(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhoneCall, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_PhoneCall_Static{PyType_FromSpec(&type_spec_PhoneCall_Static)};
+    if (!type_PhoneCall_Static)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_PhoneCallBlocking_Meta{PyType_FromSpec(&type_spec_PhoneCallBlocking_Meta)};
-    if (!type_PhoneCallBlocking_Meta)
+    if (py::register_python_type(module.get(), &type_spec_PhoneCall, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PhoneCall_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhoneCallBlocking, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PhoneCallBlocking_Meta.get())) == -1)
+    py::pyobj_handle type_PhoneCallBlocking_Static{PyType_FromSpec(&type_spec_PhoneCallBlocking_Static)};
+    if (!type_PhoneCallBlocking_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_PhoneCallBlocking, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PhoneCallBlocking_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -8838,7 +9004,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_calls(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhoneCallHistoryManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_PhoneCallHistoryManager_Static{PyType_FromSpec(&type_spec_PhoneCallHistoryManager_Static)};
+    if (!type_PhoneCallHistoryManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_PhoneCallHistoryManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PhoneCallHistoryManager_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -8858,13 +9030,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_calls(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_PhoneCallManager_Meta{PyType_FromSpec(&type_spec_PhoneCallManager_Meta)};
-    if (!type_PhoneCallManager_Meta)
+    py::pyobj_handle type_PhoneCallManager_Static{PyType_FromSpec(&type_spec_PhoneCallManager_Static)};
+    if (!type_PhoneCallManager_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhoneCallManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PhoneCallManager_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PhoneCallManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PhoneCallManager_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -8879,7 +9051,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_calls(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhoneCallVideoCapabilitiesManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_PhoneCallVideoCapabilitiesManager_Static{PyType_FromSpec(&type_spec_PhoneCallVideoCapabilitiesManager_Static)};
+    if (!type_PhoneCallVideoCapabilitiesManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_PhoneCallVideoCapabilitiesManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PhoneCallVideoCapabilitiesManager_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -8894,7 +9072,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_calls(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhoneLine, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_PhoneLine_Static{PyType_FromSpec(&type_spec_PhoneLine_Static)};
+    if (!type_PhoneLine_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_PhoneLine, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PhoneLine_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -8914,7 +9098,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_calls(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhoneLineTransportDevice, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_PhoneLineTransportDevice_Static{PyType_FromSpec(&type_spec_PhoneLineTransportDevice_Static)};
+    if (!type_PhoneLineTransportDevice_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_PhoneLineTransportDevice, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PhoneLineTransportDevice_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -8934,7 +9124,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_calls(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VoipCallCoordinator, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_VoipCallCoordinator_Static{PyType_FromSpec(&type_spec_VoipCallCoordinator_Static)};
+    if (!type_VoipCallCoordinator_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_VoipCallCoordinator, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VoipCallCoordinator_Static.get())) == -1)
     {
         return nullptr;
     }

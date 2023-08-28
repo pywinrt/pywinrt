@@ -279,8 +279,6 @@ namespace py::cpp::Windows::Storage
     }
 
     static PyMethodDef _methods_AppDataPaths[] = {
-        { "get_default", reinterpret_cast<PyCFunction>(AppDataPaths_GetDefault), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_for_user", reinterpret_cast<PyCFunction>(AppDataPaths_GetForUser), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_AppDataPaths, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppDataPaths), METH_O | METH_STATIC, nullptr },
         { }
@@ -315,6 +313,33 @@ namespace py::cpp::Windows::Storage
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_AppDataPaths
+    };
+
+    static PyGetSetDef getset_AppDataPaths_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_AppDataPaths_Static[] = {
+        { "get_default", reinterpret_cast<PyCFunction>(AppDataPaths_GetDefault), METH_VARARGS, nullptr },
+        { "get_for_user", reinterpret_cast<PyCFunction>(AppDataPaths_GetForUser), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_AppDataPaths_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_AppDataPaths_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_AppDataPaths_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_AppDataPaths_Static =
+    {
+        "winrt._winrt_windows_storage.AppDataPaths_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_AppDataPaths_Static
     };
 
     // ----- ApplicationData class --------------------
@@ -848,7 +873,6 @@ namespace py::cpp::Windows::Storage
         { "clear_async", reinterpret_cast<PyCFunction>(ApplicationData_ClearAsync), METH_VARARGS, nullptr },
         { "clear_publisher_cache_folder_async", reinterpret_cast<PyCFunction>(ApplicationData_ClearPublisherCacheFolderAsync), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(ApplicationData_Close), METH_VARARGS, nullptr },
-        { "get_for_user_async", reinterpret_cast<PyCFunction>(ApplicationData_GetForUserAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "get_publisher_cache_folder", reinterpret_cast<PyCFunction>(ApplicationData_GetPublisherCacheFolder), METH_VARARGS, nullptr },
         { "set_version_async", reinterpret_cast<PyCFunction>(ApplicationData_SetVersionAsync), METH_VARARGS, nullptr },
         { "signal_data_changed", reinterpret_cast<PyCFunction>(ApplicationData_SignalDataChanged), METH_VARARGS, nullptr },
@@ -892,25 +916,31 @@ namespace py::cpp::Windows::Storage
         _type_slots_ApplicationData
     };
 
-    static PyGetSetDef getset_ApplicationData_Meta[] = {
+    static PyGetSetDef getset_ApplicationData_Static[] = {
         { "current", reinterpret_cast<getter>(ApplicationData_get_Current), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_ApplicationData_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_ApplicationData_Meta) },
+    static PyMethodDef methods_ApplicationData_Static[] = {
+        { "get_for_user_async", reinterpret_cast<PyCFunction>(ApplicationData_GetForUserAsync), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_ApplicationData_Meta =
+    static PyType_Slot type_slots_ApplicationData_Static[] = 
     {
-        "winrt._winrt_windows_storage.ApplicationData_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ApplicationData_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ApplicationData_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ApplicationData_Static =
+    {
+        "winrt._winrt_windows_storage.ApplicationData_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ApplicationData_Meta
+        type_slots_ApplicationData_Static
     };
 
     // ----- ApplicationDataCompositeValue class --------------------
@@ -2179,8 +2209,6 @@ namespace py::cpp::Windows::Storage
     }
 
     static PyMethodDef _methods_CachedFileManager[] = {
-        { "complete_updates_async", reinterpret_cast<PyCFunction>(CachedFileManager_CompleteUpdatesAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "defer_updates", reinterpret_cast<PyCFunction>(CachedFileManager_DeferUpdates), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -2203,6 +2231,33 @@ namespace py::cpp::Windows::Storage
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_CachedFileManager
+    };
+
+    static PyGetSetDef getset_CachedFileManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_CachedFileManager_Static[] = {
+        { "complete_updates_async", reinterpret_cast<PyCFunction>(CachedFileManager_CompleteUpdatesAsync), METH_VARARGS, nullptr },
+        { "defer_updates", reinterpret_cast<PyCFunction>(CachedFileManager_DeferUpdates), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_CachedFileManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CachedFileManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CachedFileManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CachedFileManager_Static =
+    {
+        "winrt._winrt_windows_storage.CachedFileManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CachedFileManager_Static
     };
 
     // ----- DownloadsFolder class --------------------
@@ -2427,10 +2482,6 @@ namespace py::cpp::Windows::Storage
     }
 
     static PyMethodDef _methods_DownloadsFolder[] = {
-        { "create_file_async", reinterpret_cast<PyCFunction>(DownloadsFolder_CreateFileAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_file_for_user_async", reinterpret_cast<PyCFunction>(DownloadsFolder_CreateFileForUserAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_folder_async", reinterpret_cast<PyCFunction>(DownloadsFolder_CreateFolderAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_folder_for_user_async", reinterpret_cast<PyCFunction>(DownloadsFolder_CreateFolderForUserAsync), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -2453,6 +2504,35 @@ namespace py::cpp::Windows::Storage
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_DownloadsFolder
+    };
+
+    static PyGetSetDef getset_DownloadsFolder_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_DownloadsFolder_Static[] = {
+        { "create_file_async", reinterpret_cast<PyCFunction>(DownloadsFolder_CreateFileAsync), METH_VARARGS, nullptr },
+        { "create_file_for_user_async", reinterpret_cast<PyCFunction>(DownloadsFolder_CreateFileForUserAsync), METH_VARARGS, nullptr },
+        { "create_folder_async", reinterpret_cast<PyCFunction>(DownloadsFolder_CreateFolderAsync), METH_VARARGS, nullptr },
+        { "create_folder_for_user_async", reinterpret_cast<PyCFunction>(DownloadsFolder_CreateFolderForUserAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_DownloadsFolder_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_DownloadsFolder_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_DownloadsFolder_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_DownloadsFolder_Static =
+    {
+        "winrt._winrt_windows_storage.DownloadsFolder_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_DownloadsFolder_Static
     };
 
     // ----- FileIO class --------------------
@@ -2880,15 +2960,6 @@ namespace py::cpp::Windows::Storage
     }
 
     static PyMethodDef _methods_FileIO[] = {
-        { "append_lines_async", reinterpret_cast<PyCFunction>(FileIO_AppendLinesAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "append_text_async", reinterpret_cast<PyCFunction>(FileIO_AppendTextAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "read_buffer_async", reinterpret_cast<PyCFunction>(FileIO_ReadBufferAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "read_lines_async", reinterpret_cast<PyCFunction>(FileIO_ReadLinesAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "read_text_async", reinterpret_cast<PyCFunction>(FileIO_ReadTextAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "write_buffer_async", reinterpret_cast<PyCFunction>(FileIO_WriteBufferAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "write_bytes_async", reinterpret_cast<PyCFunction>(FileIO_WriteBytesAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "write_lines_async", reinterpret_cast<PyCFunction>(FileIO_WriteLinesAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "write_text_async", reinterpret_cast<PyCFunction>(FileIO_WriteTextAsync), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -2911,6 +2982,40 @@ namespace py::cpp::Windows::Storage
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_FileIO
+    };
+
+    static PyGetSetDef getset_FileIO_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_FileIO_Static[] = {
+        { "append_lines_async", reinterpret_cast<PyCFunction>(FileIO_AppendLinesAsync), METH_VARARGS, nullptr },
+        { "append_text_async", reinterpret_cast<PyCFunction>(FileIO_AppendTextAsync), METH_VARARGS, nullptr },
+        { "read_buffer_async", reinterpret_cast<PyCFunction>(FileIO_ReadBufferAsync), METH_VARARGS, nullptr },
+        { "read_lines_async", reinterpret_cast<PyCFunction>(FileIO_ReadLinesAsync), METH_VARARGS, nullptr },
+        { "read_text_async", reinterpret_cast<PyCFunction>(FileIO_ReadTextAsync), METH_VARARGS, nullptr },
+        { "write_buffer_async", reinterpret_cast<PyCFunction>(FileIO_WriteBufferAsync), METH_VARARGS, nullptr },
+        { "write_bytes_async", reinterpret_cast<PyCFunction>(FileIO_WriteBytesAsync), METH_VARARGS, nullptr },
+        { "write_lines_async", reinterpret_cast<PyCFunction>(FileIO_WriteLinesAsync), METH_VARARGS, nullptr },
+        { "write_text_async", reinterpret_cast<PyCFunction>(FileIO_WriteTextAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_FileIO_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_FileIO_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_FileIO_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_FileIO_Static =
+    {
+        "winrt._winrt_windows_storage.FileIO_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_FileIO_Static
     };
 
     // ----- KnownFolders class --------------------
@@ -3296,10 +3401,6 @@ namespace py::cpp::Windows::Storage
     }
 
     static PyMethodDef _methods_KnownFolders[] = {
-        { "get_folder_async", reinterpret_cast<PyCFunction>(KnownFolders_GetFolderAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_folder_for_user_async", reinterpret_cast<PyCFunction>(KnownFolders_GetFolderForUserAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "request_access_async", reinterpret_cast<PyCFunction>(KnownFolders_RequestAccessAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "request_access_for_user_async", reinterpret_cast<PyCFunction>(KnownFolders_RequestAccessForUserAsync), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -3324,7 +3425,7 @@ namespace py::cpp::Windows::Storage
         _type_slots_KnownFolders
     };
 
-    static PyGetSetDef getset_KnownFolders_Meta[] = {
+    static PyGetSetDef getset_KnownFolders_Static[] = {
         { "camera_roll", reinterpret_cast<getter>(KnownFolders_get_CameraRoll), nullptr, nullptr, nullptr },
         { "playlists", reinterpret_cast<getter>(KnownFolders_get_Playlists), nullptr, nullptr, nullptr },
         { "saved_pictures", reinterpret_cast<getter>(KnownFolders_get_SavedPictures), nullptr, nullptr, nullptr },
@@ -3341,20 +3442,29 @@ namespace py::cpp::Windows::Storage
         { }
     };
 
-    static PyType_Slot type_slots_KnownFolders_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_KnownFolders_Meta) },
+    static PyMethodDef methods_KnownFolders_Static[] = {
+        { "get_folder_async", reinterpret_cast<PyCFunction>(KnownFolders_GetFolderAsync), METH_VARARGS, nullptr },
+        { "get_folder_for_user_async", reinterpret_cast<PyCFunction>(KnownFolders_GetFolderForUserAsync), METH_VARARGS, nullptr },
+        { "request_access_async", reinterpret_cast<PyCFunction>(KnownFolders_RequestAccessAsync), METH_VARARGS, nullptr },
+        { "request_access_for_user_async", reinterpret_cast<PyCFunction>(KnownFolders_RequestAccessForUserAsync), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_KnownFolders_Meta =
+    static PyType_Slot type_slots_KnownFolders_Static[] = 
     {
-        "winrt._winrt_windows_storage.KnownFolders_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_KnownFolders_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_KnownFolders_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_KnownFolders_Static =
+    {
+        "winrt._winrt_windows_storage.KnownFolders_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_KnownFolders_Meta
+        type_slots_KnownFolders_Static
     };
 
     // ----- PathIO class --------------------
@@ -3782,15 +3892,6 @@ namespace py::cpp::Windows::Storage
     }
 
     static PyMethodDef _methods_PathIO[] = {
-        { "append_lines_async", reinterpret_cast<PyCFunction>(PathIO_AppendLinesAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "append_text_async", reinterpret_cast<PyCFunction>(PathIO_AppendTextAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "read_buffer_async", reinterpret_cast<PyCFunction>(PathIO_ReadBufferAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "read_lines_async", reinterpret_cast<PyCFunction>(PathIO_ReadLinesAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "read_text_async", reinterpret_cast<PyCFunction>(PathIO_ReadTextAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "write_buffer_async", reinterpret_cast<PyCFunction>(PathIO_WriteBufferAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "write_bytes_async", reinterpret_cast<PyCFunction>(PathIO_WriteBytesAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "write_lines_async", reinterpret_cast<PyCFunction>(PathIO_WriteLinesAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "write_text_async", reinterpret_cast<PyCFunction>(PathIO_WriteTextAsync), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -3813,6 +3914,40 @@ namespace py::cpp::Windows::Storage
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_PathIO
+    };
+
+    static PyGetSetDef getset_PathIO_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_PathIO_Static[] = {
+        { "append_lines_async", reinterpret_cast<PyCFunction>(PathIO_AppendLinesAsync), METH_VARARGS, nullptr },
+        { "append_text_async", reinterpret_cast<PyCFunction>(PathIO_AppendTextAsync), METH_VARARGS, nullptr },
+        { "read_buffer_async", reinterpret_cast<PyCFunction>(PathIO_ReadBufferAsync), METH_VARARGS, nullptr },
+        { "read_lines_async", reinterpret_cast<PyCFunction>(PathIO_ReadLinesAsync), METH_VARARGS, nullptr },
+        { "read_text_async", reinterpret_cast<PyCFunction>(PathIO_ReadTextAsync), METH_VARARGS, nullptr },
+        { "write_buffer_async", reinterpret_cast<PyCFunction>(PathIO_WriteBufferAsync), METH_VARARGS, nullptr },
+        { "write_bytes_async", reinterpret_cast<PyCFunction>(PathIO_WriteBytesAsync), METH_VARARGS, nullptr },
+        { "write_lines_async", reinterpret_cast<PyCFunction>(PathIO_WriteLinesAsync), METH_VARARGS, nullptr },
+        { "write_text_async", reinterpret_cast<PyCFunction>(PathIO_WriteTextAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_PathIO_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PathIO_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PathIO_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PathIO_Static =
+    {
+        "winrt._winrt_windows_storage.PathIO_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_PathIO_Static
     };
 
     // ----- SetVersionDeferral class --------------------
@@ -5290,13 +5425,8 @@ namespace py::cpp::Windows::Storage
     static PyMethodDef _methods_StorageFile[] = {
         { "copy_and_replace_async", reinterpret_cast<PyCFunction>(StorageFile_CopyAndReplaceAsync), METH_VARARGS, nullptr },
         { "copy_async", reinterpret_cast<PyCFunction>(StorageFile_CopyAsync), METH_VARARGS, nullptr },
-        { "create_streamed_file_async", reinterpret_cast<PyCFunction>(StorageFile_CreateStreamedFileAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_streamed_file_from_uri_async", reinterpret_cast<PyCFunction>(StorageFile_CreateStreamedFileFromUriAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "delete_async", reinterpret_cast<PyCFunction>(StorageFile_DeleteAsync), METH_VARARGS, nullptr },
         { "get_basic_properties_async", reinterpret_cast<PyCFunction>(StorageFile_GetBasicPropertiesAsync), METH_VARARGS, nullptr },
-        { "get_file_from_application_uri_async", reinterpret_cast<PyCFunction>(StorageFile_GetFileFromApplicationUriAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_file_from_path_async", reinterpret_cast<PyCFunction>(StorageFile_GetFileFromPathAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_file_from_path_for_user_async", reinterpret_cast<PyCFunction>(StorageFile_GetFileFromPathForUserAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "get_parent_async", reinterpret_cast<PyCFunction>(StorageFile_GetParentAsync), METH_VARARGS, nullptr },
         { "get_scaled_image_as_thumbnail_async", reinterpret_cast<PyCFunction>(StorageFile_GetScaledImageAsThumbnailAsync), METH_VARARGS, nullptr },
         { "get_thumbnail_async", reinterpret_cast<PyCFunction>(StorageFile_GetThumbnailAsync), METH_VARARGS, nullptr },
@@ -5309,8 +5439,6 @@ namespace py::cpp::Windows::Storage
         { "open_sequential_read_async", reinterpret_cast<PyCFunction>(StorageFile_OpenSequentialReadAsync), METH_VARARGS, nullptr },
         { "open_transacted_write_async", reinterpret_cast<PyCFunction>(StorageFile_OpenTransactedWriteAsync), METH_VARARGS, nullptr },
         { "rename_async", reinterpret_cast<PyCFunction>(StorageFile_RenameAsync), METH_VARARGS, nullptr },
-        { "replace_with_streamed_file_async", reinterpret_cast<PyCFunction>(StorageFile_ReplaceWithStreamedFileAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "replace_with_streamed_file_from_uri_async", reinterpret_cast<PyCFunction>(StorageFile_ReplaceWithStreamedFileFromUriAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_StorageFile, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StorageFile), METH_O | METH_STATIC, nullptr },
         { }
@@ -5348,6 +5476,38 @@ namespace py::cpp::Windows::Storage
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_StorageFile
+    };
+
+    static PyGetSetDef getset_StorageFile_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_StorageFile_Static[] = {
+        { "create_streamed_file_async", reinterpret_cast<PyCFunction>(StorageFile_CreateStreamedFileAsync), METH_VARARGS, nullptr },
+        { "create_streamed_file_from_uri_async", reinterpret_cast<PyCFunction>(StorageFile_CreateStreamedFileFromUriAsync), METH_VARARGS, nullptr },
+        { "get_file_from_application_uri_async", reinterpret_cast<PyCFunction>(StorageFile_GetFileFromApplicationUriAsync), METH_VARARGS, nullptr },
+        { "get_file_from_path_async", reinterpret_cast<PyCFunction>(StorageFile_GetFileFromPathAsync), METH_VARARGS, nullptr },
+        { "get_file_from_path_for_user_async", reinterpret_cast<PyCFunction>(StorageFile_GetFileFromPathForUserAsync), METH_VARARGS, nullptr },
+        { "replace_with_streamed_file_async", reinterpret_cast<PyCFunction>(StorageFile_ReplaceWithStreamedFileAsync), METH_VARARGS, nullptr },
+        { "replace_with_streamed_file_from_uri_async", reinterpret_cast<PyCFunction>(StorageFile_ReplaceWithStreamedFileFromUriAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_StorageFile_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_StorageFile_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_StorageFile_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_StorageFile_Static =
+    {
+        "winrt._winrt_windows_storage.StorageFile_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_StorageFile_Static
     };
 
     // ----- StorageFolder class --------------------
@@ -6800,8 +6960,6 @@ namespace py::cpp::Windows::Storage
         { "get_file_async", reinterpret_cast<PyCFunction>(StorageFolder_GetFileAsync), METH_VARARGS, nullptr },
         { "get_files_async", reinterpret_cast<PyCFunction>(StorageFolder_GetFilesAsync), METH_VARARGS, nullptr },
         { "get_folder_async", reinterpret_cast<PyCFunction>(StorageFolder_GetFolderAsync), METH_VARARGS, nullptr },
-        { "get_folder_from_path_async", reinterpret_cast<PyCFunction>(StorageFolder_GetFolderFromPathAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_folder_from_path_for_user_async", reinterpret_cast<PyCFunction>(StorageFolder_GetFolderFromPathForUserAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "get_folders_async", reinterpret_cast<PyCFunction>(StorageFolder_GetFoldersAsync), METH_VARARGS, nullptr },
         { "get_indexed_state_async", reinterpret_cast<PyCFunction>(StorageFolder_GetIndexedStateAsync), METH_VARARGS, nullptr },
         { "get_item_async", reinterpret_cast<PyCFunction>(StorageFolder_GetItemAsync), METH_VARARGS, nullptr },
@@ -6850,6 +7008,33 @@ namespace py::cpp::Windows::Storage
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_StorageFolder
+    };
+
+    static PyGetSetDef getset_StorageFolder_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_StorageFolder_Static[] = {
+        { "get_folder_from_path_async", reinterpret_cast<PyCFunction>(StorageFolder_GetFolderFromPathAsync), METH_VARARGS, nullptr },
+        { "get_folder_from_path_for_user_async", reinterpret_cast<PyCFunction>(StorageFolder_GetFolderFromPathForUserAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_StorageFolder_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_StorageFolder_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_StorageFolder_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_StorageFolder_Static =
+    {
+        "winrt._winrt_windows_storage.StorageFolder_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_StorageFolder_Static
     };
 
     // ----- StorageLibrary class --------------------
@@ -7147,8 +7332,6 @@ namespace py::cpp::Windows::Storage
 
     static PyMethodDef _methods_StorageLibrary[] = {
         { "are_folder_suggestions_available_async", reinterpret_cast<PyCFunction>(StorageLibrary_AreFolderSuggestionsAvailableAsync), METH_VARARGS, nullptr },
-        { "get_library_async", reinterpret_cast<PyCFunction>(StorageLibrary_GetLibraryAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_library_for_user_async", reinterpret_cast<PyCFunction>(StorageLibrary_GetLibraryForUserAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "request_add_folder_async", reinterpret_cast<PyCFunction>(StorageLibrary_RequestAddFolderAsync), METH_VARARGS, nullptr },
         { "request_remove_folder_async", reinterpret_cast<PyCFunction>(StorageLibrary_RequestRemoveFolderAsync), METH_VARARGS, nullptr },
         { "add_definition_changed", reinterpret_cast<PyCFunction>(StorageLibrary_add_DefinitionChanged), METH_O, nullptr },
@@ -7181,6 +7364,33 @@ namespace py::cpp::Windows::Storage
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_StorageLibrary
+    };
+
+    static PyGetSetDef getset_StorageLibrary_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_StorageLibrary_Static[] = {
+        { "get_library_async", reinterpret_cast<PyCFunction>(StorageLibrary_GetLibraryAsync), METH_VARARGS, nullptr },
+        { "get_library_for_user_async", reinterpret_cast<PyCFunction>(StorageLibrary_GetLibraryForUserAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_StorageLibrary_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_StorageLibrary_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_StorageLibrary_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_StorageLibrary_Static =
+    {
+        "winrt._winrt_windows_storage.StorageLibrary_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_StorageLibrary_Static
     };
 
     // ----- StorageLibraryChange class --------------------
@@ -7973,25 +8183,30 @@ namespace py::cpp::Windows::Storage
         _type_slots_StorageLibraryLastChangeId
     };
 
-    static PyGetSetDef getset_StorageLibraryLastChangeId_Meta[] = {
+    static PyGetSetDef getset_StorageLibraryLastChangeId_Static[] = {
         { "unknown", reinterpret_cast<getter>(StorageLibraryLastChangeId_get_Unknown), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_StorageLibraryLastChangeId_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_StorageLibraryLastChangeId_Meta) },
+    static PyMethodDef methods_StorageLibraryLastChangeId_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_StorageLibraryLastChangeId_Meta =
+    static PyType_Slot type_slots_StorageLibraryLastChangeId_Static[] = 
     {
-        "winrt._winrt_windows_storage.StorageLibraryLastChangeId_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_StorageLibraryLastChangeId_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_StorageLibraryLastChangeId_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_StorageLibraryLastChangeId_Static =
+    {
+        "winrt._winrt_windows_storage.StorageLibraryLastChangeId_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_StorageLibraryLastChangeId_Meta
+        type_slots_StorageLibraryLastChangeId_Static
     };
 
     // ----- StorageProvider class --------------------
@@ -8986,7 +9201,6 @@ namespace py::cpp::Windows::Storage
     }
 
     static PyMethodDef _methods_SystemDataPaths[] = {
-        { "get_default", reinterpret_cast<PyCFunction>(SystemDataPaths_GetDefault), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_SystemDataPaths, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SystemDataPaths), METH_O | METH_STATIC, nullptr },
         { }
@@ -9028,6 +9242,32 @@ namespace py::cpp::Windows::Storage
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_SystemDataPaths
+    };
+
+    static PyGetSetDef getset_SystemDataPaths_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_SystemDataPaths_Static[] = {
+        { "get_default", reinterpret_cast<PyCFunction>(SystemDataPaths_GetDefault), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_SystemDataPaths_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SystemDataPaths_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SystemDataPaths_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SystemDataPaths_Static =
+    {
+        "winrt._winrt_windows_storage.SystemDataPaths_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_SystemDataPaths_Static
     };
 
     // ----- SystemGPSProperties class --------------------
@@ -10116,7 +10356,7 @@ namespace py::cpp::Windows::Storage
         _type_slots_SystemProperties
     };
 
-    static PyGetSetDef getset_SystemProperties_Meta[] = {
+    static PyGetSetDef getset_SystemProperties_Static[] = {
         { "audio", reinterpret_cast<getter>(SystemProperties_get_Audio), nullptr, nullptr, nullptr },
         { "author", reinterpret_cast<getter>(SystemProperties_get_Author), nullptr, nullptr, nullptr },
         { "comment", reinterpret_cast<getter>(SystemProperties_get_Comment), nullptr, nullptr, nullptr },
@@ -10133,20 +10373,25 @@ namespace py::cpp::Windows::Storage
         { }
     };
 
-    static PyType_Slot type_slots_SystemProperties_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_SystemProperties_Meta) },
+    static PyMethodDef methods_SystemProperties_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_SystemProperties_Meta =
+    static PyType_Slot type_slots_SystemProperties_Static[] = 
     {
-        "winrt._winrt_windows_storage.SystemProperties_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SystemProperties_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SystemProperties_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SystemProperties_Static =
+    {
+        "winrt._winrt_windows_storage.SystemProperties_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SystemProperties_Meta
+        type_slots_SystemProperties_Static
     };
 
     // ----- SystemVideoProperties class --------------------
@@ -10781,8 +11026,6 @@ namespace py::cpp::Windows::Storage
     }
 
     static PyMethodDef _methods_UserDataPaths[] = {
-        { "get_default", reinterpret_cast<PyCFunction>(UserDataPaths_GetDefault), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_for_user", reinterpret_cast<PyCFunction>(UserDataPaths_GetForUser), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_UserDataPaths, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserDataPaths), METH_O | METH_STATIC, nullptr },
         { }
@@ -10827,6 +11070,33 @@ namespace py::cpp::Windows::Storage
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_UserDataPaths
+    };
+
+    static PyGetSetDef getset_UserDataPaths_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_UserDataPaths_Static[] = {
+        { "get_default", reinterpret_cast<PyCFunction>(UserDataPaths_GetDefault), METH_VARARGS, nullptr },
+        { "get_for_user", reinterpret_cast<PyCFunction>(UserDataPaths_GetForUser), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_UserDataPaths_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_UserDataPaths_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_UserDataPaths_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_UserDataPaths_Static =
+    {
+        "winrt._winrt_windows_storage.UserDataPaths_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_UserDataPaths_Static
     };
 
     // ----- IStorageFile interface --------------------
@@ -14054,18 +14324,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppDataPaths, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_AppDataPaths_Static{PyType_FromSpec(&type_spec_AppDataPaths_Static)};
+    if (!type_AppDataPaths_Static)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ApplicationData_Meta{PyType_FromSpec(&type_spec_ApplicationData_Meta)};
-    if (!type_ApplicationData_Meta)
+    if (py::register_python_type(module.get(), &type_spec_AppDataPaths, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppDataPaths_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ApplicationData, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ApplicationData_Meta.get())) == -1)
+    py::pyobj_handle type_ApplicationData_Static{PyType_FromSpec(&type_spec_ApplicationData_Static)};
+    if (!type_ApplicationData_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_ApplicationData, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ApplicationData_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -14085,33 +14361,57 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CachedFileManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_CachedFileManager_Static{PyType_FromSpec(&type_spec_CachedFileManager_Static)};
+    if (!type_CachedFileManager_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DownloadsFolder, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CachedFileManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CachedFileManager_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FileIO, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_DownloadsFolder_Static{PyType_FromSpec(&type_spec_DownloadsFolder_Static)};
+    if (!type_DownloadsFolder_Static)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_KnownFolders_Meta{PyType_FromSpec(&type_spec_KnownFolders_Meta)};
-    if (!type_KnownFolders_Meta)
+    if (py::register_python_type(module.get(), &type_spec_DownloadsFolder, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DownloadsFolder_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_KnownFolders, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownFolders_Meta.get())) == -1)
+    py::pyobj_handle type_FileIO_Static{PyType_FromSpec(&type_spec_FileIO_Static)};
+    if (!type_FileIO_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PathIO, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FileIO, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FileIO_Static.get())) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_KnownFolders_Static{PyType_FromSpec(&type_spec_KnownFolders_Static)};
+    if (!type_KnownFolders_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_KnownFolders, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownFolders_Static.get())) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PathIO_Static{PyType_FromSpec(&type_spec_PathIO_Static)};
+    if (!type_PathIO_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_PathIO, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PathIO_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -14126,17 +14426,35 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StorageFile, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_StorageFile_Static{PyType_FromSpec(&type_spec_StorageFile_Static)};
+    if (!type_StorageFile_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StorageFolder, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StorageFile, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StorageFile_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StorageLibrary, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_StorageFolder_Static{PyType_FromSpec(&type_spec_StorageFolder_Static)};
+    if (!type_StorageFolder_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_StorageFolder, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StorageFolder_Static.get())) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_StorageLibrary_Static{PyType_FromSpec(&type_spec_StorageLibrary_Static)};
+    if (!type_StorageLibrary_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_StorageLibrary, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StorageLibrary_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -14161,13 +14479,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_StorageLibraryLastChangeId_Meta{PyType_FromSpec(&type_spec_StorageLibraryLastChangeId_Meta)};
-    if (!type_StorageLibraryLastChangeId_Meta)
+    py::pyobj_handle type_StorageLibraryLastChangeId_Static{PyType_FromSpec(&type_spec_StorageLibraryLastChangeId_Static)};
+    if (!type_StorageLibraryLastChangeId_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StorageLibraryLastChangeId, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StorageLibraryLastChangeId_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StorageLibraryLastChangeId, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StorageLibraryLastChangeId_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -14192,7 +14510,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SystemDataPaths, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_SystemDataPaths_Static{PyType_FromSpec(&type_spec_SystemDataPaths_Static)};
+    if (!type_SystemDataPaths_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_SystemDataPaths, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemDataPaths_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -14222,13 +14546,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_SystemProperties_Meta{PyType_FromSpec(&type_spec_SystemProperties_Meta)};
-    if (!type_SystemProperties_Meta)
+    py::pyobj_handle type_SystemProperties_Static{PyType_FromSpec(&type_spec_SystemProperties_Static)};
+    if (!type_SystemProperties_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SystemProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemProperties_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SystemProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemProperties_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -14238,7 +14562,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserDataPaths, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_UserDataPaths_Static{PyType_FromSpec(&type_spec_UserDataPaths_Static)};
+    if (!type_UserDataPaths_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_UserDataPaths, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UserDataPaths_Static.get())) == -1)
     {
         return nullptr;
     }

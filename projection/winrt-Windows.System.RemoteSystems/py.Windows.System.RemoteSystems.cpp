@@ -116,7 +116,7 @@ namespace py::cpp::Windows::System::RemoteSystems
         _type_slots_KnownRemoteSystemCapabilities
     };
 
-    static PyGetSetDef getset_KnownRemoteSystemCapabilities_Meta[] = {
+    static PyGetSetDef getset_KnownRemoteSystemCapabilities_Static[] = {
         { "app_service", reinterpret_cast<getter>(KnownRemoteSystemCapabilities_get_AppService), nullptr, nullptr, nullptr },
         { "launch_uri", reinterpret_cast<getter>(KnownRemoteSystemCapabilities_get_LaunchUri), nullptr, nullptr, nullptr },
         { "remote_session", reinterpret_cast<getter>(KnownRemoteSystemCapabilities_get_RemoteSession), nullptr, nullptr, nullptr },
@@ -124,20 +124,25 @@ namespace py::cpp::Windows::System::RemoteSystems
         { }
     };
 
-    static PyType_Slot type_slots_KnownRemoteSystemCapabilities_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_KnownRemoteSystemCapabilities_Meta) },
+    static PyMethodDef methods_KnownRemoteSystemCapabilities_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_KnownRemoteSystemCapabilities_Meta =
+    static PyType_Slot type_slots_KnownRemoteSystemCapabilities_Static[] = 
     {
-        "winrt._winrt_windows_system_remotesystems.KnownRemoteSystemCapabilities_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_KnownRemoteSystemCapabilities_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_KnownRemoteSystemCapabilities_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_KnownRemoteSystemCapabilities_Static =
+    {
+        "winrt._winrt_windows_system_remotesystems.KnownRemoteSystemCapabilities_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_KnownRemoteSystemCapabilities_Meta
+        type_slots_KnownRemoteSystemCapabilities_Static
     };
 
     // ----- RemoteSystem class --------------------
@@ -614,12 +619,7 @@ namespace py::cpp::Windows::System::RemoteSystems
     }
 
     static PyMethodDef _methods_RemoteSystem[] = {
-        { "create_watcher", reinterpret_cast<PyCFunction>(RemoteSystem_CreateWatcher), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_watcher_for_user", reinterpret_cast<PyCFunction>(RemoteSystem_CreateWatcherForUser), METH_VARARGS | METH_STATIC, nullptr },
-        { "find_by_host_name_async", reinterpret_cast<PyCFunction>(RemoteSystem_FindByHostNameAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "get_capability_supported_async", reinterpret_cast<PyCFunction>(RemoteSystem_GetCapabilitySupportedAsync), METH_VARARGS, nullptr },
-        { "is_authorization_kind_enabled", reinterpret_cast<PyCFunction>(RemoteSystem_IsAuthorizationKindEnabled), METH_VARARGS | METH_STATIC, nullptr },
-        { "request_access_async", reinterpret_cast<PyCFunction>(RemoteSystem_RequestAccessAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_RemoteSystem, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RemoteSystem), METH_O | METH_STATIC, nullptr },
         { }
@@ -656,6 +656,36 @@ namespace py::cpp::Windows::System::RemoteSystems
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_RemoteSystem
+    };
+
+    static PyGetSetDef getset_RemoteSystem_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_RemoteSystem_Static[] = {
+        { "create_watcher", reinterpret_cast<PyCFunction>(RemoteSystem_CreateWatcher), METH_VARARGS, nullptr },
+        { "create_watcher_for_user", reinterpret_cast<PyCFunction>(RemoteSystem_CreateWatcherForUser), METH_VARARGS, nullptr },
+        { "find_by_host_name_async", reinterpret_cast<PyCFunction>(RemoteSystem_FindByHostNameAsync), METH_VARARGS, nullptr },
+        { "is_authorization_kind_enabled", reinterpret_cast<PyCFunction>(RemoteSystem_IsAuthorizationKindEnabled), METH_VARARGS, nullptr },
+        { "request_access_async", reinterpret_cast<PyCFunction>(RemoteSystem_RequestAccessAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_RemoteSystem_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_RemoteSystem_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_RemoteSystem_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_RemoteSystem_Static =
+    {
+        "winrt._winrt_windows_system_remotesystems.RemoteSystem_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_RemoteSystem_Static
     };
 
     // ----- RemoteSystemAddedEventArgs class --------------------
@@ -1125,8 +1155,6 @@ namespace py::cpp::Windows::System::RemoteSystems
     }
 
     static PyMethodDef _methods_RemoteSystemAppRegistration[] = {
-        { "get_default", reinterpret_cast<PyCFunction>(RemoteSystemAppRegistration_GetDefault), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_for_user", reinterpret_cast<PyCFunction>(RemoteSystemAppRegistration_GetForUser), METH_VARARGS | METH_STATIC, nullptr },
         { "save_async", reinterpret_cast<PyCFunction>(RemoteSystemAppRegistration_SaveAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_RemoteSystemAppRegistration, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RemoteSystemAppRegistration), METH_O | METH_STATIC, nullptr },
@@ -1155,6 +1183,33 @@ namespace py::cpp::Windows::System::RemoteSystems
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_RemoteSystemAppRegistration
+    };
+
+    static PyGetSetDef getset_RemoteSystemAppRegistration_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_RemoteSystemAppRegistration_Static[] = {
+        { "get_default", reinterpret_cast<PyCFunction>(RemoteSystemAppRegistration_GetDefault), METH_VARARGS, nullptr },
+        { "get_for_user", reinterpret_cast<PyCFunction>(RemoteSystemAppRegistration_GetForUser), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_RemoteSystemAppRegistration_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_RemoteSystemAppRegistration_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_RemoteSystemAppRegistration_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_RemoteSystemAppRegistration_Static =
+    {
+        "winrt._winrt_windows_system_remotesystems.RemoteSystemAppRegistration_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_RemoteSystemAppRegistration_Static
     };
 
     // ----- RemoteSystemAuthorizationKindFilter class --------------------
@@ -1362,7 +1417,6 @@ namespace py::cpp::Windows::System::RemoteSystems
     }
 
     static PyMethodDef _methods_RemoteSystemConnectionInfo[] = {
-        { "try_create_from_app_service_connection", reinterpret_cast<PyCFunction>(RemoteSystemConnectionInfo_TryCreateFromAppServiceConnection), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_RemoteSystemConnectionInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RemoteSystemConnectionInfo), METH_O | METH_STATIC, nullptr },
         { }
@@ -1389,6 +1443,32 @@ namespace py::cpp::Windows::System::RemoteSystems
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_RemoteSystemConnectionInfo
+    };
+
+    static PyGetSetDef getset_RemoteSystemConnectionInfo_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_RemoteSystemConnectionInfo_Static[] = {
+        { "try_create_from_app_service_connection", reinterpret_cast<PyCFunction>(RemoteSystemConnectionInfo_TryCreateFromAppServiceConnection), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_RemoteSystemConnectionInfo_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_RemoteSystemConnectionInfo_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_RemoteSystemConnectionInfo_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_RemoteSystemConnectionInfo_Static =
+    {
+        "winrt._winrt_windows_system_remotesystems.RemoteSystemConnectionInfo_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_RemoteSystemConnectionInfo_Static
     };
 
     // ----- RemoteSystemConnectionRequest class --------------------
@@ -1608,9 +1688,6 @@ namespace py::cpp::Windows::System::RemoteSystems
     }
 
     static PyMethodDef _methods_RemoteSystemConnectionRequest[] = {
-        { "create_for_app", reinterpret_cast<PyCFunction>(RemoteSystemConnectionRequest_CreateForApp), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_from_connection_token", reinterpret_cast<PyCFunction>(RemoteSystemConnectionRequest_CreateFromConnectionToken), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_from_connection_token_for_user", reinterpret_cast<PyCFunction>(RemoteSystemConnectionRequest_CreateFromConnectionTokenForUser), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_RemoteSystemConnectionRequest, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RemoteSystemConnectionRequest), METH_O | METH_STATIC, nullptr },
         { }
@@ -1639,6 +1716,34 @@ namespace py::cpp::Windows::System::RemoteSystems
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_RemoteSystemConnectionRequest
+    };
+
+    static PyGetSetDef getset_RemoteSystemConnectionRequest_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_RemoteSystemConnectionRequest_Static[] = {
+        { "create_for_app", reinterpret_cast<PyCFunction>(RemoteSystemConnectionRequest_CreateForApp), METH_VARARGS, nullptr },
+        { "create_from_connection_token", reinterpret_cast<PyCFunction>(RemoteSystemConnectionRequest_CreateFromConnectionToken), METH_VARARGS, nullptr },
+        { "create_from_connection_token_for_user", reinterpret_cast<PyCFunction>(RemoteSystemConnectionRequest_CreateFromConnectionTokenForUser), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_RemoteSystemConnectionRequest_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_RemoteSystemConnectionRequest_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_RemoteSystemConnectionRequest_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_RemoteSystemConnectionRequest_Static =
+    {
+        "winrt._winrt_windows_system_remotesystems.RemoteSystemConnectionRequest_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_RemoteSystemConnectionRequest_Static
     };
 
     // ----- RemoteSystemDiscoveryTypeFilter class --------------------
@@ -2122,7 +2227,7 @@ namespace py::cpp::Windows::System::RemoteSystems
         _type_slots_RemoteSystemKinds
     };
 
-    static PyGetSetDef getset_RemoteSystemKinds_Meta[] = {
+    static PyGetSetDef getset_RemoteSystemKinds_Static[] = {
         { "desktop", reinterpret_cast<getter>(RemoteSystemKinds_get_Desktop), nullptr, nullptr, nullptr },
         { "holographic", reinterpret_cast<getter>(RemoteSystemKinds_get_Holographic), nullptr, nullptr, nullptr },
         { "hub", reinterpret_cast<getter>(RemoteSystemKinds_get_Hub), nullptr, nullptr, nullptr },
@@ -2134,20 +2239,25 @@ namespace py::cpp::Windows::System::RemoteSystems
         { }
     };
 
-    static PyType_Slot type_slots_RemoteSystemKinds_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_RemoteSystemKinds_Meta) },
+    static PyMethodDef methods_RemoteSystemKinds_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_RemoteSystemKinds_Meta =
+    static PyType_Slot type_slots_RemoteSystemKinds_Static[] = 
     {
-        "winrt._winrt_windows_system_remotesystems.RemoteSystemKinds_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_RemoteSystemKinds_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_RemoteSystemKinds_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_RemoteSystemKinds_Static =
+    {
+        "winrt._winrt_windows_system_remotesystems.RemoteSystemKinds_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_RemoteSystemKinds_Meta
+        type_slots_RemoteSystemKinds_Static
     };
 
     // ----- RemoteSystemRemovedEventArgs class --------------------
@@ -2521,7 +2631,6 @@ namespace py::cpp::Windows::System::RemoteSystems
     static PyMethodDef _methods_RemoteSystemSession[] = {
         { "close", reinterpret_cast<PyCFunction>(RemoteSystemSession_Close), METH_VARARGS, nullptr },
         { "create_participant_watcher", reinterpret_cast<PyCFunction>(RemoteSystemSession_CreateParticipantWatcher), METH_VARARGS, nullptr },
-        { "create_watcher", reinterpret_cast<PyCFunction>(RemoteSystemSession_CreateWatcher), METH_VARARGS | METH_STATIC, nullptr },
         { "send_invitation_async", reinterpret_cast<PyCFunction>(RemoteSystemSession_SendInvitationAsync), METH_VARARGS, nullptr },
         { "add_disconnected", reinterpret_cast<PyCFunction>(RemoteSystemSession_add_Disconnected), METH_O, nullptr },
         { "remove_disconnected", reinterpret_cast<PyCFunction>(RemoteSystemSession_remove_Disconnected), METH_O, nullptr },
@@ -2555,6 +2664,32 @@ namespace py::cpp::Windows::System::RemoteSystems
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_RemoteSystemSession
+    };
+
+    static PyGetSetDef getset_RemoteSystemSession_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_RemoteSystemSession_Static[] = {
+        { "create_watcher", reinterpret_cast<PyCFunction>(RemoteSystemSession_CreateWatcher), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_RemoteSystemSession_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_RemoteSystemSession_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_RemoteSystemSession_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_RemoteSystemSession_Static =
+    {
+        "winrt._winrt_windows_system_remotesystems.RemoteSystemSession_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_RemoteSystemSession_Static
     };
 
     // ----- RemoteSystemSessionAddedEventArgs class --------------------
@@ -6345,18 +6480,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_remotesystems(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_KnownRemoteSystemCapabilities_Meta{PyType_FromSpec(&type_spec_KnownRemoteSystemCapabilities_Meta)};
-    if (!type_KnownRemoteSystemCapabilities_Meta)
+    py::pyobj_handle type_KnownRemoteSystemCapabilities_Static{PyType_FromSpec(&type_spec_KnownRemoteSystemCapabilities_Static)};
+    if (!type_KnownRemoteSystemCapabilities_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_KnownRemoteSystemCapabilities, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownRemoteSystemCapabilities_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_KnownRemoteSystemCapabilities, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownRemoteSystemCapabilities_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RemoteSystem, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_RemoteSystem_Static{PyType_FromSpec(&type_spec_RemoteSystem_Static)};
+    if (!type_RemoteSystem_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_RemoteSystem, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RemoteSystem_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -6371,7 +6512,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_remotesystems(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RemoteSystemAppRegistration, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_RemoteSystemAppRegistration_Static{PyType_FromSpec(&type_spec_RemoteSystemAppRegistration_Static)};
+    if (!type_RemoteSystemAppRegistration_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_RemoteSystemAppRegistration, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RemoteSystemAppRegistration_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -6381,12 +6528,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_remotesystems(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RemoteSystemConnectionInfo, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_RemoteSystemConnectionInfo_Static{PyType_FromSpec(&type_spec_RemoteSystemConnectionInfo_Static)};
+    if (!type_RemoteSystemConnectionInfo_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RemoteSystemConnectionRequest, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RemoteSystemConnectionInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RemoteSystemConnectionInfo_Static.get())) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_RemoteSystemConnectionRequest_Static{PyType_FromSpec(&type_spec_RemoteSystemConnectionRequest_Static)};
+    if (!type_RemoteSystemConnectionRequest_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_RemoteSystemConnectionRequest, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RemoteSystemConnectionRequest_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -6406,13 +6565,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_remotesystems(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_RemoteSystemKinds_Meta{PyType_FromSpec(&type_spec_RemoteSystemKinds_Meta)};
-    if (!type_RemoteSystemKinds_Meta)
+    py::pyobj_handle type_RemoteSystemKinds_Static{PyType_FromSpec(&type_spec_RemoteSystemKinds_Static)};
+    if (!type_RemoteSystemKinds_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RemoteSystemKinds, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RemoteSystemKinds_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RemoteSystemKinds, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RemoteSystemKinds_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -6422,7 +6581,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_remotesystems(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RemoteSystemSession, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_RemoteSystemSession_Static{PyType_FromSpec(&type_spec_RemoteSystemSession_Static)};
+    if (!type_RemoteSystemSession_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_RemoteSystemSession, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RemoteSystemSession_Static.get())) == -1)
     {
         return nullptr;
     }

@@ -1371,7 +1371,6 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
 
     static PyMethodDef _methods_PreviewTeamView[] = {
         { "enter_full_screen", reinterpret_cast<PyCFunction>(PreviewTeamView_EnterFullScreen), METH_VARARGS, nullptr },
-        { "get_for_current_view", reinterpret_cast<PyCFunction>(PreviewTeamView_GetForCurrentView), METH_VARARGS | METH_STATIC, nullptr },
         { "join_meeting_with_uri", reinterpret_cast<PyCFunction>(PreviewTeamView_JoinMeetingWithUri), METH_VARARGS, nullptr },
         { "leave_full_screen", reinterpret_cast<PyCFunction>(PreviewTeamView_LeaveFullScreen), METH_VARARGS, nullptr },
         { "notify_meeting_ended", reinterpret_cast<PyCFunction>(PreviewTeamView_NotifyMeetingEnded), METH_VARARGS, nullptr },
@@ -1427,6 +1426,32 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_PreviewTeamView
+    };
+
+    static PyGetSetDef getset_PreviewTeamView_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_PreviewTeamView_Static[] = {
+        { "get_for_current_view", reinterpret_cast<PyCFunction>(PreviewTeamView_GetForCurrentView), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_PreviewTeamView_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PreviewTeamView_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PreviewTeamView_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PreviewTeamView_Static =
+    {
+        "winrt._winrt_windows_ui_core_preview_communications.PreviewTeamView_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_PreviewTeamView_Static
     };
 
     // ----- Windows.UI.Core.Preview.Communications Initialization --------------------
@@ -1500,7 +1525,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_core_preview_communications(void) noexce
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PreviewTeamView, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_PreviewTeamView_Static{PyType_FromSpec(&type_spec_PreviewTeamView_Static)};
+    if (!type_PreviewTeamView_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_PreviewTeamView, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PreviewTeamView_Static.get())) == -1)
     {
         return nullptr;
     }

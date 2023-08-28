@@ -56,12 +56,14 @@ class OnlineIdServiceTicketRequest(winrt.system.Object):
     @_property
     def service(self) -> str: ...
 
-class OnlineIdSystemAuthenticator(winrt.system.Object):
+class OnlineIdSystemAuthenticator_Static(type):
+    def get_for_user(cls, user: typing.Optional[winrt.windows.system.User], /) -> typing.Optional[OnlineIdSystemAuthenticatorForUser]: ...
+    @_property
+    def default(cls) -> typing.Optional[OnlineIdSystemAuthenticatorForUser]: ...
+
+class OnlineIdSystemAuthenticator(winrt.system.Object, metaclass=OnlineIdSystemAuthenticator_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> OnlineIdSystemAuthenticator: ...
-    @staticmethod
-    def get_for_user(user: typing.Optional[winrt.windows.system.User], /) -> typing.Optional[OnlineIdSystemAuthenticatorForUser]: ...
-    default: typing.ClassVar[typing.Optional[OnlineIdSystemAuthenticatorForUser]]
 
 class OnlineIdSystemAuthenticatorForUser(winrt.system.Object):
     @staticmethod

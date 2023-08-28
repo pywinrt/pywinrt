@@ -297,7 +297,6 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
     }
 
     static PyMethodDef _methods_DevicePortalConnection[] = {
-        { "get_for_app_service_connection", reinterpret_cast<PyCFunction>(DevicePortalConnection_GetForAppServiceConnection), METH_VARARGS | METH_STATIC, nullptr },
         { "get_server_message_web_socket_for_request", reinterpret_cast<PyCFunction>(DevicePortalConnection_GetServerMessageWebSocketForRequest), METH_VARARGS, nullptr },
         { "get_server_stream_web_socket_for_request", reinterpret_cast<PyCFunction>(DevicePortalConnection_GetServerStreamWebSocketForRequest), METH_VARARGS, nullptr },
         { "add_closed", reinterpret_cast<PyCFunction>(DevicePortalConnection_add_Closed), METH_O, nullptr },
@@ -329,6 +328,32 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_DevicePortalConnection
+    };
+
+    static PyGetSetDef getset_DevicePortalConnection_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_DevicePortalConnection_Static[] = {
+        { "get_for_app_service_connection", reinterpret_cast<PyCFunction>(DevicePortalConnection_GetForAppServiceConnection), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_DevicePortalConnection_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_DevicePortalConnection_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_DevicePortalConnection_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_DevicePortalConnection_Static =
+    {
+        "winrt._winrt_windows_system_diagnostics_deviceportal.DevicePortalConnection_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_DevicePortalConnection_Static
     };
 
     // ----- DevicePortalConnectionClosedEventArgs class --------------------
@@ -645,7 +670,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_diagnostics_deviceportal(void) noexc
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DevicePortalConnection, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_DevicePortalConnection_Static{PyType_FromSpec(&type_spec_DevicePortalConnection_Static)};
+    if (!type_DevicePortalConnection_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_DevicePortalConnection, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DevicePortalConnection_Static.get())) == -1)
     {
         return nullptr;
     }

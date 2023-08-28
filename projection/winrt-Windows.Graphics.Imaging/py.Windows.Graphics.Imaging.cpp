@@ -1106,8 +1106,6 @@ namespace py::cpp::Windows::Graphics::Imaging
     }
 
     static PyMethodDef _methods_BitmapDecoder[] = {
-        { "create_async", reinterpret_cast<PyCFunction>(BitmapDecoder_CreateAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_decoder_information_enumerator", reinterpret_cast<PyCFunction>(BitmapDecoder_GetDecoderInformationEnumerator), METH_VARARGS | METH_STATIC, nullptr },
         { "get_frame_async", reinterpret_cast<PyCFunction>(BitmapDecoder_GetFrameAsync), METH_VARARGS, nullptr },
         { "get_pixel_data_async", reinterpret_cast<PyCFunction>(BitmapDecoder_GetPixelDataAsync), METH_VARARGS, nullptr },
         { "get_preview_async", reinterpret_cast<PyCFunction>(BitmapDecoder_GetPreviewAsync), METH_VARARGS, nullptr },
@@ -1152,7 +1150,7 @@ namespace py::cpp::Windows::Graphics::Imaging
         _type_slots_BitmapDecoder
     };
 
-    static PyGetSetDef getset_BitmapDecoder_Meta[] = {
+    static PyGetSetDef getset_BitmapDecoder_Static[] = {
         { "bmp_decoder_id", reinterpret_cast<getter>(BitmapDecoder_get_BmpDecoderId), nullptr, nullptr, nullptr },
         { "gif_decoder_id", reinterpret_cast<getter>(BitmapDecoder_get_GifDecoderId), nullptr, nullptr, nullptr },
         { "ico_decoder_id", reinterpret_cast<getter>(BitmapDecoder_get_IcoDecoderId), nullptr, nullptr, nullptr },
@@ -1165,20 +1163,27 @@ namespace py::cpp::Windows::Graphics::Imaging
         { }
     };
 
-    static PyType_Slot type_slots_BitmapDecoder_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_BitmapDecoder_Meta) },
+    static PyMethodDef methods_BitmapDecoder_Static[] = {
+        { "create_async", reinterpret_cast<PyCFunction>(BitmapDecoder_CreateAsync), METH_VARARGS, nullptr },
+        { "get_decoder_information_enumerator", reinterpret_cast<PyCFunction>(BitmapDecoder_GetDecoderInformationEnumerator), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_BitmapDecoder_Meta =
+    static PyType_Slot type_slots_BitmapDecoder_Static[] = 
     {
-        "winrt._winrt_windows_graphics_imaging.BitmapDecoder_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_BitmapDecoder_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_BitmapDecoder_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_BitmapDecoder_Static =
+    {
+        "winrt._winrt_windows_graphics_imaging.BitmapDecoder_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_BitmapDecoder_Meta
+        type_slots_BitmapDecoder_Static
     };
 
     // ----- BitmapEncoder class --------------------
@@ -1867,11 +1872,7 @@ namespace py::cpp::Windows::Graphics::Imaging
     }
 
     static PyMethodDef _methods_BitmapEncoder[] = {
-        { "create_async", reinterpret_cast<PyCFunction>(BitmapEncoder_CreateAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_for_in_place_property_encoding_async", reinterpret_cast<PyCFunction>(BitmapEncoder_CreateForInPlacePropertyEncodingAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_for_transcoding_async", reinterpret_cast<PyCFunction>(BitmapEncoder_CreateForTranscodingAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "flush_async", reinterpret_cast<PyCFunction>(BitmapEncoder_FlushAsync), METH_VARARGS, nullptr },
-        { "get_encoder_information_enumerator", reinterpret_cast<PyCFunction>(BitmapEncoder_GetEncoderInformationEnumerator), METH_VARARGS | METH_STATIC, nullptr },
         { "go_to_next_frame_async", reinterpret_cast<PyCFunction>(BitmapEncoder_GoToNextFrameAsync), METH_VARARGS, nullptr },
         { "set_pixel_data", reinterpret_cast<PyCFunction>(BitmapEncoder_SetPixelData), METH_VARARGS, nullptr },
         { "set_software_bitmap", reinterpret_cast<PyCFunction>(BitmapEncoder_SetSoftwareBitmap), METH_VARARGS, nullptr },
@@ -1909,7 +1910,7 @@ namespace py::cpp::Windows::Graphics::Imaging
         _type_slots_BitmapEncoder
     };
 
-    static PyGetSetDef getset_BitmapEncoder_Meta[] = {
+    static PyGetSetDef getset_BitmapEncoder_Static[] = {
         { "bmp_encoder_id", reinterpret_cast<getter>(BitmapEncoder_get_BmpEncoderId), nullptr, nullptr, nullptr },
         { "gif_encoder_id", reinterpret_cast<getter>(BitmapEncoder_get_GifEncoderId), nullptr, nullptr, nullptr },
         { "jpeg_encoder_id", reinterpret_cast<getter>(BitmapEncoder_get_JpegEncoderId), nullptr, nullptr, nullptr },
@@ -1920,20 +1921,29 @@ namespace py::cpp::Windows::Graphics::Imaging
         { }
     };
 
-    static PyType_Slot type_slots_BitmapEncoder_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_BitmapEncoder_Meta) },
+    static PyMethodDef methods_BitmapEncoder_Static[] = {
+        { "create_async", reinterpret_cast<PyCFunction>(BitmapEncoder_CreateAsync), METH_VARARGS, nullptr },
+        { "create_for_in_place_property_encoding_async", reinterpret_cast<PyCFunction>(BitmapEncoder_CreateForInPlacePropertyEncodingAsync), METH_VARARGS, nullptr },
+        { "create_for_transcoding_async", reinterpret_cast<PyCFunction>(BitmapEncoder_CreateForTranscodingAsync), METH_VARARGS, nullptr },
+        { "get_encoder_information_enumerator", reinterpret_cast<PyCFunction>(BitmapEncoder_GetEncoderInformationEnumerator), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_BitmapEncoder_Meta =
+    static PyType_Slot type_slots_BitmapEncoder_Static[] = 
     {
-        "winrt._winrt_windows_graphics_imaging.BitmapEncoder_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_BitmapEncoder_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_BitmapEncoder_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_BitmapEncoder_Static =
+    {
+        "winrt._winrt_windows_graphics_imaging.BitmapEncoder_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_BitmapEncoder_Meta
+        type_slots_BitmapEncoder_Static
     };
 
     // ----- BitmapFrame class --------------------
@@ -4767,13 +4777,9 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyMethodDef _methods_SoftwareBitmap[] = {
         { "close", reinterpret_cast<PyCFunction>(SoftwareBitmap_Close), METH_VARARGS, nullptr },
-        { "convert", reinterpret_cast<PyCFunction>(SoftwareBitmap_Convert), METH_VARARGS | METH_STATIC, nullptr },
-        { "copy", reinterpret_cast<PyCFunction>(SoftwareBitmap_Copy), METH_VARARGS | METH_STATIC, nullptr },
         { "copy_from_buffer", reinterpret_cast<PyCFunction>(SoftwareBitmap_CopyFromBuffer), METH_VARARGS, nullptr },
         { "copy_to", reinterpret_cast<PyCFunction>(SoftwareBitmap_CopyTo), METH_VARARGS, nullptr },
         { "copy_to_buffer", reinterpret_cast<PyCFunction>(SoftwareBitmap_CopyToBuffer), METH_VARARGS, nullptr },
-        { "create_copy_from_buffer", reinterpret_cast<PyCFunction>(SoftwareBitmap_CreateCopyFromBuffer), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_copy_from_surface_async", reinterpret_cast<PyCFunction>(SoftwareBitmap_CreateCopyFromSurfaceAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "get_read_only_view", reinterpret_cast<PyCFunction>(SoftwareBitmap_GetReadOnlyView), METH_VARARGS, nullptr },
         { "lock_buffer", reinterpret_cast<PyCFunction>(SoftwareBitmap_LockBuffer), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SoftwareBitmap, METH_O | METH_STATIC, nullptr },
@@ -4810,6 +4816,35 @@ namespace py::cpp::Windows::Graphics::Imaging
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_SoftwareBitmap
+    };
+
+    static PyGetSetDef getset_SoftwareBitmap_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_SoftwareBitmap_Static[] = {
+        { "convert", reinterpret_cast<PyCFunction>(SoftwareBitmap_Convert), METH_VARARGS, nullptr },
+        { "copy", reinterpret_cast<PyCFunction>(SoftwareBitmap_Copy), METH_VARARGS, nullptr },
+        { "create_copy_from_buffer", reinterpret_cast<PyCFunction>(SoftwareBitmap_CreateCopyFromBuffer), METH_VARARGS, nullptr },
+        { "create_copy_from_surface_async", reinterpret_cast<PyCFunction>(SoftwareBitmap_CreateCopyFromSurfaceAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_SoftwareBitmap_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SoftwareBitmap_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SoftwareBitmap_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SoftwareBitmap_Static =
+    {
+        "winrt._winrt_windows_graphics_imaging.SoftwareBitmap_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_SoftwareBitmap_Static
     };
 
     // ----- IBitmapFrame interface --------------------
@@ -6333,24 +6368,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_imaging(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_BitmapDecoder_Meta{PyType_FromSpec(&type_spec_BitmapDecoder_Meta)};
-    if (!type_BitmapDecoder_Meta)
+    py::pyobj_handle type_BitmapDecoder_Static{PyType_FromSpec(&type_spec_BitmapDecoder_Static)};
+    if (!type_BitmapDecoder_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BitmapDecoder, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BitmapDecoder_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BitmapDecoder, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BitmapDecoder_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_BitmapEncoder_Meta{PyType_FromSpec(&type_spec_BitmapEncoder_Meta)};
-    if (!type_BitmapEncoder_Meta)
+    py::pyobj_handle type_BitmapEncoder_Static{PyType_FromSpec(&type_spec_BitmapEncoder_Static)};
+    if (!type_BitmapEncoder_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BitmapEncoder, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BitmapEncoder_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BitmapEncoder, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BitmapEncoder_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -6395,7 +6430,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_imaging(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SoftwareBitmap, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_SoftwareBitmap_Static{PyType_FromSpec(&type_spec_SoftwareBitmap_Static)};
+    if (!type_SoftwareBitmap_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_SoftwareBitmap, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SoftwareBitmap_Static.get())) == -1)
     {
         return nullptr;
     }

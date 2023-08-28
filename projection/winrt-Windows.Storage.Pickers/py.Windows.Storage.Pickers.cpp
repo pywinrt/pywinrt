@@ -1130,12 +1130,10 @@ namespace py::cpp::Windows::Storage::Pickers
     }
 
     static PyMethodDef _methods_FileOpenPicker[] = {
-        { "create_for_user", reinterpret_cast<PyCFunction>(FileOpenPicker_CreateForUser), METH_VARARGS | METH_STATIC, nullptr },
         { "pick_multiple_files_and_continue", reinterpret_cast<PyCFunction>(FileOpenPicker_PickMultipleFilesAndContinue), METH_VARARGS, nullptr },
         { "pick_multiple_files_async", reinterpret_cast<PyCFunction>(FileOpenPicker_PickMultipleFilesAsync), METH_VARARGS, nullptr },
         { "pick_single_file_and_continue", reinterpret_cast<PyCFunction>(FileOpenPicker_PickSingleFileAndContinue), METH_VARARGS, nullptr },
         { "pick_single_file_async", reinterpret_cast<PyCFunction>(FileOpenPicker_PickSingleFileAsync), METH_VARARGS, nullptr },
-        { "resume_pick_single_file_async", reinterpret_cast<PyCFunction>(FileOpenPicker_ResumePickSingleFileAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_FileOpenPicker, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FileOpenPicker), METH_O | METH_STATIC, nullptr },
         { }
@@ -1168,6 +1166,33 @@ namespace py::cpp::Windows::Storage::Pickers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_FileOpenPicker
+    };
+
+    static PyGetSetDef getset_FileOpenPicker_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_FileOpenPicker_Static[] = {
+        { "create_for_user", reinterpret_cast<PyCFunction>(FileOpenPicker_CreateForUser), METH_VARARGS, nullptr },
+        { "resume_pick_single_file_async", reinterpret_cast<PyCFunction>(FileOpenPicker_ResumePickSingleFileAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_FileOpenPicker_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_FileOpenPicker_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_FileOpenPicker_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_FileOpenPicker_Static =
+    {
+        "winrt._winrt_windows_storage_pickers.FileOpenPicker_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_FileOpenPicker_Static
     };
 
     // ----- FilePickerFileTypesOrderedMap class --------------------
@@ -2459,7 +2484,6 @@ namespace py::cpp::Windows::Storage::Pickers
     }
 
     static PyMethodDef _methods_FileSavePicker[] = {
-        { "create_for_user", reinterpret_cast<PyCFunction>(FileSavePicker_CreateForUser), METH_VARARGS | METH_STATIC, nullptr },
         { "pick_save_file_and_continue", reinterpret_cast<PyCFunction>(FileSavePicker_PickSaveFileAndContinue), METH_VARARGS, nullptr },
         { "pick_save_file_async", reinterpret_cast<PyCFunction>(FileSavePicker_PickSaveFileAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_FileSavePicker, METH_O | METH_STATIC, nullptr },
@@ -2497,6 +2521,32 @@ namespace py::cpp::Windows::Storage::Pickers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_FileSavePicker
+    };
+
+    static PyGetSetDef getset_FileSavePicker_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_FileSavePicker_Static[] = {
+        { "create_for_user", reinterpret_cast<PyCFunction>(FileSavePicker_CreateForUser), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_FileSavePicker_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_FileSavePicker_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_FileSavePicker_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_FileSavePicker_Static =
+    {
+        "winrt._winrt_windows_storage_pickers.FileSavePicker_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_FileSavePicker_Static
     };
 
     // ----- FolderPicker class --------------------
@@ -2898,7 +2948,6 @@ namespace py::cpp::Windows::Storage::Pickers
     }
 
     static PyMethodDef _methods_FolderPicker[] = {
-        { "create_for_user", reinterpret_cast<PyCFunction>(FolderPicker_CreateForUser), METH_VARARGS | METH_STATIC, nullptr },
         { "pick_folder_and_continue", reinterpret_cast<PyCFunction>(FolderPicker_PickFolderAndContinue), METH_VARARGS, nullptr },
         { "pick_single_folder_async", reinterpret_cast<PyCFunction>(FolderPicker_PickSingleFolderAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_FolderPicker, METH_O | METH_STATIC, nullptr },
@@ -2933,6 +2982,32 @@ namespace py::cpp::Windows::Storage::Pickers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_FolderPicker
+    };
+
+    static PyGetSetDef getset_FolderPicker_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_FolderPicker_Static[] = {
+        { "create_for_user", reinterpret_cast<PyCFunction>(FolderPicker_CreateForUser), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_FolderPicker_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_FolderPicker_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_FolderPicker_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_FolderPicker_Static =
+    {
+        "winrt._winrt_windows_storage_pickers.FolderPicker_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_FolderPicker_Static
     };
 
     // ----- Windows.Storage.Pickers Initialization --------------------
@@ -2986,7 +3061,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_pickers(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FileOpenPicker, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_FileOpenPicker_Static{PyType_FromSpec(&type_spec_FileOpenPicker_Static)};
+    if (!type_FileOpenPicker_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_FileOpenPicker, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FileOpenPicker_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -3001,12 +3082,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_pickers(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FileSavePicker, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_FileSavePicker_Static{PyType_FromSpec(&type_spec_FileSavePicker_Static)};
+    if (!type_FileSavePicker_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FolderPicker, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FileSavePicker, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FileSavePicker_Static.get())) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_FolderPicker_Static{PyType_FromSpec(&type_spec_FolderPicker_Static)};
+    if (!type_FolderPicker_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_FolderPicker, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FolderPicker_Static.get())) == -1)
     {
         return nullptr;
     }

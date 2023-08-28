@@ -1965,23 +1965,6 @@ namespace py::cpp::Windows::Data::Text
     }
 
     static PyMethodDef _methods_UnicodeCharacters[] = {
-        { "get_codepoint_from_surrogate_pair", reinterpret_cast<PyCFunction>(UnicodeCharacters_GetCodepointFromSurrogatePair), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_general_category", reinterpret_cast<PyCFunction>(UnicodeCharacters_GetGeneralCategory), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_numeric_type", reinterpret_cast<PyCFunction>(UnicodeCharacters_GetNumericType), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_surrogate_pair_from_codepoint", reinterpret_cast<PyCFunction>(UnicodeCharacters_GetSurrogatePairFromCodepoint), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_alphabetic", reinterpret_cast<PyCFunction>(UnicodeCharacters_IsAlphabetic), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_cased", reinterpret_cast<PyCFunction>(UnicodeCharacters_IsCased), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_grapheme_base", reinterpret_cast<PyCFunction>(UnicodeCharacters_IsGraphemeBase), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_grapheme_extend", reinterpret_cast<PyCFunction>(UnicodeCharacters_IsGraphemeExtend), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_high_surrogate", reinterpret_cast<PyCFunction>(UnicodeCharacters_IsHighSurrogate), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_id_continue", reinterpret_cast<PyCFunction>(UnicodeCharacters_IsIdContinue), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_id_start", reinterpret_cast<PyCFunction>(UnicodeCharacters_IsIdStart), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_low_surrogate", reinterpret_cast<PyCFunction>(UnicodeCharacters_IsLowSurrogate), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_lowercase", reinterpret_cast<PyCFunction>(UnicodeCharacters_IsLowercase), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_noncharacter", reinterpret_cast<PyCFunction>(UnicodeCharacters_IsNoncharacter), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_supplementary", reinterpret_cast<PyCFunction>(UnicodeCharacters_IsSupplementary), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_uppercase", reinterpret_cast<PyCFunction>(UnicodeCharacters_IsUppercase), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_whitespace", reinterpret_cast<PyCFunction>(UnicodeCharacters_IsWhitespace), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -2004,6 +1987,48 @@ namespace py::cpp::Windows::Data::Text
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_UnicodeCharacters
+    };
+
+    static PyGetSetDef getset_UnicodeCharacters_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_UnicodeCharacters_Static[] = {
+        { "get_codepoint_from_surrogate_pair", reinterpret_cast<PyCFunction>(UnicodeCharacters_GetCodepointFromSurrogatePair), METH_VARARGS, nullptr },
+        { "get_general_category", reinterpret_cast<PyCFunction>(UnicodeCharacters_GetGeneralCategory), METH_VARARGS, nullptr },
+        { "get_numeric_type", reinterpret_cast<PyCFunction>(UnicodeCharacters_GetNumericType), METH_VARARGS, nullptr },
+        { "get_surrogate_pair_from_codepoint", reinterpret_cast<PyCFunction>(UnicodeCharacters_GetSurrogatePairFromCodepoint), METH_VARARGS, nullptr },
+        { "is_alphabetic", reinterpret_cast<PyCFunction>(UnicodeCharacters_IsAlphabetic), METH_VARARGS, nullptr },
+        { "is_cased", reinterpret_cast<PyCFunction>(UnicodeCharacters_IsCased), METH_VARARGS, nullptr },
+        { "is_grapheme_base", reinterpret_cast<PyCFunction>(UnicodeCharacters_IsGraphemeBase), METH_VARARGS, nullptr },
+        { "is_grapheme_extend", reinterpret_cast<PyCFunction>(UnicodeCharacters_IsGraphemeExtend), METH_VARARGS, nullptr },
+        { "is_high_surrogate", reinterpret_cast<PyCFunction>(UnicodeCharacters_IsHighSurrogate), METH_VARARGS, nullptr },
+        { "is_id_continue", reinterpret_cast<PyCFunction>(UnicodeCharacters_IsIdContinue), METH_VARARGS, nullptr },
+        { "is_id_start", reinterpret_cast<PyCFunction>(UnicodeCharacters_IsIdStart), METH_VARARGS, nullptr },
+        { "is_low_surrogate", reinterpret_cast<PyCFunction>(UnicodeCharacters_IsLowSurrogate), METH_VARARGS, nullptr },
+        { "is_lowercase", reinterpret_cast<PyCFunction>(UnicodeCharacters_IsLowercase), METH_VARARGS, nullptr },
+        { "is_noncharacter", reinterpret_cast<PyCFunction>(UnicodeCharacters_IsNoncharacter), METH_VARARGS, nullptr },
+        { "is_supplementary", reinterpret_cast<PyCFunction>(UnicodeCharacters_IsSupplementary), METH_VARARGS, nullptr },
+        { "is_uppercase", reinterpret_cast<PyCFunction>(UnicodeCharacters_IsUppercase), METH_VARARGS, nullptr },
+        { "is_whitespace", reinterpret_cast<PyCFunction>(UnicodeCharacters_IsWhitespace), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_UnicodeCharacters_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_UnicodeCharacters_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_UnicodeCharacters_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_UnicodeCharacters_Static =
+    {
+        "winrt._winrt_windows_data_text.UnicodeCharacters_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_UnicodeCharacters_Static
     };
 
     // ----- WordSegment class --------------------
@@ -2595,7 +2620,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_data_text(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UnicodeCharacters, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_UnicodeCharacters_Static{PyType_FromSpec(&type_spec_UnicodeCharacters_Static)};
+    if (!type_UnicodeCharacters_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_UnicodeCharacters, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UnicodeCharacters_Static.get())) == -1)
     {
         return nullptr;
     }

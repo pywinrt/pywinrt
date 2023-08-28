@@ -1001,7 +1001,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     }
 
     static PyMethodDef _methods_BindingOperations[] = {
-        { "set_binding", reinterpret_cast<PyCFunction>(BindingOperations_SetBinding), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_BindingOperations, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BindingOperations), METH_O | METH_STATIC, nullptr },
         { }
@@ -1027,6 +1026,32 @@ namespace py::cpp::Windows::UI::Xaml::Data
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_BindingOperations
+    };
+
+    static PyGetSetDef getset_BindingOperations_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_BindingOperations_Static[] = {
+        { "set_binding", reinterpret_cast<PyCFunction>(BindingOperations_SetBinding), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_BindingOperations_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_BindingOperations_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_BindingOperations_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_BindingOperations_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_data.BindingOperations_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_BindingOperations_Static
     };
 
     // ----- CollectionViewSource class --------------------
@@ -1360,7 +1385,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         _type_slots_CollectionViewSource
     };
 
-    static PyGetSetDef getset_CollectionViewSource_Meta[] = {
+    static PyGetSetDef getset_CollectionViewSource_Static[] = {
         { "is_source_grouped_property", reinterpret_cast<getter>(CollectionViewSource_get_IsSourceGroupedProperty), nullptr, nullptr, nullptr },
         { "items_path_property", reinterpret_cast<getter>(CollectionViewSource_get_ItemsPathProperty), nullptr, nullptr, nullptr },
         { "source_property", reinterpret_cast<getter>(CollectionViewSource_get_SourceProperty), nullptr, nullptr, nullptr },
@@ -1368,20 +1393,25 @@ namespace py::cpp::Windows::UI::Xaml::Data
         { }
     };
 
-    static PyType_Slot type_slots_CollectionViewSource_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_CollectionViewSource_Meta) },
+    static PyMethodDef methods_CollectionViewSource_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_CollectionViewSource_Meta =
+    static PyType_Slot type_slots_CollectionViewSource_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_data.CollectionViewSource_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CollectionViewSource_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CollectionViewSource_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CollectionViewSource_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_data.CollectionViewSource_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_CollectionViewSource_Meta
+        type_slots_CollectionViewSource_Static
     };
 
     // ----- CurrentChangingEventArgs class --------------------
@@ -4645,18 +4675,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_data(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BindingOperations, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_BindingOperations_Static{PyType_FromSpec(&type_spec_BindingOperations_Static)};
+    if (!type_BindingOperations_Static)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_CollectionViewSource_Meta{PyType_FromSpec(&type_spec_CollectionViewSource_Meta)};
-    if (!type_CollectionViewSource_Meta)
+    if (py::register_python_type(module.get(), &type_spec_BindingOperations, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BindingOperations_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CollectionViewSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CollectionViewSource_Meta.get())) == -1)
+    py::pyobj_handle type_CollectionViewSource_Static{PyType_FromSpec(&type_spec_CollectionViewSource_Static)};
+    if (!type_CollectionViewSource_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_CollectionViewSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CollectionViewSource_Static.get())) == -1)
     {
         return nullptr;
     }

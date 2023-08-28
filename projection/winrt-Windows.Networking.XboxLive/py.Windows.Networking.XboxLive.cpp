@@ -418,10 +418,6 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyMethodDef _methods_XboxLiveDeviceAddress[] = {
         { "compare", reinterpret_cast<PyCFunction>(XboxLiveDeviceAddress_Compare), METH_VARARGS, nullptr },
-        { "create_from_snapshot_base64", reinterpret_cast<PyCFunction>(XboxLiveDeviceAddress_CreateFromSnapshotBase64), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_from_snapshot_buffer", reinterpret_cast<PyCFunction>(XboxLiveDeviceAddress_CreateFromSnapshotBuffer), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_from_snapshot_bytes", reinterpret_cast<PyCFunction>(XboxLiveDeviceAddress_CreateFromSnapshotBytes), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_local", reinterpret_cast<PyCFunction>(XboxLiveDeviceAddress_GetLocal), METH_VARARGS | METH_STATIC, nullptr },
         { "get_snapshot_as_base64", reinterpret_cast<PyCFunction>(XboxLiveDeviceAddress_GetSnapshotAsBase64), METH_VARARGS, nullptr },
         { "get_snapshot_as_buffer", reinterpret_cast<PyCFunction>(XboxLiveDeviceAddress_GetSnapshotAsBuffer), METH_VARARGS, nullptr },
         { "get_snapshot_as_bytes", reinterpret_cast<PyCFunction>(XboxLiveDeviceAddress_GetSnapshotAsBytes), METH_VARARGS, nullptr },
@@ -457,25 +453,34 @@ namespace py::cpp::Windows::Networking::XboxLive
         _type_slots_XboxLiveDeviceAddress
     };
 
-    static PyGetSetDef getset_XboxLiveDeviceAddress_Meta[] = {
+    static PyGetSetDef getset_XboxLiveDeviceAddress_Static[] = {
         { "max_snapshot_bytes_size", reinterpret_cast<getter>(XboxLiveDeviceAddress_get_MaxSnapshotBytesSize), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_XboxLiveDeviceAddress_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_XboxLiveDeviceAddress_Meta) },
+    static PyMethodDef methods_XboxLiveDeviceAddress_Static[] = {
+        { "create_from_snapshot_base64", reinterpret_cast<PyCFunction>(XboxLiveDeviceAddress_CreateFromSnapshotBase64), METH_VARARGS, nullptr },
+        { "create_from_snapshot_buffer", reinterpret_cast<PyCFunction>(XboxLiveDeviceAddress_CreateFromSnapshotBuffer), METH_VARARGS, nullptr },
+        { "create_from_snapshot_bytes", reinterpret_cast<PyCFunction>(XboxLiveDeviceAddress_CreateFromSnapshotBytes), METH_VARARGS, nullptr },
+        { "get_local", reinterpret_cast<PyCFunction>(XboxLiveDeviceAddress_GetLocal), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_XboxLiveDeviceAddress_Meta =
+    static PyType_Slot type_slots_XboxLiveDeviceAddress_Static[] = 
     {
-        "winrt._winrt_windows_networking_xboxlive.XboxLiveDeviceAddress_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_XboxLiveDeviceAddress_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_XboxLiveDeviceAddress_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_XboxLiveDeviceAddress_Static =
+    {
+        "winrt._winrt_windows_networking_xboxlive.XboxLiveDeviceAddress_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_XboxLiveDeviceAddress_Meta
+        type_slots_XboxLiveDeviceAddress_Static
     };
 
     // ----- XboxLiveEndpointPair class --------------------
@@ -856,8 +861,6 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyMethodDef _methods_XboxLiveEndpointPair[] = {
         { "delete_async", reinterpret_cast<PyCFunction>(XboxLiveEndpointPair_DeleteAsync), METH_VARARGS, nullptr },
-        { "find_endpoint_pair_by_host_names_and_ports", reinterpret_cast<PyCFunction>(XboxLiveEndpointPair_FindEndpointPairByHostNamesAndPorts), METH_VARARGS | METH_STATIC, nullptr },
-        { "find_endpoint_pair_by_socket_address_bytes", reinterpret_cast<PyCFunction>(XboxLiveEndpointPair_FindEndpointPairBySocketAddressBytes), METH_VARARGS | METH_STATIC, nullptr },
         { "get_local_socket_address_bytes", reinterpret_cast<PyCFunction>(XboxLiveEndpointPair_GetLocalSocketAddressBytes), METH_VARARGS, nullptr },
         { "get_remote_socket_address_bytes", reinterpret_cast<PyCFunction>(XboxLiveEndpointPair_GetRemoteSocketAddressBytes), METH_VARARGS, nullptr },
         { "add_state_changed", reinterpret_cast<PyCFunction>(XboxLiveEndpointPair_add_StateChanged), METH_O, nullptr },
@@ -894,6 +897,33 @@ namespace py::cpp::Windows::Networking::XboxLive
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_XboxLiveEndpointPair
+    };
+
+    static PyGetSetDef getset_XboxLiveEndpointPair_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_XboxLiveEndpointPair_Static[] = {
+        { "find_endpoint_pair_by_host_names_and_ports", reinterpret_cast<PyCFunction>(XboxLiveEndpointPair_FindEndpointPairByHostNamesAndPorts), METH_VARARGS, nullptr },
+        { "find_endpoint_pair_by_socket_address_bytes", reinterpret_cast<PyCFunction>(XboxLiveEndpointPair_FindEndpointPairBySocketAddressBytes), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_XboxLiveEndpointPair_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_XboxLiveEndpointPair_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_XboxLiveEndpointPair_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_XboxLiveEndpointPair_Static =
+    {
+        "winrt._winrt_windows_networking_xboxlive.XboxLiveEndpointPair_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_XboxLiveEndpointPair_Static
     };
 
     // ----- XboxLiveEndpointPairCreationResult class --------------------
@@ -1532,7 +1562,6 @@ namespace py::cpp::Windows::Networking::XboxLive
     static PyMethodDef _methods_XboxLiveEndpointPairTemplate[] = {
         { "create_endpoint_pair_async", reinterpret_cast<PyCFunction>(XboxLiveEndpointPairTemplate_CreateEndpointPairAsync), METH_VARARGS, nullptr },
         { "create_endpoint_pair_for_ports_async", reinterpret_cast<PyCFunction>(XboxLiveEndpointPairTemplate_CreateEndpointPairForPortsAsync), METH_VARARGS, nullptr },
-        { "get_template_by_name", reinterpret_cast<PyCFunction>(XboxLiveEndpointPairTemplate_GetTemplateByName), METH_VARARGS | METH_STATIC, nullptr },
         { "add_inbound_endpoint_pair_created", reinterpret_cast<PyCFunction>(XboxLiveEndpointPairTemplate_add_InboundEndpointPairCreated), METH_O, nullptr },
         { "remove_inbound_endpoint_pair_created", reinterpret_cast<PyCFunction>(XboxLiveEndpointPairTemplate_remove_InboundEndpointPairCreated), METH_O, nullptr },
         { "_assign_array_", _assign_array_XboxLiveEndpointPairTemplate, METH_O | METH_STATIC, nullptr },
@@ -1569,25 +1598,31 @@ namespace py::cpp::Windows::Networking::XboxLive
         _type_slots_XboxLiveEndpointPairTemplate
     };
 
-    static PyGetSetDef getset_XboxLiveEndpointPairTemplate_Meta[] = {
+    static PyGetSetDef getset_XboxLiveEndpointPairTemplate_Static[] = {
         { "templates", reinterpret_cast<getter>(XboxLiveEndpointPairTemplate_get_Templates), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_XboxLiveEndpointPairTemplate_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_XboxLiveEndpointPairTemplate_Meta) },
+    static PyMethodDef methods_XboxLiveEndpointPairTemplate_Static[] = {
+        { "get_template_by_name", reinterpret_cast<PyCFunction>(XboxLiveEndpointPairTemplate_GetTemplateByName), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_XboxLiveEndpointPairTemplate_Meta =
+    static PyType_Slot type_slots_XboxLiveEndpointPairTemplate_Static[] = 
     {
-        "winrt._winrt_windows_networking_xboxlive.XboxLiveEndpointPairTemplate_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_XboxLiveEndpointPairTemplate_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_XboxLiveEndpointPairTemplate_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_XboxLiveEndpointPairTemplate_Static =
+    {
+        "winrt._winrt_windows_networking_xboxlive.XboxLiveEndpointPairTemplate_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_XboxLiveEndpointPairTemplate_Meta
+        type_slots_XboxLiveEndpointPairTemplate_Static
     };
 
     // ----- XboxLiveInboundEndpointPairCreatedEventArgs class --------------------
@@ -2402,13 +2437,11 @@ namespace py::cpp::Windows::Networking::XboxLive
     }
 
     static PyMethodDef _methods_XboxLiveQualityOfServiceMeasurement[] = {
-        { "clear_private_payload", reinterpret_cast<PyCFunction>(XboxLiveQualityOfServiceMeasurement_ClearPrivatePayload), METH_VARARGS | METH_STATIC, nullptr },
         { "get_metric_result", reinterpret_cast<PyCFunction>(XboxLiveQualityOfServiceMeasurement_GetMetricResult), METH_VARARGS, nullptr },
         { "get_metric_results_for_device", reinterpret_cast<PyCFunction>(XboxLiveQualityOfServiceMeasurement_GetMetricResultsForDevice), METH_VARARGS, nullptr },
         { "get_metric_results_for_metric", reinterpret_cast<PyCFunction>(XboxLiveQualityOfServiceMeasurement_GetMetricResultsForMetric), METH_VARARGS, nullptr },
         { "get_private_payload_result", reinterpret_cast<PyCFunction>(XboxLiveQualityOfServiceMeasurement_GetPrivatePayloadResult), METH_VARARGS, nullptr },
         { "measure_async", reinterpret_cast<PyCFunction>(XboxLiveQualityOfServiceMeasurement_MeasureAsync), METH_VARARGS, nullptr },
-        { "publish_private_payload_bytes", reinterpret_cast<PyCFunction>(XboxLiveQualityOfServiceMeasurement_PublishPrivatePayloadBytes), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_XboxLiveQualityOfServiceMeasurement, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_XboxLiveQualityOfServiceMeasurement), METH_O | METH_STATIC, nullptr },
         { }
@@ -2444,7 +2477,7 @@ namespace py::cpp::Windows::Networking::XboxLive
         _type_slots_XboxLiveQualityOfServiceMeasurement
     };
 
-    static PyGetSetDef getset_XboxLiveQualityOfServiceMeasurement_Meta[] = {
+    static PyGetSetDef getset_XboxLiveQualityOfServiceMeasurement_Static[] = {
         { "published_private_payload", reinterpret_cast<getter>(XboxLiveQualityOfServiceMeasurement_get_PublishedPrivatePayload), reinterpret_cast<setter>(XboxLiveQualityOfServiceMeasurement_put_PublishedPrivatePayload), nullptr, nullptr },
         { "max_simultaneous_probe_connections", reinterpret_cast<getter>(XboxLiveQualityOfServiceMeasurement_get_MaxSimultaneousProbeConnections), reinterpret_cast<setter>(XboxLiveQualityOfServiceMeasurement_put_MaxSimultaneousProbeConnections), nullptr, nullptr },
         { "is_system_outbound_bandwidth_constrained", reinterpret_cast<getter>(XboxLiveQualityOfServiceMeasurement_get_IsSystemOutboundBandwidthConstrained), reinterpret_cast<setter>(XboxLiveQualityOfServiceMeasurement_put_IsSystemOutboundBandwidthConstrained), nullptr, nullptr },
@@ -2453,20 +2486,27 @@ namespace py::cpp::Windows::Networking::XboxLive
         { }
     };
 
-    static PyType_Slot type_slots_XboxLiveQualityOfServiceMeasurement_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_XboxLiveQualityOfServiceMeasurement_Meta) },
+    static PyMethodDef methods_XboxLiveQualityOfServiceMeasurement_Static[] = {
+        { "clear_private_payload", reinterpret_cast<PyCFunction>(XboxLiveQualityOfServiceMeasurement_ClearPrivatePayload), METH_VARARGS, nullptr },
+        { "publish_private_payload_bytes", reinterpret_cast<PyCFunction>(XboxLiveQualityOfServiceMeasurement_PublishPrivatePayloadBytes), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_XboxLiveQualityOfServiceMeasurement_Meta =
+    static PyType_Slot type_slots_XboxLiveQualityOfServiceMeasurement_Static[] = 
     {
-        "winrt._winrt_windows_networking_xboxlive.XboxLiveQualityOfServiceMeasurement_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_XboxLiveQualityOfServiceMeasurement_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_XboxLiveQualityOfServiceMeasurement_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_XboxLiveQualityOfServiceMeasurement_Static =
+    {
+        "winrt._winrt_windows_networking_xboxlive.XboxLiveQualityOfServiceMeasurement_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_XboxLiveQualityOfServiceMeasurement_Meta
+        type_slots_XboxLiveQualityOfServiceMeasurement_Static
     };
 
     // ----- XboxLiveQualityOfServiceMetricResult class --------------------
@@ -2793,18 +2833,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_xboxlive(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_XboxLiveDeviceAddress_Meta{PyType_FromSpec(&type_spec_XboxLiveDeviceAddress_Meta)};
-    if (!type_XboxLiveDeviceAddress_Meta)
+    py::pyobj_handle type_XboxLiveDeviceAddress_Static{PyType_FromSpec(&type_spec_XboxLiveDeviceAddress_Static)};
+    if (!type_XboxLiveDeviceAddress_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_XboxLiveDeviceAddress, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XboxLiveDeviceAddress_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_XboxLiveDeviceAddress, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XboxLiveDeviceAddress_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_XboxLiveEndpointPair, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_XboxLiveEndpointPair_Static{PyType_FromSpec(&type_spec_XboxLiveEndpointPair_Static)};
+    if (!type_XboxLiveEndpointPair_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_XboxLiveEndpointPair, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XboxLiveEndpointPair_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -2819,13 +2865,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_xboxlive(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_XboxLiveEndpointPairTemplate_Meta{PyType_FromSpec(&type_spec_XboxLiveEndpointPairTemplate_Meta)};
-    if (!type_XboxLiveEndpointPairTemplate_Meta)
+    py::pyobj_handle type_XboxLiveEndpointPairTemplate_Static{PyType_FromSpec(&type_spec_XboxLiveEndpointPairTemplate_Static)};
+    if (!type_XboxLiveEndpointPairTemplate_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_XboxLiveEndpointPairTemplate, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XboxLiveEndpointPairTemplate_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_XboxLiveEndpointPairTemplate, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XboxLiveEndpointPairTemplate_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -2835,13 +2881,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_xboxlive(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_XboxLiveQualityOfServiceMeasurement_Meta{PyType_FromSpec(&type_spec_XboxLiveQualityOfServiceMeasurement_Meta)};
-    if (!type_XboxLiveQualityOfServiceMeasurement_Meta)
+    py::pyobj_handle type_XboxLiveQualityOfServiceMeasurement_Static{PyType_FromSpec(&type_spec_XboxLiveQualityOfServiceMeasurement_Static)};
+    if (!type_XboxLiveQualityOfServiceMeasurement_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_XboxLiveQualityOfServiceMeasurement, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XboxLiveQualityOfServiceMeasurement_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_XboxLiveQualityOfServiceMeasurement, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XboxLiveQualityOfServiceMeasurement_Static.get())) == -1)
     {
         return nullptr;
     }

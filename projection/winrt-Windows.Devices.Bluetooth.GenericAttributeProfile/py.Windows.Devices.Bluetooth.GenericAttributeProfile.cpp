@@ -688,7 +688,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     }
 
     static PyMethodDef _methods_GattCharacteristic[] = {
-        { "convert_short_id_to_uuid", reinterpret_cast<PyCFunction>(GattCharacteristic_ConvertShortIdToUuid), METH_VARARGS | METH_STATIC, nullptr },
         { "get_all_descriptors", reinterpret_cast<PyCFunction>(GattCharacteristic_GetAllDescriptors), METH_VARARGS, nullptr },
         { "get_descriptors", reinterpret_cast<PyCFunction>(GattCharacteristic_GetDescriptors), METH_VARARGS, nullptr },
         { "get_descriptors_async", reinterpret_cast<PyCFunction>(GattCharacteristic_GetDescriptorsAsync), METH_VARARGS, nullptr },
@@ -733,6 +732,32 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_GattCharacteristic
+    };
+
+    static PyGetSetDef getset_GattCharacteristic_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_GattCharacteristic_Static[] = {
+        { "convert_short_id_to_uuid", reinterpret_cast<PyCFunction>(GattCharacteristic_ConvertShortIdToUuid), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_GattCharacteristic_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_GattCharacteristic_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_GattCharacteristic_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_GattCharacteristic_Static =
+    {
+        "winrt._winrt_windows_devices_bluetooth_genericattributeprofile.GattCharacteristic_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_GattCharacteristic_Static
     };
 
     // ----- GattCharacteristicUuids class --------------------
@@ -2308,7 +2333,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         _type_slots_GattCharacteristicUuids
     };
 
-    static PyGetSetDef getset_GattCharacteristicUuids_Meta[] = {
+    static PyGetSetDef getset_GattCharacteristicUuids_Static[] = {
         { "heart_rate_measurement", reinterpret_cast<getter>(GattCharacteristicUuids_get_HeartRateMeasurement), nullptr, nullptr, nullptr },
         { "battery_level", reinterpret_cast<getter>(GattCharacteristicUuids_get_BatteryLevel), nullptr, nullptr, nullptr },
         { "blood_pressure_feature", reinterpret_cast<getter>(GattCharacteristicUuids_get_BloodPressureFeature), nullptr, nullptr, nullptr },
@@ -2393,20 +2418,25 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         { }
     };
 
-    static PyType_Slot type_slots_GattCharacteristicUuids_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_GattCharacteristicUuids_Meta) },
+    static PyMethodDef methods_GattCharacteristicUuids_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_GattCharacteristicUuids_Meta =
+    static PyType_Slot type_slots_GattCharacteristicUuids_Static[] = 
     {
-        "winrt._winrt_windows_devices_bluetooth_genericattributeprofile.GattCharacteristicUuids_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_GattCharacteristicUuids_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_GattCharacteristicUuids_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_GattCharacteristicUuids_Static =
+    {
+        "winrt._winrt_windows_devices_bluetooth_genericattributeprofile.GattCharacteristicUuids_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_GattCharacteristicUuids_Meta
+        type_slots_GattCharacteristicUuids_Static
     };
 
     // ----- GattCharacteristicsResult class --------------------
@@ -2956,7 +2986,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     }
 
     static PyMethodDef _methods_GattDescriptor[] = {
-        { "convert_short_id_to_uuid", reinterpret_cast<PyCFunction>(GattDescriptor_ConvertShortIdToUuid), METH_VARARGS | METH_STATIC, nullptr },
         { "read_value_async", reinterpret_cast<PyCFunction>(GattDescriptor_ReadValueAsync), METH_VARARGS, nullptr },
         { "write_value_async", reinterpret_cast<PyCFunction>(GattDescriptor_WriteValueAsync), METH_VARARGS, nullptr },
         { "write_value_with_result_async", reinterpret_cast<PyCFunction>(GattDescriptor_WriteValueWithResultAsync), METH_VARARGS, nullptr },
@@ -2988,6 +3017,32 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_GattDescriptor
+    };
+
+    static PyGetSetDef getset_GattDescriptor_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_GattDescriptor_Static[] = {
+        { "convert_short_id_to_uuid", reinterpret_cast<PyCFunction>(GattDescriptor_ConvertShortIdToUuid), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_GattDescriptor_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_GattDescriptor_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_GattDescriptor_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_GattDescriptor_Static =
+    {
+        "winrt._winrt_windows_devices_bluetooth_genericattributeprofile.GattDescriptor_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_GattDescriptor_Static
     };
 
     // ----- GattDescriptorUuids class --------------------
@@ -3138,7 +3193,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         _type_slots_GattDescriptorUuids
     };
 
-    static PyGetSetDef getset_GattDescriptorUuids_Meta[] = {
+    static PyGetSetDef getset_GattDescriptorUuids_Static[] = {
         { "characteristic_aggregate_format", reinterpret_cast<getter>(GattDescriptorUuids_get_CharacteristicAggregateFormat), nullptr, nullptr, nullptr },
         { "characteristic_extended_properties", reinterpret_cast<getter>(GattDescriptorUuids_get_CharacteristicExtendedProperties), nullptr, nullptr, nullptr },
         { "characteristic_presentation_format", reinterpret_cast<getter>(GattDescriptorUuids_get_CharacteristicPresentationFormat), nullptr, nullptr, nullptr },
@@ -3148,20 +3203,25 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         { }
     };
 
-    static PyType_Slot type_slots_GattDescriptorUuids_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_GattDescriptorUuids_Meta) },
+    static PyMethodDef methods_GattDescriptorUuids_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_GattDescriptorUuids_Meta =
+    static PyType_Slot type_slots_GattDescriptorUuids_Static[] = 
     {
-        "winrt._winrt_windows_devices_bluetooth_genericattributeprofile.GattDescriptorUuids_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_GattDescriptorUuids_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_GattDescriptorUuids_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_GattDescriptorUuids_Static =
+    {
+        "winrt._winrt_windows_devices_bluetooth_genericattributeprofile.GattDescriptorUuids_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_GattDescriptorUuids_Meta
+        type_slots_GattDescriptorUuids_Static
     };
 
     // ----- GattDescriptorsResult class --------------------
@@ -4170,17 +4230,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyMethodDef _methods_GattDeviceService[] = {
         { "close", reinterpret_cast<PyCFunction>(GattDeviceService_Close), METH_VARARGS, nullptr },
-        { "convert_short_id_to_uuid", reinterpret_cast<PyCFunction>(GattDeviceService_ConvertShortIdToUuid), METH_VARARGS | METH_STATIC, nullptr },
-        { "from_id_async", reinterpret_cast<PyCFunction>(GattDeviceService_FromIdAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "get_all_characteristics", reinterpret_cast<PyCFunction>(GattDeviceService_GetAllCharacteristics), METH_VARARGS, nullptr },
         { "get_all_included_services", reinterpret_cast<PyCFunction>(GattDeviceService_GetAllIncludedServices), METH_VARARGS, nullptr },
         { "get_characteristics", reinterpret_cast<PyCFunction>(GattDeviceService_GetCharacteristics), METH_VARARGS, nullptr },
         { "get_characteristics_async", reinterpret_cast<PyCFunction>(GattDeviceService_GetCharacteristicsAsync), METH_VARARGS, nullptr },
         { "get_characteristics_for_uuid_async", reinterpret_cast<PyCFunction>(GattDeviceService_GetCharacteristicsForUuidAsync), METH_VARARGS, nullptr },
-        { "get_device_selector_for_bluetooth_device_id", reinterpret_cast<PyCFunction>(GattDeviceService_GetDeviceSelectorForBluetoothDeviceId), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_device_selector_for_bluetooth_device_id_and_uuid", reinterpret_cast<PyCFunction>(GattDeviceService_GetDeviceSelectorForBluetoothDeviceIdAndUuid), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_device_selector_from_short_id", reinterpret_cast<PyCFunction>(GattDeviceService_GetDeviceSelectorFromShortId), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_device_selector_from_uuid", reinterpret_cast<PyCFunction>(GattDeviceService_GetDeviceSelectorFromUuid), METH_VARARGS | METH_STATIC, nullptr },
         { "get_included_services", reinterpret_cast<PyCFunction>(GattDeviceService_GetIncludedServices), METH_VARARGS, nullptr },
         { "get_included_services_async", reinterpret_cast<PyCFunction>(GattDeviceService_GetIncludedServicesAsync), METH_VARARGS, nullptr },
         { "get_included_services_for_uuid_async", reinterpret_cast<PyCFunction>(GattDeviceService_GetIncludedServicesForUuidAsync), METH_VARARGS, nullptr },
@@ -4221,6 +4275,37 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_GattDeviceService
+    };
+
+    static PyGetSetDef getset_GattDeviceService_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_GattDeviceService_Static[] = {
+        { "convert_short_id_to_uuid", reinterpret_cast<PyCFunction>(GattDeviceService_ConvertShortIdToUuid), METH_VARARGS, nullptr },
+        { "from_id_async", reinterpret_cast<PyCFunction>(GattDeviceService_FromIdAsync), METH_VARARGS, nullptr },
+        { "get_device_selector_for_bluetooth_device_id", reinterpret_cast<PyCFunction>(GattDeviceService_GetDeviceSelectorForBluetoothDeviceId), METH_VARARGS, nullptr },
+        { "get_device_selector_for_bluetooth_device_id_and_uuid", reinterpret_cast<PyCFunction>(GattDeviceService_GetDeviceSelectorForBluetoothDeviceIdAndUuid), METH_VARARGS, nullptr },
+        { "get_device_selector_from_short_id", reinterpret_cast<PyCFunction>(GattDeviceService_GetDeviceSelectorFromShortId), METH_VARARGS, nullptr },
+        { "get_device_selector_from_uuid", reinterpret_cast<PyCFunction>(GattDeviceService_GetDeviceSelectorFromUuid), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_GattDeviceService_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_GattDeviceService_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_GattDeviceService_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_GattDeviceService_Static =
+    {
+        "winrt._winrt_windows_devices_bluetooth_genericattributeprofile.GattDeviceService_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_GattDeviceService_Static
     };
 
     // ----- GattDeviceServicesResult class --------------------
@@ -6198,7 +6283,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     }
 
     static PyMethodDef _methods_GattPresentationFormat[] = {
-        { "from_parts", reinterpret_cast<PyCFunction>(GattPresentationFormat_FromParts), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_GattPresentationFormat, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GattPresentationFormat), METH_O | METH_STATIC, nullptr },
         { }
@@ -6231,25 +6315,31 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         _type_slots_GattPresentationFormat
     };
 
-    static PyGetSetDef getset_GattPresentationFormat_Meta[] = {
+    static PyGetSetDef getset_GattPresentationFormat_Static[] = {
         { "bluetooth_sig_assigned_numbers", reinterpret_cast<getter>(GattPresentationFormat_get_BluetoothSigAssignedNumbers), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_GattPresentationFormat_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_GattPresentationFormat_Meta) },
+    static PyMethodDef methods_GattPresentationFormat_Static[] = {
+        { "from_parts", reinterpret_cast<PyCFunction>(GattPresentationFormat_FromParts), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_GattPresentationFormat_Meta =
+    static PyType_Slot type_slots_GattPresentationFormat_Static[] = 
     {
-        "winrt._winrt_windows_devices_bluetooth_genericattributeprofile.GattPresentationFormat_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_GattPresentationFormat_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_GattPresentationFormat_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_GattPresentationFormat_Static =
+    {
+        "winrt._winrt_windows_devices_bluetooth_genericattributeprofile.GattPresentationFormat_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_GattPresentationFormat_Meta
+        type_slots_GattPresentationFormat_Static
     };
 
     // ----- GattPresentationFormatTypes class --------------------
@@ -6799,7 +6889,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         _type_slots_GattPresentationFormatTypes
     };
 
-    static PyGetSetDef getset_GattPresentationFormatTypes_Meta[] = {
+    static PyGetSetDef getset_GattPresentationFormatTypes_Static[] = {
         { "bit2", reinterpret_cast<getter>(GattPresentationFormatTypes_get_Bit2), nullptr, nullptr, nullptr },
         { "boolean", reinterpret_cast<getter>(GattPresentationFormatTypes_get_Boolean), nullptr, nullptr, nullptr },
         { "d_uint16", reinterpret_cast<getter>(GattPresentationFormatTypes_get_DUInt16), nullptr, nullptr, nullptr },
@@ -6830,20 +6920,25 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         { }
     };
 
-    static PyType_Slot type_slots_GattPresentationFormatTypes_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_GattPresentationFormatTypes_Meta) },
+    static PyMethodDef methods_GattPresentationFormatTypes_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_GattPresentationFormatTypes_Meta =
+    static PyType_Slot type_slots_GattPresentationFormatTypes_Static[] = 
     {
-        "winrt._winrt_windows_devices_bluetooth_genericattributeprofile.GattPresentationFormatTypes_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_GattPresentationFormatTypes_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_GattPresentationFormatTypes_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_GattPresentationFormatTypes_Static =
+    {
+        "winrt._winrt_windows_devices_bluetooth_genericattributeprofile.GattPresentationFormatTypes_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_GattPresentationFormatTypes_Meta
+        type_slots_GattPresentationFormatTypes_Static
     };
 
     // ----- GattProtocolError class --------------------
@@ -7203,7 +7298,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         _type_slots_GattProtocolError
     };
 
-    static PyGetSetDef getset_GattProtocolError_Meta[] = {
+    static PyGetSetDef getset_GattProtocolError_Static[] = {
         { "attribute_not_found", reinterpret_cast<getter>(GattProtocolError_get_AttributeNotFound), nullptr, nullptr, nullptr },
         { "attribute_not_long", reinterpret_cast<getter>(GattProtocolError_get_AttributeNotLong), nullptr, nullptr, nullptr },
         { "insufficient_authentication", reinterpret_cast<getter>(GattProtocolError_get_InsufficientAuthentication), nullptr, nullptr, nullptr },
@@ -7224,20 +7319,25 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         { }
     };
 
-    static PyType_Slot type_slots_GattProtocolError_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_GattProtocolError_Meta) },
+    static PyMethodDef methods_GattProtocolError_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_GattProtocolError_Meta =
+    static PyType_Slot type_slots_GattProtocolError_Static[] = 
     {
-        "winrt._winrt_windows_devices_bluetooth_genericattributeprofile.GattProtocolError_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_GattProtocolError_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_GattProtocolError_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_GattProtocolError_Static =
+    {
+        "winrt._winrt_windows_devices_bluetooth_genericattributeprofile.GattProtocolError_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_GattProtocolError_Meta
+        type_slots_GattProtocolError_Static
     };
 
     // ----- GattReadClientCharacteristicConfigurationDescriptorResult class --------------------
@@ -8416,7 +8516,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     }
 
     static PyMethodDef _methods_GattServiceProvider[] = {
-        { "create_async", reinterpret_cast<PyCFunction>(GattServiceProvider_CreateAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "start_advertising", reinterpret_cast<PyCFunction>(GattServiceProvider_StartAdvertising), METH_VARARGS, nullptr },
         { "stop_advertising", reinterpret_cast<PyCFunction>(GattServiceProvider_StopAdvertising), METH_VARARGS, nullptr },
         { "add_advertisement_status_changed", reinterpret_cast<PyCFunction>(GattServiceProvider_add_AdvertisementStatusChanged), METH_O, nullptr },
@@ -8448,6 +8547,32 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_GattServiceProvider
+    };
+
+    static PyGetSetDef getset_GattServiceProvider_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_GattServiceProvider_Static[] = {
+        { "create_async", reinterpret_cast<PyCFunction>(GattServiceProvider_CreateAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_GattServiceProvider_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_GattServiceProvider_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_GattServiceProvider_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_GattServiceProvider_Static =
+    {
+        "winrt._winrt_windows_devices_bluetooth_genericattributeprofile.GattServiceProvider_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_GattServiceProvider_Static
     };
 
     // ----- GattServiceProviderAdvertisementStatusChangedEventArgs class --------------------
@@ -9355,7 +9480,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         _type_slots_GattServiceUuids
     };
 
-    static PyGetSetDef getset_GattServiceUuids_Meta[] = {
+    static PyGetSetDef getset_GattServiceUuids_Static[] = {
         { "battery", reinterpret_cast<getter>(GattServiceUuids_get_Battery), nullptr, nullptr, nullptr },
         { "blood_pressure", reinterpret_cast<getter>(GattServiceUuids_get_BloodPressure), nullptr, nullptr, nullptr },
         { "cycling_speed_and_cadence", reinterpret_cast<getter>(GattServiceUuids_get_CyclingSpeedAndCadence), nullptr, nullptr, nullptr },
@@ -9381,20 +9506,25 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         { }
     };
 
-    static PyType_Slot type_slots_GattServiceUuids_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_GattServiceUuids_Meta) },
+    static PyMethodDef methods_GattServiceUuids_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_GattServiceUuids_Meta =
+    static PyType_Slot type_slots_GattServiceUuids_Static[] = 
     {
-        "winrt._winrt_windows_devices_bluetooth_genericattributeprofile.GattServiceUuids_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_GattServiceUuids_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_GattServiceUuids_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_GattServiceUuids_Static =
+    {
+        "winrt._winrt_windows_devices_bluetooth_genericattributeprofile.GattServiceUuids_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_GattServiceUuids_Meta
+        type_slots_GattServiceUuids_Static
     };
 
     // ----- GattSession class --------------------
@@ -9729,7 +9859,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyMethodDef _methods_GattSession[] = {
         { "close", reinterpret_cast<PyCFunction>(GattSession_Close), METH_VARARGS, nullptr },
-        { "from_device_id_async", reinterpret_cast<PyCFunction>(GattSession_FromDeviceIdAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "add_max_pdu_size_changed", reinterpret_cast<PyCFunction>(GattSession_add_MaxPduSizeChanged), METH_O, nullptr },
         { "remove_max_pdu_size_changed", reinterpret_cast<PyCFunction>(GattSession_remove_MaxPduSizeChanged), METH_O, nullptr },
         { "add_session_status_changed", reinterpret_cast<PyCFunction>(GattSession_add_SessionStatusChanged), METH_O, nullptr },
@@ -9766,6 +9895,32 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_GattSession
+    };
+
+    static PyGetSetDef getset_GattSession_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_GattSession_Static[] = {
+        { "from_device_id_async", reinterpret_cast<PyCFunction>(GattSession_FromDeviceIdAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_GattSession_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_GattSession_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_GattSession_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_GattSession_Static =
+    {
+        "winrt._winrt_windows_devices_bluetooth_genericattributeprofile.GattSession_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_GattSession_Static
     };
 
     // ----- GattSessionStatusChangedEventArgs class --------------------
@@ -10702,18 +10857,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth_genericattributeprofile(v
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GattCharacteristic, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_GattCharacteristic_Static{PyType_FromSpec(&type_spec_GattCharacteristic_Static)};
+    if (!type_GattCharacteristic_Static)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_GattCharacteristicUuids_Meta{PyType_FromSpec(&type_spec_GattCharacteristicUuids_Meta)};
-    if (!type_GattCharacteristicUuids_Meta)
+    if (py::register_python_type(module.get(), &type_spec_GattCharacteristic, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GattCharacteristic_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GattCharacteristicUuids, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GattCharacteristicUuids_Meta.get())) == -1)
+    py::pyobj_handle type_GattCharacteristicUuids_Static{PyType_FromSpec(&type_spec_GattCharacteristicUuids_Static)};
+    if (!type_GattCharacteristicUuids_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_GattCharacteristicUuids, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GattCharacteristicUuids_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -10728,18 +10889,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth_genericattributeprofile(v
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GattDescriptor, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_GattDescriptor_Static{PyType_FromSpec(&type_spec_GattDescriptor_Static)};
+    if (!type_GattDescriptor_Static)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_GattDescriptorUuids_Meta{PyType_FromSpec(&type_spec_GattDescriptorUuids_Meta)};
-    if (!type_GattDescriptorUuids_Meta)
+    if (py::register_python_type(module.get(), &type_spec_GattDescriptor, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GattDescriptor_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GattDescriptorUuids, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GattDescriptorUuids_Meta.get())) == -1)
+    py::pyobj_handle type_GattDescriptorUuids_Static{PyType_FromSpec(&type_spec_GattDescriptorUuids_Static)};
+    if (!type_GattDescriptorUuids_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_GattDescriptorUuids, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GattDescriptorUuids_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -10749,7 +10916,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth_genericattributeprofile(v
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GattDeviceService, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_GattDeviceService_Static{PyType_FromSpec(&type_spec_GattDeviceService_Static)};
+    if (!type_GattDeviceService_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_GattDeviceService, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GattDeviceService_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -10794,35 +10967,35 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth_genericattributeprofile(v
         return nullptr;
     }
 
-    py::pyobj_handle type_GattPresentationFormat_Meta{PyType_FromSpec(&type_spec_GattPresentationFormat_Meta)};
-    if (!type_GattPresentationFormat_Meta)
+    py::pyobj_handle type_GattPresentationFormat_Static{PyType_FromSpec(&type_spec_GattPresentationFormat_Static)};
+    if (!type_GattPresentationFormat_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GattPresentationFormat, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GattPresentationFormat_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GattPresentationFormat, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GattPresentationFormat_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_GattPresentationFormatTypes_Meta{PyType_FromSpec(&type_spec_GattPresentationFormatTypes_Meta)};
-    if (!type_GattPresentationFormatTypes_Meta)
+    py::pyobj_handle type_GattPresentationFormatTypes_Static{PyType_FromSpec(&type_spec_GattPresentationFormatTypes_Static)};
+    if (!type_GattPresentationFormatTypes_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GattPresentationFormatTypes, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GattPresentationFormatTypes_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GattPresentationFormatTypes, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GattPresentationFormatTypes_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_GattProtocolError_Meta{PyType_FromSpec(&type_spec_GattProtocolError_Meta)};
-    if (!type_GattProtocolError_Meta)
+    py::pyobj_handle type_GattProtocolError_Static{PyType_FromSpec(&type_spec_GattProtocolError_Static)};
+    if (!type_GattProtocolError_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GattProtocolError, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GattProtocolError_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GattProtocolError, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GattProtocolError_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -10857,7 +11030,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth_genericattributeprofile(v
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GattServiceProvider, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_GattServiceProvider_Static{PyType_FromSpec(&type_spec_GattServiceProvider_Static)};
+    if (!type_GattServiceProvider_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_GattServiceProvider, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GattServiceProvider_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -10877,18 +11056,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth_genericattributeprofile(v
         return nullptr;
     }
 
-    py::pyobj_handle type_GattServiceUuids_Meta{PyType_FromSpec(&type_spec_GattServiceUuids_Meta)};
-    if (!type_GattServiceUuids_Meta)
+    py::pyobj_handle type_GattServiceUuids_Static{PyType_FromSpec(&type_spec_GattServiceUuids_Static)};
+    if (!type_GattServiceUuids_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GattServiceUuids, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GattServiceUuids_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GattServiceUuids, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GattServiceUuids_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GattSession, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_GattSession_Static{PyType_FromSpec(&type_spec_GattSession_Static)};
+    if (!type_GattSession_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_GattSession, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GattSession_Static.get())) == -1)
     {
         return nullptr;
     }

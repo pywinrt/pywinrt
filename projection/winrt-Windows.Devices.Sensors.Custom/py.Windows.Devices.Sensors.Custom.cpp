@@ -333,9 +333,7 @@ namespace py::cpp::Windows::Devices::Sensors::Custom
     }
 
     static PyMethodDef _methods_CustomSensor[] = {
-        { "from_id_async", reinterpret_cast<PyCFunction>(CustomSensor_FromIdAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "get_current_reading", reinterpret_cast<PyCFunction>(CustomSensor_GetCurrentReading), METH_VARARGS, nullptr },
-        { "get_device_selector", reinterpret_cast<PyCFunction>(CustomSensor_GetDeviceSelector), METH_VARARGS | METH_STATIC, nullptr },
         { "add_reading_changed", reinterpret_cast<PyCFunction>(CustomSensor_add_ReadingChanged), METH_O, nullptr },
         { "remove_reading_changed", reinterpret_cast<PyCFunction>(CustomSensor_remove_ReadingChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_CustomSensor, METH_O | METH_STATIC, nullptr },
@@ -368,6 +366,33 @@ namespace py::cpp::Windows::Devices::Sensors::Custom
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_CustomSensor
+    };
+
+    static PyGetSetDef getset_CustomSensor_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_CustomSensor_Static[] = {
+        { "from_id_async", reinterpret_cast<PyCFunction>(CustomSensor_FromIdAsync), METH_VARARGS, nullptr },
+        { "get_device_selector", reinterpret_cast<PyCFunction>(CustomSensor_GetDeviceSelector), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_CustomSensor_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CustomSensor_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CustomSensor_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CustomSensor_Static =
+    {
+        "winrt._winrt_windows_devices_sensors_custom.CustomSensor_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CustomSensor_Static
     };
 
     // ----- CustomSensorReading class --------------------
@@ -634,7 +659,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_sensors_custom(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CustomSensor, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_CustomSensor_Static{PyType_FromSpec(&type_spec_CustomSensor_Static)};
+    if (!type_CustomSensor_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_CustomSensor, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CustomSensor_Static.get())) == -1)
     {
         return nullptr;
     }

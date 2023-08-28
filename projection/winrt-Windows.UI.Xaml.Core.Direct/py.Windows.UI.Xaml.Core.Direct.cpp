@@ -1786,7 +1786,6 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         { "get_color_property", reinterpret_cast<PyCFunction>(XamlDirect_GetColorProperty), METH_VARARGS, nullptr },
         { "get_corner_radius_property", reinterpret_cast<PyCFunction>(XamlDirect_GetCornerRadiusProperty), METH_VARARGS, nullptr },
         { "get_date_time_property", reinterpret_cast<PyCFunction>(XamlDirect_GetDateTimeProperty), METH_VARARGS, nullptr },
-        { "get_default", reinterpret_cast<PyCFunction>(XamlDirect_GetDefault), METH_VARARGS | METH_STATIC, nullptr },
         { "get_double_property", reinterpret_cast<PyCFunction>(XamlDirect_GetDoubleProperty), METH_VARARGS, nullptr },
         { "get_duration_property", reinterpret_cast<PyCFunction>(XamlDirect_GetDurationProperty), METH_VARARGS, nullptr },
         { "get_enum_property", reinterpret_cast<PyCFunction>(XamlDirect_GetEnumProperty), METH_VARARGS, nullptr },
@@ -1853,6 +1852,32 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_XamlDirect
+    };
+
+    static PyGetSetDef getset_XamlDirect_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_XamlDirect_Static[] = {
+        { "get_default", reinterpret_cast<PyCFunction>(XamlDirect_GetDefault), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_XamlDirect_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_XamlDirect_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_XamlDirect_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_XamlDirect_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_core_direct.XamlDirect_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_XamlDirect_Static
     };
 
     // ----- IXamlDirectObject interface --------------------
@@ -1970,7 +1995,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_core_direct(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_XamlDirect, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_XamlDirect_Static{PyType_FromSpec(&type_spec_XamlDirect_Static)};
+    if (!type_XamlDirect_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_XamlDirect, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XamlDirect_Static.get())) == -1)
     {
         return nullptr;
     }

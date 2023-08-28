@@ -422,7 +422,6 @@ namespace py::cpp::Windows::Devices::Input
     }
 
     static PyMethodDef _methods_MouseDevice[] = {
-        { "get_for_current_view", reinterpret_cast<PyCFunction>(MouseDevice_GetForCurrentView), METH_VARARGS | METH_STATIC, nullptr },
         { "add_mouse_moved", reinterpret_cast<PyCFunction>(MouseDevice_add_MouseMoved), METH_O, nullptr },
         { "remove_mouse_moved", reinterpret_cast<PyCFunction>(MouseDevice_remove_MouseMoved), METH_O, nullptr },
         { "_assign_array_", _assign_array_MouseDevice, METH_O | METH_STATIC, nullptr },
@@ -450,6 +449,32 @@ namespace py::cpp::Windows::Devices::Input
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_MouseDevice
+    };
+
+    static PyGetSetDef getset_MouseDevice_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_MouseDevice_Static[] = {
+        { "get_for_current_view", reinterpret_cast<PyCFunction>(MouseDevice_GetForCurrentView), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_MouseDevice_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_MouseDevice_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_MouseDevice_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_MouseDevice_Static =
+    {
+        "winrt._winrt_windows_devices_input.MouseDevice_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_MouseDevice_Static
     };
 
     // ----- MouseEventArgs class --------------------
@@ -813,7 +838,6 @@ namespace py::cpp::Windows::Devices::Input
     }
 
     static PyMethodDef _methods_PenButtonListener[] = {
-        { "get_default", reinterpret_cast<PyCFunction>(PenButtonListener_GetDefault), METH_VARARGS | METH_STATIC, nullptr },
         { "is_supported", reinterpret_cast<PyCFunction>(PenButtonListener_IsSupported), METH_VARARGS, nullptr },
         { "add_is_supported_changed", reinterpret_cast<PyCFunction>(PenButtonListener_add_IsSupportedChanged), METH_O, nullptr },
         { "remove_is_supported_changed", reinterpret_cast<PyCFunction>(PenButtonListener_remove_IsSupportedChanged), METH_O, nullptr },
@@ -848,6 +872,32 @@ namespace py::cpp::Windows::Devices::Input
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_PenButtonListener
+    };
+
+    static PyGetSetDef getset_PenButtonListener_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_PenButtonListener_Static[] = {
+        { "get_default", reinterpret_cast<PyCFunction>(PenButtonListener_GetDefault), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_PenButtonListener_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PenButtonListener_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PenButtonListener_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PenButtonListener_Static =
+    {
+        "winrt._winrt_windows_devices_input.PenButtonListener_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_PenButtonListener_Static
     };
 
     // ----- PenDevice class --------------------
@@ -961,7 +1011,6 @@ namespace py::cpp::Windows::Devices::Input
     }
 
     static PyMethodDef _methods_PenDevice[] = {
-        { "get_from_pointer_id", reinterpret_cast<PyCFunction>(PenDevice_GetFromPointerId), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_PenDevice, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PenDevice), METH_O | METH_STATIC, nullptr },
         { }
@@ -989,6 +1038,32 @@ namespace py::cpp::Windows::Devices::Input
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_PenDevice
+    };
+
+    static PyGetSetDef getset_PenDevice_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_PenDevice_Static[] = {
+        { "get_from_pointer_id", reinterpret_cast<PyCFunction>(PenDevice_GetFromPointerId), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_PenDevice_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PenDevice_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PenDevice_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PenDevice_Static =
+    {
+        "winrt._winrt_windows_devices_input.PenDevice_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_PenDevice_Static
     };
 
     // ----- PenDockListener class --------------------
@@ -1220,7 +1295,6 @@ namespace py::cpp::Windows::Devices::Input
     }
 
     static PyMethodDef _methods_PenDockListener[] = {
-        { "get_default", reinterpret_cast<PyCFunction>(PenDockListener_GetDefault), METH_VARARGS | METH_STATIC, nullptr },
         { "is_supported", reinterpret_cast<PyCFunction>(PenDockListener_IsSupported), METH_VARARGS, nullptr },
         { "add_docked", reinterpret_cast<PyCFunction>(PenDockListener_add_Docked), METH_O, nullptr },
         { "remove_docked", reinterpret_cast<PyCFunction>(PenDockListener_remove_Docked), METH_O, nullptr },
@@ -1253,6 +1327,32 @@ namespace py::cpp::Windows::Devices::Input
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_PenDockListener
+    };
+
+    static PyGetSetDef getset_PenDockListener_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_PenDockListener_Static[] = {
+        { "get_default", reinterpret_cast<PyCFunction>(PenDockListener_GetDefault), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_PenDockListener_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PenDockListener_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PenDockListener_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PenDockListener_Static =
+    {
+        "winrt._winrt_windows_devices_input.PenDockListener_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_PenDockListener_Static
     };
 
     // ----- PenDockedEventArgs class --------------------
@@ -1835,8 +1935,6 @@ namespace py::cpp::Windows::Devices::Input
     }
 
     static PyMethodDef _methods_PointerDevice[] = {
-        { "get_pointer_device", reinterpret_cast<PyCFunction>(PointerDevice_GetPointerDevice), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_pointer_devices", reinterpret_cast<PyCFunction>(PointerDevice_GetPointerDevices), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_PointerDevice, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PointerDevice), METH_O | METH_STATIC, nullptr },
         { }
@@ -1869,6 +1967,33 @@ namespace py::cpp::Windows::Devices::Input
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_PointerDevice
+    };
+
+    static PyGetSetDef getset_PointerDevice_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_PointerDevice_Static[] = {
+        { "get_pointer_device", reinterpret_cast<PyCFunction>(PointerDevice_GetPointerDevice), METH_VARARGS, nullptr },
+        { "get_pointer_devices", reinterpret_cast<PyCFunction>(PointerDevice_GetPointerDevices), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_PointerDevice_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PointerDevice_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PointerDevice_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PointerDevice_Static =
+    {
+        "winrt._winrt_windows_devices_input.PointerDevice_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_PointerDevice_Static
     };
 
     // ----- TouchCapabilities class --------------------
@@ -2590,7 +2715,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_input(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MouseDevice, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_MouseDevice_Static{PyType_FromSpec(&type_spec_MouseDevice_Static)};
+    if (!type_MouseDevice_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_MouseDevice, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MouseDevice_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -2600,17 +2731,35 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_input(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PenButtonListener, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_PenButtonListener_Static{PyType_FromSpec(&type_spec_PenButtonListener_Static)};
+    if (!type_PenButtonListener_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PenDevice, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PenButtonListener, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PenButtonListener_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PenDockListener, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_PenDevice_Static{PyType_FromSpec(&type_spec_PenDevice_Static)};
+    if (!type_PenDevice_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_PenDevice, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PenDevice_Static.get())) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PenDockListener_Static{PyType_FromSpec(&type_spec_PenDockListener_Static)};
+    if (!type_PenDockListener_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_PenDockListener, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PenDockListener_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -2640,7 +2789,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_input(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PointerDevice, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_PointerDevice_Static{PyType_FromSpec(&type_spec_PointerDevice_Static)};
+    if (!type_PointerDevice_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_PointerDevice, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PointerDevice_Static.get())) == -1)
     {
         return nullptr;
     }

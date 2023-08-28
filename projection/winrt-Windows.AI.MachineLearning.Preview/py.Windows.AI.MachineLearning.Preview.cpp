@@ -1508,8 +1508,6 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
     static PyMethodDef _methods_LearningModelPreview[] = {
         { "evaluate_async", reinterpret_cast<PyCFunction>(LearningModelPreview_EvaluateAsync), METH_VARARGS, nullptr },
         { "evaluate_features_async", reinterpret_cast<PyCFunction>(LearningModelPreview_EvaluateFeaturesAsync), METH_VARARGS, nullptr },
-        { "load_model_from_storage_file_async", reinterpret_cast<PyCFunction>(LearningModelPreview_LoadModelFromStorageFileAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "load_model_from_stream_async", reinterpret_cast<PyCFunction>(LearningModelPreview_LoadModelFromStreamAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_LearningModelPreview, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LearningModelPreview), METH_O | METH_STATIC, nullptr },
         { }
@@ -1537,6 +1535,33 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_LearningModelPreview
+    };
+
+    static PyGetSetDef getset_LearningModelPreview_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_LearningModelPreview_Static[] = {
+        { "load_model_from_storage_file_async", reinterpret_cast<PyCFunction>(LearningModelPreview_LoadModelFromStorageFileAsync), METH_VARARGS, nullptr },
+        { "load_model_from_stream_async", reinterpret_cast<PyCFunction>(LearningModelPreview_LoadModelFromStreamAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_LearningModelPreview_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_LearningModelPreview_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_LearningModelPreview_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_LearningModelPreview_Static =
+    {
+        "winrt._winrt_windows_ai_machinelearning_preview.LearningModelPreview_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_LearningModelPreview_Static
     };
 
     // ----- LearningModelVariableDescriptorPreview class --------------------
@@ -2495,7 +2520,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ai_machinelearning_preview(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LearningModelPreview, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_LearningModelPreview_Static{PyType_FromSpec(&type_spec_LearningModelPreview_Static)};
+    if (!type_LearningModelPreview_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_LearningModelPreview, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LearningModelPreview_Static.get())) == -1)
     {
         return nullptr;
     }

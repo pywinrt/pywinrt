@@ -59,25 +59,30 @@ namespace py::cpp::Windows::System::RemoteDesktop
         _type_slots_InteractiveSession
     };
 
-    static PyGetSetDef getset_InteractiveSession_Meta[] = {
+    static PyGetSetDef getset_InteractiveSession_Static[] = {
         { "is_remote", reinterpret_cast<getter>(InteractiveSession_get_IsRemote), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_InteractiveSession_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_InteractiveSession_Meta) },
+    static PyMethodDef methods_InteractiveSession_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_InteractiveSession_Meta =
+    static PyType_Slot type_slots_InteractiveSession_Static[] = 
     {
-        "winrt._winrt_windows_system_remotedesktop.InteractiveSession_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_InteractiveSession_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_InteractiveSession_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_InteractiveSession_Static =
+    {
+        "winrt._winrt_windows_system_remotedesktop.InteractiveSession_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_InteractiveSession_Meta
+        type_slots_InteractiveSession_Static
     };
 
     // ----- Windows.System.RemoteDesktop Initialization --------------------
@@ -126,13 +131,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_remotedesktop(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_InteractiveSession_Meta{PyType_FromSpec(&type_spec_InteractiveSession_Meta)};
-    if (!type_InteractiveSession_Meta)
+    py::pyobj_handle type_InteractiveSession_Static{PyType_FromSpec(&type_spec_InteractiveSession_Static)};
+    if (!type_InteractiveSession_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InteractiveSession, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InteractiveSession_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_InteractiveSession, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InteractiveSession_Static.get())) == -1)
     {
         return nullptr;
     }

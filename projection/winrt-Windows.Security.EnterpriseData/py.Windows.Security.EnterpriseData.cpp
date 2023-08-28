@@ -424,12 +424,6 @@ namespace py::cpp::Windows::Security::EnterpriseData
     }
 
     static PyMethodDef _methods_DataProtectionManager[] = {
-        { "get_protection_info_async", reinterpret_cast<PyCFunction>(DataProtectionManager_GetProtectionInfoAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_stream_protection_info_async", reinterpret_cast<PyCFunction>(DataProtectionManager_GetStreamProtectionInfoAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "protect_async", reinterpret_cast<PyCFunction>(DataProtectionManager_ProtectAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "protect_stream_async", reinterpret_cast<PyCFunction>(DataProtectionManager_ProtectStreamAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "unprotect_async", reinterpret_cast<PyCFunction>(DataProtectionManager_UnprotectAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "unprotect_stream_async", reinterpret_cast<PyCFunction>(DataProtectionManager_UnprotectStreamAsync), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -452,6 +446,37 @@ namespace py::cpp::Windows::Security::EnterpriseData
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_DataProtectionManager
+    };
+
+    static PyGetSetDef getset_DataProtectionManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_DataProtectionManager_Static[] = {
+        { "get_protection_info_async", reinterpret_cast<PyCFunction>(DataProtectionManager_GetProtectionInfoAsync), METH_VARARGS, nullptr },
+        { "get_stream_protection_info_async", reinterpret_cast<PyCFunction>(DataProtectionManager_GetStreamProtectionInfoAsync), METH_VARARGS, nullptr },
+        { "protect_async", reinterpret_cast<PyCFunction>(DataProtectionManager_ProtectAsync), METH_VARARGS, nullptr },
+        { "protect_stream_async", reinterpret_cast<PyCFunction>(DataProtectionManager_ProtectStreamAsync), METH_VARARGS, nullptr },
+        { "unprotect_async", reinterpret_cast<PyCFunction>(DataProtectionManager_UnprotectAsync), METH_VARARGS, nullptr },
+        { "unprotect_stream_async", reinterpret_cast<PyCFunction>(DataProtectionManager_UnprotectStreamAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_DataProtectionManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_DataProtectionManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_DataProtectionManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_DataProtectionManager_Static =
+    {
+        "winrt._winrt_windows_security_enterprisedata.DataProtectionManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_DataProtectionManager_Static
     };
 
     // ----- FileProtectionInfo class --------------------
@@ -951,14 +976,6 @@ namespace py::cpp::Windows::Security::EnterpriseData
     }
 
     static PyMethodDef _methods_FileProtectionManager[] = {
-        { "copy_protection_async", reinterpret_cast<PyCFunction>(FileProtectionManager_CopyProtectionAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_protected_and_open_async", reinterpret_cast<PyCFunction>(FileProtectionManager_CreateProtectedAndOpenAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_protection_info_async", reinterpret_cast<PyCFunction>(FileProtectionManager_GetProtectionInfoAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_container_async", reinterpret_cast<PyCFunction>(FileProtectionManager_IsContainerAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "load_file_from_container_async", reinterpret_cast<PyCFunction>(FileProtectionManager_LoadFileFromContainerAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "protect_async", reinterpret_cast<PyCFunction>(FileProtectionManager_ProtectAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "save_file_as_container_async", reinterpret_cast<PyCFunction>(FileProtectionManager_SaveFileAsContainerAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "unprotect_async", reinterpret_cast<PyCFunction>(FileProtectionManager_UnprotectAsync), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -981,6 +998,39 @@ namespace py::cpp::Windows::Security::EnterpriseData
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_FileProtectionManager
+    };
+
+    static PyGetSetDef getset_FileProtectionManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_FileProtectionManager_Static[] = {
+        { "copy_protection_async", reinterpret_cast<PyCFunction>(FileProtectionManager_CopyProtectionAsync), METH_VARARGS, nullptr },
+        { "create_protected_and_open_async", reinterpret_cast<PyCFunction>(FileProtectionManager_CreateProtectedAndOpenAsync), METH_VARARGS, nullptr },
+        { "get_protection_info_async", reinterpret_cast<PyCFunction>(FileProtectionManager_GetProtectionInfoAsync), METH_VARARGS, nullptr },
+        { "is_container_async", reinterpret_cast<PyCFunction>(FileProtectionManager_IsContainerAsync), METH_VARARGS, nullptr },
+        { "load_file_from_container_async", reinterpret_cast<PyCFunction>(FileProtectionManager_LoadFileFromContainerAsync), METH_VARARGS, nullptr },
+        { "protect_async", reinterpret_cast<PyCFunction>(FileProtectionManager_ProtectAsync), METH_VARARGS, nullptr },
+        { "save_file_as_container_async", reinterpret_cast<PyCFunction>(FileProtectionManager_SaveFileAsContainerAsync), METH_VARARGS, nullptr },
+        { "unprotect_async", reinterpret_cast<PyCFunction>(FileProtectionManager_UnprotectAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_FileProtectionManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_FileProtectionManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_FileProtectionManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_FileProtectionManager_Static =
+    {
+        "winrt._winrt_windows_security_enterprisedata.FileProtectionManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_FileProtectionManager_Static
     };
 
     // ----- FileRevocationManager class --------------------
@@ -1120,10 +1170,6 @@ namespace py::cpp::Windows::Security::EnterpriseData
     }
 
     static PyMethodDef _methods_FileRevocationManager[] = {
-        { "copy_protection_async", reinterpret_cast<PyCFunction>(FileRevocationManager_CopyProtectionAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_status_async", reinterpret_cast<PyCFunction>(FileRevocationManager_GetStatusAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "protect_async", reinterpret_cast<PyCFunction>(FileRevocationManager_ProtectAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "revoke", reinterpret_cast<PyCFunction>(FileRevocationManager_Revoke), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -1146,6 +1192,35 @@ namespace py::cpp::Windows::Security::EnterpriseData
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_FileRevocationManager
+    };
+
+    static PyGetSetDef getset_FileRevocationManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_FileRevocationManager_Static[] = {
+        { "copy_protection_async", reinterpret_cast<PyCFunction>(FileRevocationManager_CopyProtectionAsync), METH_VARARGS, nullptr },
+        { "get_status_async", reinterpret_cast<PyCFunction>(FileRevocationManager_GetStatusAsync), METH_VARARGS, nullptr },
+        { "protect_async", reinterpret_cast<PyCFunction>(FileRevocationManager_ProtectAsync), METH_VARARGS, nullptr },
+        { "revoke", reinterpret_cast<PyCFunction>(FileRevocationManager_Revoke), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_FileRevocationManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_FileRevocationManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_FileRevocationManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_FileRevocationManager_Static =
+    {
+        "winrt._winrt_windows_security_enterprisedata.FileRevocationManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_FileRevocationManager_Static
     };
 
     // ----- FileUnprotectOptions class --------------------
@@ -3484,28 +3559,6 @@ namespace py::cpp::Windows::Security::EnterpriseData
     }
 
     static PyMethodDef _methods_ProtectionPolicyManager[] = {
-        { "check_access", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_CheckAccess), METH_VARARGS | METH_STATIC, nullptr },
-        { "check_access_for_app", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_CheckAccessForApp), METH_VARARGS | METH_STATIC, nullptr },
-        { "clear_process_u_i_policy", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_ClearProcessUIPolicy), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_current_thread_network_context", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_CreateCurrentThreadNetworkContext), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_enforcement_level", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_GetEnforcementLevel), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_for_current_view", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_GetForCurrentView), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_primary_managed_identity_for_identity", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_GetPrimaryManagedIdentityForIdentity), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_primary_managed_identity_for_network_endpoint_async", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_GetPrimaryManagedIdentityForNetworkEndpointAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "has_content_been_revoked_since", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_HasContentBeenRevokedSince), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_file_protection_required_async", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_IsFileProtectionRequiredAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_file_protection_required_for_new_file_async", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_IsFileProtectionRequiredForNewFileAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_identity_managed", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_IsIdentityManaged), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_protection_under_lock_required", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_IsProtectionUnderLockRequired), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_roamable_protection_enabled", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_IsRoamableProtectionEnabled), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_user_decryption_allowed", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_IsUserDecryptionAllowed), METH_VARARGS | METH_STATIC, nullptr },
-        { "log_audit_event", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_LogAuditEvent), METH_VARARGS | METH_STATIC, nullptr },
-        { "request_access_async", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_RequestAccessAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "request_access_for_app_async", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_RequestAccessForAppAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "request_access_to_files_for_app_async", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_RequestAccessToFilesForAppAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "request_access_to_files_for_process_async", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_RequestAccessToFilesForProcessAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "revoke_content", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_RevokeContent), METH_VARARGS | METH_STATIC, nullptr },
-        { "try_apply_process_u_i_policy", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_TryApplyProcessUIPolicy), METH_VARARGS | METH_STATIC, nullptr },
         { "add_policy_changed", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_add_PolicyChanged), METH_O | METH_STATIC, nullptr },
         { "remove_policy_changed", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_remove_PolicyChanged), METH_O | METH_STATIC, nullptr },
         { "add_protected_access_resumed", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_add_ProtectedAccessResumed), METH_O | METH_STATIC, nullptr },
@@ -3543,26 +3596,53 @@ namespace py::cpp::Windows::Security::EnterpriseData
         _type_slots_ProtectionPolicyManager
     };
 
-    static PyGetSetDef getset_ProtectionPolicyManager_Meta[] = {
+    static PyGetSetDef getset_ProtectionPolicyManager_Static[] = {
         { "is_protection_enabled", reinterpret_cast<getter>(ProtectionPolicyManager_get_IsProtectionEnabled), nullptr, nullptr, nullptr },
         { "primary_managed_identity", reinterpret_cast<getter>(ProtectionPolicyManager_get_PrimaryManagedIdentity), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_ProtectionPolicyManager_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_ProtectionPolicyManager_Meta) },
+    static PyMethodDef methods_ProtectionPolicyManager_Static[] = {
+        { "check_access", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_CheckAccess), METH_VARARGS, nullptr },
+        { "check_access_for_app", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_CheckAccessForApp), METH_VARARGS, nullptr },
+        { "clear_process_u_i_policy", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_ClearProcessUIPolicy), METH_VARARGS, nullptr },
+        { "create_current_thread_network_context", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_CreateCurrentThreadNetworkContext), METH_VARARGS, nullptr },
+        { "get_enforcement_level", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_GetEnforcementLevel), METH_VARARGS, nullptr },
+        { "get_for_current_view", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_GetForCurrentView), METH_VARARGS, nullptr },
+        { "get_primary_managed_identity_for_identity", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_GetPrimaryManagedIdentityForIdentity), METH_VARARGS, nullptr },
+        { "get_primary_managed_identity_for_network_endpoint_async", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_GetPrimaryManagedIdentityForNetworkEndpointAsync), METH_VARARGS, nullptr },
+        { "has_content_been_revoked_since", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_HasContentBeenRevokedSince), METH_VARARGS, nullptr },
+        { "is_file_protection_required_async", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_IsFileProtectionRequiredAsync), METH_VARARGS, nullptr },
+        { "is_file_protection_required_for_new_file_async", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_IsFileProtectionRequiredForNewFileAsync), METH_VARARGS, nullptr },
+        { "is_identity_managed", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_IsIdentityManaged), METH_VARARGS, nullptr },
+        { "is_protection_under_lock_required", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_IsProtectionUnderLockRequired), METH_VARARGS, nullptr },
+        { "is_roamable_protection_enabled", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_IsRoamableProtectionEnabled), METH_VARARGS, nullptr },
+        { "is_user_decryption_allowed", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_IsUserDecryptionAllowed), METH_VARARGS, nullptr },
+        { "log_audit_event", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_LogAuditEvent), METH_VARARGS, nullptr },
+        { "request_access_async", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_RequestAccessAsync), METH_VARARGS, nullptr },
+        { "request_access_for_app_async", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_RequestAccessForAppAsync), METH_VARARGS, nullptr },
+        { "request_access_to_files_for_app_async", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_RequestAccessToFilesForAppAsync), METH_VARARGS, nullptr },
+        { "request_access_to_files_for_process_async", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_RequestAccessToFilesForProcessAsync), METH_VARARGS, nullptr },
+        { "revoke_content", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_RevokeContent), METH_VARARGS, nullptr },
+        { "try_apply_process_u_i_policy", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_TryApplyProcessUIPolicy), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_ProtectionPolicyManager_Meta =
+    static PyType_Slot type_slots_ProtectionPolicyManager_Static[] = 
     {
-        "winrt._winrt_windows_security_enterprisedata.ProtectionPolicyManager_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ProtectionPolicyManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ProtectionPolicyManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ProtectionPolicyManager_Static =
+    {
+        "winrt._winrt_windows_security_enterprisedata.ProtectionPolicyManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ProtectionPolicyManager_Meta
+        type_slots_ProtectionPolicyManager_Static
     };
 
     // ----- ThreadNetworkContext class --------------------
@@ -3742,7 +3822,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_enterprisedata(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DataProtectionManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_DataProtectionManager_Static{PyType_FromSpec(&type_spec_DataProtectionManager_Static)};
+    if (!type_DataProtectionManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_DataProtectionManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DataProtectionManager_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -3752,12 +3838,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_enterprisedata(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FileProtectionManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_FileProtectionManager_Static{PyType_FromSpec(&type_spec_FileProtectionManager_Static)};
+    if (!type_FileProtectionManager_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FileRevocationManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FileProtectionManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FileProtectionManager_Static.get())) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_FileRevocationManager_Static{PyType_FromSpec(&type_spec_FileRevocationManager_Static)};
+    if (!type_FileRevocationManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_FileRevocationManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FileRevocationManager_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -3802,13 +3900,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_enterprisedata(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_ProtectionPolicyManager_Meta{PyType_FromSpec(&type_spec_ProtectionPolicyManager_Meta)};
-    if (!type_ProtectionPolicyManager_Meta)
+    py::pyobj_handle type_ProtectionPolicyManager_Static{PyType_FromSpec(&type_spec_ProtectionPolicyManager_Static)};
+    if (!type_ProtectionPolicyManager_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ProtectionPolicyManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ProtectionPolicyManager_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProtectionPolicyManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ProtectionPolicyManager_Static.get())) == -1)
     {
         return nullptr;
     }

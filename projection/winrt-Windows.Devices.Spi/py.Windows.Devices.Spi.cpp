@@ -621,8 +621,6 @@ namespace py::cpp::Windows::Devices::Spi
     }
 
     static PyMethodDef _methods_SpiController[] = {
-        { "get_controllers_async", reinterpret_cast<PyCFunction>(SpiController_GetControllersAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_default_async", reinterpret_cast<PyCFunction>(SpiController_GetDefaultAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "get_device", reinterpret_cast<PyCFunction>(SpiController_GetDevice), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SpiController, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpiController), METH_O | METH_STATIC, nullptr },
@@ -649,6 +647,33 @@ namespace py::cpp::Windows::Devices::Spi
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_SpiController
+    };
+
+    static PyGetSetDef getset_SpiController_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_SpiController_Static[] = {
+        { "get_controllers_async", reinterpret_cast<PyCFunction>(SpiController_GetControllersAsync), METH_VARARGS, nullptr },
+        { "get_default_async", reinterpret_cast<PyCFunction>(SpiController_GetDefaultAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_SpiController_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SpiController_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SpiController_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SpiController_Static =
+    {
+        "winrt._winrt_windows_devices_spi.SpiController_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_SpiController_Static
     };
 
     // ----- SpiDevice class --------------------
@@ -1023,9 +1048,6 @@ namespace py::cpp::Windows::Devices::Spi
 
     static PyMethodDef _methods_SpiDevice[] = {
         { "close", reinterpret_cast<PyCFunction>(SpiDevice_Close), METH_VARARGS, nullptr },
-        { "from_id_async", reinterpret_cast<PyCFunction>(SpiDevice_FromIdAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_bus_info", reinterpret_cast<PyCFunction>(SpiDevice_GetBusInfo), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_device_selector", reinterpret_cast<PyCFunction>(SpiDevice_GetDeviceSelector), METH_VARARGS | METH_STATIC, nullptr },
         { "read", reinterpret_cast<PyCFunction>(SpiDevice_Read), METH_VARARGS, nullptr },
         { "transfer_full_duplex", reinterpret_cast<PyCFunction>(SpiDevice_TransferFullDuplex), METH_VARARGS, nullptr },
         { "transfer_sequential", reinterpret_cast<PyCFunction>(SpiDevice_TransferSequential), METH_VARARGS, nullptr },
@@ -1059,6 +1081,34 @@ namespace py::cpp::Windows::Devices::Spi
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_SpiDevice
+    };
+
+    static PyGetSetDef getset_SpiDevice_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_SpiDevice_Static[] = {
+        { "from_id_async", reinterpret_cast<PyCFunction>(SpiDevice_FromIdAsync), METH_VARARGS, nullptr },
+        { "get_bus_info", reinterpret_cast<PyCFunction>(SpiDevice_GetBusInfo), METH_VARARGS, nullptr },
+        { "get_device_selector", reinterpret_cast<PyCFunction>(SpiDevice_GetDeviceSelector), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_SpiDevice_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SpiDevice_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SpiDevice_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SpiDevice_Static =
+    {
+        "winrt._winrt_windows_devices_spi.SpiDevice_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_SpiDevice_Static
     };
 
     // ----- ISpiDeviceStatics interface --------------------
@@ -1301,12 +1351,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_spi(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpiController, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_SpiController_Static{PyType_FromSpec(&type_spec_SpiController_Static)};
+    if (!type_SpiController_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpiDevice, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpiController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpiController_Static.get())) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SpiDevice_Static{PyType_FromSpec(&type_spec_SpiDevice_Static)};
+    if (!type_SpiDevice_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_SpiDevice, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpiDevice_Static.get())) == -1)
     {
         return nullptr;
     }

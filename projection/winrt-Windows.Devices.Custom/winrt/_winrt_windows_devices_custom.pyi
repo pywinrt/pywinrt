@@ -15,13 +15,13 @@ from winrt.windows.devices.custom import DeviceAccessMode, DeviceSharingMode, IO
 
 Self = typing.TypeVar('Self')
 
-class CustomDevice(winrt.system.Object):
+class CustomDevice_Static(type):
+    def from_id_async(cls, device_id: str, desired_access: DeviceAccessMode, sharing_mode: DeviceSharingMode, /) -> winrt.windows.foundation.IAsyncOperation[CustomDevice]: ...
+    def get_device_selector(cls, class_guid: _uuid.UUID, /) -> str: ...
+
+class CustomDevice(winrt.system.Object, metaclass=CustomDevice_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CustomDevice: ...
-    @staticmethod
-    def from_id_async(device_id: str, desired_access: DeviceAccessMode, sharing_mode: DeviceSharingMode, /) -> winrt.windows.foundation.IAsyncOperation[CustomDevice]: ...
-    @staticmethod
-    def get_device_selector(class_guid: _uuid.UUID, /) -> str: ...
     def send_i_o_control_async(self, io_control_code: typing.Optional[IIOControlCode], input_buffer: typing.Optional[winrt.windows.storage.streams.IBuffer], output_buffer: typing.Optional[winrt.windows.storage.streams.IBuffer], /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.UInt32]: ...
     def try_send_i_o_control_async(self, io_control_code: typing.Optional[IIOControlCode], input_buffer: typing.Optional[winrt.windows.storage.streams.IBuffer], output_buffer: typing.Optional[winrt.windows.storage.streams.IBuffer], /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     @_property
@@ -44,10 +44,13 @@ class IOControlCode(winrt.system.Object):
     @_property
     def function(self) -> winrt.system.UInt16: ...
 
-class KnownDeviceTypes(winrt.system.Object):
+class KnownDeviceTypes_Static(type):
+    @_property
+    def unknown(cls) -> winrt.system.UInt16: ...
+
+class KnownDeviceTypes(winrt.system.Object, metaclass=KnownDeviceTypes_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> KnownDeviceTypes: ...
-    unknown: typing.ClassVar[winrt.system.UInt16]
 
 class IIOControlCode(winrt.system.Object):
     @staticmethod

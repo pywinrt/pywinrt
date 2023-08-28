@@ -545,7 +545,6 @@ namespace py::cpp::Windows::UI::WebUI::Core
     }
 
     static PyMethodDef _methods_WebUICommandBar[] = {
-        { "get_for_current_view", reinterpret_cast<PyCFunction>(WebUICommandBar_GetForCurrentView), METH_VARARGS | METH_STATIC, nullptr },
         { "add_menu_closed", reinterpret_cast<PyCFunction>(WebUICommandBar_add_MenuClosed), METH_O, nullptr },
         { "remove_menu_closed", reinterpret_cast<PyCFunction>(WebUICommandBar_remove_MenuClosed), METH_O, nullptr },
         { "add_menu_opened", reinterpret_cast<PyCFunction>(WebUICommandBar_add_MenuOpened), METH_O, nullptr },
@@ -586,6 +585,32 @@ namespace py::cpp::Windows::UI::WebUI::Core
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_WebUICommandBar
+    };
+
+    static PyGetSetDef getset_WebUICommandBar_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_WebUICommandBar_Static[] = {
+        { "get_for_current_view", reinterpret_cast<PyCFunction>(WebUICommandBar_GetForCurrentView), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_WebUICommandBar_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_WebUICommandBar_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_WebUICommandBar_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_WebUICommandBar_Static =
+    {
+        "winrt._winrt_windows_ui_webui_core.WebUICommandBar_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_WebUICommandBar_Static
     };
 
     // ----- WebUICommandBarBitmapIcon class --------------------
@@ -1818,7 +1843,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_webui_core(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUICommandBar, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_WebUICommandBar_Static{PyType_FromSpec(&type_spec_WebUICommandBar_Static)};
+    if (!type_WebUICommandBar_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_WebUICommandBar, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WebUICommandBar_Static.get())) == -1)
     {
         return nullptr;
     }

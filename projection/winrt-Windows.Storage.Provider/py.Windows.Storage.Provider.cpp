@@ -52,7 +52,6 @@ namespace py::cpp::Windows::Storage::Provider
     }
 
     static PyMethodDef _methods_CachedFileUpdater[] = {
-        { "set_update_information", reinterpret_cast<PyCFunction>(CachedFileUpdater_SetUpdateInformation), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -75,6 +74,32 @@ namespace py::cpp::Windows::Storage::Provider
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_CachedFileUpdater
+    };
+
+    static PyGetSetDef getset_CachedFileUpdater_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_CachedFileUpdater_Static[] = {
+        { "set_update_information", reinterpret_cast<PyCFunction>(CachedFileUpdater_SetUpdateInformation), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_CachedFileUpdater_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CachedFileUpdater_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CachedFileUpdater_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CachedFileUpdater_Static =
+    {
+        "winrt._winrt_windows_storage_provider.CachedFileUpdater_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CachedFileUpdater_Static
     };
 
     // ----- CachedFileUpdaterUI class --------------------
@@ -1429,7 +1454,6 @@ namespace py::cpp::Windows::Storage::Provider
     }
 
     static PyMethodDef _methods_StorageProviderItemProperties[] = {
-        { "set_async", reinterpret_cast<PyCFunction>(StorageProviderItemProperties_SetAsync), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -1452,6 +1476,32 @@ namespace py::cpp::Windows::Storage::Provider
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_StorageProviderItemProperties
+    };
+
+    static PyGetSetDef getset_StorageProviderItemProperties_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_StorageProviderItemProperties_Static[] = {
+        { "set_async", reinterpret_cast<PyCFunction>(StorageProviderItemProperties_SetAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_StorageProviderItemProperties_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_StorageProviderItemProperties_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_StorageProviderItemProperties_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_StorageProviderItemProperties_Static =
+    {
+        "winrt._winrt_windows_storage_provider.StorageProviderItemProperties_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_StorageProviderItemProperties_Static
     };
 
     // ----- StorageProviderItemProperty class --------------------
@@ -3914,12 +3964,6 @@ namespace py::cpp::Windows::Storage::Provider
     }
 
     static PyMethodDef _methods_StorageProviderSyncRootManager[] = {
-        { "get_current_sync_roots", reinterpret_cast<PyCFunction>(StorageProviderSyncRootManager_GetCurrentSyncRoots), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_sync_root_information_for_folder", reinterpret_cast<PyCFunction>(StorageProviderSyncRootManager_GetSyncRootInformationForFolder), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_sync_root_information_for_id", reinterpret_cast<PyCFunction>(StorageProviderSyncRootManager_GetSyncRootInformationForId), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_supported", reinterpret_cast<PyCFunction>(StorageProviderSyncRootManager_IsSupported), METH_VARARGS | METH_STATIC, nullptr },
-        { "register", reinterpret_cast<PyCFunction>(StorageProviderSyncRootManager_Register), METH_VARARGS | METH_STATIC, nullptr },
-        { "unregister", reinterpret_cast<PyCFunction>(StorageProviderSyncRootManager_Unregister), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -3942,6 +3986,37 @@ namespace py::cpp::Windows::Storage::Provider
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_StorageProviderSyncRootManager
+    };
+
+    static PyGetSetDef getset_StorageProviderSyncRootManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_StorageProviderSyncRootManager_Static[] = {
+        { "get_current_sync_roots", reinterpret_cast<PyCFunction>(StorageProviderSyncRootManager_GetCurrentSyncRoots), METH_VARARGS, nullptr },
+        { "get_sync_root_information_for_folder", reinterpret_cast<PyCFunction>(StorageProviderSyncRootManager_GetSyncRootInformationForFolder), METH_VARARGS, nullptr },
+        { "get_sync_root_information_for_id", reinterpret_cast<PyCFunction>(StorageProviderSyncRootManager_GetSyncRootInformationForId), METH_VARARGS, nullptr },
+        { "is_supported", reinterpret_cast<PyCFunction>(StorageProviderSyncRootManager_IsSupported), METH_VARARGS, nullptr },
+        { "register", reinterpret_cast<PyCFunction>(StorageProviderSyncRootManager_Register), METH_VARARGS, nullptr },
+        { "unregister", reinterpret_cast<PyCFunction>(StorageProviderSyncRootManager_Unregister), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_StorageProviderSyncRootManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_StorageProviderSyncRootManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_StorageProviderSyncRootManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_StorageProviderSyncRootManager_Static =
+    {
+        "winrt._winrt_windows_storage_provider.StorageProviderSyncRootManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_StorageProviderSyncRootManager_Static
     };
 
     // ----- IStorageProviderItemPropertySource interface --------------------
@@ -4754,7 +4829,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_provider(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CachedFileUpdater, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_CachedFileUpdater_Static{PyType_FromSpec(&type_spec_CachedFileUpdater_Static)};
+    if (!type_CachedFileUpdater_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_CachedFileUpdater, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CachedFileUpdater_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -4794,7 +4875,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_provider(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StorageProviderItemProperties, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_StorageProviderItemProperties_Static{PyType_FromSpec(&type_spec_StorageProviderItemProperties_Static)};
+    if (!type_StorageProviderItemProperties_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_StorageProviderItemProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StorageProviderItemProperties_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -4829,7 +4916,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_provider(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StorageProviderSyncRootManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_StorageProviderSyncRootManager_Static{PyType_FromSpec(&type_spec_StorageProviderSyncRootManager_Static)};
+    if (!type_StorageProviderSyncRootManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_StorageProviderSyncRootManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StorageProviderSyncRootManager_Static.get())) == -1)
     {
         return nullptr;
     }

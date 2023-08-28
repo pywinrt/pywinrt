@@ -123,26 +123,31 @@ namespace py::cpp::Windows::Phone::System::Power
         _type_slots_PowerManager
     };
 
-    static PyGetSetDef getset_PowerManager_Meta[] = {
+    static PyGetSetDef getset_PowerManager_Static[] = {
         { "power_saving_mode", reinterpret_cast<getter>(PowerManager_get_PowerSavingMode), nullptr, nullptr, nullptr },
         { "power_saving_mode_enabled", reinterpret_cast<getter>(PowerManager_get_PowerSavingModeEnabled), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_PowerManager_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_PowerManager_Meta) },
+    static PyMethodDef methods_PowerManager_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_PowerManager_Meta =
+    static PyType_Slot type_slots_PowerManager_Static[] = 
     {
-        "winrt._winrt_windows_phone_system_power.PowerManager_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PowerManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PowerManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PowerManager_Static =
+    {
+        "winrt._winrt_windows_phone_system_power.PowerManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PowerManager_Meta
+        type_slots_PowerManager_Static
     };
 
     // ----- Windows.Phone.System.Power Initialization --------------------
@@ -191,13 +196,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_system_power(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_PowerManager_Meta{PyType_FromSpec(&type_spec_PowerManager_Meta)};
-    if (!type_PowerManager_Meta)
+    py::pyobj_handle type_PowerManager_Static{PyType_FromSpec(&type_spec_PowerManager_Static)};
+    if (!type_PowerManager_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PowerManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PowerManager_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PowerManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PowerManager_Static.get())) == -1)
     {
         return nullptr;
     }

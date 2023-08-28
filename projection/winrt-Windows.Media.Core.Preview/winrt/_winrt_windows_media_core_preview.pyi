@@ -13,12 +13,13 @@ import winrt.windows.media
 
 Self = typing.TypeVar('Self')
 
-class SoundLevelBroker(winrt.system.Object):
+class SoundLevelBroker_Static(type):
+    def add_sound_level_changed(cls, handler: winrt.windows.foundation.EventHandler[winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
+    def remove_sound_level_changed(cls, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
+    @_property
+    def sound_level(cls) -> winrt.windows.media.SoundLevel: ...
+
+class SoundLevelBroker(winrt.system.Object, metaclass=SoundLevelBroker_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SoundLevelBroker: ...
-    @staticmethod
-    def add_sound_level_changed(handler: winrt.windows.foundation.EventHandler[winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
-    @staticmethod
-    def remove_sound_level_changed(token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
-    sound_level: typing.ClassVar[winrt.windows.media.SoundLevel]
 

@@ -2352,9 +2352,6 @@ namespace py::cpp::Windows::Networking::Connectivity
     }
 
     static PyMethodDef _methods_ConnectivityManager[] = {
-        { "acquire_connection_async", reinterpret_cast<PyCFunction>(ConnectivityManager_AcquireConnectionAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "add_http_route_policy", reinterpret_cast<PyCFunction>(ConnectivityManager_AddHttpRoutePolicy), METH_VARARGS | METH_STATIC, nullptr },
-        { "remove_http_route_policy", reinterpret_cast<PyCFunction>(ConnectivityManager_RemoveHttpRoutePolicy), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -2377,6 +2374,34 @@ namespace py::cpp::Windows::Networking::Connectivity
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ConnectivityManager
+    };
+
+    static PyGetSetDef getset_ConnectivityManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ConnectivityManager_Static[] = {
+        { "acquire_connection_async", reinterpret_cast<PyCFunction>(ConnectivityManager_AcquireConnectionAsync), METH_VARARGS, nullptr },
+        { "add_http_route_policy", reinterpret_cast<PyCFunction>(ConnectivityManager_AddHttpRoutePolicy), METH_VARARGS, nullptr },
+        { "remove_http_route_policy", reinterpret_cast<PyCFunction>(ConnectivityManager_RemoveHttpRoutePolicy), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_ConnectivityManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ConnectivityManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ConnectivityManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ConnectivityManager_Static =
+    {
+        "winrt._winrt_windows_networking_connectivity.ConnectivityManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ConnectivityManager_Static
     };
 
     // ----- DataPlanStatus class --------------------
@@ -3595,13 +3620,6 @@ namespace py::cpp::Windows::Networking::Connectivity
     }
 
     static PyMethodDef _methods_NetworkInformation[] = {
-        { "find_connection_profiles_async", reinterpret_cast<PyCFunction>(NetworkInformation_FindConnectionProfilesAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_connection_profiles", reinterpret_cast<PyCFunction>(NetworkInformation_GetConnectionProfiles), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_host_names", reinterpret_cast<PyCFunction>(NetworkInformation_GetHostNames), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_internet_connection_profile", reinterpret_cast<PyCFunction>(NetworkInformation_GetInternetConnectionProfile), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_lan_identifiers", reinterpret_cast<PyCFunction>(NetworkInformation_GetLanIdentifiers), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_proxy_configuration_async", reinterpret_cast<PyCFunction>(NetworkInformation_GetProxyConfigurationAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_sorted_endpoint_pairs", reinterpret_cast<PyCFunction>(NetworkInformation_GetSortedEndpointPairs), METH_VARARGS | METH_STATIC, nullptr },
         { "add_network_status_changed", reinterpret_cast<PyCFunction>(NetworkInformation_add_NetworkStatusChanged), METH_O | METH_STATIC, nullptr },
         { "remove_network_status_changed", reinterpret_cast<PyCFunction>(NetworkInformation_remove_NetworkStatusChanged), METH_O | METH_STATIC, nullptr },
         { }
@@ -3626,6 +3644,38 @@ namespace py::cpp::Windows::Networking::Connectivity
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_NetworkInformation
+    };
+
+    static PyGetSetDef getset_NetworkInformation_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_NetworkInformation_Static[] = {
+        { "find_connection_profiles_async", reinterpret_cast<PyCFunction>(NetworkInformation_FindConnectionProfilesAsync), METH_VARARGS, nullptr },
+        { "get_connection_profiles", reinterpret_cast<PyCFunction>(NetworkInformation_GetConnectionProfiles), METH_VARARGS, nullptr },
+        { "get_host_names", reinterpret_cast<PyCFunction>(NetworkInformation_GetHostNames), METH_VARARGS, nullptr },
+        { "get_internet_connection_profile", reinterpret_cast<PyCFunction>(NetworkInformation_GetInternetConnectionProfile), METH_VARARGS, nullptr },
+        { "get_lan_identifiers", reinterpret_cast<PyCFunction>(NetworkInformation_GetLanIdentifiers), METH_VARARGS, nullptr },
+        { "get_proxy_configuration_async", reinterpret_cast<PyCFunction>(NetworkInformation_GetProxyConfigurationAsync), METH_VARARGS, nullptr },
+        { "get_sorted_endpoint_pairs", reinterpret_cast<PyCFunction>(NetworkInformation_GetSortedEndpointPairs), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_NetworkInformation_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_NetworkInformation_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_NetworkInformation_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_NetworkInformation_Static =
+    {
+        "winrt._winrt_windows_networking_connectivity.NetworkInformation_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_NetworkInformation_Static
     };
 
     // ----- NetworkItem class --------------------
@@ -5157,7 +5207,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_connectivity(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ConnectivityManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_ConnectivityManager_Static{PyType_FromSpec(&type_spec_ConnectivityManager_Static)};
+    if (!type_ConnectivityManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_ConnectivityManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ConnectivityManager_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -5197,7 +5253,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_connectivity(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_NetworkInformation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_NetworkInformation_Static{PyType_FromSpec(&type_spec_NetworkInformation_Static)};
+    if (!type_NetworkInformation_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_NetworkInformation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NetworkInformation_Static.get())) == -1)
     {
         return nullptr;
     }

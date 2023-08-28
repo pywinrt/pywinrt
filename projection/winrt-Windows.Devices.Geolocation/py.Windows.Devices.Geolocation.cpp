@@ -503,7 +503,6 @@ namespace py::cpp::Windows::Devices::Geolocation
     }
 
     static PyMethodDef _methods_GeoboundingBox[] = {
-        { "try_compute", reinterpret_cast<PyCFunction>(GeoboundingBox_TryCompute), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_GeoboundingBox, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GeoboundingBox), METH_O | METH_STATIC, nullptr },
         { }
@@ -537,6 +536,32 @@ namespace py::cpp::Windows::Devices::Geolocation
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_GeoboundingBox
+    };
+
+    static PyGetSetDef getset_GeoboundingBox_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_GeoboundingBox_Static[] = {
+        { "try_compute", reinterpret_cast<PyCFunction>(GeoboundingBox_TryCompute), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_GeoboundingBox_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_GeoboundingBox_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_GeoboundingBox_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_GeoboundingBox_Static =
+    {
+        "winrt._winrt_windows_devices_geolocation.GeoboundingBox_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_GeoboundingBox_Static
     };
 
     // ----- Geocircle class --------------------
@@ -1852,8 +1877,6 @@ namespace py::cpp::Windows::Devices::Geolocation
     static PyMethodDef _methods_Geolocator[] = {
         { "allow_fallback_to_consentless_positions", reinterpret_cast<PyCFunction>(Geolocator_AllowFallbackToConsentlessPositions), METH_VARARGS, nullptr },
         { "get_geoposition_async", reinterpret_cast<PyCFunction>(Geolocator_GetGeopositionAsync), METH_VARARGS, nullptr },
-        { "get_geoposition_history_async", reinterpret_cast<PyCFunction>(Geolocator_GetGeopositionHistoryAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "request_access_async", reinterpret_cast<PyCFunction>(Geolocator_RequestAccessAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "add_position_changed", reinterpret_cast<PyCFunction>(Geolocator_add_PositionChanged), METH_O, nullptr },
         { "remove_position_changed", reinterpret_cast<PyCFunction>(Geolocator_remove_PositionChanged), METH_O, nullptr },
         { "add_status_changed", reinterpret_cast<PyCFunction>(Geolocator_add_StatusChanged), METH_O, nullptr },
@@ -1890,26 +1913,33 @@ namespace py::cpp::Windows::Devices::Geolocation
         _type_slots_Geolocator
     };
 
-    static PyGetSetDef getset_Geolocator_Meta[] = {
+    static PyGetSetDef getset_Geolocator_Static[] = {
         { "default_geoposition", reinterpret_cast<getter>(Geolocator_get_DefaultGeoposition), reinterpret_cast<setter>(Geolocator_put_DefaultGeoposition), nullptr, nullptr },
         { "is_default_geoposition_recommended", reinterpret_cast<getter>(Geolocator_get_IsDefaultGeopositionRecommended), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_Geolocator_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_Geolocator_Meta) },
+    static PyMethodDef methods_Geolocator_Static[] = {
+        { "get_geoposition_history_async", reinterpret_cast<PyCFunction>(Geolocator_GetGeopositionHistoryAsync), METH_VARARGS, nullptr },
+        { "request_access_async", reinterpret_cast<PyCFunction>(Geolocator_RequestAccessAsync), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_Geolocator_Meta =
+    static PyType_Slot type_slots_Geolocator_Static[] = 
     {
-        "winrt._winrt_windows_devices_geolocation.Geolocator_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Geolocator_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Geolocator_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Geolocator_Static =
+    {
+        "winrt._winrt_windows_devices_geolocation.Geolocator_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Geolocator_Meta
+        type_slots_Geolocator_Static
     };
 
     // ----- Geopath class --------------------
@@ -2799,7 +2829,6 @@ namespace py::cpp::Windows::Devices::Geolocation
     }
 
     static PyMethodDef _methods_GeovisitMonitor[] = {
-        { "get_last_report_async", reinterpret_cast<PyCFunction>(GeovisitMonitor_GetLastReportAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "start", reinterpret_cast<PyCFunction>(GeovisitMonitor_Start), METH_VARARGS, nullptr },
         { "stop", reinterpret_cast<PyCFunction>(GeovisitMonitor_Stop), METH_VARARGS, nullptr },
         { "add_visit_state_changed", reinterpret_cast<PyCFunction>(GeovisitMonitor_add_VisitStateChanged), METH_O, nullptr },
@@ -2830,6 +2859,32 @@ namespace py::cpp::Windows::Devices::Geolocation
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_GeovisitMonitor
+    };
+
+    static PyGetSetDef getset_GeovisitMonitor_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_GeovisitMonitor_Static[] = {
+        { "get_last_report_async", reinterpret_cast<PyCFunction>(GeovisitMonitor_GetLastReportAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_GeovisitMonitor_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_GeovisitMonitor_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_GeovisitMonitor_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_GeovisitMonitor_Static =
+    {
+        "winrt._winrt_windows_devices_geolocation.GeovisitMonitor_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_GeovisitMonitor_Static
     };
 
     // ----- GeovisitStateChangedEventArgs class --------------------
@@ -3683,7 +3738,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_geolocation(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GeoboundingBox, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_GeoboundingBox_Static{PyType_FromSpec(&type_spec_GeoboundingBox_Static)};
+    if (!type_GeoboundingBox_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_GeoboundingBox, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GeoboundingBox_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -3703,13 +3764,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_geolocation(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_Geolocator_Meta{PyType_FromSpec(&type_spec_Geolocator_Meta)};
-    if (!type_Geolocator_Meta)
+    py::pyobj_handle type_Geolocator_Static{PyType_FromSpec(&type_spec_Geolocator_Static)};
+    if (!type_Geolocator_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Geolocator, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Geolocator_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Geolocator, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Geolocator_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -3734,7 +3795,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_geolocation(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GeovisitMonitor, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_GeovisitMonitor_Static{PyType_FromSpec(&type_spec_GeovisitMonitor_Static)};
+    if (!type_GeovisitMonitor_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_GeovisitMonitor, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GeovisitMonitor_Static.get())) == -1)
     {
         return nullptr;
     }

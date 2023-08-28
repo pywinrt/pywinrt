@@ -3002,7 +3002,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         { "recognize_async", reinterpret_cast<PyCFunction>(SpeechRecognizer_RecognizeAsync), METH_VARARGS, nullptr },
         { "recognize_with_u_i_async", reinterpret_cast<PyCFunction>(SpeechRecognizer_RecognizeWithUIAsync), METH_VARARGS, nullptr },
         { "stop_recognition_async", reinterpret_cast<PyCFunction>(SpeechRecognizer_StopRecognitionAsync), METH_VARARGS, nullptr },
-        { "try_set_system_speech_language_async", reinterpret_cast<PyCFunction>(SpeechRecognizer_TrySetSystemSpeechLanguageAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "add_recognition_quality_degrading", reinterpret_cast<PyCFunction>(SpeechRecognizer_add_RecognitionQualityDegrading), METH_O, nullptr },
         { "remove_recognition_quality_degrading", reinterpret_cast<PyCFunction>(SpeechRecognizer_remove_RecognitionQualityDegrading), METH_O, nullptr },
         { "add_state_changed", reinterpret_cast<PyCFunction>(SpeechRecognizer_add_StateChanged), METH_O, nullptr },
@@ -3044,27 +3043,33 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         _type_slots_SpeechRecognizer
     };
 
-    static PyGetSetDef getset_SpeechRecognizer_Meta[] = {
+    static PyGetSetDef getset_SpeechRecognizer_Static[] = {
         { "supported_grammar_languages", reinterpret_cast<getter>(SpeechRecognizer_get_SupportedGrammarLanguages), nullptr, nullptr, nullptr },
         { "supported_topic_languages", reinterpret_cast<getter>(SpeechRecognizer_get_SupportedTopicLanguages), nullptr, nullptr, nullptr },
         { "system_speech_language", reinterpret_cast<getter>(SpeechRecognizer_get_SystemSpeechLanguage), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_SpeechRecognizer_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_SpeechRecognizer_Meta) },
+    static PyMethodDef methods_SpeechRecognizer_Static[] = {
+        { "try_set_system_speech_language_async", reinterpret_cast<PyCFunction>(SpeechRecognizer_TrySetSystemSpeechLanguageAsync), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_SpeechRecognizer_Meta =
+    static PyType_Slot type_slots_SpeechRecognizer_Static[] = 
     {
-        "winrt._winrt_windows_media_speechrecognition.SpeechRecognizer_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SpeechRecognizer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SpeechRecognizer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SpeechRecognizer_Static =
+    {
+        "winrt._winrt_windows_media_speechrecognition.SpeechRecognizer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SpeechRecognizer_Meta
+        type_slots_SpeechRecognizer_Static
     };
 
     // ----- SpeechRecognizerStateChangedEventArgs class --------------------
@@ -3690,7 +3695,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     }
 
     static PyMethodDef _methods_VoiceCommandManager[] = {
-        { "install_command_sets_from_storage_file_async", reinterpret_cast<PyCFunction>(VoiceCommandManager_InstallCommandSetsFromStorageFileAsync), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -3715,25 +3719,31 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         _type_slots_VoiceCommandManager
     };
 
-    static PyGetSetDef getset_VoiceCommandManager_Meta[] = {
+    static PyGetSetDef getset_VoiceCommandManager_Static[] = {
         { "installed_command_sets", reinterpret_cast<getter>(VoiceCommandManager_get_InstalledCommandSets), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_VoiceCommandManager_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_VoiceCommandManager_Meta) },
+    static PyMethodDef methods_VoiceCommandManager_Static[] = {
+        { "install_command_sets_from_storage_file_async", reinterpret_cast<PyCFunction>(VoiceCommandManager_InstallCommandSetsFromStorageFileAsync), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_VoiceCommandManager_Meta =
+    static PyType_Slot type_slots_VoiceCommandManager_Static[] = 
     {
-        "winrt._winrt_windows_media_speechrecognition.VoiceCommandManager_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_VoiceCommandManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_VoiceCommandManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_VoiceCommandManager_Static =
+    {
+        "winrt._winrt_windows_media_speechrecognition.VoiceCommandManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_VoiceCommandManager_Meta
+        type_slots_VoiceCommandManager_Static
     };
 
     // ----- VoiceCommandSet class --------------------
@@ -4222,13 +4232,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_speechrecognition(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_SpeechRecognizer_Meta{PyType_FromSpec(&type_spec_SpeechRecognizer_Meta)};
-    if (!type_SpeechRecognizer_Meta)
+    py::pyobj_handle type_SpeechRecognizer_Static{PyType_FromSpec(&type_spec_SpeechRecognizer_Static)};
+    if (!type_SpeechRecognizer_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpeechRecognizer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpeechRecognizer_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpeechRecognizer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpeechRecognizer_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -4248,13 +4258,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_speechrecognition(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_VoiceCommandManager_Meta{PyType_FromSpec(&type_spec_VoiceCommandManager_Meta)};
-    if (!type_VoiceCommandManager_Meta)
+    py::pyobj_handle type_VoiceCommandManager_Static{PyType_FromSpec(&type_spec_VoiceCommandManager_Static)};
+    if (!type_VoiceCommandManager_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VoiceCommandManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VoiceCommandManager_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_VoiceCommandManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VoiceCommandManager_Static.get())) == -1)
     {
         return nullptr;
     }

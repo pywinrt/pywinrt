@@ -1115,7 +1115,6 @@ namespace py::cpp::Windows::Networking::Sockets
         { "close", reinterpret_cast<PyCFunction>(DatagramSocket_Close), METH_VARARGS, nullptr },
         { "connect_async", reinterpret_cast<PyCFunction>(DatagramSocket_ConnectAsync), METH_VARARGS, nullptr },
         { "enable_transfer_ownership", reinterpret_cast<PyCFunction>(DatagramSocket_EnableTransferOwnership), METH_VARARGS, nullptr },
-        { "get_endpoint_pairs_async", reinterpret_cast<PyCFunction>(DatagramSocket_GetEndpointPairsAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "get_output_stream_async", reinterpret_cast<PyCFunction>(DatagramSocket_GetOutputStreamAsync), METH_VARARGS, nullptr },
         { "join_multicast_group", reinterpret_cast<PyCFunction>(DatagramSocket_JoinMulticastGroup), METH_VARARGS, nullptr },
         { "transfer_ownership", reinterpret_cast<PyCFunction>(DatagramSocket_TransferOwnership), METH_VARARGS, nullptr },
@@ -1151,6 +1150,32 @@ namespace py::cpp::Windows::Networking::Sockets
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_DatagramSocket
+    };
+
+    static PyGetSetDef getset_DatagramSocket_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_DatagramSocket_Static[] = {
+        { "get_endpoint_pairs_async", reinterpret_cast<PyCFunction>(DatagramSocket_GetEndpointPairsAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_DatagramSocket_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_DatagramSocket_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_DatagramSocket_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_DatagramSocket_Static =
+    {
+        "winrt._winrt_windows_networking_sockets.DatagramSocket_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_DatagramSocket_Static
     };
 
     // ----- DatagramSocketControl class --------------------
@@ -4438,25 +4463,30 @@ namespace py::cpp::Windows::Networking::Sockets
         _type_slots_SocketActivityInformation
     };
 
-    static PyGetSetDef getset_SocketActivityInformation_Meta[] = {
+    static PyGetSetDef getset_SocketActivityInformation_Static[] = {
         { "all_sockets", reinterpret_cast<getter>(SocketActivityInformation_get_AllSockets), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_SocketActivityInformation_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_SocketActivityInformation_Meta) },
+    static PyMethodDef methods_SocketActivityInformation_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_SocketActivityInformation_Meta =
+    static PyType_Slot type_slots_SocketActivityInformation_Static[] = 
     {
-        "winrt._winrt_windows_networking_sockets.SocketActivityInformation_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SocketActivityInformation_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SocketActivityInformation_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SocketActivityInformation_Static =
+    {
+        "winrt._winrt_windows_networking_sockets.SocketActivityInformation_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SocketActivityInformation_Meta
+        type_slots_SocketActivityInformation_Static
     };
 
     // ----- SocketActivityTriggerDetails class --------------------
@@ -4609,7 +4639,6 @@ namespace py::cpp::Windows::Networking::Sockets
     }
 
     static PyMethodDef _methods_SocketError[] = {
-        { "get_status", reinterpret_cast<PyCFunction>(SocketError_GetStatus), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -4632,6 +4661,32 @@ namespace py::cpp::Windows::Networking::Sockets
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_SocketError
+    };
+
+    static PyGetSetDef getset_SocketError_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_SocketError_Static[] = {
+        { "get_status", reinterpret_cast<PyCFunction>(SocketError_GetStatus), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_SocketError_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SocketError_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SocketError_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SocketError_Static =
+    {
+        "winrt._winrt_windows_networking_sockets.SocketError_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_SocketError_Static
     };
 
     // ----- StreamSocket class --------------------
@@ -5170,7 +5225,6 @@ namespace py::cpp::Windows::Networking::Sockets
         { "close", reinterpret_cast<PyCFunction>(StreamSocket_Close), METH_VARARGS, nullptr },
         { "connect_async", reinterpret_cast<PyCFunction>(StreamSocket_ConnectAsync), METH_VARARGS, nullptr },
         { "enable_transfer_ownership", reinterpret_cast<PyCFunction>(StreamSocket_EnableTransferOwnership), METH_VARARGS, nullptr },
-        { "get_endpoint_pairs_async", reinterpret_cast<PyCFunction>(StreamSocket_GetEndpointPairsAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "transfer_ownership", reinterpret_cast<PyCFunction>(StreamSocket_TransferOwnership), METH_VARARGS, nullptr },
         { "upgrade_to_ssl_async", reinterpret_cast<PyCFunction>(StreamSocket_UpgradeToSslAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_StreamSocket, METH_O | METH_STATIC, nullptr },
@@ -5204,6 +5258,32 @@ namespace py::cpp::Windows::Networking::Sockets
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_StreamSocket
+    };
+
+    static PyGetSetDef getset_StreamSocket_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_StreamSocket_Static[] = {
+        { "get_endpoint_pairs_async", reinterpret_cast<PyCFunction>(StreamSocket_GetEndpointPairsAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_StreamSocket_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_StreamSocket_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_StreamSocket_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_StreamSocket_Static =
+    {
+        "winrt._winrt_windows_networking_sockets.StreamSocket_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_StreamSocket_Static
     };
 
     // ----- StreamSocketControl class --------------------
@@ -8168,7 +8248,6 @@ namespace py::cpp::Windows::Networking::Sockets
     }
 
     static PyMethodDef _methods_WebSocketError[] = {
-        { "get_status", reinterpret_cast<PyCFunction>(WebSocketError_GetStatus), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -8191,6 +8270,32 @@ namespace py::cpp::Windows::Networking::Sockets
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_WebSocketError
+    };
+
+    static PyGetSetDef getset_WebSocketError_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_WebSocketError_Static[] = {
+        { "get_status", reinterpret_cast<PyCFunction>(WebSocketError_GetStatus), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_WebSocketError_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_WebSocketError_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_WebSocketError_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_WebSocketError_Static =
+    {
+        "winrt._winrt_windows_networking_sockets.WebSocketError_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_WebSocketError_Static
     };
 
     // ----- WebSocketKeepAlive class --------------------
@@ -10426,7 +10531,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_sockets(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DatagramSocket, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_DatagramSocket_Static{PyType_FromSpec(&type_spec_DatagramSocket_Static)};
+    if (!type_DatagramSocket_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_DatagramSocket, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DatagramSocket_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -10496,13 +10607,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_sockets(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_SocketActivityInformation_Meta{PyType_FromSpec(&type_spec_SocketActivityInformation_Meta)};
-    if (!type_SocketActivityInformation_Meta)
+    py::pyobj_handle type_SocketActivityInformation_Static{PyType_FromSpec(&type_spec_SocketActivityInformation_Static)};
+    if (!type_SocketActivityInformation_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SocketActivityInformation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SocketActivityInformation_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SocketActivityInformation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SocketActivityInformation_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -10512,12 +10623,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_sockets(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SocketError, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_SocketError_Static{PyType_FromSpec(&type_spec_SocketError_Static)};
+    if (!type_SocketError_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StreamSocket, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SocketError, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SocketError_Static.get())) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_StreamSocket_Static{PyType_FromSpec(&type_spec_StreamSocket_Static)};
+    if (!type_StreamSocket_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_StreamSocket, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StreamSocket_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -10572,7 +10695,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_sockets(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebSocketError, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_WebSocketError_Static{PyType_FromSpec(&type_spec_WebSocketError_Static)};
+    if (!type_WebSocketError_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_WebSocketError, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WebSocketError_Static.get())) == -1)
     {
         return nullptr;
     }

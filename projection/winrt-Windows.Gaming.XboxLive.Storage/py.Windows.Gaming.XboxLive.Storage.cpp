@@ -1560,9 +1560,7 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
         { "create_container", reinterpret_cast<PyCFunction>(GameSaveProvider_CreateContainer), METH_VARARGS, nullptr },
         { "create_container_info_query", reinterpret_cast<PyCFunction>(GameSaveProvider_CreateContainerInfoQuery), METH_VARARGS, nullptr },
         { "delete_container_async", reinterpret_cast<PyCFunction>(GameSaveProvider_DeleteContainerAsync), METH_VARARGS, nullptr },
-        { "get_for_user_async", reinterpret_cast<PyCFunction>(GameSaveProvider_GetForUserAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "get_remaining_bytes_in_quota_async", reinterpret_cast<PyCFunction>(GameSaveProvider_GetRemainingBytesInQuotaAsync), METH_VARARGS, nullptr },
-        { "get_sync_on_demand_for_user_async", reinterpret_cast<PyCFunction>(GameSaveProvider_GetSyncOnDemandForUserAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_GameSaveProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GameSaveProvider), METH_O | METH_STATIC, nullptr },
         { }
@@ -1590,6 +1588,33 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_GameSaveProvider
+    };
+
+    static PyGetSetDef getset_GameSaveProvider_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_GameSaveProvider_Static[] = {
+        { "get_for_user_async", reinterpret_cast<PyCFunction>(GameSaveProvider_GetForUserAsync), METH_VARARGS, nullptr },
+        { "get_sync_on_demand_for_user_async", reinterpret_cast<PyCFunction>(GameSaveProvider_GetSyncOnDemandForUserAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_GameSaveProvider_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_GameSaveProvider_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_GameSaveProvider_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_GameSaveProvider_Static =
+    {
+        "winrt._winrt_windows_gaming_xboxlive_storage.GameSaveProvider_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_GameSaveProvider_Static
     };
 
     // ----- GameSaveProviderGetResult class --------------------
@@ -1792,7 +1817,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_xboxlive_storage(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GameSaveProvider, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_GameSaveProvider_Static{PyType_FromSpec(&type_spec_GameSaveProvider_Static)};
+    if (!type_GameSaveProvider_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_GameSaveProvider, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GameSaveProvider_Static.get())) == -1)
     {
         return nullptr;
     }

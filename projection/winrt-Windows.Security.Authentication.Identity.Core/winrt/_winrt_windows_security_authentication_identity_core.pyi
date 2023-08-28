@@ -15,7 +15,11 @@ from winrt.windows.security.authentication.identity.core import MicrosoftAccount
 
 Self = typing.TypeVar('Self')
 
-class MicrosoftAccountMultiFactorAuthenticationManager(winrt.system.Object):
+class MicrosoftAccountMultiFactorAuthenticationManager_Static(type):
+    @_property
+    def current(cls) -> typing.Optional[MicrosoftAccountMultiFactorAuthenticationManager]: ...
+
+class MicrosoftAccountMultiFactorAuthenticationManager(winrt.system.Object, metaclass=MicrosoftAccountMultiFactorAuthenticationManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MicrosoftAccountMultiFactorAuthenticationManager: ...
     def add_device_async(self, user_account_id: str, authentication_token: str, wns_channel_id: str, /) -> winrt.windows.foundation.IAsyncOperation[MicrosoftAccountMultiFactorServiceResponse]: ...
@@ -32,7 +36,6 @@ class MicrosoftAccountMultiFactorAuthenticationManager(winrt.system.Object):
     def get_sessions_async(self, user_account_id_list: typing.Iterable[str], /) -> winrt.windows.foundation.IAsyncOperation[MicrosoftAccountMultiFactorGetSessionsResult]: ...
     def remove_device_async(self, user_account_id: str, /) -> winrt.windows.foundation.IAsyncOperation[MicrosoftAccountMultiFactorServiceResponse]: ...
     def update_wns_channel_async(self, user_account_id: str, channel_uri: str, /) -> winrt.windows.foundation.IAsyncOperation[MicrosoftAccountMultiFactorServiceResponse]: ...
-    current: typing.ClassVar[typing.Optional[MicrosoftAccountMultiFactorAuthenticationManager]]
 
 class MicrosoftAccountMultiFactorGetSessionsResult(winrt.system.Object):
     @staticmethod

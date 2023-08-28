@@ -165,7 +165,6 @@ namespace py::cpp::Windows::ApplicationModel::Holographic
     }
 
     static PyMethodDef _methods_HolographicKeyboard[] = {
-        { "get_default", reinterpret_cast<PyCFunction>(HolographicKeyboard_GetDefault), METH_VARARGS | METH_STATIC, nullptr },
         { "reset_placement_override", reinterpret_cast<PyCFunction>(HolographicKeyboard_ResetPlacementOverride), METH_VARARGS, nullptr },
         { "set_placement_override", reinterpret_cast<PyCFunction>(HolographicKeyboard_SetPlacementOverride), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HolographicKeyboard, METH_O | METH_STATIC, nullptr },
@@ -193,6 +192,32 @@ namespace py::cpp::Windows::ApplicationModel::Holographic
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_HolographicKeyboard
+    };
+
+    static PyGetSetDef getset_HolographicKeyboard_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_HolographicKeyboard_Static[] = {
+        { "get_default", reinterpret_cast<PyCFunction>(HolographicKeyboard_GetDefault), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_HolographicKeyboard_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_HolographicKeyboard_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_HolographicKeyboard_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_HolographicKeyboard_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_holographic.HolographicKeyboard_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_HolographicKeyboard_Static
     };
 
     // ----- Windows.ApplicationModel.Holographic Initialization --------------------
@@ -241,7 +266,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_holographic(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HolographicKeyboard, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_HolographicKeyboard_Static{PyType_FromSpec(&type_spec_HolographicKeyboard_Static)};
+    if (!type_HolographicKeyboard_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_HolographicKeyboard, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HolographicKeyboard_Static.get())) == -1)
     {
         return nullptr;
     }

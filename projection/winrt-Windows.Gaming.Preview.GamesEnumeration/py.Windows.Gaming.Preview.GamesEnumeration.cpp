@@ -257,9 +257,6 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
     }
 
     static PyMethodDef _methods_GameList[] = {
-        { "find_all_async", reinterpret_cast<PyCFunction>(GameList_FindAllAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "merge_entries_async", reinterpret_cast<PyCFunction>(GameList_MergeEntriesAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "unmerge_entry_async", reinterpret_cast<PyCFunction>(GameList_UnmergeEntryAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "add_game_added", reinterpret_cast<PyCFunction>(GameList_add_GameAdded), METH_O | METH_STATIC, nullptr },
         { "remove_game_added", reinterpret_cast<PyCFunction>(GameList_remove_GameAdded), METH_O | METH_STATIC, nullptr },
         { "add_game_removed", reinterpret_cast<PyCFunction>(GameList_add_GameRemoved), METH_O | METH_STATIC, nullptr },
@@ -288,6 +285,34 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_GameList
+    };
+
+    static PyGetSetDef getset_GameList_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_GameList_Static[] = {
+        { "find_all_async", reinterpret_cast<PyCFunction>(GameList_FindAllAsync), METH_VARARGS, nullptr },
+        { "merge_entries_async", reinterpret_cast<PyCFunction>(GameList_MergeEntriesAsync), METH_VARARGS, nullptr },
+        { "unmerge_entry_async", reinterpret_cast<PyCFunction>(GameList_UnmergeEntryAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_GameList_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_GameList_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_GameList_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_GameList_Static =
+    {
+        "winrt._winrt_windows_gaming_preview_gamesenumeration.GameList_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_GameList_Static
     };
 
     // ----- GameListEntry class --------------------
@@ -1288,7 +1313,6 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
     }
 
     static PyMethodDef _methods_GameModeUserConfiguration[] = {
-        { "get_default", reinterpret_cast<PyCFunction>(GameModeUserConfiguration_GetDefault), METH_VARARGS | METH_STATIC, nullptr },
         { "save_async", reinterpret_cast<PyCFunction>(GameModeUserConfiguration_SaveAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_GameModeUserConfiguration, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GameModeUserConfiguration), METH_O | METH_STATIC, nullptr },
@@ -1316,6 +1340,32 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_GameModeUserConfiguration
+    };
+
+    static PyGetSetDef getset_GameModeUserConfiguration_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_GameModeUserConfiguration_Static[] = {
+        { "get_default", reinterpret_cast<PyCFunction>(GameModeUserConfiguration_GetDefault), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_GameModeUserConfiguration_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_GameModeUserConfiguration_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_GameModeUserConfiguration_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_GameModeUserConfiguration_Static =
+    {
+        "winrt._winrt_windows_gaming_preview_gamesenumeration.GameModeUserConfiguration_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_GameModeUserConfiguration_Static
     };
 
     // ----- IGameListEntry interface --------------------
@@ -1555,7 +1605,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_preview_gamesenumeration(void) noexc
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GameList, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_GameList_Static{PyType_FromSpec(&type_spec_GameList_Static)};
+    if (!type_GameList_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_GameList, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GameList_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -1570,7 +1626,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_preview_gamesenumeration(void) noexc
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GameModeUserConfiguration, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_GameModeUserConfiguration_Static{PyType_FromSpec(&type_spec_GameModeUserConfiguration_Static)};
+    if (!type_GameModeUserConfiguration_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_GameModeUserConfiguration, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GameModeUserConfiguration_Static.get())) == -1)
     {
         return nullptr;
     }

@@ -693,13 +693,6 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyMethodDef _methods_AudioEncodingProperties[] = {
         { "copy", reinterpret_cast<PyCFunction>(AudioEncodingProperties_Copy), METH_VARARGS, nullptr },
-        { "create_aac", reinterpret_cast<PyCFunction>(AudioEncodingProperties_CreateAac), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_aac_adts", reinterpret_cast<PyCFunction>(AudioEncodingProperties_CreateAacAdts), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_alac", reinterpret_cast<PyCFunction>(AudioEncodingProperties_CreateAlac), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_flac", reinterpret_cast<PyCFunction>(AudioEncodingProperties_CreateFlac), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_mp3", reinterpret_cast<PyCFunction>(AudioEncodingProperties_CreateMp3), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_pcm", reinterpret_cast<PyCFunction>(AudioEncodingProperties_CreatePcm), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_wma", reinterpret_cast<PyCFunction>(AudioEncodingProperties_CreateWma), METH_VARARGS | METH_STATIC, nullptr },
         { "get_format_user_data", reinterpret_cast<PyCFunction>(AudioEncodingProperties_GetFormatUserData), METH_VARARGS, nullptr },
         { "set_format_user_data", reinterpret_cast<PyCFunction>(AudioEncodingProperties_SetFormatUserData), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AudioEncodingProperties, METH_O | METH_STATIC, nullptr },
@@ -735,6 +728,38 @@ namespace py::cpp::Windows::Media::MediaProperties
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_AudioEncodingProperties
+    };
+
+    static PyGetSetDef getset_AudioEncodingProperties_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_AudioEncodingProperties_Static[] = {
+        { "create_aac", reinterpret_cast<PyCFunction>(AudioEncodingProperties_CreateAac), METH_VARARGS, nullptr },
+        { "create_aac_adts", reinterpret_cast<PyCFunction>(AudioEncodingProperties_CreateAacAdts), METH_VARARGS, nullptr },
+        { "create_alac", reinterpret_cast<PyCFunction>(AudioEncodingProperties_CreateAlac), METH_VARARGS, nullptr },
+        { "create_flac", reinterpret_cast<PyCFunction>(AudioEncodingProperties_CreateFlac), METH_VARARGS, nullptr },
+        { "create_mp3", reinterpret_cast<PyCFunction>(AudioEncodingProperties_CreateMp3), METH_VARARGS, nullptr },
+        { "create_pcm", reinterpret_cast<PyCFunction>(AudioEncodingProperties_CreatePcm), METH_VARARGS, nullptr },
+        { "create_wma", reinterpret_cast<PyCFunction>(AudioEncodingProperties_CreateWma), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_AudioEncodingProperties_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_AudioEncodingProperties_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_AudioEncodingProperties_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_AudioEncodingProperties_Static =
+    {
+        "winrt._winrt_windows_media_mediaproperties.AudioEncodingProperties_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_AudioEncodingProperties_Static
     };
 
     // ----- ContainerEncodingProperties class --------------------
@@ -1170,7 +1195,7 @@ namespace py::cpp::Windows::Media::MediaProperties
         _type_slots_H264ProfileIds
     };
 
-    static PyGetSetDef getset_H264ProfileIds_Meta[] = {
+    static PyGetSetDef getset_H264ProfileIds_Static[] = {
         { "baseline", reinterpret_cast<getter>(H264ProfileIds_get_Baseline), nullptr, nullptr, nullptr },
         { "constrained_baseline", reinterpret_cast<getter>(H264ProfileIds_get_ConstrainedBaseline), nullptr, nullptr, nullptr },
         { "extended", reinterpret_cast<getter>(H264ProfileIds_get_Extended), nullptr, nullptr, nullptr },
@@ -1184,20 +1209,25 @@ namespace py::cpp::Windows::Media::MediaProperties
         { }
     };
 
-    static PyType_Slot type_slots_H264ProfileIds_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_H264ProfileIds_Meta) },
+    static PyMethodDef methods_H264ProfileIds_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_H264ProfileIds_Meta =
+    static PyType_Slot type_slots_H264ProfileIds_Static[] = 
     {
-        "winrt._winrt_windows_media_mediaproperties.H264ProfileIds_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_H264ProfileIds_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_H264ProfileIds_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_H264ProfileIds_Static =
+    {
+        "winrt._winrt_windows_media_mediaproperties.H264ProfileIds_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_H264ProfileIds_Meta
+        type_slots_H264ProfileIds_Static
     };
 
     // ----- ImageEncodingProperties class --------------------
@@ -1649,12 +1679,6 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyMethodDef _methods_ImageEncodingProperties[] = {
         { "copy", reinterpret_cast<PyCFunction>(ImageEncodingProperties_Copy), METH_VARARGS, nullptr },
-        { "create_bmp", reinterpret_cast<PyCFunction>(ImageEncodingProperties_CreateBmp), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_heif", reinterpret_cast<PyCFunction>(ImageEncodingProperties_CreateHeif), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_jpeg", reinterpret_cast<PyCFunction>(ImageEncodingProperties_CreateJpeg), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_jpeg_x_r", reinterpret_cast<PyCFunction>(ImageEncodingProperties_CreateJpegXR), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_png", reinterpret_cast<PyCFunction>(ImageEncodingProperties_CreatePng), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_uncompressed", reinterpret_cast<PyCFunction>(ImageEncodingProperties_CreateUncompressed), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_ImageEncodingProperties, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ImageEncodingProperties), METH_O | METH_STATIC, nullptr },
         { }
@@ -1685,6 +1709,37 @@ namespace py::cpp::Windows::Media::MediaProperties
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ImageEncodingProperties
+    };
+
+    static PyGetSetDef getset_ImageEncodingProperties_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ImageEncodingProperties_Static[] = {
+        { "create_bmp", reinterpret_cast<PyCFunction>(ImageEncodingProperties_CreateBmp), METH_VARARGS, nullptr },
+        { "create_heif", reinterpret_cast<PyCFunction>(ImageEncodingProperties_CreateHeif), METH_VARARGS, nullptr },
+        { "create_jpeg", reinterpret_cast<PyCFunction>(ImageEncodingProperties_CreateJpeg), METH_VARARGS, nullptr },
+        { "create_jpeg_x_r", reinterpret_cast<PyCFunction>(ImageEncodingProperties_CreateJpegXR), METH_VARARGS, nullptr },
+        { "create_png", reinterpret_cast<PyCFunction>(ImageEncodingProperties_CreatePng), METH_VARARGS, nullptr },
+        { "create_uncompressed", reinterpret_cast<PyCFunction>(ImageEncodingProperties_CreateUncompressed), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_ImageEncodingProperties_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ImageEncodingProperties_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImageEncodingProperties_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ImageEncodingProperties_Static =
+    {
+        "winrt._winrt_windows_media_mediaproperties.ImageEncodingProperties_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ImageEncodingProperties_Static
     };
 
     // ----- MediaEncodingProfile class --------------------
@@ -2447,18 +2502,6 @@ namespace py::cpp::Windows::Media::MediaProperties
     }
 
     static PyMethodDef _methods_MediaEncodingProfile[] = {
-        { "create_alac", reinterpret_cast<PyCFunction>(MediaEncodingProfile_CreateAlac), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_avi", reinterpret_cast<PyCFunction>(MediaEncodingProfile_CreateAvi), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_flac", reinterpret_cast<PyCFunction>(MediaEncodingProfile_CreateFlac), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_from_file_async", reinterpret_cast<PyCFunction>(MediaEncodingProfile_CreateFromFileAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_from_stream_async", reinterpret_cast<PyCFunction>(MediaEncodingProfile_CreateFromStreamAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_hevc", reinterpret_cast<PyCFunction>(MediaEncodingProfile_CreateHevc), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_m4a", reinterpret_cast<PyCFunction>(MediaEncodingProfile_CreateM4a), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_mp3", reinterpret_cast<PyCFunction>(MediaEncodingProfile_CreateMp3), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_mp4", reinterpret_cast<PyCFunction>(MediaEncodingProfile_CreateMp4), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_wav", reinterpret_cast<PyCFunction>(MediaEncodingProfile_CreateWav), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_wma", reinterpret_cast<PyCFunction>(MediaEncodingProfile_CreateWma), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_wmv", reinterpret_cast<PyCFunction>(MediaEncodingProfile_CreateWmv), METH_VARARGS | METH_STATIC, nullptr },
         { "get_audio_tracks", reinterpret_cast<PyCFunction>(MediaEncodingProfile_GetAudioTracks), METH_VARARGS, nullptr },
         { "get_timed_metadata_tracks", reinterpret_cast<PyCFunction>(MediaEncodingProfile_GetTimedMetadataTracks), METH_VARARGS, nullptr },
         { "get_video_tracks", reinterpret_cast<PyCFunction>(MediaEncodingProfile_GetVideoTracks), METH_VARARGS, nullptr },
@@ -2493,6 +2536,43 @@ namespace py::cpp::Windows::Media::MediaProperties
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_MediaEncodingProfile
+    };
+
+    static PyGetSetDef getset_MediaEncodingProfile_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_MediaEncodingProfile_Static[] = {
+        { "create_alac", reinterpret_cast<PyCFunction>(MediaEncodingProfile_CreateAlac), METH_VARARGS, nullptr },
+        { "create_avi", reinterpret_cast<PyCFunction>(MediaEncodingProfile_CreateAvi), METH_VARARGS, nullptr },
+        { "create_flac", reinterpret_cast<PyCFunction>(MediaEncodingProfile_CreateFlac), METH_VARARGS, nullptr },
+        { "create_from_file_async", reinterpret_cast<PyCFunction>(MediaEncodingProfile_CreateFromFileAsync), METH_VARARGS, nullptr },
+        { "create_from_stream_async", reinterpret_cast<PyCFunction>(MediaEncodingProfile_CreateFromStreamAsync), METH_VARARGS, nullptr },
+        { "create_hevc", reinterpret_cast<PyCFunction>(MediaEncodingProfile_CreateHevc), METH_VARARGS, nullptr },
+        { "create_m4a", reinterpret_cast<PyCFunction>(MediaEncodingProfile_CreateM4a), METH_VARARGS, nullptr },
+        { "create_mp3", reinterpret_cast<PyCFunction>(MediaEncodingProfile_CreateMp3), METH_VARARGS, nullptr },
+        { "create_mp4", reinterpret_cast<PyCFunction>(MediaEncodingProfile_CreateMp4), METH_VARARGS, nullptr },
+        { "create_wav", reinterpret_cast<PyCFunction>(MediaEncodingProfile_CreateWav), METH_VARARGS, nullptr },
+        { "create_wma", reinterpret_cast<PyCFunction>(MediaEncodingProfile_CreateWma), METH_VARARGS, nullptr },
+        { "create_wmv", reinterpret_cast<PyCFunction>(MediaEncodingProfile_CreateWmv), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_MediaEncodingProfile_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_MediaEncodingProfile_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_MediaEncodingProfile_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_MediaEncodingProfile_Static =
+    {
+        "winrt._winrt_windows_media_mediaproperties.MediaEncodingProfile_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_MediaEncodingProfile_Static
     };
 
     // ----- MediaEncodingSubtypes class --------------------
@@ -3517,7 +3597,7 @@ namespace py::cpp::Windows::Media::MediaProperties
         _type_slots_MediaEncodingSubtypes
     };
 
-    static PyGetSetDef getset_MediaEncodingSubtypes_Meta[] = {
+    static PyGetSetDef getset_MediaEncodingSubtypes_Static[] = {
         { "asf", reinterpret_cast<getter>(MediaEncodingSubtypes_get_Asf), nullptr, nullptr, nullptr },
         { "aac", reinterpret_cast<getter>(MediaEncodingSubtypes_get_Aac), nullptr, nullptr, nullptr },
         { "aac_adts", reinterpret_cast<getter>(MediaEncodingSubtypes_get_AacAdts), nullptr, nullptr, nullptr },
@@ -3573,20 +3653,25 @@ namespace py::cpp::Windows::Media::MediaProperties
         { }
     };
 
-    static PyType_Slot type_slots_MediaEncodingSubtypes_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_MediaEncodingSubtypes_Meta) },
+    static PyMethodDef methods_MediaEncodingSubtypes_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_MediaEncodingSubtypes_Meta =
+    static PyType_Slot type_slots_MediaEncodingSubtypes_Static[] = 
     {
-        "winrt._winrt_windows_media_mediaproperties.MediaEncodingSubtypes_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_MediaEncodingSubtypes_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_MediaEncodingSubtypes_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_MediaEncodingSubtypes_Static =
+    {
+        "winrt._winrt_windows_media_mediaproperties.MediaEncodingSubtypes_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_MediaEncodingSubtypes_Meta
+        type_slots_MediaEncodingSubtypes_Static
     };
 
     // ----- MediaPropertySet class --------------------
@@ -4312,7 +4397,7 @@ namespace py::cpp::Windows::Media::MediaProperties
         _type_slots_Mpeg2ProfileIds
     };
 
-    static PyGetSetDef getset_Mpeg2ProfileIds_Meta[] = {
+    static PyGetSetDef getset_Mpeg2ProfileIds_Static[] = {
         { "high", reinterpret_cast<getter>(Mpeg2ProfileIds_get_High), nullptr, nullptr, nullptr },
         { "main", reinterpret_cast<getter>(Mpeg2ProfileIds_get_Main), nullptr, nullptr, nullptr },
         { "signal_noise_ratio_scalable", reinterpret_cast<getter>(Mpeg2ProfileIds_get_SignalNoiseRatioScalable), nullptr, nullptr, nullptr },
@@ -4321,20 +4406,25 @@ namespace py::cpp::Windows::Media::MediaProperties
         { }
     };
 
-    static PyType_Slot type_slots_Mpeg2ProfileIds_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_Mpeg2ProfileIds_Meta) },
+    static PyMethodDef methods_Mpeg2ProfileIds_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_Mpeg2ProfileIds_Meta =
+    static PyType_Slot type_slots_Mpeg2ProfileIds_Static[] = 
     {
-        "winrt._winrt_windows_media_mediaproperties.Mpeg2ProfileIds_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Mpeg2ProfileIds_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Mpeg2ProfileIds_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Mpeg2ProfileIds_Static =
+    {
+        "winrt._winrt_windows_media_mediaproperties.Mpeg2ProfileIds_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Mpeg2ProfileIds_Meta
+        type_slots_Mpeg2ProfileIds_Static
     };
 
     // ----- TimedMetadataEncodingProperties class --------------------
@@ -4706,10 +4796,6 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyMethodDef _methods_TimedMetadataEncodingProperties[] = {
         { "copy", reinterpret_cast<PyCFunction>(TimedMetadataEncodingProperties_Copy), METH_VARARGS, nullptr },
-        { "create_pgs", reinterpret_cast<PyCFunction>(TimedMetadataEncodingProperties_CreatePgs), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_srt", reinterpret_cast<PyCFunction>(TimedMetadataEncodingProperties_CreateSrt), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_ssa", reinterpret_cast<PyCFunction>(TimedMetadataEncodingProperties_CreateSsa), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_vob_sub", reinterpret_cast<PyCFunction>(TimedMetadataEncodingProperties_CreateVobSub), METH_VARARGS | METH_STATIC, nullptr },
         { "get_format_user_data", reinterpret_cast<PyCFunction>(TimedMetadataEncodingProperties_GetFormatUserData), METH_VARARGS, nullptr },
         { "set_format_user_data", reinterpret_cast<PyCFunction>(TimedMetadataEncodingProperties_SetFormatUserData), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_TimedMetadataEncodingProperties, METH_O | METH_STATIC, nullptr },
@@ -4740,6 +4826,35 @@ namespace py::cpp::Windows::Media::MediaProperties
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_TimedMetadataEncodingProperties
+    };
+
+    static PyGetSetDef getset_TimedMetadataEncodingProperties_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_TimedMetadataEncodingProperties_Static[] = {
+        { "create_pgs", reinterpret_cast<PyCFunction>(TimedMetadataEncodingProperties_CreatePgs), METH_VARARGS, nullptr },
+        { "create_srt", reinterpret_cast<PyCFunction>(TimedMetadataEncodingProperties_CreateSrt), METH_VARARGS, nullptr },
+        { "create_ssa", reinterpret_cast<PyCFunction>(TimedMetadataEncodingProperties_CreateSsa), METH_VARARGS, nullptr },
+        { "create_vob_sub", reinterpret_cast<PyCFunction>(TimedMetadataEncodingProperties_CreateVobSub), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_TimedMetadataEncodingProperties_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_TimedMetadataEncodingProperties_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_TimedMetadataEncodingProperties_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_TimedMetadataEncodingProperties_Static =
+    {
+        "winrt._winrt_windows_media_mediaproperties.TimedMetadataEncodingProperties_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_TimedMetadataEncodingProperties_Static
     };
 
     // ----- VideoEncodingProperties class --------------------
@@ -5375,10 +5490,6 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyMethodDef _methods_VideoEncodingProperties[] = {
         { "copy", reinterpret_cast<PyCFunction>(VideoEncodingProperties_Copy), METH_VARARGS, nullptr },
-        { "create_h264", reinterpret_cast<PyCFunction>(VideoEncodingProperties_CreateH264), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_hevc", reinterpret_cast<PyCFunction>(VideoEncodingProperties_CreateHevc), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_mpeg2", reinterpret_cast<PyCFunction>(VideoEncodingProperties_CreateMpeg2), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_uncompressed", reinterpret_cast<PyCFunction>(VideoEncodingProperties_CreateUncompressed), METH_VARARGS | METH_STATIC, nullptr },
         { "get_format_user_data", reinterpret_cast<PyCFunction>(VideoEncodingProperties_GetFormatUserData), METH_VARARGS, nullptr },
         { "set_format_user_data", reinterpret_cast<PyCFunction>(VideoEncodingProperties_SetFormatUserData), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_VideoEncodingProperties, METH_O | METH_STATIC, nullptr },
@@ -5417,6 +5528,35 @@ namespace py::cpp::Windows::Media::MediaProperties
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_VideoEncodingProperties
+    };
+
+    static PyGetSetDef getset_VideoEncodingProperties_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_VideoEncodingProperties_Static[] = {
+        { "create_h264", reinterpret_cast<PyCFunction>(VideoEncodingProperties_CreateH264), METH_VARARGS, nullptr },
+        { "create_hevc", reinterpret_cast<PyCFunction>(VideoEncodingProperties_CreateHevc), METH_VARARGS, nullptr },
+        { "create_mpeg2", reinterpret_cast<PyCFunction>(VideoEncodingProperties_CreateMpeg2), METH_VARARGS, nullptr },
+        { "create_uncompressed", reinterpret_cast<PyCFunction>(VideoEncodingProperties_CreateUncompressed), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_VideoEncodingProperties_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_VideoEncodingProperties_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_VideoEncodingProperties_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_VideoEncodingProperties_Static =
+    {
+        "winrt._winrt_windows_media_mediaproperties.VideoEncodingProperties_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_VideoEncodingProperties_Static
     };
 
     // ----- IMediaEncodingProperties interface --------------------
@@ -5622,7 +5762,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_mediaproperties(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AudioEncodingProperties, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_AudioEncodingProperties_Static{PyType_FromSpec(&type_spec_AudioEncodingProperties_Static)};
+    if (!type_AudioEncodingProperties_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_AudioEncodingProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AudioEncodingProperties_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -5632,34 +5778,46 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_mediaproperties(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_H264ProfileIds_Meta{PyType_FromSpec(&type_spec_H264ProfileIds_Meta)};
-    if (!type_H264ProfileIds_Meta)
+    py::pyobj_handle type_H264ProfileIds_Static{PyType_FromSpec(&type_spec_H264ProfileIds_Static)};
+    if (!type_H264ProfileIds_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_H264ProfileIds, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_H264ProfileIds_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_H264ProfileIds, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_H264ProfileIds_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ImageEncodingProperties, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_ImageEncodingProperties_Static{PyType_FromSpec(&type_spec_ImageEncodingProperties_Static)};
+    if (!type_ImageEncodingProperties_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MediaEncodingProfile, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ImageEncodingProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ImageEncodingProperties_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_MediaEncodingSubtypes_Meta{PyType_FromSpec(&type_spec_MediaEncodingSubtypes_Meta)};
-    if (!type_MediaEncodingSubtypes_Meta)
+    py::pyobj_handle type_MediaEncodingProfile_Static{PyType_FromSpec(&type_spec_MediaEncodingProfile_Static)};
+    if (!type_MediaEncodingProfile_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MediaEncodingSubtypes, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MediaEncodingSubtypes_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaEncodingProfile, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MediaEncodingProfile_Static.get())) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MediaEncodingSubtypes_Static{PyType_FromSpec(&type_spec_MediaEncodingSubtypes_Static)};
+    if (!type_MediaEncodingSubtypes_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_MediaEncodingSubtypes, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MediaEncodingSubtypes_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -5674,23 +5832,35 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_mediaproperties(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_Mpeg2ProfileIds_Meta{PyType_FromSpec(&type_spec_Mpeg2ProfileIds_Meta)};
-    if (!type_Mpeg2ProfileIds_Meta)
+    py::pyobj_handle type_Mpeg2ProfileIds_Static{PyType_FromSpec(&type_spec_Mpeg2ProfileIds_Static)};
+    if (!type_Mpeg2ProfileIds_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Mpeg2ProfileIds, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Mpeg2ProfileIds_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Mpeg2ProfileIds, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Mpeg2ProfileIds_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_TimedMetadataEncodingProperties, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_TimedMetadataEncodingProperties_Static{PyType_FromSpec(&type_spec_TimedMetadataEncodingProperties_Static)};
+    if (!type_TimedMetadataEncodingProperties_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VideoEncodingProperties, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TimedMetadataEncodingProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TimedMetadataEncodingProperties_Static.get())) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_VideoEncodingProperties_Static{PyType_FromSpec(&type_spec_VideoEncodingProperties_Static)};
+    if (!type_VideoEncodingProperties_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_VideoEncodingProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VideoEncodingProperties_Static.get())) == -1)
     {
         return nullptr;
     }

@@ -313,7 +313,7 @@ namespace py::cpp::Windows::Media::ClosedCaptioning
         _type_slots_ClosedCaptionProperties
     };
 
-    static PyGetSetDef getset_ClosedCaptionProperties_Meta[] = {
+    static PyGetSetDef getset_ClosedCaptionProperties_Static[] = {
         { "background_color", reinterpret_cast<getter>(ClosedCaptionProperties_get_BackgroundColor), nullptr, nullptr, nullptr },
         { "background_opacity", reinterpret_cast<getter>(ClosedCaptionProperties_get_BackgroundOpacity), nullptr, nullptr, nullptr },
         { "computed_background_color", reinterpret_cast<getter>(ClosedCaptionProperties_get_ComputedBackgroundColor), nullptr, nullptr, nullptr },
@@ -329,20 +329,25 @@ namespace py::cpp::Windows::Media::ClosedCaptioning
         { }
     };
 
-    static PyType_Slot type_slots_ClosedCaptionProperties_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_ClosedCaptionProperties_Meta) },
+    static PyMethodDef methods_ClosedCaptionProperties_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_ClosedCaptionProperties_Meta =
+    static PyType_Slot type_slots_ClosedCaptionProperties_Static[] = 
     {
-        "winrt._winrt_windows_media_closedcaptioning.ClosedCaptionProperties_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ClosedCaptionProperties_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ClosedCaptionProperties_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ClosedCaptionProperties_Static =
+    {
+        "winrt._winrt_windows_media_closedcaptioning.ClosedCaptionProperties_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ClosedCaptionProperties_Meta
+        type_slots_ClosedCaptionProperties_Static
     };
 
     // ----- Windows.Media.ClosedCaptioning Initialization --------------------
@@ -391,13 +396,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_closedcaptioning(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_ClosedCaptionProperties_Meta{PyType_FromSpec(&type_spec_ClosedCaptionProperties_Meta)};
-    if (!type_ClosedCaptionProperties_Meta)
+    py::pyobj_handle type_ClosedCaptionProperties_Static{PyType_FromSpec(&type_spec_ClosedCaptionProperties_Static)};
+    if (!type_ClosedCaptionProperties_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ClosedCaptionProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ClosedCaptionProperties_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ClosedCaptionProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ClosedCaptionProperties_Static.get())) == -1)
     {
         return nullptr;
     }

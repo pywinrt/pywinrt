@@ -662,7 +662,6 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
     }
 
     static PyMethodDef _methods_CoreInkIndependentInputSource[] = {
-        { "create", reinterpret_cast<PyCFunction>(CoreInkIndependentInputSource_Create), METH_VARARGS | METH_STATIC, nullptr },
         { "add_pointer_entering", reinterpret_cast<PyCFunction>(CoreInkIndependentInputSource_add_PointerEntering), METH_O, nullptr },
         { "remove_pointer_entering", reinterpret_cast<PyCFunction>(CoreInkIndependentInputSource_remove_PointerEntering), METH_O, nullptr },
         { "add_pointer_exiting", reinterpret_cast<PyCFunction>(CoreInkIndependentInputSource_add_PointerExiting), METH_O, nullptr },
@@ -704,6 +703,32 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_CoreInkIndependentInputSource
+    };
+
+    static PyGetSetDef getset_CoreInkIndependentInputSource_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_CoreInkIndependentInputSource_Static[] = {
+        { "create", reinterpret_cast<PyCFunction>(CoreInkIndependentInputSource_Create), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_CoreInkIndependentInputSource_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CoreInkIndependentInputSource_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CoreInkIndependentInputSource_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CoreInkIndependentInputSource_Static =
+    {
+        "winrt._winrt_windows_ui_input_inking_core.CoreInkIndependentInputSource_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CoreInkIndependentInputSource_Static
     };
 
     // ----- CoreInkPresenterHost class --------------------
@@ -1329,7 +1354,6 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
     }
 
     static PyMethodDef _methods_CoreWetStrokeUpdateSource[] = {
-        { "create", reinterpret_cast<PyCFunction>(CoreWetStrokeUpdateSource_Create), METH_VARARGS | METH_STATIC, nullptr },
         { "add_wet_stroke_canceled", reinterpret_cast<PyCFunction>(CoreWetStrokeUpdateSource_add_WetStrokeCanceled), METH_O, nullptr },
         { "remove_wet_stroke_canceled", reinterpret_cast<PyCFunction>(CoreWetStrokeUpdateSource_remove_WetStrokeCanceled), METH_O, nullptr },
         { "add_wet_stroke_completed", reinterpret_cast<PyCFunction>(CoreWetStrokeUpdateSource_add_WetStrokeCompleted), METH_O, nullptr },
@@ -1366,6 +1390,32 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_CoreWetStrokeUpdateSource
+    };
+
+    static PyGetSetDef getset_CoreWetStrokeUpdateSource_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_CoreWetStrokeUpdateSource_Static[] = {
+        { "create", reinterpret_cast<PyCFunction>(CoreWetStrokeUpdateSource_Create), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_CoreWetStrokeUpdateSource_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CoreWetStrokeUpdateSource_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CoreWetStrokeUpdateSource_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CoreWetStrokeUpdateSource_Static =
+    {
+        "winrt._winrt_windows_ui_input_inking_core.CoreWetStrokeUpdateSource_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CoreWetStrokeUpdateSource_Static
     };
 
     // ----- Windows.UI.Input.Inking.Core Initialization --------------------
@@ -1419,7 +1469,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input_inking_core(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreInkIndependentInputSource, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_CoreInkIndependentInputSource_Static{PyType_FromSpec(&type_spec_CoreInkIndependentInputSource_Static)};
+    if (!type_CoreInkIndependentInputSource_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_CoreInkIndependentInputSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CoreInkIndependentInputSource_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -1434,7 +1490,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input_inking_core(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWetStrokeUpdateSource, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_CoreWetStrokeUpdateSource_Static{PyType_FromSpec(&type_spec_CoreWetStrokeUpdateSource_Static)};
+    if (!type_CoreWetStrokeUpdateSource_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_CoreWetStrokeUpdateSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CoreWetStrokeUpdateSource_Static.get())) == -1)
     {
         return nullptr;
     }

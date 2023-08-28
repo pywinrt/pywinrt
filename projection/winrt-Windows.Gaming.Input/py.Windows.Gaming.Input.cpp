@@ -459,7 +459,6 @@ namespace py::cpp::Windows::Gaming::Input
     }
 
     static PyMethodDef _methods_ArcadeStick[] = {
-        { "from_game_controller", reinterpret_cast<PyCFunction>(ArcadeStick_FromGameController), METH_VARARGS | METH_STATIC, nullptr },
         { "get_button_label", reinterpret_cast<PyCFunction>(ArcadeStick_GetButtonLabel), METH_VARARGS, nullptr },
         { "get_current_reading", reinterpret_cast<PyCFunction>(ArcadeStick_GetCurrentReading), METH_VARARGS, nullptr },
         { "try_get_battery_report", reinterpret_cast<PyCFunction>(ArcadeStick_TryGetBatteryReport), METH_VARARGS, nullptr },
@@ -503,25 +502,31 @@ namespace py::cpp::Windows::Gaming::Input
         _type_slots_ArcadeStick
     };
 
-    static PyGetSetDef getset_ArcadeStick_Meta[] = {
+    static PyGetSetDef getset_ArcadeStick_Static[] = {
         { "arcade_sticks", reinterpret_cast<getter>(ArcadeStick_get_ArcadeSticks), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_ArcadeStick_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_ArcadeStick_Meta) },
+    static PyMethodDef methods_ArcadeStick_Static[] = {
+        { "from_game_controller", reinterpret_cast<PyCFunction>(ArcadeStick_FromGameController), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_ArcadeStick_Meta =
+    static PyType_Slot type_slots_ArcadeStick_Static[] = 
     {
-        "winrt._winrt_windows_gaming_input.ArcadeStick_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ArcadeStick_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ArcadeStick_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ArcadeStick_Static =
+    {
+        "winrt._winrt_windows_gaming_input.ArcadeStick_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ArcadeStick_Meta
+        type_slots_ArcadeStick_Static
     };
 
     // ----- FlightStick class --------------------
@@ -996,7 +1001,6 @@ namespace py::cpp::Windows::Gaming::Input
     }
 
     static PyMethodDef _methods_FlightStick[] = {
-        { "from_game_controller", reinterpret_cast<PyCFunction>(FlightStick_FromGameController), METH_VARARGS | METH_STATIC, nullptr },
         { "get_button_label", reinterpret_cast<PyCFunction>(FlightStick_GetButtonLabel), METH_VARARGS, nullptr },
         { "get_current_reading", reinterpret_cast<PyCFunction>(FlightStick_GetCurrentReading), METH_VARARGS, nullptr },
         { "try_get_battery_report", reinterpret_cast<PyCFunction>(FlightStick_TryGetBatteryReport), METH_VARARGS, nullptr },
@@ -1041,25 +1045,31 @@ namespace py::cpp::Windows::Gaming::Input
         _type_slots_FlightStick
     };
 
-    static PyGetSetDef getset_FlightStick_Meta[] = {
+    static PyGetSetDef getset_FlightStick_Static[] = {
         { "flight_sticks", reinterpret_cast<getter>(FlightStick_get_FlightSticks), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_FlightStick_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_FlightStick_Meta) },
+    static PyMethodDef methods_FlightStick_Static[] = {
+        { "from_game_controller", reinterpret_cast<PyCFunction>(FlightStick_FromGameController), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_FlightStick_Meta =
+    static PyType_Slot type_slots_FlightStick_Static[] = 
     {
-        "winrt._winrt_windows_gaming_input.FlightStick_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_FlightStick_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_FlightStick_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_FlightStick_Static =
+    {
+        "winrt._winrt_windows_gaming_input.FlightStick_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_FlightStick_Meta
+        type_slots_FlightStick_Static
     };
 
     // ----- Gamepad class --------------------
@@ -1562,7 +1572,6 @@ namespace py::cpp::Windows::Gaming::Input
     }
 
     static PyMethodDef _methods_Gamepad[] = {
-        { "from_game_controller", reinterpret_cast<PyCFunction>(Gamepad_FromGameController), METH_VARARGS | METH_STATIC, nullptr },
         { "get_button_label", reinterpret_cast<PyCFunction>(Gamepad_GetButtonLabel), METH_VARARGS, nullptr },
         { "get_current_reading", reinterpret_cast<PyCFunction>(Gamepad_GetCurrentReading), METH_VARARGS, nullptr },
         { "try_get_battery_report", reinterpret_cast<PyCFunction>(Gamepad_TryGetBatteryReport), METH_VARARGS, nullptr },
@@ -1607,25 +1616,31 @@ namespace py::cpp::Windows::Gaming::Input
         _type_slots_Gamepad
     };
 
-    static PyGetSetDef getset_Gamepad_Meta[] = {
+    static PyGetSetDef getset_Gamepad_Static[] = {
         { "gamepads", reinterpret_cast<getter>(Gamepad_get_Gamepads), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_Gamepad_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_Gamepad_Meta) },
+    static PyMethodDef methods_Gamepad_Static[] = {
+        { "from_game_controller", reinterpret_cast<PyCFunction>(Gamepad_FromGameController), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_Gamepad_Meta =
+    static PyType_Slot type_slots_Gamepad_Static[] = 
     {
-        "winrt._winrt_windows_gaming_input.Gamepad_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Gamepad_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Gamepad_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Gamepad_Static =
+    {
+        "winrt._winrt_windows_gaming_input.Gamepad_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Gamepad_Meta
+        type_slots_Gamepad_Static
     };
 
     // ----- Headset class --------------------
@@ -2334,7 +2349,6 @@ namespace py::cpp::Windows::Gaming::Input
     }
 
     static PyMethodDef _methods_RacingWheel[] = {
-        { "from_game_controller", reinterpret_cast<PyCFunction>(RacingWheel_FromGameController), METH_VARARGS | METH_STATIC, nullptr },
         { "get_button_label", reinterpret_cast<PyCFunction>(RacingWheel_GetButtonLabel), METH_VARARGS, nullptr },
         { "get_current_reading", reinterpret_cast<PyCFunction>(RacingWheel_GetCurrentReading), METH_VARARGS, nullptr },
         { "try_get_battery_report", reinterpret_cast<PyCFunction>(RacingWheel_TryGetBatteryReport), METH_VARARGS, nullptr },
@@ -2384,25 +2398,31 @@ namespace py::cpp::Windows::Gaming::Input
         _type_slots_RacingWheel
     };
 
-    static PyGetSetDef getset_RacingWheel_Meta[] = {
+    static PyGetSetDef getset_RacingWheel_Static[] = {
         { "racing_wheels", reinterpret_cast<getter>(RacingWheel_get_RacingWheels), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_RacingWheel_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_RacingWheel_Meta) },
+    static PyMethodDef methods_RacingWheel_Static[] = {
+        { "from_game_controller", reinterpret_cast<PyCFunction>(RacingWheel_FromGameController), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_RacingWheel_Meta =
+    static PyType_Slot type_slots_RacingWheel_Static[] = 
     {
-        "winrt._winrt_windows_gaming_input.RacingWheel_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_RacingWheel_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_RacingWheel_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_RacingWheel_Static =
+    {
+        "winrt._winrt_windows_gaming_input.RacingWheel_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_RacingWheel_Meta
+        type_slots_RacingWheel_Static
     };
 
     // ----- RawGameController class --------------------
@@ -3064,7 +3084,6 @@ namespace py::cpp::Windows::Gaming::Input
     }
 
     static PyMethodDef _methods_RawGameController[] = {
-        { "from_game_controller", reinterpret_cast<PyCFunction>(RawGameController_FromGameController), METH_VARARGS | METH_STATIC, nullptr },
         { "get_button_label", reinterpret_cast<PyCFunction>(RawGameController_GetButtonLabel), METH_VARARGS, nullptr },
         { "get_current_reading", reinterpret_cast<PyCFunction>(RawGameController_GetCurrentReading), METH_VARARGS, nullptr },
         { "get_switch_kind", reinterpret_cast<PyCFunction>(RawGameController_GetSwitchKind), METH_VARARGS, nullptr },
@@ -3118,25 +3137,31 @@ namespace py::cpp::Windows::Gaming::Input
         _type_slots_RawGameController
     };
 
-    static PyGetSetDef getset_RawGameController_Meta[] = {
+    static PyGetSetDef getset_RawGameController_Static[] = {
         { "raw_game_controllers", reinterpret_cast<getter>(RawGameController_get_RawGameControllers), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_RawGameController_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_RawGameController_Meta) },
+    static PyMethodDef methods_RawGameController_Static[] = {
+        { "from_game_controller", reinterpret_cast<PyCFunction>(RawGameController_FromGameController), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_RawGameController_Meta =
+    static PyType_Slot type_slots_RawGameController_Static[] = 
     {
-        "winrt._winrt_windows_gaming_input.RawGameController_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_RawGameController_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_RawGameController_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_RawGameController_Static =
+    {
+        "winrt._winrt_windows_gaming_input.RawGameController_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_RawGameController_Meta
+        type_slots_RawGameController_Static
     };
 
     // ----- UINavigationController class --------------------
@@ -3623,7 +3648,6 @@ namespace py::cpp::Windows::Gaming::Input
     }
 
     static PyMethodDef _methods_UINavigationController[] = {
-        { "from_game_controller", reinterpret_cast<PyCFunction>(UINavigationController_FromGameController), METH_VARARGS | METH_STATIC, nullptr },
         { "get_current_reading", reinterpret_cast<PyCFunction>(UINavigationController_GetCurrentReading), METH_VARARGS, nullptr },
         { "get_optional_button_label", reinterpret_cast<PyCFunction>(UINavigationController_GetOptionalButtonLabel), METH_VARARGS, nullptr },
         { "get_required_button_label", reinterpret_cast<PyCFunction>(UINavigationController_GetRequiredButtonLabel), METH_VARARGS, nullptr },
@@ -3668,25 +3692,31 @@ namespace py::cpp::Windows::Gaming::Input
         _type_slots_UINavigationController
     };
 
-    static PyGetSetDef getset_UINavigationController_Meta[] = {
+    static PyGetSetDef getset_UINavigationController_Static[] = {
         { "u_i_navigation_controllers", reinterpret_cast<getter>(UINavigationController_get_UINavigationControllers), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_UINavigationController_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_UINavigationController_Meta) },
+    static PyMethodDef methods_UINavigationController_Static[] = {
+        { "from_game_controller", reinterpret_cast<PyCFunction>(UINavigationController_FromGameController), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_UINavigationController_Meta =
+    static PyType_Slot type_slots_UINavigationController_Static[] = 
     {
-        "winrt._winrt_windows_gaming_input.UINavigationController_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_UINavigationController_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_UINavigationController_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_UINavigationController_Static =
+    {
+        "winrt._winrt_windows_gaming_input.UINavigationController_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_UINavigationController_Meta
+        type_slots_UINavigationController_Static
     };
 
     // ----- IGameController interface --------------------
@@ -5764,35 +5794,35 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_input(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_ArcadeStick_Meta{PyType_FromSpec(&type_spec_ArcadeStick_Meta)};
-    if (!type_ArcadeStick_Meta)
+    py::pyobj_handle type_ArcadeStick_Static{PyType_FromSpec(&type_spec_ArcadeStick_Static)};
+    if (!type_ArcadeStick_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ArcadeStick, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ArcadeStick_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ArcadeStick, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ArcadeStick_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_FlightStick_Meta{PyType_FromSpec(&type_spec_FlightStick_Meta)};
-    if (!type_FlightStick_Meta)
+    py::pyobj_handle type_FlightStick_Static{PyType_FromSpec(&type_spec_FlightStick_Static)};
+    if (!type_FlightStick_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FlightStick, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FlightStick_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FlightStick, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FlightStick_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_Gamepad_Meta{PyType_FromSpec(&type_spec_Gamepad_Meta)};
-    if (!type_Gamepad_Meta)
+    py::pyobj_handle type_Gamepad_Static{PyType_FromSpec(&type_spec_Gamepad_Static)};
+    if (!type_Gamepad_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Gamepad, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Gamepad_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Gamepad, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Gamepad_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -5802,35 +5832,35 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_input(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_RacingWheel_Meta{PyType_FromSpec(&type_spec_RacingWheel_Meta)};
-    if (!type_RacingWheel_Meta)
+    py::pyobj_handle type_RacingWheel_Static{PyType_FromSpec(&type_spec_RacingWheel_Static)};
+    if (!type_RacingWheel_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RacingWheel, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RacingWheel_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RacingWheel, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RacingWheel_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_RawGameController_Meta{PyType_FromSpec(&type_spec_RawGameController_Meta)};
-    if (!type_RawGameController_Meta)
+    py::pyobj_handle type_RawGameController_Static{PyType_FromSpec(&type_spec_RawGameController_Static)};
+    if (!type_RawGameController_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RawGameController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RawGameController_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RawGameController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RawGameController_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_UINavigationController_Meta{PyType_FromSpec(&type_spec_UINavigationController_Meta)};
-    if (!type_UINavigationController_Meta)
+    py::pyobj_handle type_UINavigationController_Static{PyType_FromSpec(&type_spec_UINavigationController_Static)};
+    if (!type_UINavigationController_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UINavigationController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UINavigationController_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UINavigationController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UINavigationController_Static.get())) == -1)
     {
         return nullptr;
     }

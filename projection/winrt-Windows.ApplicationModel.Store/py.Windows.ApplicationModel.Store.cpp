@@ -515,19 +515,6 @@ namespace py::cpp::Windows::ApplicationModel::Store
     }
 
     static PyMethodDef _methods_CurrentApp[] = {
-        { "get_app_purchase_campaign_id_async", reinterpret_cast<PyCFunction>(CurrentApp_GetAppPurchaseCampaignIdAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_app_receipt_async", reinterpret_cast<PyCFunction>(CurrentApp_GetAppReceiptAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_customer_collections_id_async", reinterpret_cast<PyCFunction>(CurrentApp_GetCustomerCollectionsIdAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_customer_purchase_id_async", reinterpret_cast<PyCFunction>(CurrentApp_GetCustomerPurchaseIdAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_product_receipt_async", reinterpret_cast<PyCFunction>(CurrentApp_GetProductReceiptAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_unfulfilled_consumables_async", reinterpret_cast<PyCFunction>(CurrentApp_GetUnfulfilledConsumablesAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "load_listing_information_async", reinterpret_cast<PyCFunction>(CurrentApp_LoadListingInformationAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "load_listing_information_by_keywords_async", reinterpret_cast<PyCFunction>(CurrentApp_LoadListingInformationByKeywordsAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "load_listing_information_by_product_ids_async", reinterpret_cast<PyCFunction>(CurrentApp_LoadListingInformationByProductIdsAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "report_consumable_fulfillment_async", reinterpret_cast<PyCFunction>(CurrentApp_ReportConsumableFulfillmentAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "report_product_fulfillment", reinterpret_cast<PyCFunction>(CurrentApp_ReportProductFulfillment), METH_VARARGS | METH_STATIC, nullptr },
-        { "request_app_purchase_async", reinterpret_cast<PyCFunction>(CurrentApp_RequestAppPurchaseAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "request_product_purchase_async", reinterpret_cast<PyCFunction>(CurrentApp_RequestProductPurchaseAsync), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -552,27 +539,45 @@ namespace py::cpp::Windows::ApplicationModel::Store
         _type_slots_CurrentApp
     };
 
-    static PyGetSetDef getset_CurrentApp_Meta[] = {
+    static PyGetSetDef getset_CurrentApp_Static[] = {
         { "app_id", reinterpret_cast<getter>(CurrentApp_get_AppId), nullptr, nullptr, nullptr },
         { "license_information", reinterpret_cast<getter>(CurrentApp_get_LicenseInformation), nullptr, nullptr, nullptr },
         { "link_uri", reinterpret_cast<getter>(CurrentApp_get_LinkUri), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_CurrentApp_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_CurrentApp_Meta) },
+    static PyMethodDef methods_CurrentApp_Static[] = {
+        { "get_app_purchase_campaign_id_async", reinterpret_cast<PyCFunction>(CurrentApp_GetAppPurchaseCampaignIdAsync), METH_VARARGS, nullptr },
+        { "get_app_receipt_async", reinterpret_cast<PyCFunction>(CurrentApp_GetAppReceiptAsync), METH_VARARGS, nullptr },
+        { "get_customer_collections_id_async", reinterpret_cast<PyCFunction>(CurrentApp_GetCustomerCollectionsIdAsync), METH_VARARGS, nullptr },
+        { "get_customer_purchase_id_async", reinterpret_cast<PyCFunction>(CurrentApp_GetCustomerPurchaseIdAsync), METH_VARARGS, nullptr },
+        { "get_product_receipt_async", reinterpret_cast<PyCFunction>(CurrentApp_GetProductReceiptAsync), METH_VARARGS, nullptr },
+        { "get_unfulfilled_consumables_async", reinterpret_cast<PyCFunction>(CurrentApp_GetUnfulfilledConsumablesAsync), METH_VARARGS, nullptr },
+        { "load_listing_information_async", reinterpret_cast<PyCFunction>(CurrentApp_LoadListingInformationAsync), METH_VARARGS, nullptr },
+        { "load_listing_information_by_keywords_async", reinterpret_cast<PyCFunction>(CurrentApp_LoadListingInformationByKeywordsAsync), METH_VARARGS, nullptr },
+        { "load_listing_information_by_product_ids_async", reinterpret_cast<PyCFunction>(CurrentApp_LoadListingInformationByProductIdsAsync), METH_VARARGS, nullptr },
+        { "report_consumable_fulfillment_async", reinterpret_cast<PyCFunction>(CurrentApp_ReportConsumableFulfillmentAsync), METH_VARARGS, nullptr },
+        { "report_product_fulfillment", reinterpret_cast<PyCFunction>(CurrentApp_ReportProductFulfillment), METH_VARARGS, nullptr },
+        { "request_app_purchase_async", reinterpret_cast<PyCFunction>(CurrentApp_RequestAppPurchaseAsync), METH_VARARGS, nullptr },
+        { "request_product_purchase_async", reinterpret_cast<PyCFunction>(CurrentApp_RequestProductPurchaseAsync), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_CurrentApp_Meta =
+    static PyType_Slot type_slots_CurrentApp_Static[] = 
     {
-        "winrt._winrt_windows_applicationmodel_store.CurrentApp_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CurrentApp_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CurrentApp_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CurrentApp_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_store.CurrentApp_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_CurrentApp_Meta
+        type_slots_CurrentApp_Static
     };
 
     // ----- CurrentAppSimulator class --------------------
@@ -1019,17 +1024,6 @@ namespace py::cpp::Windows::ApplicationModel::Store
     }
 
     static PyMethodDef _methods_CurrentAppSimulator[] = {
-        { "get_app_purchase_campaign_id_async", reinterpret_cast<PyCFunction>(CurrentAppSimulator_GetAppPurchaseCampaignIdAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_app_receipt_async", reinterpret_cast<PyCFunction>(CurrentAppSimulator_GetAppReceiptAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_product_receipt_async", reinterpret_cast<PyCFunction>(CurrentAppSimulator_GetProductReceiptAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_unfulfilled_consumables_async", reinterpret_cast<PyCFunction>(CurrentAppSimulator_GetUnfulfilledConsumablesAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "load_listing_information_async", reinterpret_cast<PyCFunction>(CurrentAppSimulator_LoadListingInformationAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "load_listing_information_by_keywords_async", reinterpret_cast<PyCFunction>(CurrentAppSimulator_LoadListingInformationByKeywordsAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "load_listing_information_by_product_ids_async", reinterpret_cast<PyCFunction>(CurrentAppSimulator_LoadListingInformationByProductIdsAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "reload_simulator_async", reinterpret_cast<PyCFunction>(CurrentAppSimulator_ReloadSimulatorAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "report_consumable_fulfillment_async", reinterpret_cast<PyCFunction>(CurrentAppSimulator_ReportConsumableFulfillmentAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "request_app_purchase_async", reinterpret_cast<PyCFunction>(CurrentAppSimulator_RequestAppPurchaseAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "request_product_purchase_async", reinterpret_cast<PyCFunction>(CurrentAppSimulator_RequestProductPurchaseAsync), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -1054,27 +1048,43 @@ namespace py::cpp::Windows::ApplicationModel::Store
         _type_slots_CurrentAppSimulator
     };
 
-    static PyGetSetDef getset_CurrentAppSimulator_Meta[] = {
+    static PyGetSetDef getset_CurrentAppSimulator_Static[] = {
         { "app_id", reinterpret_cast<getter>(CurrentAppSimulator_get_AppId), nullptr, nullptr, nullptr },
         { "license_information", reinterpret_cast<getter>(CurrentAppSimulator_get_LicenseInformation), nullptr, nullptr, nullptr },
         { "link_uri", reinterpret_cast<getter>(CurrentAppSimulator_get_LinkUri), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_CurrentAppSimulator_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_CurrentAppSimulator_Meta) },
+    static PyMethodDef methods_CurrentAppSimulator_Static[] = {
+        { "get_app_purchase_campaign_id_async", reinterpret_cast<PyCFunction>(CurrentAppSimulator_GetAppPurchaseCampaignIdAsync), METH_VARARGS, nullptr },
+        { "get_app_receipt_async", reinterpret_cast<PyCFunction>(CurrentAppSimulator_GetAppReceiptAsync), METH_VARARGS, nullptr },
+        { "get_product_receipt_async", reinterpret_cast<PyCFunction>(CurrentAppSimulator_GetProductReceiptAsync), METH_VARARGS, nullptr },
+        { "get_unfulfilled_consumables_async", reinterpret_cast<PyCFunction>(CurrentAppSimulator_GetUnfulfilledConsumablesAsync), METH_VARARGS, nullptr },
+        { "load_listing_information_async", reinterpret_cast<PyCFunction>(CurrentAppSimulator_LoadListingInformationAsync), METH_VARARGS, nullptr },
+        { "load_listing_information_by_keywords_async", reinterpret_cast<PyCFunction>(CurrentAppSimulator_LoadListingInformationByKeywordsAsync), METH_VARARGS, nullptr },
+        { "load_listing_information_by_product_ids_async", reinterpret_cast<PyCFunction>(CurrentAppSimulator_LoadListingInformationByProductIdsAsync), METH_VARARGS, nullptr },
+        { "reload_simulator_async", reinterpret_cast<PyCFunction>(CurrentAppSimulator_ReloadSimulatorAsync), METH_VARARGS, nullptr },
+        { "report_consumable_fulfillment_async", reinterpret_cast<PyCFunction>(CurrentAppSimulator_ReportConsumableFulfillmentAsync), METH_VARARGS, nullptr },
+        { "request_app_purchase_async", reinterpret_cast<PyCFunction>(CurrentAppSimulator_RequestAppPurchaseAsync), METH_VARARGS, nullptr },
+        { "request_product_purchase_async", reinterpret_cast<PyCFunction>(CurrentAppSimulator_RequestProductPurchaseAsync), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_CurrentAppSimulator_Meta =
+    static PyType_Slot type_slots_CurrentAppSimulator_Static[] = 
     {
-        "winrt._winrt_windows_applicationmodel_store.CurrentAppSimulator_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CurrentAppSimulator_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CurrentAppSimulator_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CurrentAppSimulator_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_store.CurrentAppSimulator_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_CurrentAppSimulator_Meta
+        type_slots_CurrentAppSimulator_Static
     };
 
     // ----- LicenseInformation class --------------------
@@ -2572,24 +2582,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_store(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_CurrentApp_Meta{PyType_FromSpec(&type_spec_CurrentApp_Meta)};
-    if (!type_CurrentApp_Meta)
+    py::pyobj_handle type_CurrentApp_Static{PyType_FromSpec(&type_spec_CurrentApp_Static)};
+    if (!type_CurrentApp_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CurrentApp, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CurrentApp_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CurrentApp, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CurrentApp_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_CurrentAppSimulator_Meta{PyType_FromSpec(&type_spec_CurrentAppSimulator_Meta)};
-    if (!type_CurrentAppSimulator_Meta)
+    py::pyobj_handle type_CurrentAppSimulator_Static{PyType_FromSpec(&type_spec_CurrentAppSimulator_Static)};
+    if (!type_CurrentAppSimulator_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CurrentAppSimulator, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CurrentAppSimulator_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CurrentAppSimulator, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CurrentAppSimulator_Static.get())) == -1)
     {
         return nullptr;
     }

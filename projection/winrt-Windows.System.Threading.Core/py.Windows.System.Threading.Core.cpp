@@ -372,8 +372,6 @@ namespace py::cpp::Windows::System::Threading::Core
     }
 
     static PyMethodDef _methods_SignalNotifier[] = {
-        { "attach_to_event", reinterpret_cast<PyCFunction>(SignalNotifier_AttachToEvent), METH_VARARGS | METH_STATIC, nullptr },
-        { "attach_to_semaphore", reinterpret_cast<PyCFunction>(SignalNotifier_AttachToSemaphore), METH_VARARGS | METH_STATIC, nullptr },
         { "enable", reinterpret_cast<PyCFunction>(SignalNotifier_Enable), METH_VARARGS, nullptr },
         { "terminate", reinterpret_cast<PyCFunction>(SignalNotifier_Terminate), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SignalNotifier, METH_O | METH_STATIC, nullptr },
@@ -401,6 +399,33 @@ namespace py::cpp::Windows::System::Threading::Core
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_SignalNotifier
+    };
+
+    static PyGetSetDef getset_SignalNotifier_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_SignalNotifier_Static[] = {
+        { "attach_to_event", reinterpret_cast<PyCFunction>(SignalNotifier_AttachToEvent), METH_VARARGS, nullptr },
+        { "attach_to_semaphore", reinterpret_cast<PyCFunction>(SignalNotifier_AttachToSemaphore), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_SignalNotifier_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SignalNotifier_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SignalNotifier_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SignalNotifier_Static =
+    {
+        "winrt._winrt_windows_system_threading_core.SignalNotifier_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_SignalNotifier_Static
     };
 
     // ----- Windows.System.Threading.Core Initialization --------------------
@@ -454,7 +479,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_threading_core(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SignalNotifier, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_SignalNotifier_Static{PyType_FromSpec(&type_spec_SignalNotifier_Static)};
+    if (!type_SignalNotifier_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_SignalNotifier, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SignalNotifier_Static.get())) == -1)
     {
         return nullptr;
     }

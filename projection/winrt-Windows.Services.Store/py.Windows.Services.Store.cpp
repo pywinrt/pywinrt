@@ -2403,8 +2403,6 @@ namespace py::cpp::Windows::Services::Store
         { "get_consumable_balance_remaining_async", reinterpret_cast<PyCFunction>(StoreContext_GetConsumableBalanceRemainingAsync), METH_VARARGS, nullptr },
         { "get_customer_collections_id_async", reinterpret_cast<PyCFunction>(StoreContext_GetCustomerCollectionsIdAsync), METH_VARARGS, nullptr },
         { "get_customer_purchase_id_async", reinterpret_cast<PyCFunction>(StoreContext_GetCustomerPurchaseIdAsync), METH_VARARGS, nullptr },
-        { "get_default", reinterpret_cast<PyCFunction>(StoreContext_GetDefault), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_for_user", reinterpret_cast<PyCFunction>(StoreContext_GetForUser), METH_VARARGS | METH_STATIC, nullptr },
         { "get_store_product_for_current_app_async", reinterpret_cast<PyCFunction>(StoreContext_GetStoreProductForCurrentAppAsync), METH_VARARGS, nullptr },
         { "get_store_products_async", reinterpret_cast<PyCFunction>(StoreContext_GetStoreProductsAsync), METH_VARARGS, nullptr },
         { "get_store_queue_items_async", reinterpret_cast<PyCFunction>(StoreContext_GetStoreQueueItemsAsync), METH_VARARGS, nullptr },
@@ -2454,6 +2452,33 @@ namespace py::cpp::Windows::Services::Store
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_StoreContext
+    };
+
+    static PyGetSetDef getset_StoreContext_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_StoreContext_Static[] = {
+        { "get_default", reinterpret_cast<PyCFunction>(StoreContext_GetDefault), METH_VARARGS, nullptr },
+        { "get_for_user", reinterpret_cast<PyCFunction>(StoreContext_GetForUser), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_StoreContext_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_StoreContext_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_StoreContext_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_StoreContext_Static =
+    {
+        "winrt._winrt_windows_services_store.StoreContext_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_StoreContext_Static
     };
 
     // ----- StoreImage class --------------------
@@ -5674,7 +5699,6 @@ namespace py::cpp::Windows::Services::Store
     }
 
     static PyMethodDef _methods_StoreRequestHelper[] = {
-        { "send_request_async", reinterpret_cast<PyCFunction>(StoreRequestHelper_SendRequestAsync), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -5697,6 +5721,32 @@ namespace py::cpp::Windows::Services::Store
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_StoreRequestHelper
+    };
+
+    static PyGetSetDef getset_StoreRequestHelper_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_StoreRequestHelper_Static[] = {
+        { "send_request_async", reinterpret_cast<PyCFunction>(StoreRequestHelper_SendRequestAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_StoreRequestHelper_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_StoreRequestHelper_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_StoreRequestHelper_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_StoreRequestHelper_Static =
+    {
+        "winrt._winrt_windows_services_store.StoreRequestHelper_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_StoreRequestHelper_Static
     };
 
     // ----- StoreSendRequestResult class --------------------
@@ -7141,7 +7191,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_store(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StoreContext, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_StoreContext_Static{PyType_FromSpec(&type_spec_StoreContext_Static)};
+    if (!type_StoreContext_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_StoreContext, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StoreContext_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -7236,7 +7292,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_store(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StoreRequestHelper, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_StoreRequestHelper_Static{PyType_FromSpec(&type_spec_StoreRequestHelper_Static)};
+    if (!type_StoreRequestHelper_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_StoreRequestHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StoreRequestHelper_Static.get())) == -1)
     {
         return nullptr;
     }

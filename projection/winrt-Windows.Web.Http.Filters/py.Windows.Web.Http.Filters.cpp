@@ -802,7 +802,6 @@ namespace py::cpp::Windows::Web::Http::Filters
     static PyMethodDef _methods_HttpBaseProtocolFilter[] = {
         { "clear_authentication_cache", reinterpret_cast<PyCFunction>(HttpBaseProtocolFilter_ClearAuthenticationCache), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(HttpBaseProtocolFilter_Close), METH_VARARGS, nullptr },
-        { "create_for_user", reinterpret_cast<PyCFunction>(HttpBaseProtocolFilter_CreateForUser), METH_VARARGS | METH_STATIC, nullptr },
         { "send_request_async", reinterpret_cast<PyCFunction>(HttpBaseProtocolFilter_SendRequestAsync), METH_VARARGS, nullptr },
         { "add_server_custom_validation_requested", reinterpret_cast<PyCFunction>(HttpBaseProtocolFilter_add_ServerCustomValidationRequested), METH_O, nullptr },
         { "remove_server_custom_validation_requested", reinterpret_cast<PyCFunction>(HttpBaseProtocolFilter_remove_ServerCustomValidationRequested), METH_O, nullptr },
@@ -847,6 +846,32 @@ namespace py::cpp::Windows::Web::Http::Filters
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_HttpBaseProtocolFilter
+    };
+
+    static PyGetSetDef getset_HttpBaseProtocolFilter_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_HttpBaseProtocolFilter_Static[] = {
+        { "create_for_user", reinterpret_cast<PyCFunction>(HttpBaseProtocolFilter_CreateForUser), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_HttpBaseProtocolFilter_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_HttpBaseProtocolFilter_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_HttpBaseProtocolFilter_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_HttpBaseProtocolFilter_Static =
+    {
+        "winrt._winrt_windows_web_http_filters.HttpBaseProtocolFilter_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_HttpBaseProtocolFilter_Static
     };
 
     // ----- HttpCacheControl class --------------------
@@ -1443,7 +1468,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_http_filters(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HttpBaseProtocolFilter, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_HttpBaseProtocolFilter_Static{PyType_FromSpec(&type_spec_HttpBaseProtocolFilter_Static)};
+    if (!type_HttpBaseProtocolFilter_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_HttpBaseProtocolFilter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HttpBaseProtocolFilter_Static.get())) == -1)
     {
         return nullptr;
     }

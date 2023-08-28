@@ -1115,9 +1115,6 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static PyMethodDef _methods_SerialDevice[] = {
         { "close", reinterpret_cast<PyCFunction>(SerialDevice_Close), METH_VARARGS, nullptr },
-        { "from_id_async", reinterpret_cast<PyCFunction>(SerialDevice_FromIdAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_device_selector", reinterpret_cast<PyCFunction>(SerialDevice_GetDeviceSelector), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_device_selector_from_usb_vid_pid", reinterpret_cast<PyCFunction>(SerialDevice_GetDeviceSelectorFromUsbVidPid), METH_VARARGS | METH_STATIC, nullptr },
         { "add_error_received", reinterpret_cast<PyCFunction>(SerialDevice_add_ErrorReceived), METH_O, nullptr },
         { "remove_error_received", reinterpret_cast<PyCFunction>(SerialDevice_remove_ErrorReceived), METH_O, nullptr },
         { "add_pin_changed", reinterpret_cast<PyCFunction>(SerialDevice_add_PinChanged), METH_O, nullptr },
@@ -1168,6 +1165,34 @@ namespace py::cpp::Windows::Devices::SerialCommunication
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_SerialDevice
+    };
+
+    static PyGetSetDef getset_SerialDevice_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_SerialDevice_Static[] = {
+        { "from_id_async", reinterpret_cast<PyCFunction>(SerialDevice_FromIdAsync), METH_VARARGS, nullptr },
+        { "get_device_selector", reinterpret_cast<PyCFunction>(SerialDevice_GetDeviceSelector), METH_VARARGS, nullptr },
+        { "get_device_selector_from_usb_vid_pid", reinterpret_cast<PyCFunction>(SerialDevice_GetDeviceSelectorFromUsbVidPid), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_SerialDevice_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SerialDevice_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SerialDevice_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SerialDevice_Static =
+    {
+        "winrt._winrt_windows_devices_serialcommunication.SerialDevice_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_SerialDevice_Static
     };
 
     // ----- Windows.Devices.SerialCommunication Initialization --------------------
@@ -1226,7 +1251,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_serialcommunication(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SerialDevice, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_SerialDevice_Static{PyType_FromSpec(&type_spec_SerialDevice_Static)};
+    if (!type_SerialDevice_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_SerialDevice, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SerialDevice_Static.get())) == -1)
     {
         return nullptr;
     }

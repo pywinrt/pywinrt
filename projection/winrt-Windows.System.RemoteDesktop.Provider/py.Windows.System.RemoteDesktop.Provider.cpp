@@ -112,7 +112,6 @@ namespace py::cpp::Windows::System::RemoteDesktop::Provider
     }
 
     static PyMethodDef _methods_RemoteDesktopConnectionInfo[] = {
-        { "get_for_launch_uri", reinterpret_cast<PyCFunction>(RemoteDesktopConnectionInfo_GetForLaunchUri), METH_VARARGS | METH_STATIC, nullptr },
         { "set_connection_status", reinterpret_cast<PyCFunction>(RemoteDesktopConnectionInfo_SetConnectionStatus), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_RemoteDesktopConnectionInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RemoteDesktopConnectionInfo), METH_O | METH_STATIC, nullptr },
@@ -139,6 +138,32 @@ namespace py::cpp::Windows::System::RemoteDesktop::Provider
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_RemoteDesktopConnectionInfo
+    };
+
+    static PyGetSetDef getset_RemoteDesktopConnectionInfo_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_RemoteDesktopConnectionInfo_Static[] = {
+        { "get_for_launch_uri", reinterpret_cast<PyCFunction>(RemoteDesktopConnectionInfo_GetForLaunchUri), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_RemoteDesktopConnectionInfo_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_RemoteDesktopConnectionInfo_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_RemoteDesktopConnectionInfo_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_RemoteDesktopConnectionInfo_Static =
+    {
+        "winrt._winrt_windows_system_remotedesktop_provider.RemoteDesktopConnectionInfo_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_RemoteDesktopConnectionInfo_Static
     };
 
     // ----- Windows.System.RemoteDesktop.Provider Initialization --------------------
@@ -187,7 +212,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_remotedesktop_provider(void) noexcep
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RemoteDesktopConnectionInfo, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_RemoteDesktopConnectionInfo_Static{PyType_FromSpec(&type_spec_RemoteDesktopConnectionInfo_Static)};
+    if (!type_RemoteDesktopConnectionInfo_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_RemoteDesktopConnectionInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RemoteDesktopConnectionInfo_Static.get())) == -1)
     {
         return nullptr;
     }

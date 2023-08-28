@@ -94,8 +94,6 @@ namespace py::cpp::Windows::System::Power::Diagnostics
     }
 
     static PyMethodDef _methods_BackgroundEnergyDiagnostics[] = {
-        { "compute_total_energy_usage", reinterpret_cast<PyCFunction>(BackgroundEnergyDiagnostics_ComputeTotalEnergyUsage), METH_VARARGS | METH_STATIC, nullptr },
-        { "reset_total_energy_usage", reinterpret_cast<PyCFunction>(BackgroundEnergyDiagnostics_ResetTotalEnergyUsage), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -120,25 +118,32 @@ namespace py::cpp::Windows::System::Power::Diagnostics
         _type_slots_BackgroundEnergyDiagnostics
     };
 
-    static PyGetSetDef getset_BackgroundEnergyDiagnostics_Meta[] = {
+    static PyGetSetDef getset_BackgroundEnergyDiagnostics_Static[] = {
         { "device_specific_conversion_factor", reinterpret_cast<getter>(BackgroundEnergyDiagnostics_get_DeviceSpecificConversionFactor), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_BackgroundEnergyDiagnostics_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_BackgroundEnergyDiagnostics_Meta) },
+    static PyMethodDef methods_BackgroundEnergyDiagnostics_Static[] = {
+        { "compute_total_energy_usage", reinterpret_cast<PyCFunction>(BackgroundEnergyDiagnostics_ComputeTotalEnergyUsage), METH_VARARGS, nullptr },
+        { "reset_total_energy_usage", reinterpret_cast<PyCFunction>(BackgroundEnergyDiagnostics_ResetTotalEnergyUsage), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_BackgroundEnergyDiagnostics_Meta =
+    static PyType_Slot type_slots_BackgroundEnergyDiagnostics_Static[] = 
     {
-        "winrt._winrt_windows_system_power_diagnostics.BackgroundEnergyDiagnostics_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_BackgroundEnergyDiagnostics_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_BackgroundEnergyDiagnostics_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_BackgroundEnergyDiagnostics_Static =
+    {
+        "winrt._winrt_windows_system_power_diagnostics.BackgroundEnergyDiagnostics_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_BackgroundEnergyDiagnostics_Meta
+        type_slots_BackgroundEnergyDiagnostics_Static
     };
 
     // ----- ForegroundEnergyDiagnostics class --------------------
@@ -229,8 +234,6 @@ namespace py::cpp::Windows::System::Power::Diagnostics
     }
 
     static PyMethodDef _methods_ForegroundEnergyDiagnostics[] = {
-        { "compute_total_energy_usage", reinterpret_cast<PyCFunction>(ForegroundEnergyDiagnostics_ComputeTotalEnergyUsage), METH_VARARGS | METH_STATIC, nullptr },
-        { "reset_total_energy_usage", reinterpret_cast<PyCFunction>(ForegroundEnergyDiagnostics_ResetTotalEnergyUsage), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -255,25 +258,32 @@ namespace py::cpp::Windows::System::Power::Diagnostics
         _type_slots_ForegroundEnergyDiagnostics
     };
 
-    static PyGetSetDef getset_ForegroundEnergyDiagnostics_Meta[] = {
+    static PyGetSetDef getset_ForegroundEnergyDiagnostics_Static[] = {
         { "device_specific_conversion_factor", reinterpret_cast<getter>(ForegroundEnergyDiagnostics_get_DeviceSpecificConversionFactor), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_ForegroundEnergyDiagnostics_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_ForegroundEnergyDiagnostics_Meta) },
+    static PyMethodDef methods_ForegroundEnergyDiagnostics_Static[] = {
+        { "compute_total_energy_usage", reinterpret_cast<PyCFunction>(ForegroundEnergyDiagnostics_ComputeTotalEnergyUsage), METH_VARARGS, nullptr },
+        { "reset_total_energy_usage", reinterpret_cast<PyCFunction>(ForegroundEnergyDiagnostics_ResetTotalEnergyUsage), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_ForegroundEnergyDiagnostics_Meta =
+    static PyType_Slot type_slots_ForegroundEnergyDiagnostics_Static[] = 
     {
-        "winrt._winrt_windows_system_power_diagnostics.ForegroundEnergyDiagnostics_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ForegroundEnergyDiagnostics_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ForegroundEnergyDiagnostics_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ForegroundEnergyDiagnostics_Static =
+    {
+        "winrt._winrt_windows_system_power_diagnostics.ForegroundEnergyDiagnostics_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ForegroundEnergyDiagnostics_Meta
+        type_slots_ForegroundEnergyDiagnostics_Static
     };
 
     // ----- Windows.System.Power.Diagnostics Initialization --------------------
@@ -322,24 +332,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_power_diagnostics(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_BackgroundEnergyDiagnostics_Meta{PyType_FromSpec(&type_spec_BackgroundEnergyDiagnostics_Meta)};
-    if (!type_BackgroundEnergyDiagnostics_Meta)
+    py::pyobj_handle type_BackgroundEnergyDiagnostics_Static{PyType_FromSpec(&type_spec_BackgroundEnergyDiagnostics_Static)};
+    if (!type_BackgroundEnergyDiagnostics_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BackgroundEnergyDiagnostics, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BackgroundEnergyDiagnostics_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BackgroundEnergyDiagnostics, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BackgroundEnergyDiagnostics_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ForegroundEnergyDiagnostics_Meta{PyType_FromSpec(&type_spec_ForegroundEnergyDiagnostics_Meta)};
-    if (!type_ForegroundEnergyDiagnostics_Meta)
+    py::pyobj_handle type_ForegroundEnergyDiagnostics_Static{PyType_FromSpec(&type_spec_ForegroundEnergyDiagnostics_Static)};
+    if (!type_ForegroundEnergyDiagnostics_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ForegroundEnergyDiagnostics, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ForegroundEnergyDiagnostics_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ForegroundEnergyDiagnostics, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ForegroundEnergyDiagnostics_Static.get())) == -1)
     {
         return nullptr;
     }

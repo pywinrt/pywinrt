@@ -7560,9 +7560,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     }
 
     static PyMethodDef _methods_EmailManager[] = {
-        { "get_for_user", reinterpret_cast<PyCFunction>(EmailManager_GetForUser), METH_VARARGS | METH_STATIC, nullptr },
-        { "request_store_async", reinterpret_cast<PyCFunction>(EmailManager_RequestStoreAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "show_compose_new_email_async", reinterpret_cast<PyCFunction>(EmailManager_ShowComposeNewEmailAsync), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -7585,6 +7582,34 @@ namespace py::cpp::Windows::ApplicationModel::Email
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_EmailManager
+    };
+
+    static PyGetSetDef getset_EmailManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_EmailManager_Static[] = {
+        { "get_for_user", reinterpret_cast<PyCFunction>(EmailManager_GetForUser), METH_VARARGS, nullptr },
+        { "request_store_async", reinterpret_cast<PyCFunction>(EmailManager_RequestStoreAsync), METH_VARARGS, nullptr },
+        { "show_compose_new_email_async", reinterpret_cast<PyCFunction>(EmailManager_ShowComposeNewEmailAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_EmailManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_EmailManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_EmailManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_EmailManager_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_email.EmailManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_EmailManager_Static
     };
 
     // ----- EmailManagerForUser class --------------------
@@ -11699,7 +11724,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_email(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EmailManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_EmailManager_Static{PyType_FromSpec(&type_spec_EmailManager_Static)};
+    if (!type_EmailManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_EmailManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EmailManager_Static.get())) == -1)
     {
         return nullptr;
     }

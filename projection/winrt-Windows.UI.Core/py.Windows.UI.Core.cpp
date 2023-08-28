@@ -3661,8 +3661,6 @@ namespace py::cpp::Windows::UI::Core
 
     static PyMethodDef _methods_CoreIndependentInputSourceController[] = {
         { "close", reinterpret_cast<PyCFunction>(CoreIndependentInputSourceController_Close), METH_VARARGS, nullptr },
-        { "create_for_i_visual_element", reinterpret_cast<PyCFunction>(CoreIndependentInputSourceController_CreateForIVisualElement), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_for_visual", reinterpret_cast<PyCFunction>(CoreIndependentInputSourceController_CreateForVisual), METH_VARARGS | METH_STATIC, nullptr },
         { "set_controlled_input", reinterpret_cast<PyCFunction>(CoreIndependentInputSourceController_SetControlledInput), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CoreIndependentInputSourceController, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreIndependentInputSourceController), METH_O | METH_STATIC, nullptr },
@@ -3694,6 +3692,33 @@ namespace py::cpp::Windows::UI::Core
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_CoreIndependentInputSourceController
+    };
+
+    static PyGetSetDef getset_CoreIndependentInputSourceController_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_CoreIndependentInputSourceController_Static[] = {
+        { "create_for_i_visual_element", reinterpret_cast<PyCFunction>(CoreIndependentInputSourceController_CreateForIVisualElement), METH_VARARGS, nullptr },
+        { "create_for_visual", reinterpret_cast<PyCFunction>(CoreIndependentInputSourceController_CreateForVisual), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_CoreIndependentInputSourceController_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CoreIndependentInputSourceController_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CoreIndependentInputSourceController_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CoreIndependentInputSourceController_Static =
+    {
+        "winrt._winrt_windows_ui_core.CoreIndependentInputSourceController_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CoreIndependentInputSourceController_Static
     };
 
     // ----- CoreWindow class --------------------
@@ -5311,7 +5336,6 @@ namespace py::cpp::Windows::UI::Core
         { "close", reinterpret_cast<PyCFunction>(CoreWindow_Close), METH_VARARGS, nullptr },
         { "get_async_key_state", reinterpret_cast<PyCFunction>(CoreWindow_GetAsyncKeyState), METH_VARARGS, nullptr },
         { "get_current_key_event_device_id", reinterpret_cast<PyCFunction>(CoreWindow_GetCurrentKeyEventDeviceId), METH_VARARGS, nullptr },
-        { "get_for_current_thread", reinterpret_cast<PyCFunction>(CoreWindow_GetForCurrentThread), METH_VARARGS | METH_STATIC, nullptr },
         { "get_key_state", reinterpret_cast<PyCFunction>(CoreWindow_GetKeyState), METH_VARARGS, nullptr },
         { "release_pointer_capture", reinterpret_cast<PyCFunction>(CoreWindow_ReleasePointerCapture), METH_VARARGS, nullptr },
         { "set_pointer_capture", reinterpret_cast<PyCFunction>(CoreWindow_SetPointerCapture), METH_VARARGS, nullptr },
@@ -5398,6 +5422,32 @@ namespace py::cpp::Windows::UI::Core
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_CoreWindow
+    };
+
+    static PyGetSetDef getset_CoreWindow_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_CoreWindow_Static[] = {
+        { "get_for_current_thread", reinterpret_cast<PyCFunction>(CoreWindow_GetForCurrentThread), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_CoreWindow_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CoreWindow_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CoreWindow_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CoreWindow_Static =
+    {
+        "winrt._winrt_windows_ui_core.CoreWindow_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CoreWindow_Static
     };
 
     // ----- CoreWindowDialog class --------------------
@@ -6684,7 +6734,6 @@ namespace py::cpp::Windows::UI::Core
     }
 
     static PyMethodDef _methods_CoreWindowResizeManager[] = {
-        { "get_for_current_view", reinterpret_cast<PyCFunction>(CoreWindowResizeManager_GetForCurrentView), METH_VARARGS | METH_STATIC, nullptr },
         { "notify_layout_completed", reinterpret_cast<PyCFunction>(CoreWindowResizeManager_NotifyLayoutCompleted), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CoreWindowResizeManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWindowResizeManager), METH_O | METH_STATIC, nullptr },
@@ -6712,6 +6761,32 @@ namespace py::cpp::Windows::UI::Core
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_CoreWindowResizeManager
+    };
+
+    static PyGetSetDef getset_CoreWindowResizeManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_CoreWindowResizeManager_Static[] = {
+        { "get_for_current_view", reinterpret_cast<PyCFunction>(CoreWindowResizeManager_GetForCurrentView), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_CoreWindowResizeManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CoreWindowResizeManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CoreWindowResizeManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CoreWindowResizeManager_Static =
+    {
+        "winrt._winrt_windows_ui_core.CoreWindowResizeManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CoreWindowResizeManager_Static
     };
 
     // ----- IdleDispatchedHandlerArgs class --------------------
@@ -7465,7 +7540,6 @@ namespace py::cpp::Windows::UI::Core
     }
 
     static PyMethodDef _methods_SystemNavigationManager[] = {
-        { "get_for_current_view", reinterpret_cast<PyCFunction>(SystemNavigationManager_GetForCurrentView), METH_VARARGS | METH_STATIC, nullptr },
         { "add_back_requested", reinterpret_cast<PyCFunction>(SystemNavigationManager_add_BackRequested), METH_O, nullptr },
         { "remove_back_requested", reinterpret_cast<PyCFunction>(SystemNavigationManager_remove_BackRequested), METH_O, nullptr },
         { "_assign_array_", _assign_array_SystemNavigationManager, METH_O | METH_STATIC, nullptr },
@@ -7494,6 +7568,32 @@ namespace py::cpp::Windows::UI::Core
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_SystemNavigationManager
+    };
+
+    static PyGetSetDef getset_SystemNavigationManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_SystemNavigationManager_Static[] = {
+        { "get_for_current_view", reinterpret_cast<PyCFunction>(SystemNavigationManager_GetForCurrentView), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_SystemNavigationManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SystemNavigationManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SystemNavigationManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SystemNavigationManager_Static =
+    {
+        "winrt._winrt_windows_ui_core.SystemNavigationManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_SystemNavigationManager_Static
     };
 
     // ----- TouchHitTestingEventArgs class --------------------
@@ -11795,12 +11895,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_core(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreIndependentInputSourceController, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_CoreIndependentInputSourceController_Static{PyType_FromSpec(&type_spec_CoreIndependentInputSourceController_Static)};
+    if (!type_CoreIndependentInputSourceController_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWindow, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreIndependentInputSourceController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CoreIndependentInputSourceController_Static.get())) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CoreWindow_Static{PyType_FromSpec(&type_spec_CoreWindow_Static)};
+    if (!type_CoreWindow_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_CoreWindow, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CoreWindow_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -11825,7 +11937,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_core(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreWindowResizeManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_CoreWindowResizeManager_Static{PyType_FromSpec(&type_spec_CoreWindowResizeManager_Static)};
+    if (!type_CoreWindowResizeManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_CoreWindowResizeManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CoreWindowResizeManager_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -11850,7 +11968,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_core(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SystemNavigationManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_SystemNavigationManager_Static{PyType_FromSpec(&type_spec_SystemNavigationManager_Static)};
+    if (!type_SystemNavigationManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_SystemNavigationManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemNavigationManager_Static.get())) == -1)
     {
         return nullptr;
     }

@@ -113,8 +113,6 @@ namespace py::cpp::Windows::UI
     }
 
     static PyMethodDef _methods_ColorHelper[] = {
-        { "from_argb", reinterpret_cast<PyCFunction>(ColorHelper_FromArgb), METH_VARARGS | METH_STATIC, nullptr },
-        { "to_display_name", reinterpret_cast<PyCFunction>(ColorHelper_ToDisplayName), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_ColorHelper, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ColorHelper), METH_O | METH_STATIC, nullptr },
         { }
@@ -140,6 +138,33 @@ namespace py::cpp::Windows::UI
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ColorHelper
+    };
+
+    static PyGetSetDef getset_ColorHelper_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ColorHelper_Static[] = {
+        { "from_argb", reinterpret_cast<PyCFunction>(ColorHelper_FromArgb), METH_VARARGS, nullptr },
+        { "to_display_name", reinterpret_cast<PyCFunction>(ColorHelper_ToDisplayName), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_ColorHelper_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ColorHelper_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ColorHelper_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ColorHelper_Static =
+    {
+        "winrt._winrt_windows_ui.ColorHelper_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ColorHelper_Static
     };
 
     // ----- Colors class --------------------
@@ -2890,7 +2915,7 @@ namespace py::cpp::Windows::UI
         _type_slots_Colors
     };
 
-    static PyGetSetDef getset_Colors_Meta[] = {
+    static PyGetSetDef getset_Colors_Static[] = {
         { "alice_blue", reinterpret_cast<getter>(Colors_get_AliceBlue), nullptr, nullptr, nullptr },
         { "antique_white", reinterpret_cast<getter>(Colors_get_AntiqueWhite), nullptr, nullptr, nullptr },
         { "aqua", reinterpret_cast<getter>(Colors_get_Aqua), nullptr, nullptr, nullptr },
@@ -3035,20 +3060,25 @@ namespace py::cpp::Windows::UI
         { }
     };
 
-    static PyType_Slot type_slots_Colors_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_Colors_Meta) },
+    static PyMethodDef methods_Colors_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_Colors_Meta =
+    static PyType_Slot type_slots_Colors_Static[] = 
     {
-        "winrt._winrt_windows_ui.Colors_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Colors_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Colors_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Colors_Static =
+    {
+        "winrt._winrt_windows_ui.Colors_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Colors_Meta
+        type_slots_Colors_Static
     };
 
     // ----- UIContentRoot class --------------------
@@ -3612,18 +3642,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ColorHelper, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_ColorHelper_Static{PyType_FromSpec(&type_spec_ColorHelper_Static)};
+    if (!type_ColorHelper_Static)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_Colors_Meta{PyType_FromSpec(&type_spec_Colors_Meta)};
-    if (!type_Colors_Meta)
+    if (py::register_python_type(module.get(), &type_spec_ColorHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorHelper_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Colors, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Colors_Meta.get())) == -1)
+    py::pyobj_handle type_Colors_Static{PyType_FromSpec(&type_spec_Colors_Static)};
+    if (!type_Colors_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_Colors, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Colors_Static.get())) == -1)
     {
         return nullptr;
     }

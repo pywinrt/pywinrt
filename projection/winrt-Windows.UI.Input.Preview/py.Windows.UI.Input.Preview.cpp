@@ -47,7 +47,6 @@ namespace py::cpp::Windows::UI::Input::Preview
     }
 
     static PyMethodDef _methods_InputActivationListenerPreview[] = {
-        { "create_for_application_window", reinterpret_cast<PyCFunction>(InputActivationListenerPreview_CreateForApplicationWindow), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -70,6 +69,32 @@ namespace py::cpp::Windows::UI::Input::Preview
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_InputActivationListenerPreview
+    };
+
+    static PyGetSetDef getset_InputActivationListenerPreview_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_InputActivationListenerPreview_Static[] = {
+        { "create_for_application_window", reinterpret_cast<PyCFunction>(InputActivationListenerPreview_CreateForApplicationWindow), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_InputActivationListenerPreview_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_InputActivationListenerPreview_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_InputActivationListenerPreview_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_InputActivationListenerPreview_Static =
+    {
+        "winrt._winrt_windows_ui_input_preview.InputActivationListenerPreview_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_InputActivationListenerPreview_Static
     };
 
     // ----- Windows.UI.Input.Preview Initialization --------------------
@@ -118,7 +143,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input_preview(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InputActivationListenerPreview, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_InputActivationListenerPreview_Static{PyType_FromSpec(&type_spec_InputActivationListenerPreview_Static)};
+    if (!type_InputActivationListenerPreview_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_InputActivationListenerPreview, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InputActivationListenerPreview_Static.get())) == -1)
     {
         return nullptr;
     }

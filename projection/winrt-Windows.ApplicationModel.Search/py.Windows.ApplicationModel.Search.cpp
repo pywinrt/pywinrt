@@ -908,8 +908,6 @@ namespace py::cpp::Windows::ApplicationModel::Search
     }
 
     static PyMethodDef _methods_SearchPane[] = {
-        { "get_for_current_view", reinterpret_cast<PyCFunction>(SearchPane_GetForCurrentView), METH_VARARGS | METH_STATIC, nullptr },
-        { "hide_this_application", reinterpret_cast<PyCFunction>(SearchPane_HideThisApplication), METH_VARARGS | METH_STATIC, nullptr },
         { "set_local_content_suggestion_settings", reinterpret_cast<PyCFunction>(SearchPane_SetLocalContentSuggestionSettings), METH_VARARGS, nullptr },
         { "show", reinterpret_cast<PyCFunction>(SearchPane_Show), METH_VARARGS, nullptr },
         { "try_set_query_text", reinterpret_cast<PyCFunction>(SearchPane_TrySetQueryText), METH_VARARGS, nullptr },
@@ -955,6 +953,33 @@ namespace py::cpp::Windows::ApplicationModel::Search
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_SearchPane
+    };
+
+    static PyGetSetDef getset_SearchPane_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_SearchPane_Static[] = {
+        { "get_for_current_view", reinterpret_cast<PyCFunction>(SearchPane_GetForCurrentView), METH_VARARGS, nullptr },
+        { "hide_this_application", reinterpret_cast<PyCFunction>(SearchPane_HideThisApplication), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_SearchPane_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SearchPane_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SearchPane_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SearchPane_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_search.SearchPane_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_SearchPane_Static
     };
 
     // ----- SearchPaneQueryChangedEventArgs class --------------------
@@ -2709,7 +2734,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_search(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SearchPane, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_SearchPane_Static{PyType_FromSpec(&type_spec_SearchPane_Static)};
+    if (!type_SearchPane_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_SearchPane, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SearchPane_Static.get())) == -1)
     {
         return nullptr;
     }

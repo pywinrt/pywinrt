@@ -520,8 +520,6 @@ namespace py::cpp::Windows::Security::DataProtection
         { "is_continued_data_availability_expected", reinterpret_cast<PyCFunction>(UserDataProtectionManager_IsContinuedDataAvailabilityExpected), METH_VARARGS, nullptr },
         { "protect_buffer_async", reinterpret_cast<PyCFunction>(UserDataProtectionManager_ProtectBufferAsync), METH_VARARGS, nullptr },
         { "protect_storage_item_async", reinterpret_cast<PyCFunction>(UserDataProtectionManager_ProtectStorageItemAsync), METH_VARARGS, nullptr },
-        { "try_get_default", reinterpret_cast<PyCFunction>(UserDataProtectionManager_TryGetDefault), METH_VARARGS | METH_STATIC, nullptr },
-        { "try_get_for_user", reinterpret_cast<PyCFunction>(UserDataProtectionManager_TryGetForUser), METH_VARARGS | METH_STATIC, nullptr },
         { "unprotect_buffer_async", reinterpret_cast<PyCFunction>(UserDataProtectionManager_UnprotectBufferAsync), METH_VARARGS, nullptr },
         { "add_data_availability_state_changed", reinterpret_cast<PyCFunction>(UserDataProtectionManager_add_DataAvailabilityStateChanged), METH_O, nullptr },
         { "remove_data_availability_state_changed", reinterpret_cast<PyCFunction>(UserDataProtectionManager_remove_DataAvailabilityStateChanged), METH_O, nullptr },
@@ -550,6 +548,33 @@ namespace py::cpp::Windows::Security::DataProtection
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_UserDataProtectionManager
+    };
+
+    static PyGetSetDef getset_UserDataProtectionManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_UserDataProtectionManager_Static[] = {
+        { "try_get_default", reinterpret_cast<PyCFunction>(UserDataProtectionManager_TryGetDefault), METH_VARARGS, nullptr },
+        { "try_get_for_user", reinterpret_cast<PyCFunction>(UserDataProtectionManager_TryGetForUser), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_UserDataProtectionManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_UserDataProtectionManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_UserDataProtectionManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_UserDataProtectionManager_Static =
+    {
+        "winrt._winrt_windows_security_dataprotection.UserDataProtectionManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_UserDataProtectionManager_Static
     };
 
     // ----- UserDataStorageItemProtectionInfo class --------------------
@@ -697,7 +722,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_dataprotection(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserDataProtectionManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_UserDataProtectionManager_Static{PyType_FromSpec(&type_spec_UserDataProtectionManager_Static)};
+    if (!type_UserDataProtectionManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_UserDataProtectionManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UserDataProtectionManager_Static.get())) == -1)
     {
         return nullptr;
     }

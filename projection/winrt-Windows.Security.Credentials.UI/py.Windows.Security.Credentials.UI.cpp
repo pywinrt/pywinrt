@@ -90,7 +90,6 @@ namespace py::cpp::Windows::Security::Credentials::UI
     }
 
     static PyMethodDef _methods_CredentialPicker[] = {
-        { "pick_async", reinterpret_cast<PyCFunction>(CredentialPicker_PickAsync), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -113,6 +112,32 @@ namespace py::cpp::Windows::Security::Credentials::UI
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_CredentialPicker
+    };
+
+    static PyGetSetDef getset_CredentialPicker_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_CredentialPicker_Static[] = {
+        { "pick_async", reinterpret_cast<PyCFunction>(CredentialPicker_PickAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_CredentialPicker_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CredentialPicker_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CredentialPicker_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CredentialPicker_Static =
+    {
+        "winrt._winrt_windows_security_credentials_ui.CredentialPicker_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CredentialPicker_Static
     };
 
     // ----- CredentialPickerOptions class --------------------
@@ -965,8 +990,6 @@ namespace py::cpp::Windows::Security::Credentials::UI
     }
 
     static PyMethodDef _methods_UserConsentVerifier[] = {
-        { "check_availability_async", reinterpret_cast<PyCFunction>(UserConsentVerifier_CheckAvailabilityAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "request_verification_async", reinterpret_cast<PyCFunction>(UserConsentVerifier_RequestVerificationAsync), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -989,6 +1012,33 @@ namespace py::cpp::Windows::Security::Credentials::UI
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_UserConsentVerifier
+    };
+
+    static PyGetSetDef getset_UserConsentVerifier_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_UserConsentVerifier_Static[] = {
+        { "check_availability_async", reinterpret_cast<PyCFunction>(UserConsentVerifier_CheckAvailabilityAsync), METH_VARARGS, nullptr },
+        { "request_verification_async", reinterpret_cast<PyCFunction>(UserConsentVerifier_RequestVerificationAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_UserConsentVerifier_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_UserConsentVerifier_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_UserConsentVerifier_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_UserConsentVerifier_Static =
+    {
+        "winrt._winrt_windows_security_credentials_ui.UserConsentVerifier_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_UserConsentVerifier_Static
     };
 
     // ----- Windows.Security.Credentials.UI Initialization --------------------
@@ -1037,7 +1087,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_credentials_ui(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CredentialPicker, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_CredentialPicker_Static{PyType_FromSpec(&type_spec_CredentialPicker_Static)};
+    if (!type_CredentialPicker_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_CredentialPicker, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CredentialPicker_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -1052,7 +1108,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_credentials_ui(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserConsentVerifier, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_UserConsentVerifier_Static{PyType_FromSpec(&type_spec_UserConsentVerifier_Static)};
+    if (!type_UserConsentVerifier_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_UserConsentVerifier, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UserConsentVerifier_Static.get())) == -1)
     {
         return nullptr;
     }

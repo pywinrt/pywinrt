@@ -238,11 +238,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     }
 
     static PyMethodDef _methods_AsyncCausalityTracer[] = {
-        { "trace_operation_completion", reinterpret_cast<PyCFunction>(AsyncCausalityTracer_TraceOperationCompletion), METH_VARARGS | METH_STATIC, nullptr },
-        { "trace_operation_creation", reinterpret_cast<PyCFunction>(AsyncCausalityTracer_TraceOperationCreation), METH_VARARGS | METH_STATIC, nullptr },
-        { "trace_operation_relation", reinterpret_cast<PyCFunction>(AsyncCausalityTracer_TraceOperationRelation), METH_VARARGS | METH_STATIC, nullptr },
-        { "trace_synchronous_work_completion", reinterpret_cast<PyCFunction>(AsyncCausalityTracer_TraceSynchronousWorkCompletion), METH_VARARGS | METH_STATIC, nullptr },
-        { "trace_synchronous_work_start", reinterpret_cast<PyCFunction>(AsyncCausalityTracer_TraceSynchronousWorkStart), METH_VARARGS | METH_STATIC, nullptr },
         { "add_tracing_status_changed", reinterpret_cast<PyCFunction>(AsyncCausalityTracer_add_TracingStatusChanged), METH_O | METH_STATIC, nullptr },
         { "remove_tracing_status_changed", reinterpret_cast<PyCFunction>(AsyncCausalityTracer_remove_TracingStatusChanged), METH_O | METH_STATIC, nullptr },
         { }
@@ -267,6 +262,36 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_AsyncCausalityTracer
+    };
+
+    static PyGetSetDef getset_AsyncCausalityTracer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_AsyncCausalityTracer_Static[] = {
+        { "trace_operation_completion", reinterpret_cast<PyCFunction>(AsyncCausalityTracer_TraceOperationCompletion), METH_VARARGS, nullptr },
+        { "trace_operation_creation", reinterpret_cast<PyCFunction>(AsyncCausalityTracer_TraceOperationCreation), METH_VARARGS, nullptr },
+        { "trace_operation_relation", reinterpret_cast<PyCFunction>(AsyncCausalityTracer_TraceOperationRelation), METH_VARARGS, nullptr },
+        { "trace_synchronous_work_completion", reinterpret_cast<PyCFunction>(AsyncCausalityTracer_TraceSynchronousWorkCompletion), METH_VARARGS, nullptr },
+        { "trace_synchronous_work_start", reinterpret_cast<PyCFunction>(AsyncCausalityTracer_TraceSynchronousWorkStart), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_AsyncCausalityTracer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_AsyncCausalityTracer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_AsyncCausalityTracer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_AsyncCausalityTracer_Static =
+    {
+        "winrt._winrt_windows_foundation_diagnostics.AsyncCausalityTracer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_AsyncCausalityTracer_Static
     };
 
     // ----- ErrorDetails class --------------------
@@ -399,7 +424,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     }
 
     static PyMethodDef _methods_ErrorDetails[] = {
-        { "create_from_h_result_async", reinterpret_cast<PyCFunction>(ErrorDetails_CreateFromHResultAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_ErrorDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ErrorDetails), METH_O | METH_STATIC, nullptr },
         { }
@@ -428,6 +452,32 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ErrorDetails
+    };
+
+    static PyGetSetDef getset_ErrorDetails_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ErrorDetails_Static[] = {
+        { "create_from_h_result_async", reinterpret_cast<PyCFunction>(ErrorDetails_CreateFromHResultAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_ErrorDetails_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ErrorDetails_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ErrorDetails_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ErrorDetails_Static =
+    {
+        "winrt._winrt_windows_foundation_diagnostics.ErrorDetails_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ErrorDetails_Static
     };
 
     // ----- FileLoggingSession class --------------------
@@ -7826,12 +7876,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation_diagnostics(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AsyncCausalityTracer, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_AsyncCausalityTracer_Static{PyType_FromSpec(&type_spec_AsyncCausalityTracer_Static)};
+    if (!type_AsyncCausalityTracer_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ErrorDetails, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AsyncCausalityTracer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AsyncCausalityTracer_Static.get())) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ErrorDetails_Static{PyType_FromSpec(&type_spec_ErrorDetails_Static)};
+    if (!type_ErrorDetails_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_ErrorDetails, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ErrorDetails_Static.get())) == -1)
     {
         return nullptr;
     }

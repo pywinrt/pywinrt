@@ -738,7 +738,6 @@ namespace py::cpp::Windows::Services::TargetedContent
     }
 
     static PyMethodDef _methods_TargetedContentContainer[] = {
-        { "get_async", reinterpret_cast<PyCFunction>(TargetedContentContainer_GetAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "select_single_object", reinterpret_cast<PyCFunction>(TargetedContentContainer_SelectSingleObject), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_TargetedContentContainer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TargetedContentContainer), METH_O | METH_STATIC, nullptr },
@@ -769,6 +768,32 @@ namespace py::cpp::Windows::Services::TargetedContent
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_TargetedContentContainer
+    };
+
+    static PyGetSetDef getset_TargetedContentContainer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_TargetedContentContainer_Static[] = {
+        { "get_async", reinterpret_cast<PyCFunction>(TargetedContentContainer_GetAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_TargetedContentContainer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_TargetedContentContainer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_TargetedContentContainer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_TargetedContentContainer_Static =
+    {
+        "winrt._winrt_windows_services_targetedcontent.TargetedContentContainer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_TargetedContentContainer_Static
     };
 
     // ----- TargetedContentFile class --------------------
@@ -1862,9 +1887,7 @@ namespace py::cpp::Windows::Services::TargetedContent
     }
 
     static PyMethodDef _methods_TargetedContentSubscription[] = {
-        { "get_async", reinterpret_cast<PyCFunction>(TargetedContentSubscription_GetAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "get_content_container_async", reinterpret_cast<PyCFunction>(TargetedContentSubscription_GetContentContainerAsync), METH_VARARGS, nullptr },
-        { "get_options", reinterpret_cast<PyCFunction>(TargetedContentSubscription_GetOptions), METH_VARARGS | METH_STATIC, nullptr },
         { "add_availability_changed", reinterpret_cast<PyCFunction>(TargetedContentSubscription_add_AvailabilityChanged), METH_O, nullptr },
         { "remove_availability_changed", reinterpret_cast<PyCFunction>(TargetedContentSubscription_remove_AvailabilityChanged), METH_O, nullptr },
         { "add_content_changed", reinterpret_cast<PyCFunction>(TargetedContentSubscription_add_ContentChanged), METH_O, nullptr },
@@ -1897,6 +1920,33 @@ namespace py::cpp::Windows::Services::TargetedContent
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_TargetedContentSubscription
+    };
+
+    static PyGetSetDef getset_TargetedContentSubscription_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_TargetedContentSubscription_Static[] = {
+        { "get_async", reinterpret_cast<PyCFunction>(TargetedContentSubscription_GetAsync), METH_VARARGS, nullptr },
+        { "get_options", reinterpret_cast<PyCFunction>(TargetedContentSubscription_GetOptions), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_TargetedContentSubscription_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_TargetedContentSubscription_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_TargetedContentSubscription_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_TargetedContentSubscription_Static =
+    {
+        "winrt._winrt_windows_services_targetedcontent.TargetedContentSubscription_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_TargetedContentSubscription_Static
     };
 
     // ----- TargetedContentSubscriptionOptions class --------------------
@@ -2562,7 +2612,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_targetedcontent(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_TargetedContentContainer, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_TargetedContentContainer_Static{PyType_FromSpec(&type_spec_TargetedContentContainer_Static)};
+    if (!type_TargetedContentContainer_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_TargetedContentContainer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TargetedContentContainer_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -2597,7 +2653,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_targetedcontent(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_TargetedContentSubscription, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_TargetedContentSubscription_Static{PyType_FromSpec(&type_spec_TargetedContentSubscription_Static)};
+    if (!type_TargetedContentSubscription_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_TargetedContentSubscription, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TargetedContentSubscription_Static.get())) == -1)
     {
         return nullptr;
     }

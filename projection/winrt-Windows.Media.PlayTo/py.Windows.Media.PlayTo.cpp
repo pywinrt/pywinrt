@@ -969,8 +969,6 @@ namespace py::cpp::Windows::Media::PlayTo
     }
 
     static PyMethodDef _methods_PlayToManager[] = {
-        { "get_for_current_view", reinterpret_cast<PyCFunction>(PlayToManager_GetForCurrentView), METH_VARARGS | METH_STATIC, nullptr },
-        { "show_play_to_u_i", reinterpret_cast<PyCFunction>(PlayToManager_ShowPlayToUI), METH_VARARGS | METH_STATIC, nullptr },
         { "add_source_requested", reinterpret_cast<PyCFunction>(PlayToManager_add_SourceRequested), METH_O, nullptr },
         { "remove_source_requested", reinterpret_cast<PyCFunction>(PlayToManager_remove_SourceRequested), METH_O, nullptr },
         { "add_source_selected", reinterpret_cast<PyCFunction>(PlayToManager_add_SourceSelected), METH_O, nullptr },
@@ -1001,6 +999,33 @@ namespace py::cpp::Windows::Media::PlayTo
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_PlayToManager
+    };
+
+    static PyGetSetDef getset_PlayToManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_PlayToManager_Static[] = {
+        { "get_for_current_view", reinterpret_cast<PyCFunction>(PlayToManager_GetForCurrentView), METH_VARARGS, nullptr },
+        { "show_play_to_u_i", reinterpret_cast<PyCFunction>(PlayToManager_ShowPlayToUI), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_PlayToManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PlayToManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PlayToManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PlayToManager_Static =
+    {
+        "winrt._winrt_windows_media_playto.PlayToManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_PlayToManager_Static
     };
 
     // ----- PlayToReceiver class --------------------
@@ -3434,7 +3459,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_playto(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PlayToManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_PlayToManager_Static{PyType_FromSpec(&type_spec_PlayToManager_Static)};
+    if (!type_PlayToManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_PlayToManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PlayToManager_Static.get())) == -1)
     {
         return nullptr;
     }

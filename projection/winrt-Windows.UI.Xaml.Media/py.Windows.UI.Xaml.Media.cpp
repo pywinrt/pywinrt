@@ -499,7 +499,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         _type_slots_AcrylicBrush
     };
 
-    static PyGetSetDef getset_AcrylicBrush_Meta[] = {
+    static PyGetSetDef getset_AcrylicBrush_Static[] = {
         { "always_use_fallback_property", reinterpret_cast<getter>(AcrylicBrush_get_AlwaysUseFallbackProperty), nullptr, nullptr, nullptr },
         { "background_source_property", reinterpret_cast<getter>(AcrylicBrush_get_BackgroundSourceProperty), nullptr, nullptr, nullptr },
         { "tint_color_property", reinterpret_cast<getter>(AcrylicBrush_get_TintColorProperty), nullptr, nullptr, nullptr },
@@ -509,20 +509,25 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot type_slots_AcrylicBrush_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_AcrylicBrush_Meta) },
+    static PyMethodDef methods_AcrylicBrush_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_AcrylicBrush_Meta =
+    static PyType_Slot type_slots_AcrylicBrush_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_media.AcrylicBrush_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_AcrylicBrush_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_AcrylicBrush_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_AcrylicBrush_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media.AcrylicBrush_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_AcrylicBrush_Meta
+        type_slots_AcrylicBrush_Static
     };
 
     // ----- ArcSegment class --------------------
@@ -951,7 +956,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         _type_slots_ArcSegment
     };
 
-    static PyGetSetDef getset_ArcSegment_Meta[] = {
+    static PyGetSetDef getset_ArcSegment_Static[] = {
         { "is_large_arc_property", reinterpret_cast<getter>(ArcSegment_get_IsLargeArcProperty), nullptr, nullptr, nullptr },
         { "point_property", reinterpret_cast<getter>(ArcSegment_get_PointProperty), nullptr, nullptr, nullptr },
         { "rotation_angle_property", reinterpret_cast<getter>(ArcSegment_get_RotationAngleProperty), nullptr, nullptr, nullptr },
@@ -960,20 +965,25 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot type_slots_ArcSegment_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_ArcSegment_Meta) },
+    static PyMethodDef methods_ArcSegment_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_ArcSegment_Meta =
+    static PyType_Slot type_slots_ArcSegment_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_media.ArcSegment_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ArcSegment_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ArcSegment_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ArcSegment_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media.ArcSegment_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ArcSegment_Meta
+        type_slots_ArcSegment_Static
     };
 
     // ----- BezierSegment class --------------------
@@ -1268,27 +1278,32 @@ namespace py::cpp::Windows::UI::Xaml::Media
         _type_slots_BezierSegment
     };
 
-    static PyGetSetDef getset_BezierSegment_Meta[] = {
+    static PyGetSetDef getset_BezierSegment_Static[] = {
         { "point1_property", reinterpret_cast<getter>(BezierSegment_get_Point1Property), nullptr, nullptr, nullptr },
         { "point2_property", reinterpret_cast<getter>(BezierSegment_get_Point2Property), nullptr, nullptr, nullptr },
         { "point3_property", reinterpret_cast<getter>(BezierSegment_get_Point3Property), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_BezierSegment_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_BezierSegment_Meta) },
+    static PyMethodDef methods_BezierSegment_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_BezierSegment_Meta =
+    static PyType_Slot type_slots_BezierSegment_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_media.BezierSegment_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_BezierSegment_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_BezierSegment_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_BezierSegment_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media.BezierSegment_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_BezierSegment_Meta
+        type_slots_BezierSegment_Static
     };
 
     // ----- BitmapCache class --------------------
@@ -1720,27 +1735,32 @@ namespace py::cpp::Windows::UI::Xaml::Media
         _type_slots_Brush
     };
 
-    static PyGetSetDef getset_Brush_Meta[] = {
+    static PyGetSetDef getset_Brush_Static[] = {
         { "opacity_property", reinterpret_cast<getter>(Brush_get_OpacityProperty), nullptr, nullptr, nullptr },
         { "relative_transform_property", reinterpret_cast<getter>(Brush_get_RelativeTransformProperty), nullptr, nullptr, nullptr },
         { "transform_property", reinterpret_cast<getter>(Brush_get_TransformProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_Brush_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_Brush_Meta) },
+    static PyMethodDef methods_Brush_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_Brush_Meta =
+    static PyType_Slot type_slots_Brush_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_media.Brush_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Brush_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Brush_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Brush_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media.Brush_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Brush_Meta
+        type_slots_Brush_Static
     };
 
     // ----- BrushCollection class --------------------
@@ -3145,7 +3165,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         _type_slots_CompositeTransform
     };
 
-    static PyGetSetDef getset_CompositeTransform_Meta[] = {
+    static PyGetSetDef getset_CompositeTransform_Static[] = {
         { "center_x_property", reinterpret_cast<getter>(CompositeTransform_get_CenterXProperty), nullptr, nullptr, nullptr },
         { "center_y_property", reinterpret_cast<getter>(CompositeTransform_get_CenterYProperty), nullptr, nullptr, nullptr },
         { "rotation_property", reinterpret_cast<getter>(CompositeTransform_get_RotationProperty), nullptr, nullptr, nullptr },
@@ -3158,20 +3178,25 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot type_slots_CompositeTransform_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_CompositeTransform_Meta) },
+    static PyMethodDef methods_CompositeTransform_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_CompositeTransform_Meta =
+    static PyType_Slot type_slots_CompositeTransform_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_media.CompositeTransform_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CompositeTransform_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CompositeTransform_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CompositeTransform_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media.CompositeTransform_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_CompositeTransform_Meta
+        type_slots_CompositeTransform_Static
     };
 
     // ----- CompositionTarget class --------------------
@@ -3376,6 +3401,31 @@ namespace py::cpp::Windows::UI::Xaml::Media
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_CompositionTarget
+    };
+
+    static PyGetSetDef getset_CompositionTarget_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_CompositionTarget_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_CompositionTarget_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CompositionTarget_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CompositionTarget_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CompositionTarget_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media.CompositionTarget_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CompositionTarget_Static
     };
 
     // ----- DoubleCollection class --------------------
@@ -4309,27 +4359,32 @@ namespace py::cpp::Windows::UI::Xaml::Media
         _type_slots_EllipseGeometry
     };
 
-    static PyGetSetDef getset_EllipseGeometry_Meta[] = {
+    static PyGetSetDef getset_EllipseGeometry_Static[] = {
         { "center_property", reinterpret_cast<getter>(EllipseGeometry_get_CenterProperty), nullptr, nullptr, nullptr },
         { "radius_x_property", reinterpret_cast<getter>(EllipseGeometry_get_RadiusXProperty), nullptr, nullptr, nullptr },
         { "radius_y_property", reinterpret_cast<getter>(EllipseGeometry_get_RadiusYProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_EllipseGeometry_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_EllipseGeometry_Meta) },
+    static PyMethodDef methods_EllipseGeometry_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_EllipseGeometry_Meta =
+    static PyType_Slot type_slots_EllipseGeometry_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_media.EllipseGeometry_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_EllipseGeometry_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_EllipseGeometry_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_EllipseGeometry_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media.EllipseGeometry_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_EllipseGeometry_Meta
+        type_slots_EllipseGeometry_Static
     };
 
     // ----- FontFamily class --------------------
@@ -4464,25 +4519,30 @@ namespace py::cpp::Windows::UI::Xaml::Media
         _type_slots_FontFamily
     };
 
-    static PyGetSetDef getset_FontFamily_Meta[] = {
+    static PyGetSetDef getset_FontFamily_Static[] = {
         { "xaml_auto_font_family", reinterpret_cast<getter>(FontFamily_get_XamlAutoFontFamily), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_FontFamily_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_FontFamily_Meta) },
+    static PyMethodDef methods_FontFamily_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_FontFamily_Meta =
+    static PyType_Slot type_slots_FontFamily_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_media.FontFamily_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_FontFamily_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_FontFamily_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_FontFamily_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media.FontFamily_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_FontFamily_Meta
+        type_slots_FontFamily_Static
     };
 
     // ----- GeneralTransform class --------------------
@@ -4974,27 +5034,32 @@ namespace py::cpp::Windows::UI::Xaml::Media
         _type_slots_Geometry
     };
 
-    static PyGetSetDef getset_Geometry_Meta[] = {
+    static PyGetSetDef getset_Geometry_Static[] = {
         { "empty", reinterpret_cast<getter>(Geometry_get_Empty), nullptr, nullptr, nullptr },
         { "standard_flattening_tolerance", reinterpret_cast<getter>(Geometry_get_StandardFlatteningTolerance), nullptr, nullptr, nullptr },
         { "transform_property", reinterpret_cast<getter>(Geometry_get_TransformProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_Geometry_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_Geometry_Meta) },
+    static PyMethodDef methods_Geometry_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_Geometry_Meta =
+    static PyType_Slot type_slots_Geometry_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_media.Geometry_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Geometry_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Geometry_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Geometry_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media.Geometry_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Geometry_Meta
+        type_slots_Geometry_Static
     };
 
     // ----- GeometryCollection class --------------------
@@ -5861,26 +5926,31 @@ namespace py::cpp::Windows::UI::Xaml::Media
         _type_slots_GeometryGroup
     };
 
-    static PyGetSetDef getset_GeometryGroup_Meta[] = {
+    static PyGetSetDef getset_GeometryGroup_Static[] = {
         { "children_property", reinterpret_cast<getter>(GeometryGroup_get_ChildrenProperty), nullptr, nullptr, nullptr },
         { "fill_rule_property", reinterpret_cast<getter>(GeometryGroup_get_FillRuleProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_GeometryGroup_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_GeometryGroup_Meta) },
+    static PyMethodDef methods_GeometryGroup_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_GeometryGroup_Meta =
+    static PyType_Slot type_slots_GeometryGroup_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_media.GeometryGroup_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_GeometryGroup_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_GeometryGroup_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_GeometryGroup_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media.GeometryGroup_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_GeometryGroup_Meta
+        type_slots_GeometryGroup_Static
     };
 
     // ----- GradientBrush class --------------------
@@ -6220,7 +6290,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         _type_slots_GradientBrush
     };
 
-    static PyGetSetDef getset_GradientBrush_Meta[] = {
+    static PyGetSetDef getset_GradientBrush_Static[] = {
         { "color_interpolation_mode_property", reinterpret_cast<getter>(GradientBrush_get_ColorInterpolationModeProperty), nullptr, nullptr, nullptr },
         { "gradient_stops_property", reinterpret_cast<getter>(GradientBrush_get_GradientStopsProperty), nullptr, nullptr, nullptr },
         { "mapping_mode_property", reinterpret_cast<getter>(GradientBrush_get_MappingModeProperty), nullptr, nullptr, nullptr },
@@ -6228,20 +6298,25 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot type_slots_GradientBrush_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_GradientBrush_Meta) },
+    static PyMethodDef methods_GradientBrush_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_GradientBrush_Meta =
+    static PyType_Slot type_slots_GradientBrush_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_media.GradientBrush_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_GradientBrush_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_GradientBrush_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_GradientBrush_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media.GradientBrush_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_GradientBrush_Meta
+        type_slots_GradientBrush_Static
     };
 
     // ----- GradientStop class --------------------
@@ -6469,26 +6544,31 @@ namespace py::cpp::Windows::UI::Xaml::Media
         _type_slots_GradientStop
     };
 
-    static PyGetSetDef getset_GradientStop_Meta[] = {
+    static PyGetSetDef getset_GradientStop_Static[] = {
         { "color_property", reinterpret_cast<getter>(GradientStop_get_ColorProperty), nullptr, nullptr, nullptr },
         { "offset_property", reinterpret_cast<getter>(GradientStop_get_OffsetProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_GradientStop_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_GradientStop_Meta) },
+    static PyMethodDef methods_GradientStop_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_GradientStop_Meta =
+    static PyType_Slot type_slots_GradientStop_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_media.GradientStop_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_GradientStop_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_GradientStop_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_GradientStop_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media.GradientStop_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_GradientStop_Meta
+        type_slots_GradientStop_Static
     };
 
     // ----- GradientStopCollection class --------------------
@@ -7378,25 +7458,30 @@ namespace py::cpp::Windows::UI::Xaml::Media
         _type_slots_ImageBrush
     };
 
-    static PyGetSetDef getset_ImageBrush_Meta[] = {
+    static PyGetSetDef getset_ImageBrush_Static[] = {
         { "image_source_property", reinterpret_cast<getter>(ImageBrush_get_ImageSourceProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_ImageBrush_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_ImageBrush_Meta) },
+    static PyMethodDef methods_ImageBrush_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_ImageBrush_Meta =
+    static PyType_Slot type_slots_ImageBrush_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_media.ImageBrush_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ImageBrush_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImageBrush_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ImageBrush_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media.ImageBrush_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ImageBrush_Meta
+        type_slots_ImageBrush_Static
     };
 
     // ----- ImageSource class --------------------
@@ -7693,26 +7778,31 @@ namespace py::cpp::Windows::UI::Xaml::Media
         _type_slots_LineGeometry
     };
 
-    static PyGetSetDef getset_LineGeometry_Meta[] = {
+    static PyGetSetDef getset_LineGeometry_Static[] = {
         { "end_point_property", reinterpret_cast<getter>(LineGeometry_get_EndPointProperty), nullptr, nullptr, nullptr },
         { "start_point_property", reinterpret_cast<getter>(LineGeometry_get_StartPointProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_LineGeometry_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_LineGeometry_Meta) },
+    static PyMethodDef methods_LineGeometry_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_LineGeometry_Meta =
+    static PyType_Slot type_slots_LineGeometry_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_media.LineGeometry_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_LineGeometry_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_LineGeometry_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_LineGeometry_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media.LineGeometry_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_LineGeometry_Meta
+        type_slots_LineGeometry_Static
     };
 
     // ----- LineSegment class --------------------
@@ -7873,25 +7963,30 @@ namespace py::cpp::Windows::UI::Xaml::Media
         _type_slots_LineSegment
     };
 
-    static PyGetSetDef getset_LineSegment_Meta[] = {
+    static PyGetSetDef getset_LineSegment_Static[] = {
         { "point_property", reinterpret_cast<getter>(LineSegment_get_PointProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_LineSegment_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_LineSegment_Meta) },
+    static PyMethodDef methods_LineSegment_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_LineSegment_Meta =
+    static PyType_Slot type_slots_LineSegment_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_media.LineSegment_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_LineSegment_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_LineSegment_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_LineSegment_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media.LineSegment_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_LineSegment_Meta
+        type_slots_LineSegment_Static
     };
 
     // ----- LinearGradientBrush class --------------------
@@ -8135,26 +8230,31 @@ namespace py::cpp::Windows::UI::Xaml::Media
         _type_slots_LinearGradientBrush
     };
 
-    static PyGetSetDef getset_LinearGradientBrush_Meta[] = {
+    static PyGetSetDef getset_LinearGradientBrush_Static[] = {
         { "end_point_property", reinterpret_cast<getter>(LinearGradientBrush_get_EndPointProperty), nullptr, nullptr, nullptr },
         { "start_point_property", reinterpret_cast<getter>(LinearGradientBrush_get_StartPointProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_LinearGradientBrush_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_LinearGradientBrush_Meta) },
+    static PyMethodDef methods_LinearGradientBrush_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_LinearGradientBrush_Meta =
+    static PyType_Slot type_slots_LinearGradientBrush_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_media.LinearGradientBrush_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_LinearGradientBrush_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_LinearGradientBrush_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_LinearGradientBrush_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media.LinearGradientBrush_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_LinearGradientBrush_Meta
+        type_slots_LinearGradientBrush_Static
     };
 
     // ----- LoadedImageSourceLoadCompletedEventArgs class --------------------
@@ -8542,8 +8642,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     static PyMethodDef _methods_LoadedImageSurface[] = {
         { "close", reinterpret_cast<PyCFunction>(LoadedImageSurface_Close), METH_VARARGS, nullptr },
-        { "start_load_from_stream", reinterpret_cast<PyCFunction>(LoadedImageSurface_StartLoadFromStream), METH_VARARGS | METH_STATIC, nullptr },
-        { "start_load_from_uri", reinterpret_cast<PyCFunction>(LoadedImageSurface_StartLoadFromUri), METH_VARARGS | METH_STATIC, nullptr },
         { "add_load_completed", reinterpret_cast<PyCFunction>(LoadedImageSurface_add_LoadCompleted), METH_O, nullptr },
         { "remove_load_completed", reinterpret_cast<PyCFunction>(LoadedImageSurface_remove_LoadCompleted), METH_O, nullptr },
         { "_assign_array_", _assign_array_LoadedImageSurface, METH_O | METH_STATIC, nullptr },
@@ -8576,6 +8674,33 @@ namespace py::cpp::Windows::UI::Xaml::Media
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_LoadedImageSurface
+    };
+
+    static PyGetSetDef getset_LoadedImageSurface_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_LoadedImageSurface_Static[] = {
+        { "start_load_from_stream", reinterpret_cast<PyCFunction>(LoadedImageSurface_StartLoadFromStream), METH_VARARGS, nullptr },
+        { "start_load_from_uri", reinterpret_cast<PyCFunction>(LoadedImageSurface_StartLoadFromUri), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_LoadedImageSurface_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_LoadedImageSurface_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_LoadedImageSurface_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_LoadedImageSurface_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media.LoadedImageSurface_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_LoadedImageSurface_Static
     };
 
     // ----- Matrix3DProjection class --------------------
@@ -8736,25 +8861,30 @@ namespace py::cpp::Windows::UI::Xaml::Media
         _type_slots_Matrix3DProjection
     };
 
-    static PyGetSetDef getset_Matrix3DProjection_Meta[] = {
+    static PyGetSetDef getset_Matrix3DProjection_Static[] = {
         { "projection_matrix_property", reinterpret_cast<getter>(Matrix3DProjection_get_ProjectionMatrixProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_Matrix3DProjection_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_Matrix3DProjection_Meta) },
+    static PyMethodDef methods_Matrix3DProjection_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_Matrix3DProjection_Meta =
+    static PyType_Slot type_slots_Matrix3DProjection_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_media.Matrix3DProjection_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Matrix3DProjection_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Matrix3DProjection_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Matrix3DProjection_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media.Matrix3DProjection_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Matrix3DProjection_Meta
+        type_slots_Matrix3DProjection_Static
     };
 
     // ----- MatrixHelper class --------------------
@@ -8917,9 +9047,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
     }
 
     static PyMethodDef _methods_MatrixHelper[] = {
-        { "from_elements", reinterpret_cast<PyCFunction>(MatrixHelper_FromElements), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_is_identity", reinterpret_cast<PyCFunction>(MatrixHelper_GetIsIdentity), METH_VARARGS | METH_STATIC, nullptr },
-        { "transform", reinterpret_cast<PyCFunction>(MatrixHelper_Transform), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_MatrixHelper, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MatrixHelper), METH_O | METH_STATIC, nullptr },
         { }
@@ -8947,25 +9074,33 @@ namespace py::cpp::Windows::UI::Xaml::Media
         _type_slots_MatrixHelper
     };
 
-    static PyGetSetDef getset_MatrixHelper_Meta[] = {
+    static PyGetSetDef getset_MatrixHelper_Static[] = {
         { "identity", reinterpret_cast<getter>(MatrixHelper_get_Identity), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_MatrixHelper_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_MatrixHelper_Meta) },
+    static PyMethodDef methods_MatrixHelper_Static[] = {
+        { "from_elements", reinterpret_cast<PyCFunction>(MatrixHelper_FromElements), METH_VARARGS, nullptr },
+        { "get_is_identity", reinterpret_cast<PyCFunction>(MatrixHelper_GetIsIdentity), METH_VARARGS, nullptr },
+        { "transform", reinterpret_cast<PyCFunction>(MatrixHelper_Transform), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_MatrixHelper_Meta =
+    static PyType_Slot type_slots_MatrixHelper_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_media.MatrixHelper_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_MatrixHelper_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_MatrixHelper_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_MatrixHelper_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media.MatrixHelper_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_MatrixHelper_Meta
+        type_slots_MatrixHelper_Static
     };
 
     // ----- MatrixTransform class --------------------
@@ -9126,25 +9261,30 @@ namespace py::cpp::Windows::UI::Xaml::Media
         _type_slots_MatrixTransform
     };
 
-    static PyGetSetDef getset_MatrixTransform_Meta[] = {
+    static PyGetSetDef getset_MatrixTransform_Static[] = {
         { "matrix_property", reinterpret_cast<getter>(MatrixTransform_get_MatrixProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_MatrixTransform_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_MatrixTransform_Meta) },
+    static PyMethodDef methods_MatrixTransform_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_MatrixTransform_Meta =
+    static PyType_Slot type_slots_MatrixTransform_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_media.MatrixTransform_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_MatrixTransform_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_MatrixTransform_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_MatrixTransform_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media.MatrixTransform_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_MatrixTransform_Meta
+        type_slots_MatrixTransform_Static
     };
 
     // ----- MediaTransportControlsThumbnailRequestedEventArgs class --------------------
@@ -9769,7 +9909,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         _type_slots_PathFigure
     };
 
-    static PyGetSetDef getset_PathFigure_Meta[] = {
+    static PyGetSetDef getset_PathFigure_Static[] = {
         { "is_closed_property", reinterpret_cast<getter>(PathFigure_get_IsClosedProperty), nullptr, nullptr, nullptr },
         { "is_filled_property", reinterpret_cast<getter>(PathFigure_get_IsFilledProperty), nullptr, nullptr, nullptr },
         { "segments_property", reinterpret_cast<getter>(PathFigure_get_SegmentsProperty), nullptr, nullptr, nullptr },
@@ -9777,20 +9917,25 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot type_slots_PathFigure_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_PathFigure_Meta) },
+    static PyMethodDef methods_PathFigure_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_PathFigure_Meta =
+    static PyType_Slot type_slots_PathFigure_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_media.PathFigure_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PathFigure_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PathFigure_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PathFigure_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media.PathFigure_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PathFigure_Meta
+        type_slots_PathFigure_Static
     };
 
     // ----- PathFigureCollection class --------------------
@@ -10657,26 +10802,31 @@ namespace py::cpp::Windows::UI::Xaml::Media
         _type_slots_PathGeometry
     };
 
-    static PyGetSetDef getset_PathGeometry_Meta[] = {
+    static PyGetSetDef getset_PathGeometry_Static[] = {
         { "figures_property", reinterpret_cast<getter>(PathGeometry_get_FiguresProperty), nullptr, nullptr, nullptr },
         { "fill_rule_property", reinterpret_cast<getter>(PathGeometry_get_FillRuleProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_PathGeometry_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_PathGeometry_Meta) },
+    static PyMethodDef methods_PathGeometry_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_PathGeometry_Meta =
+    static PyType_Slot type_slots_PathGeometry_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_media.PathGeometry_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PathGeometry_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PathGeometry_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PathGeometry_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media.PathGeometry_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PathGeometry_Meta
+        type_slots_PathGeometry_Static
     };
 
     // ----- PathSegment class --------------------
@@ -12321,7 +12471,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         _type_slots_PlaneProjection
     };
 
-    static PyGetSetDef getset_PlaneProjection_Meta[] = {
+    static PyGetSetDef getset_PlaneProjection_Static[] = {
         { "center_of_rotation_x_property", reinterpret_cast<getter>(PlaneProjection_get_CenterOfRotationXProperty), nullptr, nullptr, nullptr },
         { "center_of_rotation_y_property", reinterpret_cast<getter>(PlaneProjection_get_CenterOfRotationYProperty), nullptr, nullptr, nullptr },
         { "center_of_rotation_z_property", reinterpret_cast<getter>(PlaneProjection_get_CenterOfRotationZProperty), nullptr, nullptr, nullptr },
@@ -12338,20 +12488,25 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot type_slots_PlaneProjection_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_PlaneProjection_Meta) },
+    static PyMethodDef methods_PlaneProjection_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_PlaneProjection_Meta =
+    static PyType_Slot type_slots_PlaneProjection_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_media.PlaneProjection_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PlaneProjection_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PlaneProjection_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PlaneProjection_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media.PlaneProjection_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PlaneProjection_Meta
+        type_slots_PlaneProjection_Static
     };
 
     // ----- PointCollection class --------------------
@@ -13151,25 +13306,30 @@ namespace py::cpp::Windows::UI::Xaml::Media
         _type_slots_PolyBezierSegment
     };
 
-    static PyGetSetDef getset_PolyBezierSegment_Meta[] = {
+    static PyGetSetDef getset_PolyBezierSegment_Static[] = {
         { "points_property", reinterpret_cast<getter>(PolyBezierSegment_get_PointsProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_PolyBezierSegment_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_PolyBezierSegment_Meta) },
+    static PyMethodDef methods_PolyBezierSegment_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_PolyBezierSegment_Meta =
+    static PyType_Slot type_slots_PolyBezierSegment_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_media.PolyBezierSegment_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PolyBezierSegment_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PolyBezierSegment_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PolyBezierSegment_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media.PolyBezierSegment_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PolyBezierSegment_Meta
+        type_slots_PolyBezierSegment_Static
     };
 
     // ----- PolyLineSegment class --------------------
@@ -13330,25 +13490,30 @@ namespace py::cpp::Windows::UI::Xaml::Media
         _type_slots_PolyLineSegment
     };
 
-    static PyGetSetDef getset_PolyLineSegment_Meta[] = {
+    static PyGetSetDef getset_PolyLineSegment_Static[] = {
         { "points_property", reinterpret_cast<getter>(PolyLineSegment_get_PointsProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_PolyLineSegment_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_PolyLineSegment_Meta) },
+    static PyMethodDef methods_PolyLineSegment_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_PolyLineSegment_Meta =
+    static PyType_Slot type_slots_PolyLineSegment_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_media.PolyLineSegment_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PolyLineSegment_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PolyLineSegment_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PolyLineSegment_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media.PolyLineSegment_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PolyLineSegment_Meta
+        type_slots_PolyLineSegment_Static
     };
 
     // ----- PolyQuadraticBezierSegment class --------------------
@@ -13509,25 +13674,30 @@ namespace py::cpp::Windows::UI::Xaml::Media
         _type_slots_PolyQuadraticBezierSegment
     };
 
-    static PyGetSetDef getset_PolyQuadraticBezierSegment_Meta[] = {
+    static PyGetSetDef getset_PolyQuadraticBezierSegment_Static[] = {
         { "points_property", reinterpret_cast<getter>(PolyQuadraticBezierSegment_get_PointsProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_PolyQuadraticBezierSegment_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_PolyQuadraticBezierSegment_Meta) },
+    static PyMethodDef methods_PolyQuadraticBezierSegment_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_PolyQuadraticBezierSegment_Meta =
+    static PyType_Slot type_slots_PolyQuadraticBezierSegment_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_media.PolyQuadraticBezierSegment_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PolyQuadraticBezierSegment_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PolyQuadraticBezierSegment_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PolyQuadraticBezierSegment_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media.PolyQuadraticBezierSegment_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PolyQuadraticBezierSegment_Meta
+        type_slots_PolyQuadraticBezierSegment_Static
     };
 
     // ----- Projection class --------------------
@@ -13824,26 +13994,31 @@ namespace py::cpp::Windows::UI::Xaml::Media
         _type_slots_QuadraticBezierSegment
     };
 
-    static PyGetSetDef getset_QuadraticBezierSegment_Meta[] = {
+    static PyGetSetDef getset_QuadraticBezierSegment_Static[] = {
         { "point1_property", reinterpret_cast<getter>(QuadraticBezierSegment_get_Point1Property), nullptr, nullptr, nullptr },
         { "point2_property", reinterpret_cast<getter>(QuadraticBezierSegment_get_Point2Property), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_QuadraticBezierSegment_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_QuadraticBezierSegment_Meta) },
+    static PyMethodDef methods_QuadraticBezierSegment_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_QuadraticBezierSegment_Meta =
+    static PyType_Slot type_slots_QuadraticBezierSegment_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_media.QuadraticBezierSegment_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_QuadraticBezierSegment_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_QuadraticBezierSegment_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_QuadraticBezierSegment_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media.QuadraticBezierSegment_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_QuadraticBezierSegment_Meta
+        type_slots_QuadraticBezierSegment_Static
     };
 
     // ----- RateChangedRoutedEventArgs class --------------------
@@ -14095,25 +14270,30 @@ namespace py::cpp::Windows::UI::Xaml::Media
         _type_slots_RectangleGeometry
     };
 
-    static PyGetSetDef getset_RectangleGeometry_Meta[] = {
+    static PyGetSetDef getset_RectangleGeometry_Static[] = {
         { "rect_property", reinterpret_cast<getter>(RectangleGeometry_get_RectProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_RectangleGeometry_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_RectangleGeometry_Meta) },
+    static PyMethodDef methods_RectangleGeometry_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_RectangleGeometry_Meta =
+    static PyType_Slot type_slots_RectangleGeometry_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_media.RectangleGeometry_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_RectangleGeometry_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_RectangleGeometry_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_RectangleGeometry_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media.RectangleGeometry_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_RectangleGeometry_Meta
+        type_slots_RectangleGeometry_Static
     };
 
     // ----- RenderedEventArgs class --------------------
@@ -14799,8 +14979,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
     }
 
     static PyMethodDef _methods_RevealBrush[] = {
-        { "get_state", reinterpret_cast<PyCFunction>(RevealBrush_GetState), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_state", reinterpret_cast<PyCFunction>(RevealBrush_SetState), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_RevealBrush, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RevealBrush), METH_O | METH_STATIC, nullptr },
         { }
@@ -14831,7 +15009,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         _type_slots_RevealBrush
     };
 
-    static PyGetSetDef getset_RevealBrush_Meta[] = {
+    static PyGetSetDef getset_RevealBrush_Static[] = {
         { "always_use_fallback_property", reinterpret_cast<getter>(RevealBrush_get_AlwaysUseFallbackProperty), nullptr, nullptr, nullptr },
         { "color_property", reinterpret_cast<getter>(RevealBrush_get_ColorProperty), nullptr, nullptr, nullptr },
         { "state_property", reinterpret_cast<getter>(RevealBrush_get_StateProperty), nullptr, nullptr, nullptr },
@@ -14839,20 +15017,27 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot type_slots_RevealBrush_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_RevealBrush_Meta) },
+    static PyMethodDef methods_RevealBrush_Static[] = {
+        { "get_state", reinterpret_cast<PyCFunction>(RevealBrush_GetState), METH_VARARGS, nullptr },
+        { "set_state", reinterpret_cast<PyCFunction>(RevealBrush_SetState), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_RevealBrush_Meta =
+    static PyType_Slot type_slots_RevealBrush_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_media.RevealBrush_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_RevealBrush_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_RevealBrush_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_RevealBrush_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media.RevealBrush_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_RevealBrush_Meta
+        type_slots_RevealBrush_Static
     };
 
     // ----- RotateTransform class --------------------
@@ -15147,27 +15332,32 @@ namespace py::cpp::Windows::UI::Xaml::Media
         _type_slots_RotateTransform
     };
 
-    static PyGetSetDef getset_RotateTransform_Meta[] = {
+    static PyGetSetDef getset_RotateTransform_Static[] = {
         { "angle_property", reinterpret_cast<getter>(RotateTransform_get_AngleProperty), nullptr, nullptr, nullptr },
         { "center_x_property", reinterpret_cast<getter>(RotateTransform_get_CenterXProperty), nullptr, nullptr, nullptr },
         { "center_y_property", reinterpret_cast<getter>(RotateTransform_get_CenterYProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_RotateTransform_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_RotateTransform_Meta) },
+    static PyMethodDef methods_RotateTransform_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_RotateTransform_Meta =
+    static PyType_Slot type_slots_RotateTransform_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_media.RotateTransform_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_RotateTransform_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_RotateTransform_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_RotateTransform_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media.RotateTransform_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_RotateTransform_Meta
+        type_slots_RotateTransform_Static
     };
 
     // ----- ScaleTransform class --------------------
@@ -15529,7 +15719,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         _type_slots_ScaleTransform
     };
 
-    static PyGetSetDef getset_ScaleTransform_Meta[] = {
+    static PyGetSetDef getset_ScaleTransform_Static[] = {
         { "center_x_property", reinterpret_cast<getter>(ScaleTransform_get_CenterXProperty), nullptr, nullptr, nullptr },
         { "center_y_property", reinterpret_cast<getter>(ScaleTransform_get_CenterYProperty), nullptr, nullptr, nullptr },
         { "scale_x_property", reinterpret_cast<getter>(ScaleTransform_get_ScaleXProperty), nullptr, nullptr, nullptr },
@@ -15537,20 +15727,25 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot type_slots_ScaleTransform_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_ScaleTransform_Meta) },
+    static PyMethodDef methods_ScaleTransform_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_ScaleTransform_Meta =
+    static PyType_Slot type_slots_ScaleTransform_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_media.ScaleTransform_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ScaleTransform_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ScaleTransform_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ScaleTransform_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media.ScaleTransform_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ScaleTransform_Meta
+        type_slots_ScaleTransform_Static
     };
 
     // ----- Shadow class --------------------
@@ -15981,7 +16176,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         _type_slots_SkewTransform
     };
 
-    static PyGetSetDef getset_SkewTransform_Meta[] = {
+    static PyGetSetDef getset_SkewTransform_Static[] = {
         { "angle_x_property", reinterpret_cast<getter>(SkewTransform_get_AngleXProperty), nullptr, nullptr, nullptr },
         { "angle_y_property", reinterpret_cast<getter>(SkewTransform_get_AngleYProperty), nullptr, nullptr, nullptr },
         { "center_x_property", reinterpret_cast<getter>(SkewTransform_get_CenterXProperty), nullptr, nullptr, nullptr },
@@ -15989,20 +16184,25 @@ namespace py::cpp::Windows::UI::Xaml::Media
         { }
     };
 
-    static PyType_Slot type_slots_SkewTransform_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_SkewTransform_Meta) },
+    static PyMethodDef methods_SkewTransform_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_SkewTransform_Meta =
+    static PyType_Slot type_slots_SkewTransform_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_media.SkewTransform_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SkewTransform_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SkewTransform_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SkewTransform_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media.SkewTransform_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SkewTransform_Meta
+        type_slots_SkewTransform_Static
     };
 
     // ----- SolidColorBrush class --------------------
@@ -16178,25 +16378,30 @@ namespace py::cpp::Windows::UI::Xaml::Media
         _type_slots_SolidColorBrush
     };
 
-    static PyGetSetDef getset_SolidColorBrush_Meta[] = {
+    static PyGetSetDef getset_SolidColorBrush_Static[] = {
         { "color_property", reinterpret_cast<getter>(SolidColorBrush_get_ColorProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_SolidColorBrush_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_SolidColorBrush_Meta) },
+    static PyMethodDef methods_SolidColorBrush_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_SolidColorBrush_Meta =
+    static PyType_Slot type_slots_SolidColorBrush_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_media.SolidColorBrush_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SolidColorBrush_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SolidColorBrush_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SolidColorBrush_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media.SolidColorBrush_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SolidColorBrush_Meta
+        type_slots_SolidColorBrush_Static
     };
 
     // ----- ThemeShadow class --------------------
@@ -16580,27 +16785,32 @@ namespace py::cpp::Windows::UI::Xaml::Media
         _type_slots_TileBrush
     };
 
-    static PyGetSetDef getset_TileBrush_Meta[] = {
+    static PyGetSetDef getset_TileBrush_Static[] = {
         { "alignment_x_property", reinterpret_cast<getter>(TileBrush_get_AlignmentXProperty), nullptr, nullptr, nullptr },
         { "alignment_y_property", reinterpret_cast<getter>(TileBrush_get_AlignmentYProperty), nullptr, nullptr, nullptr },
         { "stretch_property", reinterpret_cast<getter>(TileBrush_get_StretchProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_TileBrush_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_TileBrush_Meta) },
+    static PyMethodDef methods_TileBrush_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_TileBrush_Meta =
+    static PyType_Slot type_slots_TileBrush_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_media.TileBrush_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_TileBrush_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_TileBrush_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_TileBrush_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media.TileBrush_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_TileBrush_Meta
+        type_slots_TileBrush_Static
     };
 
     // ----- TimelineMarker class --------------------
@@ -16895,27 +17105,32 @@ namespace py::cpp::Windows::UI::Xaml::Media
         _type_slots_TimelineMarker
     };
 
-    static PyGetSetDef getset_TimelineMarker_Meta[] = {
+    static PyGetSetDef getset_TimelineMarker_Static[] = {
         { "text_property", reinterpret_cast<getter>(TimelineMarker_get_TextProperty), nullptr, nullptr, nullptr },
         { "time_property", reinterpret_cast<getter>(TimelineMarker_get_TimeProperty), nullptr, nullptr, nullptr },
         { "type_property", reinterpret_cast<getter>(TimelineMarker_get_TypeProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_TimelineMarker_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_TimelineMarker_Meta) },
+    static PyMethodDef methods_TimelineMarker_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_TimelineMarker_Meta =
+    static PyType_Slot type_slots_TimelineMarker_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_media.TimelineMarker_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_TimelineMarker_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_TimelineMarker_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_TimelineMarker_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media.TimelineMarker_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_TimelineMarker_Meta
+        type_slots_TimelineMarker_Static
     };
 
     // ----- TimelineMarkerCollection class --------------------
@@ -18582,25 +18797,30 @@ namespace py::cpp::Windows::UI::Xaml::Media
         _type_slots_TransformGroup
     };
 
-    static PyGetSetDef getset_TransformGroup_Meta[] = {
+    static PyGetSetDef getset_TransformGroup_Static[] = {
         { "children_property", reinterpret_cast<getter>(TransformGroup_get_ChildrenProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_TransformGroup_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_TransformGroup_Meta) },
+    static PyMethodDef methods_TransformGroup_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_TransformGroup_Meta =
+    static PyType_Slot type_slots_TransformGroup_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_media.TransformGroup_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_TransformGroup_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_TransformGroup_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_TransformGroup_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media.TransformGroup_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_TransformGroup_Meta
+        type_slots_TransformGroup_Static
     };
 
     // ----- TranslateTransform class --------------------
@@ -18828,26 +19048,31 @@ namespace py::cpp::Windows::UI::Xaml::Media
         _type_slots_TranslateTransform
     };
 
-    static PyGetSetDef getset_TranslateTransform_Meta[] = {
+    static PyGetSetDef getset_TranslateTransform_Static[] = {
         { "x_property", reinterpret_cast<getter>(TranslateTransform_get_XProperty), nullptr, nullptr, nullptr },
         { "y_property", reinterpret_cast<getter>(TranslateTransform_get_YProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_TranslateTransform_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_TranslateTransform_Meta) },
+    static PyMethodDef methods_TranslateTransform_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_TranslateTransform_Meta =
+    static PyType_Slot type_slots_TranslateTransform_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_media.TranslateTransform_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_TranslateTransform_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_TranslateTransform_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_TranslateTransform_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media.TranslateTransform_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_TranslateTransform_Meta
+        type_slots_TranslateTransform_Static
     };
 
     // ----- VisualTreeHelper class --------------------
@@ -19134,13 +19359,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
     }
 
     static PyMethodDef _methods_VisualTreeHelper[] = {
-        { "disconnect_children_recursive", reinterpret_cast<PyCFunction>(VisualTreeHelper_DisconnectChildrenRecursive), METH_VARARGS | METH_STATIC, nullptr },
-        { "find_elements_in_host_coordinates", reinterpret_cast<PyCFunction>(VisualTreeHelper_FindElementsInHostCoordinates), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_child", reinterpret_cast<PyCFunction>(VisualTreeHelper_GetChild), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_children_count", reinterpret_cast<PyCFunction>(VisualTreeHelper_GetChildrenCount), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_open_popups", reinterpret_cast<PyCFunction>(VisualTreeHelper_GetOpenPopups), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_open_popups_for_xaml_root", reinterpret_cast<PyCFunction>(VisualTreeHelper_GetOpenPopupsForXamlRoot), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_parent", reinterpret_cast<PyCFunction>(VisualTreeHelper_GetParent), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_VisualTreeHelper, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VisualTreeHelper), METH_O | METH_STATIC, nullptr },
         { }
@@ -19166,6 +19384,38 @@ namespace py::cpp::Windows::UI::Xaml::Media
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_VisualTreeHelper
+    };
+
+    static PyGetSetDef getset_VisualTreeHelper_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_VisualTreeHelper_Static[] = {
+        { "disconnect_children_recursive", reinterpret_cast<PyCFunction>(VisualTreeHelper_DisconnectChildrenRecursive), METH_VARARGS, nullptr },
+        { "find_elements_in_host_coordinates", reinterpret_cast<PyCFunction>(VisualTreeHelper_FindElementsInHostCoordinates), METH_VARARGS, nullptr },
+        { "get_child", reinterpret_cast<PyCFunction>(VisualTreeHelper_GetChild), METH_VARARGS, nullptr },
+        { "get_children_count", reinterpret_cast<PyCFunction>(VisualTreeHelper_GetChildrenCount), METH_VARARGS, nullptr },
+        { "get_open_popups", reinterpret_cast<PyCFunction>(VisualTreeHelper_GetOpenPopups), METH_VARARGS, nullptr },
+        { "get_open_popups_for_xaml_root", reinterpret_cast<PyCFunction>(VisualTreeHelper_GetOpenPopupsForXamlRoot), METH_VARARGS, nullptr },
+        { "get_parent", reinterpret_cast<PyCFunction>(VisualTreeHelper_GetParent), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_VisualTreeHelper_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_VisualTreeHelper_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_VisualTreeHelper_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_VisualTreeHelper_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media.VisualTreeHelper_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_VisualTreeHelper_Static
     };
 
     // ----- XamlCompositionBrushBase class --------------------
@@ -19414,25 +19664,30 @@ namespace py::cpp::Windows::UI::Xaml::Media
         _type_slots_XamlCompositionBrushBase
     };
 
-    static PyGetSetDef getset_XamlCompositionBrushBase_Meta[] = {
+    static PyGetSetDef getset_XamlCompositionBrushBase_Static[] = {
         { "fallback_color_property", reinterpret_cast<getter>(XamlCompositionBrushBase_get_FallbackColorProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_XamlCompositionBrushBase_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_XamlCompositionBrushBase_Meta) },
+    static PyMethodDef methods_XamlCompositionBrushBase_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_XamlCompositionBrushBase_Meta =
+    static PyType_Slot type_slots_XamlCompositionBrushBase_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_media.XamlCompositionBrushBase_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_XamlCompositionBrushBase_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_XamlCompositionBrushBase_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_XamlCompositionBrushBase_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media.XamlCompositionBrushBase_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_XamlCompositionBrushBase_Meta
+        type_slots_XamlCompositionBrushBase_Static
     };
 
     // ----- XamlLight class --------------------
@@ -19771,13 +20026,9 @@ namespace py::cpp::Windows::UI::Xaml::Media
     }
 
     static PyMethodDef _methods_XamlLight[] = {
-        { "add_target_brush", reinterpret_cast<PyCFunction>(XamlLight_AddTargetBrush), METH_VARARGS | METH_STATIC, nullptr },
-        { "add_target_element", reinterpret_cast<PyCFunction>(XamlLight_AddTargetElement), METH_VARARGS | METH_STATIC, nullptr },
         { "get_id", reinterpret_cast<PyCFunction>(XamlLight_GetId), METH_VARARGS, nullptr },
         { "on_connected", reinterpret_cast<PyCFunction>(XamlLight_OnConnected), METH_VARARGS, nullptr },
         { "on_disconnected", reinterpret_cast<PyCFunction>(XamlLight_OnDisconnected), METH_VARARGS, nullptr },
-        { "remove_target_brush", reinterpret_cast<PyCFunction>(XamlLight_RemoveTargetBrush), METH_VARARGS | METH_STATIC, nullptr },
-        { "remove_target_element", reinterpret_cast<PyCFunction>(XamlLight_RemoveTargetElement), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_XamlLight, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_XamlLight), METH_O | METH_STATIC, nullptr },
         { }
@@ -19804,6 +20055,35 @@ namespace py::cpp::Windows::UI::Xaml::Media
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_XamlLight
+    };
+
+    static PyGetSetDef getset_XamlLight_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_XamlLight_Static[] = {
+        { "add_target_brush", reinterpret_cast<PyCFunction>(XamlLight_AddTargetBrush), METH_VARARGS, nullptr },
+        { "add_target_element", reinterpret_cast<PyCFunction>(XamlLight_AddTargetElement), METH_VARARGS, nullptr },
+        { "remove_target_brush", reinterpret_cast<PyCFunction>(XamlLight_RemoveTargetBrush), METH_VARARGS, nullptr },
+        { "remove_target_element", reinterpret_cast<PyCFunction>(XamlLight_RemoveTargetElement), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_XamlLight_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_XamlLight_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_XamlLight_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_XamlLight_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media.XamlLight_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_XamlLight_Static
     };
 
     // ----- Matrix struct --------------------
@@ -20153,35 +20433,35 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_AcrylicBrush_Meta{PyType_FromSpec(&type_spec_AcrylicBrush_Meta)};
-    if (!type_AcrylicBrush_Meta)
+    py::pyobj_handle type_AcrylicBrush_Static{PyType_FromSpec(&type_spec_AcrylicBrush_Static)};
+    if (!type_AcrylicBrush_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AcrylicBrush, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AcrylicBrush_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AcrylicBrush, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AcrylicBrush_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ArcSegment_Meta{PyType_FromSpec(&type_spec_ArcSegment_Meta)};
-    if (!type_ArcSegment_Meta)
+    py::pyobj_handle type_ArcSegment_Static{PyType_FromSpec(&type_spec_ArcSegment_Static)};
+    if (!type_ArcSegment_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ArcSegment, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ArcSegment_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ArcSegment, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ArcSegment_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_BezierSegment_Meta{PyType_FromSpec(&type_spec_BezierSegment_Meta)};
-    if (!type_BezierSegment_Meta)
+    py::pyobj_handle type_BezierSegment_Static{PyType_FromSpec(&type_spec_BezierSegment_Static)};
+    if (!type_BezierSegment_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BezierSegment, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BezierSegment_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BezierSegment, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BezierSegment_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -20191,13 +20471,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_Brush_Meta{PyType_FromSpec(&type_spec_Brush_Meta)};
-    if (!type_Brush_Meta)
+    py::pyobj_handle type_Brush_Static{PyType_FromSpec(&type_spec_Brush_Static)};
+    if (!type_Brush_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Brush, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Brush_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Brush, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Brush_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -20212,18 +20492,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_CompositeTransform_Meta{PyType_FromSpec(&type_spec_CompositeTransform_Meta)};
-    if (!type_CompositeTransform_Meta)
+    py::pyobj_handle type_CompositeTransform_Static{PyType_FromSpec(&type_spec_CompositeTransform_Static)};
+    if (!type_CompositeTransform_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositeTransform, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositeTransform_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositeTransform, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositeTransform_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionTarget, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_CompositionTarget_Static{PyType_FromSpec(&type_spec_CompositionTarget_Static)};
+    if (!type_CompositionTarget_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_CompositionTarget, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionTarget_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -20233,24 +20519,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_EllipseGeometry_Meta{PyType_FromSpec(&type_spec_EllipseGeometry_Meta)};
-    if (!type_EllipseGeometry_Meta)
+    py::pyobj_handle type_EllipseGeometry_Static{PyType_FromSpec(&type_spec_EllipseGeometry_Static)};
+    if (!type_EllipseGeometry_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EllipseGeometry, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EllipseGeometry_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EllipseGeometry, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EllipseGeometry_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_FontFamily_Meta{PyType_FromSpec(&type_spec_FontFamily_Meta)};
-    if (!type_FontFamily_Meta)
+    py::pyobj_handle type_FontFamily_Static{PyType_FromSpec(&type_spec_FontFamily_Static)};
+    if (!type_FontFamily_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FontFamily, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FontFamily_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FontFamily, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FontFamily_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -20260,13 +20546,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_Geometry_Meta{PyType_FromSpec(&type_spec_Geometry_Meta)};
-    if (!type_Geometry_Meta)
+    py::pyobj_handle type_Geometry_Static{PyType_FromSpec(&type_spec_Geometry_Static)};
+    if (!type_Geometry_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Geometry, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Geometry_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Geometry, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Geometry_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -20276,35 +20562,35 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_GeometryGroup_Meta{PyType_FromSpec(&type_spec_GeometryGroup_Meta)};
-    if (!type_GeometryGroup_Meta)
+    py::pyobj_handle type_GeometryGroup_Static{PyType_FromSpec(&type_spec_GeometryGroup_Static)};
+    if (!type_GeometryGroup_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GeometryGroup, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GeometryGroup_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GeometryGroup, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GeometryGroup_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_GradientBrush_Meta{PyType_FromSpec(&type_spec_GradientBrush_Meta)};
-    if (!type_GradientBrush_Meta)
+    py::pyobj_handle type_GradientBrush_Static{PyType_FromSpec(&type_spec_GradientBrush_Static)};
+    if (!type_GradientBrush_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GradientBrush, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GradientBrush_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GradientBrush, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GradientBrush_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_GradientStop_Meta{PyType_FromSpec(&type_spec_GradientStop_Meta)};
-    if (!type_GradientStop_Meta)
+    py::pyobj_handle type_GradientStop_Static{PyType_FromSpec(&type_spec_GradientStop_Static)};
+    if (!type_GradientStop_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GradientStop, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GradientStop_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GradientStop, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GradientStop_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -20314,13 +20600,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_ImageBrush_Meta{PyType_FromSpec(&type_spec_ImageBrush_Meta)};
-    if (!type_ImageBrush_Meta)
+    py::pyobj_handle type_ImageBrush_Static{PyType_FromSpec(&type_spec_ImageBrush_Static)};
+    if (!type_ImageBrush_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ImageBrush, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ImageBrush_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ImageBrush, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ImageBrush_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -20330,35 +20616,35 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_LineGeometry_Meta{PyType_FromSpec(&type_spec_LineGeometry_Meta)};
-    if (!type_LineGeometry_Meta)
+    py::pyobj_handle type_LineGeometry_Static{PyType_FromSpec(&type_spec_LineGeometry_Static)};
+    if (!type_LineGeometry_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LineGeometry, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LineGeometry_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LineGeometry, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LineGeometry_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_LineSegment_Meta{PyType_FromSpec(&type_spec_LineSegment_Meta)};
-    if (!type_LineSegment_Meta)
+    py::pyobj_handle type_LineSegment_Static{PyType_FromSpec(&type_spec_LineSegment_Static)};
+    if (!type_LineSegment_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LineSegment, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LineSegment_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LineSegment, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LineSegment_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_LinearGradientBrush_Meta{PyType_FromSpec(&type_spec_LinearGradientBrush_Meta)};
-    if (!type_LinearGradientBrush_Meta)
+    py::pyobj_handle type_LinearGradientBrush_Static{PyType_FromSpec(&type_spec_LinearGradientBrush_Static)};
+    if (!type_LinearGradientBrush_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LinearGradientBrush, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LinearGradientBrush_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LinearGradientBrush, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LinearGradientBrush_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -20368,40 +20654,46 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LoadedImageSurface, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_LoadedImageSurface_Static{PyType_FromSpec(&type_spec_LoadedImageSurface_Static)};
+    if (!type_LoadedImageSurface_Static)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_Matrix3DProjection_Meta{PyType_FromSpec(&type_spec_Matrix3DProjection_Meta)};
-    if (!type_Matrix3DProjection_Meta)
+    if (py::register_python_type(module.get(), &type_spec_LoadedImageSurface, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LoadedImageSurface_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Matrix3DProjection, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Matrix3DProjection_Meta.get())) == -1)
+    py::pyobj_handle type_Matrix3DProjection_Static{PyType_FromSpec(&type_spec_Matrix3DProjection_Static)};
+    if (!type_Matrix3DProjection_Static)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_MatrixHelper_Meta{PyType_FromSpec(&type_spec_MatrixHelper_Meta)};
-    if (!type_MatrixHelper_Meta)
+    if (py::register_python_type(module.get(), &type_spec_Matrix3DProjection, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Matrix3DProjection_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MatrixHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MatrixHelper_Meta.get())) == -1)
+    py::pyobj_handle type_MatrixHelper_Static{PyType_FromSpec(&type_spec_MatrixHelper_Static)};
+    if (!type_MatrixHelper_Static)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_MatrixTransform_Meta{PyType_FromSpec(&type_spec_MatrixTransform_Meta)};
-    if (!type_MatrixTransform_Meta)
+    if (py::register_python_type(module.get(), &type_spec_MatrixHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MatrixHelper_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MatrixTransform, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MatrixTransform_Meta.get())) == -1)
+    py::pyobj_handle type_MatrixTransform_Static{PyType_FromSpec(&type_spec_MatrixTransform_Static)};
+    if (!type_MatrixTransform_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_MatrixTransform, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MatrixTransform_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -20416,13 +20708,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_PathFigure_Meta{PyType_FromSpec(&type_spec_PathFigure_Meta)};
-    if (!type_PathFigure_Meta)
+    py::pyobj_handle type_PathFigure_Static{PyType_FromSpec(&type_spec_PathFigure_Static)};
+    if (!type_PathFigure_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PathFigure, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PathFigure_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PathFigure, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PathFigure_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -20432,13 +20724,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_PathGeometry_Meta{PyType_FromSpec(&type_spec_PathGeometry_Meta)};
-    if (!type_PathGeometry_Meta)
+    py::pyobj_handle type_PathGeometry_Static{PyType_FromSpec(&type_spec_PathGeometry_Static)};
+    if (!type_PathGeometry_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PathGeometry, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PathGeometry_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PathGeometry, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PathGeometry_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -20453,13 +20745,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_PlaneProjection_Meta{PyType_FromSpec(&type_spec_PlaneProjection_Meta)};
-    if (!type_PlaneProjection_Meta)
+    py::pyobj_handle type_PlaneProjection_Static{PyType_FromSpec(&type_spec_PlaneProjection_Static)};
+    if (!type_PlaneProjection_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PlaneProjection, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PlaneProjection_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PlaneProjection, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PlaneProjection_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -20469,35 +20761,35 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_PolyBezierSegment_Meta{PyType_FromSpec(&type_spec_PolyBezierSegment_Meta)};
-    if (!type_PolyBezierSegment_Meta)
+    py::pyobj_handle type_PolyBezierSegment_Static{PyType_FromSpec(&type_spec_PolyBezierSegment_Static)};
+    if (!type_PolyBezierSegment_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PolyBezierSegment, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PolyBezierSegment_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PolyBezierSegment, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PolyBezierSegment_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_PolyLineSegment_Meta{PyType_FromSpec(&type_spec_PolyLineSegment_Meta)};
-    if (!type_PolyLineSegment_Meta)
+    py::pyobj_handle type_PolyLineSegment_Static{PyType_FromSpec(&type_spec_PolyLineSegment_Static)};
+    if (!type_PolyLineSegment_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PolyLineSegment, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PolyLineSegment_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PolyLineSegment, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PolyLineSegment_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_PolyQuadraticBezierSegment_Meta{PyType_FromSpec(&type_spec_PolyQuadraticBezierSegment_Meta)};
-    if (!type_PolyQuadraticBezierSegment_Meta)
+    py::pyobj_handle type_PolyQuadraticBezierSegment_Static{PyType_FromSpec(&type_spec_PolyQuadraticBezierSegment_Static)};
+    if (!type_PolyQuadraticBezierSegment_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PolyQuadraticBezierSegment, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PolyQuadraticBezierSegment_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PolyQuadraticBezierSegment, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PolyQuadraticBezierSegment_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -20507,13 +20799,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_QuadraticBezierSegment_Meta{PyType_FromSpec(&type_spec_QuadraticBezierSegment_Meta)};
-    if (!type_QuadraticBezierSegment_Meta)
+    py::pyobj_handle type_QuadraticBezierSegment_Static{PyType_FromSpec(&type_spec_QuadraticBezierSegment_Static)};
+    if (!type_QuadraticBezierSegment_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_QuadraticBezierSegment, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_QuadraticBezierSegment_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_QuadraticBezierSegment, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_QuadraticBezierSegment_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -20523,13 +20815,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_RectangleGeometry_Meta{PyType_FromSpec(&type_spec_RectangleGeometry_Meta)};
-    if (!type_RectangleGeometry_Meta)
+    py::pyobj_handle type_RectangleGeometry_Static{PyType_FromSpec(&type_spec_RectangleGeometry_Static)};
+    if (!type_RectangleGeometry_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RectangleGeometry, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RectangleGeometry_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RectangleGeometry, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RectangleGeometry_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -20554,35 +20846,35 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_RevealBrush_Meta{PyType_FromSpec(&type_spec_RevealBrush_Meta)};
-    if (!type_RevealBrush_Meta)
+    py::pyobj_handle type_RevealBrush_Static{PyType_FromSpec(&type_spec_RevealBrush_Static)};
+    if (!type_RevealBrush_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RevealBrush, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RevealBrush_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RevealBrush, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RevealBrush_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_RotateTransform_Meta{PyType_FromSpec(&type_spec_RotateTransform_Meta)};
-    if (!type_RotateTransform_Meta)
+    py::pyobj_handle type_RotateTransform_Static{PyType_FromSpec(&type_spec_RotateTransform_Static)};
+    if (!type_RotateTransform_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RotateTransform, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RotateTransform_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RotateTransform, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RotateTransform_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ScaleTransform_Meta{PyType_FromSpec(&type_spec_ScaleTransform_Meta)};
-    if (!type_ScaleTransform_Meta)
+    py::pyobj_handle type_ScaleTransform_Static{PyType_FromSpec(&type_spec_ScaleTransform_Static)};
+    if (!type_ScaleTransform_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ScaleTransform, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ScaleTransform_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ScaleTransform, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ScaleTransform_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -20592,24 +20884,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_SkewTransform_Meta{PyType_FromSpec(&type_spec_SkewTransform_Meta)};
-    if (!type_SkewTransform_Meta)
+    py::pyobj_handle type_SkewTransform_Static{PyType_FromSpec(&type_spec_SkewTransform_Static)};
+    if (!type_SkewTransform_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SkewTransform, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SkewTransform_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SkewTransform, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SkewTransform_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SolidColorBrush_Meta{PyType_FromSpec(&type_spec_SolidColorBrush_Meta)};
-    if (!type_SolidColorBrush_Meta)
+    py::pyobj_handle type_SolidColorBrush_Static{PyType_FromSpec(&type_spec_SolidColorBrush_Static)};
+    if (!type_SolidColorBrush_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SolidColorBrush, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SolidColorBrush_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SolidColorBrush, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SolidColorBrush_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -20619,24 +20911,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_TileBrush_Meta{PyType_FromSpec(&type_spec_TileBrush_Meta)};
-    if (!type_TileBrush_Meta)
+    py::pyobj_handle type_TileBrush_Static{PyType_FromSpec(&type_spec_TileBrush_Static)};
+    if (!type_TileBrush_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_TileBrush, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TileBrush_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TileBrush, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TileBrush_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_TimelineMarker_Meta{PyType_FromSpec(&type_spec_TimelineMarker_Meta)};
-    if (!type_TimelineMarker_Meta)
+    py::pyobj_handle type_TimelineMarker_Static{PyType_FromSpec(&type_spec_TimelineMarker_Static)};
+    if (!type_TimelineMarker_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_TimelineMarker, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TimelineMarker_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TimelineMarker, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TimelineMarker_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -20661,45 +20953,57 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_TransformGroup_Meta{PyType_FromSpec(&type_spec_TransformGroup_Meta)};
-    if (!type_TransformGroup_Meta)
+    py::pyobj_handle type_TransformGroup_Static{PyType_FromSpec(&type_spec_TransformGroup_Static)};
+    if (!type_TransformGroup_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_TransformGroup, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TransformGroup_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TransformGroup, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TransformGroup_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_TranslateTransform_Meta{PyType_FromSpec(&type_spec_TranslateTransform_Meta)};
-    if (!type_TranslateTransform_Meta)
+    py::pyobj_handle type_TranslateTransform_Static{PyType_FromSpec(&type_spec_TranslateTransform_Static)};
+    if (!type_TranslateTransform_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_TranslateTransform, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TranslateTransform_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TranslateTransform, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TranslateTransform_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VisualTreeHelper, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_VisualTreeHelper_Static{PyType_FromSpec(&type_spec_VisualTreeHelper_Static)};
+    if (!type_VisualTreeHelper_Static)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_XamlCompositionBrushBase_Meta{PyType_FromSpec(&type_spec_XamlCompositionBrushBase_Meta)};
-    if (!type_XamlCompositionBrushBase_Meta)
+    if (py::register_python_type(module.get(), &type_spec_VisualTreeHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VisualTreeHelper_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_XamlCompositionBrushBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XamlCompositionBrushBase_Meta.get())) == -1)
+    py::pyobj_handle type_XamlCompositionBrushBase_Static{PyType_FromSpec(&type_spec_XamlCompositionBrushBase_Static)};
+    if (!type_XamlCompositionBrushBase_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_XamlLight, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_XamlCompositionBrushBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XamlCompositionBrushBase_Static.get())) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_XamlLight_Static{PyType_FromSpec(&type_spec_XamlLight_Static)};
+    if (!type_XamlLight_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_XamlLight, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XamlLight_Static.get())) == -1)
     {
         return nullptr;
     }

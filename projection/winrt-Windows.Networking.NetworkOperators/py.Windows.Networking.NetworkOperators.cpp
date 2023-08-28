@@ -1043,7 +1043,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     }
 
     static PyMethodDef _methods_ESimManager[] = {
-        { "try_create_e_sim_watcher", reinterpret_cast<PyCFunction>(ESimManager_TryCreateESimWatcher), METH_VARARGS | METH_STATIC, nullptr },
         { "add_service_info_changed", reinterpret_cast<PyCFunction>(ESimManager_add_ServiceInfoChanged), METH_O | METH_STATIC, nullptr },
         { "remove_service_info_changed", reinterpret_cast<PyCFunction>(ESimManager_remove_ServiceInfoChanged), METH_O | METH_STATIC, nullptr },
         { }
@@ -1070,25 +1069,31 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         _type_slots_ESimManager
     };
 
-    static PyGetSetDef getset_ESimManager_Meta[] = {
+    static PyGetSetDef getset_ESimManager_Static[] = {
         { "service_info", reinterpret_cast<getter>(ESimManager_get_ServiceInfo), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_ESimManager_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_ESimManager_Meta) },
+    static PyMethodDef methods_ESimManager_Static[] = {
+        { "try_create_e_sim_watcher", reinterpret_cast<PyCFunction>(ESimManager_TryCreateESimWatcher), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_ESimManager_Meta =
+    static PyType_Slot type_slots_ESimManager_Static[] = 
     {
-        "winrt._winrt_windows_networking_networkoperators.ESimManager_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ESimManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ESimManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ESimManager_Static =
+    {
+        "winrt._winrt_windows_networking_networkoperators.ESimManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ESimManager_Meta
+        type_slots_ESimManager_Static
     };
 
     // ----- ESimOperationResult class --------------------
@@ -2787,7 +2792,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     }
 
     static PyMethodDef _methods_FdnAccessManager[] = {
-        { "request_unlock_async", reinterpret_cast<PyCFunction>(FdnAccessManager_RequestUnlockAsync), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -2810,6 +2814,32 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_FdnAccessManager
+    };
+
+    static PyGetSetDef getset_FdnAccessManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_FdnAccessManager_Static[] = {
+        { "request_unlock_async", reinterpret_cast<PyCFunction>(FdnAccessManager_RequestUnlockAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_FdnAccessManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_FdnAccessManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_FdnAccessManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_FdnAccessManager_Static =
+    {
+        "winrt._winrt_windows_networking_networkoperators.FdnAccessManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_FdnAccessManager_Static
     };
 
     // ----- HotspotAuthenticationContext class --------------------
@@ -3162,7 +3192,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "issue_credentials_async", reinterpret_cast<PyCFunction>(HotspotAuthenticationContext_IssueCredentialsAsync), METH_VARARGS, nullptr },
         { "skip_authentication", reinterpret_cast<PyCFunction>(HotspotAuthenticationContext_SkipAuthentication), METH_VARARGS, nullptr },
         { "trigger_attention_required", reinterpret_cast<PyCFunction>(HotspotAuthenticationContext_TriggerAttentionRequired), METH_VARARGS, nullptr },
-        { "try_get_authentication_context", reinterpret_cast<PyCFunction>(HotspotAuthenticationContext_TryGetAuthenticationContext), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_HotspotAuthenticationContext, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HotspotAuthenticationContext), METH_O | METH_STATIC, nullptr },
         { }
@@ -3193,6 +3222,32 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_HotspotAuthenticationContext
+    };
+
+    static PyGetSetDef getset_HotspotAuthenticationContext_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_HotspotAuthenticationContext_Static[] = {
+        { "try_get_authentication_context", reinterpret_cast<PyCFunction>(HotspotAuthenticationContext_TryGetAuthenticationContext), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_HotspotAuthenticationContext_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_HotspotAuthenticationContext_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_HotspotAuthenticationContext_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_HotspotAuthenticationContext_Static =
+    {
+        "winrt._winrt_windows_networking_networkoperators.HotspotAuthenticationContext_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_HotspotAuthenticationContext_Static
     };
 
     // ----- HotspotAuthenticationEventDetails class --------------------
@@ -3524,27 +3579,32 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         _type_slots_KnownCSimFilePaths
     };
 
-    static PyGetSetDef getset_KnownCSimFilePaths_Meta[] = {
+    static PyGetSetDef getset_KnownCSimFilePaths_Static[] = {
         { "e_f_spn", reinterpret_cast<getter>(KnownCSimFilePaths_get_EFSpn), nullptr, nullptr, nullptr },
         { "gid1", reinterpret_cast<getter>(KnownCSimFilePaths_get_Gid1), nullptr, nullptr, nullptr },
         { "gid2", reinterpret_cast<getter>(KnownCSimFilePaths_get_Gid2), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_KnownCSimFilePaths_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_KnownCSimFilePaths_Meta) },
+    static PyMethodDef methods_KnownCSimFilePaths_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_KnownCSimFilePaths_Meta =
+    static PyType_Slot type_slots_KnownCSimFilePaths_Static[] = 
     {
-        "winrt._winrt_windows_networking_networkoperators.KnownCSimFilePaths_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_KnownCSimFilePaths_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_KnownCSimFilePaths_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_KnownCSimFilePaths_Static =
+    {
+        "winrt._winrt_windows_networking_networkoperators.KnownCSimFilePaths_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_KnownCSimFilePaths_Meta
+        type_slots_KnownCSimFilePaths_Static
     };
 
     // ----- KnownRuimFilePaths class --------------------
@@ -3638,27 +3698,32 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         _type_slots_KnownRuimFilePaths
     };
 
-    static PyGetSetDef getset_KnownRuimFilePaths_Meta[] = {
+    static PyGetSetDef getset_KnownRuimFilePaths_Static[] = {
         { "e_f_spn", reinterpret_cast<getter>(KnownRuimFilePaths_get_EFSpn), nullptr, nullptr, nullptr },
         { "gid1", reinterpret_cast<getter>(KnownRuimFilePaths_get_Gid1), nullptr, nullptr, nullptr },
         { "gid2", reinterpret_cast<getter>(KnownRuimFilePaths_get_Gid2), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_KnownRuimFilePaths_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_KnownRuimFilePaths_Meta) },
+    static PyMethodDef methods_KnownRuimFilePaths_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_KnownRuimFilePaths_Meta =
+    static PyType_Slot type_slots_KnownRuimFilePaths_Static[] = 
     {
-        "winrt._winrt_windows_networking_networkoperators.KnownRuimFilePaths_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_KnownRuimFilePaths_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_KnownRuimFilePaths_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_KnownRuimFilePaths_Static =
+    {
+        "winrt._winrt_windows_networking_networkoperators.KnownRuimFilePaths_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_KnownRuimFilePaths_Meta
+        type_slots_KnownRuimFilePaths_Static
     };
 
     // ----- KnownSimFilePaths class --------------------
@@ -3771,7 +3836,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         _type_slots_KnownSimFilePaths
     };
 
-    static PyGetSetDef getset_KnownSimFilePaths_Meta[] = {
+    static PyGetSetDef getset_KnownSimFilePaths_Static[] = {
         { "e_f_ons", reinterpret_cast<getter>(KnownSimFilePaths_get_EFOns), nullptr, nullptr, nullptr },
         { "e_f_spn", reinterpret_cast<getter>(KnownSimFilePaths_get_EFSpn), nullptr, nullptr, nullptr },
         { "gid1", reinterpret_cast<getter>(KnownSimFilePaths_get_Gid1), nullptr, nullptr, nullptr },
@@ -3779,20 +3844,25 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { }
     };
 
-    static PyType_Slot type_slots_KnownSimFilePaths_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_KnownSimFilePaths_Meta) },
+    static PyMethodDef methods_KnownSimFilePaths_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_KnownSimFilePaths_Meta =
+    static PyType_Slot type_slots_KnownSimFilePaths_Static[] = 
     {
-        "winrt._winrt_windows_networking_networkoperators.KnownSimFilePaths_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_KnownSimFilePaths_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_KnownSimFilePaths_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_KnownSimFilePaths_Static =
+    {
+        "winrt._winrt_windows_networking_networkoperators.KnownSimFilePaths_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_KnownSimFilePaths_Meta
+        type_slots_KnownSimFilePaths_Static
     };
 
     // ----- KnownUSimFilePaths class --------------------
@@ -3924,7 +3994,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         _type_slots_KnownUSimFilePaths
     };
 
-    static PyGetSetDef getset_KnownUSimFilePaths_Meta[] = {
+    static PyGetSetDef getset_KnownUSimFilePaths_Static[] = {
         { "e_f_opl", reinterpret_cast<getter>(KnownUSimFilePaths_get_EFOpl), nullptr, nullptr, nullptr },
         { "e_f_pnn", reinterpret_cast<getter>(KnownUSimFilePaths_get_EFPnn), nullptr, nullptr, nullptr },
         { "e_f_spn", reinterpret_cast<getter>(KnownUSimFilePaths_get_EFSpn), nullptr, nullptr, nullptr },
@@ -3933,20 +4003,25 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { }
     };
 
-    static PyType_Slot type_slots_KnownUSimFilePaths_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_KnownUSimFilePaths_Meta) },
+    static PyMethodDef methods_KnownUSimFilePaths_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_KnownUSimFilePaths_Meta =
+    static PyType_Slot type_slots_KnownUSimFilePaths_Static[] = 
     {
-        "winrt._winrt_windows_networking_networkoperators.KnownUSimFilePaths_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_KnownUSimFilePaths_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_KnownUSimFilePaths_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_KnownUSimFilePaths_Static =
+    {
+        "winrt._winrt_windows_networking_networkoperators.KnownUSimFilePaths_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_KnownUSimFilePaths_Meta
+        type_slots_KnownUSimFilePaths_Static
     };
 
     // ----- MobileBroadbandAccount class --------------------
@@ -4184,7 +4259,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     }
 
     static PyMethodDef _methods_MobileBroadbandAccount[] = {
-        { "create_from_network_account_id", reinterpret_cast<PyCFunction>(MobileBroadbandAccount_CreateFromNetworkAccountId), METH_VARARGS | METH_STATIC, nullptr },
         { "get_connection_profiles", reinterpret_cast<PyCFunction>(MobileBroadbandAccount_GetConnectionProfiles), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MobileBroadbandAccount, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MobileBroadbandAccount), METH_O | METH_STATIC, nullptr },
@@ -4219,25 +4293,31 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         _type_slots_MobileBroadbandAccount
     };
 
-    static PyGetSetDef getset_MobileBroadbandAccount_Meta[] = {
+    static PyGetSetDef getset_MobileBroadbandAccount_Static[] = {
         { "available_network_account_ids", reinterpret_cast<getter>(MobileBroadbandAccount_get_AvailableNetworkAccountIds), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_MobileBroadbandAccount_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_MobileBroadbandAccount_Meta) },
+    static PyMethodDef methods_MobileBroadbandAccount_Static[] = {
+        { "create_from_network_account_id", reinterpret_cast<PyCFunction>(MobileBroadbandAccount_CreateFromNetworkAccountId), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_MobileBroadbandAccount_Meta =
+    static PyType_Slot type_slots_MobileBroadbandAccount_Static[] = 
     {
-        "winrt._winrt_windows_networking_networkoperators.MobileBroadbandAccount_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_MobileBroadbandAccount_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_MobileBroadbandAccount_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_MobileBroadbandAccount_Static =
+    {
+        "winrt._winrt_windows_networking_networkoperators.MobileBroadbandAccount_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_MobileBroadbandAccount_Meta
+        type_slots_MobileBroadbandAccount_Static
     };
 
     // ----- MobileBroadbandAccountEventArgs class --------------------
@@ -8847,10 +8927,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     }
 
     static PyMethodDef _methods_MobileBroadbandModem[] = {
-        { "from_id", reinterpret_cast<PyCFunction>(MobileBroadbandModem_FromId), METH_VARARGS | METH_STATIC, nullptr },
         { "get_current_configuration_async", reinterpret_cast<PyCFunction>(MobileBroadbandModem_GetCurrentConfigurationAsync), METH_VARARGS, nullptr },
-        { "get_default", reinterpret_cast<PyCFunction>(MobileBroadbandModem_GetDefault), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_device_selector", reinterpret_cast<PyCFunction>(MobileBroadbandModem_GetDeviceSelector), METH_VARARGS | METH_STATIC, nullptr },
         { "get_device_service", reinterpret_cast<PyCFunction>(MobileBroadbandModem_GetDeviceService), METH_VARARGS, nullptr },
         { "get_is_passthrough_enabled", reinterpret_cast<PyCFunction>(MobileBroadbandModem_GetIsPassthroughEnabled), METH_VARARGS, nullptr },
         { "get_is_passthrough_enabled_async", reinterpret_cast<PyCFunction>(MobileBroadbandModem_GetIsPassthroughEnabledAsync), METH_VARARGS, nullptr },
@@ -8893,6 +8970,34 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_MobileBroadbandModem
+    };
+
+    static PyGetSetDef getset_MobileBroadbandModem_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_MobileBroadbandModem_Static[] = {
+        { "from_id", reinterpret_cast<PyCFunction>(MobileBroadbandModem_FromId), METH_VARARGS, nullptr },
+        { "get_default", reinterpret_cast<PyCFunction>(MobileBroadbandModem_GetDefault), METH_VARARGS, nullptr },
+        { "get_device_selector", reinterpret_cast<PyCFunction>(MobileBroadbandModem_GetDeviceSelector), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_MobileBroadbandModem_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_MobileBroadbandModem_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_MobileBroadbandModem_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_MobileBroadbandModem_Static =
+    {
+        "winrt._winrt_windows_networking_networkoperators.MobileBroadbandModem_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_MobileBroadbandModem_Static
     };
 
     // ----- MobileBroadbandModemConfiguration class --------------------
@@ -14047,17 +14152,8 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyMethodDef _methods_NetworkOperatorTetheringManager[] = {
         { "configure_access_point_async", reinterpret_cast<PyCFunction>(NetworkOperatorTetheringManager_ConfigureAccessPointAsync), METH_VARARGS, nullptr },
-        { "create_from_connection_profile", reinterpret_cast<PyCFunction>(NetworkOperatorTetheringManager_CreateFromConnectionProfile), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_from_network_account_id", reinterpret_cast<PyCFunction>(NetworkOperatorTetheringManager_CreateFromNetworkAccountId), METH_VARARGS | METH_STATIC, nullptr },
-        { "disable_no_connections_timeout", reinterpret_cast<PyCFunction>(NetworkOperatorTetheringManager_DisableNoConnectionsTimeout), METH_VARARGS | METH_STATIC, nullptr },
-        { "disable_no_connections_timeout_async", reinterpret_cast<PyCFunction>(NetworkOperatorTetheringManager_DisableNoConnectionsTimeoutAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "enable_no_connections_timeout", reinterpret_cast<PyCFunction>(NetworkOperatorTetheringManager_EnableNoConnectionsTimeout), METH_VARARGS | METH_STATIC, nullptr },
-        { "enable_no_connections_timeout_async", reinterpret_cast<PyCFunction>(NetworkOperatorTetheringManager_EnableNoConnectionsTimeoutAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "get_current_access_point_configuration", reinterpret_cast<PyCFunction>(NetworkOperatorTetheringManager_GetCurrentAccessPointConfiguration), METH_VARARGS, nullptr },
-        { "get_tethering_capability", reinterpret_cast<PyCFunction>(NetworkOperatorTetheringManager_GetTetheringCapability), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_tethering_capability_from_connection_profile", reinterpret_cast<PyCFunction>(NetworkOperatorTetheringManager_GetTetheringCapabilityFromConnectionProfile), METH_VARARGS | METH_STATIC, nullptr },
         { "get_tethering_clients", reinterpret_cast<PyCFunction>(NetworkOperatorTetheringManager_GetTetheringClients), METH_VARARGS, nullptr },
-        { "is_no_connections_timeout_enabled", reinterpret_cast<PyCFunction>(NetworkOperatorTetheringManager_IsNoConnectionsTimeoutEnabled), METH_VARARGS | METH_STATIC, nullptr },
         { "start_tethering_async", reinterpret_cast<PyCFunction>(NetworkOperatorTetheringManager_StartTetheringAsync), METH_VARARGS, nullptr },
         { "stop_tethering_async", reinterpret_cast<PyCFunction>(NetworkOperatorTetheringManager_StopTetheringAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_NetworkOperatorTetheringManager, METH_O | METH_STATIC, nullptr },
@@ -14088,6 +14184,40 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_NetworkOperatorTetheringManager
+    };
+
+    static PyGetSetDef getset_NetworkOperatorTetheringManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_NetworkOperatorTetheringManager_Static[] = {
+        { "create_from_connection_profile", reinterpret_cast<PyCFunction>(NetworkOperatorTetheringManager_CreateFromConnectionProfile), METH_VARARGS, nullptr },
+        { "create_from_network_account_id", reinterpret_cast<PyCFunction>(NetworkOperatorTetheringManager_CreateFromNetworkAccountId), METH_VARARGS, nullptr },
+        { "disable_no_connections_timeout", reinterpret_cast<PyCFunction>(NetworkOperatorTetheringManager_DisableNoConnectionsTimeout), METH_VARARGS, nullptr },
+        { "disable_no_connections_timeout_async", reinterpret_cast<PyCFunction>(NetworkOperatorTetheringManager_DisableNoConnectionsTimeoutAsync), METH_VARARGS, nullptr },
+        { "enable_no_connections_timeout", reinterpret_cast<PyCFunction>(NetworkOperatorTetheringManager_EnableNoConnectionsTimeout), METH_VARARGS, nullptr },
+        { "enable_no_connections_timeout_async", reinterpret_cast<PyCFunction>(NetworkOperatorTetheringManager_EnableNoConnectionsTimeoutAsync), METH_VARARGS, nullptr },
+        { "get_tethering_capability", reinterpret_cast<PyCFunction>(NetworkOperatorTetheringManager_GetTetheringCapability), METH_VARARGS, nullptr },
+        { "get_tethering_capability_from_connection_profile", reinterpret_cast<PyCFunction>(NetworkOperatorTetheringManager_GetTetheringCapabilityFromConnectionProfile), METH_VARARGS, nullptr },
+        { "is_no_connections_timeout_enabled", reinterpret_cast<PyCFunction>(NetworkOperatorTetheringManager_IsNoConnectionsTimeoutEnabled), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_NetworkOperatorTetheringManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_NetworkOperatorTetheringManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_NetworkOperatorTetheringManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_NetworkOperatorTetheringManager_Static =
+    {
+        "winrt._winrt_windows_networking_networkoperators.NetworkOperatorTetheringManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_NetworkOperatorTetheringManager_Static
     };
 
     // ----- NetworkOperatorTetheringOperationResult class --------------------
@@ -14601,7 +14731,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     }
 
     static PyMethodDef _methods_ProvisioningAgent[] = {
-        { "create_from_network_account_id", reinterpret_cast<PyCFunction>(ProvisioningAgent_CreateFromNetworkAccountId), METH_VARARGS | METH_STATIC, nullptr },
         { "get_provisioned_profile", reinterpret_cast<PyCFunction>(ProvisioningAgent_GetProvisionedProfile), METH_VARARGS, nullptr },
         { "provision_from_xml_document_async", reinterpret_cast<PyCFunction>(ProvisioningAgent_ProvisionFromXmlDocumentAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ProvisioningAgent, METH_O | METH_STATIC, nullptr },
@@ -14629,6 +14758,32 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ProvisioningAgent
+    };
+
+    static PyGetSetDef getset_ProvisioningAgent_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ProvisioningAgent_Static[] = {
+        { "create_from_network_account_id", reinterpret_cast<PyCFunction>(ProvisioningAgent_CreateFromNetworkAccountId), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_ProvisioningAgent_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ProvisioningAgent_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ProvisioningAgent_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ProvisioningAgent_Static =
+    {
+        "winrt._winrt_windows_networking_networkoperators.ProvisioningAgent_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ProvisioningAgent_Static
     };
 
     // ----- TetheringEntitlementCheckTriggerDetails class --------------------
@@ -15311,8 +15466,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyMethodDef _methods_UssdSession[] = {
         { "close", reinterpret_cast<PyCFunction>(UssdSession_Close), METH_VARARGS, nullptr },
-        { "create_from_network_account_id", reinterpret_cast<PyCFunction>(UssdSession_CreateFromNetworkAccountId), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_from_network_interface_id", reinterpret_cast<PyCFunction>(UssdSession_CreateFromNetworkInterfaceId), METH_VARARGS | METH_STATIC, nullptr },
         { "send_message_and_get_reply_async", reinterpret_cast<PyCFunction>(UssdSession_SendMessageAndGetReplyAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_UssdSession, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UssdSession), METH_O | METH_STATIC, nullptr },
@@ -15339,6 +15492,33 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_UssdSession
+    };
+
+    static PyGetSetDef getset_UssdSession_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_UssdSession_Static[] = {
+        { "create_from_network_account_id", reinterpret_cast<PyCFunction>(UssdSession_CreateFromNetworkAccountId), METH_VARARGS, nullptr },
+        { "create_from_network_interface_id", reinterpret_cast<PyCFunction>(UssdSession_CreateFromNetworkInterfaceId), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_UssdSession_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_UssdSession_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_UssdSession_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_UssdSession_Static =
+    {
+        "winrt._winrt_windows_networking_networkoperators.UssdSession_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_UssdSession_Static
     };
 
     // ----- ESimProfileInstallProgress struct --------------------
@@ -15734,13 +15914,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_networkoperators(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_ESimManager_Meta{PyType_FromSpec(&type_spec_ESimManager_Meta)};
-    if (!type_ESimManager_Meta)
+    py::pyobj_handle type_ESimManager_Static{PyType_FromSpec(&type_spec_ESimManager_Static)};
+    if (!type_ESimManager_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ESimManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ESimManager_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ESimManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ESimManager_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -15790,12 +15970,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_networkoperators(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FdnAccessManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_FdnAccessManager_Static{PyType_FromSpec(&type_spec_FdnAccessManager_Static)};
+    if (!type_FdnAccessManager_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HotspotAuthenticationContext, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FdnAccessManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FdnAccessManager_Static.get())) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_HotspotAuthenticationContext_Static{PyType_FromSpec(&type_spec_HotspotAuthenticationContext_Static)};
+    if (!type_HotspotAuthenticationContext_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_HotspotAuthenticationContext, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HotspotAuthenticationContext_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -15810,57 +16002,57 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_networkoperators(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_KnownCSimFilePaths_Meta{PyType_FromSpec(&type_spec_KnownCSimFilePaths_Meta)};
-    if (!type_KnownCSimFilePaths_Meta)
+    py::pyobj_handle type_KnownCSimFilePaths_Static{PyType_FromSpec(&type_spec_KnownCSimFilePaths_Static)};
+    if (!type_KnownCSimFilePaths_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_KnownCSimFilePaths, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownCSimFilePaths_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_KnownCSimFilePaths, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownCSimFilePaths_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_KnownRuimFilePaths_Meta{PyType_FromSpec(&type_spec_KnownRuimFilePaths_Meta)};
-    if (!type_KnownRuimFilePaths_Meta)
+    py::pyobj_handle type_KnownRuimFilePaths_Static{PyType_FromSpec(&type_spec_KnownRuimFilePaths_Static)};
+    if (!type_KnownRuimFilePaths_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_KnownRuimFilePaths, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownRuimFilePaths_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_KnownRuimFilePaths, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownRuimFilePaths_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_KnownSimFilePaths_Meta{PyType_FromSpec(&type_spec_KnownSimFilePaths_Meta)};
-    if (!type_KnownSimFilePaths_Meta)
+    py::pyobj_handle type_KnownSimFilePaths_Static{PyType_FromSpec(&type_spec_KnownSimFilePaths_Static)};
+    if (!type_KnownSimFilePaths_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_KnownSimFilePaths, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownSimFilePaths_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_KnownSimFilePaths, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownSimFilePaths_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_KnownUSimFilePaths_Meta{PyType_FromSpec(&type_spec_KnownUSimFilePaths_Meta)};
-    if (!type_KnownUSimFilePaths_Meta)
+    py::pyobj_handle type_KnownUSimFilePaths_Static{PyType_FromSpec(&type_spec_KnownUSimFilePaths_Static)};
+    if (!type_KnownUSimFilePaths_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_KnownUSimFilePaths, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownUSimFilePaths_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_KnownUSimFilePaths, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownUSimFilePaths_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_MobileBroadbandAccount_Meta{PyType_FromSpec(&type_spec_MobileBroadbandAccount_Meta)};
-    if (!type_MobileBroadbandAccount_Meta)
+    py::pyobj_handle type_MobileBroadbandAccount_Static{PyType_FromSpec(&type_spec_MobileBroadbandAccount_Static)};
+    if (!type_MobileBroadbandAccount_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandAccount, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MobileBroadbandAccount_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandAccount, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MobileBroadbandAccount_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -15965,7 +16157,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_networkoperators(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandModem, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_MobileBroadbandModem_Static{PyType_FromSpec(&type_spec_MobileBroadbandModem_Static)};
+    if (!type_MobileBroadbandModem_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandModem, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MobileBroadbandModem_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -16110,7 +16308,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_networkoperators(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_NetworkOperatorTetheringManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_NetworkOperatorTetheringManager_Static{PyType_FromSpec(&type_spec_NetworkOperatorTetheringManager_Static)};
+    if (!type_NetworkOperatorTetheringManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_NetworkOperatorTetheringManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NetworkOperatorTetheringManager_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -16130,7 +16334,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_networkoperators(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ProvisioningAgent, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_ProvisioningAgent_Static{PyType_FromSpec(&type_spec_ProvisioningAgent_Static)};
+    if (!type_ProvisioningAgent_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_ProvisioningAgent, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ProvisioningAgent_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -16150,7 +16360,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_networkoperators(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UssdSession, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_UssdSession_Static{PyType_FromSpec(&type_spec_UssdSession_Static)};
+    if (!type_UssdSession_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_UssdSession, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UssdSession_Static.get())) == -1)
     {
         return nullptr;
     }

@@ -202,7 +202,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     }
 
     static PyMethodDef _methods_XamlBinaryWriter[] = {
-        { "write", reinterpret_cast<PyCFunction>(XamlBinaryWriter_Write), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_XamlBinaryWriter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_XamlBinaryWriter), METH_O | METH_STATIC, nullptr },
         { }
@@ -228,6 +227,32 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_XamlBinaryWriter
+    };
+
+    static PyGetSetDef getset_XamlBinaryWriter_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_XamlBinaryWriter_Static[] = {
+        { "write", reinterpret_cast<PyCFunction>(XamlBinaryWriter_Write), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_XamlBinaryWriter_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_XamlBinaryWriter_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_XamlBinaryWriter_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_XamlBinaryWriter_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_markup.XamlBinaryWriter_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_XamlBinaryWriter_Static
     };
 
     // ----- XamlBindingHelper class --------------------
@@ -1029,28 +1054,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     }
 
     static PyMethodDef _methods_XamlBindingHelper[] = {
-        { "convert_value", reinterpret_cast<PyCFunction>(XamlBindingHelper_ConvertValue), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_data_template_component", reinterpret_cast<PyCFunction>(XamlBindingHelper_GetDataTemplateComponent), METH_VARARGS | METH_STATIC, nullptr },
-        { "resume_rendering", reinterpret_cast<PyCFunction>(XamlBindingHelper_ResumeRendering), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_data_template_component", reinterpret_cast<PyCFunction>(XamlBindingHelper_SetDataTemplateComponent), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_property_from_boolean", reinterpret_cast<PyCFunction>(XamlBindingHelper_SetPropertyFromBoolean), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_property_from_byte", reinterpret_cast<PyCFunction>(XamlBindingHelper_SetPropertyFromByte), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_property_from_char16", reinterpret_cast<PyCFunction>(XamlBindingHelper_SetPropertyFromChar16), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_property_from_date_time", reinterpret_cast<PyCFunction>(XamlBindingHelper_SetPropertyFromDateTime), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_property_from_double", reinterpret_cast<PyCFunction>(XamlBindingHelper_SetPropertyFromDouble), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_property_from_int32", reinterpret_cast<PyCFunction>(XamlBindingHelper_SetPropertyFromInt32), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_property_from_int64", reinterpret_cast<PyCFunction>(XamlBindingHelper_SetPropertyFromInt64), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_property_from_object", reinterpret_cast<PyCFunction>(XamlBindingHelper_SetPropertyFromObject), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_property_from_point", reinterpret_cast<PyCFunction>(XamlBindingHelper_SetPropertyFromPoint), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_property_from_rect", reinterpret_cast<PyCFunction>(XamlBindingHelper_SetPropertyFromRect), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_property_from_single", reinterpret_cast<PyCFunction>(XamlBindingHelper_SetPropertyFromSingle), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_property_from_size", reinterpret_cast<PyCFunction>(XamlBindingHelper_SetPropertyFromSize), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_property_from_string", reinterpret_cast<PyCFunction>(XamlBindingHelper_SetPropertyFromString), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_property_from_time_span", reinterpret_cast<PyCFunction>(XamlBindingHelper_SetPropertyFromTimeSpan), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_property_from_uint32", reinterpret_cast<PyCFunction>(XamlBindingHelper_SetPropertyFromUInt32), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_property_from_uint64", reinterpret_cast<PyCFunction>(XamlBindingHelper_SetPropertyFromUInt64), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_property_from_uri", reinterpret_cast<PyCFunction>(XamlBindingHelper_SetPropertyFromUri), METH_VARARGS | METH_STATIC, nullptr },
-        { "suspend_rendering", reinterpret_cast<PyCFunction>(XamlBindingHelper_SuspendRendering), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_XamlBindingHelper, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_XamlBindingHelper), METH_O | METH_STATIC, nullptr },
         { }
@@ -1078,25 +1081,52 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         _type_slots_XamlBindingHelper
     };
 
-    static PyGetSetDef getset_XamlBindingHelper_Meta[] = {
+    static PyGetSetDef getset_XamlBindingHelper_Static[] = {
         { "data_template_component_property", reinterpret_cast<getter>(XamlBindingHelper_get_DataTemplateComponentProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_XamlBindingHelper_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_XamlBindingHelper_Meta) },
+    static PyMethodDef methods_XamlBindingHelper_Static[] = {
+        { "convert_value", reinterpret_cast<PyCFunction>(XamlBindingHelper_ConvertValue), METH_VARARGS, nullptr },
+        { "get_data_template_component", reinterpret_cast<PyCFunction>(XamlBindingHelper_GetDataTemplateComponent), METH_VARARGS, nullptr },
+        { "resume_rendering", reinterpret_cast<PyCFunction>(XamlBindingHelper_ResumeRendering), METH_VARARGS, nullptr },
+        { "set_data_template_component", reinterpret_cast<PyCFunction>(XamlBindingHelper_SetDataTemplateComponent), METH_VARARGS, nullptr },
+        { "set_property_from_boolean", reinterpret_cast<PyCFunction>(XamlBindingHelper_SetPropertyFromBoolean), METH_VARARGS, nullptr },
+        { "set_property_from_byte", reinterpret_cast<PyCFunction>(XamlBindingHelper_SetPropertyFromByte), METH_VARARGS, nullptr },
+        { "set_property_from_char16", reinterpret_cast<PyCFunction>(XamlBindingHelper_SetPropertyFromChar16), METH_VARARGS, nullptr },
+        { "set_property_from_date_time", reinterpret_cast<PyCFunction>(XamlBindingHelper_SetPropertyFromDateTime), METH_VARARGS, nullptr },
+        { "set_property_from_double", reinterpret_cast<PyCFunction>(XamlBindingHelper_SetPropertyFromDouble), METH_VARARGS, nullptr },
+        { "set_property_from_int32", reinterpret_cast<PyCFunction>(XamlBindingHelper_SetPropertyFromInt32), METH_VARARGS, nullptr },
+        { "set_property_from_int64", reinterpret_cast<PyCFunction>(XamlBindingHelper_SetPropertyFromInt64), METH_VARARGS, nullptr },
+        { "set_property_from_object", reinterpret_cast<PyCFunction>(XamlBindingHelper_SetPropertyFromObject), METH_VARARGS, nullptr },
+        { "set_property_from_point", reinterpret_cast<PyCFunction>(XamlBindingHelper_SetPropertyFromPoint), METH_VARARGS, nullptr },
+        { "set_property_from_rect", reinterpret_cast<PyCFunction>(XamlBindingHelper_SetPropertyFromRect), METH_VARARGS, nullptr },
+        { "set_property_from_single", reinterpret_cast<PyCFunction>(XamlBindingHelper_SetPropertyFromSingle), METH_VARARGS, nullptr },
+        { "set_property_from_size", reinterpret_cast<PyCFunction>(XamlBindingHelper_SetPropertyFromSize), METH_VARARGS, nullptr },
+        { "set_property_from_string", reinterpret_cast<PyCFunction>(XamlBindingHelper_SetPropertyFromString), METH_VARARGS, nullptr },
+        { "set_property_from_time_span", reinterpret_cast<PyCFunction>(XamlBindingHelper_SetPropertyFromTimeSpan), METH_VARARGS, nullptr },
+        { "set_property_from_uint32", reinterpret_cast<PyCFunction>(XamlBindingHelper_SetPropertyFromUInt32), METH_VARARGS, nullptr },
+        { "set_property_from_uint64", reinterpret_cast<PyCFunction>(XamlBindingHelper_SetPropertyFromUInt64), METH_VARARGS, nullptr },
+        { "set_property_from_uri", reinterpret_cast<PyCFunction>(XamlBindingHelper_SetPropertyFromUri), METH_VARARGS, nullptr },
+        { "suspend_rendering", reinterpret_cast<PyCFunction>(XamlBindingHelper_SuspendRendering), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_XamlBindingHelper_Meta =
+    static PyType_Slot type_slots_XamlBindingHelper_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_markup.XamlBindingHelper_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_XamlBindingHelper_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_XamlBindingHelper_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_XamlBindingHelper_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_markup.XamlBindingHelper_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_XamlBindingHelper_Meta
+        type_slots_XamlBindingHelper_Static
     };
 
     // ----- XamlMarkupHelper class --------------------
@@ -1173,7 +1203,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     }
 
     static PyMethodDef _methods_XamlMarkupHelper[] = {
-        { "unload_object", reinterpret_cast<PyCFunction>(XamlMarkupHelper_UnloadObject), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_XamlMarkupHelper, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_XamlMarkupHelper), METH_O | METH_STATIC, nullptr },
         { }
@@ -1199,6 +1228,32 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_XamlMarkupHelper
+    };
+
+    static PyGetSetDef getset_XamlMarkupHelper_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_XamlMarkupHelper_Static[] = {
+        { "unload_object", reinterpret_cast<PyCFunction>(XamlMarkupHelper_UnloadObject), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_XamlMarkupHelper_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_XamlMarkupHelper_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_XamlMarkupHelper_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_XamlMarkupHelper_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_markup.XamlMarkupHelper_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_XamlMarkupHelper_Static
     };
 
     // ----- XamlReader class --------------------
@@ -1305,8 +1360,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     }
 
     static PyMethodDef _methods_XamlReader[] = {
-        { "load", reinterpret_cast<PyCFunction>(XamlReader_Load), METH_VARARGS | METH_STATIC, nullptr },
-        { "load_with_initial_template_validation", reinterpret_cast<PyCFunction>(XamlReader_LoadWithInitialTemplateValidation), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_XamlReader, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_XamlReader), METH_O | METH_STATIC, nullptr },
         { }
@@ -1332,6 +1385,33 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_XamlReader
+    };
+
+    static PyGetSetDef getset_XamlReader_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_XamlReader_Static[] = {
+        { "load", reinterpret_cast<PyCFunction>(XamlReader_Load), METH_VARARGS, nullptr },
+        { "load_with_initial_template_validation", reinterpret_cast<PyCFunction>(XamlReader_LoadWithInitialTemplateValidation), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_XamlReader_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_XamlReader_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_XamlReader_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_XamlReader_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_markup.XamlReader_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_XamlReader_Static
     };
 
     // ----- IComponentConnector interface --------------------
@@ -3604,28 +3684,46 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_markup(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_XamlBinaryWriter, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_XamlBinaryWriter_Static{PyType_FromSpec(&type_spec_XamlBinaryWriter_Static)};
+    if (!type_XamlBinaryWriter_Static)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_XamlBindingHelper_Meta{PyType_FromSpec(&type_spec_XamlBindingHelper_Meta)};
-    if (!type_XamlBindingHelper_Meta)
+    if (py::register_python_type(module.get(), &type_spec_XamlBinaryWriter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XamlBinaryWriter_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_XamlBindingHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XamlBindingHelper_Meta.get())) == -1)
+    py::pyobj_handle type_XamlBindingHelper_Static{PyType_FromSpec(&type_spec_XamlBindingHelper_Static)};
+    if (!type_XamlBindingHelper_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_XamlMarkupHelper, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_XamlBindingHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XamlBindingHelper_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_XamlReader, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_XamlMarkupHelper_Static{PyType_FromSpec(&type_spec_XamlMarkupHelper_Static)};
+    if (!type_XamlMarkupHelper_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_XamlMarkupHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XamlMarkupHelper_Static.get())) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_XamlReader_Static{PyType_FromSpec(&type_spec_XamlReader_Static)};
+    if (!type_XamlReader_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_XamlReader, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XamlReader_Static.get())) == -1)
     {
         return nullptr;
     }

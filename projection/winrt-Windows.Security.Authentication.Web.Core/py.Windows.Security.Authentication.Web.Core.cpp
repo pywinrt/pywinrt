@@ -850,13 +850,6 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
     }
 
     static PyMethodDef _methods_WebAuthenticationCoreManager[] = {
-        { "create_web_account_monitor", reinterpret_cast<PyCFunction>(WebAuthenticationCoreManager_CreateWebAccountMonitor), METH_VARARGS | METH_STATIC, nullptr },
-        { "find_account_async", reinterpret_cast<PyCFunction>(WebAuthenticationCoreManager_FindAccountAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "find_account_provider_async", reinterpret_cast<PyCFunction>(WebAuthenticationCoreManager_FindAccountProviderAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "find_all_accounts_async", reinterpret_cast<PyCFunction>(WebAuthenticationCoreManager_FindAllAccountsAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "find_system_account_provider_async", reinterpret_cast<PyCFunction>(WebAuthenticationCoreManager_FindSystemAccountProviderAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_token_silently_async", reinterpret_cast<PyCFunction>(WebAuthenticationCoreManager_GetTokenSilentlyAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "request_token_async", reinterpret_cast<PyCFunction>(WebAuthenticationCoreManager_RequestTokenAsync), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -879,6 +872,38 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_WebAuthenticationCoreManager
+    };
+
+    static PyGetSetDef getset_WebAuthenticationCoreManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_WebAuthenticationCoreManager_Static[] = {
+        { "create_web_account_monitor", reinterpret_cast<PyCFunction>(WebAuthenticationCoreManager_CreateWebAccountMonitor), METH_VARARGS, nullptr },
+        { "find_account_async", reinterpret_cast<PyCFunction>(WebAuthenticationCoreManager_FindAccountAsync), METH_VARARGS, nullptr },
+        { "find_account_provider_async", reinterpret_cast<PyCFunction>(WebAuthenticationCoreManager_FindAccountProviderAsync), METH_VARARGS, nullptr },
+        { "find_all_accounts_async", reinterpret_cast<PyCFunction>(WebAuthenticationCoreManager_FindAllAccountsAsync), METH_VARARGS, nullptr },
+        { "find_system_account_provider_async", reinterpret_cast<PyCFunction>(WebAuthenticationCoreManager_FindSystemAccountProviderAsync), METH_VARARGS, nullptr },
+        { "get_token_silently_async", reinterpret_cast<PyCFunction>(WebAuthenticationCoreManager_GetTokenSilentlyAsync), METH_VARARGS, nullptr },
+        { "request_token_async", reinterpret_cast<PyCFunction>(WebAuthenticationCoreManager_RequestTokenAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_WebAuthenticationCoreManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_WebAuthenticationCoreManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_WebAuthenticationCoreManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_WebAuthenticationCoreManager_Static =
+    {
+        "winrt._winrt_windows_security_authentication_web_core.WebAuthenticationCoreManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_WebAuthenticationCoreManager_Static
     };
 
     // ----- WebProviderError class --------------------
@@ -1786,7 +1811,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_web_core(void) noex
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebAuthenticationCoreManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_WebAuthenticationCoreManager_Static{PyType_FromSpec(&type_spec_WebAuthenticationCoreManager_Static)};
+    if (!type_WebAuthenticationCoreManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_WebAuthenticationCoreManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WebAuthenticationCoreManager_Static.get())) == -1)
     {
         return nullptr;
     }

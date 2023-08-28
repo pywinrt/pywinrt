@@ -13,15 +13,15 @@ from winrt.windows.system.diagnostics.telemetry import PlatformTelemetryRegistra
 
 Self = typing.TypeVar('Self')
 
-class PlatformTelemetryClient(winrt.system.Object):
+class PlatformTelemetryClient_Static(type):
+    @typing.overload
+    def register(cls, id: str, /) -> typing.Optional[PlatformTelemetryRegistrationResult]: ...
+    @typing.overload
+    def register(cls, id: str, settings: typing.Optional[PlatformTelemetryRegistrationSettings], /) -> typing.Optional[PlatformTelemetryRegistrationResult]: ...
+
+class PlatformTelemetryClient(winrt.system.Object, metaclass=PlatformTelemetryClient_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlatformTelemetryClient: ...
-    @typing.overload
-    @staticmethod
-    def register(id: str, /) -> typing.Optional[PlatformTelemetryRegistrationResult]: ...
-    @typing.overload
-    @staticmethod
-    def register(id: str, settings: typing.Optional[PlatformTelemetryRegistrationSettings], /) -> typing.Optional[PlatformTelemetryRegistrationResult]: ...
 
 class PlatformTelemetryRegistrationResult(winrt.system.Object):
     @staticmethod

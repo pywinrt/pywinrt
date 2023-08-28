@@ -439,7 +439,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         _type_slots_AsymmetricAlgorithmNames
     };
 
-    static PyGetSetDef getset_AsymmetricAlgorithmNames_Meta[] = {
+    static PyGetSetDef getset_AsymmetricAlgorithmNames_Static[] = {
         { "ecdsa_p521_sha512", reinterpret_cast<getter>(AsymmetricAlgorithmNames_get_EcdsaP521Sha512), nullptr, nullptr, nullptr },
         { "dsa_sha1", reinterpret_cast<getter>(AsymmetricAlgorithmNames_get_DsaSha1), nullptr, nullptr, nullptr },
         { "dsa_sha256", reinterpret_cast<getter>(AsymmetricAlgorithmNames_get_DsaSha256), nullptr, nullptr, nullptr },
@@ -464,20 +464,25 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         { }
     };
 
-    static PyType_Slot type_slots_AsymmetricAlgorithmNames_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_AsymmetricAlgorithmNames_Meta) },
+    static PyMethodDef methods_AsymmetricAlgorithmNames_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_AsymmetricAlgorithmNames_Meta =
+    static PyType_Slot type_slots_AsymmetricAlgorithmNames_Static[] = 
     {
-        "winrt._winrt_windows_security_cryptography_core.AsymmetricAlgorithmNames_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_AsymmetricAlgorithmNames_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_AsymmetricAlgorithmNames_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_AsymmetricAlgorithmNames_Static =
+    {
+        "winrt._winrt_windows_security_cryptography_core.AsymmetricAlgorithmNames_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_AsymmetricAlgorithmNames_Meta
+        type_slots_AsymmetricAlgorithmNames_Static
     };
 
     // ----- AsymmetricKeyAlgorithmProvider class --------------------
@@ -774,7 +779,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         { "create_key_pair_with_curve_parameters", reinterpret_cast<PyCFunction>(AsymmetricKeyAlgorithmProvider_CreateKeyPairWithCurveParameters), METH_VARARGS, nullptr },
         { "import_key_pair", reinterpret_cast<PyCFunction>(AsymmetricKeyAlgorithmProvider_ImportKeyPair), METH_VARARGS, nullptr },
         { "import_public_key", reinterpret_cast<PyCFunction>(AsymmetricKeyAlgorithmProvider_ImportPublicKey), METH_VARARGS, nullptr },
-        { "open_algorithm", reinterpret_cast<PyCFunction>(AsymmetricKeyAlgorithmProvider_OpenAlgorithm), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_AsymmetricKeyAlgorithmProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AsymmetricKeyAlgorithmProvider), METH_O | METH_STATIC, nullptr },
         { }
@@ -801,6 +805,32 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_AsymmetricKeyAlgorithmProvider
+    };
+
+    static PyGetSetDef getset_AsymmetricKeyAlgorithmProvider_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_AsymmetricKeyAlgorithmProvider_Static[] = {
+        { "open_algorithm", reinterpret_cast<PyCFunction>(AsymmetricKeyAlgorithmProvider_OpenAlgorithm), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_AsymmetricKeyAlgorithmProvider_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_AsymmetricKeyAlgorithmProvider_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_AsymmetricKeyAlgorithmProvider_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_AsymmetricKeyAlgorithmProvider_Static =
+    {
+        "winrt._winrt_windows_security_cryptography_core.AsymmetricKeyAlgorithmProvider_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_AsymmetricKeyAlgorithmProvider_Static
     };
 
     // ----- CryptographicEngine class --------------------
@@ -1208,18 +1238,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
     }
 
     static PyMethodDef _methods_CryptographicEngine[] = {
-        { "decrypt", reinterpret_cast<PyCFunction>(CryptographicEngine_Decrypt), METH_VARARGS | METH_STATIC, nullptr },
-        { "decrypt_and_authenticate", reinterpret_cast<PyCFunction>(CryptographicEngine_DecryptAndAuthenticate), METH_VARARGS | METH_STATIC, nullptr },
-        { "decrypt_async", reinterpret_cast<PyCFunction>(CryptographicEngine_DecryptAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "derive_key_material", reinterpret_cast<PyCFunction>(CryptographicEngine_DeriveKeyMaterial), METH_VARARGS | METH_STATIC, nullptr },
-        { "encrypt", reinterpret_cast<PyCFunction>(CryptographicEngine_Encrypt), METH_VARARGS | METH_STATIC, nullptr },
-        { "encrypt_and_authenticate", reinterpret_cast<PyCFunction>(CryptographicEngine_EncryptAndAuthenticate), METH_VARARGS | METH_STATIC, nullptr },
-        { "sign", reinterpret_cast<PyCFunction>(CryptographicEngine_Sign), METH_VARARGS | METH_STATIC, nullptr },
-        { "sign_async", reinterpret_cast<PyCFunction>(CryptographicEngine_SignAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "sign_hashed_data", reinterpret_cast<PyCFunction>(CryptographicEngine_SignHashedData), METH_VARARGS | METH_STATIC, nullptr },
-        { "sign_hashed_data_async", reinterpret_cast<PyCFunction>(CryptographicEngine_SignHashedDataAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "verify_signature", reinterpret_cast<PyCFunction>(CryptographicEngine_VerifySignature), METH_VARARGS | METH_STATIC, nullptr },
-        { "verify_signature_with_hash_input", reinterpret_cast<PyCFunction>(CryptographicEngine_VerifySignatureWithHashInput), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -1242,6 +1260,43 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_CryptographicEngine
+    };
+
+    static PyGetSetDef getset_CryptographicEngine_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_CryptographicEngine_Static[] = {
+        { "decrypt", reinterpret_cast<PyCFunction>(CryptographicEngine_Decrypt), METH_VARARGS, nullptr },
+        { "decrypt_and_authenticate", reinterpret_cast<PyCFunction>(CryptographicEngine_DecryptAndAuthenticate), METH_VARARGS, nullptr },
+        { "decrypt_async", reinterpret_cast<PyCFunction>(CryptographicEngine_DecryptAsync), METH_VARARGS, nullptr },
+        { "derive_key_material", reinterpret_cast<PyCFunction>(CryptographicEngine_DeriveKeyMaterial), METH_VARARGS, nullptr },
+        { "encrypt", reinterpret_cast<PyCFunction>(CryptographicEngine_Encrypt), METH_VARARGS, nullptr },
+        { "encrypt_and_authenticate", reinterpret_cast<PyCFunction>(CryptographicEngine_EncryptAndAuthenticate), METH_VARARGS, nullptr },
+        { "sign", reinterpret_cast<PyCFunction>(CryptographicEngine_Sign), METH_VARARGS, nullptr },
+        { "sign_async", reinterpret_cast<PyCFunction>(CryptographicEngine_SignAsync), METH_VARARGS, nullptr },
+        { "sign_hashed_data", reinterpret_cast<PyCFunction>(CryptographicEngine_SignHashedData), METH_VARARGS, nullptr },
+        { "sign_hashed_data_async", reinterpret_cast<PyCFunction>(CryptographicEngine_SignHashedDataAsync), METH_VARARGS, nullptr },
+        { "verify_signature", reinterpret_cast<PyCFunction>(CryptographicEngine_VerifySignature), METH_VARARGS, nullptr },
+        { "verify_signature_with_hash_input", reinterpret_cast<PyCFunction>(CryptographicEngine_VerifySignatureWithHashInput), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_CryptographicEngine_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CryptographicEngine_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CryptographicEngine_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CryptographicEngine_Static =
+    {
+        "winrt._winrt_windows_security_cryptography_core.CryptographicEngine_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CryptographicEngine_Static
     };
 
     // ----- CryptographicHash class --------------------
@@ -2473,7 +2528,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         _type_slots_EccCurveNames
     };
 
-    static PyGetSetDef getset_EccCurveNames_Meta[] = {
+    static PyGetSetDef getset_EccCurveNames_Static[] = {
         { "all_ecc_curve_names", reinterpret_cast<getter>(EccCurveNames_get_AllEccCurveNames), nullptr, nullptr, nullptr },
         { "brainpool_p160r1", reinterpret_cast<getter>(EccCurveNames_get_BrainpoolP160r1), nullptr, nullptr, nullptr },
         { "brainpool_p160t1", reinterpret_cast<getter>(EccCurveNames_get_BrainpoolP160t1), nullptr, nullptr, nullptr },
@@ -2523,20 +2578,25 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         { }
     };
 
-    static PyType_Slot type_slots_EccCurveNames_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_EccCurveNames_Meta) },
+    static PyMethodDef methods_EccCurveNames_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_EccCurveNames_Meta =
+    static PyType_Slot type_slots_EccCurveNames_Static[] = 
     {
-        "winrt._winrt_windows_security_cryptography_core.EccCurveNames_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_EccCurveNames_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_EccCurveNames_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_EccCurveNames_Static =
+    {
+        "winrt._winrt_windows_security_cryptography_core.EccCurveNames_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_EccCurveNames_Meta
+        type_slots_EccCurveNames_Static
     };
 
     // ----- EncryptedAndAuthenticatedData class --------------------
@@ -2777,7 +2837,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         _type_slots_HashAlgorithmNames
     };
 
-    static PyGetSetDef getset_HashAlgorithmNames_Meta[] = {
+    static PyGetSetDef getset_HashAlgorithmNames_Static[] = {
         { "md5", reinterpret_cast<getter>(HashAlgorithmNames_get_Md5), nullptr, nullptr, nullptr },
         { "sha1", reinterpret_cast<getter>(HashAlgorithmNames_get_Sha1), nullptr, nullptr, nullptr },
         { "sha256", reinterpret_cast<getter>(HashAlgorithmNames_get_Sha256), nullptr, nullptr, nullptr },
@@ -2786,20 +2846,25 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         { }
     };
 
-    static PyType_Slot type_slots_HashAlgorithmNames_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_HashAlgorithmNames_Meta) },
+    static PyMethodDef methods_HashAlgorithmNames_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_HashAlgorithmNames_Meta =
+    static PyType_Slot type_slots_HashAlgorithmNames_Static[] = 
     {
-        "winrt._winrt_windows_security_cryptography_core.HashAlgorithmNames_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_HashAlgorithmNames_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_HashAlgorithmNames_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_HashAlgorithmNames_Static =
+    {
+        "winrt._winrt_windows_security_cryptography_core.HashAlgorithmNames_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_HashAlgorithmNames_Meta
+        type_slots_HashAlgorithmNames_Static
     };
 
     // ----- HashAlgorithmProvider class --------------------
@@ -2975,7 +3040,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
     static PyMethodDef _methods_HashAlgorithmProvider[] = {
         { "create_hash", reinterpret_cast<PyCFunction>(HashAlgorithmProvider_CreateHash), METH_VARARGS, nullptr },
         { "hash_data", reinterpret_cast<PyCFunction>(HashAlgorithmProvider_HashData), METH_VARARGS, nullptr },
-        { "open_algorithm", reinterpret_cast<PyCFunction>(HashAlgorithmProvider_OpenAlgorithm), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_HashAlgorithmProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HashAlgorithmProvider), METH_O | METH_STATIC, nullptr },
         { }
@@ -3003,6 +3067,32 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_HashAlgorithmProvider
+    };
+
+    static PyGetSetDef getset_HashAlgorithmProvider_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_HashAlgorithmProvider_Static[] = {
+        { "open_algorithm", reinterpret_cast<PyCFunction>(HashAlgorithmProvider_OpenAlgorithm), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_HashAlgorithmProvider_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_HashAlgorithmProvider_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_HashAlgorithmProvider_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_HashAlgorithmProvider_Static =
+    {
+        "winrt._winrt_windows_security_cryptography_core.HashAlgorithmProvider_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_HashAlgorithmProvider_Static
     };
 
     // ----- KeyDerivationAlgorithmNames class --------------------
@@ -3419,7 +3509,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         _type_slots_KeyDerivationAlgorithmNames
     };
 
-    static PyGetSetDef getset_KeyDerivationAlgorithmNames_Meta[] = {
+    static PyGetSetDef getset_KeyDerivationAlgorithmNames_Static[] = {
         { "pbkdf2_sha256", reinterpret_cast<getter>(KeyDerivationAlgorithmNames_get_Pbkdf2Sha256), nullptr, nullptr, nullptr },
         { "pbkdf2_md5", reinterpret_cast<getter>(KeyDerivationAlgorithmNames_get_Pbkdf2Md5), nullptr, nullptr, nullptr },
         { "pbkdf2_sha1", reinterpret_cast<getter>(KeyDerivationAlgorithmNames_get_Pbkdf2Sha1), nullptr, nullptr, nullptr },
@@ -3443,20 +3533,25 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         { }
     };
 
-    static PyType_Slot type_slots_KeyDerivationAlgorithmNames_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_KeyDerivationAlgorithmNames_Meta) },
+    static PyMethodDef methods_KeyDerivationAlgorithmNames_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_KeyDerivationAlgorithmNames_Meta =
+    static PyType_Slot type_slots_KeyDerivationAlgorithmNames_Static[] = 
     {
-        "winrt._winrt_windows_security_cryptography_core.KeyDerivationAlgorithmNames_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_KeyDerivationAlgorithmNames_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_KeyDerivationAlgorithmNames_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_KeyDerivationAlgorithmNames_Static =
+    {
+        "winrt._winrt_windows_security_cryptography_core.KeyDerivationAlgorithmNames_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_KeyDerivationAlgorithmNames_Meta
+        type_slots_KeyDerivationAlgorithmNames_Static
     };
 
     // ----- KeyDerivationAlgorithmProvider class --------------------
@@ -3583,7 +3678,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyMethodDef _methods_KeyDerivationAlgorithmProvider[] = {
         { "create_key", reinterpret_cast<PyCFunction>(KeyDerivationAlgorithmProvider_CreateKey), METH_VARARGS, nullptr },
-        { "open_algorithm", reinterpret_cast<PyCFunction>(KeyDerivationAlgorithmProvider_OpenAlgorithm), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_KeyDerivationAlgorithmProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_KeyDerivationAlgorithmProvider), METH_O | METH_STATIC, nullptr },
         { }
@@ -3610,6 +3704,32 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_KeyDerivationAlgorithmProvider
+    };
+
+    static PyGetSetDef getset_KeyDerivationAlgorithmProvider_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_KeyDerivationAlgorithmProvider_Static[] = {
+        { "open_algorithm", reinterpret_cast<PyCFunction>(KeyDerivationAlgorithmProvider_OpenAlgorithm), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_KeyDerivationAlgorithmProvider_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_KeyDerivationAlgorithmProvider_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_KeyDerivationAlgorithmProvider_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_KeyDerivationAlgorithmProvider_Static =
+    {
+        "winrt._winrt_windows_security_cryptography_core.KeyDerivationAlgorithmProvider_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_KeyDerivationAlgorithmProvider_Static
     };
 
     // ----- KeyDerivationParameters class --------------------
@@ -3897,10 +4017,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
     }
 
     static PyMethodDef _methods_KeyDerivationParameters[] = {
-        { "build_for_capi1_kdf", reinterpret_cast<PyCFunction>(KeyDerivationParameters_BuildForCapi1Kdf), METH_VARARGS | METH_STATIC, nullptr },
-        { "build_for_pbkdf2", reinterpret_cast<PyCFunction>(KeyDerivationParameters_BuildForPbkdf2), METH_VARARGS | METH_STATIC, nullptr },
-        { "build_for_s_p800108", reinterpret_cast<PyCFunction>(KeyDerivationParameters_BuildForSP800108), METH_VARARGS | METH_STATIC, nullptr },
-        { "build_for_s_p80056a", reinterpret_cast<PyCFunction>(KeyDerivationParameters_BuildForSP80056a), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_KeyDerivationParameters, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_KeyDerivationParameters), METH_O | METH_STATIC, nullptr },
         { }
@@ -3929,6 +4045,35 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_KeyDerivationParameters
+    };
+
+    static PyGetSetDef getset_KeyDerivationParameters_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_KeyDerivationParameters_Static[] = {
+        { "build_for_capi1_kdf", reinterpret_cast<PyCFunction>(KeyDerivationParameters_BuildForCapi1Kdf), METH_VARARGS, nullptr },
+        { "build_for_pbkdf2", reinterpret_cast<PyCFunction>(KeyDerivationParameters_BuildForPbkdf2), METH_VARARGS, nullptr },
+        { "build_for_s_p800108", reinterpret_cast<PyCFunction>(KeyDerivationParameters_BuildForSP800108), METH_VARARGS, nullptr },
+        { "build_for_s_p80056a", reinterpret_cast<PyCFunction>(KeyDerivationParameters_BuildForSP80056a), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_KeyDerivationParameters_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_KeyDerivationParameters_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_KeyDerivationParameters_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_KeyDerivationParameters_Static =
+    {
+        "winrt._winrt_windows_security_cryptography_core.KeyDerivationParameters_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_KeyDerivationParameters_Static
     };
 
     // ----- MacAlgorithmNames class --------------------
@@ -4079,7 +4224,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         _type_slots_MacAlgorithmNames
     };
 
-    static PyGetSetDef getset_MacAlgorithmNames_Meta[] = {
+    static PyGetSetDef getset_MacAlgorithmNames_Static[] = {
         { "aes_cmac", reinterpret_cast<getter>(MacAlgorithmNames_get_AesCmac), nullptr, nullptr, nullptr },
         { "hmac_md5", reinterpret_cast<getter>(MacAlgorithmNames_get_HmacMd5), nullptr, nullptr, nullptr },
         { "hmac_sha1", reinterpret_cast<getter>(MacAlgorithmNames_get_HmacSha1), nullptr, nullptr, nullptr },
@@ -4089,20 +4234,25 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         { }
     };
 
-    static PyType_Slot type_slots_MacAlgorithmNames_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_MacAlgorithmNames_Meta) },
+    static PyMethodDef methods_MacAlgorithmNames_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_MacAlgorithmNames_Meta =
+    static PyType_Slot type_slots_MacAlgorithmNames_Static[] = 
     {
-        "winrt._winrt_windows_security_cryptography_core.MacAlgorithmNames_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_MacAlgorithmNames_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_MacAlgorithmNames_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_MacAlgorithmNames_Static =
+    {
+        "winrt._winrt_windows_security_cryptography_core.MacAlgorithmNames_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_MacAlgorithmNames_Meta
+        type_slots_MacAlgorithmNames_Static
     };
 
     // ----- MacAlgorithmProvider class --------------------
@@ -4280,7 +4430,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
     static PyMethodDef _methods_MacAlgorithmProvider[] = {
         { "create_hash", reinterpret_cast<PyCFunction>(MacAlgorithmProvider_CreateHash), METH_VARARGS, nullptr },
         { "create_key", reinterpret_cast<PyCFunction>(MacAlgorithmProvider_CreateKey), METH_VARARGS, nullptr },
-        { "open_algorithm", reinterpret_cast<PyCFunction>(MacAlgorithmProvider_OpenAlgorithm), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_MacAlgorithmProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MacAlgorithmProvider), METH_O | METH_STATIC, nullptr },
         { }
@@ -4308,6 +4457,32 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_MacAlgorithmProvider
+    };
+
+    static PyGetSetDef getset_MacAlgorithmProvider_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_MacAlgorithmProvider_Static[] = {
+        { "open_algorithm", reinterpret_cast<PyCFunction>(MacAlgorithmProvider_OpenAlgorithm), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_MacAlgorithmProvider_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_MacAlgorithmProvider_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_MacAlgorithmProvider_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_MacAlgorithmProvider_Static =
+    {
+        "winrt._winrt_windows_security_cryptography_core.MacAlgorithmProvider_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_MacAlgorithmProvider_Static
     };
 
     // ----- PersistedKeyProvider class --------------------
@@ -4386,8 +4561,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
     }
 
     static PyMethodDef _methods_PersistedKeyProvider[] = {
-        { "open_key_pair_from_certificate_async", reinterpret_cast<PyCFunction>(PersistedKeyProvider_OpenKeyPairFromCertificateAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "open_public_key_from_certificate", reinterpret_cast<PyCFunction>(PersistedKeyProvider_OpenPublicKeyFromCertificate), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -4410,6 +4583,33 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_PersistedKeyProvider
+    };
+
+    static PyGetSetDef getset_PersistedKeyProvider_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_PersistedKeyProvider_Static[] = {
+        { "open_key_pair_from_certificate_async", reinterpret_cast<PyCFunction>(PersistedKeyProvider_OpenKeyPairFromCertificateAsync), METH_VARARGS, nullptr },
+        { "open_public_key_from_certificate", reinterpret_cast<PyCFunction>(PersistedKeyProvider_OpenPublicKeyFromCertificate), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_PersistedKeyProvider_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PersistedKeyProvider_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PersistedKeyProvider_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PersistedKeyProvider_Static =
+    {
+        "winrt._winrt_windows_security_cryptography_core.PersistedKeyProvider_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_PersistedKeyProvider_Static
     };
 
     // ----- SymmetricAlgorithmNames class --------------------
@@ -4807,7 +5007,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         _type_slots_SymmetricAlgorithmNames
     };
 
-    static PyGetSetDef getset_SymmetricAlgorithmNames_Meta[] = {
+    static PyGetSetDef getset_SymmetricAlgorithmNames_Static[] = {
         { "aes_cbc", reinterpret_cast<getter>(SymmetricAlgorithmNames_get_AesCbc), nullptr, nullptr, nullptr },
         { "aes_cbc_pkcs7", reinterpret_cast<getter>(SymmetricAlgorithmNames_get_AesCbcPkcs7), nullptr, nullptr, nullptr },
         { "aes_ccm", reinterpret_cast<getter>(SymmetricAlgorithmNames_get_AesCcm), nullptr, nullptr, nullptr },
@@ -4830,20 +5030,25 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         { }
     };
 
-    static PyType_Slot type_slots_SymmetricAlgorithmNames_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_SymmetricAlgorithmNames_Meta) },
+    static PyMethodDef methods_SymmetricAlgorithmNames_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_SymmetricAlgorithmNames_Meta =
+    static PyType_Slot type_slots_SymmetricAlgorithmNames_Static[] = 
     {
-        "winrt._winrt_windows_security_cryptography_core.SymmetricAlgorithmNames_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SymmetricAlgorithmNames_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SymmetricAlgorithmNames_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SymmetricAlgorithmNames_Static =
+    {
+        "winrt._winrt_windows_security_cryptography_core.SymmetricAlgorithmNames_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SymmetricAlgorithmNames_Meta
+        type_slots_SymmetricAlgorithmNames_Static
     };
 
     // ----- SymmetricKeyAlgorithmProvider class --------------------
@@ -4989,7 +5194,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyMethodDef _methods_SymmetricKeyAlgorithmProvider[] = {
         { "create_symmetric_key", reinterpret_cast<PyCFunction>(SymmetricKeyAlgorithmProvider_CreateSymmetricKey), METH_VARARGS, nullptr },
-        { "open_algorithm", reinterpret_cast<PyCFunction>(SymmetricKeyAlgorithmProvider_OpenAlgorithm), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_SymmetricKeyAlgorithmProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SymmetricKeyAlgorithmProvider), METH_O | METH_STATIC, nullptr },
         { }
@@ -5017,6 +5221,32 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_SymmetricKeyAlgorithmProvider
+    };
+
+    static PyGetSetDef getset_SymmetricKeyAlgorithmProvider_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_SymmetricKeyAlgorithmProvider_Static[] = {
+        { "open_algorithm", reinterpret_cast<PyCFunction>(SymmetricKeyAlgorithmProvider_OpenAlgorithm), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_SymmetricKeyAlgorithmProvider_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SymmetricKeyAlgorithmProvider_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SymmetricKeyAlgorithmProvider_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SymmetricKeyAlgorithmProvider_Static =
+    {
+        "winrt._winrt_windows_security_cryptography_core.SymmetricKeyAlgorithmProvider_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_SymmetricKeyAlgorithmProvider_Static
     };
 
     // ----- Windows.Security.Cryptography.Core Initialization --------------------
@@ -5065,23 +5295,35 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_core(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_AsymmetricAlgorithmNames_Meta{PyType_FromSpec(&type_spec_AsymmetricAlgorithmNames_Meta)};
-    if (!type_AsymmetricAlgorithmNames_Meta)
+    py::pyobj_handle type_AsymmetricAlgorithmNames_Static{PyType_FromSpec(&type_spec_AsymmetricAlgorithmNames_Static)};
+    if (!type_AsymmetricAlgorithmNames_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AsymmetricAlgorithmNames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AsymmetricAlgorithmNames_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AsymmetricAlgorithmNames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AsymmetricAlgorithmNames_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AsymmetricKeyAlgorithmProvider, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_AsymmetricKeyAlgorithmProvider_Static{PyType_FromSpec(&type_spec_AsymmetricKeyAlgorithmProvider_Static)};
+    if (!type_AsymmetricKeyAlgorithmProvider_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CryptographicEngine, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AsymmetricKeyAlgorithmProvider, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AsymmetricKeyAlgorithmProvider_Static.get())) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CryptographicEngine_Static{PyType_FromSpec(&type_spec_CryptographicEngine_Static)};
+    if (!type_CryptographicEngine_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_CryptographicEngine, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CryptographicEngine_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -5096,13 +5338,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_core(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_EccCurveNames_Meta{PyType_FromSpec(&type_spec_EccCurveNames_Meta)};
-    if (!type_EccCurveNames_Meta)
+    py::pyobj_handle type_EccCurveNames_Static{PyType_FromSpec(&type_spec_EccCurveNames_Static)};
+    if (!type_EccCurveNames_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EccCurveNames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EccCurveNames_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EccCurveNames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EccCurveNames_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -5112,76 +5354,112 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_core(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_HashAlgorithmNames_Meta{PyType_FromSpec(&type_spec_HashAlgorithmNames_Meta)};
-    if (!type_HashAlgorithmNames_Meta)
+    py::pyobj_handle type_HashAlgorithmNames_Static{PyType_FromSpec(&type_spec_HashAlgorithmNames_Static)};
+    if (!type_HashAlgorithmNames_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HashAlgorithmNames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HashAlgorithmNames_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HashAlgorithmNames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HashAlgorithmNames_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HashAlgorithmProvider, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_HashAlgorithmProvider_Static{PyType_FromSpec(&type_spec_HashAlgorithmProvider_Static)};
+    if (!type_HashAlgorithmProvider_Static)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_KeyDerivationAlgorithmNames_Meta{PyType_FromSpec(&type_spec_KeyDerivationAlgorithmNames_Meta)};
-    if (!type_KeyDerivationAlgorithmNames_Meta)
+    if (py::register_python_type(module.get(), &type_spec_HashAlgorithmProvider, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HashAlgorithmProvider_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_KeyDerivationAlgorithmNames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KeyDerivationAlgorithmNames_Meta.get())) == -1)
+    py::pyobj_handle type_KeyDerivationAlgorithmNames_Static{PyType_FromSpec(&type_spec_KeyDerivationAlgorithmNames_Static)};
+    if (!type_KeyDerivationAlgorithmNames_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_KeyDerivationAlgorithmProvider, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_KeyDerivationAlgorithmNames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KeyDerivationAlgorithmNames_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_KeyDerivationParameters, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_KeyDerivationAlgorithmProvider_Static{PyType_FromSpec(&type_spec_KeyDerivationAlgorithmProvider_Static)};
+    if (!type_KeyDerivationAlgorithmProvider_Static)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_MacAlgorithmNames_Meta{PyType_FromSpec(&type_spec_MacAlgorithmNames_Meta)};
-    if (!type_MacAlgorithmNames_Meta)
+    if (py::register_python_type(module.get(), &type_spec_KeyDerivationAlgorithmProvider, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KeyDerivationAlgorithmProvider_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MacAlgorithmNames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MacAlgorithmNames_Meta.get())) == -1)
+    py::pyobj_handle type_KeyDerivationParameters_Static{PyType_FromSpec(&type_spec_KeyDerivationParameters_Static)};
+    if (!type_KeyDerivationParameters_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MacAlgorithmProvider, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_KeyDerivationParameters, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KeyDerivationParameters_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PersistedKeyProvider, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_MacAlgorithmNames_Static{PyType_FromSpec(&type_spec_MacAlgorithmNames_Static)};
+    if (!type_MacAlgorithmNames_Static)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SymmetricAlgorithmNames_Meta{PyType_FromSpec(&type_spec_SymmetricAlgorithmNames_Meta)};
-    if (!type_SymmetricAlgorithmNames_Meta)
+    if (py::register_python_type(module.get(), &type_spec_MacAlgorithmNames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MacAlgorithmNames_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SymmetricAlgorithmNames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SymmetricAlgorithmNames_Meta.get())) == -1)
+    py::pyobj_handle type_MacAlgorithmProvider_Static{PyType_FromSpec(&type_spec_MacAlgorithmProvider_Static)};
+    if (!type_MacAlgorithmProvider_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SymmetricKeyAlgorithmProvider, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MacAlgorithmProvider, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MacAlgorithmProvider_Static.get())) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PersistedKeyProvider_Static{PyType_FromSpec(&type_spec_PersistedKeyProvider_Static)};
+    if (!type_PersistedKeyProvider_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_PersistedKeyProvider, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PersistedKeyProvider_Static.get())) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SymmetricAlgorithmNames_Static{PyType_FromSpec(&type_spec_SymmetricAlgorithmNames_Static)};
+    if (!type_SymmetricAlgorithmNames_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_SymmetricAlgorithmNames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SymmetricAlgorithmNames_Static.get())) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SymmetricKeyAlgorithmProvider_Static{PyType_FromSpec(&type_spec_SymmetricKeyAlgorithmProvider_Static)};
+    if (!type_SymmetricKeyAlgorithmProvider_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_SymmetricKeyAlgorithmProvider, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SymmetricKeyAlgorithmProvider_Static.get())) == -1)
     {
         return nullptr;
     }

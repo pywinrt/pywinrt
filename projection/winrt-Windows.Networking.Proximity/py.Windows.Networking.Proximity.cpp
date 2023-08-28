@@ -681,11 +681,6 @@ namespace py::cpp::Windows::Networking::Proximity
     }
 
     static PyMethodDef _methods_PeerFinder[] = {
-        { "connect_async", reinterpret_cast<PyCFunction>(PeerFinder_ConnectAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_watcher", reinterpret_cast<PyCFunction>(PeerFinder_CreateWatcher), METH_VARARGS | METH_STATIC, nullptr },
-        { "find_all_peers_async", reinterpret_cast<PyCFunction>(PeerFinder_FindAllPeersAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "start", reinterpret_cast<PyCFunction>(PeerFinder_Start), METH_VARARGS | METH_STATIC, nullptr },
-        { "stop", reinterpret_cast<PyCFunction>(PeerFinder_Stop), METH_VARARGS | METH_STATIC, nullptr },
         { "add_connection_requested", reinterpret_cast<PyCFunction>(PeerFinder_add_ConnectionRequested), METH_O | METH_STATIC, nullptr },
         { "remove_connection_requested", reinterpret_cast<PyCFunction>(PeerFinder_remove_ConnectionRequested), METH_O | METH_STATIC, nullptr },
         { "add_triggered_connection_state_changed", reinterpret_cast<PyCFunction>(PeerFinder_add_TriggeredConnectionStateChanged), METH_O | METH_STATIC, nullptr },
@@ -714,7 +709,7 @@ namespace py::cpp::Windows::Networking::Proximity
         _type_slots_PeerFinder
     };
 
-    static PyGetSetDef getset_PeerFinder_Meta[] = {
+    static PyGetSetDef getset_PeerFinder_Static[] = {
         { "display_name", reinterpret_cast<getter>(PeerFinder_get_DisplayName), reinterpret_cast<setter>(PeerFinder_put_DisplayName), nullptr, nullptr },
         { "allow_wi_fi_direct", reinterpret_cast<getter>(PeerFinder_get_AllowWiFiDirect), reinterpret_cast<setter>(PeerFinder_put_AllowWiFiDirect), nullptr, nullptr },
         { "allow_infrastructure", reinterpret_cast<getter>(PeerFinder_get_AllowInfrastructure), reinterpret_cast<setter>(PeerFinder_put_AllowInfrastructure), nullptr, nullptr },
@@ -726,20 +721,30 @@ namespace py::cpp::Windows::Networking::Proximity
         { }
     };
 
-    static PyType_Slot type_slots_PeerFinder_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_PeerFinder_Meta) },
+    static PyMethodDef methods_PeerFinder_Static[] = {
+        { "connect_async", reinterpret_cast<PyCFunction>(PeerFinder_ConnectAsync), METH_VARARGS, nullptr },
+        { "create_watcher", reinterpret_cast<PyCFunction>(PeerFinder_CreateWatcher), METH_VARARGS, nullptr },
+        { "find_all_peers_async", reinterpret_cast<PyCFunction>(PeerFinder_FindAllPeersAsync), METH_VARARGS, nullptr },
+        { "start", reinterpret_cast<PyCFunction>(PeerFinder_Start), METH_VARARGS, nullptr },
+        { "stop", reinterpret_cast<PyCFunction>(PeerFinder_Stop), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_PeerFinder_Meta =
+    static PyType_Slot type_slots_PeerFinder_Static[] = 
     {
-        "winrt._winrt_windows_networking_proximity.PeerFinder_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PeerFinder_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PeerFinder_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PeerFinder_Static =
+    {
+        "winrt._winrt_windows_networking_proximity.PeerFinder_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PeerFinder_Meta
+        type_slots_PeerFinder_Static
     };
 
     // ----- PeerInformation class --------------------
@@ -1817,9 +1822,6 @@ namespace py::cpp::Windows::Networking::Proximity
     }
 
     static PyMethodDef _methods_ProximityDevice[] = {
-        { "from_id", reinterpret_cast<PyCFunction>(ProximityDevice_FromId), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_default", reinterpret_cast<PyCFunction>(ProximityDevice_GetDefault), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_device_selector", reinterpret_cast<PyCFunction>(ProximityDevice_GetDeviceSelector), METH_VARARGS | METH_STATIC, nullptr },
         { "publish_binary_message", reinterpret_cast<PyCFunction>(ProximityDevice_PublishBinaryMessage), METH_VARARGS, nullptr },
         { "publish_message", reinterpret_cast<PyCFunction>(ProximityDevice_PublishMessage), METH_VARARGS, nullptr },
         { "publish_uri_message", reinterpret_cast<PyCFunction>(ProximityDevice_PublishUriMessage), METH_VARARGS, nullptr },
@@ -1858,6 +1860,34 @@ namespace py::cpp::Windows::Networking::Proximity
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ProximityDevice
+    };
+
+    static PyGetSetDef getset_ProximityDevice_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ProximityDevice_Static[] = {
+        { "from_id", reinterpret_cast<PyCFunction>(ProximityDevice_FromId), METH_VARARGS, nullptr },
+        { "get_default", reinterpret_cast<PyCFunction>(ProximityDevice_GetDefault), METH_VARARGS, nullptr },
+        { "get_device_selector", reinterpret_cast<PyCFunction>(ProximityDevice_GetDeviceSelector), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_ProximityDevice_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ProximityDevice_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ProximityDevice_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ProximityDevice_Static =
+    {
+        "winrt._winrt_windows_networking_proximity.ProximityDevice_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ProximityDevice_Static
     };
 
     // ----- ProximityMessage class --------------------
@@ -2189,13 +2219,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_proximity(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_PeerFinder_Meta{PyType_FromSpec(&type_spec_PeerFinder_Meta)};
-    if (!type_PeerFinder_Meta)
+    py::pyobj_handle type_PeerFinder_Static{PyType_FromSpec(&type_spec_PeerFinder_Static)};
+    if (!type_PeerFinder_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PeerFinder, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PeerFinder_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PeerFinder, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PeerFinder_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -2210,7 +2240,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_proximity(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ProximityDevice, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_ProximityDevice_Static{PyType_FromSpec(&type_spec_ProximityDevice_Static)};
+    if (!type_ProximityDevice_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_ProximityDevice, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ProximityDevice_Static.get())) == -1)
     {
         return nullptr;
     }

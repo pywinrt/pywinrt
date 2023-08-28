@@ -3923,14 +3923,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     }
 
     static PyMethodDef _methods_AppointmentManager[] = {
-        { "get_for_user", reinterpret_cast<PyCFunction>(AppointmentManager_GetForUser), METH_VARARGS | METH_STATIC, nullptr },
-        { "request_store_async", reinterpret_cast<PyCFunction>(AppointmentManager_RequestStoreAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "show_add_appointment_async", reinterpret_cast<PyCFunction>(AppointmentManager_ShowAddAppointmentAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "show_appointment_details_async", reinterpret_cast<PyCFunction>(AppointmentManager_ShowAppointmentDetailsAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "show_edit_new_appointment_async", reinterpret_cast<PyCFunction>(AppointmentManager_ShowEditNewAppointmentAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "show_remove_appointment_async", reinterpret_cast<PyCFunction>(AppointmentManager_ShowRemoveAppointmentAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "show_replace_appointment_async", reinterpret_cast<PyCFunction>(AppointmentManager_ShowReplaceAppointmentAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "show_time_frame_async", reinterpret_cast<PyCFunction>(AppointmentManager_ShowTimeFrameAsync), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -3953,6 +3945,39 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_AppointmentManager
+    };
+
+    static PyGetSetDef getset_AppointmentManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_AppointmentManager_Static[] = {
+        { "get_for_user", reinterpret_cast<PyCFunction>(AppointmentManager_GetForUser), METH_VARARGS, nullptr },
+        { "request_store_async", reinterpret_cast<PyCFunction>(AppointmentManager_RequestStoreAsync), METH_VARARGS, nullptr },
+        { "show_add_appointment_async", reinterpret_cast<PyCFunction>(AppointmentManager_ShowAddAppointmentAsync), METH_VARARGS, nullptr },
+        { "show_appointment_details_async", reinterpret_cast<PyCFunction>(AppointmentManager_ShowAppointmentDetailsAsync), METH_VARARGS, nullptr },
+        { "show_edit_new_appointment_async", reinterpret_cast<PyCFunction>(AppointmentManager_ShowEditNewAppointmentAsync), METH_VARARGS, nullptr },
+        { "show_remove_appointment_async", reinterpret_cast<PyCFunction>(AppointmentManager_ShowRemoveAppointmentAsync), METH_VARARGS, nullptr },
+        { "show_replace_appointment_async", reinterpret_cast<PyCFunction>(AppointmentManager_ShowReplaceAppointmentAsync), METH_VARARGS, nullptr },
+        { "show_time_frame_async", reinterpret_cast<PyCFunction>(AppointmentManager_ShowTimeFrameAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_AppointmentManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_AppointmentManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_AppointmentManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_AppointmentManager_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_appointments.AppointmentManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_AppointmentManager_Static
     };
 
     // ----- AppointmentManagerForUser class --------------------
@@ -5123,7 +5148,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         _type_slots_AppointmentProperties
     };
 
-    static PyGetSetDef getset_AppointmentProperties_Meta[] = {
+    static PyGetSetDef getset_AppointmentProperties_Static[] = {
         { "has_invitees", reinterpret_cast<getter>(AppointmentProperties_get_HasInvitees), nullptr, nullptr, nullptr },
         { "all_day", reinterpret_cast<getter>(AppointmentProperties_get_AllDay), nullptr, nullptr, nullptr },
         { "allow_new_time_proposal", reinterpret_cast<getter>(AppointmentProperties_get_AllowNewTimeProposal), nullptr, nullptr, nullptr },
@@ -5153,20 +5178,25 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         { }
     };
 
-    static PyType_Slot type_slots_AppointmentProperties_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_AppointmentProperties_Meta) },
+    static PyMethodDef methods_AppointmentProperties_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_AppointmentProperties_Meta =
+    static PyType_Slot type_slots_AppointmentProperties_Static[] = 
     {
-        "winrt._winrt_windows_applicationmodel_appointments.AppointmentProperties_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_AppointmentProperties_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_AppointmentProperties_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_AppointmentProperties_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_appointments.AppointmentProperties_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_AppointmentProperties_Meta
+        type_slots_AppointmentProperties_Static
     };
 
     // ----- AppointmentRecurrence class --------------------
@@ -7712,7 +7742,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_appointments(void) noexcep
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppointmentManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_AppointmentManager_Static{PyType_FromSpec(&type_spec_AppointmentManager_Static)};
+    if (!type_AppointmentManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_AppointmentManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppointmentManager_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -7727,13 +7763,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_appointments(void) noexcep
         return nullptr;
     }
 
-    py::pyobj_handle type_AppointmentProperties_Meta{PyType_FromSpec(&type_spec_AppointmentProperties_Meta)};
-    if (!type_AppointmentProperties_Meta)
+    py::pyobj_handle type_AppointmentProperties_Static{PyType_FromSpec(&type_spec_AppointmentProperties_Static)};
+    if (!type_AppointmentProperties_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppointmentProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppointmentProperties_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppointmentProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppointmentProperties_Static.get())) == -1)
     {
         return nullptr;
     }

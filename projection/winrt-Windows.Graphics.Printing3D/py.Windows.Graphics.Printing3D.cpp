@@ -149,8 +149,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
     }
 
     static PyMethodDef _methods_Print3DManager[] = {
-        { "get_for_current_view", reinterpret_cast<PyCFunction>(Print3DManager_GetForCurrentView), METH_VARARGS | METH_STATIC, nullptr },
-        { "show_print_u_i_async", reinterpret_cast<PyCFunction>(Print3DManager_ShowPrintUIAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "add_task_requested", reinterpret_cast<PyCFunction>(Print3DManager_add_TaskRequested), METH_O, nullptr },
         { "remove_task_requested", reinterpret_cast<PyCFunction>(Print3DManager_remove_TaskRequested), METH_O, nullptr },
         { "_assign_array_", _assign_array_Print3DManager, METH_O | METH_STATIC, nullptr },
@@ -178,6 +176,33 @@ namespace py::cpp::Windows::Graphics::Printing3D
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_Print3DManager
+    };
+
+    static PyGetSetDef getset_Print3DManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_Print3DManager_Static[] = {
+        { "get_for_current_view", reinterpret_cast<PyCFunction>(Print3DManager_GetForCurrentView), METH_VARARGS, nullptr },
+        { "show_print_u_i_async", reinterpret_cast<PyCFunction>(Print3DManager_ShowPrintUIAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_Print3DManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Print3DManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Print3DManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Print3DManager_Static =
+    {
+        "winrt._winrt_windows_graphics_printing3d.Print3DManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_Print3DManager_Static
     };
 
     // ----- Print3DTask class --------------------
@@ -1289,7 +1314,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
     }
 
     static PyMethodDef _methods_Printing3D3MFPackage[] = {
-        { "load_async", reinterpret_cast<PyCFunction>(Printing3D3MFPackage_LoadAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "load_model_from_package_async", reinterpret_cast<PyCFunction>(Printing3D3MFPackage_LoadModelFromPackageAsync), METH_VARARGS, nullptr },
         { "save_async", reinterpret_cast<PyCFunction>(Printing3D3MFPackage_SaveAsync), METH_VARARGS, nullptr },
         { "save_model_to_package_async", reinterpret_cast<PyCFunction>(Printing3D3MFPackage_SaveModelToPackageAsync), METH_VARARGS, nullptr },
@@ -1323,6 +1347,32 @@ namespace py::cpp::Windows::Graphics::Printing3D
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_Printing3D3MFPackage
+    };
+
+    static PyGetSetDef getset_Printing3D3MFPackage_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_Printing3D3MFPackage_Static[] = {
+        { "load_async", reinterpret_cast<PyCFunction>(Printing3D3MFPackage_LoadAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_Printing3D3MFPackage_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Printing3D3MFPackage_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Printing3D3MFPackage_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Printing3D3MFPackage_Static =
+    {
+        "winrt._winrt_windows_graphics_printing3d.Printing3D3MFPackage_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_Printing3D3MFPackage_Static
     };
 
     // ----- Printing3DBaseMaterial class --------------------
@@ -1550,26 +1600,31 @@ namespace py::cpp::Windows::Graphics::Printing3D
         _type_slots_Printing3DBaseMaterial
     };
 
-    static PyGetSetDef getset_Printing3DBaseMaterial_Meta[] = {
+    static PyGetSetDef getset_Printing3DBaseMaterial_Static[] = {
         { "abs", reinterpret_cast<getter>(Printing3DBaseMaterial_get_Abs), nullptr, nullptr, nullptr },
         { "pla", reinterpret_cast<getter>(Printing3DBaseMaterial_get_Pla), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_Printing3DBaseMaterial_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_Printing3DBaseMaterial_Meta) },
+    static PyMethodDef methods_Printing3DBaseMaterial_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_Printing3DBaseMaterial_Meta =
+    static PyType_Slot type_slots_Printing3DBaseMaterial_Static[] = 
     {
-        "winrt._winrt_windows_graphics_printing3d.Printing3DBaseMaterial_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Printing3DBaseMaterial_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Printing3DBaseMaterial_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Printing3DBaseMaterial_Static =
+    {
+        "winrt._winrt_windows_graphics_printing3d.Printing3DBaseMaterial_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Printing3DBaseMaterial_Meta
+        type_slots_Printing3DBaseMaterial_Static
     };
 
     // ----- Printing3DBaseMaterialGroup class --------------------
@@ -6036,7 +6091,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_printing3d(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Print3DManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_Print3DManager_Static{PyType_FromSpec(&type_spec_Print3DManager_Static)};
+    if (!type_Print3DManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_Print3DManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Print3DManager_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -6071,18 +6132,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_printing3d(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Printing3D3MFPackage, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_Printing3D3MFPackage_Static{PyType_FromSpec(&type_spec_Printing3D3MFPackage_Static)};
+    if (!type_Printing3D3MFPackage_Static)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_Printing3DBaseMaterial_Meta{PyType_FromSpec(&type_spec_Printing3DBaseMaterial_Meta)};
-    if (!type_Printing3DBaseMaterial_Meta)
+    if (py::register_python_type(module.get(), &type_spec_Printing3D3MFPackage, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Printing3D3MFPackage_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Printing3DBaseMaterial, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Printing3DBaseMaterial_Meta.get())) == -1)
+    py::pyobj_handle type_Printing3DBaseMaterial_Static{PyType_FromSpec(&type_spec_Printing3DBaseMaterial_Static)};
+    if (!type_Printing3DBaseMaterial_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_Printing3DBaseMaterial, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Printing3DBaseMaterial_Static.get())) == -1)
     {
         return nullptr;
     }

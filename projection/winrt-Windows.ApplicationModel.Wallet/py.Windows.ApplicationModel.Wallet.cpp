@@ -2236,7 +2236,6 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
     }
 
     static PyMethodDef _methods_WalletManager[] = {
-        { "request_store_async", reinterpret_cast<PyCFunction>(WalletManager_RequestStoreAsync), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -2259,6 +2258,32 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_WalletManager
+    };
+
+    static PyGetSetDef getset_WalletManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_WalletManager_Static[] = {
+        { "request_store_async", reinterpret_cast<PyCFunction>(WalletManager_RequestStoreAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_WalletManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_WalletManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_WalletManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_WalletManager_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_wallet.WalletManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_WalletManager_Static
     };
 
     // ----- WalletRelevantLocation class --------------------
@@ -3034,7 +3059,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_wallet(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WalletManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_WalletManager_Static{PyType_FromSpec(&type_spec_WalletManager_Static)};
+    if (!type_WalletManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_WalletManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WalletManager_Static.get())) == -1)
     {
         return nullptr;
     }

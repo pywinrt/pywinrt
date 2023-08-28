@@ -1931,45 +1931,6 @@ namespace py::cpp::Windows::Devices::Printers
     }
 
     static PyMethodDef _methods_IppAttributeValue[] = {
-        { "create_boolean", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateBoolean), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_boolean_array", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateBooleanArray), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_charset", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateCharset), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_charset_array", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateCharsetArray), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_collection", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateCollection), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_collection_array", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateCollectionArray), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_date_time", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateDateTime), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_date_time_array", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateDateTimeArray), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_enum", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateEnum), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_enum_array", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateEnumArray), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_integer", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateInteger), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_integer_array", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateIntegerArray), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_keyword", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateKeyword), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_keyword_array", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateKeywordArray), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_mime_media", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateMimeMedia), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_mime_media_array", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateMimeMediaArray), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_name_with_language", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateNameWithLanguage), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_name_with_language_array", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateNameWithLanguageArray), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_name_without_language", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateNameWithoutLanguage), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_name_without_language_array", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateNameWithoutLanguageArray), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_natural_language", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateNaturalLanguage), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_natural_language_array", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateNaturalLanguageArray), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_no_value", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateNoValue), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_octet_string", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateOctetString), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_octet_string_array", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateOctetStringArray), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_range_of_integer", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateRangeOfInteger), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_range_of_integer_array", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateRangeOfIntegerArray), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_resolution", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateResolution), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_resolution_array", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateResolutionArray), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_text_with_language", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateTextWithLanguage), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_text_with_language_array", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateTextWithLanguageArray), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_text_without_language", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateTextWithoutLanguage), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_text_without_language_array", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateTextWithoutLanguageArray), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_unknown", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateUnknown), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_unsupported", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateUnsupported), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_uri", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateUri), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_uri_array", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateUriArray), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_uri_schema", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateUriSchema), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_uri_schema_array", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateUriSchemaArray), METH_VARARGS | METH_STATIC, nullptr },
         { "get_boolean_array", reinterpret_cast<PyCFunction>(IppAttributeValue_GetBooleanArray), METH_VARARGS, nullptr },
         { "get_charset_array", reinterpret_cast<PyCFunction>(IppAttributeValue_GetCharsetArray), METH_VARARGS, nullptr },
         { "get_collection_array", reinterpret_cast<PyCFunction>(IppAttributeValue_GetCollectionArray), METH_VARARGS, nullptr },
@@ -2014,6 +1975,70 @@ namespace py::cpp::Windows::Devices::Printers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IppAttributeValue
+    };
+
+    static PyGetSetDef getset_IppAttributeValue_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_IppAttributeValue_Static[] = {
+        { "create_boolean", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateBoolean), METH_VARARGS, nullptr },
+        { "create_boolean_array", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateBooleanArray), METH_VARARGS, nullptr },
+        { "create_charset", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateCharset), METH_VARARGS, nullptr },
+        { "create_charset_array", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateCharsetArray), METH_VARARGS, nullptr },
+        { "create_collection", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateCollection), METH_VARARGS, nullptr },
+        { "create_collection_array", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateCollectionArray), METH_VARARGS, nullptr },
+        { "create_date_time", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateDateTime), METH_VARARGS, nullptr },
+        { "create_date_time_array", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateDateTimeArray), METH_VARARGS, nullptr },
+        { "create_enum", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateEnum), METH_VARARGS, nullptr },
+        { "create_enum_array", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateEnumArray), METH_VARARGS, nullptr },
+        { "create_integer", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateInteger), METH_VARARGS, nullptr },
+        { "create_integer_array", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateIntegerArray), METH_VARARGS, nullptr },
+        { "create_keyword", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateKeyword), METH_VARARGS, nullptr },
+        { "create_keyword_array", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateKeywordArray), METH_VARARGS, nullptr },
+        { "create_mime_media", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateMimeMedia), METH_VARARGS, nullptr },
+        { "create_mime_media_array", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateMimeMediaArray), METH_VARARGS, nullptr },
+        { "create_name_with_language", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateNameWithLanguage), METH_VARARGS, nullptr },
+        { "create_name_with_language_array", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateNameWithLanguageArray), METH_VARARGS, nullptr },
+        { "create_name_without_language", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateNameWithoutLanguage), METH_VARARGS, nullptr },
+        { "create_name_without_language_array", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateNameWithoutLanguageArray), METH_VARARGS, nullptr },
+        { "create_natural_language", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateNaturalLanguage), METH_VARARGS, nullptr },
+        { "create_natural_language_array", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateNaturalLanguageArray), METH_VARARGS, nullptr },
+        { "create_no_value", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateNoValue), METH_VARARGS, nullptr },
+        { "create_octet_string", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateOctetString), METH_VARARGS, nullptr },
+        { "create_octet_string_array", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateOctetStringArray), METH_VARARGS, nullptr },
+        { "create_range_of_integer", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateRangeOfInteger), METH_VARARGS, nullptr },
+        { "create_range_of_integer_array", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateRangeOfIntegerArray), METH_VARARGS, nullptr },
+        { "create_resolution", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateResolution), METH_VARARGS, nullptr },
+        { "create_resolution_array", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateResolutionArray), METH_VARARGS, nullptr },
+        { "create_text_with_language", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateTextWithLanguage), METH_VARARGS, nullptr },
+        { "create_text_with_language_array", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateTextWithLanguageArray), METH_VARARGS, nullptr },
+        { "create_text_without_language", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateTextWithoutLanguage), METH_VARARGS, nullptr },
+        { "create_text_without_language_array", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateTextWithoutLanguageArray), METH_VARARGS, nullptr },
+        { "create_unknown", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateUnknown), METH_VARARGS, nullptr },
+        { "create_unsupported", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateUnsupported), METH_VARARGS, nullptr },
+        { "create_uri", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateUri), METH_VARARGS, nullptr },
+        { "create_uri_array", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateUriArray), METH_VARARGS, nullptr },
+        { "create_uri_schema", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateUriSchema), METH_VARARGS, nullptr },
+        { "create_uri_schema_array", reinterpret_cast<PyCFunction>(IppAttributeValue_CreateUriSchemaArray), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_IppAttributeValue_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_IppAttributeValue_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_IppAttributeValue_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_IppAttributeValue_Static =
+    {
+        "winrt._winrt_windows_devices_printers.IppAttributeValue_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_IppAttributeValue_Static
     };
 
     // ----- IppIntegerRange class --------------------
@@ -2594,15 +2619,11 @@ namespace py::cpp::Windows::Devices::Printers
     }
 
     static PyMethodDef _methods_IppPrintDevice[] = {
-        { "from_id", reinterpret_cast<PyCFunction>(IppPrintDevice_FromId), METH_VARARGS | METH_STATIC, nullptr },
-        { "from_printer_name", reinterpret_cast<PyCFunction>(IppPrintDevice_FromPrinterName), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_device_selector", reinterpret_cast<PyCFunction>(IppPrintDevice_GetDeviceSelector), METH_VARARGS | METH_STATIC, nullptr },
         { "get_max_supported_pdf_size", reinterpret_cast<PyCFunction>(IppPrintDevice_GetMaxSupportedPdfSize), METH_VARARGS, nullptr },
         { "get_max_supported_pdf_version", reinterpret_cast<PyCFunction>(IppPrintDevice_GetMaxSupportedPdfVersion), METH_VARARGS, nullptr },
         { "get_pdl_passthrough_provider", reinterpret_cast<PyCFunction>(IppPrintDevice_GetPdlPassthroughProvider), METH_VARARGS, nullptr },
         { "get_printer_attributes", reinterpret_cast<PyCFunction>(IppPrintDevice_GetPrinterAttributes), METH_VARARGS, nullptr },
         { "get_printer_attributes_as_buffer", reinterpret_cast<PyCFunction>(IppPrintDevice_GetPrinterAttributesAsBuffer), METH_VARARGS, nullptr },
-        { "is_ipp_printer", reinterpret_cast<PyCFunction>(IppPrintDevice_IsIppPrinter), METH_VARARGS | METH_STATIC, nullptr },
         { "is_pdl_passthrough_supported", reinterpret_cast<PyCFunction>(IppPrintDevice_IsPdlPassthroughSupported), METH_VARARGS, nullptr },
         { "set_printer_attributes", reinterpret_cast<PyCFunction>(IppPrintDevice_SetPrinterAttributes), METH_VARARGS, nullptr },
         { "set_printer_attributes_from_buffer", reinterpret_cast<PyCFunction>(IppPrintDevice_SetPrinterAttributesFromBuffer), METH_VARARGS, nullptr },
@@ -2633,6 +2654,35 @@ namespace py::cpp::Windows::Devices::Printers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IppPrintDevice
+    };
+
+    static PyGetSetDef getset_IppPrintDevice_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_IppPrintDevice_Static[] = {
+        { "from_id", reinterpret_cast<PyCFunction>(IppPrintDevice_FromId), METH_VARARGS, nullptr },
+        { "from_printer_name", reinterpret_cast<PyCFunction>(IppPrintDevice_FromPrinterName), METH_VARARGS, nullptr },
+        { "get_device_selector", reinterpret_cast<PyCFunction>(IppPrintDevice_GetDeviceSelector), METH_VARARGS, nullptr },
+        { "is_ipp_printer", reinterpret_cast<PyCFunction>(IppPrintDevice_IsIppPrinter), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_IppPrintDevice_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_IppPrintDevice_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_IppPrintDevice_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_IppPrintDevice_Static =
+    {
+        "winrt._winrt_windows_devices_printers.IppPrintDevice_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_IppPrintDevice_Static
     };
 
     // ----- IppResolution class --------------------
@@ -3702,8 +3752,6 @@ namespace py::cpp::Windows::Devices::Printers
     }
 
     static PyMethodDef _methods_Print3DDevice[] = {
-        { "from_id_async", reinterpret_cast<PyCFunction>(Print3DDevice_FromIdAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_device_selector", reinterpret_cast<PyCFunction>(Print3DDevice_GetDeviceSelector), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_Print3DDevice, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Print3DDevice), METH_O | METH_STATIC, nullptr },
         { }
@@ -3730,6 +3778,33 @@ namespace py::cpp::Windows::Devices::Printers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_Print3DDevice
+    };
+
+    static PyGetSetDef getset_Print3DDevice_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_Print3DDevice_Static[] = {
+        { "from_id_async", reinterpret_cast<PyCFunction>(Print3DDevice_FromIdAsync), METH_VARARGS, nullptr },
+        { "get_device_selector", reinterpret_cast<PyCFunction>(Print3DDevice_GetDeviceSelector), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_Print3DDevice_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Print3DDevice_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Print3DDevice_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Print3DDevice_Static =
+    {
+        "winrt._winrt_windows_devices_printers.Print3DDevice_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_Print3DDevice_Static
     };
 
     // ----- PrintSchema class --------------------
@@ -3946,7 +4021,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_printers(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IppAttributeValue, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_IppAttributeValue_Static{PyType_FromSpec(&type_spec_IppAttributeValue_Static)};
+    if (!type_IppAttributeValue_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_IppAttributeValue, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_IppAttributeValue_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -3956,7 +4037,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_printers(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IppPrintDevice, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_IppPrintDevice_Static{PyType_FromSpec(&type_spec_IppPrintDevice_Static)};
+    if (!type_IppPrintDevice_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_IppPrintDevice, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_IppPrintDevice_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -3991,7 +4078,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_printers(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Print3DDevice, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_Print3DDevice_Static{PyType_FromSpec(&type_spec_Print3DDevice_Static)};
+    if (!type_Print3DDevice_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_Print3DDevice, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Print3DDevice_Static.get())) == -1)
     {
         return nullptr;
     }

@@ -440,11 +440,7 @@ namespace py::cpp::Windows::Devices::WiFi
     static PyMethodDef _methods_WiFiAdapter[] = {
         { "connect_async", reinterpret_cast<PyCFunction>(WiFiAdapter_ConnectAsync), METH_VARARGS, nullptr },
         { "disconnect", reinterpret_cast<PyCFunction>(WiFiAdapter_Disconnect), METH_VARARGS, nullptr },
-        { "find_all_adapters_async", reinterpret_cast<PyCFunction>(WiFiAdapter_FindAllAdaptersAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "from_id_async", reinterpret_cast<PyCFunction>(WiFiAdapter_FromIdAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_device_selector", reinterpret_cast<PyCFunction>(WiFiAdapter_GetDeviceSelector), METH_VARARGS | METH_STATIC, nullptr },
         { "get_wps_configuration_async", reinterpret_cast<PyCFunction>(WiFiAdapter_GetWpsConfigurationAsync), METH_VARARGS, nullptr },
-        { "request_access_async", reinterpret_cast<PyCFunction>(WiFiAdapter_RequestAccessAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "scan_async", reinterpret_cast<PyCFunction>(WiFiAdapter_ScanAsync), METH_VARARGS, nullptr },
         { "add_available_networks_changed", reinterpret_cast<PyCFunction>(WiFiAdapter_add_AvailableNetworksChanged), METH_O, nullptr },
         { "remove_available_networks_changed", reinterpret_cast<PyCFunction>(WiFiAdapter_remove_AvailableNetworksChanged), METH_O, nullptr },
@@ -475,6 +471,35 @@ namespace py::cpp::Windows::Devices::WiFi
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_WiFiAdapter
+    };
+
+    static PyGetSetDef getset_WiFiAdapter_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_WiFiAdapter_Static[] = {
+        { "find_all_adapters_async", reinterpret_cast<PyCFunction>(WiFiAdapter_FindAllAdaptersAsync), METH_VARARGS, nullptr },
+        { "from_id_async", reinterpret_cast<PyCFunction>(WiFiAdapter_FromIdAsync), METH_VARARGS, nullptr },
+        { "get_device_selector", reinterpret_cast<PyCFunction>(WiFiAdapter_GetDeviceSelector), METH_VARARGS, nullptr },
+        { "request_access_async", reinterpret_cast<PyCFunction>(WiFiAdapter_RequestAccessAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_WiFiAdapter_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_WiFiAdapter_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_WiFiAdapter_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_WiFiAdapter_Static =
+    {
+        "winrt._winrt_windows_devices_wifi.WiFiAdapter_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_WiFiAdapter_Static
     };
 
     // ----- WiFiAvailableNetwork class --------------------
@@ -1388,7 +1413,6 @@ namespace py::cpp::Windows::Devices::WiFi
     }
 
     static PyMethodDef _methods_WiFiOnDemandHotspotNetwork[] = {
-        { "get_or_create_by_id", reinterpret_cast<PyCFunction>(WiFiOnDemandHotspotNetwork_GetOrCreateById), METH_VARARGS | METH_STATIC, nullptr },
         { "get_properties", reinterpret_cast<PyCFunction>(WiFiOnDemandHotspotNetwork_GetProperties), METH_VARARGS, nullptr },
         { "update_properties", reinterpret_cast<PyCFunction>(WiFiOnDemandHotspotNetwork_UpdateProperties), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_WiFiOnDemandHotspotNetwork, METH_O | METH_STATIC, nullptr },
@@ -1417,6 +1441,32 @@ namespace py::cpp::Windows::Devices::WiFi
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_WiFiOnDemandHotspotNetwork
+    };
+
+    static PyGetSetDef getset_WiFiOnDemandHotspotNetwork_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_WiFiOnDemandHotspotNetwork_Static[] = {
+        { "get_or_create_by_id", reinterpret_cast<PyCFunction>(WiFiOnDemandHotspotNetwork_GetOrCreateById), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_WiFiOnDemandHotspotNetwork_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_WiFiOnDemandHotspotNetwork_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_WiFiOnDemandHotspotNetwork_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_WiFiOnDemandHotspotNetwork_Static =
+    {
+        "winrt._winrt_windows_devices_wifi.WiFiOnDemandHotspotNetwork_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_WiFiOnDemandHotspotNetwork_Static
     };
 
     // ----- WiFiOnDemandHotspotNetworkProperties class --------------------
@@ -1979,7 +2029,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_wifi(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WiFiAdapter, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_WiFiAdapter_Static{PyType_FromSpec(&type_spec_WiFiAdapter_Static)};
+    if (!type_WiFiAdapter_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_WiFiAdapter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WiFiAdapter_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -2009,7 +2065,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_wifi(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WiFiOnDemandHotspotNetwork, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_WiFiOnDemandHotspotNetwork_Static{PyType_FromSpec(&type_spec_WiFiOnDemandHotspotNetwork_Static)};
+    if (!type_WiFiOnDemandHotspotNetwork_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_WiFiOnDemandHotspotNetwork, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WiFiOnDemandHotspotNetwork_Static.get())) == -1)
     {
         return nullptr;
     }

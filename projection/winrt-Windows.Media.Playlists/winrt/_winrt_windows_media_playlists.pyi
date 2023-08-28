@@ -16,12 +16,13 @@ from winrt.windows.media.playlists import PlaylistFormat
 
 Self = typing.TypeVar('Self')
 
-class Playlist(winrt.system.Object):
+class Playlist_Static(type):
+    def load_async(cls, file: typing.Optional[winrt.windows.storage.IStorageFile], /) -> winrt.windows.foundation.IAsyncOperation[Playlist]: ...
+
+class Playlist(winrt.system.Object, metaclass=Playlist_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Playlist: ...
     def __new__(cls: typing.Type[Playlist]) -> Playlist:...
-    @staticmethod
-    def load_async(file: typing.Optional[winrt.windows.storage.IStorageFile], /) -> winrt.windows.foundation.IAsyncOperation[Playlist]: ...
     @typing.overload
     def save_as_async(self, save_location: typing.Optional[winrt.windows.storage.IStorageFolder], desired_name: str, option: winrt.windows.storage.NameCollisionOption, /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.storage.StorageFile]: ...
     @typing.overload

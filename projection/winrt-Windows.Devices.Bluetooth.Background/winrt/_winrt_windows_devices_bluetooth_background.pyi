@@ -55,7 +55,11 @@ class GattCharacteristicNotificationTriggerDetails(winrt.system.Object):
     @_property
     def value_changed_events(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.devices.bluetooth.genericattributeprofile.GattValueChangedEventArgs]]: ...
 
-class GattServiceProviderConnection(winrt.system.Object):
+class GattServiceProviderConnection_Static(type):
+    @_property
+    def all_services(cls) -> typing.Optional[winrt.windows.foundation.collections.IMapView[str, GattServiceProviderConnection]]: ...
+
+class GattServiceProviderConnection(winrt.system.Object, metaclass=GattServiceProviderConnection_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattServiceProviderConnection: ...
     def start(self) -> None: ...
@@ -63,7 +67,6 @@ class GattServiceProviderConnection(winrt.system.Object):
     def service(self) -> typing.Optional[winrt.windows.devices.bluetooth.genericattributeprofile.GattLocalService]: ...
     @_property
     def trigger_id(self) -> str: ...
-    all_services: typing.ClassVar[typing.Optional[winrt.windows.foundation.collections.IMapView[str, GattServiceProviderConnection]]]
 
 class GattServiceProviderTriggerDetails(winrt.system.Object):
     @staticmethod

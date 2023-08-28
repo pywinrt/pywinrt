@@ -334,9 +334,6 @@ namespace py::cpp::Windows::Phone::Management::Deployment
     }
 
     static PyMethodDef _methods_EnterpriseEnrollmentManager[] = {
-        { "request_enrollment_async", reinterpret_cast<PyCFunction>(EnterpriseEnrollmentManager_RequestEnrollmentAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "request_unenrollment_async", reinterpret_cast<PyCFunction>(EnterpriseEnrollmentManager_RequestUnenrollmentAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "validate_enterprises_async", reinterpret_cast<PyCFunction>(EnterpriseEnrollmentManager_ValidateEnterprisesAsync), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -361,26 +358,34 @@ namespace py::cpp::Windows::Phone::Management::Deployment
         _type_slots_EnterpriseEnrollmentManager
     };
 
-    static PyGetSetDef getset_EnterpriseEnrollmentManager_Meta[] = {
+    static PyGetSetDef getset_EnterpriseEnrollmentManager_Static[] = {
         { "current_enterprise", reinterpret_cast<getter>(EnterpriseEnrollmentManager_get_CurrentEnterprise), nullptr, nullptr, nullptr },
         { "enrolled_enterprises", reinterpret_cast<getter>(EnterpriseEnrollmentManager_get_EnrolledEnterprises), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_EnterpriseEnrollmentManager_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_EnterpriseEnrollmentManager_Meta) },
+    static PyMethodDef methods_EnterpriseEnrollmentManager_Static[] = {
+        { "request_enrollment_async", reinterpret_cast<PyCFunction>(EnterpriseEnrollmentManager_RequestEnrollmentAsync), METH_VARARGS, nullptr },
+        { "request_unenrollment_async", reinterpret_cast<PyCFunction>(EnterpriseEnrollmentManager_RequestUnenrollmentAsync), METH_VARARGS, nullptr },
+        { "validate_enterprises_async", reinterpret_cast<PyCFunction>(EnterpriseEnrollmentManager_ValidateEnterprisesAsync), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_EnterpriseEnrollmentManager_Meta =
+    static PyType_Slot type_slots_EnterpriseEnrollmentManager_Static[] = 
     {
-        "winrt._winrt_windows_phone_management_deployment.EnterpriseEnrollmentManager_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_EnterpriseEnrollmentManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_EnterpriseEnrollmentManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_EnterpriseEnrollmentManager_Static =
+    {
+        "winrt._winrt_windows_phone_management_deployment.EnterpriseEnrollmentManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_EnterpriseEnrollmentManager_Meta
+        type_slots_EnterpriseEnrollmentManager_Static
     };
 
     // ----- EnterpriseEnrollmentResult class --------------------
@@ -731,12 +736,6 @@ namespace py::cpp::Windows::Phone::Management::Deployment
     }
 
     static PyMethodDef _methods_InstallationManager[] = {
-        { "add_package_async", reinterpret_cast<PyCFunction>(InstallationManager_AddPackageAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "find_packages", reinterpret_cast<PyCFunction>(InstallationManager_FindPackages), METH_VARARGS | METH_STATIC, nullptr },
-        { "find_packages_for_current_publisher", reinterpret_cast<PyCFunction>(InstallationManager_FindPackagesForCurrentPublisher), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_pending_package_installs", reinterpret_cast<PyCFunction>(InstallationManager_GetPendingPackageInstalls), METH_VARARGS | METH_STATIC, nullptr },
-        { "register_package_async", reinterpret_cast<PyCFunction>(InstallationManager_RegisterPackageAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "remove_package_async", reinterpret_cast<PyCFunction>(InstallationManager_RemovePackageAsync), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -759,6 +758,37 @@ namespace py::cpp::Windows::Phone::Management::Deployment
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_InstallationManager
+    };
+
+    static PyGetSetDef getset_InstallationManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_InstallationManager_Static[] = {
+        { "add_package_async", reinterpret_cast<PyCFunction>(InstallationManager_AddPackageAsync), METH_VARARGS, nullptr },
+        { "find_packages", reinterpret_cast<PyCFunction>(InstallationManager_FindPackages), METH_VARARGS, nullptr },
+        { "find_packages_for_current_publisher", reinterpret_cast<PyCFunction>(InstallationManager_FindPackagesForCurrentPublisher), METH_VARARGS, nullptr },
+        { "get_pending_package_installs", reinterpret_cast<PyCFunction>(InstallationManager_GetPendingPackageInstalls), METH_VARARGS, nullptr },
+        { "register_package_async", reinterpret_cast<PyCFunction>(InstallationManager_RegisterPackageAsync), METH_VARARGS, nullptr },
+        { "remove_package_async", reinterpret_cast<PyCFunction>(InstallationManager_RemovePackageAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_InstallationManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_InstallationManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_InstallationManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_InstallationManager_Static =
+    {
+        "winrt._winrt_windows_phone_management_deployment.InstallationManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_InstallationManager_Static
     };
 
     // ----- PackageInstallResult class --------------------
@@ -941,13 +971,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_management_deployment(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_EnterpriseEnrollmentManager_Meta{PyType_FromSpec(&type_spec_EnterpriseEnrollmentManager_Meta)};
-    if (!type_EnterpriseEnrollmentManager_Meta)
+    py::pyobj_handle type_EnterpriseEnrollmentManager_Static{PyType_FromSpec(&type_spec_EnterpriseEnrollmentManager_Static)};
+    if (!type_EnterpriseEnrollmentManager_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EnterpriseEnrollmentManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EnterpriseEnrollmentManager_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EnterpriseEnrollmentManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EnterpriseEnrollmentManager_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -957,7 +987,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_management_deployment(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InstallationManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_InstallationManager_Static{PyType_FromSpec(&type_spec_InstallationManager_Static)};
+    if (!type_InstallationManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_InstallationManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InstallationManager_Static.get())) == -1)
     {
         return nullptr;
     }

@@ -2802,10 +2802,6 @@ namespace py::cpp::Windows::Media::Capture
     }
 
     static PyMethodDef _methods_AppBroadcastManager[] = {
-        { "apply_global_settings", reinterpret_cast<PyCFunction>(AppBroadcastManager_ApplyGlobalSettings), METH_VARARGS | METH_STATIC, nullptr },
-        { "apply_provider_settings", reinterpret_cast<PyCFunction>(AppBroadcastManager_ApplyProviderSettings), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_global_settings", reinterpret_cast<PyCFunction>(AppBroadcastManager_GetGlobalSettings), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_provider_settings", reinterpret_cast<PyCFunction>(AppBroadcastManager_GetProviderSettings), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -2828,6 +2824,35 @@ namespace py::cpp::Windows::Media::Capture
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_AppBroadcastManager
+    };
+
+    static PyGetSetDef getset_AppBroadcastManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_AppBroadcastManager_Static[] = {
+        { "apply_global_settings", reinterpret_cast<PyCFunction>(AppBroadcastManager_ApplyGlobalSettings), METH_VARARGS, nullptr },
+        { "apply_provider_settings", reinterpret_cast<PyCFunction>(AppBroadcastManager_ApplyProviderSettings), METH_VARARGS, nullptr },
+        { "get_global_settings", reinterpret_cast<PyCFunction>(AppBroadcastManager_GetGlobalSettings), METH_VARARGS, nullptr },
+        { "get_provider_settings", reinterpret_cast<PyCFunction>(AppBroadcastManager_GetProviderSettings), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_AppBroadcastManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_AppBroadcastManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_AppBroadcastManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_AppBroadcastManager_Static =
+    {
+        "winrt._winrt_windows_media_capture.AppBroadcastManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_AppBroadcastManager_Static
     };
 
     // ----- AppBroadcastMicrophoneCaptureStateChangedEventArgs class --------------------
@@ -3275,8 +3300,6 @@ namespace py::cpp::Windows::Media::Capture
     }
 
     static PyMethodDef _methods_AppBroadcastPlugInManager[] = {
-        { "get_default", reinterpret_cast<PyCFunction>(AppBroadcastPlugInManager_GetDefault), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_for_user", reinterpret_cast<PyCFunction>(AppBroadcastPlugInManager_GetForUser), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_AppBroadcastPlugInManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppBroadcastPlugInManager), METH_O | METH_STATIC, nullptr },
         { }
@@ -3305,6 +3328,33 @@ namespace py::cpp::Windows::Media::Capture
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_AppBroadcastPlugInManager
+    };
+
+    static PyGetSetDef getset_AppBroadcastPlugInManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_AppBroadcastPlugInManager_Static[] = {
+        { "get_default", reinterpret_cast<PyCFunction>(AppBroadcastPlugInManager_GetDefault), METH_VARARGS, nullptr },
+        { "get_for_user", reinterpret_cast<PyCFunction>(AppBroadcastPlugInManager_GetForUser), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_AppBroadcastPlugInManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_AppBroadcastPlugInManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_AppBroadcastPlugInManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_AppBroadcastPlugInManager_Static =
+    {
+        "winrt._winrt_windows_media_capture.AppBroadcastPlugInManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_AppBroadcastPlugInManager_Static
     };
 
     // ----- AppBroadcastPlugInStateChangedEventArgs class --------------------
@@ -7427,8 +7477,6 @@ namespace py::cpp::Windows::Media::Capture
     }
 
     static PyMethodDef _methods_AppCapture[] = {
-        { "get_for_current_view", reinterpret_cast<PyCFunction>(AppCapture_GetForCurrentView), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_allowed_async", reinterpret_cast<PyCFunction>(AppCapture_SetAllowedAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "add_capturing_changed", reinterpret_cast<PyCFunction>(AppCapture_add_CapturingChanged), METH_O, nullptr },
         { "remove_capturing_changed", reinterpret_cast<PyCFunction>(AppCapture_remove_CapturingChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_AppCapture, METH_O | METH_STATIC, nullptr },
@@ -7458,6 +7506,33 @@ namespace py::cpp::Windows::Media::Capture
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_AppCapture
+    };
+
+    static PyGetSetDef getset_AppCapture_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_AppCapture_Static[] = {
+        { "get_for_current_view", reinterpret_cast<PyCFunction>(AppCapture_GetForCurrentView), METH_VARARGS, nullptr },
+        { "set_allowed_async", reinterpret_cast<PyCFunction>(AppCapture_SetAllowedAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_AppCapture_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_AppCapture_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_AppCapture_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_AppCapture_Static =
+    {
+        "winrt._winrt_windows_media_capture.AppCapture_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_AppCapture_Static
     };
 
     // ----- AppCaptureAlternateShortcutKeys class --------------------
@@ -8546,8 +8621,6 @@ namespace py::cpp::Windows::Media::Capture
     }
 
     static PyMethodDef _methods_AppCaptureManager[] = {
-        { "apply_settings", reinterpret_cast<PyCFunction>(AppCaptureManager_ApplySettings), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_current_settings", reinterpret_cast<PyCFunction>(AppCaptureManager_GetCurrentSettings), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -8570,6 +8643,33 @@ namespace py::cpp::Windows::Media::Capture
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_AppCaptureManager
+    };
+
+    static PyGetSetDef getset_AppCaptureManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_AppCaptureManager_Static[] = {
+        { "apply_settings", reinterpret_cast<PyCFunction>(AppCaptureManager_ApplySettings), METH_VARARGS, nullptr },
+        { "get_current_settings", reinterpret_cast<PyCFunction>(AppCaptureManager_GetCurrentSettings), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_AppCaptureManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_AppCaptureManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_AppCaptureManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_AppCaptureManager_Static =
+    {
+        "winrt._winrt_windows_media_capture.AppCaptureManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_AppCaptureManager_Static
     };
 
     // ----- AppCaptureMetadataWriter class --------------------
@@ -12165,7 +12265,6 @@ namespace py::cpp::Windows::Media::Capture
     }
 
     static PyMethodDef _methods_CameraOptionsUI[] = {
-        { "show", reinterpret_cast<PyCFunction>(CameraOptionsUI_Show), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -12188,6 +12287,32 @@ namespace py::cpp::Windows::Media::Capture
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_CameraOptionsUI
+    };
+
+    static PyGetSetDef getset_CameraOptionsUI_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_CameraOptionsUI_Static[] = {
+        { "show", reinterpret_cast<PyCFunction>(CameraOptionsUI_Show), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_CameraOptionsUI_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CameraOptionsUI_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CameraOptionsUI_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CameraOptionsUI_Static =
+    {
+        "winrt._winrt_windows_media_capture.CameraOptionsUI_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CameraOptionsUI_Static
     };
 
     // ----- CapturedFrame class --------------------
@@ -13719,7 +13844,6 @@ namespace py::cpp::Windows::Media::Capture
     }
 
     static PyMethodDef _methods_GameBarServicesManager[] = {
-        { "get_default", reinterpret_cast<PyCFunction>(GameBarServicesManager_GetDefault), METH_VARARGS | METH_STATIC, nullptr },
         { "add_game_bar_services_created", reinterpret_cast<PyCFunction>(GameBarServicesManager_add_GameBarServicesCreated), METH_O, nullptr },
         { "remove_game_bar_services_created", reinterpret_cast<PyCFunction>(GameBarServicesManager_remove_GameBarServicesCreated), METH_O, nullptr },
         { "_assign_array_", _assign_array_GameBarServicesManager, METH_O | METH_STATIC, nullptr },
@@ -13747,6 +13871,32 @@ namespace py::cpp::Windows::Media::Capture
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_GameBarServicesManager
+    };
+
+    static PyGetSetDef getset_GameBarServicesManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_GameBarServicesManager_Static[] = {
+        { "get_default", reinterpret_cast<PyCFunction>(GameBarServicesManager_GetDefault), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_GameBarServicesManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_GameBarServicesManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_GameBarServicesManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_GameBarServicesManager_Static =
+    {
+        "winrt._winrt_windows_media_capture.GameBarServicesManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_GameBarServicesManager_Static
     };
 
     // ----- GameBarServicesManagerGameBarServicesCreatedEventArgs class --------------------
@@ -16626,16 +16776,12 @@ namespace py::cpp::Windows::Media::Capture
         { "create_frame_reader_async", reinterpret_cast<PyCFunction>(MediaCapture_CreateFrameReaderAsync), METH_VARARGS, nullptr },
         { "create_multi_source_frame_reader_async", reinterpret_cast<PyCFunction>(MediaCapture_CreateMultiSourceFrameReaderAsync), METH_VARARGS, nullptr },
         { "create_relative_panel_watcher", reinterpret_cast<PyCFunction>(MediaCapture_CreateRelativePanelWatcher), METH_VARARGS, nullptr },
-        { "find_all_video_profiles", reinterpret_cast<PyCFunction>(MediaCapture_FindAllVideoProfiles), METH_VARARGS | METH_STATIC, nullptr },
-        { "find_concurrent_profiles", reinterpret_cast<PyCFunction>(MediaCapture_FindConcurrentProfiles), METH_VARARGS | METH_STATIC, nullptr },
-        { "find_known_video_profiles", reinterpret_cast<PyCFunction>(MediaCapture_FindKnownVideoProfiles), METH_VARARGS | METH_STATIC, nullptr },
         { "get_encoder_property", reinterpret_cast<PyCFunction>(MediaCapture_GetEncoderProperty), METH_VARARGS, nullptr },
         { "get_preview_frame_async", reinterpret_cast<PyCFunction>(MediaCapture_GetPreviewFrameAsync), METH_VARARGS, nullptr },
         { "get_preview_mirroring", reinterpret_cast<PyCFunction>(MediaCapture_GetPreviewMirroring), METH_VARARGS, nullptr },
         { "get_preview_rotation", reinterpret_cast<PyCFunction>(MediaCapture_GetPreviewRotation), METH_VARARGS, nullptr },
         { "get_record_rotation", reinterpret_cast<PyCFunction>(MediaCapture_GetRecordRotation), METH_VARARGS, nullptr },
         { "initialize_async", reinterpret_cast<PyCFunction>(MediaCapture_InitializeAsync), METH_VARARGS, nullptr },
-        { "is_video_profile_supported", reinterpret_cast<PyCFunction>(MediaCapture_IsVideoProfileSupported), METH_VARARGS | METH_STATIC, nullptr },
         { "pause_record_async", reinterpret_cast<PyCFunction>(MediaCapture_PauseRecordAsync), METH_VARARGS, nullptr },
         { "pause_record_with_result_async", reinterpret_cast<PyCFunction>(MediaCapture_PauseRecordWithResultAsync), METH_VARARGS, nullptr },
         { "prepare_advanced_photo_capture_async", reinterpret_cast<PyCFunction>(MediaCapture_PrepareAdvancedPhotoCaptureAsync), METH_VARARGS, nullptr },
@@ -16707,6 +16853,35 @@ namespace py::cpp::Windows::Media::Capture
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_MediaCapture
+    };
+
+    static PyGetSetDef getset_MediaCapture_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_MediaCapture_Static[] = {
+        { "find_all_video_profiles", reinterpret_cast<PyCFunction>(MediaCapture_FindAllVideoProfiles), METH_VARARGS, nullptr },
+        { "find_concurrent_profiles", reinterpret_cast<PyCFunction>(MediaCapture_FindConcurrentProfiles), METH_VARARGS, nullptr },
+        { "find_known_video_profiles", reinterpret_cast<PyCFunction>(MediaCapture_FindKnownVideoProfiles), METH_VARARGS, nullptr },
+        { "is_video_profile_supported", reinterpret_cast<PyCFunction>(MediaCapture_IsVideoProfileSupported), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_MediaCapture_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_MediaCapture_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_MediaCapture_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_MediaCapture_Static =
+    {
+        "winrt._winrt_windows_media_capture.MediaCapture_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_MediaCapture_Static
     };
 
     // ----- MediaCaptureDeviceExclusiveControlStatusChangedEventArgs class --------------------
@@ -19875,7 +20050,6 @@ namespace py::cpp::Windows::Media::Capture
     }
 
     static PyMethodDef _methods_ScreenCapture[] = {
-        { "get_for_current_view", reinterpret_cast<PyCFunction>(ScreenCapture_GetForCurrentView), METH_VARARGS | METH_STATIC, nullptr },
         { "add_source_suspension_changed", reinterpret_cast<PyCFunction>(ScreenCapture_add_SourceSuspensionChanged), METH_O, nullptr },
         { "remove_source_suspension_changed", reinterpret_cast<PyCFunction>(ScreenCapture_remove_SourceSuspensionChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_ScreenCapture, METH_O | METH_STATIC, nullptr },
@@ -19907,6 +20081,32 @@ namespace py::cpp::Windows::Media::Capture
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ScreenCapture
+    };
+
+    static PyGetSetDef getset_ScreenCapture_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ScreenCapture_Static[] = {
+        { "get_for_current_view", reinterpret_cast<PyCFunction>(ScreenCapture_GetForCurrentView), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_ScreenCapture_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ScreenCapture_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ScreenCapture_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ScreenCapture_Static =
+    {
+        "winrt._winrt_windows_media_capture.ScreenCapture_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ScreenCapture_Static
     };
 
     // ----- SourceSuspensionChangedEventArgs class --------------------
@@ -20409,7 +20609,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_capture(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppBroadcastManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_AppBroadcastManager_Static{PyType_FromSpec(&type_spec_AppBroadcastManager_Static)};
+    if (!type_AppBroadcastManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_AppBroadcastManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppBroadcastManager_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -20424,7 +20630,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_capture(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppBroadcastPlugInManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_AppBroadcastPlugInManager_Static{PyType_FromSpec(&type_spec_AppBroadcastPlugInManager_Static)};
+    if (!type_AppBroadcastPlugInManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_AppBroadcastPlugInManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppBroadcastPlugInManager_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -20519,7 +20731,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_capture(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppCapture, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_AppCapture_Static{PyType_FromSpec(&type_spec_AppCapture_Static)};
+    if (!type_AppCapture_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_AppCapture, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppCapture_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -20539,7 +20757,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_capture(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppCaptureManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_AppCaptureManager_Static{PyType_FromSpec(&type_spec_AppCaptureManager_Static)};
+    if (!type_AppCaptureManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_AppCaptureManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppCaptureManager_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -20594,7 +20818,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_capture(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CameraOptionsUI, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_CameraOptionsUI_Static{PyType_FromSpec(&type_spec_CameraOptionsUI_Static)};
+    if (!type_CameraOptionsUI_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_CameraOptionsUI, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CameraOptionsUI_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -20624,7 +20854,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_capture(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GameBarServicesManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_GameBarServicesManager_Static{PyType_FromSpec(&type_spec_GameBarServicesManager_Static)};
+    if (!type_GameBarServicesManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_GameBarServicesManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GameBarServicesManager_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -20654,7 +20890,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_capture(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MediaCapture, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_MediaCapture_Static{PyType_FromSpec(&type_spec_MediaCapture_Static)};
+    if (!type_MediaCapture_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_MediaCapture, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MediaCapture_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -20724,7 +20966,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_capture(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ScreenCapture, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_ScreenCapture_Static{PyType_FromSpec(&type_spec_ScreenCapture_Static)};
+    if (!type_ScreenCapture_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_ScreenCapture, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ScreenCapture_Static.get())) == -1)
     {
         return nullptr;
     }

@@ -615,7 +615,7 @@ namespace py::cpp::Windows::UI::Text
         _type_slots_FontWeights
     };
 
-    static PyGetSetDef getset_FontWeights_Meta[] = {
+    static PyGetSetDef getset_FontWeights_Static[] = {
         { "black", reinterpret_cast<getter>(FontWeights_get_Black), nullptr, nullptr, nullptr },
         { "bold", reinterpret_cast<getter>(FontWeights_get_Bold), nullptr, nullptr, nullptr },
         { "extra_black", reinterpret_cast<getter>(FontWeights_get_ExtraBlack), nullptr, nullptr, nullptr },
@@ -630,20 +630,25 @@ namespace py::cpp::Windows::UI::Text
         { }
     };
 
-    static PyType_Slot type_slots_FontWeights_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_FontWeights_Meta) },
+    static PyMethodDef methods_FontWeights_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_FontWeights_Meta =
+    static PyType_Slot type_slots_FontWeights_Static[] = 
     {
-        "winrt._winrt_windows_ui_text.FontWeights_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_FontWeights_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_FontWeights_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_FontWeights_Static =
+    {
+        "winrt._winrt_windows_ui_text.FontWeights_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_FontWeights_Meta
+        type_slots_FontWeights_Static
     };
 
     // ----- RichEditTextDocument class --------------------
@@ -3615,7 +3620,7 @@ namespace py::cpp::Windows::UI::Text
         _type_slots_TextConstants
     };
 
-    static PyGetSetDef getset_TextConstants_Meta[] = {
+    static PyGetSetDef getset_TextConstants_Static[] = {
         { "auto_color", reinterpret_cast<getter>(TextConstants_get_AutoColor), nullptr, nullptr, nullptr },
         { "max_unit_count", reinterpret_cast<getter>(TextConstants_get_MaxUnitCount), nullptr, nullptr, nullptr },
         { "min_unit_count", reinterpret_cast<getter>(TextConstants_get_MinUnitCount), nullptr, nullptr, nullptr },
@@ -3627,20 +3632,25 @@ namespace py::cpp::Windows::UI::Text
         { }
     };
 
-    static PyType_Slot type_slots_TextConstants_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_TextConstants_Meta) },
+    static PyMethodDef methods_TextConstants_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_TextConstants_Meta =
+    static PyType_Slot type_slots_TextConstants_Static[] = 
     {
-        "winrt._winrt_windows_ui_text.TextConstants_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_TextConstants_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_TextConstants_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_TextConstants_Static =
+    {
+        "winrt._winrt_windows_ui_text.TextConstants_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_TextConstants_Meta
+        type_slots_TextConstants_Static
     };
 
     // ----- ITextCharacterFormat interface --------------------
@@ -10846,13 +10856,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_text(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_FontWeights_Meta{PyType_FromSpec(&type_spec_FontWeights_Meta)};
-    if (!type_FontWeights_Meta)
+    py::pyobj_handle type_FontWeights_Static{PyType_FromSpec(&type_spec_FontWeights_Static)};
+    if (!type_FontWeights_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FontWeights, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FontWeights_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FontWeights, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FontWeights_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -10867,13 +10877,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_text(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_TextConstants_Meta{PyType_FromSpec(&type_spec_TextConstants_Meta)};
-    if (!type_TextConstants_Meta)
+    py::pyobj_handle type_TextConstants_Static{PyType_FromSpec(&type_spec_TextConstants_Static)};
+    if (!type_TextConstants_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_TextConstants, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TextConstants_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TextConstants, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TextConstants_Static.get())) == -1)
     {
         return nullptr;
     }

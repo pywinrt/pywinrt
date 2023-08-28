@@ -229,10 +229,6 @@ namespace py::cpp::Windows::Security::Authentication::Web
     }
 
     static PyMethodDef _methods_WebAuthenticationBroker[] = {
-        { "authenticate_and_continue", reinterpret_cast<PyCFunction>(WebAuthenticationBroker_AuthenticateAndContinue), METH_VARARGS | METH_STATIC, nullptr },
-        { "authenticate_async", reinterpret_cast<PyCFunction>(WebAuthenticationBroker_AuthenticateAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "authenticate_silently_async", reinterpret_cast<PyCFunction>(WebAuthenticationBroker_AuthenticateSilentlyAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_current_application_callback_uri", reinterpret_cast<PyCFunction>(WebAuthenticationBroker_GetCurrentApplicationCallbackUri), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -255,6 +251,35 @@ namespace py::cpp::Windows::Security::Authentication::Web
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_WebAuthenticationBroker
+    };
+
+    static PyGetSetDef getset_WebAuthenticationBroker_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_WebAuthenticationBroker_Static[] = {
+        { "authenticate_and_continue", reinterpret_cast<PyCFunction>(WebAuthenticationBroker_AuthenticateAndContinue), METH_VARARGS, nullptr },
+        { "authenticate_async", reinterpret_cast<PyCFunction>(WebAuthenticationBroker_AuthenticateAsync), METH_VARARGS, nullptr },
+        { "authenticate_silently_async", reinterpret_cast<PyCFunction>(WebAuthenticationBroker_AuthenticateSilentlyAsync), METH_VARARGS, nullptr },
+        { "get_current_application_callback_uri", reinterpret_cast<PyCFunction>(WebAuthenticationBroker_GetCurrentApplicationCallbackUri), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_WebAuthenticationBroker_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_WebAuthenticationBroker_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_WebAuthenticationBroker_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_WebAuthenticationBroker_Static =
+    {
+        "winrt._winrt_windows_security_authentication_web.WebAuthenticationBroker_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_WebAuthenticationBroker_Static
     };
 
     // ----- WebAuthenticationResult class --------------------
@@ -432,7 +457,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_web(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebAuthenticationBroker, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_WebAuthenticationBroker_Static{PyType_FromSpec(&type_spec_WebAuthenticationBroker_Static)};
+    if (!type_WebAuthenticationBroker_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_WebAuthenticationBroker, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WebAuthenticationBroker_Static.get())) == -1)
     {
         return nullptr;
     }

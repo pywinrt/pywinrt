@@ -25,14 +25,21 @@ class AddAppointmentOperation(winrt.system.Object):
     @_property
     def source_package_family_name(self) -> str: ...
 
-class AppointmentsProviderLaunchActionVerbs(winrt.system.Object):
+class AppointmentsProviderLaunchActionVerbs_Static(type):
+    @_property
+    def add_appointment(cls) -> str: ...
+    @_property
+    def remove_appointment(cls) -> str: ...
+    @_property
+    def replace_appointment(cls) -> str: ...
+    @_property
+    def show_time_frame(cls) -> str: ...
+    @_property
+    def show_appointment_details(cls) -> str: ...
+
+class AppointmentsProviderLaunchActionVerbs(winrt.system.Object, metaclass=AppointmentsProviderLaunchActionVerbs_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentsProviderLaunchActionVerbs: ...
-    add_appointment: typing.ClassVar[str]
-    remove_appointment: typing.ClassVar[str]
-    replace_appointment: typing.ClassVar[str]
-    show_time_frame: typing.ClassVar[str]
-    show_appointment_details: typing.ClassVar[str]
 
 class RemoveAppointmentOperation(winrt.system.Object):
     @staticmethod

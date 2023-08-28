@@ -223,7 +223,6 @@ namespace py::cpp::Windows::Media::AppRecording
     }
 
     static PyMethodDef _methods_AppRecordingManager[] = {
-        { "get_default", reinterpret_cast<PyCFunction>(AppRecordingManager_GetDefault), METH_VARARGS | METH_STATIC, nullptr },
         { "get_status", reinterpret_cast<PyCFunction>(AppRecordingManager_GetStatus), METH_VARARGS, nullptr },
         { "record_time_span_to_file_async", reinterpret_cast<PyCFunction>(AppRecordingManager_RecordTimeSpanToFileAsync), METH_VARARGS, nullptr },
         { "save_screenshot_to_files_async", reinterpret_cast<PyCFunction>(AppRecordingManager_SaveScreenshotToFilesAsync), METH_VARARGS, nullptr },
@@ -254,6 +253,32 @@ namespace py::cpp::Windows::Media::AppRecording
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_AppRecordingManager
+    };
+
+    static PyGetSetDef getset_AppRecordingManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_AppRecordingManager_Static[] = {
+        { "get_default", reinterpret_cast<PyCFunction>(AppRecordingManager_GetDefault), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_AppRecordingManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_AppRecordingManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_AppRecordingManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_AppRecordingManager_Static =
+    {
+        "winrt._winrt_windows_media_apprecording.AppRecordingManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_AppRecordingManager_Static
     };
 
     // ----- AppRecordingResult class --------------------
@@ -1087,7 +1112,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_apprecording(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppRecordingManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_AppRecordingManager_Static{PyType_FromSpec(&type_spec_AppRecordingManager_Static)};
+    if (!type_AppRecordingManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_AppRecordingManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppRecordingManager_Static.get())) == -1)
     {
         return nullptr;
     }

@@ -1479,16 +1479,6 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
     }
 
     static PyMethodDef _methods_ElementCompositionPreview[] = {
-        { "get_app_window_content", reinterpret_cast<PyCFunction>(ElementCompositionPreview_GetAppWindowContent), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_element_child_visual", reinterpret_cast<PyCFunction>(ElementCompositionPreview_GetElementChildVisual), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_element_visual", reinterpret_cast<PyCFunction>(ElementCompositionPreview_GetElementVisual), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_pointer_position_property_set", reinterpret_cast<PyCFunction>(ElementCompositionPreview_GetPointerPositionPropertySet), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_scroll_viewer_manipulation_property_set", reinterpret_cast<PyCFunction>(ElementCompositionPreview_GetScrollViewerManipulationPropertySet), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_app_window_content", reinterpret_cast<PyCFunction>(ElementCompositionPreview_SetAppWindowContent), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_element_child_visual", reinterpret_cast<PyCFunction>(ElementCompositionPreview_SetElementChildVisual), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_implicit_hide_animation", reinterpret_cast<PyCFunction>(ElementCompositionPreview_SetImplicitHideAnimation), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_implicit_show_animation", reinterpret_cast<PyCFunction>(ElementCompositionPreview_SetImplicitShowAnimation), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_is_translation_enabled", reinterpret_cast<PyCFunction>(ElementCompositionPreview_SetIsTranslationEnabled), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_ElementCompositionPreview, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ElementCompositionPreview), METH_O | METH_STATIC, nullptr },
         { }
@@ -1514,6 +1504,41 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ElementCompositionPreview
+    };
+
+    static PyGetSetDef getset_ElementCompositionPreview_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ElementCompositionPreview_Static[] = {
+        { "get_app_window_content", reinterpret_cast<PyCFunction>(ElementCompositionPreview_GetAppWindowContent), METH_VARARGS, nullptr },
+        { "get_element_child_visual", reinterpret_cast<PyCFunction>(ElementCompositionPreview_GetElementChildVisual), METH_VARARGS, nullptr },
+        { "get_element_visual", reinterpret_cast<PyCFunction>(ElementCompositionPreview_GetElementVisual), METH_VARARGS, nullptr },
+        { "get_pointer_position_property_set", reinterpret_cast<PyCFunction>(ElementCompositionPreview_GetPointerPositionPropertySet), METH_VARARGS, nullptr },
+        { "get_scroll_viewer_manipulation_property_set", reinterpret_cast<PyCFunction>(ElementCompositionPreview_GetScrollViewerManipulationPropertySet), METH_VARARGS, nullptr },
+        { "set_app_window_content", reinterpret_cast<PyCFunction>(ElementCompositionPreview_SetAppWindowContent), METH_VARARGS, nullptr },
+        { "set_element_child_visual", reinterpret_cast<PyCFunction>(ElementCompositionPreview_SetElementChildVisual), METH_VARARGS, nullptr },
+        { "set_implicit_hide_animation", reinterpret_cast<PyCFunction>(ElementCompositionPreview_SetImplicitHideAnimation), METH_VARARGS, nullptr },
+        { "set_implicit_show_animation", reinterpret_cast<PyCFunction>(ElementCompositionPreview_SetImplicitShowAnimation), METH_VARARGS, nullptr },
+        { "set_is_translation_enabled", reinterpret_cast<PyCFunction>(ElementCompositionPreview_SetIsTranslationEnabled), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_ElementCompositionPreview_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ElementCompositionPreview_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ElementCompositionPreview_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ElementCompositionPreview_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_hosting.ElementCompositionPreview_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ElementCompositionPreview_Static
     };
 
     // ----- WindowsXamlManager class --------------------
@@ -1637,7 +1662,6 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
 
     static PyMethodDef _methods_WindowsXamlManager[] = {
         { "close", reinterpret_cast<PyCFunction>(WindowsXamlManager_Close), METH_VARARGS, nullptr },
-        { "initialize_for_current_thread", reinterpret_cast<PyCFunction>(WindowsXamlManager_InitializeForCurrentThread), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_WindowsXamlManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WindowsXamlManager), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_WindowsXamlManager), METH_NOARGS, nullptr },
@@ -1665,6 +1689,32 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_WindowsXamlManager
+    };
+
+    static PyGetSetDef getset_WindowsXamlManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_WindowsXamlManager_Static[] = {
+        { "initialize_for_current_thread", reinterpret_cast<PyCFunction>(WindowsXamlManager_InitializeForCurrentThread), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_WindowsXamlManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_WindowsXamlManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_WindowsXamlManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_WindowsXamlManager_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_hosting.WindowsXamlManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_WindowsXamlManager_Static
     };
 
     // ----- XamlSourceFocusNavigationRequest class --------------------
@@ -2451,12 +2501,8 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
     }
 
     static PyMethodDef _methods_XamlUIPresenter[] = {
-        { "get_flyout_placement", reinterpret_cast<PyCFunction>(XamlUIPresenter_GetFlyoutPlacement), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_flyout_placement_target_info", reinterpret_cast<PyCFunction>(XamlUIPresenter_GetFlyoutPlacementTargetInfo), METH_VARARGS | METH_STATIC, nullptr },
-        { "notify_window_size_changed", reinterpret_cast<PyCFunction>(XamlUIPresenter_NotifyWindowSizeChanged), METH_VARARGS | METH_STATIC, nullptr },
         { "present", reinterpret_cast<PyCFunction>(XamlUIPresenter_Present), METH_VARARGS, nullptr },
         { "render", reinterpret_cast<PyCFunction>(XamlUIPresenter_Render), METH_VARARGS, nullptr },
-        { "set_host", reinterpret_cast<PyCFunction>(XamlUIPresenter_SetHost), METH_VARARGS | METH_STATIC, nullptr },
         { "set_size", reinterpret_cast<PyCFunction>(XamlUIPresenter_SetSize), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_XamlUIPresenter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_XamlUIPresenter), METH_O | METH_STATIC, nullptr },
@@ -2488,25 +2534,34 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
         _type_slots_XamlUIPresenter
     };
 
-    static PyGetSetDef getset_XamlUIPresenter_Meta[] = {
+    static PyGetSetDef getset_XamlUIPresenter_Static[] = {
         { "complete_timelines_automatically", reinterpret_cast<getter>(XamlUIPresenter_get_CompleteTimelinesAutomatically), reinterpret_cast<setter>(XamlUIPresenter_put_CompleteTimelinesAutomatically), nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_XamlUIPresenter_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_XamlUIPresenter_Meta) },
+    static PyMethodDef methods_XamlUIPresenter_Static[] = {
+        { "get_flyout_placement", reinterpret_cast<PyCFunction>(XamlUIPresenter_GetFlyoutPlacement), METH_VARARGS, nullptr },
+        { "get_flyout_placement_target_info", reinterpret_cast<PyCFunction>(XamlUIPresenter_GetFlyoutPlacementTargetInfo), METH_VARARGS, nullptr },
+        { "notify_window_size_changed", reinterpret_cast<PyCFunction>(XamlUIPresenter_NotifyWindowSizeChanged), METH_VARARGS, nullptr },
+        { "set_host", reinterpret_cast<PyCFunction>(XamlUIPresenter_SetHost), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_XamlUIPresenter_Meta =
+    static PyType_Slot type_slots_XamlUIPresenter_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_hosting.XamlUIPresenter_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_XamlUIPresenter_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_XamlUIPresenter_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_XamlUIPresenter_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_hosting.XamlUIPresenter_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_XamlUIPresenter_Meta
+        type_slots_XamlUIPresenter_Static
     };
 
     // ----- IXamlUIPresenterHost interface --------------------
@@ -2888,12 +2943,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_hosting(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ElementCompositionPreview, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_ElementCompositionPreview_Static{PyType_FromSpec(&type_spec_ElementCompositionPreview_Static)};
+    if (!type_ElementCompositionPreview_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WindowsXamlManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ElementCompositionPreview, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ElementCompositionPreview_Static.get())) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_WindowsXamlManager_Static{PyType_FromSpec(&type_spec_WindowsXamlManager_Static)};
+    if (!type_WindowsXamlManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_WindowsXamlManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WindowsXamlManager_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -2908,13 +2975,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_hosting(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_XamlUIPresenter_Meta{PyType_FromSpec(&type_spec_XamlUIPresenter_Meta)};
-    if (!type_XamlUIPresenter_Meta)
+    py::pyobj_handle type_XamlUIPresenter_Static{PyType_FromSpec(&type_spec_XamlUIPresenter_Static)};
+    if (!type_XamlUIPresenter_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_XamlUIPresenter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XamlUIPresenter_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_XamlUIPresenter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XamlUIPresenter_Static.get())) == -1)
     {
         return nullptr;
     }

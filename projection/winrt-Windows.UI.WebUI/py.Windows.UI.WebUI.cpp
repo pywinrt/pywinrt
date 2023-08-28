@@ -1965,9 +1965,6 @@ namespace py::cpp::Windows::UI::WebUI
     }
 
     static PyMethodDef _methods_WebUIApplication[] = {
-        { "enable_prelaunch", reinterpret_cast<PyCFunction>(WebUIApplication_EnablePrelaunch), METH_VARARGS | METH_STATIC, nullptr },
-        { "request_restart_async", reinterpret_cast<PyCFunction>(WebUIApplication_RequestRestartAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "request_restart_for_user_async", reinterpret_cast<PyCFunction>(WebUIApplication_RequestRestartForUserAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "add_background_activated", reinterpret_cast<PyCFunction>(WebUIApplication_add_BackgroundActivated), METH_O | METH_STATIC, nullptr },
         { "remove_background_activated", reinterpret_cast<PyCFunction>(WebUIApplication_remove_BackgroundActivated), METH_O | METH_STATIC, nullptr },
         { "add_new_web_u_i_view_created", reinterpret_cast<PyCFunction>(WebUIApplication_add_NewWebUIViewCreated), METH_O | METH_STATIC, nullptr },
@@ -2006,6 +2003,34 @@ namespace py::cpp::Windows::UI::WebUI
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_WebUIApplication
+    };
+
+    static PyGetSetDef getset_WebUIApplication_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_WebUIApplication_Static[] = {
+        { "enable_prelaunch", reinterpret_cast<PyCFunction>(WebUIApplication_EnablePrelaunch), METH_VARARGS, nullptr },
+        { "request_restart_async", reinterpret_cast<PyCFunction>(WebUIApplication_RequestRestartAsync), METH_VARARGS, nullptr },
+        { "request_restart_for_user_async", reinterpret_cast<PyCFunction>(WebUIApplication_RequestRestartForUserAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_WebUIApplication_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_WebUIApplication_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_WebUIApplication_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_WebUIApplication_Static =
+    {
+        "winrt._winrt_windows_ui_webui.WebUIApplication_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_WebUIApplication_Static
     };
 
     // ----- WebUIAppointmentsProviderAddAppointmentActivatedEventArgs class --------------------
@@ -3166,25 +3191,30 @@ namespace py::cpp::Windows::UI::WebUI
         _type_slots_WebUIBackgroundTaskInstance
     };
 
-    static PyGetSetDef getset_WebUIBackgroundTaskInstance_Meta[] = {
+    static PyGetSetDef getset_WebUIBackgroundTaskInstance_Static[] = {
         { "current", reinterpret_cast<getter>(WebUIBackgroundTaskInstance_get_Current), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_WebUIBackgroundTaskInstance_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_WebUIBackgroundTaskInstance_Meta) },
+    static PyMethodDef methods_WebUIBackgroundTaskInstance_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_WebUIBackgroundTaskInstance_Meta =
+    static PyType_Slot type_slots_WebUIBackgroundTaskInstance_Static[] = 
     {
-        "winrt._winrt_windows_ui_webui.WebUIBackgroundTaskInstance_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_WebUIBackgroundTaskInstance_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_WebUIBackgroundTaskInstance_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_WebUIBackgroundTaskInstance_Static =
+    {
+        "winrt._winrt_windows_ui_webui.WebUIBackgroundTaskInstance_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_WebUIBackgroundTaskInstance_Meta
+        type_slots_WebUIBackgroundTaskInstance_Static
     };
 
     // ----- WebUIBackgroundTaskInstanceRuntimeClass class --------------------
@@ -12889,7 +12919,6 @@ namespace py::cpp::Windows::UI::WebUI
         { "build_local_stream_uri", reinterpret_cast<PyCFunction>(WebUIView_BuildLocalStreamUri), METH_VARARGS, nullptr },
         { "capture_preview_to_stream_async", reinterpret_cast<PyCFunction>(WebUIView_CapturePreviewToStreamAsync), METH_VARARGS, nullptr },
         { "capture_selected_content_to_data_package_async", reinterpret_cast<PyCFunction>(WebUIView_CaptureSelectedContentToDataPackageAsync), METH_VARARGS, nullptr },
-        { "create_async", reinterpret_cast<PyCFunction>(WebUIView_CreateAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "get_deferred_permission_request_by_id", reinterpret_cast<PyCFunction>(WebUIView_GetDeferredPermissionRequestById), METH_VARARGS, nullptr },
         { "go_back", reinterpret_cast<PyCFunction>(WebUIView_GoBack), METH_VARARGS, nullptr },
         { "go_forward", reinterpret_cast<PyCFunction>(WebUIView_GoForward), METH_VARARGS, nullptr },
@@ -12973,6 +13002,32 @@ namespace py::cpp::Windows::UI::WebUI
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_WebUIView
+    };
+
+    static PyGetSetDef getset_WebUIView_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_WebUIView_Static[] = {
+        { "create_async", reinterpret_cast<PyCFunction>(WebUIView_CreateAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_WebUIView_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_WebUIView_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_WebUIView_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_WebUIView_Static =
+    {
+        "winrt._winrt_windows_ui_webui.WebUIView_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_WebUIView_Static
     };
 
     // ----- WebUIVoiceCommandActivatedEventArgs class --------------------
@@ -14142,7 +14197,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_webui(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUIApplication, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_WebUIApplication_Static{PyType_FromSpec(&type_spec_WebUIApplication_Static)};
+    if (!type_WebUIApplication_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_WebUIApplication, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WebUIApplication_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -14172,13 +14233,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_webui(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_WebUIBackgroundTaskInstance_Meta{PyType_FromSpec(&type_spec_WebUIBackgroundTaskInstance_Meta)};
-    if (!type_WebUIBackgroundTaskInstance_Meta)
+    py::pyobj_handle type_WebUIBackgroundTaskInstance_Static{PyType_FromSpec(&type_spec_WebUIBackgroundTaskInstance_Static)};
+    if (!type_WebUIBackgroundTaskInstance_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUIBackgroundTaskInstance, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WebUIBackgroundTaskInstance_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebUIBackgroundTaskInstance, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WebUIBackgroundTaskInstance_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -14383,7 +14444,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_webui(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebUIView, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_WebUIView_Static{PyType_FromSpec(&type_spec_WebUIView_Static)};
+    if (!type_WebUIView_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_WebUIView, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WebUIView_Static.get())) == -1)
     {
         return nullptr;
     }

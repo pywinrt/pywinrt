@@ -136,10 +136,6 @@ namespace py::cpp::Windows::Embedded::DeviceLockdown
     }
 
     static PyMethodDef _methods_DeviceLockdownProfile[] = {
-        { "apply_lockdown_profile_async", reinterpret_cast<PyCFunction>(DeviceLockdownProfile_ApplyLockdownProfileAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_current_lockdown_profile", reinterpret_cast<PyCFunction>(DeviceLockdownProfile_GetCurrentLockdownProfile), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_lockdown_profile_information", reinterpret_cast<PyCFunction>(DeviceLockdownProfile_GetLockdownProfileInformation), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_supported_lockdown_profiles", reinterpret_cast<PyCFunction>(DeviceLockdownProfile_GetSupportedLockdownProfiles), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -162,6 +158,35 @@ namespace py::cpp::Windows::Embedded::DeviceLockdown
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_DeviceLockdownProfile
+    };
+
+    static PyGetSetDef getset_DeviceLockdownProfile_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_DeviceLockdownProfile_Static[] = {
+        { "apply_lockdown_profile_async", reinterpret_cast<PyCFunction>(DeviceLockdownProfile_ApplyLockdownProfileAsync), METH_VARARGS, nullptr },
+        { "get_current_lockdown_profile", reinterpret_cast<PyCFunction>(DeviceLockdownProfile_GetCurrentLockdownProfile), METH_VARARGS, nullptr },
+        { "get_lockdown_profile_information", reinterpret_cast<PyCFunction>(DeviceLockdownProfile_GetLockdownProfileInformation), METH_VARARGS, nullptr },
+        { "get_supported_lockdown_profiles", reinterpret_cast<PyCFunction>(DeviceLockdownProfile_GetSupportedLockdownProfiles), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_DeviceLockdownProfile_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_DeviceLockdownProfile_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_DeviceLockdownProfile_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_DeviceLockdownProfile_Static =
+    {
+        "winrt._winrt_windows_embedded_devicelockdown.DeviceLockdownProfile_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_DeviceLockdownProfile_Static
     };
 
     // ----- DeviceLockdownProfileInformation class --------------------
@@ -299,7 +324,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_embedded_devicelockdown(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DeviceLockdownProfile, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_DeviceLockdownProfile_Static{PyType_FromSpec(&type_spec_DeviceLockdownProfile_Static)};
+    if (!type_DeviceLockdownProfile_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_DeviceLockdownProfile, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DeviceLockdownProfile_Static.get())) == -1)
     {
         return nullptr;
     }

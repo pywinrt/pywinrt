@@ -108,7 +108,6 @@ namespace py::cpp::Windows::ApplicationModel::Preview::InkWorkspace
     }
 
     static PyMethodDef _methods_InkWorkspaceHostedAppManager[] = {
-        { "get_for_current_app", reinterpret_cast<PyCFunction>(InkWorkspaceHostedAppManager_GetForCurrentApp), METH_VARARGS | METH_STATIC, nullptr },
         { "set_thumbnail_async", reinterpret_cast<PyCFunction>(InkWorkspaceHostedAppManager_SetThumbnailAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_InkWorkspaceHostedAppManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InkWorkspaceHostedAppManager), METH_O | METH_STATIC, nullptr },
@@ -135,6 +134,32 @@ namespace py::cpp::Windows::ApplicationModel::Preview::InkWorkspace
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_InkWorkspaceHostedAppManager
+    };
+
+    static PyGetSetDef getset_InkWorkspaceHostedAppManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_InkWorkspaceHostedAppManager_Static[] = {
+        { "get_for_current_app", reinterpret_cast<PyCFunction>(InkWorkspaceHostedAppManager_GetForCurrentApp), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_InkWorkspaceHostedAppManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_InkWorkspaceHostedAppManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_InkWorkspaceHostedAppManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_InkWorkspaceHostedAppManager_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_preview_inkworkspace.InkWorkspaceHostedAppManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_InkWorkspaceHostedAppManager_Static
     };
 
     // ----- Windows.ApplicationModel.Preview.InkWorkspace Initialization --------------------
@@ -183,7 +208,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_preview_inkworkspace(void)
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InkWorkspaceHostedAppManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_InkWorkspaceHostedAppManager_Static{PyType_FromSpec(&type_spec_InkWorkspaceHostedAppManager_Static)};
+    if (!type_InkWorkspaceHostedAppManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_InkWorkspaceHostedAppManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InkWorkspaceHostedAppManager_Static.get())) == -1)
     {
         return nullptr;
     }

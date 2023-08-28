@@ -831,7 +831,6 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
         { "close", reinterpret_cast<PyCFunction>(SpeechSynthesizer_Close), METH_VARARGS, nullptr },
         { "synthesize_ssml_to_stream_async", reinterpret_cast<PyCFunction>(SpeechSynthesizer_SynthesizeSsmlToStreamAsync), METH_VARARGS, nullptr },
         { "synthesize_text_to_stream_async", reinterpret_cast<PyCFunction>(SpeechSynthesizer_SynthesizeTextToStreamAsync), METH_VARARGS, nullptr },
-        { "try_set_default_voice_async", reinterpret_cast<PyCFunction>(SpeechSynthesizer_TrySetDefaultVoiceAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_SpeechSynthesizer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpeechSynthesizer), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_SpeechSynthesizer), METH_NOARGS, nullptr },
@@ -863,26 +862,32 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
         _type_slots_SpeechSynthesizer
     };
 
-    static PyGetSetDef getset_SpeechSynthesizer_Meta[] = {
+    static PyGetSetDef getset_SpeechSynthesizer_Static[] = {
         { "all_voices", reinterpret_cast<getter>(SpeechSynthesizer_get_AllVoices), nullptr, nullptr, nullptr },
         { "default_voice", reinterpret_cast<getter>(SpeechSynthesizer_get_DefaultVoice), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_SpeechSynthesizer_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_SpeechSynthesizer_Meta) },
+    static PyMethodDef methods_SpeechSynthesizer_Static[] = {
+        { "try_set_default_voice_async", reinterpret_cast<PyCFunction>(SpeechSynthesizer_TrySetDefaultVoiceAsync), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_SpeechSynthesizer_Meta =
+    static PyType_Slot type_slots_SpeechSynthesizer_Static[] = 
     {
-        "winrt._winrt_windows_media_speechsynthesis.SpeechSynthesizer_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SpeechSynthesizer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SpeechSynthesizer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SpeechSynthesizer_Static =
+    {
+        "winrt._winrt_windows_media_speechsynthesis.SpeechSynthesizer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SpeechSynthesizer_Meta
+        type_slots_SpeechSynthesizer_Static
     };
 
     // ----- SpeechSynthesizerOptions class --------------------
@@ -1510,13 +1515,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_speechsynthesis(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_SpeechSynthesizer_Meta{PyType_FromSpec(&type_spec_SpeechSynthesizer_Meta)};
-    if (!type_SpeechSynthesizer_Meta)
+    py::pyobj_handle type_SpeechSynthesizer_Static{PyType_FromSpec(&type_spec_SpeechSynthesizer_Static)};
+    if (!type_SpeechSynthesizer_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpeechSynthesizer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpeechSynthesizer_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpeechSynthesizer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpeechSynthesizer_Static.get())) == -1)
     {
         return nullptr;
     }

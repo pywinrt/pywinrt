@@ -325,7 +325,7 @@ namespace py::cpp::Windows::Devices::Haptics
         _type_slots_KnownSimpleHapticsControllerWaveforms
     };
 
-    static PyGetSetDef getset_KnownSimpleHapticsControllerWaveforms_Meta[] = {
+    static PyGetSetDef getset_KnownSimpleHapticsControllerWaveforms_Static[] = {
         { "buzz_continuous", reinterpret_cast<getter>(KnownSimpleHapticsControllerWaveforms_get_BuzzContinuous), nullptr, nullptr, nullptr },
         { "click", reinterpret_cast<getter>(KnownSimpleHapticsControllerWaveforms_get_Click), nullptr, nullptr, nullptr },
         { "press", reinterpret_cast<getter>(KnownSimpleHapticsControllerWaveforms_get_Press), nullptr, nullptr, nullptr },
@@ -344,20 +344,25 @@ namespace py::cpp::Windows::Devices::Haptics
         { }
     };
 
-    static PyType_Slot type_slots_KnownSimpleHapticsControllerWaveforms_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_KnownSimpleHapticsControllerWaveforms_Meta) },
+    static PyMethodDef methods_KnownSimpleHapticsControllerWaveforms_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_KnownSimpleHapticsControllerWaveforms_Meta =
+    static PyType_Slot type_slots_KnownSimpleHapticsControllerWaveforms_Static[] = 
     {
-        "winrt._winrt_windows_devices_haptics.KnownSimpleHapticsControllerWaveforms_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_KnownSimpleHapticsControllerWaveforms_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_KnownSimpleHapticsControllerWaveforms_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_KnownSimpleHapticsControllerWaveforms_Static =
+    {
+        "winrt._winrt_windows_devices_haptics.KnownSimpleHapticsControllerWaveforms_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_KnownSimpleHapticsControllerWaveforms_Meta
+        type_slots_KnownSimpleHapticsControllerWaveforms_Static
     };
 
     // ----- SimpleHapticsController class --------------------
@@ -1042,11 +1047,6 @@ namespace py::cpp::Windows::Devices::Haptics
     }
 
     static PyMethodDef _methods_VibrationDevice[] = {
-        { "find_all_async", reinterpret_cast<PyCFunction>(VibrationDevice_FindAllAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "from_id_async", reinterpret_cast<PyCFunction>(VibrationDevice_FromIdAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_default_async", reinterpret_cast<PyCFunction>(VibrationDevice_GetDefaultAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_device_selector", reinterpret_cast<PyCFunction>(VibrationDevice_GetDeviceSelector), METH_VARARGS | METH_STATIC, nullptr },
-        { "request_access_async", reinterpret_cast<PyCFunction>(VibrationDevice_RequestAccessAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_VibrationDevice, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VibrationDevice), METH_O | METH_STATIC, nullptr },
         { }
@@ -1074,6 +1074,36 @@ namespace py::cpp::Windows::Devices::Haptics
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_VibrationDevice
+    };
+
+    static PyGetSetDef getset_VibrationDevice_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_VibrationDevice_Static[] = {
+        { "find_all_async", reinterpret_cast<PyCFunction>(VibrationDevice_FindAllAsync), METH_VARARGS, nullptr },
+        { "from_id_async", reinterpret_cast<PyCFunction>(VibrationDevice_FromIdAsync), METH_VARARGS, nullptr },
+        { "get_default_async", reinterpret_cast<PyCFunction>(VibrationDevice_GetDefaultAsync), METH_VARARGS, nullptr },
+        { "get_device_selector", reinterpret_cast<PyCFunction>(VibrationDevice_GetDeviceSelector), METH_VARARGS, nullptr },
+        { "request_access_async", reinterpret_cast<PyCFunction>(VibrationDevice_RequestAccessAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_VibrationDevice_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_VibrationDevice_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_VibrationDevice_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_VibrationDevice_Static =
+    {
+        "winrt._winrt_windows_devices_haptics.VibrationDevice_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_VibrationDevice_Static
     };
 
     // ----- Windows.Devices.Haptics Initialization --------------------
@@ -1122,13 +1152,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_haptics(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_KnownSimpleHapticsControllerWaveforms_Meta{PyType_FromSpec(&type_spec_KnownSimpleHapticsControllerWaveforms_Meta)};
-    if (!type_KnownSimpleHapticsControllerWaveforms_Meta)
+    py::pyobj_handle type_KnownSimpleHapticsControllerWaveforms_Static{PyType_FromSpec(&type_spec_KnownSimpleHapticsControllerWaveforms_Static)};
+    if (!type_KnownSimpleHapticsControllerWaveforms_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_KnownSimpleHapticsControllerWaveforms, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownSimpleHapticsControllerWaveforms_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_KnownSimpleHapticsControllerWaveforms, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownSimpleHapticsControllerWaveforms_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -1143,7 +1173,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_haptics(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VibrationDevice, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_VibrationDevice_Static{PyType_FromSpec(&type_spec_VibrationDevice_Static)};
+    if (!type_VibrationDevice_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_VibrationDevice, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VibrationDevice_Static.get())) == -1)
     {
         return nullptr;
     }

@@ -1068,8 +1068,6 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyMethodDef _methods_AppInstallerManager[] = {
         { "clear_auto_update_settings", reinterpret_cast<PyCFunction>(AppInstallerManager_ClearAutoUpdateSettings), METH_VARARGS, nullptr },
-        { "get_default", reinterpret_cast<PyCFunction>(AppInstallerManager_GetDefault), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_for_system", reinterpret_cast<PyCFunction>(AppInstallerManager_GetForSystem), METH_VARARGS | METH_STATIC, nullptr },
         { "pause_auto_updates_until", reinterpret_cast<PyCFunction>(AppInstallerManager_PauseAutoUpdatesUntil), METH_VARARGS, nullptr },
         { "set_auto_update_settings", reinterpret_cast<PyCFunction>(AppInstallerManager_SetAutoUpdateSettings), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AppInstallerManager, METH_O | METH_STATIC, nullptr },
@@ -1097,6 +1095,33 @@ namespace py::cpp::Windows::Management::Deployment
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_AppInstallerManager
+    };
+
+    static PyGetSetDef getset_AppInstallerManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_AppInstallerManager_Static[] = {
+        { "get_default", reinterpret_cast<PyCFunction>(AppInstallerManager_GetDefault), METH_VARARGS, nullptr },
+        { "get_for_system", reinterpret_cast<PyCFunction>(AppInstallerManager_GetForSystem), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_AppInstallerManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_AppInstallerManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_AppInstallerManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_AppInstallerManager_Static =
+    {
+        "winrt._winrt_windows_management_deployment.AppInstallerManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_AppInstallerManager_Static
     };
 
     // ----- AutoUpdateSettingsOptions class --------------------
@@ -1693,7 +1718,6 @@ namespace py::cpp::Windows::Management::Deployment
     }
 
     static PyMethodDef _methods_AutoUpdateSettingsOptions[] = {
-        { "create_from_app_installer_info", reinterpret_cast<PyCFunction>(AutoUpdateSettingsOptions_CreateFromAppInstallerInfo), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_AutoUpdateSettingsOptions, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AutoUpdateSettingsOptions), METH_O | METH_STATIC, nullptr },
         { }
@@ -1732,6 +1756,32 @@ namespace py::cpp::Windows::Management::Deployment
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_AutoUpdateSettingsOptions
+    };
+
+    static PyGetSetDef getset_AutoUpdateSettingsOptions_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_AutoUpdateSettingsOptions_Static[] = {
+        { "create_from_app_installer_info", reinterpret_cast<PyCFunction>(AutoUpdateSettingsOptions_CreateFromAppInstallerInfo), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_AutoUpdateSettingsOptions_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_AutoUpdateSettingsOptions_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_AutoUpdateSettingsOptions_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_AutoUpdateSettingsOptions_Static =
+    {
+        "winrt._winrt_windows_management_deployment.AutoUpdateSettingsOptions_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_AutoUpdateSettingsOptions_Static
     };
 
     // ----- CreateSharedPackageContainerOptions class --------------------
@@ -6710,9 +6760,6 @@ namespace py::cpp::Windows::Management::Deployment
         { "delete_container", reinterpret_cast<PyCFunction>(SharedPackageContainerManager_DeleteContainer), METH_VARARGS, nullptr },
         { "find_containers", reinterpret_cast<PyCFunction>(SharedPackageContainerManager_FindContainers), METH_VARARGS, nullptr },
         { "get_container", reinterpret_cast<PyCFunction>(SharedPackageContainerManager_GetContainer), METH_VARARGS, nullptr },
-        { "get_default", reinterpret_cast<PyCFunction>(SharedPackageContainerManager_GetDefault), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_for_provisioning", reinterpret_cast<PyCFunction>(SharedPackageContainerManager_GetForProvisioning), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_for_user", reinterpret_cast<PyCFunction>(SharedPackageContainerManager_GetForUser), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_SharedPackageContainerManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SharedPackageContainerManager), METH_O | METH_STATIC, nullptr },
         { }
@@ -6738,6 +6785,34 @@ namespace py::cpp::Windows::Management::Deployment
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_SharedPackageContainerManager
+    };
+
+    static PyGetSetDef getset_SharedPackageContainerManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_SharedPackageContainerManager_Static[] = {
+        { "get_default", reinterpret_cast<PyCFunction>(SharedPackageContainerManager_GetDefault), METH_VARARGS, nullptr },
+        { "get_for_provisioning", reinterpret_cast<PyCFunction>(SharedPackageContainerManager_GetForProvisioning), METH_VARARGS, nullptr },
+        { "get_for_user", reinterpret_cast<PyCFunction>(SharedPackageContainerManager_GetForUser), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_SharedPackageContainerManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SharedPackageContainerManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SharedPackageContainerManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SharedPackageContainerManager_Static =
+    {
+        "winrt._winrt_windows_management_deployment.SharedPackageContainerManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_SharedPackageContainerManager_Static
     };
 
     // ----- SharedPackageContainerMember class --------------------
@@ -7984,12 +8059,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_management_deployment(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppInstallerManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_AppInstallerManager_Static{PyType_FromSpec(&type_spec_AppInstallerManager_Static)};
+    if (!type_AppInstallerManager_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AutoUpdateSettingsOptions, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppInstallerManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppInstallerManager_Static.get())) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_AutoUpdateSettingsOptions_Static{PyType_FromSpec(&type_spec_AutoUpdateSettingsOptions_Static)};
+    if (!type_AutoUpdateSettingsOptions_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_AutoUpdateSettingsOptions, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AutoUpdateSettingsOptions_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -8059,7 +8146,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_management_deployment(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SharedPackageContainerManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_SharedPackageContainerManager_Static{PyType_FromSpec(&type_spec_SharedPackageContainerManager_Static)};
+    if (!type_SharedPackageContainerManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_SharedPackageContainerManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SharedPackageContainerManager_Static.get())) == -1)
     {
         return nullptr;
     }

@@ -247,8 +247,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     }
 
     static PyMethodDef _methods_AlarmApplicationManager[] = {
-        { "get_access_status", reinterpret_cast<PyCFunction>(AlarmApplicationManager_GetAccessStatus), METH_VARARGS | METH_STATIC, nullptr },
-        { "request_access_async", reinterpret_cast<PyCFunction>(AlarmApplicationManager_RequestAccessAsync), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -271,6 +269,33 @@ namespace py::cpp::Windows::ApplicationModel::Background
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_AlarmApplicationManager
+    };
+
+    static PyGetSetDef getset_AlarmApplicationManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_AlarmApplicationManager_Static[] = {
+        { "get_access_status", reinterpret_cast<PyCFunction>(AlarmApplicationManager_GetAccessStatus), METH_VARARGS, nullptr },
+        { "request_access_async", reinterpret_cast<PyCFunction>(AlarmApplicationManager_RequestAccessAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_AlarmApplicationManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_AlarmApplicationManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_AlarmApplicationManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_AlarmApplicationManager_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_background.AlarmApplicationManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_AlarmApplicationManager_Static
     };
 
     // ----- AppBroadcastTrigger class --------------------
@@ -1364,12 +1389,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     }
 
     static PyMethodDef _methods_BackgroundExecutionManager[] = {
-        { "get_access_status", reinterpret_cast<PyCFunction>(BackgroundExecutionManager_GetAccessStatus), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_access_status_for_modern_standby", reinterpret_cast<PyCFunction>(BackgroundExecutionManager_GetAccessStatusForModernStandby), METH_VARARGS | METH_STATIC, nullptr },
-        { "remove_access", reinterpret_cast<PyCFunction>(BackgroundExecutionManager_RemoveAccess), METH_VARARGS | METH_STATIC, nullptr },
-        { "request_access_async", reinterpret_cast<PyCFunction>(BackgroundExecutionManager_RequestAccessAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "request_access_kind_async", reinterpret_cast<PyCFunction>(BackgroundExecutionManager_RequestAccessKindAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "request_access_kind_for_modern_standby_async", reinterpret_cast<PyCFunction>(BackgroundExecutionManager_RequestAccessKindForModernStandbyAsync), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -1392,6 +1411,37 @@ namespace py::cpp::Windows::ApplicationModel::Background
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_BackgroundExecutionManager
+    };
+
+    static PyGetSetDef getset_BackgroundExecutionManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_BackgroundExecutionManager_Static[] = {
+        { "get_access_status", reinterpret_cast<PyCFunction>(BackgroundExecutionManager_GetAccessStatus), METH_VARARGS, nullptr },
+        { "get_access_status_for_modern_standby", reinterpret_cast<PyCFunction>(BackgroundExecutionManager_GetAccessStatusForModernStandby), METH_VARARGS, nullptr },
+        { "remove_access", reinterpret_cast<PyCFunction>(BackgroundExecutionManager_RemoveAccess), METH_VARARGS, nullptr },
+        { "request_access_async", reinterpret_cast<PyCFunction>(BackgroundExecutionManager_RequestAccessAsync), METH_VARARGS, nullptr },
+        { "request_access_kind_async", reinterpret_cast<PyCFunction>(BackgroundExecutionManager_RequestAccessKindAsync), METH_VARARGS, nullptr },
+        { "request_access_kind_for_modern_standby_async", reinterpret_cast<PyCFunction>(BackgroundExecutionManager_RequestAccessKindForModernStandbyAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_BackgroundExecutionManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_BackgroundExecutionManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_BackgroundExecutionManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_BackgroundExecutionManager_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_background.BackgroundExecutionManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_BackgroundExecutionManager_Static
     };
 
     // ----- BackgroundTaskBuilder class --------------------
@@ -2488,7 +2538,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     }
 
     static PyMethodDef _methods_BackgroundTaskRegistration[] = {
-        { "get_task_group", reinterpret_cast<PyCFunction>(BackgroundTaskRegistration_GetTaskGroup), METH_VARARGS | METH_STATIC, nullptr },
         { "unregister", reinterpret_cast<PyCFunction>(BackgroundTaskRegistration_Unregister), METH_VARARGS, nullptr },
         { "add_completed", reinterpret_cast<PyCFunction>(BackgroundTaskRegistration_add_Completed), METH_O, nullptr },
         { "remove_completed", reinterpret_cast<PyCFunction>(BackgroundTaskRegistration_remove_Completed), METH_O, nullptr },
@@ -2525,26 +2574,32 @@ namespace py::cpp::Windows::ApplicationModel::Background
         _type_slots_BackgroundTaskRegistration
     };
 
-    static PyGetSetDef getset_BackgroundTaskRegistration_Meta[] = {
+    static PyGetSetDef getset_BackgroundTaskRegistration_Static[] = {
         { "all_tasks", reinterpret_cast<getter>(BackgroundTaskRegistration_get_AllTasks), nullptr, nullptr, nullptr },
         { "all_task_groups", reinterpret_cast<getter>(BackgroundTaskRegistration_get_AllTaskGroups), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_BackgroundTaskRegistration_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_BackgroundTaskRegistration_Meta) },
+    static PyMethodDef methods_BackgroundTaskRegistration_Static[] = {
+        { "get_task_group", reinterpret_cast<PyCFunction>(BackgroundTaskRegistration_GetTaskGroup), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_BackgroundTaskRegistration_Meta =
+    static PyType_Slot type_slots_BackgroundTaskRegistration_Static[] = 
     {
-        "winrt._winrt_windows_applicationmodel_background.BackgroundTaskRegistration_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_BackgroundTaskRegistration_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_BackgroundTaskRegistration_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_BackgroundTaskRegistration_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_background.BackgroundTaskRegistration_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_BackgroundTaskRegistration_Meta
+        type_slots_BackgroundTaskRegistration_Static
     };
 
     // ----- BackgroundTaskRegistrationGroup class --------------------
@@ -2814,25 +2869,30 @@ namespace py::cpp::Windows::ApplicationModel::Background
         _type_slots_BackgroundWorkCost
     };
 
-    static PyGetSetDef getset_BackgroundWorkCost_Meta[] = {
+    static PyGetSetDef getset_BackgroundWorkCost_Static[] = {
         { "current_background_work_cost", reinterpret_cast<getter>(BackgroundWorkCost_get_CurrentBackgroundWorkCost), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_BackgroundWorkCost_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_BackgroundWorkCost_Meta) },
+    static PyMethodDef methods_BackgroundWorkCost_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_BackgroundWorkCost_Meta =
+    static PyType_Slot type_slots_BackgroundWorkCost_Static[] = 
     {
-        "winrt._winrt_windows_applicationmodel_background.BackgroundWorkCost_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_BackgroundWorkCost_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_BackgroundWorkCost_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_BackgroundWorkCost_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_background.BackgroundWorkCost_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_BackgroundWorkCost_Meta
+        type_slots_BackgroundWorkCost_Static
     };
 
     // ----- BluetoothLEAdvertisementPublisherTrigger class --------------------
@@ -4546,7 +4606,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     }
 
     static PyMethodDef _methods_DeviceConnectionChangeTrigger[] = {
-        { "from_id_async", reinterpret_cast<PyCFunction>(DeviceConnectionChangeTrigger_FromIdAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_DeviceConnectionChangeTrigger, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DeviceConnectionChangeTrigger), METH_O | METH_STATIC, nullptr },
         { }
@@ -4575,6 +4634,32 @@ namespace py::cpp::Windows::ApplicationModel::Background
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_DeviceConnectionChangeTrigger
+    };
+
+    static PyGetSetDef getset_DeviceConnectionChangeTrigger_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_DeviceConnectionChangeTrigger_Static[] = {
+        { "from_id_async", reinterpret_cast<PyCFunction>(DeviceConnectionChangeTrigger_FromIdAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_DeviceConnectionChangeTrigger_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_DeviceConnectionChangeTrigger_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_DeviceConnectionChangeTrigger_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_DeviceConnectionChangeTrigger_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_background.DeviceConnectionChangeTrigger_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_DeviceConnectionChangeTrigger_Static
     };
 
     // ----- DeviceManufacturerNotificationTrigger class --------------------
@@ -5469,7 +5554,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     }
 
     static PyMethodDef _methods_GattServiceProviderTrigger[] = {
-        { "create_async", reinterpret_cast<PyCFunction>(GattServiceProviderTrigger_CreateAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_GattServiceProviderTrigger, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GattServiceProviderTrigger), METH_O | METH_STATIC, nullptr },
         { }
@@ -5498,6 +5582,32 @@ namespace py::cpp::Windows::ApplicationModel::Background
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_GattServiceProviderTrigger
+    };
+
+    static PyGetSetDef getset_GattServiceProviderTrigger_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_GattServiceProviderTrigger_Static[] = {
+        { "create_async", reinterpret_cast<PyCFunction>(GattServiceProviderTrigger_CreateAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_GattServiceProviderTrigger_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_GattServiceProviderTrigger_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_GattServiceProviderTrigger_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_GattServiceProviderTrigger_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_background.GattServiceProviderTrigger_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_GattServiceProviderTrigger_Static
     };
 
     // ----- GattServiceProviderTriggerResult class --------------------
@@ -8281,8 +8391,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     }
 
     static PyMethodDef _methods_StorageLibraryContentChangedTrigger[] = {
-        { "create", reinterpret_cast<PyCFunction>(StorageLibraryContentChangedTrigger_Create), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_from_libraries", reinterpret_cast<PyCFunction>(StorageLibraryContentChangedTrigger_CreateFromLibraries), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_StorageLibraryContentChangedTrigger, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StorageLibraryContentChangedTrigger), METH_O | METH_STATIC, nullptr },
         { }
@@ -8308,6 +8416,33 @@ namespace py::cpp::Windows::ApplicationModel::Background
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_StorageLibraryContentChangedTrigger
+    };
+
+    static PyGetSetDef getset_StorageLibraryContentChangedTrigger_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_StorageLibraryContentChangedTrigger_Static[] = {
+        { "create", reinterpret_cast<PyCFunction>(StorageLibraryContentChangedTrigger_Create), METH_VARARGS, nullptr },
+        { "create_from_libraries", reinterpret_cast<PyCFunction>(StorageLibraryContentChangedTrigger_CreateFromLibraries), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_StorageLibraryContentChangedTrigger_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_StorageLibraryContentChangedTrigger_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_StorageLibraryContentChangedTrigger_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_StorageLibraryContentChangedTrigger_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_background.StorageLibraryContentChangedTrigger_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_StorageLibraryContentChangedTrigger_Static
     };
 
     // ----- SystemCondition class --------------------
@@ -11164,7 +11299,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_background(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AlarmApplicationManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_AlarmApplicationManager_Static{PyType_FromSpec(&type_spec_AlarmApplicationManager_Static)};
+    if (!type_AlarmApplicationManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_AlarmApplicationManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AlarmApplicationManager_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -11194,7 +11335,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_background(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BackgroundExecutionManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_BackgroundExecutionManager_Static{PyType_FromSpec(&type_spec_BackgroundExecutionManager_Static)};
+    if (!type_BackgroundExecutionManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_BackgroundExecutionManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BackgroundExecutionManager_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -11219,13 +11366,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_background(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_BackgroundTaskRegistration_Meta{PyType_FromSpec(&type_spec_BackgroundTaskRegistration_Meta)};
-    if (!type_BackgroundTaskRegistration_Meta)
+    py::pyobj_handle type_BackgroundTaskRegistration_Static{PyType_FromSpec(&type_spec_BackgroundTaskRegistration_Static)};
+    if (!type_BackgroundTaskRegistration_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BackgroundTaskRegistration, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BackgroundTaskRegistration_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BackgroundTaskRegistration, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BackgroundTaskRegistration_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -11235,13 +11382,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_background(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_BackgroundWorkCost_Meta{PyType_FromSpec(&type_spec_BackgroundWorkCost_Meta)};
-    if (!type_BackgroundWorkCost_Meta)
+    py::pyobj_handle type_BackgroundWorkCost_Static{PyType_FromSpec(&type_spec_BackgroundWorkCost_Static)};
+    if (!type_BackgroundWorkCost_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BackgroundWorkCost, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BackgroundWorkCost_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BackgroundWorkCost, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BackgroundWorkCost_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -11301,7 +11448,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_background(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DeviceConnectionChangeTrigger, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_DeviceConnectionChangeTrigger_Static{PyType_FromSpec(&type_spec_DeviceConnectionChangeTrigger_Static)};
+    if (!type_DeviceConnectionChangeTrigger_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_DeviceConnectionChangeTrigger, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DeviceConnectionChangeTrigger_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -11336,7 +11489,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_background(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GattServiceProviderTrigger, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_GattServiceProviderTrigger_Static{PyType_FromSpec(&type_spec_GattServiceProviderTrigger_Static)};
+    if (!type_GattServiceProviderTrigger_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_GattServiceProviderTrigger, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GattServiceProviderTrigger_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -11461,7 +11620,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_background(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StorageLibraryContentChangedTrigger, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_StorageLibraryContentChangedTrigger_Static{PyType_FromSpec(&type_spec_StorageLibraryContentChangedTrigger_Static)};
+    if (!type_StorageLibraryContentChangedTrigger_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_StorageLibraryContentChangedTrigger, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StorageLibraryContentChangedTrigger_Static.get())) == -1)
     {
         return nullptr;
     }

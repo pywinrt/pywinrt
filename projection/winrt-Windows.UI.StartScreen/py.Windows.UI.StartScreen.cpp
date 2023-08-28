@@ -201,8 +201,6 @@ namespace py::cpp::Windows::UI::StartScreen
     }
 
     static PyMethodDef _methods_JumpList[] = {
-        { "is_supported", reinterpret_cast<PyCFunction>(JumpList_IsSupported), METH_VARARGS | METH_STATIC, nullptr },
-        { "load_current_async", reinterpret_cast<PyCFunction>(JumpList_LoadCurrentAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "save_async", reinterpret_cast<PyCFunction>(JumpList_SaveAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_JumpList, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_JumpList), METH_O | METH_STATIC, nullptr },
@@ -231,6 +229,33 @@ namespace py::cpp::Windows::UI::StartScreen
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_JumpList
+    };
+
+    static PyGetSetDef getset_JumpList_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_JumpList_Static[] = {
+        { "is_supported", reinterpret_cast<PyCFunction>(JumpList_IsSupported), METH_VARARGS, nullptr },
+        { "load_current_async", reinterpret_cast<PyCFunction>(JumpList_LoadCurrentAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_JumpList_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_JumpList_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_JumpList_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_JumpList_Static =
+    {
+        "winrt._winrt_windows_ui_startscreen.JumpList_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_JumpList_Static
     };
 
     // ----- JumpListItem class --------------------
@@ -581,8 +606,6 @@ namespace py::cpp::Windows::UI::StartScreen
     }
 
     static PyMethodDef _methods_JumpListItem[] = {
-        { "create_separator", reinterpret_cast<PyCFunction>(JumpListItem_CreateSeparator), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_with_arguments", reinterpret_cast<PyCFunction>(JumpListItem_CreateWithArguments), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_JumpListItem, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_JumpListItem), METH_O | METH_STATIC, nullptr },
         { }
@@ -615,6 +638,33 @@ namespace py::cpp::Windows::UI::StartScreen
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_JumpListItem
+    };
+
+    static PyGetSetDef getset_JumpListItem_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_JumpListItem_Static[] = {
+        { "create_separator", reinterpret_cast<PyCFunction>(JumpListItem_CreateSeparator), METH_VARARGS, nullptr },
+        { "create_with_arguments", reinterpret_cast<PyCFunction>(JumpListItem_CreateWithArguments), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_JumpListItem_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_JumpListItem_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_JumpListItem_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_JumpListItem_Static =
+    {
+        "winrt._winrt_windows_ui_startscreen.JumpListItem_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_JumpListItem_Static
     };
 
     // ----- SecondaryTile class --------------------
@@ -1816,9 +1866,6 @@ namespace py::cpp::Windows::UI::StartScreen
     }
 
     static PyMethodDef _methods_SecondaryTile[] = {
-        { "exists", reinterpret_cast<PyCFunction>(SecondaryTile_Exists), METH_VARARGS | METH_STATIC, nullptr },
-        { "find_all_async", reinterpret_cast<PyCFunction>(SecondaryTile_FindAllAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "find_all_for_package_async", reinterpret_cast<PyCFunction>(SecondaryTile_FindAllForPackageAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "request_create_async", reinterpret_cast<PyCFunction>(SecondaryTile_RequestCreateAsync), METH_VARARGS, nullptr },
         { "request_create_for_selection_async", reinterpret_cast<PyCFunction>(SecondaryTile_RequestCreateForSelectionAsync), METH_VARARGS, nullptr },
         { "request_delete_async", reinterpret_cast<PyCFunction>(SecondaryTile_RequestDeleteAsync), METH_VARARGS, nullptr },
@@ -1866,6 +1913,34 @@ namespace py::cpp::Windows::UI::StartScreen
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_SecondaryTile
+    };
+
+    static PyGetSetDef getset_SecondaryTile_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_SecondaryTile_Static[] = {
+        { "exists", reinterpret_cast<PyCFunction>(SecondaryTile_Exists), METH_VARARGS, nullptr },
+        { "find_all_async", reinterpret_cast<PyCFunction>(SecondaryTile_FindAllAsync), METH_VARARGS, nullptr },
+        { "find_all_for_package_async", reinterpret_cast<PyCFunction>(SecondaryTile_FindAllForPackageAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_SecondaryTile_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SecondaryTile_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SecondaryTile_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SecondaryTile_Static =
+    {
+        "winrt._winrt_windows_ui_startscreen.SecondaryTile_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_SecondaryTile_Static
     };
 
     // ----- SecondaryTileVisualElements class --------------------
@@ -2811,8 +2886,6 @@ namespace py::cpp::Windows::UI::StartScreen
     static PyMethodDef _methods_StartScreenManager[] = {
         { "contains_app_list_entry_async", reinterpret_cast<PyCFunction>(StartScreenManager_ContainsAppListEntryAsync), METH_VARARGS, nullptr },
         { "contains_secondary_tile_async", reinterpret_cast<PyCFunction>(StartScreenManager_ContainsSecondaryTileAsync), METH_VARARGS, nullptr },
-        { "get_default", reinterpret_cast<PyCFunction>(StartScreenManager_GetDefault), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_for_user", reinterpret_cast<PyCFunction>(StartScreenManager_GetForUser), METH_VARARGS | METH_STATIC, nullptr },
         { "request_add_app_list_entry_async", reinterpret_cast<PyCFunction>(StartScreenManager_RequestAddAppListEntryAsync), METH_VARARGS, nullptr },
         { "supports_app_list_entry", reinterpret_cast<PyCFunction>(StartScreenManager_SupportsAppListEntry), METH_VARARGS, nullptr },
         { "try_remove_secondary_tile_async", reinterpret_cast<PyCFunction>(StartScreenManager_TryRemoveSecondaryTileAsync), METH_VARARGS, nullptr },
@@ -2842,6 +2915,33 @@ namespace py::cpp::Windows::UI::StartScreen
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_StartScreenManager
+    };
+
+    static PyGetSetDef getset_StartScreenManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_StartScreenManager_Static[] = {
+        { "get_default", reinterpret_cast<PyCFunction>(StartScreenManager_GetDefault), METH_VARARGS, nullptr },
+        { "get_for_user", reinterpret_cast<PyCFunction>(StartScreenManager_GetForUser), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_StartScreenManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_StartScreenManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_StartScreenManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_StartScreenManager_Static =
+    {
+        "winrt._winrt_windows_ui_startscreen.StartScreenManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_StartScreenManager_Static
     };
 
     // ----- TileMixedRealityModel class --------------------
@@ -3451,17 +3551,35 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_startscreen(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_JumpList, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_JumpList_Static{PyType_FromSpec(&type_spec_JumpList_Static)};
+    if (!type_JumpList_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_JumpListItem, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_JumpList, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_JumpList_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SecondaryTile, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_JumpListItem_Static{PyType_FromSpec(&type_spec_JumpListItem_Static)};
+    if (!type_JumpListItem_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_JumpListItem, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_JumpListItem_Static.get())) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SecondaryTile_Static{PyType_FromSpec(&type_spec_SecondaryTile_Static)};
+    if (!type_SecondaryTile_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_SecondaryTile, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SecondaryTile_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -3471,7 +3589,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_startscreen(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StartScreenManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_StartScreenManager_Static{PyType_FromSpec(&type_spec_StartScreenManager_Static)};
+    if (!type_StartScreenManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_StartScreenManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StartScreenManager_Static.get())) == -1)
     {
         return nullptr;
     }

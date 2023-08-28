@@ -81,8 +81,6 @@ namespace py::cpp::Windows::Management::Policies
     }
 
     static PyMethodDef _methods_NamedPolicy[] = {
-        { "get_policy_from_path", reinterpret_cast<PyCFunction>(NamedPolicy_GetPolicyFromPath), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_policy_from_path_for_user", reinterpret_cast<PyCFunction>(NamedPolicy_GetPolicyFromPathForUser), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -105,6 +103,33 @@ namespace py::cpp::Windows::Management::Policies
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_NamedPolicy
+    };
+
+    static PyGetSetDef getset_NamedPolicy_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_NamedPolicy_Static[] = {
+        { "get_policy_from_path", reinterpret_cast<PyCFunction>(NamedPolicy_GetPolicyFromPath), METH_VARARGS, nullptr },
+        { "get_policy_from_path_for_user", reinterpret_cast<PyCFunction>(NamedPolicy_GetPolicyFromPathForUser), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_NamedPolicy_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_NamedPolicy_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_NamedPolicy_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_NamedPolicy_Static =
+    {
+        "winrt._winrt_windows_management_policies.NamedPolicy_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_NamedPolicy_Static
     };
 
     // ----- NamedPolicyData class --------------------
@@ -537,7 +562,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_management_policies(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_NamedPolicy, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_NamedPolicy_Static{PyType_FromSpec(&type_spec_NamedPolicy_Static)};
+    if (!type_NamedPolicy_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_NamedPolicy, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NamedPolicy_Static.get())) == -1)
     {
         return nullptr;
     }

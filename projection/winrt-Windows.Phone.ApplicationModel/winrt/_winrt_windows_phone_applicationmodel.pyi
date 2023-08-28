@@ -13,8 +13,11 @@ from winrt.windows.phone.applicationmodel import ApplicationProfileModes
 
 Self = typing.TypeVar('Self')
 
-class ApplicationProfile(winrt.system.Object):
+class ApplicationProfile_Static(type):
+    @_property
+    def modes(cls) -> ApplicationProfileModes: ...
+
+class ApplicationProfile(winrt.system.Object, metaclass=ApplicationProfile_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ApplicationProfile: ...
-    modes: typing.ClassVar[ApplicationProfileModes]
 

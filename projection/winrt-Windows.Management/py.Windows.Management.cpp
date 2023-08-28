@@ -786,9 +786,6 @@ namespace py::cpp::Windows::Management
     }
 
     static PyMethodDef _methods_MdmSessionManager[] = {
-        { "delete_session_by_id", reinterpret_cast<PyCFunction>(MdmSessionManager_DeleteSessionById), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_session_by_id", reinterpret_cast<PyCFunction>(MdmSessionManager_GetSessionById), METH_VARARGS | METH_STATIC, nullptr },
-        { "try_create_session", reinterpret_cast<PyCFunction>(MdmSessionManager_TryCreateSession), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -813,25 +810,33 @@ namespace py::cpp::Windows::Management
         _type_slots_MdmSessionManager
     };
 
-    static PyGetSetDef getset_MdmSessionManager_Meta[] = {
+    static PyGetSetDef getset_MdmSessionManager_Static[] = {
         { "session_ids", reinterpret_cast<getter>(MdmSessionManager_get_SessionIds), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_MdmSessionManager_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_MdmSessionManager_Meta) },
+    static PyMethodDef methods_MdmSessionManager_Static[] = {
+        { "delete_session_by_id", reinterpret_cast<PyCFunction>(MdmSessionManager_DeleteSessionById), METH_VARARGS, nullptr },
+        { "get_session_by_id", reinterpret_cast<PyCFunction>(MdmSessionManager_GetSessionById), METH_VARARGS, nullptr },
+        { "try_create_session", reinterpret_cast<PyCFunction>(MdmSessionManager_TryCreateSession), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_MdmSessionManager_Meta =
+    static PyType_Slot type_slots_MdmSessionManager_Static[] = 
     {
-        "winrt._winrt_windows_management.MdmSessionManager_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_MdmSessionManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_MdmSessionManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_MdmSessionManager_Static =
+    {
+        "winrt._winrt_windows_management.MdmSessionManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_MdmSessionManager_Meta
+        type_slots_MdmSessionManager_Static
     };
 
     // ----- Windows.Management Initialization --------------------
@@ -890,13 +895,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_management(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_MdmSessionManager_Meta{PyType_FromSpec(&type_spec_MdmSessionManager_Meta)};
-    if (!type_MdmSessionManager_Meta)
+    py::pyobj_handle type_MdmSessionManager_Static{PyType_FromSpec(&type_spec_MdmSessionManager_Static)};
+    if (!type_MdmSessionManager_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MdmSessionManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MdmSessionManager_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MdmSessionManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MdmSessionManager_Static.get())) == -1)
     {
         return nullptr;
     }

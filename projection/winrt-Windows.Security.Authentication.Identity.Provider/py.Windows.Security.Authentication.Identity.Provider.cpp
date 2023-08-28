@@ -325,9 +325,6 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
     static PyMethodDef _methods_SecondaryAuthenticationFactorAuthentication[] = {
         { "abort_authentication_async", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorAuthentication_AbortAuthenticationAsync), METH_VARARGS, nullptr },
         { "finish_authentication_async", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorAuthentication_FinishAuthenticationAsync), METH_VARARGS, nullptr },
-        { "get_authentication_stage_info_async", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorAuthentication_GetAuthenticationStageInfoAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "show_notification_message_async", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorAuthentication_ShowNotificationMessageAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "start_authentication_async", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorAuthentication_StartAuthenticationAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "add_authentication_stage_changed", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorAuthentication_add_AuthenticationStageChanged), METH_O | METH_STATIC, nullptr },
         { "remove_authentication_stage_changed", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorAuthentication_remove_AuthenticationStageChanged), METH_O | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_SecondaryAuthenticationFactorAuthentication, METH_O | METH_STATIC, nullptr },
@@ -359,6 +356,34 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_SecondaryAuthenticationFactorAuthentication
+    };
+
+    static PyGetSetDef getset_SecondaryAuthenticationFactorAuthentication_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_SecondaryAuthenticationFactorAuthentication_Static[] = {
+        { "get_authentication_stage_info_async", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorAuthentication_GetAuthenticationStageInfoAsync), METH_VARARGS, nullptr },
+        { "show_notification_message_async", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorAuthentication_ShowNotificationMessageAsync), METH_VARARGS, nullptr },
+        { "start_authentication_async", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorAuthentication_StartAuthenticationAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_SecondaryAuthenticationFactorAuthentication_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SecondaryAuthenticationFactorAuthentication_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SecondaryAuthenticationFactorAuthentication_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SecondaryAuthenticationFactorAuthentication_Static =
+    {
+        "winrt._winrt_windows_security_authentication_identity_provider.SecondaryAuthenticationFactorAuthentication_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_SecondaryAuthenticationFactorAuthentication_Static
     };
 
     // ----- SecondaryAuthenticationFactorAuthenticationResult class --------------------
@@ -1262,14 +1287,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
 
     static PyMethodDef _methods_SecondaryAuthenticationFactorRegistration[] = {
         { "abort_registering_device_async", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorRegistration_AbortRegisteringDeviceAsync), METH_VARARGS, nullptr },
-        { "find_all_registered_device_info_async", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorRegistration_FindAllRegisteredDeviceInfoAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "finish_registering_device_async", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorRegistration_FinishRegisteringDeviceAsync), METH_VARARGS, nullptr },
-        { "is_device_presence_monitoring_supported", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorRegistration_IsDevicePresenceMonitoringSupported), METH_VARARGS | METH_STATIC, nullptr },
-        { "register_device_presence_monitoring_async", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorRegistration_RegisterDevicePresenceMonitoringAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "request_start_registering_device_async", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorRegistration_RequestStartRegisteringDeviceAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "unregister_device_async", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorRegistration_UnregisterDeviceAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "unregister_device_presence_monitoring_async", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorRegistration_UnregisterDevicePresenceMonitoringAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "update_device_configuration_data_async", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorRegistration_UpdateDeviceConfigurationDataAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_SecondaryAuthenticationFactorRegistration, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SecondaryAuthenticationFactorRegistration), METH_O | METH_STATIC, nullptr },
         { }
@@ -1295,6 +1313,38 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_SecondaryAuthenticationFactorRegistration
+    };
+
+    static PyGetSetDef getset_SecondaryAuthenticationFactorRegistration_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_SecondaryAuthenticationFactorRegistration_Static[] = {
+        { "find_all_registered_device_info_async", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorRegistration_FindAllRegisteredDeviceInfoAsync), METH_VARARGS, nullptr },
+        { "is_device_presence_monitoring_supported", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorRegistration_IsDevicePresenceMonitoringSupported), METH_VARARGS, nullptr },
+        { "register_device_presence_monitoring_async", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorRegistration_RegisterDevicePresenceMonitoringAsync), METH_VARARGS, nullptr },
+        { "request_start_registering_device_async", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorRegistration_RequestStartRegisteringDeviceAsync), METH_VARARGS, nullptr },
+        { "unregister_device_async", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorRegistration_UnregisterDeviceAsync), METH_VARARGS, nullptr },
+        { "unregister_device_presence_monitoring_async", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorRegistration_UnregisterDevicePresenceMonitoringAsync), METH_VARARGS, nullptr },
+        { "update_device_configuration_data_async", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorRegistration_UpdateDeviceConfigurationDataAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_SecondaryAuthenticationFactorRegistration_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SecondaryAuthenticationFactorRegistration_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SecondaryAuthenticationFactorRegistration_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SecondaryAuthenticationFactorRegistration_Static =
+    {
+        "winrt._winrt_windows_security_authentication_identity_provider.SecondaryAuthenticationFactorRegistration_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_SecondaryAuthenticationFactorRegistration_Static
     };
 
     // ----- SecondaryAuthenticationFactorRegistrationResult class --------------------
@@ -1452,7 +1502,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_identity_provider(v
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SecondaryAuthenticationFactorAuthentication, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_SecondaryAuthenticationFactorAuthentication_Static{PyType_FromSpec(&type_spec_SecondaryAuthenticationFactorAuthentication_Static)};
+    if (!type_SecondaryAuthenticationFactorAuthentication_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_SecondaryAuthenticationFactorAuthentication, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SecondaryAuthenticationFactorAuthentication_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -1477,7 +1533,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_identity_provider(v
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SecondaryAuthenticationFactorRegistration, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_SecondaryAuthenticationFactorRegistration_Static{PyType_FromSpec(&type_spec_SecondaryAuthenticationFactorRegistration_Static)};
+    if (!type_SecondaryAuthenticationFactorRegistration_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_SecondaryAuthenticationFactorRegistration, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SecondaryAuthenticationFactorRegistration_Static.get())) == -1)
     {
         return nullptr;
     }

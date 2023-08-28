@@ -212,8 +212,6 @@ namespace py::cpp::Windows::Management::Update
 
     static PyMethodDef _methods_PreviewBuildsManager[] = {
         { "get_current_state", reinterpret_cast<PyCFunction>(PreviewBuildsManager_GetCurrentState), METH_VARARGS, nullptr },
-        { "get_default", reinterpret_cast<PyCFunction>(PreviewBuildsManager_GetDefault), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_supported", reinterpret_cast<PyCFunction>(PreviewBuildsManager_IsSupported), METH_VARARGS | METH_STATIC, nullptr },
         { "sync_async", reinterpret_cast<PyCFunction>(PreviewBuildsManager_SyncAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PreviewBuildsManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PreviewBuildsManager), METH_O | METH_STATIC, nullptr },
@@ -241,6 +239,33 @@ namespace py::cpp::Windows::Management::Update
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_PreviewBuildsManager
+    };
+
+    static PyGetSetDef getset_PreviewBuildsManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_PreviewBuildsManager_Static[] = {
+        { "get_default", reinterpret_cast<PyCFunction>(PreviewBuildsManager_GetDefault), METH_VARARGS, nullptr },
+        { "is_supported", reinterpret_cast<PyCFunction>(PreviewBuildsManager_IsSupported), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_PreviewBuildsManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PreviewBuildsManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PreviewBuildsManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PreviewBuildsManager_Static =
+    {
+        "winrt._winrt_windows_management_update.PreviewBuildsManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_PreviewBuildsManager_Static
     };
 
     // ----- PreviewBuildsState class --------------------
@@ -1731,16 +1756,10 @@ namespace py::cpp::Windows::Management::Update
     static PyMethodDef _methods_WindowsUpdateAdministrator[] = {
         { "approve_windows_update", reinterpret_cast<PyCFunction>(WindowsUpdateAdministrator_ApproveWindowsUpdate), METH_VARARGS, nullptr },
         { "approve_windows_update_action", reinterpret_cast<PyCFunction>(WindowsUpdateAdministrator_ApproveWindowsUpdateAction), METH_VARARGS, nullptr },
-        { "cancel_restart_request", reinterpret_cast<PyCFunction>(WindowsUpdateAdministrator_CancelRestartRequest), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_registered_administrator", reinterpret_cast<PyCFunction>(WindowsUpdateAdministrator_GetRegisteredAdministrator), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_registered_administrator_name", reinterpret_cast<PyCFunction>(WindowsUpdateAdministrator_GetRegisteredAdministratorName), METH_VARARGS | METH_STATIC, nullptr },
         { "get_updates", reinterpret_cast<PyCFunction>(WindowsUpdateAdministrator_GetUpdates), METH_VARARGS, nullptr },
-        { "register_for_administration", reinterpret_cast<PyCFunction>(WindowsUpdateAdministrator_RegisterForAdministration), METH_VARARGS | METH_STATIC, nullptr },
-        { "request_restart", reinterpret_cast<PyCFunction>(WindowsUpdateAdministrator_RequestRestart), METH_VARARGS | METH_STATIC, nullptr },
         { "revoke_windows_update_action_approval", reinterpret_cast<PyCFunction>(WindowsUpdateAdministrator_RevokeWindowsUpdateActionApproval), METH_VARARGS, nullptr },
         { "revoke_windows_update_approval", reinterpret_cast<PyCFunction>(WindowsUpdateAdministrator_RevokeWindowsUpdateApproval), METH_VARARGS, nullptr },
         { "start_administrator_scan", reinterpret_cast<PyCFunction>(WindowsUpdateAdministrator_StartAdministratorScan), METH_VARARGS, nullptr },
-        { "unregister_for_administration", reinterpret_cast<PyCFunction>(WindowsUpdateAdministrator_UnregisterForAdministration), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_WindowsUpdateAdministrator, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WindowsUpdateAdministrator), METH_O | METH_STATIC, nullptr },
         { }
@@ -1766,6 +1785,37 @@ namespace py::cpp::Windows::Management::Update
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_WindowsUpdateAdministrator
+    };
+
+    static PyGetSetDef getset_WindowsUpdateAdministrator_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_WindowsUpdateAdministrator_Static[] = {
+        { "cancel_restart_request", reinterpret_cast<PyCFunction>(WindowsUpdateAdministrator_CancelRestartRequest), METH_VARARGS, nullptr },
+        { "get_registered_administrator", reinterpret_cast<PyCFunction>(WindowsUpdateAdministrator_GetRegisteredAdministrator), METH_VARARGS, nullptr },
+        { "get_registered_administrator_name", reinterpret_cast<PyCFunction>(WindowsUpdateAdministrator_GetRegisteredAdministratorName), METH_VARARGS, nullptr },
+        { "register_for_administration", reinterpret_cast<PyCFunction>(WindowsUpdateAdministrator_RegisterForAdministration), METH_VARARGS, nullptr },
+        { "request_restart", reinterpret_cast<PyCFunction>(WindowsUpdateAdministrator_RequestRestart), METH_VARARGS, nullptr },
+        { "unregister_for_administration", reinterpret_cast<PyCFunction>(WindowsUpdateAdministrator_UnregisterForAdministration), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_WindowsUpdateAdministrator_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_WindowsUpdateAdministrator_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_WindowsUpdateAdministrator_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_WindowsUpdateAdministrator_Static =
+    {
+        "winrt._winrt_windows_management_update.WindowsUpdateAdministrator_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_WindowsUpdateAdministrator_Static
     };
 
     // ----- WindowsUpdateApprovalData class --------------------
@@ -3955,7 +4005,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_management_update(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PreviewBuildsManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_PreviewBuildsManager_Static{PyType_FromSpec(&type_spec_PreviewBuildsManager_Static)};
+    if (!type_PreviewBuildsManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_PreviewBuildsManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PreviewBuildsManager_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -3985,7 +4041,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_management_update(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WindowsUpdateAdministrator, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_WindowsUpdateAdministrator_Static{PyType_FromSpec(&type_spec_WindowsUpdateAdministrator_Static)};
+    if (!type_WindowsUpdateAdministrator_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_WindowsUpdateAdministrator, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WindowsUpdateAdministrator_Static.get())) == -1)
     {
         return nullptr;
     }

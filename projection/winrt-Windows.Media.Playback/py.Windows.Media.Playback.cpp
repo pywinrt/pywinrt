@@ -244,10 +244,6 @@ namespace py::cpp::Windows::Media::Playback
     }
 
     static PyMethodDef _methods_BackgroundMediaPlayer[] = {
-        { "is_media_playing", reinterpret_cast<PyCFunction>(BackgroundMediaPlayer_IsMediaPlaying), METH_VARARGS | METH_STATIC, nullptr },
-        { "send_message_to_background", reinterpret_cast<PyCFunction>(BackgroundMediaPlayer_SendMessageToBackground), METH_VARARGS | METH_STATIC, nullptr },
-        { "send_message_to_foreground", reinterpret_cast<PyCFunction>(BackgroundMediaPlayer_SendMessageToForeground), METH_VARARGS | METH_STATIC, nullptr },
-        { "shutdown", reinterpret_cast<PyCFunction>(BackgroundMediaPlayer_Shutdown), METH_VARARGS | METH_STATIC, nullptr },
         { "add_message_received_from_background", reinterpret_cast<PyCFunction>(BackgroundMediaPlayer_add_MessageReceivedFromBackground), METH_O | METH_STATIC, nullptr },
         { "remove_message_received_from_background", reinterpret_cast<PyCFunction>(BackgroundMediaPlayer_remove_MessageReceivedFromBackground), METH_O | METH_STATIC, nullptr },
         { "add_message_received_from_foreground", reinterpret_cast<PyCFunction>(BackgroundMediaPlayer_add_MessageReceivedFromForeground), METH_O | METH_STATIC, nullptr },
@@ -276,25 +272,34 @@ namespace py::cpp::Windows::Media::Playback
         _type_slots_BackgroundMediaPlayer
     };
 
-    static PyGetSetDef getset_BackgroundMediaPlayer_Meta[] = {
+    static PyGetSetDef getset_BackgroundMediaPlayer_Static[] = {
         { "current", reinterpret_cast<getter>(BackgroundMediaPlayer_get_Current), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_BackgroundMediaPlayer_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_BackgroundMediaPlayer_Meta) },
+    static PyMethodDef methods_BackgroundMediaPlayer_Static[] = {
+        { "is_media_playing", reinterpret_cast<PyCFunction>(BackgroundMediaPlayer_IsMediaPlaying), METH_VARARGS, nullptr },
+        { "send_message_to_background", reinterpret_cast<PyCFunction>(BackgroundMediaPlayer_SendMessageToBackground), METH_VARARGS, nullptr },
+        { "send_message_to_foreground", reinterpret_cast<PyCFunction>(BackgroundMediaPlayer_SendMessageToForeground), METH_VARARGS, nullptr },
+        { "shutdown", reinterpret_cast<PyCFunction>(BackgroundMediaPlayer_Shutdown), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_BackgroundMediaPlayer_Meta =
+    static PyType_Slot type_slots_BackgroundMediaPlayer_Static[] = 
     {
-        "winrt._winrt_windows_media_playback.BackgroundMediaPlayer_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_BackgroundMediaPlayer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_BackgroundMediaPlayer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_BackgroundMediaPlayer_Static =
+    {
+        "winrt._winrt_windows_media_playback.BackgroundMediaPlayer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_BackgroundMediaPlayer_Meta
+        type_slots_BackgroundMediaPlayer_Static
     };
 
     // ----- CurrentMediaPlaybackItemChangedEventArgs class --------------------
@@ -5552,7 +5557,6 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyMethodDef _methods_MediaPlaybackItem[] = {
         { "apply_display_properties", reinterpret_cast<PyCFunction>(MediaPlaybackItem_ApplyDisplayProperties), METH_VARARGS, nullptr },
-        { "find_from_media_source", reinterpret_cast<PyCFunction>(MediaPlaybackItem_FindFromMediaSource), METH_VARARGS | METH_STATIC, nullptr },
         { "get_display_properties", reinterpret_cast<PyCFunction>(MediaPlaybackItem_GetDisplayProperties), METH_VARARGS, nullptr },
         { "add_audio_tracks_changed", reinterpret_cast<PyCFunction>(MediaPlaybackItem_add_AudioTracksChanged), METH_O, nullptr },
         { "remove_audio_tracks_changed", reinterpret_cast<PyCFunction>(MediaPlaybackItem_remove_AudioTracksChanged), METH_O, nullptr },
@@ -5596,6 +5600,32 @@ namespace py::cpp::Windows::Media::Playback
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_MediaPlaybackItem
+    };
+
+    static PyGetSetDef getset_MediaPlaybackItem_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_MediaPlaybackItem_Static[] = {
+        { "find_from_media_source", reinterpret_cast<PyCFunction>(MediaPlaybackItem_FindFromMediaSource), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_MediaPlaybackItem_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_MediaPlaybackItem_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_MediaPlaybackItem_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_MediaPlaybackItem_Static =
+    {
+        "winrt._winrt_windows_media_playback.MediaPlaybackItem_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_MediaPlaybackItem_Static
     };
 
     // ----- MediaPlaybackItemError class --------------------
@@ -13044,13 +13074,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_playback(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_BackgroundMediaPlayer_Meta{PyType_FromSpec(&type_spec_BackgroundMediaPlayer_Meta)};
-    if (!type_BackgroundMediaPlayer_Meta)
+    py::pyobj_handle type_BackgroundMediaPlayer_Static{PyType_FromSpec(&type_spec_BackgroundMediaPlayer_Static)};
+    if (!type_BackgroundMediaPlayer_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BackgroundMediaPlayer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BackgroundMediaPlayer_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BackgroundMediaPlayer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BackgroundMediaPlayer_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -13165,7 +13195,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_playback(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MediaPlaybackItem, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_MediaPlaybackItem_Static{PyType_FromSpec(&type_spec_MediaPlaybackItem_Static)};
+    if (!type_MediaPlaybackItem_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_MediaPlaybackItem, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MediaPlaybackItem_Static.get())) == -1)
     {
         return nullptr;
     }

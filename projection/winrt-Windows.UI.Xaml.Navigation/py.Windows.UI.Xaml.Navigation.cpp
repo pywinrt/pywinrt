@@ -938,25 +938,30 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
         _type_slots_PageStackEntry
     };
 
-    static PyGetSetDef getset_PageStackEntry_Meta[] = {
+    static PyGetSetDef getset_PageStackEntry_Static[] = {
         { "source_page_type_property", reinterpret_cast<getter>(PageStackEntry_get_SourcePageTypeProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_PageStackEntry_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_PageStackEntry_Meta) },
+    static PyMethodDef methods_PageStackEntry_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_PageStackEntry_Meta =
+    static PyType_Slot type_slots_PageStackEntry_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_navigation.PageStackEntry_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PageStackEntry_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PageStackEntry_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PageStackEntry_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_navigation.PageStackEntry_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PageStackEntry_Meta
+        type_slots_PageStackEntry_Static
     };
 
     // ----- Windows.UI.Xaml.Navigation Initialization --------------------
@@ -1025,13 +1030,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_navigation(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_PageStackEntry_Meta{PyType_FromSpec(&type_spec_PageStackEntry_Meta)};
-    if (!type_PageStackEntry_Meta)
+    py::pyobj_handle type_PageStackEntry_Static{PyType_FromSpec(&type_spec_PageStackEntry_Static)};
+    if (!type_PageStackEntry_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PageStackEntry, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PageStackEntry_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PageStackEntry, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PageStackEntry_Static.get())) == -1)
     {
         return nullptr;
     }

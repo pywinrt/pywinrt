@@ -2348,11 +2348,8 @@ namespace py::cpp::Windows::Devices::Lights::Effects
         { "index_of", reinterpret_cast<PyCFunction>(LampArrayEffectPlaylist_IndexOf), METH_VARARGS, nullptr },
         { "override_z_index", reinterpret_cast<PyCFunction>(LampArrayEffectPlaylist_OverrideZIndex), METH_VARARGS, nullptr },
         { "pause", reinterpret_cast<PyCFunction>(LampArrayEffectPlaylist_Pause), METH_VARARGS, nullptr },
-        { "pause_all", reinterpret_cast<PyCFunction>(LampArrayEffectPlaylist_PauseAll), METH_VARARGS | METH_STATIC, nullptr },
         { "start", reinterpret_cast<PyCFunction>(LampArrayEffectPlaylist_Start), METH_VARARGS, nullptr },
-        { "start_all", reinterpret_cast<PyCFunction>(LampArrayEffectPlaylist_StartAll), METH_VARARGS | METH_STATIC, nullptr },
         { "stop", reinterpret_cast<PyCFunction>(LampArrayEffectPlaylist_Stop), METH_VARARGS, nullptr },
-        { "stop_all", reinterpret_cast<PyCFunction>(LampArrayEffectPlaylist_StopAll), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_LampArrayEffectPlaylist, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LampArrayEffectPlaylist), METH_O | METH_STATIC, nullptr },
         { }
@@ -2386,6 +2383,34 @@ namespace py::cpp::Windows::Devices::Lights::Effects
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_LampArrayEffectPlaylist
+    };
+
+    static PyGetSetDef getset_LampArrayEffectPlaylist_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_LampArrayEffectPlaylist_Static[] = {
+        { "pause_all", reinterpret_cast<PyCFunction>(LampArrayEffectPlaylist_PauseAll), METH_VARARGS, nullptr },
+        { "start_all", reinterpret_cast<PyCFunction>(LampArrayEffectPlaylist_StartAll), METH_VARARGS, nullptr },
+        { "stop_all", reinterpret_cast<PyCFunction>(LampArrayEffectPlaylist_StopAll), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_LampArrayEffectPlaylist_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_LampArrayEffectPlaylist_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_LampArrayEffectPlaylist_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_LampArrayEffectPlaylist_Static =
+    {
+        "winrt._winrt_windows_devices_lights_effects.LampArrayEffectPlaylist_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_LampArrayEffectPlaylist_Static
     };
 
     // ----- LampArraySolidEffect class --------------------
@@ -3134,7 +3159,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_lights_effects(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LampArrayEffectPlaylist, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_LampArrayEffectPlaylist_Static{PyType_FromSpec(&type_spec_LampArrayEffectPlaylist_Static)};
+    if (!type_LampArrayEffectPlaylist_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_LampArrayEffectPlaylist, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LampArrayEffectPlaylist_Static.get())) == -1)
     {
         return nullptr;
     }

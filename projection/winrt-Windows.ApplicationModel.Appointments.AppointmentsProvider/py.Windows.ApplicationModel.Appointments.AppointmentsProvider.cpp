@@ -372,7 +372,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
         _type_slots_AppointmentsProviderLaunchActionVerbs
     };
 
-    static PyGetSetDef getset_AppointmentsProviderLaunchActionVerbs_Meta[] = {
+    static PyGetSetDef getset_AppointmentsProviderLaunchActionVerbs_Static[] = {
         { "add_appointment", reinterpret_cast<getter>(AppointmentsProviderLaunchActionVerbs_get_AddAppointment), nullptr, nullptr, nullptr },
         { "remove_appointment", reinterpret_cast<getter>(AppointmentsProviderLaunchActionVerbs_get_RemoveAppointment), nullptr, nullptr, nullptr },
         { "replace_appointment", reinterpret_cast<getter>(AppointmentsProviderLaunchActionVerbs_get_ReplaceAppointment), nullptr, nullptr, nullptr },
@@ -381,20 +381,25 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
         { }
     };
 
-    static PyType_Slot type_slots_AppointmentsProviderLaunchActionVerbs_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_AppointmentsProviderLaunchActionVerbs_Meta) },
+    static PyMethodDef methods_AppointmentsProviderLaunchActionVerbs_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_AppointmentsProviderLaunchActionVerbs_Meta =
+    static PyType_Slot type_slots_AppointmentsProviderLaunchActionVerbs_Static[] = 
     {
-        "winrt._winrt_windows_applicationmodel_appointments_appointmentsprovider.AppointmentsProviderLaunchActionVerbs_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_AppointmentsProviderLaunchActionVerbs_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_AppointmentsProviderLaunchActionVerbs_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_AppointmentsProviderLaunchActionVerbs_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_appointments_appointmentsprovider.AppointmentsProviderLaunchActionVerbs_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_AppointmentsProviderLaunchActionVerbs_Meta
+        type_slots_AppointmentsProviderLaunchActionVerbs_Static
     };
 
     // ----- RemoveAppointmentOperation class --------------------
@@ -980,13 +985,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_appointments_appointmentsp
         return nullptr;
     }
 
-    py::pyobj_handle type_AppointmentsProviderLaunchActionVerbs_Meta{PyType_FromSpec(&type_spec_AppointmentsProviderLaunchActionVerbs_Meta)};
-    if (!type_AppointmentsProviderLaunchActionVerbs_Meta)
+    py::pyobj_handle type_AppointmentsProviderLaunchActionVerbs_Static{PyType_FromSpec(&type_spec_AppointmentsProviderLaunchActionVerbs_Static)};
+    if (!type_AppointmentsProviderLaunchActionVerbs_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppointmentsProviderLaunchActionVerbs, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppointmentsProviderLaunchActionVerbs_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppointmentsProviderLaunchActionVerbs, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppointmentsProviderLaunchActionVerbs_Static.get())) == -1)
     {
         return nullptr;
     }

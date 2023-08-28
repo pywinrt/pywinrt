@@ -439,11 +439,11 @@ struct py_type<%>
         if (requires_metaclass(type))
         {
             w.write(
-                "py::pyobj_handle type_%_Meta{PyType_FromSpec(&type_spec_@_Meta)};\n",
+                "py::pyobj_handle type_%_Static{PyType_FromSpec(&type_spec_@_Static)};\n",
                 type.TypeName(),
                 type.TypeName());
 
-            w.write("if (!type_%_Meta)\n{\n", type.TypeName());
+            w.write("if (!type_%_Static)\n{\n", type.TypeName());
             {
                 writer::indent_guard g{w};
                 w.write("return nullptr;\n");
@@ -451,7 +451,8 @@ struct py_type<%>
             w.write("}\n\n");
 
             metaclass = w.write_temp(
-                "reinterpret_cast<PyTypeObject*>(type_%_Meta.get())", type.TypeName());
+                "reinterpret_cast<PyTypeObject*>(type_%_Static.get())",
+                type.TypeName());
         }
 
         w.write(
@@ -2034,6 +2035,11 @@ return 0;
                 type,
                 [&](auto const& method)
                 {
+                    if (is_static(method))
+                    {
+                        return;
+                    }
+
                     if (!contains(method_names, method.Name()))
                     {
                         write_row(method);
@@ -2270,13 +2276,8 @@ static PyType_Spec type_spec_@ =
             type_name);
     }
 
-    void write_metaclass(writer& w, TypeDef const& type)
+    static void write_metaclass_property_getset_table(writer& w, TypeDef const& type)
     {
-        if (!requires_metaclass(type))
-        {
-            return;
-        }
-
         auto write_row = [&](std::string_view field_name,
                              std::string_view getter_name,
                              std::string_view setter_name)
@@ -2295,7 +2296,7 @@ static PyType_Spec type_spec_@ =
                 setter);
         };
 
-        w.write("\nstatic PyGetSetDef getset_@_Meta[] = {\n", type.TypeName());
+        w.write("\nstatic PyGetSetDef getset_@_Static[] = {\n", type.TypeName());
         {
             writer::indent_guard g{w};
 
@@ -2316,14 +2317,81 @@ static PyType_Spec type_spec_@ =
             w.write("{ }\n");
         }
         w.write("};\n");
+    }
 
-        w.write("\nstatic PyType_Slot type_slots_@_Meta[] = \n{\n", type.TypeName());
+    static void write_metaclass_method_table(writer& w, TypeDef const& type)
+    {
+        auto get_argument_convention_flag = [](MethodDef const& method)
+        {
+            switch (get_argument_convention(method))
+            {
+            case argument_convention::no_args:
+                return "METH_NOARGS";
+            case argument_convention::single_arg:
+                return "METH_O";
+            case argument_convention::variable_args:
+                return "METH_VARARGS";
+            }
+
+            throw_invalid("invalid argument_convention");
+        };
+
+        auto write_row = [&](MethodDef const& method)
+        {
+            w.write(
+                "{ \"%\", reinterpret_cast<PyCFunction>(@_%), %, nullptr },\n",
+                bind<write_lower_snake_case_python_identifier>(method.Name()),
+                type.TypeName(),
+                method.Name(),
+                get_argument_convention_flag(method));
+        };
+
+        w.write("\nstatic PyMethodDef methods_@_Static[] = {\n", type.TypeName());
+        {
+            writer::indent_guard g{w};
+
+            std::set<std::string_view> method_names{};
+            enumerate_methods(
+                w,
+                type,
+                [&](auto const& method)
+                {
+                    if (!contains(method_names, method.Name()))
+                    {
+                        if (is_static(method))
+                        {
+                            write_row(method);
+                        }
+                    }
+
+                    method_names.insert(method.Name());
+                });
+
+            w.write("{ }\n");
+        }
+        w.write("};\n");
+    }
+
+    void write_metaclass(writer& w, TypeDef const& type)
+    {
+        if (!requires_metaclass(type))
+        {
+            return;
+        }
+
+        write_metaclass_property_getset_table(w, type);
+        write_metaclass_method_table(w, type);
+
+        w.write("\nstatic PyType_Slot type_slots_@_Static[] = \n{\n", type.TypeName());
 
         {
             writer::indent_guard g{w};
             w.write("{ Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },\n");
             w.write(
-                "{ Py_tp_getset, reinterpret_cast<void*>(getset_@_Meta) },\n",
+                "{ Py_tp_getset, reinterpret_cast<void*>(getset_@_Static) },\n",
+                type.TypeName());
+            w.write(
+                "{ Py_tp_methods, reinterpret_cast<void*>(methods_@_Static) },\n",
                 type.TypeName());
             w.write("{ }\n");
         }
@@ -2331,13 +2399,13 @@ static PyType_Spec type_spec_@ =
         w.write("};\n");
 
         auto format = R"(
-static PyType_Spec type_spec_@_Meta =
+static PyType_Spec type_spec_@_Static =
 {
-    "winrt.%.@_Meta",
+    "winrt.%.@_Static",
     static_cast<int>(PyType_Type.tp_basicsize),
     static_cast<int>(PyType_Type.tp_itemsize),
     Py_TPFLAGS_DEFAULT,
-    type_slots_@_Meta
+    type_slots_@_Static
 };
 )";
 
@@ -4094,8 +4162,109 @@ if (!return_value)
         auto ns = type.TypeNamespace();
         auto name = type.TypeName();
 
+        if (requires_metaclass(type))
+        {
+            w.write("class @_Static(type):\n", type.TypeName());
+
+            {
+                writer::indent_guard g{w};
+
+                // write regular methods
+
+                auto method_writer = [&](MethodDef const& method)
+                {
+                    if (!is_static(method))
+                    {
+                        return;
+                    }
+
+                    method_signature signature{method};
+
+                    if (is_method_overloaded(w, type, method.Name()))
+                    {
+                        w.write("@typing.overload\n");
+                    }
+
+                    // seperator between cls/self and the rest of the args
+                    auto first_seperator
+                        = count_py_in_param(signature.params()) > 0 ? ", " : "";
+
+                    w.write(
+                        "def %(cls%%%) -> %: ...\n",
+                        bind<write_lower_snake_case_python_identifier>(method.Name()),
+                        first_seperator,
+                        bind_list<write_method_in_param_name_and_typing>(
+                            ", ", filter_py_in_params(signature.params())),
+                        filter_py_in_params(signature.params()).empty() ? "" : ", /",
+                        bind<write_return_typing>(signature));
+                };
+
+                enumerate_methods(w, type, method_writer);
+
+                enumerate_events(
+                    w,
+                    type,
+                    [&](auto const& event)
+                    {
+                        auto&& [add_method, remove_method] = get_event_methods(event);
+                        method_writer(add_method);
+                        method_writer(remove_method);
+                    });
+
+                // write properties
+
+                auto property_writer = [&](Property const& property)
+                {
+                    if (!is_static(property))
+                    {
+                        return;
+                    }
+
+                    auto [get_method, put_method] = get_property_methods(property);
+
+                    auto type = w.write_temp(
+                        "%", bind<write_nullable_python_type>(property.Type().Type()));
+
+                    // NB: have to use "_property" because there can be
+                    // properties named "property"
+                    w.write("@_property\n");
+                    w.write(
+                        "def %(cls) -> %: ...\n",
+                        bind<write_lower_snake_case_python_identifier>(property.Name()),
+                        type);
+
+                    if (put_method)
+                    {
+                        w.write(
+                            "^@%.setter\n",
+                            bind<write_lower_snake_case_python_identifier>(
+                                property.Name()));
+                        w.write(
+                            "def %(cls, value: %) -> None: ...\n",
+                            bind<write_lower_snake_case_python_identifier>(
+                                property.Name()),
+                            type);
+                    }
+                };
+
+                enumerate_properties(w, type, property_writer);
+            }
+
+            w.write("\n");
+        }
+
+        std::string metaclass{};
+
+        if (requires_metaclass(type))
+        {
+            metaclass = w.write_temp(", metaclass=@_Static", type.TypeName());
+        }
+
         w.write(
-            "class @(%):\n", type.TypeName(), bind<write_python_base_classes>(type));
+            "class @(%%):\n",
+            type.TypeName(),
+            bind<write_python_base_classes>(type),
+            metaclass);
         {
             writer::indent_guard g{w};
 
@@ -4350,6 +4519,11 @@ if (!return_value)
 
             auto method_writer = [&](MethodDef const& method)
             {
+                if (is_static(method))
+                {
+                    return;
+                }
+
                 method_signature signature{method};
 
                 if (is_method_overloaded(w, type, method.Name()))
@@ -4357,16 +4531,9 @@ if (!return_value)
                     w.write("@typing.overload\n");
                 }
 
-                if (is_static(method))
-                {
-                    w.write("@staticmethod\n");
-                }
-
                 // seperator between cls/self and the rest of the args
                 auto first_seperator
-                    = !is_static(method) && count_py_in_param(signature.params()) > 0
-                          ? ", "
-                          : "";
+                    = count_py_in_param(signature.params()) > 0 ? ", " : "";
 
                 if (is_constructor(method))
                 {
@@ -4381,9 +4548,8 @@ if (!return_value)
                 else
                 {
                     w.write(
-                        "def %(%%%%) -> %: ...\n",
+                        "def %(self%%%) -> %: ...\n",
                         bind<write_lower_snake_case_python_identifier>(method.Name()),
-                        is_static(method) ? "" : "self",
                         first_seperator,
                         bind_list<write_method_in_param_name_and_typing>(
                             ", ", filter_py_in_params(signature.params())),
@@ -4415,42 +4581,34 @@ if (!return_value)
 
             auto property_writer = [&](Property const& property)
             {
+                if (is_static(property))
+                {
+                    return;
+                }
+
                 auto [get_method, put_method] = get_property_methods(property);
 
                 auto type = w.write_temp(
                     "%", bind<write_nullable_python_type>(property.Type().Type()));
 
-                if (is_static(get_method))
-                {
-                    // TODO: find a way to indicate read-only vs. read-write
-                    // static properties
-                    w.write(
-                        "%: typing.ClassVar[%]\n",
-                        bind<write_lower_snake_case_python_identifier>(property.Name()),
-                        type);
-                }
-                else
-                {
-                    // NB: have to use "_property" because there can be
-                    // properties named "property"
-                    w.write("@_property\n");
-                    w.write(
-                        "def %(self) -> %: ...\n",
-                        bind<write_lower_snake_case_python_identifier>(property.Name()),
-                        type);
+                // NB: have to use "_property" because there can be
+                // properties named "property"
+                w.write("@_property\n");
+                w.write(
+                    "def %(self) -> %: ...\n",
+                    bind<write_lower_snake_case_python_identifier>(property.Name()),
+                    type);
 
-                    if (put_method)
-                    {
-                        w.write(
-                            "^@%.setter\n",
-                            bind<write_lower_snake_case_python_identifier>(
-                                property.Name()));
-                        w.write(
-                            "def %(self, value: %) -> None: ...\n",
-                            bind<write_lower_snake_case_python_identifier>(
-                                property.Name()),
-                            type);
-                    }
+                if (put_method)
+                {
+                    w.write(
+                        "^@%.setter\n",
+                        bind<write_lower_snake_case_python_identifier>(
+                            property.Name()));
+                    w.write(
+                        "def %(self, value: %) -> None: ...\n",
+                        bind<write_lower_snake_case_python_identifier>(property.Name()),
+                        type);
                 }
             };
 

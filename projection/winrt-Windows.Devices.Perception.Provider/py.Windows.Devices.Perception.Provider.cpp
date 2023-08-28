@@ -97,27 +97,32 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         _type_slots_KnownPerceptionFrameKind
     };
 
-    static PyGetSetDef getset_KnownPerceptionFrameKind_Meta[] = {
+    static PyGetSetDef getset_KnownPerceptionFrameKind_Static[] = {
         { "color", reinterpret_cast<getter>(KnownPerceptionFrameKind_get_Color), nullptr, nullptr, nullptr },
         { "depth", reinterpret_cast<getter>(KnownPerceptionFrameKind_get_Depth), nullptr, nullptr, nullptr },
         { "infrared", reinterpret_cast<getter>(KnownPerceptionFrameKind_get_Infrared), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_KnownPerceptionFrameKind_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_KnownPerceptionFrameKind_Meta) },
+    static PyMethodDef methods_KnownPerceptionFrameKind_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_KnownPerceptionFrameKind_Meta =
+    static PyType_Slot type_slots_KnownPerceptionFrameKind_Static[] = 
     {
-        "winrt._winrt_windows_devices_perception_provider.KnownPerceptionFrameKind_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_KnownPerceptionFrameKind_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_KnownPerceptionFrameKind_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_KnownPerceptionFrameKind_Static =
+    {
+        "winrt._winrt_windows_devices_perception_provider.KnownPerceptionFrameKind_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_KnownPerceptionFrameKind_Meta
+        type_slots_KnownPerceptionFrameKind_Static
     };
 
     // ----- PerceptionControlGroup class --------------------
@@ -1444,16 +1449,6 @@ namespace py::cpp::Windows::Devices::Perception::Provider
     }
 
     static PyMethodDef _methods_PerceptionFrameProviderManagerService[] = {
-        { "publish_frame_for_provider", reinterpret_cast<PyCFunction>(PerceptionFrameProviderManagerService_PublishFrameForProvider), METH_VARARGS | METH_STATIC, nullptr },
-        { "register_control_group", reinterpret_cast<PyCFunction>(PerceptionFrameProviderManagerService_RegisterControlGroup), METH_VARARGS | METH_STATIC, nullptr },
-        { "register_correlation_group", reinterpret_cast<PyCFunction>(PerceptionFrameProviderManagerService_RegisterCorrelationGroup), METH_VARARGS | METH_STATIC, nullptr },
-        { "register_face_authentication_group", reinterpret_cast<PyCFunction>(PerceptionFrameProviderManagerService_RegisterFaceAuthenticationGroup), METH_VARARGS | METH_STATIC, nullptr },
-        { "register_frame_provider_info", reinterpret_cast<PyCFunction>(PerceptionFrameProviderManagerService_RegisterFrameProviderInfo), METH_VARARGS | METH_STATIC, nullptr },
-        { "unregister_control_group", reinterpret_cast<PyCFunction>(PerceptionFrameProviderManagerService_UnregisterControlGroup), METH_VARARGS | METH_STATIC, nullptr },
-        { "unregister_correlation_group", reinterpret_cast<PyCFunction>(PerceptionFrameProviderManagerService_UnregisterCorrelationGroup), METH_VARARGS | METH_STATIC, nullptr },
-        { "unregister_face_authentication_group", reinterpret_cast<PyCFunction>(PerceptionFrameProviderManagerService_UnregisterFaceAuthenticationGroup), METH_VARARGS | METH_STATIC, nullptr },
-        { "unregister_frame_provider_info", reinterpret_cast<PyCFunction>(PerceptionFrameProviderManagerService_UnregisterFrameProviderInfo), METH_VARARGS | METH_STATIC, nullptr },
-        { "update_availability_for_provider", reinterpret_cast<PyCFunction>(PerceptionFrameProviderManagerService_UpdateAvailabilityForProvider), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -1476,6 +1471,41 @@ namespace py::cpp::Windows::Devices::Perception::Provider
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_PerceptionFrameProviderManagerService
+    };
+
+    static PyGetSetDef getset_PerceptionFrameProviderManagerService_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_PerceptionFrameProviderManagerService_Static[] = {
+        { "publish_frame_for_provider", reinterpret_cast<PyCFunction>(PerceptionFrameProviderManagerService_PublishFrameForProvider), METH_VARARGS, nullptr },
+        { "register_control_group", reinterpret_cast<PyCFunction>(PerceptionFrameProviderManagerService_RegisterControlGroup), METH_VARARGS, nullptr },
+        { "register_correlation_group", reinterpret_cast<PyCFunction>(PerceptionFrameProviderManagerService_RegisterCorrelationGroup), METH_VARARGS, nullptr },
+        { "register_face_authentication_group", reinterpret_cast<PyCFunction>(PerceptionFrameProviderManagerService_RegisterFaceAuthenticationGroup), METH_VARARGS, nullptr },
+        { "register_frame_provider_info", reinterpret_cast<PyCFunction>(PerceptionFrameProviderManagerService_RegisterFrameProviderInfo), METH_VARARGS, nullptr },
+        { "unregister_control_group", reinterpret_cast<PyCFunction>(PerceptionFrameProviderManagerService_UnregisterControlGroup), METH_VARARGS, nullptr },
+        { "unregister_correlation_group", reinterpret_cast<PyCFunction>(PerceptionFrameProviderManagerService_UnregisterCorrelationGroup), METH_VARARGS, nullptr },
+        { "unregister_face_authentication_group", reinterpret_cast<PyCFunction>(PerceptionFrameProviderManagerService_UnregisterFaceAuthenticationGroup), METH_VARARGS, nullptr },
+        { "unregister_frame_provider_info", reinterpret_cast<PyCFunction>(PerceptionFrameProviderManagerService_UnregisterFrameProviderInfo), METH_VARARGS, nullptr },
+        { "update_availability_for_provider", reinterpret_cast<PyCFunction>(PerceptionFrameProviderManagerService_UpdateAvailabilityForProvider), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_PerceptionFrameProviderManagerService_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PerceptionFrameProviderManagerService_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PerceptionFrameProviderManagerService_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PerceptionFrameProviderManagerService_Static =
+    {
+        "winrt._winrt_windows_devices_perception_provider.PerceptionFrameProviderManagerService_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_PerceptionFrameProviderManagerService_Static
     };
 
     // ----- PerceptionPropertyChangeRequest class --------------------
@@ -2350,13 +2380,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_perception_provider(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_KnownPerceptionFrameKind_Meta{PyType_FromSpec(&type_spec_KnownPerceptionFrameKind_Meta)};
-    if (!type_KnownPerceptionFrameKind_Meta)
+    py::pyobj_handle type_KnownPerceptionFrameKind_Static{PyType_FromSpec(&type_spec_KnownPerceptionFrameKind_Static)};
+    if (!type_KnownPerceptionFrameKind_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_KnownPerceptionFrameKind, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionFrameKind_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_KnownPerceptionFrameKind, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionFrameKind_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -2391,7 +2421,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_perception_provider(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PerceptionFrameProviderManagerService, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_PerceptionFrameProviderManagerService_Static{PyType_FromSpec(&type_spec_PerceptionFrameProviderManagerService_Static)};
+    if (!type_PerceptionFrameProviderManagerService_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_PerceptionFrameProviderManagerService, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PerceptionFrameProviderManagerService_Static.get())) == -1)
     {
         return nullptr;
     }

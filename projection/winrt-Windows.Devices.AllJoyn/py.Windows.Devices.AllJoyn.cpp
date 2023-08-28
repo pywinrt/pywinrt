@@ -969,7 +969,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
     }
 
     static PyMethodDef _methods_AllJoynAboutDataView[] = {
-        { "get_data_by_session_port_async", reinterpret_cast<PyCFunction>(AllJoynAboutDataView_GetDataBySessionPortAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_AllJoynAboutDataView, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AllJoynAboutDataView), METH_O | METH_STATIC, nullptr },
         { }
@@ -1011,6 +1010,32 @@ namespace py::cpp::Windows::Devices::AllJoyn
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_AllJoynAboutDataView
+    };
+
+    static PyGetSetDef getset_AllJoynAboutDataView_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_AllJoynAboutDataView_Static[] = {
+        { "get_data_by_session_port_async", reinterpret_cast<PyCFunction>(AllJoynAboutDataView_GetDataBySessionPortAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_AllJoynAboutDataView_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_AllJoynAboutDataView_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_AllJoynAboutDataView_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_AllJoynAboutDataView_Static =
+    {
+        "winrt._winrt_windows_devices_alljoyn.AllJoynAboutDataView_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_AllJoynAboutDataView_Static
     };
 
     // ----- AllJoynAcceptSessionJoinerEventArgs class --------------------
@@ -2008,8 +2033,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
         { "connect", reinterpret_cast<PyCFunction>(AllJoynBusAttachment_Connect), METH_VARARGS, nullptr },
         { "disconnect", reinterpret_cast<PyCFunction>(AllJoynBusAttachment_Disconnect), METH_VARARGS, nullptr },
         { "get_about_data_async", reinterpret_cast<PyCFunction>(AllJoynBusAttachment_GetAboutDataAsync), METH_VARARGS, nullptr },
-        { "get_default", reinterpret_cast<PyCFunction>(AllJoynBusAttachment_GetDefault), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_watcher", reinterpret_cast<PyCFunction>(AllJoynBusAttachment_GetWatcher), METH_VARARGS | METH_STATIC, nullptr },
         { "ping_async", reinterpret_cast<PyCFunction>(AllJoynBusAttachment_PingAsync), METH_VARARGS, nullptr },
         { "add_authentication_complete", reinterpret_cast<PyCFunction>(AllJoynBusAttachment_add_AuthenticationComplete), METH_O, nullptr },
         { "remove_authentication_complete", reinterpret_cast<PyCFunction>(AllJoynBusAttachment_remove_AuthenticationComplete), METH_O, nullptr },
@@ -2053,6 +2076,33 @@ namespace py::cpp::Windows::Devices::AllJoyn
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_AllJoynBusAttachment
+    };
+
+    static PyGetSetDef getset_AllJoynBusAttachment_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_AllJoynBusAttachment_Static[] = {
+        { "get_default", reinterpret_cast<PyCFunction>(AllJoynBusAttachment_GetDefault), METH_VARARGS, nullptr },
+        { "get_watcher", reinterpret_cast<PyCFunction>(AllJoynBusAttachment_GetWatcher), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_AllJoynBusAttachment_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_AllJoynBusAttachment_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_AllJoynBusAttachment_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_AllJoynBusAttachment_Static =
+    {
+        "winrt._winrt_windows_devices_alljoyn.AllJoynBusAttachment_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_AllJoynBusAttachment_Static
     };
 
     // ----- AllJoynBusAttachmentStateChangedEventArgs class --------------------
@@ -3623,7 +3673,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
     }
 
     static PyMethodDef _methods_AllJoynServiceInfo[] = {
-        { "from_id_async", reinterpret_cast<PyCFunction>(AllJoynServiceInfo_FromIdAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_AllJoynServiceInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AllJoynServiceInfo), METH_O | METH_STATIC, nullptr },
         { }
@@ -3652,6 +3701,32 @@ namespace py::cpp::Windows::Devices::AllJoyn
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_AllJoynServiceInfo
+    };
+
+    static PyGetSetDef getset_AllJoynServiceInfo_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_AllJoynServiceInfo_Static[] = {
+        { "from_id_async", reinterpret_cast<PyCFunction>(AllJoynServiceInfo_FromIdAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_AllJoynServiceInfo_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_AllJoynServiceInfo_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_AllJoynServiceInfo_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_AllJoynServiceInfo_Static =
+    {
+        "winrt._winrt_windows_devices_alljoyn.AllJoynServiceInfo_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_AllJoynServiceInfo_Static
     };
 
     // ----- AllJoynServiceInfoRemovedEventArgs class --------------------
@@ -4059,7 +4134,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
     }
 
     static PyMethodDef _methods_AllJoynSession[] = {
-        { "get_from_service_info_async", reinterpret_cast<PyCFunction>(AllJoynSession_GetFromServiceInfoAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "remove_member_async", reinterpret_cast<PyCFunction>(AllJoynSession_RemoveMemberAsync), METH_VARARGS, nullptr },
         { "add_lost", reinterpret_cast<PyCFunction>(AllJoynSession_add_Lost), METH_O, nullptr },
         { "remove_lost", reinterpret_cast<PyCFunction>(AllJoynSession_remove_Lost), METH_O, nullptr },
@@ -4094,6 +4168,32 @@ namespace py::cpp::Windows::Devices::AllJoyn
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_AllJoynSession
+    };
+
+    static PyGetSetDef getset_AllJoynSession_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_AllJoynSession_Static[] = {
+        { "get_from_service_info_async", reinterpret_cast<PyCFunction>(AllJoynSession_GetFromServiceInfoAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_AllJoynSession_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_AllJoynSession_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_AllJoynSession_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_AllJoynSession_Static =
+    {
+        "winrt._winrt_windows_devices_alljoyn.AllJoynSession_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_AllJoynSession_Static
     };
 
     // ----- AllJoynSessionJoinedEventArgs class --------------------
@@ -4924,7 +5024,7 @@ namespace py::cpp::Windows::Devices::AllJoyn
         _type_slots_AllJoynStatus
     };
 
-    static PyGetSetDef getset_AllJoynStatus_Meta[] = {
+    static PyGetSetDef getset_AllJoynStatus_Static[] = {
         { "authentication_failed", reinterpret_cast<getter>(AllJoynStatus_get_AuthenticationFailed), nullptr, nullptr, nullptr },
         { "authentication_rejected_by_user", reinterpret_cast<getter>(AllJoynStatus_get_AuthenticationRejectedByUser), nullptr, nullptr, nullptr },
         { "connection_refused", reinterpret_cast<getter>(AllJoynStatus_get_ConnectionRefused), nullptr, nullptr, nullptr },
@@ -4946,20 +5046,25 @@ namespace py::cpp::Windows::Devices::AllJoyn
         { }
     };
 
-    static PyType_Slot type_slots_AllJoynStatus_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_AllJoynStatus_Meta) },
+    static PyMethodDef methods_AllJoynStatus_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_AllJoynStatus_Meta =
+    static PyType_Slot type_slots_AllJoynStatus_Static[] = 
     {
-        "winrt._winrt_windows_devices_alljoyn.AllJoynStatus_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_AllJoynStatus_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_AllJoynStatus_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_AllJoynStatus_Static =
+    {
+        "winrt._winrt_windows_devices_alljoyn.AllJoynStatus_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_AllJoynStatus_Meta
+        type_slots_AllJoynStatus_Static
     };
 
     // ----- AllJoynWatcherStoppedEventArgs class --------------------
@@ -5328,7 +5433,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_alljoyn(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AllJoynAboutDataView, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_AllJoynAboutDataView_Static{PyType_FromSpec(&type_spec_AllJoynAboutDataView_Static)};
+    if (!type_AllJoynAboutDataView_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_AllJoynAboutDataView, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AllJoynAboutDataView_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -5343,7 +5454,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_alljoyn(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AllJoynBusAttachment, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_AllJoynBusAttachment_Static{PyType_FromSpec(&type_spec_AllJoynBusAttachment_Static)};
+    if (!type_AllJoynBusAttachment_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_AllJoynBusAttachment, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AllJoynBusAttachment_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -5388,7 +5505,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_alljoyn(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AllJoynServiceInfo, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_AllJoynServiceInfo_Static{PyType_FromSpec(&type_spec_AllJoynServiceInfo_Static)};
+    if (!type_AllJoynServiceInfo_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_AllJoynServiceInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AllJoynServiceInfo_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -5398,7 +5521,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_alljoyn(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AllJoynSession, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_AllJoynSession_Static{PyType_FromSpec(&type_spec_AllJoynSession_Static)};
+    if (!type_AllJoynSession_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_AllJoynSession, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AllJoynSession_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -5423,13 +5552,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_alljoyn(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_AllJoynStatus_Meta{PyType_FromSpec(&type_spec_AllJoynStatus_Meta)};
-    if (!type_AllJoynStatus_Meta)
+    py::pyobj_handle type_AllJoynStatus_Static{PyType_FromSpec(&type_spec_AllJoynStatus_Static)};
+    if (!type_AllJoynStatus_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AllJoynStatus, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AllJoynStatus_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AllJoynStatus, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AllJoynStatus_Static.get())) == -1)
     {
         return nullptr;
     }

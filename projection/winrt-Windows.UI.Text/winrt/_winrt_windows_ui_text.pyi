@@ -45,20 +45,33 @@ class ContentLinkInfo(winrt.system.Object):
     @display_text.setter
     def display_text(self, value: str) -> None: ...
 
-class FontWeights(winrt.system.Object):
+class FontWeights_Static(type):
+    @_property
+    def black(cls) -> FontWeight: ...
+    @_property
+    def bold(cls) -> FontWeight: ...
+    @_property
+    def extra_black(cls) -> FontWeight: ...
+    @_property
+    def extra_bold(cls) -> FontWeight: ...
+    @_property
+    def extra_light(cls) -> FontWeight: ...
+    @_property
+    def light(cls) -> FontWeight: ...
+    @_property
+    def medium(cls) -> FontWeight: ...
+    @_property
+    def normal(cls) -> FontWeight: ...
+    @_property
+    def semi_bold(cls) -> FontWeight: ...
+    @_property
+    def semi_light(cls) -> FontWeight: ...
+    @_property
+    def thin(cls) -> FontWeight: ...
+
+class FontWeights(winrt.system.Object, metaclass=FontWeights_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FontWeights: ...
-    black: typing.ClassVar[FontWeight]
-    bold: typing.ClassVar[FontWeight]
-    extra_black: typing.ClassVar[FontWeight]
-    extra_bold: typing.ClassVar[FontWeight]
-    extra_light: typing.ClassVar[FontWeight]
-    light: typing.ClassVar[FontWeight]
-    medium: typing.ClassVar[FontWeight]
-    normal: typing.ClassVar[FontWeight]
-    semi_bold: typing.ClassVar[FontWeight]
-    semi_light: typing.ClassVar[FontWeight]
-    thin: typing.ClassVar[FontWeight]
 
 class RichEditTextDocument(winrt.system.Object):
     @staticmethod
@@ -190,17 +203,27 @@ class RichEditTextRange(winrt.system.Object):
     @_property
     def story_length(self) -> winrt.system.Int32: ...
 
-class TextConstants(winrt.system.Object):
+class TextConstants_Static(type):
+    @_property
+    def auto_color(cls) -> winrt.windows.ui.Color: ...
+    @_property
+    def max_unit_count(cls) -> winrt.system.Int32: ...
+    @_property
+    def min_unit_count(cls) -> winrt.system.Int32: ...
+    @_property
+    def undefined_color(cls) -> winrt.windows.ui.Color: ...
+    @_property
+    def undefined_float_value(cls) -> winrt.system.Single: ...
+    @_property
+    def undefined_font_stretch(cls) -> FontStretch: ...
+    @_property
+    def undefined_font_style(cls) -> FontStyle: ...
+    @_property
+    def undefined_int32_value(cls) -> winrt.system.Int32: ...
+
+class TextConstants(winrt.system.Object, metaclass=TextConstants_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TextConstants: ...
-    auto_color: typing.ClassVar[winrt.windows.ui.Color]
-    max_unit_count: typing.ClassVar[winrt.system.Int32]
-    min_unit_count: typing.ClassVar[winrt.system.Int32]
-    undefined_color: typing.ClassVar[winrt.windows.ui.Color]
-    undefined_float_value: typing.ClassVar[winrt.system.Single]
-    undefined_font_stretch: typing.ClassVar[FontStretch]
-    undefined_font_style: typing.ClassVar[FontStyle]
-    undefined_int32_value: typing.ClassVar[winrt.system.Int32]
 
 class ITextCharacterFormat(winrt.system.Object):
     @staticmethod

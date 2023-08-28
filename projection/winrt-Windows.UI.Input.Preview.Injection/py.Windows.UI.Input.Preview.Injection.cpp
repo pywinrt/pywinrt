@@ -2257,8 +2257,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         { "inject_pen_input", reinterpret_cast<PyCFunction>(InputInjector_InjectPenInput), METH_VARARGS, nullptr },
         { "inject_shortcut", reinterpret_cast<PyCFunction>(InputInjector_InjectShortcut), METH_VARARGS, nullptr },
         { "inject_touch_input", reinterpret_cast<PyCFunction>(InputInjector_InjectTouchInput), METH_VARARGS, nullptr },
-        { "try_create", reinterpret_cast<PyCFunction>(InputInjector_TryCreate), METH_VARARGS | METH_STATIC, nullptr },
-        { "try_create_for_app_broadcast_only", reinterpret_cast<PyCFunction>(InputInjector_TryCreateForAppBroadcastOnly), METH_VARARGS | METH_STATIC, nullptr },
         { "uninitialize_gamepad_injection", reinterpret_cast<PyCFunction>(InputInjector_UninitializeGamepadInjection), METH_VARARGS, nullptr },
         { "uninitialize_pen_injection", reinterpret_cast<PyCFunction>(InputInjector_UninitializePenInjection), METH_VARARGS, nullptr },
         { "uninitialize_touch_injection", reinterpret_cast<PyCFunction>(InputInjector_UninitializeTouchInjection), METH_VARARGS, nullptr },
@@ -2287,6 +2285,33 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_InputInjector
+    };
+
+    static PyGetSetDef getset_InputInjector_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_InputInjector_Static[] = {
+        { "try_create", reinterpret_cast<PyCFunction>(InputInjector_TryCreate), METH_VARARGS, nullptr },
+        { "try_create_for_app_broadcast_only", reinterpret_cast<PyCFunction>(InputInjector_TryCreateForAppBroadcastOnly), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_InputInjector_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_InputInjector_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_InputInjector_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_InputInjector_Static =
+    {
+        "winrt._winrt_windows_ui_input_preview_injection.InputInjector_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_InputInjector_Static
     };
 
     // ----- InjectedInputPoint struct --------------------
@@ -3018,7 +3043,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input_preview_injection(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InputInjector, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_InputInjector_Static{PyType_FromSpec(&type_spec_InputInjector_Static)};
+    if (!type_InputInjector_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_InputInjector, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InputInjector_Static.get())) == -1)
     {
         return nullptr;
     }

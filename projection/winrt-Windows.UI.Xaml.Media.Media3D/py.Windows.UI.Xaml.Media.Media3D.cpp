@@ -901,7 +901,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
         _type_slots_CompositeTransform3D
     };
 
-    static PyGetSetDef getset_CompositeTransform3D_Meta[] = {
+    static PyGetSetDef getset_CompositeTransform3D_Static[] = {
         { "center_x_property", reinterpret_cast<getter>(CompositeTransform3D_get_CenterXProperty), nullptr, nullptr, nullptr },
         { "center_y_property", reinterpret_cast<getter>(CompositeTransform3D_get_CenterYProperty), nullptr, nullptr, nullptr },
         { "center_z_property", reinterpret_cast<getter>(CompositeTransform3D_get_CenterZProperty), nullptr, nullptr, nullptr },
@@ -917,20 +917,25 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
         { }
     };
 
-    static PyType_Slot type_slots_CompositeTransform3D_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_CompositeTransform3D_Meta) },
+    static PyMethodDef methods_CompositeTransform3D_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_CompositeTransform3D_Meta =
+    static PyType_Slot type_slots_CompositeTransform3D_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_media_media3d.CompositeTransform3D_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CompositeTransform3D_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CompositeTransform3D_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CompositeTransform3D_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media_media3d.CompositeTransform3D_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_CompositeTransform3D_Meta
+        type_slots_CompositeTransform3D_Static
     };
 
     // ----- Matrix3DHelper class --------------------
@@ -1165,11 +1170,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
     }
 
     static PyMethodDef _methods_Matrix3DHelper[] = {
-        { "from_elements", reinterpret_cast<PyCFunction>(Matrix3DHelper_FromElements), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_has_inverse", reinterpret_cast<PyCFunction>(Matrix3DHelper_GetHasInverse), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_is_identity", reinterpret_cast<PyCFunction>(Matrix3DHelper_GetIsIdentity), METH_VARARGS | METH_STATIC, nullptr },
-        { "invert", reinterpret_cast<PyCFunction>(Matrix3DHelper_Invert), METH_VARARGS | METH_STATIC, nullptr },
-        { "multiply", reinterpret_cast<PyCFunction>(Matrix3DHelper_Multiply), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_Matrix3DHelper, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Matrix3DHelper), METH_O | METH_STATIC, nullptr },
         { }
@@ -1197,25 +1197,35 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
         _type_slots_Matrix3DHelper
     };
 
-    static PyGetSetDef getset_Matrix3DHelper_Meta[] = {
+    static PyGetSetDef getset_Matrix3DHelper_Static[] = {
         { "identity", reinterpret_cast<getter>(Matrix3DHelper_get_Identity), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_Matrix3DHelper_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_Matrix3DHelper_Meta) },
+    static PyMethodDef methods_Matrix3DHelper_Static[] = {
+        { "from_elements", reinterpret_cast<PyCFunction>(Matrix3DHelper_FromElements), METH_VARARGS, nullptr },
+        { "get_has_inverse", reinterpret_cast<PyCFunction>(Matrix3DHelper_GetHasInverse), METH_VARARGS, nullptr },
+        { "get_is_identity", reinterpret_cast<PyCFunction>(Matrix3DHelper_GetIsIdentity), METH_VARARGS, nullptr },
+        { "invert", reinterpret_cast<PyCFunction>(Matrix3DHelper_Invert), METH_VARARGS, nullptr },
+        { "multiply", reinterpret_cast<PyCFunction>(Matrix3DHelper_Multiply), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_Matrix3DHelper_Meta =
+    static PyType_Slot type_slots_Matrix3DHelper_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_media_media3d.Matrix3DHelper_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Matrix3DHelper_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Matrix3DHelper_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Matrix3DHelper_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media_media3d.Matrix3DHelper_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Matrix3DHelper_Meta
+        type_slots_Matrix3DHelper_Static
     };
 
     // ----- PerspectiveTransform3D class --------------------
@@ -1510,27 +1520,32 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
         _type_slots_PerspectiveTransform3D
     };
 
-    static PyGetSetDef getset_PerspectiveTransform3D_Meta[] = {
+    static PyGetSetDef getset_PerspectiveTransform3D_Static[] = {
         { "depth_property", reinterpret_cast<getter>(PerspectiveTransform3D_get_DepthProperty), nullptr, nullptr, nullptr },
         { "offset_x_property", reinterpret_cast<getter>(PerspectiveTransform3D_get_OffsetXProperty), nullptr, nullptr, nullptr },
         { "offset_y_property", reinterpret_cast<getter>(PerspectiveTransform3D_get_OffsetYProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_PerspectiveTransform3D_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_PerspectiveTransform3D_Meta) },
+    static PyMethodDef methods_PerspectiveTransform3D_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_PerspectiveTransform3D_Meta =
+    static PyType_Slot type_slots_PerspectiveTransform3D_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_media_media3d.PerspectiveTransform3D_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PerspectiveTransform3D_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PerspectiveTransform3D_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PerspectiveTransform3D_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media_media3d.PerspectiveTransform3D_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PerspectiveTransform3D_Meta
+        type_slots_PerspectiveTransform3D_Static
     };
 
     // ----- Transform3D class --------------------
@@ -2299,35 +2314,35 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_media3d(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_CompositeTransform3D_Meta{PyType_FromSpec(&type_spec_CompositeTransform3D_Meta)};
-    if (!type_CompositeTransform3D_Meta)
+    py::pyobj_handle type_CompositeTransform3D_Static{PyType_FromSpec(&type_spec_CompositeTransform3D_Static)};
+    if (!type_CompositeTransform3D_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositeTransform3D, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositeTransform3D_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositeTransform3D, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositeTransform3D_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_Matrix3DHelper_Meta{PyType_FromSpec(&type_spec_Matrix3DHelper_Meta)};
-    if (!type_Matrix3DHelper_Meta)
+    py::pyobj_handle type_Matrix3DHelper_Static{PyType_FromSpec(&type_spec_Matrix3DHelper_Static)};
+    if (!type_Matrix3DHelper_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Matrix3DHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Matrix3DHelper_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Matrix3DHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Matrix3DHelper_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_PerspectiveTransform3D_Meta{PyType_FromSpec(&type_spec_PerspectiveTransform3D_Meta)};
-    if (!type_PerspectiveTransform3D_Meta)
+    py::pyobj_handle type_PerspectiveTransform3D_Static{PyType_FromSpec(&type_spec_PerspectiveTransform3D_Static)};
+    if (!type_PerspectiveTransform3D_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PerspectiveTransform3D, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PerspectiveTransform3D_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PerspectiveTransform3D, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PerspectiveTransform3D_Static.get())) == -1)
     {
         return nullptr;
     }

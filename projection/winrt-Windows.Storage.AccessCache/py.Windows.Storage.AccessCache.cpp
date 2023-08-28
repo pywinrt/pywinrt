@@ -547,8 +547,6 @@ namespace py::cpp::Windows::Storage::AccessCache
     }
 
     static PyMethodDef _methods_StorageApplicationPermissions[] = {
-        { "get_future_access_list_for_user", reinterpret_cast<PyCFunction>(StorageApplicationPermissions_GetFutureAccessListForUser), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_most_recently_used_list_for_user", reinterpret_cast<PyCFunction>(StorageApplicationPermissions_GetMostRecentlyUsedListForUser), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -573,26 +571,33 @@ namespace py::cpp::Windows::Storage::AccessCache
         _type_slots_StorageApplicationPermissions
     };
 
-    static PyGetSetDef getset_StorageApplicationPermissions_Meta[] = {
+    static PyGetSetDef getset_StorageApplicationPermissions_Static[] = {
         { "future_access_list", reinterpret_cast<getter>(StorageApplicationPermissions_get_FutureAccessList), nullptr, nullptr, nullptr },
         { "most_recently_used_list", reinterpret_cast<getter>(StorageApplicationPermissions_get_MostRecentlyUsedList), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_StorageApplicationPermissions_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_StorageApplicationPermissions_Meta) },
+    static PyMethodDef methods_StorageApplicationPermissions_Static[] = {
+        { "get_future_access_list_for_user", reinterpret_cast<PyCFunction>(StorageApplicationPermissions_GetFutureAccessListForUser), METH_VARARGS, nullptr },
+        { "get_most_recently_used_list_for_user", reinterpret_cast<PyCFunction>(StorageApplicationPermissions_GetMostRecentlyUsedListForUser), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_StorageApplicationPermissions_Meta =
+    static PyType_Slot type_slots_StorageApplicationPermissions_Static[] = 
     {
-        "winrt._winrt_windows_storage_accesscache.StorageApplicationPermissions_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_StorageApplicationPermissions_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_StorageApplicationPermissions_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_StorageApplicationPermissions_Static =
+    {
+        "winrt._winrt_windows_storage_accesscache.StorageApplicationPermissions_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_StorageApplicationPermissions_Meta
+        type_slots_StorageApplicationPermissions_Static
     };
 
     // ----- StorageItemAccessList class --------------------
@@ -2421,13 +2426,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_accesscache(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_StorageApplicationPermissions_Meta{PyType_FromSpec(&type_spec_StorageApplicationPermissions_Meta)};
-    if (!type_StorageApplicationPermissions_Meta)
+    py::pyobj_handle type_StorageApplicationPermissions_Static{PyType_FromSpec(&type_spec_StorageApplicationPermissions_Static)};
+    if (!type_StorageApplicationPermissions_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StorageApplicationPermissions, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StorageApplicationPermissions_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StorageApplicationPermissions, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StorageApplicationPermissions_Static.get())) == -1)
     {
         return nullptr;
     }

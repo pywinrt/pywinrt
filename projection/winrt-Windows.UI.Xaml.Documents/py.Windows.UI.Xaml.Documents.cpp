@@ -410,7 +410,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         _type_slots_Block
     };
 
-    static PyGetSetDef getset_Block_Meta[] = {
+    static PyGetSetDef getset_Block_Static[] = {
         { "line_height_property", reinterpret_cast<getter>(Block_get_LineHeightProperty), nullptr, nullptr, nullptr },
         { "line_stacking_strategy_property", reinterpret_cast<getter>(Block_get_LineStackingStrategyProperty), nullptr, nullptr, nullptr },
         { "margin_property", reinterpret_cast<getter>(Block_get_MarginProperty), nullptr, nullptr, nullptr },
@@ -419,20 +419,25 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         { }
     };
 
-    static PyType_Slot type_slots_Block_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_Block_Meta) },
+    static PyMethodDef methods_Block_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_Block_Meta =
+    static PyType_Slot type_slots_Block_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_documents.Block_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Block_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Block_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Block_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_documents.Block_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Block_Meta
+        type_slots_Block_Static
     };
 
     // ----- BlockCollection class --------------------
@@ -2450,7 +2455,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         _type_slots_ContentLink
     };
 
-    static PyGetSetDef getset_ContentLink_Meta[] = {
+    static PyGetSetDef getset_ContentLink_Static[] = {
         { "background_property", reinterpret_cast<getter>(ContentLink_get_BackgroundProperty), nullptr, nullptr, nullptr },
         { "cursor_property", reinterpret_cast<getter>(ContentLink_get_CursorProperty), nullptr, nullptr, nullptr },
         { "element_sound_mode_property", reinterpret_cast<getter>(ContentLink_get_ElementSoundModeProperty), nullptr, nullptr, nullptr },
@@ -2468,20 +2473,25 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         { }
     };
 
-    static PyType_Slot type_slots_ContentLink_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_ContentLink_Meta) },
+    static PyMethodDef methods_ContentLink_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_ContentLink_Meta =
+    static PyType_Slot type_slots_ContentLink_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_documents.ContentLink_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ContentLink_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ContentLink_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ContentLink_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_documents.ContentLink_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ContentLink_Meta
+        type_slots_ContentLink_Static
     };
 
     // ----- ContentLinkInvokedEventArgs class --------------------
@@ -4090,7 +4100,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         _type_slots_Glyphs
     };
 
-    static PyGetSetDef getset_Glyphs_Meta[] = {
+    static PyGetSetDef getset_Glyphs_Static[] = {
         { "fill_property", reinterpret_cast<getter>(Glyphs_get_FillProperty), nullptr, nullptr, nullptr },
         { "font_rendering_em_size_property", reinterpret_cast<getter>(Glyphs_get_FontRenderingEmSizeProperty), nullptr, nullptr, nullptr },
         { "font_uri_property", reinterpret_cast<getter>(Glyphs_get_FontUriProperty), nullptr, nullptr, nullptr },
@@ -4104,20 +4114,25 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         { }
     };
 
-    static PyType_Slot type_slots_Glyphs_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_Glyphs_Meta) },
+    static PyMethodDef methods_Glyphs_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_Glyphs_Meta =
+    static PyType_Slot type_slots_Glyphs_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_documents.Glyphs_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Glyphs_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Glyphs_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Glyphs_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_documents.Glyphs_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Glyphs_Meta
+        type_slots_Glyphs_Static
     };
 
     // ----- Hyperlink class --------------------
@@ -5288,7 +5303,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         _type_slots_Hyperlink
     };
 
-    static PyGetSetDef getset_Hyperlink_Meta[] = {
+    static PyGetSetDef getset_Hyperlink_Static[] = {
         { "navigate_uri_property", reinterpret_cast<getter>(Hyperlink_get_NavigateUriProperty), nullptr, nullptr, nullptr },
         { "underline_style_property", reinterpret_cast<getter>(Hyperlink_get_UnderlineStyleProperty), nullptr, nullptr, nullptr },
         { "element_sound_mode_property", reinterpret_cast<getter>(Hyperlink_get_ElementSoundModeProperty), nullptr, nullptr, nullptr },
@@ -5306,20 +5321,25 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         { }
     };
 
-    static PyType_Slot type_slots_Hyperlink_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_Hyperlink_Meta) },
+    static PyMethodDef methods_Hyperlink_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_Hyperlink_Meta =
+    static PyType_Slot type_slots_Hyperlink_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_documents.Hyperlink_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Hyperlink_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Hyperlink_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Hyperlink_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_documents.Hyperlink_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Hyperlink_Meta
+        type_slots_Hyperlink_Static
     };
 
     // ----- HyperlinkClickEventArgs class --------------------
@@ -6576,25 +6596,30 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         _type_slots_Paragraph
     };
 
-    static PyGetSetDef getset_Paragraph_Meta[] = {
+    static PyGetSetDef getset_Paragraph_Static[] = {
         { "text_indent_property", reinterpret_cast<getter>(Paragraph_get_TextIndentProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_Paragraph_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_Paragraph_Meta) },
+    static PyMethodDef methods_Paragraph_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_Paragraph_Meta =
+    static PyType_Slot type_slots_Paragraph_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_documents.Paragraph_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Paragraph_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Paragraph_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Paragraph_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_documents.Paragraph_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Paragraph_Meta
+        type_slots_Paragraph_Static
     };
 
     // ----- PlaceContentLinkProvider class --------------------
@@ -6894,25 +6919,30 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         _type_slots_Run
     };
 
-    static PyGetSetDef getset_Run_Meta[] = {
+    static PyGetSetDef getset_Run_Static[] = {
         { "flow_direction_property", reinterpret_cast<getter>(Run_get_FlowDirectionProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_Run_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_Run_Meta) },
+    static PyMethodDef methods_Run_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_Run_Meta =
+    static PyType_Slot type_slots_Run_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_documents.Run_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Run_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Run_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Run_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_documents.Run_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Run_Meta
+        type_slots_Run_Static
     };
 
     // ----- Span class --------------------
@@ -8675,7 +8705,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         _type_slots_TextElement
     };
 
-    static PyGetSetDef getset_TextElement_Meta[] = {
+    static PyGetSetDef getset_TextElement_Static[] = {
         { "character_spacing_property", reinterpret_cast<getter>(TextElement_get_CharacterSpacingProperty), nullptr, nullptr, nullptr },
         { "font_family_property", reinterpret_cast<getter>(TextElement_get_FontFamilyProperty), nullptr, nullptr, nullptr },
         { "font_size_property", reinterpret_cast<getter>(TextElement_get_FontSizeProperty), nullptr, nullptr, nullptr },
@@ -8697,20 +8727,25 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         { }
     };
 
-    static PyType_Slot type_slots_TextElement_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_TextElement_Meta) },
+    static PyMethodDef methods_TextElement_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_TextElement_Meta =
+    static PyType_Slot type_slots_TextElement_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_documents.TextElement_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_TextElement_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_TextElement_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_TextElement_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_documents.TextElement_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_TextElement_Meta
+        type_slots_TextElement_Static
     };
 
     // ----- TextHighlighter class --------------------
@@ -8958,26 +8993,31 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         _type_slots_TextHighlighter
     };
 
-    static PyGetSetDef getset_TextHighlighter_Meta[] = {
+    static PyGetSetDef getset_TextHighlighter_Static[] = {
         { "background_property", reinterpret_cast<getter>(TextHighlighter_get_BackgroundProperty), nullptr, nullptr, nullptr },
         { "foreground_property", reinterpret_cast<getter>(TextHighlighter_get_ForegroundProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_TextHighlighter_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_TextHighlighter_Meta) },
+    static PyMethodDef methods_TextHighlighter_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_TextHighlighter_Meta =
+    static PyType_Slot type_slots_TextHighlighter_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_documents.TextHighlighter_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_TextHighlighter_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_TextHighlighter_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_TextHighlighter_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_documents.TextHighlighter_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_TextHighlighter_Meta
+        type_slots_TextHighlighter_Static
     };
 
     // ----- TextHighlighterBase class --------------------
@@ -12874,92 +12914,6 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     }
 
     static PyMethodDef _methods_Typography[] = {
-        { "get_annotation_alternates", reinterpret_cast<PyCFunction>(Typography_GetAnnotationAlternates), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_capital_spacing", reinterpret_cast<PyCFunction>(Typography_GetCapitalSpacing), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_capitals", reinterpret_cast<PyCFunction>(Typography_GetCapitals), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_case_sensitive_forms", reinterpret_cast<PyCFunction>(Typography_GetCaseSensitiveForms), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_contextual_alternates", reinterpret_cast<PyCFunction>(Typography_GetContextualAlternates), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_contextual_ligatures", reinterpret_cast<PyCFunction>(Typography_GetContextualLigatures), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_contextual_swashes", reinterpret_cast<PyCFunction>(Typography_GetContextualSwashes), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_discretionary_ligatures", reinterpret_cast<PyCFunction>(Typography_GetDiscretionaryLigatures), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_east_asian_expert_forms", reinterpret_cast<PyCFunction>(Typography_GetEastAsianExpertForms), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_east_asian_language", reinterpret_cast<PyCFunction>(Typography_GetEastAsianLanguage), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_east_asian_widths", reinterpret_cast<PyCFunction>(Typography_GetEastAsianWidths), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_fraction", reinterpret_cast<PyCFunction>(Typography_GetFraction), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_historical_forms", reinterpret_cast<PyCFunction>(Typography_GetHistoricalForms), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_historical_ligatures", reinterpret_cast<PyCFunction>(Typography_GetHistoricalLigatures), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_kerning", reinterpret_cast<PyCFunction>(Typography_GetKerning), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_mathematical_greek", reinterpret_cast<PyCFunction>(Typography_GetMathematicalGreek), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_numeral_alignment", reinterpret_cast<PyCFunction>(Typography_GetNumeralAlignment), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_numeral_style", reinterpret_cast<PyCFunction>(Typography_GetNumeralStyle), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_slashed_zero", reinterpret_cast<PyCFunction>(Typography_GetSlashedZero), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_standard_ligatures", reinterpret_cast<PyCFunction>(Typography_GetStandardLigatures), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_standard_swashes", reinterpret_cast<PyCFunction>(Typography_GetStandardSwashes), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_stylistic_alternates", reinterpret_cast<PyCFunction>(Typography_GetStylisticAlternates), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_stylistic_set1", reinterpret_cast<PyCFunction>(Typography_GetStylisticSet1), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_stylistic_set10", reinterpret_cast<PyCFunction>(Typography_GetStylisticSet10), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_stylistic_set11", reinterpret_cast<PyCFunction>(Typography_GetStylisticSet11), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_stylistic_set12", reinterpret_cast<PyCFunction>(Typography_GetStylisticSet12), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_stylistic_set13", reinterpret_cast<PyCFunction>(Typography_GetStylisticSet13), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_stylistic_set14", reinterpret_cast<PyCFunction>(Typography_GetStylisticSet14), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_stylistic_set15", reinterpret_cast<PyCFunction>(Typography_GetStylisticSet15), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_stylistic_set16", reinterpret_cast<PyCFunction>(Typography_GetStylisticSet16), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_stylistic_set17", reinterpret_cast<PyCFunction>(Typography_GetStylisticSet17), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_stylistic_set18", reinterpret_cast<PyCFunction>(Typography_GetStylisticSet18), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_stylistic_set19", reinterpret_cast<PyCFunction>(Typography_GetStylisticSet19), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_stylistic_set2", reinterpret_cast<PyCFunction>(Typography_GetStylisticSet2), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_stylistic_set20", reinterpret_cast<PyCFunction>(Typography_GetStylisticSet20), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_stylistic_set3", reinterpret_cast<PyCFunction>(Typography_GetStylisticSet3), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_stylistic_set4", reinterpret_cast<PyCFunction>(Typography_GetStylisticSet4), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_stylistic_set5", reinterpret_cast<PyCFunction>(Typography_GetStylisticSet5), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_stylistic_set6", reinterpret_cast<PyCFunction>(Typography_GetStylisticSet6), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_stylistic_set7", reinterpret_cast<PyCFunction>(Typography_GetStylisticSet7), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_stylistic_set8", reinterpret_cast<PyCFunction>(Typography_GetStylisticSet8), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_stylistic_set9", reinterpret_cast<PyCFunction>(Typography_GetStylisticSet9), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_variants", reinterpret_cast<PyCFunction>(Typography_GetVariants), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_annotation_alternates", reinterpret_cast<PyCFunction>(Typography_SetAnnotationAlternates), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_capital_spacing", reinterpret_cast<PyCFunction>(Typography_SetCapitalSpacing), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_capitals", reinterpret_cast<PyCFunction>(Typography_SetCapitals), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_case_sensitive_forms", reinterpret_cast<PyCFunction>(Typography_SetCaseSensitiveForms), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_contextual_alternates", reinterpret_cast<PyCFunction>(Typography_SetContextualAlternates), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_contextual_ligatures", reinterpret_cast<PyCFunction>(Typography_SetContextualLigatures), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_contextual_swashes", reinterpret_cast<PyCFunction>(Typography_SetContextualSwashes), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_discretionary_ligatures", reinterpret_cast<PyCFunction>(Typography_SetDiscretionaryLigatures), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_east_asian_expert_forms", reinterpret_cast<PyCFunction>(Typography_SetEastAsianExpertForms), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_east_asian_language", reinterpret_cast<PyCFunction>(Typography_SetEastAsianLanguage), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_east_asian_widths", reinterpret_cast<PyCFunction>(Typography_SetEastAsianWidths), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_fraction", reinterpret_cast<PyCFunction>(Typography_SetFraction), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_historical_forms", reinterpret_cast<PyCFunction>(Typography_SetHistoricalForms), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_historical_ligatures", reinterpret_cast<PyCFunction>(Typography_SetHistoricalLigatures), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_kerning", reinterpret_cast<PyCFunction>(Typography_SetKerning), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_mathematical_greek", reinterpret_cast<PyCFunction>(Typography_SetMathematicalGreek), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_numeral_alignment", reinterpret_cast<PyCFunction>(Typography_SetNumeralAlignment), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_numeral_style", reinterpret_cast<PyCFunction>(Typography_SetNumeralStyle), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_slashed_zero", reinterpret_cast<PyCFunction>(Typography_SetSlashedZero), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_standard_ligatures", reinterpret_cast<PyCFunction>(Typography_SetStandardLigatures), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_standard_swashes", reinterpret_cast<PyCFunction>(Typography_SetStandardSwashes), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_stylistic_alternates", reinterpret_cast<PyCFunction>(Typography_SetStylisticAlternates), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_stylistic_set1", reinterpret_cast<PyCFunction>(Typography_SetStylisticSet1), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_stylistic_set10", reinterpret_cast<PyCFunction>(Typography_SetStylisticSet10), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_stylistic_set11", reinterpret_cast<PyCFunction>(Typography_SetStylisticSet11), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_stylistic_set12", reinterpret_cast<PyCFunction>(Typography_SetStylisticSet12), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_stylistic_set13", reinterpret_cast<PyCFunction>(Typography_SetStylisticSet13), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_stylistic_set14", reinterpret_cast<PyCFunction>(Typography_SetStylisticSet14), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_stylistic_set15", reinterpret_cast<PyCFunction>(Typography_SetStylisticSet15), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_stylistic_set16", reinterpret_cast<PyCFunction>(Typography_SetStylisticSet16), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_stylistic_set17", reinterpret_cast<PyCFunction>(Typography_SetStylisticSet17), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_stylistic_set18", reinterpret_cast<PyCFunction>(Typography_SetStylisticSet18), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_stylistic_set19", reinterpret_cast<PyCFunction>(Typography_SetStylisticSet19), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_stylistic_set2", reinterpret_cast<PyCFunction>(Typography_SetStylisticSet2), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_stylistic_set20", reinterpret_cast<PyCFunction>(Typography_SetStylisticSet20), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_stylistic_set3", reinterpret_cast<PyCFunction>(Typography_SetStylisticSet3), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_stylistic_set4", reinterpret_cast<PyCFunction>(Typography_SetStylisticSet4), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_stylistic_set5", reinterpret_cast<PyCFunction>(Typography_SetStylisticSet5), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_stylistic_set6", reinterpret_cast<PyCFunction>(Typography_SetStylisticSet6), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_stylistic_set7", reinterpret_cast<PyCFunction>(Typography_SetStylisticSet7), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_stylistic_set8", reinterpret_cast<PyCFunction>(Typography_SetStylisticSet8), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_stylistic_set9", reinterpret_cast<PyCFunction>(Typography_SetStylisticSet9), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_variants", reinterpret_cast<PyCFunction>(Typography_SetVariants), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_Typography, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Typography), METH_O | METH_STATIC, nullptr },
         { }
@@ -12987,7 +12941,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         _type_slots_Typography
     };
 
-    static PyGetSetDef getset_Typography_Meta[] = {
+    static PyGetSetDef getset_Typography_Static[] = {
         { "annotation_alternates_property", reinterpret_cast<getter>(Typography_get_AnnotationAlternatesProperty), nullptr, nullptr, nullptr },
         { "capital_spacing_property", reinterpret_cast<getter>(Typography_get_CapitalSpacingProperty), nullptr, nullptr, nullptr },
         { "capitals_property", reinterpret_cast<getter>(Typography_get_CapitalsProperty), nullptr, nullptr, nullptr },
@@ -13034,20 +12988,111 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         { }
     };
 
-    static PyType_Slot type_slots_Typography_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_Typography_Meta) },
+    static PyMethodDef methods_Typography_Static[] = {
+        { "get_annotation_alternates", reinterpret_cast<PyCFunction>(Typography_GetAnnotationAlternates), METH_VARARGS, nullptr },
+        { "get_capital_spacing", reinterpret_cast<PyCFunction>(Typography_GetCapitalSpacing), METH_VARARGS, nullptr },
+        { "get_capitals", reinterpret_cast<PyCFunction>(Typography_GetCapitals), METH_VARARGS, nullptr },
+        { "get_case_sensitive_forms", reinterpret_cast<PyCFunction>(Typography_GetCaseSensitiveForms), METH_VARARGS, nullptr },
+        { "get_contextual_alternates", reinterpret_cast<PyCFunction>(Typography_GetContextualAlternates), METH_VARARGS, nullptr },
+        { "get_contextual_ligatures", reinterpret_cast<PyCFunction>(Typography_GetContextualLigatures), METH_VARARGS, nullptr },
+        { "get_contextual_swashes", reinterpret_cast<PyCFunction>(Typography_GetContextualSwashes), METH_VARARGS, nullptr },
+        { "get_discretionary_ligatures", reinterpret_cast<PyCFunction>(Typography_GetDiscretionaryLigatures), METH_VARARGS, nullptr },
+        { "get_east_asian_expert_forms", reinterpret_cast<PyCFunction>(Typography_GetEastAsianExpertForms), METH_VARARGS, nullptr },
+        { "get_east_asian_language", reinterpret_cast<PyCFunction>(Typography_GetEastAsianLanguage), METH_VARARGS, nullptr },
+        { "get_east_asian_widths", reinterpret_cast<PyCFunction>(Typography_GetEastAsianWidths), METH_VARARGS, nullptr },
+        { "get_fraction", reinterpret_cast<PyCFunction>(Typography_GetFraction), METH_VARARGS, nullptr },
+        { "get_historical_forms", reinterpret_cast<PyCFunction>(Typography_GetHistoricalForms), METH_VARARGS, nullptr },
+        { "get_historical_ligatures", reinterpret_cast<PyCFunction>(Typography_GetHistoricalLigatures), METH_VARARGS, nullptr },
+        { "get_kerning", reinterpret_cast<PyCFunction>(Typography_GetKerning), METH_VARARGS, nullptr },
+        { "get_mathematical_greek", reinterpret_cast<PyCFunction>(Typography_GetMathematicalGreek), METH_VARARGS, nullptr },
+        { "get_numeral_alignment", reinterpret_cast<PyCFunction>(Typography_GetNumeralAlignment), METH_VARARGS, nullptr },
+        { "get_numeral_style", reinterpret_cast<PyCFunction>(Typography_GetNumeralStyle), METH_VARARGS, nullptr },
+        { "get_slashed_zero", reinterpret_cast<PyCFunction>(Typography_GetSlashedZero), METH_VARARGS, nullptr },
+        { "get_standard_ligatures", reinterpret_cast<PyCFunction>(Typography_GetStandardLigatures), METH_VARARGS, nullptr },
+        { "get_standard_swashes", reinterpret_cast<PyCFunction>(Typography_GetStandardSwashes), METH_VARARGS, nullptr },
+        { "get_stylistic_alternates", reinterpret_cast<PyCFunction>(Typography_GetStylisticAlternates), METH_VARARGS, nullptr },
+        { "get_stylistic_set1", reinterpret_cast<PyCFunction>(Typography_GetStylisticSet1), METH_VARARGS, nullptr },
+        { "get_stylistic_set10", reinterpret_cast<PyCFunction>(Typography_GetStylisticSet10), METH_VARARGS, nullptr },
+        { "get_stylistic_set11", reinterpret_cast<PyCFunction>(Typography_GetStylisticSet11), METH_VARARGS, nullptr },
+        { "get_stylistic_set12", reinterpret_cast<PyCFunction>(Typography_GetStylisticSet12), METH_VARARGS, nullptr },
+        { "get_stylistic_set13", reinterpret_cast<PyCFunction>(Typography_GetStylisticSet13), METH_VARARGS, nullptr },
+        { "get_stylistic_set14", reinterpret_cast<PyCFunction>(Typography_GetStylisticSet14), METH_VARARGS, nullptr },
+        { "get_stylistic_set15", reinterpret_cast<PyCFunction>(Typography_GetStylisticSet15), METH_VARARGS, nullptr },
+        { "get_stylistic_set16", reinterpret_cast<PyCFunction>(Typography_GetStylisticSet16), METH_VARARGS, nullptr },
+        { "get_stylistic_set17", reinterpret_cast<PyCFunction>(Typography_GetStylisticSet17), METH_VARARGS, nullptr },
+        { "get_stylistic_set18", reinterpret_cast<PyCFunction>(Typography_GetStylisticSet18), METH_VARARGS, nullptr },
+        { "get_stylistic_set19", reinterpret_cast<PyCFunction>(Typography_GetStylisticSet19), METH_VARARGS, nullptr },
+        { "get_stylistic_set2", reinterpret_cast<PyCFunction>(Typography_GetStylisticSet2), METH_VARARGS, nullptr },
+        { "get_stylistic_set20", reinterpret_cast<PyCFunction>(Typography_GetStylisticSet20), METH_VARARGS, nullptr },
+        { "get_stylistic_set3", reinterpret_cast<PyCFunction>(Typography_GetStylisticSet3), METH_VARARGS, nullptr },
+        { "get_stylistic_set4", reinterpret_cast<PyCFunction>(Typography_GetStylisticSet4), METH_VARARGS, nullptr },
+        { "get_stylistic_set5", reinterpret_cast<PyCFunction>(Typography_GetStylisticSet5), METH_VARARGS, nullptr },
+        { "get_stylistic_set6", reinterpret_cast<PyCFunction>(Typography_GetStylisticSet6), METH_VARARGS, nullptr },
+        { "get_stylistic_set7", reinterpret_cast<PyCFunction>(Typography_GetStylisticSet7), METH_VARARGS, nullptr },
+        { "get_stylistic_set8", reinterpret_cast<PyCFunction>(Typography_GetStylisticSet8), METH_VARARGS, nullptr },
+        { "get_stylistic_set9", reinterpret_cast<PyCFunction>(Typography_GetStylisticSet9), METH_VARARGS, nullptr },
+        { "get_variants", reinterpret_cast<PyCFunction>(Typography_GetVariants), METH_VARARGS, nullptr },
+        { "set_annotation_alternates", reinterpret_cast<PyCFunction>(Typography_SetAnnotationAlternates), METH_VARARGS, nullptr },
+        { "set_capital_spacing", reinterpret_cast<PyCFunction>(Typography_SetCapitalSpacing), METH_VARARGS, nullptr },
+        { "set_capitals", reinterpret_cast<PyCFunction>(Typography_SetCapitals), METH_VARARGS, nullptr },
+        { "set_case_sensitive_forms", reinterpret_cast<PyCFunction>(Typography_SetCaseSensitiveForms), METH_VARARGS, nullptr },
+        { "set_contextual_alternates", reinterpret_cast<PyCFunction>(Typography_SetContextualAlternates), METH_VARARGS, nullptr },
+        { "set_contextual_ligatures", reinterpret_cast<PyCFunction>(Typography_SetContextualLigatures), METH_VARARGS, nullptr },
+        { "set_contextual_swashes", reinterpret_cast<PyCFunction>(Typography_SetContextualSwashes), METH_VARARGS, nullptr },
+        { "set_discretionary_ligatures", reinterpret_cast<PyCFunction>(Typography_SetDiscretionaryLigatures), METH_VARARGS, nullptr },
+        { "set_east_asian_expert_forms", reinterpret_cast<PyCFunction>(Typography_SetEastAsianExpertForms), METH_VARARGS, nullptr },
+        { "set_east_asian_language", reinterpret_cast<PyCFunction>(Typography_SetEastAsianLanguage), METH_VARARGS, nullptr },
+        { "set_east_asian_widths", reinterpret_cast<PyCFunction>(Typography_SetEastAsianWidths), METH_VARARGS, nullptr },
+        { "set_fraction", reinterpret_cast<PyCFunction>(Typography_SetFraction), METH_VARARGS, nullptr },
+        { "set_historical_forms", reinterpret_cast<PyCFunction>(Typography_SetHistoricalForms), METH_VARARGS, nullptr },
+        { "set_historical_ligatures", reinterpret_cast<PyCFunction>(Typography_SetHistoricalLigatures), METH_VARARGS, nullptr },
+        { "set_kerning", reinterpret_cast<PyCFunction>(Typography_SetKerning), METH_VARARGS, nullptr },
+        { "set_mathematical_greek", reinterpret_cast<PyCFunction>(Typography_SetMathematicalGreek), METH_VARARGS, nullptr },
+        { "set_numeral_alignment", reinterpret_cast<PyCFunction>(Typography_SetNumeralAlignment), METH_VARARGS, nullptr },
+        { "set_numeral_style", reinterpret_cast<PyCFunction>(Typography_SetNumeralStyle), METH_VARARGS, nullptr },
+        { "set_slashed_zero", reinterpret_cast<PyCFunction>(Typography_SetSlashedZero), METH_VARARGS, nullptr },
+        { "set_standard_ligatures", reinterpret_cast<PyCFunction>(Typography_SetStandardLigatures), METH_VARARGS, nullptr },
+        { "set_standard_swashes", reinterpret_cast<PyCFunction>(Typography_SetStandardSwashes), METH_VARARGS, nullptr },
+        { "set_stylistic_alternates", reinterpret_cast<PyCFunction>(Typography_SetStylisticAlternates), METH_VARARGS, nullptr },
+        { "set_stylistic_set1", reinterpret_cast<PyCFunction>(Typography_SetStylisticSet1), METH_VARARGS, nullptr },
+        { "set_stylistic_set10", reinterpret_cast<PyCFunction>(Typography_SetStylisticSet10), METH_VARARGS, nullptr },
+        { "set_stylistic_set11", reinterpret_cast<PyCFunction>(Typography_SetStylisticSet11), METH_VARARGS, nullptr },
+        { "set_stylistic_set12", reinterpret_cast<PyCFunction>(Typography_SetStylisticSet12), METH_VARARGS, nullptr },
+        { "set_stylistic_set13", reinterpret_cast<PyCFunction>(Typography_SetStylisticSet13), METH_VARARGS, nullptr },
+        { "set_stylistic_set14", reinterpret_cast<PyCFunction>(Typography_SetStylisticSet14), METH_VARARGS, nullptr },
+        { "set_stylistic_set15", reinterpret_cast<PyCFunction>(Typography_SetStylisticSet15), METH_VARARGS, nullptr },
+        { "set_stylistic_set16", reinterpret_cast<PyCFunction>(Typography_SetStylisticSet16), METH_VARARGS, nullptr },
+        { "set_stylistic_set17", reinterpret_cast<PyCFunction>(Typography_SetStylisticSet17), METH_VARARGS, nullptr },
+        { "set_stylistic_set18", reinterpret_cast<PyCFunction>(Typography_SetStylisticSet18), METH_VARARGS, nullptr },
+        { "set_stylistic_set19", reinterpret_cast<PyCFunction>(Typography_SetStylisticSet19), METH_VARARGS, nullptr },
+        { "set_stylistic_set2", reinterpret_cast<PyCFunction>(Typography_SetStylisticSet2), METH_VARARGS, nullptr },
+        { "set_stylistic_set20", reinterpret_cast<PyCFunction>(Typography_SetStylisticSet20), METH_VARARGS, nullptr },
+        { "set_stylistic_set3", reinterpret_cast<PyCFunction>(Typography_SetStylisticSet3), METH_VARARGS, nullptr },
+        { "set_stylistic_set4", reinterpret_cast<PyCFunction>(Typography_SetStylisticSet4), METH_VARARGS, nullptr },
+        { "set_stylistic_set5", reinterpret_cast<PyCFunction>(Typography_SetStylisticSet5), METH_VARARGS, nullptr },
+        { "set_stylistic_set6", reinterpret_cast<PyCFunction>(Typography_SetStylisticSet6), METH_VARARGS, nullptr },
+        { "set_stylistic_set7", reinterpret_cast<PyCFunction>(Typography_SetStylisticSet7), METH_VARARGS, nullptr },
+        { "set_stylistic_set8", reinterpret_cast<PyCFunction>(Typography_SetStylisticSet8), METH_VARARGS, nullptr },
+        { "set_stylistic_set9", reinterpret_cast<PyCFunction>(Typography_SetStylisticSet9), METH_VARARGS, nullptr },
+        { "set_variants", reinterpret_cast<PyCFunction>(Typography_SetVariants), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_Typography_Meta =
+    static PyType_Slot type_slots_Typography_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_documents.Typography_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Typography_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Typography_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Typography_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_documents.Typography_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Typography_Meta
+        type_slots_Typography_Static
     };
 
     // ----- Underline class --------------------
@@ -13348,13 +13393,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_documents(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_Block_Meta{PyType_FromSpec(&type_spec_Block_Meta)};
-    if (!type_Block_Meta)
+    py::pyobj_handle type_Block_Static{PyType_FromSpec(&type_spec_Block_Static)};
+    if (!type_Block_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Block, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Block_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Block, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Block_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -13374,13 +13419,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_documents(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_ContentLink_Meta{PyType_FromSpec(&type_spec_ContentLink_Meta)};
-    if (!type_ContentLink_Meta)
+    py::pyobj_handle type_ContentLink_Static{PyType_FromSpec(&type_spec_ContentLink_Static)};
+    if (!type_ContentLink_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContentLink, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContentLink_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContentLink, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContentLink_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -13400,24 +13445,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_documents(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_Glyphs_Meta{PyType_FromSpec(&type_spec_Glyphs_Meta)};
-    if (!type_Glyphs_Meta)
+    py::pyobj_handle type_Glyphs_Static{PyType_FromSpec(&type_spec_Glyphs_Static)};
+    if (!type_Glyphs_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Glyphs, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Glyphs_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Glyphs, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Glyphs_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_Hyperlink_Meta{PyType_FromSpec(&type_spec_Hyperlink_Meta)};
-    if (!type_Hyperlink_Meta)
+    py::pyobj_handle type_Hyperlink_Static{PyType_FromSpec(&type_spec_Hyperlink_Static)};
+    if (!type_Hyperlink_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Hyperlink, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Hyperlink_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Hyperlink, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Hyperlink_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -13452,13 +13497,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_documents(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_Paragraph_Meta{PyType_FromSpec(&type_spec_Paragraph_Meta)};
-    if (!type_Paragraph_Meta)
+    py::pyobj_handle type_Paragraph_Static{PyType_FromSpec(&type_spec_Paragraph_Static)};
+    if (!type_Paragraph_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Paragraph, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Paragraph_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Paragraph, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Paragraph_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -13468,13 +13513,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_documents(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_Run_Meta{PyType_FromSpec(&type_spec_Run_Meta)};
-    if (!type_Run_Meta)
+    py::pyobj_handle type_Run_Static{PyType_FromSpec(&type_spec_Run_Static)};
+    if (!type_Run_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Run, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Run_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Run, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Run_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -13484,24 +13529,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_documents(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_TextElement_Meta{PyType_FromSpec(&type_spec_TextElement_Meta)};
-    if (!type_TextElement_Meta)
+    py::pyobj_handle type_TextElement_Static{PyType_FromSpec(&type_spec_TextElement_Static)};
+    if (!type_TextElement_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_TextElement, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TextElement_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TextElement, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TextElement_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_TextHighlighter_Meta{PyType_FromSpec(&type_spec_TextHighlighter_Meta)};
-    if (!type_TextHighlighter_Meta)
+    py::pyobj_handle type_TextHighlighter_Static{PyType_FromSpec(&type_spec_TextHighlighter_Static)};
+    if (!type_TextHighlighter_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_TextHighlighter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TextHighlighter_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TextHighlighter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TextHighlighter_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -13516,13 +13561,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_documents(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_Typography_Meta{PyType_FromSpec(&type_spec_Typography_Meta)};
-    if (!type_Typography_Meta)
+    py::pyobj_handle type_Typography_Static{PyType_FromSpec(&type_spec_Typography_Static)};
+    if (!type_Typography_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Typography, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Typography_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Typography, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Typography_Static.get())) == -1)
     {
         return nullptr;
     }

@@ -18,11 +18,12 @@ from winrt.windows.system.diagnostics.deviceportal import DevicePortalConnection
 
 Self = typing.TypeVar('Self')
 
-class DevicePortalConnection(winrt.system.Object):
+class DevicePortalConnection_Static(type):
+    def get_for_app_service_connection(cls, app_service_connection: typing.Optional[winrt.windows.applicationmodel.appservice.AppServiceConnection], /) -> typing.Optional[DevicePortalConnection]: ...
+
+class DevicePortalConnection(winrt.system.Object, metaclass=DevicePortalConnection_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DevicePortalConnection: ...
-    @staticmethod
-    def get_for_app_service_connection(app_service_connection: typing.Optional[winrt.windows.applicationmodel.appservice.AppServiceConnection], /) -> typing.Optional[DevicePortalConnection]: ...
     @typing.overload
     def get_server_message_web_socket_for_request(self, request: typing.Optional[winrt.windows.web.http.HttpRequestMessage], /) -> typing.Optional[winrt.windows.networking.sockets.ServerMessageWebSocket]: ...
     @typing.overload

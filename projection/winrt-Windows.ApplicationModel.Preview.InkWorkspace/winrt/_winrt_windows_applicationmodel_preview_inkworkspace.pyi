@@ -13,10 +13,11 @@ import winrt.windows.graphics.imaging
 
 Self = typing.TypeVar('Self')
 
-class InkWorkspaceHostedAppManager(winrt.system.Object):
+class InkWorkspaceHostedAppManager_Static(type):
+    def get_for_current_app(cls) -> typing.Optional[InkWorkspaceHostedAppManager]: ...
+
+class InkWorkspaceHostedAppManager(winrt.system.Object, metaclass=InkWorkspaceHostedAppManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InkWorkspaceHostedAppManager: ...
-    @staticmethod
-    def get_for_current_app() -> typing.Optional[InkWorkspaceHostedAppManager]: ...
     def set_thumbnail_async(self, bitmap: typing.Optional[winrt.windows.graphics.imaging.SoftwareBitmap], /) -> winrt.windows.foundation.IAsyncAction: ...
 

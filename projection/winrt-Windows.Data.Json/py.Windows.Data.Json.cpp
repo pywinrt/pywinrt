@@ -1083,14 +1083,12 @@ namespace py::cpp::Windows::Data::Json
         { "get_view", reinterpret_cast<PyCFunction>(JsonArray_GetView), METH_VARARGS, nullptr },
         { "index_of", reinterpret_cast<PyCFunction>(JsonArray_IndexOf), METH_VARARGS, nullptr },
         { "insert_at", reinterpret_cast<PyCFunction>(JsonArray_InsertAt), METH_VARARGS, nullptr },
-        { "parse", reinterpret_cast<PyCFunction>(JsonArray_Parse), METH_VARARGS | METH_STATIC, nullptr },
         { "remove_at", reinterpret_cast<PyCFunction>(JsonArray_RemoveAt), METH_VARARGS, nullptr },
         { "remove_at_end", reinterpret_cast<PyCFunction>(JsonArray_RemoveAtEnd), METH_VARARGS, nullptr },
         { "replace_all", reinterpret_cast<PyCFunction>(JsonArray_ReplaceAll), METH_VARARGS, nullptr },
         { "set_at", reinterpret_cast<PyCFunction>(JsonArray_SetAt), METH_VARARGS, nullptr },
         { "stringify", reinterpret_cast<PyCFunction>(JsonArray_Stringify), METH_VARARGS, nullptr },
         { "to_string", reinterpret_cast<PyCFunction>(JsonArray_ToString), METH_VARARGS, nullptr },
-        { "try_parse", reinterpret_cast<PyCFunction>(JsonArray_TryParse), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_JsonArray, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_JsonArray), METH_O | METH_STATIC, nullptr },
         { }
@@ -1124,6 +1122,33 @@ namespace py::cpp::Windows::Data::Json
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_JsonArray
+    };
+
+    static PyGetSetDef getset_JsonArray_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_JsonArray_Static[] = {
+        { "parse", reinterpret_cast<PyCFunction>(JsonArray_Parse), METH_VARARGS, nullptr },
+        { "try_parse", reinterpret_cast<PyCFunction>(JsonArray_TryParse), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_JsonArray_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_JsonArray_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_JsonArray_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_JsonArray_Static =
+    {
+        "winrt._winrt_windows_data_json.JsonArray_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_JsonArray_Static
     };
 
     // ----- JsonError class --------------------
@@ -1167,7 +1192,6 @@ namespace py::cpp::Windows::Data::Json
     }
 
     static PyMethodDef _methods_JsonError[] = {
-        { "get_json_status", reinterpret_cast<PyCFunction>(JsonError_GetJsonStatus), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -1190,6 +1214,32 @@ namespace py::cpp::Windows::Data::Json
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_JsonError
+    };
+
+    static PyGetSetDef getset_JsonError_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_JsonError_Static[] = {
+        { "get_json_status", reinterpret_cast<PyCFunction>(JsonError_GetJsonStatus), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_JsonError_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_JsonError_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_JsonError_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_JsonError_Static =
+    {
+        "winrt._winrt_windows_data_json.JsonError_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_JsonError_Static
     };
 
     // ----- JsonObject class --------------------
@@ -2253,12 +2303,10 @@ namespace py::cpp::Windows::Data::Json
         { "has_key", reinterpret_cast<PyCFunction>(JsonObject_HasKey), METH_VARARGS, nullptr },
         { "insert", reinterpret_cast<PyCFunction>(JsonObject_Insert), METH_VARARGS, nullptr },
         { "lookup", reinterpret_cast<PyCFunction>(JsonObject_Lookup), METH_VARARGS, nullptr },
-        { "parse", reinterpret_cast<PyCFunction>(JsonObject_Parse), METH_VARARGS | METH_STATIC, nullptr },
         { "remove", reinterpret_cast<PyCFunction>(JsonObject_Remove), METH_VARARGS, nullptr },
         { "set_named_value", reinterpret_cast<PyCFunction>(JsonObject_SetNamedValue), METH_VARARGS, nullptr },
         { "stringify", reinterpret_cast<PyCFunction>(JsonObject_Stringify), METH_VARARGS, nullptr },
         { "to_string", reinterpret_cast<PyCFunction>(JsonObject_ToString), METH_VARARGS, nullptr },
-        { "try_parse", reinterpret_cast<PyCFunction>(JsonObject_TryParse), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_JsonObject, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_JsonObject), METH_O | METH_STATIC, nullptr },
         { }
@@ -2292,6 +2340,33 @@ namespace py::cpp::Windows::Data::Json
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_JsonObject
+    };
+
+    static PyGetSetDef getset_JsonObject_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_JsonObject_Static[] = {
+        { "parse", reinterpret_cast<PyCFunction>(JsonObject_Parse), METH_VARARGS, nullptr },
+        { "try_parse", reinterpret_cast<PyCFunction>(JsonObject_TryParse), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_JsonObject_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_JsonObject_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_JsonObject_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_JsonObject_Static =
+    {
+        "winrt._winrt_windows_data_json.JsonObject_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_JsonObject_Static
     };
 
     // ----- JsonValue class --------------------
@@ -2768,19 +2843,13 @@ namespace py::cpp::Windows::Data::Json
     }
 
     static PyMethodDef _methods_JsonValue[] = {
-        { "create_boolean_value", reinterpret_cast<PyCFunction>(JsonValue_CreateBooleanValue), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_null_value", reinterpret_cast<PyCFunction>(JsonValue_CreateNullValue), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_number_value", reinterpret_cast<PyCFunction>(JsonValue_CreateNumberValue), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_string_value", reinterpret_cast<PyCFunction>(JsonValue_CreateStringValue), METH_VARARGS | METH_STATIC, nullptr },
         { "get_array", reinterpret_cast<PyCFunction>(JsonValue_GetArray), METH_VARARGS, nullptr },
         { "get_boolean", reinterpret_cast<PyCFunction>(JsonValue_GetBoolean), METH_VARARGS, nullptr },
         { "get_number", reinterpret_cast<PyCFunction>(JsonValue_GetNumber), METH_VARARGS, nullptr },
         { "get_object", reinterpret_cast<PyCFunction>(JsonValue_GetObject), METH_VARARGS, nullptr },
         { "get_string", reinterpret_cast<PyCFunction>(JsonValue_GetString), METH_VARARGS, nullptr },
-        { "parse", reinterpret_cast<PyCFunction>(JsonValue_Parse), METH_VARARGS | METH_STATIC, nullptr },
         { "stringify", reinterpret_cast<PyCFunction>(JsonValue_Stringify), METH_VARARGS, nullptr },
         { "to_string", reinterpret_cast<PyCFunction>(JsonValue_ToString), METH_VARARGS, nullptr },
-        { "try_parse", reinterpret_cast<PyCFunction>(JsonValue_TryParse), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_JsonValue, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_JsonValue), METH_O | METH_STATIC, nullptr },
         { }
@@ -2808,6 +2877,37 @@ namespace py::cpp::Windows::Data::Json
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_JsonValue
+    };
+
+    static PyGetSetDef getset_JsonValue_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_JsonValue_Static[] = {
+        { "create_boolean_value", reinterpret_cast<PyCFunction>(JsonValue_CreateBooleanValue), METH_VARARGS, nullptr },
+        { "create_null_value", reinterpret_cast<PyCFunction>(JsonValue_CreateNullValue), METH_VARARGS, nullptr },
+        { "create_number_value", reinterpret_cast<PyCFunction>(JsonValue_CreateNumberValue), METH_VARARGS, nullptr },
+        { "create_string_value", reinterpret_cast<PyCFunction>(JsonValue_CreateStringValue), METH_VARARGS, nullptr },
+        { "parse", reinterpret_cast<PyCFunction>(JsonValue_Parse), METH_VARARGS, nullptr },
+        { "try_parse", reinterpret_cast<PyCFunction>(JsonValue_TryParse), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_JsonValue_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_JsonValue_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_JsonValue_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_JsonValue_Static =
+    {
+        "winrt._winrt_windows_data_json.JsonValue_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_JsonValue_Static
     };
 
     // ----- IJsonValue interface --------------------
@@ -3125,22 +3225,46 @@ PyMODINIT_FUNC PyInit__winrt_windows_data_json(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_JsonArray, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_JsonArray_Static{PyType_FromSpec(&type_spec_JsonArray_Static)};
+    if (!type_JsonArray_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_JsonError, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_JsonArray, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_JsonArray_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_JsonObject, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_JsonError_Static{PyType_FromSpec(&type_spec_JsonError_Static)};
+    if (!type_JsonError_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_JsonValue, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_JsonError, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_JsonError_Static.get())) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_JsonObject_Static{PyType_FromSpec(&type_spec_JsonObject_Static)};
+    if (!type_JsonObject_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_JsonObject, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_JsonObject_Static.get())) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_JsonValue_Static{PyType_FromSpec(&type_spec_JsonValue_Static)};
+    if (!type_JsonValue_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_JsonValue, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_JsonValue_Static.get())) == -1)
     {
         return nullptr;
     }

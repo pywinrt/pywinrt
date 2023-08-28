@@ -406,9 +406,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect::Services
 
     static PyMethodDef _methods_WiFiDirectService[] = {
         { "connect_async", reinterpret_cast<PyCFunction>(WiFiDirectService_ConnectAsync), METH_VARARGS, nullptr },
-        { "from_id_async", reinterpret_cast<PyCFunction>(WiFiDirectService_FromIdAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "get_provisioning_info_async", reinterpret_cast<PyCFunction>(WiFiDirectService_GetProvisioningInfoAsync), METH_VARARGS, nullptr },
-        { "get_selector", reinterpret_cast<PyCFunction>(WiFiDirectService_GetSelector), METH_VARARGS | METH_STATIC, nullptr },
         { "add_session_deferred", reinterpret_cast<PyCFunction>(WiFiDirectService_add_SessionDeferred), METH_O, nullptr },
         { "remove_session_deferred", reinterpret_cast<PyCFunction>(WiFiDirectService_remove_SessionDeferred), METH_O, nullptr },
         { "_assign_array_", _assign_array_WiFiDirectService, METH_O | METH_STATIC, nullptr },
@@ -441,6 +439,33 @@ namespace py::cpp::Windows::Devices::WiFiDirect::Services
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_WiFiDirectService
+    };
+
+    static PyGetSetDef getset_WiFiDirectService_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_WiFiDirectService_Static[] = {
+        { "from_id_async", reinterpret_cast<PyCFunction>(WiFiDirectService_FromIdAsync), METH_VARARGS, nullptr },
+        { "get_selector", reinterpret_cast<PyCFunction>(WiFiDirectService_GetSelector), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_WiFiDirectService_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_WiFiDirectService_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_WiFiDirectService_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_WiFiDirectService_Static =
+    {
+        "winrt._winrt_windows_devices_wifidirect_services.WiFiDirectService_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_WiFiDirectService_Static
     };
 
     // ----- WiFiDirectServiceAdvertiser class --------------------
@@ -2361,7 +2386,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_wifidirect_services(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WiFiDirectService, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_WiFiDirectService_Static{PyType_FromSpec(&type_spec_WiFiDirectService_Static)};
+    if (!type_WiFiDirectService_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_WiFiDirectService, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WiFiDirectService_Static.get())) == -1)
     {
         return nullptr;
     }

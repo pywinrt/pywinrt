@@ -195,7 +195,6 @@ namespace py::cpp::Windows::System::Inventory
     }
 
     static PyMethodDef _methods_InstalledDesktopApp[] = {
-        { "get_inventory_async", reinterpret_cast<PyCFunction>(InstalledDesktopApp_GetInventoryAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "to_string", reinterpret_cast<PyCFunction>(InstalledDesktopApp_ToString), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_InstalledDesktopApp, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InstalledDesktopApp), METH_O | METH_STATIC, nullptr },
@@ -227,6 +226,32 @@ namespace py::cpp::Windows::System::Inventory
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_InstalledDesktopApp
+    };
+
+    static PyGetSetDef getset_InstalledDesktopApp_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_InstalledDesktopApp_Static[] = {
+        { "get_inventory_async", reinterpret_cast<PyCFunction>(InstalledDesktopApp_GetInventoryAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_InstalledDesktopApp_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_InstalledDesktopApp_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_InstalledDesktopApp_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_InstalledDesktopApp_Static =
+    {
+        "winrt._winrt_windows_system_inventory.InstalledDesktopApp_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_InstalledDesktopApp_Static
     };
 
     // ----- Windows.System.Inventory Initialization --------------------
@@ -275,7 +300,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_inventory(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InstalledDesktopApp, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_InstalledDesktopApp_Static{PyType_FromSpec(&type_spec_InstalledDesktopApp_Static)};
+    if (!type_InstalledDesktopApp_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_InstalledDesktopApp, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InstalledDesktopApp_Static.get())) == -1)
     {
         return nullptr;
     }

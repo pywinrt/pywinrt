@@ -289,9 +289,6 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
     }
 
     static PyMethodDef _methods_OfflineMapPackage[] = {
-        { "find_packages_async", reinterpret_cast<PyCFunction>(OfflineMapPackage_FindPackagesAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "find_packages_in_bounding_box_async", reinterpret_cast<PyCFunction>(OfflineMapPackage_FindPackagesInBoundingBoxAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "find_packages_in_geocircle_async", reinterpret_cast<PyCFunction>(OfflineMapPackage_FindPackagesInGeocircleAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "request_start_download_async", reinterpret_cast<PyCFunction>(OfflineMapPackage_RequestStartDownloadAsync), METH_VARARGS, nullptr },
         { "add_status_changed", reinterpret_cast<PyCFunction>(OfflineMapPackage_add_StatusChanged), METH_O, nullptr },
         { "remove_status_changed", reinterpret_cast<PyCFunction>(OfflineMapPackage_remove_StatusChanged), METH_O, nullptr },
@@ -324,6 +321,34 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_OfflineMapPackage
+    };
+
+    static PyGetSetDef getset_OfflineMapPackage_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_OfflineMapPackage_Static[] = {
+        { "find_packages_async", reinterpret_cast<PyCFunction>(OfflineMapPackage_FindPackagesAsync), METH_VARARGS, nullptr },
+        { "find_packages_in_bounding_box_async", reinterpret_cast<PyCFunction>(OfflineMapPackage_FindPackagesInBoundingBoxAsync), METH_VARARGS, nullptr },
+        { "find_packages_in_geocircle_async", reinterpret_cast<PyCFunction>(OfflineMapPackage_FindPackagesInGeocircleAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_OfflineMapPackage_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_OfflineMapPackage_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_OfflineMapPackage_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_OfflineMapPackage_Static =
+    {
+        "winrt._winrt_windows_services_maps_offlinemaps.OfflineMapPackage_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_OfflineMapPackage_Static
     };
 
     // ----- OfflineMapPackageQueryResult class --------------------
@@ -570,7 +595,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_maps_offlinemaps(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_OfflineMapPackage, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_OfflineMapPackage_Static{PyType_FromSpec(&type_spec_OfflineMapPackage_Static)};
+    if (!type_OfflineMapPackage_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_OfflineMapPackage, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_OfflineMapPackage_Static.get())) == -1)
     {
         return nullptr;
     }

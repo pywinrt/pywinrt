@@ -506,8 +506,6 @@ namespace py::cpp::Windows::Media::Effects
     }
 
     static PyMethodDef _methods_AudioEffectsManager[] = {
-        { "create_audio_capture_effects_manager", reinterpret_cast<PyCFunction>(AudioEffectsManager_CreateAudioCaptureEffectsManager), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_audio_render_effects_manager", reinterpret_cast<PyCFunction>(AudioEffectsManager_CreateAudioRenderEffectsManager), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -530,6 +528,33 @@ namespace py::cpp::Windows::Media::Effects
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_AudioEffectsManager
+    };
+
+    static PyGetSetDef getset_AudioEffectsManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_AudioEffectsManager_Static[] = {
+        { "create_audio_capture_effects_manager", reinterpret_cast<PyCFunction>(AudioEffectsManager_CreateAudioCaptureEffectsManager), METH_VARARGS, nullptr },
+        { "create_audio_render_effects_manager", reinterpret_cast<PyCFunction>(AudioEffectsManager_CreateAudioRenderEffectsManager), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_AudioEffectsManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_AudioEffectsManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_AudioEffectsManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_AudioEffectsManager_Static =
+    {
+        "winrt._winrt_windows_media_effects.AudioEffectsManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_AudioEffectsManager_Static
     };
 
     // ----- AudioRenderEffectsManager class --------------------
@@ -3577,7 +3602,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_effects(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AudioEffectsManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_AudioEffectsManager_Static{PyType_FromSpec(&type_spec_AudioEffectsManager_Static)};
+    if (!type_AudioEffectsManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_AudioEffectsManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AudioEffectsManager_Static.get())) == -1)
     {
         return nullptr;
     }

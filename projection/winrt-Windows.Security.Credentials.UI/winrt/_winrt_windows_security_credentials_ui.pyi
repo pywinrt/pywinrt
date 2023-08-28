@@ -15,18 +15,17 @@ from winrt.windows.security.credentials.ui import AuthenticationProtocol, Creden
 
 Self = typing.TypeVar('Self')
 
-class CredentialPicker(winrt.system.Object):
+class CredentialPicker_Static(type):
+    @typing.overload
+    def pick_async(cls, options: typing.Optional[CredentialPickerOptions], /) -> winrt.windows.foundation.IAsyncOperation[CredentialPickerResults]: ...
+    @typing.overload
+    def pick_async(cls, target_name: str, message: str, /) -> winrt.windows.foundation.IAsyncOperation[CredentialPickerResults]: ...
+    @typing.overload
+    def pick_async(cls, target_name: str, message: str, caption: str, /) -> winrt.windows.foundation.IAsyncOperation[CredentialPickerResults]: ...
+
+class CredentialPicker(winrt.system.Object, metaclass=CredentialPicker_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CredentialPicker: ...
-    @typing.overload
-    @staticmethod
-    def pick_async(options: typing.Optional[CredentialPickerOptions], /) -> winrt.windows.foundation.IAsyncOperation[CredentialPickerResults]: ...
-    @typing.overload
-    @staticmethod
-    def pick_async(target_name: str, message: str, /) -> winrt.windows.foundation.IAsyncOperation[CredentialPickerResults]: ...
-    @typing.overload
-    @staticmethod
-    def pick_async(target_name: str, message: str, caption: str, /) -> winrt.windows.foundation.IAsyncOperation[CredentialPickerResults]: ...
 
 class CredentialPickerOptions(winrt.system.Object):
     @staticmethod
@@ -91,11 +90,11 @@ class CredentialPickerResults(winrt.system.Object):
     @_property
     def error_code(self) -> winrt.system.UInt32: ...
 
-class UserConsentVerifier(winrt.system.Object):
+class UserConsentVerifier_Static(type):
+    def check_availability_async(cls) -> winrt.windows.foundation.IAsyncOperation[UserConsentVerifierAvailability]: ...
+    def request_verification_async(cls, message: str, /) -> winrt.windows.foundation.IAsyncOperation[UserConsentVerificationResult]: ...
+
+class UserConsentVerifier(winrt.system.Object, metaclass=UserConsentVerifier_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserConsentVerifier: ...
-    @staticmethod
-    def check_availability_async() -> winrt.windows.foundation.IAsyncOperation[UserConsentVerifierAvailability]: ...
-    @staticmethod
-    def request_verification_async(message: str, /) -> winrt.windows.foundation.IAsyncOperation[UserConsentVerificationResult]: ...
 

@@ -362,11 +362,7 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
 
     static PyMethodDef _methods_AppCapability[] = {
         { "check_access", reinterpret_cast<PyCFunction>(AppCapability_CheckAccess), METH_VARARGS, nullptr },
-        { "create", reinterpret_cast<PyCFunction>(AppCapability_Create), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_with_process_id_for_user", reinterpret_cast<PyCFunction>(AppCapability_CreateWithProcessIdForUser), METH_VARARGS | METH_STATIC, nullptr },
         { "request_access_async", reinterpret_cast<PyCFunction>(AppCapability_RequestAccessAsync), METH_VARARGS, nullptr },
-        { "request_access_for_capabilities_async", reinterpret_cast<PyCFunction>(AppCapability_RequestAccessForCapabilitiesAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "request_access_for_capabilities_for_user_async", reinterpret_cast<PyCFunction>(AppCapability_RequestAccessForCapabilitiesForUserAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "add_access_changed", reinterpret_cast<PyCFunction>(AppCapability_add_AccessChanged), METH_O, nullptr },
         { "remove_access_changed", reinterpret_cast<PyCFunction>(AppCapability_remove_AccessChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_AppCapability, METH_O | METH_STATIC, nullptr },
@@ -397,6 +393,35 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_AppCapability
+    };
+
+    static PyGetSetDef getset_AppCapability_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_AppCapability_Static[] = {
+        { "create", reinterpret_cast<PyCFunction>(AppCapability_Create), METH_VARARGS, nullptr },
+        { "create_with_process_id_for_user", reinterpret_cast<PyCFunction>(AppCapability_CreateWithProcessIdForUser), METH_VARARGS, nullptr },
+        { "request_access_for_capabilities_async", reinterpret_cast<PyCFunction>(AppCapability_RequestAccessForCapabilitiesAsync), METH_VARARGS, nullptr },
+        { "request_access_for_capabilities_for_user_async", reinterpret_cast<PyCFunction>(AppCapability_RequestAccessForCapabilitiesForUserAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_AppCapability_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_AppCapability_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_AppCapability_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_AppCapability_Static =
+    {
+        "winrt._winrt_windows_security_authorization_appcapabilityaccess.AppCapability_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_AppCapability_Static
     };
 
     // ----- AppCapabilityAccessChangedEventArgs class --------------------
@@ -514,7 +539,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_authorization_appcapabilityaccess(
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppCapability, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_AppCapability_Static{PyType_FromSpec(&type_spec_AppCapability_Static)};
+    if (!type_AppCapability_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_AppCapability, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppCapability_Static.get())) == -1)
     {
         return nullptr;
     }

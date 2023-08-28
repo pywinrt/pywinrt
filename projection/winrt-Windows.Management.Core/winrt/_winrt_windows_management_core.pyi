@@ -12,9 +12,10 @@ import winrt.windows.storage
 
 Self = typing.TypeVar('Self')
 
-class ApplicationDataManager(winrt.system.Object):
+class ApplicationDataManager_Static(type):
+    def create_for_package_family(cls, package_family_name: str, /) -> typing.Optional[winrt.windows.storage.ApplicationData]: ...
+
+class ApplicationDataManager(winrt.system.Object, metaclass=ApplicationDataManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ApplicationDataManager: ...
-    @staticmethod
-    def create_for_package_family(package_family_name: str, /) -> typing.Optional[winrt.windows.storage.ApplicationData]: ...
 

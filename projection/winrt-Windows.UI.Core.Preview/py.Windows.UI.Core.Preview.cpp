@@ -79,7 +79,6 @@ namespace py::cpp::Windows::UI::Core::Preview
     }
 
     static PyMethodDef _methods_CoreAppWindowPreview[] = {
-        { "get_id_from_window", reinterpret_cast<PyCFunction>(CoreAppWindowPreview_GetIdFromWindow), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_CoreAppWindowPreview, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreAppWindowPreview), METH_O | METH_STATIC, nullptr },
         { }
@@ -105,6 +104,32 @@ namespace py::cpp::Windows::UI::Core::Preview
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_CoreAppWindowPreview
+    };
+
+    static PyGetSetDef getset_CoreAppWindowPreview_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_CoreAppWindowPreview_Static[] = {
+        { "get_id_from_window", reinterpret_cast<PyCFunction>(CoreAppWindowPreview_GetIdFromWindow), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_CoreAppWindowPreview_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CoreAppWindowPreview_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CoreAppWindowPreview_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CoreAppWindowPreview_Static =
+    {
+        "winrt._winrt_windows_ui_core_preview.CoreAppWindowPreview_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CoreAppWindowPreview_Static
     };
 
     // ----- SystemNavigationCloseRequestedPreviewEventArgs class --------------------
@@ -368,7 +393,6 @@ namespace py::cpp::Windows::UI::Core::Preview
     }
 
     static PyMethodDef _methods_SystemNavigationManagerPreview[] = {
-        { "get_for_current_view", reinterpret_cast<PyCFunction>(SystemNavigationManagerPreview_GetForCurrentView), METH_VARARGS | METH_STATIC, nullptr },
         { "add_close_requested", reinterpret_cast<PyCFunction>(SystemNavigationManagerPreview_add_CloseRequested), METH_O, nullptr },
         { "remove_close_requested", reinterpret_cast<PyCFunction>(SystemNavigationManagerPreview_remove_CloseRequested), METH_O, nullptr },
         { "_assign_array_", _assign_array_SystemNavigationManagerPreview, METH_O | METH_STATIC, nullptr },
@@ -396,6 +420,32 @@ namespace py::cpp::Windows::UI::Core::Preview
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_SystemNavigationManagerPreview
+    };
+
+    static PyGetSetDef getset_SystemNavigationManagerPreview_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_SystemNavigationManagerPreview_Static[] = {
+        { "get_for_current_view", reinterpret_cast<PyCFunction>(SystemNavigationManagerPreview_GetForCurrentView), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_SystemNavigationManagerPreview_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SystemNavigationManagerPreview_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SystemNavigationManagerPreview_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SystemNavigationManagerPreview_Static =
+    {
+        "winrt._winrt_windows_ui_core_preview.SystemNavigationManagerPreview_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_SystemNavigationManagerPreview_Static
     };
 
     // ----- Windows.UI.Core.Preview Initialization --------------------
@@ -444,7 +494,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_core_preview(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreAppWindowPreview, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_CoreAppWindowPreview_Static{PyType_FromSpec(&type_spec_CoreAppWindowPreview_Static)};
+    if (!type_CoreAppWindowPreview_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_CoreAppWindowPreview, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CoreAppWindowPreview_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -454,7 +510,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_core_preview(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SystemNavigationManagerPreview, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_SystemNavigationManagerPreview_Static{PyType_FromSpec(&type_spec_SystemNavigationManagerPreview_Static)};
+    if (!type_SystemNavigationManagerPreview_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_SystemNavigationManagerPreview, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemNavigationManagerPreview_Static.get())) == -1)
     {
         return nullptr;
     }

@@ -278,25 +278,30 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
         _type_slots_PaymentAppManager
     };
 
-    static PyGetSetDef getset_PaymentAppManager_Meta[] = {
+    static PyGetSetDef getset_PaymentAppManager_Static[] = {
         { "current", reinterpret_cast<getter>(PaymentAppManager_get_Current), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_PaymentAppManager_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_PaymentAppManager_Meta) },
+    static PyMethodDef methods_PaymentAppManager_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_PaymentAppManager_Meta =
+    static PyType_Slot type_slots_PaymentAppManager_Static[] = 
     {
-        "winrt._winrt_windows_applicationmodel_payments_provider.PaymentAppManager_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PaymentAppManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PaymentAppManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PaymentAppManager_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_payments_provider.PaymentAppManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PaymentAppManager_Meta
+        type_slots_PaymentAppManager_Static
     };
 
     // ----- PaymentTransaction class --------------------
@@ -656,7 +661,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
 
     static PyMethodDef _methods_PaymentTransaction[] = {
         { "accept_async", reinterpret_cast<PyCFunction>(PaymentTransaction_AcceptAsync), METH_VARARGS, nullptr },
-        { "from_id_async", reinterpret_cast<PyCFunction>(PaymentTransaction_FromIdAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "reject", reinterpret_cast<PyCFunction>(PaymentTransaction_Reject), METH_VARARGS, nullptr },
         { "update_selected_shipping_option_async", reinterpret_cast<PyCFunction>(PaymentTransaction_UpdateSelectedShippingOptionAsync), METH_VARARGS, nullptr },
         { "update_shipping_address_async", reinterpret_cast<PyCFunction>(PaymentTransaction_UpdateShippingAddressAsync), METH_VARARGS, nullptr },
@@ -689,6 +693,32 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_PaymentTransaction
+    };
+
+    static PyGetSetDef getset_PaymentTransaction_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_PaymentTransaction_Static[] = {
+        { "from_id_async", reinterpret_cast<PyCFunction>(PaymentTransaction_FromIdAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_PaymentTransaction_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PaymentTransaction_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PaymentTransaction_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PaymentTransaction_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_payments_provider.PaymentTransaction_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_PaymentTransaction_Static
     };
 
     // ----- PaymentTransactionAcceptResult class --------------------
@@ -831,18 +861,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_payments_provider(void) no
         return nullptr;
     }
 
-    py::pyobj_handle type_PaymentAppManager_Meta{PyType_FromSpec(&type_spec_PaymentAppManager_Meta)};
-    if (!type_PaymentAppManager_Meta)
+    py::pyobj_handle type_PaymentAppManager_Static{PyType_FromSpec(&type_spec_PaymentAppManager_Static)};
+    if (!type_PaymentAppManager_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PaymentAppManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PaymentAppManager_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PaymentAppManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PaymentAppManager_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PaymentTransaction, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_PaymentTransaction_Static{PyType_FromSpec(&type_spec_PaymentTransaction_Static)};
+    if (!type_PaymentTransaction_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_PaymentTransaction, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PaymentTransaction_Static.get())) == -1)
     {
         return nullptr;
     }

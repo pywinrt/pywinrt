@@ -2461,25 +2461,30 @@ namespace py::cpp::Windows::UI::Text::Core
         _type_slots_CoreTextServicesConstants
     };
 
-    static PyGetSetDef getset_CoreTextServicesConstants_Meta[] = {
+    static PyGetSetDef getset_CoreTextServicesConstants_Static[] = {
         { "hidden_character", reinterpret_cast<getter>(CoreTextServicesConstants_get_HiddenCharacter), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_CoreTextServicesConstants_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_CoreTextServicesConstants_Meta) },
+    static PyMethodDef methods_CoreTextServicesConstants_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_CoreTextServicesConstants_Meta =
+    static PyType_Slot type_slots_CoreTextServicesConstants_Static[] = 
     {
-        "winrt._winrt_windows_ui_text_core.CoreTextServicesConstants_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CoreTextServicesConstants_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CoreTextServicesConstants_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CoreTextServicesConstants_Static =
+    {
+        "winrt._winrt_windows_ui_text_core.CoreTextServicesConstants_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_CoreTextServicesConstants_Meta
+        type_slots_CoreTextServicesConstants_Static
     };
 
     // ----- CoreTextServicesManager class --------------------
@@ -2645,7 +2650,6 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyMethodDef _methods_CoreTextServicesManager[] = {
         { "create_edit_context", reinterpret_cast<PyCFunction>(CoreTextServicesManager_CreateEditContext), METH_VARARGS, nullptr },
-        { "get_for_current_view", reinterpret_cast<PyCFunction>(CoreTextServicesManager_GetForCurrentView), METH_VARARGS | METH_STATIC, nullptr },
         { "add_input_language_changed", reinterpret_cast<PyCFunction>(CoreTextServicesManager_add_InputLanguageChanged), METH_O, nullptr },
         { "remove_input_language_changed", reinterpret_cast<PyCFunction>(CoreTextServicesManager_remove_InputLanguageChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_CoreTextServicesManager, METH_O | METH_STATIC, nullptr },
@@ -2674,6 +2678,32 @@ namespace py::cpp::Windows::UI::Text::Core
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_CoreTextServicesManager
+    };
+
+    static PyGetSetDef getset_CoreTextServicesManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_CoreTextServicesManager_Static[] = {
+        { "get_for_current_view", reinterpret_cast<PyCFunction>(CoreTextServicesManager_GetForCurrentView), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_CoreTextServicesManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CoreTextServicesManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CoreTextServicesManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CoreTextServicesManager_Static =
+    {
+        "winrt._winrt_windows_ui_text_core.CoreTextServicesManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CoreTextServicesManager_Static
     };
 
     // ----- CoreTextTextRequest class --------------------
@@ -3461,18 +3491,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_text_core(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_CoreTextServicesConstants_Meta{PyType_FromSpec(&type_spec_CoreTextServicesConstants_Meta)};
-    if (!type_CoreTextServicesConstants_Meta)
+    py::pyobj_handle type_CoreTextServicesConstants_Static{PyType_FromSpec(&type_spec_CoreTextServicesConstants_Static)};
+    if (!type_CoreTextServicesConstants_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreTextServicesConstants, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CoreTextServicesConstants_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreTextServicesConstants, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CoreTextServicesConstants_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreTextServicesManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_CoreTextServicesManager_Static{PyType_FromSpec(&type_spec_CoreTextServicesManager_Static)};
+    if (!type_CoreTextServicesManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_CoreTextServicesManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CoreTextServicesManager_Static.get())) == -1)
     {
         return nullptr;
     }

@@ -918,11 +918,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
     }
 
     static PyMethodDef _methods_UserDataAccountManager[] = {
-        { "get_for_user", reinterpret_cast<PyCFunction>(UserDataAccountManager_GetForUser), METH_VARARGS | METH_STATIC, nullptr },
-        { "request_store_async", reinterpret_cast<PyCFunction>(UserDataAccountManager_RequestStoreAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "show_account_error_resolver_async", reinterpret_cast<PyCFunction>(UserDataAccountManager_ShowAccountErrorResolverAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "show_account_settings_async", reinterpret_cast<PyCFunction>(UserDataAccountManager_ShowAccountSettingsAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "show_add_account_async", reinterpret_cast<PyCFunction>(UserDataAccountManager_ShowAddAccountAsync), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -945,6 +940,36 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_UserDataAccountManager
+    };
+
+    static PyGetSetDef getset_UserDataAccountManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_UserDataAccountManager_Static[] = {
+        { "get_for_user", reinterpret_cast<PyCFunction>(UserDataAccountManager_GetForUser), METH_VARARGS, nullptr },
+        { "request_store_async", reinterpret_cast<PyCFunction>(UserDataAccountManager_RequestStoreAsync), METH_VARARGS, nullptr },
+        { "show_account_error_resolver_async", reinterpret_cast<PyCFunction>(UserDataAccountManager_ShowAccountErrorResolverAsync), METH_VARARGS, nullptr },
+        { "show_account_settings_async", reinterpret_cast<PyCFunction>(UserDataAccountManager_ShowAccountSettingsAsync), METH_VARARGS, nullptr },
+        { "show_add_account_async", reinterpret_cast<PyCFunction>(UserDataAccountManager_ShowAddAccountAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_UserDataAccountManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_UserDataAccountManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_UserDataAccountManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_UserDataAccountManager_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_userdataaccounts.UserDataAccountManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_UserDataAccountManager_Static
     };
 
     // ----- UserDataAccountManagerForUser class --------------------
@@ -1469,7 +1494,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_userdataaccounts(void) noe
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserDataAccountManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_UserDataAccountManager_Static{PyType_FromSpec(&type_spec_UserDataAccountManager_Static)};
+    if (!type_UserDataAccountManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_UserDataAccountManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UserDataAccountManager_Static.get())) == -1)
     {
         return nullptr;
     }

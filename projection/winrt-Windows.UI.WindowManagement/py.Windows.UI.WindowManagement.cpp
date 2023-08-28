@@ -854,8 +854,6 @@ namespace py::cpp::Windows::UI::WindowManagement
     }
 
     static PyMethodDef _methods_AppWindow[] = {
-        { "clear_all_persisted_state", reinterpret_cast<PyCFunction>(AppWindow_ClearAllPersistedState), METH_VARARGS | METH_STATIC, nullptr },
-        { "clear_persisted_state", reinterpret_cast<PyCFunction>(AppWindow_ClearPersistedState), METH_VARARGS | METH_STATIC, nullptr },
         { "close_async", reinterpret_cast<PyCFunction>(AppWindow_CloseAsync), METH_VARARGS, nullptr },
         { "get_display_regions", reinterpret_cast<PyCFunction>(AppWindow_GetDisplayRegions), METH_VARARGS, nullptr },
         { "get_placement", reinterpret_cast<PyCFunction>(AppWindow_GetPlacement), METH_VARARGS, nullptr },
@@ -866,7 +864,6 @@ namespace py::cpp::Windows::UI::WindowManagement
         { "request_move_relative_to_window_content", reinterpret_cast<PyCFunction>(AppWindow_RequestMoveRelativeToWindowContent), METH_VARARGS, nullptr },
         { "request_move_to_display_region", reinterpret_cast<PyCFunction>(AppWindow_RequestMoveToDisplayRegion), METH_VARARGS, nullptr },
         { "request_size", reinterpret_cast<PyCFunction>(AppWindow_RequestSize), METH_VARARGS, nullptr },
-        { "try_create_async", reinterpret_cast<PyCFunction>(AppWindow_TryCreateAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "try_show_async", reinterpret_cast<PyCFunction>(AppWindow_TryShowAsync), METH_VARARGS, nullptr },
         { "add_changed", reinterpret_cast<PyCFunction>(AppWindow_add_Changed), METH_O, nullptr },
         { "remove_changed", reinterpret_cast<PyCFunction>(AppWindow_remove_Changed), METH_O, nullptr },
@@ -909,6 +906,34 @@ namespace py::cpp::Windows::UI::WindowManagement
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_AppWindow
+    };
+
+    static PyGetSetDef getset_AppWindow_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_AppWindow_Static[] = {
+        { "clear_all_persisted_state", reinterpret_cast<PyCFunction>(AppWindow_ClearAllPersistedState), METH_VARARGS, nullptr },
+        { "clear_persisted_state", reinterpret_cast<PyCFunction>(AppWindow_ClearPersistedState), METH_VARARGS, nullptr },
+        { "try_create_async", reinterpret_cast<PyCFunction>(AppWindow_TryCreateAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_AppWindow_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_AppWindow_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_AppWindow_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_AppWindow_Static =
+    {
+        "winrt._winrt_windows_ui_windowmanagement.AppWindow_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_AppWindow_Static
     };
 
     // ----- AppWindowChangedEventArgs class --------------------
@@ -3378,7 +3403,6 @@ namespace py::cpp::Windows::UI::WindowManagement
     }
 
     static PyMethodDef _methods_WindowServices[] = {
-        { "find_all_top_level_window_ids", reinterpret_cast<PyCFunction>(WindowServices_FindAllTopLevelWindowIds), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -3401,6 +3425,32 @@ namespace py::cpp::Windows::UI::WindowManagement
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_WindowServices
+    };
+
+    static PyGetSetDef getset_WindowServices_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_WindowServices_Static[] = {
+        { "find_all_top_level_window_ids", reinterpret_cast<PyCFunction>(WindowServices_FindAllTopLevelWindowIds), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_WindowServices_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_WindowServices_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_WindowServices_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_WindowServices_Static =
+    {
+        "winrt._winrt_windows_ui_windowmanagement.WindowServices_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_WindowServices_Static
     };
 
     // ----- WindowingEnvironment class --------------------
@@ -3604,7 +3654,6 @@ namespace py::cpp::Windows::UI::WindowManagement
     }
 
     static PyMethodDef _methods_WindowingEnvironment[] = {
-        { "find_all", reinterpret_cast<PyCFunction>(WindowingEnvironment_FindAll), METH_VARARGS | METH_STATIC, nullptr },
         { "get_display_regions", reinterpret_cast<PyCFunction>(WindowingEnvironment_GetDisplayRegions), METH_VARARGS, nullptr },
         { "add_changed", reinterpret_cast<PyCFunction>(WindowingEnvironment_add_Changed), METH_O, nullptr },
         { "remove_changed", reinterpret_cast<PyCFunction>(WindowingEnvironment_remove_Changed), METH_O, nullptr },
@@ -3635,6 +3684,32 @@ namespace py::cpp::Windows::UI::WindowManagement
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_WindowingEnvironment
+    };
+
+    static PyGetSetDef getset_WindowingEnvironment_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_WindowingEnvironment_Static[] = {
+        { "find_all", reinterpret_cast<PyCFunction>(WindowingEnvironment_FindAll), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_WindowingEnvironment_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_WindowingEnvironment_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_WindowingEnvironment_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_WindowingEnvironment_Static =
+    {
+        "winrt._winrt_windows_ui_windowmanagement.WindowingEnvironment_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_WindowingEnvironment_Static
     };
 
     // ----- WindowingEnvironmentAddedEventArgs class --------------------
@@ -3930,7 +4005,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_windowmanagement(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppWindow, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_AppWindow_Static{PyType_FromSpec(&type_spec_AppWindow_Static)};
+    if (!type_AppWindow_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_AppWindow, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppWindow_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -4000,12 +4081,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_windowmanagement(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WindowServices, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_WindowServices_Static{PyType_FromSpec(&type_spec_WindowServices_Static)};
+    if (!type_WindowServices_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WindowingEnvironment, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowServices, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WindowServices_Static.get())) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_WindowingEnvironment_Static{PyType_FromSpec(&type_spec_WindowingEnvironment_Static)};
+    if (!type_WindowingEnvironment_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_WindowingEnvironment, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WindowingEnvironment_Static.get())) == -1)
     {
         return nullptr;
     }

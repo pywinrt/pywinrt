@@ -47,7 +47,6 @@ namespace py::cpp::Windows::UI::Shell
     }
 
     static PyMethodDef _methods_AdaptiveCardBuilder[] = {
-        { "create_adaptive_card_from_json", reinterpret_cast<PyCFunction>(AdaptiveCardBuilder_CreateAdaptiveCardFromJson), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -70,6 +69,32 @@ namespace py::cpp::Windows::UI::Shell
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_AdaptiveCardBuilder
+    };
+
+    static PyGetSetDef getset_AdaptiveCardBuilder_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_AdaptiveCardBuilder_Static[] = {
+        { "create_adaptive_card_from_json", reinterpret_cast<PyCFunction>(AdaptiveCardBuilder_CreateAdaptiveCardFromJson), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_AdaptiveCardBuilder_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_AdaptiveCardBuilder_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_AdaptiveCardBuilder_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_AdaptiveCardBuilder_Static =
+    {
+        "winrt._winrt_windows_ui_shell.AdaptiveCardBuilder_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_AdaptiveCardBuilder_Static
     };
 
     // ----- FocusSession class --------------------
@@ -455,7 +480,6 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyMethodDef _methods_FocusSessionManager[] = {
         { "deactivate_focus", reinterpret_cast<PyCFunction>(FocusSessionManager_DeactivateFocus), METH_VARARGS, nullptr },
-        { "get_default", reinterpret_cast<PyCFunction>(FocusSessionManager_GetDefault), METH_VARARGS | METH_STATIC, nullptr },
         { "get_session", reinterpret_cast<PyCFunction>(FocusSessionManager_GetSession), METH_VARARGS, nullptr },
         { "try_start_focus_session", reinterpret_cast<PyCFunction>(FocusSessionManager_TryStartFocusSession), METH_VARARGS, nullptr },
         { "add_is_focus_active_changed", reinterpret_cast<PyCFunction>(FocusSessionManager_add_IsFocusActiveChanged), METH_O, nullptr },
@@ -488,25 +512,31 @@ namespace py::cpp::Windows::UI::Shell
         _type_slots_FocusSessionManager
     };
 
-    static PyGetSetDef getset_FocusSessionManager_Meta[] = {
+    static PyGetSetDef getset_FocusSessionManager_Static[] = {
         { "is_supported", reinterpret_cast<getter>(FocusSessionManager_get_IsSupported), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_FocusSessionManager_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_FocusSessionManager_Meta) },
+    static PyMethodDef methods_FocusSessionManager_Static[] = {
+        { "get_default", reinterpret_cast<PyCFunction>(FocusSessionManager_GetDefault), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_FocusSessionManager_Meta =
+    static PyType_Slot type_slots_FocusSessionManager_Static[] = 
     {
-        "winrt._winrt_windows_ui_shell.FocusSessionManager_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_FocusSessionManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_FocusSessionManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_FocusSessionManager_Static =
+    {
+        "winrt._winrt_windows_ui_shell.FocusSessionManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_FocusSessionManager_Meta
+        type_slots_FocusSessionManager_Static
     };
 
     // ----- SecurityAppManager class --------------------
@@ -1090,7 +1120,6 @@ namespace py::cpp::Windows::UI::Shell
     }
 
     static PyMethodDef _methods_ShareWindowCommandSource[] = {
-        { "get_for_current_view", reinterpret_cast<PyCFunction>(ShareWindowCommandSource_GetForCurrentView), METH_VARARGS | METH_STATIC, nullptr },
         { "report_command_changed", reinterpret_cast<PyCFunction>(ShareWindowCommandSource_ReportCommandChanged), METH_VARARGS, nullptr },
         { "start", reinterpret_cast<PyCFunction>(ShareWindowCommandSource_Start), METH_VARARGS, nullptr },
         { "stop", reinterpret_cast<PyCFunction>(ShareWindowCommandSource_Stop), METH_VARARGS, nullptr },
@@ -1123,6 +1152,32 @@ namespace py::cpp::Windows::UI::Shell
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ShareWindowCommandSource
+    };
+
+    static PyGetSetDef getset_ShareWindowCommandSource_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ShareWindowCommandSource_Static[] = {
+        { "get_for_current_view", reinterpret_cast<PyCFunction>(ShareWindowCommandSource_GetForCurrentView), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_ShareWindowCommandSource_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ShareWindowCommandSource_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ShareWindowCommandSource_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ShareWindowCommandSource_Static =
+    {
+        "winrt._winrt_windows_ui_shell.ShareWindowCommandSource_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ShareWindowCommandSource_Static
     };
 
     // ----- TaskbarManager class --------------------
@@ -1447,7 +1502,6 @@ namespace py::cpp::Windows::UI::Shell
     }
 
     static PyMethodDef _methods_TaskbarManager[] = {
-        { "get_default", reinterpret_cast<PyCFunction>(TaskbarManager_GetDefault), METH_VARARGS | METH_STATIC, nullptr },
         { "is_app_list_entry_pinned_async", reinterpret_cast<PyCFunction>(TaskbarManager_IsAppListEntryPinnedAsync), METH_VARARGS, nullptr },
         { "is_current_app_pinned_async", reinterpret_cast<PyCFunction>(TaskbarManager_IsCurrentAppPinnedAsync), METH_VARARGS, nullptr },
         { "is_secondary_tile_pinned_async", reinterpret_cast<PyCFunction>(TaskbarManager_IsSecondaryTilePinnedAsync), METH_VARARGS, nullptr },
@@ -1482,6 +1536,32 @@ namespace py::cpp::Windows::UI::Shell
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_TaskbarManager
+    };
+
+    static PyGetSetDef getset_TaskbarManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_TaskbarManager_Static[] = {
+        { "get_default", reinterpret_cast<PyCFunction>(TaskbarManager_GetDefault), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_TaskbarManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_TaskbarManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_TaskbarManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_TaskbarManager_Static =
+    {
+        "winrt._winrt_windows_ui_shell.TaskbarManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_TaskbarManager_Static
     };
 
     // ----- WindowTab class --------------------
@@ -2900,8 +2980,6 @@ namespace py::cpp::Windows::UI::Shell
     }
 
     static PyMethodDef _methods_WindowTabIcon[] = {
-        { "create_from_font_glyph", reinterpret_cast<PyCFunction>(WindowTabIcon_CreateFromFontGlyph), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_from_image", reinterpret_cast<PyCFunction>(WindowTabIcon_CreateFromImage), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_WindowTabIcon, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WindowTabIcon), METH_O | METH_STATIC, nullptr },
         { }
@@ -2927,6 +3005,33 @@ namespace py::cpp::Windows::UI::Shell
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_WindowTabIcon
+    };
+
+    static PyGetSetDef getset_WindowTabIcon_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_WindowTabIcon_Static[] = {
+        { "create_from_font_glyph", reinterpret_cast<PyCFunction>(WindowTabIcon_CreateFromFontGlyph), METH_VARARGS, nullptr },
+        { "create_from_image", reinterpret_cast<PyCFunction>(WindowTabIcon_CreateFromImage), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_WindowTabIcon_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_WindowTabIcon_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_WindowTabIcon_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_WindowTabIcon_Static =
+    {
+        "winrt._winrt_windows_ui_shell.WindowTabIcon_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_WindowTabIcon_Static
     };
 
     // ----- WindowTabManager class --------------------
@@ -3283,9 +3388,6 @@ namespace py::cpp::Windows::UI::Shell
     }
 
     static PyMethodDef _methods_WindowTabManager[] = {
-        { "get_for_window", reinterpret_cast<PyCFunction>(WindowTabManager_GetForWindow), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_supported", reinterpret_cast<PyCFunction>(WindowTabManager_IsSupported), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_tab_tear_out_supported", reinterpret_cast<PyCFunction>(WindowTabManager_IsTabTearOutSupported), METH_VARARGS | METH_STATIC, nullptr },
         { "set_active_tab", reinterpret_cast<PyCFunction>(WindowTabManager_SetActiveTab), METH_VARARGS, nullptr },
         { "add_tab_close_requested", reinterpret_cast<PyCFunction>(WindowTabManager_add_TabCloseRequested), METH_O, nullptr },
         { "remove_tab_close_requested", reinterpret_cast<PyCFunction>(WindowTabManager_remove_TabCloseRequested), METH_O, nullptr },
@@ -3321,6 +3423,34 @@ namespace py::cpp::Windows::UI::Shell
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_WindowTabManager
+    };
+
+    static PyGetSetDef getset_WindowTabManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_WindowTabManager_Static[] = {
+        { "get_for_window", reinterpret_cast<PyCFunction>(WindowTabManager_GetForWindow), METH_VARARGS, nullptr },
+        { "is_supported", reinterpret_cast<PyCFunction>(WindowTabManager_IsSupported), METH_VARARGS, nullptr },
+        { "is_tab_tear_out_supported", reinterpret_cast<PyCFunction>(WindowTabManager_IsTabTearOutSupported), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_WindowTabManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_WindowTabManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_WindowTabManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_WindowTabManager_Static =
+    {
+        "winrt._winrt_windows_ui_shell.WindowTabManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_WindowTabManager_Static
     };
 
     // ----- WindowTabSwitchRequestedEventArgs class --------------------
@@ -4032,7 +4162,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_shell(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AdaptiveCardBuilder, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_AdaptiveCardBuilder_Static{PyType_FromSpec(&type_spec_AdaptiveCardBuilder_Static)};
+    if (!type_AdaptiveCardBuilder_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_AdaptiveCardBuilder, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AdaptiveCardBuilder_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -4042,13 +4178,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_shell(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_FocusSessionManager_Meta{PyType_FromSpec(&type_spec_FocusSessionManager_Meta)};
-    if (!type_FocusSessionManager_Meta)
+    py::pyobj_handle type_FocusSessionManager_Static{PyType_FromSpec(&type_spec_FocusSessionManager_Static)};
+    if (!type_FocusSessionManager_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FocusSessionManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FocusSessionManager_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FocusSessionManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FocusSessionManager_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -4063,12 +4199,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_shell(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ShareWindowCommandSource, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_ShareWindowCommandSource_Static{PyType_FromSpec(&type_spec_ShareWindowCommandSource_Static)};
+    if (!type_ShareWindowCommandSource_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_TaskbarManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ShareWindowCommandSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ShareWindowCommandSource_Static.get())) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_TaskbarManager_Static{PyType_FromSpec(&type_spec_TaskbarManager_Static)};
+    if (!type_TaskbarManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_TaskbarManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TaskbarManager_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -4093,12 +4241,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_shell(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WindowTabIcon, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_WindowTabIcon_Static{PyType_FromSpec(&type_spec_WindowTabIcon_Static)};
+    if (!type_WindowTabIcon_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WindowTabManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowTabIcon, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WindowTabIcon_Static.get())) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_WindowTabManager_Static{PyType_FromSpec(&type_spec_WindowTabManager_Static)};
+    if (!type_WindowTabManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_WindowTabManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WindowTabManager_Static.get())) == -1)
     {
         return nullptr;
     }

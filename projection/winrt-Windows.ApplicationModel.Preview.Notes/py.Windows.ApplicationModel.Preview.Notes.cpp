@@ -784,7 +784,6 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
     }
 
     static PyMethodDef _methods_NotesWindowManagerPreview[] = {
-        { "get_for_current_app", reinterpret_cast<PyCFunction>(NotesWindowManagerPreview_GetForCurrentApp), METH_VARARGS | METH_STATIC, nullptr },
         { "get_note_placement", reinterpret_cast<PyCFunction>(NotesWindowManagerPreview_GetNotePlacement), METH_VARARGS, nullptr },
         { "hide_note", reinterpret_cast<PyCFunction>(NotesWindowManagerPreview_HideNote), METH_VARARGS, nullptr },
         { "set_focus_to_next_view", reinterpret_cast<PyCFunction>(NotesWindowManagerPreview_SetFocusToNextView), METH_VARARGS, nullptr },
@@ -827,6 +826,32 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_NotesWindowManagerPreview
+    };
+
+    static PyGetSetDef getset_NotesWindowManagerPreview_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_NotesWindowManagerPreview_Static[] = {
+        { "get_for_current_app", reinterpret_cast<PyCFunction>(NotesWindowManagerPreview_GetForCurrentApp), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_NotesWindowManagerPreview_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_NotesWindowManagerPreview_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_NotesWindowManagerPreview_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_NotesWindowManagerPreview_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_preview_notes.NotesWindowManagerPreview_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_NotesWindowManagerPreview_Static
     };
 
     // ----- NotesWindowManagerPreviewShowNoteOptions class --------------------
@@ -1024,7 +1049,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_preview_notes(void) noexce
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_NotesWindowManagerPreview, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_NotesWindowManagerPreview_Static{PyType_FromSpec(&type_spec_NotesWindowManagerPreview_Static)};
+    if (!type_NotesWindowManagerPreview_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_NotesWindowManagerPreview, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NotesWindowManagerPreview_Static.get())) == -1)
     {
         return nullptr;
     }

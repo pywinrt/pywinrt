@@ -2539,7 +2539,7 @@ namespace py::cpp::Windows::Media::Core
         _type_slots_CodecSubtypes
     };
 
-    static PyGetSetDef getset_CodecSubtypes_Meta[] = {
+    static PyGetSetDef getset_CodecSubtypes_Static[] = {
         { "audio_format_aac", reinterpret_cast<getter>(CodecSubtypes_get_AudioFormatAac), nullptr, nullptr, nullptr },
         { "audio_format_adts", reinterpret_cast<getter>(CodecSubtypes_get_AudioFormatAdts), nullptr, nullptr, nullptr },
         { "audio_format_alac", reinterpret_cast<getter>(CodecSubtypes_get_AudioFormatAlac), nullptr, nullptr, nullptr },
@@ -2594,20 +2594,25 @@ namespace py::cpp::Windows::Media::Core
         { }
     };
 
-    static PyType_Slot type_slots_CodecSubtypes_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_CodecSubtypes_Meta) },
+    static PyMethodDef methods_CodecSubtypes_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_CodecSubtypes_Meta =
+    static PyType_Slot type_slots_CodecSubtypes_Static[] = 
     {
-        "winrt._winrt_windows_media_core.CodecSubtypes_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CodecSubtypes_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CodecSubtypes_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CodecSubtypes_Static =
+    {
+        "winrt._winrt_windows_media_core.CodecSubtypes_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_CodecSubtypes_Meta
+        type_slots_CodecSubtypes_Static
     };
 
     // ----- DataCue class --------------------
@@ -4688,7 +4693,6 @@ namespace py::cpp::Windows::Media::Core
     }
 
     static PyMethodDef _methods_LowLightFusion[] = {
-        { "fuse_async", reinterpret_cast<PyCFunction>(LowLightFusion_FuseAsync), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -4713,26 +4717,32 @@ namespace py::cpp::Windows::Media::Core
         _type_slots_LowLightFusion
     };
 
-    static PyGetSetDef getset_LowLightFusion_Meta[] = {
+    static PyGetSetDef getset_LowLightFusion_Static[] = {
         { "max_supported_frame_count", reinterpret_cast<getter>(LowLightFusion_get_MaxSupportedFrameCount), nullptr, nullptr, nullptr },
         { "supported_bitmap_pixel_formats", reinterpret_cast<getter>(LowLightFusion_get_SupportedBitmapPixelFormats), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_LowLightFusion_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_LowLightFusion_Meta) },
+    static PyMethodDef methods_LowLightFusion_Static[] = {
+        { "fuse_async", reinterpret_cast<PyCFunction>(LowLightFusion_FuseAsync), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_LowLightFusion_Meta =
+    static PyType_Slot type_slots_LowLightFusion_Static[] = 
     {
-        "winrt._winrt_windows_media_core.LowLightFusion_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_LowLightFusion_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_LowLightFusion_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_LowLightFusion_Static =
+    {
+        "winrt._winrt_windows_media_core.LowLightFusion_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_LowLightFusion_Meta
+        type_slots_LowLightFusion_Static
     };
 
     // ----- LowLightFusionResult class --------------------
@@ -6322,17 +6332,6 @@ namespace py::cpp::Windows::Media::Core
 
     static PyMethodDef _methods_MediaSource[] = {
         { "close", reinterpret_cast<PyCFunction>(MediaSource_Close), METH_VARARGS, nullptr },
-        { "create_from_adaptive_media_source", reinterpret_cast<PyCFunction>(MediaSource_CreateFromAdaptiveMediaSource), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_from_download_operation", reinterpret_cast<PyCFunction>(MediaSource_CreateFromDownloadOperation), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_from_i_media_source", reinterpret_cast<PyCFunction>(MediaSource_CreateFromIMediaSource), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_from_media_binder", reinterpret_cast<PyCFunction>(MediaSource_CreateFromMediaBinder), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_from_media_frame_source", reinterpret_cast<PyCFunction>(MediaSource_CreateFromMediaFrameSource), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_from_media_stream_source", reinterpret_cast<PyCFunction>(MediaSource_CreateFromMediaStreamSource), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_from_mse_stream_source", reinterpret_cast<PyCFunction>(MediaSource_CreateFromMseStreamSource), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_from_storage_file", reinterpret_cast<PyCFunction>(MediaSource_CreateFromStorageFile), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_from_stream", reinterpret_cast<PyCFunction>(MediaSource_CreateFromStream), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_from_stream_reference", reinterpret_cast<PyCFunction>(MediaSource_CreateFromStreamReference), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_from_uri", reinterpret_cast<PyCFunction>(MediaSource_CreateFromUri), METH_VARARGS | METH_STATIC, nullptr },
         { "open_async", reinterpret_cast<PyCFunction>(MediaSource_OpenAsync), METH_VARARGS, nullptr },
         { "reset", reinterpret_cast<PyCFunction>(MediaSource_Reset), METH_VARARGS, nullptr },
         { "add_open_operation_completed", reinterpret_cast<PyCFunction>(MediaSource_add_OpenOperationCompleted), METH_O, nullptr },
@@ -6377,6 +6376,42 @@ namespace py::cpp::Windows::Media::Core
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_MediaSource
+    };
+
+    static PyGetSetDef getset_MediaSource_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_MediaSource_Static[] = {
+        { "create_from_adaptive_media_source", reinterpret_cast<PyCFunction>(MediaSource_CreateFromAdaptiveMediaSource), METH_VARARGS, nullptr },
+        { "create_from_download_operation", reinterpret_cast<PyCFunction>(MediaSource_CreateFromDownloadOperation), METH_VARARGS, nullptr },
+        { "create_from_i_media_source", reinterpret_cast<PyCFunction>(MediaSource_CreateFromIMediaSource), METH_VARARGS, nullptr },
+        { "create_from_media_binder", reinterpret_cast<PyCFunction>(MediaSource_CreateFromMediaBinder), METH_VARARGS, nullptr },
+        { "create_from_media_frame_source", reinterpret_cast<PyCFunction>(MediaSource_CreateFromMediaFrameSource), METH_VARARGS, nullptr },
+        { "create_from_media_stream_source", reinterpret_cast<PyCFunction>(MediaSource_CreateFromMediaStreamSource), METH_VARARGS, nullptr },
+        { "create_from_mse_stream_source", reinterpret_cast<PyCFunction>(MediaSource_CreateFromMseStreamSource), METH_VARARGS, nullptr },
+        { "create_from_storage_file", reinterpret_cast<PyCFunction>(MediaSource_CreateFromStorageFile), METH_VARARGS, nullptr },
+        { "create_from_stream", reinterpret_cast<PyCFunction>(MediaSource_CreateFromStream), METH_VARARGS, nullptr },
+        { "create_from_stream_reference", reinterpret_cast<PyCFunction>(MediaSource_CreateFromStreamReference), METH_VARARGS, nullptr },
+        { "create_from_uri", reinterpret_cast<PyCFunction>(MediaSource_CreateFromUri), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_MediaSource_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_MediaSource_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_MediaSource_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_MediaSource_Static =
+    {
+        "winrt._winrt_windows_media_core.MediaSource_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_MediaSource_Static
     };
 
     // ----- MediaSourceAppServiceConnection class --------------------
@@ -7300,9 +7335,6 @@ namespace py::cpp::Windows::Media::Core
     }
 
     static PyMethodDef _methods_MediaStreamSample[] = {
-        { "create_from_buffer", reinterpret_cast<PyCFunction>(MediaStreamSample_CreateFromBuffer), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_from_direct3_d11_surface", reinterpret_cast<PyCFunction>(MediaStreamSample_CreateFromDirect3D11Surface), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_from_stream_async", reinterpret_cast<PyCFunction>(MediaStreamSample_CreateFromStreamAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "add_processed", reinterpret_cast<PyCFunction>(MediaStreamSample_add_Processed), METH_O, nullptr },
         { "remove_processed", reinterpret_cast<PyCFunction>(MediaStreamSample_remove_Processed), METH_O, nullptr },
         { "_assign_array_", _assign_array_MediaStreamSample, METH_O | METH_STATIC, nullptr },
@@ -7339,6 +7371,34 @@ namespace py::cpp::Windows::Media::Core
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_MediaStreamSample
+    };
+
+    static PyGetSetDef getset_MediaStreamSample_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_MediaStreamSample_Static[] = {
+        { "create_from_buffer", reinterpret_cast<PyCFunction>(MediaStreamSample_CreateFromBuffer), METH_VARARGS, nullptr },
+        { "create_from_direct3_d11_surface", reinterpret_cast<PyCFunction>(MediaStreamSample_CreateFromDirect3D11Surface), METH_VARARGS, nullptr },
+        { "create_from_stream_async", reinterpret_cast<PyCFunction>(MediaStreamSample_CreateFromStreamAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_MediaStreamSample_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_MediaStreamSample_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_MediaStreamSample_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_MediaStreamSample_Static =
+    {
+        "winrt._winrt_windows_media_core.MediaStreamSample_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_MediaStreamSample_Static
     };
 
     // ----- MediaStreamSamplePropertySet class --------------------
@@ -11578,7 +11638,6 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef _methods_MseStreamSource[] = {
         { "add_source_buffer", reinterpret_cast<PyCFunction>(MseStreamSource_AddSourceBuffer), METH_VARARGS, nullptr },
         { "end_of_stream", reinterpret_cast<PyCFunction>(MseStreamSource_EndOfStream), METH_VARARGS, nullptr },
-        { "is_content_type_supported", reinterpret_cast<PyCFunction>(MseStreamSource_IsContentTypeSupported), METH_VARARGS | METH_STATIC, nullptr },
         { "remove_source_buffer", reinterpret_cast<PyCFunction>(MseStreamSource_RemoveSourceBuffer), METH_VARARGS, nullptr },
         { "add_closed", reinterpret_cast<PyCFunction>(MseStreamSource_add_Closed), METH_O, nullptr },
         { "remove_closed", reinterpret_cast<PyCFunction>(MseStreamSource_remove_Closed), METH_O, nullptr },
@@ -11616,6 +11675,32 @@ namespace py::cpp::Windows::Media::Core
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_MseStreamSource
+    };
+
+    static PyGetSetDef getset_MseStreamSource_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_MseStreamSource_Static[] = {
+        { "is_content_type_supported", reinterpret_cast<PyCFunction>(MseStreamSource_IsContentTypeSupported), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_MseStreamSource_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_MseStreamSource_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_MseStreamSource_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_MseStreamSource_Static =
+    {
+        "winrt._winrt_windows_media_core.MseStreamSource_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_MseStreamSource_Static
     };
 
     // ----- SceneAnalysisEffect class --------------------
@@ -15842,10 +15927,6 @@ namespace py::cpp::Windows::Media::Core
     }
 
     static PyMethodDef _methods_TimedTextSource[] = {
-        { "create_from_stream", reinterpret_cast<PyCFunction>(TimedTextSource_CreateFromStream), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_from_stream_with_index", reinterpret_cast<PyCFunction>(TimedTextSource_CreateFromStreamWithIndex), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_from_uri", reinterpret_cast<PyCFunction>(TimedTextSource_CreateFromUri), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_from_uri_with_index", reinterpret_cast<PyCFunction>(TimedTextSource_CreateFromUriWithIndex), METH_VARARGS | METH_STATIC, nullptr },
         { "add_resolved", reinterpret_cast<PyCFunction>(TimedTextSource_add_Resolved), METH_O, nullptr },
         { "remove_resolved", reinterpret_cast<PyCFunction>(TimedTextSource_remove_Resolved), METH_O, nullptr },
         { "_assign_array_", _assign_array_TimedTextSource, METH_O | METH_STATIC, nullptr },
@@ -15873,6 +15954,35 @@ namespace py::cpp::Windows::Media::Core
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_TimedTextSource
+    };
+
+    static PyGetSetDef getset_TimedTextSource_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_TimedTextSource_Static[] = {
+        { "create_from_stream", reinterpret_cast<PyCFunction>(TimedTextSource_CreateFromStream), METH_VARARGS, nullptr },
+        { "create_from_stream_with_index", reinterpret_cast<PyCFunction>(TimedTextSource_CreateFromStreamWithIndex), METH_VARARGS, nullptr },
+        { "create_from_uri", reinterpret_cast<PyCFunction>(TimedTextSource_CreateFromUri), METH_VARARGS, nullptr },
+        { "create_from_uri_with_index", reinterpret_cast<PyCFunction>(TimedTextSource_CreateFromUriWithIndex), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_TimedTextSource_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_TimedTextSource_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_TimedTextSource_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_TimedTextSource_Static =
+    {
+        "winrt._winrt_windows_media_core.TimedTextSource_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_TimedTextSource_Static
     };
 
     // ----- TimedTextSourceResolveResultEventArgs class --------------------
@@ -20668,13 +20778,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_core(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_CodecSubtypes_Meta{PyType_FromSpec(&type_spec_CodecSubtypes_Meta)};
-    if (!type_CodecSubtypes_Meta)
+    py::pyobj_handle type_CodecSubtypes_Static{PyType_FromSpec(&type_spec_CodecSubtypes_Static)};
+    if (!type_CodecSubtypes_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CodecSubtypes, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CodecSubtypes_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CodecSubtypes, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CodecSubtypes_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -20724,13 +20834,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_core(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_LowLightFusion_Meta{PyType_FromSpec(&type_spec_LowLightFusion_Meta)};
-    if (!type_LowLightFusion_Meta)
+    py::pyobj_handle type_LowLightFusion_Static{PyType_FromSpec(&type_spec_LowLightFusion_Static)};
+    if (!type_LowLightFusion_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LowLightFusion, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LowLightFusion_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LowLightFusion, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LowLightFusion_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -20755,7 +20865,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_core(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MediaSource, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_MediaSource_Static{PyType_FromSpec(&type_spec_MediaSource_Static)};
+    if (!type_MediaSource_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_MediaSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MediaSource_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -20780,7 +20896,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_core(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MediaStreamSample, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_MediaStreamSample_Static{PyType_FromSpec(&type_spec_MediaStreamSample_Static)};
+    if (!type_MediaStreamSample_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_MediaStreamSample, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MediaStreamSample_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -20870,7 +20992,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_core(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MseStreamSource, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_MseStreamSource_Static{PyType_FromSpec(&type_spec_MseStreamSource_Static)};
+    if (!type_MseStreamSource_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_MseStreamSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MseStreamSource_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -20945,7 +21073,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_core(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_TimedTextSource, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_TimedTextSource_Static{PyType_FromSpec(&type_spec_TimedTextSource_Static)};
+    if (!type_TimedTextSource_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_TimedTextSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TimedTextSource_Static.get())) == -1)
     {
         return nullptr;
     }

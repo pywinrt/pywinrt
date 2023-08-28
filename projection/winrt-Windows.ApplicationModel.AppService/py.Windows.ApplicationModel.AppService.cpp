@@ -47,7 +47,6 @@ namespace py::cpp::Windows::ApplicationModel::AppService
     }
 
     static PyMethodDef _methods_AppServiceCatalog[] = {
-        { "find_app_service_providers_async", reinterpret_cast<PyCFunction>(AppServiceCatalog_FindAppServiceProvidersAsync), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -70,6 +69,32 @@ namespace py::cpp::Windows::ApplicationModel::AppService
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_AppServiceCatalog
+    };
+
+    static PyGetSetDef getset_AppServiceCatalog_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_AppServiceCatalog_Static[] = {
+        { "find_app_service_providers_async", reinterpret_cast<PyCFunction>(AppServiceCatalog_FindAppServiceProvidersAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_AppServiceCatalog_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_AppServiceCatalog_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_AppServiceCatalog_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_AppServiceCatalog_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_appservice.AppServiceCatalog_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_AppServiceCatalog_Static
     };
 
     // ----- AppServiceClosedEventArgs class --------------------
@@ -629,7 +654,6 @@ namespace py::cpp::Windows::ApplicationModel::AppService
         { "open_async", reinterpret_cast<PyCFunction>(AppServiceConnection_OpenAsync), METH_VARARGS, nullptr },
         { "open_remote_async", reinterpret_cast<PyCFunction>(AppServiceConnection_OpenRemoteAsync), METH_VARARGS, nullptr },
         { "send_message_async", reinterpret_cast<PyCFunction>(AppServiceConnection_SendMessageAsync), METH_VARARGS, nullptr },
-        { "send_stateless_message_async", reinterpret_cast<PyCFunction>(AppServiceConnection_SendStatelessMessageAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "add_request_received", reinterpret_cast<PyCFunction>(AppServiceConnection_add_RequestReceived), METH_O, nullptr },
         { "remove_request_received", reinterpret_cast<PyCFunction>(AppServiceConnection_remove_RequestReceived), METH_O, nullptr },
         { "add_service_closed", reinterpret_cast<PyCFunction>(AppServiceConnection_add_ServiceClosed), METH_O, nullptr },
@@ -664,6 +688,32 @@ namespace py::cpp::Windows::ApplicationModel::AppService
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_AppServiceConnection
+    };
+
+    static PyGetSetDef getset_AppServiceConnection_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_AppServiceConnection_Static[] = {
+        { "send_stateless_message_async", reinterpret_cast<PyCFunction>(AppServiceConnection_SendStatelessMessageAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_AppServiceConnection_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_AppServiceConnection_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_AppServiceConnection_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_AppServiceConnection_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_appservice.AppServiceConnection_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_AppServiceConnection_Static
     };
 
     // ----- AppServiceDeferral class --------------------
@@ -1471,7 +1521,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_appservice(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppServiceCatalog, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_AppServiceCatalog_Static{PyType_FromSpec(&type_spec_AppServiceCatalog_Static)};
+    if (!type_AppServiceCatalog_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_AppServiceCatalog, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppServiceCatalog_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -1481,7 +1537,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_appservice(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppServiceConnection, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_AppServiceConnection_Static{PyType_FromSpec(&type_spec_AppServiceConnection_Static)};
+    if (!type_AppServiceConnection_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_AppServiceConnection, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppServiceConnection_Static.get())) == -1)
     {
         return nullptr;
     }

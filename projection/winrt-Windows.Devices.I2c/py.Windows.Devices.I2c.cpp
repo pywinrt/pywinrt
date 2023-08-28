@@ -376,8 +376,6 @@ namespace py::cpp::Windows::Devices::I2c
     }
 
     static PyMethodDef _methods_I2cController[] = {
-        { "get_controllers_async", reinterpret_cast<PyCFunction>(I2cController_GetControllersAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_default_async", reinterpret_cast<PyCFunction>(I2cController_GetDefaultAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "get_device", reinterpret_cast<PyCFunction>(I2cController_GetDevice), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_I2cController, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_I2cController), METH_O | METH_STATIC, nullptr },
@@ -404,6 +402,33 @@ namespace py::cpp::Windows::Devices::I2c
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_I2cController
+    };
+
+    static PyGetSetDef getset_I2cController_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_I2cController_Static[] = {
+        { "get_controllers_async", reinterpret_cast<PyCFunction>(I2cController_GetControllersAsync), METH_VARARGS, nullptr },
+        { "get_default_async", reinterpret_cast<PyCFunction>(I2cController_GetDefaultAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_I2cController_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_I2cController_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_I2cController_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_I2cController_Static =
+    {
+        "winrt._winrt_windows_devices_i2c.I2cController_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_I2cController_Static
     };
 
     // ----- I2cDevice class --------------------
@@ -808,8 +833,6 @@ namespace py::cpp::Windows::Devices::I2c
 
     static PyMethodDef _methods_I2cDevice[] = {
         { "close", reinterpret_cast<PyCFunction>(I2cDevice_Close), METH_VARARGS, nullptr },
-        { "from_id_async", reinterpret_cast<PyCFunction>(I2cDevice_FromIdAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_device_selector", reinterpret_cast<PyCFunction>(I2cDevice_GetDeviceSelector), METH_VARARGS | METH_STATIC, nullptr },
         { "read", reinterpret_cast<PyCFunction>(I2cDevice_Read), METH_VARARGS, nullptr },
         { "read_partial", reinterpret_cast<PyCFunction>(I2cDevice_ReadPartial), METH_VARARGS, nullptr },
         { "write", reinterpret_cast<PyCFunction>(I2cDevice_Write), METH_VARARGS, nullptr },
@@ -845,6 +868,33 @@ namespace py::cpp::Windows::Devices::I2c
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_I2cDevice
+    };
+
+    static PyGetSetDef getset_I2cDevice_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_I2cDevice_Static[] = {
+        { "from_id_async", reinterpret_cast<PyCFunction>(I2cDevice_FromIdAsync), METH_VARARGS, nullptr },
+        { "get_device_selector", reinterpret_cast<PyCFunction>(I2cDevice_GetDeviceSelector), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_I2cDevice_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_I2cDevice_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_I2cDevice_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_I2cDevice_Static =
+    {
+        "winrt._winrt_windows_devices_i2c.I2cDevice_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_I2cDevice_Static
     };
 
     // ----- II2cDeviceStatics interface --------------------
@@ -1211,12 +1261,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_i2c(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_I2cController, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_I2cController_Static{PyType_FromSpec(&type_spec_I2cController_Static)};
+    if (!type_I2cController_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_I2cDevice, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_I2cController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_I2cController_Static.get())) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_I2cDevice_Static{PyType_FromSpec(&type_spec_I2cDevice_Static)};
+    if (!type_I2cDevice_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_I2cDevice, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_I2cDevice_Static.get())) == -1)
     {
         return nullptr;
     }

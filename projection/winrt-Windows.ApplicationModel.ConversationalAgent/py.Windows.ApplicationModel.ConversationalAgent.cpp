@@ -2040,25 +2040,30 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         _type_slots_ConversationalAgentDetectorManager
     };
 
-    static PyGetSetDef getset_ConversationalAgentDetectorManager_Meta[] = {
+    static PyGetSetDef getset_ConversationalAgentDetectorManager_Static[] = {
         { "default", reinterpret_cast<getter>(ConversationalAgentDetectorManager_get_Default), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_ConversationalAgentDetectorManager_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_ConversationalAgentDetectorManager_Meta) },
+    static PyMethodDef methods_ConversationalAgentDetectorManager_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_ConversationalAgentDetectorManager_Meta =
+    static PyType_Slot type_slots_ConversationalAgentDetectorManager_Static[] = 
     {
-        "winrt._winrt_windows_applicationmodel_conversationalagent.ConversationalAgentDetectorManager_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ConversationalAgentDetectorManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ConversationalAgentDetectorManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ConversationalAgentDetectorManager_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_conversationalagent.ConversationalAgentDetectorManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ConversationalAgentDetectorManager_Meta
+        type_slots_ConversationalAgentDetectorManager_Static
     };
 
     // ----- ConversationalAgentSession class --------------------
@@ -3279,8 +3284,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         { "get_audio_client_async", reinterpret_cast<PyCFunction>(ConversationalAgentSession_GetAudioClientAsync), METH_VARARGS, nullptr },
         { "get_audio_render_device_id", reinterpret_cast<PyCFunction>(ConversationalAgentSession_GetAudioRenderDeviceId), METH_VARARGS, nullptr },
         { "get_audio_render_device_id_async", reinterpret_cast<PyCFunction>(ConversationalAgentSession_GetAudioRenderDeviceIdAsync), METH_VARARGS, nullptr },
-        { "get_current_session_async", reinterpret_cast<PyCFunction>(ConversationalAgentSession_GetCurrentSessionAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_current_session_sync", reinterpret_cast<PyCFunction>(ConversationalAgentSession_GetCurrentSessionSync), METH_VARARGS | METH_STATIC, nullptr },
         { "get_missing_prerequisites", reinterpret_cast<PyCFunction>(ConversationalAgentSession_GetMissingPrerequisites), METH_VARARGS, nullptr },
         { "get_missing_prerequisites_async", reinterpret_cast<PyCFunction>(ConversationalAgentSession_GetMissingPrerequisitesAsync), METH_VARARGS, nullptr },
         { "get_signal_model_id", reinterpret_cast<PyCFunction>(ConversationalAgentSession_GetSignalModelId), METH_VARARGS, nullptr },
@@ -3340,6 +3343,33 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ConversationalAgentSession
+    };
+
+    static PyGetSetDef getset_ConversationalAgentSession_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ConversationalAgentSession_Static[] = {
+        { "get_current_session_async", reinterpret_cast<PyCFunction>(ConversationalAgentSession_GetCurrentSessionAsync), METH_VARARGS, nullptr },
+        { "get_current_session_sync", reinterpret_cast<PyCFunction>(ConversationalAgentSession_GetCurrentSessionSync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_ConversationalAgentSession_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ConversationalAgentSession_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ConversationalAgentSession_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ConversationalAgentSession_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_conversationalagent.ConversationalAgentSession_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ConversationalAgentSession_Static
     };
 
     // ----- ConversationalAgentSessionInterruptedEventArgs class --------------------
@@ -4285,18 +4315,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_conversationalagent(void) 
         return nullptr;
     }
 
-    py::pyobj_handle type_ConversationalAgentDetectorManager_Meta{PyType_FromSpec(&type_spec_ConversationalAgentDetectorManager_Meta)};
-    if (!type_ConversationalAgentDetectorManager_Meta)
+    py::pyobj_handle type_ConversationalAgentDetectorManager_Static{PyType_FromSpec(&type_spec_ConversationalAgentDetectorManager_Static)};
+    if (!type_ConversationalAgentDetectorManager_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ConversationalAgentDetectorManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ConversationalAgentDetectorManager_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ConversationalAgentDetectorManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ConversationalAgentDetectorManager_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ConversationalAgentSession, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_ConversationalAgentSession_Static{PyType_FromSpec(&type_spec_ConversationalAgentSession_Static)};
+    if (!type_ConversationalAgentSession_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_ConversationalAgentSession, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ConversationalAgentSession_Static.get())) == -1)
     {
         return nullptr;
     }

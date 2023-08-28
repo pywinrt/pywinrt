@@ -315,14 +315,6 @@ namespace py::cpp::Windows::Foundation::Metadata
     }
 
     static PyMethodDef _methods_ApiInformation[] = {
-        { "is_api_contract_present", reinterpret_cast<PyCFunction>(ApiInformation_IsApiContractPresent), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_enum_named_value_present", reinterpret_cast<PyCFunction>(ApiInformation_IsEnumNamedValuePresent), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_event_present", reinterpret_cast<PyCFunction>(ApiInformation_IsEventPresent), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_method_present", reinterpret_cast<PyCFunction>(ApiInformation_IsMethodPresent), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_property_present", reinterpret_cast<PyCFunction>(ApiInformation_IsPropertyPresent), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_read_only_property_present", reinterpret_cast<PyCFunction>(ApiInformation_IsReadOnlyPropertyPresent), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_type_present", reinterpret_cast<PyCFunction>(ApiInformation_IsTypePresent), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_writeable_property_present", reinterpret_cast<PyCFunction>(ApiInformation_IsWriteablePropertyPresent), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -345,6 +337,39 @@ namespace py::cpp::Windows::Foundation::Metadata
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ApiInformation
+    };
+
+    static PyGetSetDef getset_ApiInformation_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ApiInformation_Static[] = {
+        { "is_api_contract_present", reinterpret_cast<PyCFunction>(ApiInformation_IsApiContractPresent), METH_VARARGS, nullptr },
+        { "is_enum_named_value_present", reinterpret_cast<PyCFunction>(ApiInformation_IsEnumNamedValuePresent), METH_VARARGS, nullptr },
+        { "is_event_present", reinterpret_cast<PyCFunction>(ApiInformation_IsEventPresent), METH_VARARGS, nullptr },
+        { "is_method_present", reinterpret_cast<PyCFunction>(ApiInformation_IsMethodPresent), METH_VARARGS, nullptr },
+        { "is_property_present", reinterpret_cast<PyCFunction>(ApiInformation_IsPropertyPresent), METH_VARARGS, nullptr },
+        { "is_read_only_property_present", reinterpret_cast<PyCFunction>(ApiInformation_IsReadOnlyPropertyPresent), METH_VARARGS, nullptr },
+        { "is_type_present", reinterpret_cast<PyCFunction>(ApiInformation_IsTypePresent), METH_VARARGS, nullptr },
+        { "is_writeable_property_present", reinterpret_cast<PyCFunction>(ApiInformation_IsWriteablePropertyPresent), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_ApiInformation_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ApiInformation_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ApiInformation_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ApiInformation_Static =
+    {
+        "winrt._winrt_windows_foundation_metadata.ApiInformation_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ApiInformation_Static
     };
 
     // ----- Windows.Foundation.Metadata Initialization --------------------
@@ -393,7 +418,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation_metadata(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ApiInformation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_ApiInformation_Static{PyType_FromSpec(&type_spec_ApiInformation_Static)};
+    if (!type_ApiInformation_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_ApiInformation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ApiInformation_Static.get())) == -1)
     {
         return nullptr;
     }

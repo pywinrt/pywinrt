@@ -1332,8 +1332,6 @@ namespace py::cpp::Windows::Devices::Input::Preview
     }
 
     static PyMethodDef _methods_GazeInputSourcePreview[] = {
-        { "create_watcher", reinterpret_cast<PyCFunction>(GazeInputSourcePreview_CreateWatcher), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_for_current_view", reinterpret_cast<PyCFunction>(GazeInputSourcePreview_GetForCurrentView), METH_VARARGS | METH_STATIC, nullptr },
         { "add_gaze_entered", reinterpret_cast<PyCFunction>(GazeInputSourcePreview_add_GazeEntered), METH_O, nullptr },
         { "remove_gaze_entered", reinterpret_cast<PyCFunction>(GazeInputSourcePreview_remove_GazeEntered), METH_O, nullptr },
         { "add_gaze_exited", reinterpret_cast<PyCFunction>(GazeInputSourcePreview_add_GazeExited), METH_O, nullptr },
@@ -1365,6 +1363,33 @@ namespace py::cpp::Windows::Devices::Input::Preview
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_GazeInputSourcePreview
+    };
+
+    static PyGetSetDef getset_GazeInputSourcePreview_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_GazeInputSourcePreview_Static[] = {
+        { "create_watcher", reinterpret_cast<PyCFunction>(GazeInputSourcePreview_CreateWatcher), METH_VARARGS, nullptr },
+        { "get_for_current_view", reinterpret_cast<PyCFunction>(GazeInputSourcePreview_GetForCurrentView), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_GazeInputSourcePreview_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_GazeInputSourcePreview_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_GazeInputSourcePreview_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_GazeInputSourcePreview_Static =
+    {
+        "winrt._winrt_windows_devices_input_preview.GazeInputSourcePreview_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_GazeInputSourcePreview_Static
     };
 
     // ----- GazeMovedPreviewEventArgs class --------------------
@@ -1784,7 +1809,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_input_preview(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GazeInputSourcePreview, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_GazeInputSourcePreview_Static{PyType_FromSpec(&type_spec_GazeInputSourcePreview_Static)};
+    if (!type_GazeInputSourcePreview_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_GazeInputSourcePreview, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GazeInputSourcePreview_Static.get())) == -1)
     {
         return nullptr;
     }

@@ -366,17 +366,6 @@ namespace py::cpp::Windows::Security::Cryptography
     }
 
     static PyMethodDef _methods_CryptographicBuffer[] = {
-        { "compare", reinterpret_cast<PyCFunction>(CryptographicBuffer_Compare), METH_VARARGS | METH_STATIC, nullptr },
-        { "convert_binary_to_string", reinterpret_cast<PyCFunction>(CryptographicBuffer_ConvertBinaryToString), METH_VARARGS | METH_STATIC, nullptr },
-        { "convert_string_to_binary", reinterpret_cast<PyCFunction>(CryptographicBuffer_ConvertStringToBinary), METH_VARARGS | METH_STATIC, nullptr },
-        { "copy_to_byte_array", reinterpret_cast<PyCFunction>(CryptographicBuffer_CopyToByteArray), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_from_byte_array", reinterpret_cast<PyCFunction>(CryptographicBuffer_CreateFromByteArray), METH_VARARGS | METH_STATIC, nullptr },
-        { "decode_from_base64_string", reinterpret_cast<PyCFunction>(CryptographicBuffer_DecodeFromBase64String), METH_VARARGS | METH_STATIC, nullptr },
-        { "decode_from_hex_string", reinterpret_cast<PyCFunction>(CryptographicBuffer_DecodeFromHexString), METH_VARARGS | METH_STATIC, nullptr },
-        { "encode_to_base64_string", reinterpret_cast<PyCFunction>(CryptographicBuffer_EncodeToBase64String), METH_VARARGS | METH_STATIC, nullptr },
-        { "encode_to_hex_string", reinterpret_cast<PyCFunction>(CryptographicBuffer_EncodeToHexString), METH_VARARGS | METH_STATIC, nullptr },
-        { "generate_random", reinterpret_cast<PyCFunction>(CryptographicBuffer_GenerateRandom), METH_VARARGS | METH_STATIC, nullptr },
-        { "generate_random_number", reinterpret_cast<PyCFunction>(CryptographicBuffer_GenerateRandomNumber), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -399,6 +388,42 @@ namespace py::cpp::Windows::Security::Cryptography
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_CryptographicBuffer
+    };
+
+    static PyGetSetDef getset_CryptographicBuffer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_CryptographicBuffer_Static[] = {
+        { "compare", reinterpret_cast<PyCFunction>(CryptographicBuffer_Compare), METH_VARARGS, nullptr },
+        { "convert_binary_to_string", reinterpret_cast<PyCFunction>(CryptographicBuffer_ConvertBinaryToString), METH_VARARGS, nullptr },
+        { "convert_string_to_binary", reinterpret_cast<PyCFunction>(CryptographicBuffer_ConvertStringToBinary), METH_VARARGS, nullptr },
+        { "copy_to_byte_array", reinterpret_cast<PyCFunction>(CryptographicBuffer_CopyToByteArray), METH_VARARGS, nullptr },
+        { "create_from_byte_array", reinterpret_cast<PyCFunction>(CryptographicBuffer_CreateFromByteArray), METH_VARARGS, nullptr },
+        { "decode_from_base64_string", reinterpret_cast<PyCFunction>(CryptographicBuffer_DecodeFromBase64String), METH_VARARGS, nullptr },
+        { "decode_from_hex_string", reinterpret_cast<PyCFunction>(CryptographicBuffer_DecodeFromHexString), METH_VARARGS, nullptr },
+        { "encode_to_base64_string", reinterpret_cast<PyCFunction>(CryptographicBuffer_EncodeToBase64String), METH_VARARGS, nullptr },
+        { "encode_to_hex_string", reinterpret_cast<PyCFunction>(CryptographicBuffer_EncodeToHexString), METH_VARARGS, nullptr },
+        { "generate_random", reinterpret_cast<PyCFunction>(CryptographicBuffer_GenerateRandom), METH_VARARGS, nullptr },
+        { "generate_random_number", reinterpret_cast<PyCFunction>(CryptographicBuffer_GenerateRandomNumber), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_CryptographicBuffer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CryptographicBuffer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CryptographicBuffer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CryptographicBuffer_Static =
+    {
+        "winrt._winrt_windows_security_cryptography.CryptographicBuffer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CryptographicBuffer_Static
     };
 
     // ----- Windows.Security.Cryptography Initialization --------------------
@@ -447,7 +472,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CryptographicBuffer, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_CryptographicBuffer_Static{PyType_FromSpec(&type_spec_CryptographicBuffer_Static)};
+    if (!type_CryptographicBuffer_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_CryptographicBuffer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CryptographicBuffer_Static.get())) == -1)
     {
         return nullptr;
     }

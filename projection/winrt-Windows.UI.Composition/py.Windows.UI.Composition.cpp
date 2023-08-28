@@ -484,26 +484,31 @@ namespace py::cpp::Windows::UI::Composition
         _type_slots_AnimationController
     };
 
-    static PyGetSetDef getset_AnimationController_Meta[] = {
+    static PyGetSetDef getset_AnimationController_Static[] = {
         { "max_playback_rate", reinterpret_cast<getter>(AnimationController_get_MaxPlaybackRate), nullptr, nullptr, nullptr },
         { "min_playback_rate", reinterpret_cast<getter>(AnimationController_get_MinPlaybackRate), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_AnimationController_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_AnimationController_Meta) },
+    static PyMethodDef methods_AnimationController_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_AnimationController_Meta =
+    static PyType_Slot type_slots_AnimationController_Static[] = 
     {
-        "winrt._winrt_windows_ui_composition.AnimationController_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_AnimationController_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_AnimationController_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_AnimationController_Static =
+    {
+        "winrt._winrt_windows_ui_composition.AnimationController_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_AnimationController_Meta
+        type_slots_AnimationController_Static
     };
 
     // ----- AnimationPropertyInfo class --------------------
@@ -2968,7 +2973,6 @@ namespace py::cpp::Windows::UI::Composition
     static PyMethodDef _methods_CompositionCapabilities[] = {
         { "are_effects_fast", reinterpret_cast<PyCFunction>(CompositionCapabilities_AreEffectsFast), METH_VARARGS, nullptr },
         { "are_effects_supported", reinterpret_cast<PyCFunction>(CompositionCapabilities_AreEffectsSupported), METH_VARARGS, nullptr },
-        { "get_for_current_view", reinterpret_cast<PyCFunction>(CompositionCapabilities_GetForCurrentView), METH_VARARGS | METH_STATIC, nullptr },
         { "add_changed", reinterpret_cast<PyCFunction>(CompositionCapabilities_add_Changed), METH_O, nullptr },
         { "remove_changed", reinterpret_cast<PyCFunction>(CompositionCapabilities_remove_Changed), METH_O, nullptr },
         { "_assign_array_", _assign_array_CompositionCapabilities, METH_O | METH_STATIC, nullptr },
@@ -2996,6 +3000,32 @@ namespace py::cpp::Windows::UI::Composition
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_CompositionCapabilities
+    };
+
+    static PyGetSetDef getset_CompositionCapabilities_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_CompositionCapabilities_Static[] = {
+        { "get_for_current_view", reinterpret_cast<PyCFunction>(CompositionCapabilities_GetForCurrentView), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_CompositionCapabilities_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CompositionCapabilities_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CompositionCapabilities_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CompositionCapabilities_Static =
+    {
+        "winrt._winrt_windows_ui_composition.CompositionCapabilities_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CompositionCapabilities_Static
     };
 
     // ----- CompositionClip class --------------------
@@ -5228,16 +5258,6 @@ namespace py::cpp::Windows::UI::Composition
     }
 
     static PyMethodDef _methods_CompositionEasingFunction[] = {
-        { "create_back_easing_function", reinterpret_cast<PyCFunction>(CompositionEasingFunction_CreateBackEasingFunction), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_bounce_easing_function", reinterpret_cast<PyCFunction>(CompositionEasingFunction_CreateBounceEasingFunction), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_circle_easing_function", reinterpret_cast<PyCFunction>(CompositionEasingFunction_CreateCircleEasingFunction), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_cubic_bezier_easing_function", reinterpret_cast<PyCFunction>(CompositionEasingFunction_CreateCubicBezierEasingFunction), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_elastic_easing_function", reinterpret_cast<PyCFunction>(CompositionEasingFunction_CreateElasticEasingFunction), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_exponential_easing_function", reinterpret_cast<PyCFunction>(CompositionEasingFunction_CreateExponentialEasingFunction), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_linear_easing_function", reinterpret_cast<PyCFunction>(CompositionEasingFunction_CreateLinearEasingFunction), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_power_easing_function", reinterpret_cast<PyCFunction>(CompositionEasingFunction_CreatePowerEasingFunction), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_sine_easing_function", reinterpret_cast<PyCFunction>(CompositionEasingFunction_CreateSineEasingFunction), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_step_easing_function", reinterpret_cast<PyCFunction>(CompositionEasingFunction_CreateStepEasingFunction), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_CompositionEasingFunction, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionEasingFunction), METH_O | METH_STATIC, nullptr },
         { }
@@ -5263,6 +5283,41 @@ namespace py::cpp::Windows::UI::Composition
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_CompositionEasingFunction
+    };
+
+    static PyGetSetDef getset_CompositionEasingFunction_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_CompositionEasingFunction_Static[] = {
+        { "create_back_easing_function", reinterpret_cast<PyCFunction>(CompositionEasingFunction_CreateBackEasingFunction), METH_VARARGS, nullptr },
+        { "create_bounce_easing_function", reinterpret_cast<PyCFunction>(CompositionEasingFunction_CreateBounceEasingFunction), METH_VARARGS, nullptr },
+        { "create_circle_easing_function", reinterpret_cast<PyCFunction>(CompositionEasingFunction_CreateCircleEasingFunction), METH_VARARGS, nullptr },
+        { "create_cubic_bezier_easing_function", reinterpret_cast<PyCFunction>(CompositionEasingFunction_CreateCubicBezierEasingFunction), METH_VARARGS, nullptr },
+        { "create_elastic_easing_function", reinterpret_cast<PyCFunction>(CompositionEasingFunction_CreateElasticEasingFunction), METH_VARARGS, nullptr },
+        { "create_exponential_easing_function", reinterpret_cast<PyCFunction>(CompositionEasingFunction_CreateExponentialEasingFunction), METH_VARARGS, nullptr },
+        { "create_linear_easing_function", reinterpret_cast<PyCFunction>(CompositionEasingFunction_CreateLinearEasingFunction), METH_VARARGS, nullptr },
+        { "create_power_easing_function", reinterpret_cast<PyCFunction>(CompositionEasingFunction_CreatePowerEasingFunction), METH_VARARGS, nullptr },
+        { "create_sine_easing_function", reinterpret_cast<PyCFunction>(CompositionEasingFunction_CreateSineEasingFunction), METH_VARARGS, nullptr },
+        { "create_step_easing_function", reinterpret_cast<PyCFunction>(CompositionEasingFunction_CreateStepEasingFunction), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_CompositionEasingFunction_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CompositionEasingFunction_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CompositionEasingFunction_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CompositionEasingFunction_Static =
+    {
+        "winrt._winrt_windows_ui_composition.CompositionEasingFunction_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CompositionEasingFunction_Static
     };
 
     // ----- CompositionEffectBrush class --------------------
@@ -9125,8 +9180,6 @@ namespace py::cpp::Windows::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(CompositionObject_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(CompositionObject_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(CompositionObject_StartAnimationGroup), METH_VARARGS, nullptr },
-        { "start_animation_group_with_i_animation_object", reinterpret_cast<PyCFunction>(CompositionObject_StartAnimationGroupWithIAnimationObject), METH_VARARGS | METH_STATIC, nullptr },
-        { "start_animation_with_i_animation_object", reinterpret_cast<PyCFunction>(CompositionObject_StartAnimationWithIAnimationObject), METH_VARARGS | METH_STATIC, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(CompositionObject_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(CompositionObject_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(CompositionObject_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -9163,6 +9216,33 @@ namespace py::cpp::Windows::UI::Composition
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_CompositionObject
+    };
+
+    static PyGetSetDef getset_CompositionObject_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_CompositionObject_Static[] = {
+        { "start_animation_group_with_i_animation_object", reinterpret_cast<PyCFunction>(CompositionObject_StartAnimationGroupWithIAnimationObject), METH_VARARGS, nullptr },
+        { "start_animation_with_i_animation_object", reinterpret_cast<PyCFunction>(CompositionObject_StartAnimationWithIAnimationObject), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_CompositionObject_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CompositionObject_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CompositionObject_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CompositionObject_Static =
+    {
+        "winrt._winrt_windows_ui_composition.CompositionObject_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CompositionObject_Static
     };
 
     // ----- CompositionPath class --------------------
@@ -10191,25 +10271,30 @@ namespace py::cpp::Windows::UI::Composition
         _type_slots_CompositionProjectedShadowCasterCollection
     };
 
-    static PyGetSetDef getset_CompositionProjectedShadowCasterCollection_Meta[] = {
+    static PyGetSetDef getset_CompositionProjectedShadowCasterCollection_Static[] = {
         { "max_respected_casters", reinterpret_cast<getter>(CompositionProjectedShadowCasterCollection_get_MaxRespectedCasters), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_CompositionProjectedShadowCasterCollection_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_CompositionProjectedShadowCasterCollection_Meta) },
+    static PyMethodDef methods_CompositionProjectedShadowCasterCollection_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_CompositionProjectedShadowCasterCollection_Meta =
+    static PyType_Slot type_slots_CompositionProjectedShadowCasterCollection_Static[] = 
     {
-        "winrt._winrt_windows_ui_composition.CompositionProjectedShadowCasterCollection_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CompositionProjectedShadowCasterCollection_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CompositionProjectedShadowCasterCollection_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CompositionProjectedShadowCasterCollection_Static =
+    {
+        "winrt._winrt_windows_ui_composition.CompositionProjectedShadowCasterCollection_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_CompositionProjectedShadowCasterCollection_Meta
+        type_slots_CompositionProjectedShadowCasterCollection_Static
     };
 
     // ----- CompositionProjectedShadowReceiver class --------------------
@@ -18428,26 +18513,31 @@ namespace py::cpp::Windows::UI::Composition
         _type_slots_Compositor
     };
 
-    static PyGetSetDef getset_Compositor_Meta[] = {
+    static PyGetSetDef getset_Compositor_Static[] = {
         { "max_global_playback_rate", reinterpret_cast<getter>(Compositor_get_MaxGlobalPlaybackRate), nullptr, nullptr, nullptr },
         { "min_global_playback_rate", reinterpret_cast<getter>(Compositor_get_MinGlobalPlaybackRate), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_Compositor_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_Compositor_Meta) },
+    static PyMethodDef methods_Compositor_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_Compositor_Meta =
+    static PyType_Slot type_slots_Compositor_Static[] = 
     {
-        "winrt._winrt_windows_ui_composition.Compositor_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Compositor_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Compositor_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Compositor_Static =
+    {
+        "winrt._winrt_windows_ui_composition.Compositor_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Compositor_Meta
+        type_slots_Compositor_Static
     };
 
     // ----- ContainerVisual class --------------------
@@ -18882,8 +18972,6 @@ namespace py::cpp::Windows::UI::Composition
     static PyMethodDef _methods_DelegatedInkTrailVisual[] = {
         { "add_trail_points", reinterpret_cast<PyCFunction>(DelegatedInkTrailVisual_AddTrailPoints), METH_VARARGS, nullptr },
         { "add_trail_points_with_prediction", reinterpret_cast<PyCFunction>(DelegatedInkTrailVisual_AddTrailPointsWithPrediction), METH_VARARGS, nullptr },
-        { "create", reinterpret_cast<PyCFunction>(DelegatedInkTrailVisual_Create), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_for_swap_chain", reinterpret_cast<PyCFunction>(DelegatedInkTrailVisual_CreateForSwapChain), METH_VARARGS | METH_STATIC, nullptr },
         { "remove_trail_points", reinterpret_cast<PyCFunction>(DelegatedInkTrailVisual_RemoveTrailPoints), METH_VARARGS, nullptr },
         { "start_new_trail", reinterpret_cast<PyCFunction>(DelegatedInkTrailVisual_StartNewTrail), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DelegatedInkTrailVisual, METH_O | METH_STATIC, nullptr },
@@ -18911,6 +18999,33 @@ namespace py::cpp::Windows::UI::Composition
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_DelegatedInkTrailVisual
+    };
+
+    static PyGetSetDef getset_DelegatedInkTrailVisual_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_DelegatedInkTrailVisual_Static[] = {
+        { "create", reinterpret_cast<PyCFunction>(DelegatedInkTrailVisual_Create), METH_VARARGS, nullptr },
+        { "create_for_swap_chain", reinterpret_cast<PyCFunction>(DelegatedInkTrailVisual_CreateForSwapChain), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_DelegatedInkTrailVisual_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_DelegatedInkTrailVisual_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_DelegatedInkTrailVisual_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_DelegatedInkTrailVisual_Static =
+    {
+        "winrt._winrt_windows_ui_composition.DelegatedInkTrailVisual_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_DelegatedInkTrailVisual_Static
     };
 
     // ----- DistantLight class --------------------
@@ -29081,13 +29196,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_composition(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_AnimationController_Meta{PyType_FromSpec(&type_spec_AnimationController_Meta)};
-    if (!type_AnimationController_Meta)
+    py::pyobj_handle type_AnimationController_Static{PyType_FromSpec(&type_spec_AnimationController_Static)};
+    if (!type_AnimationController_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AnimationController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AnimationController_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AnimationController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AnimationController_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -29162,7 +29277,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_composition(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionCapabilities, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_CompositionCapabilities_Static{PyType_FromSpec(&type_spec_CompositionCapabilities_Static)};
+    if (!type_CompositionCapabilities_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_CompositionCapabilities, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionCapabilities_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -29202,7 +29323,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_composition(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionEasingFunction, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_CompositionEasingFunction_Static{PyType_FromSpec(&type_spec_CompositionEasingFunction_Static)};
+    if (!type_CompositionEasingFunction_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_CompositionEasingFunction, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionEasingFunction_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -29277,7 +29404,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_composition(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionObject, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_CompositionObject_Static{PyType_FromSpec(&type_spec_CompositionObject_Static)};
+    if (!type_CompositionObject_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_CompositionObject, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionObject_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -29302,13 +29435,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_composition(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_CompositionProjectedShadowCasterCollection_Meta{PyType_FromSpec(&type_spec_CompositionProjectedShadowCasterCollection_Meta)};
-    if (!type_CompositionProjectedShadowCasterCollection_Meta)
+    py::pyobj_handle type_CompositionProjectedShadowCasterCollection_Static{PyType_FromSpec(&type_spec_CompositionProjectedShadowCasterCollection_Static)};
+    if (!type_CompositionProjectedShadowCasterCollection_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionProjectedShadowCasterCollection, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionProjectedShadowCasterCollection_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionProjectedShadowCasterCollection, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionProjectedShadowCasterCollection_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -29403,13 +29536,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_composition(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_Compositor_Meta{PyType_FromSpec(&type_spec_Compositor_Meta)};
-    if (!type_Compositor_Meta)
+    py::pyobj_handle type_Compositor_Static{PyType_FromSpec(&type_spec_Compositor_Static)};
+    if (!type_Compositor_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Compositor, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Compositor_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Compositor, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Compositor_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -29424,7 +29557,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_composition(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DelegatedInkTrailVisual, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_DelegatedInkTrailVisual_Static{PyType_FromSpec(&type_spec_DelegatedInkTrailVisual_Static)};
+    if (!type_DelegatedInkTrailVisual_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_DelegatedInkTrailVisual, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DelegatedInkTrailVisual_Static.get())) == -1)
     {
         return nullptr;
     }

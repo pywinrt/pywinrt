@@ -326,10 +326,6 @@ namespace py::cpp::Windows::Devices::Pwm
     }
 
     static PyMethodDef _methods_PwmController[] = {
-        { "from_id_async", reinterpret_cast<PyCFunction>(PwmController_FromIdAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_controllers_async", reinterpret_cast<PyCFunction>(PwmController_GetControllersAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_default_async", reinterpret_cast<PyCFunction>(PwmController_GetDefaultAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_device_selector", reinterpret_cast<PyCFunction>(PwmController_GetDeviceSelector), METH_VARARGS | METH_STATIC, nullptr },
         { "open_pin", reinterpret_cast<PyCFunction>(PwmController_OpenPin), METH_VARARGS, nullptr },
         { "set_desired_frequency", reinterpret_cast<PyCFunction>(PwmController_SetDesiredFrequency), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PwmController, METH_O | METH_STATIC, nullptr },
@@ -361,6 +357,35 @@ namespace py::cpp::Windows::Devices::Pwm
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_PwmController
+    };
+
+    static PyGetSetDef getset_PwmController_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_PwmController_Static[] = {
+        { "from_id_async", reinterpret_cast<PyCFunction>(PwmController_FromIdAsync), METH_VARARGS, nullptr },
+        { "get_controllers_async", reinterpret_cast<PyCFunction>(PwmController_GetControllersAsync), METH_VARARGS, nullptr },
+        { "get_default_async", reinterpret_cast<PyCFunction>(PwmController_GetDefaultAsync), METH_VARARGS, nullptr },
+        { "get_device_selector", reinterpret_cast<PyCFunction>(PwmController_GetDeviceSelector), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_PwmController_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PwmController_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PwmController_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PwmController_Static =
+    {
+        "winrt._winrt_windows_devices_pwm.PwmController_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_PwmController_Static
     };
 
     // ----- PwmPin class --------------------
@@ -743,7 +768,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_pwm(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PwmController, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_PwmController_Static{PyType_FromSpec(&type_spec_PwmController_Static)};
+    if (!type_PwmController_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_PwmController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PwmController_Static.get())) == -1)
     {
         return nullptr;
     }

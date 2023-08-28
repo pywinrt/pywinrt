@@ -959,17 +959,6 @@ namespace py::cpp::Windows::System::Update
     }
 
     static PyMethodDef _methods_SystemUpdateManager[] = {
-        { "block_automatic_reboot_async", reinterpret_cast<PyCFunction>(SystemUpdateManager_BlockAutomaticRebootAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_automatic_reboot_block_ids", reinterpret_cast<PyCFunction>(SystemUpdateManager_GetAutomaticRebootBlockIds), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_flight_ring", reinterpret_cast<PyCFunction>(SystemUpdateManager_GetFlightRing), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_update_items", reinterpret_cast<PyCFunction>(SystemUpdateManager_GetUpdateItems), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_supported", reinterpret_cast<PyCFunction>(SystemUpdateManager_IsSupported), METH_VARARGS | METH_STATIC, nullptr },
-        { "reboot_to_complete_install", reinterpret_cast<PyCFunction>(SystemUpdateManager_RebootToCompleteInstall), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_flight_ring", reinterpret_cast<PyCFunction>(SystemUpdateManager_SetFlightRing), METH_VARARGS | METH_STATIC, nullptr },
-        { "start_cancel_updates", reinterpret_cast<PyCFunction>(SystemUpdateManager_StartCancelUpdates), METH_VARARGS | METH_STATIC, nullptr },
-        { "start_install", reinterpret_cast<PyCFunction>(SystemUpdateManager_StartInstall), METH_VARARGS | METH_STATIC, nullptr },
-        { "try_set_user_active_hours", reinterpret_cast<PyCFunction>(SystemUpdateManager_TrySetUserActiveHours), METH_VARARGS | METH_STATIC, nullptr },
-        { "unblock_automatic_reboot_async", reinterpret_cast<PyCFunction>(SystemUpdateManager_UnblockAutomaticRebootAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "add_state_changed", reinterpret_cast<PyCFunction>(SystemUpdateManager_add_StateChanged), METH_O | METH_STATIC, nullptr },
         { "remove_state_changed", reinterpret_cast<PyCFunction>(SystemUpdateManager_remove_StateChanged), METH_O | METH_STATIC, nullptr },
         { }
@@ -996,7 +985,7 @@ namespace py::cpp::Windows::System::Update
         _type_slots_SystemUpdateManager
     };
 
-    static PyGetSetDef getset_SystemUpdateManager_Meta[] = {
+    static PyGetSetDef getset_SystemUpdateManager_Static[] = {
         { "attention_required_reason", reinterpret_cast<getter>(SystemUpdateManager_get_AttentionRequiredReason), nullptr, nullptr, nullptr },
         { "download_progress", reinterpret_cast<getter>(SystemUpdateManager_get_DownloadProgress), nullptr, nullptr, nullptr },
         { "extended_error", reinterpret_cast<getter>(SystemUpdateManager_get_ExtendedError), nullptr, nullptr, nullptr },
@@ -1011,20 +1000,36 @@ namespace py::cpp::Windows::System::Update
         { }
     };
 
-    static PyType_Slot type_slots_SystemUpdateManager_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_SystemUpdateManager_Meta) },
+    static PyMethodDef methods_SystemUpdateManager_Static[] = {
+        { "block_automatic_reboot_async", reinterpret_cast<PyCFunction>(SystemUpdateManager_BlockAutomaticRebootAsync), METH_VARARGS, nullptr },
+        { "get_automatic_reboot_block_ids", reinterpret_cast<PyCFunction>(SystemUpdateManager_GetAutomaticRebootBlockIds), METH_VARARGS, nullptr },
+        { "get_flight_ring", reinterpret_cast<PyCFunction>(SystemUpdateManager_GetFlightRing), METH_VARARGS, nullptr },
+        { "get_update_items", reinterpret_cast<PyCFunction>(SystemUpdateManager_GetUpdateItems), METH_VARARGS, nullptr },
+        { "is_supported", reinterpret_cast<PyCFunction>(SystemUpdateManager_IsSupported), METH_VARARGS, nullptr },
+        { "reboot_to_complete_install", reinterpret_cast<PyCFunction>(SystemUpdateManager_RebootToCompleteInstall), METH_VARARGS, nullptr },
+        { "set_flight_ring", reinterpret_cast<PyCFunction>(SystemUpdateManager_SetFlightRing), METH_VARARGS, nullptr },
+        { "start_cancel_updates", reinterpret_cast<PyCFunction>(SystemUpdateManager_StartCancelUpdates), METH_VARARGS, nullptr },
+        { "start_install", reinterpret_cast<PyCFunction>(SystemUpdateManager_StartInstall), METH_VARARGS, nullptr },
+        { "try_set_user_active_hours", reinterpret_cast<PyCFunction>(SystemUpdateManager_TrySetUserActiveHours), METH_VARARGS, nullptr },
+        { "unblock_automatic_reboot_async", reinterpret_cast<PyCFunction>(SystemUpdateManager_UnblockAutomaticRebootAsync), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_SystemUpdateManager_Meta =
+    static PyType_Slot type_slots_SystemUpdateManager_Static[] = 
     {
-        "winrt._winrt_windows_system_update.SystemUpdateManager_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SystemUpdateManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SystemUpdateManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SystemUpdateManager_Static =
+    {
+        "winrt._winrt_windows_system_update.SystemUpdateManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SystemUpdateManager_Meta
+        type_slots_SystemUpdateManager_Static
     };
 
     // ----- Windows.System.Update Initialization --------------------
@@ -1083,13 +1088,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_update(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_SystemUpdateManager_Meta{PyType_FromSpec(&type_spec_SystemUpdateManager_Meta)};
-    if (!type_SystemUpdateManager_Meta)
+    py::pyobj_handle type_SystemUpdateManager_Static{PyType_FromSpec(&type_spec_SystemUpdateManager_Static)};
+    if (!type_SystemUpdateManager_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SystemUpdateManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemUpdateManager_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SystemUpdateManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemUpdateManager_Static.get())) == -1)
     {
         return nullptr;
     }

@@ -631,9 +631,6 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyMethodDef _methods_IsolatedWindowsEnvironment[] = {
         { "change_priority", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironment_ChangePriority), METH_VARARGS, nullptr },
-        { "create_async", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironment_CreateAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "find_by_owner_id", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironment_FindByOwnerId), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_by_id", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironment_GetById), METH_VARARGS | METH_STATIC, nullptr },
         { "get_user_info", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironment_GetUserInfo), METH_VARARGS, nullptr },
         { "launch_file_with_u_i_async", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironment_LaunchFileWithUIAsync), METH_VARARGS, nullptr },
         { "post_message_to_receiver_async", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironment_PostMessageToReceiverAsync), METH_VARARGS, nullptr },
@@ -669,6 +666,34 @@ namespace py::cpp::Windows::Security::Isolation
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IsolatedWindowsEnvironment
+    };
+
+    static PyGetSetDef getset_IsolatedWindowsEnvironment_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_IsolatedWindowsEnvironment_Static[] = {
+        { "create_async", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironment_CreateAsync), METH_VARARGS, nullptr },
+        { "find_by_owner_id", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironment_FindByOwnerId), METH_VARARGS, nullptr },
+        { "get_by_id", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironment_GetById), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_IsolatedWindowsEnvironment_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_IsolatedWindowsEnvironment_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_IsolatedWindowsEnvironment_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_IsolatedWindowsEnvironment_Static =
+    {
+        "winrt._winrt_windows_security_isolation.IsolatedWindowsEnvironment_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_IsolatedWindowsEnvironment_Static
     };
 
     // ----- IsolatedWindowsEnvironmentCreateResult class --------------------
@@ -1085,26 +1110,31 @@ namespace py::cpp::Windows::Security::Isolation
         _type_slots_IsolatedWindowsEnvironmentHost
     };
 
-    static PyGetSetDef getset_IsolatedWindowsEnvironmentHost_Meta[] = {
+    static PyGetSetDef getset_IsolatedWindowsEnvironmentHost_Static[] = {
         { "host_errors", reinterpret_cast<getter>(IsolatedWindowsEnvironmentHost_get_HostErrors), nullptr, nullptr, nullptr },
         { "is_ready", reinterpret_cast<getter>(IsolatedWindowsEnvironmentHost_get_IsReady), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_IsolatedWindowsEnvironmentHost_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_IsolatedWindowsEnvironmentHost_Meta) },
+    static PyMethodDef methods_IsolatedWindowsEnvironmentHost_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_IsolatedWindowsEnvironmentHost_Meta =
+    static PyType_Slot type_slots_IsolatedWindowsEnvironmentHost_Static[] = 
     {
-        "winrt._winrt_windows_security_isolation.IsolatedWindowsEnvironmentHost_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_IsolatedWindowsEnvironmentHost_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_IsolatedWindowsEnvironmentHost_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_IsolatedWindowsEnvironmentHost_Static =
+    {
+        "winrt._winrt_windows_security_isolation.IsolatedWindowsEnvironmentHost_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_IsolatedWindowsEnvironmentHost_Meta
+        type_slots_IsolatedWindowsEnvironmentHost_Static
     };
 
     // ----- IsolatedWindowsEnvironmentLaunchFileResult class --------------------
@@ -2003,8 +2033,6 @@ namespace py::cpp::Windows::Security::Isolation
     }
 
     static PyMethodDef _methods_IsolatedWindowsEnvironmentOwnerRegistration[] = {
-        { "register", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironmentOwnerRegistration_Register), METH_VARARGS | METH_STATIC, nullptr },
-        { "unregister", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironmentOwnerRegistration_Unregister), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -2027,6 +2055,33 @@ namespace py::cpp::Windows::Security::Isolation
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IsolatedWindowsEnvironmentOwnerRegistration
+    };
+
+    static PyGetSetDef getset_IsolatedWindowsEnvironmentOwnerRegistration_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_IsolatedWindowsEnvironmentOwnerRegistration_Static[] = {
+        { "register", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironmentOwnerRegistration_Register), METH_VARARGS, nullptr },
+        { "unregister", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironmentOwnerRegistration_Unregister), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_IsolatedWindowsEnvironmentOwnerRegistration_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_IsolatedWindowsEnvironmentOwnerRegistration_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_IsolatedWindowsEnvironmentOwnerRegistration_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_IsolatedWindowsEnvironmentOwnerRegistration_Static =
+    {
+        "winrt._winrt_windows_security_isolation.IsolatedWindowsEnvironmentOwnerRegistration_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_IsolatedWindowsEnvironmentOwnerRegistration_Static
     };
 
     // ----- IsolatedWindowsEnvironmentOwnerRegistrationData class --------------------
@@ -3713,10 +3768,6 @@ namespace py::cpp::Windows::Security::Isolation
     }
 
     static PyMethodDef _methods_IsolatedWindowsHostMessenger[] = {
-        { "get_file_id", reinterpret_cast<PyCFunction>(IsolatedWindowsHostMessenger_GetFileId), METH_VARARGS | METH_STATIC, nullptr },
-        { "post_message_to_receiver", reinterpret_cast<PyCFunction>(IsolatedWindowsHostMessenger_PostMessageToReceiver), METH_VARARGS | METH_STATIC, nullptr },
-        { "register_host_message_receiver", reinterpret_cast<PyCFunction>(IsolatedWindowsHostMessenger_RegisterHostMessageReceiver), METH_VARARGS | METH_STATIC, nullptr },
-        { "unregister_host_message_receiver", reinterpret_cast<PyCFunction>(IsolatedWindowsHostMessenger_UnregisterHostMessageReceiver), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -3739,6 +3790,35 @@ namespace py::cpp::Windows::Security::Isolation
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IsolatedWindowsHostMessenger
+    };
+
+    static PyGetSetDef getset_IsolatedWindowsHostMessenger_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_IsolatedWindowsHostMessenger_Static[] = {
+        { "get_file_id", reinterpret_cast<PyCFunction>(IsolatedWindowsHostMessenger_GetFileId), METH_VARARGS, nullptr },
+        { "post_message_to_receiver", reinterpret_cast<PyCFunction>(IsolatedWindowsHostMessenger_PostMessageToReceiver), METH_VARARGS, nullptr },
+        { "register_host_message_receiver", reinterpret_cast<PyCFunction>(IsolatedWindowsHostMessenger_RegisterHostMessageReceiver), METH_VARARGS, nullptr },
+        { "unregister_host_message_receiver", reinterpret_cast<PyCFunction>(IsolatedWindowsHostMessenger_UnregisterHostMessageReceiver), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_IsolatedWindowsHostMessenger_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_IsolatedWindowsHostMessenger_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_IsolatedWindowsHostMessenger_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_IsolatedWindowsHostMessenger_Static =
+    {
+        "winrt._winrt_windows_security_isolation.IsolatedWindowsHostMessenger_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_IsolatedWindowsHostMessenger_Static
     };
 
     // ----- IsolatedWindowsEnvironmentCreateProgress struct --------------------
@@ -3948,7 +4028,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_isolation(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironment, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_IsolatedWindowsEnvironment_Static{PyType_FromSpec(&type_spec_IsolatedWindowsEnvironment_Static)};
+    if (!type_IsolatedWindowsEnvironment_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironment, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_IsolatedWindowsEnvironment_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -3963,13 +4049,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_isolation(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_IsolatedWindowsEnvironmentHost_Meta{PyType_FromSpec(&type_spec_IsolatedWindowsEnvironmentHost_Meta)};
-    if (!type_IsolatedWindowsEnvironmentHost_Meta)
+    py::pyobj_handle type_IsolatedWindowsEnvironmentHost_Static{PyType_FromSpec(&type_spec_IsolatedWindowsEnvironmentHost_Static)};
+    if (!type_IsolatedWindowsEnvironmentHost_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentHost, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_IsolatedWindowsEnvironmentHost_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentHost, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_IsolatedWindowsEnvironmentHost_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -3984,7 +4070,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_isolation(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentOwnerRegistration, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_IsolatedWindowsEnvironmentOwnerRegistration_Static{PyType_FromSpec(&type_spec_IsolatedWindowsEnvironmentOwnerRegistration_Static)};
+    if (!type_IsolatedWindowsEnvironmentOwnerRegistration_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentOwnerRegistration, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_IsolatedWindowsEnvironmentOwnerRegistration_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -4044,7 +4136,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_isolation(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IsolatedWindowsHostMessenger, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_IsolatedWindowsHostMessenger_Static{PyType_FromSpec(&type_spec_IsolatedWindowsHostMessenger_Static)};
+    if (!type_IsolatedWindowsHostMessenger_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_IsolatedWindowsHostMessenger, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_IsolatedWindowsHostMessenger_Static.get())) == -1)
     {
         return nullptr;
     }

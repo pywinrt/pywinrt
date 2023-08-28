@@ -231,7 +231,6 @@ namespace py::cpp::Windows::Devices::Display::Core
     }
 
     static PyMethodDef _methods_DisplayAdapter[] = {
-        { "from_id", reinterpret_cast<PyCFunction>(DisplayAdapter_FromId), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_DisplayAdapter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DisplayAdapter), METH_O | METH_STATIC, nullptr },
         { }
@@ -265,6 +264,32 @@ namespace py::cpp::Windows::Devices::Display::Core
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_DisplayAdapter
+    };
+
+    static PyGetSetDef getset_DisplayAdapter_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_DisplayAdapter_Static[] = {
+        { "from_id", reinterpret_cast<PyCFunction>(DisplayAdapter_FromId), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_DisplayAdapter_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_DisplayAdapter_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_DisplayAdapter_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_DisplayAdapter_Static =
+    {
+        "winrt._winrt_windows_devices_display_core.DisplayAdapter_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_DisplayAdapter_Static
     };
 
     // ----- DisplayDevice class --------------------
@@ -1300,7 +1325,6 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyMethodDef _methods_DisplayManager[] = {
         { "close", reinterpret_cast<PyCFunction>(DisplayManager_Close), METH_VARARGS, nullptr },
-        { "create", reinterpret_cast<PyCFunction>(DisplayManager_Create), METH_VARARGS | METH_STATIC, nullptr },
         { "create_display_device", reinterpret_cast<PyCFunction>(DisplayManager_CreateDisplayDevice), METH_VARARGS, nullptr },
         { "get_current_adapters", reinterpret_cast<PyCFunction>(DisplayManager_GetCurrentAdapters), METH_VARARGS, nullptr },
         { "get_current_targets", reinterpret_cast<PyCFunction>(DisplayManager_GetCurrentTargets), METH_VARARGS, nullptr },
@@ -1347,6 +1371,32 @@ namespace py::cpp::Windows::Devices::Display::Core
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_DisplayManager
+    };
+
+    static PyGetSetDef getset_DisplayManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_DisplayManager_Static[] = {
+        { "create", reinterpret_cast<PyCFunction>(DisplayManager_Create), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_DisplayManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_DisplayManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_DisplayManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_DisplayManager_Static =
+    {
+        "winrt._winrt_windows_devices_display_core.DisplayManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_DisplayManager_Static
     };
 
     // ----- DisplayManagerChangedEventArgs class --------------------
@@ -3294,7 +3344,6 @@ namespace py::cpp::Windows::Devices::Display::Core
     }
 
     static PyMethodDef _methods_DisplayPrimaryDescription[] = {
-        { "create_with_properties", reinterpret_cast<PyCFunction>(DisplayPrimaryDescription_CreateWithProperties), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_DisplayPrimaryDescription, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DisplayPrimaryDescription), METH_O | METH_STATIC, nullptr },
         { }
@@ -3327,6 +3376,32 @@ namespace py::cpp::Windows::Devices::Display::Core
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_DisplayPrimaryDescription
+    };
+
+    static PyGetSetDef getset_DisplayPrimaryDescription_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_DisplayPrimaryDescription_Static[] = {
+        { "create_with_properties", reinterpret_cast<PyCFunction>(DisplayPrimaryDescription_CreateWithProperties), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_DisplayPrimaryDescription_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_DisplayPrimaryDescription_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_DisplayPrimaryDescription_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_DisplayPrimaryDescription_Static =
+    {
+        "winrt._winrt_windows_devices_display_core.DisplayPrimaryDescription_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_DisplayPrimaryDescription_Static
     };
 
     // ----- DisplayScanout class --------------------
@@ -5484,7 +5559,6 @@ namespace py::cpp::Windows::Devices::Display::Core
     }
 
     static PyMethodDef _methods_DisplayWireFormat[] = {
-        { "create_with_properties", reinterpret_cast<PyCFunction>(DisplayWireFormat_CreateWithProperties), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_DisplayWireFormat, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DisplayWireFormat), METH_O | METH_STATIC, nullptr },
         { }
@@ -5516,6 +5590,32 @@ namespace py::cpp::Windows::Devices::Display::Core
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_DisplayWireFormat
+    };
+
+    static PyGetSetDef getset_DisplayWireFormat_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_DisplayWireFormat_Static[] = {
+        { "create_with_properties", reinterpret_cast<PyCFunction>(DisplayWireFormat_CreateWithProperties), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_DisplayWireFormat_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_DisplayWireFormat_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_DisplayWireFormat_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_DisplayWireFormat_Static =
+    {
+        "winrt._winrt_windows_devices_display_core.DisplayWireFormat_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_DisplayWireFormat_Static
     };
 
     // ----- DisplayPresentationRate struct --------------------
@@ -5725,7 +5825,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_display_core(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DisplayAdapter, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_DisplayAdapter_Static{PyType_FromSpec(&type_spec_DisplayAdapter_Static)};
+    if (!type_DisplayAdapter_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_DisplayAdapter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DisplayAdapter_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -5740,7 +5846,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_display_core(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DisplayManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_DisplayManager_Static{PyType_FromSpec(&type_spec_DisplayManager_Static)};
+    if (!type_DisplayManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_DisplayManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DisplayManager_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -5780,7 +5892,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_display_core(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DisplayPrimaryDescription, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_DisplayPrimaryDescription_Static{PyType_FromSpec(&type_spec_DisplayPrimaryDescription_Static)};
+    if (!type_DisplayPrimaryDescription_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_DisplayPrimaryDescription, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DisplayPrimaryDescription_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -5835,7 +5953,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_display_core(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DisplayWireFormat, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_DisplayWireFormat_Static{PyType_FromSpec(&type_spec_DisplayWireFormat_Static)};
+    if (!type_DisplayWireFormat_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_DisplayWireFormat, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DisplayWireFormat_Static.get())) == -1)
     {
         return nullptr;
     }

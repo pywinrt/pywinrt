@@ -272,8 +272,6 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
     }
 
     static PyMethodDef _methods_CoreAutomationRegistrar[] = {
-        { "register_annotation_type", reinterpret_cast<PyCFunction>(CoreAutomationRegistrar_RegisterAnnotationType), METH_VARARGS | METH_STATIC, nullptr },
-        { "unregister_annotation_type", reinterpret_cast<PyCFunction>(CoreAutomationRegistrar_UnregisterAnnotationType), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -296,6 +294,33 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_CoreAutomationRegistrar
+    };
+
+    static PyGetSetDef getset_CoreAutomationRegistrar_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_CoreAutomationRegistrar_Static[] = {
+        { "register_annotation_type", reinterpret_cast<PyCFunction>(CoreAutomationRegistrar_RegisterAnnotationType), METH_VARARGS, nullptr },
+        { "unregister_annotation_type", reinterpret_cast<PyCFunction>(CoreAutomationRegistrar_UnregisterAnnotationType), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_CoreAutomationRegistrar_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CoreAutomationRegistrar_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CoreAutomationRegistrar_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CoreAutomationRegistrar_Static =
+    {
+        "winrt._winrt_windows_ui_uiautomation_core.CoreAutomationRegistrar_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CoreAutomationRegistrar_Static
     };
 
     // ----- CoreAutomationRemoteOperation class --------------------
@@ -1301,7 +1326,6 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
     }
 
     static PyMethodDef _methods_RemoteAutomationServer[] = {
-        { "report_session", reinterpret_cast<PyCFunction>(RemoteAutomationServer_ReportSession), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -1324,6 +1348,32 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_RemoteAutomationServer
+    };
+
+    static PyGetSetDef getset_RemoteAutomationServer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_RemoteAutomationServer_Static[] = {
+        { "report_session", reinterpret_cast<PyCFunction>(RemoteAutomationServer_ReportSession), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_RemoteAutomationServer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_RemoteAutomationServer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_RemoteAutomationServer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_RemoteAutomationServer_Static =
+    {
+        "winrt._winrt_windows_ui_uiautomation_core.RemoteAutomationServer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_RemoteAutomationServer_Static
     };
 
     // ----- RemoteAutomationWindow class --------------------
@@ -1973,7 +2023,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_uiautomation_core(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreAutomationRegistrar, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_CoreAutomationRegistrar_Static{PyType_FromSpec(&type_spec_CoreAutomationRegistrar_Static)};
+    if (!type_CoreAutomationRegistrar_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_CoreAutomationRegistrar, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CoreAutomationRegistrar_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -2003,7 +2059,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_uiautomation_core(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RemoteAutomationServer, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_RemoteAutomationServer_Static{PyType_FromSpec(&type_spec_RemoteAutomationServer_Static)};
+    if (!type_RemoteAutomationServer_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_RemoteAutomationServer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RemoteAutomationServer_Static.get())) == -1)
     {
         return nullptr;
     }

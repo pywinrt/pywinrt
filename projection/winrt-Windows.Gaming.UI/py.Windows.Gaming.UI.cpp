@@ -168,26 +168,31 @@ namespace py::cpp::Windows::Gaming::UI
         _type_slots_GameBar
     };
 
-    static PyGetSetDef getset_GameBar_Meta[] = {
+    static PyGetSetDef getset_GameBar_Static[] = {
         { "is_input_redirected", reinterpret_cast<getter>(GameBar_get_IsInputRedirected), nullptr, nullptr, nullptr },
         { "visible", reinterpret_cast<getter>(GameBar_get_Visible), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_GameBar_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_GameBar_Meta) },
+    static PyMethodDef methods_GameBar_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_GameBar_Meta =
+    static PyType_Slot type_slots_GameBar_Static[] = 
     {
-        "winrt._winrt_windows_gaming_ui.GameBar_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_GameBar_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_GameBar_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_GameBar_Static =
+    {
+        "winrt._winrt_windows_gaming_ui.GameBar_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_GameBar_Meta
+        type_slots_GameBar_Static
     };
 
     // ----- GameChatMessageReceivedEventArgs class --------------------
@@ -512,7 +517,6 @@ namespace py::cpp::Windows::Gaming::UI
 
     static PyMethodDef _methods_GameChatOverlay[] = {
         { "add_message", reinterpret_cast<PyCFunction>(GameChatOverlay_AddMessage), METH_VARARGS, nullptr },
-        { "get_default", reinterpret_cast<PyCFunction>(GameChatOverlay_GetDefault), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_GameChatOverlay, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GameChatOverlay), METH_O | METH_STATIC, nullptr },
         { }
@@ -539,6 +543,32 @@ namespace py::cpp::Windows::Gaming::UI
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_GameChatOverlay
+    };
+
+    static PyGetSetDef getset_GameChatOverlay_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_GameChatOverlay_Static[] = {
+        { "get_default", reinterpret_cast<PyCFunction>(GameChatOverlay_GetDefault), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_GameChatOverlay_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_GameChatOverlay_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_GameChatOverlay_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_GameChatOverlay_Static =
+    {
+        "winrt._winrt_windows_gaming_ui.GameChatOverlay_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_GameChatOverlay_Static
     };
 
     // ----- GameChatOverlayMessageSource class --------------------
@@ -938,13 +968,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_ui(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_GameBar_Meta{PyType_FromSpec(&type_spec_GameBar_Meta)};
-    if (!type_GameBar_Meta)
+    py::pyobj_handle type_GameBar_Static{PyType_FromSpec(&type_spec_GameBar_Static)};
+    if (!type_GameBar_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GameBar, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GameBar_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GameBar, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GameBar_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -954,7 +984,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_ui(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GameChatOverlay, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_GameChatOverlay_Static{PyType_FromSpec(&type_spec_GameChatOverlay_Static)};
+    if (!type_GameChatOverlay_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_GameChatOverlay, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GameChatOverlay_Static.get())) == -1)
     {
         return nullptr;
     }

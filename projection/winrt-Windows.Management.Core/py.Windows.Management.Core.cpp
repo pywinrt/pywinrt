@@ -79,7 +79,6 @@ namespace py::cpp::Windows::Management::Core
     }
 
     static PyMethodDef _methods_ApplicationDataManager[] = {
-        { "create_for_package_family", reinterpret_cast<PyCFunction>(ApplicationDataManager_CreateForPackageFamily), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_ApplicationDataManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ApplicationDataManager), METH_O | METH_STATIC, nullptr },
         { }
@@ -105,6 +104,32 @@ namespace py::cpp::Windows::Management::Core
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ApplicationDataManager
+    };
+
+    static PyGetSetDef getset_ApplicationDataManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ApplicationDataManager_Static[] = {
+        { "create_for_package_family", reinterpret_cast<PyCFunction>(ApplicationDataManager_CreateForPackageFamily), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_ApplicationDataManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ApplicationDataManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ApplicationDataManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ApplicationDataManager_Static =
+    {
+        "winrt._winrt_windows_management_core.ApplicationDataManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ApplicationDataManager_Static
     };
 
     // ----- Windows.Management.Core Initialization --------------------
@@ -153,7 +178,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_management_core(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ApplicationDataManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_ApplicationDataManager_Static{PyType_FromSpec(&type_spec_ApplicationDataManager_Static)};
+    if (!type_ApplicationDataManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_ApplicationDataManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ApplicationDataManager_Static.get())) == -1)
     {
         return nullptr;
     }

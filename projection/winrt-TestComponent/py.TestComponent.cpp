@@ -225,13 +225,6 @@ namespace py::cpp::TestComponent
     }
 
     static PyMethodDef _methods_TestRunner[] = {
-        { "create_int32_vector", reinterpret_cast<PyCFunction>(TestRunner_CreateInt32Vector), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_string_vector", reinterpret_cast<PyCFunction>(TestRunner_CreateStringVector), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_stringable_vector", reinterpret_cast<PyCFunction>(TestRunner_CreateStringableVector), METH_VARARGS | METH_STATIC, nullptr },
-        { "make_tests", reinterpret_cast<PyCFunction>(TestRunner_MakeTests), METH_VARARGS | METH_STATIC, nullptr },
-        { "test_consumer", reinterpret_cast<PyCFunction>(TestRunner_TestConsumer), METH_VARARGS | METH_STATIC, nullptr },
-        { "test_producer", reinterpret_cast<PyCFunction>(TestRunner_TestProducer), METH_VARARGS | METH_STATIC, nullptr },
-        { "test_self", reinterpret_cast<PyCFunction>(TestRunner_TestSelf), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -254,6 +247,38 @@ namespace py::cpp::TestComponent
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_TestRunner
+    };
+
+    static PyGetSetDef getset_TestRunner_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_TestRunner_Static[] = {
+        { "create_int32_vector", reinterpret_cast<PyCFunction>(TestRunner_CreateInt32Vector), METH_VARARGS, nullptr },
+        { "create_string_vector", reinterpret_cast<PyCFunction>(TestRunner_CreateStringVector), METH_VARARGS, nullptr },
+        { "create_stringable_vector", reinterpret_cast<PyCFunction>(TestRunner_CreateStringableVector), METH_VARARGS, nullptr },
+        { "make_tests", reinterpret_cast<PyCFunction>(TestRunner_MakeTests), METH_VARARGS, nullptr },
+        { "test_consumer", reinterpret_cast<PyCFunction>(TestRunner_TestConsumer), METH_VARARGS, nullptr },
+        { "test_producer", reinterpret_cast<PyCFunction>(TestRunner_TestProducer), METH_VARARGS, nullptr },
+        { "test_self", reinterpret_cast<PyCFunction>(TestRunner_TestSelf), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_TestRunner_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_TestRunner_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_TestRunner_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_TestRunner_Static =
+    {
+        "winrt._winrt_testcomponent.TestRunner_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_TestRunner_Static
     };
 
     // ----- ITests interface --------------------
@@ -4505,7 +4530,13 @@ PyMODINIT_FUNC PyInit__winrt_testcomponent(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_TestRunner, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_TestRunner_Static{PyType_FromSpec(&type_spec_TestRunner_Static)};
+    if (!type_TestRunner_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_TestRunner, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TestRunner_Static.get())) == -1)
     {
         return nullptr;
     }

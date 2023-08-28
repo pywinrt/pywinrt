@@ -282,7 +282,6 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
     static PyMethodDef _methods_HdmiDisplayInformation[] = {
         { "get_current_display_mode", reinterpret_cast<PyCFunction>(HdmiDisplayInformation_GetCurrentDisplayMode), METH_VARARGS, nullptr },
-        { "get_for_current_view", reinterpret_cast<PyCFunction>(HdmiDisplayInformation_GetForCurrentView), METH_VARARGS | METH_STATIC, nullptr },
         { "get_supported_display_modes", reinterpret_cast<PyCFunction>(HdmiDisplayInformation_GetSupportedDisplayModes), METH_VARARGS, nullptr },
         { "request_set_current_display_mode_async", reinterpret_cast<PyCFunction>(HdmiDisplayInformation_RequestSetCurrentDisplayModeAsync), METH_VARARGS, nullptr },
         { "set_default_display_mode_async", reinterpret_cast<PyCFunction>(HdmiDisplayInformation_SetDefaultDisplayModeAsync), METH_VARARGS, nullptr },
@@ -313,6 +312,32 @@ namespace py::cpp::Windows::Graphics::Display::Core
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_HdmiDisplayInformation
+    };
+
+    static PyGetSetDef getset_HdmiDisplayInformation_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_HdmiDisplayInformation_Static[] = {
+        { "get_for_current_view", reinterpret_cast<PyCFunction>(HdmiDisplayInformation_GetForCurrentView), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_HdmiDisplayInformation_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_HdmiDisplayInformation_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_HdmiDisplayInformation_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_HdmiDisplayInformation_Static =
+    {
+        "winrt._winrt_windows_graphics_display_core.HdmiDisplayInformation_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_HdmiDisplayInformation_Static
     };
 
     // ----- HdmiDisplayMode class --------------------
@@ -1193,7 +1218,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_display_core(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HdmiDisplayInformation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_HdmiDisplayInformation_Static{PyType_FromSpec(&type_spec_HdmiDisplayInformation_Static)};
+    if (!type_HdmiDisplayInformation_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_HdmiDisplayInformation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HdmiDisplayInformation_Static.get())) == -1)
     {
         return nullptr;
     }

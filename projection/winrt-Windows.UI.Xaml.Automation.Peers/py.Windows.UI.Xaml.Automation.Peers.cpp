@@ -3968,7 +3968,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     }
 
     static PyMethodDef _methods_AutomationPeer[] = {
-        { "generate_raw_element_provider_runtime_id", reinterpret_cast<PyCFunction>(AutomationPeer_GenerateRawElementProviderRuntimeId), METH_VARARGS | METH_STATIC, nullptr },
         { "get_accelerator_key", reinterpret_cast<PyCFunction>(AutomationPeer_GetAcceleratorKey), METH_VARARGS, nullptr },
         { "get_accelerator_key_core", reinterpret_cast<PyCFunction>(AutomationPeer_GetAcceleratorKeyCore), METH_VARARGS, nullptr },
         { "get_access_key", reinterpret_cast<PyCFunction>(AutomationPeer_GetAccessKey), METH_VARARGS, nullptr },
@@ -4056,7 +4055,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         { "is_peripheral_core", reinterpret_cast<PyCFunction>(AutomationPeer_IsPeripheralCore), METH_VARARGS, nullptr },
         { "is_required_for_form", reinterpret_cast<PyCFunction>(AutomationPeer_IsRequiredForForm), METH_VARARGS, nullptr },
         { "is_required_for_form_core", reinterpret_cast<PyCFunction>(AutomationPeer_IsRequiredForFormCore), METH_VARARGS, nullptr },
-        { "listener_exists", reinterpret_cast<PyCFunction>(AutomationPeer_ListenerExists), METH_VARARGS | METH_STATIC, nullptr },
         { "navigate", reinterpret_cast<PyCFunction>(AutomationPeer_Navigate), METH_VARARGS, nullptr },
         { "navigate_core", reinterpret_cast<PyCFunction>(AutomationPeer_NavigateCore), METH_VARARGS, nullptr },
         { "peer_from_provider", reinterpret_cast<PyCFunction>(AutomationPeer_PeerFromProvider), METH_VARARGS, nullptr },
@@ -4097,6 +4095,33 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_AutomationPeer
+    };
+
+    static PyGetSetDef getset_AutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_AutomationPeer_Static[] = {
+        { "generate_raw_element_provider_runtime_id", reinterpret_cast<PyCFunction>(AutomationPeer_GenerateRawElementProviderRuntimeId), METH_VARARGS, nullptr },
+        { "listener_exists", reinterpret_cast<PyCFunction>(AutomationPeer_ListenerExists), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_AutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_AutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_AutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_AutomationPeer_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_automation_peers.AutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_AutomationPeer_Static
     };
 
     // ----- AutomationPeerAnnotation class --------------------
@@ -4355,26 +4380,31 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         _type_slots_AutomationPeerAnnotation
     };
 
-    static PyGetSetDef getset_AutomationPeerAnnotation_Meta[] = {
+    static PyGetSetDef getset_AutomationPeerAnnotation_Static[] = {
         { "peer_property", reinterpret_cast<getter>(AutomationPeerAnnotation_get_PeerProperty), nullptr, nullptr, nullptr },
         { "type_property", reinterpret_cast<getter>(AutomationPeerAnnotation_get_TypeProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_AutomationPeerAnnotation_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_AutomationPeerAnnotation_Meta) },
+    static PyMethodDef methods_AutomationPeerAnnotation_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_AutomationPeerAnnotation_Meta =
+    static PyType_Slot type_slots_AutomationPeerAnnotation_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_automation_peers.AutomationPeerAnnotation_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_AutomationPeerAnnotation_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_AutomationPeerAnnotation_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_AutomationPeerAnnotation_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_automation_peers.AutomationPeerAnnotation_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_AutomationPeerAnnotation_Meta
+        type_slots_AutomationPeerAnnotation_Static
     };
 
     // ----- ButtonAutomationPeer class --------------------
@@ -6534,8 +6564,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     }
 
     static PyMethodDef _methods_FrameworkElementAutomationPeer[] = {
-        { "create_peer_for_element", reinterpret_cast<PyCFunction>(FrameworkElementAutomationPeer_CreatePeerForElement), METH_VARARGS | METH_STATIC, nullptr },
-        { "from_element", reinterpret_cast<PyCFunction>(FrameworkElementAutomationPeer_FromElement), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_FrameworkElementAutomationPeer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FrameworkElementAutomationPeer), METH_O | METH_STATIC, nullptr },
         { }
@@ -6562,6 +6590,33 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_FrameworkElementAutomationPeer
+    };
+
+    static PyGetSetDef getset_FrameworkElementAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_FrameworkElementAutomationPeer_Static[] = {
+        { "create_peer_for_element", reinterpret_cast<PyCFunction>(FrameworkElementAutomationPeer_CreatePeerForElement), METH_VARARGS, nullptr },
+        { "from_element", reinterpret_cast<PyCFunction>(FrameworkElementAutomationPeer_FromElement), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_FrameworkElementAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_FrameworkElementAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_FrameworkElementAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_FrameworkElementAutomationPeer_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_automation_peers.FrameworkElementAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_FrameworkElementAutomationPeer_Static
     };
 
     // ----- GridViewAutomationPeer class --------------------
@@ -15831,18 +15886,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_peers(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AutomationPeer, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_AutomationPeer_Static{PyType_FromSpec(&type_spec_AutomationPeer_Static)};
+    if (!type_AutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_AutomationPeerAnnotation_Meta{PyType_FromSpec(&type_spec_AutomationPeerAnnotation_Meta)};
-    if (!type_AutomationPeerAnnotation_Meta)
+    if (py::register_python_type(module.get(), &type_spec_AutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AutomationPeer_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AutomationPeerAnnotation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AutomationPeerAnnotation_Meta.get())) == -1)
+    py::pyobj_handle type_AutomationPeerAnnotation_Static{PyType_FromSpec(&type_spec_AutomationPeerAnnotation_Static)};
+    if (!type_AutomationPeerAnnotation_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_AutomationPeerAnnotation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AutomationPeerAnnotation_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -15927,7 +15988,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_peers(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FrameworkElementAutomationPeer, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_FrameworkElementAutomationPeer_Static{PyType_FromSpec(&type_spec_FrameworkElementAutomationPeer_Static)};
+    if (!type_FrameworkElementAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_FrameworkElementAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FrameworkElementAutomationPeer_Static.get())) == -1)
     {
         return nullptr;
     }

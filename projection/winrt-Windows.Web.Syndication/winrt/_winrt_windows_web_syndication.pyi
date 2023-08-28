@@ -177,11 +177,12 @@ class SyndicationContent(winrt.system.Object):
     @xml.setter
     def xml(self, value: typing.Optional[winrt.windows.data.xml.dom.XmlDocument]) -> None: ...
 
-class SyndicationError(winrt.system.Object):
+class SyndicationError_Static(type):
+    def get_status(cls, hresult: winrt.system.Int32, /) -> SyndicationErrorStatus: ...
+
+class SyndicationError(winrt.system.Object, metaclass=SyndicationError_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SyndicationError: ...
-    @staticmethod
-    def get_status(hresult: winrt.system.Int32, /) -> SyndicationErrorStatus: ...
 
 class SyndicationFeed(winrt.system.Object):
     @staticmethod

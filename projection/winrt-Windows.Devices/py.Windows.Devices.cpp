@@ -319,25 +319,30 @@ namespace py::cpp::Windows::Devices
         _type_slots_LowLevelDevicesController
     };
 
-    static PyGetSetDef getset_LowLevelDevicesController_Meta[] = {
+    static PyGetSetDef getset_LowLevelDevicesController_Static[] = {
         { "default_provider", reinterpret_cast<getter>(LowLevelDevicesController_get_DefaultProvider), reinterpret_cast<setter>(LowLevelDevicesController_put_DefaultProvider), nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_LowLevelDevicesController_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_LowLevelDevicesController_Meta) },
+    static PyMethodDef methods_LowLevelDevicesController_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_LowLevelDevicesController_Meta =
+    static PyType_Slot type_slots_LowLevelDevicesController_Static[] = 
     {
-        "winrt._winrt_windows_devices.LowLevelDevicesController_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_LowLevelDevicesController_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_LowLevelDevicesController_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_LowLevelDevicesController_Static =
+    {
+        "winrt._winrt_windows_devices.LowLevelDevicesController_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_LowLevelDevicesController_Meta
+        type_slots_LowLevelDevicesController_Static
     };
 
     // ----- ILowLevelDevicesAggregateProvider interface --------------------
@@ -560,13 +565,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_LowLevelDevicesController_Meta{PyType_FromSpec(&type_spec_LowLevelDevicesController_Meta)};
-    if (!type_LowLevelDevicesController_Meta)
+    py::pyobj_handle type_LowLevelDevicesController_Static{PyType_FromSpec(&type_spec_LowLevelDevicesController_Static)};
+    if (!type_LowLevelDevicesController_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LowLevelDevicesController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LowLevelDevicesController_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LowLevelDevicesController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LowLevelDevicesController_Static.get())) == -1)
     {
         return nullptr;
     }

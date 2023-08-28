@@ -59,25 +59,30 @@ namespace py::cpp::Windows::Phone::ApplicationModel
         _type_slots_ApplicationProfile
     };
 
-    static PyGetSetDef getset_ApplicationProfile_Meta[] = {
+    static PyGetSetDef getset_ApplicationProfile_Static[] = {
         { "modes", reinterpret_cast<getter>(ApplicationProfile_get_Modes), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_ApplicationProfile_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_ApplicationProfile_Meta) },
+    static PyMethodDef methods_ApplicationProfile_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_ApplicationProfile_Meta =
+    static PyType_Slot type_slots_ApplicationProfile_Static[] = 
     {
-        "winrt._winrt_windows_phone_applicationmodel.ApplicationProfile_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ApplicationProfile_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ApplicationProfile_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ApplicationProfile_Static =
+    {
+        "winrt._winrt_windows_phone_applicationmodel.ApplicationProfile_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ApplicationProfile_Meta
+        type_slots_ApplicationProfile_Static
     };
 
     // ----- Windows.Phone.ApplicationModel Initialization --------------------
@@ -126,13 +131,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_applicationmodel(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_ApplicationProfile_Meta{PyType_FromSpec(&type_spec_ApplicationProfile_Meta)};
-    if (!type_ApplicationProfile_Meta)
+    py::pyobj_handle type_ApplicationProfile_Static{PyType_FromSpec(&type_spec_ApplicationProfile_Static)};
+    if (!type_ApplicationProfile_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ApplicationProfile, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ApplicationProfile_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ApplicationProfile, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ApplicationProfile_Static.get())) == -1)
     {
         return nullptr;
     }

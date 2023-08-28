@@ -6426,8 +6426,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { "has_child_nodes", reinterpret_cast<PyCFunction>(XmlDocument_HasChildNodes), METH_VARARGS, nullptr },
         { "import_node", reinterpret_cast<PyCFunction>(XmlDocument_ImportNode), METH_VARARGS, nullptr },
         { "insert_before", reinterpret_cast<PyCFunction>(XmlDocument_InsertBefore), METH_VARARGS, nullptr },
-        { "load_from_file_async", reinterpret_cast<PyCFunction>(XmlDocument_LoadFromFileAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "load_from_uri_async", reinterpret_cast<PyCFunction>(XmlDocument_LoadFromUriAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "load_xml", reinterpret_cast<PyCFunction>(XmlDocument_LoadXml), METH_VARARGS, nullptr },
         { "load_xml_from_buffer", reinterpret_cast<PyCFunction>(XmlDocument_LoadXmlFromBuffer), METH_VARARGS, nullptr },
         { "normalize", reinterpret_cast<PyCFunction>(XmlDocument_Normalize), METH_VARARGS, nullptr },
@@ -6482,6 +6480,33 @@ namespace py::cpp::Windows::Data::Xml::Dom
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_XmlDocument
+    };
+
+    static PyGetSetDef getset_XmlDocument_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_XmlDocument_Static[] = {
+        { "load_from_file_async", reinterpret_cast<PyCFunction>(XmlDocument_LoadFromFileAsync), METH_VARARGS, nullptr },
+        { "load_from_uri_async", reinterpret_cast<PyCFunction>(XmlDocument_LoadFromUriAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_XmlDocument_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_XmlDocument_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_XmlDocument_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_XmlDocument_Static =
+    {
+        "winrt._winrt_windows_data_xml_dom.XmlDocument_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_XmlDocument_Static
     };
 
     // ----- XmlDocumentFragment class --------------------
@@ -17157,7 +17182,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_data_xml_dom(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_XmlDocument, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_XmlDocument_Static{PyType_FromSpec(&type_spec_XmlDocument_Static)};
+    if (!type_XmlDocument_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_XmlDocument, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XmlDocument_Static.get())) == -1)
     {
         return nullptr;
     }

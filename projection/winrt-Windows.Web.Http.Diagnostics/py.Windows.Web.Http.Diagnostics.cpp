@@ -268,7 +268,6 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
     }
 
     static PyMethodDef _methods_HttpDiagnosticProvider[] = {
-        { "create_from_process_diagnostic_info", reinterpret_cast<PyCFunction>(HttpDiagnosticProvider_CreateFromProcessDiagnosticInfo), METH_VARARGS | METH_STATIC, nullptr },
         { "start", reinterpret_cast<PyCFunction>(HttpDiagnosticProvider_Start), METH_VARARGS, nullptr },
         { "stop", reinterpret_cast<PyCFunction>(HttpDiagnosticProvider_Stop), METH_VARARGS, nullptr },
         { "add_request_response_completed", reinterpret_cast<PyCFunction>(HttpDiagnosticProvider_add_RequestResponseCompleted), METH_O, nullptr },
@@ -302,6 +301,32 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_HttpDiagnosticProvider
+    };
+
+    static PyGetSetDef getset_HttpDiagnosticProvider_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_HttpDiagnosticProvider_Static[] = {
+        { "create_from_process_diagnostic_info", reinterpret_cast<PyCFunction>(HttpDiagnosticProvider_CreateFromProcessDiagnosticInfo), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_HttpDiagnosticProvider_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_HttpDiagnosticProvider_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_HttpDiagnosticProvider_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_HttpDiagnosticProvider_Static =
+    {
+        "winrt._winrt_windows_web_http_diagnostics.HttpDiagnosticProvider_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_HttpDiagnosticProvider_Static
     };
 
     // ----- HttpDiagnosticProviderRequestResponseCompletedEventArgs class --------------------
@@ -1275,7 +1300,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_http_diagnostics(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HttpDiagnosticProvider, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_HttpDiagnosticProvider_Static{PyType_FromSpec(&type_spec_HttpDiagnosticProvider_Static)};
+    if (!type_HttpDiagnosticProvider_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_HttpDiagnosticProvider, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HttpDiagnosticProvider_Static.get())) == -1)
     {
         return nullptr;
     }

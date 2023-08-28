@@ -789,7 +789,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         _type_slots_BitmapImage
     };
 
-    static PyGetSetDef getset_BitmapImage_Meta[] = {
+    static PyGetSetDef getset_BitmapImage_Static[] = {
         { "create_options_property", reinterpret_cast<getter>(BitmapImage_get_CreateOptionsProperty), nullptr, nullptr, nullptr },
         { "decode_pixel_height_property", reinterpret_cast<getter>(BitmapImage_get_DecodePixelHeightProperty), nullptr, nullptr, nullptr },
         { "decode_pixel_width_property", reinterpret_cast<getter>(BitmapImage_get_DecodePixelWidthProperty), nullptr, nullptr, nullptr },
@@ -801,20 +801,25 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         { }
     };
 
-    static PyType_Slot type_slots_BitmapImage_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_BitmapImage_Meta) },
+    static PyMethodDef methods_BitmapImage_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_BitmapImage_Meta =
+    static PyType_Slot type_slots_BitmapImage_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_media_imaging.BitmapImage_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_BitmapImage_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_BitmapImage_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_BitmapImage_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media_imaging.BitmapImage_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_BitmapImage_Meta
+        type_slots_BitmapImage_Static
     };
 
     // ----- BitmapSource class --------------------
@@ -1029,26 +1034,31 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         _type_slots_BitmapSource
     };
 
-    static PyGetSetDef getset_BitmapSource_Meta[] = {
+    static PyGetSetDef getset_BitmapSource_Static[] = {
         { "pixel_height_property", reinterpret_cast<getter>(BitmapSource_get_PixelHeightProperty), nullptr, nullptr, nullptr },
         { "pixel_width_property", reinterpret_cast<getter>(BitmapSource_get_PixelWidthProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_BitmapSource_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_BitmapSource_Meta) },
+    static PyMethodDef methods_BitmapSource_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_BitmapSource_Meta =
+    static PyType_Slot type_slots_BitmapSource_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_media_imaging.BitmapSource_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_BitmapSource_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_BitmapSource_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_BitmapSource_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media_imaging.BitmapSource_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_BitmapSource_Meta
+        type_slots_BitmapSource_Static
     };
 
     // ----- DownloadProgressEventArgs class --------------------
@@ -1421,26 +1431,31 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         _type_slots_RenderTargetBitmap
     };
 
-    static PyGetSetDef getset_RenderTargetBitmap_Meta[] = {
+    static PyGetSetDef getset_RenderTargetBitmap_Static[] = {
         { "pixel_height_property", reinterpret_cast<getter>(RenderTargetBitmap_get_PixelHeightProperty), nullptr, nullptr, nullptr },
         { "pixel_width_property", reinterpret_cast<getter>(RenderTargetBitmap_get_PixelWidthProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_RenderTargetBitmap_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_RenderTargetBitmap_Meta) },
+    static PyMethodDef methods_RenderTargetBitmap_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_RenderTargetBitmap_Meta =
+    static PyType_Slot type_slots_RenderTargetBitmap_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_media_imaging.RenderTargetBitmap_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_RenderTargetBitmap_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_RenderTargetBitmap_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_RenderTargetBitmap_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media_imaging.RenderTargetBitmap_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_RenderTargetBitmap_Meta
+        type_slots_RenderTargetBitmap_Static
     };
 
     // ----- SoftwareBitmapSource class --------------------
@@ -2158,27 +2173,32 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         _type_slots_SvgImageSource
     };
 
-    static PyGetSetDef getset_SvgImageSource_Meta[] = {
+    static PyGetSetDef getset_SvgImageSource_Static[] = {
         { "rasterize_pixel_height_property", reinterpret_cast<getter>(SvgImageSource_get_RasterizePixelHeightProperty), nullptr, nullptr, nullptr },
         { "rasterize_pixel_width_property", reinterpret_cast<getter>(SvgImageSource_get_RasterizePixelWidthProperty), nullptr, nullptr, nullptr },
         { "uri_source_property", reinterpret_cast<getter>(SvgImageSource_get_UriSourceProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_SvgImageSource_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_SvgImageSource_Meta) },
+    static PyMethodDef methods_SvgImageSource_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_SvgImageSource_Meta =
+    static PyType_Slot type_slots_SvgImageSource_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml_media_imaging.SvgImageSource_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SvgImageSource_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SvgImageSource_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SvgImageSource_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media_imaging.SvgImageSource_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SvgImageSource_Meta
+        type_slots_SvgImageSource_Static
     };
 
     // ----- SvgImageSourceFailedEventArgs class --------------------
@@ -2743,24 +2763,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_imaging(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_BitmapImage_Meta{PyType_FromSpec(&type_spec_BitmapImage_Meta)};
-    if (!type_BitmapImage_Meta)
+    py::pyobj_handle type_BitmapImage_Static{PyType_FromSpec(&type_spec_BitmapImage_Static)};
+    if (!type_BitmapImage_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BitmapImage, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BitmapImage_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BitmapImage, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BitmapImage_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_BitmapSource_Meta{PyType_FromSpec(&type_spec_BitmapSource_Meta)};
-    if (!type_BitmapSource_Meta)
+    py::pyobj_handle type_BitmapSource_Static{PyType_FromSpec(&type_spec_BitmapSource_Static)};
+    if (!type_BitmapSource_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BitmapSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BitmapSource_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BitmapSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BitmapSource_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -2770,13 +2790,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_imaging(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_RenderTargetBitmap_Meta{PyType_FromSpec(&type_spec_RenderTargetBitmap_Meta)};
-    if (!type_RenderTargetBitmap_Meta)
+    py::pyobj_handle type_RenderTargetBitmap_Static{PyType_FromSpec(&type_spec_RenderTargetBitmap_Static)};
+    if (!type_RenderTargetBitmap_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RenderTargetBitmap, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RenderTargetBitmap_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RenderTargetBitmap, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RenderTargetBitmap_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -2791,13 +2811,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_imaging(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_SvgImageSource_Meta{PyType_FromSpec(&type_spec_SvgImageSource_Meta)};
-    if (!type_SvgImageSource_Meta)
+    py::pyobj_handle type_SvgImageSource_Static{PyType_FromSpec(&type_spec_SvgImageSource_Static)};
+    if (!type_SvgImageSource_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SvgImageSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SvgImageSource_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SvgImageSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SvgImageSource_Static.get())) == -1)
     {
         return nullptr;
     }

@@ -298,8 +298,6 @@ namespace py::cpp::Windows::System::Diagnostics
     }
 
     static PyMethodDef _methods_DiagnosticInvoker[] = {
-        { "get_default", reinterpret_cast<PyCFunction>(DiagnosticInvoker_GetDefault), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_for_user", reinterpret_cast<PyCFunction>(DiagnosticInvoker_GetForUser), METH_VARARGS | METH_STATIC, nullptr },
         { "run_diagnostic_action_async", reinterpret_cast<PyCFunction>(DiagnosticInvoker_RunDiagnosticActionAsync), METH_VARARGS, nullptr },
         { "run_diagnostic_action_from_string_async", reinterpret_cast<PyCFunction>(DiagnosticInvoker_RunDiagnosticActionFromStringAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DiagnosticInvoker, METH_O | METH_STATIC, nullptr },
@@ -329,25 +327,32 @@ namespace py::cpp::Windows::System::Diagnostics
         _type_slots_DiagnosticInvoker
     };
 
-    static PyGetSetDef getset_DiagnosticInvoker_Meta[] = {
+    static PyGetSetDef getset_DiagnosticInvoker_Static[] = {
         { "is_supported", reinterpret_cast<getter>(DiagnosticInvoker_get_IsSupported), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_DiagnosticInvoker_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_DiagnosticInvoker_Meta) },
+    static PyMethodDef methods_DiagnosticInvoker_Static[] = {
+        { "get_default", reinterpret_cast<PyCFunction>(DiagnosticInvoker_GetDefault), METH_VARARGS, nullptr },
+        { "get_for_user", reinterpret_cast<PyCFunction>(DiagnosticInvoker_GetForUser), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_DiagnosticInvoker_Meta =
+    static PyType_Slot type_slots_DiagnosticInvoker_Static[] = 
     {
-        "winrt._winrt_windows_system_diagnostics.DiagnosticInvoker_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_DiagnosticInvoker_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_DiagnosticInvoker_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_DiagnosticInvoker_Static =
+    {
+        "winrt._winrt_windows_system_diagnostics.DiagnosticInvoker_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_DiagnosticInvoker_Meta
+        type_slots_DiagnosticInvoker_Static
     };
 
     // ----- ProcessCpuUsage class --------------------
@@ -871,9 +876,6 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyMethodDef _methods_ProcessDiagnosticInfo[] = {
         { "get_app_diagnostic_infos", reinterpret_cast<PyCFunction>(ProcessDiagnosticInfo_GetAppDiagnosticInfos), METH_VARARGS, nullptr },
-        { "get_for_current_process", reinterpret_cast<PyCFunction>(ProcessDiagnosticInfo_GetForCurrentProcess), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_for_processes", reinterpret_cast<PyCFunction>(ProcessDiagnosticInfo_GetForProcesses), METH_VARARGS | METH_STATIC, nullptr },
-        { "try_get_for_process_id", reinterpret_cast<PyCFunction>(ProcessDiagnosticInfo_TryGetForProcessId), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_ProcessDiagnosticInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ProcessDiagnosticInfo), METH_O | METH_STATIC, nullptr },
         { }
@@ -907,6 +909,34 @@ namespace py::cpp::Windows::System::Diagnostics
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ProcessDiagnosticInfo
+    };
+
+    static PyGetSetDef getset_ProcessDiagnosticInfo_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ProcessDiagnosticInfo_Static[] = {
+        { "get_for_current_process", reinterpret_cast<PyCFunction>(ProcessDiagnosticInfo_GetForCurrentProcess), METH_VARARGS, nullptr },
+        { "get_for_processes", reinterpret_cast<PyCFunction>(ProcessDiagnosticInfo_GetForProcesses), METH_VARARGS, nullptr },
+        { "try_get_for_process_id", reinterpret_cast<PyCFunction>(ProcessDiagnosticInfo_TryGetForProcessId), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_ProcessDiagnosticInfo_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ProcessDiagnosticInfo_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ProcessDiagnosticInfo_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ProcessDiagnosticInfo_Static =
+    {
+        "winrt._winrt_windows_system_diagnostics.ProcessDiagnosticInfo_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ProcessDiagnosticInfo_Static
     };
 
     // ----- ProcessDiskUsage class --------------------
@@ -1992,8 +2022,6 @@ namespace py::cpp::Windows::System::Diagnostics
     }
 
     static PyMethodDef _methods_SystemDiagnosticInfo[] = {
-        { "get_for_current_system", reinterpret_cast<PyCFunction>(SystemDiagnosticInfo_GetForCurrentSystem), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_architecture_supported", reinterpret_cast<PyCFunction>(SystemDiagnosticInfo_IsArchitectureSupported), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_SystemDiagnosticInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SystemDiagnosticInfo), METH_O | METH_STATIC, nullptr },
         { }
@@ -2023,25 +2051,32 @@ namespace py::cpp::Windows::System::Diagnostics
         _type_slots_SystemDiagnosticInfo
     };
 
-    static PyGetSetDef getset_SystemDiagnosticInfo_Meta[] = {
+    static PyGetSetDef getset_SystemDiagnosticInfo_Static[] = {
         { "preferred_architecture", reinterpret_cast<getter>(SystemDiagnosticInfo_get_PreferredArchitecture), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_SystemDiagnosticInfo_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_SystemDiagnosticInfo_Meta) },
+    static PyMethodDef methods_SystemDiagnosticInfo_Static[] = {
+        { "get_for_current_system", reinterpret_cast<PyCFunction>(SystemDiagnosticInfo_GetForCurrentSystem), METH_VARARGS, nullptr },
+        { "is_architecture_supported", reinterpret_cast<PyCFunction>(SystemDiagnosticInfo_IsArchitectureSupported), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_SystemDiagnosticInfo_Meta =
+    static PyType_Slot type_slots_SystemDiagnosticInfo_Static[] = 
     {
-        "winrt._winrt_windows_system_diagnostics.SystemDiagnosticInfo_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SystemDiagnosticInfo_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SystemDiagnosticInfo_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SystemDiagnosticInfo_Static =
+    {
+        "winrt._winrt_windows_system_diagnostics.SystemDiagnosticInfo_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SystemDiagnosticInfo_Meta
+        type_slots_SystemDiagnosticInfo_Static
     };
 
     // ----- SystemMemoryUsage class --------------------
@@ -2323,13 +2358,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_diagnostics(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_DiagnosticInvoker_Meta{PyType_FromSpec(&type_spec_DiagnosticInvoker_Meta)};
-    if (!type_DiagnosticInvoker_Meta)
+    py::pyobj_handle type_DiagnosticInvoker_Static{PyType_FromSpec(&type_spec_DiagnosticInvoker_Static)};
+    if (!type_DiagnosticInvoker_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DiagnosticInvoker, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DiagnosticInvoker_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DiagnosticInvoker, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DiagnosticInvoker_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -2344,7 +2379,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_diagnostics(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ProcessDiagnosticInfo, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_ProcessDiagnosticInfo_Static{PyType_FromSpec(&type_spec_ProcessDiagnosticInfo_Static)};
+    if (!type_ProcessDiagnosticInfo_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_ProcessDiagnosticInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ProcessDiagnosticInfo_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -2379,13 +2420,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_diagnostics(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_SystemDiagnosticInfo_Meta{PyType_FromSpec(&type_spec_SystemDiagnosticInfo_Meta)};
-    if (!type_SystemDiagnosticInfo_Meta)
+    py::pyobj_handle type_SystemDiagnosticInfo_Static{PyType_FromSpec(&type_spec_SystemDiagnosticInfo_Static)};
+    if (!type_SystemDiagnosticInfo_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SystemDiagnosticInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemDiagnosticInfo_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SystemDiagnosticInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemDiagnosticInfo_Static.get())) == -1)
     {
         return nullptr;
     }

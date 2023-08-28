@@ -80,8 +80,6 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities::Core
     }
 
     static PyMethodDef _methods_CoreUserActivityManager[] = {
-        { "create_user_activity_session_in_background", reinterpret_cast<PyCFunction>(CoreUserActivityManager_CreateUserActivitySessionInBackground), METH_VARARGS | METH_STATIC, nullptr },
-        { "delete_user_activity_sessions_in_time_range_async", reinterpret_cast<PyCFunction>(CoreUserActivityManager_DeleteUserActivitySessionsInTimeRangeAsync), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -104,6 +102,33 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities::Core
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_CoreUserActivityManager
+    };
+
+    static PyGetSetDef getset_CoreUserActivityManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_CoreUserActivityManager_Static[] = {
+        { "create_user_activity_session_in_background", reinterpret_cast<PyCFunction>(CoreUserActivityManager_CreateUserActivitySessionInBackground), METH_VARARGS, nullptr },
+        { "delete_user_activity_sessions_in_time_range_async", reinterpret_cast<PyCFunction>(CoreUserActivityManager_DeleteUserActivitySessionsInTimeRangeAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_CoreUserActivityManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CoreUserActivityManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CoreUserActivityManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CoreUserActivityManager_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_useractivities_core.CoreUserActivityManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CoreUserActivityManager_Static
     };
 
     // ----- Windows.ApplicationModel.UserActivities.Core Initialization --------------------
@@ -152,7 +177,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_useractivities_core(void) 
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CoreUserActivityManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_CoreUserActivityManager_Static{PyType_FromSpec(&type_spec_CoreUserActivityManager_Static)};
+    if (!type_CoreUserActivityManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_CoreUserActivityManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CoreUserActivityManager_Static.get())) == -1)
     {
         return nullptr;
     }

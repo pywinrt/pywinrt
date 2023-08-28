@@ -48,7 +48,6 @@ namespace py::cpp::Windows::Perception::Automation::Core
     }
 
     static PyMethodDef _methods_CorePerceptionAutomation[] = {
-        { "set_activation_factory_provider", reinterpret_cast<PyCFunction>(CorePerceptionAutomation_SetActivationFactoryProvider), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -71,6 +70,32 @@ namespace py::cpp::Windows::Perception::Automation::Core
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_CorePerceptionAutomation
+    };
+
+    static PyGetSetDef getset_CorePerceptionAutomation_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_CorePerceptionAutomation_Static[] = {
+        { "set_activation_factory_provider", reinterpret_cast<PyCFunction>(CorePerceptionAutomation_SetActivationFactoryProvider), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_CorePerceptionAutomation_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CorePerceptionAutomation_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CorePerceptionAutomation_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CorePerceptionAutomation_Static =
+    {
+        "winrt._winrt_windows_perception_automation_core.CorePerceptionAutomation_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CorePerceptionAutomation_Static
     };
 
     // ----- Windows.Perception.Automation.Core Initialization --------------------
@@ -119,7 +144,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_perception_automation_core(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CorePerceptionAutomation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_CorePerceptionAutomation_Static{PyType_FromSpec(&type_spec_CorePerceptionAutomation_Static)};
+    if (!type_CorePerceptionAutomation_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_CorePerceptionAutomation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CorePerceptionAutomation_Static.get())) == -1)
     {
         return nullptr;
     }

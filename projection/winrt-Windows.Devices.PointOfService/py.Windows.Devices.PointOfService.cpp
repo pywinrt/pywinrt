@@ -520,9 +520,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "check_health_async", reinterpret_cast<PyCFunction>(BarcodeScanner_CheckHealthAsync), METH_VARARGS, nullptr },
         { "claim_scanner_async", reinterpret_cast<PyCFunction>(BarcodeScanner_ClaimScannerAsync), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(BarcodeScanner_Close), METH_VARARGS, nullptr },
-        { "from_id_async", reinterpret_cast<PyCFunction>(BarcodeScanner_FromIdAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_default_async", reinterpret_cast<PyCFunction>(BarcodeScanner_GetDefaultAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_device_selector", reinterpret_cast<PyCFunction>(BarcodeScanner_GetDeviceSelector), METH_VARARGS | METH_STATIC, nullptr },
         { "get_supported_profiles", reinterpret_cast<PyCFunction>(BarcodeScanner_GetSupportedProfiles), METH_VARARGS, nullptr },
         { "get_supported_symbologies_async", reinterpret_cast<PyCFunction>(BarcodeScanner_GetSupportedSymbologiesAsync), METH_VARARGS, nullptr },
         { "is_profile_supported", reinterpret_cast<PyCFunction>(BarcodeScanner_IsProfileSupported), METH_VARARGS, nullptr },
@@ -560,6 +557,34 @@ namespace py::cpp::Windows::Devices::PointOfService
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_BarcodeScanner
+    };
+
+    static PyGetSetDef getset_BarcodeScanner_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_BarcodeScanner_Static[] = {
+        { "from_id_async", reinterpret_cast<PyCFunction>(BarcodeScanner_FromIdAsync), METH_VARARGS, nullptr },
+        { "get_default_async", reinterpret_cast<PyCFunction>(BarcodeScanner_GetDefaultAsync), METH_VARARGS, nullptr },
+        { "get_device_selector", reinterpret_cast<PyCFunction>(BarcodeScanner_GetDeviceSelector), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_BarcodeScanner_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_BarcodeScanner_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_BarcodeScanner_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_BarcodeScanner_Static =
+    {
+        "winrt._winrt_windows_devices_pointofservice.BarcodeScanner_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_BarcodeScanner_Static
     };
 
     // ----- BarcodeScannerCapabilities class --------------------
@@ -3149,7 +3174,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     }
 
     static PyMethodDef _methods_BarcodeSymbologies[] = {
-        { "get_name", reinterpret_cast<PyCFunction>(BarcodeSymbologies_GetName), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -3174,7 +3198,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         _type_slots_BarcodeSymbologies
     };
 
-    static PyGetSetDef getset_BarcodeSymbologies_Meta[] = {
+    static PyGetSetDef getset_BarcodeSymbologies_Static[] = {
         { "code11", reinterpret_cast<getter>(BarcodeSymbologies_get_Code11), nullptr, nullptr, nullptr },
         { "aus_post", reinterpret_cast<getter>(BarcodeSymbologies_get_AusPost), nullptr, nullptr, nullptr },
         { "aztec", reinterpret_cast<getter>(BarcodeSymbologies_get_Aztec), nullptr, nullptr, nullptr },
@@ -3272,20 +3296,26 @@ namespace py::cpp::Windows::Devices::PointOfService
         { }
     };
 
-    static PyType_Slot type_slots_BarcodeSymbologies_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_BarcodeSymbologies_Meta) },
+    static PyMethodDef methods_BarcodeSymbologies_Static[] = {
+        { "get_name", reinterpret_cast<PyCFunction>(BarcodeSymbologies_GetName), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_BarcodeSymbologies_Meta =
+    static PyType_Slot type_slots_BarcodeSymbologies_Static[] = 
     {
-        "winrt._winrt_windows_devices_pointofservice.BarcodeSymbologies_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_BarcodeSymbologies_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_BarcodeSymbologies_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_BarcodeSymbologies_Static =
+    {
+        "winrt._winrt_windows_devices_pointofservice.BarcodeSymbologies_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_BarcodeSymbologies_Meta
+        type_slots_BarcodeSymbologies_Static
     };
 
     // ----- BarcodeSymbologyAttributes class --------------------
@@ -4089,9 +4119,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "check_health_async", reinterpret_cast<PyCFunction>(CashDrawer_CheckHealthAsync), METH_VARARGS, nullptr },
         { "claim_drawer_async", reinterpret_cast<PyCFunction>(CashDrawer_ClaimDrawerAsync), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(CashDrawer_Close), METH_VARARGS, nullptr },
-        { "from_id_async", reinterpret_cast<PyCFunction>(CashDrawer_FromIdAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_default_async", reinterpret_cast<PyCFunction>(CashDrawer_GetDefaultAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_device_selector", reinterpret_cast<PyCFunction>(CashDrawer_GetDeviceSelector), METH_VARARGS | METH_STATIC, nullptr },
         { "get_statistics_async", reinterpret_cast<PyCFunction>(CashDrawer_GetStatisticsAsync), METH_VARARGS, nullptr },
         { "add_status_updated", reinterpret_cast<PyCFunction>(CashDrawer_add_StatusUpdated), METH_O, nullptr },
         { "remove_status_updated", reinterpret_cast<PyCFunction>(CashDrawer_remove_StatusUpdated), METH_O, nullptr },
@@ -4127,6 +4154,34 @@ namespace py::cpp::Windows::Devices::PointOfService
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_CashDrawer
+    };
+
+    static PyGetSetDef getset_CashDrawer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_CashDrawer_Static[] = {
+        { "from_id_async", reinterpret_cast<PyCFunction>(CashDrawer_FromIdAsync), METH_VARARGS, nullptr },
+        { "get_default_async", reinterpret_cast<PyCFunction>(CashDrawer_GetDefaultAsync), METH_VARARGS, nullptr },
+        { "get_device_selector", reinterpret_cast<PyCFunction>(CashDrawer_GetDeviceSelector), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_CashDrawer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CashDrawer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CashDrawer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CashDrawer_Static =
+    {
+        "winrt._winrt_windows_devices_pointofservice.CashDrawer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CashDrawer_Static
     };
 
     // ----- CashDrawerCapabilities class --------------------
@@ -8239,9 +8294,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "check_health_async", reinterpret_cast<PyCFunction>(ClaimedLineDisplay_CheckHealthAsync), METH_VARARGS, nullptr },
         { "check_power_status_async", reinterpret_cast<PyCFunction>(ClaimedLineDisplay_CheckPowerStatusAsync), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(ClaimedLineDisplay_Close), METH_VARARGS, nullptr },
-        { "from_id_async", reinterpret_cast<PyCFunction>(ClaimedLineDisplay_FromIdAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "get_attributes", reinterpret_cast<PyCFunction>(ClaimedLineDisplay_GetAttributes), METH_VARARGS, nullptr },
-        { "get_device_selector", reinterpret_cast<PyCFunction>(ClaimedLineDisplay_GetDeviceSelector), METH_VARARGS | METH_STATIC, nullptr },
         { "get_statistics_async", reinterpret_cast<PyCFunction>(ClaimedLineDisplay_GetStatisticsAsync), METH_VARARGS, nullptr },
         { "retain_device", reinterpret_cast<PyCFunction>(ClaimedLineDisplay_RetainDevice), METH_VARARGS, nullptr },
         { "try_clear_descriptors_async", reinterpret_cast<PyCFunction>(ClaimedLineDisplay_TryClearDescriptorsAsync), METH_VARARGS, nullptr },
@@ -8294,6 +8347,33 @@ namespace py::cpp::Windows::Devices::PointOfService
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ClaimedLineDisplay
+    };
+
+    static PyGetSetDef getset_ClaimedLineDisplay_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ClaimedLineDisplay_Static[] = {
+        { "from_id_async", reinterpret_cast<PyCFunction>(ClaimedLineDisplay_FromIdAsync), METH_VARARGS, nullptr },
+        { "get_device_selector", reinterpret_cast<PyCFunction>(ClaimedLineDisplay_GetDeviceSelector), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_ClaimedLineDisplay_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ClaimedLineDisplay_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ClaimedLineDisplay_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ClaimedLineDisplay_Static =
+    {
+        "winrt._winrt_windows_devices_pointofservice.ClaimedLineDisplay_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ClaimedLineDisplay_Static
     };
 
     // ----- ClaimedLineDisplayClosedEventArgs class --------------------
@@ -12733,9 +12813,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "check_power_status_async", reinterpret_cast<PyCFunction>(LineDisplay_CheckPowerStatusAsync), METH_VARARGS, nullptr },
         { "claim_async", reinterpret_cast<PyCFunction>(LineDisplay_ClaimAsync), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(LineDisplay_Close), METH_VARARGS, nullptr },
-        { "from_id_async", reinterpret_cast<PyCFunction>(LineDisplay_FromIdAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_default_async", reinterpret_cast<PyCFunction>(LineDisplay_GetDefaultAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_device_selector", reinterpret_cast<PyCFunction>(LineDisplay_GetDeviceSelector), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_LineDisplay, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LineDisplay), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_LineDisplay), METH_NOARGS, nullptr },
@@ -12772,25 +12849,33 @@ namespace py::cpp::Windows::Devices::PointOfService
         _type_slots_LineDisplay
     };
 
-    static PyGetSetDef getset_LineDisplay_Meta[] = {
+    static PyGetSetDef getset_LineDisplay_Static[] = {
         { "statistics_category_selector", reinterpret_cast<getter>(LineDisplay_get_StatisticsCategorySelector), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_LineDisplay_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_LineDisplay_Meta) },
+    static PyMethodDef methods_LineDisplay_Static[] = {
+        { "from_id_async", reinterpret_cast<PyCFunction>(LineDisplay_FromIdAsync), METH_VARARGS, nullptr },
+        { "get_default_async", reinterpret_cast<PyCFunction>(LineDisplay_GetDefaultAsync), METH_VARARGS, nullptr },
+        { "get_device_selector", reinterpret_cast<PyCFunction>(LineDisplay_GetDeviceSelector), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_LineDisplay_Meta =
+    static PyType_Slot type_slots_LineDisplay_Static[] = 
     {
-        "winrt._winrt_windows_devices_pointofservice.LineDisplay_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_LineDisplay_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_LineDisplay_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_LineDisplay_Static =
+    {
+        "winrt._winrt_windows_devices_pointofservice.LineDisplay_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_LineDisplay_Meta
+        type_slots_LineDisplay_Static
     };
 
     // ----- LineDisplayAttributes class --------------------
@@ -15946,9 +16031,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "check_health_async", reinterpret_cast<PyCFunction>(MagneticStripeReader_CheckHealthAsync), METH_VARARGS, nullptr },
         { "claim_reader_async", reinterpret_cast<PyCFunction>(MagneticStripeReader_ClaimReaderAsync), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(MagneticStripeReader_Close), METH_VARARGS, nullptr },
-        { "from_id_async", reinterpret_cast<PyCFunction>(MagneticStripeReader_FromIdAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_default_async", reinterpret_cast<PyCFunction>(MagneticStripeReader_GetDefaultAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_device_selector", reinterpret_cast<PyCFunction>(MagneticStripeReader_GetDeviceSelector), METH_VARARGS | METH_STATIC, nullptr },
         { "get_error_reporting_type", reinterpret_cast<PyCFunction>(MagneticStripeReader_GetErrorReportingType), METH_VARARGS, nullptr },
         { "retrieve_statistics_async", reinterpret_cast<PyCFunction>(MagneticStripeReader_RetrieveStatisticsAsync), METH_VARARGS, nullptr },
         { "add_status_updated", reinterpret_cast<PyCFunction>(MagneticStripeReader_add_StatusUpdated), METH_O, nullptr },
@@ -15984,6 +16066,34 @@ namespace py::cpp::Windows::Devices::PointOfService
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_MagneticStripeReader
+    };
+
+    static PyGetSetDef getset_MagneticStripeReader_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_MagneticStripeReader_Static[] = {
+        { "from_id_async", reinterpret_cast<PyCFunction>(MagneticStripeReader_FromIdAsync), METH_VARARGS, nullptr },
+        { "get_default_async", reinterpret_cast<PyCFunction>(MagneticStripeReader_GetDefaultAsync), METH_VARARGS, nullptr },
+        { "get_device_selector", reinterpret_cast<PyCFunction>(MagneticStripeReader_GetDeviceSelector), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_MagneticStripeReader_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_MagneticStripeReader_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_MagneticStripeReader_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_MagneticStripeReader_Static =
+    {
+        "winrt._winrt_windows_devices_pointofservice.MagneticStripeReader_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_MagneticStripeReader_Static
     };
 
     // ----- MagneticStripeReaderAamvaCardDataReceivedEventArgs class --------------------
@@ -17083,7 +17193,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         _type_slots_MagneticStripeReaderCardTypes
     };
 
-    static PyGetSetDef getset_MagneticStripeReaderCardTypes_Meta[] = {
+    static PyGetSetDef getset_MagneticStripeReaderCardTypes_Static[] = {
         { "aamva", reinterpret_cast<getter>(MagneticStripeReaderCardTypes_get_Aamva), nullptr, nullptr, nullptr },
         { "bank", reinterpret_cast<getter>(MagneticStripeReaderCardTypes_get_Bank), nullptr, nullptr, nullptr },
         { "extended_base", reinterpret_cast<getter>(MagneticStripeReaderCardTypes_get_ExtendedBase), nullptr, nullptr, nullptr },
@@ -17091,20 +17201,25 @@ namespace py::cpp::Windows::Devices::PointOfService
         { }
     };
 
-    static PyType_Slot type_slots_MagneticStripeReaderCardTypes_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_MagneticStripeReaderCardTypes_Meta) },
+    static PyMethodDef methods_MagneticStripeReaderCardTypes_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_MagneticStripeReaderCardTypes_Meta =
+    static PyType_Slot type_slots_MagneticStripeReaderCardTypes_Static[] = 
     {
-        "winrt._winrt_windows_devices_pointofservice.MagneticStripeReaderCardTypes_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_MagneticStripeReaderCardTypes_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_MagneticStripeReaderCardTypes_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_MagneticStripeReaderCardTypes_Static =
+    {
+        "winrt._winrt_windows_devices_pointofservice.MagneticStripeReaderCardTypes_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_MagneticStripeReaderCardTypes_Meta
+        type_slots_MagneticStripeReaderCardTypes_Static
     };
 
     // ----- MagneticStripeReaderEncryptionAlgorithms class --------------------
@@ -17198,27 +17313,32 @@ namespace py::cpp::Windows::Devices::PointOfService
         _type_slots_MagneticStripeReaderEncryptionAlgorithms
     };
 
-    static PyGetSetDef getset_MagneticStripeReaderEncryptionAlgorithms_Meta[] = {
+    static PyGetSetDef getset_MagneticStripeReaderEncryptionAlgorithms_Static[] = {
         { "extended_base", reinterpret_cast<getter>(MagneticStripeReaderEncryptionAlgorithms_get_ExtendedBase), nullptr, nullptr, nullptr },
         { "none", reinterpret_cast<getter>(MagneticStripeReaderEncryptionAlgorithms_get_None), nullptr, nullptr, nullptr },
         { "triple_des_dukpt", reinterpret_cast<getter>(MagneticStripeReaderEncryptionAlgorithms_get_TripleDesDukpt), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_MagneticStripeReaderEncryptionAlgorithms_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_MagneticStripeReaderEncryptionAlgorithms_Meta) },
+    static PyMethodDef methods_MagneticStripeReaderEncryptionAlgorithms_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_MagneticStripeReaderEncryptionAlgorithms_Meta =
+    static PyType_Slot type_slots_MagneticStripeReaderEncryptionAlgorithms_Static[] = 
     {
-        "winrt._winrt_windows_devices_pointofservice.MagneticStripeReaderEncryptionAlgorithms_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_MagneticStripeReaderEncryptionAlgorithms_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_MagneticStripeReaderEncryptionAlgorithms_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_MagneticStripeReaderEncryptionAlgorithms_Static =
+    {
+        "winrt._winrt_windows_devices_pointofservice.MagneticStripeReaderEncryptionAlgorithms_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_MagneticStripeReaderEncryptionAlgorithms_Meta
+        type_slots_MagneticStripeReaderEncryptionAlgorithms_Static
     };
 
     // ----- MagneticStripeReaderErrorOccurredEventArgs class --------------------
@@ -18468,9 +18588,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "check_health_async", reinterpret_cast<PyCFunction>(PosPrinter_CheckHealthAsync), METH_VARARGS, nullptr },
         { "claim_printer_async", reinterpret_cast<PyCFunction>(PosPrinter_ClaimPrinterAsync), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(PosPrinter_Close), METH_VARARGS, nullptr },
-        { "from_id_async", reinterpret_cast<PyCFunction>(PosPrinter_FromIdAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_default_async", reinterpret_cast<PyCFunction>(PosPrinter_GetDefaultAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_device_selector", reinterpret_cast<PyCFunction>(PosPrinter_GetDeviceSelector), METH_VARARGS | METH_STATIC, nullptr },
         { "get_font_property", reinterpret_cast<PyCFunction>(PosPrinter_GetFontProperty), METH_VARARGS, nullptr },
         { "get_statistics_async", reinterpret_cast<PyCFunction>(PosPrinter_GetStatisticsAsync), METH_VARARGS, nullptr },
         { "add_status_updated", reinterpret_cast<PyCFunction>(PosPrinter_add_StatusUpdated), METH_O, nullptr },
@@ -18508,6 +18625,34 @@ namespace py::cpp::Windows::Devices::PointOfService
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_PosPrinter
+    };
+
+    static PyGetSetDef getset_PosPrinter_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_PosPrinter_Static[] = {
+        { "from_id_async", reinterpret_cast<PyCFunction>(PosPrinter_FromIdAsync), METH_VARARGS, nullptr },
+        { "get_default_async", reinterpret_cast<PyCFunction>(PosPrinter_GetDefaultAsync), METH_VARARGS, nullptr },
+        { "get_device_selector", reinterpret_cast<PyCFunction>(PosPrinter_GetDeviceSelector), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_PosPrinter_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PosPrinter_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PosPrinter_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PosPrinter_Static =
+    {
+        "winrt._winrt_windows_devices_pointofservice.PosPrinter_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_PosPrinter_Static
     };
 
     // ----- PosPrinterCapabilities class --------------------
@@ -18870,27 +19015,32 @@ namespace py::cpp::Windows::Devices::PointOfService
         _type_slots_PosPrinterCharacterSetIds
     };
 
-    static PyGetSetDef getset_PosPrinterCharacterSetIds_Meta[] = {
+    static PyGetSetDef getset_PosPrinterCharacterSetIds_Static[] = {
         { "ansi", reinterpret_cast<getter>(PosPrinterCharacterSetIds_get_Ansi), nullptr, nullptr, nullptr },
         { "ascii", reinterpret_cast<getter>(PosPrinterCharacterSetIds_get_Ascii), nullptr, nullptr, nullptr },
         { "utf16_l_e", reinterpret_cast<getter>(PosPrinterCharacterSetIds_get_Utf16LE), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_PosPrinterCharacterSetIds_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_PosPrinterCharacterSetIds_Meta) },
+    static PyMethodDef methods_PosPrinterCharacterSetIds_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_PosPrinterCharacterSetIds_Meta =
+    static PyType_Slot type_slots_PosPrinterCharacterSetIds_Static[] = 
     {
-        "winrt._winrt_windows_devices_pointofservice.PosPrinterCharacterSetIds_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PosPrinterCharacterSetIds_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PosPrinterCharacterSetIds_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PosPrinterCharacterSetIds_Static =
+    {
+        "winrt._winrt_windows_devices_pointofservice.PosPrinterCharacterSetIds_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PosPrinterCharacterSetIds_Meta
+        type_slots_PosPrinterCharacterSetIds_Static
     };
 
     // ----- PosPrinterFontProperty class --------------------
@@ -25635,7 +25785,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_pointofservice(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BarcodeScanner, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_BarcodeScanner_Static{PyType_FromSpec(&type_spec_BarcodeScanner_Static)};
+    if (!type_BarcodeScanner_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScanner, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BarcodeScanner_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -25670,13 +25826,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_pointofservice(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_BarcodeSymbologies_Meta{PyType_FromSpec(&type_spec_BarcodeSymbologies_Meta)};
-    if (!type_BarcodeSymbologies_Meta)
+    py::pyobj_handle type_BarcodeSymbologies_Static{PyType_FromSpec(&type_spec_BarcodeSymbologies_Static)};
+    if (!type_BarcodeSymbologies_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BarcodeSymbologies, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BarcodeSymbologies_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeSymbologies, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BarcodeSymbologies_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -25686,7 +25842,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_pointofservice(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CashDrawer, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_CashDrawer_Static{PyType_FromSpec(&type_spec_CashDrawer_Static)};
+    if (!type_CashDrawer_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_CashDrawer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CashDrawer_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -25751,7 +25913,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_pointofservice(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ClaimedLineDisplay, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_ClaimedLineDisplay_Static{PyType_FromSpec(&type_spec_ClaimedLineDisplay_Static)};
+    if (!type_ClaimedLineDisplay_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_ClaimedLineDisplay, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ClaimedLineDisplay_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -25801,13 +25969,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_pointofservice(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_LineDisplay_Meta{PyType_FromSpec(&type_spec_LineDisplay_Meta)};
-    if (!type_LineDisplay_Meta)
+    py::pyobj_handle type_LineDisplay_Static{PyType_FromSpec(&type_spec_LineDisplay_Static)};
+    if (!type_LineDisplay_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LineDisplay, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LineDisplay_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LineDisplay, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LineDisplay_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -25862,7 +26030,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_pointofservice(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MagneticStripeReader, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_MagneticStripeReader_Static{PyType_FromSpec(&type_spec_MagneticStripeReader_Static)};
+    if (!type_MagneticStripeReader_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_MagneticStripeReader, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MagneticStripeReader_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -25882,24 +26056,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_pointofservice(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_MagneticStripeReaderCardTypes_Meta{PyType_FromSpec(&type_spec_MagneticStripeReaderCardTypes_Meta)};
-    if (!type_MagneticStripeReaderCardTypes_Meta)
+    py::pyobj_handle type_MagneticStripeReaderCardTypes_Static{PyType_FromSpec(&type_spec_MagneticStripeReaderCardTypes_Static)};
+    if (!type_MagneticStripeReaderCardTypes_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MagneticStripeReaderCardTypes, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MagneticStripeReaderCardTypes_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MagneticStripeReaderCardTypes, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MagneticStripeReaderCardTypes_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_MagneticStripeReaderEncryptionAlgorithms_Meta{PyType_FromSpec(&type_spec_MagneticStripeReaderEncryptionAlgorithms_Meta)};
-    if (!type_MagneticStripeReaderEncryptionAlgorithms_Meta)
+    py::pyobj_handle type_MagneticStripeReaderEncryptionAlgorithms_Static{PyType_FromSpec(&type_spec_MagneticStripeReaderEncryptionAlgorithms_Static)};
+    if (!type_MagneticStripeReaderEncryptionAlgorithms_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MagneticStripeReaderEncryptionAlgorithms, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MagneticStripeReaderEncryptionAlgorithms_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MagneticStripeReaderEncryptionAlgorithms, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MagneticStripeReaderEncryptionAlgorithms_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -25929,7 +26103,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_pointofservice(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PosPrinter, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_PosPrinter_Static{PyType_FromSpec(&type_spec_PosPrinter_Static)};
+    if (!type_PosPrinter_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_PosPrinter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PosPrinter_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -25939,13 +26119,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_pointofservice(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_PosPrinterCharacterSetIds_Meta{PyType_FromSpec(&type_spec_PosPrinterCharacterSetIds_Meta)};
-    if (!type_PosPrinterCharacterSetIds_Meta)
+    py::pyobj_handle type_PosPrinterCharacterSetIds_Static{PyType_FromSpec(&type_spec_PosPrinterCharacterSetIds_Static)};
+    if (!type_PosPrinterCharacterSetIds_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PosPrinterCharacterSetIds, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PosPrinterCharacterSetIds_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PosPrinterCharacterSetIds, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PosPrinterCharacterSetIds_Static.get())) == -1)
     {
         return nullptr;
     }

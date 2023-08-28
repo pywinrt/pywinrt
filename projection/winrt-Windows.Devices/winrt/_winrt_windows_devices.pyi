@@ -31,10 +31,15 @@ class LowLevelDevicesAggregateProvider(winrt.system.Object):
     @_property
     def spi_controller_provider(self) -> typing.Optional[winrt.windows.devices.spi.provider.ISpiControllerProvider]: ...
 
-class LowLevelDevicesController(winrt.system.Object):
+class LowLevelDevicesController_Static(type):
+    @_property
+    def default_provider(cls) -> typing.Optional[ILowLevelDevicesAggregateProvider]: ...
+    @default_provider.setter
+    def default_provider(cls, value: typing.Optional[ILowLevelDevicesAggregateProvider]) -> None: ...
+
+class LowLevelDevicesController(winrt.system.Object, metaclass=LowLevelDevicesController_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LowLevelDevicesController: ...
-    default_provider: typing.ClassVar[typing.Optional[ILowLevelDevicesAggregateProvider]]
 
 class ILowLevelDevicesAggregateProvider(winrt.system.Object):
     @staticmethod

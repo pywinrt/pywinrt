@@ -2087,7 +2087,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     }
 
     static PyMethodDef _methods_PlayReadyContentResolver[] = {
-        { "service_request", reinterpret_cast<PyCFunction>(PlayReadyContentResolver_ServiceRequest), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -2110,6 +2109,32 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_PlayReadyContentResolver
+    };
+
+    static PyGetSetDef getset_PlayReadyContentResolver_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_PlayReadyContentResolver_Static[] = {
+        { "service_request", reinterpret_cast<PyCFunction>(PlayReadyContentResolver_ServiceRequest), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_PlayReadyContentResolver_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PlayReadyContentResolver_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PlayReadyContentResolver_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PlayReadyContentResolver_Static =
+    {
+        "winrt._winrt_windows_media_protection_playready.PlayReadyContentResolver_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_PlayReadyContentResolver_Static
     };
 
     // ----- PlayReadyDomain class --------------------
@@ -5300,7 +5325,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     }
 
     static PyMethodDef _methods_PlayReadyLicenseManagement[] = {
-        { "delete_licenses", reinterpret_cast<PyCFunction>(PlayReadyLicenseManagement_DeleteLicenses), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -5323,6 +5347,32 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_PlayReadyLicenseManagement
+    };
+
+    static PyGetSetDef getset_PlayReadyLicenseManagement_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_PlayReadyLicenseManagement_Static[] = {
+        { "delete_licenses", reinterpret_cast<PyCFunction>(PlayReadyLicenseManagement_DeleteLicenses), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_PlayReadyLicenseManagement_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PlayReadyLicenseManagement_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PlayReadyLicenseManagement_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PlayReadyLicenseManagement_Static =
+    {
+        "winrt._winrt_windows_media_protection_playready.PlayReadyLicenseManagement_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_PlayReadyLicenseManagement_Static
     };
 
     // ----- PlayReadyLicenseSession class --------------------
@@ -7599,8 +7649,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     }
 
     static PyMethodDef _methods_PlayReadyStatics[] = {
-        { "check_supported_hardware", reinterpret_cast<PyCFunction>(PlayReadyStatics_CheckSupportedHardware), METH_VARARGS | METH_STATIC, nullptr },
-        { "reset_hardware_d_r_m_disabled", reinterpret_cast<PyCFunction>(PlayReadyStatics_ResetHardwareDRMDisabled), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -7625,7 +7673,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         _type_slots_PlayReadyStatics
     };
 
-    static PyGetSetDef getset_PlayReadyStatics_Meta[] = {
+    static PyGetSetDef getset_PlayReadyStatics_Static[] = {
         { "domain_join_service_request_type", reinterpret_cast<getter>(PlayReadyStatics_get_DomainJoinServiceRequestType), nullptr, nullptr, nullptr },
         { "domain_leave_service_request_type", reinterpret_cast<getter>(PlayReadyStatics_get_DomainLeaveServiceRequestType), nullptr, nullptr, nullptr },
         { "individualization_service_request_type", reinterpret_cast<getter>(PlayReadyStatics_get_IndividualizationServiceRequestType), nullptr, nullptr, nullptr },
@@ -7643,20 +7691,27 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { }
     };
 
-    static PyType_Slot type_slots_PlayReadyStatics_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_PlayReadyStatics_Meta) },
+    static PyMethodDef methods_PlayReadyStatics_Static[] = {
+        { "check_supported_hardware", reinterpret_cast<PyCFunction>(PlayReadyStatics_CheckSupportedHardware), METH_VARARGS, nullptr },
+        { "reset_hardware_d_r_m_disabled", reinterpret_cast<PyCFunction>(PlayReadyStatics_ResetHardwareDRMDisabled), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_PlayReadyStatics_Meta =
+    static PyType_Slot type_slots_PlayReadyStatics_Static[] = 
     {
-        "winrt._winrt_windows_media_protection_playready.PlayReadyStatics_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PlayReadyStatics_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PlayReadyStatics_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PlayReadyStatics_Static =
+    {
+        "winrt._winrt_windows_media_protection_playready.PlayReadyStatics_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_PlayReadyStatics_Meta
+        type_slots_PlayReadyStatics_Static
     };
 
     // ----- INDClosedCaptionDataReceivedEventArgs interface --------------------
@@ -12270,7 +12325,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_protection_playready(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PlayReadyContentResolver, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_PlayReadyContentResolver_Static{PyType_FromSpec(&type_spec_PlayReadyContentResolver_Static)};
+    if (!type_PlayReadyContentResolver_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_PlayReadyContentResolver, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PlayReadyContentResolver_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -12330,7 +12391,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_protection_playready(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PlayReadyLicenseManagement, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_PlayReadyLicenseManagement_Static{PyType_FromSpec(&type_spec_PlayReadyLicenseManagement_Static)};
+    if (!type_PlayReadyLicenseManagement_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_PlayReadyLicenseManagement, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PlayReadyLicenseManagement_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -12370,13 +12437,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_protection_playready(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_PlayReadyStatics_Meta{PyType_FromSpec(&type_spec_PlayReadyStatics_Meta)};
-    if (!type_PlayReadyStatics_Meta)
+    py::pyobj_handle type_PlayReadyStatics_Static{PyType_FromSpec(&type_spec_PlayReadyStatics_Static)};
+    if (!type_PlayReadyStatics_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PlayReadyStatics, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PlayReadyStatics_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PlayReadyStatics, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PlayReadyStatics_Static.get())) == -1)
     {
         return nullptr;
     }

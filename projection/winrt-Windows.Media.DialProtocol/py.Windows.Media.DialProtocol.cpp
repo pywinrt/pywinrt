@@ -519,9 +519,6 @@ namespace py::cpp::Windows::Media::DialProtocol
     }
 
     static PyMethodDef _methods_DialDevice[] = {
-        { "device_info_supports_dial_async", reinterpret_cast<PyCFunction>(DialDevice_DeviceInfoSupportsDialAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "from_id_async", reinterpret_cast<PyCFunction>(DialDevice_FromIdAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_device_selector", reinterpret_cast<PyCFunction>(DialDevice_GetDeviceSelector), METH_VARARGS | METH_STATIC, nullptr },
         { "get_dial_app", reinterpret_cast<PyCFunction>(DialDevice_GetDialApp), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DialDevice, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DialDevice), METH_O | METH_STATIC, nullptr },
@@ -551,6 +548,34 @@ namespace py::cpp::Windows::Media::DialProtocol
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_DialDevice
+    };
+
+    static PyGetSetDef getset_DialDevice_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_DialDevice_Static[] = {
+        { "device_info_supports_dial_async", reinterpret_cast<PyCFunction>(DialDevice_DeviceInfoSupportsDialAsync), METH_VARARGS, nullptr },
+        { "from_id_async", reinterpret_cast<PyCFunction>(DialDevice_FromIdAsync), METH_VARARGS, nullptr },
+        { "get_device_selector", reinterpret_cast<PyCFunction>(DialDevice_GetDeviceSelector), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_DialDevice_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_DialDevice_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_DialDevice_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_DialDevice_Static =
+    {
+        "winrt._winrt_windows_media_dialprotocol.DialDevice_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_DialDevice_Static
     };
 
     // ----- DialDevicePicker class --------------------
@@ -1439,25 +1464,30 @@ namespace py::cpp::Windows::Media::DialProtocol
         _type_slots_DialReceiverApp
     };
 
-    static PyGetSetDef getset_DialReceiverApp_Meta[] = {
+    static PyGetSetDef getset_DialReceiverApp_Static[] = {
         { "current", reinterpret_cast<getter>(DialReceiverApp_get_Current), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_DialReceiverApp_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_DialReceiverApp_Meta) },
+    static PyMethodDef methods_DialReceiverApp_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_DialReceiverApp_Meta =
+    static PyType_Slot type_slots_DialReceiverApp_Static[] = 
     {
-        "winrt._winrt_windows_media_dialprotocol.DialReceiverApp_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_DialReceiverApp_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_DialReceiverApp_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_DialReceiverApp_Static =
+    {
+        "winrt._winrt_windows_media_dialprotocol.DialReceiverApp_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_DialReceiverApp_Meta
+        type_slots_DialReceiverApp_Static
     };
 
     // ----- Windows.Media.DialProtocol Initialization --------------------
@@ -1516,7 +1546,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_dialprotocol(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DialDevice, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_DialDevice_Static{PyType_FromSpec(&type_spec_DialDevice_Static)};
+    if (!type_DialDevice_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_DialDevice, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DialDevice_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -1541,13 +1577,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_dialprotocol(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_DialReceiverApp_Meta{PyType_FromSpec(&type_spec_DialReceiverApp_Meta)};
-    if (!type_DialReceiverApp_Meta)
+    py::pyobj_handle type_DialReceiverApp_Static{PyType_FromSpec(&type_spec_DialReceiverApp_Static)};
+    if (!type_DialReceiverApp_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DialReceiverApp, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DialReceiverApp_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DialReceiverApp, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DialReceiverApp_Static.get())) == -1)
     {
         return nullptr;
     }

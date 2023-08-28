@@ -178,9 +178,6 @@ namespace py::cpp::Windows::Graphics::Printing
     }
 
     static PyMethodDef _methods_PrintManager[] = {
-        { "get_for_current_view", reinterpret_cast<PyCFunction>(PrintManager_GetForCurrentView), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_supported", reinterpret_cast<PyCFunction>(PrintManager_IsSupported), METH_VARARGS | METH_STATIC, nullptr },
-        { "show_print_u_i_async", reinterpret_cast<PyCFunction>(PrintManager_ShowPrintUIAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "add_print_task_requested", reinterpret_cast<PyCFunction>(PrintManager_add_PrintTaskRequested), METH_O, nullptr },
         { "remove_print_task_requested", reinterpret_cast<PyCFunction>(PrintManager_remove_PrintTaskRequested), METH_O, nullptr },
         { "_assign_array_", _assign_array_PrintManager, METH_O | METH_STATIC, nullptr },
@@ -208,6 +205,34 @@ namespace py::cpp::Windows::Graphics::Printing
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_PrintManager
+    };
+
+    static PyGetSetDef getset_PrintManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_PrintManager_Static[] = {
+        { "get_for_current_view", reinterpret_cast<PyCFunction>(PrintManager_GetForCurrentView), METH_VARARGS, nullptr },
+        { "is_supported", reinterpret_cast<PyCFunction>(PrintManager_IsSupported), METH_VARARGS, nullptr },
+        { "show_print_u_i_async", reinterpret_cast<PyCFunction>(PrintManager_ShowPrintUIAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_PrintManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PrintManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PrintManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PrintManager_Static =
+    {
+        "winrt._winrt_windows_graphics_printing.PrintManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_PrintManager_Static
     };
 
     // ----- PrintPageInfo class --------------------
@@ -3255,7 +3280,7 @@ namespace py::cpp::Windows::Graphics::Printing
         _type_slots_StandardPrintTaskOptions
     };
 
-    static PyGetSetDef getset_StandardPrintTaskOptions_Meta[] = {
+    static PyGetSetDef getset_StandardPrintTaskOptions_Static[] = {
         { "copies", reinterpret_cast<getter>(StandardPrintTaskOptions_get_Copies), nullptr, nullptr, nullptr },
         { "binding", reinterpret_cast<getter>(StandardPrintTaskOptions_get_Binding), nullptr, nullptr, nullptr },
         { "collation", reinterpret_cast<getter>(StandardPrintTaskOptions_get_Collation), nullptr, nullptr, nullptr },
@@ -3274,20 +3299,25 @@ namespace py::cpp::Windows::Graphics::Printing
         { }
     };
 
-    static PyType_Slot type_slots_StandardPrintTaskOptions_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_StandardPrintTaskOptions_Meta) },
+    static PyMethodDef methods_StandardPrintTaskOptions_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_StandardPrintTaskOptions_Meta =
+    static PyType_Slot type_slots_StandardPrintTaskOptions_Static[] = 
     {
-        "winrt._winrt_windows_graphics_printing.StandardPrintTaskOptions_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_StandardPrintTaskOptions_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_StandardPrintTaskOptions_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_StandardPrintTaskOptions_Static =
+    {
+        "winrt._winrt_windows_graphics_printing.StandardPrintTaskOptions_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_StandardPrintTaskOptions_Meta
+        type_slots_StandardPrintTaskOptions_Static
     };
 
     // ----- IPrintDocumentSource interface --------------------
@@ -4463,7 +4493,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_printing(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_PrintManager_Static{PyType_FromSpec(&type_spec_PrintManager_Static)};
+    if (!type_PrintManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_PrintManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PrintManager_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -4528,13 +4564,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_printing(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_StandardPrintTaskOptions_Meta{PyType_FromSpec(&type_spec_StandardPrintTaskOptions_Meta)};
-    if (!type_StandardPrintTaskOptions_Meta)
+    py::pyobj_handle type_StandardPrintTaskOptions_Static{PyType_FromSpec(&type_spec_StandardPrintTaskOptions_Static)};
+    if (!type_StandardPrintTaskOptions_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StandardPrintTaskOptions, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StandardPrintTaskOptions_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StandardPrintTaskOptions, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StandardPrintTaskOptions_Static.get())) == -1)
     {
         return nullptr;
     }

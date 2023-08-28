@@ -1689,7 +1689,7 @@ namespace py::cpp::Windows::Media
         _type_slots_MediaControl
     };
 
-    static PyGetSetDef getset_MediaControl_Meta[] = {
+    static PyGetSetDef getset_MediaControl_Static[] = {
         { "track_name", reinterpret_cast<getter>(MediaControl_get_TrackName), reinterpret_cast<setter>(MediaControl_put_TrackName), nullptr, nullptr },
         { "is_playing", reinterpret_cast<getter>(MediaControl_get_IsPlaying), reinterpret_cast<setter>(MediaControl_put_IsPlaying), nullptr, nullptr },
         { "artist_name", reinterpret_cast<getter>(MediaControl_get_ArtistName), reinterpret_cast<setter>(MediaControl_put_ArtistName), nullptr, nullptr },
@@ -1698,20 +1698,25 @@ namespace py::cpp::Windows::Media
         { }
     };
 
-    static PyType_Slot type_slots_MediaControl_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_MediaControl_Meta) },
+    static PyMethodDef methods_MediaControl_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_MediaControl_Meta =
+    static PyType_Slot type_slots_MediaControl_Static[] = 
     {
-        "winrt._winrt_windows_media.MediaControl_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_MediaControl_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_MediaControl_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_MediaControl_Static =
+    {
+        "winrt._winrt_windows_media.MediaControl_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_MediaControl_Meta
+        type_slots_MediaControl_Static
     };
 
     // ----- MediaExtensionManager class --------------------
@@ -2244,25 +2249,30 @@ namespace py::cpp::Windows::Media
         _type_slots_MediaMarkerTypes
     };
 
-    static PyGetSetDef getset_MediaMarkerTypes_Meta[] = {
+    static PyGetSetDef getset_MediaMarkerTypes_Static[] = {
         { "bookmark", reinterpret_cast<getter>(MediaMarkerTypes_get_Bookmark), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_MediaMarkerTypes_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_MediaMarkerTypes_Meta) },
+    static PyMethodDef methods_MediaMarkerTypes_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_MediaMarkerTypes_Meta =
+    static PyType_Slot type_slots_MediaMarkerTypes_Static[] = 
     {
-        "winrt._winrt_windows_media.MediaMarkerTypes_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_MediaMarkerTypes_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_MediaMarkerTypes_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_MediaMarkerTypes_Static =
+    {
+        "winrt._winrt_windows_media.MediaMarkerTypes_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_MediaMarkerTypes_Meta
+        type_slots_MediaMarkerTypes_Static
     };
 
     // ----- MediaProcessingTriggerDetails class --------------------
@@ -4767,7 +4777,6 @@ namespace py::cpp::Windows::Media
     }
 
     static PyMethodDef _methods_SystemMediaTransportControls[] = {
-        { "get_for_current_view", reinterpret_cast<PyCFunction>(SystemMediaTransportControls_GetForCurrentView), METH_VARARGS | METH_STATIC, nullptr },
         { "update_timeline_properties", reinterpret_cast<PyCFunction>(SystemMediaTransportControls_UpdateTimelineProperties), METH_VARARGS, nullptr },
         { "add_button_pressed", reinterpret_cast<PyCFunction>(SystemMediaTransportControls_add_ButtonPressed), METH_O, nullptr },
         { "remove_button_pressed", reinterpret_cast<PyCFunction>(SystemMediaTransportControls_remove_ButtonPressed), METH_O, nullptr },
@@ -4823,6 +4832,32 @@ namespace py::cpp::Windows::Media
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_SystemMediaTransportControls
+    };
+
+    static PyGetSetDef getset_SystemMediaTransportControls_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_SystemMediaTransportControls_Static[] = {
+        { "get_for_current_view", reinterpret_cast<PyCFunction>(SystemMediaTransportControls_GetForCurrentView), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_SystemMediaTransportControls_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SystemMediaTransportControls_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SystemMediaTransportControls_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SystemMediaTransportControls_Static =
+    {
+        "winrt._winrt_windows_media.SystemMediaTransportControls_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_SystemMediaTransportControls_Static
     };
 
     // ----- SystemMediaTransportControlsButtonPressedEventArgs class --------------------
@@ -5940,25 +5975,30 @@ namespace py::cpp::Windows::Media
         _type_slots_VideoEffects
     };
 
-    static PyGetSetDef getset_VideoEffects_Meta[] = {
+    static PyGetSetDef getset_VideoEffects_Static[] = {
         { "video_stabilization", reinterpret_cast<getter>(VideoEffects_get_VideoStabilization), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_VideoEffects_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_VideoEffects_Meta) },
+    static PyMethodDef methods_VideoEffects_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_VideoEffects_Meta =
+    static PyType_Slot type_slots_VideoEffects_Static[] = 
     {
-        "winrt._winrt_windows_media.VideoEffects_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_VideoEffects_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_VideoEffects_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_VideoEffects_Static =
+    {
+        "winrt._winrt_windows_media.VideoEffects_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_VideoEffects_Meta
+        type_slots_VideoEffects_Static
     };
 
     // ----- VideoFrame class --------------------
@@ -6552,9 +6592,6 @@ namespace py::cpp::Windows::Media
     static PyMethodDef _methods_VideoFrame[] = {
         { "close", reinterpret_cast<PyCFunction>(VideoFrame_Close), METH_VARARGS, nullptr },
         { "copy_to_async", reinterpret_cast<PyCFunction>(VideoFrame_CopyToAsync), METH_VARARGS, nullptr },
-        { "create_as_direct3_d11_surface_backed", reinterpret_cast<PyCFunction>(VideoFrame_CreateAsDirect3D11SurfaceBacked), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_with_direct3_d11_surface", reinterpret_cast<PyCFunction>(VideoFrame_CreateWithDirect3D11Surface), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_with_software_bitmap", reinterpret_cast<PyCFunction>(VideoFrame_CreateWithSoftwareBitmap), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_VideoFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VideoFrame), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_VideoFrame), METH_NOARGS, nullptr },
@@ -6591,6 +6628,34 @@ namespace py::cpp::Windows::Media
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_VideoFrame
+    };
+
+    static PyGetSetDef getset_VideoFrame_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_VideoFrame_Static[] = {
+        { "create_as_direct3_d11_surface_backed", reinterpret_cast<PyCFunction>(VideoFrame_CreateAsDirect3D11SurfaceBacked), METH_VARARGS, nullptr },
+        { "create_with_direct3_d11_surface", reinterpret_cast<PyCFunction>(VideoFrame_CreateWithDirect3D11Surface), METH_VARARGS, nullptr },
+        { "create_with_software_bitmap", reinterpret_cast<PyCFunction>(VideoFrame_CreateWithSoftwareBitmap), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_VideoFrame_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_VideoFrame_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_VideoFrame_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_VideoFrame_Static =
+    {
+        "winrt._winrt_windows_media.VideoFrame_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_VideoFrame_Static
     };
 
     // ----- IMediaExtension interface --------------------
@@ -7513,13 +7578,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_MediaControl_Meta{PyType_FromSpec(&type_spec_MediaControl_Meta)};
-    if (!type_MediaControl_Meta)
+    py::pyobj_handle type_MediaControl_Static{PyType_FromSpec(&type_spec_MediaControl_Static)};
+    if (!type_MediaControl_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MediaControl, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MediaControl_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaControl, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MediaControl_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -7529,13 +7594,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_MediaMarkerTypes_Meta{PyType_FromSpec(&type_spec_MediaMarkerTypes_Meta)};
-    if (!type_MediaMarkerTypes_Meta)
+    py::pyobj_handle type_MediaMarkerTypes_Static{PyType_FromSpec(&type_spec_MediaMarkerTypes_Static)};
+    if (!type_MediaMarkerTypes_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MediaMarkerTypes, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MediaMarkerTypes_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaMarkerTypes, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MediaMarkerTypes_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -7575,7 +7640,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SystemMediaTransportControls, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_SystemMediaTransportControls_Static{PyType_FromSpec(&type_spec_SystemMediaTransportControls_Static)};
+    if (!type_SystemMediaTransportControls_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_SystemMediaTransportControls, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemMediaTransportControls_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -7605,18 +7676,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_media(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_VideoEffects_Meta{PyType_FromSpec(&type_spec_VideoEffects_Meta)};
-    if (!type_VideoEffects_Meta)
+    py::pyobj_handle type_VideoEffects_Static{PyType_FromSpec(&type_spec_VideoEffects_Static)};
+    if (!type_VideoEffects_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VideoEffects, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VideoEffects_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_VideoEffects, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VideoEffects_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VideoFrame, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_VideoFrame_Static{PyType_FromSpec(&type_spec_VideoFrame_Static)};
+    if (!type_VideoFrame_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_VideoFrame, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VideoFrame_Static.get())) == -1)
     {
         return nullptr;
     }

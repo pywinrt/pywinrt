@@ -1599,7 +1599,6 @@ namespace py::cpp::Windows::Services::Maps::Guidance
     }
 
     static PyMethodDef _methods_GuidanceNavigator[] = {
-        { "get_current", reinterpret_cast<PyCFunction>(GuidanceNavigator_GetCurrent), METH_VARARGS | METH_STATIC, nullptr },
         { "pause", reinterpret_cast<PyCFunction>(GuidanceNavigator_Pause), METH_VARARGS, nullptr },
         { "repeat_last_audio_notification", reinterpret_cast<PyCFunction>(GuidanceNavigator_RepeatLastAudioNotification), METH_VARARGS, nullptr },
         { "resume", reinterpret_cast<PyCFunction>(GuidanceNavigator_Resume), METH_VARARGS, nullptr },
@@ -1655,25 +1654,31 @@ namespace py::cpp::Windows::Services::Maps::Guidance
         _type_slots_GuidanceNavigator
     };
 
-    static PyGetSetDef getset_GuidanceNavigator_Meta[] = {
+    static PyGetSetDef getset_GuidanceNavigator_Static[] = {
         { "use_app_provided_voice", reinterpret_cast<getter>(GuidanceNavigator_get_UseAppProvidedVoice), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_GuidanceNavigator_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_GuidanceNavigator_Meta) },
+    static PyMethodDef methods_GuidanceNavigator_Static[] = {
+        { "get_current", reinterpret_cast<PyCFunction>(GuidanceNavigator_GetCurrent), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_GuidanceNavigator_Meta =
+    static PyType_Slot type_slots_GuidanceNavigator_Static[] = 
     {
-        "winrt._winrt_windows_services_maps_guidance.GuidanceNavigator_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_GuidanceNavigator_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_GuidanceNavigator_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_GuidanceNavigator_Static =
+    {
+        "winrt._winrt_windows_services_maps_guidance.GuidanceNavigator_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_GuidanceNavigator_Meta
+        type_slots_GuidanceNavigator_Static
     };
 
     // ----- GuidanceReroutedEventArgs class --------------------
@@ -2450,9 +2455,7 @@ namespace py::cpp::Windows::Services::Maps::Guidance
     }
 
     static PyMethodDef _methods_GuidanceRoute[] = {
-        { "can_create_from_map_route", reinterpret_cast<PyCFunction>(GuidanceRoute_CanCreateFromMapRoute), METH_VARARGS | METH_STATIC, nullptr },
         { "convert_to_map_route", reinterpret_cast<PyCFunction>(GuidanceRoute_ConvertToMapRoute), METH_VARARGS, nullptr },
-        { "try_create_from_map_route", reinterpret_cast<PyCFunction>(GuidanceRoute_TryCreateFromMapRoute), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_GuidanceRoute, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GuidanceRoute), METH_O | METH_STATIC, nullptr },
         { }
@@ -2484,6 +2487,33 @@ namespace py::cpp::Windows::Services::Maps::Guidance
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_GuidanceRoute
+    };
+
+    static PyGetSetDef getset_GuidanceRoute_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_GuidanceRoute_Static[] = {
+        { "can_create_from_map_route", reinterpret_cast<PyCFunction>(GuidanceRoute_CanCreateFromMapRoute), METH_VARARGS, nullptr },
+        { "try_create_from_map_route", reinterpret_cast<PyCFunction>(GuidanceRoute_TryCreateFromMapRoute), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_GuidanceRoute_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_GuidanceRoute_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_GuidanceRoute_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_GuidanceRoute_Static =
+    {
+        "winrt._winrt_windows_services_maps_guidance.GuidanceRoute_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_GuidanceRoute_Static
     };
 
     // ----- GuidanceTelemetryCollector class --------------------
@@ -2729,7 +2759,6 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyMethodDef _methods_GuidanceTelemetryCollector[] = {
         { "clear_local_data", reinterpret_cast<PyCFunction>(GuidanceTelemetryCollector_ClearLocalData), METH_VARARGS, nullptr },
-        { "get_current", reinterpret_cast<PyCFunction>(GuidanceTelemetryCollector_GetCurrent), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_GuidanceTelemetryCollector, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GuidanceTelemetryCollector), METH_O | METH_STATIC, nullptr },
         { }
@@ -2758,6 +2787,32 @@ namespace py::cpp::Windows::Services::Maps::Guidance
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_GuidanceTelemetryCollector
+    };
+
+    static PyGetSetDef getset_GuidanceTelemetryCollector_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_GuidanceTelemetryCollector_Static[] = {
+        { "get_current", reinterpret_cast<PyCFunction>(GuidanceTelemetryCollector_GetCurrent), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_GuidanceTelemetryCollector_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_GuidanceTelemetryCollector_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_GuidanceTelemetryCollector_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_GuidanceTelemetryCollector_Static =
+    {
+        "winrt._winrt_windows_services_maps_guidance.GuidanceTelemetryCollector_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_GuidanceTelemetryCollector_Static
     };
 
     // ----- GuidanceUpdatedEventArgs class --------------------
@@ -3175,13 +3230,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_maps_guidance(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_GuidanceNavigator_Meta{PyType_FromSpec(&type_spec_GuidanceNavigator_Meta)};
-    if (!type_GuidanceNavigator_Meta)
+    py::pyobj_handle type_GuidanceNavigator_Static{PyType_FromSpec(&type_spec_GuidanceNavigator_Static)};
+    if (!type_GuidanceNavigator_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GuidanceNavigator, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GuidanceNavigator_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GuidanceNavigator, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GuidanceNavigator_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -3201,12 +3256,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_maps_guidance(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GuidanceRoute, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_GuidanceRoute_Static{PyType_FromSpec(&type_spec_GuidanceRoute_Static)};
+    if (!type_GuidanceRoute_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GuidanceTelemetryCollector, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GuidanceRoute, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GuidanceRoute_Static.get())) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_GuidanceTelemetryCollector_Static{PyType_FromSpec(&type_spec_GuidanceTelemetryCollector_Static)};
+    if (!type_GuidanceTelemetryCollector_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_GuidanceTelemetryCollector, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GuidanceTelemetryCollector_Static.get())) == -1)
     {
         return nullptr;
     }

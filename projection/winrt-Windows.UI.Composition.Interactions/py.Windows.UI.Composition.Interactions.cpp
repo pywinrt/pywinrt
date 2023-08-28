@@ -173,7 +173,6 @@ namespace py::cpp::Windows::UI::Composition::Interactions
     }
 
     static PyMethodDef _methods_CompositionConditionalValue[] = {
-        { "create", reinterpret_cast<PyCFunction>(CompositionConditionalValue_Create), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_CompositionConditionalValue, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionConditionalValue), METH_O | METH_STATIC, nullptr },
         { }
@@ -201,6 +200,32 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_CompositionConditionalValue
+    };
+
+    static PyGetSetDef getset_CompositionConditionalValue_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_CompositionConditionalValue_Static[] = {
+        { "create", reinterpret_cast<PyCFunction>(CompositionConditionalValue_Create), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_CompositionConditionalValue_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CompositionConditionalValue_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CompositionConditionalValue_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CompositionConditionalValue_Static =
+    {
+        "winrt._winrt_windows_ui_composition_interactions.CompositionConditionalValue_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CompositionConditionalValue_Static
     };
 
     // ----- CompositionInteractionSourceCollection class --------------------
@@ -1839,10 +1864,6 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         { "configure_position_y_inertia_modifiers", reinterpret_cast<PyCFunction>(InteractionTracker_ConfigurePositionYInertiaModifiers), METH_VARARGS, nullptr },
         { "configure_scale_inertia_modifiers", reinterpret_cast<PyCFunction>(InteractionTracker_ConfigureScaleInertiaModifiers), METH_VARARGS, nullptr },
         { "configure_vector2_position_inertia_modifiers", reinterpret_cast<PyCFunction>(InteractionTracker_ConfigureVector2PositionInertiaModifiers), METH_VARARGS, nullptr },
-        { "create", reinterpret_cast<PyCFunction>(InteractionTracker_Create), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_with_owner", reinterpret_cast<PyCFunction>(InteractionTracker_CreateWithOwner), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_binding_mode", reinterpret_cast<PyCFunction>(InteractionTracker_GetBindingMode), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_binding_mode", reinterpret_cast<PyCFunction>(InteractionTracker_SetBindingMode), METH_VARARGS | METH_STATIC, nullptr },
         { "try_update_position", reinterpret_cast<PyCFunction>(InteractionTracker_TryUpdatePosition), METH_VARARGS, nullptr },
         { "try_update_position_by", reinterpret_cast<PyCFunction>(InteractionTracker_TryUpdatePositionBy), METH_VARARGS, nullptr },
         { "try_update_position_with_additional_velocity", reinterpret_cast<PyCFunction>(InteractionTracker_TryUpdatePositionWithAdditionalVelocity), METH_VARARGS, nullptr },
@@ -1891,6 +1912,35 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_InteractionTracker
+    };
+
+    static PyGetSetDef getset_InteractionTracker_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_InteractionTracker_Static[] = {
+        { "create", reinterpret_cast<PyCFunction>(InteractionTracker_Create), METH_VARARGS, nullptr },
+        { "create_with_owner", reinterpret_cast<PyCFunction>(InteractionTracker_CreateWithOwner), METH_VARARGS, nullptr },
+        { "get_binding_mode", reinterpret_cast<PyCFunction>(InteractionTracker_GetBindingMode), METH_VARARGS, nullptr },
+        { "set_binding_mode", reinterpret_cast<PyCFunction>(InteractionTracker_SetBindingMode), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_InteractionTracker_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_InteractionTracker_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_InteractionTracker_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_InteractionTracker_Static =
+    {
+        "winrt._winrt_windows_ui_composition_interactions.InteractionTracker_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_InteractionTracker_Static
     };
 
     // ----- InteractionTrackerCustomAnimationStateEnteredArgs class --------------------
@@ -2347,7 +2397,6 @@ namespace py::cpp::Windows::UI::Composition::Interactions
     }
 
     static PyMethodDef _methods_InteractionTrackerInertiaMotion[] = {
-        { "create", reinterpret_cast<PyCFunction>(InteractionTrackerInertiaMotion_Create), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_InteractionTrackerInertiaMotion, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InteractionTrackerInertiaMotion), METH_O | METH_STATIC, nullptr },
         { }
@@ -2375,6 +2424,32 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_InteractionTrackerInertiaMotion
+    };
+
+    static PyGetSetDef getset_InteractionTrackerInertiaMotion_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_InteractionTrackerInertiaMotion_Static[] = {
+        { "create", reinterpret_cast<PyCFunction>(InteractionTrackerInertiaMotion_Create), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_InteractionTrackerInertiaMotion_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_InteractionTrackerInertiaMotion_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_InteractionTrackerInertiaMotion_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_InteractionTrackerInertiaMotion_Static =
+    {
+        "winrt._winrt_windows_ui_composition_interactions.InteractionTrackerInertiaMotion_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_InteractionTrackerInertiaMotion_Static
     };
 
     // ----- InteractionTrackerInertiaNaturalMotion class --------------------
@@ -2544,7 +2619,6 @@ namespace py::cpp::Windows::UI::Composition::Interactions
     }
 
     static PyMethodDef _methods_InteractionTrackerInertiaNaturalMotion[] = {
-        { "create", reinterpret_cast<PyCFunction>(InteractionTrackerInertiaNaturalMotion_Create), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_InteractionTrackerInertiaNaturalMotion, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InteractionTrackerInertiaNaturalMotion), METH_O | METH_STATIC, nullptr },
         { }
@@ -2572,6 +2646,32 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_InteractionTrackerInertiaNaturalMotion
+    };
+
+    static PyGetSetDef getset_InteractionTrackerInertiaNaturalMotion_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_InteractionTrackerInertiaNaturalMotion_Static[] = {
+        { "create", reinterpret_cast<PyCFunction>(InteractionTrackerInertiaNaturalMotion_Create), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_InteractionTrackerInertiaNaturalMotion_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_InteractionTrackerInertiaNaturalMotion_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_InteractionTrackerInertiaNaturalMotion_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_InteractionTrackerInertiaNaturalMotion_Static =
+    {
+        "winrt._winrt_windows_ui_composition_interactions.InteractionTrackerInertiaNaturalMotion_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_InteractionTrackerInertiaNaturalMotion_Static
     };
 
     // ----- InteractionTrackerInertiaRestingValue class --------------------
@@ -2741,7 +2841,6 @@ namespace py::cpp::Windows::UI::Composition::Interactions
     }
 
     static PyMethodDef _methods_InteractionTrackerInertiaRestingValue[] = {
-        { "create", reinterpret_cast<PyCFunction>(InteractionTrackerInertiaRestingValue_Create), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_InteractionTrackerInertiaRestingValue, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InteractionTrackerInertiaRestingValue), METH_O | METH_STATIC, nullptr },
         { }
@@ -2769,6 +2868,32 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_InteractionTrackerInertiaRestingValue
+    };
+
+    static PyGetSetDef getset_InteractionTrackerInertiaRestingValue_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_InteractionTrackerInertiaRestingValue_Static[] = {
+        { "create", reinterpret_cast<PyCFunction>(InteractionTrackerInertiaRestingValue_Create), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_InteractionTrackerInertiaRestingValue_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_InteractionTrackerInertiaRestingValue_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_InteractionTrackerInertiaRestingValue_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_InteractionTrackerInertiaRestingValue_Static =
+    {
+        "winrt._winrt_windows_ui_composition_interactions.InteractionTrackerInertiaRestingValue_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_InteractionTrackerInertiaRestingValue_Static
     };
 
     // ----- InteractionTrackerInertiaStateEnteredArgs class --------------------
@@ -3583,7 +3708,6 @@ namespace py::cpp::Windows::UI::Composition::Interactions
     }
 
     static PyMethodDef _methods_InteractionTrackerVector2InertiaNaturalMotion[] = {
-        { "create", reinterpret_cast<PyCFunction>(InteractionTrackerVector2InertiaNaturalMotion_Create), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_InteractionTrackerVector2InertiaNaturalMotion, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InteractionTrackerVector2InertiaNaturalMotion), METH_O | METH_STATIC, nullptr },
         { }
@@ -3611,6 +3735,32 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_InteractionTrackerVector2InertiaNaturalMotion
+    };
+
+    static PyGetSetDef getset_InteractionTrackerVector2InertiaNaturalMotion_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_InteractionTrackerVector2InertiaNaturalMotion_Static[] = {
+        { "create", reinterpret_cast<PyCFunction>(InteractionTrackerVector2InertiaNaturalMotion_Create), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_InteractionTrackerVector2InertiaNaturalMotion_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_InteractionTrackerVector2InertiaNaturalMotion_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_InteractionTrackerVector2InertiaNaturalMotion_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_InteractionTrackerVector2InertiaNaturalMotion_Static =
+    {
+        "winrt._winrt_windows_ui_composition_interactions.InteractionTrackerVector2InertiaNaturalMotion_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_InteractionTrackerVector2InertiaNaturalMotion_Static
     };
 
     // ----- VisualInteractionSource class --------------------
@@ -4489,8 +4639,6 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         { "configure_delta_position_x_modifiers", reinterpret_cast<PyCFunction>(VisualInteractionSource_ConfigureDeltaPositionXModifiers), METH_VARARGS, nullptr },
         { "configure_delta_position_y_modifiers", reinterpret_cast<PyCFunction>(VisualInteractionSource_ConfigureDeltaPositionYModifiers), METH_VARARGS, nullptr },
         { "configure_delta_scale_modifiers", reinterpret_cast<PyCFunction>(VisualInteractionSource_ConfigureDeltaScaleModifiers), METH_VARARGS, nullptr },
-        { "create", reinterpret_cast<PyCFunction>(VisualInteractionSource_Create), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_from_i_visual_element", reinterpret_cast<PyCFunction>(VisualInteractionSource_CreateFromIVisualElement), METH_VARARGS | METH_STATIC, nullptr },
         { "try_redirect_for_manipulation", reinterpret_cast<PyCFunction>(VisualInteractionSource_TryRedirectForManipulation), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_VisualInteractionSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VisualInteractionSource), METH_O | METH_STATIC, nullptr },
@@ -4534,6 +4682,33 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_VisualInteractionSource
+    };
+
+    static PyGetSetDef getset_VisualInteractionSource_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_VisualInteractionSource_Static[] = {
+        { "create", reinterpret_cast<PyCFunction>(VisualInteractionSource_Create), METH_VARARGS, nullptr },
+        { "create_from_i_visual_element", reinterpret_cast<PyCFunction>(VisualInteractionSource_CreateFromIVisualElement), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_VisualInteractionSource_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_VisualInteractionSource_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_VisualInteractionSource_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_VisualInteractionSource_Static =
+    {
+        "winrt._winrt_windows_ui_composition_interactions.VisualInteractionSource_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_VisualInteractionSource_Static
     };
 
     // ----- ICompositionInteractionSource interface --------------------
@@ -4924,7 +5099,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_composition_interactions(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CompositionConditionalValue, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_CompositionConditionalValue_Static{PyType_FromSpec(&type_spec_CompositionConditionalValue_Static)};
+    if (!type_CompositionConditionalValue_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_CompositionConditionalValue, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionConditionalValue_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -4939,7 +5120,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_composition_interactions(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InteractionTracker, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_InteractionTracker_Static{PyType_FromSpec(&type_spec_InteractionTracker_Static)};
+    if (!type_InteractionTracker_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_InteractionTracker, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InteractionTracker_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -4959,17 +5146,35 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_composition_interactions(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InteractionTrackerInertiaMotion, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_InteractionTrackerInertiaMotion_Static{PyType_FromSpec(&type_spec_InteractionTrackerInertiaMotion_Static)};
+    if (!type_InteractionTrackerInertiaMotion_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InteractionTrackerInertiaNaturalMotion, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_InteractionTrackerInertiaMotion, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InteractionTrackerInertiaMotion_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InteractionTrackerInertiaRestingValue, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_InteractionTrackerInertiaNaturalMotion_Static{PyType_FromSpec(&type_spec_InteractionTrackerInertiaNaturalMotion_Static)};
+    if (!type_InteractionTrackerInertiaNaturalMotion_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_InteractionTrackerInertiaNaturalMotion, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InteractionTrackerInertiaNaturalMotion_Static.get())) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_InteractionTrackerInertiaRestingValue_Static{PyType_FromSpec(&type_spec_InteractionTrackerInertiaRestingValue_Static)};
+    if (!type_InteractionTrackerInertiaRestingValue_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_InteractionTrackerInertiaRestingValue, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InteractionTrackerInertiaRestingValue_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -4999,12 +5204,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_composition_interactions(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InteractionTrackerVector2InertiaNaturalMotion, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_InteractionTrackerVector2InertiaNaturalMotion_Static{PyType_FromSpec(&type_spec_InteractionTrackerVector2InertiaNaturalMotion_Static)};
+    if (!type_InteractionTrackerVector2InertiaNaturalMotion_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VisualInteractionSource, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_InteractionTrackerVector2InertiaNaturalMotion, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InteractionTrackerVector2InertiaNaturalMotion_Static.get())) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_VisualInteractionSource_Static{PyType_FromSpec(&type_spec_VisualInteractionSource_Static)};
+    if (!type_VisualInteractionSource_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_VisualInteractionSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VisualInteractionSource_Static.get())) == -1)
     {
         return nullptr;
     }

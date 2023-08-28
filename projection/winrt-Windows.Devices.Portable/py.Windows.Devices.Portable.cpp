@@ -78,8 +78,6 @@ namespace py::cpp::Windows::Devices::Portable
     }
 
     static PyMethodDef _methods_ServiceDevice[] = {
-        { "get_device_selector", reinterpret_cast<PyCFunction>(ServiceDevice_GetDeviceSelector), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_device_selector_from_service_id", reinterpret_cast<PyCFunction>(ServiceDevice_GetDeviceSelectorFromServiceId), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -102,6 +100,33 @@ namespace py::cpp::Windows::Devices::Portable
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ServiceDevice
+    };
+
+    static PyGetSetDef getset_ServiceDevice_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ServiceDevice_Static[] = {
+        { "get_device_selector", reinterpret_cast<PyCFunction>(ServiceDevice_GetDeviceSelector), METH_VARARGS, nullptr },
+        { "get_device_selector_from_service_id", reinterpret_cast<PyCFunction>(ServiceDevice_GetDeviceSelectorFromServiceId), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_ServiceDevice_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ServiceDevice_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ServiceDevice_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ServiceDevice_Static =
+    {
+        "winrt._winrt_windows_devices_portable.ServiceDevice_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ServiceDevice_Static
     };
 
     // ----- StorageDevice class --------------------
@@ -174,8 +199,6 @@ namespace py::cpp::Windows::Devices::Portable
     }
 
     static PyMethodDef _methods_StorageDevice[] = {
-        { "from_id", reinterpret_cast<PyCFunction>(StorageDevice_FromId), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_device_selector", reinterpret_cast<PyCFunction>(StorageDevice_GetDeviceSelector), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -198,6 +221,33 @@ namespace py::cpp::Windows::Devices::Portable
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_StorageDevice
+    };
+
+    static PyGetSetDef getset_StorageDevice_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_StorageDevice_Static[] = {
+        { "from_id", reinterpret_cast<PyCFunction>(StorageDevice_FromId), METH_VARARGS, nullptr },
+        { "get_device_selector", reinterpret_cast<PyCFunction>(StorageDevice_GetDeviceSelector), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_StorageDevice_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_StorageDevice_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_StorageDevice_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_StorageDevice_Static =
+    {
+        "winrt._winrt_windows_devices_portable.StorageDevice_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_StorageDevice_Static
     };
 
     // ----- Windows.Devices.Portable Initialization --------------------
@@ -246,12 +296,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_portable(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ServiceDevice, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_ServiceDevice_Static{PyType_FromSpec(&type_spec_ServiceDevice_Static)};
+    if (!type_ServiceDevice_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StorageDevice, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ServiceDevice, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ServiceDevice_Static.get())) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_StorageDevice_Static{PyType_FromSpec(&type_spec_StorageDevice_Static)};
+    if (!type_StorageDevice_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_StorageDevice, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StorageDevice_Static.get())) == -1)
     {
         return nullptr;
     }

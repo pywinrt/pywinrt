@@ -758,10 +758,6 @@ namespace py::cpp::Windows::Media::Casting
 
     static PyMethodDef _methods_CastingDevice[] = {
         { "create_casting_connection", reinterpret_cast<PyCFunction>(CastingDevice_CreateCastingConnection), METH_VARARGS, nullptr },
-        { "device_info_supports_casting_async", reinterpret_cast<PyCFunction>(CastingDevice_DeviceInfoSupportsCastingAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "from_id_async", reinterpret_cast<PyCFunction>(CastingDevice_FromIdAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_device_selector", reinterpret_cast<PyCFunction>(CastingDevice_GetDeviceSelector), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_device_selector_from_casting_source_async", reinterpret_cast<PyCFunction>(CastingDevice_GetDeviceSelectorFromCastingSourceAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "get_supported_casting_playback_types_async", reinterpret_cast<PyCFunction>(CastingDevice_GetSupportedCastingPlaybackTypesAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CastingDevice, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CastingDevice), METH_O | METH_STATIC, nullptr },
@@ -791,6 +787,35 @@ namespace py::cpp::Windows::Media::Casting
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_CastingDevice
+    };
+
+    static PyGetSetDef getset_CastingDevice_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_CastingDevice_Static[] = {
+        { "device_info_supports_casting_async", reinterpret_cast<PyCFunction>(CastingDevice_DeviceInfoSupportsCastingAsync), METH_VARARGS, nullptr },
+        { "from_id_async", reinterpret_cast<PyCFunction>(CastingDevice_FromIdAsync), METH_VARARGS, nullptr },
+        { "get_device_selector", reinterpret_cast<PyCFunction>(CastingDevice_GetDeviceSelector), METH_VARARGS, nullptr },
+        { "get_device_selector_from_casting_source_async", reinterpret_cast<PyCFunction>(CastingDevice_GetDeviceSelectorFromCastingSourceAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_CastingDevice_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CastingDevice_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CastingDevice_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CastingDevice_Static =
+    {
+        "winrt._winrt_windows_media_casting.CastingDevice_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CastingDevice_Static
     };
 
     // ----- CastingDevicePicker class --------------------
@@ -1595,7 +1620,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_casting(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CastingDevice, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_CastingDevice_Static{PyType_FromSpec(&type_spec_CastingDevice_Static)};
+    if (!type_CastingDevice_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_CastingDevice, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CastingDevice_Static.get())) == -1)
     {
         return nullptr;
     }

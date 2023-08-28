@@ -292,8 +292,6 @@ namespace py::cpp::Windows::Foundation
     }
 
     static PyMethodDef _methods_GuidHelper[] = {
-        { "create_new_guid", reinterpret_cast<PyCFunction>(GuidHelper_CreateNewGuid), METH_VARARGS | METH_STATIC, nullptr },
-        { "equals", reinterpret_cast<PyCFunction>(GuidHelper_Equals), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -318,25 +316,32 @@ namespace py::cpp::Windows::Foundation
         _type_slots_GuidHelper
     };
 
-    static PyGetSetDef getset_GuidHelper_Meta[] = {
+    static PyGetSetDef getset_GuidHelper_Static[] = {
         { "empty", reinterpret_cast<getter>(GuidHelper_get_Empty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_GuidHelper_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_GuidHelper_Meta) },
+    static PyMethodDef methods_GuidHelper_Static[] = {
+        { "create_new_guid", reinterpret_cast<PyCFunction>(GuidHelper_CreateNewGuid), METH_VARARGS, nullptr },
+        { "equals", reinterpret_cast<PyCFunction>(GuidHelper_Equals), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_GuidHelper_Meta =
+    static PyType_Slot type_slots_GuidHelper_Static[] = 
     {
-        "winrt._winrt_windows_foundation.GuidHelper_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_GuidHelper_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_GuidHelper_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_GuidHelper_Static =
+    {
+        "winrt._winrt_windows_foundation.GuidHelper_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_GuidHelper_Meta
+        type_slots_GuidHelper_Static
     };
 
     // ----- MemoryBuffer class --------------------
@@ -1731,45 +1736,6 @@ namespace py::cpp::Windows::Foundation
     }
 
     static PyMethodDef _methods_PropertyValue[] = {
-        { "create_boolean", reinterpret_cast<PyCFunction>(PropertyValue_CreateBoolean), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_boolean_array", reinterpret_cast<PyCFunction>(PropertyValue_CreateBooleanArray), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_char16", reinterpret_cast<PyCFunction>(PropertyValue_CreateChar16), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_char16_array", reinterpret_cast<PyCFunction>(PropertyValue_CreateChar16Array), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_date_time", reinterpret_cast<PyCFunction>(PropertyValue_CreateDateTime), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_date_time_array", reinterpret_cast<PyCFunction>(PropertyValue_CreateDateTimeArray), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_double", reinterpret_cast<PyCFunction>(PropertyValue_CreateDouble), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_double_array", reinterpret_cast<PyCFunction>(PropertyValue_CreateDoubleArray), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_empty", reinterpret_cast<PyCFunction>(PropertyValue_CreateEmpty), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_guid", reinterpret_cast<PyCFunction>(PropertyValue_CreateGuid), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_guid_array", reinterpret_cast<PyCFunction>(PropertyValue_CreateGuidArray), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_inspectable", reinterpret_cast<PyCFunction>(PropertyValue_CreateInspectable), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_inspectable_array", reinterpret_cast<PyCFunction>(PropertyValue_CreateInspectableArray), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_int16", reinterpret_cast<PyCFunction>(PropertyValue_CreateInt16), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_int16_array", reinterpret_cast<PyCFunction>(PropertyValue_CreateInt16Array), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_int32", reinterpret_cast<PyCFunction>(PropertyValue_CreateInt32), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_int32_array", reinterpret_cast<PyCFunction>(PropertyValue_CreateInt32Array), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_int64", reinterpret_cast<PyCFunction>(PropertyValue_CreateInt64), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_int64_array", reinterpret_cast<PyCFunction>(PropertyValue_CreateInt64Array), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_point", reinterpret_cast<PyCFunction>(PropertyValue_CreatePoint), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_point_array", reinterpret_cast<PyCFunction>(PropertyValue_CreatePointArray), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_rect", reinterpret_cast<PyCFunction>(PropertyValue_CreateRect), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_rect_array", reinterpret_cast<PyCFunction>(PropertyValue_CreateRectArray), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_single", reinterpret_cast<PyCFunction>(PropertyValue_CreateSingle), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_single_array", reinterpret_cast<PyCFunction>(PropertyValue_CreateSingleArray), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_size", reinterpret_cast<PyCFunction>(PropertyValue_CreateSize), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_size_array", reinterpret_cast<PyCFunction>(PropertyValue_CreateSizeArray), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_string", reinterpret_cast<PyCFunction>(PropertyValue_CreateString), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_string_array", reinterpret_cast<PyCFunction>(PropertyValue_CreateStringArray), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_time_span", reinterpret_cast<PyCFunction>(PropertyValue_CreateTimeSpan), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_time_span_array", reinterpret_cast<PyCFunction>(PropertyValue_CreateTimeSpanArray), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_uint16", reinterpret_cast<PyCFunction>(PropertyValue_CreateUInt16), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_uint16_array", reinterpret_cast<PyCFunction>(PropertyValue_CreateUInt16Array), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_uint32", reinterpret_cast<PyCFunction>(PropertyValue_CreateUInt32), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_uint32_array", reinterpret_cast<PyCFunction>(PropertyValue_CreateUInt32Array), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_uint64", reinterpret_cast<PyCFunction>(PropertyValue_CreateUInt64), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_uint64_array", reinterpret_cast<PyCFunction>(PropertyValue_CreateUInt64Array), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_uint8", reinterpret_cast<PyCFunction>(PropertyValue_CreateUInt8), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_uint8_array", reinterpret_cast<PyCFunction>(PropertyValue_CreateUInt8Array), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -1792,6 +1758,70 @@ namespace py::cpp::Windows::Foundation
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_PropertyValue
+    };
+
+    static PyGetSetDef getset_PropertyValue_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_PropertyValue_Static[] = {
+        { "create_boolean", reinterpret_cast<PyCFunction>(PropertyValue_CreateBoolean), METH_VARARGS, nullptr },
+        { "create_boolean_array", reinterpret_cast<PyCFunction>(PropertyValue_CreateBooleanArray), METH_VARARGS, nullptr },
+        { "create_char16", reinterpret_cast<PyCFunction>(PropertyValue_CreateChar16), METH_VARARGS, nullptr },
+        { "create_char16_array", reinterpret_cast<PyCFunction>(PropertyValue_CreateChar16Array), METH_VARARGS, nullptr },
+        { "create_date_time", reinterpret_cast<PyCFunction>(PropertyValue_CreateDateTime), METH_VARARGS, nullptr },
+        { "create_date_time_array", reinterpret_cast<PyCFunction>(PropertyValue_CreateDateTimeArray), METH_VARARGS, nullptr },
+        { "create_double", reinterpret_cast<PyCFunction>(PropertyValue_CreateDouble), METH_VARARGS, nullptr },
+        { "create_double_array", reinterpret_cast<PyCFunction>(PropertyValue_CreateDoubleArray), METH_VARARGS, nullptr },
+        { "create_empty", reinterpret_cast<PyCFunction>(PropertyValue_CreateEmpty), METH_VARARGS, nullptr },
+        { "create_guid", reinterpret_cast<PyCFunction>(PropertyValue_CreateGuid), METH_VARARGS, nullptr },
+        { "create_guid_array", reinterpret_cast<PyCFunction>(PropertyValue_CreateGuidArray), METH_VARARGS, nullptr },
+        { "create_inspectable", reinterpret_cast<PyCFunction>(PropertyValue_CreateInspectable), METH_VARARGS, nullptr },
+        { "create_inspectable_array", reinterpret_cast<PyCFunction>(PropertyValue_CreateInspectableArray), METH_VARARGS, nullptr },
+        { "create_int16", reinterpret_cast<PyCFunction>(PropertyValue_CreateInt16), METH_VARARGS, nullptr },
+        { "create_int16_array", reinterpret_cast<PyCFunction>(PropertyValue_CreateInt16Array), METH_VARARGS, nullptr },
+        { "create_int32", reinterpret_cast<PyCFunction>(PropertyValue_CreateInt32), METH_VARARGS, nullptr },
+        { "create_int32_array", reinterpret_cast<PyCFunction>(PropertyValue_CreateInt32Array), METH_VARARGS, nullptr },
+        { "create_int64", reinterpret_cast<PyCFunction>(PropertyValue_CreateInt64), METH_VARARGS, nullptr },
+        { "create_int64_array", reinterpret_cast<PyCFunction>(PropertyValue_CreateInt64Array), METH_VARARGS, nullptr },
+        { "create_point", reinterpret_cast<PyCFunction>(PropertyValue_CreatePoint), METH_VARARGS, nullptr },
+        { "create_point_array", reinterpret_cast<PyCFunction>(PropertyValue_CreatePointArray), METH_VARARGS, nullptr },
+        { "create_rect", reinterpret_cast<PyCFunction>(PropertyValue_CreateRect), METH_VARARGS, nullptr },
+        { "create_rect_array", reinterpret_cast<PyCFunction>(PropertyValue_CreateRectArray), METH_VARARGS, nullptr },
+        { "create_single", reinterpret_cast<PyCFunction>(PropertyValue_CreateSingle), METH_VARARGS, nullptr },
+        { "create_single_array", reinterpret_cast<PyCFunction>(PropertyValue_CreateSingleArray), METH_VARARGS, nullptr },
+        { "create_size", reinterpret_cast<PyCFunction>(PropertyValue_CreateSize), METH_VARARGS, nullptr },
+        { "create_size_array", reinterpret_cast<PyCFunction>(PropertyValue_CreateSizeArray), METH_VARARGS, nullptr },
+        { "create_string", reinterpret_cast<PyCFunction>(PropertyValue_CreateString), METH_VARARGS, nullptr },
+        { "create_string_array", reinterpret_cast<PyCFunction>(PropertyValue_CreateStringArray), METH_VARARGS, nullptr },
+        { "create_time_span", reinterpret_cast<PyCFunction>(PropertyValue_CreateTimeSpan), METH_VARARGS, nullptr },
+        { "create_time_span_array", reinterpret_cast<PyCFunction>(PropertyValue_CreateTimeSpanArray), METH_VARARGS, nullptr },
+        { "create_uint16", reinterpret_cast<PyCFunction>(PropertyValue_CreateUInt16), METH_VARARGS, nullptr },
+        { "create_uint16_array", reinterpret_cast<PyCFunction>(PropertyValue_CreateUInt16Array), METH_VARARGS, nullptr },
+        { "create_uint32", reinterpret_cast<PyCFunction>(PropertyValue_CreateUInt32), METH_VARARGS, nullptr },
+        { "create_uint32_array", reinterpret_cast<PyCFunction>(PropertyValue_CreateUInt32Array), METH_VARARGS, nullptr },
+        { "create_uint64", reinterpret_cast<PyCFunction>(PropertyValue_CreateUInt64), METH_VARARGS, nullptr },
+        { "create_uint64_array", reinterpret_cast<PyCFunction>(PropertyValue_CreateUInt64Array), METH_VARARGS, nullptr },
+        { "create_uint8", reinterpret_cast<PyCFunction>(PropertyValue_CreateUInt8), METH_VARARGS, nullptr },
+        { "create_uint8_array", reinterpret_cast<PyCFunction>(PropertyValue_CreateUInt8Array), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_PropertyValue_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PropertyValue_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PropertyValue_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PropertyValue_Static =
+    {
+        "winrt._winrt_windows_foundation.PropertyValue_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_PropertyValue_Static
     };
 
     // ----- Uri class --------------------
@@ -2367,9 +2397,7 @@ namespace py::cpp::Windows::Foundation
     static PyMethodDef _methods_Uri[] = {
         { "combine_uri", reinterpret_cast<PyCFunction>(Uri_CombineUri), METH_VARARGS, nullptr },
         { "equals", reinterpret_cast<PyCFunction>(Uri_Equals), METH_VARARGS, nullptr },
-        { "escape_component", reinterpret_cast<PyCFunction>(Uri_EscapeComponent), METH_VARARGS | METH_STATIC, nullptr },
         { "to_string", reinterpret_cast<PyCFunction>(Uri_ToString), METH_VARARGS, nullptr },
-        { "unescape_component", reinterpret_cast<PyCFunction>(Uri_UnescapeComponent), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_Uri, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Uri), METH_O | METH_STATIC, nullptr },
         { }
@@ -2413,6 +2441,33 @@ namespace py::cpp::Windows::Foundation
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_Uri
+    };
+
+    static PyGetSetDef getset_Uri_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_Uri_Static[] = {
+        { "escape_component", reinterpret_cast<PyCFunction>(Uri_EscapeComponent), METH_VARARGS, nullptr },
+        { "unescape_component", reinterpret_cast<PyCFunction>(Uri_UnescapeComponent), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_Uri_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Uri_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Uri_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Uri_Static =
+    {
+        "winrt._winrt_windows_foundation.Uri_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_Uri_Static
     };
 
     // ----- WwwFormUrlDecoder class --------------------
@@ -7467,13 +7522,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_GuidHelper_Meta{PyType_FromSpec(&type_spec_GuidHelper_Meta)};
-    if (!type_GuidHelper_Meta)
+    py::pyobj_handle type_GuidHelper_Static{PyType_FromSpec(&type_spec_GuidHelper_Static)};
+    if (!type_GuidHelper_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GuidHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GuidHelper_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GuidHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GuidHelper_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -7483,12 +7538,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PropertyValue, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_PropertyValue_Static{PyType_FromSpec(&type_spec_PropertyValue_Static)};
+    if (!type_PropertyValue_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Uri, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PropertyValue, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PropertyValue_Static.get())) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_Uri_Static{PyType_FromSpec(&type_spec_Uri_Static)};
+    if (!type_Uri_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_Uri, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Uri_Static.get())) == -1)
     {
         return nullptr;
     }

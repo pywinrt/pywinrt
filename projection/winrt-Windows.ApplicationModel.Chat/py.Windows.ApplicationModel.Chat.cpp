@@ -289,8 +289,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     }
 
     static PyMethodDef _methods_ChatCapabilitiesManager[] = {
-        { "get_cached_capabilities_async", reinterpret_cast<PyCFunction>(ChatCapabilitiesManager_GetCachedCapabilitiesAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_capabilities_from_network_async", reinterpret_cast<PyCFunction>(ChatCapabilitiesManager_GetCapabilitiesFromNetworkAsync), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -313,6 +311,33 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ChatCapabilitiesManager
+    };
+
+    static PyGetSetDef getset_ChatCapabilitiesManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ChatCapabilitiesManager_Static[] = {
+        { "get_cached_capabilities_async", reinterpret_cast<PyCFunction>(ChatCapabilitiesManager_GetCachedCapabilitiesAsync), METH_VARARGS, nullptr },
+        { "get_capabilities_from_network_async", reinterpret_cast<PyCFunction>(ChatCapabilitiesManager_GetCapabilitiesFromNetworkAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_ChatCapabilitiesManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ChatCapabilitiesManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ChatCapabilitiesManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ChatCapabilitiesManager_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_chat.ChatCapabilitiesManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ChatCapabilitiesManager_Static
     };
 
     // ----- ChatConversation class --------------------
@@ -3028,7 +3053,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     }
 
     static PyMethodDef _methods_ChatMessageBlocking[] = {
-        { "mark_message_as_blocked_async", reinterpret_cast<PyCFunction>(ChatMessageBlocking_MarkMessageAsBlockedAsync), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -3051,6 +3075,32 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ChatMessageBlocking
+    };
+
+    static PyGetSetDef getset_ChatMessageBlocking_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ChatMessageBlocking_Static[] = {
+        { "mark_message_as_blocked_async", reinterpret_cast<PyCFunction>(ChatMessageBlocking_MarkMessageAsBlockedAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_ChatMessageBlocking_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ChatMessageBlocking_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ChatMessageBlocking_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ChatMessageBlocking_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_chat.ChatMessageBlocking_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ChatMessageBlocking_Static
     };
 
     // ----- ChatMessageChange class --------------------
@@ -3903,13 +3953,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     }
 
     static PyMethodDef _methods_ChatMessageManager[] = {
-        { "get_transport_async", reinterpret_cast<PyCFunction>(ChatMessageManager_GetTransportAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_transports_async", reinterpret_cast<PyCFunction>(ChatMessageManager_GetTransportsAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "register_transport_async", reinterpret_cast<PyCFunction>(ChatMessageManager_RegisterTransportAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "request_store_async", reinterpret_cast<PyCFunction>(ChatMessageManager_RequestStoreAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "request_sync_manager_async", reinterpret_cast<PyCFunction>(ChatMessageManager_RequestSyncManagerAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "show_compose_sms_message_async", reinterpret_cast<PyCFunction>(ChatMessageManager_ShowComposeSmsMessageAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "show_sms_settings", reinterpret_cast<PyCFunction>(ChatMessageManager_ShowSmsSettings), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -3932,6 +3975,38 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ChatMessageManager
+    };
+
+    static PyGetSetDef getset_ChatMessageManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ChatMessageManager_Static[] = {
+        { "get_transport_async", reinterpret_cast<PyCFunction>(ChatMessageManager_GetTransportAsync), METH_VARARGS, nullptr },
+        { "get_transports_async", reinterpret_cast<PyCFunction>(ChatMessageManager_GetTransportsAsync), METH_VARARGS, nullptr },
+        { "register_transport_async", reinterpret_cast<PyCFunction>(ChatMessageManager_RegisterTransportAsync), METH_VARARGS, nullptr },
+        { "request_store_async", reinterpret_cast<PyCFunction>(ChatMessageManager_RequestStoreAsync), METH_VARARGS, nullptr },
+        { "request_sync_manager_async", reinterpret_cast<PyCFunction>(ChatMessageManager_RequestSyncManagerAsync), METH_VARARGS, nullptr },
+        { "show_compose_sms_message_async", reinterpret_cast<PyCFunction>(ChatMessageManager_ShowComposeSmsMessageAsync), METH_VARARGS, nullptr },
+        { "show_sms_settings", reinterpret_cast<PyCFunction>(ChatMessageManager_ShowSmsSettings), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_ChatMessageManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ChatMessageManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ChatMessageManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ChatMessageManager_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_chat.ChatMessageManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ChatMessageManager_Static
     };
 
     // ----- ChatMessageNotificationTriggerDetails class --------------------
@@ -7614,10 +7689,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     }
 
     static PyMethodDef _methods_RcsManager[] = {
-        { "get_end_user_message_manager", reinterpret_cast<PyCFunction>(RcsManager_GetEndUserMessageManager), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_transport_async", reinterpret_cast<PyCFunction>(RcsManager_GetTransportAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_transports_async", reinterpret_cast<PyCFunction>(RcsManager_GetTransportsAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "leave_conversation_async", reinterpret_cast<PyCFunction>(RcsManager_LeaveConversationAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "add_transport_list_changed", reinterpret_cast<PyCFunction>(RcsManager_add_TransportListChanged), METH_O | METH_STATIC, nullptr },
         { "remove_transport_list_changed", reinterpret_cast<PyCFunction>(RcsManager_remove_TransportListChanged), METH_O | METH_STATIC, nullptr },
         { }
@@ -7642,6 +7713,35 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_RcsManager
+    };
+
+    static PyGetSetDef getset_RcsManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_RcsManager_Static[] = {
+        { "get_end_user_message_manager", reinterpret_cast<PyCFunction>(RcsManager_GetEndUserMessageManager), METH_VARARGS, nullptr },
+        { "get_transport_async", reinterpret_cast<PyCFunction>(RcsManager_GetTransportAsync), METH_VARARGS, nullptr },
+        { "get_transports_async", reinterpret_cast<PyCFunction>(RcsManager_GetTransportsAsync), METH_VARARGS, nullptr },
+        { "leave_conversation_async", reinterpret_cast<PyCFunction>(RcsManager_LeaveConversationAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_RcsManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_RcsManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_RcsManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_RcsManager_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_chat.RcsManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_RcsManager_Static
     };
 
     // ----- RcsServiceKindSupportedChangedEventArgs class --------------------
@@ -8469,7 +8569,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_chat(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ChatCapabilitiesManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_ChatCapabilitiesManager_Static{PyType_FromSpec(&type_spec_ChatCapabilitiesManager_Static)};
+    if (!type_ChatCapabilitiesManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_ChatCapabilitiesManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ChatCapabilitiesManager_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -8499,7 +8605,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_chat(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ChatMessageBlocking, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_ChatMessageBlocking_Static{PyType_FromSpec(&type_spec_ChatMessageBlocking_Static)};
+    if (!type_ChatMessageBlocking_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_ChatMessageBlocking, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ChatMessageBlocking_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -8529,7 +8641,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_chat(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ChatMessageManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_ChatMessageManager_Static{PyType_FromSpec(&type_spec_ChatMessageManager_Static)};
+    if (!type_ChatMessageManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_ChatMessageManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ChatMessageManager_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -8619,7 +8737,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_chat(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RcsManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_RcsManager_Static{PyType_FromSpec(&type_spec_RcsManager_Static)};
+    if (!type_RcsManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_RcsManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RcsManager_Static.get())) == -1)
     {
         return nullptr;
     }

@@ -205,7 +205,6 @@ namespace py::cpp::Windows::Media::Playlists
     }
 
     static PyMethodDef _methods_Playlist[] = {
-        { "load_async", reinterpret_cast<PyCFunction>(Playlist_LoadAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "save_as_async", reinterpret_cast<PyCFunction>(Playlist_SaveAsAsync), METH_VARARGS, nullptr },
         { "save_async", reinterpret_cast<PyCFunction>(Playlist_SaveAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Playlist, METH_O | METH_STATIC, nullptr },
@@ -234,6 +233,32 @@ namespace py::cpp::Windows::Media::Playlists
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_Playlist
+    };
+
+    static PyGetSetDef getset_Playlist_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_Playlist_Static[] = {
+        { "load_async", reinterpret_cast<PyCFunction>(Playlist_LoadAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_Playlist_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Playlist_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Playlist_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Playlist_Static =
+    {
+        "winrt._winrt_windows_media_playlists.Playlist_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_Playlist_Static
     };
 
     // ----- Windows.Media.Playlists Initialization --------------------
@@ -282,7 +307,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_playlists(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Playlist, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_Playlist_Static{PyType_FromSpec(&type_spec_Playlist_Static)};
+    if (!type_Playlist_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_Playlist, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Playlist_Static.get())) == -1)
     {
         return nullptr;
     }

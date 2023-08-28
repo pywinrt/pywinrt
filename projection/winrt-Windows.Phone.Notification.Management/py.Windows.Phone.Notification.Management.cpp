@@ -1791,49 +1791,6 @@ namespace py::cpp::Windows::Phone::Notification::Management
     }
 
     static PyMethodDef _methods_AccessoryManager[] = {
-        { "accept_phone_call", reinterpret_cast<PyCFunction>(AccessoryManager_AcceptPhoneCall), METH_VARARGS | METH_STATIC, nullptr },
-        { "accept_phone_call_with_video", reinterpret_cast<PyCFunction>(AccessoryManager_AcceptPhoneCallWithVideo), METH_VARARGS | METH_STATIC, nullptr },
-        { "clear_toast", reinterpret_cast<PyCFunction>(AccessoryManager_ClearToast), METH_VARARGS | METH_STATIC, nullptr },
-        { "decrease_volume", reinterpret_cast<PyCFunction>(AccessoryManager_DecreaseVolume), METH_VARARGS | METH_STATIC, nullptr },
-        { "disable_all_accessory_notification_types", reinterpret_cast<PyCFunction>(AccessoryManager_DisableAllAccessoryNotificationTypes), METH_VARARGS | METH_STATIC, nullptr },
-        { "disable_email_notification_email_account", reinterpret_cast<PyCFunction>(AccessoryManager_DisableEmailNotificationEmailAccount), METH_VARARGS | METH_STATIC, nullptr },
-        { "disable_notifications_for_application", reinterpret_cast<PyCFunction>(AccessoryManager_DisableNotificationsForApplication), METH_VARARGS | METH_STATIC, nullptr },
-        { "dismiss_alarm", reinterpret_cast<PyCFunction>(AccessoryManager_DismissAlarm), METH_VARARGS | METH_STATIC, nullptr },
-        { "dismiss_alarm_by_instance_id", reinterpret_cast<PyCFunction>(AccessoryManager_DismissAlarmByInstanceId), METH_VARARGS | METH_STATIC, nullptr },
-        { "dismiss_reminder", reinterpret_cast<PyCFunction>(AccessoryManager_DismissReminder), METH_VARARGS | METH_STATIC, nullptr },
-        { "dismiss_reminder_by_instance_id", reinterpret_cast<PyCFunction>(AccessoryManager_DismissReminderByInstanceId), METH_VARARGS | METH_STATIC, nullptr },
-        { "enable_accessory_notification_types", reinterpret_cast<PyCFunction>(AccessoryManager_EnableAccessoryNotificationTypes), METH_VARARGS | METH_STATIC, nullptr },
-        { "enable_email_notification_email_account", reinterpret_cast<PyCFunction>(AccessoryManager_EnableEmailNotificationEmailAccount), METH_VARARGS | METH_STATIC, nullptr },
-        { "enable_email_notification_folder_filter", reinterpret_cast<PyCFunction>(AccessoryManager_EnableEmailNotificationFolderFilter), METH_VARARGS | METH_STATIC, nullptr },
-        { "enable_notifications_for_application", reinterpret_cast<PyCFunction>(AccessoryManager_EnableNotificationsForApplication), METH_VARARGS | METH_STATIC, nullptr },
-        { "end_phone_call", reinterpret_cast<PyCFunction>(AccessoryManager_EndPhoneCall), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_all_email_accounts", reinterpret_cast<PyCFunction>(AccessoryManager_GetAllEmailAccounts), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_app_icon", reinterpret_cast<PyCFunction>(AccessoryManager_GetAppIcon), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_apps", reinterpret_cast<PyCFunction>(AccessoryManager_GetApps), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_enabled_accessory_notification_types", reinterpret_cast<PyCFunction>(AccessoryManager_GetEnabledAccessoryNotificationTypes), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_folders", reinterpret_cast<PyCFunction>(AccessoryManager_GetFolders), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_media_metadata", reinterpret_cast<PyCFunction>(AccessoryManager_GetMediaMetadata), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_next_trigger_details", reinterpret_cast<PyCFunction>(AccessoryManager_GetNextTriggerDetails), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_phone_line_details", reinterpret_cast<PyCFunction>(AccessoryManager_GetPhoneLineDetails), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_user_consent", reinterpret_cast<PyCFunction>(AccessoryManager_GetUserConsent), METH_VARARGS | METH_STATIC, nullptr },
-        { "hold_phone_call", reinterpret_cast<PyCFunction>(AccessoryManager_HoldPhoneCall), METH_VARARGS | METH_STATIC, nullptr },
-        { "increase_volume", reinterpret_cast<PyCFunction>(AccessoryManager_IncreaseVolume), METH_VARARGS | METH_STATIC, nullptr },
-        { "is_notification_enabled_for_application", reinterpret_cast<PyCFunction>(AccessoryManager_IsNotificationEnabledForApplication), METH_VARARGS | METH_STATIC, nullptr },
-        { "make_phone_call", reinterpret_cast<PyCFunction>(AccessoryManager_MakePhoneCall), METH_VARARGS | METH_STATIC, nullptr },
-        { "make_phone_call_with_video", reinterpret_cast<PyCFunction>(AccessoryManager_MakePhoneCallWithVideo), METH_VARARGS | METH_STATIC, nullptr },
-        { "perform_media_playback_command", reinterpret_cast<PyCFunction>(AccessoryManager_PerformMediaPlaybackCommand), METH_VARARGS | METH_STATIC, nullptr },
-        { "process_trigger_details", reinterpret_cast<PyCFunction>(AccessoryManager_ProcessTriggerDetails), METH_VARARGS | METH_STATIC, nullptr },
-        { "register_accessory_app", reinterpret_cast<PyCFunction>(AccessoryManager_RegisterAccessoryApp), METH_VARARGS | METH_STATIC, nullptr },
-        { "reject_phone_call", reinterpret_cast<PyCFunction>(AccessoryManager_RejectPhoneCall), METH_VARARGS | METH_STATIC, nullptr },
-        { "ring_device", reinterpret_cast<PyCFunction>(AccessoryManager_RingDevice), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_mute", reinterpret_cast<PyCFunction>(AccessoryManager_SetMute), METH_VARARGS | METH_STATIC, nullptr },
-        { "set_ringer_vibrate", reinterpret_cast<PyCFunction>(AccessoryManager_SetRingerVibrate), METH_VARARGS | METH_STATIC, nullptr },
-        { "snooze_alarm", reinterpret_cast<PyCFunction>(AccessoryManager_SnoozeAlarm), METH_VARARGS | METH_STATIC, nullptr },
-        { "snooze_alarm_by_instance_id", reinterpret_cast<PyCFunction>(AccessoryManager_SnoozeAlarmByInstanceId), METH_VARARGS | METH_STATIC, nullptr },
-        { "snooze_reminder", reinterpret_cast<PyCFunction>(AccessoryManager_SnoozeReminder), METH_VARARGS | METH_STATIC, nullptr },
-        { "snooze_reminder_by_instance_id", reinterpret_cast<PyCFunction>(AccessoryManager_SnoozeReminderByInstanceId), METH_VARARGS | METH_STATIC, nullptr },
-        { "swap_phone_calls", reinterpret_cast<PyCFunction>(AccessoryManager_SwapPhoneCalls), METH_VARARGS | METH_STATIC, nullptr },
-        { "update_email_read_status", reinterpret_cast<PyCFunction>(AccessoryManager_UpdateEmailReadStatus), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -1858,7 +1815,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
         _type_slots_AccessoryManager
     };
 
-    static PyGetSetDef getset_AccessoryManager_Meta[] = {
+    static PyGetSetDef getset_AccessoryManager_Static[] = {
         { "phone_mute", reinterpret_cast<getter>(AccessoryManager_get_PhoneMute), reinterpret_cast<setter>(AccessoryManager_put_PhoneMute), nullptr, nullptr },
         { "phone_call_audio_endpoint", reinterpret_cast<getter>(AccessoryManager_get_PhoneCallAudioEndpoint), reinterpret_cast<setter>(AccessoryManager_put_PhoneCallAudioEndpoint), nullptr, nullptr },
         { "battery_saver_state", reinterpret_cast<getter>(AccessoryManager_get_BatterySaverState), nullptr, nullptr, nullptr },
@@ -1873,20 +1830,68 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { }
     };
 
-    static PyType_Slot type_slots_AccessoryManager_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_AccessoryManager_Meta) },
+    static PyMethodDef methods_AccessoryManager_Static[] = {
+        { "accept_phone_call", reinterpret_cast<PyCFunction>(AccessoryManager_AcceptPhoneCall), METH_VARARGS, nullptr },
+        { "accept_phone_call_with_video", reinterpret_cast<PyCFunction>(AccessoryManager_AcceptPhoneCallWithVideo), METH_VARARGS, nullptr },
+        { "clear_toast", reinterpret_cast<PyCFunction>(AccessoryManager_ClearToast), METH_VARARGS, nullptr },
+        { "decrease_volume", reinterpret_cast<PyCFunction>(AccessoryManager_DecreaseVolume), METH_VARARGS, nullptr },
+        { "disable_all_accessory_notification_types", reinterpret_cast<PyCFunction>(AccessoryManager_DisableAllAccessoryNotificationTypes), METH_VARARGS, nullptr },
+        { "disable_email_notification_email_account", reinterpret_cast<PyCFunction>(AccessoryManager_DisableEmailNotificationEmailAccount), METH_VARARGS, nullptr },
+        { "disable_notifications_for_application", reinterpret_cast<PyCFunction>(AccessoryManager_DisableNotificationsForApplication), METH_VARARGS, nullptr },
+        { "dismiss_alarm", reinterpret_cast<PyCFunction>(AccessoryManager_DismissAlarm), METH_VARARGS, nullptr },
+        { "dismiss_alarm_by_instance_id", reinterpret_cast<PyCFunction>(AccessoryManager_DismissAlarmByInstanceId), METH_VARARGS, nullptr },
+        { "dismiss_reminder", reinterpret_cast<PyCFunction>(AccessoryManager_DismissReminder), METH_VARARGS, nullptr },
+        { "dismiss_reminder_by_instance_id", reinterpret_cast<PyCFunction>(AccessoryManager_DismissReminderByInstanceId), METH_VARARGS, nullptr },
+        { "enable_accessory_notification_types", reinterpret_cast<PyCFunction>(AccessoryManager_EnableAccessoryNotificationTypes), METH_VARARGS, nullptr },
+        { "enable_email_notification_email_account", reinterpret_cast<PyCFunction>(AccessoryManager_EnableEmailNotificationEmailAccount), METH_VARARGS, nullptr },
+        { "enable_email_notification_folder_filter", reinterpret_cast<PyCFunction>(AccessoryManager_EnableEmailNotificationFolderFilter), METH_VARARGS, nullptr },
+        { "enable_notifications_for_application", reinterpret_cast<PyCFunction>(AccessoryManager_EnableNotificationsForApplication), METH_VARARGS, nullptr },
+        { "end_phone_call", reinterpret_cast<PyCFunction>(AccessoryManager_EndPhoneCall), METH_VARARGS, nullptr },
+        { "get_all_email_accounts", reinterpret_cast<PyCFunction>(AccessoryManager_GetAllEmailAccounts), METH_VARARGS, nullptr },
+        { "get_app_icon", reinterpret_cast<PyCFunction>(AccessoryManager_GetAppIcon), METH_VARARGS, nullptr },
+        { "get_apps", reinterpret_cast<PyCFunction>(AccessoryManager_GetApps), METH_VARARGS, nullptr },
+        { "get_enabled_accessory_notification_types", reinterpret_cast<PyCFunction>(AccessoryManager_GetEnabledAccessoryNotificationTypes), METH_VARARGS, nullptr },
+        { "get_folders", reinterpret_cast<PyCFunction>(AccessoryManager_GetFolders), METH_VARARGS, nullptr },
+        { "get_media_metadata", reinterpret_cast<PyCFunction>(AccessoryManager_GetMediaMetadata), METH_VARARGS, nullptr },
+        { "get_next_trigger_details", reinterpret_cast<PyCFunction>(AccessoryManager_GetNextTriggerDetails), METH_VARARGS, nullptr },
+        { "get_phone_line_details", reinterpret_cast<PyCFunction>(AccessoryManager_GetPhoneLineDetails), METH_VARARGS, nullptr },
+        { "get_user_consent", reinterpret_cast<PyCFunction>(AccessoryManager_GetUserConsent), METH_VARARGS, nullptr },
+        { "hold_phone_call", reinterpret_cast<PyCFunction>(AccessoryManager_HoldPhoneCall), METH_VARARGS, nullptr },
+        { "increase_volume", reinterpret_cast<PyCFunction>(AccessoryManager_IncreaseVolume), METH_VARARGS, nullptr },
+        { "is_notification_enabled_for_application", reinterpret_cast<PyCFunction>(AccessoryManager_IsNotificationEnabledForApplication), METH_VARARGS, nullptr },
+        { "make_phone_call", reinterpret_cast<PyCFunction>(AccessoryManager_MakePhoneCall), METH_VARARGS, nullptr },
+        { "make_phone_call_with_video", reinterpret_cast<PyCFunction>(AccessoryManager_MakePhoneCallWithVideo), METH_VARARGS, nullptr },
+        { "perform_media_playback_command", reinterpret_cast<PyCFunction>(AccessoryManager_PerformMediaPlaybackCommand), METH_VARARGS, nullptr },
+        { "process_trigger_details", reinterpret_cast<PyCFunction>(AccessoryManager_ProcessTriggerDetails), METH_VARARGS, nullptr },
+        { "register_accessory_app", reinterpret_cast<PyCFunction>(AccessoryManager_RegisterAccessoryApp), METH_VARARGS, nullptr },
+        { "reject_phone_call", reinterpret_cast<PyCFunction>(AccessoryManager_RejectPhoneCall), METH_VARARGS, nullptr },
+        { "ring_device", reinterpret_cast<PyCFunction>(AccessoryManager_RingDevice), METH_VARARGS, nullptr },
+        { "set_mute", reinterpret_cast<PyCFunction>(AccessoryManager_SetMute), METH_VARARGS, nullptr },
+        { "set_ringer_vibrate", reinterpret_cast<PyCFunction>(AccessoryManager_SetRingerVibrate), METH_VARARGS, nullptr },
+        { "snooze_alarm", reinterpret_cast<PyCFunction>(AccessoryManager_SnoozeAlarm), METH_VARARGS, nullptr },
+        { "snooze_alarm_by_instance_id", reinterpret_cast<PyCFunction>(AccessoryManager_SnoozeAlarmByInstanceId), METH_VARARGS, nullptr },
+        { "snooze_reminder", reinterpret_cast<PyCFunction>(AccessoryManager_SnoozeReminder), METH_VARARGS, nullptr },
+        { "snooze_reminder_by_instance_id", reinterpret_cast<PyCFunction>(AccessoryManager_SnoozeReminderByInstanceId), METH_VARARGS, nullptr },
+        { "swap_phone_calls", reinterpret_cast<PyCFunction>(AccessoryManager_SwapPhoneCalls), METH_VARARGS, nullptr },
+        { "update_email_read_status", reinterpret_cast<PyCFunction>(AccessoryManager_UpdateEmailReadStatus), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_AccessoryManager_Meta =
+    static PyType_Slot type_slots_AccessoryManager_Static[] = 
     {
-        "winrt._winrt_windows_phone_notification_management.AccessoryManager_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_AccessoryManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_AccessoryManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_AccessoryManager_Static =
+    {
+        "winrt._winrt_windows_phone_notification_management.AccessoryManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_AccessoryManager_Meta
+        type_slots_AccessoryManager_Static
     };
 
     // ----- AlarmNotificationTriggerDetails class --------------------
@@ -6415,13 +6420,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_notification_management(void) noexcep
         return nullptr;
     }
 
-    py::pyobj_handle type_AccessoryManager_Meta{PyType_FromSpec(&type_spec_AccessoryManager_Meta)};
-    if (!type_AccessoryManager_Meta)
+    py::pyobj_handle type_AccessoryManager_Static{PyType_FromSpec(&type_spec_AccessoryManager_Static)};
+    if (!type_AccessoryManager_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AccessoryManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AccessoryManager_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AccessoryManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AccessoryManager_Static.get())) == -1)
     {
         return nullptr;
     }

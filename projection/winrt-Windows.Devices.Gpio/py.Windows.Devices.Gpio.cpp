@@ -1118,9 +1118,6 @@ namespace py::cpp::Windows::Devices::Gpio
     }
 
     static PyMethodDef _methods_GpioController[] = {
-        { "get_controllers_async", reinterpret_cast<PyCFunction>(GpioController_GetControllersAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_default", reinterpret_cast<PyCFunction>(GpioController_GetDefault), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_default_async", reinterpret_cast<PyCFunction>(GpioController_GetDefaultAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "open_pin", reinterpret_cast<PyCFunction>(GpioController_OpenPin), METH_VARARGS, nullptr },
         { "try_open_pin", reinterpret_cast<PyCFunction>(GpioController_TryOpenPin), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_GpioController, METH_O | METH_STATIC, nullptr },
@@ -1149,6 +1146,34 @@ namespace py::cpp::Windows::Devices::Gpio
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_GpioController
+    };
+
+    static PyGetSetDef getset_GpioController_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_GpioController_Static[] = {
+        { "get_controllers_async", reinterpret_cast<PyCFunction>(GpioController_GetControllersAsync), METH_VARARGS, nullptr },
+        { "get_default", reinterpret_cast<PyCFunction>(GpioController_GetDefault), METH_VARARGS, nullptr },
+        { "get_default_async", reinterpret_cast<PyCFunction>(GpioController_GetDefaultAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_GpioController_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_GpioController_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_GpioController_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_GpioController_Static =
+    {
+        "winrt._winrt_windows_devices_gpio.GpioController_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_GpioController_Static
     };
 
     // ----- GpioPin class --------------------
@@ -2030,7 +2055,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_gpio(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GpioController, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_GpioController_Static{PyType_FromSpec(&type_spec_GpioController_Static)};
+    if (!type_GpioController_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_GpioController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GpioController_Static.get())) == -1)
     {
         return nullptr;
     }

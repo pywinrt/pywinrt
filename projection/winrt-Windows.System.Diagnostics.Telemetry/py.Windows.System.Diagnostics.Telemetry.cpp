@@ -68,7 +68,6 @@ namespace py::cpp::Windows::System::Diagnostics::Telemetry
     }
 
     static PyMethodDef _methods_PlatformTelemetryClient[] = {
-        { "register", reinterpret_cast<PyCFunction>(PlatformTelemetryClient_Register), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -91,6 +90,32 @@ namespace py::cpp::Windows::System::Diagnostics::Telemetry
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_PlatformTelemetryClient
+    };
+
+    static PyGetSetDef getset_PlatformTelemetryClient_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_PlatformTelemetryClient_Static[] = {
+        { "register", reinterpret_cast<PyCFunction>(PlatformTelemetryClient_Register), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_PlatformTelemetryClient_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PlatformTelemetryClient_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PlatformTelemetryClient_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PlatformTelemetryClient_Static =
+    {
+        "winrt._winrt_windows_system_diagnostics_telemetry.PlatformTelemetryClient_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_PlatformTelemetryClient_Static
     };
 
     // ----- PlatformTelemetryRegistrationResult class --------------------
@@ -415,7 +440,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_diagnostics_telemetry(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PlatformTelemetryClient, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_PlatformTelemetryClient_Static{PyType_FromSpec(&type_spec_PlatformTelemetryClient_Static)};
+    if (!type_PlatformTelemetryClient_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_PlatformTelemetryClient, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PlatformTelemetryClient_Static.get())) == -1)
     {
         return nullptr;
     }

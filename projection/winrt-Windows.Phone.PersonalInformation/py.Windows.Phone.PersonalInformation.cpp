@@ -975,7 +975,6 @@ namespace py::cpp::Windows::Phone::PersonalInformation
     static PyMethodDef _methods_ContactInformation[] = {
         { "get_display_picture_async", reinterpret_cast<PyCFunction>(ContactInformation_GetDisplayPictureAsync), METH_VARARGS, nullptr },
         { "get_properties_async", reinterpret_cast<PyCFunction>(ContactInformation_GetPropertiesAsync), METH_VARARGS, nullptr },
-        { "parse_vcard_async", reinterpret_cast<PyCFunction>(ContactInformation_ParseVcardAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "set_display_picture_async", reinterpret_cast<PyCFunction>(ContactInformation_SetDisplayPictureAsync), METH_VARARGS, nullptr },
         { "to_vcard_async", reinterpret_cast<PyCFunction>(ContactInformation_ToVcardAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ContactInformation, METH_O | METH_STATIC, nullptr },
@@ -1009,6 +1008,32 @@ namespace py::cpp::Windows::Phone::PersonalInformation
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ContactInformation
+    };
+
+    static PyGetSetDef getset_ContactInformation_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ContactInformation_Static[] = {
+        { "parse_vcard_async", reinterpret_cast<PyCFunction>(ContactInformation_ParseVcardAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_ContactInformation_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ContactInformation_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ContactInformation_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ContactInformation_Static =
+    {
+        "winrt._winrt_windows_phone_personalinformation.ContactInformation_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ContactInformation_Static
     };
 
     // ----- ContactQueryOptions class --------------------
@@ -1756,7 +1781,6 @@ namespace py::cpp::Windows::Phone::PersonalInformation
     static PyMethodDef _methods_ContactStore[] = {
         { "create_contact_query", reinterpret_cast<PyCFunction>(ContactStore_CreateContactQuery), METH_VARARGS, nullptr },
         { "create_me_contact_async", reinterpret_cast<PyCFunction>(ContactStore_CreateMeContactAsync), METH_VARARGS, nullptr },
-        { "create_or_open_async", reinterpret_cast<PyCFunction>(ContactStore_CreateOrOpenAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "delete_async", reinterpret_cast<PyCFunction>(ContactStore_DeleteAsync), METH_VARARGS, nullptr },
         { "delete_contact_async", reinterpret_cast<PyCFunction>(ContactStore_DeleteContactAsync), METH_VARARGS, nullptr },
         { "find_contact_by_id_async", reinterpret_cast<PyCFunction>(ContactStore_FindContactByIdAsync), METH_VARARGS, nullptr },
@@ -1790,6 +1814,32 @@ namespace py::cpp::Windows::Phone::PersonalInformation
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ContactStore
+    };
+
+    static PyGetSetDef getset_ContactStore_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ContactStore_Static[] = {
+        { "create_or_open_async", reinterpret_cast<PyCFunction>(ContactStore_CreateOrOpenAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_ContactStore_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ContactStore_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ContactStore_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ContactStore_Static =
+    {
+        "winrt._winrt_windows_phone_personalinformation.ContactStore_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ContactStore_Static
     };
 
     // ----- KnownContactProperties class --------------------
@@ -2491,7 +2541,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
         _type_slots_KnownContactProperties
     };
 
-    static PyGetSetDef getset_KnownContactProperties_Meta[] = {
+    static PyGetSetDef getset_KnownContactProperties_Static[] = {
         { "additional_name", reinterpret_cast<getter>(KnownContactProperties_get_AdditionalName), nullptr, nullptr, nullptr },
         { "address", reinterpret_cast<getter>(KnownContactProperties_get_Address), nullptr, nullptr, nullptr },
         { "alternate_mobile_telephone", reinterpret_cast<getter>(KnownContactProperties_get_AlternateMobileTelephone), nullptr, nullptr, nullptr },
@@ -2530,20 +2580,25 @@ namespace py::cpp::Windows::Phone::PersonalInformation
         { }
     };
 
-    static PyType_Slot type_slots_KnownContactProperties_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_KnownContactProperties_Meta) },
+    static PyMethodDef methods_KnownContactProperties_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_KnownContactProperties_Meta =
+    static PyType_Slot type_slots_KnownContactProperties_Static[] = 
     {
-        "winrt._winrt_windows_phone_personalinformation.KnownContactProperties_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_KnownContactProperties_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_KnownContactProperties_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_KnownContactProperties_Static =
+    {
+        "winrt._winrt_windows_phone_personalinformation.KnownContactProperties_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_KnownContactProperties_Meta
+        type_slots_KnownContactProperties_Static
     };
 
     // ----- StoredContact class --------------------
@@ -3929,7 +3984,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_personalinformation(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactInformation, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_ContactInformation_Static{PyType_FromSpec(&type_spec_ContactInformation_Static)};
+    if (!type_ContactInformation_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_ContactInformation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContactInformation_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -3944,18 +4005,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_personalinformation(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactStore, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_ContactStore_Static{PyType_FromSpec(&type_spec_ContactStore_Static)};
+    if (!type_ContactStore_Static)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_KnownContactProperties_Meta{PyType_FromSpec(&type_spec_KnownContactProperties_Meta)};
-    if (!type_KnownContactProperties_Meta)
+    if (py::register_python_type(module.get(), &type_spec_ContactStore, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContactStore_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_KnownContactProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownContactProperties_Meta.get())) == -1)
+    py::pyobj_handle type_KnownContactProperties_Static{PyType_FromSpec(&type_spec_KnownContactProperties_Static)};
+    if (!type_KnownContactProperties_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_KnownContactProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownContactProperties_Static.get())) == -1)
     {
         return nullptr;
     }

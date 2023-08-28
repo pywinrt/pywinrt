@@ -192,7 +192,7 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
         _type_slots_LocalCategories
     };
 
-    static PyGetSetDef getset_LocalCategories_Meta[] = {
+    static PyGetSetDef getset_LocalCategories_Static[] = {
         { "all", reinterpret_cast<getter>(LocalCategories_get_All), nullptr, nullptr, nullptr },
         { "bank_and_credit_unions", reinterpret_cast<getter>(LocalCategories_get_BankAndCreditUnions), nullptr, nullptr, nullptr },
         { "eat_drink", reinterpret_cast<getter>(LocalCategories_get_EatDrink), nullptr, nullptr, nullptr },
@@ -204,20 +204,25 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
         { }
     };
 
-    static PyType_Slot type_slots_LocalCategories_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_LocalCategories_Meta) },
+    static PyMethodDef methods_LocalCategories_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_LocalCategories_Meta =
+    static PyType_Slot type_slots_LocalCategories_Static[] = 
     {
-        "winrt._winrt_windows_services_maps_localsearch.LocalCategories_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_LocalCategories_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_LocalCategories_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_LocalCategories_Static =
+    {
+        "winrt._winrt_windows_services_maps_localsearch.LocalCategories_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_LocalCategories_Meta
+        type_slots_LocalCategories_Static
     };
 
     // ----- LocalLocation class --------------------
@@ -533,7 +538,6 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
     }
 
     static PyMethodDef _methods_LocalLocationFinder[] = {
-        { "find_local_locations_async", reinterpret_cast<PyCFunction>(LocalLocationFinder_FindLocalLocationsAsync), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -556,6 +560,32 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_LocalLocationFinder
+    };
+
+    static PyGetSetDef getset_LocalLocationFinder_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_LocalLocationFinder_Static[] = {
+        { "find_local_locations_async", reinterpret_cast<PyCFunction>(LocalLocationFinder_FindLocalLocationsAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_LocalLocationFinder_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_LocalLocationFinder_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_LocalLocationFinder_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_LocalLocationFinder_Static =
+    {
+        "winrt._winrt_windows_services_maps_localsearch.LocalLocationFinder_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_LocalLocationFinder_Static
     };
 
     // ----- LocalLocationFinderResult class --------------------
@@ -966,7 +996,6 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
     }
 
     static PyMethodDef _methods_PlaceInfoHelper[] = {
-        { "create_from_local_location", reinterpret_cast<PyCFunction>(PlaceInfoHelper_CreateFromLocalLocation), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -989,6 +1018,32 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_PlaceInfoHelper
+    };
+
+    static PyGetSetDef getset_PlaceInfoHelper_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_PlaceInfoHelper_Static[] = {
+        { "create_from_local_location", reinterpret_cast<PyCFunction>(PlaceInfoHelper_CreateFromLocalLocation), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_PlaceInfoHelper_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PlaceInfoHelper_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PlaceInfoHelper_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PlaceInfoHelper_Static =
+    {
+        "winrt._winrt_windows_services_maps_localsearch.PlaceInfoHelper_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_PlaceInfoHelper_Static
     };
 
     // ----- Windows.Services.Maps.LocalSearch Initialization --------------------
@@ -1037,13 +1092,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_maps_localsearch(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_LocalCategories_Meta{PyType_FromSpec(&type_spec_LocalCategories_Meta)};
-    if (!type_LocalCategories_Meta)
+    py::pyobj_handle type_LocalCategories_Static{PyType_FromSpec(&type_spec_LocalCategories_Static)};
+    if (!type_LocalCategories_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LocalCategories, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LocalCategories_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LocalCategories, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LocalCategories_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -1053,7 +1108,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_maps_localsearch(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LocalLocationFinder, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_LocalLocationFinder_Static{PyType_FromSpec(&type_spec_LocalLocationFinder_Static)};
+    if (!type_LocalLocationFinder_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_LocalLocationFinder, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LocalLocationFinder_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -1073,7 +1134,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_maps_localsearch(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PlaceInfoHelper, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_PlaceInfoHelper_Static{PyType_FromSpec(&type_spec_PlaceInfoHelper_Static)};
+    if (!type_PlaceInfoHelper_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_PlaceInfoHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PlaceInfoHelper_Static.get())) == -1)
     {
         return nullptr;
     }

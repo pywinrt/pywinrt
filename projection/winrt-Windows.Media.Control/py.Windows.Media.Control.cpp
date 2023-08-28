@@ -1064,7 +1064,6 @@ namespace py::cpp::Windows::Media::Control
     static PyMethodDef _methods_GlobalSystemMediaTransportControlsSessionManager[] = {
         { "get_current_session", reinterpret_cast<PyCFunction>(GlobalSystemMediaTransportControlsSessionManager_GetCurrentSession), METH_VARARGS, nullptr },
         { "get_sessions", reinterpret_cast<PyCFunction>(GlobalSystemMediaTransportControlsSessionManager_GetSessions), METH_VARARGS, nullptr },
-        { "request_async", reinterpret_cast<PyCFunction>(GlobalSystemMediaTransportControlsSessionManager_RequestAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "add_current_session_changed", reinterpret_cast<PyCFunction>(GlobalSystemMediaTransportControlsSessionManager_add_CurrentSessionChanged), METH_O, nullptr },
         { "remove_current_session_changed", reinterpret_cast<PyCFunction>(GlobalSystemMediaTransportControlsSessionManager_remove_CurrentSessionChanged), METH_O, nullptr },
         { "add_sessions_changed", reinterpret_cast<PyCFunction>(GlobalSystemMediaTransportControlsSessionManager_add_SessionsChanged), METH_O, nullptr },
@@ -1094,6 +1093,32 @@ namespace py::cpp::Windows::Media::Control
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_GlobalSystemMediaTransportControlsSessionManager
+    };
+
+    static PyGetSetDef getset_GlobalSystemMediaTransportControlsSessionManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_GlobalSystemMediaTransportControlsSessionManager_Static[] = {
+        { "request_async", reinterpret_cast<PyCFunction>(GlobalSystemMediaTransportControlsSessionManager_RequestAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_GlobalSystemMediaTransportControlsSessionManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_GlobalSystemMediaTransportControlsSessionManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_GlobalSystemMediaTransportControlsSessionManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_GlobalSystemMediaTransportControlsSessionManager_Static =
+    {
+        "winrt._winrt_windows_media_control.GlobalSystemMediaTransportControlsSessionManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_GlobalSystemMediaTransportControlsSessionManager_Static
     };
 
     // ----- GlobalSystemMediaTransportControlsSessionMediaProperties class --------------------
@@ -2444,7 +2469,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_control(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GlobalSystemMediaTransportControlsSessionManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_GlobalSystemMediaTransportControlsSessionManager_Static{PyType_FromSpec(&type_spec_GlobalSystemMediaTransportControlsSessionManager_Static)};
+    if (!type_GlobalSystemMediaTransportControlsSessionManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_GlobalSystemMediaTransportControlsSessionManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GlobalSystemMediaTransportControlsSessionManager_Static.get())) == -1)
     {
         return nullptr;
     }

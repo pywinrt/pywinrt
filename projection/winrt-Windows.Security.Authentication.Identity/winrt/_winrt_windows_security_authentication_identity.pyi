@@ -27,9 +27,12 @@ class EnterpriseKeyCredentialRegistrationInfo(winrt.system.Object):
     @_property
     def tenant_name(self) -> str: ...
 
-class EnterpriseKeyCredentialRegistrationManager(winrt.system.Object):
+class EnterpriseKeyCredentialRegistrationManager_Static(type):
+    @_property
+    def current(cls) -> typing.Optional[EnterpriseKeyCredentialRegistrationManager]: ...
+
+class EnterpriseKeyCredentialRegistrationManager(winrt.system.Object, metaclass=EnterpriseKeyCredentialRegistrationManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EnterpriseKeyCredentialRegistrationManager: ...
     def get_registrations_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[EnterpriseKeyCredentialRegistrationInfo]]: ...
-    current: typing.ClassVar[typing.Optional[EnterpriseKeyCredentialRegistrationManager]]
 

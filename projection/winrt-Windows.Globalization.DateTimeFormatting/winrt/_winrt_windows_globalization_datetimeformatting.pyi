@@ -15,7 +15,17 @@ from winrt.windows.globalization.datetimeformatting import DayFormat, DayOfWeekF
 
 Self = typing.TypeVar('Self')
 
-class DateTimeFormatter(winrt.system.Object):
+class DateTimeFormatter_Static(type):
+    @_property
+    def long_date(cls) -> typing.Optional[DateTimeFormatter]: ...
+    @_property
+    def long_time(cls) -> typing.Optional[DateTimeFormatter]: ...
+    @_property
+    def short_date(cls) -> typing.Optional[DateTimeFormatter]: ...
+    @_property
+    def short_time(cls) -> typing.Optional[DateTimeFormatter]: ...
+
+class DateTimeFormatter(winrt.system.Object, metaclass=DateTimeFormatter_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DateTimeFormatter: ...
     @typing.overload
@@ -70,8 +80,4 @@ class DateTimeFormatter(winrt.system.Object):
     def resolved_language(self) -> str: ...
     @_property
     def template(self) -> str: ...
-    long_date: typing.ClassVar[typing.Optional[DateTimeFormatter]]
-    long_time: typing.ClassVar[typing.Optional[DateTimeFormatter]]
-    short_date: typing.ClassVar[typing.Optional[DateTimeFormatter]]
-    short_time: typing.ClassVar[typing.Optional[DateTimeFormatter]]
 

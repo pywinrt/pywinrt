@@ -2366,11 +2366,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
     }
 
     static PyMethodDef _methods_UserDataAccountSystemAccessManager[] = {
-        { "add_and_show_device_accounts_async", reinterpret_cast<PyCFunction>(UserDataAccountSystemAccessManager_AddAndShowDeviceAccountsAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "create_device_account_async", reinterpret_cast<PyCFunction>(UserDataAccountSystemAccessManager_CreateDeviceAccountAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "delete_device_account_async", reinterpret_cast<PyCFunction>(UserDataAccountSystemAccessManager_DeleteDeviceAccountAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_device_account_configuration_async", reinterpret_cast<PyCFunction>(UserDataAccountSystemAccessManager_GetDeviceAccountConfigurationAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "suppress_local_account_with_account_async", reinterpret_cast<PyCFunction>(UserDataAccountSystemAccessManager_SuppressLocalAccountWithAccountAsync), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -2393,6 +2388,36 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_UserDataAccountSystemAccessManager
+    };
+
+    static PyGetSetDef getset_UserDataAccountSystemAccessManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_UserDataAccountSystemAccessManager_Static[] = {
+        { "add_and_show_device_accounts_async", reinterpret_cast<PyCFunction>(UserDataAccountSystemAccessManager_AddAndShowDeviceAccountsAsync), METH_VARARGS, nullptr },
+        { "create_device_account_async", reinterpret_cast<PyCFunction>(UserDataAccountSystemAccessManager_CreateDeviceAccountAsync), METH_VARARGS, nullptr },
+        { "delete_device_account_async", reinterpret_cast<PyCFunction>(UserDataAccountSystemAccessManager_DeleteDeviceAccountAsync), METH_VARARGS, nullptr },
+        { "get_device_account_configuration_async", reinterpret_cast<PyCFunction>(UserDataAccountSystemAccessManager_GetDeviceAccountConfigurationAsync), METH_VARARGS, nullptr },
+        { "suppress_local_account_with_account_async", reinterpret_cast<PyCFunction>(UserDataAccountSystemAccessManager_SuppressLocalAccountWithAccountAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_UserDataAccountSystemAccessManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_UserDataAccountSystemAccessManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_UserDataAccountSystemAccessManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_UserDataAccountSystemAccessManager_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_userdataaccounts_systemaccess.UserDataAccountSystemAccessManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_UserDataAccountSystemAccessManager_Static
     };
 
     // ----- Windows.ApplicationModel.UserDataAccounts.SystemAccess Initialization --------------------
@@ -2446,7 +2471,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_userdataaccounts_systemacc
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserDataAccountSystemAccessManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_UserDataAccountSystemAccessManager_Static{PyType_FromSpec(&type_spec_UserDataAccountSystemAccessManager_Static)};
+    if (!type_UserDataAccountSystemAccessManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_UserDataAccountSystemAccessManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UserDataAccountSystemAccessManager_Static.get())) == -1)
     {
         return nullptr;
     }

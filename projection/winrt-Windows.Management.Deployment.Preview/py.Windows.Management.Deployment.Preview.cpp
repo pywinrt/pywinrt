@@ -47,7 +47,6 @@ namespace py::cpp::Windows::Management::Deployment::Preview
     }
 
     static PyMethodDef _methods_ClassicAppManager[] = {
-        { "find_installed_app", reinterpret_cast<PyCFunction>(ClassicAppManager_FindInstalledApp), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -70,6 +69,32 @@ namespace py::cpp::Windows::Management::Deployment::Preview
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ClassicAppManager
+    };
+
+    static PyGetSetDef getset_ClassicAppManager_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ClassicAppManager_Static[] = {
+        { "find_installed_app", reinterpret_cast<PyCFunction>(ClassicAppManager_FindInstalledApp), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_ClassicAppManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ClassicAppManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ClassicAppManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ClassicAppManager_Static =
+    {
+        "winrt._winrt_windows_management_deployment_preview.ClassicAppManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ClassicAppManager_Static
     };
 
     // ----- InstalledClassicAppInfo class --------------------
@@ -227,7 +252,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_management_deployment_preview(void) noexcep
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ClassicAppManager, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_ClassicAppManager_Static{PyType_FromSpec(&type_spec_ClassicAppManager_Static)};
+    if (!type_ClassicAppManager_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_ClassicAppManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ClassicAppManager_Static.get())) == -1)
     {
         return nullptr;
     }

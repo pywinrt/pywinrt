@@ -153,7 +153,6 @@ namespace py::cpp::Windows::UI::Input::Inking::Preview
 
     static PyMethodDef _methods_PalmRejectionDelayZonePreview[] = {
         { "close", reinterpret_cast<PyCFunction>(PalmRejectionDelayZonePreview_Close), METH_VARARGS, nullptr },
-        { "create_for_visual", reinterpret_cast<PyCFunction>(PalmRejectionDelayZonePreview_CreateForVisual), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_PalmRejectionDelayZonePreview, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PalmRejectionDelayZonePreview), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_PalmRejectionDelayZonePreview), METH_NOARGS, nullptr },
@@ -181,6 +180,32 @@ namespace py::cpp::Windows::UI::Input::Inking::Preview
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_PalmRejectionDelayZonePreview
+    };
+
+    static PyGetSetDef getset_PalmRejectionDelayZonePreview_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_PalmRejectionDelayZonePreview_Static[] = {
+        { "create_for_visual", reinterpret_cast<PyCFunction>(PalmRejectionDelayZonePreview_CreateForVisual), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_PalmRejectionDelayZonePreview_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PalmRejectionDelayZonePreview_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PalmRejectionDelayZonePreview_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PalmRejectionDelayZonePreview_Static =
+    {
+        "winrt._winrt_windows_ui_input_inking_preview.PalmRejectionDelayZonePreview_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_PalmRejectionDelayZonePreview_Static
     };
 
     // ----- Windows.UI.Input.Inking.Preview Initialization --------------------
@@ -229,7 +254,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input_inking_preview(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PalmRejectionDelayZonePreview, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_PalmRejectionDelayZonePreview_Static{PyType_FromSpec(&type_spec_PalmRejectionDelayZonePreview_Static)};
+    if (!type_PalmRejectionDelayZonePreview_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_PalmRejectionDelayZonePreview, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PalmRejectionDelayZonePreview_Static.get())) == -1)
     {
         return nullptr;
     }

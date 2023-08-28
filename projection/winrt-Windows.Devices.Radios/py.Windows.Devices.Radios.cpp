@@ -297,10 +297,6 @@ namespace py::cpp::Windows::Devices::Radios
     }
 
     static PyMethodDef _methods_Radio[] = {
-        { "from_id_async", reinterpret_cast<PyCFunction>(Radio_FromIdAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_device_selector", reinterpret_cast<PyCFunction>(Radio_GetDeviceSelector), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_radios_async", reinterpret_cast<PyCFunction>(Radio_GetRadiosAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "request_access_async", reinterpret_cast<PyCFunction>(Radio_RequestAccessAsync), METH_VARARGS | METH_STATIC, nullptr },
         { "set_state_async", reinterpret_cast<PyCFunction>(Radio_SetStateAsync), METH_VARARGS, nullptr },
         { "add_state_changed", reinterpret_cast<PyCFunction>(Radio_add_StateChanged), METH_O, nullptr },
         { "remove_state_changed", reinterpret_cast<PyCFunction>(Radio_remove_StateChanged), METH_O, nullptr },
@@ -332,6 +328,35 @@ namespace py::cpp::Windows::Devices::Radios
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_Radio
+    };
+
+    static PyGetSetDef getset_Radio_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_Radio_Static[] = {
+        { "from_id_async", reinterpret_cast<PyCFunction>(Radio_FromIdAsync), METH_VARARGS, nullptr },
+        { "get_device_selector", reinterpret_cast<PyCFunction>(Radio_GetDeviceSelector), METH_VARARGS, nullptr },
+        { "get_radios_async", reinterpret_cast<PyCFunction>(Radio_GetRadiosAsync), METH_VARARGS, nullptr },
+        { "request_access_async", reinterpret_cast<PyCFunction>(Radio_RequestAccessAsync), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_Radio_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Radio_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Radio_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Radio_Static =
+    {
+        "winrt._winrt_windows_devices_radios.Radio_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_Radio_Static
     };
 
     // ----- Windows.Devices.Radios Initialization --------------------
@@ -380,7 +405,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_radios(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Radio, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_Radio_Static{PyType_FromSpec(&type_spec_Radio_Static)};
+    if (!type_Radio_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_Radio, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Radio_Static.get())) == -1)
     {
         return nullptr;
     }

@@ -231,26 +231,31 @@ namespace py::cpp::Windows::UI::Xaml
         _type_slots_AdaptiveTrigger
     };
 
-    static PyGetSetDef getset_AdaptiveTrigger_Meta[] = {
+    static PyGetSetDef getset_AdaptiveTrigger_Static[] = {
         { "min_window_height_property", reinterpret_cast<getter>(AdaptiveTrigger_get_MinWindowHeightProperty), nullptr, nullptr, nullptr },
         { "min_window_width_property", reinterpret_cast<getter>(AdaptiveTrigger_get_MinWindowWidthProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_AdaptiveTrigger_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_AdaptiveTrigger_Meta) },
+    static PyMethodDef methods_AdaptiveTrigger_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_AdaptiveTrigger_Meta =
+    static PyType_Slot type_slots_AdaptiveTrigger_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml.AdaptiveTrigger_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_AdaptiveTrigger_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_AdaptiveTrigger_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_AdaptiveTrigger_Static =
+    {
+        "winrt._winrt_windows_ui_xaml.AdaptiveTrigger_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_AdaptiveTrigger_Meta
+        type_slots_AdaptiveTrigger_Static
     };
 
     // ----- Application class --------------------
@@ -1244,7 +1249,6 @@ namespace py::cpp::Windows::UI::Xaml
 
     static PyMethodDef _methods_Application[] = {
         { "exit", reinterpret_cast<PyCFunction>(Application_Exit), METH_VARARGS, nullptr },
-        { "load_component", reinterpret_cast<PyCFunction>(Application_LoadComponent), METH_VARARGS | METH_STATIC, nullptr },
         { "on_activated", reinterpret_cast<PyCFunction>(Application_OnActivated), METH_VARARGS, nullptr },
         { "on_background_activated", reinterpret_cast<PyCFunction>(Application_OnBackgroundActivated), METH_VARARGS, nullptr },
         { "on_cached_file_updater_activated", reinterpret_cast<PyCFunction>(Application_OnCachedFileUpdaterActivated), METH_VARARGS, nullptr },
@@ -1255,7 +1259,6 @@ namespace py::cpp::Windows::UI::Xaml
         { "on_search_activated", reinterpret_cast<PyCFunction>(Application_OnSearchActivated), METH_VARARGS, nullptr },
         { "on_share_target_activated", reinterpret_cast<PyCFunction>(Application_OnShareTargetActivated), METH_VARARGS, nullptr },
         { "on_window_created", reinterpret_cast<PyCFunction>(Application_OnWindowCreated), METH_VARARGS, nullptr },
-        { "start", reinterpret_cast<PyCFunction>(Application_Start), METH_VARARGS | METH_STATIC, nullptr },
         { "add_resuming", reinterpret_cast<PyCFunction>(Application_add_Resuming), METH_O, nullptr },
         { "remove_resuming", reinterpret_cast<PyCFunction>(Application_remove_Resuming), METH_O, nullptr },
         { "add_suspending", reinterpret_cast<PyCFunction>(Application_add_Suspending), METH_O, nullptr },
@@ -1299,25 +1302,32 @@ namespace py::cpp::Windows::UI::Xaml
         _type_slots_Application
     };
 
-    static PyGetSetDef getset_Application_Meta[] = {
+    static PyGetSetDef getset_Application_Static[] = {
         { "current", reinterpret_cast<getter>(Application_get_Current), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_Application_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_Application_Meta) },
+    static PyMethodDef methods_Application_Static[] = {
+        { "load_component", reinterpret_cast<PyCFunction>(Application_LoadComponent), METH_VARARGS, nullptr },
+        { "start", reinterpret_cast<PyCFunction>(Application_Start), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_Application_Meta =
+    static PyType_Slot type_slots_Application_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml.Application_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Application_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Application_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Application_Static =
+    {
+        "winrt._winrt_windows_ui_xaml.Application_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Application_Meta
+        type_slots_Application_Static
     };
 
     // ----- ApplicationInitializationCallbackParams class --------------------
@@ -3887,8 +3897,6 @@ namespace py::cpp::Windows::UI::Xaml
     }
 
     static PyMethodDef _methods_CornerRadiusHelper[] = {
-        { "from_radii", reinterpret_cast<PyCFunction>(CornerRadiusHelper_FromRadii), METH_VARARGS | METH_STATIC, nullptr },
-        { "from_uniform_radius", reinterpret_cast<PyCFunction>(CornerRadiusHelper_FromUniformRadius), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_CornerRadiusHelper, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CornerRadiusHelper), METH_O | METH_STATIC, nullptr },
         { }
@@ -3914,6 +3922,33 @@ namespace py::cpp::Windows::UI::Xaml
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_CornerRadiusHelper
+    };
+
+    static PyGetSetDef getset_CornerRadiusHelper_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_CornerRadiusHelper_Static[] = {
+        { "from_radii", reinterpret_cast<PyCFunction>(CornerRadiusHelper_FromRadii), METH_VARARGS, nullptr },
+        { "from_uniform_radius", reinterpret_cast<PyCFunction>(CornerRadiusHelper_FromUniformRadius), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_CornerRadiusHelper_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CornerRadiusHelper_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CornerRadiusHelper_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CornerRadiusHelper_Static =
+    {
+        "winrt._winrt_windows_ui_xaml.CornerRadiusHelper_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CornerRadiusHelper_Static
     };
 
     // ----- DataContextChangedEventArgs class --------------------
@@ -4293,10 +4328,8 @@ namespace py::cpp::Windows::UI::Xaml
 
     static PyMethodDef _methods_DataTemplate[] = {
         { "get_element", reinterpret_cast<PyCFunction>(DataTemplate_GetElement), METH_VARARGS, nullptr },
-        { "get_extension_instance", reinterpret_cast<PyCFunction>(DataTemplate_GetExtensionInstance), METH_VARARGS | METH_STATIC, nullptr },
         { "load_content", reinterpret_cast<PyCFunction>(DataTemplate_LoadContent), METH_VARARGS, nullptr },
         { "recycle_element", reinterpret_cast<PyCFunction>(DataTemplate_RecycleElement), METH_VARARGS, nullptr },
-        { "set_extension_instance", reinterpret_cast<PyCFunction>(DataTemplate_SetExtensionInstance), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_DataTemplate, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DataTemplate), METH_O | METH_STATIC, nullptr },
         { }
@@ -4324,25 +4357,32 @@ namespace py::cpp::Windows::UI::Xaml
         _type_slots_DataTemplate
     };
 
-    static PyGetSetDef getset_DataTemplate_Meta[] = {
+    static PyGetSetDef getset_DataTemplate_Static[] = {
         { "extension_instance_property", reinterpret_cast<getter>(DataTemplate_get_ExtensionInstanceProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_DataTemplate_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_DataTemplate_Meta) },
+    static PyMethodDef methods_DataTemplate_Static[] = {
+        { "get_extension_instance", reinterpret_cast<PyCFunction>(DataTemplate_GetExtensionInstance), METH_VARARGS, nullptr },
+        { "set_extension_instance", reinterpret_cast<PyCFunction>(DataTemplate_SetExtensionInstance), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_DataTemplate_Meta =
+    static PyType_Slot type_slots_DataTemplate_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml.DataTemplate_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_DataTemplate_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_DataTemplate_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_DataTemplate_Static =
+    {
+        "winrt._winrt_windows_ui_xaml.DataTemplate_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_DataTemplate_Meta
+        type_slots_DataTemplate_Static
     };
 
     // ----- DataTemplateKey class --------------------
@@ -6065,8 +6105,6 @@ namespace py::cpp::Windows::UI::Xaml
 
     static PyMethodDef _methods_DependencyProperty[] = {
         { "get_metadata", reinterpret_cast<PyCFunction>(DependencyProperty_GetMetadata), METH_VARARGS, nullptr },
-        { "register", reinterpret_cast<PyCFunction>(DependencyProperty_Register), METH_VARARGS | METH_STATIC, nullptr },
-        { "register_attached", reinterpret_cast<PyCFunction>(DependencyProperty_RegisterAttached), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_DependencyProperty, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DependencyProperty), METH_O | METH_STATIC, nullptr },
         { }
@@ -6094,25 +6132,32 @@ namespace py::cpp::Windows::UI::Xaml
         _type_slots_DependencyProperty
     };
 
-    static PyGetSetDef getset_DependencyProperty_Meta[] = {
+    static PyGetSetDef getset_DependencyProperty_Static[] = {
         { "unset_value", reinterpret_cast<getter>(DependencyProperty_get_UnsetValue), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_DependencyProperty_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_DependencyProperty_Meta) },
+    static PyMethodDef methods_DependencyProperty_Static[] = {
+        { "register", reinterpret_cast<PyCFunction>(DependencyProperty_Register), METH_VARARGS, nullptr },
+        { "register_attached", reinterpret_cast<PyCFunction>(DependencyProperty_RegisterAttached), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_DependencyProperty_Meta =
+    static PyType_Slot type_slots_DependencyProperty_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml.DependencyProperty_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_DependencyProperty_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_DependencyProperty_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_DependencyProperty_Static =
+    {
+        "winrt._winrt_windows_ui_xaml.DependencyProperty_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_DependencyProperty_Meta
+        type_slots_DependencyProperty_Static
     };
 
     // ----- DependencyPropertyChangedEventArgs class --------------------
@@ -8203,12 +8248,6 @@ namespace py::cpp::Windows::UI::Xaml
     }
 
     static PyMethodDef _methods_DurationHelper[] = {
-        { "add", reinterpret_cast<PyCFunction>(DurationHelper_Add), METH_VARARGS | METH_STATIC, nullptr },
-        { "compare", reinterpret_cast<PyCFunction>(DurationHelper_Compare), METH_VARARGS | METH_STATIC, nullptr },
-        { "equals", reinterpret_cast<PyCFunction>(DurationHelper_Equals), METH_VARARGS | METH_STATIC, nullptr },
-        { "from_time_span", reinterpret_cast<PyCFunction>(DurationHelper_FromTimeSpan), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_has_time_span", reinterpret_cast<PyCFunction>(DurationHelper_GetHasTimeSpan), METH_VARARGS | METH_STATIC, nullptr },
-        { "subtract", reinterpret_cast<PyCFunction>(DurationHelper_Subtract), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_DurationHelper, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DurationHelper), METH_O | METH_STATIC, nullptr },
         { }
@@ -8236,26 +8275,37 @@ namespace py::cpp::Windows::UI::Xaml
         _type_slots_DurationHelper
     };
 
-    static PyGetSetDef getset_DurationHelper_Meta[] = {
+    static PyGetSetDef getset_DurationHelper_Static[] = {
         { "automatic", reinterpret_cast<getter>(DurationHelper_get_Automatic), nullptr, nullptr, nullptr },
         { "forever", reinterpret_cast<getter>(DurationHelper_get_Forever), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_DurationHelper_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_DurationHelper_Meta) },
+    static PyMethodDef methods_DurationHelper_Static[] = {
+        { "add", reinterpret_cast<PyCFunction>(DurationHelper_Add), METH_VARARGS, nullptr },
+        { "compare", reinterpret_cast<PyCFunction>(DurationHelper_Compare), METH_VARARGS, nullptr },
+        { "equals", reinterpret_cast<PyCFunction>(DurationHelper_Equals), METH_VARARGS, nullptr },
+        { "from_time_span", reinterpret_cast<PyCFunction>(DurationHelper_FromTimeSpan), METH_VARARGS, nullptr },
+        { "get_has_time_span", reinterpret_cast<PyCFunction>(DurationHelper_GetHasTimeSpan), METH_VARARGS, nullptr },
+        { "subtract", reinterpret_cast<PyCFunction>(DurationHelper_Subtract), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_DurationHelper_Meta =
+    static PyType_Slot type_slots_DurationHelper_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml.DurationHelper_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_DurationHelper_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_DurationHelper_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_DurationHelper_Static =
+    {
+        "winrt._winrt_windows_ui_xaml.DurationHelper_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_DurationHelper_Meta
+        type_slots_DurationHelper_Static
     };
 
     // ----- EffectiveViewportChangedEventArgs class --------------------
@@ -8996,7 +9046,6 @@ namespace py::cpp::Windows::UI::Xaml
     }
 
     static PyMethodDef _methods_ElementSoundPlayer[] = {
-        { "play", reinterpret_cast<PyCFunction>(ElementSoundPlayer_Play), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_ElementSoundPlayer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ElementSoundPlayer), METH_O | METH_STATIC, nullptr },
         { }
@@ -9024,27 +9073,33 @@ namespace py::cpp::Windows::UI::Xaml
         _type_slots_ElementSoundPlayer
     };
 
-    static PyGetSetDef getset_ElementSoundPlayer_Meta[] = {
+    static PyGetSetDef getset_ElementSoundPlayer_Static[] = {
         { "volume", reinterpret_cast<getter>(ElementSoundPlayer_get_Volume), reinterpret_cast<setter>(ElementSoundPlayer_put_Volume), nullptr, nullptr },
         { "state", reinterpret_cast<getter>(ElementSoundPlayer_get_State), reinterpret_cast<setter>(ElementSoundPlayer_put_State), nullptr, nullptr },
         { "spatial_audio_mode", reinterpret_cast<getter>(ElementSoundPlayer_get_SpatialAudioMode), reinterpret_cast<setter>(ElementSoundPlayer_put_SpatialAudioMode), nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_ElementSoundPlayer_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_ElementSoundPlayer_Meta) },
+    static PyMethodDef methods_ElementSoundPlayer_Static[] = {
+        { "play", reinterpret_cast<PyCFunction>(ElementSoundPlayer_Play), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_ElementSoundPlayer_Meta =
+    static PyType_Slot type_slots_ElementSoundPlayer_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml.ElementSoundPlayer_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ElementSoundPlayer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ElementSoundPlayer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ElementSoundPlayer_Static =
+    {
+        "winrt._winrt_windows_ui_xaml.ElementSoundPlayer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_ElementSoundPlayer_Meta
+        type_slots_ElementSoundPlayer_Static
     };
 
     // ----- EventTrigger class --------------------
@@ -11718,7 +11773,6 @@ namespace py::cpp::Windows::UI::Xaml
 
     static PyMethodDef _methods_FrameworkElement[] = {
         { "arrange_override", reinterpret_cast<PyCFunction>(FrameworkElement_ArrangeOverride), METH_VARARGS, nullptr },
-        { "defer_tree", reinterpret_cast<PyCFunction>(FrameworkElement_DeferTree), METH_VARARGS | METH_STATIC, nullptr },
         { "find_name", reinterpret_cast<PyCFunction>(FrameworkElement_FindName), METH_VARARGS, nullptr },
         { "get_binding_expression", reinterpret_cast<PyCFunction>(FrameworkElement_GetBindingExpression), METH_VARARGS, nullptr },
         { "go_to_element_state_core", reinterpret_cast<PyCFunction>(FrameworkElement_GoToElementStateCore), METH_VARARGS, nullptr },
@@ -11800,7 +11854,7 @@ namespace py::cpp::Windows::UI::Xaml
         _type_slots_FrameworkElement
     };
 
-    static PyGetSetDef getset_FrameworkElement_Meta[] = {
+    static PyGetSetDef getset_FrameworkElement_Static[] = {
         { "actual_height_property", reinterpret_cast<getter>(FrameworkElement_get_ActualHeightProperty), nullptr, nullptr, nullptr },
         { "actual_width_property", reinterpret_cast<getter>(FrameworkElement_get_ActualWidthProperty), nullptr, nullptr, nullptr },
         { "data_context_property", reinterpret_cast<getter>(FrameworkElement_get_DataContextProperty), nullptr, nullptr, nullptr },
@@ -11830,20 +11884,26 @@ namespace py::cpp::Windows::UI::Xaml
         { }
     };
 
-    static PyType_Slot type_slots_FrameworkElement_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_FrameworkElement_Meta) },
+    static PyMethodDef methods_FrameworkElement_Static[] = {
+        { "defer_tree", reinterpret_cast<PyCFunction>(FrameworkElement_DeferTree), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_FrameworkElement_Meta =
+    static PyType_Slot type_slots_FrameworkElement_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml.FrameworkElement_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_FrameworkElement_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_FrameworkElement_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_FrameworkElement_Static =
+    {
+        "winrt._winrt_windows_ui_xaml.FrameworkElement_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_FrameworkElement_Meta
+        type_slots_FrameworkElement_Static
     };
 
     // ----- FrameworkTemplate class --------------------
@@ -12537,12 +12597,6 @@ namespace py::cpp::Windows::UI::Xaml
     }
 
     static PyMethodDef _methods_GridLengthHelper[] = {
-        { "equals", reinterpret_cast<PyCFunction>(GridLengthHelper_Equals), METH_VARARGS | METH_STATIC, nullptr },
-        { "from_pixels", reinterpret_cast<PyCFunction>(GridLengthHelper_FromPixels), METH_VARARGS | METH_STATIC, nullptr },
-        { "from_value_and_type", reinterpret_cast<PyCFunction>(GridLengthHelper_FromValueAndType), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_is_absolute", reinterpret_cast<PyCFunction>(GridLengthHelper_GetIsAbsolute), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_is_auto", reinterpret_cast<PyCFunction>(GridLengthHelper_GetIsAuto), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_is_star", reinterpret_cast<PyCFunction>(GridLengthHelper_GetIsStar), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_GridLengthHelper, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GridLengthHelper), METH_O | METH_STATIC, nullptr },
         { }
@@ -12570,25 +12624,36 @@ namespace py::cpp::Windows::UI::Xaml
         _type_slots_GridLengthHelper
     };
 
-    static PyGetSetDef getset_GridLengthHelper_Meta[] = {
+    static PyGetSetDef getset_GridLengthHelper_Static[] = {
         { "auto", reinterpret_cast<getter>(GridLengthHelper_get_Auto), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_GridLengthHelper_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_GridLengthHelper_Meta) },
+    static PyMethodDef methods_GridLengthHelper_Static[] = {
+        { "equals", reinterpret_cast<PyCFunction>(GridLengthHelper_Equals), METH_VARARGS, nullptr },
+        { "from_pixels", reinterpret_cast<PyCFunction>(GridLengthHelper_FromPixels), METH_VARARGS, nullptr },
+        { "from_value_and_type", reinterpret_cast<PyCFunction>(GridLengthHelper_FromValueAndType), METH_VARARGS, nullptr },
+        { "get_is_absolute", reinterpret_cast<PyCFunction>(GridLengthHelper_GetIsAbsolute), METH_VARARGS, nullptr },
+        { "get_is_auto", reinterpret_cast<PyCFunction>(GridLengthHelper_GetIsAuto), METH_VARARGS, nullptr },
+        { "get_is_star", reinterpret_cast<PyCFunction>(GridLengthHelper_GetIsStar), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_GridLengthHelper_Meta =
+    static PyType_Slot type_slots_GridLengthHelper_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml.GridLengthHelper_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_GridLengthHelper_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_GridLengthHelper_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_GridLengthHelper_Static =
+    {
+        "winrt._winrt_windows_ui_xaml.GridLengthHelper_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_GridLengthHelper_Meta
+        type_slots_GridLengthHelper_Static
     };
 
     // ----- MediaFailedRoutedEventArgs class --------------------
@@ -12754,7 +12819,6 @@ namespace py::cpp::Windows::UI::Xaml
     }
 
     static PyMethodDef _methods_PointHelper[] = {
-        { "from_coordinates", reinterpret_cast<PyCFunction>(PointHelper_FromCoordinates), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_PointHelper, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PointHelper), METH_O | METH_STATIC, nullptr },
         { }
@@ -12780,6 +12844,32 @@ namespace py::cpp::Windows::UI::Xaml
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_PointHelper
+    };
+
+    static PyGetSetDef getset_PointHelper_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_PointHelper_Static[] = {
+        { "from_coordinates", reinterpret_cast<PyCFunction>(PointHelper_FromCoordinates), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_PointHelper_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PointHelper_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PointHelper_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PointHelper_Static =
+    {
+        "winrt._winrt_windows_ui_xaml.PointHelper_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_PointHelper_Static
     };
 
     // ----- PropertyMetadata class --------------------
@@ -12954,7 +13044,6 @@ namespace py::cpp::Windows::UI::Xaml
     }
 
     static PyMethodDef _methods_PropertyMetadata[] = {
-        { "create", reinterpret_cast<PyCFunction>(PropertyMetadata_Create), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_PropertyMetadata, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PropertyMetadata), METH_O | METH_STATIC, nullptr },
         { }
@@ -12982,6 +13071,32 @@ namespace py::cpp::Windows::UI::Xaml
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_PropertyMetadata
+    };
+
+    static PyGetSetDef getset_PropertyMetadata_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_PropertyMetadata_Static[] = {
+        { "create", reinterpret_cast<PyCFunction>(PropertyMetadata_Create), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_PropertyMetadata_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PropertyMetadata_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PropertyMetadata_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PropertyMetadata_Static =
+    {
+        "winrt._winrt_windows_ui_xaml.PropertyMetadata_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_PropertyMetadata_Static
     };
 
     // ----- PropertyPath class --------------------
@@ -13539,18 +13654,6 @@ namespace py::cpp::Windows::UI::Xaml
     }
 
     static PyMethodDef _methods_RectHelper[] = {
-        { "contains", reinterpret_cast<PyCFunction>(RectHelper_Contains), METH_VARARGS | METH_STATIC, nullptr },
-        { "equals", reinterpret_cast<PyCFunction>(RectHelper_Equals), METH_VARARGS | METH_STATIC, nullptr },
-        { "from_coordinates_and_dimensions", reinterpret_cast<PyCFunction>(RectHelper_FromCoordinatesAndDimensions), METH_VARARGS | METH_STATIC, nullptr },
-        { "from_location_and_size", reinterpret_cast<PyCFunction>(RectHelper_FromLocationAndSize), METH_VARARGS | METH_STATIC, nullptr },
-        { "from_points", reinterpret_cast<PyCFunction>(RectHelper_FromPoints), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_bottom", reinterpret_cast<PyCFunction>(RectHelper_GetBottom), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_is_empty", reinterpret_cast<PyCFunction>(RectHelper_GetIsEmpty), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_left", reinterpret_cast<PyCFunction>(RectHelper_GetLeft), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_right", reinterpret_cast<PyCFunction>(RectHelper_GetRight), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_top", reinterpret_cast<PyCFunction>(RectHelper_GetTop), METH_VARARGS | METH_STATIC, nullptr },
-        { "intersect", reinterpret_cast<PyCFunction>(RectHelper_Intersect), METH_VARARGS | METH_STATIC, nullptr },
-        { "union", reinterpret_cast<PyCFunction>(RectHelper_Union), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_RectHelper, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RectHelper), METH_O | METH_STATIC, nullptr },
         { }
@@ -13578,25 +13681,42 @@ namespace py::cpp::Windows::UI::Xaml
         _type_slots_RectHelper
     };
 
-    static PyGetSetDef getset_RectHelper_Meta[] = {
+    static PyGetSetDef getset_RectHelper_Static[] = {
         { "empty", reinterpret_cast<getter>(RectHelper_get_Empty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_RectHelper_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_RectHelper_Meta) },
+    static PyMethodDef methods_RectHelper_Static[] = {
+        { "contains", reinterpret_cast<PyCFunction>(RectHelper_Contains), METH_VARARGS, nullptr },
+        { "equals", reinterpret_cast<PyCFunction>(RectHelper_Equals), METH_VARARGS, nullptr },
+        { "from_coordinates_and_dimensions", reinterpret_cast<PyCFunction>(RectHelper_FromCoordinatesAndDimensions), METH_VARARGS, nullptr },
+        { "from_location_and_size", reinterpret_cast<PyCFunction>(RectHelper_FromLocationAndSize), METH_VARARGS, nullptr },
+        { "from_points", reinterpret_cast<PyCFunction>(RectHelper_FromPoints), METH_VARARGS, nullptr },
+        { "get_bottom", reinterpret_cast<PyCFunction>(RectHelper_GetBottom), METH_VARARGS, nullptr },
+        { "get_is_empty", reinterpret_cast<PyCFunction>(RectHelper_GetIsEmpty), METH_VARARGS, nullptr },
+        { "get_left", reinterpret_cast<PyCFunction>(RectHelper_GetLeft), METH_VARARGS, nullptr },
+        { "get_right", reinterpret_cast<PyCFunction>(RectHelper_GetRight), METH_VARARGS, nullptr },
+        { "get_top", reinterpret_cast<PyCFunction>(RectHelper_GetTop), METH_VARARGS, nullptr },
+        { "intersect", reinterpret_cast<PyCFunction>(RectHelper_Intersect), METH_VARARGS, nullptr },
+        { "union", reinterpret_cast<PyCFunction>(RectHelper_Union), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_RectHelper_Meta =
+    static PyType_Slot type_slots_RectHelper_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml.RectHelper_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_RectHelper_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_RectHelper_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_RectHelper_Static =
+    {
+        "winrt._winrt_windows_ui_xaml.RectHelper_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_RectHelper_Meta
+        type_slots_RectHelper_Static
     };
 
     // ----- ResourceDictionary class --------------------
@@ -15699,9 +15819,6 @@ namespace py::cpp::Windows::UI::Xaml
     }
 
     static PyMethodDef _methods_SizeHelper[] = {
-        { "equals", reinterpret_cast<PyCFunction>(SizeHelper_Equals), METH_VARARGS | METH_STATIC, nullptr },
-        { "from_dimensions", reinterpret_cast<PyCFunction>(SizeHelper_FromDimensions), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_is_empty", reinterpret_cast<PyCFunction>(SizeHelper_GetIsEmpty), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_SizeHelper, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SizeHelper), METH_O | METH_STATIC, nullptr },
         { }
@@ -15729,25 +15846,33 @@ namespace py::cpp::Windows::UI::Xaml
         _type_slots_SizeHelper
     };
 
-    static PyGetSetDef getset_SizeHelper_Meta[] = {
+    static PyGetSetDef getset_SizeHelper_Static[] = {
         { "empty", reinterpret_cast<getter>(SizeHelper_get_Empty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_SizeHelper_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_SizeHelper_Meta) },
+    static PyMethodDef methods_SizeHelper_Static[] = {
+        { "equals", reinterpret_cast<PyCFunction>(SizeHelper_Equals), METH_VARARGS, nullptr },
+        { "from_dimensions", reinterpret_cast<PyCFunction>(SizeHelper_FromDimensions), METH_VARARGS, nullptr },
+        { "get_is_empty", reinterpret_cast<PyCFunction>(SizeHelper_GetIsEmpty), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_SizeHelper_Meta =
+    static PyType_Slot type_slots_SizeHelper_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml.SizeHelper_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SizeHelper_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SizeHelper_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SizeHelper_Static =
+    {
+        "winrt._winrt_windows_ui_xaml.SizeHelper_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_SizeHelper_Meta
+        type_slots_SizeHelper_Static
     };
 
     // ----- StateTrigger class --------------------
@@ -15908,25 +16033,30 @@ namespace py::cpp::Windows::UI::Xaml
         _type_slots_StateTrigger
     };
 
-    static PyGetSetDef getset_StateTrigger_Meta[] = {
+    static PyGetSetDef getset_StateTrigger_Static[] = {
         { "is_active_property", reinterpret_cast<getter>(StateTrigger_get_IsActiveProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_StateTrigger_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_StateTrigger_Meta) },
+    static PyMethodDef methods_StateTrigger_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_StateTrigger_Meta =
+    static PyType_Slot type_slots_StateTrigger_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml.StateTrigger_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_StateTrigger_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_StateTrigger_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_StateTrigger_Static =
+    {
+        "winrt._winrt_windows_ui_xaml.StateTrigger_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_StateTrigger_Meta
+        type_slots_StateTrigger_Static
     };
 
     // ----- StateTriggerBase class --------------------
@@ -16613,8 +16743,6 @@ namespace py::cpp::Windows::UI::Xaml
     }
 
     static PyMethodDef _methods_ThicknessHelper[] = {
-        { "from_lengths", reinterpret_cast<PyCFunction>(ThicknessHelper_FromLengths), METH_VARARGS | METH_STATIC, nullptr },
-        { "from_uniform_length", reinterpret_cast<PyCFunction>(ThicknessHelper_FromUniformLength), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_ThicknessHelper, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ThicknessHelper), METH_O | METH_STATIC, nullptr },
         { }
@@ -16640,6 +16768,33 @@ namespace py::cpp::Windows::UI::Xaml
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ThicknessHelper
+    };
+
+    static PyGetSetDef getset_ThicknessHelper_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ThicknessHelper_Static[] = {
+        { "from_lengths", reinterpret_cast<PyCFunction>(ThicknessHelper_FromLengths), METH_VARARGS, nullptr },
+        { "from_uniform_length", reinterpret_cast<PyCFunction>(ThicknessHelper_FromUniformLength), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_ThicknessHelper_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ThicknessHelper_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ThicknessHelper_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ThicknessHelper_Static =
+    {
+        "winrt._winrt_windows_ui_xaml.ThicknessHelper_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ThicknessHelper_Static
     };
 
     // ----- TriggerAction class --------------------
@@ -24581,7 +24736,6 @@ namespace py::cpp::Windows::UI::Xaml
         { "on_process_keyboard_accelerators", reinterpret_cast<PyCFunction>(UIElement_OnProcessKeyboardAccelerators), METH_VARARGS, nullptr },
         { "populate_property_info", reinterpret_cast<PyCFunction>(UIElement_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "populate_property_info_override", reinterpret_cast<PyCFunction>(UIElement_PopulatePropertyInfoOverride), METH_VARARGS, nullptr },
-        { "register_as_scroll_port", reinterpret_cast<PyCFunction>(UIElement_RegisterAsScrollPort), METH_VARARGS | METH_STATIC, nullptr },
         { "release_pointer_capture", reinterpret_cast<PyCFunction>(UIElement_ReleasePointerCapture), METH_VARARGS, nullptr },
         { "release_pointer_captures", reinterpret_cast<PyCFunction>(UIElement_ReleasePointerCaptures), METH_VARARGS, nullptr },
         { "remove_handler", reinterpret_cast<PyCFunction>(UIElement_RemoveHandler), METH_VARARGS, nullptr },
@@ -24591,7 +24745,6 @@ namespace py::cpp::Windows::UI::Xaml
         { "stop_animation", reinterpret_cast<PyCFunction>(UIElement_StopAnimation), METH_VARARGS, nullptr },
         { "transform_to_visual", reinterpret_cast<PyCFunction>(UIElement_TransformToVisual), METH_VARARGS, nullptr },
         { "try_invoke_keyboard_accelerator", reinterpret_cast<PyCFunction>(UIElement_TryInvokeKeyboardAccelerator), METH_VARARGS, nullptr },
-        { "try_start_direct_manipulation", reinterpret_cast<PyCFunction>(UIElement_TryStartDirectManipulation), METH_VARARGS | METH_STATIC, nullptr },
         { "update_layout", reinterpret_cast<PyCFunction>(UIElement_UpdateLayout), METH_VARARGS, nullptr },
         { "add_double_tapped", reinterpret_cast<PyCFunction>(UIElement_add_DoubleTapped), METH_O, nullptr },
         { "remove_double_tapped", reinterpret_cast<PyCFunction>(UIElement_remove_DoubleTapped), METH_O, nullptr },
@@ -24758,7 +24911,7 @@ namespace py::cpp::Windows::UI::Xaml
         _type_slots_UIElement
     };
 
-    static PyGetSetDef getset_UIElement_Meta[] = {
+    static PyGetSetDef getset_UIElement_Static[] = {
         { "holding_event", reinterpret_cast<getter>(UIElement_get_HoldingEvent), nullptr, nullptr, nullptr },
         { "is_double_tap_enabled_property", reinterpret_cast<getter>(UIElement_get_IsDoubleTapEnabledProperty), nullptr, nullptr, nullptr },
         { "is_hit_test_visible_property", reinterpret_cast<getter>(UIElement_get_IsHitTestVisibleProperty), nullptr, nullptr, nullptr },
@@ -24834,20 +24987,27 @@ namespace py::cpp::Windows::UI::Xaml
         { }
     };
 
-    static PyType_Slot type_slots_UIElement_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_UIElement_Meta) },
+    static PyMethodDef methods_UIElement_Static[] = {
+        { "register_as_scroll_port", reinterpret_cast<PyCFunction>(UIElement_RegisterAsScrollPort), METH_VARARGS, nullptr },
+        { "try_start_direct_manipulation", reinterpret_cast<PyCFunction>(UIElement_TryStartDirectManipulation), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_UIElement_Meta =
+    static PyType_Slot type_slots_UIElement_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml.UIElement_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_UIElement_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_UIElement_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_UIElement_Static =
+    {
+        "winrt._winrt_windows_ui_xaml.UIElement_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_UIElement_Meta
+        type_slots_UIElement_Static
     };
 
     // ----- UIElementWeakCollection class --------------------
@@ -26845,13 +27005,9 @@ namespace py::cpp::Windows::UI::Xaml
     }
 
     static PyMethodDef _methods_VisualStateManager[] = {
-        { "get_custom_visual_state_manager", reinterpret_cast<PyCFunction>(VisualStateManager_GetCustomVisualStateManager), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_visual_state_groups", reinterpret_cast<PyCFunction>(VisualStateManager_GetVisualStateGroups), METH_VARARGS | METH_STATIC, nullptr },
-        { "go_to_state", reinterpret_cast<PyCFunction>(VisualStateManager_GoToState), METH_VARARGS | METH_STATIC, nullptr },
         { "go_to_state_core", reinterpret_cast<PyCFunction>(VisualStateManager_GoToStateCore), METH_VARARGS, nullptr },
         { "raise_current_state_changed", reinterpret_cast<PyCFunction>(VisualStateManager_RaiseCurrentStateChanged), METH_VARARGS, nullptr },
         { "raise_current_state_changing", reinterpret_cast<PyCFunction>(VisualStateManager_RaiseCurrentStateChanging), METH_VARARGS, nullptr },
-        { "set_custom_visual_state_manager", reinterpret_cast<PyCFunction>(VisualStateManager_SetCustomVisualStateManager), METH_VARARGS | METH_STATIC, nullptr },
         { "_assign_array_", _assign_array_VisualStateManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VisualStateManager), METH_O | METH_STATIC, nullptr },
         { }
@@ -26879,25 +27035,34 @@ namespace py::cpp::Windows::UI::Xaml
         _type_slots_VisualStateManager
     };
 
-    static PyGetSetDef getset_VisualStateManager_Meta[] = {
+    static PyGetSetDef getset_VisualStateManager_Static[] = {
         { "custom_visual_state_manager_property", reinterpret_cast<getter>(VisualStateManager_get_CustomVisualStateManagerProperty), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_VisualStateManager_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_VisualStateManager_Meta) },
+    static PyMethodDef methods_VisualStateManager_Static[] = {
+        { "get_custom_visual_state_manager", reinterpret_cast<PyCFunction>(VisualStateManager_GetCustomVisualStateManager), METH_VARARGS, nullptr },
+        { "get_visual_state_groups", reinterpret_cast<PyCFunction>(VisualStateManager_GetVisualStateGroups), METH_VARARGS, nullptr },
+        { "go_to_state", reinterpret_cast<PyCFunction>(VisualStateManager_GoToState), METH_VARARGS, nullptr },
+        { "set_custom_visual_state_manager", reinterpret_cast<PyCFunction>(VisualStateManager_SetCustomVisualStateManager), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_VisualStateManager_Meta =
+    static PyType_Slot type_slots_VisualStateManager_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml.VisualStateManager_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_VisualStateManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_VisualStateManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_VisualStateManager_Static =
+    {
+        "winrt._winrt_windows_ui_xaml.VisualStateManager_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_VisualStateManager_Meta
+        type_slots_VisualStateManager_Static
     };
 
     // ----- VisualTransition class --------------------
@@ -27762,25 +27927,30 @@ namespace py::cpp::Windows::UI::Xaml
         _type_slots_Window
     };
 
-    static PyGetSetDef getset_Window_Meta[] = {
+    static PyGetSetDef getset_Window_Static[] = {
         { "current", reinterpret_cast<getter>(Window_get_Current), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_Window_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_Window_Meta) },
+    static PyMethodDef methods_Window_Static[] = {
         { }
     };
 
-    static PyType_Spec type_spec_Window_Meta =
+    static PyType_Slot type_slots_Window_Static[] = 
     {
-        "winrt._winrt_windows_ui_xaml.Window_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Window_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Window_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Window_Static =
+    {
+        "winrt._winrt_windows_ui_xaml.Window_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_Window_Meta
+        type_slots_Window_Static
     };
 
     // ----- WindowCreatedEventArgs class --------------------
@@ -29283,24 +29453,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_AdaptiveTrigger_Meta{PyType_FromSpec(&type_spec_AdaptiveTrigger_Meta)};
-    if (!type_AdaptiveTrigger_Meta)
+    py::pyobj_handle type_AdaptiveTrigger_Static{PyType_FromSpec(&type_spec_AdaptiveTrigger_Static)};
+    if (!type_AdaptiveTrigger_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AdaptiveTrigger, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AdaptiveTrigger_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AdaptiveTrigger, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AdaptiveTrigger_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_Application_Meta{PyType_FromSpec(&type_spec_Application_Meta)};
-    if (!type_Application_Meta)
+    py::pyobj_handle type_Application_Static{PyType_FromSpec(&type_spec_Application_Static)};
+    if (!type_Application_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Application, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Application_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Application, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Application_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -29335,7 +29505,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CornerRadiusHelper, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_CornerRadiusHelper_Static{PyType_FromSpec(&type_spec_CornerRadiusHelper_Static)};
+    if (!type_CornerRadiusHelper_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_CornerRadiusHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CornerRadiusHelper_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -29345,13 +29521,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_DataTemplate_Meta{PyType_FromSpec(&type_spec_DataTemplate_Meta)};
-    if (!type_DataTemplate_Meta)
+    py::pyobj_handle type_DataTemplate_Static{PyType_FromSpec(&type_spec_DataTemplate_Static)};
+    if (!type_DataTemplate_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DataTemplate, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DataTemplate_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DataTemplate, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DataTemplate_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -29376,13 +29552,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_DependencyProperty_Meta{PyType_FromSpec(&type_spec_DependencyProperty_Meta)};
-    if (!type_DependencyProperty_Meta)
+    py::pyobj_handle type_DependencyProperty_Static{PyType_FromSpec(&type_spec_DependencyProperty_Static)};
+    if (!type_DependencyProperty_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DependencyProperty, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DependencyProperty_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DependencyProperty, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DependencyProperty_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -29427,13 +29603,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_DurationHelper_Meta{PyType_FromSpec(&type_spec_DurationHelper_Meta)};
-    if (!type_DurationHelper_Meta)
+    py::pyobj_handle type_DurationHelper_Static{PyType_FromSpec(&type_spec_DurationHelper_Static)};
+    if (!type_DurationHelper_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DurationHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DurationHelper_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DurationHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DurationHelper_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -29453,13 +29629,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_ElementSoundPlayer_Meta{PyType_FromSpec(&type_spec_ElementSoundPlayer_Meta)};
-    if (!type_ElementSoundPlayer_Meta)
+    py::pyobj_handle type_ElementSoundPlayer_Static{PyType_FromSpec(&type_spec_ElementSoundPlayer_Static)};
+    if (!type_ElementSoundPlayer_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ElementSoundPlayer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ElementSoundPlayer_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ElementSoundPlayer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ElementSoundPlayer_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -29474,13 +29650,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_FrameworkElement_Meta{PyType_FromSpec(&type_spec_FrameworkElement_Meta)};
-    if (!type_FrameworkElement_Meta)
+    py::pyobj_handle type_FrameworkElement_Static{PyType_FromSpec(&type_spec_FrameworkElement_Static)};
+    if (!type_FrameworkElement_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FrameworkElement, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FrameworkElement_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FrameworkElement, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FrameworkElement_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -29500,13 +29676,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_GridLengthHelper_Meta{PyType_FromSpec(&type_spec_GridLengthHelper_Meta)};
-    if (!type_GridLengthHelper_Meta)
+    py::pyobj_handle type_GridLengthHelper_Static{PyType_FromSpec(&type_spec_GridLengthHelper_Static)};
+    if (!type_GridLengthHelper_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GridLengthHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridLengthHelper_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GridLengthHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridLengthHelper_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -29516,12 +29692,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PointHelper, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_PointHelper_Static{PyType_FromSpec(&type_spec_PointHelper_Static)};
+    if (!type_PointHelper_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PropertyMetadata, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PointHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PointHelper_Static.get())) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PropertyMetadata_Static{PyType_FromSpec(&type_spec_PropertyMetadata_Static)};
+    if (!type_PropertyMetadata_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_PropertyMetadata, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PropertyMetadata_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -29531,13 +29719,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_RectHelper_Meta{PyType_FromSpec(&type_spec_RectHelper_Meta)};
-    if (!type_RectHelper_Meta)
+    py::pyobj_handle type_RectHelper_Static{PyType_FromSpec(&type_spec_RectHelper_Static)};
+    if (!type_RectHelper_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RectHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RectHelper_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RectHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RectHelper_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -29582,24 +29770,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_SizeHelper_Meta{PyType_FromSpec(&type_spec_SizeHelper_Meta)};
-    if (!type_SizeHelper_Meta)
+    py::pyobj_handle type_SizeHelper_Static{PyType_FromSpec(&type_spec_SizeHelper_Static)};
+    if (!type_SizeHelper_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SizeHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SizeHelper_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SizeHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SizeHelper_Static.get())) == -1)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_StateTrigger_Meta{PyType_FromSpec(&type_spec_StateTrigger_Meta)};
-    if (!type_StateTrigger_Meta)
+    py::pyobj_handle type_StateTrigger_Static{PyType_FromSpec(&type_spec_StateTrigger_Static)};
+    if (!type_StateTrigger_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StateTrigger, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StateTrigger_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StateTrigger, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StateTrigger_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -29619,7 +29807,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ThicknessHelper, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_ThicknessHelper_Static{PyType_FromSpec(&type_spec_ThicknessHelper_Static)};
+    if (!type_ThicknessHelper_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_ThicknessHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ThicknessHelper_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -29644,13 +29838,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_UIElement_Meta{PyType_FromSpec(&type_spec_UIElement_Meta)};
-    if (!type_UIElement_Meta)
+    py::pyobj_handle type_UIElement_Static{PyType_FromSpec(&type_spec_UIElement_Static)};
+    if (!type_UIElement_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UIElement, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UIElement_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UIElement, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UIElement_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -29685,13 +29879,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_VisualStateManager_Meta{PyType_FromSpec(&type_spec_VisualStateManager_Meta)};
-    if (!type_VisualStateManager_Meta)
+    py::pyobj_handle type_VisualStateManager_Static{PyType_FromSpec(&type_spec_VisualStateManager_Static)};
+    if (!type_VisualStateManager_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VisualStateManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VisualStateManager_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_VisualStateManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VisualStateManager_Static.get())) == -1)
     {
         return nullptr;
     }
@@ -29701,13 +29895,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_Window_Meta{PyType_FromSpec(&type_spec_Window_Meta)};
-    if (!type_Window_Meta)
+    py::pyobj_handle type_Window_Static{PyType_FromSpec(&type_spec_Window_Static)};
+    if (!type_Window_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Window, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Window_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Window, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Window_Static.get())) == -1)
     {
         return nullptr;
     }

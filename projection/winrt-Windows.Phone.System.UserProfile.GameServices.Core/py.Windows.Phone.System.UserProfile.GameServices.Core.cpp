@@ -314,15 +314,6 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
     }
 
     static PyMethodDef _methods_GameService[] = {
-        { "get_authentication_status", reinterpret_cast<PyCFunction>(GameService_GetAuthenticationStatus), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_gamer_profile_async", reinterpret_cast<PyCFunction>(GameService_GetGamerProfileAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_installed_game_items_async", reinterpret_cast<PyCFunction>(GameService_GetInstalledGameItemsAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_partner_token_async", reinterpret_cast<PyCFunction>(GameService_GetPartnerTokenAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "get_privileges_async", reinterpret_cast<PyCFunction>(GameService_GetPrivilegesAsync), METH_VARARGS | METH_STATIC, nullptr },
-        { "grant_achievement", reinterpret_cast<PyCFunction>(GameService_GrantAchievement), METH_VARARGS | METH_STATIC, nullptr },
-        { "grant_avatar_award", reinterpret_cast<PyCFunction>(GameService_GrantAvatarAward), METH_VARARGS | METH_STATIC, nullptr },
-        { "notify_partner_token_expired", reinterpret_cast<PyCFunction>(GameService_NotifyPartnerTokenExpired), METH_VARARGS | METH_STATIC, nullptr },
-        { "post_result", reinterpret_cast<PyCFunction>(GameService_PostResult), METH_VARARGS | METH_STATIC, nullptr },
         { }
     };
 
@@ -347,25 +338,39 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
         _type_slots_GameService
     };
 
-    static PyGetSetDef getset_GameService_Meta[] = {
+    static PyGetSetDef getset_GameService_Static[] = {
         { "service_uri", reinterpret_cast<getter>(GameService_get_ServiceUri), nullptr, nullptr, nullptr },
         { }
     };
 
-    static PyType_Slot type_slots_GameService_Meta[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_GameService_Meta) },
+    static PyMethodDef methods_GameService_Static[] = {
+        { "get_authentication_status", reinterpret_cast<PyCFunction>(GameService_GetAuthenticationStatus), METH_VARARGS, nullptr },
+        { "get_gamer_profile_async", reinterpret_cast<PyCFunction>(GameService_GetGamerProfileAsync), METH_VARARGS, nullptr },
+        { "get_installed_game_items_async", reinterpret_cast<PyCFunction>(GameService_GetInstalledGameItemsAsync), METH_VARARGS, nullptr },
+        { "get_partner_token_async", reinterpret_cast<PyCFunction>(GameService_GetPartnerTokenAsync), METH_VARARGS, nullptr },
+        { "get_privileges_async", reinterpret_cast<PyCFunction>(GameService_GetPrivilegesAsync), METH_VARARGS, nullptr },
+        { "grant_achievement", reinterpret_cast<PyCFunction>(GameService_GrantAchievement), METH_VARARGS, nullptr },
+        { "grant_avatar_award", reinterpret_cast<PyCFunction>(GameService_GrantAvatarAward), METH_VARARGS, nullptr },
+        { "notify_partner_token_expired", reinterpret_cast<PyCFunction>(GameService_NotifyPartnerTokenExpired), METH_VARARGS, nullptr },
+        { "post_result", reinterpret_cast<PyCFunction>(GameService_PostResult), METH_VARARGS, nullptr },
         { }
     };
 
-    static PyType_Spec type_spec_GameService_Meta =
+    static PyType_Slot type_slots_GameService_Static[] = 
     {
-        "winrt._winrt_windows_phone_system_userprofile_gameservices_core.GameService_Meta",
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_GameService_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_GameService_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_GameService_Static =
+    {
+        "winrt._winrt_windows_phone_system_userprofile_gameservices_core.GameService_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
-        type_slots_GameService_Meta
+        type_slots_GameService_Static
     };
 
     // ----- GameServicePropertyCollection class --------------------
@@ -515,13 +520,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_system_userprofile_gameservices_core(
         return nullptr;
     }
 
-    py::pyobj_handle type_GameService_Meta{PyType_FromSpec(&type_spec_GameService_Meta)};
-    if (!type_GameService_Meta)
+    py::pyobj_handle type_GameService_Static{PyType_FromSpec(&type_spec_GameService_Static)};
+    if (!type_GameService_Static)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GameService, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GameService_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GameService, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GameService_Static.get())) == -1)
     {
         return nullptr;
     }

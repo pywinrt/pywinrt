@@ -560,7 +560,6 @@ namespace py::cpp::Windows::Networking
     }
 
     static PyMethodDef _methods_HostName[] = {
-        { "compare", reinterpret_cast<PyCFunction>(HostName_Compare), METH_VARARGS | METH_STATIC, nullptr },
         { "is_equal", reinterpret_cast<PyCFunction>(HostName_IsEqual), METH_VARARGS, nullptr },
         { "to_string", reinterpret_cast<PyCFunction>(HostName_ToString), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HostName, METH_O | METH_STATIC, nullptr },
@@ -594,6 +593,32 @@ namespace py::cpp::Windows::Networking
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_HostName
+    };
+
+    static PyGetSetDef getset_HostName_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_HostName_Static[] = {
+        { "compare", reinterpret_cast<PyCFunction>(HostName_Compare), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_HostName_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_HostName_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_HostName_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_HostName_Static =
+    {
+        "winrt._winrt_windows_networking.HostName_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_HostName_Static
     };
 
     // ----- Windows.Networking Initialization --------------------
@@ -647,7 +672,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HostName, object_bases.get(), nullptr) == -1)
+    py::pyobj_handle type_HostName_Static{PyType_FromSpec(&type_spec_HostName_Static)};
+    if (!type_HostName_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_HostName, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HostName_Static.get())) == -1)
     {
         return nullptr;
     }
