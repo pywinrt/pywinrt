@@ -12,5 +12,6 @@ setup(
             extra_compile_args=["/std:c++20", "/permissive-"],
             libraries=["windowsapp"],
         )
-    ]
+    ],
+    package_data={"winrt": ["*.pyi"]},
 )

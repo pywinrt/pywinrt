@@ -72,7 +72,7 @@ setup(
             extra_compile_args=["/std:c++20", "/permissive-"],
             libraries=["windowsapp"],
         )
-    ]
+    ],{package_data}
 )
 """
 
@@ -139,6 +139,7 @@ with open(PROJECTION_PATH / "winrt-runtime" / "setup.py", "w", newline="\n") as 
         SETUP_PY_TEMPLATE.format(
             ext_module="_winrt",
             sources='"_winrt.cpp", "_winrt_array.cpp", "runtime.cpp"',
+            package_data="",
         )
     )
 
@@ -165,6 +166,7 @@ for package_path in iglob(str(PROJECTION_PATH / "interop" / "winrt-*")):
             SETUP_PY_TEMPLATE.format(
                 ext_module=f"_{module.replace('.', '_')}",
                 sources=f'"py.{ns}.cpp"',
+                package_data='\n    package_data={"winrt": ["*.pyi"]},',
             )
         )
 
@@ -196,6 +198,7 @@ for package_path in iglob(str(PROJECTION_PATH / "winrt-Windows.*")):
             SETUP_PY_TEMPLATE.format(
                 ext_module=f"_{module.replace('.', '_')}",
                 sources=f'"py.{ns}.cpp"',
+                package_data='\n    package_data={"winrt": ["*.pyi"]},',
             )
         )
 
@@ -217,5 +220,6 @@ with open(
             SETUP_PY_TEMPLATE.format(
                 ext_module="_winrt_testcomponent",
                 sources='"py.TestComponent.cpp"',
+                package_data='\n    package_data={"winrt": ["*.pyi"]},',
             )
         )
