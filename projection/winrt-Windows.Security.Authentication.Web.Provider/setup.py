@@ -1,0 +1,16 @@
+# WARNING: Please don't edit this file. It was automatically generated.
+
+from setuptools import Extension, setup
+from winrt_sdk import get_include_dirs
+
+setup(
+    ext_modules=[
+        Extension(
+            "winrt.windows.security.authentication.web.provider._winrt_windows_security_authentication_web_provider",
+            sources=["py.Windows.Security.Authentication.Web.Provider.cpp"],
+            include_dirs=get_include_dirs(),
+            extra_compile_args=["/std:c++20", "/permissive-"],
+            libraries=["windowsapp"],
+        )
+    ]
+)

@@ -1,0 +1,16 @@
+# WARNING: Please don't edit this file. It was automatically generated.
+
+from setuptools import Extension, setup
+from winrt_sdk import get_include_dirs
+
+setup(
+    ext_modules=[
+        Extension(
+            "winrt.windows.ui.xaml.automation.text._winrt_windows_ui_xaml_automation_text",
+            sources=["py.Windows.UI.Xaml.Automation.Text.cpp"],
+            include_dirs=get_include_dirs(),
+            extra_compile_args=["/std:c++20", "/permissive-"],
+            libraries=["windowsapp"],
+        )
+    ]
+)

@@ -1,0 +1,39 @@
+# WARNING: Please don't edit this file. It was automatically generated.
+
+[build-system]
+requires = ["setuptools", "setuptools-scm", "winrt-sdk"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "winrt-Windows.ApplicationModel.UserDataTasks"
+description = "Python projection of Windows Runtime (WinRT) APIs"
+license = { text = "MIT" }
+classifiers = [
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3",
+    "Target Audience :: Developers",
+]
+dynamic = ["version", "optional-dependencies"]
+requires-python = ">=3.9,<3.13"
+dependencies = ["winrt-runtime==0.0.0"]
+
+[project.urls]
+# Homepage = "https://github.com/pywrint/pywrinrt"
+# Documentation = "https://readthedocs.org"
+Repository = "https://github.com/pywrint/pywrinrt"
+Changelog = "https://github.com/pywinrt/pywinrt/blob/main/CHANGELOG.md"
+
+[tool.setuptools.dynamic]
+version = { file = "../winrt-sdk/version.txt" }
+optional-dependencies.all = { file = "all-requirements.txt" }
+
+[tool.cibuildwheel]
+# use local winrt-sdk build dependency
+environment = { PYTHONPATH="../winrt-sdk/src" }
+# don't install winrt-sdk from PyPI
+build-frontend = "build; args: --skip-dependency-check --no-isolation"
+# don't build for PyPy
+skip = "pp*"
+
+[tool.cibuildwheel.windows]
+archs = ["x86", "AMD64", "ARM64"]

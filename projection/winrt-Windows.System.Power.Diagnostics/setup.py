@@ -1,0 +1,16 @@
+# WARNING: Please don't edit this file. It was automatically generated.
+
+from setuptools import Extension, setup
+from winrt_sdk import get_include_dirs
+
+setup(
+    ext_modules=[
+        Extension(
+            "winrt.windows.system.power.diagnostics._winrt_windows_system_power_diagnostics",
+            sources=["py.Windows.System.Power.Diagnostics.cpp"],
+            include_dirs=get_include_dirs(),
+            extra_compile_args=["/std:c++20", "/permissive-"],
+            libraries=["windowsapp"],
+        )
+    ]
+)

@@ -1,15 +1,13 @@
+# WARNING: Please don't edit this file. It was automatically generated.
+
 [build-system]
 requires = ["setuptools", "setuptools-scm", "winrt-sdk"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "winrt-runtime"
-authors = [
-    {name = "David Lechner", email = "david@pybricks.com"},
-]
-description = "Python runtime for Windows Runtime (WinRT) APIs"
-readme = "README.md"
-license = {text = "MIT"}
+description = "Python projection of Windows Runtime (WinRT) APIs"
+license = { text = "MIT" }
 classifiers = [
     "Operating System :: Microsoft :: Windows",
     "Programming Language :: Python :: 3",
@@ -23,6 +21,9 @@ requires-python = ">=3.9,<3.13"
 # Documentation = "https://readthedocs.org"
 Repository = "https://github.com/pywrint/pywrinrt"
 Changelog = "https://github.com/pywinrt/pywinrt/blob/main/CHANGELOG.md"
+
+[tool.setuptools.dynamic]
+version = { file = "../winrt-sdk/version.txt" }
 
 [tool.setuptools.packages.find]
 where = ["src"]

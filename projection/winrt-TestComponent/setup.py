@@ -1,0 +1,16 @@
+# WARNING: Please don't edit this file. It was automatically generated.
+
+from setuptools import Extension, setup
+from winrt_sdk import get_include_dirs
+
+setup(
+    ext_modules=[
+        Extension(
+            "_winrt.testcomponent._winrt_testcomponent",
+            sources=["py.TestComponent.cpp"],
+            include_dirs=get_include_dirs(),
+            extra_compile_args=["/std:c++20", "/permissive-"],
+            libraries=["windowsapp"],
+        )
+    ]
+)

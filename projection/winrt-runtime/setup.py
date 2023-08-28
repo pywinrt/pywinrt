@@ -1,3 +1,5 @@
+# WARNING: Please don't edit this file. It was automatically generated.
+
 from setuptools import Extension, setup
 from winrt_sdk import get_include_dirs
 
