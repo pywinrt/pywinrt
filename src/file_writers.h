@@ -4,6 +4,17 @@ namespace pywinrt
 {
     namespace stdfs = std::filesystem;
 
+    inline void write_base_files(stdfs::path const& folder)
+    {
+        writer w;
+
+        write_license(w);
+        w.write("#pragma once\n");
+        w.write("#define PYWINRT_VERSION \"%\"\n", PYWINRT_VERSION_STRING);
+
+        w.flush_to_file(folder / "pywinrt_version.h");
+    }
+
     inline void write_namespace_h(
         stdfs::path const& folder,
         std::string_view const& ns,
@@ -72,13 +83,11 @@ namespace pywinrt
         w.swap();
 
         write_license(w);
-        {
-            auto format = R"(#pragma once
-
-#include "pybase.h"
-)";
-            w.write(format);
-        }
+        w.write("#pragma once\n\n");
+        w.write("#include \"pybase.h\"\n");
+        w.write(
+            "static_assert(winrt::check_version(PYWINRT_VERSION, \"%\"), \"Mismatched Py/WinRT headers.\");\n",
+            PYWINRT_VERSION_STRING);
 
         w.write_each<write_py_include>(w.needed_namespaces);
         w.write("\n");
@@ -104,7 +113,6 @@ namespace pywinrt
         auto filename = w.write_temp("py.%.cpp", ns);
 
         write_license(w);
-        w.write("#include \"pybase.h\"\n");
         w.write("#include \"py.%.h\"\n", ns);
 
         if (ns == "Windows.Foundation")

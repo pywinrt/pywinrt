@@ -3,6 +3,7 @@
 #pragma once
 
 #include "pybase.h"
+static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 
 #if __has_include("py.Windows.ApplicationModel.Search.h")
 #include "py.Windows.ApplicationModel.Search.h"

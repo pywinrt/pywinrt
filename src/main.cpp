@@ -208,6 +208,18 @@ Where <spec> is one or more of:
 
             task_group group;
 
+            // if we are building the base projection (not user components),
+            // then emit some extra files
+            if (settings.reference.empty())
+            {
+                group.add(
+                    []
+                    {
+                        write_base_files(
+                            settings.header_path.value_or(settings.output_folder));
+                    });
+            }
+
             std::vector<std::string> generated_namespaces{};
 
             for (auto&& [ns, members] : c.namespaces())
