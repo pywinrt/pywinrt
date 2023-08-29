@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 
+import winrt._winrt
 import winrt.system
 import winrt.windows.devices.lights
 import winrt.windows.foundation
@@ -140,7 +141,7 @@ class LampArrayEffectPlaylist_Static(type):
     def start_all(cls, value: typing.Iterable[LampArrayEffectPlaylist], /) -> None: ...
     def stop_all(cls, value: typing.Iterable[LampArrayEffectPlaylist], /) -> None: ...
 
-class LampArrayEffectPlaylist(winrt.system.Object, typing.Sequence[ILampArrayEffect], metaclass=LampArrayEffectPlaylist_Static):
+class LampArrayEffectPlaylist(winrt.system.Object, winrt._winrt.Sequence[ILampArrayEffect], metaclass=LampArrayEffectPlaylist_Static):
     def __len__(self) -> int: ...
     @typing.overload
     def __getitem__(self, index: int) -> ILampArrayEffect: ...

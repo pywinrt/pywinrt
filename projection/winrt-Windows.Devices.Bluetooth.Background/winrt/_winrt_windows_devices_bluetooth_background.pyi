@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 
+import winrt._winrt
 import winrt.system
 import winrt.windows.devices.bluetooth
 import winrt.windows.devices.bluetooth.advertisement

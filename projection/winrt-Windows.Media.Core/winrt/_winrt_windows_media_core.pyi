@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 
+import winrt._winrt
 import winrt.system
 import winrt.windows.applicationmodel.appservice
 import winrt.windows.foundation
@@ -595,7 +596,7 @@ class MediaStreamSample(winrt.system.Object, metaclass=MediaStreamSample_Static)
     @_property
     def direct3_d11_surface(self) -> typing.Optional[winrt.windows.graphics.directx.direct3d11.IDirect3DSurface]: ...
 
-class MediaStreamSamplePropertySet(winrt.system.Object, typing.MutableMapping[_uuid.UUID, winrt.system.Object]):
+class MediaStreamSamplePropertySet(winrt.system.Object, winrt._winrt.MutableMapping[_uuid.UUID, winrt.system.Object]):
     def __len__(self) -> int: ...
     def __iter__(self) -> typing.Iterator[_uuid.UUID]: ...
     def __contains__(self, key: object) -> bool:...

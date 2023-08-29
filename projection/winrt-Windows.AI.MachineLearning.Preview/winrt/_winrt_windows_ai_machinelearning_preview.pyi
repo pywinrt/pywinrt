@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 
+import winrt._winrt
 import winrt.system
 import winrt.windows.foundation
 import winrt.windows.foundation.collections
@@ -60,7 +61,7 @@ class InferencingOptionsPreview(winrt.system.Object):
     @is_tracing_enabled.setter
     def is_tracing_enabled(self, value: bool) -> None: ...
 
-class LearningModelBindingPreview(winrt.system.Object, typing.Mapping[str, winrt.system.Object]):
+class LearningModelBindingPreview(winrt.system.Object, winrt._winrt.Mapping[str, winrt.system.Object]):
     def __len__(self) -> int: ...
     def __iter__(self) -> typing.Iterator[str]: ...
     def __contains__(self, key: object) -> bool:...

@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 
+import winrt._winrt
 import winrt.system
 import winrt.windows.foundation
 import winrt.windows.foundation.collections
@@ -222,7 +223,7 @@ class BitmapPropertiesView(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> BitmapPropertiesView: ...
     def get_properties_async(self, properties_to_retrieve: typing.Iterable[str], /) -> winrt.windows.foundation.IAsyncOperation[BitmapPropertySet]: ...
 
-class BitmapPropertySet(winrt.system.Object, typing.MutableMapping[str, BitmapTypedValue]):
+class BitmapPropertySet(winrt.system.Object, winrt._winrt.MutableMapping[str, BitmapTypedValue]):
     def __len__(self) -> int: ...
     def __iter__(self) -> typing.Iterator[str]: ...
     def __contains__(self, key: object) -> bool:...

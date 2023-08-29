@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 
+import winrt._winrt
 import winrt.system
 
 from winrt.windows.phone.applicationmodel import ApplicationProfileModes

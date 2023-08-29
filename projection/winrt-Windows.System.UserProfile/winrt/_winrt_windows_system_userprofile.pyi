@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 
+import winrt._winrt
 import winrt.system
 import winrt.windows.foundation
 import winrt.windows.foundation.collections
@@ -65,7 +66,7 @@ class DiagnosticsSettings(winrt.system.Object, metaclass=DiagnosticsSettings_Sta
 class FirstSignInSettings_Static(type):
     def get_default(cls) -> typing.Optional[FirstSignInSettings]: ...
 
-class FirstSignInSettings(winrt.system.Object, typing.Mapping[str, winrt.system.Object], metaclass=FirstSignInSettings_Static):
+class FirstSignInSettings(winrt.system.Object, winrt._winrt.Mapping[str, winrt.system.Object], metaclass=FirstSignInSettings_Static):
     def __len__(self) -> int: ...
     def __iter__(self) -> typing.Iterator[str]: ...
     def __contains__(self, key: object) -> bool:...

@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 
+import winrt._winrt
 import winrt.system
 import winrt.windows.foundation
 import winrt.windows.foundation.collections
@@ -22,7 +23,7 @@ class AccessListEntry:
     metadata: str
     def __init__(self, token: str, metadata: str) -> None: ...
 
-class AccessListEntryView(winrt.system.Object, typing.Sequence[AccessListEntry]):
+class AccessListEntryView(winrt.system.Object, winrt._winrt.Sequence[AccessListEntry]):
     def __len__(self) -> int: ...
     @typing.overload
     def __getitem__(self, index: int) -> AccessListEntry: ...

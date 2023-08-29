@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 
+import winrt._winrt
 import winrt.system
 import winrt.windows.foundation
 import winrt.windows.foundation.collections
@@ -278,7 +279,7 @@ class MediaEncodingSubtypes(winrt.system.Object, metaclass=MediaEncodingSubtypes
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaEncodingSubtypes: ...
 
-class MediaPropertySet(winrt.system.Object, typing.MutableMapping[_uuid.UUID, winrt.system.Object]):
+class MediaPropertySet(winrt.system.Object, winrt._winrt.MutableMapping[_uuid.UUID, winrt.system.Object]):
     def __len__(self) -> int: ...
     def __iter__(self) -> typing.Iterator[_uuid.UUID]: ...
     def __contains__(self, key: object) -> bool:...

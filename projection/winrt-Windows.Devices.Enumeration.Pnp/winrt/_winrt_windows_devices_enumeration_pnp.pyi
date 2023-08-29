@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 
+import winrt._winrt
 import winrt.system
 import winrt.windows.devices.enumeration
 import winrt.windows.foundation
@@ -38,7 +39,7 @@ class PnpObject(winrt.system.Object, metaclass=PnpObject_Static):
     @_property
     def type(self) -> PnpObjectType: ...
 
-class PnpObjectCollection(winrt.system.Object, typing.Sequence[PnpObject]):
+class PnpObjectCollection(winrt.system.Object, winrt._winrt.Sequence[PnpObject]):
     def __len__(self) -> int: ...
     @typing.overload
     def __getitem__(self, index: int) -> PnpObject: ...

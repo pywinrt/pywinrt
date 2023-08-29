@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 
+import winrt._winrt
 import winrt.system
 import winrt.windows.foundation.collections
 
@@ -20,7 +21,7 @@ class CharacterGrouping(winrt.system.Object):
     @_property
     def label(self) -> str: ...
 
-class CharacterGroupings(winrt.system.Object, typing.Sequence[CharacterGrouping]):
+class CharacterGroupings(winrt.system.Object, winrt._winrt.Sequence[CharacterGrouping]):
     def __len__(self) -> int: ...
     @typing.overload
     def __getitem__(self, index: int) -> CharacterGrouping: ...

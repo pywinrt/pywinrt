@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 
+import winrt._winrt
 import winrt.system
 import winrt.windows.foundation
 import winrt.windows.foundation.collections
@@ -90,7 +91,7 @@ class PasswordCredential(winrt.system.Object):
     @_property
     def properties(self) -> typing.Optional[winrt.windows.foundation.collections.IPropertySet]: ...
 
-class PasswordCredentialPropertyStore(winrt.system.Object, typing.MutableMapping[str, winrt.system.Object]):
+class PasswordCredentialPropertyStore(winrt.system.Object, winrt._winrt.MutableMapping[str, winrt.system.Object]):
     def __len__(self) -> int: ...
     def __iter__(self) -> typing.Iterator[str]: ...
     def __contains__(self, key: object) -> bool:...

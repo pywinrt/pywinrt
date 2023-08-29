@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 
+import winrt._winrt
 import winrt.system
 import winrt.windows.devices.enumeration
 import winrt.windows.foundation
@@ -156,7 +157,7 @@ class MediaItemDisplayProperties(winrt.system.Object):
     @_property
     def video_properties(self) -> typing.Optional[winrt.windows.media.VideoDisplayProperties]: ...
 
-class MediaPlaybackAudioTrackList(winrt.system.Object, typing.Sequence[winrt.windows.media.core.AudioTrack]):
+class MediaPlaybackAudioTrackList(winrt.system.Object, winrt._winrt.Sequence[winrt.windows.media.core.AudioTrack]):
     def __len__(self) -> int: ...
     @typing.overload
     def __getitem__(self, index: int) -> winrt.windows.media.core.AudioTrack: ...
@@ -572,7 +573,7 @@ class MediaPlaybackSphericalVideoProjection(winrt.system.Object):
     @frame_format.setter
     def frame_format(self, value: winrt.windows.media.mediaproperties.SphericalVideoFrameFormat) -> None: ...
 
-class MediaPlaybackTimedMetadataTrackList(winrt.system.Object, typing.Sequence[winrt.windows.media.core.TimedMetadataTrack]):
+class MediaPlaybackTimedMetadataTrackList(winrt.system.Object, winrt._winrt.Sequence[winrt.windows.media.core.TimedMetadataTrack]):
     def __len__(self) -> int: ...
     @typing.overload
     def __getitem__(self, index: int) -> winrt.windows.media.core.TimedMetadataTrack: ...
@@ -591,7 +592,7 @@ class MediaPlaybackTimedMetadataTrackList(winrt.system.Object, typing.Sequence[w
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
-class MediaPlaybackVideoTrackList(winrt.system.Object, typing.Sequence[winrt.windows.media.core.VideoTrack]):
+class MediaPlaybackVideoTrackList(winrt.system.Object, winrt._winrt.Sequence[winrt.windows.media.core.VideoTrack]):
     def __len__(self) -> int: ...
     @typing.overload
     def __getitem__(self, index: int) -> winrt.windows.media.core.VideoTrack: ...

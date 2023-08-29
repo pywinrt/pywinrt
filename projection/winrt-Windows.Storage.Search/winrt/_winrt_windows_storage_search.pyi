@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 
+import winrt._winrt
 import winrt.system
 import winrt.windows.data.text
 import winrt.windows.foundation
@@ -126,13 +127,12 @@ class QueryOptions(winrt.system.Object):
     @_property
     def storage_provider_id_filter(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[str]]: ...
 
-class SortEntryVector(winrt.system.Object, typing.MutableSequence[SortEntry]):
+class SortEntryVector(winrt.system.Object, winrt._winrt.MutableSequence[SortEntry]):
     def __len__(self) -> int: ...
     @typing.overload
     def __getitem__(self, index: int) -> SortEntry: ...
     @typing.overload
     def __getitem__(self, index: slice) -> winrt.system.Array[SortEntry]: ...
-    def insert(self, index: int, value: SortEntry) -> None: ...
     @typing.overload
     def __delitem__(self, index: int) -> None: ...
     @typing.overload

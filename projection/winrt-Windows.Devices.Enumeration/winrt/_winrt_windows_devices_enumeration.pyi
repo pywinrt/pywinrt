@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 
+import winrt._winrt
 import winrt.system
 import winrt.windows.applicationmodel.background
 import winrt.windows.foundation
@@ -101,7 +102,7 @@ class DeviceInformation(winrt.system.Object, metaclass=DeviceInformation_Static)
     @_property
     def pairing(self) -> typing.Optional[DeviceInformationPairing]: ...
 
-class DeviceInformationCollection(winrt.system.Object, typing.Sequence[DeviceInformation]):
+class DeviceInformationCollection(winrt.system.Object, winrt._winrt.Sequence[DeviceInformation]):
     def __len__(self) -> int: ...
     @typing.overload
     def __getitem__(self, index: int) -> DeviceInformation: ...

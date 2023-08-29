@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 
+import winrt._winrt
 import winrt.system
 import winrt.windows.foundation
 import winrt.windows.foundation.collections
@@ -68,7 +69,7 @@ class DnssdServiceInstance(winrt.system.Object):
     @_property
     def text_attributes(self) -> typing.Optional[winrt.windows.foundation.collections.IMap[str, str]]: ...
 
-class DnssdServiceInstanceCollection(winrt.system.Object, typing.Sequence[DnssdServiceInstance]):
+class DnssdServiceInstanceCollection(winrt.system.Object, winrt._winrt.Sequence[DnssdServiceInstance]):
     def __len__(self) -> int: ...
     @typing.overload
     def __getitem__(self, index: int) -> DnssdServiceInstance: ...

@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 
+import winrt._winrt
 import winrt.system
 import winrt.windows.foundation
 import winrt.windows.foundation.collections
@@ -669,7 +670,7 @@ class XmlLoadSettings(winrt.system.Object):
     @element_content_white_space.setter
     def element_content_white_space(self, value: bool) -> None: ...
 
-class XmlNamedNodeMap(winrt.system.Object, typing.Sequence[IXmlNode]):
+class XmlNamedNodeMap(winrt.system.Object, winrt._winrt.Sequence[IXmlNode]):
     def __len__(self) -> int: ...
     @typing.overload
     def __getitem__(self, index: int) -> IXmlNode: ...
@@ -693,7 +694,7 @@ class XmlNamedNodeMap(winrt.system.Object, typing.Sequence[IXmlNode]):
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
-class XmlNodeList(winrt.system.Object, typing.Sequence[IXmlNode]):
+class XmlNodeList(winrt.system.Object, winrt._winrt.Sequence[IXmlNode]):
     def __len__(self) -> int: ...
     @typing.overload
     def __getitem__(self, index: int) -> IXmlNode: ...

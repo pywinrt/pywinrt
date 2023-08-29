@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 
+import winrt._winrt
 import winrt.system
 import winrt.windows.applicationmodel.core
 import winrt.windows.foundation
@@ -135,13 +136,12 @@ class WindowTabCloseRequestedEventArgs(winrt.system.Object):
     @_property
     def tab(self) -> typing.Optional[WindowTab]: ...
 
-class WindowTabCollection(winrt.system.Object, typing.MutableSequence[WindowTab]):
+class WindowTabCollection(winrt.system.Object, winrt._winrt.MutableSequence[WindowTab]):
     def __len__(self) -> int: ...
     @typing.overload
     def __getitem__(self, index: int) -> WindowTab: ...
     @typing.overload
     def __getitem__(self, index: slice) -> winrt.system.Array[WindowTab]: ...
-    def insert(self, index: int, value: WindowTab) -> None: ...
     @typing.overload
     def __delitem__(self, index: int) -> None: ...
     @typing.overload

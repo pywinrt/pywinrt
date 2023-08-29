@@ -237,6 +237,7 @@ static void custom_set(winrt::hresult& instance, int32_t value)
         w.write("import uuid as _uuid\n");
         w.write("from builtins import property as _property\n");
         w.write("\n");
+        w.write("import winrt._winrt\n");
         w.write("import winrt.system\n");
 
         w.write_each<write_python_import_namespace>(needed_namespaces);

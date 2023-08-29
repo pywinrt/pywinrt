@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 
+import winrt._winrt
 import winrt.system
 import winrt.windows.foundation
 import winrt.windows.foundation.collections
@@ -166,13 +167,12 @@ class RelativeSource(winrt.system.Object):
     @mode.setter
     def mode(self, value: RelativeSourceMode) -> None: ...
 
-class ICollectionView(winrt.system.Object, typing.MutableSequence[winrt.system.Object]):
+class ICollectionView(winrt.system.Object, winrt._winrt.MutableSequence[winrt.system.Object]):
     def __len__(self) -> int: ...
     @typing.overload
     def __getitem__(self, index: int) -> winrt.system.Object: ...
     @typing.overload
     def __getitem__(self, index: slice) -> winrt.system.Array[winrt.system.Object]: ...
-    def insert(self, index: int, value: winrt.system.Object) -> None: ...
     @typing.overload
     def __delitem__(self, index: int) -> None: ...
     @typing.overload

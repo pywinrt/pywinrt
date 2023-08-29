@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 
+import winrt._winrt
 import winrt.system
 import winrt.windows.foundation
 import winrt.windows.foundation.collections
@@ -17,13 +18,12 @@ from winrt.windows.storage.pickers import PickerLocationId, PickerViewMode
 
 Self = typing.TypeVar('Self')
 
-class FileExtensionVector(winrt.system.Object, typing.MutableSequence[str]):
+class FileExtensionVector(winrt.system.Object, winrt._winrt.MutableSequence[str]):
     def __len__(self) -> int: ...
     @typing.overload
     def __getitem__(self, index: int) -> str: ...
     @typing.overload
     def __getitem__(self, index: slice) -> winrt.system.Array[str]: ...
-    def insert(self, index: int, value: str) -> None: ...
     @typing.overload
     def __delitem__(self, index: int) -> None: ...
     @typing.overload
@@ -87,7 +87,7 @@ class FileOpenPicker(winrt.system.Object, metaclass=FileOpenPicker_Static):
     @_property
     def user(self) -> typing.Optional[winrt.windows.system.User]: ...
 
-class FilePickerFileTypesOrderedMap(winrt.system.Object, typing.MutableMapping[str, winrt.windows.foundation.collections.IVector[str]]):
+class FilePickerFileTypesOrderedMap(winrt.system.Object, winrt._winrt.MutableMapping[str, winrt.windows.foundation.collections.IVector[str]]):
     def __len__(self) -> int: ...
     def __iter__(self) -> typing.Iterator[str]: ...
     def __contains__(self, key: object) -> bool:...
@@ -106,7 +106,7 @@ class FilePickerFileTypesOrderedMap(winrt.system.Object, typing.MutableMapping[s
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
-class FilePickerSelectedFilesArray(winrt.system.Object, typing.Sequence[winrt.windows.storage.StorageFile]):
+class FilePickerSelectedFilesArray(winrt.system.Object, winrt._winrt.Sequence[winrt.windows.storage.StorageFile]):
     def __len__(self) -> int: ...
     @typing.overload
     def __getitem__(self, index: int) -> winrt.windows.storage.StorageFile: ...

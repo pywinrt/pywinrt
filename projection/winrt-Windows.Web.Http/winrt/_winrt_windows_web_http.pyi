@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 
+import winrt._winrt
 import winrt.system
 import winrt.windows.foundation
 import winrt.windows.foundation.collections
@@ -126,7 +127,7 @@ class HttpCookie(winrt.system.Object):
     @_property
     def path(self) -> str: ...
 
-class HttpCookieCollection(winrt.system.Object, typing.Sequence[HttpCookie]):
+class HttpCookieCollection(winrt.system.Object, winrt._winrt.Sequence[HttpCookie]):
     def __len__(self) -> int: ...
     @typing.overload
     def __getitem__(self, index: int) -> HttpCookie: ...

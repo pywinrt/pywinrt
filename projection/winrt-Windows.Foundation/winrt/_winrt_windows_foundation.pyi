@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 
+import winrt._winrt
 import winrt.system
 import winrt.windows.foundation.collections
 
@@ -166,7 +167,7 @@ class Uri(winrt.system.Object, metaclass=Uri_Static):
     @_property
     def display_iri(self) -> str: ...
 
-class WwwFormUrlDecoder(winrt.system.Object, typing.Sequence[IWwwFormUrlDecoderEntry]):
+class WwwFormUrlDecoder(winrt.system.Object, winrt._winrt.Sequence[IWwwFormUrlDecoderEntry]):
     def __len__(self) -> int: ...
     @typing.overload
     def __getitem__(self, index: int) -> IWwwFormUrlDecoderEntry: ...

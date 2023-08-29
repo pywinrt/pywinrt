@@ -4009,11 +4009,11 @@ if (!return_value)
 
             if (implements_imap(type))
             {
-                w.write(", typing.MutableMapping%", type_args);
+                w.write(", winrt._winrt.MutableMapping%", type_args);
             }
             else
             {
-                w.write(", typing.Mapping%", type_args);
+                w.write(", winrt._winrt.Mapping%", type_args);
             }
         }
         else if (implements_sequence(type))
@@ -4036,11 +4036,11 @@ if (!return_value)
 
             if (implements_ivector(type))
             {
-                w.write(", typing.MutableSequence%", type_args);
+                w.write(", winrt._winrt.MutableSequence%", type_args);
             }
             else
             {
-                w.write(", typing.Sequence%", type_args);
+                w.write(", winrt._winrt.Sequence%", type_args);
             }
         }
 
@@ -4375,16 +4375,7 @@ if (!return_value)
                     type,
                     [&](MethodDef const& method)
                     {
-                        if (method.Name() == "InsertAt")
-                        {
-                            auto value_type
-                                = (method.Signature().Params().first + 1)->Type();
-
-                            w.write(
-                                "def insert(self, index: int, value: %) -> None: ...\n",
-                                bind<write_nonnullable_python_type>(value_type));
-                        }
-                        else if (method.Name() == "GetAt")
+                        if (method.Name() == "GetAt")
                         {
                             auto value_type = method.Signature().ReturnType().Type();
 

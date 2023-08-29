@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 
+import winrt._winrt
 import winrt.system
 import winrt.windows.foundation
 import winrt.windows.foundation.collections
@@ -95,7 +96,7 @@ class LearningModel(winrt.system.Object, metaclass=LearningModel_Static):
     @_property
     def version(self) -> winrt.system.Int64: ...
 
-class LearningModelBinding(winrt.system.Object, typing.Mapping[str, winrt.system.Object]):
+class LearningModelBinding(winrt.system.Object, winrt._winrt.Mapping[str, winrt.system.Object]):
     def __len__(self) -> int: ...
     def __iter__(self) -> typing.Iterator[str]: ...
     def __contains__(self, key: object) -> bool:...
