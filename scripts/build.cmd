@@ -9,7 +9,7 @@ goto :init
     echo build pywinrt
     echo.
     echo USAGE:
-    echo   build.cmd [flags] "build target" 
+    echo   build.cmd [flags] "build target"
     echo.
     echo.  -h, --help               shows this help
     echo.  -v, --verbose            shows detailed output
@@ -23,7 +23,7 @@ goto :init
     set "OPT_VERBOSE_NINJA="
     set "OPT_VERBOSE_CMAKE="
     set "OPT_FORCE_CMAKE="
-    set "BUILD_TYPE=Debug"
+    set "BUILD_TYPE=Release"
     set "BUILD_VERSION=0.0.0"
     set "BUILD_TARGET="
 

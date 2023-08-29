@@ -4,11 +4,17 @@ import sys
 
 REPO_ROOT_PATH = pathlib.Path(__file__).parent.parent.resolve()
 PROJECTION_PATH = REPO_ROOT_PATH / "projection"
-PYWINRT_EXE = (
-    (REPO_ROOT_PATH / "_tools" / "PyWinRT" / "bin" / "pywinrt.exe")
-    if "--nuget" in sys.argv
-    else (REPO_ROOT_PATH / "_build" / "Windows" / "x86" / "Debug" / "pywinrt.exe")
-)
+
+if "--nuget" in sys.argv:
+    PYWINRT_EXE = REPO_ROOT_PATH / "_tools" / "PyWinRT" / "bin" / "pywinrt.exe"
+elif "--debug" in sys.argv:
+    PYWINRT_EXE = (
+        REPO_ROOT_PATH / "_build" / "Windows" / "x86" / "Debug" / "pywinrt.exe"
+    )
+else:
+    PYWINRT_EXE = (
+        REPO_ROOT_PATH / "_build" / "Windows" / "x86" / "Release" / "pywinrt.exe"
+    )
 
 if not PYWINRT_EXE.exists():
     raise RuntimeError("pywinrt.exe not found. Please run `./scripts/fetch-tools.cmd`")
