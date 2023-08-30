@@ -15,7 +15,6 @@ classifiers = [
 ]
 dynamic = ["version"]
 requires-python = ">=3.9,<3.13"
-dependencies = ["winrt-runtime==0.0.0"]
 
 [project.urls]
 # Homepage = "https://github.com/pywrint/pywrinrt"

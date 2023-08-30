@@ -288,6 +288,22 @@ static void custom_set(winrt::hresult& instance, int32_t value)
     }
 
     /**
+     * Writes a `requirements.txt` file.
+     *
+     * @param folder The folder to write the file to.
+     */
+    inline void write_requirements_txt(stdfs::path const& folder)
+    {
+        writer w{};
+
+        write_license(w, "#");
+
+        w.write("winrt-runtime==%\n", PYWINRT_VERSION_STRING);
+
+        w.flush_to_file(folder / "requirements.txt");
+    }
+
+    /**
      * Writes a `all-requirements.txt` file for the given namespaces.
      *
      * No file is written if the set of namespaces is empty.

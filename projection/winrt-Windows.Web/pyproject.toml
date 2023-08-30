@@ -13,9 +13,8 @@ classifiers = [
     "Programming Language :: Python :: 3",
     "Target Audience :: Developers",
 ]
-dynamic = ["version", "optional-dependencies"]
+dynamic = ["version", "dependencies", "optional-dependencies"]
 requires-python = ">=3.9,<3.13"
-dependencies = ["winrt-runtime==0.0.0"]
 
 [project.urls]
 # Homepage = "https://github.com/pywrint/pywrinrt"
@@ -25,6 +24,7 @@ Changelog = "https://github.com/pywinrt/pywinrt/blob/main/CHANGELOG.md"
 
 [tool.setuptools.dynamic]
 version = { file = "../winrt-sdk/version.txt" }
+dependencies = { file = "requirements.txt" }
 optional-dependencies.all = { file = "all-requirements.txt" }
 
 [tool.cibuildwheel]

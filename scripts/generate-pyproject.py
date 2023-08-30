@@ -19,7 +19,7 @@ classifiers = [
     "Target Audience :: Developers",
 ]
 dynamic = ["version"{extra_dynamic}]
-requires-python = ">=3.9,<3.13"{dependencies}
+requires-python = ">=3.9,<3.13"
 
 [project.urls]
 # Homepage = "https://github.com/pywrint/pywrinrt"
@@ -28,7 +28,7 @@ Repository = "https://github.com/pywrint/pywrinrt"
 Changelog = "https://github.com/pywinrt/pywinrt/blob/main/CHANGELOG.md"
 
 [tool.setuptools.dynamic]
-version = {{ file = "{relative}/winrt-sdk/version.txt" }}{optional_dependencies}
+version = {{ file = "{relative}/winrt-sdk/version.txt" }}{dependencies}{optional_dependencies}
 {find_src}
 [tool.cibuildwheel]
 # use local winrt-sdk build dependency
@@ -41,6 +41,9 @@ skip = "pp*"
 [tool.cibuildwheel.windows]
 archs = ["x86", "AMD64", "ARM64"]
 """
+
+DEPENDENCIES = """
+dependencies = { file = "requirements.txt" }"""
 
 OPTIONAL_DEPENDENCIES = """
 optional-dependencies.all = { file = "all-requirements.txt" }"""
@@ -134,6 +137,7 @@ def write_project_files(
 ) -> None:
     package_name = package_path.name
     relative_package_path = package_path.relative_to(PROJECTION_PATH)
+    has_requirements = (package_path / "requirements.txt").exists()
     has_all_requirements = (package_path / "all-requirements.txt").exists()
 
     with open(package_path / "pyproject.toml", "w", newline="\n") as f:
@@ -141,12 +145,9 @@ def write_project_files(
             PYPROJECT_TOML_TEMPLATE.format(
                 package_name=package_name,
                 module_name=module_name,
-                extra_dynamic=', "optional-dependencies"'
-                if has_all_requirements
-                else "",
-                dependencies=""
-                if package_name == "winrt-runtime"
-                else '\ndependencies = ["winrt-runtime==0.0.0"]',
+                extra_dynamic=(', "dependencies"' if has_requirements else "")
+                + (', "optional-dependencies"' if has_all_requirements else ""),
+                dependencies=DEPENDENCIES if has_requirements else "",
                 optional_dependencies=OPTIONAL_DEPENDENCIES
                 if has_all_requirements
                 else "",

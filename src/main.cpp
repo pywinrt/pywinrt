@@ -255,6 +255,7 @@ Where <spec> is one or more of:
                         write_namespace_h(header_dir, ns, namespaces, members);
                         write_namespace_dunder_init_py(ns_dir, ns, members);
                         write_namespace_pyi(ns_winrt_dir, namespaces, ns, members);
+                        write_requirements_txt(ns_package_dir);
                         write_all_requirements_txt(ns_package_dir, namespaces);
                     });
             }
