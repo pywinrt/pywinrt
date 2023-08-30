@@ -1,4 +1,5 @@
 import subprocess
+import sys
 from glob import iglob
 from itertools import chain
 from pathlib import Path
@@ -14,8 +15,7 @@ for package_path in chain(
     subprocess.check_call(
         [
             "cibuildwheel",
-            "--only",
-            "cp312-win_arm64",
             package_path,
         ]
+        + (sys.argv[1:] or ["--platform", "windows"])
     )

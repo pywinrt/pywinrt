@@ -42,11 +42,15 @@ The resulting executable will be `_build\Windows\x86\Debug\pywinrt.exe`.
 
 ## Regenerating the projection
 
-Once a local debug build of `pywinrt.exe` is built, it can be used to update
+Once a local build of `pywinrt.exe` is built, it can be used to update
 the generated files of the projection. This requires that the Windows SDK is
 installed either via the Visual Studio Installer or standalone.
 
     py .\scripts\generate-python.py
+
+Some additional files are also generated instead by:
+
+    py .\scripts\generate-pyproject.py
 
 ## Regenerating other upstream code
 
@@ -86,4 +90,16 @@ If using MSYS2 shell for MINGW, this can be simplified to:
 
 ## Building the Nuget package
 
+To build the nuget package for the `pywinrt.exe` tool.
+
     .\scripts\build_pywinrt_nuget.cmd
+
+## Building Python wheels
+
+To build Python wheels of the projection packages:
+
+    py .\scripts\build-wheels.py
+
+To only build for a specific Python and target architecture:
+
+    py .\scripts\build-wheels.py --only cp312_win_amd64
