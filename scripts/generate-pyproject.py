@@ -33,7 +33,7 @@ version = {{ file = "{relative}/winrt-sdk/version.txt" }}{optional_dependencies}
 # use local winrt-sdk build dependency
 environment = {{ PYTHONPATH="{relative}/winrt-sdk/src" }}
 # don't install winrt-sdk from PyPI
-build-frontend = "build; args: --skip-dependency-check --no-isolation"
+build-frontend = {{ name = "build", args = ["--skip-dependency-check", "--no-isolation"] }}
 # don't build for PyPy
 skip = "pp*"
 
