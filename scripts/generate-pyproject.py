@@ -1,5 +1,6 @@
-from glob import iglob
+from itertools import chain
 from pathlib import Path
+from typing import List
 
 PYPROJECT_TOML_TEMPLATE = """\
 # WARNING: Please don't edit this file. It was automatically generated.
@@ -125,101 +126,62 @@ def winrt_ns_to_py_package(ns: str) -> str:
     return ".".join(avoid_keyword(x.lower()) for x in ns.split("."))
 
 
-with open(PROJECTION_PATH / "winrt-runtime" / "pyproject.toml", "w", newline="\n") as f:
-    f.write(
-        PYPROJECT_TOML_TEMPLATE.format(
-            package_name="winrt-runtime",
-            module_name="winrt.system",
-            **(PYPROJECT_DEFAULTS | dict(dependencies="", find_src=FIND_SRC)),
-        )
-    )
+def write_project_files(
+    package_path: Path,
+    module_name: str,
+    ext_module_name: str,
+    sources: List[str],
+) -> None:
+    package_name = package_path.name
+    relative_package_path = package_path.relative_to(PROJECTION_PATH)
+    has_all_requirements = (package_path / "all-requirements.txt").exists()
 
-with open(PROJECTION_PATH / "winrt-runtime" / "setup.py", "w", newline="\n") as f:
-    f.write(
-        SETUP_PY_TEMPLATE.format(
-            ext_module="_winrt",
-            sources='"_winrt.cpp", "_winrt_array.cpp", "runtime.cpp"',
-            package_data="",
-        )
-    )
-
-for package_path in iglob(str(PROJECTION_PATH / "interop" / "winrt-*")):
-    package = Path(package_path).name
-    ns = package.removeprefix("winrt-")
-    module = f"winrt.{winrt_ns_to_py_package(ns)}"
-
-    with open(
-        PROJECTION_PATH / "interop" / package / "pyproject.toml", "w", newline="\n"
-    ) as f:
+    with open(package_path / "pyproject.toml", "w", newline="\n") as f:
         f.write(
             PYPROJECT_TOML_TEMPLATE.format(
-                package_name=package,
-                module_name=module,
-                **(PYPROJECT_DEFAULTS | dict(relative="../..")),
+                package_name=package_name,
+                module_name=module_name,
+                extra_dynamic=', "optional-dependencies"'
+                if has_all_requirements
+                else "",
+                dependencies=""
+                if package_name == "winrt-runtime"
+                else '\ndependencies = ["winrt-runtime==0.0.0"]',
+                optional_dependencies=OPTIONAL_DEPENDENCIES
+                if has_all_requirements
+                else "",
+                find_src=FIND_SRC if (package_path / "src").exists() else "",
+                relative="/".join([".."] * len(relative_package_path.parts)),
             )
         )
 
-    with open(
-        PROJECTION_PATH / "interop" / package / "setup.py", "w", newline="\n"
-    ) as f:
+    with open(package_path / "setup.py", "w", newline="\n") as f:
         f.write(
             SETUP_PY_TEMPLATE.format(
-                ext_module=f"_{module.replace('.', '_')}",
-                sources=f'"py.{ns}.cpp"',
-                package_data='\n    package_data={"winrt": ["*.pyi"]},',
+                ext_module=ext_module_name,
+                sources=", ".join(f'"{x}"' for x in sources),
+                package_data=""
+                if package_name == "winrt-runtime"
+                else '\n    package_data={"winrt": ["*.pyi"]},',
             )
         )
 
-for package_path in iglob(str(PROJECTION_PATH / "winrt-Windows.*")):
-    package = Path(package_path).name
-    ns = package.removeprefix("winrt-")
-    module = f"winrt.{winrt_ns_to_py_package(ns)}"
 
-    with open(PROJECTION_PATH / package / "pyproject.toml", "w", newline="\n") as f:
-        optional_dependencies = (
-            dict(
-                optional_dependencies=OPTIONAL_DEPENDENCIES,
-                extra_dynamic=', "optional-dependencies"',
-            )
-            if (PROJECTION_PATH / package / "all-requirements.txt").exists()
-            else {}
-        )
+write_project_files(
+    PROJECTION_PATH / "winrt-runtime",
+    "winrt.system",
+    "_winrt",
+    ["_winrt.cpp", "_winrt_array.cpp", "runtime.cpp"],
+)
 
-        f.write(
-            PYPROJECT_TOML_TEMPLATE.format(
-                package_name=package,
-                module_name=module,
-                **(PYPROJECT_DEFAULTS | optional_dependencies),
-            )
-        )
+for package_path in chain(
+    (PROJECTION_PATH / "interop").glob("winrt-*"),
+    (PROJECTION_PATH).glob("winrt-Windows.*"),
+    [PROJECTION_PATH / "winrt-TestComponent"],
+):
+    namespace = package_path.name.removeprefix("winrt-")
+    module_name = f"winrt.{winrt_ns_to_py_package(namespace)}"
+    ext_module_name = f"_{module_name.replace('.', '_')}"
+    source_file = f"py.{namespace}.cpp"
 
-    with open(PROJECTION_PATH / package / "setup.py", "w", newline="\n") as f:
-        f.write(
-            SETUP_PY_TEMPLATE.format(
-                ext_module=f"_{module.replace('.', '_')}",
-                sources=f'"py.{ns}.cpp"',
-                package_data='\n    package_data={"winrt": ["*.pyi"]},',
-            )
-        )
-
-with open(
-    PROJECTION_PATH / "winrt-TestComponent" / "pyproject.toml", "w", newline="\n"
-) as f:
-    f.write(
-        PYPROJECT_TOML_TEMPLATE.format(
-            package_name="winrt-TestComponent",
-            module_name="winrt.testcomponent",
-            **(PYPROJECT_DEFAULTS | dict(find_src=FIND_SRC)),
-        )
-    )
-
-    with open(
-        PROJECTION_PATH / "winrt-TestComponent" / "setup.py", "w", newline="\n"
-    ) as f:
-        f.write(
-            SETUP_PY_TEMPLATE.format(
-                ext_module="_winrt_testcomponent",
-                sources='"py.TestComponent.cpp"',
-                package_data='\n    package_data={"winrt": ["*.pyi"]},',
-            )
-        )
+    write_project_files(package_path, module_name, ext_module_name, [source_file])
