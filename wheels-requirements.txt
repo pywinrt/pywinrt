@@ -1,0 +1,5 @@
+build==0.10.0
+cibuildwheel @ https://github.com/pypa/cibuildwheel/archive/refs/heads/frontend-flags.zip
+setuptools==68.0.0
+setuptools-scm==7.1.0
+wheel==0.41.1

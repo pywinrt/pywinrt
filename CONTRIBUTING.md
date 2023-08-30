@@ -98,8 +98,8 @@ To build the nuget package for the `pywinrt.exe` tool.
 
 To build Python wheels of the projection packages:
 
-    py .\scripts\build-wheels.py
+    py .\scripts\build-bdist.py
 
 To only build for a specific Python and target architecture:
 
-    py .\scripts\build-wheels.py --only cp312_win_amd64
+    py .\scripts\build-bdist.py --only cp312_win_amd64

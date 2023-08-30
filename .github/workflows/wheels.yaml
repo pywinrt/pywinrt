@@ -1,0 +1,56 @@
+name: wheels
+concurrency: wheels-${{ github.ref }}
+on: 
+  push:
+      branches:
+        - multi-package
+
+jobs:
+  sdist:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r wheels-requirements.txt
+      - name: Build winrt-sdk
+        run: pyproject-build --outdir wheelhouse projection/winrt-sdk
+      - name: Install winrt-sdk
+        run: |
+          $whl = (Get-ChildItem wheelhouse/winrt_sdk-*.whl | Select-Object -First 1).FullName
+          pip install $whl
+      - name: Build sdists
+        run: python scripts/build-sdist.py
+      - name: Upload wheels
+        uses: actions/upload-artifact@v3
+        with:
+          name: wheels
+          path: wheelhouse/
+  bdist:
+    runs-on: windows-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        py:
+          - cp39
+          - cp310
+          - cp311
+          - cp312
+        arch:
+          - win_amd64
+          - win32
+          - win_arm64
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r wheels-requirements.txt
+      - name: Build bdist wheels
+        run: python scripts/build-bdist.py --only ${{ matrix.py }}-${{ matrix.arch }}
+      - name: Upload wheels
+        uses: actions/upload-artifact@v3
+        with:
+          name: wheels
+          path: wheelhouse/
