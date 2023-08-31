@@ -17,7 +17,8 @@ license = {{ text = "MIT" }}
 classifiers = [
     "Operating System :: Microsoft :: Windows",
     "Programming Language :: Python :: 3",
-    "Target Audience :: Developers",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Intended Audience :: Developers",
 ]
 dynamic = ["version"{extra_dynamic}]
 requires-python = ">=3.9,<3.13"
