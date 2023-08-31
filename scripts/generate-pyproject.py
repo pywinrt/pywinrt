@@ -12,6 +12,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "{package_name}"
 description = "Python projection of Windows Runtime (WinRT) APIs"
+readme = "README.md"
 license = {{ text = "MIT" }}
 classifiers = [
     "Operating System :: Microsoft :: Windows",
@@ -53,14 +54,6 @@ FIND_SRC = """
 where = ["src"]
 """
 
-PYPROJECT_DEFAULTS = dict(
-    dependencies='\ndependencies = ["winrt-runtime==0.0.0"]',
-    optional_dependencies="",
-    find_src="",
-    relative="..",
-    extra_dynamic="",
-)
-
 SETUP_PY_TEMPLATE = """\
 # WARNING: Please don't edit this file. It was automatically generated.
 
@@ -78,6 +71,16 @@ setup(
         )
     ],{package_data}
 )
+"""
+
+README_TEMPLATE = """\
+<!-- warning: Please don't edit this file. It was automatically generated. -->
+
+# {package_name}
+
+Windows Runtime (WinRT) APIs for for the `{namespace}` namespace.
+
+This package provides the `{module_name}` module.
 """
 
 PROJECTION_PATH = (Path(__file__).parent.parent / "projection").resolve()
@@ -166,6 +169,16 @@ def write_project_files(
                 else '\n    package_data={"winrt": ["*.pyi"]},',
             )
         )
+
+    if package_name != "winrt-runtime":
+        with open(package_path / "README.md", "w", newline="\n") as f:
+            f.write(
+                README_TEMPLATE.format(
+                    package_name=package_name,
+                    namespace=package_name.removeprefix("winrt-"),
+                    module_name=module_name,
+                )
+            )
 
 
 write_project_files(

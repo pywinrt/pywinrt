@@ -7,6 +7,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "winrt-Windows.Devices.Bluetooth.Advertisement"
 description = "Python projection of Windows Runtime (WinRT) APIs"
+readme = "README.md"
 license = { text = "MIT" }
 classifiers = [
     "Operating System :: Microsoft :: Windows",
