@@ -33,6 +33,8 @@ environment = { PYTHONPATH="../../winrt-sdk/src" }
 build-frontend = { name = "build", args = ["--skip-dependency-check", "--no-isolation"] }
 # don't build for PyPy
 skip = "pp*"
+# suppress warnings about ARM64 testing
+test-skip = "*-win_arm64"
 
 [tool.cibuildwheel.windows]
 archs = ["x86", "AMD64", "ARM64"]
