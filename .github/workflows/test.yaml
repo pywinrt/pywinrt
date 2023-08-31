@@ -4,15 +4,6 @@ concurrency:
   cancel-in-progress: true
 
 on:
-  push:
-    paths:
-      - .github/workflows/test.yaml
-      - projection/**
-      - '!projection/**/*.md'
-      - '!projection/**/*.toml'
-      - '!projection/**/*.txt'
-      - '!projection/**/setup.py'
-      - test/**
   pull_request:
     paths:
       - .github/workflows/test.yaml

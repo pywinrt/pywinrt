@@ -2,8 +2,7 @@ name: wheels
 concurrency: wheels-${{ github.ref }}
 on: 
   push:
-      branches:
-        - multi-package
+      tags: [wheels/*]
 
 jobs:
   sdist:
