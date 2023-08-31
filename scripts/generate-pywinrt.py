@@ -9,17 +9,29 @@ PROJECTION_PATH = REPO_ROOT_PATH / "projection"
 
 if "--nuget" in sys.argv:
     PYWINRT_EXE = REPO_ROOT_PATH / "_tools" / "PyWinRT" / "bin" / "pywinrt.exe"
+
+    if not PYWINRT_EXE.exists():
+        raise RuntimeError(
+            "pywinrt.exe not found. Please run `./scripts/fetch-tools.cmd`"
+        )
 elif "--debug" in sys.argv:
     PYWINRT_EXE = (
         REPO_ROOT_PATH / "_build" / "Windows" / "x86" / "Debug" / "pywinrt.exe"
     )
+
+    if not PYWINRT_EXE.exists():
+        raise RuntimeError(
+            "pywinrt.exe not found. Please run `./vsdevcmd-build.cmd --build-type Debug`"
+        )
 else:
     PYWINRT_EXE = (
         REPO_ROOT_PATH / "_build" / "Windows" / "x86" / "Release" / "pywinrt.exe"
     )
 
-if not PYWINRT_EXE.exists():
-    raise RuntimeError("pywinrt.exe not found. Please run `./scripts/fetch-tools.cmd`")
+    if not PYWINRT_EXE.exists():
+        raise RuntimeError(
+            "pywinrt.exe not found. Please run `./scripts/vsdevcmd-build.cmd`"
+        )
 
 
 # generate code for windows sdk
