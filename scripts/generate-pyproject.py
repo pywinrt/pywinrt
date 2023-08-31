@@ -28,7 +28,7 @@ Repository = "https://github.com/pywrint/pywrinrt"
 Changelog = "https://github.com/pywinrt/pywinrt/blob/main/CHANGELOG.md"
 
 [tool.setuptools.dynamic]
-version = {{ file = "{relative}/winrt-sdk/version.txt" }}{dependencies}{optional_dependencies}
+version = {{ file = "pywinrt-version.txt" }}{dependencies}{optional_dependencies}
 {find_src}
 [tool.cibuildwheel]
 # use local winrt-sdk build dependency

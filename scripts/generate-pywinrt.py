@@ -1,4 +1,6 @@
+import itertools
 import pathlib
+import shutil
 import subprocess
 import sys
 
@@ -74,3 +76,13 @@ subprocess.check_call(
         PROJECTION_PATH,
     ]
 )
+
+# copy versioned files to non-generated packages
+for path in itertools.chain(
+    [PROJECTION_PATH / "winrt-sdk", PROJECTION_PATH / "winrt-runtime"],
+    (PROJECTION_PATH / "interop").glob("winrt-*"),
+):
+    shutil.copy(
+        str(PROJECTION_PATH / "winrt-Windows.Foundation" / "pywinrt-version.txt"),
+        str(path / "pywinrt-version.txt"),
+    )

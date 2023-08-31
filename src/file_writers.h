@@ -288,6 +288,20 @@ static void custom_set(winrt::hresult& instance, int32_t value)
     }
 
     /**
+     * Writes a `pywinrt-version.txt` file.
+     *
+     * @param folder The folder to write the file to.
+     */
+    inline void write_pywinrt_version_txt(stdfs::path const& folder)
+    {
+        writer w{};
+
+        w.write(PYWINRT_VERSION_STRING);
+
+        w.flush_to_file(folder / "pywinrt-version.txt");
+    }
+
+    /**
      * Writes a `requirements.txt` file.
      *
      * @param folder The folder to write the file to.

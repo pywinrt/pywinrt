@@ -17,6 +17,9 @@ classifiers = [
 ]
 dynamic = ["version"]
 
+[tool.setuptools.dynamic]
+version = { file = "pywinrt-version.txt" }
+
 [project.urls]
 # Homepage = "https://github.com/pywrint/pywrinrt"
 # Documentation = "https://readthedocs.org"

@@ -23,7 +23,7 @@ Repository = "https://github.com/pywrint/pywrinrt"
 Changelog = "https://github.com/pywinrt/pywinrt/blob/main/CHANGELOG.md"
 
 [tool.setuptools.dynamic]
-version = { file = "../winrt-sdk/version.txt" }
+version = { file = "pywinrt-version.txt" }
 dependencies = { file = "requirements.txt" }
 optional-dependencies.all = { file = "all-requirements.txt" }
 
