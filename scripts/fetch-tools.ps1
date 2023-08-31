@@ -3,9 +3,9 @@
 param(
     [Parameter(Mandatory=$false)]
     [string]$CppWinRTVersion = "2.0.230706.1",
-    
+
     [Parameter(Mandatory=$false)]
-    [string]$PyWinRTVersion = "1.0.0-beta.10",
+    [string]$PyWinRTVersion = "2.0.0-beta.1",
 
     [Parameter(Mandatory=$false)]
     [string]$TestWinRTVersion = "1.0.12",
