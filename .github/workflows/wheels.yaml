@@ -24,7 +24,7 @@ jobs:
       - name: Upload wheels
         uses: actions/upload-artifact@v3
         with:
-          name: wheels
+          name: sdist_${{ github.run_id }}
           path: wheelhouse/
   bdist:
     runs-on: windows-latest
@@ -51,5 +51,19 @@ jobs:
       - name: Upload wheels
         uses: actions/upload-artifact@v3
         with:
-          name: wheels
+          name: bdist_${{ matrix.py }}-${{ matrix.arch }}_${{ github.run_id }}
           path: wheelhouse/
+  publish:
+    needs: [sdist, bdist]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v2
+        with:
+          path: artifacts
+      - run: |
+          mkdir -p dist
+          mv artifacts/{b,s}dist_*/* dist/
+      - uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          user: __token__
+          password: ${{ secrets.PYPI_API_TOKEN }}
