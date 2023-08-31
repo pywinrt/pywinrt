@@ -1,6 +1,6 @@
+import shutil
 import subprocess
 import sys
-from glob import iglob
 from itertools import chain
 from pathlib import Path
 
@@ -8,14 +8,17 @@ PROJECTION_PATH = (Path(__file__).parent.parent / "projection").resolve()
 
 
 for package_path in chain(
-    [str(PROJECTION_PATH / "winrt-runtime")],
-    iglob(str(PROJECTION_PATH / "interop" / "winrt-Windows*")),
-    iglob(str(PROJECTION_PATH / "winrt-Windows*")),
+    [PROJECTION_PATH / "winrt-runtime"],
+    (PROJECTION_PATH / "interop").glob("winrt-Windows*"),
+    PROJECTION_PATH.glob("winrt-Windows*"),
 ):
     subprocess.check_call(
         [
             "cibuildwheel",
-            package_path,
+            str(package_path),
         ]
         + (sys.argv[1:] or ["--platform", "windows"])
     )
+
+    # Build directories are 10s of MBs and will cause CI to run out of space!
+    shutil.rmtree(package_path / "build")
