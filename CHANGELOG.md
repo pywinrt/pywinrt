@@ -4,6 +4,8 @@
 
 ## [Unreleased]
 
+## [v2.0.0-beta.1] - 2023-09-01
+
 ### Added
 - Added `-reference` option to `pywinrt.exe`.
 - Added `-header-path` option to `pywinrt.exe`.
@@ -194,7 +196,8 @@
 ### Removed
 - Removed selecting apartment thread type during module init.
 
-[Unreleased]: https://github.com/pywinrt/pywinrt/compare/v1.0.0-beta.10...HEAD
+[Unreleased]: https://github.com/pywinrt/pywinrt/compare/v2.0.0-beta.1...HEAD
+[v2.0.0-beta.1]: https://github.com/pywinrt/pywinrt/compare/v1.0.0-beta.10...v2.0.0-beta.1
 [v1.0.0-beta.10]: https://github.com/pywinrt/pywinrt/compare/v1.0.0-beta.9...v1.0.0-beta.10
 [v1.0.0-beta.9]: https://github.com/pywinrt/pywinrt/compare/v1.0.0-beta.8...v1.0.0-beta.9
 [v1.0.0-beta.8]: https://github.com/pywinrt/pywinrt/compare/v1.0.0-beta.7...v1.0.0-beta.8
