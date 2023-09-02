@@ -6,6 +6,7 @@
 
 ### Added
 - Added `@final` decorator to runtime class type hints.
+- Added support for Windows App SDK (`Microsoft.Windows` namespace).
 
 ### Fixed
 - Fixed missing `__iter__` type hint on sequences.

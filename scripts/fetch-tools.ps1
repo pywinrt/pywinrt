@@ -8,6 +8,9 @@ param(
     [string]$PyWinRTVersion = "2.0.0-beta.1",
 
     [Parameter(Mandatory=$false)]
+    [string]$WindowsAppSDKVersion = "1.4.231115000",
+
+    [Parameter(Mandatory=$false)]
     [string]$TestWinRTVersion = "1.0.12",
 
     [switch]$useLocalPyWinRT
@@ -30,6 +33,12 @@ if ($LASTEXITCODE -ne 0) {
 
 $source = If ($useLocalPyWinRT) { "-Source", "$repoRootPath" } Else { "" }
 & nuget install PyWinRT -Version $PyWinRTVersion -Prerelease -DependencyVersion Ignore -ExcludeVersion -OutputDirectory "$repoRootPath/_tools" $source
+
+if ($LASTEXITCODE -ne 0) {
+    exit $LASTEXITCODE
+}
+
+& nuget install Microsoft.WindowsAppSDK -Version $WindowsAppSDKVersion -ExcludeVersion -DependencyVersion Ignore -OutputDirectory "$repoRootPath/_tools"
 
 if ($LASTEXITCODE -ne 0) {
     exit $LASTEXITCODE

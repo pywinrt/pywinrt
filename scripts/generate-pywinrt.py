@@ -66,6 +66,38 @@ subprocess.check_call(
     + include_args
 )
 
+# generate code for windows app sdk
+
+WINDOWS_APP_SDK_PACKAGE_METADATA = (
+    REPO_ROOT_PATH / "_tools" / "Microsoft.WindowsAppSDK" / "lib" / "uap10.0"
+)
+WINDOWS_APP_SDK_PACKAGE_METADATA2 = (
+    REPO_ROOT_PATH / "_tools" / "Microsoft.WindowsAppSDK" / "lib" / "uap10.0.18362"
+)
+WINDOWS_APP_SDK_PACKAGE_PATH = (
+    PROJECTION_PATH
+    / "winrt-WindowsAppSDK"
+    / "src"
+    / "winrt_windows_app_sdk"
+    / "pywinrt"
+)
+
+subprocess.check_call(
+    [
+        PYWINRT_EXE,
+        "-input",
+        WINDOWS_APP_SDK_PACKAGE_METADATA,
+        "-input",
+        WINDOWS_APP_SDK_PACKAGE_METADATA2,
+        "-reference",
+        WINDOWS_SDK,
+        "-output",
+        PROJECTION_PATH,
+        "-header-path",
+        WINDOWS_APP_SDK_PACKAGE_PATH,
+    ]
+)
+
 # generate code for test component
 
 TEST_PACKAGE_METADATA = (

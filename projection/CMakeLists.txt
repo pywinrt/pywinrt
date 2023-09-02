@@ -44,6 +44,7 @@ find_package(Python3 REQUIRED COMPONENTS Development.Module)
 ################################################################################
 
 set(WINRT_SDK_PATH "winrt-sdk/src/winrt_sdk")
+set(WINRT_WINDOWS_APP_SDK_PATH "winrt-WindowsAppSDK/src/winrt_windows_app_sdk")
 
 function(pywinrt_add_library target sources)
     Python3_add_library(${target} MODULE "${sources}")
@@ -82,6 +83,7 @@ install(DIRECTORY "${WINRT_RUNTIME_PATH}/src/winrt/" DESTINATION "${PYWINRT_SITE
 
 if (PYWINRT_FULL_PROJECTION)
     file(GLOB packages CONFIGURE_DEPENDS "winrt-Windows.*")
+    file(GLOB app_packages CONFIGURE_DEPENDS "winrt-Microsoft.*")
     file(GLOB interop_packages CONFIGURE_DEPENDS "interop/winrt-Windows.*")
 else()
     # minimum set of packages required for unit tests
@@ -104,11 +106,11 @@ else()
     )
 endif()
 
-foreach(package ${packages} ${interop_packages})
+foreach(package ${packages} ${app_packages} ${interop_packages})
     pywinrt_add_namespace_package(${package})
 
     # speed up builds by precompiling frequently used headers
-    if (package IN_LIST packages)
+    if (package IN_LIST packages OR package IN_LIST app_packages)
         if (NOT first_target)
             set(first_target ${package_target})
 
@@ -130,6 +132,14 @@ foreach(package ${packages} ${interop_packages})
 
     # don't define ${package_target}_EXPORTS symbol to avoid shared precompiled header warning
     set_target_properties(${package_target} PROPERTIES DEFINE_SYMBOL "")
+
+    # windows app sdk headers
+    if (package IN_LIST app_packages)
+        target_include_directories(${package_target} PRIVATE
+            "${WINRT_WINDOWS_APP_SDK_PATH}/cppwinrt"
+            "${WINRT_WINDOWS_APP_SDK_PATH}/pywinrt"
+        )
+    endif()
 endforeach()
 
 # test component package

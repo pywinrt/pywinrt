@@ -11,6 +11,7 @@ for package_path in chain(
     [PROJECTION_PATH / "winrt-runtime"],
     (PROJECTION_PATH / "interop").glob("winrt-Windows*"),
     PROJECTION_PATH.glob("winrt-Windows*"),
+    PROJECTION_PATH.glob("winrt-Microsoft*"),
 ):
     subprocess.check_call(
         [
