@@ -14,6 +14,10 @@ the bindings will be generated in a modular fashion and published as separate
 packages, one per Windows SDK namespace. The top level namespace has been
 changed back from `winsdk` to the original `winrt`.
 
+## Documentation
+
+https://pywinrt.readthedocs.io
+
 # pywirnt.exe
 
 This tool is used in conjunction with [cppwinrt](https://github.com/microsoft/cppwinrt)

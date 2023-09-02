@@ -20,7 +20,7 @@ requires-python = ">=3.9,<3.13"
 
 [project.urls]
 # Homepage = "https://github.com/pywrint/pywrinrt"
-# Documentation = "https://readthedocs.org"
+Documentation = "https://pywinrt.readthedocs.io"
 Repository = "https://github.com/pywrint/pywrinrt"
 Changelog = "https://github.com/pywinrt/pywinrt/blob/main/CHANGELOG.md"
 
