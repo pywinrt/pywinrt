@@ -32,6 +32,9 @@ Changelog = "https://github.com/pywinrt/pywinrt/blob/main/CHANGELOG.md"
 [tool.setuptools.dynamic]
 version = {{ file = "pywinrt-version.txt" }}{dependencies}{optional_dependencies}
 {find_src}
+[tool.setuptools.package-data]
+winrt = ["*.pyi"{extra_winrt_package_data}]
+
 [tool.cibuildwheel]
 # use local winrt-sdk build dependency
 environment = {{ PYTHONPATH="{relative}/winrt-sdk/src" }}
@@ -72,7 +75,7 @@ setup(
             extra_compile_args=["/std:c++20", "/permissive-"],
             libraries=["windowsapp"],
         )
-    ],{package_data}
+    ],
 )
 """
 
@@ -157,6 +160,9 @@ def write_project_files(
                 optional_dependencies=OPTIONAL_DEPENDENCIES
                 if has_all_requirements
                 else "",
+                extra_winrt_package_data=', "py.typed"'
+                if package_name == "winrt-runtime"
+                else "",
                 find_src=FIND_SRC if (package_path / "src").exists() else "",
                 relative="/".join([".."] * len(relative_package_path.parts)),
             )
@@ -167,9 +173,6 @@ def write_project_files(
             SETUP_PY_TEMPLATE.format(
                 ext_module=ext_module_name,
                 sources=", ".join(f'"{x}"' for x in sources),
-                package_data=""
-                if package_name == "winrt-runtime"
-                else '\n    package_data={"winrt": ["*.pyi"]},',
             )
         )
 

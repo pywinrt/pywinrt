@@ -30,6 +30,9 @@ version = { file = "pywinrt-version.txt" }
 [tool.setuptools.packages.find]
 where = ["src"]
 
+[tool.setuptools.package-data]
+winrt = ["*.pyi", "py.typed"]
+
 [tool.cibuildwheel]
 # use local winrt-sdk build dependency
 environment = { PYTHONPATH="../winrt-sdk/src" }

@@ -13,5 +13,4 @@ setup(
             libraries=["windowsapp"],
         )
     ],
-    package_data={"winrt": ["*.pyi"]},
 )
