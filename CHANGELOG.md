@@ -4,6 +4,9 @@
 
 ## [Unreleased]
 
+### Fixed
+- Fixed missing `__iter__` type hint on sequences.
+
 ## [v2.0.0-beta.1] - 2023-09-01
 
 ### Added
