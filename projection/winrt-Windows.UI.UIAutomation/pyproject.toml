@@ -28,6 +28,9 @@ Changelog = "https://github.com/pywinrt/pywinrt/blob/main/CHANGELOG.md"
 version = { file = "pywinrt-version.txt" }
 dependencies = { file = "requirements.txt" }
 
+[tool.setuptools.package-data]
+winrt = ["*.pyi"]
+
 [tool.cibuildwheel]
 # use local winrt-sdk build dependency
 environment = { PYTHONPATH="../winrt-sdk/src" }

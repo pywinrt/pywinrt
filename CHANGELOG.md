@@ -10,6 +10,7 @@
 ### Fixed
 - Fixed missing `__iter__` type hint on sequences.
 - Fixed index type on sequences index operators.
+- Fixed `py.typed` and `_winrt.pyi` missing from `winrt-runtime` package.
 
 ## [v2.0.0-beta.1] - 2023-09-01
 
