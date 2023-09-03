@@ -6,6 +6,7 @@
 
 ### Fixed
 - Fixed missing `__iter__` type hint on sequences.
+- Fixed index type on sequences index operators.
 
 ## [v2.0.0-beta.1] - 2023-09-01
 

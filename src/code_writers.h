@@ -4381,7 +4381,7 @@ if (!return_value)
 
                             w.write("@typing.overload\n");
                             w.write(
-                                "def __getitem__(self, index: int) -> %: ...\n",
+                                "def __getitem__(self, index: typing.SupportsIndex) -> %: ...\n",
                                 bind<write_nonnullable_python_type>(value_type));
                             w.write("@typing.overload\n");
                             w.write(
@@ -4395,7 +4395,7 @@ if (!return_value)
 
                             w.write("@typing.overload\n");
                             w.write(
-                                "def __setitem__(self, index: int, value: %) -> None: ...\n",
+                                "def __setitem__(self, index: typing.SupportsIndex, value: %) -> None: ...\n",
                                 bind<write_nonnullable_python_type>(value_type));
                             w.write("@typing.overload\n");
                             w.write(
@@ -4405,7 +4405,8 @@ if (!return_value)
                         else if (method.Name() == "RemoveAt")
                         {
                             w.write("@typing.overload\n");
-                            w.write("def __delitem__(self, index: int) -> None: ...\n");
+                            w.write(
+                                "def __delitem__(self, index: typing.SupportsIndex) -> None: ...\n");
                             w.write("@typing.overload\n");
                             w.write(
                                 "def __delitem__(self, index: slice) -> None: ...\n");
