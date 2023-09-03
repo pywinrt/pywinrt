@@ -4410,6 +4410,14 @@ if (!return_value)
                             w.write(
                                 "def __delitem__(self, index: slice) -> None: ...\n");
                         }
+                        else if (method.Name() == "First")
+                        {
+                            auto return_type = method.Signature().ReturnType().Type();
+
+                            w.write(
+                                "def __iter__(self) -> %: ...\n",
+                                bind<write_nonnullable_python_type>(return_type));
+                        }
                     });
             }
             else if (implements_iiterable(type))
