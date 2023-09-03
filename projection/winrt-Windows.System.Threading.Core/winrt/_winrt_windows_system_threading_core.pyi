@@ -16,6 +16,7 @@ from winrt.windows.system.threading.core import SignalHandler
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class PreallocatedWorkItem(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PreallocatedWorkItem: ...
@@ -27,6 +28,7 @@ class PreallocatedWorkItem(winrt.system.Object):
     def __new__(cls: typing.Type[PreallocatedWorkItem], handler: typing.Optional[winrt.windows.system.threading.WorkItemHandler], priority: winrt.windows.system.threading.WorkItemPriority, options: winrt.windows.system.threading.WorkItemOptions) -> PreallocatedWorkItem:...
     def run_async(self) -> winrt.windows.foundation.IAsyncAction: ...
 
+@typing.final
 class SignalNotifier_Static(type):
     @typing.overload
     def attach_to_event(cls, name: str, handler: typing.Optional[SignalHandler], /) -> typing.Optional[SignalNotifier]: ...
@@ -37,6 +39,7 @@ class SignalNotifier_Static(type):
     @typing.overload
     def attach_to_semaphore(cls, name: str, handler: typing.Optional[SignalHandler], timeout: datetime.timedelta, /) -> typing.Optional[SignalNotifier]: ...
 
+@typing.final
 class SignalNotifier(winrt.system.Object, metaclass=SignalNotifier_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SignalNotifier: ...

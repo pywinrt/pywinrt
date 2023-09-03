@@ -16,6 +16,7 @@ from winrt.windows.phone.system.userprofile.gameservices.core import GameService
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class GameService_Static(type):
     def get_authentication_status(cls) -> winrt.system.UInt32: ...
     def get_gamer_profile_async(cls) -> winrt.windows.foundation.IAsyncOperation[GameServicePropertyCollection]: ...
@@ -29,10 +30,12 @@ class GameService_Static(type):
     @_property
     def service_uri(cls) -> typing.Optional[winrt.windows.foundation.Uri]: ...
 
+@typing.final
 class GameService(winrt.system.Object, metaclass=GameService_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GameService: ...
 
+@typing.final
 class GameServicePropertyCollection(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GameServicePropertyCollection: ...

@@ -14,6 +14,7 @@ import winrt.windows.foundation.collections
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class CommunicationBlockingAccessManager_Static(type):
     def is_blocked_number_async(cls, number: str, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     def show_block_numbers_u_i(cls, phone_numbers: typing.Iterable[str], /) -> bool: ...
@@ -23,16 +24,19 @@ class CommunicationBlockingAccessManager_Static(type):
     @_property
     def is_blocking_active(cls) -> bool: ...
 
+@typing.final
 class CommunicationBlockingAccessManager(winrt.system.Object, metaclass=CommunicationBlockingAccessManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CommunicationBlockingAccessManager: ...
 
+@typing.final
 class CommunicationBlockingAppManager_Static(type):
     def request_set_as_active_blocking_app_async(cls) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     def show_communication_blocking_settings_u_i(cls) -> None: ...
     @_property
     def is_current_app_active_blocking_app(cls) -> bool: ...
 
+@typing.final
 class CommunicationBlockingAppManager(winrt.system.Object, metaclass=CommunicationBlockingAppManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CommunicationBlockingAppManager: ...

@@ -22,14 +22,17 @@ from winrt.windows.devices.display.core import DisplayBitsPerChannel, DisplayDev
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class DisplayPresentationRate:
     vertical_sync_rate: winrt.windows.foundation.numerics.Rational
     vertical_syncs_per_presentation: winrt.system.Int32
     def __init__(self, vertical_sync_rate: winrt.windows.foundation.numerics.Rational, vertical_syncs_per_presentation: winrt.system.Int32) -> None: ...
 
+@typing.final
 class DisplayAdapter_Static(type):
     def from_id(cls, id: winrt.windows.graphics.DisplayAdapterId, /) -> typing.Optional[DisplayAdapter]: ...
 
+@typing.final
 class DisplayAdapter(winrt.system.Object, metaclass=DisplayAdapter_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DisplayAdapter: ...
@@ -50,6 +53,7 @@ class DisplayAdapter(winrt.system.Object, metaclass=DisplayAdapter_Static):
     @_property
     def source_count(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class DisplayDevice(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DisplayDevice: ...
@@ -62,13 +66,16 @@ class DisplayDevice(winrt.system.Object):
     def is_capability_supported(self, capability: DisplayDeviceCapability, /) -> bool: ...
     def wait_for_v_blank(self, source: typing.Optional[DisplaySource], /) -> None: ...
 
+@typing.final
 class DisplayFence(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DisplayFence: ...
 
+@typing.final
 class DisplayManager_Static(type):
     def create(cls, options: DisplayManagerOptions, /) -> typing.Optional[DisplayManager]: ...
 
+@typing.final
 class DisplayManager(winrt.system.Object, metaclass=DisplayManager_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -95,6 +102,7 @@ class DisplayManager(winrt.system.Object, metaclass=DisplayManager_Static):
     def add_paths_failed_or_invalidated(self, handler: winrt.windows.foundation.TypedEventHandler[DisplayManager, DisplayManagerPathsFailedOrInvalidatedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_paths_failed_or_invalidated(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class DisplayManagerChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DisplayManagerChangedEventArgs: ...
@@ -104,6 +112,7 @@ class DisplayManagerChangedEventArgs(winrt.system.Object):
     @handled.setter
     def handled(self, value: bool) -> None: ...
 
+@typing.final
 class DisplayManagerDisabledEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DisplayManagerDisabledEventArgs: ...
@@ -113,6 +122,7 @@ class DisplayManagerDisabledEventArgs(winrt.system.Object):
     @handled.setter
     def handled(self, value: bool) -> None: ...
 
+@typing.final
 class DisplayManagerEnabledEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DisplayManagerEnabledEventArgs: ...
@@ -122,6 +132,7 @@ class DisplayManagerEnabledEventArgs(winrt.system.Object):
     @handled.setter
     def handled(self, value: bool) -> None: ...
 
+@typing.final
 class DisplayManagerPathsFailedOrInvalidatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DisplayManagerPathsFailedOrInvalidatedEventArgs: ...
@@ -131,6 +142,7 @@ class DisplayManagerPathsFailedOrInvalidatedEventArgs(winrt.system.Object):
     @handled.setter
     def handled(self, value: bool) -> None: ...
 
+@typing.final
 class DisplayManagerResultWithState(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DisplayManagerResultWithState: ...
@@ -141,6 +153,7 @@ class DisplayManagerResultWithState(winrt.system.Object):
     @_property
     def state(self) -> typing.Optional[DisplayState]: ...
 
+@typing.final
 class DisplayModeInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DisplayModeInfo: ...
@@ -163,6 +176,7 @@ class DisplayModeInfo(winrt.system.Object):
     @_property
     def physical_presentation_rate(self) -> DisplayPresentationRate: ...
 
+@typing.final
 class DisplayPath(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DisplayPath: ...
@@ -217,9 +231,11 @@ class DisplayPath(winrt.system.Object):
     @physical_presentation_rate.setter
     def physical_presentation_rate(self, value: typing.Optional[typing.Optional[DisplayPresentationRate]]) -> None: ...
 
+@typing.final
 class DisplayPrimaryDescription_Static(type):
     def create_with_properties(cls, extra_properties: typing.Iterable[winrt.windows.foundation.collections.IKeyValuePair[_uuid.UUID, winrt.system.Object]], width: winrt.system.UInt32, height: winrt.system.UInt32, pixel_format: winrt.windows.graphics.directx.DirectXPixelFormat, color_space: winrt.windows.graphics.directx.DirectXColorSpace, is_stereo: bool, multisample_description: winrt.windows.graphics.directx.direct3d11.Direct3DMultisampleDescription, /) -> typing.Optional[DisplayPrimaryDescription]: ...
 
+@typing.final
 class DisplayPrimaryDescription(winrt.system.Object, metaclass=DisplayPrimaryDescription_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DisplayPrimaryDescription: ...
@@ -239,10 +255,12 @@ class DisplayPrimaryDescription(winrt.system.Object, metaclass=DisplayPrimaryDes
     @_property
     def width(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class DisplayScanout(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DisplayScanout: ...
 
+@typing.final
 class DisplaySource(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DisplaySource: ...
@@ -256,6 +274,7 @@ class DisplaySource(winrt.system.Object):
     @_property
     def status(self) -> DisplaySourceStatus: ...
 
+@typing.final
 class DisplayState(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DisplayState: ...
@@ -281,6 +300,7 @@ class DisplayState(winrt.system.Object):
     @_property
     def views(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[DisplayView]]: ...
 
+@typing.final
 class DisplayStateOperationResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DisplayStateOperationResult: ...
@@ -289,10 +309,12 @@ class DisplayStateOperationResult(winrt.system.Object):
     @_property
     def status(self) -> DisplayStateOperationStatus: ...
 
+@typing.final
 class DisplaySurface(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DisplaySurface: ...
 
+@typing.final
 class DisplayTarget(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DisplayTarget: ...
@@ -322,6 +344,7 @@ class DisplayTarget(winrt.system.Object):
     @_property
     def usage_kind(self) -> winrt.windows.devices.display.DisplayMonitorUsageKind: ...
 
+@typing.final
 class DisplayTask(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DisplayTask: ...
@@ -329,6 +352,7 @@ class DisplayTask(winrt.system.Object):
     def set_signal(self, signal_kind: DisplayTaskSignalKind, fence: typing.Optional[DisplayFence], /) -> None: ...
     def set_wait(self, ready_fence: typing.Optional[DisplayFence], ready_fence_value: winrt.system.UInt64, /) -> None: ...
 
+@typing.final
 class DisplayTaskPool(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DisplayTaskPool: ...
@@ -336,6 +360,7 @@ class DisplayTaskPool(winrt.system.Object):
     def execute_task(self, task: typing.Optional[DisplayTask], /) -> None: ...
     def try_execute_task(self, task: typing.Optional[DisplayTask], /) -> typing.Optional[DisplayTaskResult]: ...
 
+@typing.final
 class DisplayTaskResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DisplayTaskResult: ...
@@ -346,6 +371,7 @@ class DisplayTaskResult(winrt.system.Object):
     @_property
     def source_status(self) -> DisplaySourceStatus: ...
 
+@typing.final
 class DisplayView(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DisplayView: ...
@@ -359,9 +385,11 @@ class DisplayView(winrt.system.Object):
     @_property
     def properties(self) -> typing.Optional[winrt.windows.foundation.collections.IMap[_uuid.UUID, winrt.system.Object]]: ...
 
+@typing.final
 class DisplayWireFormat_Static(type):
     def create_with_properties(cls, extra_properties: typing.Iterable[winrt.windows.foundation.collections.IKeyValuePair[_uuid.UUID, winrt.system.Object]], pixel_encoding: DisplayWireFormatPixelEncoding, bits_per_channel: winrt.system.Int32, color_space: DisplayWireFormatColorSpace, eotf: DisplayWireFormatEotf, hdr_metadata: DisplayWireFormatHdrMetadata, /) -> typing.Optional[DisplayWireFormat]: ...
 
+@typing.final
 class DisplayWireFormat(winrt.system.Object, metaclass=DisplayWireFormat_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DisplayWireFormat: ...

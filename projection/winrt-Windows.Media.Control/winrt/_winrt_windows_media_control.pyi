@@ -18,10 +18,12 @@ from winrt.windows.media.control import GlobalSystemMediaTransportControlsSessio
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class CurrentSessionChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CurrentSessionChangedEventArgs: ...
 
+@typing.final
 class GlobalSystemMediaTransportControlsSession(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GlobalSystemMediaTransportControlsSession: ...
@@ -52,9 +54,11 @@ class GlobalSystemMediaTransportControlsSession(winrt.system.Object):
     @_property
     def source_app_user_model_id(self) -> str: ...
 
+@typing.final
 class GlobalSystemMediaTransportControlsSessionManager_Static(type):
     def request_async(cls) -> winrt.windows.foundation.IAsyncOperation[GlobalSystemMediaTransportControlsSessionManager]: ...
 
+@typing.final
 class GlobalSystemMediaTransportControlsSessionManager(winrt.system.Object, metaclass=GlobalSystemMediaTransportControlsSessionManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GlobalSystemMediaTransportControlsSessionManager: ...
@@ -65,6 +69,7 @@ class GlobalSystemMediaTransportControlsSessionManager(winrt.system.Object, meta
     def add_sessions_changed(self, handler: winrt.windows.foundation.TypedEventHandler[GlobalSystemMediaTransportControlsSessionManager, SessionsChangedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_sessions_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class GlobalSystemMediaTransportControlsSessionMediaProperties(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GlobalSystemMediaTransportControlsSessionMediaProperties: ...
@@ -89,6 +94,7 @@ class GlobalSystemMediaTransportControlsSessionMediaProperties(winrt.system.Obje
     @_property
     def track_number(self) -> winrt.system.Int32: ...
 
+@typing.final
 class GlobalSystemMediaTransportControlsSessionPlaybackControls(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GlobalSystemMediaTransportControlsSessionPlaybackControls: ...
@@ -123,6 +129,7 @@ class GlobalSystemMediaTransportControlsSessionPlaybackControls(winrt.system.Obj
     @_property
     def is_stop_enabled(self) -> bool: ...
 
+@typing.final
 class GlobalSystemMediaTransportControlsSessionPlaybackInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GlobalSystemMediaTransportControlsSessionPlaybackInfo: ...
@@ -139,6 +146,7 @@ class GlobalSystemMediaTransportControlsSessionPlaybackInfo(winrt.system.Object)
     @_property
     def playback_type(self) -> typing.Optional[typing.Optional[winrt.windows.media.MediaPlaybackType]]: ...
 
+@typing.final
 class GlobalSystemMediaTransportControlsSessionTimelineProperties(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GlobalSystemMediaTransportControlsSessionTimelineProperties: ...
@@ -155,18 +163,22 @@ class GlobalSystemMediaTransportControlsSessionTimelineProperties(winrt.system.O
     @_property
     def start_time(self) -> datetime.timedelta: ...
 
+@typing.final
 class MediaPropertiesChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaPropertiesChangedEventArgs: ...
 
+@typing.final
 class PlaybackInfoChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlaybackInfoChangedEventArgs: ...
 
+@typing.final
 class SessionsChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SessionsChangedEventArgs: ...
 
+@typing.final
 class TimelinePropertiesChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TimelinePropertiesChangedEventArgs: ...

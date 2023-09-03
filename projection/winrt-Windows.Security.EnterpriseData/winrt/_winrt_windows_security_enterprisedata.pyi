@@ -19,6 +19,7 @@ from winrt.windows.security.enterprisedata import DataProtectionStatus, Enforcem
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class BufferProtectUnprotectResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BufferProtectUnprotectResult: ...
@@ -27,6 +28,7 @@ class BufferProtectUnprotectResult(winrt.system.Object):
     @_property
     def protection_info(self) -> typing.Optional[DataProtectionInfo]: ...
 
+@typing.final
 class DataProtectionInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DataProtectionInfo: ...
@@ -35,6 +37,7 @@ class DataProtectionInfo(winrt.system.Object):
     @_property
     def status(self) -> DataProtectionStatus: ...
 
+@typing.final
 class DataProtectionManager_Static(type):
     def get_protection_info_async(cls, protected_data: typing.Optional[winrt.windows.storage.streams.IBuffer], /) -> winrt.windows.foundation.IAsyncOperation[DataProtectionInfo]: ...
     def get_stream_protection_info_async(cls, protected_stream: typing.Optional[winrt.windows.storage.streams.IInputStream], /) -> winrt.windows.foundation.IAsyncOperation[DataProtectionInfo]: ...
@@ -43,10 +46,12 @@ class DataProtectionManager_Static(type):
     def unprotect_async(cls, data: typing.Optional[winrt.windows.storage.streams.IBuffer], /) -> winrt.windows.foundation.IAsyncOperation[BufferProtectUnprotectResult]: ...
     def unprotect_stream_async(cls, protected_stream: typing.Optional[winrt.windows.storage.streams.IInputStream], unprotected_stream: typing.Optional[winrt.windows.storage.streams.IOutputStream], /) -> winrt.windows.foundation.IAsyncOperation[DataProtectionInfo]: ...
 
+@typing.final
 class DataProtectionManager(winrt.system.Object, metaclass=DataProtectionManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DataProtectionManager: ...
 
+@typing.final
 class FileProtectionInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FileProtectionInfo: ...
@@ -59,6 +64,7 @@ class FileProtectionInfo(winrt.system.Object):
     @_property
     def is_protect_while_open_supported(self) -> bool: ...
 
+@typing.final
 class FileProtectionManager_Static(type):
     def copy_protection_async(cls, source: typing.Optional[winrt.windows.storage.IStorageItem], target: typing.Optional[winrt.windows.storage.IStorageItem], /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     def create_protected_and_open_async(cls, parent_folder: typing.Optional[winrt.windows.storage.IStorageFolder], desired_name: str, identity: str, collision_option: winrt.windows.storage.CreationCollisionOption, /) -> winrt.windows.foundation.IAsyncOperation[ProtectedFileCreateResult]: ...
@@ -80,20 +86,24 @@ class FileProtectionManager_Static(type):
     @typing.overload
     def unprotect_async(cls, target: typing.Optional[winrt.windows.storage.IStorageItem], options: typing.Optional[FileUnprotectOptions], /) -> winrt.windows.foundation.IAsyncOperation[FileProtectionInfo]: ...
 
+@typing.final
 class FileProtectionManager(winrt.system.Object, metaclass=FileProtectionManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FileProtectionManager: ...
 
+@typing.final
 class FileRevocationManager_Static(type):
     def copy_protection_async(cls, source_storage_item: typing.Optional[winrt.windows.storage.IStorageItem], target_storage_item: typing.Optional[winrt.windows.storage.IStorageItem], /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     def get_status_async(cls, storage_item: typing.Optional[winrt.windows.storage.IStorageItem], /) -> winrt.windows.foundation.IAsyncOperation[FileProtectionStatus]: ...
     def protect_async(cls, storage_item: typing.Optional[winrt.windows.storage.IStorageItem], enterprise_identity: str, /) -> winrt.windows.foundation.IAsyncOperation[FileProtectionStatus]: ...
     def revoke(cls, enterprise_identity: str, /) -> None: ...
 
+@typing.final
 class FileRevocationManager(winrt.system.Object, metaclass=FileRevocationManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FileRevocationManager: ...
 
+@typing.final
 class FileUnprotectOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FileUnprotectOptions: ...
@@ -103,12 +113,14 @@ class FileUnprotectOptions(winrt.system.Object):
     @audit.setter
     def audit(self, value: bool) -> None: ...
 
+@typing.final
 class ProtectedAccessResumedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProtectedAccessResumedEventArgs: ...
     @_property
     def identities(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]: ...
 
+@typing.final
 class ProtectedAccessSuspendingEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProtectedAccessSuspendingEventArgs: ...
@@ -118,6 +130,7 @@ class ProtectedAccessSuspendingEventArgs(winrt.system.Object):
     @_property
     def identities(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]: ...
 
+@typing.final
 class ProtectedContainerExportResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProtectedContainerExportResult: ...
@@ -126,6 +139,7 @@ class ProtectedContainerExportResult(winrt.system.Object):
     @_property
     def status(self) -> ProtectedImportExportStatus: ...
 
+@typing.final
 class ProtectedContainerImportResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProtectedContainerImportResult: ...
@@ -134,12 +148,14 @@ class ProtectedContainerImportResult(winrt.system.Object):
     @_property
     def status(self) -> ProtectedImportExportStatus: ...
 
+@typing.final
 class ProtectedContentRevokedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProtectedContentRevokedEventArgs: ...
     @_property
     def identities(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]: ...
 
+@typing.final
 class ProtectedFileCreateResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProtectedFileCreateResult: ...
@@ -150,6 +166,7 @@ class ProtectedFileCreateResult(winrt.system.Object):
     @_property
     def stream(self) -> typing.Optional[winrt.windows.storage.streams.IRandomAccessStream]: ...
 
+@typing.final
 class ProtectionPolicyAuditInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProtectionPolicyAuditInfo: ...
@@ -174,6 +191,7 @@ class ProtectionPolicyAuditInfo(winrt.system.Object):
     @action.setter
     def action(self, value: ProtectionPolicyAuditAction) -> None: ...
 
+@typing.final
 class ProtectionPolicyManager_Static(type):
     def check_access(cls, source_identity: str, target_identity: str, /) -> ProtectionPolicyEvaluationResult: ...
     def check_access_for_app(cls, source_identity: str, app_package_family_name: str, /) -> ProtectionPolicyEvaluationResult: ...
@@ -230,6 +248,7 @@ class ProtectionPolicyManager_Static(type):
     @_property
     def primary_managed_identity(cls) -> str: ...
 
+@typing.final
 class ProtectionPolicyManager(winrt.system.Object, metaclass=ProtectionPolicyManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProtectionPolicyManager: ...
@@ -242,6 +261,7 @@ class ProtectionPolicyManager(winrt.system.Object, metaclass=ProtectionPolicyMan
     @show_enterprise_indicator.setter
     def show_enterprise_indicator(self, value: bool) -> None: ...
 
+@typing.final
 class ThreadNetworkContext(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...

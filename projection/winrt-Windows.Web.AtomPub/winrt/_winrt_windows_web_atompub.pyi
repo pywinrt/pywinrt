@@ -18,6 +18,7 @@ import winrt.windows.web.syndication
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class AtomPubClient(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AtomPubClient: ...
@@ -59,6 +60,7 @@ class AtomPubClient(winrt.system.Object):
     @bypass_cache_on_retrieve.setter
     def bypass_cache_on_retrieve(self, value: bool) -> None: ...
 
+@typing.final
 class ResourceCollection(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ResourceCollection: ...
@@ -96,6 +98,7 @@ class ResourceCollection(winrt.system.Object):
     @_property
     def element_extensions(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.web.syndication.ISyndicationNode]]: ...
 
+@typing.final
 class ServiceDocument(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ServiceDocument: ...
@@ -127,6 +130,7 @@ class ServiceDocument(winrt.system.Object):
     @_property
     def element_extensions(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.web.syndication.ISyndicationNode]]: ...
 
+@typing.final
 class Workspace(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Workspace: ...

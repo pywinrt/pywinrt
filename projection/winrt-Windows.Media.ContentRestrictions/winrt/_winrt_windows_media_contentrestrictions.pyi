@@ -17,6 +17,7 @@ from winrt.windows.media.contentrestrictions import ContentAccessRestrictionLeve
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class ContentRestrictionsBrowsePolicy(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContentRestrictionsBrowsePolicy: ...
@@ -27,6 +28,7 @@ class ContentRestrictionsBrowsePolicy(winrt.system.Object):
     @_property
     def preferred_age_rating(self) -> typing.Optional[typing.Optional[winrt.system.UInt32]]: ...
 
+@typing.final
 class RatedContentDescription(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RatedContentDescription: ...
@@ -52,6 +54,7 @@ class RatedContentDescription(winrt.system.Object):
     @category.setter
     def category(self, value: RatedContentCategory) -> None: ...
 
+@typing.final
 class RatedContentRestrictions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RatedContentRestrictions: ...

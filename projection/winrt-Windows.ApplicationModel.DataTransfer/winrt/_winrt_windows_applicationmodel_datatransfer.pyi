@@ -21,6 +21,7 @@ from winrt.windows.applicationmodel.datatransfer import DataProviderHandler, Sha
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class Clipboard_Static(type):
     def clear(cls) -> None: ...
     def clear_history(cls) -> bool: ...
@@ -42,10 +43,12 @@ class Clipboard_Static(type):
     def add_content_changed(cls, handler: winrt.windows.foundation.EventHandler[winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_content_changed(cls, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class Clipboard(winrt.system.Object, metaclass=Clipboard_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Clipboard: ...
 
+@typing.final
 class ClipboardContentOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ClipboardContentOptions: ...
@@ -63,10 +66,12 @@ class ClipboardContentOptions(winrt.system.Object):
     @_property
     def roaming_formats(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[str]]: ...
 
+@typing.final
 class ClipboardHistoryChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ClipboardHistoryChangedEventArgs: ...
 
+@typing.final
 class ClipboardHistoryItem(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ClipboardHistoryItem: ...
@@ -77,6 +82,7 @@ class ClipboardHistoryItem(winrt.system.Object):
     @_property
     def timestamp(self) -> datetime.datetime: ...
 
+@typing.final
 class ClipboardHistoryItemsResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ClipboardHistoryItemsResult: ...
@@ -85,6 +91,7 @@ class ClipboardHistoryItemsResult(winrt.system.Object):
     @_property
     def status(self) -> ClipboardHistoryItemsResultStatus: ...
 
+@typing.final
 class DataPackage(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DataPackage: ...
@@ -120,6 +127,7 @@ class DataPackage(winrt.system.Object):
     @_property
     def resource_map(self) -> typing.Optional[winrt.windows.foundation.collections.IMap[str, winrt.windows.storage.streams.RandomAccessStreamReference]]: ...
 
+@typing.final
 class DataPackagePropertySet(winrt.system.Object, winrt._winrt.MutableMapping[str, winrt.system.Object]):
     def __len__(self) -> int: ...
     def __iter__(self) -> typing.Iterator[str]: ...
@@ -189,6 +197,7 @@ class DataPackagePropertySet(winrt.system.Object, winrt._winrt.MutableMapping[st
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class DataPackagePropertySetView(winrt.system.Object, winrt._winrt.Mapping[str, winrt.system.Object]):
     def __len__(self) -> int: ...
     def __iter__(self) -> typing.Iterator[str]: ...
@@ -231,6 +240,7 @@ class DataPackagePropertySetView(winrt.system.Object, winrt._winrt.Mapping[str, 
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class DataPackageView(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DataPackageView: ...
@@ -262,11 +272,13 @@ class DataPackageView(winrt.system.Object):
     @_property
     def requested_operation(self) -> DataPackageOperation: ...
 
+@typing.final
 class DataProviderDeferral(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DataProviderDeferral: ...
     def complete(self) -> None: ...
 
+@typing.final
 class DataProviderRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DataProviderRequest: ...
@@ -277,6 +289,7 @@ class DataProviderRequest(winrt.system.Object):
     @_property
     def format_id(self) -> str: ...
 
+@typing.final
 class DataRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DataRequest: ...
@@ -289,17 +302,20 @@ class DataRequest(winrt.system.Object):
     @_property
     def deadline(self) -> datetime.datetime: ...
 
+@typing.final
 class DataRequestDeferral(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DataRequestDeferral: ...
     def complete(self) -> None: ...
 
+@typing.final
 class DataRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DataRequestedEventArgs: ...
     @_property
     def request(self) -> typing.Optional[DataRequest]: ...
 
+@typing.final
 class DataTransferManager_Static(type):
     def get_for_current_view(cls) -> typing.Optional[DataTransferManager]: ...
     def is_supported(cls) -> bool: ...
@@ -308,6 +324,7 @@ class DataTransferManager_Static(type):
     @typing.overload
     def show_share_u_i(cls, options: typing.Optional[ShareUIOptions], /) -> None: ...
 
+@typing.final
 class DataTransferManager(winrt.system.Object, metaclass=DataTransferManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DataTransferManager: ...
@@ -318,14 +335,17 @@ class DataTransferManager(winrt.system.Object, metaclass=DataTransferManager_Sta
     def add_share_providers_requested(self, handler: winrt.windows.foundation.TypedEventHandler[DataTransferManager, ShareProvidersRequestedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_share_providers_requested(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class HtmlFormatHelper_Static(type):
     def create_html_format(cls, html_fragment: str, /) -> str: ...
     def get_static_fragment(cls, html_format: str, /) -> str: ...
 
+@typing.final
 class HtmlFormatHelper(winrt.system.Object, metaclass=HtmlFormatHelper_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HtmlFormatHelper: ...
 
+@typing.final
 class OperationCompletedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> OperationCompletedEventArgs: ...
@@ -334,12 +354,14 @@ class OperationCompletedEventArgs(winrt.system.Object):
     @_property
     def accepted_format_id(self) -> str: ...
 
+@typing.final
 class ShareCompletedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ShareCompletedEventArgs: ...
     @_property
     def share_target(self) -> typing.Optional[ShareTargetInfo]: ...
 
+@typing.final
 class ShareProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ShareProvider: ...
@@ -355,6 +377,7 @@ class ShareProvider(winrt.system.Object):
     @_property
     def title(self) -> str: ...
 
+@typing.final
 class ShareProviderOperation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ShareProviderOperation: ...
@@ -364,6 +387,7 @@ class ShareProviderOperation(winrt.system.Object):
     @_property
     def provider(self) -> typing.Optional[ShareProvider]: ...
 
+@typing.final
 class ShareProvidersRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ShareProvidersRequestedEventArgs: ...
@@ -373,6 +397,7 @@ class ShareProvidersRequestedEventArgs(winrt.system.Object):
     @_property
     def providers(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[ShareProvider]]: ...
 
+@typing.final
 class ShareTargetInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ShareTargetInfo: ...
@@ -381,6 +406,7 @@ class ShareTargetInfo(winrt.system.Object):
     @_property
     def share_provider(self) -> typing.Optional[ShareProvider]: ...
 
+@typing.final
 class ShareUIOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ShareUIOptions: ...
@@ -394,15 +420,18 @@ class ShareUIOptions(winrt.system.Object):
     @selection_rect.setter
     def selection_rect(self, value: typing.Optional[typing.Optional[winrt.windows.foundation.Rect]]) -> None: ...
 
+@typing.final
 class SharedStorageAccessManager_Static(type):
     def add_file(cls, file: typing.Optional[winrt.windows.storage.IStorageFile], /) -> str: ...
     def redeem_token_for_file_async(cls, token: str, /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.storage.StorageFile]: ...
     def remove_file(cls, token: str, /) -> None: ...
 
+@typing.final
 class SharedStorageAccessManager(winrt.system.Object, metaclass=SharedStorageAccessManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SharedStorageAccessManager: ...
 
+@typing.final
 class StandardDataFormats_Static(type):
     @_property
     def bitmap(cls) -> str: ...
@@ -423,10 +452,12 @@ class StandardDataFormats_Static(type):
     @_property
     def user_activity_json_array(cls) -> str: ...
 
+@typing.final
 class StandardDataFormats(winrt.system.Object, metaclass=StandardDataFormats_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StandardDataFormats: ...
 
+@typing.final
 class TargetApplicationChosenEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TargetApplicationChosenEventArgs: ...

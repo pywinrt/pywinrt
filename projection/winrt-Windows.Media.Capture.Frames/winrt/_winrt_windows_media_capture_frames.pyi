@@ -27,6 +27,7 @@ from winrt.windows.media.capture.frames import MediaFrameReaderAcquisitionMode, 
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class AudioMediaFrame(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AudioMediaFrame: ...
@@ -36,6 +37,7 @@ class AudioMediaFrame(winrt.system.Object):
     @_property
     def frame_reference(self) -> typing.Optional[MediaFrameReference]: ...
 
+@typing.final
 class BufferMediaFrame(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BufferMediaFrame: ...
@@ -44,6 +46,7 @@ class BufferMediaFrame(winrt.system.Object):
     @_property
     def frame_reference(self) -> typing.Optional[MediaFrameReference]: ...
 
+@typing.final
 class DepthMediaFrame(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DepthMediaFrame: ...
@@ -59,6 +62,7 @@ class DepthMediaFrame(winrt.system.Object):
     @_property
     def min_reliable_depth(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class DepthMediaFrameFormat(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DepthMediaFrameFormat: ...
@@ -67,6 +71,7 @@ class DepthMediaFrameFormat(winrt.system.Object):
     @_property
     def video_format(self) -> typing.Optional[VideoMediaFrameFormat]: ...
 
+@typing.final
 class InfraredMediaFrame(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InfraredMediaFrame: ...
@@ -77,10 +82,12 @@ class InfraredMediaFrame(winrt.system.Object):
     @_property
     def video_media_frame(self) -> typing.Optional[VideoMediaFrame]: ...
 
+@typing.final
 class MediaFrameArrivedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaFrameArrivedEventArgs: ...
 
+@typing.final
 class MediaFrameFormat(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaFrameFormat: ...
@@ -97,6 +104,7 @@ class MediaFrameFormat(winrt.system.Object):
     @_property
     def audio_encoding_properties(self) -> typing.Optional[winrt.windows.media.mediaproperties.AudioEncodingProperties]: ...
 
+@typing.final
 class MediaFrameReader(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -113,6 +121,7 @@ class MediaFrameReader(winrt.system.Object):
     @acquisition_mode.setter
     def acquisition_mode(self, value: MediaFrameReaderAcquisitionMode) -> None: ...
 
+@typing.final
 class MediaFrameReference(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -138,6 +147,7 @@ class MediaFrameReference(winrt.system.Object):
     @_property
     def audio_media_frame(self) -> typing.Optional[AudioMediaFrame]: ...
 
+@typing.final
 class MediaFrameSource(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaFrameSource: ...
@@ -154,6 +164,7 @@ class MediaFrameSource(winrt.system.Object):
     @_property
     def supported_formats(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[MediaFrameFormat]]: ...
 
+@typing.final
 class MediaFrameSourceController(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaFrameSourceController: ...
@@ -166,6 +177,7 @@ class MediaFrameSourceController(winrt.system.Object):
     @_property
     def audio_device_controller(self) -> typing.Optional[winrt.windows.media.devices.AudioDeviceController]: ...
 
+@typing.final
 class MediaFrameSourceGetPropertyResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaFrameSourceGetPropertyResult: ...
@@ -174,11 +186,13 @@ class MediaFrameSourceGetPropertyResult(winrt.system.Object):
     @_property
     def value(self) -> typing.Optional[winrt.system.Object]: ...
 
+@typing.final
 class MediaFrameSourceGroup_Static(type):
     def find_all_async(cls) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[MediaFrameSourceGroup]]: ...
     def from_id_async(cls, id: str, /) -> winrt.windows.foundation.IAsyncOperation[MediaFrameSourceGroup]: ...
     def get_device_selector(cls) -> str: ...
 
+@typing.final
 class MediaFrameSourceGroup(winrt.system.Object, metaclass=MediaFrameSourceGroup_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaFrameSourceGroup: ...
@@ -189,6 +203,7 @@ class MediaFrameSourceGroup(winrt.system.Object, metaclass=MediaFrameSourceGroup
     @_property
     def source_infos(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[MediaFrameSourceInfo]]: ...
 
+@typing.final
 class MediaFrameSourceInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaFrameSourceInfo: ...
@@ -214,10 +229,12 @@ class MediaFrameSourceInfo(winrt.system.Object):
     @_property
     def is_shareable(self) -> bool: ...
 
+@typing.final
 class MultiSourceMediaFrameArrivedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MultiSourceMediaFrameArrivedEventArgs: ...
 
+@typing.final
 class MultiSourceMediaFrameReader(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -234,6 +251,7 @@ class MultiSourceMediaFrameReader(winrt.system.Object):
     @acquisition_mode.setter
     def acquisition_mode(self, value: MediaFrameReaderAcquisitionMode) -> None: ...
 
+@typing.final
 class MultiSourceMediaFrameReference(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -242,6 +260,7 @@ class MultiSourceMediaFrameReference(winrt.system.Object):
     def close(self) -> None: ...
     def try_get_frame_reference_by_source_id(self, source_id: str, /) -> typing.Optional[MediaFrameReference]: ...
 
+@typing.final
 class VideoMediaFrame(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VideoMediaFrame: ...
@@ -261,6 +280,7 @@ class VideoMediaFrame(winrt.system.Object):
     @_property
     def video_format(self) -> typing.Optional[VideoMediaFrameFormat]: ...
 
+@typing.final
 class VideoMediaFrameFormat(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VideoMediaFrameFormat: ...

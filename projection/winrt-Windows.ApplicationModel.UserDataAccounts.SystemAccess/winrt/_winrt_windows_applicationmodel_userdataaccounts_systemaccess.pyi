@@ -17,6 +17,7 @@ from winrt.windows.applicationmodel.userdataaccounts.systemaccess import DeviceA
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class DeviceAccountConfiguration(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DeviceAccountConfiguration: ...
@@ -198,6 +199,7 @@ class DeviceAccountConfiguration(winrt.system.Object):
     @_property
     def is_sso_authentication_supported(self) -> bool: ...
 
+@typing.final
 class UserDataAccountSystemAccessManager_Static(type):
     def add_and_show_device_accounts_async(cls, accounts: typing.Iterable[DeviceAccountConfiguration], /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[str]]: ...
     def create_device_account_async(cls, account: typing.Optional[DeviceAccountConfiguration], /) -> winrt.windows.foundation.IAsyncOperation[str]: ...
@@ -205,6 +207,7 @@ class UserDataAccountSystemAccessManager_Static(type):
     def get_device_account_configuration_async(cls, account_id: str, /) -> winrt.windows.foundation.IAsyncOperation[DeviceAccountConfiguration]: ...
     def suppress_local_account_with_account_async(cls, user_data_account_id: str, /) -> winrt.windows.foundation.IAsyncAction: ...
 
+@typing.final
 class UserDataAccountSystemAccessManager(winrt.system.Object, metaclass=UserDataAccountSystemAccessManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDataAccountSystemAccessManager: ...

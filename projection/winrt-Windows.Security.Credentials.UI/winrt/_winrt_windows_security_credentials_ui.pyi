@@ -16,6 +16,7 @@ from winrt.windows.security.credentials.ui import AuthenticationProtocol, Creden
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class CredentialPicker_Static(type):
     @typing.overload
     def pick_async(cls, options: typing.Optional[CredentialPickerOptions], /) -> winrt.windows.foundation.IAsyncOperation[CredentialPickerResults]: ...
@@ -24,10 +25,12 @@ class CredentialPicker_Static(type):
     @typing.overload
     def pick_async(cls, target_name: str, message: str, caption: str, /) -> winrt.windows.foundation.IAsyncOperation[CredentialPickerResults]: ...
 
+@typing.final
 class CredentialPicker(winrt.system.Object, metaclass=CredentialPicker_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CredentialPicker: ...
 
+@typing.final
 class CredentialPickerOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CredentialPickerOptions: ...
@@ -73,6 +76,7 @@ class CredentialPickerOptions(winrt.system.Object):
     @always_display_dialog.setter
     def always_display_dialog(self, value: bool) -> None: ...
 
+@typing.final
 class CredentialPickerResults(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CredentialPickerResults: ...
@@ -91,10 +95,12 @@ class CredentialPickerResults(winrt.system.Object):
     @_property
     def error_code(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class UserConsentVerifier_Static(type):
     def check_availability_async(cls) -> winrt.windows.foundation.IAsyncOperation[UserConsentVerifierAvailability]: ...
     def request_verification_async(cls, message: str, /) -> winrt.windows.foundation.IAsyncOperation[UserConsentVerificationResult]: ...
 
+@typing.final
 class UserConsentVerifier(winrt.system.Object, metaclass=UserConsentVerifier_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserConsentVerifier: ...

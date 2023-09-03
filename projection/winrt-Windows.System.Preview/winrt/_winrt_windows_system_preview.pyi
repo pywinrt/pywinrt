@@ -16,9 +16,11 @@ from winrt.windows.system.preview import HingeState
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class TwoPanelHingedDevicePosturePreview_Static(type):
     def get_default_async(cls) -> winrt.windows.foundation.IAsyncOperation[TwoPanelHingedDevicePosturePreview]: ...
 
+@typing.final
 class TwoPanelHingedDevicePosturePreview(winrt.system.Object, metaclass=TwoPanelHingedDevicePosturePreview_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TwoPanelHingedDevicePosturePreview: ...
@@ -26,6 +28,7 @@ class TwoPanelHingedDevicePosturePreview(winrt.system.Object, metaclass=TwoPanel
     def add_posture_changed(self, handler: winrt.windows.foundation.TypedEventHandler[TwoPanelHingedDevicePosturePreview, TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_posture_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class TwoPanelHingedDevicePosturePreviewReading(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TwoPanelHingedDevicePosturePreviewReading: ...
@@ -42,6 +45,7 @@ class TwoPanelHingedDevicePosturePreviewReading(winrt.system.Object):
     @_property
     def timestamp(self) -> datetime.datetime: ...
 
+@typing.final
 class TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs: ...

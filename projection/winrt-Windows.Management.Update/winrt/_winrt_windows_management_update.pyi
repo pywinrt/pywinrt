@@ -16,10 +16,12 @@ from winrt.windows.management.update import WindowsUpdateAdministratorOptions, W
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class PreviewBuildsManager_Static(type):
     def get_default(cls) -> typing.Optional[PreviewBuildsManager]: ...
     def is_supported(cls) -> bool: ...
 
+@typing.final
 class PreviewBuildsManager(winrt.system.Object, metaclass=PreviewBuildsManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PreviewBuildsManager: ...
@@ -30,12 +32,14 @@ class PreviewBuildsManager(winrt.system.Object, metaclass=PreviewBuildsManager_S
     @are_preview_builds_allowed.setter
     def are_preview_builds_allowed(self, value: bool) -> None: ...
 
+@typing.final
 class PreviewBuildsState(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PreviewBuildsState: ...
     @_property
     def properties(self) -> typing.Optional[winrt.windows.foundation.collections.ValueSet]: ...
 
+@typing.final
 class WindowsUpdate(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WindowsUpdate: ...
@@ -86,6 +90,7 @@ class WindowsUpdate(winrt.system.Object):
     @_property
     def update_id(self) -> str: ...
 
+@typing.final
 class WindowsUpdateActionCompletedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WindowsUpdateActionCompletedEventArgs: ...
@@ -98,6 +103,7 @@ class WindowsUpdateActionCompletedEventArgs(winrt.system.Object):
     @_property
     def update(self) -> typing.Optional[WindowsUpdate]: ...
 
+@typing.final
 class WindowsUpdateActionProgress(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WindowsUpdateActionProgress: ...
@@ -106,6 +112,7 @@ class WindowsUpdateActionProgress(winrt.system.Object):
     @_property
     def progress(self) -> winrt.system.Double: ...
 
+@typing.final
 class WindowsUpdateActionResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WindowsUpdateActionResult: ...
@@ -118,6 +125,7 @@ class WindowsUpdateActionResult(winrt.system.Object):
     @_property
     def timestamp(self) -> datetime.datetime: ...
 
+@typing.final
 class WindowsUpdateAdministrator_Static(type):
     def cancel_restart_request(cls, request_restart_token: str, /) -> None: ...
     def get_registered_administrator(cls, organization_name: str, /) -> typing.Optional[WindowsUpdateGetAdministratorResult]: ...
@@ -126,6 +134,7 @@ class WindowsUpdateAdministrator_Static(type):
     def request_restart(cls, restart_options: typing.Optional[WindowsUpdateRestartRequestOptions], /) -> str: ...
     def unregister_for_administration(cls, organization_name: str, /) -> WindowsUpdateAdministratorStatus: ...
 
+@typing.final
 class WindowsUpdateAdministrator(winrt.system.Object, metaclass=WindowsUpdateAdministrator_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WindowsUpdateAdministrator: ...
@@ -136,6 +145,7 @@ class WindowsUpdateAdministrator(winrt.system.Object, metaclass=WindowsUpdateAdm
     def revoke_windows_update_approval(self, update_id: str, /) -> None: ...
     def start_administrator_scan(self) -> None: ...
 
+@typing.final
 class WindowsUpdateApprovalData(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WindowsUpdateApprovalData: ...
@@ -161,6 +171,7 @@ class WindowsUpdateApprovalData(winrt.system.Object):
     @allow_download_on_metered.setter
     def allow_download_on_metered(self, value: typing.Optional[typing.Optional[bool]]) -> None: ...
 
+@typing.final
 class WindowsUpdateAttentionRequiredInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WindowsUpdateAttentionRequiredInfo: ...
@@ -169,6 +180,7 @@ class WindowsUpdateAttentionRequiredInfo(winrt.system.Object):
     @_property
     def timestamp(self) -> typing.Optional[typing.Optional[datetime.datetime]]: ...
 
+@typing.final
 class WindowsUpdateAttentionRequiredReasonChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WindowsUpdateAttentionRequiredReasonChangedEventArgs: ...
@@ -177,6 +189,7 @@ class WindowsUpdateAttentionRequiredReasonChangedEventArgs(winrt.system.Object):
     @_property
     def update(self) -> typing.Optional[WindowsUpdate]: ...
 
+@typing.final
 class WindowsUpdateGetAdministratorResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WindowsUpdateGetAdministratorResult: ...
@@ -185,6 +198,7 @@ class WindowsUpdateGetAdministratorResult(winrt.system.Object):
     @_property
     def status(self) -> WindowsUpdateAdministratorStatus: ...
 
+@typing.final
 class WindowsUpdateItem(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WindowsUpdateItem: ...
@@ -205,6 +219,7 @@ class WindowsUpdateItem(winrt.system.Object):
     @_property
     def update_id(self) -> str: ...
 
+@typing.final
 class WindowsUpdateManager(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WindowsUpdateManager: ...
@@ -232,6 +247,7 @@ class WindowsUpdateManager(winrt.system.Object):
     @_property
     def last_successful_scan_timestamp(self) -> typing.Optional[typing.Optional[datetime.datetime]]: ...
 
+@typing.final
 class WindowsUpdateProgressChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WindowsUpdateProgressChangedEventArgs: ...
@@ -240,6 +256,7 @@ class WindowsUpdateProgressChangedEventArgs(winrt.system.Object):
     @_property
     def update(self) -> typing.Optional[WindowsUpdate]: ...
 
+@typing.final
 class WindowsUpdateRestartRequestOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WindowsUpdateRestartRequestOptions: ...
@@ -276,6 +293,7 @@ class WindowsUpdateRestartRequestOptions(winrt.system.Object):
     @compliance_deadline_in_days.setter
     def compliance_deadline_in_days(self, value: winrt.system.Int32) -> None: ...
 
+@typing.final
 class WindowsUpdateScanCompletedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WindowsUpdateScanCompletedEventArgs: ...

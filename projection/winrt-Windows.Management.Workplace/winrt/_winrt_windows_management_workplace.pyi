@@ -14,6 +14,7 @@ from winrt.windows.management.workplace import MessagingSyncPolicy
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class MdmPolicy_Static(type):
     def get_messaging_sync_policy(cls) -> MessagingSyncPolicy: ...
     def is_browser_allowed(cls) -> bool: ...
@@ -21,14 +22,17 @@ class MdmPolicy_Static(type):
     def is_microsoft_account_allowed(cls) -> bool: ...
     def is_store_allowed(cls) -> bool: ...
 
+@typing.final
 class MdmPolicy(winrt.system.Object, metaclass=MdmPolicy_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MdmPolicy: ...
 
+@typing.final
 class WorkplaceSettings_Static(type):
     @_property
     def is_microsoft_account_optional(cls) -> bool: ...
 
+@typing.final
 class WorkplaceSettings(winrt.system.Object, metaclass=WorkplaceSettings_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WorkplaceSettings: ...

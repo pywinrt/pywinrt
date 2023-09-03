@@ -17,10 +17,12 @@ from winrt.windows.ui.text import CaretType, FindOptions, FontStretch, FontStyle
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class FontWeight:
     weight: winrt.system.UInt16
     def __init__(self, weight: winrt.system.UInt16) -> None: ...
 
+@typing.final
 class ContentLinkInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContentLinkInfo: ...
@@ -46,6 +48,7 @@ class ContentLinkInfo(winrt.system.Object):
     @display_text.setter
     def display_text(self, value: str) -> None: ...
 
+@typing.final
 class FontWeights_Static(type):
     @_property
     def black(cls) -> FontWeight: ...
@@ -70,10 +73,12 @@ class FontWeights_Static(type):
     @_property
     def thin(cls) -> FontWeight: ...
 
+@typing.final
 class FontWeights(winrt.system.Object, metaclass=FontWeights_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FontWeights: ...
 
+@typing.final
 class RichEditTextDocument(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RichEditTextDocument: ...
@@ -124,6 +129,7 @@ class RichEditTextDocument(winrt.system.Object):
     @alignment_includes_trailing_whitespace.setter
     def alignment_includes_trailing_whitespace(self, value: bool) -> None: ...
 
+@typing.final
 class RichEditTextRange(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RichEditTextRange: ...
@@ -204,6 +210,7 @@ class RichEditTextRange(winrt.system.Object):
     @_property
     def story_length(self) -> winrt.system.Int32: ...
 
+@typing.final
 class TextConstants_Static(type):
     @_property
     def auto_color(cls) -> winrt.windows.ui.Color: ...
@@ -222,10 +229,12 @@ class TextConstants_Static(type):
     @_property
     def undefined_int32_value(cls) -> winrt.system.Int32: ...
 
+@typing.final
 class TextConstants(winrt.system.Object, metaclass=TextConstants_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TextConstants: ...
 
+@typing.final
 class ITextCharacterFormat(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ITextCharacterFormat: ...
@@ -327,6 +336,7 @@ class ITextCharacterFormat(winrt.system.Object):
     @weight.setter
     def weight(self, value: winrt.system.Int32) -> None: ...
 
+@typing.final
 class ITextDocument(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ITextDocument: ...
@@ -365,6 +375,7 @@ class ITextDocument(winrt.system.Object):
     @undo_limit.setter
     def undo_limit(self, value: winrt.system.UInt32) -> None: ...
 
+@typing.final
 class ITextParagraphFormat(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ITextParagraphFormat: ...
@@ -456,6 +467,7 @@ class ITextParagraphFormat(winrt.system.Object):
     @widow_control.setter
     def widow_control(self, value: FormatEffect) -> None: ...
 
+@typing.final
 class ITextRange(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ITextRange: ...
@@ -532,6 +544,7 @@ class ITextRange(winrt.system.Object):
     @text.setter
     def text(self, value: str) -> None: ...
 
+@typing.final
 class ITextSelection(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ITextSelection: ...

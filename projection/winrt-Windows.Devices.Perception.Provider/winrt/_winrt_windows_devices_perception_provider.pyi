@@ -20,6 +20,7 @@ from winrt.windows.devices.perception.provider import PerceptionStartFaceAuthent
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class KnownPerceptionFrameKind_Static(type):
     @_property
     def color(cls) -> str: ...
@@ -28,10 +29,12 @@ class KnownPerceptionFrameKind_Static(type):
     @_property
     def infrared(cls) -> str: ...
 
+@typing.final
 class KnownPerceptionFrameKind(winrt.system.Object, metaclass=KnownPerceptionFrameKind_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> KnownPerceptionFrameKind: ...
 
+@typing.final
 class PerceptionControlGroup(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PerceptionControlGroup: ...
@@ -39,6 +42,7 @@ class PerceptionControlGroup(winrt.system.Object):
     @_property
     def frame_provider_ids(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]: ...
 
+@typing.final
 class PerceptionCorrelation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PerceptionCorrelation: ...
@@ -50,6 +54,7 @@ class PerceptionCorrelation(winrt.system.Object):
     @_property
     def target_id(self) -> str: ...
 
+@typing.final
 class PerceptionCorrelationGroup(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PerceptionCorrelationGroup: ...
@@ -57,6 +62,7 @@ class PerceptionCorrelationGroup(winrt.system.Object):
     @_property
     def relative_locations(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[PerceptionCorrelation]]: ...
 
+@typing.final
 class PerceptionFaceAuthenticationGroup(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PerceptionFaceAuthenticationGroup: ...
@@ -64,6 +70,7 @@ class PerceptionFaceAuthenticationGroup(winrt.system.Object):
     @_property
     def frame_provider_ids(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]: ...
 
+@typing.final
 class PerceptionFrame(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PerceptionFrame: ...
@@ -76,6 +83,7 @@ class PerceptionFrame(winrt.system.Object):
     @_property
     def properties(self) -> typing.Optional[winrt.windows.foundation.collections.ValueSet]: ...
 
+@typing.final
 class PerceptionFrameProviderInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PerceptionFrameProviderInfo: ...
@@ -101,6 +109,7 @@ class PerceptionFrameProviderInfo(winrt.system.Object):
     @device_kind.setter
     def device_kind(self, value: str) -> None: ...
 
+@typing.final
 class PerceptionFrameProviderManagerService_Static(type):
     def publish_frame_for_provider(cls, provider: typing.Optional[IPerceptionFrameProvider], frame: typing.Optional[PerceptionFrame], /) -> None: ...
     def register_control_group(cls, manager: typing.Optional[IPerceptionFrameProviderManager], control_group: typing.Optional[PerceptionControlGroup], /) -> None: ...
@@ -113,10 +122,12 @@ class PerceptionFrameProviderManagerService_Static(type):
     def unregister_frame_provider_info(cls, manager: typing.Optional[IPerceptionFrameProviderManager], frame_provider_info: typing.Optional[PerceptionFrameProviderInfo], /) -> None: ...
     def update_availability_for_provider(cls, provider: typing.Optional[IPerceptionFrameProvider], available: bool, /) -> None: ...
 
+@typing.final
 class PerceptionFrameProviderManagerService(winrt.system.Object, metaclass=PerceptionFrameProviderManagerService_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PerceptionFrameProviderManagerService: ...
 
+@typing.final
 class PerceptionPropertyChangeRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PerceptionPropertyChangeRequest: ...
@@ -130,6 +141,7 @@ class PerceptionPropertyChangeRequest(winrt.system.Object):
     @_property
     def value(self) -> typing.Optional[winrt.system.Object]: ...
 
+@typing.final
 class PerceptionVideoFrameAllocator(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -140,6 +152,7 @@ class PerceptionVideoFrameAllocator(winrt.system.Object):
     def close(self) -> None: ...
     def copy_from_video_frame(self, frame: typing.Optional[winrt.windows.media.VideoFrame], /) -> typing.Optional[PerceptionFrame]: ...
 
+@typing.final
 class IPerceptionFrameProvider(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -156,6 +169,7 @@ class IPerceptionFrameProvider(winrt.system.Object):
     @_property
     def properties(self) -> typing.Optional[winrt.windows.foundation.collections.IPropertySet]: ...
 
+@typing.final
 class IPerceptionFrameProviderManager(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...

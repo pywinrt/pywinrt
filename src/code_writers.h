@@ -4125,6 +4125,7 @@ if (!return_value)
             return;
         }
 
+        w.write("@typing.final\n");
         w.write("class @:\n", type.TypeName());
         {
             writer::indent_guard g{w};
@@ -4164,6 +4165,7 @@ if (!return_value)
 
         if (requires_metaclass(type))
         {
+            w.write("@typing.final\n");
             w.write("class @_Static(type):\n", type.TypeName());
 
             {
@@ -4260,6 +4262,7 @@ if (!return_value)
             metaclass = w.write_temp(", metaclass=@_Static", type.TypeName());
         }
 
+        w.write("@typing.final\n");
         w.write(
             "class @(%%):\n",
             type.TypeName(),

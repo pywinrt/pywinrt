@@ -16,9 +16,11 @@ from winrt.windows.system.remotedesktop.provider import RemoteDesktopConnectionS
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class RemoteDesktopConnectionInfo_Static(type):
     def get_for_launch_uri(cls, launch_uri: typing.Optional[winrt.windows.foundation.Uri], window_id: winrt.windows.ui.WindowId, /) -> typing.Optional[RemoteDesktopConnectionInfo]: ...
 
+@typing.final
 class RemoteDesktopConnectionInfo(winrt.system.Object, metaclass=RemoteDesktopConnectionInfo_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteDesktopConnectionInfo: ...

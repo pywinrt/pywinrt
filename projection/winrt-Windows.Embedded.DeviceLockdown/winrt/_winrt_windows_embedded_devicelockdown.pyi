@@ -14,16 +14,19 @@ import winrt.windows.foundation.collections
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class DeviceLockdownProfile_Static(type):
     def apply_lockdown_profile_async(cls, profile_i_d: _uuid.UUID, /) -> winrt.windows.foundation.IAsyncAction: ...
     def get_current_lockdown_profile(cls) -> _uuid.UUID: ...
     def get_lockdown_profile_information(cls, profile_i_d: _uuid.UUID, /) -> typing.Optional[DeviceLockdownProfileInformation]: ...
     def get_supported_lockdown_profiles(cls) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[_uuid.UUID]]: ...
 
+@typing.final
 class DeviceLockdownProfile(winrt.system.Object, metaclass=DeviceLockdownProfile_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DeviceLockdownProfile: ...
 
+@typing.final
 class DeviceLockdownProfileInformation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DeviceLockdownProfileInformation: ...

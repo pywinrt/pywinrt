@@ -28,6 +28,7 @@ from winrt.windows.media.playback import AutoLoadedDisplayPropertyKind, FailedMe
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class BackgroundMediaPlayer_Static(type):
     def is_media_playing(cls) -> bool: ...
     def send_message_to_background(cls, value: typing.Optional[winrt.windows.foundation.collections.ValueSet], /) -> None: ...
@@ -40,10 +41,12 @@ class BackgroundMediaPlayer_Static(type):
     @_property
     def current(cls) -> typing.Optional[MediaPlayer]: ...
 
+@typing.final
 class BackgroundMediaPlayer(winrt.system.Object, metaclass=BackgroundMediaPlayer_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BackgroundMediaPlayer: ...
 
+@typing.final
 class CurrentMediaPlaybackItemChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CurrentMediaPlaybackItemChangedEventArgs: ...
@@ -54,6 +57,7 @@ class CurrentMediaPlaybackItemChangedEventArgs(winrt.system.Object):
     @_property
     def reason(self) -> MediaPlaybackItemChangedReason: ...
 
+@typing.final
 class MediaBreak(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaBreak: ...
@@ -74,12 +78,14 @@ class MediaBreak(winrt.system.Object):
     @_property
     def presentation_position(self) -> typing.Optional[typing.Optional[datetime.timedelta]]: ...
 
+@typing.final
 class MediaBreakEndedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaBreakEndedEventArgs: ...
     @_property
     def media_break(self) -> typing.Optional[MediaBreak]: ...
 
+@typing.final
 class MediaBreakManager(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaBreakManager: ...
@@ -98,6 +104,7 @@ class MediaBreakManager(winrt.system.Object):
     @_property
     def playback_session(self) -> typing.Optional[MediaPlaybackSession]: ...
 
+@typing.final
 class MediaBreakSchedule(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaBreakSchedule: ...
@@ -118,6 +125,7 @@ class MediaBreakSchedule(winrt.system.Object):
     @_property
     def playback_item(self) -> typing.Optional[MediaPlaybackItem]: ...
 
+@typing.final
 class MediaBreakSeekedOverEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaBreakSeekedOverEventArgs: ...
@@ -128,18 +136,21 @@ class MediaBreakSeekedOverEventArgs(winrt.system.Object):
     @_property
     def seeked_over_breaks(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[MediaBreak]]: ...
 
+@typing.final
 class MediaBreakSkippedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaBreakSkippedEventArgs: ...
     @_property
     def media_break(self) -> typing.Optional[MediaBreak]: ...
 
+@typing.final
 class MediaBreakStartedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaBreakStartedEventArgs: ...
     @_property
     def media_break(self) -> typing.Optional[MediaBreak]: ...
 
+@typing.final
 class MediaItemDisplayProperties(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaItemDisplayProperties: ...
@@ -157,6 +168,7 @@ class MediaItemDisplayProperties(winrt.system.Object):
     @_property
     def video_properties(self) -> typing.Optional[winrt.windows.media.VideoDisplayProperties]: ...
 
+@typing.final
 class MediaPlaybackAudioTrackList(winrt.system.Object, winrt._winrt.Sequence[winrt.windows.media.core.AudioTrack]):
     def __len__(self) -> int: ...
     def __iter__(self) -> winrt.windows.foundation.collections.IIterator[winrt.windows.media.core.AudioTrack]: ...
@@ -179,6 +191,7 @@ class MediaPlaybackAudioTrackList(winrt.system.Object, winrt._winrt.Sequence[win
     @selected_index.setter
     def selected_index(self, value: winrt.system.Int32) -> None: ...
 
+@typing.final
 class MediaPlaybackCommandManager(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaPlaybackCommandManager: ...
@@ -229,6 +242,7 @@ class MediaPlaybackCommandManager(winrt.system.Object):
     @_property
     def shuffle_behavior(self) -> typing.Optional[MediaPlaybackCommandManagerCommandBehavior]: ...
 
+@typing.final
 class MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs: ...
@@ -240,6 +254,7 @@ class MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs(winrt.system.Ob
     @_property
     def auto_repeat_mode(self) -> winrt.windows.media.MediaPlaybackAutoRepeatMode: ...
 
+@typing.final
 class MediaPlaybackCommandManagerCommandBehavior(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaPlaybackCommandManagerCommandBehavior: ...
@@ -254,6 +269,7 @@ class MediaPlaybackCommandManagerCommandBehavior(winrt.system.Object):
     @_property
     def is_enabled(self) -> bool: ...
 
+@typing.final
 class MediaPlaybackCommandManagerFastForwardReceivedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaPlaybackCommandManagerFastForwardReceivedEventArgs: ...
@@ -263,6 +279,7 @@ class MediaPlaybackCommandManagerFastForwardReceivedEventArgs(winrt.system.Objec
     @handled.setter
     def handled(self, value: bool) -> None: ...
 
+@typing.final
 class MediaPlaybackCommandManagerNextReceivedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaPlaybackCommandManagerNextReceivedEventArgs: ...
@@ -272,6 +289,7 @@ class MediaPlaybackCommandManagerNextReceivedEventArgs(winrt.system.Object):
     @handled.setter
     def handled(self, value: bool) -> None: ...
 
+@typing.final
 class MediaPlaybackCommandManagerPauseReceivedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaPlaybackCommandManagerPauseReceivedEventArgs: ...
@@ -281,6 +299,7 @@ class MediaPlaybackCommandManagerPauseReceivedEventArgs(winrt.system.Object):
     @handled.setter
     def handled(self, value: bool) -> None: ...
 
+@typing.final
 class MediaPlaybackCommandManagerPlayReceivedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaPlaybackCommandManagerPlayReceivedEventArgs: ...
@@ -290,6 +309,7 @@ class MediaPlaybackCommandManagerPlayReceivedEventArgs(winrt.system.Object):
     @handled.setter
     def handled(self, value: bool) -> None: ...
 
+@typing.final
 class MediaPlaybackCommandManagerPositionReceivedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaPlaybackCommandManagerPositionReceivedEventArgs: ...
@@ -301,6 +321,7 @@ class MediaPlaybackCommandManagerPositionReceivedEventArgs(winrt.system.Object):
     @_property
     def position(self) -> datetime.timedelta: ...
 
+@typing.final
 class MediaPlaybackCommandManagerPreviousReceivedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaPlaybackCommandManagerPreviousReceivedEventArgs: ...
@@ -310,6 +331,7 @@ class MediaPlaybackCommandManagerPreviousReceivedEventArgs(winrt.system.Object):
     @handled.setter
     def handled(self, value: bool) -> None: ...
 
+@typing.final
 class MediaPlaybackCommandManagerRateReceivedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaPlaybackCommandManagerRateReceivedEventArgs: ...
@@ -321,6 +343,7 @@ class MediaPlaybackCommandManagerRateReceivedEventArgs(winrt.system.Object):
     @_property
     def playback_rate(self) -> winrt.system.Double: ...
 
+@typing.final
 class MediaPlaybackCommandManagerRewindReceivedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaPlaybackCommandManagerRewindReceivedEventArgs: ...
@@ -330,6 +353,7 @@ class MediaPlaybackCommandManagerRewindReceivedEventArgs(winrt.system.Object):
     @handled.setter
     def handled(self, value: bool) -> None: ...
 
+@typing.final
 class MediaPlaybackCommandManagerShuffleReceivedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaPlaybackCommandManagerShuffleReceivedEventArgs: ...
@@ -341,9 +365,11 @@ class MediaPlaybackCommandManagerShuffleReceivedEventArgs(winrt.system.Object):
     @_property
     def is_shuffle_requested(self) -> bool: ...
 
+@typing.final
 class MediaPlaybackItem_Static(type):
     def find_from_media_source(cls, source: typing.Optional[winrt.windows.media.core.MediaSource], /) -> typing.Optional[MediaPlaybackItem]: ...
 
+@typing.final
 class MediaPlaybackItem(winrt.system.Object, metaclass=MediaPlaybackItem_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaPlaybackItem: ...
@@ -390,6 +416,7 @@ class MediaPlaybackItem(winrt.system.Object, metaclass=MediaPlaybackItem_Static)
     @_property
     def total_download_progress(self) -> winrt.system.Double: ...
 
+@typing.final
 class MediaPlaybackItemError(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaPlaybackItemError: ...
@@ -398,6 +425,7 @@ class MediaPlaybackItemError(winrt.system.Object):
     @_property
     def extended_error(self) -> winrt.windows.foundation.HResult: ...
 
+@typing.final
 class MediaPlaybackItemFailedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaPlaybackItemFailedEventArgs: ...
@@ -406,12 +434,14 @@ class MediaPlaybackItemFailedEventArgs(winrt.system.Object):
     @_property
     def item(self) -> typing.Optional[MediaPlaybackItem]: ...
 
+@typing.final
 class MediaPlaybackItemOpenedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaPlaybackItemOpenedEventArgs: ...
     @_property
     def item(self) -> typing.Optional[MediaPlaybackItem]: ...
 
+@typing.final
 class MediaPlaybackList(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaPlaybackList: ...
@@ -455,6 +485,7 @@ class MediaPlaybackList(winrt.system.Object):
     @max_played_items_to_keep_open.setter
     def max_played_items_to_keep_open(self, value: typing.Optional[typing.Optional[winrt.system.UInt32]]) -> None: ...
 
+@typing.final
 class MediaPlaybackSession(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaPlaybackSession: ...
@@ -538,18 +569,21 @@ class MediaPlaybackSession(winrt.system.Object):
     @playback_rotation.setter
     def playback_rotation(self, value: winrt.windows.media.mediaproperties.MediaRotation) -> None: ...
 
+@typing.final
 class MediaPlaybackSessionBufferingStartedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaPlaybackSessionBufferingStartedEventArgs: ...
     @_property
     def is_playback_interruption(self) -> bool: ...
 
+@typing.final
 class MediaPlaybackSessionOutputDegradationPolicyState(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaPlaybackSessionOutputDegradationPolicyState: ...
     @_property
     def video_constriction_reason(self) -> MediaPlaybackSessionVideoConstrictionReason: ...
 
+@typing.final
 class MediaPlaybackSphericalVideoProjection(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaPlaybackSphericalVideoProjection: ...
@@ -574,6 +608,7 @@ class MediaPlaybackSphericalVideoProjection(winrt.system.Object):
     @frame_format.setter
     def frame_format(self, value: winrt.windows.media.mediaproperties.SphericalVideoFrameFormat) -> None: ...
 
+@typing.final
 class MediaPlaybackTimedMetadataTrackList(winrt.system.Object, winrt._winrt.Sequence[winrt.windows.media.core.TimedMetadataTrack]):
     def __len__(self) -> int: ...
     def __iter__(self) -> winrt.windows.foundation.collections.IIterator[winrt.windows.media.core.TimedMetadataTrack]: ...
@@ -594,6 +629,7 @@ class MediaPlaybackTimedMetadataTrackList(winrt.system.Object, winrt._winrt.Sequ
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class MediaPlaybackVideoTrackList(winrt.system.Object, winrt._winrt.Sequence[winrt.windows.media.core.VideoTrack]):
     def __len__(self) -> int: ...
     def __iter__(self) -> winrt.windows.foundation.collections.IIterator[winrt.windows.media.core.VideoTrack]: ...
@@ -616,6 +652,7 @@ class MediaPlaybackVideoTrackList(winrt.system.Object, winrt._winrt.Sequence[win
     @selected_index.setter
     def selected_index(self, value: winrt.system.Int32) -> None: ...
 
+@typing.final
 class MediaPlayer(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -767,12 +804,14 @@ class MediaPlayer(winrt.system.Object):
     @source.setter
     def source(self, value: typing.Optional[IMediaPlaybackSource]) -> None: ...
 
+@typing.final
 class MediaPlayerDataReceivedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaPlayerDataReceivedEventArgs: ...
     @_property
     def data(self) -> typing.Optional[winrt.windows.foundation.collections.ValueSet]: ...
 
+@typing.final
 class MediaPlayerFailedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaPlayerFailedEventArgs: ...
@@ -783,12 +822,14 @@ class MediaPlayerFailedEventArgs(winrt.system.Object):
     @_property
     def extended_error_code(self) -> winrt.windows.foundation.HResult: ...
 
+@typing.final
 class MediaPlayerRateChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaPlayerRateChangedEventArgs: ...
     @_property
     def new_rate(self) -> winrt.system.Double: ...
 
+@typing.final
 class MediaPlayerSurface(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -802,6 +843,7 @@ class MediaPlayerSurface(winrt.system.Object):
     @_property
     def media_player(self) -> typing.Optional[MediaPlayer]: ...
 
+@typing.final
 class PlaybackMediaMarker(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlaybackMediaMarker: ...
@@ -816,12 +858,14 @@ class PlaybackMediaMarker(winrt.system.Object):
     @_property
     def time(self) -> datetime.timedelta: ...
 
+@typing.final
 class PlaybackMediaMarkerReachedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlaybackMediaMarkerReachedEventArgs: ...
     @_property
     def playback_media_marker(self) -> typing.Optional[PlaybackMediaMarker]: ...
 
+@typing.final
 class PlaybackMediaMarkerSequence(winrt.system.Object):
     def __iter__(self) -> winrt.windows.foundation.collections.IIterator[PlaybackMediaMarker]: ...
     @staticmethod
@@ -832,6 +876,7 @@ class PlaybackMediaMarkerSequence(winrt.system.Object):
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class TimedMetadataPresentationModeChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TimedMetadataPresentationModeChangedEventArgs: ...
@@ -842,6 +887,7 @@ class TimedMetadataPresentationModeChangedEventArgs(winrt.system.Object):
     @_property
     def track(self) -> typing.Optional[winrt.windows.media.core.TimedMetadataTrack]: ...
 
+@typing.final
 class IMediaEnginePlaybackSource(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IMediaEnginePlaybackSource: ...
@@ -849,6 +895,7 @@ class IMediaEnginePlaybackSource(winrt.system.Object):
     @_property
     def current_item(self) -> typing.Optional[MediaPlaybackItem]: ...
 
+@typing.final
 class IMediaPlaybackSource(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IMediaPlaybackSource: ...

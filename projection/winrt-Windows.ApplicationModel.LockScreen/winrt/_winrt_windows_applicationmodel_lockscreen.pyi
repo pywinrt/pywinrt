@@ -15,9 +15,11 @@ import winrt.windows.storage.streams
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class LockApplicationHost_Static(type):
     def get_for_current_view(cls) -> typing.Optional[LockApplicationHost]: ...
 
+@typing.final
 class LockApplicationHost(winrt.system.Object, metaclass=LockApplicationHost_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LockApplicationHost: ...
@@ -25,6 +27,7 @@ class LockApplicationHost(winrt.system.Object, metaclass=LockApplicationHost_Sta
     def add_unlocking(self, handler: winrt.windows.foundation.TypedEventHandler[LockApplicationHost, LockScreenUnlockingEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_unlocking(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class LockScreenBadge(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LockScreenBadge: ...
@@ -38,6 +41,7 @@ class LockScreenBadge(winrt.system.Object):
     @_property
     def number(self) -> typing.Optional[typing.Optional[winrt.system.UInt32]]: ...
 
+@typing.final
 class LockScreenInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LockScreenInfo: ...
@@ -58,11 +62,13 @@ class LockScreenInfo(winrt.system.Object):
     @_property
     def lock_screen_image(self) -> typing.Optional[winrt.windows.storage.streams.IRandomAccessStream]: ...
 
+@typing.final
 class LockScreenUnlockingDeferral(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LockScreenUnlockingDeferral: ...
     def complete(self) -> None: ...
 
+@typing.final
 class LockScreenUnlockingEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LockScreenUnlockingEventArgs: ...

@@ -13,6 +13,7 @@ import winrt.windows.ui.xaml
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class Matrix3D:
     m11: winrt.system.Double
     m12: winrt.system.Double
@@ -32,6 +33,7 @@ class Matrix3D:
     m44: winrt.system.Double
     def __init__(self, m11: winrt.system.Double, m12: winrt.system.Double, m13: winrt.system.Double, m14: winrt.system.Double, m21: winrt.system.Double, m22: winrt.system.Double, m23: winrt.system.Double, m24: winrt.system.Double, m31: winrt.system.Double, m32: winrt.system.Double, m33: winrt.system.Double, m34: winrt.system.Double, offset_x: winrt.system.Double, offset_y: winrt.system.Double, offset_z: winrt.system.Double, m44: winrt.system.Double) -> None: ...
 
+@typing.final
 class CompositeTransform3D_Static(type):
     @_property
     def center_x_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
@@ -58,6 +60,7 @@ class CompositeTransform3D_Static(type):
     @_property
     def translate_z_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class CompositeTransform3D(winrt.system.Object, metaclass=CompositeTransform3D_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositeTransform3D: ...
@@ -111,6 +114,7 @@ class CompositeTransform3D(winrt.system.Object, metaclass=CompositeTransform3D_S
     @center_x.setter
     def center_x(self, value: winrt.system.Double) -> None: ...
 
+@typing.final
 class Matrix3DHelper_Static(type):
     def from_elements(cls, m11: winrt.system.Double, m12: winrt.system.Double, m13: winrt.system.Double, m14: winrt.system.Double, m21: winrt.system.Double, m22: winrt.system.Double, m23: winrt.system.Double, m24: winrt.system.Double, m31: winrt.system.Double, m32: winrt.system.Double, m33: winrt.system.Double, m34: winrt.system.Double, offset_x: winrt.system.Double, offset_y: winrt.system.Double, offset_z: winrt.system.Double, m44: winrt.system.Double, /) -> Matrix3D: ...
     def get_has_inverse(cls, target: Matrix3D, /) -> bool: ...
@@ -120,10 +124,12 @@ class Matrix3DHelper_Static(type):
     @_property
     def identity(cls) -> Matrix3D: ...
 
+@typing.final
 class Matrix3DHelper(winrt.system.Object, metaclass=Matrix3DHelper_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Matrix3DHelper: ...
 
+@typing.final
 class PerspectiveTransform3D_Static(type):
     @_property
     def depth_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
@@ -132,6 +138,7 @@ class PerspectiveTransform3D_Static(type):
     @_property
     def offset_y_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class PerspectiveTransform3D(winrt.system.Object, metaclass=PerspectiveTransform3D_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PerspectiveTransform3D: ...
@@ -149,6 +156,7 @@ class PerspectiveTransform3D(winrt.system.Object, metaclass=PerspectiveTransform
     @depth.setter
     def depth(self, value: winrt.system.Double) -> None: ...
 
+@typing.final
 class Transform3D(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Transform3D: ...

@@ -19,6 +19,7 @@ from winrt.windows.devices.lights.effects import LampArrayEffectCompletionBehavi
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class LampArrayBitmapEffect(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LampArrayBitmapEffect: ...
@@ -44,6 +45,7 @@ class LampArrayBitmapEffect(winrt.system.Object):
     @z_index.setter
     def z_index(self, value: winrt.system.Int32) -> None: ...
 
+@typing.final
 class LampArrayBitmapRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LampArrayBitmapRequestedEventArgs: ...
@@ -51,6 +53,7 @@ class LampArrayBitmapRequestedEventArgs(winrt.system.Object):
     @_property
     def since_started(self) -> datetime.timedelta: ...
 
+@typing.final
 class LampArrayBlinkEffect(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LampArrayBlinkEffect: ...
@@ -92,6 +95,7 @@ class LampArrayBlinkEffect(winrt.system.Object):
     @z_index.setter
     def z_index(self, value: winrt.system.Int32) -> None: ...
 
+@typing.final
 class LampArrayColorRampEffect(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LampArrayColorRampEffect: ...
@@ -117,6 +121,7 @@ class LampArrayColorRampEffect(winrt.system.Object):
     @z_index.setter
     def z_index(self, value: winrt.system.Int32) -> None: ...
 
+@typing.final
 class LampArrayCustomEffect(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LampArrayCustomEffect: ...
@@ -136,11 +141,13 @@ class LampArrayCustomEffect(winrt.system.Object):
     @z_index.setter
     def z_index(self, value: winrt.system.Int32) -> None: ...
 
+@typing.final
 class LampArrayEffectPlaylist_Static(type):
     def pause_all(cls, value: typing.Iterable[LampArrayEffectPlaylist], /) -> None: ...
     def start_all(cls, value: typing.Iterable[LampArrayEffectPlaylist], /) -> None: ...
     def stop_all(cls, value: typing.Iterable[LampArrayEffectPlaylist], /) -> None: ...
 
+@typing.final
 class LampArrayEffectPlaylist(winrt.system.Object, winrt._winrt.Sequence[ILampArrayEffect], metaclass=LampArrayEffectPlaylist_Static):
     def __len__(self) -> int: ...
     def __iter__(self) -> winrt.windows.foundation.collections.IIterator[ILampArrayEffect]: ...
@@ -175,6 +182,7 @@ class LampArrayEffectPlaylist(winrt.system.Object, winrt._winrt.Sequence[ILampAr
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class LampArraySolidEffect(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LampArraySolidEffect: ...
@@ -200,6 +208,7 @@ class LampArraySolidEffect(winrt.system.Object):
     @color.setter
     def color(self, value: winrt.windows.ui.Color) -> None: ...
 
+@typing.final
 class LampArrayUpdateRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LampArrayUpdateRequestedEventArgs: ...
@@ -210,6 +219,7 @@ class LampArrayUpdateRequestedEventArgs(winrt.system.Object):
     @_property
     def since_started(self) -> datetime.timedelta: ...
 
+@typing.final
 class ILampArrayEffect(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ILampArrayEffect: ...

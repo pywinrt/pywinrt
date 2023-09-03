@@ -15,11 +15,13 @@ import winrt.windows.ui.xaml.media
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class Ellipse(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Ellipse: ...
     def __new__(cls: typing.Type[Ellipse]) -> Ellipse:...
 
+@typing.final
 class Line_Static(type):
     @_property
     def x1_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
@@ -30,6 +32,7 @@ class Line_Static(type):
     @_property
     def y2_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class Line(winrt.system.Object, metaclass=Line_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Line: ...
@@ -51,10 +54,12 @@ class Line(winrt.system.Object, metaclass=Line_Static):
     @x1.setter
     def x1(self, value: winrt.system.Double) -> None: ...
 
+@typing.final
 class Path_Static(type):
     @_property
     def data_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class Path(winrt.system.Object, metaclass=Path_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Path: ...
@@ -64,12 +69,14 @@ class Path(winrt.system.Object, metaclass=Path_Static):
     @data.setter
     def data(self, value: typing.Optional[winrt.windows.ui.xaml.media.Geometry]) -> None: ...
 
+@typing.final
 class Polygon_Static(type):
     @_property
     def fill_rule_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
     @_property
     def points_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class Polygon(winrt.system.Object, metaclass=Polygon_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Polygon: ...
@@ -83,12 +90,14 @@ class Polygon(winrt.system.Object, metaclass=Polygon_Static):
     @fill_rule.setter
     def fill_rule(self, value: winrt.windows.ui.xaml.media.FillRule) -> None: ...
 
+@typing.final
 class Polyline_Static(type):
     @_property
     def fill_rule_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
     @_property
     def points_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class Polyline(winrt.system.Object, metaclass=Polyline_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Polyline: ...
@@ -102,12 +111,14 @@ class Polyline(winrt.system.Object, metaclass=Polyline_Static):
     @fill_rule.setter
     def fill_rule(self, value: winrt.windows.ui.xaml.media.FillRule) -> None: ...
 
+@typing.final
 class Rectangle_Static(type):
     @_property
     def radius_x_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
     @_property
     def radius_y_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class Rectangle(winrt.system.Object, metaclass=Rectangle_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Rectangle: ...
@@ -121,6 +132,7 @@ class Rectangle(winrt.system.Object, metaclass=Rectangle_Static):
     @radius_x.setter
     def radius_x(self, value: winrt.system.Double) -> None: ...
 
+@typing.final
 class Shape_Static(type):
     @_property
     def fill_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
@@ -145,6 +157,7 @@ class Shape_Static(type):
     @_property
     def stroke_thickness_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class Shape(winrt.system.Object, metaclass=Shape_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Shape: ...

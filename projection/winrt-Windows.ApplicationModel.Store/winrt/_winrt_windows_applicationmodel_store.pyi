@@ -18,6 +18,7 @@ from winrt.windows.applicationmodel.store import LicenseChangedEventHandler
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class CurrentApp_Static(type):
     def get_app_purchase_campaign_id_async(cls) -> winrt.windows.foundation.IAsyncOperation[str]: ...
     def get_app_receipt_async(cls) -> winrt.windows.foundation.IAsyncOperation[str]: ...
@@ -44,10 +45,12 @@ class CurrentApp_Static(type):
     @_property
     def link_uri(cls) -> typing.Optional[winrt.windows.foundation.Uri]: ...
 
+@typing.final
 class CurrentApp(winrt.system.Object, metaclass=CurrentApp_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CurrentApp: ...
 
+@typing.final
 class CurrentAppSimulator_Static(type):
     def get_app_purchase_campaign_id_async(cls) -> winrt.windows.foundation.IAsyncOperation[str]: ...
     def get_app_receipt_async(cls) -> winrt.windows.foundation.IAsyncOperation[str]: ...
@@ -72,10 +75,12 @@ class CurrentAppSimulator_Static(type):
     @_property
     def link_uri(cls) -> typing.Optional[winrt.windows.foundation.Uri]: ...
 
+@typing.final
 class CurrentAppSimulator(winrt.system.Object, metaclass=CurrentAppSimulator_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CurrentAppSimulator: ...
 
+@typing.final
 class LicenseInformation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LicenseInformation: ...
@@ -90,6 +95,7 @@ class LicenseInformation(winrt.system.Object):
     @_property
     def product_licenses(self) -> typing.Optional[winrt.windows.foundation.collections.IMapView[str, ProductLicense]]: ...
 
+@typing.final
 class ListingInformation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ListingInformation: ...
@@ -114,6 +120,7 @@ class ListingInformation(winrt.system.Object):
     @_property
     def sale_end_date(self) -> datetime.datetime: ...
 
+@typing.final
 class ProductLicense(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProductLicense: ...
@@ -126,6 +133,7 @@ class ProductLicense(winrt.system.Object):
     @_property
     def is_consumable(self) -> bool: ...
 
+@typing.final
 class ProductListing(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProductListing: ...
@@ -154,6 +162,7 @@ class ProductListing(winrt.system.Object):
     @_property
     def product_type(self) -> ProductType: ...
 
+@typing.final
 class ProductPurchaseDisplayProperties(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProductPurchaseDisplayProperties: ...
@@ -174,6 +183,7 @@ class ProductPurchaseDisplayProperties(winrt.system.Object):
     @description.setter
     def description(self, value: str) -> None: ...
 
+@typing.final
 class PurchaseResults(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PurchaseResults: ...
@@ -186,6 +196,7 @@ class PurchaseResults(winrt.system.Object):
     @_property
     def transaction_id(self) -> _uuid.UUID: ...
 
+@typing.final
 class UnfulfilledConsumable(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UnfulfilledConsumable: ...

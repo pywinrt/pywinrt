@@ -33,12 +33,14 @@ from winrt.windows.media.capture import MediaCaptureFailedEventHandler, RecordLi
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class WhiteBalanceGain:
     r: winrt.system.Double
     g: winrt.system.Double
     b: winrt.system.Double
     def __init__(self, r: winrt.system.Double, g: winrt.system.Double, b: winrt.system.Double) -> None: ...
 
+@typing.final
 class AdvancedCapturedPhoto(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AdvancedCapturedPhoto: ...
@@ -51,6 +53,7 @@ class AdvancedCapturedPhoto(winrt.system.Object):
     @_property
     def frame_bounds_relative_to_reference_photo(self) -> typing.Optional[typing.Optional[winrt.windows.foundation.Rect]]: ...
 
+@typing.final
 class AdvancedPhotoCapture(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AdvancedPhotoCapture: ...
@@ -64,6 +67,7 @@ class AdvancedPhotoCapture(winrt.system.Object):
     def add_optional_reference_photo_captured(self, handler: winrt.windows.foundation.TypedEventHandler[AdvancedPhotoCapture, OptionalReferencePhotoCapturedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_optional_reference_photo_captured(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class AppBroadcastBackgroundService(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBroadcastBackgroundService: ...
@@ -109,6 +113,7 @@ class AppBroadcastBackgroundService(winrt.system.Object):
     @broadcast_channel.setter
     def broadcast_channel(self, value: str) -> None: ...
 
+@typing.final
 class AppBroadcastBackgroundServiceSignInInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBroadcastBackgroundServiceSignInInfo: ...
@@ -133,6 +138,7 @@ class AppBroadcastBackgroundServiceSignInInfo(winrt.system.Object):
     @_property
     def sign_in_state(self) -> AppBroadcastSignInState: ...
 
+@typing.final
 class AppBroadcastBackgroundServiceStreamInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBroadcastBackgroundServiceStreamInfo: ...
@@ -160,6 +166,7 @@ class AppBroadcastBackgroundServiceStreamInfo(winrt.system.Object):
     @_property
     def stream_state(self) -> AppBroadcastStreamState: ...
 
+@typing.final
 class AppBroadcastCameraCaptureStateChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBroadcastCameraCaptureStateChangedEventArgs: ...
@@ -168,6 +175,7 @@ class AppBroadcastCameraCaptureStateChangedEventArgs(winrt.system.Object):
     @_property
     def state(self) -> AppBroadcastCameraCaptureState: ...
 
+@typing.final
 class AppBroadcastGlobalSettings(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBroadcastGlobalSettings: ...
@@ -220,6 +228,7 @@ class AppBroadcastGlobalSettings(winrt.system.Object):
     @_property
     def is_gpu_constrained(self) -> bool: ...
 
+@typing.final
 class AppBroadcastHeartbeatRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBroadcastHeartbeatRequestedEventArgs: ...
@@ -228,16 +237,19 @@ class AppBroadcastHeartbeatRequestedEventArgs(winrt.system.Object):
     @handled.setter
     def handled(self, value: bool) -> None: ...
 
+@typing.final
 class AppBroadcastManager_Static(type):
     def apply_global_settings(cls, value: typing.Optional[AppBroadcastGlobalSettings], /) -> None: ...
     def apply_provider_settings(cls, value: typing.Optional[AppBroadcastProviderSettings], /) -> None: ...
     def get_global_settings(cls) -> typing.Optional[AppBroadcastGlobalSettings]: ...
     def get_provider_settings(cls) -> typing.Optional[AppBroadcastProviderSettings]: ...
 
+@typing.final
 class AppBroadcastManager(winrt.system.Object, metaclass=AppBroadcastManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBroadcastManager: ...
 
+@typing.final
 class AppBroadcastMicrophoneCaptureStateChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBroadcastMicrophoneCaptureStateChangedEventArgs: ...
@@ -246,6 +258,7 @@ class AppBroadcastMicrophoneCaptureStateChangedEventArgs(winrt.system.Object):
     @_property
     def state(self) -> AppBroadcastMicrophoneCaptureState: ...
 
+@typing.final
 class AppBroadcastPlugIn(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBroadcastPlugIn: ...
@@ -258,10 +271,12 @@ class AppBroadcastPlugIn(winrt.system.Object):
     @_property
     def provider_settings(self) -> typing.Optional[AppBroadcastProviderSettings]: ...
 
+@typing.final
 class AppBroadcastPlugInManager_Static(type):
     def get_default(cls) -> typing.Optional[AppBroadcastPlugInManager]: ...
     def get_for_user(cls, user: typing.Optional[winrt.windows.system.User], /) -> typing.Optional[AppBroadcastPlugInManager]: ...
 
+@typing.final
 class AppBroadcastPlugInManager(winrt.system.Object, metaclass=AppBroadcastPlugInManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBroadcastPlugInManager: ...
@@ -274,12 +289,14 @@ class AppBroadcastPlugInManager(winrt.system.Object, metaclass=AppBroadcastPlugI
     @_property
     def plug_in_list(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[AppBroadcastPlugIn]]: ...
 
+@typing.final
 class AppBroadcastPlugInStateChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBroadcastPlugInStateChangedEventArgs: ...
     @_property
     def plug_in_state(self) -> AppBroadcastPlugInState: ...
 
+@typing.final
 class AppBroadcastPreview(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBroadcastPreview: ...
@@ -293,6 +310,7 @@ class AppBroadcastPreview(winrt.system.Object):
     @_property
     def preview_stream_reader(self) -> typing.Optional[AppBroadcastPreviewStreamReader]: ...
 
+@typing.final
 class AppBroadcastPreviewStateChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBroadcastPreviewStateChangedEventArgs: ...
@@ -301,6 +319,7 @@ class AppBroadcastPreviewStateChangedEventArgs(winrt.system.Object):
     @_property
     def preview_state(self) -> AppBroadcastPreviewState: ...
 
+@typing.final
 class AppBroadcastPreviewStreamReader(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBroadcastPreviewStreamReader: ...
@@ -318,6 +337,7 @@ class AppBroadcastPreviewStreamReader(winrt.system.Object):
     @_property
     def video_width(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class AppBroadcastPreviewStreamVideoFrame(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBroadcastPreviewStreamVideoFrame: ...
@@ -326,6 +346,7 @@ class AppBroadcastPreviewStreamVideoFrame(winrt.system.Object):
     @_property
     def video_header(self) -> typing.Optional[AppBroadcastPreviewStreamVideoHeader]: ...
 
+@typing.final
 class AppBroadcastPreviewStreamVideoHeader(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBroadcastPreviewStreamVideoHeader: ...
@@ -338,6 +359,7 @@ class AppBroadcastPreviewStreamVideoHeader(winrt.system.Object):
     @_property
     def relative_timestamp(self) -> datetime.timedelta: ...
 
+@typing.final
 class AppBroadcastProviderSettings(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBroadcastProviderSettings: ...
@@ -370,6 +392,7 @@ class AppBroadcastProviderSettings(winrt.system.Object):
     @audio_encoding_bitrate.setter
     def audio_encoding_bitrate(self, value: winrt.system.UInt32) -> None: ...
 
+@typing.final
 class AppBroadcastServices(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBroadcastServices: ...
@@ -398,6 +421,7 @@ class AppBroadcastServices(winrt.system.Object):
     @_property
     def user_name(self) -> str: ...
 
+@typing.final
 class AppBroadcastSignInStateChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBroadcastSignInStateChangedEventArgs: ...
@@ -406,6 +430,7 @@ class AppBroadcastSignInStateChangedEventArgs(winrt.system.Object):
     @_property
     def sign_in_state(self) -> AppBroadcastSignInState: ...
 
+@typing.final
 class AppBroadcastState(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBroadcastState: ...
@@ -466,6 +491,7 @@ class AppBroadcastState(winrt.system.Object):
     @_property
     def viewer_count(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class AppBroadcastStreamAudioFrame(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBroadcastStreamAudioFrame: ...
@@ -474,6 +500,7 @@ class AppBroadcastStreamAudioFrame(winrt.system.Object):
     @_property
     def audio_header(self) -> typing.Optional[AppBroadcastStreamAudioHeader]: ...
 
+@typing.final
 class AppBroadcastStreamAudioHeader(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBroadcastStreamAudioHeader: ...
@@ -488,6 +515,7 @@ class AppBroadcastStreamAudioHeader(winrt.system.Object):
     @_property
     def relative_timestamp(self) -> datetime.timedelta: ...
 
+@typing.final
 class AppBroadcastStreamReader(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBroadcastStreamReader: ...
@@ -512,12 +540,14 @@ class AppBroadcastStreamReader(winrt.system.Object):
     @_property
     def video_width(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class AppBroadcastStreamStateChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBroadcastStreamStateChangedEventArgs: ...
     @_property
     def stream_state(self) -> AppBroadcastStreamState: ...
 
+@typing.final
 class AppBroadcastStreamVideoFrame(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBroadcastStreamVideoFrame: ...
@@ -526,6 +556,7 @@ class AppBroadcastStreamVideoFrame(winrt.system.Object):
     @_property
     def video_header(self) -> typing.Optional[AppBroadcastStreamVideoHeader]: ...
 
+@typing.final
 class AppBroadcastStreamVideoHeader(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBroadcastStreamVideoHeader: ...
@@ -542,22 +573,26 @@ class AppBroadcastStreamVideoHeader(winrt.system.Object):
     @_property
     def relative_timestamp(self) -> datetime.timedelta: ...
 
+@typing.final
 class AppBroadcastTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBroadcastTriggerDetails: ...
     @_property
     def background_service(self) -> typing.Optional[AppBroadcastBackgroundService]: ...
 
+@typing.final
 class AppBroadcastViewerCountChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBroadcastViewerCountChangedEventArgs: ...
     @_property
     def viewer_count(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class AppCapture_Static(type):
     def get_for_current_view(cls) -> typing.Optional[AppCapture]: ...
     def set_allowed_async(cls, allowed: bool, /) -> winrt.windows.foundation.IAsyncAction: ...
 
+@typing.final
 class AppCapture(winrt.system.Object, metaclass=AppCapture_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppCapture: ...
@@ -568,6 +603,7 @@ class AppCapture(winrt.system.Object, metaclass=AppCapture_Static):
     @_property
     def is_capturing_video(self) -> bool: ...
 
+@typing.final
 class AppCaptureAlternateShortcutKeys(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppCaptureAlternateShortcutKeys: ...
@@ -636,26 +672,31 @@ class AppCaptureAlternateShortcutKeys(winrt.system.Object):
     @toggle_broadcast_key.setter
     def toggle_broadcast_key(self, value: winrt.windows.system.VirtualKey) -> None: ...
 
+@typing.final
 class AppCaptureDurationGeneratedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppCaptureDurationGeneratedEventArgs: ...
     @_property
     def duration(self) -> datetime.timedelta: ...
 
+@typing.final
 class AppCaptureFileGeneratedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppCaptureFileGeneratedEventArgs: ...
     @_property
     def file(self) -> typing.Optional[winrt.windows.storage.StorageFile]: ...
 
+@typing.final
 class AppCaptureManager_Static(type):
     def apply_settings(cls, app_capture_settings: typing.Optional[AppCaptureSettings], /) -> None: ...
     def get_current_settings(cls) -> typing.Optional[AppCaptureSettings]: ...
 
+@typing.final
 class AppCaptureManager(winrt.system.Object, metaclass=AppCaptureManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppCaptureManager: ...
 
+@typing.final
 class AppCaptureMetadataWriter(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -676,6 +717,7 @@ class AppCaptureMetadataWriter(winrt.system.Object):
     @_property
     def remaining_storage_bytes_available(self) -> winrt.system.UInt64: ...
 
+@typing.final
 class AppCaptureMicrophoneCaptureStateChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppCaptureMicrophoneCaptureStateChangedEventArgs: ...
@@ -684,6 +726,7 @@ class AppCaptureMicrophoneCaptureStateChangedEventArgs(winrt.system.Object):
     @_property
     def state(self) -> AppCaptureMicrophoneCaptureState: ...
 
+@typing.final
 class AppCaptureRecordOperation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppCaptureRecordOperation: ...
@@ -705,6 +748,7 @@ class AppCaptureRecordOperation(winrt.system.Object):
     @_property
     def state(self) -> AppCaptureRecordingState: ...
 
+@typing.final
 class AppCaptureRecordingStateChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppCaptureRecordingStateChangedEventArgs: ...
@@ -713,6 +757,7 @@ class AppCaptureRecordingStateChangedEventArgs(winrt.system.Object):
     @_property
     def state(self) -> AppCaptureRecordingState: ...
 
+@typing.final
 class AppCaptureServices(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppCaptureServices: ...
@@ -723,6 +768,7 @@ class AppCaptureServices(winrt.system.Object):
     @_property
     def state(self) -> typing.Optional[AppCaptureState]: ...
 
+@typing.final
 class AppCaptureSettings(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppCaptureSettings: ...
@@ -831,6 +877,7 @@ class AppCaptureSettings(winrt.system.Object):
     @is_cursor_image_capture_enabled.setter
     def is_cursor_image_capture_enabled(self, value: bool) -> None: ...
 
+@typing.final
 class AppCaptureState(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppCaptureState: ...
@@ -852,6 +899,7 @@ class AppCaptureState(winrt.system.Object):
     @_property
     def microphone_capture_state(self) -> AppCaptureMicrophoneCaptureState: ...
 
+@typing.final
 class CameraCaptureUI(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CameraCaptureUI: ...
@@ -862,6 +910,7 @@ class CameraCaptureUI(winrt.system.Object):
     @_property
     def video_settings(self) -> typing.Optional[CameraCaptureUIVideoCaptureSettings]: ...
 
+@typing.final
 class CameraCaptureUIPhotoCaptureSettings(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CameraCaptureUIPhotoCaptureSettings: ...
@@ -886,6 +935,7 @@ class CameraCaptureUIPhotoCaptureSettings(winrt.system.Object):
     @allow_cropping.setter
     def allow_cropping(self, value: bool) -> None: ...
 
+@typing.final
 class CameraCaptureUIVideoCaptureSettings(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CameraCaptureUIVideoCaptureSettings: ...
@@ -906,13 +956,16 @@ class CameraCaptureUIVideoCaptureSettings(winrt.system.Object):
     @allow_trimming.setter
     def allow_trimming(self, value: bool) -> None: ...
 
+@typing.final
 class CameraOptionsUI_Static(type):
     def show(cls, media_capture: typing.Optional[MediaCapture], /) -> None: ...
 
+@typing.final
 class CameraOptionsUI(winrt.system.Object, metaclass=CameraOptionsUI_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CameraOptionsUI: ...
 
+@typing.final
 class CapturedFrame(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -949,6 +1002,7 @@ class CapturedFrame(winrt.system.Object):
     @_property
     def position(self) -> winrt.system.UInt64: ...
 
+@typing.final
 class CapturedFrameControlValues(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CapturedFrameControlValues: ...
@@ -981,6 +1035,7 @@ class CapturedFrameControlValues(winrt.system.Object):
     @_property
     def white_balance_gain(self) -> typing.Optional[typing.Optional[WhiteBalanceGain]]: ...
 
+@typing.final
 class CapturedPhoto(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CapturedPhoto: ...
@@ -989,6 +1044,7 @@ class CapturedPhoto(winrt.system.Object):
     @_property
     def thumbnail(self) -> typing.Optional[CapturedFrame]: ...
 
+@typing.final
 class GameBarServices(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GameBarServices: ...
@@ -1007,6 +1063,7 @@ class GameBarServices(winrt.system.Object):
     @_property
     def target_info(self) -> typing.Optional[GameBarServicesTargetInfo]: ...
 
+@typing.final
 class GameBarServicesCommandEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GameBarServicesCommandEventArgs: ...
@@ -1015,21 +1072,25 @@ class GameBarServicesCommandEventArgs(winrt.system.Object):
     @_property
     def origin(self) -> GameBarCommandOrigin: ...
 
+@typing.final
 class GameBarServicesManager_Static(type):
     def get_default(cls) -> typing.Optional[GameBarServicesManager]: ...
 
+@typing.final
 class GameBarServicesManager(winrt.system.Object, metaclass=GameBarServicesManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GameBarServicesManager: ...
     def add_game_bar_services_created(self, value: winrt.windows.foundation.TypedEventHandler[GameBarServicesManager, GameBarServicesManagerGameBarServicesCreatedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_game_bar_services_created(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class GameBarServicesManagerGameBarServicesCreatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GameBarServicesManagerGameBarServicesCreatedEventArgs: ...
     @_property
     def game_bar_services(self) -> typing.Optional[GameBarServices]: ...
 
+@typing.final
 class GameBarServicesTargetInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GameBarServicesTargetInfo: ...
@@ -1042,6 +1103,7 @@ class GameBarServicesTargetInfo(winrt.system.Object):
     @_property
     def title_id(self) -> str: ...
 
+@typing.final
 class LowLagMediaRecording(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LowLagMediaRecording: ...
@@ -1053,12 +1115,14 @@ class LowLagMediaRecording(winrt.system.Object):
     def stop_async(self) -> winrt.windows.foundation.IAsyncAction: ...
     def stop_with_result_async(self) -> winrt.windows.foundation.IAsyncOperation[MediaCaptureStopResult]: ...
 
+@typing.final
 class LowLagPhotoCapture(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LowLagPhotoCapture: ...
     def capture_async(self) -> winrt.windows.foundation.IAsyncOperation[CapturedPhoto]: ...
     def finish_async(self) -> winrt.windows.foundation.IAsyncAction: ...
 
+@typing.final
 class LowLagPhotoSequenceCapture(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LowLagPhotoSequenceCapture: ...
@@ -1068,12 +1132,14 @@ class LowLagPhotoSequenceCapture(winrt.system.Object):
     def add_photo_captured(self, handler: winrt.windows.foundation.TypedEventHandler[LowLagPhotoSequenceCapture, PhotoCapturedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_photo_captured(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class MediaCapture_Static(type):
     def find_all_video_profiles(cls, video_device_id: str, /) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[MediaCaptureVideoProfile]]: ...
     def find_concurrent_profiles(cls, video_device_id: str, /) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[MediaCaptureVideoProfile]]: ...
     def find_known_video_profiles(cls, video_device_id: str, name: KnownVideoProfile, /) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[MediaCaptureVideoProfile]]: ...
     def is_video_profile_supported(cls, video_device_id: str, /) -> bool: ...
 
+@typing.final
 class MediaCapture(winrt.system.Object, metaclass=MediaCapture_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -1167,6 +1233,7 @@ class MediaCapture(winrt.system.Object, metaclass=MediaCapture_Static):
     @_property
     def frame_sources(self) -> typing.Optional[winrt.windows.foundation.collections.IMapView[str, winrt.windows.media.capture.frames.MediaFrameSource]]: ...
 
+@typing.final
 class MediaCaptureDeviceExclusiveControlStatusChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaCaptureDeviceExclusiveControlStatusChangedEventArgs: ...
@@ -1175,6 +1242,7 @@ class MediaCaptureDeviceExclusiveControlStatusChangedEventArgs(winrt.system.Obje
     @_property
     def status(self) -> MediaCaptureDeviceExclusiveControlStatus: ...
 
+@typing.final
 class MediaCaptureFailedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaCaptureFailedEventArgs: ...
@@ -1183,12 +1251,14 @@ class MediaCaptureFailedEventArgs(winrt.system.Object):
     @_property
     def message(self) -> str: ...
 
+@typing.final
 class MediaCaptureFocusChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaCaptureFocusChangedEventArgs: ...
     @_property
     def focus_state(self) -> winrt.windows.media.devices.MediaCaptureFocusState: ...
 
+@typing.final
 class MediaCaptureInitializationSettings(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaCaptureInitializationSettings: ...
@@ -1266,6 +1336,7 @@ class MediaCaptureInitializationSettings(winrt.system.Object):
     @device_uri.setter
     def device_uri(self, value: typing.Optional[winrt.windows.foundation.Uri]) -> None: ...
 
+@typing.final
 class MediaCapturePauseResult(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -1277,6 +1348,7 @@ class MediaCapturePauseResult(winrt.system.Object):
     @_property
     def record_duration(self) -> datetime.timedelta: ...
 
+@typing.final
 class MediaCaptureRelativePanelWatcher(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -1290,6 +1362,7 @@ class MediaCaptureRelativePanelWatcher(winrt.system.Object):
     @_property
     def relative_panel(self) -> winrt.windows.devices.enumeration.Panel: ...
 
+@typing.final
 class MediaCaptureSettings(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaCaptureSettings: ...
@@ -1322,6 +1395,7 @@ class MediaCaptureSettings(winrt.system.Object):
     @_property
     def direct3_d11_device(self) -> typing.Optional[winrt.windows.graphics.directx.direct3d11.IDirect3DDevice]: ...
 
+@typing.final
 class MediaCaptureStopResult(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -1333,6 +1407,7 @@ class MediaCaptureStopResult(winrt.system.Object):
     @_property
     def record_duration(self) -> datetime.timedelta: ...
 
+@typing.final
 class MediaCaptureVideoProfile(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaCaptureVideoProfile: ...
@@ -1352,6 +1427,7 @@ class MediaCaptureVideoProfile(winrt.system.Object):
     @_property
     def properties(self) -> typing.Optional[winrt.windows.foundation.collections.IMapView[_uuid.UUID, winrt.system.Object]]: ...
 
+@typing.final
 class MediaCaptureVideoProfileMediaDescription(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaCaptureVideoProfileMediaDescription: ...
@@ -1370,6 +1446,7 @@ class MediaCaptureVideoProfileMediaDescription(winrt.system.Object):
     @_property
     def subtype(self) -> str: ...
 
+@typing.final
 class OptionalReferencePhotoCapturedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> OptionalReferencePhotoCapturedEventArgs: ...
@@ -1378,6 +1455,7 @@ class OptionalReferencePhotoCapturedEventArgs(winrt.system.Object):
     @_property
     def frame(self) -> typing.Optional[CapturedFrame]: ...
 
+@typing.final
 class PhotoCapturedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhotoCapturedEventArgs: ...
@@ -1388,6 +1466,7 @@ class PhotoCapturedEventArgs(winrt.system.Object):
     @_property
     def thumbnail(self) -> typing.Optional[CapturedFrame]: ...
 
+@typing.final
 class PhotoConfirmationCapturedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhotoConfirmationCapturedEventArgs: ...
@@ -1396,9 +1475,11 @@ class PhotoConfirmationCapturedEventArgs(winrt.system.Object):
     @_property
     def frame(self) -> typing.Optional[CapturedFrame]: ...
 
+@typing.final
 class ScreenCapture_Static(type):
     def get_for_current_view(cls) -> typing.Optional[ScreenCapture]: ...
 
+@typing.final
 class ScreenCapture(winrt.system.Object, metaclass=ScreenCapture_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ScreenCapture: ...
@@ -1413,6 +1494,7 @@ class ScreenCapture(winrt.system.Object, metaclass=ScreenCapture_Static):
     @_property
     def video_source(self) -> typing.Optional[winrt.windows.media.core.IMediaSource]: ...
 
+@typing.final
 class SourceSuspensionChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SourceSuspensionChangedEventArgs: ...
@@ -1421,6 +1503,7 @@ class SourceSuspensionChangedEventArgs(winrt.system.Object):
     @_property
     def is_video_suspended(self) -> bool: ...
 
+@typing.final
 class VideoStreamConfiguration(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VideoStreamConfiguration: ...

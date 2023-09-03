@@ -16,6 +16,7 @@ from winrt.testcomponent import Array10Handler, Array11Handler, Array12Handler, 
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class Blittable:
     a: winrt.system.UInt8
     b: winrt.system.UInt16
@@ -29,11 +30,13 @@ class Blittable:
     j: _uuid.UUID
     def __init__(self, a: winrt.system.UInt8, b: winrt.system.UInt16, c: winrt.system.UInt32, d: winrt.system.UInt64, e: winrt.system.Int16, f: winrt.system.Int32, g: winrt.system.Int64, h: winrt.system.Single, i: winrt.system.Double, j: _uuid.UUID) -> None: ...
 
+@typing.final
 class Nested:
     blittable: Blittable
     non_blittable: NonBlittable
     def __init__(self, blittable: Blittable, non_blittable: NonBlittable) -> None: ...
 
+@typing.final
 class NonBlittable:
     a: bool
     b: winrt.system.Char16
@@ -41,6 +44,7 @@ class NonBlittable:
     d: winrt.system.Int64
     def __init__(self, a: bool, b: winrt.system.Char16, c: str, d: winrt.system.Int64) -> None: ...
 
+@typing.final
 class TestRunner_Static(type):
     def create_int32_vector(cls) -> typing.Optional[winrt.windows.foundation.collections.IVector[winrt.system.Int32]]: ...
     def create_string_vector(cls) -> typing.Optional[winrt.windows.foundation.collections.IVector[str]]: ...
@@ -50,10 +54,12 @@ class TestRunner_Static(type):
     def test_producer(cls, callee: typing.Optional[ITests], /) -> None: ...
     def test_self(cls) -> None: ...
 
+@typing.final
 class TestRunner(winrt.system.Object, metaclass=TestRunner_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TestRunner: ...
 
+@typing.final
 class ITests(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ITests: ...

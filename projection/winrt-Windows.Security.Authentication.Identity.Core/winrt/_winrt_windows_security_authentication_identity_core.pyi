@@ -16,10 +16,12 @@ from winrt.windows.security.authentication.identity.core import MicrosoftAccount
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class MicrosoftAccountMultiFactorAuthenticationManager_Static(type):
     @_property
     def current(cls) -> typing.Optional[MicrosoftAccountMultiFactorAuthenticationManager]: ...
 
+@typing.final
 class MicrosoftAccountMultiFactorAuthenticationManager(winrt.system.Object, metaclass=MicrosoftAccountMultiFactorAuthenticationManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MicrosoftAccountMultiFactorAuthenticationManager: ...
@@ -38,6 +40,7 @@ class MicrosoftAccountMultiFactorAuthenticationManager(winrt.system.Object, meta
     def remove_device_async(self, user_account_id: str, /) -> winrt.windows.foundation.IAsyncOperation[MicrosoftAccountMultiFactorServiceResponse]: ...
     def update_wns_channel_async(self, user_account_id: str, channel_uri: str, /) -> winrt.windows.foundation.IAsyncOperation[MicrosoftAccountMultiFactorServiceResponse]: ...
 
+@typing.final
 class MicrosoftAccountMultiFactorGetSessionsResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MicrosoftAccountMultiFactorGetSessionsResult: ...
@@ -46,6 +49,7 @@ class MicrosoftAccountMultiFactorGetSessionsResult(winrt.system.Object):
     @_property
     def sessions(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[MicrosoftAccountMultiFactorSessionInfo]]: ...
 
+@typing.final
 class MicrosoftAccountMultiFactorOneTimeCodedInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MicrosoftAccountMultiFactorOneTimeCodedInfo: ...
@@ -58,6 +62,7 @@ class MicrosoftAccountMultiFactorOneTimeCodedInfo(winrt.system.Object):
     @_property
     def time_to_live(self) -> datetime.timedelta: ...
 
+@typing.final
 class MicrosoftAccountMultiFactorSessionInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MicrosoftAccountMultiFactorSessionInfo: ...
@@ -76,6 +81,7 @@ class MicrosoftAccountMultiFactorSessionInfo(winrt.system.Object):
     @_property
     def user_account_id(self) -> str: ...
 
+@typing.final
 class MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo: ...

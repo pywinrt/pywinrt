@@ -16,6 +16,7 @@ import winrt.windows.graphics.imaging
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class OcrEngine_Static(type):
     def is_language_supported(cls, language: typing.Optional[winrt.windows.globalization.Language], /) -> bool: ...
     def try_create_from_language(cls, language: typing.Optional[winrt.windows.globalization.Language], /) -> typing.Optional[OcrEngine]: ...
@@ -25,6 +26,7 @@ class OcrEngine_Static(type):
     @_property
     def max_image_dimension(cls) -> winrt.system.UInt32: ...
 
+@typing.final
 class OcrEngine(winrt.system.Object, metaclass=OcrEngine_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> OcrEngine: ...
@@ -32,6 +34,7 @@ class OcrEngine(winrt.system.Object, metaclass=OcrEngine_Static):
     @_property
     def recognizer_language(self) -> typing.Optional[winrt.windows.globalization.Language]: ...
 
+@typing.final
 class OcrLine(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> OcrLine: ...
@@ -40,6 +43,7 @@ class OcrLine(winrt.system.Object):
     @_property
     def words(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[OcrWord]]: ...
 
+@typing.final
 class OcrResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> OcrResult: ...
@@ -50,6 +54,7 @@ class OcrResult(winrt.system.Object):
     @_property
     def text_angle(self) -> typing.Optional[typing.Optional[winrt.system.Double]]: ...
 
+@typing.final
 class OcrWord(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> OcrWord: ...

@@ -18,6 +18,7 @@ from winrt.windows.devices.sms import SmsDeviceStatusChangedEventHandler, SmsMes
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class SmsEncodedLength:
     segment_count: winrt.system.UInt32
     character_count_last_segment: winrt.system.UInt32
@@ -26,6 +27,7 @@ class SmsEncodedLength:
     bytes_per_segment: winrt.system.UInt32
     def __init__(self, segment_count: winrt.system.UInt32, character_count_last_segment: winrt.system.UInt32, characters_per_segment: winrt.system.UInt32, byte_count_last_segment: winrt.system.UInt32, bytes_per_segment: winrt.system.UInt32) -> None: ...
 
+@typing.final
 class DeleteSmsMessageOperation(winrt.system.Object):
     def __await__(self) -> typing.Generator[typing.Any, None, None]: ...
     @staticmethod
@@ -44,6 +46,7 @@ class DeleteSmsMessageOperation(winrt.system.Object):
     @completed.setter
     def completed(self, value: typing.Optional[winrt.windows.foundation.AsyncActionCompletedHandler]) -> None: ...
 
+@typing.final
 class DeleteSmsMessagesOperation(winrt.system.Object):
     def __await__(self) -> typing.Generator[typing.Any, None, None]: ...
     @staticmethod
@@ -62,6 +65,7 @@ class DeleteSmsMessagesOperation(winrt.system.Object):
     @completed.setter
     def completed(self, value: typing.Optional[winrt.windows.foundation.AsyncActionCompletedHandler]) -> None: ...
 
+@typing.final
 class GetSmsDeviceOperation(winrt.system.Object):
     def __await__(self) -> typing.Generator[typing.Any, None, typing.Optional[SmsDevice]]: ...
     @staticmethod
@@ -80,6 +84,7 @@ class GetSmsDeviceOperation(winrt.system.Object):
     @completed.setter
     def completed(self, value: typing.Optional[winrt.windows.foundation.AsyncOperationCompletedHandler[SmsDevice]]) -> None: ...
 
+@typing.final
 class GetSmsMessageOperation(winrt.system.Object):
     def __await__(self) -> typing.Generator[typing.Any, None, typing.Optional[ISmsMessage]]: ...
     @staticmethod
@@ -98,6 +103,7 @@ class GetSmsMessageOperation(winrt.system.Object):
     @completed.setter
     def completed(self, value: typing.Optional[winrt.windows.foundation.AsyncOperationCompletedHandler[ISmsMessage]]) -> None: ...
 
+@typing.final
 class GetSmsMessagesOperation(winrt.system.Object):
     def __await__(self) -> typing.Generator[typing.Any, None, typing.Optional[winrt.windows.foundation.collections.IVectorView[ISmsMessage]]]: ...
     @staticmethod
@@ -120,6 +126,7 @@ class GetSmsMessagesOperation(winrt.system.Object):
     @completed.setter
     def completed(self, value: typing.Optional[winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler[winrt.windows.foundation.collections.IVectorView[ISmsMessage], winrt.system.Int32]]) -> None: ...
 
+@typing.final
 class SendSmsMessageOperation(winrt.system.Object):
     def __await__(self) -> typing.Generator[typing.Any, None, None]: ...
     @staticmethod
@@ -138,6 +145,7 @@ class SendSmsMessageOperation(winrt.system.Object):
     @completed.setter
     def completed(self, value: typing.Optional[winrt.windows.foundation.AsyncActionCompletedHandler]) -> None: ...
 
+@typing.final
 class SmsAppMessage(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmsAppMessage: ...
@@ -197,6 +205,7 @@ class SmsAppMessage(winrt.system.Object):
     @_property
     def sim_icc_id(self) -> str: ...
 
+@typing.final
 class SmsBinaryMessage(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmsBinaryMessage: ...
@@ -212,6 +221,7 @@ class SmsBinaryMessage(winrt.system.Object):
     @_property
     def message_class(self) -> SmsMessageClass: ...
 
+@typing.final
 class SmsBroadcastMessage(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmsBroadcastMessage: ...
@@ -246,12 +256,14 @@ class SmsBroadcastMessage(winrt.system.Object):
     @_property
     def sim_icc_id(self) -> str: ...
 
+@typing.final
 class SmsDevice_Static(type):
     def from_id_async(cls, device_id: str, /) -> winrt.windows.foundation.IAsyncOperation[SmsDevice]: ...
     def from_network_account_id_async(cls, network_account_id: str, /) -> winrt.windows.foundation.IAsyncOperation[SmsDevice]: ...
     def get_default_async(cls) -> winrt.windows.foundation.IAsyncOperation[SmsDevice]: ...
     def get_device_selector(cls) -> str: ...
 
+@typing.final
 class SmsDevice(winrt.system.Object, metaclass=SmsDevice_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmsDevice: ...
@@ -270,12 +282,14 @@ class SmsDevice(winrt.system.Object, metaclass=SmsDevice_Static):
     @_property
     def message_store(self) -> typing.Optional[SmsDeviceMessageStore]: ...
 
+@typing.final
 class SmsDevice2_Static(type):
     def from_id(cls, device_id: str, /) -> typing.Optional[SmsDevice2]: ...
     def from_parent_id(cls, parent_device_id: str, /) -> typing.Optional[SmsDevice2]: ...
     def get_default(cls) -> typing.Optional[SmsDevice2]: ...
     def get_device_selector(cls) -> str: ...
 
+@typing.final
 class SmsDevice2(winrt.system.Object, metaclass=SmsDevice2_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmsDevice2: ...
@@ -298,6 +312,7 @@ class SmsDevice2(winrt.system.Object, metaclass=SmsDevice2_Static):
     @_property
     def parent_device_id(self) -> str: ...
 
+@typing.final
 class SmsDeviceMessageStore(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmsDeviceMessageStore: ...
@@ -308,6 +323,7 @@ class SmsDeviceMessageStore(winrt.system.Object):
     @_property
     def max_messages(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class SmsFilterRule(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmsFilterRule: ...
@@ -341,6 +357,7 @@ class SmsFilterRule(winrt.system.Object):
     @_property
     def wap_content_types(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[str]]: ...
 
+@typing.final
 class SmsFilterRules(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmsFilterRules: ...
@@ -350,6 +367,7 @@ class SmsFilterRules(winrt.system.Object):
     @_property
     def rules(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[SmsFilterRule]]: ...
 
+@typing.final
 class SmsMessageReceivedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmsMessageReceivedEventArgs: ...
@@ -358,6 +376,7 @@ class SmsMessageReceivedEventArgs(winrt.system.Object):
     @_property
     def text_message(self) -> typing.Optional[SmsTextMessage]: ...
 
+@typing.final
 class SmsMessageReceivedTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmsMessageReceivedTriggerDetails: ...
@@ -378,11 +397,13 @@ class SmsMessageReceivedTriggerDetails(winrt.system.Object):
     @_property
     def wap_message(self) -> typing.Optional[SmsWapMessage]: ...
 
+@typing.final
 class SmsMessageRegistration_Static(type):
     def register(cls, id: str, filter_rules: typing.Optional[SmsFilterRules], /) -> typing.Optional[SmsMessageRegistration]: ...
     @_property
     def all_registrations(cls) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[SmsMessageRegistration]]: ...
 
+@typing.final
 class SmsMessageRegistration(winrt.system.Object, metaclass=SmsMessageRegistration_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmsMessageRegistration: ...
@@ -392,6 +413,7 @@ class SmsMessageRegistration(winrt.system.Object, metaclass=SmsMessageRegistrati
     @_property
     def id(self) -> str: ...
 
+@typing.final
 class SmsReceivedEventDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmsReceivedEventDetails: ...
@@ -404,6 +426,7 @@ class SmsReceivedEventDetails(winrt.system.Object):
     @_property
     def message_class(self) -> SmsMessageClass: ...
 
+@typing.final
 class SmsSendMessageResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmsSendMessageResult: ...
@@ -422,6 +445,7 @@ class SmsSendMessageResult(winrt.system.Object):
     @_property
     def transport_failure_cause(self) -> winrt.system.Int32: ...
 
+@typing.final
 class SmsStatusMessage(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmsStatusMessage: ...
@@ -450,10 +474,12 @@ class SmsStatusMessage(winrt.system.Object):
     @_property
     def to(self) -> str: ...
 
+@typing.final
 class SmsTextMessage_Static(type):
     def from_binary_data(cls, format: SmsDataFormat, value: winrt.system.Array[winrt.system.UInt8], /) -> typing.Optional[SmsTextMessage]: ...
     def from_binary_message(cls, binary_message: typing.Optional[SmsBinaryMessage], /) -> typing.Optional[SmsTextMessage]: ...
 
+@typing.final
 class SmsTextMessage(winrt.system.Object, metaclass=SmsTextMessage_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmsTextMessage: ...
@@ -488,6 +514,7 @@ class SmsTextMessage(winrt.system.Object, metaclass=SmsTextMessage_Static):
     @_property
     def timestamp(self) -> datetime.datetime: ...
 
+@typing.final
 class SmsTextMessage2(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmsTextMessage2: ...
@@ -535,6 +562,7 @@ class SmsTextMessage2(winrt.system.Object):
     @_property
     def teleservice_id(self) -> winrt.system.Int32: ...
 
+@typing.final
 class SmsVoicemailMessage(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmsVoicemailMessage: ...
@@ -557,6 +585,7 @@ class SmsVoicemailMessage(winrt.system.Object):
     @_property
     def to(self) -> str: ...
 
+@typing.final
 class SmsWapMessage(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmsWapMessage: ...
@@ -585,6 +614,7 @@ class SmsWapMessage(winrt.system.Object):
     @_property
     def to(self) -> str: ...
 
+@typing.final
 class ISmsBinaryMessage(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISmsBinaryMessage: ...
@@ -599,6 +629,7 @@ class ISmsBinaryMessage(winrt.system.Object):
     @_property
     def message_class(self) -> SmsMessageClass: ...
 
+@typing.final
 class ISmsDevice(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISmsDevice: ...
@@ -617,6 +648,7 @@ class ISmsDevice(winrt.system.Object):
     @_property
     def message_store(self) -> typing.Optional[SmsDeviceMessageStore]: ...
 
+@typing.final
 class ISmsMessage(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISmsMessage: ...
@@ -625,6 +657,7 @@ class ISmsMessage(winrt.system.Object):
     @_property
     def message_class(self) -> SmsMessageClass: ...
 
+@typing.final
 class ISmsMessageBase(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISmsMessageBase: ...
@@ -639,6 +672,7 @@ class ISmsMessageBase(winrt.system.Object):
     @_property
     def sim_icc_id(self) -> str: ...
 
+@typing.final
 class ISmsTextMessage(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISmsTextMessage: ...

@@ -21,6 +21,7 @@ from winrt.windows.devices.perception import PerceptionFrameSourceAccessStatus, 
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class KnownCameraIntrinsicsProperties_Static(type):
     @_property
     def focal_length(cls) -> str: ...
@@ -31,10 +32,12 @@ class KnownCameraIntrinsicsProperties_Static(type):
     @_property
     def tangential_distortion(cls) -> str: ...
 
+@typing.final
 class KnownCameraIntrinsicsProperties(winrt.system.Object, metaclass=KnownCameraIntrinsicsProperties_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> KnownCameraIntrinsicsProperties: ...
 
+@typing.final
 class KnownPerceptionColorFrameSourceProperties_Static(type):
     @_property
     def auto_exposure_enabled(cls) -> str: ...
@@ -43,20 +46,24 @@ class KnownPerceptionColorFrameSourceProperties_Static(type):
     @_property
     def exposure_compensation(cls) -> str: ...
 
+@typing.final
 class KnownPerceptionColorFrameSourceProperties(winrt.system.Object, metaclass=KnownPerceptionColorFrameSourceProperties_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> KnownPerceptionColorFrameSourceProperties: ...
 
+@typing.final
 class KnownPerceptionDepthFrameSourceProperties_Static(type):
     @_property
     def max_depth(cls) -> str: ...
     @_property
     def min_depth(cls) -> str: ...
 
+@typing.final
 class KnownPerceptionDepthFrameSourceProperties(winrt.system.Object, metaclass=KnownPerceptionDepthFrameSourceProperties_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> KnownPerceptionDepthFrameSourceProperties: ...
 
+@typing.final
 class KnownPerceptionFrameSourceProperties_Static(type):
     @_property
     def device_model_version(cls) -> str: ...
@@ -71,10 +78,12 @@ class KnownPerceptionFrameSourceProperties_Static(type):
     @_property
     def device_id(cls) -> str: ...
 
+@typing.final
 class KnownPerceptionFrameSourceProperties(winrt.system.Object, metaclass=KnownPerceptionFrameSourceProperties_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> KnownPerceptionFrameSourceProperties: ...
 
+@typing.final
 class KnownPerceptionInfraredFrameSourceProperties_Static(type):
     @_property
     def active_illumination_enabled(cls) -> str: ...
@@ -91,10 +100,12 @@ class KnownPerceptionInfraredFrameSourceProperties_Static(type):
     @_property
     def structure_light_pattern_enabled(cls) -> str: ...
 
+@typing.final
 class KnownPerceptionInfraredFrameSourceProperties(winrt.system.Object, metaclass=KnownPerceptionInfraredFrameSourceProperties_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> KnownPerceptionInfraredFrameSourceProperties: ...
 
+@typing.final
 class KnownPerceptionVideoFrameSourceProperties_Static(type):
     @_property
     def available_video_profiles(cls) -> str: ...
@@ -107,10 +118,12 @@ class KnownPerceptionVideoFrameSourceProperties_Static(type):
     @_property
     def video_profile(cls) -> str: ...
 
+@typing.final
 class KnownPerceptionVideoFrameSourceProperties(winrt.system.Object, metaclass=KnownPerceptionVideoFrameSourceProperties_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> KnownPerceptionVideoFrameSourceProperties: ...
 
+@typing.final
 class KnownPerceptionVideoProfileProperties_Static(type):
     @_property
     def bitmap_alpha_mode(cls) -> str: ...
@@ -123,10 +136,12 @@ class KnownPerceptionVideoProfileProperties_Static(type):
     @_property
     def width(cls) -> str: ...
 
+@typing.final
 class KnownPerceptionVideoProfileProperties(winrt.system.Object, metaclass=KnownPerceptionVideoProfileProperties_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> KnownPerceptionVideoProfileProperties: ...
 
+@typing.final
 class PerceptionColorFrame(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -136,6 +151,7 @@ class PerceptionColorFrame(winrt.system.Object):
     @_property
     def video_frame(self) -> typing.Optional[winrt.windows.media.VideoFrame]: ...
 
+@typing.final
 class PerceptionColorFrameArrivedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PerceptionColorFrameArrivedEventArgs: ...
@@ -143,6 +159,7 @@ class PerceptionColorFrameArrivedEventArgs(winrt.system.Object):
     @_property
     def relative_time(self) -> datetime.timedelta: ...
 
+@typing.final
 class PerceptionColorFrameReader(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -159,12 +176,14 @@ class PerceptionColorFrameReader(winrt.system.Object):
     @_property
     def source(self) -> typing.Optional[PerceptionColorFrameSource]: ...
 
+@typing.final
 class PerceptionColorFrameSource_Static(type):
     def create_watcher(cls) -> typing.Optional[PerceptionColorFrameSourceWatcher]: ...
     def find_all_async(cls) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[PerceptionColorFrameSource]]: ...
     def from_id_async(cls, id: str, /) -> winrt.windows.foundation.IAsyncOperation[PerceptionColorFrameSource]: ...
     def request_access_async(cls) -> winrt.windows.foundation.IAsyncOperation[PerceptionFrameSourceAccessStatus]: ...
 
+@typing.final
 class PerceptionColorFrameSource(winrt.system.Object, metaclass=PerceptionColorFrameSource_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PerceptionColorFrameSource: ...
@@ -211,18 +230,21 @@ class PerceptionColorFrameSource(winrt.system.Object, metaclass=PerceptionColorF
     @_property
     def device_id(self) -> str: ...
 
+@typing.final
 class PerceptionColorFrameSourceAddedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PerceptionColorFrameSourceAddedEventArgs: ...
     @_property
     def frame_source(self) -> typing.Optional[PerceptionColorFrameSource]: ...
 
+@typing.final
 class PerceptionColorFrameSourceRemovedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PerceptionColorFrameSourceRemovedEventArgs: ...
     @_property
     def frame_source(self) -> typing.Optional[PerceptionColorFrameSource]: ...
 
+@typing.final
 class PerceptionColorFrameSourceWatcher(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PerceptionColorFrameSourceWatcher: ...
@@ -239,6 +261,7 @@ class PerceptionColorFrameSourceWatcher(winrt.system.Object):
     @_property
     def status(self) -> winrt.windows.devices.enumeration.DeviceWatcherStatus: ...
 
+@typing.final
 class PerceptionControlSession(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -249,6 +272,7 @@ class PerceptionControlSession(winrt.system.Object):
     def add_control_lost(self, handler: winrt.windows.foundation.TypedEventHandler[PerceptionControlSession, winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_control_lost(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class PerceptionDepthCorrelatedCameraIntrinsics(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PerceptionDepthCorrelatedCameraIntrinsics: ...
@@ -257,6 +281,7 @@ class PerceptionDepthCorrelatedCameraIntrinsics(winrt.system.Object):
     def unproject_pixels_at_correlated_depth(self, source_coordinates: winrt.system.Array[winrt.windows.foundation.Point], depth_frame: typing.Optional[PerceptionDepthFrame], results: winrt.system.Array[winrt.windows.foundation.numerics.Vector3], /) -> None: ...
     def unproject_region_pixels_at_correlated_depth_async(self, region: winrt.windows.foundation.Rect, depth_frame: typing.Optional[PerceptionDepthFrame], results: winrt.system.Array[winrt.windows.foundation.numerics.Vector3], /) -> winrt.windows.foundation.IAsyncAction: ...
 
+@typing.final
 class PerceptionDepthCorrelatedCoordinateMapper(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PerceptionDepthCorrelatedCoordinateMapper: ...
@@ -265,6 +290,7 @@ class PerceptionDepthCorrelatedCoordinateMapper(winrt.system.Object):
     def map_pixels_to_target(self, source_coordinates: winrt.system.Array[winrt.windows.foundation.Point], depth_frame: typing.Optional[PerceptionDepthFrame], results: winrt.system.Array[winrt.windows.foundation.Point], /) -> None: ...
     def map_region_of_pixels_to_target_async(self, region: winrt.windows.foundation.Rect, depth_frame: typing.Optional[PerceptionDepthFrame], target_coordinates: winrt.system.Array[winrt.windows.foundation.Point], /) -> winrt.windows.foundation.IAsyncAction: ...
 
+@typing.final
 class PerceptionDepthFrame(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -274,6 +300,7 @@ class PerceptionDepthFrame(winrt.system.Object):
     @_property
     def video_frame(self) -> typing.Optional[winrt.windows.media.VideoFrame]: ...
 
+@typing.final
 class PerceptionDepthFrameArrivedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PerceptionDepthFrameArrivedEventArgs: ...
@@ -281,6 +308,7 @@ class PerceptionDepthFrameArrivedEventArgs(winrt.system.Object):
     @_property
     def relative_time(self) -> datetime.timedelta: ...
 
+@typing.final
 class PerceptionDepthFrameReader(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -297,12 +325,14 @@ class PerceptionDepthFrameReader(winrt.system.Object):
     @_property
     def source(self) -> typing.Optional[PerceptionDepthFrameSource]: ...
 
+@typing.final
 class PerceptionDepthFrameSource_Static(type):
     def create_watcher(cls) -> typing.Optional[PerceptionDepthFrameSourceWatcher]: ...
     def find_all_async(cls) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[PerceptionDepthFrameSource]]: ...
     def from_id_async(cls, id: str, /) -> winrt.windows.foundation.IAsyncOperation[PerceptionDepthFrameSource]: ...
     def request_access_async(cls) -> winrt.windows.foundation.IAsyncOperation[PerceptionFrameSourceAccessStatus]: ...
 
+@typing.final
 class PerceptionDepthFrameSource(winrt.system.Object, metaclass=PerceptionDepthFrameSource_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PerceptionDepthFrameSource: ...
@@ -349,18 +379,21 @@ class PerceptionDepthFrameSource(winrt.system.Object, metaclass=PerceptionDepthF
     @_property
     def device_id(self) -> str: ...
 
+@typing.final
 class PerceptionDepthFrameSourceAddedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PerceptionDepthFrameSourceAddedEventArgs: ...
     @_property
     def frame_source(self) -> typing.Optional[PerceptionDepthFrameSource]: ...
 
+@typing.final
 class PerceptionDepthFrameSourceRemovedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PerceptionDepthFrameSourceRemovedEventArgs: ...
     @_property
     def frame_source(self) -> typing.Optional[PerceptionDepthFrameSource]: ...
 
+@typing.final
 class PerceptionDepthFrameSourceWatcher(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PerceptionDepthFrameSourceWatcher: ...
@@ -377,6 +410,7 @@ class PerceptionDepthFrameSourceWatcher(winrt.system.Object):
     @_property
     def status(self) -> winrt.windows.devices.enumeration.DeviceWatcherStatus: ...
 
+@typing.final
 class PerceptionFrameSourcePropertiesChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PerceptionFrameSourcePropertiesChangedEventArgs: ...
@@ -385,6 +419,7 @@ class PerceptionFrameSourcePropertiesChangedEventArgs(winrt.system.Object):
     @_property
     def key(self) -> str: ...
 
+@typing.final
 class PerceptionFrameSourcePropertyChangeResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PerceptionFrameSourcePropertyChangeResult: ...
@@ -393,6 +428,7 @@ class PerceptionFrameSourcePropertyChangeResult(winrt.system.Object):
     @_property
     def status(self) -> PerceptionFrameSourcePropertyChangeStatus: ...
 
+@typing.final
 class PerceptionInfraredFrame(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -402,6 +438,7 @@ class PerceptionInfraredFrame(winrt.system.Object):
     @_property
     def video_frame(self) -> typing.Optional[winrt.windows.media.VideoFrame]: ...
 
+@typing.final
 class PerceptionInfraredFrameArrivedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PerceptionInfraredFrameArrivedEventArgs: ...
@@ -409,6 +446,7 @@ class PerceptionInfraredFrameArrivedEventArgs(winrt.system.Object):
     @_property
     def relative_time(self) -> datetime.timedelta: ...
 
+@typing.final
 class PerceptionInfraredFrameReader(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -425,12 +463,14 @@ class PerceptionInfraredFrameReader(winrt.system.Object):
     @_property
     def source(self) -> typing.Optional[PerceptionInfraredFrameSource]: ...
 
+@typing.final
 class PerceptionInfraredFrameSource_Static(type):
     def create_watcher(cls) -> typing.Optional[PerceptionInfraredFrameSourceWatcher]: ...
     def find_all_async(cls) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[PerceptionInfraredFrameSource]]: ...
     def from_id_async(cls, id: str, /) -> winrt.windows.foundation.IAsyncOperation[PerceptionInfraredFrameSource]: ...
     def request_access_async(cls) -> winrt.windows.foundation.IAsyncOperation[PerceptionFrameSourceAccessStatus]: ...
 
+@typing.final
 class PerceptionInfraredFrameSource(winrt.system.Object, metaclass=PerceptionInfraredFrameSource_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PerceptionInfraredFrameSource: ...
@@ -477,18 +517,21 @@ class PerceptionInfraredFrameSource(winrt.system.Object, metaclass=PerceptionInf
     @_property
     def device_id(self) -> str: ...
 
+@typing.final
 class PerceptionInfraredFrameSourceAddedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PerceptionInfraredFrameSourceAddedEventArgs: ...
     @_property
     def frame_source(self) -> typing.Optional[PerceptionInfraredFrameSource]: ...
 
+@typing.final
 class PerceptionInfraredFrameSourceRemovedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PerceptionInfraredFrameSourceRemovedEventArgs: ...
     @_property
     def frame_source(self) -> typing.Optional[PerceptionInfraredFrameSource]: ...
 
+@typing.final
 class PerceptionInfraredFrameSourceWatcher(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PerceptionInfraredFrameSourceWatcher: ...
@@ -505,6 +548,7 @@ class PerceptionInfraredFrameSourceWatcher(winrt.system.Object):
     @_property
     def status(self) -> winrt.windows.devices.enumeration.DeviceWatcherStatus: ...
 
+@typing.final
 class PerceptionVideoProfile(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PerceptionVideoProfile: ...

@@ -16,6 +16,7 @@ from winrt.windows.system.update import SystemUpdateAttentionRequiredReason, Sys
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class SystemUpdateItem(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SystemUpdateItem: ...
@@ -36,6 +37,7 @@ class SystemUpdateItem(winrt.system.Object):
     @_property
     def title(self) -> str: ...
 
+@typing.final
 class SystemUpdateLastErrorInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SystemUpdateLastErrorInfo: ...
@@ -46,6 +48,7 @@ class SystemUpdateLastErrorInfo(winrt.system.Object):
     @_property
     def state(self) -> SystemUpdateManagerState: ...
 
+@typing.final
 class SystemUpdateManager_Static(type):
     def block_automatic_reboot_async(cls, lock_id: str, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     def get_automatic_reboot_block_ids(cls) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]: ...
@@ -83,6 +86,7 @@ class SystemUpdateManager_Static(type):
     @_property
     def user_active_hours_start(cls) -> datetime.timedelta: ...
 
+@typing.final
 class SystemUpdateManager(winrt.system.Object, metaclass=SystemUpdateManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SystemUpdateManager: ...

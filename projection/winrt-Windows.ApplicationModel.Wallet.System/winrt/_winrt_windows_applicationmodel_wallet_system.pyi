@@ -18,6 +18,7 @@ from winrt.windows.applicationmodel.wallet.system import WalletItemAppAssociatio
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class WalletItemSystemStore(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WalletItemSystemStore: ...
@@ -29,9 +30,11 @@ class WalletItemSystemStore(winrt.system.Object):
     def add_items_changed(self, handler: winrt.windows.foundation.TypedEventHandler[WalletItemSystemStore, winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_items_changed(self, cookie: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class WalletManagerSystem_Static(type):
     def request_store_async(cls) -> winrt.windows.foundation.IAsyncOperation[WalletItemSystemStore]: ...
 
+@typing.final
 class WalletManagerSystem(winrt.system.Object, metaclass=WalletManagerSystem_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WalletManagerSystem: ...

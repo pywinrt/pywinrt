@@ -17,6 +17,7 @@ from winrt.windows.security.authentication.onlineid import CredentialPromptType,
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class OnlineIdAuthenticator(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> OnlineIdAuthenticator: ...
@@ -35,6 +36,7 @@ class OnlineIdAuthenticator(winrt.system.Object):
     @_property
     def can_sign_out(self) -> bool: ...
 
+@typing.final
 class OnlineIdServiceTicket(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> OnlineIdServiceTicket: ...
@@ -45,6 +47,7 @@ class OnlineIdServiceTicket(winrt.system.Object):
     @_property
     def value(self) -> str: ...
 
+@typing.final
 class OnlineIdServiceTicketRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> OnlineIdServiceTicketRequest: ...
@@ -57,15 +60,18 @@ class OnlineIdServiceTicketRequest(winrt.system.Object):
     @_property
     def service(self) -> str: ...
 
+@typing.final
 class OnlineIdSystemAuthenticator_Static(type):
     def get_for_user(cls, user: typing.Optional[winrt.windows.system.User], /) -> typing.Optional[OnlineIdSystemAuthenticatorForUser]: ...
     @_property
     def default(cls) -> typing.Optional[OnlineIdSystemAuthenticatorForUser]: ...
 
+@typing.final
 class OnlineIdSystemAuthenticator(winrt.system.Object, metaclass=OnlineIdSystemAuthenticator_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> OnlineIdSystemAuthenticator: ...
 
+@typing.final
 class OnlineIdSystemAuthenticatorForUser(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> OnlineIdSystemAuthenticatorForUser: ...
@@ -77,6 +83,7 @@ class OnlineIdSystemAuthenticatorForUser(winrt.system.Object):
     @_property
     def user(self) -> typing.Optional[winrt.windows.system.User]: ...
 
+@typing.final
 class OnlineIdSystemIdentity(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> OnlineIdSystemIdentity: ...
@@ -85,6 +92,7 @@ class OnlineIdSystemIdentity(winrt.system.Object):
     @_property
     def ticket(self) -> typing.Optional[OnlineIdServiceTicket]: ...
 
+@typing.final
 class OnlineIdSystemTicketResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> OnlineIdSystemTicketResult: ...
@@ -95,6 +103,7 @@ class OnlineIdSystemTicketResult(winrt.system.Object):
     @_property
     def status(self) -> OnlineIdSystemTicketStatus: ...
 
+@typing.final
 class SignOutUserOperation(winrt.system.Object):
     def __await__(self) -> typing.Generator[typing.Any, None, None]: ...
     @staticmethod
@@ -113,6 +122,7 @@ class SignOutUserOperation(winrt.system.Object):
     @completed.setter
     def completed(self, value: typing.Optional[winrt.windows.foundation.AsyncActionCompletedHandler]) -> None: ...
 
+@typing.final
 class UserAuthenticationOperation(winrt.system.Object):
     def __await__(self) -> typing.Generator[typing.Any, None, typing.Optional[UserIdentity]]: ...
     @staticmethod
@@ -131,6 +141,7 @@ class UserAuthenticationOperation(winrt.system.Object):
     @completed.setter
     def completed(self, value: typing.Optional[winrt.windows.foundation.AsyncOperationCompletedHandler[UserIdentity]]) -> None: ...
 
+@typing.final
 class UserIdentity(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserIdentity: ...

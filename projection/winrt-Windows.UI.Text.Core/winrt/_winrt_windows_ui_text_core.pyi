@@ -19,11 +19,13 @@ from winrt.windows.ui.text.core import CoreTextFormatUpdatingReason, CoreTextFor
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class CoreTextRange:
     start_caret_position: winrt.system.Int32
     end_caret_position: winrt.system.Int32
     def __init__(self, start_caret_position: winrt.system.Int32, end_caret_position: winrt.system.Int32) -> None: ...
 
+@typing.final
 class CoreTextCompositionCompletedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreTextCompositionCompletedEventArgs: ...
@@ -33,6 +35,7 @@ class CoreTextCompositionCompletedEventArgs(winrt.system.Object):
     @_property
     def is_canceled(self) -> bool: ...
 
+@typing.final
 class CoreTextCompositionSegment(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreTextCompositionSegment: ...
@@ -41,6 +44,7 @@ class CoreTextCompositionSegment(winrt.system.Object):
     @_property
     def range(self) -> CoreTextRange: ...
 
+@typing.final
 class CoreTextCompositionStartedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreTextCompositionStartedEventArgs: ...
@@ -48,6 +52,7 @@ class CoreTextCompositionStartedEventArgs(winrt.system.Object):
     @_property
     def is_canceled(self) -> bool: ...
 
+@typing.final
 class CoreTextEditContext(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreTextEditContext: ...
@@ -93,6 +98,7 @@ class CoreTextEditContext(winrt.system.Object):
     @input_pane_display_policy.setter
     def input_pane_display_policy(self, value: CoreTextInputPaneDisplayPolicy) -> None: ...
 
+@typing.final
 class CoreTextFormatUpdatingEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreTextFormatUpdatingEventArgs: ...
@@ -116,6 +122,7 @@ class CoreTextFormatUpdatingEventArgs(winrt.system.Object):
     @_property
     def underline_type(self) -> typing.Optional[typing.Optional[winrt.windows.ui.text.UnderlineType]]: ...
 
+@typing.final
 class CoreTextLayoutBounds(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreTextLayoutBounds: ...
@@ -128,6 +135,7 @@ class CoreTextLayoutBounds(winrt.system.Object):
     @control_bounds.setter
     def control_bounds(self, value: winrt.windows.foundation.Rect) -> None: ...
 
+@typing.final
 class CoreTextLayoutRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreTextLayoutRequest: ...
@@ -141,12 +149,14 @@ class CoreTextLayoutRequest(winrt.system.Object):
     @_property
     def layout_bounds_visual_pixels(self) -> typing.Optional[CoreTextLayoutBounds]: ...
 
+@typing.final
 class CoreTextLayoutRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreTextLayoutRequestedEventArgs: ...
     @_property
     def request(self) -> typing.Optional[CoreTextLayoutRequest]: ...
 
+@typing.final
 class CoreTextSelectionRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreTextSelectionRequest: ...
@@ -158,12 +168,14 @@ class CoreTextSelectionRequest(winrt.system.Object):
     @_property
     def is_canceled(self) -> bool: ...
 
+@typing.final
 class CoreTextSelectionRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreTextSelectionRequestedEventArgs: ...
     @_property
     def request(self) -> typing.Optional[CoreTextSelectionRequest]: ...
 
+@typing.final
 class CoreTextSelectionUpdatingEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreTextSelectionUpdatingEventArgs: ...
@@ -177,17 +189,21 @@ class CoreTextSelectionUpdatingEventArgs(winrt.system.Object):
     @_property
     def selection(self) -> CoreTextRange: ...
 
+@typing.final
 class CoreTextServicesConstants_Static(type):
     @_property
     def hidden_character(cls) -> winrt.system.Char16: ...
 
+@typing.final
 class CoreTextServicesConstants(winrt.system.Object, metaclass=CoreTextServicesConstants_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreTextServicesConstants: ...
 
+@typing.final
 class CoreTextServicesManager_Static(type):
     def get_for_current_view(cls) -> typing.Optional[CoreTextServicesManager]: ...
 
+@typing.final
 class CoreTextServicesManager(winrt.system.Object, metaclass=CoreTextServicesManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreTextServicesManager: ...
@@ -197,6 +213,7 @@ class CoreTextServicesManager(winrt.system.Object, metaclass=CoreTextServicesMan
     @_property
     def input_language(self) -> typing.Optional[winrt.windows.globalization.Language]: ...
 
+@typing.final
 class CoreTextTextRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreTextTextRequest: ...
@@ -210,12 +227,14 @@ class CoreTextTextRequest(winrt.system.Object):
     @_property
     def range(self) -> CoreTextRange: ...
 
+@typing.final
 class CoreTextTextRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreTextTextRequestedEventArgs: ...
     @_property
     def request(self) -> typing.Optional[CoreTextTextRequest]: ...
 
+@typing.final
 class CoreTextTextUpdatingEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreTextTextUpdatingEventArgs: ...

@@ -23,6 +23,7 @@ from winrt.windows.networking.vpn import VpnAppIdType, VpnAuthenticationMethod, 
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class VpnAppId(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VpnAppId: ...
@@ -36,9 +37,11 @@ class VpnAppId(winrt.system.Object):
     @type.setter
     def type(self, value: VpnAppIdType) -> None: ...
 
+@typing.final
 class VpnChannel_Static(type):
     def process_event_async(cls, third_party_plug_in: typing.Optional[winrt.system.Object], event: typing.Optional[winrt.system.Object], /) -> None: ...
 
+@typing.final
 class VpnChannel(winrt.system.Object, metaclass=VpnChannel_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VpnChannel: ...
@@ -93,18 +96,21 @@ class VpnChannel(winrt.system.Object, metaclass=VpnChannel_Static):
     @_property
     def current_request_transport_context(self) -> typing.Optional[winrt.system.Object]: ...
 
+@typing.final
 class VpnChannelActivityEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VpnChannelActivityEventArgs: ...
     @_property
     def type(self) -> VpnChannelActivityEventType: ...
 
+@typing.final
 class VpnChannelActivityStateChangedArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VpnChannelActivityStateChangedArgs: ...
     @_property
     def activity_state(self) -> VpnChannelActivityEventType: ...
 
+@typing.final
 class VpnChannelConfiguration(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VpnChannelConfiguration: ...
@@ -117,6 +123,7 @@ class VpnChannelConfiguration(winrt.system.Object):
     @_property
     def server_uris(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.foundation.Uri]]: ...
 
+@typing.final
 class VpnCredential(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VpnCredential: ...
@@ -129,6 +136,7 @@ class VpnCredential(winrt.system.Object):
     @_property
     def passkey_credential(self) -> typing.Optional[winrt.windows.security.credentials.PasswordCredential]: ...
 
+@typing.final
 class VpnCustomCheckBox(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VpnCustomCheckBox: ...
@@ -152,6 +160,7 @@ class VpnCustomCheckBox(winrt.system.Object):
     @bordered.setter
     def bordered(self, value: bool) -> None: ...
 
+@typing.final
 class VpnCustomComboBox(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VpnCustomComboBox: ...
@@ -175,6 +184,7 @@ class VpnCustomComboBox(winrt.system.Object):
     @bordered.setter
     def bordered(self, value: bool) -> None: ...
 
+@typing.final
 class VpnCustomEditBox(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VpnCustomEditBox: ...
@@ -202,6 +212,7 @@ class VpnCustomEditBox(winrt.system.Object):
     @bordered.setter
     def bordered(self, value: bool) -> None: ...
 
+@typing.final
 class VpnCustomErrorBox(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VpnCustomErrorBox: ...
@@ -219,6 +230,7 @@ class VpnCustomErrorBox(winrt.system.Object):
     @bordered.setter
     def bordered(self, value: bool) -> None: ...
 
+@typing.final
 class VpnCustomPromptBooleanInput(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VpnCustomPromptBooleanInput: ...
@@ -242,6 +254,7 @@ class VpnCustomPromptBooleanInput(winrt.system.Object):
     @compulsory.setter
     def compulsory(self, value: bool) -> None: ...
 
+@typing.final
 class VpnCustomPromptOptionSelector(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VpnCustomPromptOptionSelector: ...
@@ -263,6 +276,7 @@ class VpnCustomPromptOptionSelector(winrt.system.Object):
     @_property
     def selected_index(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class VpnCustomPromptText(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VpnCustomPromptText: ...
@@ -284,6 +298,7 @@ class VpnCustomPromptText(winrt.system.Object):
     @text.setter
     def text(self, value: str) -> None: ...
 
+@typing.final
 class VpnCustomPromptTextInput(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VpnCustomPromptTextInput: ...
@@ -311,6 +326,7 @@ class VpnCustomPromptTextInput(winrt.system.Object):
     @_property
     def text(self) -> str: ...
 
+@typing.final
 class VpnCustomTextBox(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VpnCustomTextBox: ...
@@ -332,6 +348,7 @@ class VpnCustomTextBox(winrt.system.Object):
     @display_text.setter
     def display_text(self, value: str) -> None: ...
 
+@typing.final
 class VpnDomainNameAssignment(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VpnDomainNameAssignment: ...
@@ -343,6 +360,7 @@ class VpnDomainNameAssignment(winrt.system.Object):
     @_property
     def domain_name_list(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[VpnDomainNameInfo]]: ...
 
+@typing.final
 class VpnDomainNameInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VpnDomainNameInfo: ...
@@ -362,6 +380,7 @@ class VpnDomainNameInfo(winrt.system.Object):
     @_property
     def web_proxy_uris(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.foundation.Uri]]: ...
 
+@typing.final
 class VpnForegroundActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VpnForegroundActivatedEventArgs: ...
@@ -380,17 +399,20 @@ class VpnForegroundActivatedEventArgs(winrt.system.Object):
     @_property
     def shared_context(self) -> typing.Optional[winrt.windows.foundation.collections.ValueSet]: ...
 
+@typing.final
 class VpnForegroundActivationOperation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VpnForegroundActivationOperation: ...
     def complete(self, result: typing.Optional[winrt.windows.foundation.collections.ValueSet], /) -> None: ...
 
+@typing.final
 class VpnInterfaceId(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VpnInterfaceId: ...
     def __new__(cls: typing.Type[VpnInterfaceId], address: winrt.system.Array[winrt.system.UInt8]) -> VpnInterfaceId:...
     def get_address_info(self) -> winrt.system.Array[winrt.system.UInt8]: ...
 
+@typing.final
 class VpnManagementAgent(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VpnManagementAgent: ...
@@ -405,6 +427,7 @@ class VpnManagementAgent(winrt.system.Object):
     def update_profile_from_object_async(self, profile: typing.Optional[IVpnProfile], /) -> winrt.windows.foundation.IAsyncOperation[VpnManagementErrorStatus]: ...
     def update_profile_from_xml_async(self, xml: str, /) -> winrt.windows.foundation.IAsyncOperation[VpnManagementErrorStatus]: ...
 
+@typing.final
 class VpnNamespaceAssignment(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VpnNamespaceAssignment: ...
@@ -418,6 +441,7 @@ class VpnNamespaceAssignment(winrt.system.Object):
     @namespace_list.setter
     def namespace_list(self, value: typing.Optional[winrt.windows.foundation.collections.IVector[VpnNamespaceInfo]]) -> None: ...
 
+@typing.final
 class VpnNamespaceInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VpnNamespaceInfo: ...
@@ -435,6 +459,7 @@ class VpnNamespaceInfo(winrt.system.Object):
     @dns_servers.setter
     def dns_servers(self, value: typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.networking.HostName]]) -> None: ...
 
+@typing.final
 class VpnNativeProfile(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VpnNativeProfile: ...
@@ -488,6 +513,7 @@ class VpnNativeProfile(winrt.system.Object):
     @_property
     def domain_name_info_list(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[VpnDomainNameInfo]]: ...
 
+@typing.final
 class VpnPacketBuffer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VpnPacketBuffer: ...
@@ -509,6 +535,7 @@ class VpnPacketBuffer(winrt.system.Object):
     @transport_context.setter
     def transport_context(self, value: typing.Optional[winrt.system.Object]) -> None: ...
 
+@typing.final
 class VpnPacketBufferList(winrt.system.Object):
     def __iter__(self) -> winrt.windows.foundation.collections.IIterator[VpnPacketBuffer]: ...
     @staticmethod
@@ -526,6 +553,7 @@ class VpnPacketBufferList(winrt.system.Object):
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class VpnPickedCredential(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VpnPickedCredential: ...
@@ -536,6 +564,7 @@ class VpnPickedCredential(winrt.system.Object):
     @_property
     def passkey_credential(self) -> typing.Optional[winrt.windows.security.credentials.PasswordCredential]: ...
 
+@typing.final
 class VpnPlugInProfile(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VpnPlugInProfile: ...
@@ -577,6 +606,7 @@ class VpnPlugInProfile(winrt.system.Object):
     @_property
     def traffic_filters(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[VpnTrafficFilter]]: ...
 
+@typing.final
 class VpnRoute(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VpnRoute: ...
@@ -590,6 +620,7 @@ class VpnRoute(winrt.system.Object):
     @address.setter
     def address(self, value: typing.Optional[winrt.windows.networking.HostName]) -> None: ...
 
+@typing.final
 class VpnRouteAssignment(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VpnRouteAssignment: ...
@@ -615,12 +646,14 @@ class VpnRouteAssignment(winrt.system.Object):
     @exclude_local_subnets.setter
     def exclude_local_subnets(self, value: bool) -> None: ...
 
+@typing.final
 class VpnSystemHealth(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VpnSystemHealth: ...
     @_property
     def statement_of_health(self) -> typing.Optional[winrt.windows.storage.streams.Buffer]: ...
 
+@typing.final
 class VpnTrafficFilter(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VpnTrafficFilter: ...
@@ -648,6 +681,7 @@ class VpnTrafficFilter(winrt.system.Object):
     @_property
     def remote_port_ranges(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[str]]: ...
 
+@typing.final
 class VpnTrafficFilterAssignment(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VpnTrafficFilterAssignment: ...
@@ -663,11 +697,13 @@ class VpnTrafficFilterAssignment(winrt.system.Object):
     @_property
     def traffic_filter_list(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[VpnTrafficFilter]]: ...
 
+@typing.final
 class IVpnChannelStatics(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IVpnChannelStatics: ...
     def process_event_async(self, third_party_plug_in: typing.Optional[winrt.system.Object], event: typing.Optional[winrt.system.Object], /) -> None: ...
 
+@typing.final
 class IVpnCredential(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IVpnCredential: ...
@@ -680,6 +716,7 @@ class IVpnCredential(winrt.system.Object):
     @_property
     def passkey_credential(self) -> typing.Optional[winrt.windows.security.credentials.PasswordCredential]: ...
 
+@typing.final
 class IVpnCustomPrompt(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IVpnCustomPrompt: ...
@@ -696,6 +733,7 @@ class IVpnCustomPrompt(winrt.system.Object):
     @label.setter
     def label(self, value: str) -> None: ...
 
+@typing.final
 class IVpnCustomPromptElement(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IVpnCustomPromptElement: ...
@@ -712,26 +750,31 @@ class IVpnCustomPromptElement(winrt.system.Object):
     @emphasized.setter
     def emphasized(self, value: bool) -> None: ...
 
+@typing.final
 class IVpnDomainNameInfoFactory(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IVpnDomainNameInfoFactory: ...
     def create_vpn_domain_name_info(self, name: str, name_type: VpnDomainNameType, dns_server_list: typing.Iterable[winrt.windows.networking.HostName], proxy_server_list: typing.Iterable[winrt.windows.networking.HostName], /) -> typing.Optional[VpnDomainNameInfo]: ...
 
+@typing.final
 class IVpnInterfaceIdFactory(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IVpnInterfaceIdFactory: ...
     def create_vpn_interface_id(self, address: winrt.system.Array[winrt.system.UInt8], /) -> typing.Optional[VpnInterfaceId]: ...
 
+@typing.final
 class IVpnNamespaceInfoFactory(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IVpnNamespaceInfoFactory: ...
     def create_vpn_namespace_info(self, name: str, dns_server_list: winrt.windows.foundation.collections.IVector[winrt.windows.networking.HostName], proxy_server_list: winrt.windows.foundation.collections.IVector[winrt.windows.networking.HostName], /) -> typing.Optional[VpnNamespaceInfo]: ...
 
+@typing.final
 class IVpnPacketBufferFactory(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IVpnPacketBufferFactory: ...
     def create_vpn_packet_buffer(self, parent_buffer: typing.Optional[VpnPacketBuffer], offset: winrt.system.UInt32, length: winrt.system.UInt32, /) -> typing.Optional[VpnPacketBuffer]: ...
 
+@typing.final
 class IVpnPlugIn(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IVpnPlugIn: ...
@@ -741,6 +784,7 @@ class IVpnPlugIn(winrt.system.Object):
     def encapsulate(self, channel: typing.Optional[VpnChannel], packets: typing.Optional[VpnPacketBufferList], encapulated_packets: typing.Optional[VpnPacketBufferList], /) -> None: ...
     def get_keep_alive_payload(self, channel: typing.Optional[VpnChannel], /) -> typing.Optional[VpnPacketBuffer]: ...
 
+@typing.final
 class IVpnProfile(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IVpnProfile: ...
@@ -765,6 +809,7 @@ class IVpnProfile(winrt.system.Object):
     @_property
     def traffic_filters(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[VpnTrafficFilter]]: ...
 
+@typing.final
 class IVpnRouteFactory(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IVpnRouteFactory: ...

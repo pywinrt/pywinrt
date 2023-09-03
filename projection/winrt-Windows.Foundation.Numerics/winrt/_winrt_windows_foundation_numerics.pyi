@@ -12,6 +12,7 @@ import winrt.system
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class Matrix3x2:
     m11: winrt.system.Single
     m12: winrt.system.Single
@@ -21,6 +22,7 @@ class Matrix3x2:
     m32: winrt.system.Single
     def __init__(self, m11: winrt.system.Single, m12: winrt.system.Single, m21: winrt.system.Single, m22: winrt.system.Single, m31: winrt.system.Single, m32: winrt.system.Single) -> None: ...
 
+@typing.final
 class Matrix4x4:
     m11: winrt.system.Single
     m12: winrt.system.Single
@@ -40,11 +42,13 @@ class Matrix4x4:
     m44: winrt.system.Single
     def __init__(self, m11: winrt.system.Single, m12: winrt.system.Single, m13: winrt.system.Single, m14: winrt.system.Single, m21: winrt.system.Single, m22: winrt.system.Single, m23: winrt.system.Single, m24: winrt.system.Single, m31: winrt.system.Single, m32: winrt.system.Single, m33: winrt.system.Single, m34: winrt.system.Single, m41: winrt.system.Single, m42: winrt.system.Single, m43: winrt.system.Single, m44: winrt.system.Single) -> None: ...
 
+@typing.final
 class Plane:
     normal: Vector3
     d: winrt.system.Single
     def __init__(self, normal: Vector3, d: winrt.system.Single) -> None: ...
 
+@typing.final
 class Quaternion:
     x: winrt.system.Single
     y: winrt.system.Single
@@ -52,22 +56,26 @@ class Quaternion:
     w: winrt.system.Single
     def __init__(self, x: winrt.system.Single, y: winrt.system.Single, z: winrt.system.Single, w: winrt.system.Single) -> None: ...
 
+@typing.final
 class Rational:
     numerator: winrt.system.UInt32
     denominator: winrt.system.UInt32
     def __init__(self, numerator: winrt.system.UInt32, denominator: winrt.system.UInt32) -> None: ...
 
+@typing.final
 class Vector2:
     x: winrt.system.Single
     y: winrt.system.Single
     def __init__(self, x: winrt.system.Single, y: winrt.system.Single) -> None: ...
 
+@typing.final
 class Vector3:
     x: winrt.system.Single
     y: winrt.system.Single
     z: winrt.system.Single
     def __init__(self, x: winrt.system.Single, y: winrt.system.Single, z: winrt.system.Single) -> None: ...
 
+@typing.final
 class Vector4:
     x: winrt.system.Single
     y: winrt.system.Single

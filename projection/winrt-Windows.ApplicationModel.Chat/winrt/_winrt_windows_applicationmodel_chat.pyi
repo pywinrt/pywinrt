@@ -19,6 +19,7 @@ from winrt.windows.applicationmodel.chat import ChatConversationThreadingKind, C
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class ChatCapabilities(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ChatCapabilities: ...
@@ -33,6 +34,7 @@ class ChatCapabilities(winrt.system.Object):
     @_property
     def is_online(self) -> bool: ...
 
+@typing.final
 class ChatCapabilitiesManager_Static(type):
     @typing.overload
     def get_cached_capabilities_async(cls, address: str, /) -> winrt.windows.foundation.IAsyncOperation[ChatCapabilities]: ...
@@ -43,10 +45,12 @@ class ChatCapabilitiesManager_Static(type):
     @typing.overload
     def get_capabilities_from_network_async(cls, address: str, transport_id: str, /) -> winrt.windows.foundation.IAsyncOperation[ChatCapabilities]: ...
 
+@typing.final
 class ChatCapabilitiesManager(winrt.system.Object, metaclass=ChatCapabilitiesManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ChatCapabilitiesManager: ...
 
+@typing.final
 class ChatConversation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ChatConversation: ...
@@ -86,6 +90,7 @@ class ChatConversation(winrt.system.Object):
     @_property
     def item_kind(self) -> ChatItemKind: ...
 
+@typing.final
 class ChatConversationReader(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ChatConversationReader: ...
@@ -94,6 +99,7 @@ class ChatConversationReader(winrt.system.Object):
     @typing.overload
     def read_batch_async(self, count: winrt.system.Int32, /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[ChatConversation]]: ...
 
+@typing.final
 class ChatConversationThreadingInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ChatConversationThreadingInfo: ...
@@ -117,6 +123,7 @@ class ChatConversationThreadingInfo(winrt.system.Object):
     @_property
     def participants(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[str]]: ...
 
+@typing.final
 class ChatMessage(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ChatMessage: ...
@@ -220,6 +227,7 @@ class ChatMessage(winrt.system.Object):
     @sync_id.setter
     def sync_id(self, value: str) -> None: ...
 
+@typing.final
 class ChatMessageAttachment(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ChatMessageAttachment: ...
@@ -253,13 +261,16 @@ class ChatMessageAttachment(winrt.system.Object):
     @original_file_name.setter
     def original_file_name(self, value: str) -> None: ...
 
+@typing.final
 class ChatMessageBlocking_Static(type):
     def mark_message_as_blocked_async(cls, local_chat_message_id: str, blocked: bool, /) -> winrt.windows.foundation.IAsyncAction: ...
 
+@typing.final
 class ChatMessageBlocking(winrt.system.Object, metaclass=ChatMessageBlocking_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ChatMessageBlocking: ...
 
+@typing.final
 class ChatMessageChange(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ChatMessageChange: ...
@@ -268,6 +279,7 @@ class ChatMessageChange(winrt.system.Object):
     @_property
     def message(self) -> typing.Optional[ChatMessage]: ...
 
+@typing.final
 class ChatMessageChangeReader(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ChatMessageChangeReader: ...
@@ -275,6 +287,7 @@ class ChatMessageChangeReader(winrt.system.Object):
     def accept_changes_through(self, last_change_to_acknowledge: typing.Optional[ChatMessageChange], /) -> None: ...
     def read_batch_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[ChatMessageChange]]: ...
 
+@typing.final
 class ChatMessageChangeTracker(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ChatMessageChangeTracker: ...
@@ -282,16 +295,19 @@ class ChatMessageChangeTracker(winrt.system.Object):
     def get_change_reader(self) -> typing.Optional[ChatMessageChangeReader]: ...
     def reset(self) -> None: ...
 
+@typing.final
 class ChatMessageChangedDeferral(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ChatMessageChangedDeferral: ...
     def complete(self) -> None: ...
 
+@typing.final
 class ChatMessageChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ChatMessageChangedEventArgs: ...
     def get_deferral(self) -> typing.Optional[ChatMessageChangedDeferral]: ...
 
+@typing.final
 class ChatMessageManager_Static(type):
     def get_transport_async(cls, transport_id: str, /) -> winrt.windows.foundation.IAsyncOperation[ChatMessageTransport]: ...
     def get_transports_async(cls) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[ChatMessageTransport]]: ...
@@ -301,10 +317,12 @@ class ChatMessageManager_Static(type):
     def show_compose_sms_message_async(cls, message: typing.Optional[ChatMessage], /) -> winrt.windows.foundation.IAsyncAction: ...
     def show_sms_settings(cls) -> None: ...
 
+@typing.final
 class ChatMessageManager(winrt.system.Object, metaclass=ChatMessageManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ChatMessageManager: ...
 
+@typing.final
 class ChatMessageNotificationTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ChatMessageNotificationTriggerDetails: ...
@@ -319,6 +337,7 @@ class ChatMessageNotificationTriggerDetails(winrt.system.Object):
     @_property
     def should_update_detail_text(self) -> bool: ...
 
+@typing.final
 class ChatMessageReader(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ChatMessageReader: ...
@@ -327,6 +346,7 @@ class ChatMessageReader(winrt.system.Object):
     @typing.overload
     def read_batch_async(self, count: winrt.system.Int32, /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[ChatMessage]]: ...
 
+@typing.final
 class ChatMessageStore(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ChatMessageStore: ...
@@ -372,6 +392,7 @@ class ChatMessageStore(winrt.system.Object):
     @_property
     def change_tracker(self) -> typing.Optional[ChatMessageChangeTracker]: ...
 
+@typing.final
 class ChatMessageStoreChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ChatMessageStoreChangedEventArgs: ...
@@ -380,6 +401,7 @@ class ChatMessageStoreChangedEventArgs(winrt.system.Object):
     @_property
     def kind(self) -> ChatStoreChangedEventKind: ...
 
+@typing.final
 class ChatMessageTransport(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ChatMessageTransport: ...
@@ -397,6 +419,7 @@ class ChatMessageTransport(winrt.system.Object):
     @_property
     def transport_kind(self) -> ChatMessageTransportKind: ...
 
+@typing.final
 class ChatMessageTransportConfiguration(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ChatMessageTransportConfiguration: ...
@@ -411,6 +434,7 @@ class ChatMessageTransportConfiguration(winrt.system.Object):
     @_property
     def supported_video_format(self) -> typing.Optional[winrt.windows.media.mediaproperties.MediaEncodingProfile]: ...
 
+@typing.final
 class ChatMessageValidationResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ChatMessageValidationResult: ...
@@ -423,6 +447,7 @@ class ChatMessageValidationResult(winrt.system.Object):
     @_property
     def status(self) -> ChatMessageValidationStatus: ...
 
+@typing.final
 class ChatQueryOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ChatQueryOptions: ...
@@ -432,6 +457,7 @@ class ChatQueryOptions(winrt.system.Object):
     @search_string.setter
     def search_string(self, value: str) -> None: ...
 
+@typing.final
 class ChatRecipientDeliveryInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ChatRecipientDeliveryInfo: ...
@@ -459,6 +485,7 @@ class ChatRecipientDeliveryInfo(winrt.system.Object):
     @_property
     def transport_interpreted_error_code(self) -> ChatTransportInterpretedErrorCode: ...
 
+@typing.final
 class ChatSearchReader(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ChatSearchReader: ...
@@ -467,6 +494,7 @@ class ChatSearchReader(winrt.system.Object):
     @typing.overload
     def read_batch_async(self, count: winrt.system.Int32, /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[IChatItem]]: ...
 
+@typing.final
 class ChatSyncConfiguration(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ChatSyncConfiguration: ...
@@ -479,6 +507,7 @@ class ChatSyncConfiguration(winrt.system.Object):
     @is_sync_enabled.setter
     def is_sync_enabled(self, value: bool) -> None: ...
 
+@typing.final
 class ChatSyncManager(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ChatSyncManager: ...
@@ -490,6 +519,7 @@ class ChatSyncManager(winrt.system.Object):
     @_property
     def configuration(self) -> typing.Optional[ChatSyncConfiguration]: ...
 
+@typing.final
 class RcsEndUserMessage(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RcsEndUserMessage: ...
@@ -506,12 +536,14 @@ class RcsEndUserMessage(winrt.system.Object):
     @_property
     def transport_id(self) -> str: ...
 
+@typing.final
 class RcsEndUserMessageAction(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RcsEndUserMessageAction: ...
     @_property
     def label(self) -> str: ...
 
+@typing.final
 class RcsEndUserMessageAvailableEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RcsEndUserMessageAvailableEventArgs: ...
@@ -520,6 +552,7 @@ class RcsEndUserMessageAvailableEventArgs(winrt.system.Object):
     @_property
     def message(self) -> typing.Optional[RcsEndUserMessage]: ...
 
+@typing.final
 class RcsEndUserMessageAvailableTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RcsEndUserMessageAvailableTriggerDetails: ...
@@ -528,12 +561,14 @@ class RcsEndUserMessageAvailableTriggerDetails(winrt.system.Object):
     @_property
     def title(self) -> str: ...
 
+@typing.final
 class RcsEndUserMessageManager(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RcsEndUserMessageManager: ...
     def add_message_available_changed(self, handler: winrt.windows.foundation.TypedEventHandler[RcsEndUserMessageManager, RcsEndUserMessageAvailableEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_message_available_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class RcsManager_Static(type):
     def get_end_user_message_manager(cls) -> typing.Optional[RcsEndUserMessageManager]: ...
     def get_transport_async(cls, transport_id: str, /) -> winrt.windows.foundation.IAsyncOperation[RcsTransport]: ...
@@ -542,16 +577,19 @@ class RcsManager_Static(type):
     def add_transport_list_changed(cls, handler: winrt.windows.foundation.EventHandler[winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_transport_list_changed(cls, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class RcsManager(winrt.system.Object, metaclass=RcsManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RcsManager: ...
 
+@typing.final
 class RcsServiceKindSupportedChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RcsServiceKindSupportedChangedEventArgs: ...
     @_property
     def service_kind(self) -> RcsServiceKind: ...
 
+@typing.final
 class RcsTransport(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RcsTransport: ...
@@ -570,6 +608,7 @@ class RcsTransport(winrt.system.Object):
     @_property
     def transport_id(self) -> str: ...
 
+@typing.final
 class RcsTransportConfiguration(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RcsTransportConfiguration: ...
@@ -586,6 +625,7 @@ class RcsTransportConfiguration(winrt.system.Object):
     @_property
     def warning_file_size_in_kilobytes(self) -> winrt.system.Int32: ...
 
+@typing.final
 class RemoteParticipantComposingChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteParticipantComposingChangedEventArgs: ...
@@ -596,6 +636,7 @@ class RemoteParticipantComposingChangedEventArgs(winrt.system.Object):
     @_property
     def transport_id(self) -> str: ...
 
+@typing.final
 class IChatItem(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IChatItem: ...

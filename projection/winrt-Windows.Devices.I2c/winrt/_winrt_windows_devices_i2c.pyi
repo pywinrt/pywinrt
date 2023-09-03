@@ -17,11 +17,13 @@ from winrt.windows.devices.i2c import I2cBusSpeed, I2cSharingMode, I2cTransferSt
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class I2cTransferResult:
     status: I2cTransferStatus
     bytes_transferred: winrt.system.UInt32
     def __init__(self, status: I2cTransferStatus, bytes_transferred: winrt.system.UInt32) -> None: ...
 
+@typing.final
 class I2cConnectionSettings(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> I2cConnectionSettings: ...
@@ -39,15 +41,18 @@ class I2cConnectionSettings(winrt.system.Object):
     @bus_speed.setter
     def bus_speed(self, value: I2cBusSpeed) -> None: ...
 
+@typing.final
 class I2cController_Static(type):
     def get_controllers_async(cls, provider: typing.Optional[winrt.windows.devices.i2c.provider.II2cProvider], /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[I2cController]]: ...
     def get_default_async(cls) -> winrt.windows.foundation.IAsyncOperation[I2cController]: ...
 
+@typing.final
 class I2cController(winrt.system.Object, metaclass=I2cController_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> I2cController: ...
     def get_device(self, settings: typing.Optional[I2cConnectionSettings], /) -> typing.Optional[I2cDevice]: ...
 
+@typing.final
 class I2cDevice_Static(type):
     def from_id_async(cls, device_id: str, settings: typing.Optional[I2cConnectionSettings], /) -> winrt.windows.foundation.IAsyncOperation[I2cDevice]: ...
     @typing.overload
@@ -55,6 +60,7 @@ class I2cDevice_Static(type):
     @typing.overload
     def get_device_selector(cls, friendly_name: str, /) -> str: ...
 
+@typing.final
 class I2cDevice(winrt.system.Object, metaclass=I2cDevice_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -72,6 +78,7 @@ class I2cDevice(winrt.system.Object, metaclass=I2cDevice_Static):
     @_property
     def device_id(self) -> str: ...
 
+@typing.final
 class II2cDeviceStatics(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> II2cDeviceStatics: ...

@@ -19,6 +19,7 @@ from winrt.windows.phone.notification.management import AccessoryNotificationTyp
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class AccessoryManager_Static(type):
     @typing.overload
     def accept_phone_call(cls, phone_call_id: winrt.system.UInt32, /) -> None: ...
@@ -111,10 +112,12 @@ class AccessoryManager_Static(type):
     @_property
     def volume_info(cls) -> typing.Optional[VolumeInfo]: ...
 
+@typing.final
 class AccessoryManager(winrt.system.Object, metaclass=AccessoryManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AccessoryManager: ...
 
+@typing.final
 class AlarmNotificationTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AlarmNotificationTriggerDetails: ...
@@ -141,6 +144,7 @@ class AlarmNotificationTriggerDetails(winrt.system.Object):
     @_property
     def instance_id(self) -> str: ...
 
+@typing.final
 class AppNotificationInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppNotificationInfo: ...
@@ -149,6 +153,7 @@ class AppNotificationInfo(winrt.system.Object):
     @_property
     def name(self) -> str: ...
 
+@typing.final
 class BinaryId(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BinaryId: ...
@@ -157,6 +162,7 @@ class BinaryId(winrt.system.Object):
     @_property
     def length(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class CalendarChangedNotificationTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CalendarChangedNotificationTriggerDetails: ...
@@ -177,6 +183,7 @@ class CalendarChangedNotificationTriggerDetails(winrt.system.Object):
     @_property
     def item_id(self) -> str: ...
 
+@typing.final
 class CortanaTileNotificationTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CortanaTileNotificationTriggerDetails: ...
@@ -213,6 +220,7 @@ class CortanaTileNotificationTriggerDetails(winrt.system.Object):
     @_property
     def tile_id(self) -> str: ...
 
+@typing.final
 class EmailAccountInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailAccountInfo: ...
@@ -221,6 +229,7 @@ class EmailAccountInfo(winrt.system.Object):
     @_property
     def is_notification_enabled(self) -> bool: ...
 
+@typing.final
 class EmailFolderInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailFolderInfo: ...
@@ -229,6 +238,7 @@ class EmailFolderInfo(winrt.system.Object):
     @_property
     def is_notification_enabled(self) -> bool: ...
 
+@typing.final
 class EmailNotificationTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailNotificationTriggerDetails: ...
@@ -259,6 +269,7 @@ class EmailNotificationTriggerDetails(winrt.system.Object):
     @_property
     def message_entry_id(self) -> typing.Optional[BinaryId]: ...
 
+@typing.final
 class EmailReadNotificationTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailReadNotificationTriggerDetails: ...
@@ -283,6 +294,7 @@ class EmailReadNotificationTriggerDetails(winrt.system.Object):
     @_property
     def parent_folder_name(self) -> str: ...
 
+@typing.final
 class MediaControlsTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaControlsTriggerDetails: ...
@@ -303,6 +315,7 @@ class MediaControlsTriggerDetails(winrt.system.Object):
     @_property
     def playback_status(self) -> PlaybackStatus: ...
 
+@typing.final
 class MediaMetadata(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaMetadata: ...
@@ -321,6 +334,7 @@ class MediaMetadata(winrt.system.Object):
     @_property
     def track(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class PhoneCallDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneCallDetails: ...
@@ -349,6 +363,7 @@ class PhoneCallDetails(winrt.system.Object):
     @_property
     def state(self) -> PhoneCallState: ...
 
+@typing.final
 class PhoneLineDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneLineDetails: ...
@@ -367,6 +382,7 @@ class PhoneLineDetails(winrt.system.Object):
     @_property
     def missed_call_count(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class PhoneNotificationTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneNotificationTriggerDetails: ...
@@ -389,6 +405,7 @@ class PhoneNotificationTriggerDetails(winrt.system.Object):
     @_property
     def phone_notification_type(self) -> PhoneNotificationType: ...
 
+@typing.final
 class ReminderNotificationTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ReminderNotificationTriggerDetails: ...
@@ -421,6 +438,7 @@ class ReminderNotificationTriggerDetails(winrt.system.Object):
     @_property
     def instance_id(self) -> str: ...
 
+@typing.final
 class SpeedDialEntry(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpeedDialEntry: ...
@@ -431,6 +449,7 @@ class SpeedDialEntry(winrt.system.Object):
     @_property
     def phone_number(self) -> str: ...
 
+@typing.final
 class TextResponse(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TextResponse: ...
@@ -439,6 +458,7 @@ class TextResponse(winrt.system.Object):
     @_property
     def id(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class ToastNotificationTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ToastNotificationTriggerDetails: ...
@@ -467,6 +487,7 @@ class ToastNotificationTriggerDetails(winrt.system.Object):
     @_property
     def instance_id(self) -> str: ...
 
+@typing.final
 class VolumeInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VolumeInfo: ...
@@ -481,6 +502,7 @@ class VolumeInfo(winrt.system.Object):
     @_property
     def system_volume(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class IAccessoryNotificationTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAccessoryNotificationTriggerDetails: ...

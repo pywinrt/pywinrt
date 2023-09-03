@@ -4,6 +4,9 @@
 
 ## [Unreleased]
 
+### Added
+- Added `@final` decorator to runtime class type hints.
+
 ### Fixed
 - Fixed missing `__iter__` type hint on sequences.
 - Fixed index type on sequences index operators.

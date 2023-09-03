@@ -22,6 +22,7 @@ from winrt.windows.media.devices import CallControlEventHandler, DialRequestedEv
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class AdvancedPhotoCaptureSettings(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AdvancedPhotoCaptureSettings: ...
@@ -31,6 +32,7 @@ class AdvancedPhotoCaptureSettings(winrt.system.Object):
     @mode.setter
     def mode(self, value: AdvancedPhotoMode) -> None: ...
 
+@typing.final
 class AdvancedPhotoControl(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AdvancedPhotoControl: ...
@@ -42,6 +44,7 @@ class AdvancedPhotoControl(winrt.system.Object):
     @_property
     def supported_modes(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[AdvancedPhotoMode]]: ...
 
+@typing.final
 class AudioDeviceController(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AudioDeviceController: ...
@@ -57,6 +60,7 @@ class AudioDeviceController(winrt.system.Object):
     @muted.setter
     def muted(self, value: bool) -> None: ...
 
+@typing.final
 class AudioDeviceModule(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AudioDeviceModule: ...
@@ -72,6 +76,7 @@ class AudioDeviceModule(winrt.system.Object):
     @_property
     def minor_version(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class AudioDeviceModuleNotificationEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AudioDeviceModuleNotificationEventArgs: ...
@@ -80,6 +85,7 @@ class AudioDeviceModuleNotificationEventArgs(winrt.system.Object):
     @_property
     def notification_data(self) -> typing.Optional[winrt.windows.storage.streams.IBuffer]: ...
 
+@typing.final
 class AudioDeviceModulesManager(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AudioDeviceModulesManager: ...
@@ -89,10 +95,12 @@ class AudioDeviceModulesManager(winrt.system.Object):
     def add_module_notification_received(self, handler: winrt.windows.foundation.TypedEventHandler[AudioDeviceModulesManager, AudioDeviceModuleNotificationEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_module_notification_received(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class CallControl_Static(type):
     def from_id(cls, device_id: str, /) -> typing.Optional[CallControl]: ...
     def get_default(cls) -> typing.Optional[CallControl]: ...
 
+@typing.final
 class CallControl(winrt.system.Object, metaclass=CallControl_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CallControl: ...
@@ -115,6 +123,7 @@ class CallControl(winrt.system.Object, metaclass=CallControl_Static):
     @_property
     def has_ringer(self) -> bool: ...
 
+@typing.final
 class CameraOcclusionInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CameraOcclusionInfo: ...
@@ -123,6 +132,7 @@ class CameraOcclusionInfo(winrt.system.Object):
     def add_state_changed(self, handler: winrt.windows.foundation.TypedEventHandler[CameraOcclusionInfo, CameraOcclusionStateChangedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_state_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class CameraOcclusionState(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CameraOcclusionState: ...
@@ -130,12 +140,14 @@ class CameraOcclusionState(winrt.system.Object):
     @_property
     def is_occluded(self) -> bool: ...
 
+@typing.final
 class CameraOcclusionStateChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CameraOcclusionStateChangedEventArgs: ...
     @_property
     def state(self) -> typing.Optional[CameraOcclusionState]: ...
 
+@typing.final
 class DefaultAudioCaptureDeviceChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DefaultAudioCaptureDeviceChangedEventArgs: ...
@@ -144,6 +156,7 @@ class DefaultAudioCaptureDeviceChangedEventArgs(winrt.system.Object):
     @_property
     def role(self) -> AudioDeviceRole: ...
 
+@typing.final
 class DefaultAudioRenderDeviceChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DefaultAudioRenderDeviceChangedEventArgs: ...
@@ -152,6 +165,7 @@ class DefaultAudioRenderDeviceChangedEventArgs(winrt.system.Object):
     @_property
     def role(self) -> AudioDeviceRole: ...
 
+@typing.final
 class DialRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DialRequestedEventArgs: ...
@@ -159,6 +173,7 @@ class DialRequestedEventArgs(winrt.system.Object):
     @_property
     def contact(self) -> typing.Optional[winrt.system.Object]: ...
 
+@typing.final
 class DigitalWindowBounds(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DigitalWindowBounds: ...
@@ -176,6 +191,7 @@ class DigitalWindowBounds(winrt.system.Object):
     @normalized_origin_left.setter
     def normalized_origin_left(self, value: winrt.system.Double) -> None: ...
 
+@typing.final
 class DigitalWindowCapability(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DigitalWindowCapability: ...
@@ -192,6 +208,7 @@ class DigitalWindowCapability(winrt.system.Object):
     @_property
     def width(self) -> winrt.system.Int32: ...
 
+@typing.final
 class DigitalWindowControl(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DigitalWindowControl: ...
@@ -210,6 +227,7 @@ class DigitalWindowControl(winrt.system.Object):
     @_property
     def supported_modes(self) -> DigitalWindowMode: ...
 
+@typing.final
 class ExposureCompensationControl(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ExposureCompensationControl: ...
@@ -225,6 +243,7 @@ class ExposureCompensationControl(winrt.system.Object):
     @_property
     def value(self) -> winrt.system.Single: ...
 
+@typing.final
 class ExposureControl(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ExposureControl: ...
@@ -243,6 +262,7 @@ class ExposureControl(winrt.system.Object):
     @_property
     def value(self) -> datetime.timedelta: ...
 
+@typing.final
 class ExposurePriorityVideoControl(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ExposurePriorityVideoControl: ...
@@ -253,6 +273,7 @@ class ExposurePriorityVideoControl(winrt.system.Object):
     @_property
     def supported(self) -> bool: ...
 
+@typing.final
 class FlashControl(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FlashControl: ...
@@ -285,6 +306,7 @@ class FlashControl(winrt.system.Object):
     @_property
     def assistant_light_supported(self) -> bool: ...
 
+@typing.final
 class FocusControl(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FocusControl: ...
@@ -326,6 +348,7 @@ class FocusControl(winrt.system.Object):
     @_property
     def wait_for_focus_supported(self) -> bool: ...
 
+@typing.final
 class FocusSettings(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FocusSettings: ...
@@ -355,6 +378,7 @@ class FocusSettings(winrt.system.Object):
     @auto_focus_range.setter
     def auto_focus_range(self, value: AutoFocusRange) -> None: ...
 
+@typing.final
 class HdrVideoControl(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HdrVideoControl: ...
@@ -367,6 +391,7 @@ class HdrVideoControl(winrt.system.Object):
     @_property
     def supported_modes(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[HdrVideoMode]]: ...
 
+@typing.final
 class InfraredTorchControl(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InfraredTorchControl: ...
@@ -389,6 +414,7 @@ class InfraredTorchControl(winrt.system.Object):
     @_property
     def supported_modes(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[InfraredTorchMode]]: ...
 
+@typing.final
 class IsoSpeedControl(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IsoSpeedControl: ...
@@ -412,12 +438,14 @@ class IsoSpeedControl(winrt.system.Object):
     @_property
     def value(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class KeypadPressedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> KeypadPressedEventArgs: ...
     @_property
     def telephony_key(self) -> TelephonyKey: ...
 
+@typing.final
 class LowLagPhotoControl(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LowLagPhotoControl: ...
@@ -438,6 +466,7 @@ class LowLagPhotoControl(winrt.system.Object):
     @_property
     def hardware_accelerated_thumbnail_supported(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class LowLagPhotoSequenceControl(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LowLagPhotoSequenceControl: ...
@@ -472,6 +501,7 @@ class LowLagPhotoSequenceControl(winrt.system.Object):
     @_property
     def supported(self) -> bool: ...
 
+@typing.final
 class MediaDevice_Static(type):
     def get_audio_capture_selector(cls) -> str: ...
     def get_audio_render_selector(cls) -> str: ...
@@ -483,10 +513,12 @@ class MediaDevice_Static(type):
     def add_default_audio_render_device_changed(cls, handler: winrt.windows.foundation.TypedEventHandler[winrt.system.Object, DefaultAudioRenderDeviceChangedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_default_audio_render_device_changed(cls, cookie: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class MediaDevice(winrt.system.Object, metaclass=MediaDevice_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaDevice: ...
 
+@typing.final
 class MediaDeviceControl(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaDeviceControl: ...
@@ -497,6 +529,7 @@ class MediaDeviceControl(winrt.system.Object):
     @_property
     def capabilities(self) -> typing.Optional[MediaDeviceControlCapabilities]: ...
 
+@typing.final
 class MediaDeviceControlCapabilities(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaDeviceControlCapabilities: ...
@@ -513,6 +546,7 @@ class MediaDeviceControlCapabilities(winrt.system.Object):
     @_property
     def supported(self) -> bool: ...
 
+@typing.final
 class ModuleCommandResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ModuleCommandResult: ...
@@ -521,6 +555,7 @@ class ModuleCommandResult(winrt.system.Object):
     @_property
     def status(self) -> SendCommandStatus: ...
 
+@typing.final
 class OpticalImageStabilizationControl(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> OpticalImageStabilizationControl: ...
@@ -533,6 +568,7 @@ class OpticalImageStabilizationControl(winrt.system.Object):
     @_property
     def supported_modes(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[OpticalImageStabilizationMode]]: ...
 
+@typing.final
 class PanelBasedOptimizationControl(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PanelBasedOptimizationControl: ...
@@ -543,6 +579,7 @@ class PanelBasedOptimizationControl(winrt.system.Object):
     @_property
     def is_supported(self) -> bool: ...
 
+@typing.final
 class PhotoConfirmationControl(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhotoConfirmationControl: ...
@@ -557,11 +594,13 @@ class PhotoConfirmationControl(winrt.system.Object):
     @_property
     def supported(self) -> bool: ...
 
+@typing.final
 class RedialRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RedialRequestedEventArgs: ...
     def handled(self) -> None: ...
 
+@typing.final
 class RegionOfInterest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RegionOfInterest: ...
@@ -595,6 +634,7 @@ class RegionOfInterest(winrt.system.Object):
     @bounds_normalized.setter
     def bounds_normalized(self, value: bool) -> None: ...
 
+@typing.final
 class RegionsOfInterestControl(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RegionsOfInterestControl: ...
@@ -612,6 +652,7 @@ class RegionsOfInterestControl(winrt.system.Object):
     @_property
     def max_regions(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class SceneModeControl(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SceneModeControl: ...
@@ -621,6 +662,7 @@ class SceneModeControl(winrt.system.Object):
     @_property
     def value(self) -> CaptureSceneMode: ...
 
+@typing.final
 class TorchControl(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TorchControl: ...
@@ -637,6 +679,7 @@ class TorchControl(winrt.system.Object):
     @_property
     def supported(self) -> bool: ...
 
+@typing.final
 class VideoDeviceController(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VideoDeviceController: ...
@@ -731,6 +774,7 @@ class VideoDeviceController(winrt.system.Object):
     @_property
     def focus(self) -> typing.Optional[MediaDeviceControl]: ...
 
+@typing.final
 class VideoDeviceControllerGetDevicePropertyResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VideoDeviceControllerGetDevicePropertyResult: ...
@@ -739,6 +783,7 @@ class VideoDeviceControllerGetDevicePropertyResult(winrt.system.Object):
     @_property
     def value(self) -> typing.Optional[winrt.system.Object]: ...
 
+@typing.final
 class VideoTemporalDenoisingControl(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VideoTemporalDenoisingControl: ...
@@ -751,6 +796,7 @@ class VideoTemporalDenoisingControl(winrt.system.Object):
     @_property
     def supported_modes(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[VideoTemporalDenoisingMode]]: ...
 
+@typing.final
 class WhiteBalanceControl(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WhiteBalanceControl: ...
@@ -769,6 +815,7 @@ class WhiteBalanceControl(winrt.system.Object):
     @_property
     def value(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class ZoomControl(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ZoomControl: ...
@@ -790,6 +837,7 @@ class ZoomControl(winrt.system.Object):
     @_property
     def supported_modes(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[ZoomTransitionMode]]: ...
 
+@typing.final
 class ZoomSettings(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ZoomSettings: ...
@@ -803,6 +851,7 @@ class ZoomSettings(winrt.system.Object):
     @mode.setter
     def mode(self, value: ZoomTransitionMode) -> None: ...
 
+@typing.final
 class IDefaultAudioDeviceChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IDefaultAudioDeviceChangedEventArgs: ...
@@ -811,6 +860,7 @@ class IDefaultAudioDeviceChangedEventArgs(winrt.system.Object):
     @_property
     def role(self) -> AudioDeviceRole: ...
 
+@typing.final
 class IMediaDeviceController(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IMediaDeviceController: ...

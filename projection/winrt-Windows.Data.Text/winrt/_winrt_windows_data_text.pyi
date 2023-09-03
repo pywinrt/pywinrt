@@ -18,11 +18,13 @@ from winrt.windows.data.text import SelectableWordSegmentsTokenizingHandler, Wor
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class TextSegment:
     start_position: winrt.system.UInt32
     length: winrt.system.UInt32
     def __init__(self, start_position: winrt.system.UInt32, length: winrt.system.UInt32) -> None: ...
 
+@typing.final
 class AlternateWordForm(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AlternateWordForm: ...
@@ -33,6 +35,7 @@ class AlternateWordForm(winrt.system.Object):
     @_property
     def source_text_segment(self) -> TextSegment: ...
 
+@typing.final
 class SelectableWordSegment(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SelectableWordSegment: ...
@@ -41,6 +44,7 @@ class SelectableWordSegment(winrt.system.Object):
     @_property
     def text(self) -> str: ...
 
+@typing.final
 class SelectableWordsSegmenter(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SelectableWordsSegmenter: ...
@@ -51,6 +55,7 @@ class SelectableWordsSegmenter(winrt.system.Object):
     @_property
     def resolved_language(self) -> str: ...
 
+@typing.final
 class SemanticTextQuery(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SemanticTextQuery: ...
@@ -61,6 +66,7 @@ class SemanticTextQuery(winrt.system.Object):
     def find(self, content: str, /) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[TextSegment]]: ...
     def find_in_property(self, property_content: str, property_name: str, /) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[TextSegment]]: ...
 
+@typing.final
 class TextConversionGenerator(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TextConversionGenerator: ...
@@ -74,6 +80,7 @@ class TextConversionGenerator(winrt.system.Object):
     @_property
     def resolved_language(self) -> str: ...
 
+@typing.final
 class TextPhoneme(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TextPhoneme: ...
@@ -82,6 +89,7 @@ class TextPhoneme(winrt.system.Object):
     @_property
     def reading_text(self) -> str: ...
 
+@typing.final
 class TextPredictionGenerator(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TextPredictionGenerator: ...
@@ -102,6 +110,7 @@ class TextPredictionGenerator(winrt.system.Object):
     @input_scope.setter
     def input_scope(self, value: winrt.windows.ui.text.core.CoreTextInputScope) -> None: ...
 
+@typing.final
 class TextReverseConversionGenerator(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TextReverseConversionGenerator: ...
@@ -113,6 +122,7 @@ class TextReverseConversionGenerator(winrt.system.Object):
     @_property
     def resolved_language(self) -> str: ...
 
+@typing.final
 class UnicodeCharacters_Static(type):
     def get_codepoint_from_surrogate_pair(cls, high_surrogate: winrt.system.UInt32, low_surrogate: winrt.system.UInt32, /) -> winrt.system.UInt32: ...
     def get_general_category(cls, codepoint: winrt.system.UInt32, /) -> UnicodeGeneralCategory: ...
@@ -132,10 +142,12 @@ class UnicodeCharacters_Static(type):
     def is_uppercase(cls, codepoint: winrt.system.UInt32, /) -> bool: ...
     def is_whitespace(cls, codepoint: winrt.system.UInt32, /) -> bool: ...
 
+@typing.final
 class UnicodeCharacters(winrt.system.Object, metaclass=UnicodeCharacters_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UnicodeCharacters: ...
 
+@typing.final
 class WordSegment(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WordSegment: ...
@@ -146,6 +158,7 @@ class WordSegment(winrt.system.Object):
     @_property
     def text(self) -> str: ...
 
+@typing.final
 class WordsSegmenter(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WordsSegmenter: ...

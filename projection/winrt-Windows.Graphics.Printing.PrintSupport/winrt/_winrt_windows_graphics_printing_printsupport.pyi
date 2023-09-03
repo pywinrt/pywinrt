@@ -23,6 +23,7 @@ from winrt.windows.graphics.printing.printsupport import SettingsLaunchKind, Wor
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class PrintSupportExtensionSession(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintSupportExtensionSession: ...
@@ -36,12 +37,14 @@ class PrintSupportExtensionSession(winrt.system.Object):
     @_property
     def printer(self) -> typing.Optional[winrt.windows.devices.printers.IppPrintDevice]: ...
 
+@typing.final
 class PrintSupportExtensionTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintSupportExtensionTriggerDetails: ...
     @_property
     def session(self) -> typing.Optional[PrintSupportExtensionSession]: ...
 
+@typing.final
 class PrintSupportPrintDeviceCapabilitiesChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintSupportPrintDeviceCapabilitiesChangedEventArgs: ...
@@ -55,14 +58,17 @@ class PrintSupportPrintDeviceCapabilitiesChangedEventArgs(winrt.system.Object):
     @_property
     def resource_language(self) -> str: ...
 
+@typing.final
 class PrintSupportPrintDeviceCapabilitiesUpdatePolicy_Static(type):
     def create_periodic_refresh(cls, update_period: datetime.timedelta, /) -> typing.Optional[PrintSupportPrintDeviceCapabilitiesUpdatePolicy]: ...
     def create_print_job_refresh(cls, number_of_jobs: winrt.system.UInt32, /) -> typing.Optional[PrintSupportPrintDeviceCapabilitiesUpdatePolicy]: ...
 
+@typing.final
 class PrintSupportPrintDeviceCapabilitiesUpdatePolicy(winrt.system.Object, metaclass=PrintSupportPrintDeviceCapabilitiesUpdatePolicy_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintSupportPrintDeviceCapabilitiesUpdatePolicy: ...
 
+@typing.final
 class PrintSupportPrintTicketElement(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintSupportPrintTicketElement: ...
@@ -76,6 +82,7 @@ class PrintSupportPrintTicketElement(winrt.system.Object):
     @local_name.setter
     def local_name(self, value: str) -> None: ...
 
+@typing.final
 class PrintSupportPrintTicketValidationRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintSupportPrintTicketValidationRequestedEventArgs: ...
@@ -84,6 +91,7 @@ class PrintSupportPrintTicketValidationRequestedEventArgs(winrt.system.Object):
     @_property
     def print_ticket(self) -> typing.Optional[winrt.windows.graphics.printing.printticket.WorkflowPrintTicket]: ...
 
+@typing.final
 class PrintSupportPrinterSelectedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintSupportPrinterSelectedEventArgs: ...
@@ -100,6 +108,7 @@ class PrintSupportPrinterSelectedEventArgs(winrt.system.Object):
     @_property
     def source_app_info(self) -> typing.Optional[winrt.windows.applicationmodel.AppInfo]: ...
 
+@typing.final
 class PrintSupportSessionInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintSupportSessionInfo: ...
@@ -108,6 +117,7 @@ class PrintSupportSessionInfo(winrt.system.Object):
     @_property
     def source_app_info(self) -> typing.Optional[winrt.windows.applicationmodel.AppInfo]: ...
 
+@typing.final
 class PrintSupportSettingsActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintSupportSettingsActivatedEventArgs: ...
@@ -123,6 +133,7 @@ class PrintSupportSettingsActivatedEventArgs(winrt.system.Object):
     @_property
     def session(self) -> typing.Optional[PrintSupportSettingsUISession]: ...
 
+@typing.final
 class PrintSupportSettingsUISession(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintSupportSettingsUISession: ...

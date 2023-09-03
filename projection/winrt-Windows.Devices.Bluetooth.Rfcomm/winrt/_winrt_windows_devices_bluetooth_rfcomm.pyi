@@ -19,6 +19,7 @@ import winrt.windows.storage.streams
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class RfcommDeviceService_Static(type):
     def from_id_async(cls, device_id: str, /) -> winrt.windows.foundation.IAsyncOperation[RfcommDeviceService]: ...
     def get_device_selector(cls, service_id: typing.Optional[RfcommServiceId], /) -> str: ...
@@ -31,6 +32,7 @@ class RfcommDeviceService_Static(type):
     @typing.overload
     def get_device_selector_for_bluetooth_device_and_service_id(cls, bluetooth_device: typing.Optional[winrt.windows.devices.bluetooth.BluetoothDevice], service_id: typing.Optional[RfcommServiceId], cache_mode: winrt.windows.devices.bluetooth.BluetoothCacheMode, /) -> str: ...
 
+@typing.final
 class RfcommDeviceService(winrt.system.Object, metaclass=RfcommDeviceService_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -57,6 +59,7 @@ class RfcommDeviceService(winrt.system.Object, metaclass=RfcommDeviceService_Sta
     @_property
     def device_access_information(self) -> typing.Optional[winrt.windows.devices.enumeration.DeviceAccessInformation]: ...
 
+@typing.final
 class RfcommDeviceServicesResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RfcommDeviceServicesResult: ...
@@ -65,6 +68,7 @@ class RfcommDeviceServicesResult(winrt.system.Object):
     @_property
     def services(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[RfcommDeviceService]]: ...
 
+@typing.final
 class RfcommServiceId_Static(type):
     def from_short_id(cls, short_id: winrt.system.UInt32, /) -> typing.Optional[RfcommServiceId]: ...
     def from_uuid(cls, uuid: _uuid.UUID, /) -> typing.Optional[RfcommServiceId]: ...
@@ -81,6 +85,7 @@ class RfcommServiceId_Static(type):
     @_property
     def serial_port(cls) -> typing.Optional[RfcommServiceId]: ...
 
+@typing.final
 class RfcommServiceId(winrt.system.Object, metaclass=RfcommServiceId_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RfcommServiceId: ...
@@ -89,9 +94,11 @@ class RfcommServiceId(winrt.system.Object, metaclass=RfcommServiceId_Static):
     @_property
     def uuid(self) -> _uuid.UUID: ...
 
+@typing.final
 class RfcommServiceProvider_Static(type):
     def create_async(cls, service_id: typing.Optional[RfcommServiceId], /) -> winrt.windows.foundation.IAsyncOperation[RfcommServiceProvider]: ...
 
+@typing.final
 class RfcommServiceProvider(winrt.system.Object, metaclass=RfcommServiceProvider_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RfcommServiceProvider: ...

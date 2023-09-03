@@ -18,9 +18,11 @@ from winrt.windows.ui.webui.core import MenuClosedEventHandler, MenuOpenedEventH
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class WebUICommandBar_Static(type):
     def get_for_current_view(cls) -> typing.Optional[WebUICommandBar]: ...
 
+@typing.final
 class WebUICommandBar(winrt.system.Object, metaclass=WebUICommandBar_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebUICommandBar: ...
@@ -61,6 +63,7 @@ class WebUICommandBar(winrt.system.Object, metaclass=WebUICommandBar_Static):
     @_property
     def size(self) -> winrt.windows.foundation.Size: ...
 
+@typing.final
 class WebUICommandBarBitmapIcon(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebUICommandBarBitmapIcon: ...
@@ -73,6 +76,7 @@ class WebUICommandBarBitmapIcon(winrt.system.Object):
     @uri.setter
     def uri(self, value: typing.Optional[winrt.windows.foundation.Uri]) -> None: ...
 
+@typing.final
 class WebUICommandBarConfirmationButton(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebUICommandBarConfirmationButton: ...
@@ -84,6 +88,7 @@ class WebUICommandBarConfirmationButton(winrt.system.Object):
     @text.setter
     def text(self, value: str) -> None: ...
 
+@typing.final
 class WebUICommandBarIconButton(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebUICommandBarIconButton: ...
@@ -111,18 +116,21 @@ class WebUICommandBarIconButton(winrt.system.Object):
     @enabled.setter
     def enabled(self, value: bool) -> None: ...
 
+@typing.final
 class WebUICommandBarItemInvokedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebUICommandBarItemInvokedEventArgs: ...
     @_property
     def is_primary_command(self) -> bool: ...
 
+@typing.final
 class WebUICommandBarSizeChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebUICommandBarSizeChangedEventArgs: ...
     @_property
     def size(self) -> winrt.windows.foundation.Size: ...
 
+@typing.final
 class WebUICommandBarSymbolIcon(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebUICommandBarSymbolIcon: ...
@@ -135,10 +143,12 @@ class WebUICommandBarSymbolIcon(winrt.system.Object):
     @symbol.setter
     def symbol(self, value: str) -> None: ...
 
+@typing.final
 class IWebUICommandBarElement(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebUICommandBarElement: ...
 
+@typing.final
 class IWebUICommandBarIcon(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebUICommandBarIcon: ...

@@ -18,11 +18,13 @@ from winrt.windows.storage.accesscache import AccessCacheOptions, RecentStorageI
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class AccessListEntry:
     token: str
     metadata: str
     def __init__(self, token: str, metadata: str) -> None: ...
 
+@typing.final
 class AccessListEntryView(winrt.system.Object, winrt._winrt.Sequence[AccessListEntry]):
     def __len__(self) -> int: ...
     def __iter__(self) -> winrt.windows.foundation.collections.IIterator[AccessListEntry]: ...
@@ -39,12 +41,14 @@ class AccessListEntryView(winrt.system.Object, winrt._winrt.Sequence[AccessListE
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class ItemRemovedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ItemRemovedEventArgs: ...
     @_property
     def removed_entry(self) -> AccessListEntry: ...
 
+@typing.final
 class StorageApplicationPermissions_Static(type):
     def get_future_access_list_for_user(cls, user: typing.Optional[winrt.windows.system.User], /) -> typing.Optional[StorageItemAccessList]: ...
     def get_most_recently_used_list_for_user(cls, user: typing.Optional[winrt.windows.system.User], /) -> typing.Optional[StorageItemMostRecentlyUsedList]: ...
@@ -53,10 +57,12 @@ class StorageApplicationPermissions_Static(type):
     @_property
     def most_recently_used_list(cls) -> typing.Optional[StorageItemMostRecentlyUsedList]: ...
 
+@typing.final
 class StorageApplicationPermissions(winrt.system.Object, metaclass=StorageApplicationPermissions_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StorageApplicationPermissions: ...
 
+@typing.final
 class StorageItemAccessList(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StorageItemAccessList: ...
@@ -89,6 +95,7 @@ class StorageItemAccessList(winrt.system.Object):
     @_property
     def maximum_items_allowed(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class StorageItemMostRecentlyUsedList(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StorageItemMostRecentlyUsedList: ...
@@ -127,6 +134,7 @@ class StorageItemMostRecentlyUsedList(winrt.system.Object):
     @_property
     def maximum_items_allowed(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class IStorageItemAccessList(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStorageItemAccessList: ...

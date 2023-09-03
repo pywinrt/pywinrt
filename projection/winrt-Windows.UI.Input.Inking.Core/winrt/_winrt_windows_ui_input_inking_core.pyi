@@ -20,6 +20,7 @@ from winrt.windows.ui.input.inking.core import CoreWetStrokeDisposition
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class CoreIncrementalInkStroke(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreIncrementalInkStroke: ...
@@ -33,9 +34,11 @@ class CoreIncrementalInkStroke(winrt.system.Object):
     @_property
     def point_transform(self) -> winrt.windows.foundation.numerics.Matrix3x2: ...
 
+@typing.final
 class CoreInkIndependentInputSource_Static(type):
     def create(cls, ink_presenter: typing.Optional[winrt.windows.ui.input.inking.InkPresenter], /) -> typing.Optional[CoreInkIndependentInputSource]: ...
 
+@typing.final
 class CoreInkIndependentInputSource(winrt.system.Object, metaclass=CoreInkIndependentInputSource_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreInkIndependentInputSource: ...
@@ -60,6 +63,7 @@ class CoreInkIndependentInputSource(winrt.system.Object, metaclass=CoreInkIndepe
     @pointer_cursor.setter
     def pointer_cursor(self, value: typing.Optional[winrt.windows.ui.core.CoreCursor]) -> None: ...
 
+@typing.final
 class CoreInkPresenterHost(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreInkPresenterHost: ...
@@ -71,6 +75,7 @@ class CoreInkPresenterHost(winrt.system.Object):
     @_property
     def ink_presenter(self) -> typing.Optional[winrt.windows.ui.input.inking.InkPresenter]: ...
 
+@typing.final
 class CoreWetStrokeUpdateEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreWetStrokeUpdateEventArgs: ...
@@ -83,9 +88,11 @@ class CoreWetStrokeUpdateEventArgs(winrt.system.Object):
     @_property
     def pointer_id(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class CoreWetStrokeUpdateSource_Static(type):
     def create(cls, ink_presenter: typing.Optional[winrt.windows.ui.input.inking.InkPresenter], /) -> typing.Optional[CoreWetStrokeUpdateSource]: ...
 
+@typing.final
 class CoreWetStrokeUpdateSource(winrt.system.Object, metaclass=CoreWetStrokeUpdateSource_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreWetStrokeUpdateSource: ...

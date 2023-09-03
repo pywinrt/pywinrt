@@ -15,6 +15,7 @@ import winrt.windows.foundation.collections
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class SocialDashboardItemUpdater(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SocialDashboardItemUpdater: ...
@@ -36,6 +37,7 @@ class SocialDashboardItemUpdater(winrt.system.Object):
     @_property
     def owner_remote_id(self) -> str: ...
 
+@typing.final
 class SocialFeedUpdater(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SocialFeedUpdater: ...
@@ -47,6 +49,7 @@ class SocialFeedUpdater(winrt.system.Object):
     @_property
     def owner_remote_id(self) -> str: ...
 
+@typing.final
 class SocialInfoProviderManager_Static(type):
     def create_dashboard_item_updater_async(cls, owner_remote_id: str, /) -> winrt.windows.foundation.IAsyncOperation[SocialDashboardItemUpdater]: ...
     def create_social_feed_updater_async(cls, kind: winrt.windows.applicationmodel.socialinfo.SocialFeedKind, mode: winrt.windows.applicationmodel.socialinfo.SocialFeedUpdateMode, owner_remote_id: str, /) -> winrt.windows.foundation.IAsyncOperation[SocialFeedUpdater]: ...
@@ -55,6 +58,7 @@ class SocialInfoProviderManager_Static(type):
     def report_new_content_available(cls, contact_remote_id: str, kind: winrt.windows.applicationmodel.socialinfo.SocialFeedKind, /) -> None: ...
     def update_badge_count_value(cls, item_remote_id: str, new_count: winrt.system.Int32, /) -> None: ...
 
+@typing.final
 class SocialInfoProviderManager(winrt.system.Object, metaclass=SocialInfoProviderManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SocialInfoProviderManager: ...

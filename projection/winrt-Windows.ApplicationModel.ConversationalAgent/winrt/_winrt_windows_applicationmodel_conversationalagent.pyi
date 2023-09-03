@@ -18,6 +18,7 @@ from winrt.windows.applicationmodel.conversationalagent import ActivationSignalD
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class ActivationSignalDetectionConfiguration(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -63,6 +64,7 @@ class ActivationSignalDetectionConfiguration(winrt.system.Object):
     @_property
     def training_step_completion_max_allowed_time(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class ActivationSignalDetectionConfigurationCreationResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ActivationSignalDetectionConfigurationCreationResult: ...
@@ -71,6 +73,7 @@ class ActivationSignalDetectionConfigurationCreationResult(winrt.system.Object):
     @_property
     def status(self) -> ActivationSignalDetectionConfigurationCreationStatus: ...
 
+@typing.final
 class ActivationSignalDetector(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ActivationSignalDetector: ...
@@ -105,10 +108,12 @@ class ActivationSignalDetector(winrt.system.Object):
     @_property
     def detector_id(self) -> str: ...
 
+@typing.final
 class ConversationalAgentDetectorManager_Static(type):
     @_property
     def default(cls) -> typing.Optional[ConversationalAgentDetectorManager]: ...
 
+@typing.final
 class ConversationalAgentDetectorManager(winrt.system.Object, metaclass=ConversationalAgentDetectorManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ConversationalAgentDetectorManager: ...
@@ -119,10 +124,12 @@ class ConversationalAgentDetectorManager(winrt.system.Object, metaclass=Conversa
     def get_all_activation_signal_detectors(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[ActivationSignalDetector]]: ...
     def get_all_activation_signal_detectors_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[ActivationSignalDetector]]: ...
 
+@typing.final
 class ConversationalAgentSession_Static(type):
     def get_current_session_async(cls) -> winrt.windows.foundation.IAsyncOperation[ConversationalAgentSession]: ...
     def get_current_session_sync(cls) -> typing.Optional[ConversationalAgentSession]: ...
 
+@typing.final
 class ConversationalAgentSession(winrt.system.Object, metaclass=ConversationalAgentSession_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -178,10 +185,12 @@ class ConversationalAgentSession(winrt.system.Object, metaclass=ConversationalAg
     @_property
     def signal(self) -> typing.Optional[ConversationalAgentSignal]: ...
 
+@typing.final
 class ConversationalAgentSessionInterruptedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ConversationalAgentSessionInterruptedEventArgs: ...
 
+@typing.final
 class ConversationalAgentSignal(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ConversationalAgentSignal: ...
@@ -214,22 +223,26 @@ class ConversationalAgentSignal(winrt.system.Object):
     @_property
     def detector_kind(self) -> ActivationSignalDetectorKind: ...
 
+@typing.final
 class ConversationalAgentSignalDetectedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ConversationalAgentSignalDetectedEventArgs: ...
 
+@typing.final
 class ConversationalAgentSystemStateChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ConversationalAgentSystemStateChangedEventArgs: ...
     @_property
     def system_state_change_type(self) -> ConversationalAgentSystemStateChangeType: ...
 
+@typing.final
 class DetectionConfigurationAvailabilityChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DetectionConfigurationAvailabilityChangedEventArgs: ...
     @_property
     def kind(self) -> DetectionConfigurationAvailabilityChangeKind: ...
 
+@typing.final
 class DetectionConfigurationAvailabilityInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DetectionConfigurationAvailabilityInfo: ...

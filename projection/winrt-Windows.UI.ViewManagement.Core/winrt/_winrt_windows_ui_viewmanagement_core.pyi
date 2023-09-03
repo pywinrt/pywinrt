@@ -17,10 +17,12 @@ from winrt.windows.ui.viewmanagement.core import CoreInputViewKind, CoreInputVie
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class CoreFrameworkInputView_Static(type):
     def get_for_current_view(cls) -> typing.Optional[CoreFrameworkInputView]: ...
     def get_for_u_i_context(cls, context: typing.Optional[winrt.windows.ui.UIContext], /) -> typing.Optional[CoreFrameworkInputView]: ...
 
+@typing.final
 class CoreFrameworkInputView(winrt.system.Object, metaclass=CoreFrameworkInputView_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreFrameworkInputView: ...
@@ -29,6 +31,7 @@ class CoreFrameworkInputView(winrt.system.Object, metaclass=CoreFrameworkInputVi
     def add_primary_view_animation_starting(self, handler: winrt.windows.foundation.TypedEventHandler[CoreFrameworkInputView, CoreFrameworkInputViewAnimationStartingEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_primary_view_animation_starting(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class CoreFrameworkInputViewAnimationStartingEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreFrameworkInputViewAnimationStartingEventArgs: ...
@@ -39,6 +42,7 @@ class CoreFrameworkInputViewAnimationStartingEventArgs(winrt.system.Object):
     @_property
     def occlusions(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[CoreInputViewOcclusion]]: ...
 
+@typing.final
 class CoreFrameworkInputViewOcclusionsChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreFrameworkInputViewOcclusionsChangedEventArgs: ...
@@ -47,10 +51,12 @@ class CoreFrameworkInputViewOcclusionsChangedEventArgs(winrt.system.Object):
     @_property
     def occlusions(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[CoreInputViewOcclusion]]: ...
 
+@typing.final
 class CoreInputView_Static(type):
     def get_for_current_view(cls) -> typing.Optional[CoreInputView]: ...
     def get_for_u_i_context(cls, context: typing.Optional[winrt.windows.ui.UIContext], /) -> typing.Optional[CoreInputView]: ...
 
+@typing.final
 class CoreInputView(winrt.system.Object, metaclass=CoreInputView_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreInputView: ...
@@ -79,6 +85,7 @@ class CoreInputView(winrt.system.Object, metaclass=CoreInputView_Static):
     def add_supported_kinds_changed(self, handler: winrt.windows.foundation.TypedEventHandler[CoreInputView, winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_supported_kinds_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class CoreInputViewAnimationStartingEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreInputViewAnimationStartingEventArgs: ...
@@ -91,11 +98,13 @@ class CoreInputViewAnimationStartingEventArgs(winrt.system.Object):
     @_property
     def occlusions(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[CoreInputViewOcclusion]]: ...
 
+@typing.final
 class CoreInputViewHidingEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreInputViewHidingEventArgs: ...
     def try_cancel(self) -> bool: ...
 
+@typing.final
 class CoreInputViewOcclusion(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreInputViewOcclusion: ...
@@ -104,6 +113,7 @@ class CoreInputViewOcclusion(winrt.system.Object):
     @_property
     def occlusion_kind(self) -> CoreInputViewOcclusionKind: ...
 
+@typing.final
 class CoreInputViewOcclusionsChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreInputViewOcclusionsChangedEventArgs: ...
@@ -114,11 +124,13 @@ class CoreInputViewOcclusionsChangedEventArgs(winrt.system.Object):
     @_property
     def occlusions(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[CoreInputViewOcclusion]]: ...
 
+@typing.final
 class CoreInputViewShowingEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreInputViewShowingEventArgs: ...
     def try_cancel(self) -> bool: ...
 
+@typing.final
 class CoreInputViewTransferringXYFocusEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreInputViewTransferringXYFocusEventArgs: ...
@@ -135,9 +147,11 @@ class CoreInputViewTransferringXYFocusEventArgs(winrt.system.Object):
     @_property
     def origin(self) -> winrt.windows.foundation.Rect: ...
 
+@typing.final
 class UISettingsController_Static(type):
     def request_default_async(cls) -> winrt.windows.foundation.IAsyncOperation[UISettingsController]: ...
 
+@typing.final
 class UISettingsController(winrt.system.Object, metaclass=UISettingsController_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UISettingsController: ...

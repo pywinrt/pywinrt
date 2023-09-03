@@ -19,9 +19,11 @@ from winrt.windows.ui.composition.interactions import InteractionBindingAxisMode
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class CompositionConditionalValue_Static(type):
     def create(cls, compositor: typing.Optional[winrt.windows.ui.composition.Compositor], /) -> typing.Optional[CompositionConditionalValue]: ...
 
+@typing.final
 class CompositionConditionalValue(winrt.system.Object, metaclass=CompositionConditionalValue_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionConditionalValue: ...
@@ -34,6 +36,7 @@ class CompositionConditionalValue(winrt.system.Object, metaclass=CompositionCond
     @condition.setter
     def condition(self, value: typing.Optional[winrt.windows.ui.composition.ExpressionAnimation]) -> None: ...
 
+@typing.final
 class CompositionInteractionSourceCollection(winrt.system.Object):
     def __iter__(self) -> winrt.windows.foundation.collections.IIterator[ICompositionInteractionSource]: ...
     @staticmethod
@@ -45,6 +48,7 @@ class CompositionInteractionSourceCollection(winrt.system.Object):
     @_property
     def count(self) -> winrt.system.Int32: ...
 
+@typing.final
 class InteractionSourceConfiguration(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InteractionSourceConfiguration: ...
@@ -61,12 +65,14 @@ class InteractionSourceConfiguration(winrt.system.Object):
     @position_x_source_mode.setter
     def position_x_source_mode(self, value: InteractionSourceRedirectionMode) -> None: ...
 
+@typing.final
 class InteractionTracker_Static(type):
     def create(cls, compositor: typing.Optional[winrt.windows.ui.composition.Compositor], /) -> typing.Optional[InteractionTracker]: ...
     def create_with_owner(cls, compositor: typing.Optional[winrt.windows.ui.composition.Compositor], owner: typing.Optional[IInteractionTrackerOwner], /) -> typing.Optional[InteractionTracker]: ...
     def get_binding_mode(cls, bound_tracker1: typing.Optional[InteractionTracker], bound_tracker2: typing.Optional[InteractionTracker], /) -> InteractionBindingAxisModes: ...
     def set_binding_mode(cls, bound_tracker1: typing.Optional[InteractionTracker], bound_tracker2: typing.Optional[InteractionTracker], axis_mode: InteractionBindingAxisModes, /) -> None: ...
 
+@typing.final
 class InteractionTracker(winrt.system.Object, metaclass=InteractionTracker_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InteractionTracker: ...
@@ -138,6 +144,7 @@ class InteractionTracker(winrt.system.Object, metaclass=InteractionTracker_Stati
     @_property
     def is_inertia_from_impulse(self) -> bool: ...
 
+@typing.final
 class InteractionTrackerCustomAnimationStateEnteredArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InteractionTrackerCustomAnimationStateEnteredArgs: ...
@@ -146,6 +153,7 @@ class InteractionTrackerCustomAnimationStateEnteredArgs(winrt.system.Object):
     @_property
     def is_from_binding(self) -> bool: ...
 
+@typing.final
 class InteractionTrackerIdleStateEnteredArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InteractionTrackerIdleStateEnteredArgs: ...
@@ -154,13 +162,16 @@ class InteractionTrackerIdleStateEnteredArgs(winrt.system.Object):
     @_property
     def is_from_binding(self) -> bool: ...
 
+@typing.final
 class InteractionTrackerInertiaModifier(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InteractionTrackerInertiaModifier: ...
 
+@typing.final
 class InteractionTrackerInertiaMotion_Static(type):
     def create(cls, compositor: typing.Optional[winrt.windows.ui.composition.Compositor], /) -> typing.Optional[InteractionTrackerInertiaMotion]: ...
 
+@typing.final
 class InteractionTrackerInertiaMotion(winrt.system.Object, metaclass=InteractionTrackerInertiaMotion_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InteractionTrackerInertiaMotion: ...
@@ -173,9 +184,11 @@ class InteractionTrackerInertiaMotion(winrt.system.Object, metaclass=Interaction
     @condition.setter
     def condition(self, value: typing.Optional[winrt.windows.ui.composition.ExpressionAnimation]) -> None: ...
 
+@typing.final
 class InteractionTrackerInertiaNaturalMotion_Static(type):
     def create(cls, compositor: typing.Optional[winrt.windows.ui.composition.Compositor], /) -> typing.Optional[InteractionTrackerInertiaNaturalMotion]: ...
 
+@typing.final
 class InteractionTrackerInertiaNaturalMotion(winrt.system.Object, metaclass=InteractionTrackerInertiaNaturalMotion_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InteractionTrackerInertiaNaturalMotion: ...
@@ -188,9 +201,11 @@ class InteractionTrackerInertiaNaturalMotion(winrt.system.Object, metaclass=Inte
     @condition.setter
     def condition(self, value: typing.Optional[winrt.windows.ui.composition.ExpressionAnimation]) -> None: ...
 
+@typing.final
 class InteractionTrackerInertiaRestingValue_Static(type):
     def create(cls, compositor: typing.Optional[winrt.windows.ui.composition.Compositor], /) -> typing.Optional[InteractionTrackerInertiaRestingValue]: ...
 
+@typing.final
 class InteractionTrackerInertiaRestingValue(winrt.system.Object, metaclass=InteractionTrackerInertiaRestingValue_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InteractionTrackerInertiaRestingValue: ...
@@ -203,6 +218,7 @@ class InteractionTrackerInertiaRestingValue(winrt.system.Object, metaclass=Inter
     @condition.setter
     def condition(self, value: typing.Optional[winrt.windows.ui.composition.ExpressionAnimation]) -> None: ...
 
+@typing.final
 class InteractionTrackerInertiaStateEnteredArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InteractionTrackerInertiaStateEnteredArgs: ...
@@ -225,6 +241,7 @@ class InteractionTrackerInertiaStateEnteredArgs(winrt.system.Object):
     @_property
     def is_from_binding(self) -> bool: ...
 
+@typing.final
 class InteractionTrackerInteractingStateEnteredArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InteractionTrackerInteractingStateEnteredArgs: ...
@@ -233,12 +250,14 @@ class InteractionTrackerInteractingStateEnteredArgs(winrt.system.Object):
     @_property
     def is_from_binding(self) -> bool: ...
 
+@typing.final
 class InteractionTrackerRequestIgnoredArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InteractionTrackerRequestIgnoredArgs: ...
     @_property
     def request_id(self) -> winrt.system.Int32: ...
 
+@typing.final
 class InteractionTrackerValuesChangedArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InteractionTrackerValuesChangedArgs: ...
@@ -249,13 +268,16 @@ class InteractionTrackerValuesChangedArgs(winrt.system.Object):
     @_property
     def scale(self) -> winrt.system.Single: ...
 
+@typing.final
 class InteractionTrackerVector2InertiaModifier(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InteractionTrackerVector2InertiaModifier: ...
 
+@typing.final
 class InteractionTrackerVector2InertiaNaturalMotion_Static(type):
     def create(cls, compositor: typing.Optional[winrt.windows.ui.composition.Compositor], /) -> typing.Optional[InteractionTrackerVector2InertiaNaturalMotion]: ...
 
+@typing.final
 class InteractionTrackerVector2InertiaNaturalMotion(winrt.system.Object, metaclass=InteractionTrackerVector2InertiaNaturalMotion_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InteractionTrackerVector2InertiaNaturalMotion: ...
@@ -268,10 +290,12 @@ class InteractionTrackerVector2InertiaNaturalMotion(winrt.system.Object, metacla
     @condition.setter
     def condition(self, value: typing.Optional[winrt.windows.ui.composition.ExpressionAnimation]) -> None: ...
 
+@typing.final
 class VisualInteractionSource_Static(type):
     def create(cls, source: typing.Optional[winrt.windows.ui.composition.Visual], /) -> typing.Optional[VisualInteractionSource]: ...
     def create_from_i_visual_element(cls, source: typing.Optional[winrt.windows.ui.composition.IVisualElement], /) -> typing.Optional[VisualInteractionSource]: ...
 
+@typing.final
 class VisualInteractionSource(winrt.system.Object, metaclass=VisualInteractionSource_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VisualInteractionSource: ...
@@ -334,10 +358,12 @@ class VisualInteractionSource(winrt.system.Object, metaclass=VisualInteractionSo
     @_property
     def pointer_wheel_config(self) -> typing.Optional[InteractionSourceConfiguration]: ...
 
+@typing.final
 class ICompositionInteractionSource(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICompositionInteractionSource: ...
 
+@typing.final
 class IInteractionTrackerOwner(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IInteractionTrackerOwner: ...

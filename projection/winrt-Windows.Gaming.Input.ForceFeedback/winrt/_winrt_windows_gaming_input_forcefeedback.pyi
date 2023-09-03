@@ -16,6 +16,7 @@ from winrt.windows.gaming.input.forcefeedback import ConditionForceEffectKind, F
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class ConditionForceEffect(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ConditionForceEffect: ...
@@ -32,6 +33,7 @@ class ConditionForceEffect(winrt.system.Object):
     @_property
     def state(self) -> ForceFeedbackEffectState: ...
 
+@typing.final
 class ConstantForceEffect(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ConstantForceEffect: ...
@@ -47,6 +49,7 @@ class ConstantForceEffect(winrt.system.Object):
     @_property
     def state(self) -> ForceFeedbackEffectState: ...
 
+@typing.final
 class ForceFeedbackMotor(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ForceFeedbackMotor: ...
@@ -69,6 +72,7 @@ class ForceFeedbackMotor(winrt.system.Object):
     @_property
     def supported_axes(self) -> ForceFeedbackEffectAxes: ...
 
+@typing.final
 class PeriodicForceEffect(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PeriodicForceEffect: ...
@@ -86,6 +90,7 @@ class PeriodicForceEffect(winrt.system.Object):
     @_property
     def kind(self) -> PeriodicForceEffectKind: ...
 
+@typing.final
 class RampForceEffect(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RampForceEffect: ...
@@ -101,6 +106,7 @@ class RampForceEffect(winrt.system.Object):
     @_property
     def state(self) -> ForceFeedbackEffectState: ...
 
+@typing.final
 class IForceFeedbackEffect(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IForceFeedbackEffect: ...

@@ -17,11 +17,13 @@ from winrt.windows.services.maps.offlinemaps import OfflineMapPackageQueryStatus
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class OfflineMapPackage_Static(type):
     def find_packages_async(cls, query_point: typing.Optional[winrt.windows.devices.geolocation.Geopoint], /) -> winrt.windows.foundation.IAsyncOperation[OfflineMapPackageQueryResult]: ...
     def find_packages_in_bounding_box_async(cls, query_bounding_box: typing.Optional[winrt.windows.devices.geolocation.GeoboundingBox], /) -> winrt.windows.foundation.IAsyncOperation[OfflineMapPackageQueryResult]: ...
     def find_packages_in_geocircle_async(cls, query_circle: typing.Optional[winrt.windows.devices.geolocation.Geocircle], /) -> winrt.windows.foundation.IAsyncOperation[OfflineMapPackageQueryResult]: ...
 
+@typing.final
 class OfflineMapPackage(winrt.system.Object, metaclass=OfflineMapPackage_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> OfflineMapPackage: ...
@@ -37,6 +39,7 @@ class OfflineMapPackage(winrt.system.Object, metaclass=OfflineMapPackage_Static)
     @_property
     def status(self) -> OfflineMapPackageStatus: ...
 
+@typing.final
 class OfflineMapPackageQueryResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> OfflineMapPackageQueryResult: ...
@@ -45,6 +48,7 @@ class OfflineMapPackageQueryResult(winrt.system.Object):
     @_property
     def status(self) -> OfflineMapPackageQueryStatus: ...
 
+@typing.final
 class OfflineMapPackageStartDownloadResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> OfflineMapPackageStartDownloadResult: ...

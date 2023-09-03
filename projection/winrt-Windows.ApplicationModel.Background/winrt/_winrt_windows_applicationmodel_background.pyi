@@ -33,6 +33,7 @@ from winrt.windows.applicationmodel.background import BackgroundTaskCanceledEven
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class ActivitySensorTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ActivitySensorTrigger: ...
@@ -46,14 +47,17 @@ class ActivitySensorTrigger(winrt.system.Object):
     @_property
     def supported_activities(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.devices.sensors.ActivityType]]: ...
 
+@typing.final
 class AlarmApplicationManager_Static(type):
     def get_access_status(cls) -> AlarmAccessStatus: ...
     def request_access_async(cls) -> winrt.windows.foundation.IAsyncOperation[AlarmAccessStatus]: ...
 
+@typing.final
 class AlarmApplicationManager(winrt.system.Object, metaclass=AlarmApplicationManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AlarmApplicationManager: ...
 
+@typing.final
 class AppBroadcastTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBroadcastTrigger: ...
@@ -63,6 +67,7 @@ class AppBroadcastTrigger(winrt.system.Object):
     @provider_info.setter
     def provider_info(self, value: typing.Optional[AppBroadcastTriggerProviderInfo]) -> None: ...
 
+@typing.final
 class AppBroadcastTriggerProviderInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBroadcastTriggerProviderInfo: ...
@@ -91,6 +96,7 @@ class AppBroadcastTriggerProviderInfo(winrt.system.Object):
     @display_name_resource.setter
     def display_name_resource(self, value: str) -> None: ...
 
+@typing.final
 class ApplicationTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ApplicationTrigger: ...
@@ -100,17 +106,20 @@ class ApplicationTrigger(winrt.system.Object):
     @typing.overload
     def request_async(self, arguments: typing.Optional[winrt.windows.foundation.collections.ValueSet], /) -> winrt.windows.foundation.IAsyncOperation[ApplicationTriggerResult]: ...
 
+@typing.final
 class ApplicationTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ApplicationTriggerDetails: ...
     @_property
     def arguments(self) -> typing.Optional[winrt.windows.foundation.collections.ValueSet]: ...
 
+@typing.final
 class AppointmentStoreNotificationTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentStoreNotificationTrigger: ...
     def __new__(cls: typing.Type[AppointmentStoreNotificationTrigger]) -> AppointmentStoreNotificationTrigger:...
 
+@typing.final
 class BackgroundExecutionManager_Static(type):
     @typing.overload
     def get_access_status(cls) -> BackgroundAccessStatus: ...
@@ -131,10 +140,12 @@ class BackgroundExecutionManager_Static(type):
     def request_access_kind_async(cls, requested_access: BackgroundAccessRequestKind, reason: str, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     def request_access_kind_for_modern_standby_async(cls, requested_access: BackgroundAccessRequestKind, reason: str, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
 
+@typing.final
 class BackgroundExecutionManager(winrt.system.Object, metaclass=BackgroundExecutionManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BackgroundExecutionManager: ...
 
+@typing.final
 class BackgroundTaskBuilder(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BackgroundTaskBuilder: ...
@@ -164,6 +175,7 @@ class BackgroundTaskBuilder(winrt.system.Object):
     @task_group.setter
     def task_group(self, value: typing.Optional[BackgroundTaskRegistrationGroup]) -> None: ...
 
+@typing.final
 class BackgroundTaskCompletedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BackgroundTaskCompletedEventArgs: ...
@@ -171,11 +183,13 @@ class BackgroundTaskCompletedEventArgs(winrt.system.Object):
     @_property
     def instance_id(self) -> _uuid.UUID: ...
 
+@typing.final
 class BackgroundTaskDeferral(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BackgroundTaskDeferral: ...
     def complete(self) -> None: ...
 
+@typing.final
 class BackgroundTaskProgressEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BackgroundTaskProgressEventArgs: ...
@@ -184,6 +198,7 @@ class BackgroundTaskProgressEventArgs(winrt.system.Object):
     @_property
     def progress(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class BackgroundTaskRegistration_Static(type):
     def get_task_group(cls, group_id: str, /) -> typing.Optional[BackgroundTaskRegistrationGroup]: ...
     @_property
@@ -191,6 +206,7 @@ class BackgroundTaskRegistration_Static(type):
     @_property
     def all_task_groups(cls) -> typing.Optional[winrt.windows.foundation.collections.IMapView[str, BackgroundTaskRegistrationGroup]]: ...
 
+@typing.final
 class BackgroundTaskRegistration(winrt.system.Object, metaclass=BackgroundTaskRegistration_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BackgroundTaskRegistration: ...
@@ -208,6 +224,7 @@ class BackgroundTaskRegistration(winrt.system.Object, metaclass=BackgroundTaskRe
     @_property
     def task_group(self) -> typing.Optional[BackgroundTaskRegistrationGroup]: ...
 
+@typing.final
 class BackgroundTaskRegistrationGroup(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BackgroundTaskRegistrationGroup: ...
@@ -224,14 +241,17 @@ class BackgroundTaskRegistrationGroup(winrt.system.Object):
     @_property
     def name(self) -> str: ...
 
+@typing.final
 class BackgroundWorkCost_Static(type):
     @_property
     def current_background_work_cost(cls) -> BackgroundWorkCostValue: ...
 
+@typing.final
 class BackgroundWorkCost(winrt.system.Object, metaclass=BackgroundWorkCost_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BackgroundWorkCost: ...
 
+@typing.final
 class BluetoothLEAdvertisementPublisherTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BluetoothLEAdvertisementPublisherTrigger: ...
@@ -255,6 +275,7 @@ class BluetoothLEAdvertisementPublisherTrigger(winrt.system.Object):
     @include_transmit_power_level.setter
     def include_transmit_power_level(self, value: bool) -> None: ...
 
+@typing.final
 class BluetoothLEAdvertisementWatcherTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BluetoothLEAdvertisementWatcherTrigger: ...
@@ -280,11 +301,13 @@ class BluetoothLEAdvertisementWatcherTrigger(winrt.system.Object):
     @allow_extended_advertisements.setter
     def allow_extended_advertisements(self, value: bool) -> None: ...
 
+@typing.final
 class CachedFileUpdaterTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CachedFileUpdaterTrigger: ...
     def __new__(cls: typing.Type[CachedFileUpdaterTrigger]) -> CachedFileUpdaterTrigger:...
 
+@typing.final
 class CachedFileUpdaterTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CachedFileUpdaterTriggerDetails: ...
@@ -295,26 +318,31 @@ class CachedFileUpdaterTriggerDetails(winrt.system.Object):
     @_property
     def update_target(self) -> winrt.windows.storage.provider.CachedFileTarget: ...
 
+@typing.final
 class ChatMessageNotificationTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ChatMessageNotificationTrigger: ...
     def __new__(cls: typing.Type[ChatMessageNotificationTrigger]) -> ChatMessageNotificationTrigger:...
 
+@typing.final
 class ChatMessageReceivedNotificationTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ChatMessageReceivedNotificationTrigger: ...
     def __new__(cls: typing.Type[ChatMessageReceivedNotificationTrigger]) -> ChatMessageReceivedNotificationTrigger:...
 
+@typing.final
 class CommunicationBlockingAppSetAsActiveTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CommunicationBlockingAppSetAsActiveTrigger: ...
     def __new__(cls: typing.Type[CommunicationBlockingAppSetAsActiveTrigger]) -> CommunicationBlockingAppSetAsActiveTrigger:...
 
+@typing.final
 class ContactStoreNotificationTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactStoreNotificationTrigger: ...
     def __new__(cls: typing.Type[ContactStoreNotificationTrigger]) -> ContactStoreNotificationTrigger:...
 
+@typing.final
 class ContentPrefetchTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContentPrefetchTrigger: ...
@@ -325,11 +353,13 @@ class ContentPrefetchTrigger(winrt.system.Object):
     @_property
     def wait_interval(self) -> datetime.timedelta: ...
 
+@typing.final
 class ConversationalAgentTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ConversationalAgentTrigger: ...
     def __new__(cls: typing.Type[ConversationalAgentTrigger]) -> ConversationalAgentTrigger:...
 
+@typing.final
 class CustomSystemEventTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CustomSystemEventTrigger: ...
@@ -339,9 +369,11 @@ class CustomSystemEventTrigger(winrt.system.Object):
     @_property
     def trigger_id(self) -> str: ...
 
+@typing.final
 class DeviceConnectionChangeTrigger_Static(type):
     def from_id_async(cls, device_id: str, /) -> winrt.windows.foundation.IAsyncOperation[DeviceConnectionChangeTrigger]: ...
 
+@typing.final
 class DeviceConnectionChangeTrigger(winrt.system.Object, metaclass=DeviceConnectionChangeTrigger_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DeviceConnectionChangeTrigger: ...
@@ -354,6 +386,7 @@ class DeviceConnectionChangeTrigger(winrt.system.Object, metaclass=DeviceConnect
     @_property
     def device_id(self) -> str: ...
 
+@typing.final
 class DeviceManufacturerNotificationTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DeviceManufacturerNotificationTrigger: ...
@@ -363,6 +396,7 @@ class DeviceManufacturerNotificationTrigger(winrt.system.Object):
     @_property
     def trigger_qualifier(self) -> str: ...
 
+@typing.final
 class DeviceServicingTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DeviceServicingTrigger: ...
@@ -372,6 +406,7 @@ class DeviceServicingTrigger(winrt.system.Object):
     @typing.overload
     def request_async(self, device_id: str, expected_duration: datetime.timedelta, arguments: str, /) -> winrt.windows.foundation.IAsyncOperation[DeviceTriggerResult]: ...
 
+@typing.final
 class DeviceUseTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DeviceUseTrigger: ...
@@ -381,15 +416,18 @@ class DeviceUseTrigger(winrt.system.Object):
     @typing.overload
     def request_async(self, device_id: str, arguments: str, /) -> winrt.windows.foundation.IAsyncOperation[DeviceTriggerResult]: ...
 
+@typing.final
 class DeviceWatcherTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DeviceWatcherTrigger: ...
 
+@typing.final
 class EmailStoreNotificationTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailStoreNotificationTrigger: ...
     def __new__(cls: typing.Type[EmailStoreNotificationTrigger]) -> EmailStoreNotificationTrigger:...
 
+@typing.final
 class GattCharacteristicNotificationTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattCharacteristicNotificationTrigger: ...
@@ -402,9 +440,11 @@ class GattCharacteristicNotificationTrigger(winrt.system.Object):
     @_property
     def event_triggering_mode(self) -> winrt.windows.devices.bluetooth.background.BluetoothEventTriggeringMode: ...
 
+@typing.final
 class GattServiceProviderTrigger_Static(type):
     def create_async(cls, trigger_id: str, service_uuid: _uuid.UUID, /) -> winrt.windows.foundation.IAsyncOperation[GattServiceProviderTriggerResult]: ...
 
+@typing.final
 class GattServiceProviderTrigger(winrt.system.Object, metaclass=GattServiceProviderTrigger_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattServiceProviderTrigger: ...
@@ -417,6 +457,7 @@ class GattServiceProviderTrigger(winrt.system.Object, metaclass=GattServiceProvi
     @_property
     def trigger_id(self) -> str: ...
 
+@typing.final
 class GattServiceProviderTriggerResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattServiceProviderTriggerResult: ...
@@ -425,6 +466,7 @@ class GattServiceProviderTriggerResult(winrt.system.Object):
     @_property
     def trigger(self) -> typing.Optional[GattServiceProviderTrigger]: ...
 
+@typing.final
 class GeovisitTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GeovisitTrigger: ...
@@ -434,6 +476,7 @@ class GeovisitTrigger(winrt.system.Object):
     @monitoring_scope.setter
     def monitoring_scope(self, value: winrt.windows.devices.geolocation.VisitMonitoringScope) -> None: ...
 
+@typing.final
 class LocationTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LocationTrigger: ...
@@ -441,6 +484,7 @@ class LocationTrigger(winrt.system.Object):
     @_property
     def trigger_type(self) -> LocationTriggerType: ...
 
+@typing.final
 class MaintenanceTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MaintenanceTrigger: ...
@@ -450,6 +494,7 @@ class MaintenanceTrigger(winrt.system.Object):
     @_property
     def one_shot(self) -> bool: ...
 
+@typing.final
 class MediaProcessingTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaProcessingTrigger: ...
@@ -459,41 +504,49 @@ class MediaProcessingTrigger(winrt.system.Object):
     @typing.overload
     def request_async(self, arguments: typing.Optional[winrt.windows.foundation.collections.ValueSet], /) -> winrt.windows.foundation.IAsyncOperation[MediaProcessingTriggerResult]: ...
 
+@typing.final
 class MobileBroadbandDeviceServiceNotificationTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandDeviceServiceNotificationTrigger: ...
     def __new__(cls: typing.Type[MobileBroadbandDeviceServiceNotificationTrigger]) -> MobileBroadbandDeviceServiceNotificationTrigger:...
 
+@typing.final
 class MobileBroadbandPcoDataChangeTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandPcoDataChangeTrigger: ...
     def __new__(cls: typing.Type[MobileBroadbandPcoDataChangeTrigger]) -> MobileBroadbandPcoDataChangeTrigger:...
 
+@typing.final
 class MobileBroadbandPinLockStateChangeTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandPinLockStateChangeTrigger: ...
     def __new__(cls: typing.Type[MobileBroadbandPinLockStateChangeTrigger]) -> MobileBroadbandPinLockStateChangeTrigger:...
 
+@typing.final
 class MobileBroadbandRadioStateChangeTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandRadioStateChangeTrigger: ...
     def __new__(cls: typing.Type[MobileBroadbandRadioStateChangeTrigger]) -> MobileBroadbandRadioStateChangeTrigger:...
 
+@typing.final
 class MobileBroadbandRegistrationStateChangeTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandRegistrationStateChangeTrigger: ...
     def __new__(cls: typing.Type[MobileBroadbandRegistrationStateChangeTrigger]) -> MobileBroadbandRegistrationStateChangeTrigger:...
 
+@typing.final
 class NetworkOperatorDataUsageTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NetworkOperatorDataUsageTrigger: ...
     def __new__(cls: typing.Type[NetworkOperatorDataUsageTrigger]) -> NetworkOperatorDataUsageTrigger:...
 
+@typing.final
 class NetworkOperatorHotspotAuthenticationTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NetworkOperatorHotspotAuthenticationTrigger: ...
     def __new__(cls: typing.Type[NetworkOperatorHotspotAuthenticationTrigger]) -> NetworkOperatorHotspotAuthenticationTrigger:...
 
+@typing.final
 class NetworkOperatorNotificationTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NetworkOperatorNotificationTrigger: ...
@@ -501,11 +554,13 @@ class NetworkOperatorNotificationTrigger(winrt.system.Object):
     @_property
     def network_account_id(self) -> str: ...
 
+@typing.final
 class PaymentAppCanMakePaymentTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PaymentAppCanMakePaymentTrigger: ...
     def __new__(cls: typing.Type[PaymentAppCanMakePaymentTrigger]) -> PaymentAppCanMakePaymentTrigger:...
 
+@typing.final
 class PhoneTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneTrigger: ...
@@ -515,6 +570,7 @@ class PhoneTrigger(winrt.system.Object):
     @_property
     def trigger_type(self) -> winrt.windows.applicationmodel.calls.background.PhoneTriggerType: ...
 
+@typing.final
 class PushNotificationTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PushNotificationTrigger: ...
@@ -523,11 +579,13 @@ class PushNotificationTrigger(winrt.system.Object):
     @typing.overload
     def __new__(cls: typing.Type[PushNotificationTrigger]) -> PushNotificationTrigger:...
 
+@typing.final
 class RcsEndUserMessageAvailableTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RcsEndUserMessageAvailableTrigger: ...
     def __new__(cls: typing.Type[RcsEndUserMessageAvailableTrigger]) -> RcsEndUserMessageAvailableTrigger:...
 
+@typing.final
 class RfcommConnectionTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RfcommConnectionTrigger: ...
@@ -549,16 +607,19 @@ class RfcommConnectionTrigger(winrt.system.Object):
     @_property
     def outbound_connection(self) -> typing.Optional[winrt.windows.devices.bluetooth.background.RfcommOutboundConnectionInformation]: ...
 
+@typing.final
 class SecondaryAuthenticationFactorAuthenticationTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SecondaryAuthenticationFactorAuthenticationTrigger: ...
     def __new__(cls: typing.Type[SecondaryAuthenticationFactorAuthenticationTrigger]) -> SecondaryAuthenticationFactorAuthenticationTrigger:...
 
+@typing.final
 class SensorDataThresholdTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SensorDataThresholdTrigger: ...
     def __new__(cls: typing.Type[SensorDataThresholdTrigger], threshold: typing.Optional[winrt.windows.devices.sensors.ISensorDataThreshold]) -> SensorDataThresholdTrigger:...
 
+@typing.final
 class SmartCardTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmartCardTrigger: ...
@@ -566,11 +627,13 @@ class SmartCardTrigger(winrt.system.Object):
     @_property
     def trigger_type(self) -> winrt.windows.devices.smartcards.SmartCardTriggerType: ...
 
+@typing.final
 class SmsMessageReceivedTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmsMessageReceivedTrigger: ...
     def __new__(cls: typing.Type[SmsMessageReceivedTrigger], filter_rules: typing.Optional[winrt.windows.devices.sms.SmsFilterRules]) -> SmsMessageReceivedTrigger:...
 
+@typing.final
 class SocketActivityTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SocketActivityTrigger: ...
@@ -578,19 +641,23 @@ class SocketActivityTrigger(winrt.system.Object):
     @_property
     def is_wake_from_low_power_supported(self) -> bool: ...
 
+@typing.final
 class StorageLibraryChangeTrackerTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StorageLibraryChangeTrackerTrigger: ...
     def __new__(cls: typing.Type[StorageLibraryChangeTrackerTrigger], tracker: typing.Optional[winrt.windows.storage.StorageLibraryChangeTracker]) -> StorageLibraryChangeTrackerTrigger:...
 
+@typing.final
 class StorageLibraryContentChangedTrigger_Static(type):
     def create(cls, storage_library: typing.Optional[winrt.windows.storage.StorageLibrary], /) -> typing.Optional[StorageLibraryContentChangedTrigger]: ...
     def create_from_libraries(cls, storage_libraries: typing.Iterable[winrt.windows.storage.StorageLibrary], /) -> typing.Optional[StorageLibraryContentChangedTrigger]: ...
 
+@typing.final
 class StorageLibraryContentChangedTrigger(winrt.system.Object, metaclass=StorageLibraryContentChangedTrigger_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StorageLibraryContentChangedTrigger: ...
 
+@typing.final
 class SystemCondition(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SystemCondition: ...
@@ -598,6 +665,7 @@ class SystemCondition(winrt.system.Object):
     @_property
     def condition_type(self) -> SystemConditionType: ...
 
+@typing.final
 class SystemTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SystemTrigger: ...
@@ -607,11 +675,13 @@ class SystemTrigger(winrt.system.Object):
     @_property
     def trigger_type(self) -> SystemTriggerType: ...
 
+@typing.final
 class TetheringEntitlementCheckTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TetheringEntitlementCheckTrigger: ...
     def __new__(cls: typing.Type[TetheringEntitlementCheckTrigger]) -> TetheringEntitlementCheckTrigger:...
 
+@typing.final
 class TimeTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TimeTrigger: ...
@@ -621,6 +691,7 @@ class TimeTrigger(winrt.system.Object):
     @_property
     def one_shot(self) -> bool: ...
 
+@typing.final
 class ToastNotificationActionTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ToastNotificationActionTrigger: ...
@@ -629,6 +700,7 @@ class ToastNotificationActionTrigger(winrt.system.Object):
     @typing.overload
     def __new__(cls: typing.Type[ToastNotificationActionTrigger]) -> ToastNotificationActionTrigger:...
 
+@typing.final
 class ToastNotificationHistoryChangedTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ToastNotificationHistoryChangedTrigger: ...
@@ -637,30 +709,36 @@ class ToastNotificationHistoryChangedTrigger(winrt.system.Object):
     @typing.overload
     def __new__(cls: typing.Type[ToastNotificationHistoryChangedTrigger]) -> ToastNotificationHistoryChangedTrigger:...
 
+@typing.final
 class UserNotificationChangedTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserNotificationChangedTrigger: ...
     def __new__(cls: typing.Type[UserNotificationChangedTrigger], notification_kinds: winrt.windows.ui.notifications.NotificationKinds) -> UserNotificationChangedTrigger:...
 
+@typing.final
 class WiFiOnDemandHotspotConnectTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WiFiOnDemandHotspotConnectTrigger: ...
     def __new__(cls: typing.Type[WiFiOnDemandHotspotConnectTrigger]) -> WiFiOnDemandHotspotConnectTrigger:...
 
+@typing.final
 class WiFiOnDemandHotspotUpdateMetadataTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WiFiOnDemandHotspotUpdateMetadataTrigger: ...
     def __new__(cls: typing.Type[WiFiOnDemandHotspotUpdateMetadataTrigger]) -> WiFiOnDemandHotspotUpdateMetadataTrigger:...
 
+@typing.final
 class IBackgroundCondition(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBackgroundCondition: ...
 
+@typing.final
 class IBackgroundTask(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBackgroundTask: ...
     def run(self, task_instance: typing.Optional[IBackgroundTaskInstance], /) -> None: ...
 
+@typing.final
 class IBackgroundTaskInstance(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBackgroundTaskInstance: ...
@@ -680,6 +758,7 @@ class IBackgroundTaskInstance(winrt.system.Object):
     @_property
     def trigger_details(self) -> typing.Optional[winrt.system.Object]: ...
 
+@typing.final
 class IBackgroundTaskInstance2(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBackgroundTaskInstance2: ...
@@ -700,6 +779,7 @@ class IBackgroundTaskInstance2(winrt.system.Object):
     @_property
     def trigger_details(self) -> typing.Optional[winrt.system.Object]: ...
 
+@typing.final
 class IBackgroundTaskInstance4(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBackgroundTaskInstance4: ...
@@ -721,6 +801,7 @@ class IBackgroundTaskInstance4(winrt.system.Object):
     @_property
     def trigger_details(self) -> typing.Optional[winrt.system.Object]: ...
 
+@typing.final
 class IBackgroundTaskRegistration(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBackgroundTaskRegistration: ...
@@ -734,6 +815,7 @@ class IBackgroundTaskRegistration(winrt.system.Object):
     @_property
     def task_id(self) -> _uuid.UUID: ...
 
+@typing.final
 class IBackgroundTaskRegistration2(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBackgroundTaskRegistration2: ...
@@ -749,6 +831,7 @@ class IBackgroundTaskRegistration2(winrt.system.Object):
     @_property
     def task_id(self) -> _uuid.UUID: ...
 
+@typing.final
 class IBackgroundTaskRegistration3(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBackgroundTaskRegistration3: ...
@@ -764,6 +847,7 @@ class IBackgroundTaskRegistration3(winrt.system.Object):
     @_property
     def task_id(self) -> _uuid.UUID: ...
 
+@typing.final
 class IBackgroundTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBackgroundTrigger: ...

@@ -14,9 +14,11 @@ import winrt.windows.ui.windowmanagement
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class WindowManagementPreview_Static(type):
     def set_preferred_min_size(cls, window: typing.Optional[winrt.windows.ui.windowmanagement.AppWindow], preferred_frame_min_size: winrt.windows.foundation.Size, /) -> None: ...
 
+@typing.final
 class WindowManagementPreview(winrt.system.Object, metaclass=WindowManagementPreview_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WindowManagementPreview: ...

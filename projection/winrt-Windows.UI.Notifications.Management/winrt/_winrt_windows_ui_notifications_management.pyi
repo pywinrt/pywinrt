@@ -17,10 +17,12 @@ from winrt.windows.ui.notifications.management import UserNotificationListenerAc
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class UserNotificationListener_Static(type):
     @_property
     def current(cls) -> typing.Optional[UserNotificationListener]: ...
 
+@typing.final
 class UserNotificationListener(winrt.system.Object, metaclass=UserNotificationListener_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserNotificationListener: ...

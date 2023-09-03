@@ -12,6 +12,7 @@ import winrt.system
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class DesktopWindowTarget(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DesktopWindowTarget: ...

@@ -22,10 +22,12 @@ from winrt.windows.storage import ApplicationDataSetVersionHandler, StreamedFile
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class AppDataPaths_Static(type):
     def get_default(cls) -> typing.Optional[AppDataPaths]: ...
     def get_for_user(cls, user: typing.Optional[winrt.windows.system.User], /) -> typing.Optional[AppDataPaths]: ...
 
+@typing.final
 class AppDataPaths(winrt.system.Object, metaclass=AppDataPaths_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppDataPaths: ...
@@ -48,11 +50,13 @@ class AppDataPaths(winrt.system.Object, metaclass=AppDataPaths_Static):
     @_property
     def roaming_app_data(self) -> str: ...
 
+@typing.final
 class ApplicationData_Static(type):
     def get_for_user_async(cls, user: typing.Optional[winrt.windows.system.User], /) -> winrt.windows.foundation.IAsyncOperation[ApplicationData]: ...
     @_property
     def current(cls) -> typing.Optional[ApplicationData]: ...
 
+@typing.final
 class ApplicationData(winrt.system.Object, metaclass=ApplicationData_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -88,6 +92,7 @@ class ApplicationData(winrt.system.Object, metaclass=ApplicationData_Static):
     @_property
     def shared_local_folder(self) -> typing.Optional[StorageFolder]: ...
 
+@typing.final
 class ApplicationDataCompositeValue(winrt.system.Object, winrt._winrt.MutableMapping[str, winrt.system.Object]):
     def __len__(self) -> int: ...
     def __iter__(self) -> typing.Iterator[str]: ...
@@ -110,6 +115,7 @@ class ApplicationDataCompositeValue(winrt.system.Object, winrt._winrt.MutableMap
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class ApplicationDataContainer(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -127,6 +133,7 @@ class ApplicationDataContainer(winrt.system.Object):
     @_property
     def values(self) -> typing.Optional[winrt.windows.foundation.collections.IPropertySet]: ...
 
+@typing.final
 class ApplicationDataContainerSettings(winrt.system.Object, winrt._winrt.MutableMapping[str, winrt.system.Object]):
     def __len__(self) -> int: ...
     def __iter__(self) -> typing.Iterator[str]: ...
@@ -148,14 +155,17 @@ class ApplicationDataContainerSettings(winrt.system.Object, winrt._winrt.Mutable
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class CachedFileManager_Static(type):
     def complete_updates_async(cls, file: typing.Optional[IStorageFile], /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.storage.provider.FileUpdateStatus]: ...
     def defer_updates(cls, file: typing.Optional[IStorageFile], /) -> None: ...
 
+@typing.final
 class CachedFileManager(winrt.system.Object, metaclass=CachedFileManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CachedFileManager: ...
 
+@typing.final
 class DownloadsFolder_Static(type):
     @typing.overload
     def create_file_async(cls, desired_name: str, /) -> winrt.windows.foundation.IAsyncOperation[StorageFile]: ...
@@ -174,10 +184,12 @@ class DownloadsFolder_Static(type):
     @typing.overload
     def create_folder_for_user_async(cls, user: typing.Optional[winrt.windows.system.User], desired_name: str, option: CreationCollisionOption, /) -> winrt.windows.foundation.IAsyncOperation[StorageFolder]: ...
 
+@typing.final
 class DownloadsFolder(winrt.system.Object, metaclass=DownloadsFolder_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DownloadsFolder: ...
 
+@typing.final
 class FileIO_Static(type):
     @typing.overload
     def append_lines_async(cls, file: typing.Optional[IStorageFile], lines: typing.Iterable[str], /) -> winrt.windows.foundation.IAsyncAction: ...
@@ -207,10 +219,12 @@ class FileIO_Static(type):
     @typing.overload
     def write_text_async(cls, file: typing.Optional[IStorageFile], contents: str, encoding: winrt.windows.storage.streams.UnicodeEncoding, /) -> winrt.windows.foundation.IAsyncAction: ...
 
+@typing.final
 class FileIO(winrt.system.Object, metaclass=FileIO_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FileIO: ...
 
+@typing.final
 class KnownFolders_Static(type):
     def get_folder_async(cls, folder_id: KnownFolderId, /) -> winrt.windows.foundation.IAsyncOperation[StorageFolder]: ...
     def get_folder_for_user_async(cls, user: typing.Optional[winrt.windows.system.User], folder_id: KnownFolderId, /) -> winrt.windows.foundation.IAsyncOperation[StorageFolder]: ...
@@ -243,10 +257,12 @@ class KnownFolders_Static(type):
     @_property
     def recorded_calls(cls) -> typing.Optional[StorageFolder]: ...
 
+@typing.final
 class KnownFolders(winrt.system.Object, metaclass=KnownFolders_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> KnownFolders: ...
 
+@typing.final
 class PathIO_Static(type):
     @typing.overload
     def append_lines_async(cls, absolute_path: str, lines: typing.Iterable[str], /) -> winrt.windows.foundation.IAsyncAction: ...
@@ -276,15 +292,18 @@ class PathIO_Static(type):
     @typing.overload
     def write_text_async(cls, absolute_path: str, contents: str, encoding: winrt.windows.storage.streams.UnicodeEncoding, /) -> winrt.windows.foundation.IAsyncAction: ...
 
+@typing.final
 class PathIO(winrt.system.Object, metaclass=PathIO_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PathIO: ...
 
+@typing.final
 class SetVersionDeferral(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SetVersionDeferral: ...
     def complete(self) -> None: ...
 
+@typing.final
 class SetVersionRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SetVersionRequest: ...
@@ -294,6 +313,7 @@ class SetVersionRequest(winrt.system.Object):
     @_property
     def desired_version(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class StorageFile_Static(type):
     def create_streamed_file_async(cls, display_name_with_extension: str, data_requested: typing.Optional[StreamedFileDataRequestedHandler], thumbnail: typing.Optional[winrt.windows.storage.streams.IRandomAccessStreamReference], /) -> winrt.windows.foundation.IAsyncOperation[StorageFile]: ...
     def create_streamed_file_from_uri_async(cls, display_name_with_extension: str, uri: typing.Optional[winrt.windows.foundation.Uri], thumbnail: typing.Optional[winrt.windows.storage.streams.IRandomAccessStreamReference], /) -> winrt.windows.foundation.IAsyncOperation[StorageFile]: ...
@@ -303,6 +323,7 @@ class StorageFile_Static(type):
     def replace_with_streamed_file_async(cls, file_to_replace: typing.Optional[IStorageFile], data_requested: typing.Optional[StreamedFileDataRequestedHandler], thumbnail: typing.Optional[winrt.windows.storage.streams.IRandomAccessStreamReference], /) -> winrt.windows.foundation.IAsyncOperation[StorageFile]: ...
     def replace_with_streamed_file_from_uri_async(cls, file_to_replace: typing.Optional[IStorageFile], uri: typing.Optional[winrt.windows.foundation.Uri], thumbnail: typing.Optional[winrt.windows.storage.streams.IRandomAccessStreamReference], /) -> winrt.windows.foundation.IAsyncOperation[StorageFile]: ...
 
+@typing.final
 class StorageFile(winrt.system.Object, metaclass=StorageFile_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StorageFile: ...
@@ -379,10 +400,12 @@ class StorageFile(winrt.system.Object, metaclass=StorageFile_Static):
     @_property
     def provider(self) -> typing.Optional[StorageProvider]: ...
 
+@typing.final
 class StorageFolder_Static(type):
     def get_folder_from_path_async(cls, path: str, /) -> winrt.windows.foundation.IAsyncOperation[StorageFolder]: ...
     def get_folder_from_path_for_user_async(cls, user: typing.Optional[winrt.windows.system.User], path: str, /) -> winrt.windows.foundation.IAsyncOperation[StorageFolder]: ...
 
+@typing.final
 class StorageFolder(winrt.system.Object, metaclass=StorageFolder_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StorageFolder: ...
@@ -474,10 +497,12 @@ class StorageFolder(winrt.system.Object, metaclass=StorageFolder_Static):
     @_property
     def provider(self) -> typing.Optional[StorageProvider]: ...
 
+@typing.final
 class StorageLibrary_Static(type):
     def get_library_async(cls, library_id: KnownLibraryId, /) -> winrt.windows.foundation.IAsyncOperation[StorageLibrary]: ...
     def get_library_for_user_async(cls, user: typing.Optional[winrt.windows.system.User], library_id: KnownLibraryId, /) -> winrt.windows.foundation.IAsyncOperation[StorageLibrary]: ...
 
+@typing.final
 class StorageLibrary(winrt.system.Object, metaclass=StorageLibrary_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StorageLibrary: ...
@@ -493,6 +518,7 @@ class StorageLibrary(winrt.system.Object, metaclass=StorageLibrary_Static):
     @_property
     def change_tracker(self) -> typing.Optional[StorageLibraryChangeTracker]: ...
 
+@typing.final
 class StorageLibraryChange(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StorageLibraryChange: ...
@@ -505,6 +531,7 @@ class StorageLibraryChange(winrt.system.Object):
     @_property
     def previous_path(self) -> str: ...
 
+@typing.final
 class StorageLibraryChangeReader(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StorageLibraryChangeReader: ...
@@ -512,6 +539,7 @@ class StorageLibraryChangeReader(winrt.system.Object):
     def get_last_change_id(self) -> winrt.system.UInt64: ...
     def read_batch_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[StorageLibraryChange]]: ...
 
+@typing.final
 class StorageLibraryChangeTracker(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StorageLibraryChangeTracker: ...
@@ -523,6 +551,7 @@ class StorageLibraryChangeTracker(winrt.system.Object):
     def get_change_reader(self) -> typing.Optional[StorageLibraryChangeReader]: ...
     def reset(self) -> None: ...
 
+@typing.final
 class StorageLibraryChangeTrackerOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StorageLibraryChangeTrackerOptions: ...
@@ -532,14 +561,17 @@ class StorageLibraryChangeTrackerOptions(winrt.system.Object):
     @track_change_details.setter
     def track_change_details(self, value: bool) -> None: ...
 
+@typing.final
 class StorageLibraryLastChangeId_Static(type):
     @_property
     def unknown(cls) -> winrt.system.UInt64: ...
 
+@typing.final
 class StorageLibraryLastChangeId(winrt.system.Object, metaclass=StorageLibraryLastChangeId_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StorageLibraryLastChangeId: ...
 
+@typing.final
 class StorageProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StorageProvider: ...
@@ -549,6 +581,7 @@ class StorageProvider(winrt.system.Object):
     @_property
     def id(self) -> str: ...
 
+@typing.final
 class StorageStreamTransaction(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -559,6 +592,7 @@ class StorageStreamTransaction(winrt.system.Object):
     @_property
     def stream(self) -> typing.Optional[winrt.windows.storage.streams.IRandomAccessStream]: ...
 
+@typing.final
 class StreamedFileDataRequest(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -569,15 +603,18 @@ class StreamedFileDataRequest(winrt.system.Object):
     def flush_async(self) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     def write_async(self, buffer: typing.Optional[winrt.windows.storage.streams.IBuffer], /) -> winrt.windows.foundation.IAsyncOperationWithProgress[winrt.system.UInt32, winrt.system.UInt32]: ...
 
+@typing.final
 class SystemAudioProperties(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SystemAudioProperties: ...
     @_property
     def encoding_bitrate(self) -> str: ...
 
+@typing.final
 class SystemDataPaths_Static(type):
     def get_default(cls) -> typing.Optional[SystemDataPaths]: ...
 
+@typing.final
 class SystemDataPaths(winrt.system.Object, metaclass=SystemDataPaths_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SystemDataPaths: ...
@@ -614,6 +651,7 @@ class SystemDataPaths(winrt.system.Object, metaclass=SystemDataPaths_Static):
     @_property
     def windows(self) -> str: ...
 
+@typing.final
 class SystemGPSProperties(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SystemGPSProperties: ...
@@ -622,6 +660,7 @@ class SystemGPSProperties(winrt.system.Object):
     @_property
     def longitude_decimal(self) -> str: ...
 
+@typing.final
 class SystemImageProperties(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SystemImageProperties: ...
@@ -630,6 +669,7 @@ class SystemImageProperties(winrt.system.Object):
     @_property
     def vertical_size(self) -> str: ...
 
+@typing.final
 class SystemMediaProperties(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SystemMediaProperties: ...
@@ -646,6 +686,7 @@ class SystemMediaProperties(winrt.system.Object):
     @_property
     def year(self) -> str: ...
 
+@typing.final
 class SystemMusicProperties(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SystemMusicProperties: ...
@@ -666,6 +707,7 @@ class SystemMusicProperties(winrt.system.Object):
     @_property
     def track_number(self) -> str: ...
 
+@typing.final
 class SystemPhotoProperties(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SystemPhotoProperties: ...
@@ -680,6 +722,7 @@ class SystemPhotoProperties(winrt.system.Object):
     @_property
     def people_names(self) -> str: ...
 
+@typing.final
 class SystemProperties_Static(type):
     @_property
     def audio(cls) -> typing.Optional[SystemAudioProperties]: ...
@@ -708,10 +751,12 @@ class SystemProperties_Static(type):
     @_property
     def video(cls) -> typing.Optional[SystemVideoProperties]: ...
 
+@typing.final
 class SystemProperties(winrt.system.Object, metaclass=SystemProperties_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SystemProperties: ...
 
+@typing.final
 class SystemVideoProperties(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SystemVideoProperties: ...
@@ -726,10 +771,12 @@ class SystemVideoProperties(winrt.system.Object):
     @_property
     def total_bitrate(self) -> str: ...
 
+@typing.final
 class UserDataPaths_Static(type):
     def get_default(cls) -> typing.Optional[UserDataPaths]: ...
     def get_for_user(cls, user: typing.Optional[winrt.windows.system.User], /) -> typing.Optional[UserDataPaths]: ...
 
+@typing.final
 class UserDataPaths(winrt.system.Object, metaclass=UserDataPaths_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDataPaths: ...
@@ -772,6 +819,7 @@ class UserDataPaths(winrt.system.Object, metaclass=UserDataPaths_Static):
     @_property
     def videos(self) -> str: ...
 
+@typing.final
 class IStorageFile(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStorageFile: ...
@@ -816,18 +864,21 @@ class IStorageFile(winrt.system.Object):
     @_property
     def path(self) -> str: ...
 
+@typing.final
 class IStorageFile2(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStorageFile2: ...
     def open_async(self, access_mode: FileAccessMode, options: StorageOpenOptions, /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.storage.streams.IRandomAccessStream]: ...
     def open_transacted_write_async(self, options: StorageOpenOptions, /) -> winrt.windows.foundation.IAsyncOperation[StorageStreamTransaction]: ...
 
+@typing.final
 class IStorageFilePropertiesWithAvailability(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStorageFilePropertiesWithAvailability: ...
     @_property
     def is_available(self) -> bool: ...
 
+@typing.final
 class IStorageFolder(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStorageFolder: ...
@@ -864,11 +915,13 @@ class IStorageFolder(winrt.system.Object):
     @_property
     def path(self) -> str: ...
 
+@typing.final
 class IStorageFolder2(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStorageFolder2: ...
     def try_get_item_async(self, name: str, /) -> winrt.windows.foundation.IAsyncOperation[IStorageItem]: ...
 
+@typing.final
 class IStorageItem(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStorageItem: ...
@@ -891,6 +944,7 @@ class IStorageItem(winrt.system.Object):
     @_property
     def path(self) -> str: ...
 
+@typing.final
 class IStorageItem2(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStorageItem2: ...
@@ -915,6 +969,7 @@ class IStorageItem2(winrt.system.Object):
     @_property
     def path(self) -> str: ...
 
+@typing.final
 class IStorageItemProperties(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStorageItemProperties: ...
@@ -933,6 +988,7 @@ class IStorageItemProperties(winrt.system.Object):
     @_property
     def properties(self) -> typing.Optional[winrt.windows.storage.fileproperties.StorageItemContentProperties]: ...
 
+@typing.final
 class IStorageItemProperties2(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStorageItemProperties2: ...
@@ -957,6 +1013,7 @@ class IStorageItemProperties2(winrt.system.Object):
     @_property
     def properties(self) -> typing.Optional[winrt.windows.storage.fileproperties.StorageItemContentProperties]: ...
 
+@typing.final
 class IStorageItemPropertiesWithProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStorageItemPropertiesWithProvider: ...
@@ -977,6 +1034,7 @@ class IStorageItemPropertiesWithProvider(winrt.system.Object):
     @_property
     def properties(self) -> typing.Optional[winrt.windows.storage.fileproperties.StorageItemContentProperties]: ...
 
+@typing.final
 class IStreamedFileDataRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStreamedFileDataRequest: ...

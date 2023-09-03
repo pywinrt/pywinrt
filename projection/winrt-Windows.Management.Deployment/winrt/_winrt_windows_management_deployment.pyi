@@ -17,11 +17,13 @@ from winrt.windows.management.deployment import AddPackageByAppInstallerOptions,
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class DeploymentProgress:
     state: DeploymentProgressState
     percentage: winrt.system.UInt32
     def __init__(self, state: DeploymentProgressState, percentage: winrt.system.UInt32) -> None: ...
 
+@typing.final
 class AddPackageOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AddPackageOptions: ...
@@ -93,10 +95,12 @@ class AddPackageOptions(winrt.system.Object):
     @_property
     def expected_digests(self) -> typing.Optional[winrt.windows.foundation.collections.IMap[winrt.windows.foundation.Uri, str]]: ...
 
+@typing.final
 class AppInstallerManager_Static(type):
     def get_default(cls) -> typing.Optional[AppInstallerManager]: ...
     def get_for_system(cls) -> typing.Optional[AppInstallerManager]: ...
 
+@typing.final
 class AppInstallerManager(winrt.system.Object, metaclass=AppInstallerManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppInstallerManager: ...
@@ -104,9 +108,11 @@ class AppInstallerManager(winrt.system.Object, metaclass=AppInstallerManager_Sta
     def pause_auto_updates_until(self, package_family_name: str, date_time: datetime.datetime, /) -> None: ...
     def set_auto_update_settings(self, package_family_name: str, app_installer_info: typing.Optional[AutoUpdateSettingsOptions], /) -> None: ...
 
+@typing.final
 class AutoUpdateSettingsOptions_Static(type):
     def create_from_app_installer_info(cls, app_installer_info: typing.Optional[winrt.windows.applicationmodel.AppInstallerInfo], /) -> typing.Optional[AutoUpdateSettingsOptions]: ...
 
+@typing.final
 class AutoUpdateSettingsOptions(winrt.system.Object, metaclass=AutoUpdateSettingsOptions_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AutoUpdateSettingsOptions: ...
@@ -156,6 +162,7 @@ class AutoUpdateSettingsOptions(winrt.system.Object, metaclass=AutoUpdateSetting
     @_property
     def update_uris(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.foundation.Uri]]: ...
 
+@typing.final
 class CreateSharedPackageContainerOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CreateSharedPackageContainerOptions: ...
@@ -171,6 +178,7 @@ class CreateSharedPackageContainerOptions(winrt.system.Object):
     @_property
     def members(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[SharedPackageContainerMember]]: ...
 
+@typing.final
 class CreateSharedPackageContainerResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CreateSharedPackageContainerResult: ...
@@ -181,6 +189,7 @@ class CreateSharedPackageContainerResult(winrt.system.Object):
     @_property
     def status(self) -> SharedPackageContainerOperationStatus: ...
 
+@typing.final
 class DeleteSharedPackageContainerOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DeleteSharedPackageContainerOptions: ...
@@ -194,6 +203,7 @@ class DeleteSharedPackageContainerOptions(winrt.system.Object):
     @all_users.setter
     def all_users(self, value: bool) -> None: ...
 
+@typing.final
 class DeleteSharedPackageContainerResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DeleteSharedPackageContainerResult: ...
@@ -202,6 +212,7 @@ class DeleteSharedPackageContainerResult(winrt.system.Object):
     @_property
     def status(self) -> SharedPackageContainerOperationStatus: ...
 
+@typing.final
 class DeploymentResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DeploymentResult: ...
@@ -214,6 +225,7 @@ class DeploymentResult(winrt.system.Object):
     @_property
     def is_registered(self) -> bool: ...
 
+@typing.final
 class FindSharedPackageContainerOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FindSharedPackageContainerOptions: ...
@@ -227,6 +239,7 @@ class FindSharedPackageContainerOptions(winrt.system.Object):
     @name.setter
     def name(self, value: str) -> None: ...
 
+@typing.final
 class PackageAllUserProvisioningOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PackageAllUserProvisioningOptions: ...
@@ -236,6 +249,7 @@ class PackageAllUserProvisioningOptions(winrt.system.Object):
     @_property
     def projection_order_package_family_names(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[str]]: ...
 
+@typing.final
 class PackageManager(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PackageManager: ...
@@ -335,6 +349,7 @@ class PackageManager(winrt.system.Object):
     @_property
     def debug_settings(self) -> typing.Optional[PackageManagerDebugSettings]: ...
 
+@typing.final
 class PackageManagerDebugSettings(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PackageManagerDebugSettings: ...
@@ -343,6 +358,7 @@ class PackageManagerDebugSettings(winrt.system.Object):
     @typing.overload
     def set_content_group_state_async(self, package: typing.Optional[winrt.windows.applicationmodel.Package], content_group_name: str, state: winrt.windows.applicationmodel.PackageContentGroupState, completion_percentage: winrt.system.Double, /) -> winrt.windows.foundation.IAsyncAction: ...
 
+@typing.final
 class PackageUserInformation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PackageUserInformation: ...
@@ -351,6 +367,7 @@ class PackageUserInformation(winrt.system.Object):
     @_property
     def user_security_id(self) -> str: ...
 
+@typing.final
 class PackageVolume(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PackageVolume: ...
@@ -398,6 +415,7 @@ class PackageVolume(winrt.system.Object):
     @_property
     def is_full_trust_package_supported(self) -> bool: ...
 
+@typing.final
 class RegisterPackageOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RegisterPackageOptions: ...
@@ -449,6 +467,7 @@ class RegisterPackageOptions(winrt.system.Object):
     @_property
     def expected_digests(self) -> typing.Optional[winrt.windows.foundation.collections.IMap[winrt.windows.foundation.Uri, str]]: ...
 
+@typing.final
 class SharedPackageContainer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SharedPackageContainer: ...
@@ -460,11 +479,13 @@ class SharedPackageContainer(winrt.system.Object):
     @_property
     def name(self) -> str: ...
 
+@typing.final
 class SharedPackageContainerManager_Static(type):
     def get_default(cls) -> typing.Optional[SharedPackageContainerManager]: ...
     def get_for_provisioning(cls) -> typing.Optional[SharedPackageContainerManager]: ...
     def get_for_user(cls, user_sid: str, /) -> typing.Optional[SharedPackageContainerManager]: ...
 
+@typing.final
 class SharedPackageContainerManager(winrt.system.Object, metaclass=SharedPackageContainerManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SharedPackageContainerManager: ...
@@ -476,6 +497,7 @@ class SharedPackageContainerManager(winrt.system.Object, metaclass=SharedPackage
     def find_containers(self, options: typing.Optional[FindSharedPackageContainerOptions], /) -> typing.Optional[winrt.windows.foundation.collections.IVector[SharedPackageContainer]]: ...
     def get_container(self, id: str, /) -> typing.Optional[SharedPackageContainer]: ...
 
+@typing.final
 class SharedPackageContainerMember(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SharedPackageContainerMember: ...
@@ -483,6 +505,7 @@ class SharedPackageContainerMember(winrt.system.Object):
     @_property
     def package_family_name(self) -> str: ...
 
+@typing.final
 class StagePackageOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StagePackageOptions: ...
@@ -534,6 +557,7 @@ class StagePackageOptions(winrt.system.Object):
     @_property
     def expected_digests(self) -> typing.Optional[winrt.windows.foundation.collections.IMap[winrt.windows.foundation.Uri, str]]: ...
 
+@typing.final
 class UpdateSharedPackageContainerOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UpdateSharedPackageContainerOptions: ...
@@ -547,6 +571,7 @@ class UpdateSharedPackageContainerOptions(winrt.system.Object):
     @force_app_shutdown.setter
     def force_app_shutdown(self, value: bool) -> None: ...
 
+@typing.final
 class UpdateSharedPackageContainerResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UpdateSharedPackageContainerResult: ...

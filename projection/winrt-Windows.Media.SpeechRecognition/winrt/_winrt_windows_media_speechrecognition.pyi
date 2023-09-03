@@ -18,18 +18,21 @@ from winrt.windows.media.speechrecognition import SpeechContinuousRecognitionMod
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class SpeechContinuousRecognitionCompletedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpeechContinuousRecognitionCompletedEventArgs: ...
     @_property
     def status(self) -> SpeechRecognitionResultStatus: ...
 
+@typing.final
 class SpeechContinuousRecognitionResultGeneratedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpeechContinuousRecognitionResultGeneratedEventArgs: ...
     @_property
     def result(self) -> typing.Optional[SpeechRecognitionResult]: ...
 
+@typing.final
 class SpeechContinuousRecognitionSession(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpeechContinuousRecognitionSession: ...
@@ -50,12 +53,14 @@ class SpeechContinuousRecognitionSession(winrt.system.Object):
     @auto_stop_silence_timeout.setter
     def auto_stop_silence_timeout(self, value: datetime.timedelta) -> None: ...
 
+@typing.final
 class SpeechRecognitionCompilationResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpeechRecognitionCompilationResult: ...
     @_property
     def status(self) -> SpeechRecognitionResultStatus: ...
 
+@typing.final
 class SpeechRecognitionGrammarFileConstraint(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpeechRecognitionGrammarFileConstraint: ...
@@ -80,18 +85,21 @@ class SpeechRecognitionGrammarFileConstraint(winrt.system.Object):
     @_property
     def grammar_file(self) -> typing.Optional[winrt.windows.storage.StorageFile]: ...
 
+@typing.final
 class SpeechRecognitionHypothesis(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpeechRecognitionHypothesis: ...
     @_property
     def text(self) -> str: ...
 
+@typing.final
 class SpeechRecognitionHypothesisGeneratedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpeechRecognitionHypothesisGeneratedEventArgs: ...
     @_property
     def hypothesis(self) -> typing.Optional[SpeechRecognitionHypothesis]: ...
 
+@typing.final
 class SpeechRecognitionListConstraint(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpeechRecognitionListConstraint: ...
@@ -116,12 +124,14 @@ class SpeechRecognitionListConstraint(winrt.system.Object):
     @_property
     def commands(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[str]]: ...
 
+@typing.final
 class SpeechRecognitionQualityDegradingEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpeechRecognitionQualityDegradingEventArgs: ...
     @_property
     def problem(self) -> SpeechRecognitionAudioProblem: ...
 
+@typing.final
 class SpeechRecognitionResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpeechRecognitionResult: ...
@@ -145,12 +155,14 @@ class SpeechRecognitionResult(winrt.system.Object):
     @_property
     def phrase_start_time(self) -> datetime.datetime: ...
 
+@typing.final
 class SpeechRecognitionSemanticInterpretation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpeechRecognitionSemanticInterpretation: ...
     @_property
     def properties(self) -> typing.Optional[winrt.windows.foundation.collections.IMapView[str, winrt.windows.foundation.collections.IVectorView[str]]]: ...
 
+@typing.final
 class SpeechRecognitionTopicConstraint(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpeechRecognitionTopicConstraint: ...
@@ -177,6 +189,7 @@ class SpeechRecognitionTopicConstraint(winrt.system.Object):
     @_property
     def topic_hint(self) -> str: ...
 
+@typing.final
 class SpeechRecognitionVoiceCommandDefinitionConstraint(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpeechRecognitionVoiceCommandDefinitionConstraint: ...
@@ -195,6 +208,7 @@ class SpeechRecognitionVoiceCommandDefinitionConstraint(winrt.system.Object):
     @_property
     def type(self) -> SpeechRecognitionConstraintType: ...
 
+@typing.final
 class SpeechRecognizer_Static(type):
     def try_set_system_speech_language_async(cls, speech_language: typing.Optional[winrt.windows.globalization.Language], /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     @_property
@@ -204,6 +218,7 @@ class SpeechRecognizer_Static(type):
     @_property
     def system_speech_language(cls) -> typing.Optional[winrt.windows.globalization.Language]: ...
 
+@typing.final
 class SpeechRecognizer(winrt.system.Object, metaclass=SpeechRecognizer_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -237,12 +252,14 @@ class SpeechRecognizer(winrt.system.Object, metaclass=SpeechRecognizer_Static):
     @_property
     def state(self) -> SpeechRecognizerState: ...
 
+@typing.final
 class SpeechRecognizerStateChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpeechRecognizerStateChangedEventArgs: ...
     @_property
     def state(self) -> SpeechRecognizerState: ...
 
+@typing.final
 class SpeechRecognizerTimeouts(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpeechRecognizerTimeouts: ...
@@ -259,6 +276,7 @@ class SpeechRecognizerTimeouts(winrt.system.Object):
     @babble_timeout.setter
     def babble_timeout(self, value: datetime.timedelta) -> None: ...
 
+@typing.final
 class SpeechRecognizerUIOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpeechRecognizerUIOptions: ...
@@ -279,15 +297,18 @@ class SpeechRecognizerUIOptions(winrt.system.Object):
     @audible_prompt.setter
     def audible_prompt(self, value: str) -> None: ...
 
+@typing.final
 class VoiceCommandManager_Static(type):
     def install_command_sets_from_storage_file_async(cls, file: typing.Optional[winrt.windows.storage.StorageFile], /) -> winrt.windows.foundation.IAsyncAction: ...
     @_property
     def installed_command_sets(cls) -> typing.Optional[winrt.windows.foundation.collections.IMapView[str, VoiceCommandSet]]: ...
 
+@typing.final
 class VoiceCommandManager(winrt.system.Object, metaclass=VoiceCommandManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VoiceCommandManager: ...
 
+@typing.final
 class VoiceCommandSet(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VoiceCommandSet: ...
@@ -297,6 +318,7 @@ class VoiceCommandSet(winrt.system.Object):
     @_property
     def name(self) -> str: ...
 
+@typing.final
 class ISpeechRecognitionConstraint(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISpeechRecognitionConstraint: ...

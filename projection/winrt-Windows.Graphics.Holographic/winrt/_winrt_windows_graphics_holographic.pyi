@@ -22,20 +22,24 @@ from winrt.windows.graphics.holographic import HolographicDepthReprojectionMetho
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class HolographicAdapterId:
     low_part: winrt.system.UInt32
     high_part: winrt.system.Int32
     def __init__(self, low_part: winrt.system.UInt32, high_part: winrt.system.Int32) -> None: ...
 
+@typing.final
 class HolographicFrameId:
     value: winrt.system.UInt64
     def __init__(self, value: winrt.system.UInt64) -> None: ...
 
+@typing.final
 class HolographicStereoTransform:
     left: winrt.windows.foundation.numerics.Matrix4x4
     right: winrt.windows.foundation.numerics.Matrix4x4
     def __init__(self, left: winrt.windows.foundation.numerics.Matrix4x4, right: winrt.windows.foundation.numerics.Matrix4x4) -> None: ...
 
+@typing.final
 class HolographicCamera(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HolographicCamera: ...
@@ -76,6 +80,7 @@ class HolographicCamera(winrt.system.Object):
     @_property
     def view_configuration(self) -> typing.Optional[HolographicViewConfiguration]: ...
 
+@typing.final
 class HolographicCameraPose(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HolographicCameraPose: ...
@@ -96,6 +101,7 @@ class HolographicCameraPose(winrt.system.Object):
     @_property
     def viewport(self) -> winrt.windows.foundation.Rect: ...
 
+@typing.final
 class HolographicCameraRenderingParameters(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HolographicCameraRenderingParameters: ...
@@ -123,6 +129,7 @@ class HolographicCameraRenderingParameters(winrt.system.Object):
     @depth_reprojection_method.setter
     def depth_reprojection_method(self, value: HolographicDepthReprojectionMethod) -> None: ...
 
+@typing.final
 class HolographicCameraViewportParameters(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HolographicCameraViewportParameters: ...
@@ -131,9 +138,11 @@ class HolographicCameraViewportParameters(winrt.system.Object):
     @_property
     def visible_area_mesh(self) -> winrt.windows.foundation.numerics.Vector2: ...
 
+@typing.final
 class HolographicDisplay_Static(type):
     def get_default(cls) -> typing.Optional[HolographicDisplay]: ...
 
+@typing.final
 class HolographicDisplay(winrt.system.Object, metaclass=HolographicDisplay_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HolographicDisplay: ...
@@ -153,6 +162,7 @@ class HolographicDisplay(winrt.system.Object, metaclass=HolographicDisplay_Stati
     @_property
     def refresh_rate(self) -> winrt.system.Double: ...
 
+@typing.final
 class HolographicFrame(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HolographicFrame: ...
@@ -175,6 +185,7 @@ class HolographicFrame(winrt.system.Object):
     @_property
     def id(self) -> HolographicFrameId: ...
 
+@typing.final
 class HolographicFramePrediction(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HolographicFramePrediction: ...
@@ -183,6 +194,7 @@ class HolographicFramePrediction(winrt.system.Object):
     @_property
     def timestamp(self) -> typing.Optional[winrt.windows.perception.PerceptionTimestamp]: ...
 
+@typing.final
 class HolographicFramePresentationMonitor(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -191,6 +203,7 @@ class HolographicFramePresentationMonitor(winrt.system.Object):
     def close(self) -> None: ...
     def read_reports(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[HolographicFramePresentationReport]]: ...
 
+@typing.final
 class HolographicFramePresentationReport(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HolographicFramePresentationReport: ...
@@ -205,6 +218,7 @@ class HolographicFramePresentationReport(winrt.system.Object):
     @_property
     def presentation_count(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class HolographicFrameRenderingReport(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HolographicFrameRenderingReport: ...
@@ -219,6 +233,7 @@ class HolographicFrameRenderingReport(winrt.system.Object):
     @_property
     def system_relative_target_latch_time(self) -> datetime.timedelta: ...
 
+@typing.final
 class HolographicFrameScanoutMonitor(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -227,6 +242,7 @@ class HolographicFrameScanoutMonitor(winrt.system.Object):
     def close(self) -> None: ...
     def read_reports(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[HolographicFrameScanoutReport]]: ...
 
+@typing.final
 class HolographicFrameScanoutReport(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HolographicFrameScanoutReport: ...
@@ -241,6 +257,7 @@ class HolographicFrameScanoutReport(winrt.system.Object):
     @_property
     def system_relative_scanout_start_time(self) -> datetime.timedelta: ...
 
+@typing.final
 class HolographicQuadLayer(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -256,6 +273,7 @@ class HolographicQuadLayer(winrt.system.Object):
     @_property
     def size(self) -> winrt.windows.foundation.Size: ...
 
+@typing.final
 class HolographicQuadLayerUpdateParameters(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HolographicQuadLayerUpdateParameters: ...
@@ -269,6 +287,7 @@ class HolographicQuadLayerUpdateParameters(winrt.system.Object):
     @_property
     def can_acquire_with_hardware_protection(self) -> bool: ...
 
+@typing.final
 class HolographicSpace_Static(type):
     def create_for_core_window(cls, window: typing.Optional[winrt.windows.ui.core.CoreWindow], /) -> typing.Optional[HolographicSpace]: ...
     def add_is_available_changed(cls, handler: winrt.windows.foundation.EventHandler[winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
@@ -280,6 +299,7 @@ class HolographicSpace_Static(type):
     @_property
     def is_configured(cls) -> bool: ...
 
+@typing.final
 class HolographicSpace(winrt.system.Object, metaclass=HolographicSpace_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HolographicSpace: ...
@@ -300,6 +320,7 @@ class HolographicSpace(winrt.system.Object, metaclass=HolographicSpace_Static):
     @_property
     def user_presence(self) -> HolographicSpaceUserPresence: ...
 
+@typing.final
 class HolographicSpaceCameraAddedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HolographicSpaceCameraAddedEventArgs: ...
@@ -307,12 +328,14 @@ class HolographicSpaceCameraAddedEventArgs(winrt.system.Object):
     @_property
     def camera(self) -> typing.Optional[HolographicCamera]: ...
 
+@typing.final
 class HolographicSpaceCameraRemovedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HolographicSpaceCameraRemovedEventArgs: ...
     @_property
     def camera(self) -> typing.Optional[HolographicCamera]: ...
 
+@typing.final
 class HolographicViewConfiguration(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HolographicViewConfiguration: ...

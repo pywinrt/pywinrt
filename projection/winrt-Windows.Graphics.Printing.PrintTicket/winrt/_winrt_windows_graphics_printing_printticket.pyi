@@ -17,6 +17,7 @@ from winrt.windows.graphics.printing.printticket import PrintTicketFeatureSelect
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class PrintTicketCapabilities(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintTicketCapabilities: ...
@@ -59,6 +60,7 @@ class PrintTicketCapabilities(winrt.system.Object):
     @_property
     def xml_node(self) -> typing.Optional[winrt.windows.data.xml.dom.IXmlNode]: ...
 
+@typing.final
 class PrintTicketFeature(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintTicketFeature: ...
@@ -78,6 +80,7 @@ class PrintTicketFeature(winrt.system.Object):
     @_property
     def xml_node(self) -> typing.Optional[winrt.windows.data.xml.dom.IXmlNode]: ...
 
+@typing.final
 class PrintTicketOption(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintTicketOption: ...
@@ -94,6 +97,7 @@ class PrintTicketOption(winrt.system.Object):
     @_property
     def xml_node(self) -> typing.Optional[winrt.windows.data.xml.dom.IXmlNode]: ...
 
+@typing.final
 class PrintTicketParameterDefinition(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintTicketParameterDefinition: ...
@@ -112,6 +116,7 @@ class PrintTicketParameterDefinition(winrt.system.Object):
     @_property
     def xml_node(self) -> typing.Optional[winrt.windows.data.xml.dom.IXmlNode]: ...
 
+@typing.final
 class PrintTicketParameterInitializer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintTicketParameterInitializer: ...
@@ -126,6 +131,7 @@ class PrintTicketParameterInitializer(winrt.system.Object):
     @_property
     def xml_node(self) -> typing.Optional[winrt.windows.data.xml.dom.IXmlNode]: ...
 
+@typing.final
 class PrintTicketValue(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintTicketValue: ...
@@ -134,6 +140,7 @@ class PrintTicketValue(winrt.system.Object):
     @_property
     def type(self) -> PrintTicketValueType: ...
 
+@typing.final
 class WorkflowPrintTicket(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WorkflowPrintTicket: ...
@@ -182,6 +189,7 @@ class WorkflowPrintTicket(winrt.system.Object):
     @_property
     def xml_node(self) -> typing.Optional[winrt.windows.data.xml.dom.IXmlNode]: ...
 
+@typing.final
 class WorkflowPrintTicketValidationResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WorkflowPrintTicketValidationResult: ...

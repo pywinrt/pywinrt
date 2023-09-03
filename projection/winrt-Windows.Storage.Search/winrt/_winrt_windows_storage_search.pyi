@@ -20,17 +20,20 @@ from winrt.windows.storage.search import CommonFileQuery, CommonFolderQuery, Dat
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class SortEntry:
     property_name: str
     ascending_order: bool
     def __init__(self, property_name: str, ascending_order: bool) -> None: ...
 
+@typing.final
 class ContentIndexer_Static(type):
     @typing.overload
     def get_indexer(cls) -> typing.Optional[ContentIndexer]: ...
     @typing.overload
     def get_indexer(cls, index_name: str, /) -> typing.Optional[ContentIndexer]: ...
 
+@typing.final
 class ContentIndexer(winrt.system.Object, metaclass=ContentIndexer_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContentIndexer: ...
@@ -49,6 +52,7 @@ class ContentIndexer(winrt.system.Object, metaclass=ContentIndexer_Static):
     @_property
     def revision(self) -> winrt.system.UInt64: ...
 
+@typing.final
 class ContentIndexerQuery(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContentIndexerQuery: ...
@@ -64,6 +68,7 @@ class ContentIndexerQuery(winrt.system.Object):
     @_property
     def query_folder(self) -> typing.Optional[winrt.windows.storage.StorageFolder]: ...
 
+@typing.final
 class IndexableContent(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IndexableContent: ...
@@ -83,6 +88,7 @@ class IndexableContent(winrt.system.Object):
     @_property
     def properties(self) -> typing.Optional[winrt.windows.foundation.collections.IMap[str, winrt.system.Object]]: ...
 
+@typing.final
 class QueryOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> QueryOptions: ...
@@ -127,6 +133,7 @@ class QueryOptions(winrt.system.Object):
     @_property
     def storage_provider_id_filter(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[str]]: ...
 
+@typing.final
 class SortEntryVector(winrt.system.Object, winrt._winrt.MutableSequence[SortEntry]):
     def __len__(self) -> int: ...
     def __iter__(self) -> winrt.windows.foundation.collections.IIterator[SortEntry]: ...
@@ -159,6 +166,7 @@ class SortEntryVector(winrt.system.Object, winrt._winrt.MutableSequence[SortEntr
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class StorageFileQueryResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StorageFileQueryResult: ...
@@ -178,6 +186,7 @@ class StorageFileQueryResult(winrt.system.Object):
     @_property
     def folder(self) -> typing.Optional[winrt.windows.storage.StorageFolder]: ...
 
+@typing.final
 class StorageFolderQueryResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StorageFolderQueryResult: ...
@@ -196,6 +205,7 @@ class StorageFolderQueryResult(winrt.system.Object):
     @_property
     def folder(self) -> typing.Optional[winrt.windows.storage.StorageFolder]: ...
 
+@typing.final
 class StorageItemQueryResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StorageItemQueryResult: ...
@@ -214,6 +224,7 @@ class StorageItemQueryResult(winrt.system.Object):
     @_property
     def folder(self) -> typing.Optional[winrt.windows.storage.StorageFolder]: ...
 
+@typing.final
 class StorageLibraryChangeTrackerTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StorageLibraryChangeTrackerTriggerDetails: ...
@@ -222,6 +233,7 @@ class StorageLibraryChangeTrackerTriggerDetails(winrt.system.Object):
     @_property
     def folder(self) -> typing.Optional[winrt.windows.storage.StorageFolder]: ...
 
+@typing.final
 class StorageLibraryContentChangedTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StorageLibraryContentChangedTriggerDetails: ...
@@ -229,6 +241,7 @@ class StorageLibraryContentChangedTriggerDetails(winrt.system.Object):
     @_property
     def folder(self) -> typing.Optional[winrt.windows.storage.StorageFolder]: ...
 
+@typing.final
 class ValueAndLanguage(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ValueAndLanguage: ...
@@ -242,6 +255,7 @@ class ValueAndLanguage(winrt.system.Object):
     @language.setter
     def language(self, value: str) -> None: ...
 
+@typing.final
 class IIndexableContent(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IIndexableContent: ...
@@ -260,6 +274,7 @@ class IIndexableContent(winrt.system.Object):
     @stream_content_type.setter
     def stream_content_type(self, value: str) -> None: ...
 
+@typing.final
 class IStorageFolderQueryOperations(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStorageFolderQueryOperations: ...
@@ -289,6 +304,7 @@ class IStorageFolderQueryOperations(winrt.system.Object):
     def is_common_file_query_supported(self, query: CommonFileQuery, /) -> bool: ...
     def is_common_folder_query_supported(self, query: CommonFolderQuery, /) -> bool: ...
 
+@typing.final
 class IStorageQueryResultBase(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStorageQueryResultBase: ...

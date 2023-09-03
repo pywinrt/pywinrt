@@ -21,9 +21,11 @@ from winrt.windows.ui.input.inking import HandwritingLineHeight, InkDrawingAttri
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class InkDrawingAttributes_Static(type):
     def create_for_pencil(cls) -> typing.Optional[InkDrawingAttributes]: ...
 
+@typing.final
 class InkDrawingAttributes(winrt.system.Object, metaclass=InkDrawingAttributes_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InkDrawingAttributes: ...
@@ -67,6 +69,7 @@ class InkDrawingAttributes(winrt.system.Object, metaclass=InkDrawingAttributes_S
     @_property
     def modeler_attributes(self) -> typing.Optional[InkModelerAttributes]: ...
 
+@typing.final
 class InkDrawingAttributesPencilProperties(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InkDrawingAttributesPencilProperties: ...
@@ -75,6 +78,7 @@ class InkDrawingAttributesPencilProperties(winrt.system.Object):
     @opacity.setter
     def opacity(self, value: winrt.system.Double) -> None: ...
 
+@typing.final
 class InkInputConfiguration(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InkInputConfiguration: ...
@@ -91,6 +95,7 @@ class InkInputConfiguration(winrt.system.Object):
     @is_pen_haptic_feedback_enabled.setter
     def is_pen_haptic_feedback_enabled(self, value: bool) -> None: ...
 
+@typing.final
 class InkInputProcessingConfiguration(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InkInputProcessingConfiguration: ...
@@ -103,6 +108,7 @@ class InkInputProcessingConfiguration(winrt.system.Object):
     @mode.setter
     def mode(self, value: InkInputProcessingMode) -> None: ...
 
+@typing.final
 class InkManager(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InkManager: ...
@@ -137,6 +143,7 @@ class InkManager(winrt.system.Object):
     @_property
     def bounding_rect(self) -> winrt.windows.foundation.Rect: ...
 
+@typing.final
 class InkModelerAttributes(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InkModelerAttributes: ...
@@ -153,6 +160,7 @@ class InkModelerAttributes(winrt.system.Object):
     @use_velocity_based_pressure.setter
     def use_velocity_based_pressure(self, value: bool) -> None: ...
 
+@typing.final
 class InkPoint(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InkPoint: ...
@@ -171,6 +179,7 @@ class InkPoint(winrt.system.Object):
     @_property
     def timestamp(self) -> winrt.system.UInt64: ...
 
+@typing.final
 class InkPresenter(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InkPresenter: ...
@@ -207,6 +216,7 @@ class InkPresenter(winrt.system.Object):
     @_property
     def input_configuration(self) -> typing.Optional[InkInputConfiguration]: ...
 
+@typing.final
 class InkPresenterProtractor(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InkPresenterProtractor: ...
@@ -258,6 +268,7 @@ class InkPresenterProtractor(winrt.system.Object):
     @_property
     def kind(self) -> InkPresenterStencilKind: ...
 
+@typing.final
 class InkPresenterRuler(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InkPresenterRuler: ...
@@ -297,6 +308,7 @@ class InkPresenterRuler(winrt.system.Object):
     @_property
     def kind(self) -> InkPresenterStencilKind: ...
 
+@typing.final
 class InkRecognitionResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InkRecognitionResult: ...
@@ -305,12 +317,14 @@ class InkRecognitionResult(winrt.system.Object):
     @_property
     def bounding_rect(self) -> winrt.windows.foundation.Rect: ...
 
+@typing.final
 class InkRecognizer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InkRecognizer: ...
     @_property
     def name(self) -> str: ...
 
+@typing.final
 class InkRecognizerContainer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InkRecognizerContainer: ...
@@ -319,6 +333,7 @@ class InkRecognizerContainer(winrt.system.Object):
     def recognize_async(self, stroke_collection: typing.Optional[InkStrokeContainer], recognition_target: InkRecognitionTarget, /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[InkRecognitionResult]]: ...
     def set_default_recognizer(self, recognizer: typing.Optional[InkRecognizer], /) -> None: ...
 
+@typing.final
 class InkStroke(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InkStroke: ...
@@ -354,6 +369,7 @@ class InkStroke(winrt.system.Object):
     @_property
     def pointer_id(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class InkStrokeBuilder(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InkStrokeBuilder: ...
@@ -368,6 +384,7 @@ class InkStrokeBuilder(winrt.system.Object):
     def end_stroke(self, pointer_point: typing.Optional[winrt.windows.ui.input.PointerPoint], /) -> typing.Optional[InkStroke]: ...
     def set_default_drawing_attributes(self, drawing_attributes: typing.Optional[InkDrawingAttributes], /) -> None: ...
 
+@typing.final
 class InkStrokeContainer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InkStrokeContainer: ...
@@ -394,6 +411,7 @@ class InkStrokeContainer(winrt.system.Object):
     @_property
     def bounding_rect(self) -> winrt.windows.foundation.Rect: ...
 
+@typing.final
 class InkStrokeInput(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InkStrokeInput: ...
@@ -408,6 +426,7 @@ class InkStrokeInput(winrt.system.Object):
     @_property
     def ink_presenter(self) -> typing.Optional[InkPresenter]: ...
 
+@typing.final
 class InkStrokeRenderingSegment(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InkStrokeRenderingSegment: ...
@@ -426,24 +445,28 @@ class InkStrokeRenderingSegment(winrt.system.Object):
     @_property
     def twist(self) -> winrt.system.Single: ...
 
+@typing.final
 class InkStrokesCollectedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InkStrokesCollectedEventArgs: ...
     @_property
     def strokes(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[InkStroke]]: ...
 
+@typing.final
 class InkStrokesErasedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InkStrokesErasedEventArgs: ...
     @_property
     def strokes(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[InkStroke]]: ...
 
+@typing.final
 class InkSynchronizer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InkSynchronizer: ...
     def begin_dry(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[InkStroke]]: ...
     def end_dry(self) -> None: ...
 
+@typing.final
 class InkUnprocessedInput(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InkUnprocessedInput: ...
@@ -464,9 +487,11 @@ class InkUnprocessedInput(winrt.system.Object):
     @_property
     def ink_presenter(self) -> typing.Optional[InkPresenter]: ...
 
+@typing.final
 class PenAndInkSettings_Static(type):
     def get_default(cls) -> typing.Optional[PenAndInkSettings]: ...
 
+@typing.final
 class PenAndInkSettings(winrt.system.Object, metaclass=PenAndInkSettings_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PenAndInkSettings: ...
@@ -484,16 +509,19 @@ class PenAndInkSettings(winrt.system.Object, metaclass=PenAndInkSettings_Static)
     @_property
     def user_consents_to_handwriting_telemetry_collection(self) -> bool: ...
 
+@typing.final
 class IInkPointFactory(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IInkPointFactory: ...
     def create_ink_point(self, position: winrt.windows.foundation.Point, pressure: winrt.system.Single, /) -> typing.Optional[InkPoint]: ...
 
+@typing.final
 class IInkPresenterRulerFactory(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IInkPresenterRulerFactory: ...
     def create(self, ink_presenter: typing.Optional[InkPresenter], /) -> typing.Optional[InkPresenterRuler]: ...
 
+@typing.final
 class IInkPresenterStencil(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IInkPresenterStencil: ...
@@ -516,6 +544,7 @@ class IInkPresenterStencil(winrt.system.Object):
     @transform.setter
     def transform(self, value: winrt.windows.foundation.numerics.Matrix3x2) -> None: ...
 
+@typing.final
 class IInkRecognizerContainer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IInkRecognizerContainer: ...
@@ -523,6 +552,7 @@ class IInkRecognizerContainer(winrt.system.Object):
     def recognize_async(self, stroke_collection: typing.Optional[InkStrokeContainer], recognition_target: InkRecognitionTarget, /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[InkRecognitionResult]]: ...
     def set_default_recognizer(self, recognizer: typing.Optional[InkRecognizer], /) -> None: ...
 
+@typing.final
 class IInkStrokeContainer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IInkStrokeContainer: ...

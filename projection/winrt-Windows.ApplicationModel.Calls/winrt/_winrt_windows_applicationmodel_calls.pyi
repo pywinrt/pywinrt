@@ -20,29 +20,34 @@ from winrt.windows.applicationmodel.calls import CellularDtmfMode, DtmfKey, Dtmf
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class CallAnswerEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CallAnswerEventArgs: ...
     @_property
     def accepted_media(self) -> VoipPhoneCallMedia: ...
 
+@typing.final
 class CallRejectEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CallRejectEventArgs: ...
     @_property
     def reject_reason(self) -> VoipPhoneCallRejectReason: ...
 
+@typing.final
 class CallStateChangeEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CallStateChangeEventArgs: ...
     @_property
     def state(self) -> VoipPhoneCallState: ...
 
+@typing.final
 class LockScreenCallEndCallDeferral(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LockScreenCallEndCallDeferral: ...
     def complete(self) -> None: ...
 
+@typing.final
 class LockScreenCallEndRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LockScreenCallEndRequestedEventArgs: ...
@@ -50,6 +55,7 @@ class LockScreenCallEndRequestedEventArgs(winrt.system.Object):
     @_property
     def deadline(self) -> datetime.datetime: ...
 
+@typing.final
 class LockScreenCallUI(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LockScreenCallUI: ...
@@ -63,15 +69,18 @@ class LockScreenCallUI(winrt.system.Object):
     @call_title.setter
     def call_title(self, value: str) -> None: ...
 
+@typing.final
 class MuteChangeEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MuteChangeEventArgs: ...
     @_property
     def muted(self) -> bool: ...
 
+@typing.final
 class PhoneCall_Static(type):
     def get_from_id(cls, call_id: str, /) -> typing.Optional[PhoneCall]: ...
 
+@typing.final
 class PhoneCall(winrt.system.Object, metaclass=PhoneCall_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneCall: ...
@@ -110,6 +119,7 @@ class PhoneCall(winrt.system.Object, metaclass=PhoneCall_Static):
     @_property
     def status(self) -> PhoneCallStatus: ...
 
+@typing.final
 class PhoneCallBlocking_Static(type):
     def set_call_blocking_list_async(cls, phone_number_list: typing.Iterable[str], /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     @_property
@@ -121,10 +131,12 @@ class PhoneCallBlocking_Static(type):
     @block_private_numbers.setter
     def block_private_numbers(cls, value: bool) -> None: ...
 
+@typing.final
 class PhoneCallBlocking(winrt.system.Object, metaclass=PhoneCallBlocking_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneCallBlocking: ...
 
+@typing.final
 class PhoneCallHistoryEntry(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneCallHistoryEntry: ...
@@ -198,6 +210,7 @@ class PhoneCallHistoryEntry(winrt.system.Object):
     @_property
     def source_display_name(self) -> str: ...
 
+@typing.final
 class PhoneCallHistoryEntryAddress(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneCallHistoryEntryAddress: ...
@@ -222,6 +235,7 @@ class PhoneCallHistoryEntryAddress(winrt.system.Object):
     @contact_id.setter
     def contact_id(self, value: str) -> None: ...
 
+@typing.final
 class PhoneCallHistoryEntryQueryOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneCallHistoryEntryQueryOptions: ...
@@ -233,19 +247,23 @@ class PhoneCallHistoryEntryQueryOptions(winrt.system.Object):
     @_property
     def source_ids(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[str]]: ...
 
+@typing.final
 class PhoneCallHistoryEntryReader(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneCallHistoryEntryReader: ...
     def read_batch_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[PhoneCallHistoryEntry]]: ...
 
+@typing.final
 class PhoneCallHistoryManager_Static(type):
     def get_for_user(cls, user: typing.Optional[winrt.windows.system.User], /) -> typing.Optional[PhoneCallHistoryManagerForUser]: ...
     def request_store_async(cls, access_type: PhoneCallHistoryStoreAccessType, /) -> winrt.windows.foundation.IAsyncOperation[PhoneCallHistoryStore]: ...
 
+@typing.final
 class PhoneCallHistoryManager(winrt.system.Object, metaclass=PhoneCallHistoryManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneCallHistoryManager: ...
 
+@typing.final
 class PhoneCallHistoryManagerForUser(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneCallHistoryManagerForUser: ...
@@ -253,6 +271,7 @@ class PhoneCallHistoryManagerForUser(winrt.system.Object):
     @_property
     def user(self) -> typing.Optional[winrt.windows.system.User]: ...
 
+@typing.final
 class PhoneCallHistoryStore(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneCallHistoryStore: ...
@@ -271,6 +290,7 @@ class PhoneCallHistoryStore(winrt.system.Object):
     def mark_sources_as_seen_async(self, source_ids: typing.Iterable[str], /) -> winrt.windows.foundation.IAsyncAction: ...
     def save_entry_async(self, call_history_entry: typing.Optional[PhoneCallHistoryEntry], /) -> winrt.windows.foundation.IAsyncAction: ...
 
+@typing.final
 class PhoneCallInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneCallInfo: ...
@@ -287,6 +307,7 @@ class PhoneCallInfo(winrt.system.Object):
     @_property
     def start_time(self) -> datetime.datetime: ...
 
+@typing.final
 class PhoneCallManager_Static(type):
     def request_store_async(cls) -> winrt.windows.foundation.IAsyncOperation[PhoneCallStore]: ...
     def show_phone_call_settings_u_i(cls) -> None: ...
@@ -298,10 +319,12 @@ class PhoneCallManager_Static(type):
     @_property
     def is_call_incoming(cls) -> bool: ...
 
+@typing.final
 class PhoneCallManager(winrt.system.Object, metaclass=PhoneCallManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneCallManager: ...
 
+@typing.final
 class PhoneCallStore(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneCallStore: ...
@@ -309,19 +332,23 @@ class PhoneCallStore(winrt.system.Object):
     def is_emergency_phone_number_async(self, number: str, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     def request_line_watcher(self) -> typing.Optional[PhoneLineWatcher]: ...
 
+@typing.final
 class PhoneCallVideoCapabilities(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneCallVideoCapabilities: ...
     @_property
     def is_video_calling_capable(self) -> bool: ...
 
+@typing.final
 class PhoneCallVideoCapabilitiesManager_Static(type):
     def get_capabilities_async(cls, phone_number: str, /) -> winrt.windows.foundation.IAsyncOperation[PhoneCallVideoCapabilities]: ...
 
+@typing.final
 class PhoneCallVideoCapabilitiesManager(winrt.system.Object, metaclass=PhoneCallVideoCapabilitiesManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneCallVideoCapabilitiesManager: ...
 
+@typing.final
 class PhoneCallsResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneCallsResult: ...
@@ -330,6 +357,7 @@ class PhoneCallsResult(winrt.system.Object):
     @_property
     def operation_status(self) -> PhoneLineOperationStatus: ...
 
+@typing.final
 class PhoneDialOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneDialOptions: ...
@@ -359,9 +387,11 @@ class PhoneDialOptions(winrt.system.Object):
     @audio_endpoint.setter
     def audio_endpoint(self, value: PhoneAudioRoutingEndpoint) -> None: ...
 
+@typing.final
 class PhoneLine_Static(type):
     def from_id_async(cls, line_id: _uuid.UUID, /) -> winrt.windows.foundation.IAsyncOperation[PhoneLine]: ...
 
+@typing.final
 class PhoneLine(winrt.system.Object, metaclass=PhoneLine_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneLine: ...
@@ -402,6 +432,7 @@ class PhoneLine(winrt.system.Object, metaclass=PhoneLine_Static):
     @_property
     def transport_device_id(self) -> str: ...
 
+@typing.final
 class PhoneLineCellularDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneLineCellularDetails: ...
@@ -415,6 +446,7 @@ class PhoneLineCellularDetails(winrt.system.Object):
     @_property
     def sim_state(self) -> PhoneSimState: ...
 
+@typing.final
 class PhoneLineConfiguration(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneLineConfiguration: ...
@@ -423,6 +455,7 @@ class PhoneLineConfiguration(winrt.system.Object):
     @_property
     def is_video_calling_enabled(self) -> bool: ...
 
+@typing.final
 class PhoneLineDialResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneLineDialResult: ...
@@ -431,6 +464,7 @@ class PhoneLineDialResult(winrt.system.Object):
     @_property
     def dialed_call(self) -> typing.Optional[PhoneCall]: ...
 
+@typing.final
 class PhoneLineTransportDevice_Static(type):
     def from_id(cls, id: str, /) -> typing.Optional[PhoneLineTransportDevice]: ...
     @typing.overload
@@ -438,6 +472,7 @@ class PhoneLineTransportDevice_Static(type):
     @typing.overload
     def get_device_selector(cls, transport: PhoneLineTransport, /) -> str: ...
 
+@typing.final
 class PhoneLineTransportDevice(winrt.system.Object, metaclass=PhoneLineTransportDevice_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneLineTransportDevice: ...
@@ -462,6 +497,7 @@ class PhoneLineTransportDevice(winrt.system.Object, metaclass=PhoneLineTransport
     @_property
     def in_band_ringing_enabled(self) -> bool: ...
 
+@typing.final
 class PhoneLineWatcher(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneLineWatcher: ...
@@ -480,12 +516,14 @@ class PhoneLineWatcher(winrt.system.Object):
     @_property
     def status(self) -> PhoneLineWatcherStatus: ...
 
+@typing.final
 class PhoneLineWatcherEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneLineWatcherEventArgs: ...
     @_property
     def line_id(self) -> _uuid.UUID: ...
 
+@typing.final
 class PhoneVoicemail(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneVoicemail: ...
@@ -497,9 +535,11 @@ class PhoneVoicemail(winrt.system.Object):
     @_property
     def type(self) -> PhoneVoicemailType: ...
 
+@typing.final
 class VoipCallCoordinator_Static(type):
     def get_default(cls) -> typing.Optional[VoipCallCoordinator]: ...
 
+@typing.final
 class VoipCallCoordinator(winrt.system.Object, metaclass=VoipCallCoordinator_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VoipCallCoordinator: ...
@@ -523,6 +563,7 @@ class VoipCallCoordinator(winrt.system.Object, metaclass=VoipCallCoordinator_Sta
     def add_mute_state_changed(self, mute_change_handler: winrt.windows.foundation.TypedEventHandler[VoipCallCoordinator, MuteChangeEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_mute_state_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class VoipPhoneCall(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VoipPhoneCall: ...

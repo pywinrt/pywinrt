@@ -17,6 +17,7 @@ from winrt.windows.gaming.input.custom import GipFirmwareUpdateStatus, GipMessag
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class GameControllerVersionInfo:
     major: winrt.system.UInt16
     minor: winrt.system.UInt16
@@ -24,21 +25,25 @@ class GameControllerVersionInfo:
     revision: winrt.system.UInt16
     def __init__(self, major: winrt.system.UInt16, minor: winrt.system.UInt16, build: winrt.system.UInt16, revision: winrt.system.UInt16) -> None: ...
 
+@typing.final
 class GipFirmwareUpdateProgress:
     percent_completed: winrt.system.Double
     current_component_id: winrt.system.UInt32
     def __init__(self, percent_completed: winrt.system.Double, current_component_id: winrt.system.UInt32) -> None: ...
 
+@typing.final
 class GameControllerFactoryManager_Static(type):
     def register_custom_factory_for_gip_interface(cls, factory: typing.Optional[ICustomGameControllerFactory], interface_id: _uuid.UUID, /) -> None: ...
     def register_custom_factory_for_hardware_id(cls, factory: typing.Optional[ICustomGameControllerFactory], hardware_vendor_id: winrt.system.UInt16, hardware_product_id: winrt.system.UInt16, /) -> None: ...
     def register_custom_factory_for_xusb_type(cls, factory: typing.Optional[ICustomGameControllerFactory], xusb_type: XusbDeviceType, xusb_subtype: XusbDeviceSubtype, /) -> None: ...
     def try_get_factory_controller_from_game_controller(cls, factory: typing.Optional[ICustomGameControllerFactory], game_controller: typing.Optional[winrt.windows.gaming.input.IGameController], /) -> typing.Optional[winrt.windows.gaming.input.IGameController]: ...
 
+@typing.final
 class GameControllerFactoryManager(winrt.system.Object, metaclass=GameControllerFactoryManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GameControllerFactoryManager: ...
 
+@typing.final
 class GipFirmwareUpdateResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GipFirmwareUpdateResult: ...
@@ -49,6 +54,7 @@ class GipFirmwareUpdateResult(winrt.system.Object):
     @_property
     def status(self) -> GipFirmwareUpdateStatus: ...
 
+@typing.final
 class GipGameControllerProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GipGameControllerProvider: ...
@@ -66,6 +72,7 @@ class GipGameControllerProvider(winrt.system.Object):
     @_property
     def is_connected(self) -> bool: ...
 
+@typing.final
 class HidGameControllerProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HidGameControllerProvider: ...
@@ -87,6 +94,7 @@ class HidGameControllerProvider(winrt.system.Object):
     @_property
     def usage_page(self) -> winrt.system.UInt16: ...
 
+@typing.final
 class XusbGameControllerProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> XusbGameControllerProvider: ...
@@ -102,6 +110,7 @@ class XusbGameControllerProvider(winrt.system.Object):
     @_property
     def is_connected(self) -> bool: ...
 
+@typing.final
 class ICustomGameControllerFactory(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICustomGameControllerFactory: ...
@@ -109,12 +118,14 @@ class ICustomGameControllerFactory(winrt.system.Object):
     def on_game_controller_added(self, value: typing.Optional[winrt.windows.gaming.input.IGameController], /) -> None: ...
     def on_game_controller_removed(self, value: typing.Optional[winrt.windows.gaming.input.IGameController], /) -> None: ...
 
+@typing.final
 class IGameControllerInputSink(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IGameControllerInputSink: ...
     def on_input_resumed(self, timestamp: winrt.system.UInt64, /) -> None: ...
     def on_input_suspended(self, timestamp: winrt.system.UInt64, /) -> None: ...
 
+@typing.final
 class IGameControllerProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IGameControllerProvider: ...
@@ -129,6 +140,7 @@ class IGameControllerProvider(winrt.system.Object):
     @_property
     def is_connected(self) -> bool: ...
 
+@typing.final
 class IGipGameControllerInputSink(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IGipGameControllerInputSink: ...
@@ -137,6 +149,7 @@ class IGipGameControllerInputSink(winrt.system.Object):
     def on_key_received(self, timestamp: winrt.system.UInt64, key_code: winrt.system.UInt8, is_pressed: bool, /) -> None: ...
     def on_message_received(self, timestamp: winrt.system.UInt64, message_class: GipMessageClass, message_id: winrt.system.UInt8, sequence_id: winrt.system.UInt8, message_buffer: winrt.system.Array[winrt.system.UInt8], /) -> None: ...
 
+@typing.final
 class IHidGameControllerInputSink(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IHidGameControllerInputSink: ...
@@ -144,6 +157,7 @@ class IHidGameControllerInputSink(winrt.system.Object):
     def on_input_resumed(self, timestamp: winrt.system.UInt64, /) -> None: ...
     def on_input_suspended(self, timestamp: winrt.system.UInt64, /) -> None: ...
 
+@typing.final
 class IXusbGameControllerInputSink(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IXusbGameControllerInputSink: ...

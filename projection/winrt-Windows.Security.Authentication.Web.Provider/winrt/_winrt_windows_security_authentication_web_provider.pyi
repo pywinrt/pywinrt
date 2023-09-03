@@ -23,6 +23,7 @@ from winrt.windows.security.authentication.web.provider import WebAccountClientV
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class WebAccountClientView(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebAccountClientView: ...
@@ -37,6 +38,7 @@ class WebAccountClientView(winrt.system.Object):
     @_property
     def type(self) -> WebAccountClientViewType: ...
 
+@typing.final
 class WebAccountManager_Static(type):
     @typing.overload
     def add_web_account_async(cls, web_account_id: str, web_account_user_name: str, props: winrt.windows.foundation.collections.IMapView[str, str], /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.security.credentials.WebAccount]: ...
@@ -69,10 +71,12 @@ class WebAccountManager_Static(type):
     def set_web_account_picture_async(cls, web_account: typing.Optional[winrt.windows.security.credentials.WebAccount], web_account_picture: typing.Optional[winrt.windows.storage.streams.IRandomAccessStream], /) -> winrt.windows.foundation.IAsyncAction: ...
     def update_web_account_properties_async(cls, web_account: typing.Optional[winrt.windows.security.credentials.WebAccount], web_account_user_name: str, additional_properties: winrt.windows.foundation.collections.IMapView[str, str], /) -> winrt.windows.foundation.IAsyncAction: ...
 
+@typing.final
 class WebAccountManager(winrt.system.Object, metaclass=WebAccountManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebAccountManager: ...
 
+@typing.final
 class WebAccountProviderAddAccountOperation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebAccountProviderAddAccountOperation: ...
@@ -80,6 +84,7 @@ class WebAccountProviderAddAccountOperation(winrt.system.Object):
     @_property
     def kind(self) -> WebAccountProviderOperationKind: ...
 
+@typing.final
 class WebAccountProviderDeleteAccountOperation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebAccountProviderDeleteAccountOperation: ...
@@ -90,6 +95,7 @@ class WebAccountProviderDeleteAccountOperation(winrt.system.Object):
     @_property
     def kind(self) -> WebAccountProviderOperationKind: ...
 
+@typing.final
 class WebAccountProviderGetTokenSilentOperation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebAccountProviderGetTokenSilentOperation: ...
@@ -110,6 +116,7 @@ class WebAccountProviderGetTokenSilentOperation(winrt.system.Object):
     @_property
     def provider_responses(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[WebProviderTokenResponse]]: ...
 
+@typing.final
 class WebAccountProviderManageAccountOperation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebAccountProviderManageAccountOperation: ...
@@ -119,6 +126,7 @@ class WebAccountProviderManageAccountOperation(winrt.system.Object):
     @_property
     def kind(self) -> WebAccountProviderOperationKind: ...
 
+@typing.final
 class WebAccountProviderRequestTokenOperation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebAccountProviderRequestTokenOperation: ...
@@ -136,6 +144,7 @@ class WebAccountProviderRequestTokenOperation(winrt.system.Object):
     @_property
     def provider_responses(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[WebProviderTokenResponse]]: ...
 
+@typing.final
 class WebAccountProviderRetrieveCookiesOperation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebAccountProviderRetrieveCookiesOperation: ...
@@ -154,6 +163,7 @@ class WebAccountProviderRetrieveCookiesOperation(winrt.system.Object):
     @_property
     def cookies(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.web.http.HttpCookie]]: ...
 
+@typing.final
 class WebAccountProviderSignOutAccountOperation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebAccountProviderSignOutAccountOperation: ...
@@ -168,6 +178,7 @@ class WebAccountProviderSignOutAccountOperation(winrt.system.Object):
     @_property
     def web_account(self) -> typing.Optional[winrt.windows.security.credentials.WebAccount]: ...
 
+@typing.final
 class WebAccountProviderTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebAccountProviderTriggerDetails: ...
@@ -176,6 +187,7 @@ class WebAccountProviderTriggerDetails(winrt.system.Object):
     @_property
     def user(self) -> typing.Optional[winrt.windows.system.User]: ...
 
+@typing.final
 class WebProviderTokenRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebProviderTokenRequest: ...
@@ -195,6 +207,7 @@ class WebProviderTokenRequest(winrt.system.Object):
     @_property
     def application_process_name(self) -> str: ...
 
+@typing.final
 class WebProviderTokenResponse(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebProviderTokenResponse: ...
@@ -202,18 +215,21 @@ class WebProviderTokenResponse(winrt.system.Object):
     @_property
     def client_response(self) -> typing.Optional[winrt.windows.security.authentication.web.core.WebTokenResponse]: ...
 
+@typing.final
 class IWebAccountProviderBaseReportOperation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebAccountProviderBaseReportOperation: ...
     def report_completed(self) -> None: ...
     def report_error(self, value: typing.Optional[winrt.windows.security.authentication.web.core.WebProviderError], /) -> None: ...
 
+@typing.final
 class IWebAccountProviderOperation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebAccountProviderOperation: ...
     @_property
     def kind(self) -> WebAccountProviderOperationKind: ...
 
+@typing.final
 class IWebAccountProviderSilentReportOperation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebAccountProviderSilentReportOperation: ...
@@ -224,12 +240,14 @@ class IWebAccountProviderSilentReportOperation(winrt.system.Object):
     @typing.overload
     def report_user_interaction_required(self, value: typing.Optional[winrt.windows.security.authentication.web.core.WebProviderError], /) -> None: ...
 
+@typing.final
 class IWebAccountProviderTokenObjects(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebAccountProviderTokenObjects: ...
     @_property
     def operation(self) -> typing.Optional[IWebAccountProviderOperation]: ...
 
+@typing.final
 class IWebAccountProviderTokenObjects2(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebAccountProviderTokenObjects2: ...
@@ -238,6 +256,7 @@ class IWebAccountProviderTokenObjects2(winrt.system.Object):
     @_property
     def operation(self) -> typing.Optional[IWebAccountProviderOperation]: ...
 
+@typing.final
 class IWebAccountProviderTokenOperation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebAccountProviderTokenOperation: ...
@@ -252,6 +271,7 @@ class IWebAccountProviderTokenOperation(winrt.system.Object):
     @_property
     def kind(self) -> WebAccountProviderOperationKind: ...
 
+@typing.final
 class IWebAccountProviderUIReportOperation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebAccountProviderUIReportOperation: ...

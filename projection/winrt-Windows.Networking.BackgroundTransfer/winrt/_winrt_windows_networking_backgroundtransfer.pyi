@@ -22,6 +22,7 @@ from winrt.windows.networking.backgroundtransfer import BackgroundTransferBehavi
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class BackgroundDownloadProgress:
     bytes_received: winrt.system.UInt64
     total_bytes_to_receive: winrt.system.UInt64
@@ -30,11 +31,13 @@ class BackgroundDownloadProgress:
     has_restarted: bool
     def __init__(self, bytes_received: winrt.system.UInt64, total_bytes_to_receive: winrt.system.UInt64, status: BackgroundTransferStatus, has_response_changed: bool, has_restarted: bool) -> None: ...
 
+@typing.final
 class BackgroundTransferFileRange:
     offset: winrt.system.UInt64
     length: winrt.system.UInt64
     def __init__(self, offset: winrt.system.UInt64, length: winrt.system.UInt64) -> None: ...
 
+@typing.final
 class BackgroundUploadProgress:
     bytes_received: winrt.system.UInt64
     bytes_sent: winrt.system.UInt64
@@ -45,6 +48,7 @@ class BackgroundUploadProgress:
     has_restarted: bool
     def __init__(self, bytes_received: winrt.system.UInt64, bytes_sent: winrt.system.UInt64, total_bytes_to_receive: winrt.system.UInt64, total_bytes_to_send: winrt.system.UInt64, status: BackgroundTransferStatus, has_response_changed: bool, has_restarted: bool) -> None: ...
 
+@typing.final
 class BackgroundDownloader_Static(type):
     @typing.overload
     def get_current_downloads_async(cls) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[DownloadOperation]]: ...
@@ -53,6 +57,7 @@ class BackgroundDownloader_Static(type):
     def get_current_downloads_for_transfer_group_async(cls, group: typing.Optional[BackgroundTransferGroup], /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[DownloadOperation]]: ...
     def request_unconstrained_downloads_async(cls, operations: typing.Iterable[DownloadOperation], /) -> winrt.windows.foundation.IAsyncOperation[UnconstrainedTransferRequestResult]: ...
 
+@typing.final
 class BackgroundDownloader(winrt.system.Object, metaclass=BackgroundDownloader_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BackgroundDownloader: ...
@@ -109,6 +114,7 @@ class BackgroundDownloader(winrt.system.Object, metaclass=BackgroundDownloader_S
     @server_credential.setter
     def server_credential(self, value: typing.Optional[winrt.windows.security.credentials.PasswordCredential]) -> None: ...
 
+@typing.final
 class BackgroundTransferCompletionGroup(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BackgroundTransferCompletionGroup: ...
@@ -119,6 +125,7 @@ class BackgroundTransferCompletionGroup(winrt.system.Object):
     @_property
     def trigger(self) -> typing.Optional[winrt.windows.applicationmodel.background.IBackgroundTrigger]: ...
 
+@typing.final
 class BackgroundTransferCompletionGroupTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BackgroundTransferCompletionGroupTriggerDetails: ...
@@ -127,6 +134,7 @@ class BackgroundTransferCompletionGroupTriggerDetails(winrt.system.Object):
     @_property
     def uploads(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[UploadOperation]]: ...
 
+@typing.final
 class BackgroundTransferContentPart(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BackgroundTransferContentPart: ...
@@ -140,16 +148,20 @@ class BackgroundTransferContentPart(winrt.system.Object):
     def set_header(self, header_name: str, header_value: str, /) -> None: ...
     def set_text(self, value: str, /) -> None: ...
 
+@typing.final
 class BackgroundTransferError_Static(type):
     def get_status(cls, hresult: winrt.system.Int32, /) -> winrt.windows.web.WebErrorStatus: ...
 
+@typing.final
 class BackgroundTransferError(winrt.system.Object, metaclass=BackgroundTransferError_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BackgroundTransferError: ...
 
+@typing.final
 class BackgroundTransferGroup_Static(type):
     def create_group(cls, name: str, /) -> typing.Optional[BackgroundTransferGroup]: ...
 
+@typing.final
 class BackgroundTransferGroup(winrt.system.Object, metaclass=BackgroundTransferGroup_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BackgroundTransferGroup: ...
@@ -160,6 +172,7 @@ class BackgroundTransferGroup(winrt.system.Object, metaclass=BackgroundTransferG
     @_property
     def name(self) -> str: ...
 
+@typing.final
 class BackgroundTransferRangesDownloadedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BackgroundTransferRangesDownloadedEventArgs: ...
@@ -169,6 +182,7 @@ class BackgroundTransferRangesDownloadedEventArgs(winrt.system.Object):
     @_property
     def was_download_restarted(self) -> bool: ...
 
+@typing.final
 class BackgroundUploader_Static(type):
     @typing.overload
     def get_current_uploads_async(cls) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[UploadOperation]]: ...
@@ -177,6 +191,7 @@ class BackgroundUploader_Static(type):
     def get_current_uploads_for_transfer_group_async(cls, group: typing.Optional[BackgroundTransferGroup], /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[UploadOperation]]: ...
     def request_unconstrained_uploads_async(cls, operations: typing.Iterable[UploadOperation], /) -> winrt.windows.foundation.IAsyncOperation[UnconstrainedTransferRequestResult]: ...
 
+@typing.final
 class BackgroundUploader(winrt.system.Object, metaclass=BackgroundUploader_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BackgroundUploader: ...
@@ -236,6 +251,7 @@ class BackgroundUploader(winrt.system.Object, metaclass=BackgroundUploader_Stati
     @_property
     def completion_group(self) -> typing.Optional[BackgroundTransferCompletionGroup]: ...
 
+@typing.final
 class ContentPrefetcher_Static(type):
     @_property
     def indirect_content_uri(cls) -> typing.Optional[winrt.windows.foundation.Uri]: ...
@@ -246,10 +262,12 @@ class ContentPrefetcher_Static(type):
     @_property
     def last_successful_prefetch_time(cls) -> typing.Optional[typing.Optional[datetime.datetime]]: ...
 
+@typing.final
 class ContentPrefetcher(winrt.system.Object, metaclass=ContentPrefetcher_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContentPrefetcher: ...
 
+@typing.final
 class DownloadOperation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DownloadOperation: ...
@@ -299,6 +317,7 @@ class DownloadOperation(winrt.system.Object):
     @_property
     def recoverable_web_error_statuses(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.web.WebErrorStatus]]: ...
 
+@typing.final
 class ResponseInformation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ResponseInformation: ...
@@ -311,12 +330,14 @@ class ResponseInformation(winrt.system.Object):
     @_property
     def status_code(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class UnconstrainedTransferRequestResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UnconstrainedTransferRequestResult: ...
     @_property
     def is_unconstrained(self) -> bool: ...
 
+@typing.final
 class UploadOperation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UploadOperation: ...
@@ -350,6 +371,7 @@ class UploadOperation(winrt.system.Object):
     @_property
     def transfer_group(self) -> typing.Optional[BackgroundTransferGroup]: ...
 
+@typing.final
 class IBackgroundTransferBase(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBackgroundTransferBase: ...
@@ -375,12 +397,14 @@ class IBackgroundTransferBase(winrt.system.Object):
     @server_credential.setter
     def server_credential(self, value: typing.Optional[winrt.windows.security.credentials.PasswordCredential]) -> None: ...
 
+@typing.final
 class IBackgroundTransferContentPartFactory(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBackgroundTransferContentPartFactory: ...
     def create_with_name(self, name: str, /) -> typing.Optional[BackgroundTransferContentPart]: ...
     def create_with_name_and_file_name(self, name: str, file_name: str, /) -> typing.Optional[BackgroundTransferContentPart]: ...
 
+@typing.final
 class IBackgroundTransferOperation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBackgroundTransferOperation: ...
@@ -399,6 +423,7 @@ class IBackgroundTransferOperation(winrt.system.Object):
     @_property
     def requested_uri(self) -> typing.Optional[winrt.windows.foundation.Uri]: ...
 
+@typing.final
 class IBackgroundTransferOperationPriority(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBackgroundTransferOperationPriority: ...

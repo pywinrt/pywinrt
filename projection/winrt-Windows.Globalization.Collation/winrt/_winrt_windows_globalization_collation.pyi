@@ -13,6 +13,7 @@ import winrt.windows.foundation.collections
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class CharacterGrouping(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CharacterGrouping: ...
@@ -21,6 +22,7 @@ class CharacterGrouping(winrt.system.Object):
     @_property
     def label(self) -> str: ...
 
+@typing.final
 class CharacterGroupings(winrt.system.Object, winrt._winrt.Sequence[CharacterGrouping]):
     def __len__(self) -> int: ...
     def __iter__(self) -> winrt.windows.foundation.collections.IIterator[CharacterGrouping]: ...

@@ -21,16 +21,19 @@ from winrt.windows.networking.networkoperators import DataClasses, ESimAuthentic
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class ESimProfileInstallProgress:
     total_size_in_bytes: winrt.system.Int32
     installed_size_in_bytes: winrt.system.Int32
     def __init__(self, total_size_in_bytes: winrt.system.Int32, installed_size_in_bytes: winrt.system.Int32) -> None: ...
 
+@typing.final
 class ProfileUsage:
     usage_in_megabytes: winrt.system.UInt32
     last_sync_time: datetime.datetime
     def __init__(self, usage_in_megabytes: winrt.system.UInt32, last_sync_time: datetime.datetime) -> None: ...
 
+@typing.final
 class ESim(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ESim: ...
@@ -63,12 +66,14 @@ class ESim(winrt.system.Object):
     @_property
     def slot_index(self) -> typing.Optional[typing.Optional[winrt.system.Int32]]: ...
 
+@typing.final
 class ESimAddedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ESimAddedEventArgs: ...
     @_property
     def e_sim(self) -> typing.Optional[ESim]: ...
 
+@typing.final
 class ESimDiscoverEvent(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ESimDiscoverEvent: ...
@@ -77,6 +82,7 @@ class ESimDiscoverEvent(winrt.system.Object):
     @_property
     def rsp_server_address(self) -> str: ...
 
+@typing.final
 class ESimDiscoverResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ESimDiscoverResult: ...
@@ -89,6 +95,7 @@ class ESimDiscoverResult(winrt.system.Object):
     @_property
     def result(self) -> typing.Optional[ESimOperationResult]: ...
 
+@typing.final
 class ESimDownloadProfileMetadataResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ESimDownloadProfileMetadataResult: ...
@@ -97,6 +104,7 @@ class ESimDownloadProfileMetadataResult(winrt.system.Object):
     @_property
     def result(self) -> typing.Optional[ESimOperationResult]: ...
 
+@typing.final
 class ESimManager_Static(type):
     def try_create_e_sim_watcher(cls) -> typing.Optional[ESimWatcher]: ...
     def add_service_info_changed(cls, handler: winrt.windows.foundation.EventHandler[winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
@@ -104,22 +112,26 @@ class ESimManager_Static(type):
     @_property
     def service_info(cls) -> typing.Optional[ESimServiceInfo]: ...
 
+@typing.final
 class ESimManager(winrt.system.Object, metaclass=ESimManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ESimManager: ...
 
+@typing.final
 class ESimOperationResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ESimOperationResult: ...
     @_property
     def status(self) -> ESimOperationStatus: ...
 
+@typing.final
 class ESimPolicy(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ESimPolicy: ...
     @_property
     def should_enable_managing_ui(self) -> bool: ...
 
+@typing.final
 class ESimProfile(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ESimProfile: ...
@@ -143,6 +155,7 @@ class ESimProfile(winrt.system.Object):
     @_property
     def state(self) -> ESimProfileState: ...
 
+@typing.final
 class ESimProfileMetadata(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ESimProfileMetadata: ...
@@ -169,6 +182,7 @@ class ESimProfileMetadata(winrt.system.Object):
     @_property
     def state(self) -> ESimProfileMetadataState: ...
 
+@typing.final
 class ESimProfilePolicy(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ESimProfilePolicy: ...
@@ -179,12 +193,14 @@ class ESimProfilePolicy(winrt.system.Object):
     @_property
     def is_managed_by_enterprise(self) -> bool: ...
 
+@typing.final
 class ESimRemovedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ESimRemovedEventArgs: ...
     @_property
     def e_sim(self) -> typing.Optional[ESim]: ...
 
+@typing.final
 class ESimServiceInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ESimServiceInfo: ...
@@ -193,12 +209,14 @@ class ESimServiceInfo(winrt.system.Object):
     @_property
     def is_e_sim_ui_enabled(self) -> bool: ...
 
+@typing.final
 class ESimUpdatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ESimUpdatedEventArgs: ...
     @_property
     def e_sim(self) -> typing.Optional[ESim]: ...
 
+@typing.final
 class ESimWatcher(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ESimWatcher: ...
@@ -217,16 +235,20 @@ class ESimWatcher(winrt.system.Object):
     @_property
     def status(self) -> ESimWatcherStatus: ...
 
+@typing.final
 class FdnAccessManager_Static(type):
     def request_unlock_async(cls, contact_list_id: str, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
 
+@typing.final
 class FdnAccessManager(winrt.system.Object, metaclass=FdnAccessManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FdnAccessManager: ...
 
+@typing.final
 class HotspotAuthenticationContext_Static(type):
     def try_get_authentication_context(cls, even_token: str, /) -> typing.Tuple[bool, typing.Optional[HotspotAuthenticationContext]]: ...
 
+@typing.final
 class HotspotAuthenticationContext(winrt.system.Object, metaclass=HotspotAuthenticationContext_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HotspotAuthenticationContext: ...
@@ -246,12 +268,14 @@ class HotspotAuthenticationContext(winrt.system.Object, metaclass=HotspotAuthent
     @_property
     def wireless_network_id(self) -> winrt.system.UInt8: ...
 
+@typing.final
 class HotspotAuthenticationEventDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HotspotAuthenticationEventDetails: ...
     @_property
     def event_token(self) -> str: ...
 
+@typing.final
 class HotspotCredentialsAuthenticationResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HotspotCredentialsAuthenticationResult: ...
@@ -264,6 +288,7 @@ class HotspotCredentialsAuthenticationResult(winrt.system.Object):
     @_property
     def response_code(self) -> HotspotAuthenticationResponseCode: ...
 
+@typing.final
 class KnownCSimFilePaths_Static(type):
     @_property
     def e_f_spn(cls) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.system.UInt32]]: ...
@@ -272,10 +297,12 @@ class KnownCSimFilePaths_Static(type):
     @_property
     def gid2(cls) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.system.UInt32]]: ...
 
+@typing.final
 class KnownCSimFilePaths(winrt.system.Object, metaclass=KnownCSimFilePaths_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> KnownCSimFilePaths: ...
 
+@typing.final
 class KnownRuimFilePaths_Static(type):
     @_property
     def e_f_spn(cls) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.system.UInt32]]: ...
@@ -284,10 +311,12 @@ class KnownRuimFilePaths_Static(type):
     @_property
     def gid2(cls) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.system.UInt32]]: ...
 
+@typing.final
 class KnownRuimFilePaths(winrt.system.Object, metaclass=KnownRuimFilePaths_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> KnownRuimFilePaths: ...
 
+@typing.final
 class KnownSimFilePaths_Static(type):
     @_property
     def e_f_ons(cls) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.system.UInt32]]: ...
@@ -298,10 +327,12 @@ class KnownSimFilePaths_Static(type):
     @_property
     def gid2(cls) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.system.UInt32]]: ...
 
+@typing.final
 class KnownSimFilePaths(winrt.system.Object, metaclass=KnownSimFilePaths_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> KnownSimFilePaths: ...
 
+@typing.final
 class KnownUSimFilePaths_Static(type):
     @_property
     def e_f_opl(cls) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.system.UInt32]]: ...
@@ -314,15 +345,18 @@ class KnownUSimFilePaths_Static(type):
     @_property
     def gid2(cls) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.system.UInt32]]: ...
 
+@typing.final
 class KnownUSimFilePaths(winrt.system.Object, metaclass=KnownUSimFilePaths_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> KnownUSimFilePaths: ...
 
+@typing.final
 class MobileBroadbandAccount_Static(type):
     def create_from_network_account_id(cls, network_account_id: str, /) -> typing.Optional[MobileBroadbandAccount]: ...
     @_property
     def available_network_account_ids(cls) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]: ...
 
+@typing.final
 class MobileBroadbandAccount(winrt.system.Object, metaclass=MobileBroadbandAccount_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandAccount: ...
@@ -340,12 +374,14 @@ class MobileBroadbandAccount(winrt.system.Object, metaclass=MobileBroadbandAccou
     @_property
     def account_experience_url(self) -> typing.Optional[winrt.windows.foundation.Uri]: ...
 
+@typing.final
 class MobileBroadbandAccountEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandAccountEventArgs: ...
     @_property
     def network_account_id(self) -> str: ...
 
+@typing.final
 class MobileBroadbandAccountUpdatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandAccountUpdatedEventArgs: ...
@@ -356,6 +392,7 @@ class MobileBroadbandAccountUpdatedEventArgs(winrt.system.Object):
     @_property
     def network_account_id(self) -> str: ...
 
+@typing.final
 class MobileBroadbandAccountWatcher(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandAccountWatcher: ...
@@ -375,6 +412,7 @@ class MobileBroadbandAccountWatcher(winrt.system.Object):
     @_property
     def status(self) -> MobileBroadbandAccountWatcherStatus: ...
 
+@typing.final
 class MobileBroadbandAntennaSar(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandAntennaSar: ...
@@ -384,6 +422,7 @@ class MobileBroadbandAntennaSar(winrt.system.Object):
     @_property
     def sar_backoff_index(self) -> winrt.system.Int32: ...
 
+@typing.final
 class MobileBroadbandCellCdma(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandCellCdma: ...
@@ -404,6 +443,7 @@ class MobileBroadbandCellCdma(winrt.system.Object):
     @_property
     def system_id(self) -> typing.Optional[typing.Optional[winrt.system.Int32]]: ...
 
+@typing.final
 class MobileBroadbandCellGsm(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandCellGsm: ...
@@ -422,6 +462,7 @@ class MobileBroadbandCellGsm(winrt.system.Object):
     @_property
     def timing_advance_in_bit_periods(self) -> typing.Optional[typing.Optional[winrt.system.Int32]]: ...
 
+@typing.final
 class MobileBroadbandCellLte(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandCellLte: ...
@@ -442,6 +483,7 @@ class MobileBroadbandCellLte(winrt.system.Object):
     @_property
     def tracking_area_code(self) -> typing.Optional[typing.Optional[winrt.system.Int32]]: ...
 
+@typing.final
 class MobileBroadbandCellNR(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandCellNR: ...
@@ -464,6 +506,7 @@ class MobileBroadbandCellNR(winrt.system.Object):
     @_property
     def tracking_area_code(self) -> typing.Optional[typing.Optional[winrt.system.Int32]]: ...
 
+@typing.final
 class MobileBroadbandCellTdscdma(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandCellTdscdma: ...
@@ -484,6 +527,7 @@ class MobileBroadbandCellTdscdma(winrt.system.Object):
     @_property
     def timing_advance_in_bit_periods(self) -> typing.Optional[typing.Optional[winrt.system.Int32]]: ...
 
+@typing.final
 class MobileBroadbandCellUmts(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandCellUmts: ...
@@ -504,6 +548,7 @@ class MobileBroadbandCellUmts(winrt.system.Object):
     @_property
     def signal_to_noise_ratio_in_d_b(self) -> typing.Optional[typing.Optional[winrt.system.Double]]: ...
 
+@typing.final
 class MobileBroadbandCellsInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandCellsInfo: ...
@@ -532,12 +577,14 @@ class MobileBroadbandCellsInfo(winrt.system.Object):
     @_property
     def serving_cells_n_r(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[MobileBroadbandCellNR]]: ...
 
+@typing.final
 class MobileBroadbandCurrentSlotIndexChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandCurrentSlotIndexChangedEventArgs: ...
     @_property
     def current_slot_index(self) -> winrt.system.Int32: ...
 
+@typing.final
 class MobileBroadbandDeviceInformation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandDeviceInformation: ...
@@ -584,6 +631,7 @@ class MobileBroadbandDeviceInformation(winrt.system.Object):
     @_property
     def slot_manager(self) -> typing.Optional[MobileBroadbandSlotManager]: ...
 
+@typing.final
 class MobileBroadbandDeviceService(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandDeviceService: ...
@@ -594,6 +642,7 @@ class MobileBroadbandDeviceService(winrt.system.Object):
     @_property
     def supported_commands(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.system.UInt32]]: ...
 
+@typing.final
 class MobileBroadbandDeviceServiceCommandResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandDeviceServiceCommandResult: ...
@@ -602,6 +651,7 @@ class MobileBroadbandDeviceServiceCommandResult(winrt.system.Object):
     @_property
     def status_code(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class MobileBroadbandDeviceServiceCommandSession(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandDeviceServiceCommandSession: ...
@@ -609,12 +659,14 @@ class MobileBroadbandDeviceServiceCommandSession(winrt.system.Object):
     def send_query_command_async(self, command_id: winrt.system.UInt32, data: typing.Optional[winrt.windows.storage.streams.IBuffer], /) -> winrt.windows.foundation.IAsyncOperation[MobileBroadbandDeviceServiceCommandResult]: ...
     def send_set_command_async(self, command_id: winrt.system.UInt32, data: typing.Optional[winrt.windows.storage.streams.IBuffer], /) -> winrt.windows.foundation.IAsyncOperation[MobileBroadbandDeviceServiceCommandResult]: ...
 
+@typing.final
 class MobileBroadbandDeviceServiceDataReceivedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandDeviceServiceDataReceivedEventArgs: ...
     @_property
     def received_data(self) -> typing.Optional[winrt.windows.storage.streams.IBuffer]: ...
 
+@typing.final
 class MobileBroadbandDeviceServiceDataSession(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandDeviceServiceDataSession: ...
@@ -623,6 +675,7 @@ class MobileBroadbandDeviceServiceDataSession(winrt.system.Object):
     def add_data_received(self, event_handler: winrt.windows.foundation.TypedEventHandler[MobileBroadbandDeviceServiceDataSession, MobileBroadbandDeviceServiceDataReceivedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_data_received(self, event_cookie: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class MobileBroadbandDeviceServiceInformation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandDeviceServiceInformation: ...
@@ -633,6 +686,7 @@ class MobileBroadbandDeviceServiceInformation(winrt.system.Object):
     @_property
     def is_data_write_supported(self) -> bool: ...
 
+@typing.final
 class MobileBroadbandDeviceServiceTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandDeviceServiceTriggerDetails: ...
@@ -645,11 +699,13 @@ class MobileBroadbandDeviceServiceTriggerDetails(winrt.system.Object):
     @_property
     def event_id(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class MobileBroadbandModem_Static(type):
     def from_id(cls, device_id: str, /) -> typing.Optional[MobileBroadbandModem]: ...
     def get_default(cls) -> typing.Optional[MobileBroadbandModem]: ...
     def get_device_selector(cls) -> str: ...
 
+@typing.final
 class MobileBroadbandModem(winrt.system.Object, metaclass=MobileBroadbandModem_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandModem: ...
@@ -686,6 +742,7 @@ class MobileBroadbandModem(winrt.system.Object, metaclass=MobileBroadbandModem_S
     @_property
     def is_in_emergency_call_mode(self) -> bool: ...
 
+@typing.final
 class MobileBroadbandModemConfiguration(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandModemConfiguration: ...
@@ -698,6 +755,7 @@ class MobileBroadbandModemConfiguration(winrt.system.Object):
     @_property
     def sar_manager(self) -> typing.Optional[MobileBroadbandSarManager]: ...
 
+@typing.final
 class MobileBroadbandModemIsolation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandModemIsolation: ...
@@ -707,6 +765,7 @@ class MobileBroadbandModemIsolation(winrt.system.Object):
     def apply_configuration_async(self) -> winrt.windows.foundation.IAsyncAction: ...
     def clear_configuration_async(self) -> winrt.windows.foundation.IAsyncAction: ...
 
+@typing.final
 class MobileBroadbandNetwork(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandNetwork: ...
@@ -734,6 +793,7 @@ class MobileBroadbandNetwork(winrt.system.Object):
     @_property
     def registration_uicc_apps(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[MobileBroadbandUiccApp]]: ...
 
+@typing.final
 class MobileBroadbandNetworkRegistrationStateChange(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandNetworkRegistrationStateChange: ...
@@ -742,12 +802,14 @@ class MobileBroadbandNetworkRegistrationStateChange(winrt.system.Object):
     @_property
     def network(self) -> typing.Optional[MobileBroadbandNetwork]: ...
 
+@typing.final
 class MobileBroadbandNetworkRegistrationStateChangeTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandNetworkRegistrationStateChangeTriggerDetails: ...
     @_property
     def network_registration_state_changes(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[MobileBroadbandNetworkRegistrationStateChange]]: ...
 
+@typing.final
 class MobileBroadbandPco(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandPco: ...
@@ -758,12 +820,14 @@ class MobileBroadbandPco(winrt.system.Object):
     @_property
     def is_complete(self) -> bool: ...
 
+@typing.final
 class MobileBroadbandPcoDataChangeTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandPcoDataChangeTriggerDetails: ...
     @_property
     def updated_data(self) -> typing.Optional[MobileBroadbandPco]: ...
 
+@typing.final
 class MobileBroadbandPin(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandPin: ...
@@ -787,6 +851,7 @@ class MobileBroadbandPin(winrt.system.Object):
     @_property
     def type(self) -> MobileBroadbandPinType: ...
 
+@typing.final
 class MobileBroadbandPinLockStateChange(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandPinLockStateChange: ...
@@ -797,12 +862,14 @@ class MobileBroadbandPinLockStateChange(winrt.system.Object):
     @_property
     def pin_type(self) -> MobileBroadbandPinType: ...
 
+@typing.final
 class MobileBroadbandPinLockStateChangeTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandPinLockStateChangeTriggerDetails: ...
     @_property
     def pin_lock_state_changes(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[MobileBroadbandPinLockStateChange]]: ...
 
+@typing.final
 class MobileBroadbandPinManager(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandPinManager: ...
@@ -810,6 +877,7 @@ class MobileBroadbandPinManager(winrt.system.Object):
     @_property
     def supported_pins(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[MobileBroadbandPinType]]: ...
 
+@typing.final
 class MobileBroadbandPinOperationResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandPinOperationResult: ...
@@ -818,6 +886,7 @@ class MobileBroadbandPinOperationResult(winrt.system.Object):
     @_property
     def is_successful(self) -> bool: ...
 
+@typing.final
 class MobileBroadbandRadioStateChange(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandRadioStateChange: ...
@@ -826,12 +895,14 @@ class MobileBroadbandRadioStateChange(winrt.system.Object):
     @_property
     def radio_state(self) -> MobileBroadbandRadioState: ...
 
+@typing.final
 class MobileBroadbandRadioStateChangeTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandRadioStateChangeTriggerDetails: ...
     @_property
     def radio_state_changes(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[MobileBroadbandRadioStateChange]]: ...
 
+@typing.final
 class MobileBroadbandSarManager(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandSarManager: ...
@@ -856,6 +927,7 @@ class MobileBroadbandSarManager(winrt.system.Object):
     @_property
     def is_wi_fi_hardware_integrated(self) -> bool: ...
 
+@typing.final
 class MobileBroadbandSlotInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandSlotInfo: ...
@@ -866,12 +938,14 @@ class MobileBroadbandSlotInfo(winrt.system.Object):
     @_property
     def icc_id(self) -> str: ...
 
+@typing.final
 class MobileBroadbandSlotInfoChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandSlotInfoChangedEventArgs: ...
     @_property
     def slot_info(self) -> typing.Optional[MobileBroadbandSlotInfo]: ...
 
+@typing.final
 class MobileBroadbandSlotManager(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandSlotManager: ...
@@ -886,12 +960,14 @@ class MobileBroadbandSlotManager(winrt.system.Object):
     @_property
     def slot_infos(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[MobileBroadbandSlotInfo]]: ...
 
+@typing.final
 class MobileBroadbandTransmissionStateChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandTransmissionStateChangedEventArgs: ...
     @_property
     def is_transmitting(self) -> bool: ...
 
+@typing.final
 class MobileBroadbandUicc(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandUicc: ...
@@ -899,6 +975,7 @@ class MobileBroadbandUicc(winrt.system.Object):
     @_property
     def sim_icc_id(self) -> str: ...
 
+@typing.final
 class MobileBroadbandUiccApp(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandUiccApp: ...
@@ -909,6 +986,7 @@ class MobileBroadbandUiccApp(winrt.system.Object):
     @_property
     def kind(self) -> UiccAppKind: ...
 
+@typing.final
 class MobileBroadbandUiccAppReadRecordResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandUiccAppReadRecordResult: ...
@@ -917,6 +995,7 @@ class MobileBroadbandUiccAppReadRecordResult(winrt.system.Object):
     @_property
     def status(self) -> MobileBroadbandUiccAppOperationStatus: ...
 
+@typing.final
 class MobileBroadbandUiccAppRecordDetailsResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandUiccAppRecordDetailsResult: ...
@@ -933,6 +1012,7 @@ class MobileBroadbandUiccAppRecordDetailsResult(winrt.system.Object):
     @_property
     def write_access_condition(self) -> UiccAccessCondition: ...
 
+@typing.final
 class MobileBroadbandUiccAppsResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandUiccAppsResult: ...
@@ -941,12 +1021,14 @@ class MobileBroadbandUiccAppsResult(winrt.system.Object):
     @_property
     def uicc_apps(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[MobileBroadbandUiccApp]]: ...
 
+@typing.final
 class NetworkOperatorDataUsageTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NetworkOperatorDataUsageTriggerDetails: ...
     @_property
     def notification_kind(self) -> NetworkOperatorDataUsageNotificationKind: ...
 
+@typing.final
 class NetworkOperatorNotificationEventDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NetworkOperatorNotificationEventDetails: ...
@@ -964,6 +1046,7 @@ class NetworkOperatorNotificationEventDetails(winrt.system.Object):
     @_property
     def sms_message(self) -> typing.Optional[winrt.windows.devices.sms.ISmsMessage]: ...
 
+@typing.final
 class NetworkOperatorTetheringAccessPointConfiguration(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NetworkOperatorTetheringAccessPointConfiguration: ...
@@ -983,6 +1066,7 @@ class NetworkOperatorTetheringAccessPointConfiguration(winrt.system.Object):
     @band.setter
     def band(self, value: TetheringWiFiBand) -> None: ...
 
+@typing.final
 class NetworkOperatorTetheringClient(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NetworkOperatorTetheringClient: ...
@@ -991,6 +1075,7 @@ class NetworkOperatorTetheringClient(winrt.system.Object):
     @_property
     def mac_address(self) -> str: ...
 
+@typing.final
 class NetworkOperatorTetheringManager_Static(type):
     @typing.overload
     def create_from_connection_profile(cls, profile: typing.Optional[winrt.windows.networking.connectivity.ConnectionProfile], /) -> typing.Optional[NetworkOperatorTetheringManager]: ...
@@ -1005,6 +1090,7 @@ class NetworkOperatorTetheringManager_Static(type):
     def get_tethering_capability_from_connection_profile(cls, profile: typing.Optional[winrt.windows.networking.connectivity.ConnectionProfile], /) -> TetheringCapability: ...
     def is_no_connections_timeout_enabled(cls) -> bool: ...
 
+@typing.final
 class NetworkOperatorTetheringManager(winrt.system.Object, metaclass=NetworkOperatorTetheringManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NetworkOperatorTetheringManager: ...
@@ -1020,6 +1106,7 @@ class NetworkOperatorTetheringManager(winrt.system.Object, metaclass=NetworkOper
     @_property
     def tethering_operational_state(self) -> TetheringOperationalState: ...
 
+@typing.final
 class NetworkOperatorTetheringOperationResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NetworkOperatorTetheringOperationResult: ...
@@ -1028,6 +1115,7 @@ class NetworkOperatorTetheringOperationResult(winrt.system.Object):
     @_property
     def status(self) -> TetheringOperationStatus: ...
 
+@typing.final
 class ProvisionFromXmlDocumentResults(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProvisionFromXmlDocumentResults: ...
@@ -1036,15 +1124,18 @@ class ProvisionFromXmlDocumentResults(winrt.system.Object):
     @_property
     def provision_results_xml(self) -> str: ...
 
+@typing.final
 class ProvisionedProfile(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProvisionedProfile: ...
     def update_cost(self, value: winrt.windows.networking.connectivity.NetworkCostType, /) -> None: ...
     def update_usage(self, value: ProfileUsage, /) -> None: ...
 
+@typing.final
 class ProvisioningAgent_Static(type):
     def create_from_network_account_id(cls, network_account_id: str, /) -> typing.Optional[ProvisioningAgent]: ...
 
+@typing.final
 class ProvisioningAgent(winrt.system.Object, metaclass=ProvisioningAgent_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProvisioningAgent: ...
@@ -1052,6 +1143,7 @@ class ProvisioningAgent(winrt.system.Object, metaclass=ProvisioningAgent_Static)
     def get_provisioned_profile(self, media_type: ProfileMediaType, profile_name: str, /) -> typing.Optional[ProvisionedProfile]: ...
     def provision_from_xml_document_async(self, provisioning_xml_document: str, /) -> winrt.windows.foundation.IAsyncOperation[ProvisionFromXmlDocumentResults]: ...
 
+@typing.final
 class TetheringEntitlementCheckTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TetheringEntitlementCheckTriggerDetails: ...
@@ -1060,6 +1152,7 @@ class TetheringEntitlementCheckTriggerDetails(winrt.system.Object):
     @_property
     def network_account_id(self) -> str: ...
 
+@typing.final
 class UssdMessage(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UssdMessage: ...
@@ -1075,6 +1168,7 @@ class UssdMessage(winrt.system.Object):
     @data_coding_scheme.setter
     def data_coding_scheme(self, value: winrt.system.UInt8) -> None: ...
 
+@typing.final
 class UssdReply(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UssdReply: ...
@@ -1083,10 +1177,12 @@ class UssdReply(winrt.system.Object):
     @_property
     def result_code(self) -> UssdResultCode: ...
 
+@typing.final
 class UssdSession_Static(type):
     def create_from_network_account_id(cls, network_account_id: str, /) -> typing.Optional[UssdSession]: ...
     def create_from_network_interface_id(cls, network_interface_id: str, /) -> typing.Optional[UssdSession]: ...
 
+@typing.final
 class UssdSession(winrt.system.Object, metaclass=UssdSession_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UssdSession: ...

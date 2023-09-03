@@ -18,9 +18,11 @@ from winrt.windows.applicationmodel.datatransfer.dragdrop.core import CoreDragUI
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class CoreDragDropManager_Static(type):
     def get_for_current_view(cls) -> typing.Optional[CoreDragDropManager]: ...
 
+@typing.final
 class CoreDragDropManager(winrt.system.Object, metaclass=CoreDragDropManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreDragDropManager: ...
@@ -31,6 +33,7 @@ class CoreDragDropManager(winrt.system.Object, metaclass=CoreDragDropManager_Sta
     @are_concurrent_operations_enabled.setter
     def are_concurrent_operations_enabled(self, value: bool) -> None: ...
 
+@typing.final
 class CoreDragInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreDragInfo: ...
@@ -43,6 +46,7 @@ class CoreDragInfo(winrt.system.Object):
     @_property
     def allowed_operations(self) -> winrt.windows.applicationmodel.datatransfer.DataPackageOperation: ...
 
+@typing.final
 class CoreDragOperation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreDragOperation: ...
@@ -64,6 +68,7 @@ class CoreDragOperation(winrt.system.Object):
     @allowed_operations.setter
     def allowed_operations(self, value: winrt.windows.applicationmodel.datatransfer.DataPackageOperation) -> None: ...
 
+@typing.final
 class CoreDragUIOverride(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreDragUIOverride: ...
@@ -89,11 +94,13 @@ class CoreDragUIOverride(winrt.system.Object):
     @caption.setter
     def caption(self, value: str) -> None: ...
 
+@typing.final
 class CoreDropOperationTargetRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreDropOperationTargetRequestedEventArgs: ...
     def set_target(self, target: typing.Optional[ICoreDropOperationTarget], /) -> None: ...
 
+@typing.final
 class ICoreDropOperationTarget(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICoreDropOperationTarget: ...

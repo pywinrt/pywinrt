@@ -19,6 +19,7 @@ from winrt.windows.devices.pointofservice.provider import BarcodeScannerTriggerS
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class BarcodeScannerDisableScannerRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BarcodeScannerDisableScannerRequest: ...
@@ -30,6 +31,7 @@ class BarcodeScannerDisableScannerRequest(winrt.system.Object):
     @typing.overload
     def report_failed_async(self, reason: winrt.system.Int32, failed_reason_description: str, /) -> winrt.windows.foundation.IAsyncAction: ...
 
+@typing.final
 class BarcodeScannerDisableScannerRequestEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BarcodeScannerDisableScannerRequestEventArgs: ...
@@ -37,6 +39,7 @@ class BarcodeScannerDisableScannerRequestEventArgs(winrt.system.Object):
     @_property
     def request(self) -> typing.Optional[BarcodeScannerDisableScannerRequest]: ...
 
+@typing.final
 class BarcodeScannerEnableScannerRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BarcodeScannerEnableScannerRequest: ...
@@ -48,6 +51,7 @@ class BarcodeScannerEnableScannerRequest(winrt.system.Object):
     @typing.overload
     def report_failed_async(self, reason: winrt.system.Int32, failed_reason_description: str, /) -> winrt.windows.foundation.IAsyncAction: ...
 
+@typing.final
 class BarcodeScannerEnableScannerRequestEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BarcodeScannerEnableScannerRequestEventArgs: ...
@@ -55,6 +59,7 @@ class BarcodeScannerEnableScannerRequestEventArgs(winrt.system.Object):
     @_property
     def request(self) -> typing.Optional[BarcodeScannerEnableScannerRequest]: ...
 
+@typing.final
 class BarcodeScannerFrameReader(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -69,11 +74,13 @@ class BarcodeScannerFrameReader(winrt.system.Object):
     @_property
     def connection(self) -> typing.Optional[BarcodeScannerProviderConnection]: ...
 
+@typing.final
 class BarcodeScannerFrameReaderFrameArrivedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BarcodeScannerFrameReaderFrameArrivedEventArgs: ...
     def get_deferral(self) -> typing.Optional[winrt.windows.foundation.Deferral]: ...
 
+@typing.final
 class BarcodeScannerGetSymbologyAttributesRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BarcodeScannerGetSymbologyAttributesRequest: ...
@@ -87,6 +94,7 @@ class BarcodeScannerGetSymbologyAttributesRequest(winrt.system.Object):
     @_property
     def symbology(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class BarcodeScannerGetSymbologyAttributesRequestEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BarcodeScannerGetSymbologyAttributesRequestEventArgs: ...
@@ -94,6 +102,7 @@ class BarcodeScannerGetSymbologyAttributesRequestEventArgs(winrt.system.Object):
     @_property
     def request(self) -> typing.Optional[BarcodeScannerGetSymbologyAttributesRequest]: ...
 
+@typing.final
 class BarcodeScannerHideVideoPreviewRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BarcodeScannerHideVideoPreviewRequest: ...
@@ -105,6 +114,7 @@ class BarcodeScannerHideVideoPreviewRequest(winrt.system.Object):
     @typing.overload
     def report_failed_async(self, reason: winrt.system.Int32, failed_reason_description: str, /) -> winrt.windows.foundation.IAsyncAction: ...
 
+@typing.final
 class BarcodeScannerHideVideoPreviewRequestEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BarcodeScannerHideVideoPreviewRequestEventArgs: ...
@@ -112,6 +122,7 @@ class BarcodeScannerHideVideoPreviewRequestEventArgs(winrt.system.Object):
     @_property
     def request(self) -> typing.Optional[BarcodeScannerHideVideoPreviewRequest]: ...
 
+@typing.final
 class BarcodeScannerProviderConnection(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -166,12 +177,14 @@ class BarcodeScannerProviderConnection(winrt.system.Object):
     @_property
     def video_device_id(self) -> str: ...
 
+@typing.final
 class BarcodeScannerProviderTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BarcodeScannerProviderTriggerDetails: ...
     @_property
     def connection(self) -> typing.Optional[BarcodeScannerProviderConnection]: ...
 
+@typing.final
 class BarcodeScannerSetActiveSymbologiesRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BarcodeScannerSetActiveSymbologiesRequest: ...
@@ -185,6 +198,7 @@ class BarcodeScannerSetActiveSymbologiesRequest(winrt.system.Object):
     @_property
     def symbologies(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.system.UInt32]]: ...
 
+@typing.final
 class BarcodeScannerSetActiveSymbologiesRequestEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BarcodeScannerSetActiveSymbologiesRequestEventArgs: ...
@@ -192,6 +206,7 @@ class BarcodeScannerSetActiveSymbologiesRequestEventArgs(winrt.system.Object):
     @_property
     def request(self) -> typing.Optional[BarcodeScannerSetActiveSymbologiesRequest]: ...
 
+@typing.final
 class BarcodeScannerSetSymbologyAttributesRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BarcodeScannerSetSymbologyAttributesRequest: ...
@@ -207,6 +222,7 @@ class BarcodeScannerSetSymbologyAttributesRequest(winrt.system.Object):
     @_property
     def symbology(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class BarcodeScannerSetSymbologyAttributesRequestEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BarcodeScannerSetSymbologyAttributesRequestEventArgs: ...
@@ -214,6 +230,7 @@ class BarcodeScannerSetSymbologyAttributesRequestEventArgs(winrt.system.Object):
     @_property
     def request(self) -> typing.Optional[BarcodeScannerSetSymbologyAttributesRequest]: ...
 
+@typing.final
 class BarcodeScannerStartSoftwareTriggerRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BarcodeScannerStartSoftwareTriggerRequest: ...
@@ -225,6 +242,7 @@ class BarcodeScannerStartSoftwareTriggerRequest(winrt.system.Object):
     @typing.overload
     def report_failed_async(self, reason: winrt.system.Int32, failed_reason_description: str, /) -> winrt.windows.foundation.IAsyncAction: ...
 
+@typing.final
 class BarcodeScannerStartSoftwareTriggerRequestEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BarcodeScannerStartSoftwareTriggerRequestEventArgs: ...
@@ -232,6 +250,7 @@ class BarcodeScannerStartSoftwareTriggerRequestEventArgs(winrt.system.Object):
     @_property
     def request(self) -> typing.Optional[BarcodeScannerStartSoftwareTriggerRequest]: ...
 
+@typing.final
 class BarcodeScannerStopSoftwareTriggerRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BarcodeScannerStopSoftwareTriggerRequest: ...
@@ -243,6 +262,7 @@ class BarcodeScannerStopSoftwareTriggerRequest(winrt.system.Object):
     @typing.overload
     def report_failed_async(self, reason: winrt.system.Int32, failed_reason_description: str, /) -> winrt.windows.foundation.IAsyncAction: ...
 
+@typing.final
 class BarcodeScannerStopSoftwareTriggerRequestEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BarcodeScannerStopSoftwareTriggerRequestEventArgs: ...
@@ -250,6 +270,7 @@ class BarcodeScannerStopSoftwareTriggerRequestEventArgs(winrt.system.Object):
     @_property
     def request(self) -> typing.Optional[BarcodeScannerStopSoftwareTriggerRequest]: ...
 
+@typing.final
 class BarcodeScannerVideoFrame(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -265,6 +286,7 @@ class BarcodeScannerVideoFrame(winrt.system.Object):
     @_property
     def width(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class BarcodeSymbologyAttributesBuilder(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BarcodeSymbologyAttributesBuilder: ...

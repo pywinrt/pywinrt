@@ -15,17 +15,21 @@ import winrt.windows.perception.spatial
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class HolographicApplicationPreview_Static(type):
     def is_current_view_presented_on_holographic_display(cls) -> bool: ...
     def is_holographic_activation(cls, activated_event_args: typing.Optional[winrt.windows.applicationmodel.activation.IActivatedEventArgs], /) -> bool: ...
 
+@typing.final
 class HolographicApplicationPreview(winrt.system.Object, metaclass=HolographicApplicationPreview_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HolographicApplicationPreview: ...
 
+@typing.final
 class HolographicKeyboardPlacementOverridePreview_Static(type):
     def get_for_current_view(cls) -> typing.Optional[HolographicKeyboardPlacementOverridePreview]: ...
 
+@typing.final
 class HolographicKeyboardPlacementOverridePreview(winrt.system.Object, metaclass=HolographicKeyboardPlacementOverridePreview_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HolographicKeyboardPlacementOverridePreview: ...

@@ -21,6 +21,7 @@ from winrt.windows.devices.enumeration import DeviceAccessStatus, DeviceClass, D
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class DeviceAccessChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DeviceAccessChangedEventArgs: ...
@@ -29,11 +30,13 @@ class DeviceAccessChangedEventArgs(winrt.system.Object):
     @_property
     def id(self) -> str: ...
 
+@typing.final
 class DeviceAccessInformation_Static(type):
     def create_from_device_class(cls, device_class: DeviceClass, /) -> typing.Optional[DeviceAccessInformation]: ...
     def create_from_device_class_id(cls, device_class_id: _uuid.UUID, /) -> typing.Optional[DeviceAccessInformation]: ...
     def create_from_id(cls, device_id: str, /) -> typing.Optional[DeviceAccessInformation]: ...
 
+@typing.final
 class DeviceAccessInformation(winrt.system.Object, metaclass=DeviceAccessInformation_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DeviceAccessInformation: ...
@@ -42,18 +45,21 @@ class DeviceAccessInformation(winrt.system.Object, metaclass=DeviceAccessInforma
     @_property
     def current_status(self) -> DeviceAccessStatus: ...
 
+@typing.final
 class DeviceConnectionChangeTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DeviceConnectionChangeTriggerDetails: ...
     @_property
     def device_id(self) -> str: ...
 
+@typing.final
 class DeviceDisconnectButtonClickedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DeviceDisconnectButtonClickedEventArgs: ...
     @_property
     def device(self) -> typing.Optional[DeviceInformation]: ...
 
+@typing.final
 class DeviceInformation_Static(type):
     @typing.overload
     def create_from_id_async(cls, device_id: str, /) -> winrt.windows.foundation.IAsyncOperation[DeviceInformation]: ...
@@ -79,6 +85,7 @@ class DeviceInformation_Static(type):
     def find_all_async(cls, aqs_filter: str, additional_properties: typing.Iterable[str], kind: DeviceInformationKind, /) -> winrt.windows.foundation.IAsyncOperation[DeviceInformationCollection]: ...
     def get_aqs_filter_from_device_class(cls, device_class: DeviceClass, /) -> str: ...
 
+@typing.final
 class DeviceInformation(winrt.system.Object, metaclass=DeviceInformation_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DeviceInformation: ...
@@ -102,6 +109,7 @@ class DeviceInformation(winrt.system.Object, metaclass=DeviceInformation_Static)
     @_property
     def pairing(self) -> typing.Optional[DeviceInformationPairing]: ...
 
+@typing.final
 class DeviceInformationCollection(winrt.system.Object, winrt._winrt.Sequence[DeviceInformation]):
     def __len__(self) -> int: ...
     def __iter__(self) -> winrt.windows.foundation.collections.IIterator[DeviceInformation]: ...
@@ -118,6 +126,7 @@ class DeviceInformationCollection(winrt.system.Object, winrt._winrt.Sequence[Dev
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class DeviceInformationCustomPairing(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DeviceInformationCustomPairing: ...
@@ -130,10 +139,12 @@ class DeviceInformationCustomPairing(winrt.system.Object):
     def add_pairing_requested(self, handler: winrt.windows.foundation.TypedEventHandler[DeviceInformationCustomPairing, DevicePairingRequestedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_pairing_requested(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class DeviceInformationPairing_Static(type):
     def try_register_for_all_inbound_pairing_requests(cls, pairing_kinds_supported: DevicePairingKinds, /) -> bool: ...
     def try_register_for_all_inbound_pairing_requests_with_protection_level(cls, pairing_kinds_supported: DevicePairingKinds, min_protection_level: DevicePairingProtectionLevel, /) -> bool: ...
 
+@typing.final
 class DeviceInformationPairing(winrt.system.Object, metaclass=DeviceInformationPairing_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DeviceInformationPairing: ...
@@ -153,6 +164,7 @@ class DeviceInformationPairing(winrt.system.Object, metaclass=DeviceInformationP
     @_property
     def protection_level(self) -> DevicePairingProtectionLevel: ...
 
+@typing.final
 class DeviceInformationUpdate(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DeviceInformationUpdate: ...
@@ -163,6 +175,7 @@ class DeviceInformationUpdate(winrt.system.Object):
     @_property
     def kind(self) -> DeviceInformationKind: ...
 
+@typing.final
 class DevicePairingRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DevicePairingRequestedEventArgs: ...
@@ -179,6 +192,7 @@ class DevicePairingRequestedEventArgs(winrt.system.Object):
     @_property
     def pin(self) -> str: ...
 
+@typing.final
 class DevicePairingResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DevicePairingResult: ...
@@ -187,6 +201,7 @@ class DevicePairingResult(winrt.system.Object):
     @_property
     def status(self) -> DevicePairingResultStatus: ...
 
+@typing.final
 class DevicePicker(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DevicePicker: ...
@@ -214,6 +229,7 @@ class DevicePicker(winrt.system.Object):
     @_property
     def requested_properties(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[str]]: ...
 
+@typing.final
 class DevicePickerAppearance(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DevicePickerAppearance: ...
@@ -246,6 +262,7 @@ class DevicePickerAppearance(winrt.system.Object):
     @accent_color.setter
     def accent_color(self, value: winrt.windows.ui.Color) -> None: ...
 
+@typing.final
 class DevicePickerFilter(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DevicePickerFilter: ...
@@ -254,12 +271,14 @@ class DevicePickerFilter(winrt.system.Object):
     @_property
     def supported_device_selectors(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[str]]: ...
 
+@typing.final
 class DeviceSelectedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DeviceSelectedEventArgs: ...
     @_property
     def selected_device(self) -> typing.Optional[DeviceInformation]: ...
 
+@typing.final
 class DeviceThumbnail(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -286,12 +305,14 @@ class DeviceThumbnail(winrt.system.Object):
     @_property
     def position(self) -> winrt.system.UInt64: ...
 
+@typing.final
 class DeviceUnpairingResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DeviceUnpairingResult: ...
     @_property
     def status(self) -> DeviceUnpairingResultStatus: ...
 
+@typing.final
 class DeviceWatcher(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DeviceWatcher: ...
@@ -311,6 +332,7 @@ class DeviceWatcher(winrt.system.Object):
     @_property
     def status(self) -> DeviceWatcherStatus: ...
 
+@typing.final
 class DeviceWatcherEvent(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DeviceWatcherEvent: ...
@@ -321,12 +343,14 @@ class DeviceWatcherEvent(winrt.system.Object):
     @_property
     def kind(self) -> DeviceWatcherEventKind: ...
 
+@typing.final
 class DeviceWatcherTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DeviceWatcherTriggerDetails: ...
     @_property
     def device_watcher_events(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[DeviceWatcherEvent]]: ...
 
+@typing.final
 class EnclosureLocation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EnclosureLocation: ...
@@ -339,6 +363,7 @@ class EnclosureLocation(winrt.system.Object):
     @_property
     def rotation_angle_in_degrees_clockwise(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class IDevicePairingSettings(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IDevicePairingSettings: ...

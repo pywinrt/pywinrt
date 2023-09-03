@@ -17,6 +17,7 @@ from winrt.windows.phone.personalinformation import ContactChangeType, ContactQu
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class ContactAddress(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactAddress: ...
@@ -42,6 +43,7 @@ class ContactAddress(winrt.system.Object):
     @country.setter
     def country(self, value: str) -> None: ...
 
+@typing.final
 class ContactChangeRecord(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactChangeRecord: ...
@@ -54,9 +56,11 @@ class ContactChangeRecord(winrt.system.Object):
     @_property
     def revision_number(self) -> winrt.system.UInt64: ...
 
+@typing.final
 class ContactInformation_Static(type):
     def parse_vcard_async(cls, vcard: typing.Optional[winrt.windows.storage.streams.IInputStream], /) -> winrt.windows.foundation.IAsyncOperation[ContactInformation]: ...
 
+@typing.final
 class ContactInformation(winrt.system.Object, metaclass=ContactInformation_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactInformation: ...
@@ -91,6 +95,7 @@ class ContactInformation(winrt.system.Object, metaclass=ContactInformation_Stati
     @_property
     def display_picture(self) -> typing.Optional[winrt.windows.storage.streams.IRandomAccessStreamReference]: ...
 
+@typing.final
 class ContactQueryOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactQueryOptions: ...
@@ -102,6 +107,7 @@ class ContactQueryOptions(winrt.system.Object):
     @_property
     def desired_fields(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[str]]: ...
 
+@typing.final
 class ContactQueryResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactQueryResult: ...
@@ -112,12 +118,14 @@ class ContactQueryResult(winrt.system.Object):
     def get_contacts_async(self, start_index: winrt.system.UInt32, max_number_of_items: winrt.system.UInt32, /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[StoredContact]]: ...
     def get_current_query_options(self) -> typing.Optional[ContactQueryOptions]: ...
 
+@typing.final
 class ContactStore_Static(type):
     @typing.overload
     def create_or_open_async(cls) -> winrt.windows.foundation.IAsyncOperation[ContactStore]: ...
     @typing.overload
     def create_or_open_async(cls, access: ContactStoreSystemAccessMode, sharing: ContactStoreApplicationAccessMode, /) -> winrt.windows.foundation.IAsyncOperation[ContactStore]: ...
 
+@typing.final
 class ContactStore(winrt.system.Object, metaclass=ContactStore_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactStore: ...
@@ -136,6 +144,7 @@ class ContactStore(winrt.system.Object, metaclass=ContactStore_Static):
     @_property
     def revision_number(self) -> winrt.system.UInt64: ...
 
+@typing.final
 class KnownContactProperties_Static(type):
     @_property
     def additional_name(cls) -> str: ...
@@ -208,10 +217,12 @@ class KnownContactProperties_Static(type):
     @_property
     def yomi_given_name(cls) -> str: ...
 
+@typing.final
 class KnownContactProperties(winrt.system.Object, metaclass=KnownContactProperties_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> KnownContactProperties: ...
 
+@typing.final
 class StoredContact(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StoredContact: ...
@@ -264,6 +275,7 @@ class StoredContact(winrt.system.Object):
     @_property
     def store(self) -> typing.Optional[ContactStore]: ...
 
+@typing.final
 class IContactInformation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IContactInformation: ...
@@ -297,6 +309,7 @@ class IContactInformation(winrt.system.Object):
     @honorific_suffix.setter
     def honorific_suffix(self, value: str) -> None: ...
 
+@typing.final
 class IContactInformation2(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IContactInformation2: ...

@@ -19,6 +19,7 @@ from winrt.windows.media.devices.core import FrameFlashMode
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class CameraIntrinsics(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CameraIntrinsics: ...
@@ -46,6 +47,7 @@ class CameraIntrinsics(winrt.system.Object):
     @_property
     def undistorted_projection_transform(self) -> winrt.windows.foundation.numerics.Matrix4x4: ...
 
+@typing.final
 class DepthCorrelatedCoordinateMapper(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -57,6 +59,7 @@ class DepthCorrelatedCoordinateMapper(winrt.system.Object):
     def unproject_point(self, source_point: winrt.windows.foundation.Point, target_coordinate_system: typing.Optional[winrt.windows.perception.spatial.SpatialCoordinateSystem], /) -> winrt.windows.foundation.numerics.Vector3: ...
     def unproject_points(self, source_points: winrt.system.Array[winrt.windows.foundation.Point], target_coordinate_system: typing.Optional[winrt.windows.perception.spatial.SpatialCoordinateSystem], results: winrt.system.Array[winrt.windows.foundation.numerics.Vector3], /) -> None: ...
 
+@typing.final
 class FrameControlCapabilities(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FrameControlCapabilities: ...
@@ -73,6 +76,7 @@ class FrameControlCapabilities(winrt.system.Object):
     @_property
     def flash(self) -> typing.Optional[FrameFlashCapabilities]: ...
 
+@typing.final
 class FrameController(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FrameController: ...
@@ -92,6 +96,7 @@ class FrameController(winrt.system.Object):
     @_property
     def flash_control(self) -> typing.Optional[FrameFlashControl]: ...
 
+@typing.final
 class FrameExposureCapabilities(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FrameExposureCapabilities: ...
@@ -104,6 +109,7 @@ class FrameExposureCapabilities(winrt.system.Object):
     @_property
     def supported(self) -> bool: ...
 
+@typing.final
 class FrameExposureCompensationCapabilities(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FrameExposureCompensationCapabilities: ...
@@ -116,6 +122,7 @@ class FrameExposureCompensationCapabilities(winrt.system.Object):
     @_property
     def supported(self) -> bool: ...
 
+@typing.final
 class FrameExposureCompensationControl(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FrameExposureCompensationControl: ...
@@ -124,6 +131,7 @@ class FrameExposureCompensationControl(winrt.system.Object):
     @value.setter
     def value(self, value: typing.Optional[typing.Optional[winrt.system.Single]]) -> None: ...
 
+@typing.final
 class FrameExposureControl(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FrameExposureControl: ...
@@ -136,6 +144,7 @@ class FrameExposureControl(winrt.system.Object):
     @auto.setter
     def auto(self, value: bool) -> None: ...
 
+@typing.final
 class FrameFlashCapabilities(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FrameFlashCapabilities: ...
@@ -146,6 +155,7 @@ class FrameFlashCapabilities(winrt.system.Object):
     @_property
     def supported(self) -> bool: ...
 
+@typing.final
 class FrameFlashControl(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FrameFlashControl: ...
@@ -166,6 +176,7 @@ class FrameFlashControl(winrt.system.Object):
     @auto.setter
     def auto(self, value: bool) -> None: ...
 
+@typing.final
 class FrameFocusCapabilities(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FrameFocusCapabilities: ...
@@ -178,6 +189,7 @@ class FrameFocusCapabilities(winrt.system.Object):
     @_property
     def supported(self) -> bool: ...
 
+@typing.final
 class FrameFocusControl(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FrameFocusControl: ...
@@ -186,6 +198,7 @@ class FrameFocusControl(winrt.system.Object):
     @value.setter
     def value(self, value: typing.Optional[typing.Optional[winrt.system.UInt32]]) -> None: ...
 
+@typing.final
 class FrameIsoSpeedCapabilities(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FrameIsoSpeedCapabilities: ...
@@ -198,6 +211,7 @@ class FrameIsoSpeedCapabilities(winrt.system.Object):
     @_property
     def supported(self) -> bool: ...
 
+@typing.final
 class FrameIsoSpeedControl(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FrameIsoSpeedControl: ...
@@ -210,6 +224,7 @@ class FrameIsoSpeedControl(winrt.system.Object):
     @auto.setter
     def auto(self, value: bool) -> None: ...
 
+@typing.final
 class VariablePhotoSequenceController(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VariablePhotoSequenceController: ...

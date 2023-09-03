@@ -16,9 +16,11 @@ import winrt.windows.ui.input
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class RadialControllerIndependentInputSource_Static(type):
     def create_for_view(cls, view: typing.Optional[winrt.windows.applicationmodel.core.CoreApplicationView], /) -> typing.Optional[RadialControllerIndependentInputSource]: ...
 
+@typing.final
 class RadialControllerIndependentInputSource(winrt.system.Object, metaclass=RadialControllerIndependentInputSource_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RadialControllerIndependentInputSource: ...

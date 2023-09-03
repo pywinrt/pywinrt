@@ -14,6 +14,7 @@ import winrt.windows.foundation
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class AddAppointmentOperation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AddAppointmentOperation: ...
@@ -26,6 +27,7 @@ class AddAppointmentOperation(winrt.system.Object):
     @_property
     def source_package_family_name(self) -> str: ...
 
+@typing.final
 class AppointmentsProviderLaunchActionVerbs_Static(type):
     @_property
     def add_appointment(cls) -> str: ...
@@ -38,10 +40,12 @@ class AppointmentsProviderLaunchActionVerbs_Static(type):
     @_property
     def show_appointment_details(cls) -> str: ...
 
+@typing.final
 class AppointmentsProviderLaunchActionVerbs(winrt.system.Object, metaclass=AppointmentsProviderLaunchActionVerbs_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentsProviderLaunchActionVerbs: ...
 
+@typing.final
 class RemoveAppointmentOperation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoveAppointmentOperation: ...
@@ -56,6 +60,7 @@ class RemoveAppointmentOperation(winrt.system.Object):
     @_property
     def source_package_family_name(self) -> str: ...
 
+@typing.final
 class ReplaceAppointmentOperation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ReplaceAppointmentOperation: ...

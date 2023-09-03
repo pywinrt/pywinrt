@@ -16,11 +16,13 @@ from winrt.windows.ui.input.preview.injection import InjectedInputButtonChangeKi
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class InjectedInputPoint:
     position_x: winrt.system.Int32
     position_y: winrt.system.Int32
     def __init__(self, position_x: winrt.system.Int32, position_y: winrt.system.Int32) -> None: ...
 
+@typing.final
 class InjectedInputPointerInfo:
     pointer_id: winrt.system.UInt32
     pointer_options: InjectedInputPointerOptions
@@ -29,6 +31,7 @@ class InjectedInputPointerInfo:
     performance_count: winrt.system.UInt64
     def __init__(self, pointer_id: winrt.system.UInt32, pointer_options: InjectedInputPointerOptions, pixel_location: InjectedInputPoint, time_offset_in_milliseconds: winrt.system.UInt32, performance_count: winrt.system.UInt64) -> None: ...
 
+@typing.final
 class InjectedInputRectangle:
     left: winrt.system.Int32
     top: winrt.system.Int32
@@ -36,6 +39,7 @@ class InjectedInputRectangle:
     right: winrt.system.Int32
     def __init__(self, left: winrt.system.Int32, top: winrt.system.Int32, bottom: winrt.system.Int32, right: winrt.system.Int32) -> None: ...
 
+@typing.final
 class InjectedInputGamepadInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InjectedInputGamepadInfo: ...
@@ -72,6 +76,7 @@ class InjectedInputGamepadInfo(winrt.system.Object):
     @buttons.setter
     def buttons(self, value: winrt.windows.gaming.input.GamepadButtons) -> None: ...
 
+@typing.final
 class InjectedInputKeyboardInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InjectedInputKeyboardInfo: ...
@@ -89,6 +94,7 @@ class InjectedInputKeyboardInfo(winrt.system.Object):
     @key_options.setter
     def key_options(self, value: InjectedInputKeyOptions) -> None: ...
 
+@typing.final
 class InjectedInputMouseInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InjectedInputMouseInfo: ...
@@ -114,6 +120,7 @@ class InjectedInputMouseInfo(winrt.system.Object):
     @delta_x.setter
     def delta_x(self, value: winrt.system.Int32) -> None: ...
 
+@typing.final
 class InjectedInputPenInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InjectedInputPenInfo: ...
@@ -147,6 +154,7 @@ class InjectedInputPenInfo(winrt.system.Object):
     @pen_buttons.setter
     def pen_buttons(self, value: InjectedInputPenButtons) -> None: ...
 
+@typing.final
 class InjectedInputTouchInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InjectedInputTouchInfo: ...
@@ -172,10 +180,12 @@ class InjectedInputTouchInfo(winrt.system.Object):
     @contact.setter
     def contact(self, value: InjectedInputRectangle) -> None: ...
 
+@typing.final
 class InputInjector_Static(type):
     def try_create(cls) -> typing.Optional[InputInjector]: ...
     def try_create_for_app_broadcast_only(cls) -> typing.Optional[InputInjector]: ...
 
+@typing.final
 class InputInjector(winrt.system.Object, metaclass=InputInjector_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InputInjector: ...

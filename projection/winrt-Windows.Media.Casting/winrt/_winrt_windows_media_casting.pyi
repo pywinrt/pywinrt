@@ -19,6 +19,7 @@ from winrt.windows.media.casting import CastingConnectionErrorStatus, CastingCon
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class CastingConnection(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -40,6 +41,7 @@ class CastingConnection(winrt.system.Object):
     @_property
     def state(self) -> CastingConnectionState: ...
 
+@typing.final
 class CastingConnectionErrorOccurredEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CastingConnectionErrorOccurredEventArgs: ...
@@ -48,12 +50,14 @@ class CastingConnectionErrorOccurredEventArgs(winrt.system.Object):
     @_property
     def message(self) -> str: ...
 
+@typing.final
 class CastingDevice_Static(type):
     def device_info_supports_casting_async(cls, device: typing.Optional[winrt.windows.devices.enumeration.DeviceInformation], /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     def from_id_async(cls, value: str, /) -> winrt.windows.foundation.IAsyncOperation[CastingDevice]: ...
     def get_device_selector(cls, type: CastingPlaybackTypes, /) -> str: ...
     def get_device_selector_from_casting_source_async(cls, casting_source: typing.Optional[CastingSource], /) -> winrt.windows.foundation.IAsyncOperation[str]: ...
 
+@typing.final
 class CastingDevice(winrt.system.Object, metaclass=CastingDevice_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CastingDevice: ...
@@ -66,6 +70,7 @@ class CastingDevice(winrt.system.Object, metaclass=CastingDevice_Static):
     @_property
     def id(self) -> str: ...
 
+@typing.final
 class CastingDevicePicker(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CastingDevicePicker: ...
@@ -84,6 +89,7 @@ class CastingDevicePicker(winrt.system.Object):
     @_property
     def filter(self) -> typing.Optional[CastingDevicePickerFilter]: ...
 
+@typing.final
 class CastingDevicePickerFilter(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CastingDevicePickerFilter: ...
@@ -102,12 +108,14 @@ class CastingDevicePickerFilter(winrt.system.Object):
     @_property
     def supported_casting_sources(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[CastingSource]]: ...
 
+@typing.final
 class CastingDeviceSelectedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CastingDeviceSelectedEventArgs: ...
     @_property
     def selected_casting_device(self) -> typing.Optional[CastingDevice]: ...
 
+@typing.final
 class CastingSource(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CastingSource: ...

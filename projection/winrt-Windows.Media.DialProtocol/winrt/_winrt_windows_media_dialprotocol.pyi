@@ -19,6 +19,7 @@ from winrt.windows.media.dialprotocol import DialAppLaunchResult, DialAppState, 
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class DialApp(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DialApp: ...
@@ -28,6 +29,7 @@ class DialApp(winrt.system.Object):
     @_property
     def app_name(self) -> str: ...
 
+@typing.final
 class DialAppStateDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DialAppStateDetails: ...
@@ -36,11 +38,13 @@ class DialAppStateDetails(winrt.system.Object):
     @_property
     def state(self) -> DialAppState: ...
 
+@typing.final
 class DialDevice_Static(type):
     def device_info_supports_dial_async(cls, device: typing.Optional[winrt.windows.devices.enumeration.DeviceInformation], /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     def from_id_async(cls, value: str, /) -> winrt.windows.foundation.IAsyncOperation[DialDevice]: ...
     def get_device_selector(cls, app_name: str, /) -> str: ...
 
+@typing.final
 class DialDevice(winrt.system.Object, metaclass=DialDevice_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DialDevice: ...
@@ -52,6 +56,7 @@ class DialDevice(winrt.system.Object, metaclass=DialDevice_Static):
     @_property
     def thumbnail(self) -> typing.Optional[winrt.windows.storage.streams.IRandomAccessStreamReference]: ...
 
+@typing.final
 class DialDevicePicker(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DialDevicePicker: ...
@@ -77,28 +82,33 @@ class DialDevicePicker(winrt.system.Object):
     @_property
     def filter(self) -> typing.Optional[DialDevicePickerFilter]: ...
 
+@typing.final
 class DialDevicePickerFilter(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DialDevicePickerFilter: ...
     @_property
     def supported_app_names(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[str]]: ...
 
+@typing.final
 class DialDeviceSelectedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DialDeviceSelectedEventArgs: ...
     @_property
     def selected_dial_device(self) -> typing.Optional[DialDevice]: ...
 
+@typing.final
 class DialDisconnectButtonClickedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DialDisconnectButtonClickedEventArgs: ...
     @_property
     def device(self) -> typing.Optional[DialDevice]: ...
 
+@typing.final
 class DialReceiverApp_Static(type):
     @_property
     def current(cls) -> typing.Optional[DialReceiverApp]: ...
 
+@typing.final
 class DialReceiverApp(winrt.system.Object, metaclass=DialReceiverApp_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DialReceiverApp: ...

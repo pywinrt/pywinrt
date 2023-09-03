@@ -18,6 +18,7 @@ from winrt.windows.phone.management.deployment import EnterpriseEnrollmentStatus
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class Enterprise(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Enterprise: ...
@@ -34,6 +35,7 @@ class Enterprise(winrt.system.Object):
     @_property
     def workplace_id(self) -> winrt.system.Int32: ...
 
+@typing.final
 class EnterpriseEnrollmentManager_Static(type):
     def request_enrollment_async(cls, enrollment_token: str, /) -> winrt.windows.foundation.IAsyncOperation[EnterpriseEnrollmentResult]: ...
     def request_unenrollment_async(cls, enterprise: typing.Optional[Enterprise], /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
@@ -43,10 +45,12 @@ class EnterpriseEnrollmentManager_Static(type):
     @_property
     def enrolled_enterprises(cls) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[Enterprise]]: ...
 
+@typing.final
 class EnterpriseEnrollmentManager(winrt.system.Object, metaclass=EnterpriseEnrollmentManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EnterpriseEnrollmentManager: ...
 
+@typing.final
 class EnterpriseEnrollmentResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EnterpriseEnrollmentResult: ...
@@ -55,6 +59,7 @@ class EnterpriseEnrollmentResult(winrt.system.Object):
     @_property
     def status(self) -> EnterpriseEnrollmentStatus: ...
 
+@typing.final
 class InstallationManager_Static(type):
     @typing.overload
     def add_package_async(cls, title: str, source_location: typing.Optional[winrt.windows.foundation.Uri], /) -> winrt.windows.foundation.IAsyncOperationWithProgress[PackageInstallResult, winrt.system.UInt32]: ...
@@ -69,10 +74,12 @@ class InstallationManager_Static(type):
     def register_package_async(cls, manifest_uri: typing.Optional[winrt.windows.foundation.Uri], dependency_package_uris: typing.Iterable[winrt.windows.foundation.Uri], deployment_options: winrt.windows.management.deployment.DeploymentOptions, /) -> winrt.windows.foundation.IAsyncOperationWithProgress[PackageInstallResult, winrt.system.UInt32]: ...
     def remove_package_async(cls, package_full_name: str, removal_options: winrt.windows.management.deployment.RemovalOptions, /) -> winrt.windows.foundation.IAsyncOperationWithProgress[PackageInstallResult, winrt.system.UInt32]: ...
 
+@typing.final
 class InstallationManager(winrt.system.Object, metaclass=InstallationManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InstallationManager: ...
 
+@typing.final
 class PackageInstallResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PackageInstallResult: ...

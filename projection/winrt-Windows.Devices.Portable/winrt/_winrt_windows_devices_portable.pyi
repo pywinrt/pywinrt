@@ -15,18 +15,22 @@ from winrt.windows.devices.portable import ServiceDeviceType
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class ServiceDevice_Static(type):
     def get_device_selector(cls, service_type: ServiceDeviceType, /) -> str: ...
     def get_device_selector_from_service_id(cls, service_id: _uuid.UUID, /) -> str: ...
 
+@typing.final
 class ServiceDevice(winrt.system.Object, metaclass=ServiceDevice_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ServiceDevice: ...
 
+@typing.final
 class StorageDevice_Static(type):
     def from_id(cls, device_id: str, /) -> typing.Optional[winrt.windows.storage.StorageFolder]: ...
     def get_device_selector(cls) -> str: ...
 
+@typing.final
 class StorageDevice(winrt.system.Object, metaclass=StorageDevice_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StorageDevice: ...

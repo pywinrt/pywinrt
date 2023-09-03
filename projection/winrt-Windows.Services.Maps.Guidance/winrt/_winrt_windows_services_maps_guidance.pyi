@@ -19,6 +19,7 @@ from winrt.windows.services.maps.guidance import GuidanceAudioMeasurementSystem,
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class GuidanceAudioNotificationRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GuidanceAudioNotificationRequestedEventArgs: ...
@@ -29,6 +30,7 @@ class GuidanceAudioNotificationRequestedEventArgs(winrt.system.Object):
     @_property
     def audio_text(self) -> str: ...
 
+@typing.final
 class GuidanceLaneInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GuidanceLaneInfo: ...
@@ -37,6 +39,7 @@ class GuidanceLaneInfo(winrt.system.Object):
     @_property
     def lane_markers(self) -> GuidanceLaneMarkers: ...
 
+@typing.final
 class GuidanceManeuver(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GuidanceManeuver: ...
@@ -65,6 +68,7 @@ class GuidanceManeuver(winrt.system.Object):
     @_property
     def start_location(self) -> typing.Optional[winrt.windows.devices.geolocation.Geopoint]: ...
 
+@typing.final
 class GuidanceMapMatchedCoordinate(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GuidanceMapMatchedCoordinate: ...
@@ -79,11 +83,13 @@ class GuidanceMapMatchedCoordinate(winrt.system.Object):
     @_property
     def road(self) -> typing.Optional[GuidanceRoadSegment]: ...
 
+@typing.final
 class GuidanceNavigator_Static(type):
     def get_current(cls) -> typing.Optional[GuidanceNavigator]: ...
     @_property
     def use_app_provided_voice(cls) -> bool: ...
 
+@typing.final
 class GuidanceNavigator(winrt.system.Object, metaclass=GuidanceNavigator_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GuidanceNavigator: ...
@@ -128,12 +134,14 @@ class GuidanceNavigator(winrt.system.Object, metaclass=GuidanceNavigator_Static)
     @is_guidance_audio_muted.setter
     def is_guidance_audio_muted(self, value: bool) -> None: ...
 
+@typing.final
 class GuidanceReroutedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GuidanceReroutedEventArgs: ...
     @_property
     def route(self) -> typing.Optional[GuidanceRoute]: ...
 
+@typing.final
 class GuidanceRoadSegment(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GuidanceRoadSegment: ...
@@ -158,6 +166,7 @@ class GuidanceRoadSegment(winrt.system.Object):
     @_property
     def is_scenic(self) -> bool: ...
 
+@typing.final
 class GuidanceRoadSignpost(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GuidanceRoadSignpost: ...
@@ -172,10 +181,12 @@ class GuidanceRoadSignpost(winrt.system.Object):
     @_property
     def foreground_color(self) -> winrt.windows.ui.Color: ...
 
+@typing.final
 class GuidanceRoute_Static(type):
     def can_create_from_map_route(cls, map_route: typing.Optional[winrt.windows.services.maps.MapRoute], /) -> bool: ...
     def try_create_from_map_route(cls, map_route: typing.Optional[winrt.windows.services.maps.MapRoute], /) -> typing.Optional[GuidanceRoute]: ...
 
+@typing.final
 class GuidanceRoute(winrt.system.Object, metaclass=GuidanceRoute_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GuidanceRoute: ...
@@ -193,9 +204,11 @@ class GuidanceRoute(winrt.system.Object, metaclass=GuidanceRoute_Static):
     @_property
     def road_segments(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[GuidanceRoadSegment]]: ...
 
+@typing.final
 class GuidanceTelemetryCollector_Static(type):
     def get_current(cls) -> typing.Optional[GuidanceTelemetryCollector]: ...
 
+@typing.final
 class GuidanceTelemetryCollector(winrt.system.Object, metaclass=GuidanceTelemetryCollector_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GuidanceTelemetryCollector: ...
@@ -213,6 +226,7 @@ class GuidanceTelemetryCollector(winrt.system.Object, metaclass=GuidanceTelemetr
     @enabled.setter
     def enabled(self, value: bool) -> None: ...
 
+@typing.final
 class GuidanceUpdatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GuidanceUpdatedEventArgs: ...

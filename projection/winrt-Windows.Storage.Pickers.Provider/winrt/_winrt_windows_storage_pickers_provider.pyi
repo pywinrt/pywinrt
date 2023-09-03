@@ -17,6 +17,7 @@ from winrt.windows.storage.pickers.provider import AddFileResult, FileSelectionM
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class FileOpenPickerUI(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FileOpenPickerUI: ...
@@ -39,12 +40,14 @@ class FileOpenPickerUI(winrt.system.Object):
     @_property
     def settings_identifier(self) -> str: ...
 
+@typing.final
 class FileRemovedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FileRemovedEventArgs: ...
     @_property
     def id(self) -> str: ...
 
+@typing.final
 class FileSavePickerUI(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FileSavePickerUI: ...
@@ -64,11 +67,13 @@ class FileSavePickerUI(winrt.system.Object):
     @_property
     def settings_identifier(self) -> str: ...
 
+@typing.final
 class PickerClosingDeferral(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PickerClosingDeferral: ...
     def complete(self) -> None: ...
 
+@typing.final
 class PickerClosingEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PickerClosingEventArgs: ...
@@ -77,6 +82,7 @@ class PickerClosingEventArgs(winrt.system.Object):
     @_property
     def is_canceled(self) -> bool: ...
 
+@typing.final
 class PickerClosingOperation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PickerClosingOperation: ...
@@ -84,6 +90,7 @@ class PickerClosingOperation(winrt.system.Object):
     @_property
     def deadline(self) -> datetime.datetime: ...
 
+@typing.final
 class TargetFileRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TargetFileRequest: ...
@@ -93,11 +100,13 @@ class TargetFileRequest(winrt.system.Object):
     @target_file.setter
     def target_file(self, value: typing.Optional[winrt.windows.storage.IStorageFile]) -> None: ...
 
+@typing.final
 class TargetFileRequestDeferral(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TargetFileRequestDeferral: ...
     def complete(self) -> None: ...
 
+@typing.final
 class TargetFileRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TargetFileRequestedEventArgs: ...

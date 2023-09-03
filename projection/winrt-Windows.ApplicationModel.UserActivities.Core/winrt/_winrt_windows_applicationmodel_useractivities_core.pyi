@@ -14,10 +14,12 @@ import winrt.windows.foundation
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class CoreUserActivityManager_Static(type):
     def create_user_activity_session_in_background(cls, activity: typing.Optional[winrt.windows.applicationmodel.useractivities.UserActivity], /) -> typing.Optional[winrt.windows.applicationmodel.useractivities.UserActivitySession]: ...
     def delete_user_activity_sessions_in_time_range_async(cls, channel: typing.Optional[winrt.windows.applicationmodel.useractivities.UserActivityChannel], start_time: datetime.datetime, end_time: datetime.datetime, /) -> winrt.windows.foundation.IAsyncAction: ...
 
+@typing.final
 class CoreUserActivityManager(winrt.system.Object, metaclass=CoreUserActivityManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreUserActivityManager: ...

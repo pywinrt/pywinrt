@@ -17,11 +17,13 @@ from winrt.windows.security.isolation import HostMessageReceivedCallback, Messag
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class IsolatedWindowsEnvironmentCreateProgress:
     state: IsolatedWindowsEnvironmentProgressState
     percent_complete: winrt.system.UInt32
     def __init__(self, state: IsolatedWindowsEnvironmentProgressState, percent_complete: winrt.system.UInt32) -> None: ...
 
+@typing.final
 class IsolatedWindowsEnvironment_Static(type):
     @typing.overload
     def create_async(cls, options: typing.Optional[IsolatedWindowsEnvironmentOptions], /) -> winrt.windows.foundation.IAsyncOperationWithProgress[IsolatedWindowsEnvironmentCreateResult, IsolatedWindowsEnvironmentCreateProgress]: ...
@@ -30,6 +32,7 @@ class IsolatedWindowsEnvironment_Static(type):
     def find_by_owner_id(cls, environment_owner_id: str, /) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[IsolatedWindowsEnvironment]]: ...
     def get_by_id(cls, environment_id: str, /) -> typing.Optional[IsolatedWindowsEnvironment]: ...
 
+@typing.final
 class IsolatedWindowsEnvironment(winrt.system.Object, metaclass=IsolatedWindowsEnvironment_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IsolatedWindowsEnvironment: ...
@@ -64,6 +67,7 @@ class IsolatedWindowsEnvironment(winrt.system.Object, metaclass=IsolatedWindowsE
     @_property
     def id(self) -> str: ...
 
+@typing.final
 class IsolatedWindowsEnvironmentCreateResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IsolatedWindowsEnvironmentCreateResult: ...
@@ -75,6 +79,7 @@ class IsolatedWindowsEnvironmentCreateResult(winrt.system.Object):
     @_property
     def status(self) -> IsolatedWindowsEnvironmentCreateStatus: ...
 
+@typing.final
 class IsolatedWindowsEnvironmentFile(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IsolatedWindowsEnvironmentFile: ...
@@ -88,16 +93,19 @@ class IsolatedWindowsEnvironmentFile(winrt.system.Object):
     @_property
     def is_read_only(self) -> bool: ...
 
+@typing.final
 class IsolatedWindowsEnvironmentHost_Static(type):
     @_property
     def host_errors(cls) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[IsolatedWindowsEnvironmentHostError]]: ...
     @_property
     def is_ready(cls) -> bool: ...
 
+@typing.final
 class IsolatedWindowsEnvironmentHost(winrt.system.Object, metaclass=IsolatedWindowsEnvironmentHost_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IsolatedWindowsEnvironmentHost: ...
 
+@typing.final
 class IsolatedWindowsEnvironmentLaunchFileResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IsolatedWindowsEnvironmentLaunchFileResult: ...
@@ -108,6 +116,7 @@ class IsolatedWindowsEnvironmentLaunchFileResult(winrt.system.Object):
     @_property
     def status(self) -> IsolatedWindowsEnvironmentLaunchFileStatus: ...
 
+@typing.final
 class IsolatedWindowsEnvironmentOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IsolatedWindowsEnvironmentOptions: ...
@@ -162,14 +171,17 @@ class IsolatedWindowsEnvironmentOptions(winrt.system.Object):
     @allowed_clipboard_formats_to_environment.setter
     def allowed_clipboard_formats_to_environment(self, value: IsolatedWindowsEnvironmentAllowedClipboardFormats) -> None: ...
 
+@typing.final
 class IsolatedWindowsEnvironmentOwnerRegistration_Static(type):
     def register(cls, owner_name: str, owner_registration_data: typing.Optional[IsolatedWindowsEnvironmentOwnerRegistrationData], /) -> typing.Optional[IsolatedWindowsEnvironmentOwnerRegistrationResult]: ...
     def unregister(cls, owner_name: str, /) -> None: ...
 
+@typing.final
 class IsolatedWindowsEnvironmentOwnerRegistration(winrt.system.Object, metaclass=IsolatedWindowsEnvironmentOwnerRegistration_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IsolatedWindowsEnvironmentOwnerRegistration: ...
 
+@typing.final
 class IsolatedWindowsEnvironmentOwnerRegistrationData(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IsolatedWindowsEnvironmentOwnerRegistrationData: ...
@@ -183,6 +195,7 @@ class IsolatedWindowsEnvironmentOwnerRegistrationData(winrt.system.Object):
     @_property
     def shareable_folders(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[str]]: ...
 
+@typing.final
 class IsolatedWindowsEnvironmentOwnerRegistrationResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IsolatedWindowsEnvironmentOwnerRegistrationResult: ...
@@ -191,6 +204,7 @@ class IsolatedWindowsEnvironmentOwnerRegistrationResult(winrt.system.Object):
     @_property
     def status(self) -> IsolatedWindowsEnvironmentOwnerRegistrationStatus: ...
 
+@typing.final
 class IsolatedWindowsEnvironmentPostMessageResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IsolatedWindowsEnvironmentPostMessageResult: ...
@@ -199,6 +213,7 @@ class IsolatedWindowsEnvironmentPostMessageResult(winrt.system.Object):
     @_property
     def status(self) -> IsolatedWindowsEnvironmentPostMessageStatus: ...
 
+@typing.final
 class IsolatedWindowsEnvironmentProcess(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IsolatedWindowsEnvironmentProcess: ...
@@ -210,6 +225,7 @@ class IsolatedWindowsEnvironmentProcess(winrt.system.Object):
     @_property
     def state(self) -> IsolatedWindowsEnvironmentProcessState: ...
 
+@typing.final
 class IsolatedWindowsEnvironmentShareFileRequestOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IsolatedWindowsEnvironmentShareFileRequestOptions: ...
@@ -219,6 +235,7 @@ class IsolatedWindowsEnvironmentShareFileRequestOptions(winrt.system.Object):
     @allow_write.setter
     def allow_write(self, value: bool) -> None: ...
 
+@typing.final
 class IsolatedWindowsEnvironmentShareFileResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IsolatedWindowsEnvironmentShareFileResult: ...
@@ -229,6 +246,7 @@ class IsolatedWindowsEnvironmentShareFileResult(winrt.system.Object):
     @_property
     def status(self) -> IsolatedWindowsEnvironmentShareFileStatus: ...
 
+@typing.final
 class IsolatedWindowsEnvironmentShareFolderRequestOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IsolatedWindowsEnvironmentShareFolderRequestOptions: ...
@@ -238,6 +256,7 @@ class IsolatedWindowsEnvironmentShareFolderRequestOptions(winrt.system.Object):
     @allow_write.setter
     def allow_write(self, value: bool) -> None: ...
 
+@typing.final
 class IsolatedWindowsEnvironmentShareFolderResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IsolatedWindowsEnvironmentShareFolderResult: ...
@@ -246,6 +265,7 @@ class IsolatedWindowsEnvironmentShareFolderResult(winrt.system.Object):
     @_property
     def status(self) -> IsolatedWindowsEnvironmentShareFolderStatus: ...
 
+@typing.final
 class IsolatedWindowsEnvironmentStartProcessResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IsolatedWindowsEnvironmentStartProcessResult: ...
@@ -256,6 +276,7 @@ class IsolatedWindowsEnvironmentStartProcessResult(winrt.system.Object):
     @_property
     def status(self) -> IsolatedWindowsEnvironmentStartProcessStatus: ...
 
+@typing.final
 class IsolatedWindowsEnvironmentTelemetryParameters(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IsolatedWindowsEnvironmentTelemetryParameters: ...
@@ -265,6 +286,7 @@ class IsolatedWindowsEnvironmentTelemetryParameters(winrt.system.Object):
     @correlation_id.setter
     def correlation_id(self, value: _uuid.UUID) -> None: ...
 
+@typing.final
 class IsolatedWindowsEnvironmentUserInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IsolatedWindowsEnvironmentUserInfo: ...
@@ -275,12 +297,14 @@ class IsolatedWindowsEnvironmentUserInfo(winrt.system.Object):
     @_property
     def environment_user_sid(self) -> str: ...
 
+@typing.final
 class IsolatedWindowsHostMessenger_Static(type):
     def get_file_id(cls, file_path: str, /) -> _uuid.UUID: ...
     def post_message_to_receiver(cls, receiver_id: _uuid.UUID, message: winrt.windows.foundation.collections.IVectorView[winrt.system.Object], /) -> None: ...
     def register_host_message_receiver(cls, receiver_id: _uuid.UUID, host_message_received_callback: typing.Optional[HostMessageReceivedCallback], /) -> None: ...
     def unregister_host_message_receiver(cls, receiver_id: _uuid.UUID, /) -> None: ...
 
+@typing.final
 class IsolatedWindowsHostMessenger(winrt.system.Object, metaclass=IsolatedWindowsHostMessenger_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IsolatedWindowsHostMessenger: ...

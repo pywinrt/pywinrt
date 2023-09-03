@@ -17,18 +17,21 @@ from winrt.windows.media.playto import PlayToConnectionError, PlayToConnectionSt
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class CurrentTimeChangeRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CurrentTimeChangeRequestedEventArgs: ...
     @_property
     def time(self) -> datetime.timedelta: ...
 
+@typing.final
 class MuteChangeRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MuteChangeRequestedEventArgs: ...
     @_property
     def mute(self) -> bool: ...
 
+@typing.final
 class PlayToConnection(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlayToConnection: ...
@@ -41,6 +44,7 @@ class PlayToConnection(winrt.system.Object):
     @_property
     def state(self) -> PlayToConnectionState: ...
 
+@typing.final
 class PlayToConnectionErrorEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlayToConnectionErrorEventArgs: ...
@@ -49,6 +53,7 @@ class PlayToConnectionErrorEventArgs(winrt.system.Object):
     @_property
     def message(self) -> str: ...
 
+@typing.final
 class PlayToConnectionStateChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlayToConnectionStateChangedEventArgs: ...
@@ -57,6 +62,7 @@ class PlayToConnectionStateChangedEventArgs(winrt.system.Object):
     @_property
     def previous_state(self) -> PlayToConnectionState: ...
 
+@typing.final
 class PlayToConnectionTransferredEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlayToConnectionTransferredEventArgs: ...
@@ -65,10 +71,12 @@ class PlayToConnectionTransferredEventArgs(winrt.system.Object):
     @_property
     def previous_source(self) -> typing.Optional[PlayToSource]: ...
 
+@typing.final
 class PlayToManager_Static(type):
     def get_for_current_view(cls) -> typing.Optional[PlayToManager]: ...
     def show_play_to_u_i(cls) -> None: ...
 
+@typing.final
 class PlayToManager(winrt.system.Object, metaclass=PlayToManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlayToManager: ...
@@ -81,6 +89,7 @@ class PlayToManager(winrt.system.Object, metaclass=PlayToManager_Static):
     @default_source_selection.setter
     def default_source_selection(self, value: bool) -> None: ...
 
+@typing.final
 class PlayToReceiver(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlayToReceiver: ...
@@ -136,6 +145,7 @@ class PlayToReceiver(winrt.system.Object):
     @_property
     def properties(self) -> typing.Optional[winrt.windows.foundation.collections.IPropertySet]: ...
 
+@typing.final
 class PlayToSource(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlayToSource: ...
@@ -151,11 +161,13 @@ class PlayToSource(winrt.system.Object):
     @preferred_source_uri.setter
     def preferred_source_uri(self, value: typing.Optional[winrt.windows.foundation.Uri]) -> None: ...
 
+@typing.final
 class PlayToSourceDeferral(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlayToSourceDeferral: ...
     def complete(self) -> None: ...
 
+@typing.final
 class PlayToSourceRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlayToSourceRequest: ...
@@ -165,12 +177,14 @@ class PlayToSourceRequest(winrt.system.Object):
     @_property
     def deadline(self) -> datetime.datetime: ...
 
+@typing.final
 class PlayToSourceRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlayToSourceRequestedEventArgs: ...
     @_property
     def source_request(self) -> typing.Optional[PlayToSourceRequest]: ...
 
+@typing.final
 class PlayToSourceSelectedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlayToSourceSelectedEventArgs: ...
@@ -185,12 +199,14 @@ class PlayToSourceSelectedEventArgs(winrt.system.Object):
     @_property
     def supports_video(self) -> bool: ...
 
+@typing.final
 class PlaybackRateChangeRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlaybackRateChangeRequestedEventArgs: ...
     @_property
     def rate(self) -> winrt.system.Double: ...
 
+@typing.final
 class SourceChangeRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SourceChangeRequestedEventArgs: ...
@@ -215,6 +231,7 @@ class SourceChangeRequestedEventArgs(winrt.system.Object):
     @_property
     def title(self) -> str: ...
 
+@typing.final
 class VolumeChangeRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VolumeChangeRequestedEventArgs: ...

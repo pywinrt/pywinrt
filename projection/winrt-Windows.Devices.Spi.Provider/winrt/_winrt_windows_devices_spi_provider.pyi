@@ -16,6 +16,7 @@ from winrt.windows.devices.spi.provider import ProviderSpiMode, ProviderSpiShari
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class ProviderSpiConnectionSettings(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProviderSpiConnectionSettings: ...
@@ -41,11 +42,13 @@ class ProviderSpiConnectionSettings(winrt.system.Object):
     @chip_select_line.setter
     def chip_select_line(self, value: winrt.system.Int32) -> None: ...
 
+@typing.final
 class ISpiControllerProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISpiControllerProvider: ...
     def get_device_provider(self, settings: typing.Optional[ProviderSpiConnectionSettings], /) -> typing.Optional[ISpiDeviceProvider]: ...
 
+@typing.final
 class ISpiDeviceProvider(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -61,6 +64,7 @@ class ISpiDeviceProvider(winrt.system.Object):
     @_property
     def device_id(self) -> str: ...
 
+@typing.final
 class ISpiProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISpiProvider: ...

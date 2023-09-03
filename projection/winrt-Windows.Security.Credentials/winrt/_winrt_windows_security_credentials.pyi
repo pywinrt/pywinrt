@@ -19,6 +19,7 @@ from winrt.windows.security.credentials import KeyCredentialAttestationStatus, K
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class KeyCredential(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> KeyCredential: ...
@@ -31,6 +32,7 @@ class KeyCredential(winrt.system.Object):
     @_property
     def name(self) -> str: ...
 
+@typing.final
 class KeyCredentialAttestationResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> KeyCredentialAttestationResult: ...
@@ -41,6 +43,7 @@ class KeyCredentialAttestationResult(winrt.system.Object):
     @_property
     def status(self) -> KeyCredentialAttestationStatus: ...
 
+@typing.final
 class KeyCredentialManager_Static(type):
     def delete_async(cls, name: str, /) -> winrt.windows.foundation.IAsyncAction: ...
     def is_supported_async(cls) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
@@ -48,10 +51,12 @@ class KeyCredentialManager_Static(type):
     def renew_attestation_async(cls) -> winrt.windows.foundation.IAsyncAction: ...
     def request_create_async(cls, name: str, option: KeyCredentialCreationOption, /) -> winrt.windows.foundation.IAsyncOperation[KeyCredentialRetrievalResult]: ...
 
+@typing.final
 class KeyCredentialManager(winrt.system.Object, metaclass=KeyCredentialManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> KeyCredentialManager: ...
 
+@typing.final
 class KeyCredentialOperationResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> KeyCredentialOperationResult: ...
@@ -60,6 +65,7 @@ class KeyCredentialOperationResult(winrt.system.Object):
     @_property
     def status(self) -> KeyCredentialStatus: ...
 
+@typing.final
 class KeyCredentialRetrievalResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> KeyCredentialRetrievalResult: ...
@@ -68,6 +74,7 @@ class KeyCredentialRetrievalResult(winrt.system.Object):
     @_property
     def status(self) -> KeyCredentialStatus: ...
 
+@typing.final
 class PasswordCredential(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PasswordCredential: ...
@@ -91,6 +98,7 @@ class PasswordCredential(winrt.system.Object):
     @_property
     def properties(self) -> typing.Optional[winrt.windows.foundation.collections.IPropertySet]: ...
 
+@typing.final
 class PasswordCredentialPropertyStore(winrt.system.Object, winrt._winrt.MutableMapping[str, winrt.system.Object]):
     def __len__(self) -> int: ...
     def __iter__(self) -> typing.Iterator[str]: ...
@@ -113,6 +121,7 @@ class PasswordCredentialPropertyStore(winrt.system.Object, winrt._winrt.MutableM
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class PasswordVault(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PasswordVault: ...
@@ -124,6 +133,7 @@ class PasswordVault(winrt.system.Object):
     def retrieve(self, resource: str, user_name: str, /) -> typing.Optional[PasswordCredential]: ...
     def retrieve_all(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[PasswordCredential]]: ...
 
+@typing.final
 class WebAccount(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebAccount: ...
@@ -144,6 +154,7 @@ class WebAccount(winrt.system.Object):
     @_property
     def properties(self) -> typing.Optional[winrt.windows.foundation.collections.IMapView[str, str]]: ...
 
+@typing.final
 class WebAccountProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebAccountProvider: ...
@@ -163,6 +174,7 @@ class WebAccountProvider(winrt.system.Object):
     @_property
     def is_system_provider(self) -> bool: ...
 
+@typing.final
 class IWebAccount(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebAccount: ...

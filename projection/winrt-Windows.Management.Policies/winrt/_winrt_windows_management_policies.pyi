@@ -17,14 +17,17 @@ from winrt.windows.management.policies import NamedPolicyKind
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class NamedPolicy_Static(type):
     def get_policy_from_path(cls, area: str, name: str, /) -> typing.Optional[NamedPolicyData]: ...
     def get_policy_from_path_for_user(cls, user: typing.Optional[winrt.windows.system.User], area: str, name: str, /) -> typing.Optional[NamedPolicyData]: ...
 
+@typing.final
 class NamedPolicy(winrt.system.Object, metaclass=NamedPolicy_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NamedPolicy: ...
 
+@typing.final
 class NamedPolicyData(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NamedPolicyData: ...

@@ -17,6 +17,7 @@ from winrt.windows.ui.xaml.automation import AnnotationType, AutomationActiveEnd
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class AnnotationPatternIdentifiers_Static(type):
     @_property
     def annotation_type_id_property(cls) -> typing.Optional[AutomationProperty]: ...
@@ -29,16 +30,19 @@ class AnnotationPatternIdentifiers_Static(type):
     @_property
     def target_property(cls) -> typing.Optional[AutomationProperty]: ...
 
+@typing.final
 class AnnotationPatternIdentifiers(winrt.system.Object, metaclass=AnnotationPatternIdentifiers_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AnnotationPatternIdentifiers: ...
 
+@typing.final
 class AutomationAnnotation_Static(type):
     @_property
     def element_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
     @_property
     def type_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class AutomationAnnotation(winrt.system.Object, metaclass=AutomationAnnotation_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AutomationAnnotation: ...
@@ -57,6 +61,7 @@ class AutomationAnnotation(winrt.system.Object, metaclass=AutomationAnnotation_S
     @element.setter
     def element(self, value: typing.Optional[winrt.windows.ui.xaml.UIElement]) -> None: ...
 
+@typing.final
 class AutomationElementIdentifiers_Static(type):
     @_property
     def bounding_rectangle_property(cls) -> typing.Optional[AutomationProperty]: ...
@@ -137,10 +142,12 @@ class AutomationElementIdentifiers_Static(type):
     @_property
     def is_dialog_property(cls) -> typing.Optional[AutomationProperty]: ...
 
+@typing.final
 class AutomationElementIdentifiers(winrt.system.Object, metaclass=AutomationElementIdentifiers_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AutomationElementIdentifiers: ...
 
+@typing.final
 class AutomationProperties_Static(type):
     def get_accelerator_key(cls, element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], /) -> str: ...
     def get_access_key(cls, element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], /) -> str: ...
@@ -254,22 +261,27 @@ class AutomationProperties_Static(type):
     @_property
     def automation_control_type_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class AutomationProperties(winrt.system.Object, metaclass=AutomationProperties_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AutomationProperties: ...
 
+@typing.final
 class AutomationProperty(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AutomationProperty: ...
 
+@typing.final
 class DockPatternIdentifiers_Static(type):
     @_property
     def dock_position_property(cls) -> typing.Optional[AutomationProperty]: ...
 
+@typing.final
 class DockPatternIdentifiers(winrt.system.Object, metaclass=DockPatternIdentifiers_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DockPatternIdentifiers: ...
 
+@typing.final
 class DragPatternIdentifiers_Static(type):
     @_property
     def drop_effect_property(cls) -> typing.Optional[AutomationProperty]: ...
@@ -280,28 +292,34 @@ class DragPatternIdentifiers_Static(type):
     @_property
     def is_grabbed_property(cls) -> typing.Optional[AutomationProperty]: ...
 
+@typing.final
 class DragPatternIdentifiers(winrt.system.Object, metaclass=DragPatternIdentifiers_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DragPatternIdentifiers: ...
 
+@typing.final
 class DropTargetPatternIdentifiers_Static(type):
     @_property
     def drop_target_effect_property(cls) -> typing.Optional[AutomationProperty]: ...
     @_property
     def drop_target_effects_property(cls) -> typing.Optional[AutomationProperty]: ...
 
+@typing.final
 class DropTargetPatternIdentifiers(winrt.system.Object, metaclass=DropTargetPatternIdentifiers_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DropTargetPatternIdentifiers: ...
 
+@typing.final
 class ExpandCollapsePatternIdentifiers_Static(type):
     @_property
     def expand_collapse_state_property(cls) -> typing.Optional[AutomationProperty]: ...
 
+@typing.final
 class ExpandCollapsePatternIdentifiers(winrt.system.Object, metaclass=ExpandCollapsePatternIdentifiers_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ExpandCollapsePatternIdentifiers: ...
 
+@typing.final
 class GridItemPatternIdentifiers_Static(type):
     @_property
     def column_property(cls) -> typing.Optional[AutomationProperty]: ...
@@ -314,30 +332,36 @@ class GridItemPatternIdentifiers_Static(type):
     @_property
     def row_span_property(cls) -> typing.Optional[AutomationProperty]: ...
 
+@typing.final
 class GridItemPatternIdentifiers(winrt.system.Object, metaclass=GridItemPatternIdentifiers_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GridItemPatternIdentifiers: ...
 
+@typing.final
 class GridPatternIdentifiers_Static(type):
     @_property
     def column_count_property(cls) -> typing.Optional[AutomationProperty]: ...
     @_property
     def row_count_property(cls) -> typing.Optional[AutomationProperty]: ...
 
+@typing.final
 class GridPatternIdentifiers(winrt.system.Object, metaclass=GridPatternIdentifiers_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GridPatternIdentifiers: ...
 
+@typing.final
 class MultipleViewPatternIdentifiers_Static(type):
     @_property
     def current_view_property(cls) -> typing.Optional[AutomationProperty]: ...
     @_property
     def supported_views_property(cls) -> typing.Optional[AutomationProperty]: ...
 
+@typing.final
 class MultipleViewPatternIdentifiers(winrt.system.Object, metaclass=MultipleViewPatternIdentifiers_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MultipleViewPatternIdentifiers: ...
 
+@typing.final
 class RangeValuePatternIdentifiers_Static(type):
     @_property
     def is_read_only_property(cls) -> typing.Optional[AutomationProperty]: ...
@@ -352,10 +376,12 @@ class RangeValuePatternIdentifiers_Static(type):
     @_property
     def value_property(cls) -> typing.Optional[AutomationProperty]: ...
 
+@typing.final
 class RangeValuePatternIdentifiers(winrt.system.Object, metaclass=RangeValuePatternIdentifiers_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RangeValuePatternIdentifiers: ...
 
+@typing.final
 class ScrollPatternIdentifiers_Static(type):
     @_property
     def horizontal_scroll_percent_property(cls) -> typing.Optional[AutomationProperty]: ...
@@ -372,20 +398,24 @@ class ScrollPatternIdentifiers_Static(type):
     @_property
     def vertically_scrollable_property(cls) -> typing.Optional[AutomationProperty]: ...
 
+@typing.final
 class ScrollPatternIdentifiers(winrt.system.Object, metaclass=ScrollPatternIdentifiers_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ScrollPatternIdentifiers: ...
 
+@typing.final
 class SelectionItemPatternIdentifiers_Static(type):
     @_property
     def is_selected_property(cls) -> typing.Optional[AutomationProperty]: ...
     @_property
     def selection_container_property(cls) -> typing.Optional[AutomationProperty]: ...
 
+@typing.final
 class SelectionItemPatternIdentifiers(winrt.system.Object, metaclass=SelectionItemPatternIdentifiers_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SelectionItemPatternIdentifiers: ...
 
+@typing.final
 class SelectionPatternIdentifiers_Static(type):
     @_property
     def can_select_multiple_property(cls) -> typing.Optional[AutomationProperty]: ...
@@ -394,18 +424,22 @@ class SelectionPatternIdentifiers_Static(type):
     @_property
     def selection_property(cls) -> typing.Optional[AutomationProperty]: ...
 
+@typing.final
 class SelectionPatternIdentifiers(winrt.system.Object, metaclass=SelectionPatternIdentifiers_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SelectionPatternIdentifiers: ...
 
+@typing.final
 class SpreadsheetItemPatternIdentifiers_Static(type):
     @_property
     def formula_property(cls) -> typing.Optional[AutomationProperty]: ...
 
+@typing.final
 class SpreadsheetItemPatternIdentifiers(winrt.system.Object, metaclass=SpreadsheetItemPatternIdentifiers_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpreadsheetItemPatternIdentifiers: ...
 
+@typing.final
 class StylesPatternIdentifiers_Static(type):
     @_property
     def extended_properties_property(cls) -> typing.Optional[AutomationProperty]: ...
@@ -422,20 +456,24 @@ class StylesPatternIdentifiers_Static(type):
     @_property
     def style_name_property(cls) -> typing.Optional[AutomationProperty]: ...
 
+@typing.final
 class StylesPatternIdentifiers(winrt.system.Object, metaclass=StylesPatternIdentifiers_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StylesPatternIdentifiers: ...
 
+@typing.final
 class TableItemPatternIdentifiers_Static(type):
     @_property
     def column_header_items_property(cls) -> typing.Optional[AutomationProperty]: ...
     @_property
     def row_header_items_property(cls) -> typing.Optional[AutomationProperty]: ...
 
+@typing.final
 class TableItemPatternIdentifiers(winrt.system.Object, metaclass=TableItemPatternIdentifiers_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TableItemPatternIdentifiers: ...
 
+@typing.final
 class TablePatternIdentifiers_Static(type):
     @_property
     def column_headers_property(cls) -> typing.Optional[AutomationProperty]: ...
@@ -444,18 +482,22 @@ class TablePatternIdentifiers_Static(type):
     @_property
     def row_or_column_major_property(cls) -> typing.Optional[AutomationProperty]: ...
 
+@typing.final
 class TablePatternIdentifiers(winrt.system.Object, metaclass=TablePatternIdentifiers_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TablePatternIdentifiers: ...
 
+@typing.final
 class TogglePatternIdentifiers_Static(type):
     @_property
     def toggle_state_property(cls) -> typing.Optional[AutomationProperty]: ...
 
+@typing.final
 class TogglePatternIdentifiers(winrt.system.Object, metaclass=TogglePatternIdentifiers_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TogglePatternIdentifiers: ...
 
+@typing.final
 class TransformPattern2Identifiers_Static(type):
     @_property
     def can_zoom_property(cls) -> typing.Optional[AutomationProperty]: ...
@@ -466,10 +508,12 @@ class TransformPattern2Identifiers_Static(type):
     @_property
     def zoom_level_property(cls) -> typing.Optional[AutomationProperty]: ...
 
+@typing.final
 class TransformPattern2Identifiers(winrt.system.Object, metaclass=TransformPattern2Identifiers_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TransformPattern2Identifiers: ...
 
+@typing.final
 class TransformPatternIdentifiers_Static(type):
     @_property
     def can_move_property(cls) -> typing.Optional[AutomationProperty]: ...
@@ -478,20 +522,24 @@ class TransformPatternIdentifiers_Static(type):
     @_property
     def can_rotate_property(cls) -> typing.Optional[AutomationProperty]: ...
 
+@typing.final
 class TransformPatternIdentifiers(winrt.system.Object, metaclass=TransformPatternIdentifiers_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TransformPatternIdentifiers: ...
 
+@typing.final
 class ValuePatternIdentifiers_Static(type):
     @_property
     def is_read_only_property(cls) -> typing.Optional[AutomationProperty]: ...
     @_property
     def value_property(cls) -> typing.Optional[AutomationProperty]: ...
 
+@typing.final
 class ValuePatternIdentifiers(winrt.system.Object, metaclass=ValuePatternIdentifiers_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ValuePatternIdentifiers: ...
 
+@typing.final
 class WindowPatternIdentifiers_Static(type):
     @_property
     def can_maximize_property(cls) -> typing.Optional[AutomationProperty]: ...
@@ -506,6 +554,7 @@ class WindowPatternIdentifiers_Static(type):
     @_property
     def window_visual_state_property(cls) -> typing.Optional[AutomationProperty]: ...
 
+@typing.final
 class WindowPatternIdentifiers(winrt.system.Object, metaclass=WindowPatternIdentifiers_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WindowPatternIdentifiers: ...

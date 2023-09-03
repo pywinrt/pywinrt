@@ -14,9 +14,11 @@ import winrt.windows.foundation.collections
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class InstalledDesktopApp_Static(type):
     def get_inventory_async(cls) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[InstalledDesktopApp]]: ...
 
+@typing.final
 class InstalledDesktopApp(winrt.system.Object, metaclass=InstalledDesktopApp_Static):
     def __str__(self) -> str: ...
     @staticmethod

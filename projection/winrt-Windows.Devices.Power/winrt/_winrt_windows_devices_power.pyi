@@ -14,12 +14,14 @@ import winrt.windows.system.power
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class Battery_Static(type):
     def from_id_async(cls, device_id: str, /) -> winrt.windows.foundation.IAsyncOperation[Battery]: ...
     def get_device_selector(cls) -> str: ...
     @_property
     def aggregate_battery(cls) -> typing.Optional[Battery]: ...
 
+@typing.final
 class Battery(winrt.system.Object, metaclass=Battery_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Battery: ...
@@ -29,6 +31,7 @@ class Battery(winrt.system.Object, metaclass=Battery_Static):
     @_property
     def device_id(self) -> str: ...
 
+@typing.final
 class BatteryReport(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BatteryReport: ...

@@ -20,11 +20,13 @@ from winrt.windows.perception.people import HandJointKind, JointPoseAccuracy
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class HandMeshVertex:
     position: winrt.windows.foundation.numerics.Vector3
     normal: winrt.windows.foundation.numerics.Vector3
     def __init__(self, position: winrt.windows.foundation.numerics.Vector3, normal: winrt.windows.foundation.numerics.Vector3) -> None: ...
 
+@typing.final
 class JointPose:
     orientation: winrt.windows.foundation.numerics.Quaternion
     position: winrt.windows.foundation.numerics.Vector3
@@ -32,10 +34,12 @@ class JointPose:
     accuracy: JointPoseAccuracy
     def __init__(self, orientation: winrt.windows.foundation.numerics.Quaternion, position: winrt.windows.foundation.numerics.Vector3, radius: winrt.system.Single, accuracy: JointPoseAccuracy) -> None: ...
 
+@typing.final
 class EyesPose_Static(type):
     def is_supported(cls) -> bool: ...
     def request_access_async(cls) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.ui.input.GazeInputAccessStatus]: ...
 
+@typing.final
 class EyesPose(winrt.system.Object, metaclass=EyesPose_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EyesPose: ...
@@ -46,6 +50,7 @@ class EyesPose(winrt.system.Object, metaclass=EyesPose_Static):
     @_property
     def update_timestamp(self) -> typing.Optional[winrt.windows.perception.PerceptionTimestamp]: ...
 
+@typing.final
 class HandMeshObserver(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HandMeshObserver: ...
@@ -64,6 +69,7 @@ class HandMeshObserver(winrt.system.Object):
     @_property
     def vertex_count(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class HandMeshVertexState(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HandMeshVertexState: ...
@@ -73,6 +79,7 @@ class HandMeshVertexState(winrt.system.Object):
     @_property
     def update_timestamp(self) -> typing.Optional[winrt.windows.perception.PerceptionTimestamp]: ...
 
+@typing.final
 class HandPose(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HandPose: ...
@@ -81,6 +88,7 @@ class HandPose(winrt.system.Object):
     def try_get_joint(self, coordinate_system: typing.Optional[winrt.windows.perception.spatial.SpatialCoordinateSystem], joint: HandJointKind, /) -> typing.Tuple[bool, JointPose]: ...
     def try_get_joints(self, coordinate_system: typing.Optional[winrt.windows.perception.spatial.SpatialCoordinateSystem], joints: winrt.system.Array[HandJointKind], joint_poses: winrt.system.Array[JointPose], /) -> bool: ...
 
+@typing.final
 class HeadPose(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HeadPose: ...

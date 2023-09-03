@@ -21,6 +21,7 @@ from winrt.windows.devices.alljoyn import AllJoynAuthenticationMechanism, AllJoy
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class AllJoynAboutData(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AllJoynAboutData: ...
@@ -67,12 +68,14 @@ class AllJoynAboutData(winrt.system.Object):
     @_property
     def descriptions(self) -> typing.Optional[winrt.windows.foundation.collections.IMap[str, str]]: ...
 
+@typing.final
 class AllJoynAboutDataView_Static(type):
     @typing.overload
     def get_data_by_session_port_async(cls, unique_name: str, bus_attachment: typing.Optional[AllJoynBusAttachment], session_port: winrt.system.UInt16, /) -> winrt.windows.foundation.IAsyncOperation[AllJoynAboutDataView]: ...
     @typing.overload
     def get_data_by_session_port_async(cls, unique_name: str, bus_attachment: typing.Optional[AllJoynBusAttachment], session_port: winrt.system.UInt16, language: typing.Optional[winrt.windows.globalization.Language], /) -> winrt.windows.foundation.IAsyncOperation[AllJoynAboutDataView]: ...
 
+@typing.final
 class AllJoynAboutDataView(winrt.system.Object, metaclass=AllJoynAboutDataView_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AllJoynAboutDataView: ...
@@ -109,6 +112,7 @@ class AllJoynAboutDataView(winrt.system.Object, metaclass=AllJoynAboutDataView_S
     @_property
     def supported_languages(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.globalization.Language]]: ...
 
+@typing.final
 class AllJoynAcceptSessionJoinerEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AllJoynAcceptSessionJoinerEventArgs: ...
@@ -125,6 +129,7 @@ class AllJoynAcceptSessionJoinerEventArgs(winrt.system.Object):
     @_property
     def unique_name(self) -> str: ...
 
+@typing.final
 class AllJoynAuthenticationCompleteEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AllJoynAuthenticationCompleteEventArgs: ...
@@ -135,10 +140,12 @@ class AllJoynAuthenticationCompleteEventArgs(winrt.system.Object):
     @_property
     def succeeded(self) -> bool: ...
 
+@typing.final
 class AllJoynBusAttachment_Static(type):
     def get_default(cls) -> typing.Optional[AllJoynBusAttachment]: ...
     def get_watcher(cls, required_interfaces: typing.Iterable[str], /) -> typing.Optional[winrt.windows.devices.enumeration.DeviceWatcher]: ...
 
+@typing.final
 class AllJoynBusAttachment(winrt.system.Object, metaclass=AllJoynBusAttachment_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AllJoynBusAttachment: ...
@@ -176,6 +183,7 @@ class AllJoynBusAttachment(winrt.system.Object, metaclass=AllJoynBusAttachment_S
     @_property
     def unique_name(self) -> str: ...
 
+@typing.final
 class AllJoynBusAttachmentStateChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AllJoynBusAttachmentStateChangedEventArgs: ...
@@ -184,6 +192,7 @@ class AllJoynBusAttachmentStateChangedEventArgs(winrt.system.Object):
     @_property
     def status(self) -> winrt.system.Int32: ...
 
+@typing.final
 class AllJoynBusObject(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AllJoynBusObject: ...
@@ -203,6 +212,7 @@ class AllJoynBusObject(winrt.system.Object):
     @_property
     def session(self) -> typing.Optional[AllJoynSession]: ...
 
+@typing.final
 class AllJoynBusObjectStoppedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AllJoynBusObjectStoppedEventArgs: ...
@@ -210,6 +220,7 @@ class AllJoynBusObjectStoppedEventArgs(winrt.system.Object):
     @_property
     def status(self) -> winrt.system.Int32: ...
 
+@typing.final
 class AllJoynCredentials(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AllJoynCredentials: ...
@@ -228,6 +239,7 @@ class AllJoynCredentials(winrt.system.Object):
     @_property
     def authentication_mechanism(self) -> AllJoynAuthenticationMechanism: ...
 
+@typing.final
 class AllJoynCredentialsRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AllJoynCredentialsRequestedEventArgs: ...
@@ -241,6 +253,7 @@ class AllJoynCredentialsRequestedEventArgs(winrt.system.Object):
     @_property
     def requested_user_name(self) -> str: ...
 
+@typing.final
 class AllJoynCredentialsVerificationRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AllJoynCredentialsVerificationRequestedEventArgs: ...
@@ -259,6 +272,7 @@ class AllJoynCredentialsVerificationRequestedEventArgs(winrt.system.Object):
     @_property
     def peer_unique_name(self) -> str: ...
 
+@typing.final
 class AllJoynMessageInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AllJoynMessageInfo: ...
@@ -266,6 +280,7 @@ class AllJoynMessageInfo(winrt.system.Object):
     @_property
     def sender_unique_name(self) -> str: ...
 
+@typing.final
 class AllJoynProducerStoppedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AllJoynProducerStoppedEventArgs: ...
@@ -273,9 +288,11 @@ class AllJoynProducerStoppedEventArgs(winrt.system.Object):
     @_property
     def status(self) -> winrt.system.Int32: ...
 
+@typing.final
 class AllJoynServiceInfo_Static(type):
     def from_id_async(cls, device_id: str, /) -> winrt.windows.foundation.IAsyncOperation[AllJoynServiceInfo]: ...
 
+@typing.final
 class AllJoynServiceInfo(winrt.system.Object, metaclass=AllJoynServiceInfo_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AllJoynServiceInfo: ...
@@ -287,6 +304,7 @@ class AllJoynServiceInfo(winrt.system.Object, metaclass=AllJoynServiceInfo_Stati
     @_property
     def unique_name(self) -> str: ...
 
+@typing.final
 class AllJoynServiceInfoRemovedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AllJoynServiceInfoRemovedEventArgs: ...
@@ -294,12 +312,14 @@ class AllJoynServiceInfoRemovedEventArgs(winrt.system.Object):
     @_property
     def unique_name(self) -> str: ...
 
+@typing.final
 class AllJoynSession_Static(type):
     @typing.overload
     def get_from_service_info_async(cls, service_info: typing.Optional[AllJoynServiceInfo], /) -> winrt.windows.foundation.IAsyncOperation[AllJoynSession]: ...
     @typing.overload
     def get_from_service_info_async(cls, service_info: typing.Optional[AllJoynServiceInfo], bus_attachment: typing.Optional[AllJoynBusAttachment], /) -> winrt.windows.foundation.IAsyncOperation[AllJoynSession]: ...
 
+@typing.final
 class AllJoynSession(winrt.system.Object, metaclass=AllJoynSession_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AllJoynSession: ...
@@ -315,6 +335,7 @@ class AllJoynSession(winrt.system.Object, metaclass=AllJoynSession_Static):
     @_property
     def status(self) -> winrt.system.Int32: ...
 
+@typing.final
 class AllJoynSessionJoinedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AllJoynSessionJoinedEventArgs: ...
@@ -322,6 +343,7 @@ class AllJoynSessionJoinedEventArgs(winrt.system.Object):
     @_property
     def session(self) -> typing.Optional[AllJoynSession]: ...
 
+@typing.final
 class AllJoynSessionLostEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AllJoynSessionLostEventArgs: ...
@@ -329,6 +351,7 @@ class AllJoynSessionLostEventArgs(winrt.system.Object):
     @_property
     def reason(self) -> AllJoynSessionLostReason: ...
 
+@typing.final
 class AllJoynSessionMemberAddedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AllJoynSessionMemberAddedEventArgs: ...
@@ -336,6 +359,7 @@ class AllJoynSessionMemberAddedEventArgs(winrt.system.Object):
     @_property
     def unique_name(self) -> str: ...
 
+@typing.final
 class AllJoynSessionMemberRemovedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AllJoynSessionMemberRemovedEventArgs: ...
@@ -343,6 +367,7 @@ class AllJoynSessionMemberRemovedEventArgs(winrt.system.Object):
     @_property
     def unique_name(self) -> str: ...
 
+@typing.final
 class AllJoynStatus_Static(type):
     @_property
     def authentication_failed(cls) -> winrt.system.Int32: ...
@@ -381,10 +406,12 @@ class AllJoynStatus_Static(type):
     @_property
     def ssl_identity_verification_failed(cls) -> winrt.system.Int32: ...
 
+@typing.final
 class AllJoynStatus(winrt.system.Object, metaclass=AllJoynStatus_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AllJoynStatus: ...
 
+@typing.final
 class AllJoynWatcherStoppedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AllJoynWatcherStoppedEventArgs: ...
@@ -392,11 +419,13 @@ class AllJoynWatcherStoppedEventArgs(winrt.system.Object):
     @_property
     def status(self) -> winrt.system.Int32: ...
 
+@typing.final
 class IAllJoynAcceptSessionJoiner(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAllJoynAcceptSessionJoiner: ...
     def accept(self) -> None: ...
 
+@typing.final
 class IAllJoynProducer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAllJoynProducer: ...

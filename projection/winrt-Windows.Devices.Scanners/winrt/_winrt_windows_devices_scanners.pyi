@@ -19,15 +19,18 @@ from winrt.windows.devices.scanners import ImageScannerAutoCroppingMode, ImageSc
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class ImageScannerResolution:
     dpi_x: winrt.system.Single
     dpi_y: winrt.system.Single
     def __init__(self, dpi_x: winrt.system.Single, dpi_y: winrt.system.Single) -> None: ...
 
+@typing.final
 class ImageScanner_Static(type):
     def from_id_async(cls, device_id: str, /) -> winrt.windows.foundation.IAsyncOperation[ImageScanner]: ...
     def get_device_selector(cls) -> str: ...
 
+@typing.final
 class ImageScanner(winrt.system.Object, metaclass=ImageScanner_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ImageScanner: ...
@@ -46,6 +49,7 @@ class ImageScanner(winrt.system.Object, metaclass=ImageScanner_Static):
     @_property
     def flatbed_configuration(self) -> typing.Optional[ImageScannerFlatbedConfiguration]: ...
 
+@typing.final
 class ImageScannerAutoConfiguration(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ImageScannerAutoConfiguration: ...
@@ -57,6 +61,7 @@ class ImageScannerAutoConfiguration(winrt.system.Object):
     @_property
     def default_format(self) -> ImageScannerFormat: ...
 
+@typing.final
 class ImageScannerFeederConfiguration(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ImageScannerFeederConfiguration: ...
@@ -157,6 +162,7 @@ class ImageScannerFeederConfiguration(winrt.system.Object):
     @_property
     def actual_resolution(self) -> ImageScannerResolution: ...
 
+@typing.final
 class ImageScannerFlatbedConfiguration(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ImageScannerFlatbedConfiguration: ...
@@ -224,6 +230,7 @@ class ImageScannerFlatbedConfiguration(winrt.system.Object):
     @_property
     def min_scan_area(self) -> winrt.windows.foundation.Size: ...
 
+@typing.final
 class ImageScannerPreviewResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ImageScannerPreviewResult: ...
@@ -232,12 +239,14 @@ class ImageScannerPreviewResult(winrt.system.Object):
     @_property
     def succeeded(self) -> bool: ...
 
+@typing.final
 class ImageScannerScanResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ImageScannerScanResult: ...
     @_property
     def scanned_files(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.storage.StorageFile]]: ...
 
+@typing.final
 class IImageScannerFormatConfiguration(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IImageScannerFormatConfiguration: ...
@@ -249,6 +258,7 @@ class IImageScannerFormatConfiguration(winrt.system.Object):
     @format.setter
     def format(self, value: ImageScannerFormat) -> None: ...
 
+@typing.final
 class IImageScannerSourceConfiguration(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IImageScannerSourceConfiguration: ...

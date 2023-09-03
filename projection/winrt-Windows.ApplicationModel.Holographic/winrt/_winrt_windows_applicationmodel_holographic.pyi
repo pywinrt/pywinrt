@@ -14,9 +14,11 @@ import winrt.windows.perception.spatial
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class HolographicKeyboard_Static(type):
     def get_default(cls) -> typing.Optional[HolographicKeyboard]: ...
 
+@typing.final
 class HolographicKeyboard(winrt.system.Object, metaclass=HolographicKeyboard_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HolographicKeyboard: ...

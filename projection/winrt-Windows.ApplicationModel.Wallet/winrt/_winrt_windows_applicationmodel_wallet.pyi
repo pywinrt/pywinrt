@@ -19,6 +19,7 @@ from winrt.windows.applicationmodel.wallet import WalletActionKind, WalletBarcod
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class WalletBarcode(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WalletBarcode: ...
@@ -32,6 +33,7 @@ class WalletBarcode(winrt.system.Object):
     @_property
     def value(self) -> str: ...
 
+@typing.final
 class WalletItem(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WalletItem: ...
@@ -141,6 +143,7 @@ class WalletItem(winrt.system.Object):
     @_property
     def verbs(self) -> typing.Optional[winrt.windows.foundation.collections.IMap[str, WalletVerb]]: ...
 
+@typing.final
 class WalletItemCustomProperty(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WalletItemCustomProperty: ...
@@ -166,6 +169,7 @@ class WalletItemCustomProperty(winrt.system.Object):
     @auto_detect_links.setter
     def auto_detect_links(self, value: bool) -> None: ...
 
+@typing.final
 class WalletItemStore(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WalletItemStore: ...
@@ -184,13 +188,16 @@ class WalletItemStore(winrt.system.Object):
     def show_async(self, id: str, /) -> winrt.windows.foundation.IAsyncAction: ...
     def update_async(self, item: typing.Optional[WalletItem], /) -> winrt.windows.foundation.IAsyncAction: ...
 
+@typing.final
 class WalletManager_Static(type):
     def request_store_async(cls) -> winrt.windows.foundation.IAsyncOperation[WalletItemStore]: ...
 
+@typing.final
 class WalletManager(winrt.system.Object, metaclass=WalletManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WalletManager: ...
 
+@typing.final
 class WalletRelevantLocation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WalletRelevantLocation: ...
@@ -204,6 +211,7 @@ class WalletRelevantLocation(winrt.system.Object):
     @display_message.setter
     def display_message(self, value: str) -> None: ...
 
+@typing.final
 class WalletTransaction(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WalletTransaction: ...
@@ -233,6 +241,7 @@ class WalletTransaction(winrt.system.Object):
     @description.setter
     def description(self, value: str) -> None: ...
 
+@typing.final
 class WalletVerb(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WalletVerb: ...

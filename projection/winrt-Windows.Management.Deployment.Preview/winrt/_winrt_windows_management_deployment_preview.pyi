@@ -12,13 +12,16 @@ import winrt.system
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class ClassicAppManager_Static(type):
     def find_installed_app(cls, app_uninstall_key: str, /) -> typing.Optional[InstalledClassicAppInfo]: ...
 
+@typing.final
 class ClassicAppManager(winrt.system.Object, metaclass=ClassicAppManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ClassicAppManager: ...
 
+@typing.final
 class InstalledClassicAppInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InstalledClassicAppInfo: ...

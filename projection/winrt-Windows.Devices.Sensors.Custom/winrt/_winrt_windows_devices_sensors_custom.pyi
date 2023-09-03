@@ -14,10 +14,12 @@ import winrt.windows.foundation.collections
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class CustomSensor_Static(type):
     def from_id_async(cls, sensor_id: str, /) -> winrt.windows.foundation.IAsyncOperation[CustomSensor]: ...
     def get_device_selector(cls, interface_id: _uuid.UUID, /) -> str: ...
 
+@typing.final
 class CustomSensor(winrt.system.Object, metaclass=CustomSensor_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CustomSensor: ...
@@ -39,6 +41,7 @@ class CustomSensor(winrt.system.Object, metaclass=CustomSensor_Static):
     @_property
     def max_batch_size(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class CustomSensorReading(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CustomSensorReading: ...
@@ -49,6 +52,7 @@ class CustomSensorReading(winrt.system.Object):
     @_property
     def performance_count(self) -> typing.Optional[typing.Optional[datetime.timedelta]]: ...
 
+@typing.final
 class CustomSensorReadingChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CustomSensorReadingChangedEventArgs: ...

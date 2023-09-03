@@ -21,13 +21,16 @@ from winrt.windows.ui.shell import SecurityAppKind, SecurityAppState, SecurityAp
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class AdaptiveCardBuilder_Static(type):
     def create_adaptive_card_from_json(cls, value: str, /) -> typing.Optional[IAdaptiveCard]: ...
 
+@typing.final
 class AdaptiveCardBuilder(winrt.system.Object, metaclass=AdaptiveCardBuilder_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AdaptiveCardBuilder: ...
 
+@typing.final
 class FocusSession(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FocusSession: ...
@@ -35,11 +38,13 @@ class FocusSession(winrt.system.Object):
     @_property
     def id(self) -> str: ...
 
+@typing.final
 class FocusSessionManager_Static(type):
     def get_default(cls) -> typing.Optional[FocusSessionManager]: ...
     @_property
     def is_supported(cls) -> bool: ...
 
+@typing.final
 class FocusSessionManager(winrt.system.Object, metaclass=FocusSessionManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FocusSessionManager: ...
@@ -54,6 +59,7 @@ class FocusSessionManager(winrt.system.Object, metaclass=FocusSessionManager_Sta
     @_property
     def is_focus_active(self) -> bool: ...
 
+@typing.final
 class SecurityAppManager(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SecurityAppManager: ...
@@ -62,6 +68,7 @@ class SecurityAppManager(winrt.system.Object):
     def unregister(self, kind: SecurityAppKind, guid_registration: _uuid.UUID, /) -> None: ...
     def update_state(self, kind: SecurityAppKind, guid_registration: _uuid.UUID, state: SecurityAppState, substatus: SecurityAppSubstatus, details_uri: typing.Optional[winrt.windows.foundation.Uri], /) -> None: ...
 
+@typing.final
 class ShareWindowCommandEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ShareWindowCommandEventArgs: ...
@@ -72,9 +79,11 @@ class ShareWindowCommandEventArgs(winrt.system.Object):
     @_property
     def window_id(self) -> winrt.windows.ui.WindowId: ...
 
+@typing.final
 class ShareWindowCommandSource_Static(type):
     def get_for_current_view(cls) -> typing.Optional[ShareWindowCommandSource]: ...
 
+@typing.final
 class ShareWindowCommandSource(winrt.system.Object, metaclass=ShareWindowCommandSource_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ShareWindowCommandSource: ...
@@ -86,9 +95,11 @@ class ShareWindowCommandSource(winrt.system.Object, metaclass=ShareWindowCommand
     def add_command_requested(self, handler: winrt.windows.foundation.TypedEventHandler[ShareWindowCommandSource, ShareWindowCommandEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_command_requested(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class TaskbarManager_Static(type):
     def get_default(cls) -> typing.Optional[TaskbarManager]: ...
 
+@typing.final
 class TaskbarManager(winrt.system.Object, metaclass=TaskbarManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TaskbarManager: ...
@@ -104,6 +115,7 @@ class TaskbarManager(winrt.system.Object, metaclass=TaskbarManager_Static):
     @_property
     def is_supported(self) -> bool: ...
 
+@typing.final
 class WindowTab(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WindowTab: ...
@@ -130,12 +142,14 @@ class WindowTab(winrt.system.Object):
     @group.setter
     def group(self, value: typing.Optional[WindowTabGroup]) -> None: ...
 
+@typing.final
 class WindowTabCloseRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WindowTabCloseRequestedEventArgs: ...
     @_property
     def tab(self) -> typing.Optional[WindowTab]: ...
 
+@typing.final
 class WindowTabCollection(winrt.system.Object, winrt._winrt.MutableSequence[WindowTab]):
     def __len__(self) -> int: ...
     def __iter__(self) -> winrt.windows.foundation.collections.IIterator[WindowTab]: ...
@@ -169,6 +183,7 @@ class WindowTabCollection(winrt.system.Object, winrt._winrt.MutableSequence[Wind
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class WindowTabGroup(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WindowTabGroup: ...
@@ -182,6 +197,7 @@ class WindowTabGroup(winrt.system.Object):
     @icon.setter
     def icon(self, value: typing.Optional[WindowTabIcon]) -> None: ...
 
+@typing.final
 class WindowTabIcon_Static(type):
     @typing.overload
     def create_from_font_glyph(cls, glyph: str, font_family: str, /) -> typing.Optional[WindowTabIcon]: ...
@@ -189,15 +205,18 @@ class WindowTabIcon_Static(type):
     def create_from_font_glyph(cls, glyph: str, font_family: str, font_uri: typing.Optional[winrt.windows.foundation.Uri], /) -> typing.Optional[WindowTabIcon]: ...
     def create_from_image(cls, image: typing.Optional[winrt.windows.storage.streams.IRandomAccessStreamReference], /) -> typing.Optional[WindowTabIcon]: ...
 
+@typing.final
 class WindowTabIcon(winrt.system.Object, metaclass=WindowTabIcon_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WindowTabIcon: ...
 
+@typing.final
 class WindowTabManager_Static(type):
     def get_for_window(cls, id: winrt.windows.ui.WindowId, /) -> typing.Optional[WindowTabManager]: ...
     def is_supported(cls) -> bool: ...
     def is_tab_tear_out_supported(cls) -> bool: ...
 
+@typing.final
 class WindowTabManager(winrt.system.Object, metaclass=WindowTabManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WindowTabManager: ...
@@ -213,12 +232,14 @@ class WindowTabManager(winrt.system.Object, metaclass=WindowTabManager_Static):
     @_property
     def tabs(self) -> typing.Optional[WindowTabCollection]: ...
 
+@typing.final
 class WindowTabSwitchRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WindowTabSwitchRequestedEventArgs: ...
     @_property
     def tab(self) -> typing.Optional[WindowTab]: ...
 
+@typing.final
 class WindowTabTearOutRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WindowTabTearOutRequestedEventArgs: ...
@@ -230,6 +251,7 @@ class WindowTabTearOutRequestedEventArgs(winrt.system.Object):
     @_property
     def tab(self) -> typing.Optional[WindowTab]: ...
 
+@typing.final
 class WindowTabThumbnailRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WindowTabThumbnailRequestedEventArgs: ...
@@ -245,11 +267,13 @@ class WindowTabThumbnailRequestedEventArgs(winrt.system.Object):
     @_property
     def tab(self) -> typing.Optional[WindowTab]: ...
 
+@typing.final
 class IAdaptiveCard(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAdaptiveCard: ...
     def to_json(self) -> str: ...
 
+@typing.final
 class IAdaptiveCardBuilderStatics(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAdaptiveCardBuilderStatics: ...

@@ -25,6 +25,7 @@ from winrt.windows.system import DispatcherQueueHandler
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class AppActivationResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppActivationResult: ...
@@ -33,6 +34,7 @@ class AppActivationResult(winrt.system.Object):
     @_property
     def extended_error(self) -> winrt.windows.foundation.HResult: ...
 
+@typing.final
 class AppDiagnosticInfo_Static(type):
     def create_watcher(cls) -> typing.Optional[AppDiagnosticInfoWatcher]: ...
     def request_access_async(cls) -> winrt.windows.foundation.IAsyncOperation[DiagnosticAccessStatus]: ...
@@ -43,6 +45,7 @@ class AppDiagnosticInfo_Static(type):
     def request_info_for_app_async(cls, app_user_model_id: str, /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVector[AppDiagnosticInfo]]: ...
     def request_info_for_package_async(cls, package_family_name: str, /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVector[AppDiagnosticInfo]]: ...
 
+@typing.final
 class AppDiagnosticInfo(winrt.system.Object, metaclass=AppDiagnosticInfo_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppDiagnosticInfo: ...
@@ -52,6 +55,7 @@ class AppDiagnosticInfo(winrt.system.Object, metaclass=AppDiagnosticInfo_Static)
     @_property
     def app_info(self) -> typing.Optional[winrt.windows.applicationmodel.AppInfo]: ...
 
+@typing.final
 class AppDiagnosticInfoWatcher(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppDiagnosticInfoWatcher: ...
@@ -68,18 +72,21 @@ class AppDiagnosticInfoWatcher(winrt.system.Object):
     @_property
     def status(self) -> AppDiagnosticInfoWatcherStatus: ...
 
+@typing.final
 class AppDiagnosticInfoWatcherEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppDiagnosticInfoWatcherEventArgs: ...
     @_property
     def app_diagnostic_info(self) -> typing.Optional[AppDiagnosticInfo]: ...
 
+@typing.final
 class AppExecutionStateChangeResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppExecutionStateChangeResult: ...
     @_property
     def extended_error(self) -> winrt.windows.foundation.HResult: ...
 
+@typing.final
 class AppMemoryReport(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppMemoryReport: ...
@@ -94,6 +101,7 @@ class AppMemoryReport(winrt.system.Object):
     @_property
     def expected_total_commit_limit(self) -> winrt.system.UInt64: ...
 
+@typing.final
 class AppMemoryUsageLimitChangingEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppMemoryUsageLimitChangingEventArgs: ...
@@ -102,6 +110,7 @@ class AppMemoryUsageLimitChangingEventArgs(winrt.system.Object):
     @_property
     def old_limit(self) -> winrt.system.UInt64: ...
 
+@typing.final
 class AppResourceGroupBackgroundTaskReport(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppResourceGroupBackgroundTaskReport: ...
@@ -114,6 +123,7 @@ class AppResourceGroupBackgroundTaskReport(winrt.system.Object):
     @_property
     def trigger(self) -> str: ...
 
+@typing.final
 class AppResourceGroupInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppResourceGroupInfo: ...
@@ -129,6 +139,7 @@ class AppResourceGroupInfo(winrt.system.Object):
     @_property
     def is_shared(self) -> bool: ...
 
+@typing.final
 class AppResourceGroupInfoWatcher(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppResourceGroupInfoWatcher: ...
@@ -147,6 +158,7 @@ class AppResourceGroupInfoWatcher(winrt.system.Object):
     @_property
     def status(self) -> AppResourceGroupInfoWatcherStatus: ...
 
+@typing.final
 class AppResourceGroupInfoWatcherEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppResourceGroupInfoWatcherEventArgs: ...
@@ -155,6 +167,7 @@ class AppResourceGroupInfoWatcherEventArgs(winrt.system.Object):
     @_property
     def app_resource_group_info(self) -> typing.Optional[AppResourceGroupInfo]: ...
 
+@typing.final
 class AppResourceGroupInfoWatcherExecutionStateChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppResourceGroupInfoWatcherExecutionStateChangedEventArgs: ...
@@ -163,6 +176,7 @@ class AppResourceGroupInfoWatcherExecutionStateChangedEventArgs(winrt.system.Obj
     @_property
     def app_resource_group_info(self) -> typing.Optional[AppResourceGroupInfo]: ...
 
+@typing.final
 class AppResourceGroupMemoryReport(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppResourceGroupMemoryReport: ...
@@ -175,6 +189,7 @@ class AppResourceGroupMemoryReport(winrt.system.Object):
     @_property
     def total_commit_usage(self) -> winrt.system.UInt64: ...
 
+@typing.final
 class AppResourceGroupStateReport(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppResourceGroupStateReport: ...
@@ -183,6 +198,7 @@ class AppResourceGroupStateReport(winrt.system.Object):
     @_property
     def execution_state(self) -> AppResourceGroupExecutionState: ...
 
+@typing.final
 class AppUriHandlerHost(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppUriHandlerHost: ...
@@ -199,6 +215,7 @@ class AppUriHandlerHost(winrt.system.Object):
     @is_enabled.setter
     def is_enabled(self, value: bool) -> None: ...
 
+@typing.final
 class AppUriHandlerRegistration(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppUriHandlerRegistration: ...
@@ -213,12 +230,14 @@ class AppUriHandlerRegistration(winrt.system.Object):
     @_property
     def package_family_name(self) -> str: ...
 
+@typing.final
 class AppUriHandlerRegistrationManager_Static(type):
     def get_default(cls) -> typing.Optional[AppUriHandlerRegistrationManager]: ...
     def get_for_package(cls, package_family_name: str, /) -> typing.Optional[AppUriHandlerRegistrationManager]: ...
     def get_for_package_for_user(cls, package_family_name: str, user: typing.Optional[User], /) -> typing.Optional[AppUriHandlerRegistrationManager]: ...
     def get_for_user(cls, user: typing.Optional[User], /) -> typing.Optional[AppUriHandlerRegistrationManager]: ...
 
+@typing.final
 class AppUriHandlerRegistrationManager(winrt.system.Object, metaclass=AppUriHandlerRegistrationManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppUriHandlerRegistrationManager: ...
@@ -228,16 +247,20 @@ class AppUriHandlerRegistrationManager(winrt.system.Object, metaclass=AppUriHand
     @_property
     def package_family_name(self) -> str: ...
 
+@typing.final
 class DateTimeSettings_Static(type):
     def set_system_date_time(cls, utc_date_time: datetime.datetime, /) -> None: ...
 
+@typing.final
 class DateTimeSettings(winrt.system.Object, metaclass=DateTimeSettings_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DateTimeSettings: ...
 
+@typing.final
 class DispatcherQueue_Static(type):
     def get_for_current_thread(cls) -> typing.Optional[DispatcherQueue]: ...
 
+@typing.final
 class DispatcherQueue(winrt.system.Object, metaclass=DispatcherQueue_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DispatcherQueue: ...
@@ -253,9 +276,11 @@ class DispatcherQueue(winrt.system.Object, metaclass=DispatcherQueue_Static):
     @_property
     def has_thread_access(self) -> bool: ...
 
+@typing.final
 class DispatcherQueueController_Static(type):
     def create_on_dedicated_thread(cls) -> typing.Optional[DispatcherQueueController]: ...
 
+@typing.final
 class DispatcherQueueController(winrt.system.Object, metaclass=DispatcherQueueController_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DispatcherQueueController: ...
@@ -263,11 +288,13 @@ class DispatcherQueueController(winrt.system.Object, metaclass=DispatcherQueueCo
     @_property
     def dispatcher_queue(self) -> typing.Optional[DispatcherQueue]: ...
 
+@typing.final
 class DispatcherQueueShutdownStartingEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DispatcherQueueShutdownStartingEventArgs: ...
     def get_deferral(self) -> typing.Optional[winrt.windows.foundation.Deferral]: ...
 
+@typing.final
 class DispatcherQueueTimer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DispatcherQueueTimer: ...
@@ -286,6 +313,7 @@ class DispatcherQueueTimer(winrt.system.Object):
     @_property
     def is_running(self) -> bool: ...
 
+@typing.final
 class FolderLauncherOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FolderLauncherOptions: ...
@@ -297,6 +325,7 @@ class FolderLauncherOptions(winrt.system.Object):
     @desired_remaining_view.setter
     def desired_remaining_view(self, value: winrt.windows.ui.viewmanagement.ViewSizePreference) -> None: ...
 
+@typing.final
 class KnownUserProperties_Static(type):
     @_property
     def account_name(cls) -> str: ...
@@ -319,10 +348,12 @@ class KnownUserProperties_Static(type):
     @_property
     def age_enforcement_region(cls) -> str: ...
 
+@typing.final
 class KnownUserProperties(winrt.system.Object, metaclass=KnownUserProperties_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> KnownUserProperties: ...
 
+@typing.final
 class LaunchUriResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LaunchUriResult: ...
@@ -331,6 +362,7 @@ class LaunchUriResult(winrt.system.Object):
     @_property
     def status(self) -> LaunchUriStatus: ...
 
+@typing.final
 class Launcher_Static(type):
     def find_app_uri_handlers_async(cls, uri: typing.Optional[winrt.windows.foundation.Uri], /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[winrt.windows.applicationmodel.AppInfo]]: ...
     def find_file_handlers_async(cls, extension: str, /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[winrt.windows.applicationmodel.AppInfo]]: ...
@@ -387,10 +419,12 @@ class Launcher_Static(type):
     @typing.overload
     def query_uri_support_async(cls, uri: typing.Optional[winrt.windows.foundation.Uri], launch_query_support_type: LaunchQuerySupportType, package_family_name: str, /) -> winrt.windows.foundation.IAsyncOperation[LaunchQuerySupportStatus]: ...
 
+@typing.final
 class Launcher(winrt.system.Object, metaclass=Launcher_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Launcher: ...
 
+@typing.final
 class LauncherOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LauncherOptions: ...
@@ -442,6 +476,7 @@ class LauncherOptions(winrt.system.Object):
     @desired_remaining_view.setter
     def desired_remaining_view(self, value: winrt.windows.ui.viewmanagement.ViewSizePreference) -> None: ...
 
+@typing.final
 class LauncherUIOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LauncherUIOptions: ...
@@ -458,6 +493,7 @@ class LauncherUIOptions(winrt.system.Object):
     @invocation_point.setter
     def invocation_point(self, value: typing.Optional[typing.Optional[winrt.windows.foundation.Point]]) -> None: ...
 
+@typing.final
 class MemoryManager_Static(type):
     def get_app_memory_report(cls) -> typing.Optional[AppMemoryReport]: ...
     def get_process_memory_report(cls) -> typing.Optional[ProcessMemoryReport]: ...
@@ -477,20 +513,24 @@ class MemoryManager_Static(type):
     @_property
     def expected_app_memory_usage_limit(cls) -> winrt.system.UInt64: ...
 
+@typing.final
 class MemoryManager(winrt.system.Object, metaclass=MemoryManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MemoryManager: ...
 
+@typing.final
 class ProcessLauncher_Static(type):
     @typing.overload
     def run_to_completion_async(cls, file_name: str, args: str, /) -> winrt.windows.foundation.IAsyncOperation[ProcessLauncherResult]: ...
     @typing.overload
     def run_to_completion_async(cls, file_name: str, args: str, options: typing.Optional[ProcessLauncherOptions], /) -> winrt.windows.foundation.IAsyncOperation[ProcessLauncherResult]: ...
 
+@typing.final
 class ProcessLauncher(winrt.system.Object, metaclass=ProcessLauncher_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProcessLauncher: ...
 
+@typing.final
 class ProcessLauncherOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProcessLauncherOptions: ...
@@ -512,12 +552,14 @@ class ProcessLauncherOptions(winrt.system.Object):
     @standard_error.setter
     def standard_error(self, value: typing.Optional[winrt.windows.storage.streams.IOutputStream]) -> None: ...
 
+@typing.final
 class ProcessLauncherResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProcessLauncherResult: ...
     @_property
     def exit_code(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class ProcessMemoryReport(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProcessMemoryReport: ...
@@ -526,11 +568,13 @@ class ProcessMemoryReport(winrt.system.Object):
     @_property
     def total_working_set_usage(self) -> winrt.system.UInt64: ...
 
+@typing.final
 class ProtocolForResultsOperation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProtocolForResultsOperation: ...
     def report_completed(self, data: typing.Optional[winrt.windows.foundation.collections.ValueSet], /) -> None: ...
 
+@typing.final
 class RemoteLauncher_Static(type):
     @typing.overload
     def launch_uri_async(cls, remote_system_connection_request: typing.Optional[winrt.windows.system.remotesystems.RemoteSystemConnectionRequest], uri: typing.Optional[winrt.windows.foundation.Uri], /) -> winrt.windows.foundation.IAsyncOperation[RemoteLaunchUriStatus]: ...
@@ -539,10 +583,12 @@ class RemoteLauncher_Static(type):
     @typing.overload
     def launch_uri_async(cls, remote_system_connection_request: typing.Optional[winrt.windows.system.remotesystems.RemoteSystemConnectionRequest], uri: typing.Optional[winrt.windows.foundation.Uri], options: typing.Optional[RemoteLauncherOptions], input_data: typing.Optional[winrt.windows.foundation.collections.ValueSet], /) -> winrt.windows.foundation.IAsyncOperation[RemoteLaunchUriStatus]: ...
 
+@typing.final
 class RemoteLauncher(winrt.system.Object, metaclass=RemoteLauncher_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteLauncher: ...
 
+@typing.final
 class RemoteLauncherOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteLauncherOptions: ...
@@ -554,6 +600,7 @@ class RemoteLauncherOptions(winrt.system.Object):
     @_property
     def preferred_app_ids(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[str]]: ...
 
+@typing.final
 class ShutdownManager_Static(type):
     def begin_shutdown(cls, shutdown_kind: ShutdownKind, timeout: datetime.timedelta, /) -> None: ...
     def cancel_shutdown(cls) -> None: ...
@@ -563,10 +610,12 @@ class ShutdownManager_Static(type):
     def enter_power_state(cls, power_state: PowerState, wake_up_after: datetime.timedelta, /) -> None: ...
     def is_power_state_supported(cls, power_state: PowerState, /) -> bool: ...
 
+@typing.final
 class ShutdownManager(winrt.system.Object, metaclass=ShutdownManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ShutdownManager: ...
 
+@typing.final
 class TimeZoneSettings_Static(type):
     def auto_update_time_zone_async(cls, timeout: datetime.timedelta, /) -> winrt.windows.foundation.IAsyncOperation[AutoUpdateTimeZoneStatus]: ...
     def change_time_zone_by_display_name(cls, time_zone_display_name: str, /) -> None: ...
@@ -577,10 +626,12 @@ class TimeZoneSettings_Static(type):
     @_property
     def supported_time_zone_display_names(cls) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]: ...
 
+@typing.final
 class TimeZoneSettings(winrt.system.Object, metaclass=TimeZoneSettings_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TimeZoneSettings: ...
 
+@typing.final
 class User_Static(type):
     def create_watcher(cls) -> typing.Optional[UserWatcher]: ...
     @typing.overload
@@ -592,6 +643,7 @@ class User_Static(type):
     def get_default(cls) -> typing.Optional[User]: ...
     def get_from_id(cls, non_roamable_id: str, /) -> typing.Optional[User]: ...
 
+@typing.final
 class User(winrt.system.Object, metaclass=User_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> User: ...
@@ -606,11 +658,13 @@ class User(winrt.system.Object, metaclass=User_Static):
     @_property
     def type(self) -> UserType: ...
 
+@typing.final
 class UserAuthenticationStatusChangeDeferral(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserAuthenticationStatusChangeDeferral: ...
     def complete(self) -> None: ...
 
+@typing.final
 class UserAuthenticationStatusChangingEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserAuthenticationStatusChangingEventArgs: ...
@@ -622,6 +676,7 @@ class UserAuthenticationStatusChangingEventArgs(winrt.system.Object):
     @_property
     def user(self) -> typing.Optional[User]: ...
 
+@typing.final
 class UserChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserChangedEventArgs: ...
@@ -630,15 +685,18 @@ class UserChangedEventArgs(winrt.system.Object):
     @_property
     def changed_property_kinds(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[UserWatcherUpdateKind]]: ...
 
+@typing.final
 class UserDeviceAssociation_Static(type):
     def find_user_from_device_id(cls, device_id: str, /) -> typing.Optional[User]: ...
     def add_user_device_association_changed(cls, handler: winrt.windows.foundation.EventHandler[UserDeviceAssociationChangedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_user_device_association_changed(cls, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class UserDeviceAssociation(winrt.system.Object, metaclass=UserDeviceAssociation_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDeviceAssociation: ...
 
+@typing.final
 class UserDeviceAssociationChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDeviceAssociationChangedEventArgs: ...
@@ -649,9 +707,11 @@ class UserDeviceAssociationChangedEventArgs(winrt.system.Object):
     @_property
     def old_user(self) -> typing.Optional[User]: ...
 
+@typing.final
 class UserPicker_Static(type):
     def is_supported(cls) -> bool: ...
 
+@typing.final
 class UserPicker(winrt.system.Object, metaclass=UserPicker_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserPicker: ...
@@ -666,6 +726,7 @@ class UserPicker(winrt.system.Object, metaclass=UserPicker_Static):
     @allow_guest_accounts.setter
     def allow_guest_accounts(self, value: bool) -> None: ...
 
+@typing.final
 class UserWatcher(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserWatcher: ...
@@ -688,6 +749,7 @@ class UserWatcher(winrt.system.Object):
     @_property
     def status(self) -> UserWatcherStatus: ...
 
+@typing.final
 class ILauncherViewOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ILauncherViewOptions: ...

@@ -21,10 +21,12 @@ from winrt.windows.applicationmodel import AddResourcePackageOptions, AppExecuti
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class PackageInstallProgress:
     percent_complete: winrt.system.UInt32
     def __init__(self, percent_complete: winrt.system.UInt32) -> None: ...
 
+@typing.final
 class PackageVersion:
     major: winrt.system.UInt16
     minor: winrt.system.UInt16
@@ -32,6 +34,7 @@ class PackageVersion:
     revision: winrt.system.UInt16
     def __init__(self, major: winrt.system.UInt16, minor: winrt.system.UInt16, build: winrt.system.UInt16, revision: winrt.system.UInt16) -> None: ...
 
+@typing.final
 class AppDisplayInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppDisplayInfo: ...
@@ -41,12 +44,14 @@ class AppDisplayInfo(winrt.system.Object):
     @_property
     def display_name(self) -> str: ...
 
+@typing.final
 class AppInfo_Static(type):
     def get_from_app_user_model_id(cls, app_user_model_id: str, /) -> typing.Optional[AppInfo]: ...
     def get_from_app_user_model_id_for_user(cls, user: typing.Optional[winrt.windows.system.User], app_user_model_id: str, /) -> typing.Optional[AppInfo]: ...
     @_property
     def current(cls) -> typing.Optional[AppInfo]: ...
 
+@typing.final
 class AppInfo(winrt.system.Object, metaclass=AppInfo_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppInfo: ...
@@ -65,6 +70,7 @@ class AppInfo(winrt.system.Object, metaclass=AppInfo_Static):
     @_property
     def supported_file_extensions(self) -> str: ...
 
+@typing.final
 class AppInstallerInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppInstallerInfo: ...
@@ -101,6 +107,7 @@ class AppInstallerInfo(winrt.system.Object):
     @_property
     def version(self) -> PackageVersion: ...
 
+@typing.final
 class AppInstance_Static(type):
     def find_or_register_instance_for_key(cls, key: str, /) -> typing.Optional[AppInstance]: ...
     def get_activated_event_args(cls) -> typing.Optional[winrt.windows.applicationmodel.activation.IActivatedEventArgs]: ...
@@ -109,6 +116,7 @@ class AppInstance_Static(type):
     @_property
     def recommended_instance(cls) -> typing.Optional[AppInstance]: ...
 
+@typing.final
 class AppInstance(winrt.system.Object, metaclass=AppInstance_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppInstance: ...
@@ -118,28 +126,34 @@ class AppInstance(winrt.system.Object, metaclass=AppInstance_Static):
     @_property
     def key(self) -> str: ...
 
+@typing.final
 class CameraApplicationManager_Static(type):
     def show_installed_applications_u_i(cls) -> None: ...
 
+@typing.final
 class CameraApplicationManager(winrt.system.Object, metaclass=CameraApplicationManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CameraApplicationManager: ...
 
+@typing.final
 class DesignMode_Static(type):
     @_property
     def design_mode_enabled(cls) -> bool: ...
     @_property
     def design_mode2_enabled(cls) -> bool: ...
 
+@typing.final
 class DesignMode(winrt.system.Object, metaclass=DesignMode_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DesignMode: ...
 
+@typing.final
 class EnteredBackgroundEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EnteredBackgroundEventArgs: ...
     def get_deferral(self) -> typing.Optional[winrt.windows.foundation.Deferral]: ...
 
+@typing.final
 class FindRelatedPackagesOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FindRelatedPackagesOptions: ...
@@ -165,6 +179,7 @@ class FindRelatedPackagesOptions(winrt.system.Object):
     @include_frameworks.setter
     def include_frameworks(self, value: bool) -> None: ...
 
+@typing.final
 class FullTrustProcessLaunchResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FullTrustProcessLaunchResult: ...
@@ -173,6 +188,7 @@ class FullTrustProcessLaunchResult(winrt.system.Object):
     @_property
     def launch_result(self) -> FullTrustLaunchResult: ...
 
+@typing.final
 class FullTrustProcessLauncher_Static(type):
     @typing.overload
     def launch_full_trust_process_for_app_async(cls, full_trust_package_relative_app_id: str, /) -> winrt.windows.foundation.IAsyncAction: ...
@@ -185,15 +201,18 @@ class FullTrustProcessLauncher_Static(type):
     def launch_full_trust_process_for_current_app_async(cls, parameter_group_id: str, /) -> winrt.windows.foundation.IAsyncAction: ...
     def launch_full_trust_process_for_current_app_with_arguments_async(cls, command_line: str, /) -> winrt.windows.foundation.IAsyncOperation[FullTrustProcessLaunchResult]: ...
 
+@typing.final
 class FullTrustProcessLauncher(winrt.system.Object, metaclass=FullTrustProcessLauncher_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FullTrustProcessLauncher: ...
 
+@typing.final
 class LeavingBackgroundEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LeavingBackgroundEventArgs: ...
     def get_deferral(self) -> typing.Optional[winrt.windows.foundation.Deferral]: ...
 
+@typing.final
 class LimitedAccessFeatureRequestResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LimitedAccessFeatureRequestResult: ...
@@ -204,17 +223,21 @@ class LimitedAccessFeatureRequestResult(winrt.system.Object):
     @_property
     def status(self) -> LimitedAccessFeatureStatus: ...
 
+@typing.final
 class LimitedAccessFeatures_Static(type):
     def try_unlock_feature(cls, feature_id: str, token: str, attestation: str, /) -> typing.Optional[LimitedAccessFeatureRequestResult]: ...
 
+@typing.final
 class LimitedAccessFeatures(winrt.system.Object, metaclass=LimitedAccessFeatures_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LimitedAccessFeatures: ...
 
+@typing.final
 class Package_Static(type):
     @_property
     def current(cls) -> typing.Optional[Package]: ...
 
+@typing.final
 class Package(winrt.system.Object, metaclass=Package_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Package: ...
@@ -293,11 +316,13 @@ class Package(winrt.system.Object, metaclass=Package_Static):
     @_property
     def install_date(self) -> datetime.datetime: ...
 
+@typing.final
 class PackageCatalog_Static(type):
     def open_for_current_package(cls) -> typing.Optional[PackageCatalog]: ...
     def open_for_current_user(cls) -> typing.Optional[PackageCatalog]: ...
     def open_for_package(cls, package: typing.Optional[Package], /) -> typing.Optional[PackageCatalog]: ...
 
+@typing.final
 class PackageCatalog(winrt.system.Object, metaclass=PackageCatalog_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PackageCatalog: ...
@@ -318,6 +343,7 @@ class PackageCatalog(winrt.system.Object, metaclass=PackageCatalog_Static):
     def add_package_content_group_staging(self, handler: winrt.windows.foundation.TypedEventHandler[PackageCatalog, PackageContentGroupStagingEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_package_content_group_staging(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class PackageCatalogAddOptionalPackageResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PackageCatalogAddOptionalPackageResult: ...
@@ -326,6 +352,7 @@ class PackageCatalogAddOptionalPackageResult(winrt.system.Object):
     @_property
     def package(self) -> typing.Optional[Package]: ...
 
+@typing.final
 class PackageCatalogAddResourcePackageResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PackageCatalogAddResourcePackageResult: ...
@@ -336,6 +363,7 @@ class PackageCatalogAddResourcePackageResult(winrt.system.Object):
     @_property
     def package(self) -> typing.Optional[Package]: ...
 
+@typing.final
 class PackageCatalogRemoveOptionalPackagesResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PackageCatalogRemoveOptionalPackagesResult: ...
@@ -344,6 +372,7 @@ class PackageCatalogRemoveOptionalPackagesResult(winrt.system.Object):
     @_property
     def packages_removed(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[Package]]: ...
 
+@typing.final
 class PackageCatalogRemoveResourcePackagesResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PackageCatalogRemoveResourcePackagesResult: ...
@@ -352,10 +381,12 @@ class PackageCatalogRemoveResourcePackagesResult(winrt.system.Object):
     @_property
     def packages_removed(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[Package]]: ...
 
+@typing.final
 class PackageContentGroup_Static(type):
     @_property
     def required_group_name(cls) -> str: ...
 
+@typing.final
 class PackageContentGroup(winrt.system.Object, metaclass=PackageContentGroup_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PackageContentGroup: ...
@@ -368,6 +399,7 @@ class PackageContentGroup(winrt.system.Object, metaclass=PackageContentGroup_Sta
     @_property
     def state(self) -> PackageContentGroupState: ...
 
+@typing.final
 class PackageContentGroupStagingEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PackageContentGroupStagingEventArgs: ...
@@ -386,6 +418,7 @@ class PackageContentGroupStagingEventArgs(winrt.system.Object):
     @_property
     def progress(self) -> winrt.system.Double: ...
 
+@typing.final
 class PackageId(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PackageId: ...
@@ -410,6 +443,7 @@ class PackageId(winrt.system.Object):
     @_property
     def product_id(self) -> str: ...
 
+@typing.final
 class PackageInstallingEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PackageInstallingEventArgs: ...
@@ -424,6 +458,7 @@ class PackageInstallingEventArgs(winrt.system.Object):
     @_property
     def progress(self) -> winrt.system.Double: ...
 
+@typing.final
 class PackageStagingEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PackageStagingEventArgs: ...
@@ -438,6 +473,7 @@ class PackageStagingEventArgs(winrt.system.Object):
     @_property
     def progress(self) -> winrt.system.Double: ...
 
+@typing.final
 class PackageStatus(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PackageStatus: ...
@@ -467,12 +503,14 @@ class PackageStatus(winrt.system.Object):
     @_property
     def is_partially_staged(self) -> bool: ...
 
+@typing.final
 class PackageStatusChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PackageStatusChangedEventArgs: ...
     @_property
     def package(self) -> typing.Optional[Package]: ...
 
+@typing.final
 class PackageUninstallingEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PackageUninstallingEventArgs: ...
@@ -487,6 +525,7 @@ class PackageUninstallingEventArgs(winrt.system.Object):
     @_property
     def progress(self) -> winrt.system.Double: ...
 
+@typing.final
 class PackageUpdateAvailabilityResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PackageUpdateAvailabilityResult: ...
@@ -495,6 +534,7 @@ class PackageUpdateAvailabilityResult(winrt.system.Object):
     @_property
     def extended_error(self) -> winrt.windows.foundation.HResult: ...
 
+@typing.final
 class PackageUpdatingEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PackageUpdatingEventArgs: ...
@@ -511,10 +551,12 @@ class PackageUpdatingEventArgs(winrt.system.Object):
     @_property
     def target_package(self) -> typing.Optional[Package]: ...
 
+@typing.final
 class StartupTask_Static(type):
     def get_async(cls, task_id: str, /) -> winrt.windows.foundation.IAsyncOperation[StartupTask]: ...
     def get_for_current_package_async(cls) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[StartupTask]]: ...
 
+@typing.final
 class StartupTask(winrt.system.Object, metaclass=StartupTask_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StartupTask: ...
@@ -525,17 +567,20 @@ class StartupTask(winrt.system.Object, metaclass=StartupTask_Static):
     @_property
     def task_id(self) -> str: ...
 
+@typing.final
 class SuspendingDeferral(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SuspendingDeferral: ...
     def complete(self) -> None: ...
 
+@typing.final
 class SuspendingEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SuspendingEventArgs: ...
     @_property
     def suspending_operation(self) -> typing.Optional[SuspendingOperation]: ...
 
+@typing.final
 class SuspendingOperation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SuspendingOperation: ...
@@ -543,32 +588,38 @@ class SuspendingOperation(winrt.system.Object):
     @_property
     def deadline(self) -> datetime.datetime: ...
 
+@typing.final
 class IEnteredBackgroundEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IEnteredBackgroundEventArgs: ...
     def get_deferral(self) -> typing.Optional[winrt.windows.foundation.Deferral]: ...
 
+@typing.final
 class ILeavingBackgroundEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ILeavingBackgroundEventArgs: ...
     def get_deferral(self) -> typing.Optional[winrt.windows.foundation.Deferral]: ...
 
+@typing.final
 class IPackageCatalogStatics2(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPackageCatalogStatics2: ...
     def open_for_package(self, package: typing.Optional[Package], /) -> typing.Optional[PackageCatalog]: ...
 
+@typing.final
 class ISuspendingDeferral(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISuspendingDeferral: ...
     def complete(self) -> None: ...
 
+@typing.final
 class ISuspendingEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISuspendingEventArgs: ...
     @_property
     def suspending_operation(self) -> typing.Optional[SuspendingOperation]: ...
 
+@typing.final
 class ISuspendingOperation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISuspendingOperation: ...

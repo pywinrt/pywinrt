@@ -19,11 +19,13 @@ from winrt.windows.ui.windowmanagement import AppWindowClosedReason, AppWindowFr
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class AppWindow_Static(type):
     def clear_all_persisted_state(cls) -> None: ...
     def clear_persisted_state(cls, key: str, /) -> None: ...
     def try_create_async(cls) -> winrt.windows.foundation.IAsyncOperation[AppWindow]: ...
 
+@typing.final
 class AppWindow(winrt.system.Object, metaclass=AppWindow_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppWindow: ...
@@ -69,6 +71,7 @@ class AppWindow(winrt.system.Object, metaclass=AppWindow_Static):
     @_property
     def windowing_environment(self) -> typing.Optional[WindowingEnvironment]: ...
 
+@typing.final
 class AppWindowChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppWindowChangedEventArgs: ...
@@ -89,6 +92,7 @@ class AppWindowChangedEventArgs(winrt.system.Object):
     @_property
     def did_windowing_environment_change(self) -> bool: ...
 
+@typing.final
 class AppWindowCloseRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppWindowCloseRequestedEventArgs: ...
@@ -98,12 +102,14 @@ class AppWindowCloseRequestedEventArgs(winrt.system.Object):
     @cancel.setter
     def cancel(self, value: bool) -> None: ...
 
+@typing.final
 class AppWindowClosedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppWindowClosedEventArgs: ...
     @_property
     def reason(self) -> AppWindowClosedReason: ...
 
+@typing.final
 class AppWindowFrame(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppWindowFrame: ...
@@ -112,6 +118,7 @@ class AppWindowFrame(winrt.system.Object):
     @_property
     def drag_region_visuals(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.ui.composition.IVisualElement]]: ...
 
+@typing.final
 class AppWindowPlacement(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppWindowPlacement: ...
@@ -122,12 +129,14 @@ class AppWindowPlacement(winrt.system.Object):
     @_property
     def size(self) -> winrt.windows.foundation.Size: ...
 
+@typing.final
 class AppWindowPresentationConfiguration(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppWindowPresentationConfiguration: ...
     @_property
     def kind(self) -> AppWindowPresentationKind: ...
 
+@typing.final
 class AppWindowPresenter(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppWindowPresenter: ...
@@ -135,6 +144,7 @@ class AppWindowPresenter(winrt.system.Object):
     def is_presentation_supported(self, presentation_kind: AppWindowPresentationKind, /) -> bool: ...
     def request_presentation(self, presentation_kind: AppWindowPresentationKind, /) -> bool: ...
 
+@typing.final
 class AppWindowTitleBar(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppWindowTitleBar: ...
@@ -196,22 +206,26 @@ class AppWindowTitleBar(winrt.system.Object):
     @_property
     def is_visible(self) -> bool: ...
 
+@typing.final
 class AppWindowTitleBarOcclusion(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppWindowTitleBarOcclusion: ...
     @_property
     def occluding_rect(self) -> winrt.windows.foundation.Rect: ...
 
+@typing.final
 class CompactOverlayPresentationConfiguration(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompactOverlayPresentationConfiguration: ...
     def __new__(cls: typing.Type[CompactOverlayPresentationConfiguration]) -> CompactOverlayPresentationConfiguration:...
 
+@typing.final
 class DefaultPresentationConfiguration(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DefaultPresentationConfiguration: ...
     def __new__(cls: typing.Type[DefaultPresentationConfiguration]) -> DefaultPresentationConfiguration:...
 
+@typing.final
 class DisplayRegion(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DisplayRegion: ...
@@ -228,6 +242,7 @@ class DisplayRegion(winrt.system.Object):
     @_property
     def work_area_size(self) -> winrt.windows.foundation.Size: ...
 
+@typing.final
 class FullScreenPresentationConfiguration(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FullScreenPresentationConfiguration: ...
@@ -237,19 +252,23 @@ class FullScreenPresentationConfiguration(winrt.system.Object):
     @is_exclusive.setter
     def is_exclusive(self, value: bool) -> None: ...
 
+@typing.final
 class WindowServices_Static(type):
     def find_all_top_level_window_ids(cls) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.ui.WindowId]]: ...
 
+@typing.final
 class WindowServices(winrt.system.Object, metaclass=WindowServices_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WindowServices: ...
 
+@typing.final
 class WindowingEnvironment_Static(type):
     @typing.overload
     def find_all(cls) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[WindowingEnvironment]]: ...
     @typing.overload
     def find_all(cls, kind: WindowingEnvironmentKind, /) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[WindowingEnvironment]]: ...
 
+@typing.final
 class WindowingEnvironment(winrt.system.Object, metaclass=WindowingEnvironment_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WindowingEnvironment: ...
@@ -261,16 +280,19 @@ class WindowingEnvironment(winrt.system.Object, metaclass=WindowingEnvironment_S
     @_property
     def kind(self) -> WindowingEnvironmentKind: ...
 
+@typing.final
 class WindowingEnvironmentAddedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WindowingEnvironmentAddedEventArgs: ...
     @_property
     def windowing_environment(self) -> typing.Optional[WindowingEnvironment]: ...
 
+@typing.final
 class WindowingEnvironmentChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WindowingEnvironmentChangedEventArgs: ...
 
+@typing.final
 class WindowingEnvironmentRemovedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WindowingEnvironmentRemovedEventArgs: ...

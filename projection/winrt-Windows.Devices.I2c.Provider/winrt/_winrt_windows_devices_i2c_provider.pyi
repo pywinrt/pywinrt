@@ -16,11 +16,13 @@ from winrt.windows.devices.i2c.provider import ProviderI2cBusSpeed, ProviderI2cS
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class ProviderI2cTransferResult:
     status: ProviderI2cTransferStatus
     bytes_transferred: winrt.system.UInt32
     def __init__(self, status: ProviderI2cTransferStatus, bytes_transferred: winrt.system.UInt32) -> None: ...
 
+@typing.final
 class ProviderI2cConnectionSettings(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProviderI2cConnectionSettings: ...
@@ -37,11 +39,13 @@ class ProviderI2cConnectionSettings(winrt.system.Object):
     @bus_speed.setter
     def bus_speed(self, value: ProviderI2cBusSpeed) -> None: ...
 
+@typing.final
 class II2cControllerProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> II2cControllerProvider: ...
     def get_device_provider(self, settings: typing.Optional[ProviderI2cConnectionSettings], /) -> typing.Optional[II2cDeviceProvider]: ...
 
+@typing.final
 class II2cDeviceProvider(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -57,6 +61,7 @@ class II2cDeviceProvider(winrt.system.Object):
     @_property
     def device_id(self) -> str: ...
 
+@typing.final
 class II2cProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> II2cProvider: ...

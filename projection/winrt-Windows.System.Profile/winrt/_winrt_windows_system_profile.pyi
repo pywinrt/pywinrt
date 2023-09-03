@@ -18,6 +18,7 @@ from winrt.windows.system.profile import PlatformDataCollectionLevel, SystemIden
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class AnalyticsInfo_Static(type):
     def get_system_properties_async(cls, attribute_names: typing.Iterable[str], /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IMapView[str, str]]: ...
     @_property
@@ -25,10 +26,12 @@ class AnalyticsInfo_Static(type):
     @_property
     def version_info(cls) -> typing.Optional[AnalyticsVersionInfo]: ...
 
+@typing.final
 class AnalyticsInfo(winrt.system.Object, metaclass=AnalyticsInfo_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AnalyticsInfo: ...
 
+@typing.final
 class AnalyticsVersionInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AnalyticsVersionInfo: ...
@@ -39,28 +42,35 @@ class AnalyticsVersionInfo(winrt.system.Object):
     @_property
     def product_name(self) -> str: ...
 
+@typing.final
 class AppApplicability_Static(type):
     def get_unsupported_app_requirements(cls, capabilities: typing.Iterable[str], /) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[UnsupportedAppRequirement]]: ...
 
+@typing.final
 class AppApplicability(winrt.system.Object, metaclass=AppApplicability_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppApplicability: ...
 
+@typing.final
 class EducationSettings_Static(type):
     @_property
     def is_education_environment(cls) -> bool: ...
 
+@typing.final
 class EducationSettings(winrt.system.Object, metaclass=EducationSettings_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EducationSettings: ...
 
+@typing.final
 class HardwareIdentification_Static(type):
     def get_package_specific_token(cls, nonce: typing.Optional[winrt.windows.storage.streams.IBuffer], /) -> typing.Optional[HardwareToken]: ...
 
+@typing.final
 class HardwareIdentification(winrt.system.Object, metaclass=HardwareIdentification_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HardwareIdentification: ...
 
+@typing.final
 class HardwareToken(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HardwareToken: ...
@@ -71,6 +81,7 @@ class HardwareToken(winrt.system.Object):
     @_property
     def signature(self) -> typing.Optional[winrt.windows.storage.streams.IBuffer]: ...
 
+@typing.final
 class KnownRetailInfoProperties_Static(type):
     @_property
     def battery_life_description(cls) -> str: ...
@@ -117,10 +128,12 @@ class KnownRetailInfoProperties_Static(type):
     @_property
     def windows_edition(cls) -> str: ...
 
+@typing.final
 class KnownRetailInfoProperties(winrt.system.Object, metaclass=KnownRetailInfoProperties_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> KnownRetailInfoProperties: ...
 
+@typing.final
 class PlatformDiagnosticsAndUsageDataSettings_Static(type):
     def can_collect_diagnostics(cls, level: PlatformDataCollectionLevel, /) -> bool: ...
     def add_collection_level_changed(cls, handler: winrt.windows.foundation.EventHandler[winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
@@ -128,48 +141,58 @@ class PlatformDiagnosticsAndUsageDataSettings_Static(type):
     @_property
     def collection_level(cls) -> PlatformDataCollectionLevel: ...
 
+@typing.final
 class PlatformDiagnosticsAndUsageDataSettings(winrt.system.Object, metaclass=PlatformDiagnosticsAndUsageDataSettings_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlatformDiagnosticsAndUsageDataSettings: ...
 
+@typing.final
 class RetailInfo_Static(type):
     @_property
     def is_demo_mode_enabled(cls) -> bool: ...
     @_property
     def properties(cls) -> typing.Optional[winrt.windows.foundation.collections.IMapView[str, winrt.system.Object]]: ...
 
+@typing.final
 class RetailInfo(winrt.system.Object, metaclass=RetailInfo_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RetailInfo: ...
 
+@typing.final
 class SharedModeSettings_Static(type):
     @_property
     def is_enabled(cls) -> bool: ...
     @_property
     def should_avoid_local_storage(cls) -> bool: ...
 
+@typing.final
 class SharedModeSettings(winrt.system.Object, metaclass=SharedModeSettings_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SharedModeSettings: ...
 
+@typing.final
 class SmartAppControlPolicy_Static(type):
     def add_changed(cls, handler: winrt.windows.foundation.EventHandler[winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_changed(cls, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
     @_property
     def is_enabled(cls) -> bool: ...
 
+@typing.final
 class SmartAppControlPolicy(winrt.system.Object, metaclass=SmartAppControlPolicy_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmartAppControlPolicy: ...
 
+@typing.final
 class SystemIdentification_Static(type):
     def get_system_id_for_publisher(cls) -> typing.Optional[SystemIdentificationInfo]: ...
     def get_system_id_for_user(cls, user: typing.Optional[winrt.windows.system.User], /) -> typing.Optional[SystemIdentificationInfo]: ...
 
+@typing.final
 class SystemIdentification(winrt.system.Object, metaclass=SystemIdentification_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SystemIdentification: ...
 
+@typing.final
 class SystemIdentificationInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SystemIdentificationInfo: ...
@@ -178,16 +201,19 @@ class SystemIdentificationInfo(winrt.system.Object):
     @_property
     def source(self) -> SystemIdentificationSource: ...
 
+@typing.final
 class SystemSetupInfo_Static(type):
     def add_out_of_box_experience_state_changed(cls, handler: winrt.windows.foundation.EventHandler[winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_out_of_box_experience_state_changed(cls, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
     @_property
     def out_of_box_experience_state(cls) -> SystemOutOfBoxExperienceState: ...
 
+@typing.final
 class SystemSetupInfo(winrt.system.Object, metaclass=SystemSetupInfo_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SystemSetupInfo: ...
 
+@typing.final
 class UnsupportedAppRequirement(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UnsupportedAppRequirement: ...
@@ -196,6 +222,7 @@ class UnsupportedAppRequirement(winrt.system.Object):
     @_property
     def requirement(self) -> str: ...
 
+@typing.final
 class WindowsIntegrityPolicy_Static(type):
     def add_policy_changed(cls, handler: winrt.windows.foundation.EventHandler[winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_policy_changed(cls, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
@@ -208,6 +235,7 @@ class WindowsIntegrityPolicy_Static(type):
     @_property
     def is_enabled_for_trial(cls) -> bool: ...
 
+@typing.final
 class WindowsIntegrityPolicy(winrt.system.Object, metaclass=WindowsIntegrityPolicy_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WindowsIntegrityPolicy: ...

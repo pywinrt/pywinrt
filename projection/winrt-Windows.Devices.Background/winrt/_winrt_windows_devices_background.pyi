@@ -13,6 +13,7 @@ import winrt.windows.foundation
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class DeviceServicingDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DeviceServicingDetails: ...
@@ -23,6 +24,7 @@ class DeviceServicingDetails(winrt.system.Object):
     @_property
     def expected_duration(self) -> datetime.timedelta: ...
 
+@typing.final
 class DeviceUseDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DeviceUseDetails: ...

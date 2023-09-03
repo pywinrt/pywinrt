@@ -17,6 +17,7 @@ import winrt.windows.devices.spi.provider
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class LowLevelDevicesAggregateProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LowLevelDevicesAggregateProvider: ...
@@ -32,16 +33,19 @@ class LowLevelDevicesAggregateProvider(winrt.system.Object):
     @_property
     def spi_controller_provider(self) -> typing.Optional[winrt.windows.devices.spi.provider.ISpiControllerProvider]: ...
 
+@typing.final
 class LowLevelDevicesController_Static(type):
     @_property
     def default_provider(cls) -> typing.Optional[ILowLevelDevicesAggregateProvider]: ...
     @default_provider.setter
     def default_provider(cls, value: typing.Optional[ILowLevelDevicesAggregateProvider]) -> None: ...
 
+@typing.final
 class LowLevelDevicesController(winrt.system.Object, metaclass=LowLevelDevicesController_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LowLevelDevicesController: ...
 
+@typing.final
 class ILowLevelDevicesAggregateProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ILowLevelDevicesAggregateProvider: ...

@@ -23,11 +23,13 @@ from winrt.windows.ui.composition import AnimationControllerProgressBehavior, An
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class InkTrailPoint:
     point: winrt.windows.foundation.Point
     radius: winrt.system.Single
     def __init__(self, point: winrt.windows.foundation.Point, radius: winrt.system.Single) -> None: ...
 
+@typing.final
 class AmbientLight(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AmbientLight: ...
@@ -40,12 +42,14 @@ class AmbientLight(winrt.system.Object):
     @intensity.setter
     def intensity(self, value: winrt.system.Single) -> None: ...
 
+@typing.final
 class AnimationController_Static(type):
     @_property
     def max_playback_rate(cls) -> winrt.system.Single: ...
     @_property
     def min_playback_rate(cls) -> winrt.system.Single: ...
 
+@typing.final
 class AnimationController(winrt.system.Object, metaclass=AnimationController_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AnimationController: ...
@@ -64,6 +68,7 @@ class AnimationController(winrt.system.Object, metaclass=AnimationController_Sta
     @playback_rate.setter
     def playback_rate(self, value: winrt.system.Single) -> None: ...
 
+@typing.final
 class AnimationPropertyInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AnimationPropertyInfo: ...
@@ -74,6 +79,7 @@ class AnimationPropertyInfo(winrt.system.Object):
     @access_mode.setter
     def access_mode(self, value: AnimationPropertyAccessMode) -> None: ...
 
+@typing.final
 class BackEasingFunction(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BackEasingFunction: ...
@@ -82,11 +88,13 @@ class BackEasingFunction(winrt.system.Object):
     @_property
     def mode(self) -> CompositionEasingFunctionMode: ...
 
+@typing.final
 class BooleanKeyFrameAnimation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BooleanKeyFrameAnimation: ...
     def insert_key_frame(self, normalized_progress_key: winrt.system.Single, value: bool, /) -> None: ...
 
+@typing.final
 class BounceEasingFunction(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BounceEasingFunction: ...
@@ -97,6 +105,7 @@ class BounceEasingFunction(winrt.system.Object):
     @_property
     def mode(self) -> CompositionEasingFunctionMode: ...
 
+@typing.final
 class BounceScalarNaturalMotionAnimation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BounceScalarNaturalMotionAnimation: ...
@@ -109,6 +118,7 @@ class BounceScalarNaturalMotionAnimation(winrt.system.Object):
     @acceleration.setter
     def acceleration(self, value: winrt.system.Single) -> None: ...
 
+@typing.final
 class BounceVector2NaturalMotionAnimation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BounceVector2NaturalMotionAnimation: ...
@@ -121,6 +131,7 @@ class BounceVector2NaturalMotionAnimation(winrt.system.Object):
     @acceleration.setter
     def acceleration(self, value: winrt.system.Single) -> None: ...
 
+@typing.final
 class BounceVector3NaturalMotionAnimation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BounceVector3NaturalMotionAnimation: ...
@@ -133,12 +144,14 @@ class BounceVector3NaturalMotionAnimation(winrt.system.Object):
     @acceleration.setter
     def acceleration(self, value: winrt.system.Single) -> None: ...
 
+@typing.final
 class CircleEasingFunction(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CircleEasingFunction: ...
     @_property
     def mode(self) -> CompositionEasingFunctionMode: ...
 
+@typing.final
 class ColorKeyFrameAnimation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ColorKeyFrameAnimation: ...
@@ -151,6 +164,7 @@ class ColorKeyFrameAnimation(winrt.system.Object):
     @interpolation_color_space.setter
     def interpolation_color_space(self, value: CompositionColorSpace) -> None: ...
 
+@typing.final
 class CompositionAnimation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionAnimation: ...
@@ -174,6 +188,7 @@ class CompositionAnimation(winrt.system.Object):
     @_property
     def initial_value_expressions(self) -> typing.Optional[InitialValueExpressionCollection]: ...
 
+@typing.final
 class CompositionAnimationGroup(winrt.system.Object):
     def __iter__(self) -> winrt.windows.foundation.collections.IIterator[CompositionAnimation]: ...
     @staticmethod
@@ -185,21 +200,26 @@ class CompositionAnimationGroup(winrt.system.Object):
     @_property
     def count(self) -> winrt.system.Int32: ...
 
+@typing.final
 class CompositionBackdropBrush(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionBackdropBrush: ...
 
+@typing.final
 class CompositionBatchCompletedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionBatchCompletedEventArgs: ...
 
+@typing.final
 class CompositionBrush(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionBrush: ...
 
+@typing.final
 class CompositionCapabilities_Static(type):
     def get_for_current_view(cls) -> typing.Optional[CompositionCapabilities]: ...
 
+@typing.final
 class CompositionCapabilities(winrt.system.Object, metaclass=CompositionCapabilities_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionCapabilities: ...
@@ -208,6 +228,7 @@ class CompositionCapabilities(winrt.system.Object, metaclass=CompositionCapabili
     def add_changed(self, handler: winrt.windows.foundation.TypedEventHandler[CompositionCapabilities, winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class CompositionClip(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionClip: ...
@@ -240,6 +261,7 @@ class CompositionClip(winrt.system.Object):
     @anchor_point.setter
     def anchor_point(self, value: winrt.windows.foundation.numerics.Vector2) -> None: ...
 
+@typing.final
 class CompositionColorBrush(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionColorBrush: ...
@@ -248,6 +270,7 @@ class CompositionColorBrush(winrt.system.Object):
     @color.setter
     def color(self, value: winrt.windows.ui.Color) -> None: ...
 
+@typing.final
 class CompositionColorGradientStop(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionColorGradientStop: ...
@@ -260,6 +283,7 @@ class CompositionColorGradientStop(winrt.system.Object):
     @color.setter
     def color(self, value: winrt.windows.ui.Color) -> None: ...
 
+@typing.final
 class CompositionColorGradientStopCollection(winrt.system.Object, winrt._winrt.MutableSequence[CompositionColorGradientStop]):
     def __len__(self) -> int: ...
     def __iter__(self) -> winrt.windows.foundation.collections.IIterator[CompositionColorGradientStop]: ...
@@ -292,6 +316,7 @@ class CompositionColorGradientStopCollection(winrt.system.Object, winrt._winrt.M
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class CompositionCommitBatch(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionCommitBatch: ...
@@ -302,12 +327,14 @@ class CompositionCommitBatch(winrt.system.Object):
     @_property
     def is_ended(self) -> bool: ...
 
+@typing.final
 class CompositionContainerShape(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionContainerShape: ...
     @_property
     def shapes(self) -> typing.Optional[CompositionShapeCollection]: ...
 
+@typing.final
 class CompositionDrawingSurface(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionDrawingSurface: ...
@@ -329,6 +356,7 @@ class CompositionDrawingSurface(winrt.system.Object):
     @_property
     def size_int32(self) -> winrt.windows.graphics.SizeInt32: ...
 
+@typing.final
 class CompositionEasingFunction_Static(type):
     def create_back_easing_function(cls, owner: typing.Optional[Compositor], mode: CompositionEasingFunctionMode, amplitude: winrt.system.Single, /) -> typing.Optional[BackEasingFunction]: ...
     def create_bounce_easing_function(cls, owner: typing.Optional[Compositor], mode: CompositionEasingFunctionMode, bounces: winrt.system.Int32, bounciness: winrt.system.Single, /) -> typing.Optional[BounceEasingFunction]: ...
@@ -344,16 +372,19 @@ class CompositionEasingFunction_Static(type):
     @typing.overload
     def create_step_easing_function(cls, owner: typing.Optional[Compositor], step_count: winrt.system.Int32, /) -> typing.Optional[StepEasingFunction]: ...
 
+@typing.final
 class CompositionEasingFunction(winrt.system.Object, metaclass=CompositionEasingFunction_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionEasingFunction: ...
 
+@typing.final
 class CompositionEffectBrush(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionEffectBrush: ...
     def get_source_parameter(self, name: str, /) -> typing.Optional[CompositionBrush]: ...
     def set_source_parameter(self, name: str, source: typing.Optional[CompositionBrush], /) -> None: ...
 
+@typing.final
 class CompositionEffectFactory(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionEffectFactory: ...
@@ -363,6 +394,7 @@ class CompositionEffectFactory(winrt.system.Object):
     @_property
     def load_status(self) -> CompositionEffectFactoryLoadStatus: ...
 
+@typing.final
 class CompositionEffectSourceParameter(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionEffectSourceParameter: ...
@@ -370,6 +402,7 @@ class CompositionEffectSourceParameter(winrt.system.Object):
     @_property
     def name(self) -> str: ...
 
+@typing.final
 class CompositionEllipseGeometry(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionEllipseGeometry: ...
@@ -382,6 +415,7 @@ class CompositionEllipseGeometry(winrt.system.Object):
     @center.setter
     def center(self, value: winrt.windows.foundation.numerics.Vector2) -> None: ...
 
+@typing.final
 class CompositionGeometricClip(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionGeometricClip: ...
@@ -394,6 +428,7 @@ class CompositionGeometricClip(winrt.system.Object):
     @geometry.setter
     def geometry(self, value: typing.Optional[CompositionGeometry]) -> None: ...
 
+@typing.final
 class CompositionGeometry(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionGeometry: ...
@@ -410,6 +445,7 @@ class CompositionGeometry(winrt.system.Object):
     @trim_end.setter
     def trim_end(self, value: winrt.system.Single) -> None: ...
 
+@typing.final
 class CompositionGradientBrush(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionGradientBrush: ...
@@ -456,6 +492,7 @@ class CompositionGradientBrush(winrt.system.Object):
     @mapping_mode.setter
     def mapping_mode(self, value: CompositionMappingMode) -> None: ...
 
+@typing.final
 class CompositionGraphicsDevice(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionGraphicsDevice: ...
@@ -468,6 +505,7 @@ class CompositionGraphicsDevice(winrt.system.Object):
     def add_rendering_device_replaced(self, handler: winrt.windows.foundation.TypedEventHandler[CompositionGraphicsDevice, RenderingDeviceReplacedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_rendering_device_replaced(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class CompositionLight(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionLight: ...
@@ -480,6 +518,7 @@ class CompositionLight(winrt.system.Object):
     @is_enabled.setter
     def is_enabled(self, value: bool) -> None: ...
 
+@typing.final
 class CompositionLineGeometry(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionLineGeometry: ...
@@ -492,6 +531,7 @@ class CompositionLineGeometry(winrt.system.Object):
     @end.setter
     def end(self, value: winrt.windows.foundation.numerics.Vector2) -> None: ...
 
+@typing.final
 class CompositionLinearGradientBrush(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionLinearGradientBrush: ...
@@ -504,6 +544,7 @@ class CompositionLinearGradientBrush(winrt.system.Object):
     @end_point.setter
     def end_point(self, value: winrt.windows.foundation.numerics.Vector2) -> None: ...
 
+@typing.final
 class CompositionMaskBrush(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionMaskBrush: ...
@@ -516,6 +557,7 @@ class CompositionMaskBrush(winrt.system.Object):
     @mask.setter
     def mask(self, value: typing.Optional[CompositionBrush]) -> None: ...
 
+@typing.final
 class CompositionMipmapSurface(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionMipmapSurface: ...
@@ -529,6 +571,7 @@ class CompositionMipmapSurface(winrt.system.Object):
     @_property
     def size_int32(self) -> winrt.windows.graphics.SizeInt32: ...
 
+@typing.final
 class CompositionNineGridBrush(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionNineGridBrush: ...
@@ -581,10 +624,12 @@ class CompositionNineGridBrush(winrt.system.Object):
     @bottom_inset.setter
     def bottom_inset(self, value: winrt.system.Single) -> None: ...
 
+@typing.final
 class CompositionObject_Static(type):
     def start_animation_group_with_i_animation_object(cls, target: typing.Optional[IAnimationObject], animation: typing.Optional[ICompositionAnimationBase], /) -> None: ...
     def start_animation_with_i_animation_object(cls, target: typing.Optional[IAnimationObject], property_name: str, animation: typing.Optional[CompositionAnimation], /) -> None: ...
 
+@typing.final
 class CompositionObject(winrt.system.Object, metaclass=CompositionObject_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -617,11 +662,13 @@ class CompositionObject(winrt.system.Object, metaclass=CompositionObject_Static)
     @_property
     def dispatcher_queue(self) -> typing.Optional[winrt.windows.system.DispatcherQueue]: ...
 
+@typing.final
 class CompositionPath(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionPath: ...
     def __new__(cls: typing.Type[CompositionPath], source: typing.Optional[winrt.windows.graphics.IGeometrySource2D]) -> CompositionPath:...
 
+@typing.final
 class CompositionPathGeometry(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionPathGeometry: ...
@@ -630,6 +677,7 @@ class CompositionPathGeometry(winrt.system.Object):
     @path.setter
     def path(self, value: typing.Optional[CompositionPath]) -> None: ...
 
+@typing.final
 class CompositionProjectedShadow(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionProjectedShadow: ...
@@ -654,6 +702,7 @@ class CompositionProjectedShadow(winrt.system.Object):
     @_property
     def receivers(self) -> typing.Optional[CompositionProjectedShadowReceiverUnorderedCollection]: ...
 
+@typing.final
 class CompositionProjectedShadowCaster(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionProjectedShadowCaster: ...
@@ -666,10 +715,12 @@ class CompositionProjectedShadowCaster(winrt.system.Object):
     @brush.setter
     def brush(self, value: typing.Optional[CompositionBrush]) -> None: ...
 
+@typing.final
 class CompositionProjectedShadowCasterCollection_Static(type):
     @_property
     def max_respected_casters(cls) -> winrt.system.Int32: ...
 
+@typing.final
 class CompositionProjectedShadowCasterCollection(winrt.system.Object, metaclass=CompositionProjectedShadowCasterCollection_Static):
     def __iter__(self) -> winrt.windows.foundation.collections.IIterator[CompositionProjectedShadowCaster]: ...
     @staticmethod
@@ -684,6 +735,7 @@ class CompositionProjectedShadowCasterCollection(winrt.system.Object, metaclass=
     @_property
     def count(self) -> winrt.system.Int32: ...
 
+@typing.final
 class CompositionProjectedShadowReceiver(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionProjectedShadowReceiver: ...
@@ -692,6 +744,7 @@ class CompositionProjectedShadowReceiver(winrt.system.Object):
     @receiving_visual.setter
     def receiving_visual(self, value: typing.Optional[Visual]) -> None: ...
 
+@typing.final
 class CompositionProjectedShadowReceiverUnorderedCollection(winrt.system.Object):
     def __iter__(self) -> winrt.windows.foundation.collections.IIterator[CompositionProjectedShadowReceiver]: ...
     @staticmethod
@@ -703,6 +756,7 @@ class CompositionProjectedShadowReceiverUnorderedCollection(winrt.system.Object)
     @_property
     def count(self) -> winrt.system.Int32: ...
 
+@typing.final
 class CompositionPropertySet(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionPropertySet: ...
@@ -725,6 +779,7 @@ class CompositionPropertySet(winrt.system.Object):
     def try_get_vector3(self, property_name: str, /) -> typing.Tuple[CompositionGetValueStatus, winrt.windows.foundation.numerics.Vector3]: ...
     def try_get_vector4(self, property_name: str, /) -> typing.Tuple[CompositionGetValueStatus, winrt.windows.foundation.numerics.Vector4]: ...
 
+@typing.final
 class CompositionRadialGradientBrush(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionRadialGradientBrush: ...
@@ -741,6 +796,7 @@ class CompositionRadialGradientBrush(winrt.system.Object):
     @ellipse_center.setter
     def ellipse_center(self, value: winrt.windows.foundation.numerics.Vector2) -> None: ...
 
+@typing.final
 class CompositionRectangleGeometry(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionRectangleGeometry: ...
@@ -753,6 +809,7 @@ class CompositionRectangleGeometry(winrt.system.Object):
     @offset.setter
     def offset(self, value: winrt.windows.foundation.numerics.Vector2) -> None: ...
 
+@typing.final
 class CompositionRoundedRectangleGeometry(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionRoundedRectangleGeometry: ...
@@ -769,6 +826,7 @@ class CompositionRoundedRectangleGeometry(winrt.system.Object):
     @corner_radius.setter
     def corner_radius(self, value: winrt.windows.foundation.numerics.Vector2) -> None: ...
 
+@typing.final
 class CompositionScopedBatch(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionScopedBatch: ...
@@ -782,10 +840,12 @@ class CompositionScopedBatch(winrt.system.Object):
     @_property
     def is_ended(self) -> bool: ...
 
+@typing.final
 class CompositionShadow(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionShadow: ...
 
+@typing.final
 class CompositionShape(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionShape: ...
@@ -814,6 +874,7 @@ class CompositionShape(winrt.system.Object):
     @center_point.setter
     def center_point(self, value: winrt.windows.foundation.numerics.Vector2) -> None: ...
 
+@typing.final
 class CompositionShapeCollection(winrt.system.Object, winrt._winrt.MutableSequence[CompositionShape]):
     def __len__(self) -> int: ...
     def __iter__(self) -> winrt.windows.foundation.collections.IIterator[CompositionShape]: ...
@@ -846,6 +907,7 @@ class CompositionShapeCollection(winrt.system.Object, winrt._winrt.MutableSequen
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class CompositionSpriteShape(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionSpriteShape: ...
@@ -896,6 +958,7 @@ class CompositionSpriteShape(winrt.system.Object):
     @_property
     def stroke_dash_array(self) -> typing.Optional[CompositionStrokeDashArray]: ...
 
+@typing.final
 class CompositionStrokeDashArray(winrt.system.Object, winrt._winrt.MutableSequence[winrt.system.Single]):
     def __len__(self) -> int: ...
     def __iter__(self) -> winrt.windows.foundation.collections.IIterator[winrt.system.Single]: ...
@@ -928,6 +991,7 @@ class CompositionStrokeDashArray(winrt.system.Object, winrt._winrt.MutableSequen
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class CompositionSurfaceBrush(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionSurfaceBrush: ...
@@ -984,6 +1048,7 @@ class CompositionSurfaceBrush(winrt.system.Object):
     @snap_to_pixels.setter
     def snap_to_pixels(self, value: bool) -> None: ...
 
+@typing.final
 class CompositionTarget(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionTarget: ...
@@ -992,10 +1057,12 @@ class CompositionTarget(winrt.system.Object):
     @root.setter
     def root(self, value: typing.Optional[Visual]) -> None: ...
 
+@typing.final
 class CompositionTransform(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionTransform: ...
 
+@typing.final
 class CompositionViewBox(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionViewBox: ...
@@ -1020,11 +1087,13 @@ class CompositionViewBox(winrt.system.Object):
     @horizontal_alignment_ratio.setter
     def horizontal_alignment_ratio(self, value: winrt.system.Single) -> None: ...
 
+@typing.final
 class CompositionVirtualDrawingSurface(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionVirtualDrawingSurface: ...
     def trim(self, rects: winrt.system.Array[winrt.windows.graphics.RectInt32], /) -> None: ...
 
+@typing.final
 class CompositionVisualSurface(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionVisualSurface: ...
@@ -1041,12 +1110,14 @@ class CompositionVisualSurface(winrt.system.Object):
     @source_offset.setter
     def source_offset(self, value: winrt.windows.foundation.numerics.Vector2) -> None: ...
 
+@typing.final
 class Compositor_Static(type):
     @_property
     def max_global_playback_rate(cls) -> winrt.system.Single: ...
     @_property
     def min_global_playback_rate(cls) -> winrt.system.Single: ...
 
+@typing.final
 class Compositor(winrt.system.Object, metaclass=Compositor_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -1166,12 +1237,14 @@ class Compositor(winrt.system.Object, metaclass=Compositor_Static):
     @_property
     def dispatcher_queue(self) -> typing.Optional[winrt.windows.system.DispatcherQueue]: ...
 
+@typing.final
 class ContainerVisual(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContainerVisual: ...
     @_property
     def children(self) -> typing.Optional[VisualCollection]: ...
 
+@typing.final
 class CubicBezierEasingFunction(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CubicBezierEasingFunction: ...
@@ -1180,10 +1253,12 @@ class CubicBezierEasingFunction(winrt.system.Object):
     @_property
     def control_point2(self) -> winrt.windows.foundation.numerics.Vector2: ...
 
+@typing.final
 class DelegatedInkTrailVisual_Static(type):
     def create(cls, compositor: typing.Optional[Compositor], /) -> typing.Optional[DelegatedInkTrailVisual]: ...
     def create_for_swap_chain(cls, compositor: typing.Optional[Compositor], swap_chain: typing.Optional[ICompositionSurface], /) -> typing.Optional[DelegatedInkTrailVisual]: ...
 
+@typing.final
 class DelegatedInkTrailVisual(winrt.system.Object, metaclass=DelegatedInkTrailVisual_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DelegatedInkTrailVisual: ...
@@ -1192,6 +1267,7 @@ class DelegatedInkTrailVisual(winrt.system.Object, metaclass=DelegatedInkTrailVi
     def remove_trail_points(self, generation_id: winrt.system.UInt32, /) -> None: ...
     def start_new_trail(self, color: winrt.windows.ui.Color, /) -> None: ...
 
+@typing.final
 class DistantLight(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DistantLight: ...
@@ -1212,6 +1288,7 @@ class DistantLight(winrt.system.Object):
     @intensity.setter
     def intensity(self, value: winrt.system.Single) -> None: ...
 
+@typing.final
 class DropShadow(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DropShadow: ...
@@ -1240,6 +1317,7 @@ class DropShadow(winrt.system.Object):
     @source_policy.setter
     def source_policy(self, value: CompositionDropShadowSourcePolicy) -> None: ...
 
+@typing.final
 class ElasticEasingFunction(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ElasticEasingFunction: ...
@@ -1250,6 +1328,7 @@ class ElasticEasingFunction(winrt.system.Object):
     @_property
     def springiness(self) -> winrt.system.Single: ...
 
+@typing.final
 class ExponentialEasingFunction(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ExponentialEasingFunction: ...
@@ -1258,6 +1337,7 @@ class ExponentialEasingFunction(winrt.system.Object):
     @_property
     def mode(self) -> CompositionEasingFunctionMode: ...
 
+@typing.final
 class ExpressionAnimation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ExpressionAnimation: ...
@@ -1266,6 +1346,7 @@ class ExpressionAnimation(winrt.system.Object):
     @expression.setter
     def expression(self, value: str) -> None: ...
 
+@typing.final
 class ImplicitAnimationCollection(winrt.system.Object, winrt._winrt.MutableMapping[str, ICompositionAnimationBase]):
     def __len__(self) -> int: ...
     def __iter__(self) -> typing.Iterator[str]: ...
@@ -1285,6 +1366,7 @@ class ImplicitAnimationCollection(winrt.system.Object, winrt._winrt.MutableMappi
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class InitialValueExpressionCollection(winrt.system.Object, winrt._winrt.MutableMapping[str, str]):
     def __len__(self) -> int: ...
     def __iter__(self) -> typing.Iterator[str]: ...
@@ -1304,6 +1386,7 @@ class InitialValueExpressionCollection(winrt.system.Object, winrt._winrt.Mutable
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class InsetClip(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InsetClip: ...
@@ -1324,6 +1407,7 @@ class InsetClip(winrt.system.Object):
     @bottom_inset.setter
     def bottom_inset(self, value: winrt.system.Single) -> None: ...
 
+@typing.final
 class KeyFrameAnimation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> KeyFrameAnimation: ...
@@ -1362,6 +1446,7 @@ class KeyFrameAnimation(winrt.system.Object):
     @delay_behavior.setter
     def delay_behavior(self, value: AnimationDelayBehavior) -> None: ...
 
+@typing.final
 class LayerVisual(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LayerVisual: ...
@@ -1374,10 +1459,12 @@ class LayerVisual(winrt.system.Object):
     @shadow.setter
     def shadow(self, value: typing.Optional[CompositionShadow]) -> None: ...
 
+@typing.final
 class LinearEasingFunction(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LinearEasingFunction: ...
 
+@typing.final
 class NaturalMotionAnimation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NaturalMotionAnimation: ...
@@ -1394,6 +1481,7 @@ class NaturalMotionAnimation(winrt.system.Object):
     @delay_behavior.setter
     def delay_behavior(self, value: AnimationDelayBehavior) -> None: ...
 
+@typing.final
 class PathKeyFrameAnimation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PathKeyFrameAnimation: ...
@@ -1402,6 +1490,7 @@ class PathKeyFrameAnimation(winrt.system.Object):
     @typing.overload
     def insert_key_frame(self, normalized_progress_key: winrt.system.Single, path: typing.Optional[CompositionPath], easing_function: typing.Optional[CompositionEasingFunction], /) -> None: ...
 
+@typing.final
 class PointLight(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PointLight: ...
@@ -1442,6 +1531,7 @@ class PointLight(winrt.system.Object):
     @max_attenuation_cutoff.setter
     def max_attenuation_cutoff(self, value: winrt.system.Single) -> None: ...
 
+@typing.final
 class PowerEasingFunction(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PowerEasingFunction: ...
@@ -1450,6 +1540,7 @@ class PowerEasingFunction(winrt.system.Object):
     @_property
     def power(self) -> winrt.system.Single: ...
 
+@typing.final
 class QuaternionKeyFrameAnimation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> QuaternionKeyFrameAnimation: ...
@@ -1458,6 +1549,7 @@ class QuaternionKeyFrameAnimation(winrt.system.Object):
     @typing.overload
     def insert_key_frame(self, normalized_progress_key: winrt.system.Single, value: winrt.windows.foundation.numerics.Quaternion, easing_function: typing.Optional[CompositionEasingFunction], /) -> None: ...
 
+@typing.final
 class RectangleClip(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RectangleClip: ...
@@ -1494,6 +1586,7 @@ class RectangleClip(winrt.system.Object):
     @bottom.setter
     def bottom(self, value: winrt.system.Single) -> None: ...
 
+@typing.final
 class RedirectVisual(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RedirectVisual: ...
@@ -1502,12 +1595,14 @@ class RedirectVisual(winrt.system.Object):
     @source.setter
     def source(self, value: typing.Optional[Visual]) -> None: ...
 
+@typing.final
 class RenderingDeviceReplacedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RenderingDeviceReplacedEventArgs: ...
     @_property
     def graphics_device(self) -> typing.Optional[CompositionGraphicsDevice]: ...
 
+@typing.final
 class ScalarKeyFrameAnimation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ScalarKeyFrameAnimation: ...
@@ -1516,6 +1611,7 @@ class ScalarKeyFrameAnimation(winrt.system.Object):
     @typing.overload
     def insert_key_frame(self, normalized_progress_key: winrt.system.Single, value: winrt.system.Single, easing_function: typing.Optional[CompositionEasingFunction], /) -> None: ...
 
+@typing.final
 class ScalarNaturalMotionAnimation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ScalarNaturalMotionAnimation: ...
@@ -1532,6 +1628,7 @@ class ScalarNaturalMotionAnimation(winrt.system.Object):
     @final_value.setter
     def final_value(self, value: typing.Optional[typing.Optional[winrt.system.Single]]) -> None: ...
 
+@typing.final
 class ShapeVisual(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ShapeVisual: ...
@@ -1542,12 +1639,14 @@ class ShapeVisual(winrt.system.Object):
     @_property
     def shapes(self) -> typing.Optional[CompositionShapeCollection]: ...
 
+@typing.final
 class SineEasingFunction(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SineEasingFunction: ...
     @_property
     def mode(self) -> CompositionEasingFunctionMode: ...
 
+@typing.final
 class SpotLight(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpotLight: ...
@@ -1616,6 +1715,7 @@ class SpotLight(winrt.system.Object):
     @max_attenuation_cutoff.setter
     def max_attenuation_cutoff(self, value: winrt.system.Single) -> None: ...
 
+@typing.final
 class SpringScalarNaturalMotionAnimation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpringScalarNaturalMotionAnimation: ...
@@ -1628,6 +1728,7 @@ class SpringScalarNaturalMotionAnimation(winrt.system.Object):
     @damping_ratio.setter
     def damping_ratio(self, value: winrt.system.Single) -> None: ...
 
+@typing.final
 class SpringVector2NaturalMotionAnimation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpringVector2NaturalMotionAnimation: ...
@@ -1640,6 +1741,7 @@ class SpringVector2NaturalMotionAnimation(winrt.system.Object):
     @damping_ratio.setter
     def damping_ratio(self, value: winrt.system.Single) -> None: ...
 
+@typing.final
 class SpringVector3NaturalMotionAnimation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpringVector3NaturalMotionAnimation: ...
@@ -1652,6 +1754,7 @@ class SpringVector3NaturalMotionAnimation(winrt.system.Object):
     @damping_ratio.setter
     def damping_ratio(self, value: winrt.system.Single) -> None: ...
 
+@typing.final
 class SpriteVisual(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpriteVisual: ...
@@ -1664,6 +1767,7 @@ class SpriteVisual(winrt.system.Object):
     @shadow.setter
     def shadow(self, value: typing.Optional[CompositionShadow]) -> None: ...
 
+@typing.final
 class StepEasingFunction(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StepEasingFunction: ...
@@ -1688,6 +1792,7 @@ class StepEasingFunction(winrt.system.Object):
     @final_step.setter
     def final_step(self, value: winrt.system.Int32) -> None: ...
 
+@typing.final
 class Vector2KeyFrameAnimation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Vector2KeyFrameAnimation: ...
@@ -1696,6 +1801,7 @@ class Vector2KeyFrameAnimation(winrt.system.Object):
     @typing.overload
     def insert_key_frame(self, normalized_progress_key: winrt.system.Single, value: winrt.windows.foundation.numerics.Vector2, easing_function: typing.Optional[CompositionEasingFunction], /) -> None: ...
 
+@typing.final
 class Vector2NaturalMotionAnimation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Vector2NaturalMotionAnimation: ...
@@ -1712,6 +1818,7 @@ class Vector2NaturalMotionAnimation(winrt.system.Object):
     @final_value.setter
     def final_value(self, value: typing.Optional[typing.Optional[winrt.windows.foundation.numerics.Vector2]]) -> None: ...
 
+@typing.final
 class Vector3KeyFrameAnimation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Vector3KeyFrameAnimation: ...
@@ -1720,6 +1827,7 @@ class Vector3KeyFrameAnimation(winrt.system.Object):
     @typing.overload
     def insert_key_frame(self, normalized_progress_key: winrt.system.Single, value: winrt.windows.foundation.numerics.Vector3, easing_function: typing.Optional[CompositionEasingFunction], /) -> None: ...
 
+@typing.final
 class Vector3NaturalMotionAnimation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Vector3NaturalMotionAnimation: ...
@@ -1736,6 +1844,7 @@ class Vector3NaturalMotionAnimation(winrt.system.Object):
     @final_value.setter
     def final_value(self, value: typing.Optional[typing.Optional[winrt.windows.foundation.numerics.Vector3]]) -> None: ...
 
+@typing.final
 class Vector4KeyFrameAnimation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Vector4KeyFrameAnimation: ...
@@ -1744,6 +1853,7 @@ class Vector4KeyFrameAnimation(winrt.system.Object):
     @typing.overload
     def insert_key_frame(self, normalized_progress_key: winrt.system.Single, value: winrt.windows.foundation.numerics.Vector4, easing_function: typing.Optional[CompositionEasingFunction], /) -> None: ...
 
+@typing.final
 class Visual(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Visual: ...
@@ -1834,6 +1944,7 @@ class Visual(winrt.system.Object):
     @is_pixel_snapping_enabled.setter
     def is_pixel_snapping_enabled(self, value: bool) -> None: ...
 
+@typing.final
 class VisualCollection(winrt.system.Object):
     def __iter__(self) -> winrt.windows.foundation.collections.IIterator[Visual]: ...
     @staticmethod
@@ -1848,6 +1959,7 @@ class VisualCollection(winrt.system.Object):
     @_property
     def count(self) -> winrt.system.Int32: ...
 
+@typing.final
 class VisualUnorderedCollection(winrt.system.Object):
     def __iter__(self) -> winrt.windows.foundation.collections.IIterator[Visual]: ...
     @staticmethod
@@ -1859,15 +1971,18 @@ class VisualUnorderedCollection(winrt.system.Object):
     @_property
     def count(self) -> winrt.system.Int32: ...
 
+@typing.final
 class IAnimationObject(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAnimationObject: ...
     def populate_property_info(self, property_name: str, property_info: typing.Optional[AnimationPropertyInfo], /) -> None: ...
 
+@typing.final
 class ICompositionAnimationBase(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICompositionAnimationBase: ...
 
+@typing.final
 class ICompositionSupportsSystemBackdrop(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICompositionSupportsSystemBackdrop: ...
@@ -1876,19 +1991,23 @@ class ICompositionSupportsSystemBackdrop(winrt.system.Object):
     @system_backdrop.setter
     def system_backdrop(self, value: typing.Optional[CompositionBrush]) -> None: ...
 
+@typing.final
 class ICompositionSurface(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICompositionSurface: ...
 
+@typing.final
 class ICompositionSurfaceFacade(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICompositionSurfaceFacade: ...
     def get_real_surface(self) -> typing.Optional[ICompositionSurface]: ...
 
+@typing.final
 class IVisualElement(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IVisualElement: ...
 
+@typing.final
 class IVisualElement2(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IVisualElement2: ...

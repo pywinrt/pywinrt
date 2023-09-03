@@ -19,22 +19,27 @@ from winrt.windows.applicationmodel.appservice import AppServiceClosedStatus, Ap
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class AppServiceCatalog_Static(type):
     def find_app_service_providers_async(cls, app_service_name: str, /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[winrt.windows.applicationmodel.AppInfo]]: ...
 
+@typing.final
 class AppServiceCatalog(winrt.system.Object, metaclass=AppServiceCatalog_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppServiceCatalog: ...
 
+@typing.final
 class AppServiceClosedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppServiceClosedEventArgs: ...
     @_property
     def status(self) -> AppServiceClosedStatus: ...
 
+@typing.final
 class AppServiceConnection_Static(type):
     def send_stateless_message_async(cls, connection: typing.Optional[AppServiceConnection], connection_request: typing.Optional[winrt.windows.system.remotesystems.RemoteSystemConnectionRequest], message: typing.Optional[winrt.windows.foundation.collections.ValueSet], /) -> winrt.windows.foundation.IAsyncOperation[StatelessAppServiceResponse]: ...
 
+@typing.final
 class AppServiceConnection(winrt.system.Object, metaclass=AppServiceConnection_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -62,11 +67,13 @@ class AppServiceConnection(winrt.system.Object, metaclass=AppServiceConnection_S
     @user.setter
     def user(self, value: typing.Optional[winrt.windows.system.User]) -> None: ...
 
+@typing.final
 class AppServiceDeferral(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppServiceDeferral: ...
     def complete(self) -> None: ...
 
+@typing.final
 class AppServiceRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppServiceRequest: ...
@@ -74,6 +81,7 @@ class AppServiceRequest(winrt.system.Object):
     @_property
     def message(self) -> typing.Optional[winrt.windows.foundation.collections.ValueSet]: ...
 
+@typing.final
 class AppServiceRequestReceivedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppServiceRequestReceivedEventArgs: ...
@@ -81,6 +89,7 @@ class AppServiceRequestReceivedEventArgs(winrt.system.Object):
     @_property
     def request(self) -> typing.Optional[AppServiceRequest]: ...
 
+@typing.final
 class AppServiceResponse(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppServiceResponse: ...
@@ -89,6 +98,7 @@ class AppServiceResponse(winrt.system.Object):
     @_property
     def status(self) -> AppServiceResponseStatus: ...
 
+@typing.final
 class AppServiceTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppServiceTriggerDetails: ...
@@ -104,6 +114,7 @@ class AppServiceTriggerDetails(winrt.system.Object):
     @_property
     def caller_remote_connection_token(self) -> str: ...
 
+@typing.final
 class StatelessAppServiceResponse(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StatelessAppServiceResponse: ...

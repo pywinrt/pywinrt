@@ -13,6 +13,7 @@ import winrt.windows.foundation
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class BackPressedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BackPressedEventArgs: ...
@@ -21,10 +22,12 @@ class BackPressedEventArgs(winrt.system.Object):
     @handled.setter
     def handled(self, value: bool) -> None: ...
 
+@typing.final
 class CameraEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CameraEventArgs: ...
 
+@typing.final
 class HardwareButtons_Static(type):
     def add_back_pressed(cls, handler: winrt.windows.foundation.EventHandler[BackPressedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_back_pressed(cls, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
@@ -35,6 +38,7 @@ class HardwareButtons_Static(type):
     def add_camera_released(cls, handler: winrt.windows.foundation.EventHandler[CameraEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_camera_released(cls, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class HardwareButtons(winrt.system.Object, metaclass=HardwareButtons_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HardwareButtons: ...

@@ -18,6 +18,7 @@ from winrt.windows.security.cryptography.core import Capi1KdfTargetAlgorithm, Cr
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class AsymmetricAlgorithmNames_Static(type):
     @_property
     def ecdsa_p521_sha512(cls) -> str: ...
@@ -62,13 +63,16 @@ class AsymmetricAlgorithmNames_Static(type):
     @_property
     def ecdsa_sha256(cls) -> str: ...
 
+@typing.final
 class AsymmetricAlgorithmNames(winrt.system.Object, metaclass=AsymmetricAlgorithmNames_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AsymmetricAlgorithmNames: ...
 
+@typing.final
 class AsymmetricKeyAlgorithmProvider_Static(type):
     def open_algorithm(cls, algorithm: str, /) -> typing.Optional[AsymmetricKeyAlgorithmProvider]: ...
 
+@typing.final
 class AsymmetricKeyAlgorithmProvider(winrt.system.Object, metaclass=AsymmetricKeyAlgorithmProvider_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AsymmetricKeyAlgorithmProvider: ...
@@ -86,6 +90,7 @@ class AsymmetricKeyAlgorithmProvider(winrt.system.Object, metaclass=AsymmetricKe
     @_property
     def algorithm_name(self) -> str: ...
 
+@typing.final
 class CryptographicEngine_Static(type):
     def decrypt(cls, key: typing.Optional[CryptographicKey], data: typing.Optional[winrt.windows.storage.streams.IBuffer], iv: typing.Optional[winrt.windows.storage.streams.IBuffer], /) -> typing.Optional[winrt.windows.storage.streams.IBuffer]: ...
     def decrypt_and_authenticate(cls, key: typing.Optional[CryptographicKey], data: typing.Optional[winrt.windows.storage.streams.IBuffer], nonce: typing.Optional[winrt.windows.storage.streams.IBuffer], authentication_tag: typing.Optional[winrt.windows.storage.streams.IBuffer], authenticated_data: typing.Optional[winrt.windows.storage.streams.IBuffer], /) -> typing.Optional[winrt.windows.storage.streams.IBuffer]: ...
@@ -100,16 +105,19 @@ class CryptographicEngine_Static(type):
     def verify_signature(cls, key: typing.Optional[CryptographicKey], data: typing.Optional[winrt.windows.storage.streams.IBuffer], signature: typing.Optional[winrt.windows.storage.streams.IBuffer], /) -> bool: ...
     def verify_signature_with_hash_input(cls, key: typing.Optional[CryptographicKey], data: typing.Optional[winrt.windows.storage.streams.IBuffer], signature: typing.Optional[winrt.windows.storage.streams.IBuffer], /) -> bool: ...
 
+@typing.final
 class CryptographicEngine(winrt.system.Object, metaclass=CryptographicEngine_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CryptographicEngine: ...
 
+@typing.final
 class CryptographicHash(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CryptographicHash: ...
     def append(self, data: typing.Optional[winrt.windows.storage.streams.IBuffer], /) -> None: ...
     def get_value_and_reset(self) -> typing.Optional[winrt.windows.storage.streams.IBuffer]: ...
 
+@typing.final
 class CryptographicKey(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CryptographicKey: ...
@@ -124,6 +132,7 @@ class CryptographicKey(winrt.system.Object):
     @_property
     def key_size(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class EccCurveNames_Static(type):
     @_property
     def all_ecc_curve_names(cls) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]: ...
@@ -218,10 +227,12 @@ class EccCurveNames_Static(type):
     @_property
     def x962_p256v1(cls) -> str: ...
 
+@typing.final
 class EccCurveNames(winrt.system.Object, metaclass=EccCurveNames_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EccCurveNames: ...
 
+@typing.final
 class EncryptedAndAuthenticatedData(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EncryptedAndAuthenticatedData: ...
@@ -230,6 +241,7 @@ class EncryptedAndAuthenticatedData(winrt.system.Object):
     @_property
     def encrypted_data(self) -> typing.Optional[winrt.windows.storage.streams.IBuffer]: ...
 
+@typing.final
 class HashAlgorithmNames_Static(type):
     @_property
     def md5(cls) -> str: ...
@@ -242,13 +254,16 @@ class HashAlgorithmNames_Static(type):
     @_property
     def sha512(cls) -> str: ...
 
+@typing.final
 class HashAlgorithmNames(winrt.system.Object, metaclass=HashAlgorithmNames_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HashAlgorithmNames: ...
 
+@typing.final
 class HashAlgorithmProvider_Static(type):
     def open_algorithm(cls, algorithm: str, /) -> typing.Optional[HashAlgorithmProvider]: ...
 
+@typing.final
 class HashAlgorithmProvider(winrt.system.Object, metaclass=HashAlgorithmProvider_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HashAlgorithmProvider: ...
@@ -259,6 +274,7 @@ class HashAlgorithmProvider(winrt.system.Object, metaclass=HashAlgorithmProvider
     @_property
     def hash_length(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class KeyDerivationAlgorithmNames_Static(type):
     @_property
     def pbkdf2_sha256(cls) -> str: ...
@@ -301,13 +317,16 @@ class KeyDerivationAlgorithmNames_Static(type):
     @_property
     def capi_kdf_md5(cls) -> str: ...
 
+@typing.final
 class KeyDerivationAlgorithmNames(winrt.system.Object, metaclass=KeyDerivationAlgorithmNames_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> KeyDerivationAlgorithmNames: ...
 
+@typing.final
 class KeyDerivationAlgorithmProvider_Static(type):
     def open_algorithm(cls, algorithm: str, /) -> typing.Optional[KeyDerivationAlgorithmProvider]: ...
 
+@typing.final
 class KeyDerivationAlgorithmProvider(winrt.system.Object, metaclass=KeyDerivationAlgorithmProvider_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> KeyDerivationAlgorithmProvider: ...
@@ -315,12 +334,14 @@ class KeyDerivationAlgorithmProvider(winrt.system.Object, metaclass=KeyDerivatio
     @_property
     def algorithm_name(self) -> str: ...
 
+@typing.final
 class KeyDerivationParameters_Static(type):
     def build_for_capi1_kdf(cls, capi1_kdf_target_algorithm: Capi1KdfTargetAlgorithm, /) -> typing.Optional[KeyDerivationParameters]: ...
     def build_for_pbkdf2(cls, pbkdf2_salt: typing.Optional[winrt.windows.storage.streams.IBuffer], iteration_count: winrt.system.UInt32, /) -> typing.Optional[KeyDerivationParameters]: ...
     def build_for_s_p800108(cls, label: typing.Optional[winrt.windows.storage.streams.IBuffer], context: typing.Optional[winrt.windows.storage.streams.IBuffer], /) -> typing.Optional[KeyDerivationParameters]: ...
     def build_for_s_p80056a(cls, algorithm_id: typing.Optional[winrt.windows.storage.streams.IBuffer], party_u_info: typing.Optional[winrt.windows.storage.streams.IBuffer], party_v_info: typing.Optional[winrt.windows.storage.streams.IBuffer], supp_pub_info: typing.Optional[winrt.windows.storage.streams.IBuffer], supp_priv_info: typing.Optional[winrt.windows.storage.streams.IBuffer], /) -> typing.Optional[KeyDerivationParameters]: ...
 
+@typing.final
 class KeyDerivationParameters(winrt.system.Object, metaclass=KeyDerivationParameters_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> KeyDerivationParameters: ...
@@ -335,6 +356,7 @@ class KeyDerivationParameters(winrt.system.Object, metaclass=KeyDerivationParame
     @capi1_kdf_target_algorithm.setter
     def capi1_kdf_target_algorithm(self, value: Capi1KdfTargetAlgorithm) -> None: ...
 
+@typing.final
 class MacAlgorithmNames_Static(type):
     @_property
     def aes_cmac(cls) -> str: ...
@@ -349,13 +371,16 @@ class MacAlgorithmNames_Static(type):
     @_property
     def hmac_sha512(cls) -> str: ...
 
+@typing.final
 class MacAlgorithmNames(winrt.system.Object, metaclass=MacAlgorithmNames_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MacAlgorithmNames: ...
 
+@typing.final
 class MacAlgorithmProvider_Static(type):
     def open_algorithm(cls, algorithm: str, /) -> typing.Optional[MacAlgorithmProvider]: ...
 
+@typing.final
 class MacAlgorithmProvider(winrt.system.Object, metaclass=MacAlgorithmProvider_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MacAlgorithmProvider: ...
@@ -366,14 +391,17 @@ class MacAlgorithmProvider(winrt.system.Object, metaclass=MacAlgorithmProvider_S
     @_property
     def mac_length(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class PersistedKeyProvider_Static(type):
     def open_key_pair_from_certificate_async(cls, certificate: typing.Optional[winrt.windows.security.cryptography.certificates.Certificate], hash_algorithm_name: str, padding: CryptographicPadding, /) -> winrt.windows.foundation.IAsyncOperation[CryptographicKey]: ...
     def open_public_key_from_certificate(cls, certificate: typing.Optional[winrt.windows.security.cryptography.certificates.Certificate], hash_algorithm_name: str, padding: CryptographicPadding, /) -> typing.Optional[CryptographicKey]: ...
 
+@typing.final
 class PersistedKeyProvider(winrt.system.Object, metaclass=PersistedKeyProvider_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PersistedKeyProvider: ...
 
+@typing.final
 class SymmetricAlgorithmNames_Static(type):
     @_property
     def aes_cbc(cls) -> str: ...
@@ -414,13 +442,16 @@ class SymmetricAlgorithmNames_Static(type):
     @_property
     def triple_des_ecb_pkcs7(cls) -> str: ...
 
+@typing.final
 class SymmetricAlgorithmNames(winrt.system.Object, metaclass=SymmetricAlgorithmNames_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SymmetricAlgorithmNames: ...
 
+@typing.final
 class SymmetricKeyAlgorithmProvider_Static(type):
     def open_algorithm(cls, algorithm: str, /) -> typing.Optional[SymmetricKeyAlgorithmProvider]: ...
 
+@typing.final
 class SymmetricKeyAlgorithmProvider(winrt.system.Object, metaclass=SymmetricKeyAlgorithmProvider_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SymmetricKeyAlgorithmProvider: ...

@@ -18,11 +18,13 @@ from winrt.windows.web.syndication import SyndicationErrorStatus, SyndicationFor
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class RetrievalProgress:
     bytes_retrieved: winrt.system.UInt32
     total_bytes_to_retrieve: winrt.system.UInt32
     def __init__(self, bytes_retrieved: winrt.system.UInt32, total_bytes_to_retrieve: winrt.system.UInt32) -> None: ...
 
+@typing.final
 class TransferProgress:
     bytes_sent: winrt.system.UInt32
     total_bytes_to_send: winrt.system.UInt32
@@ -30,6 +32,7 @@ class TransferProgress:
     total_bytes_to_retrieve: winrt.system.UInt32
     def __init__(self, bytes_sent: winrt.system.UInt32, total_bytes_to_send: winrt.system.UInt32, bytes_retrieved: winrt.system.UInt32, total_bytes_to_retrieve: winrt.system.UInt32) -> None: ...
 
+@typing.final
 class SyndicationAttribute(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SyndicationAttribute: ...
@@ -50,6 +53,7 @@ class SyndicationAttribute(winrt.system.Object):
     @name.setter
     def name(self, value: str) -> None: ...
 
+@typing.final
 class SyndicationCategory(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SyndicationCategory: ...
@@ -97,6 +101,7 @@ class SyndicationCategory(winrt.system.Object):
     @_property
     def element_extensions(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[ISyndicationNode]]: ...
 
+@typing.final
 class SyndicationClient(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SyndicationClient: ...
@@ -127,6 +132,7 @@ class SyndicationClient(winrt.system.Object):
     @bypass_cache_on_retrieve.setter
     def bypass_cache_on_retrieve(self, value: bool) -> None: ...
 
+@typing.final
 class SyndicationContent(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SyndicationContent: ...
@@ -178,13 +184,16 @@ class SyndicationContent(winrt.system.Object):
     @xml.setter
     def xml(self, value: typing.Optional[winrt.windows.data.xml.dom.XmlDocument]) -> None: ...
 
+@typing.final
 class SyndicationError_Static(type):
     def get_status(cls, hresult: winrt.system.Int32, /) -> SyndicationErrorStatus: ...
 
+@typing.final
 class SyndicationError(winrt.system.Object, metaclass=SyndicationError_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SyndicationError: ...
 
+@typing.final
 class SyndicationFeed(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SyndicationFeed: ...
@@ -272,6 +281,7 @@ class SyndicationFeed(winrt.system.Object):
     @_property
     def element_extensions(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[ISyndicationNode]]: ...
 
+@typing.final
 class SyndicationGenerator(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SyndicationGenerator: ...
@@ -317,6 +327,7 @@ class SyndicationGenerator(winrt.system.Object):
     @_property
     def element_extensions(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[ISyndicationNode]]: ...
 
+@typing.final
 class SyndicationItem(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SyndicationItem: ...
@@ -404,6 +415,7 @@ class SyndicationItem(winrt.system.Object):
     @_property
     def element_extensions(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[ISyndicationNode]]: ...
 
+@typing.final
 class SyndicationLink(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SyndicationLink: ...
@@ -463,6 +475,7 @@ class SyndicationLink(winrt.system.Object):
     @_property
     def element_extensions(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[ISyndicationNode]]: ...
 
+@typing.final
 class SyndicationNode(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SyndicationNode: ...
@@ -496,6 +509,7 @@ class SyndicationNode(winrt.system.Object):
     @_property
     def element_extensions(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[ISyndicationNode]]: ...
 
+@typing.final
 class SyndicationPerson(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SyndicationPerson: ...
@@ -543,6 +557,7 @@ class SyndicationPerson(winrt.system.Object):
     @email.setter
     def email(self, value: str) -> None: ...
 
+@typing.final
 class SyndicationText(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SyndicationText: ...
@@ -590,6 +605,7 @@ class SyndicationText(winrt.system.Object):
     @text.setter
     def text(self, value: str) -> None: ...
 
+@typing.final
 class ISyndicationClient(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISyndicationClient: ...
@@ -616,6 +632,7 @@ class ISyndicationClient(winrt.system.Object):
     @timeout.setter
     def timeout(self, value: winrt.system.UInt32) -> None: ...
 
+@typing.final
 class ISyndicationNode(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISyndicationNode: ...
@@ -645,6 +662,7 @@ class ISyndicationNode(winrt.system.Object):
     @node_value.setter
     def node_value(self, value: str) -> None: ...
 
+@typing.final
 class ISyndicationText(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISyndicationText: ...

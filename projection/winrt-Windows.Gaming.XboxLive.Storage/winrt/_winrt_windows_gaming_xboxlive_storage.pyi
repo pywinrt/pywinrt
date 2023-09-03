@@ -18,6 +18,7 @@ from winrt.windows.gaming.xboxlive.storage import GameSaveErrorStatus
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class GameSaveBlobGetResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GameSaveBlobGetResult: ...
@@ -26,6 +27,7 @@ class GameSaveBlobGetResult(winrt.system.Object):
     @_property
     def value(self) -> typing.Optional[winrt.windows.foundation.collections.IMapView[str, winrt.windows.storage.streams.IBuffer]]: ...
 
+@typing.final
 class GameSaveBlobInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GameSaveBlobInfo: ...
@@ -34,6 +36,7 @@ class GameSaveBlobInfo(winrt.system.Object):
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class GameSaveBlobInfoGetResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GameSaveBlobInfoGetResult: ...
@@ -42,6 +45,7 @@ class GameSaveBlobInfoGetResult(winrt.system.Object):
     @_property
     def value(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[GameSaveBlobInfo]]: ...
 
+@typing.final
 class GameSaveBlobInfoQuery(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GameSaveBlobInfoQuery: ...
@@ -51,6 +55,7 @@ class GameSaveBlobInfoQuery(winrt.system.Object):
     def get_blob_info_async(self, start_index: winrt.system.UInt32, max_number_of_items: winrt.system.UInt32, /) -> winrt.windows.foundation.IAsyncOperation[GameSaveBlobInfoGetResult]: ...
     def get_item_count_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.system.UInt32]: ...
 
+@typing.final
 class GameSaveContainer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GameSaveContainer: ...
@@ -64,6 +69,7 @@ class GameSaveContainer(winrt.system.Object):
     @_property
     def provider(self) -> typing.Optional[GameSaveProvider]: ...
 
+@typing.final
 class GameSaveContainerInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GameSaveContainerInfo: ...
@@ -78,6 +84,7 @@ class GameSaveContainerInfo(winrt.system.Object):
     @_property
     def total_size(self) -> winrt.system.UInt64: ...
 
+@typing.final
 class GameSaveContainerInfoGetResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GameSaveContainerInfoGetResult: ...
@@ -86,6 +93,7 @@ class GameSaveContainerInfoGetResult(winrt.system.Object):
     @_property
     def value(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[GameSaveContainerInfo]]: ...
 
+@typing.final
 class GameSaveContainerInfoQuery(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GameSaveContainerInfoQuery: ...
@@ -95,16 +103,19 @@ class GameSaveContainerInfoQuery(winrt.system.Object):
     def get_container_info_async(self, start_index: winrt.system.UInt32, max_number_of_items: winrt.system.UInt32, /) -> winrt.windows.foundation.IAsyncOperation[GameSaveContainerInfoGetResult]: ...
     def get_item_count_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.system.UInt32]: ...
 
+@typing.final
 class GameSaveOperationResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GameSaveOperationResult: ...
     @_property
     def status(self) -> GameSaveErrorStatus: ...
 
+@typing.final
 class GameSaveProvider_Static(type):
     def get_for_user_async(cls, user: typing.Optional[winrt.windows.system.User], service_config_id: str, /) -> winrt.windows.foundation.IAsyncOperation[GameSaveProviderGetResult]: ...
     def get_sync_on_demand_for_user_async(cls, user: typing.Optional[winrt.windows.system.User], service_config_id: str, /) -> winrt.windows.foundation.IAsyncOperation[GameSaveProviderGetResult]: ...
 
+@typing.final
 class GameSaveProvider(winrt.system.Object, metaclass=GameSaveProvider_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GameSaveProvider: ...
@@ -120,6 +131,7 @@ class GameSaveProvider(winrt.system.Object, metaclass=GameSaveProvider_Static):
     @_property
     def user(self) -> typing.Optional[winrt.windows.system.User]: ...
 
+@typing.final
 class GameSaveProviderGetResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GameSaveProviderGetResult: ...

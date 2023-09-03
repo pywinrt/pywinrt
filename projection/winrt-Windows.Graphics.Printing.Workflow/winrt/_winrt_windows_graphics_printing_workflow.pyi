@@ -22,6 +22,7 @@ from winrt.windows.graphics.printing.workflow import PdlConversionHostBasedProce
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class PrintWorkflowBackgroundSession(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintWorkflowBackgroundSession: ...
@@ -33,6 +34,7 @@ class PrintWorkflowBackgroundSession(winrt.system.Object):
     @_property
     def status(self) -> PrintWorkflowSessionStatus: ...
 
+@typing.final
 class PrintWorkflowBackgroundSetupRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintWorkflowBackgroundSetupRequestedEventArgs: ...
@@ -42,6 +44,7 @@ class PrintWorkflowBackgroundSetupRequestedEventArgs(winrt.system.Object):
     @_property
     def configuration(self) -> typing.Optional[PrintWorkflowConfiguration]: ...
 
+@typing.final
 class PrintWorkflowConfiguration(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintWorkflowConfiguration: ...
@@ -53,6 +56,7 @@ class PrintWorkflowConfiguration(winrt.system.Object):
     @_property
     def source_app_display_name(self) -> str: ...
 
+@typing.final
 class PrintWorkflowForegroundSession(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintWorkflowForegroundSession: ...
@@ -64,6 +68,7 @@ class PrintWorkflowForegroundSession(winrt.system.Object):
     @_property
     def status(self) -> PrintWorkflowSessionStatus: ...
 
+@typing.final
 class PrintWorkflowForegroundSetupRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintWorkflowForegroundSetupRequestedEventArgs: ...
@@ -72,6 +77,7 @@ class PrintWorkflowForegroundSetupRequestedEventArgs(winrt.system.Object):
     @_property
     def configuration(self) -> typing.Optional[PrintWorkflowConfiguration]: ...
 
+@typing.final
 class PrintWorkflowJobActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintWorkflowJobActivatedEventArgs: ...
@@ -86,6 +92,7 @@ class PrintWorkflowJobActivatedEventArgs(winrt.system.Object):
     @_property
     def session(self) -> typing.Optional[PrintWorkflowJobUISession]: ...
 
+@typing.final
 class PrintWorkflowJobBackgroundSession(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintWorkflowJobBackgroundSession: ...
@@ -97,6 +104,7 @@ class PrintWorkflowJobBackgroundSession(winrt.system.Object):
     @_property
     def status(self) -> PrintWorkflowSessionStatus: ...
 
+@typing.final
 class PrintWorkflowJobNotificationEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintWorkflowJobNotificationEventArgs: ...
@@ -106,6 +114,7 @@ class PrintWorkflowJobNotificationEventArgs(winrt.system.Object):
     @_property
     def printer_job(self) -> typing.Optional[PrintWorkflowPrinterJob]: ...
 
+@typing.final
 class PrintWorkflowJobStartingEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintWorkflowJobStartingEventArgs: ...
@@ -116,12 +125,14 @@ class PrintWorkflowJobStartingEventArgs(winrt.system.Object):
     @_property
     def printer(self) -> typing.Optional[winrt.windows.devices.printers.IppPrintDevice]: ...
 
+@typing.final
 class PrintWorkflowJobTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintWorkflowJobTriggerDetails: ...
     @_property
     def print_workflow_job_session(self) -> typing.Optional[PrintWorkflowJobBackgroundSession]: ...
 
+@typing.final
 class PrintWorkflowJobUISession(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintWorkflowJobUISession: ...
@@ -133,15 +144,18 @@ class PrintWorkflowJobUISession(winrt.system.Object):
     @_property
     def status(self) -> PrintWorkflowSessionStatus: ...
 
+@typing.final
 class PrintWorkflowObjectModelSourceFileContent(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintWorkflowObjectModelSourceFileContent: ...
     def __new__(cls: typing.Type[PrintWorkflowObjectModelSourceFileContent], xps_stream: typing.Optional[winrt.windows.storage.streams.IInputStream]) -> PrintWorkflowObjectModelSourceFileContent:...
 
+@typing.final
 class PrintWorkflowObjectModelTargetPackage(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintWorkflowObjectModelTargetPackage: ...
 
+@typing.final
 class PrintWorkflowPdlConverter(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintWorkflowPdlConverter: ...
@@ -150,6 +164,7 @@ class PrintWorkflowPdlConverter(winrt.system.Object):
     @typing.overload
     def convert_pdl_async(self, print_ticket: typing.Optional[winrt.windows.graphics.printing.printticket.WorkflowPrintTicket], input_stream: typing.Optional[winrt.windows.storage.streams.IInputStream], output_stream: typing.Optional[winrt.windows.storage.streams.IOutputStream], host_based_processing_operations: PdlConversionHostBasedProcessingOperations, /) -> winrt.windows.foundation.IAsyncAction: ...
 
+@typing.final
 class PrintWorkflowPdlDataAvailableEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintWorkflowPdlDataAvailableEventArgs: ...
@@ -161,6 +176,7 @@ class PrintWorkflowPdlDataAvailableEventArgs(winrt.system.Object):
     @_property
     def source_content(self) -> typing.Optional[PrintWorkflowPdlSourceContent]: ...
 
+@typing.final
 class PrintWorkflowPdlModificationRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintWorkflowPdlModificationRequestedEventArgs: ...
@@ -184,6 +200,7 @@ class PrintWorkflowPdlModificationRequestedEventArgs(winrt.system.Object):
     @_property
     def u_i_launcher(self) -> typing.Optional[PrintWorkflowUILauncher]: ...
 
+@typing.final
 class PrintWorkflowPdlSourceContent(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintWorkflowPdlSourceContent: ...
@@ -192,12 +209,14 @@ class PrintWorkflowPdlSourceContent(winrt.system.Object):
     @_property
     def content_type(self) -> str: ...
 
+@typing.final
 class PrintWorkflowPdlTargetStream(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintWorkflowPdlTargetStream: ...
     def complete_stream_submission(self, status: PrintWorkflowSubmittedStatus, /) -> None: ...
     def get_output_stream(self) -> typing.Optional[winrt.windows.storage.streams.IOutputStream]: ...
 
+@typing.final
 class PrintWorkflowPrinterJob(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintWorkflowPrinterJob: ...
@@ -212,6 +231,7 @@ class PrintWorkflowPrinterJob(winrt.system.Object):
     @_property
     def printer(self) -> typing.Optional[winrt.windows.devices.printers.IppPrintDevice]: ...
 
+@typing.final
 class PrintWorkflowSourceContent(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintWorkflowSourceContent: ...
@@ -219,16 +239,19 @@ class PrintWorkflowSourceContent(winrt.system.Object):
     def get_source_spool_data_as_stream_content(self) -> typing.Optional[PrintWorkflowSpoolStreamContent]: ...
     def get_source_spool_data_as_xps_object_model(self) -> typing.Optional[PrintWorkflowObjectModelSourceFileContent]: ...
 
+@typing.final
 class PrintWorkflowSpoolStreamContent(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintWorkflowSpoolStreamContent: ...
     def get_input_stream(self) -> typing.Optional[winrt.windows.storage.streams.IInputStream]: ...
 
+@typing.final
 class PrintWorkflowStreamTarget(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintWorkflowStreamTarget: ...
     def get_output_stream(self) -> typing.Optional[winrt.windows.storage.streams.IOutputStream]: ...
 
+@typing.final
 class PrintWorkflowSubmittedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintWorkflowSubmittedEventArgs: ...
@@ -237,6 +260,7 @@ class PrintWorkflowSubmittedEventArgs(winrt.system.Object):
     @_property
     def operation(self) -> typing.Optional[PrintWorkflowSubmittedOperation]: ...
 
+@typing.final
 class PrintWorkflowSubmittedOperation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintWorkflowSubmittedOperation: ...
@@ -246,6 +270,7 @@ class PrintWorkflowSubmittedOperation(winrt.system.Object):
     @_property
     def xps_content(self) -> typing.Optional[PrintWorkflowSourceContent]: ...
 
+@typing.final
 class PrintWorkflowTarget(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintWorkflowTarget: ...
@@ -254,12 +279,14 @@ class PrintWorkflowTarget(winrt.system.Object):
     @_property
     def target_as_xps_object_model_package(self) -> typing.Optional[PrintWorkflowObjectModelTargetPackage]: ...
 
+@typing.final
 class PrintWorkflowTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintWorkflowTriggerDetails: ...
     @_property
     def print_workflow_session(self) -> typing.Optional[PrintWorkflowBackgroundSession]: ...
 
+@typing.final
 class PrintWorkflowUIActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintWorkflowUIActivatedEventArgs: ...
@@ -274,12 +301,14 @@ class PrintWorkflowUIActivatedEventArgs(winrt.system.Object):
     @_property
     def print_workflow_session(self) -> typing.Optional[PrintWorkflowForegroundSession]: ...
 
+@typing.final
 class PrintWorkflowUILauncher(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintWorkflowUILauncher: ...
     def is_u_i_launch_enabled(self) -> bool: ...
     def launch_and_complete_u_i_async(self) -> winrt.windows.foundation.IAsyncOperation[PrintWorkflowUICompletionStatus]: ...
 
+@typing.final
 class PrintWorkflowXpsDataAvailableEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintWorkflowXpsDataAvailableEventArgs: ...

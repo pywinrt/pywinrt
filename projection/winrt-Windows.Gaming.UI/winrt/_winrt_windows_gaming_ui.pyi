@@ -17,6 +17,7 @@ from winrt.windows.gaming.ui import GameChatMessageOrigin, GameChatOverlayPositi
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class GameBar_Static(type):
     def add_is_input_redirected_changed(cls, handler: winrt.windows.foundation.EventHandler[winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_is_input_redirected_changed(cls, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
@@ -27,10 +28,12 @@ class GameBar_Static(type):
     @_property
     def visible(cls) -> bool: ...
 
+@typing.final
 class GameBar(winrt.system.Object, metaclass=GameBar_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GameBar: ...
 
+@typing.final
 class GameChatMessageReceivedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GameChatMessageReceivedEventArgs: ...
@@ -45,9 +48,11 @@ class GameChatMessageReceivedEventArgs(winrt.system.Object):
     @_property
     def sender_name(self) -> str: ...
 
+@typing.final
 class GameChatOverlay_Static(type):
     def get_default(cls) -> typing.Optional[GameChatOverlay]: ...
 
+@typing.final
 class GameChatOverlay(winrt.system.Object, metaclass=GameChatOverlay_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GameChatOverlay: ...
@@ -57,6 +62,7 @@ class GameChatOverlay(winrt.system.Object, metaclass=GameChatOverlay_Static):
     @desired_position.setter
     def desired_position(self, value: GameChatOverlayPosition) -> None: ...
 
+@typing.final
 class GameChatOverlayMessageSource(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GameChatOverlayMessageSource: ...
@@ -65,6 +71,7 @@ class GameChatOverlayMessageSource(winrt.system.Object):
     def add_message_received(self, handler: winrt.windows.foundation.TypedEventHandler[GameChatOverlayMessageSource, GameChatMessageReceivedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_message_received(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class GameUIProviderActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GameUIProviderActivatedEventArgs: ...

@@ -16,6 +16,7 @@ from winrt.windows.applicationmodel.userdataaccounts.provider import UserDataAcc
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class UserDataAccountPartnerAccountInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDataAccountPartnerAccountInfo: ...
@@ -26,6 +27,7 @@ class UserDataAccountPartnerAccountInfo(winrt.system.Object):
     @_property
     def priority(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class UserDataAccountProviderAddAccountOperation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDataAccountProviderAddAccountOperation: ...
@@ -37,6 +39,7 @@ class UserDataAccountProviderAddAccountOperation(winrt.system.Object):
     @_property
     def kind(self) -> UserDataAccountProviderOperationKind: ...
 
+@typing.final
 class UserDataAccountProviderResolveErrorsOperation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDataAccountProviderResolveErrorsOperation: ...
@@ -46,6 +49,7 @@ class UserDataAccountProviderResolveErrorsOperation(winrt.system.Object):
     @_property
     def user_data_account_id(self) -> str: ...
 
+@typing.final
 class UserDataAccountProviderSettingsOperation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDataAccountProviderSettingsOperation: ...
@@ -55,6 +59,7 @@ class UserDataAccountProviderSettingsOperation(winrt.system.Object):
     @_property
     def user_data_account_id(self) -> str: ...
 
+@typing.final
 class IUserDataAccountProviderOperation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IUserDataAccountProviderOperation: ...

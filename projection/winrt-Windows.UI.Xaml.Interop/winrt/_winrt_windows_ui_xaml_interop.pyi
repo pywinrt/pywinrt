@@ -16,11 +16,13 @@ from winrt.windows.ui.xaml.interop import BindableVectorChangedEventHandler, Not
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class TypeName:
     name: str
     kind: TypeKind
     def __init__(self, name: str, kind: TypeKind) -> None: ...
 
+@typing.final
 class NotifyCollectionChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NotifyCollectionChangedEventArgs: ...
@@ -36,11 +38,13 @@ class NotifyCollectionChangedEventArgs(winrt.system.Object):
     @_property
     def old_starting_index(self) -> winrt.system.Int32: ...
 
+@typing.final
 class IBindableIterable(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBindableIterable: ...
     def first(self) -> typing.Optional[IBindableIterator]: ...
 
+@typing.final
 class IBindableIterator(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBindableIterator: ...
@@ -50,6 +54,7 @@ class IBindableIterator(winrt.system.Object):
     @_property
     def has_current(self) -> bool: ...
 
+@typing.final
 class IBindableObservableVector(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBindableObservableVector: ...
@@ -68,6 +73,7 @@ class IBindableObservableVector(winrt.system.Object):
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class IBindableVector(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBindableVector: ...
@@ -84,6 +90,7 @@ class IBindableVector(winrt.system.Object):
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class IBindableVectorView(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBindableVectorView: ...
@@ -93,6 +100,7 @@ class IBindableVectorView(winrt.system.Object):
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class INotifyCollectionChanged(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INotifyCollectionChanged: ...

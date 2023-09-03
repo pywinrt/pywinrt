@@ -13,9 +13,11 @@ import winrt.windows.foundation
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class VibrationDevice_Static(type):
     def get_default(cls) -> typing.Optional[VibrationDevice]: ...
 
+@typing.final
 class VibrationDevice(winrt.system.Object, metaclass=VibrationDevice_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VibrationDevice: ...

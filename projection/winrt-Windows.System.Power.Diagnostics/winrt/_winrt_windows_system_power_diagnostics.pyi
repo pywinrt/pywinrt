@@ -12,22 +12,26 @@ import winrt.system
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class BackgroundEnergyDiagnostics_Static(type):
     def compute_total_energy_usage(cls) -> winrt.system.UInt64: ...
     def reset_total_energy_usage(cls) -> None: ...
     @_property
     def device_specific_conversion_factor(cls) -> winrt.system.Double: ...
 
+@typing.final
 class BackgroundEnergyDiagnostics(winrt.system.Object, metaclass=BackgroundEnergyDiagnostics_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BackgroundEnergyDiagnostics: ...
 
+@typing.final
 class ForegroundEnergyDiagnostics_Static(type):
     def compute_total_energy_usage(cls) -> winrt.system.UInt64: ...
     def reset_total_energy_usage(cls) -> None: ...
     @_property
     def device_specific_conversion_factor(cls) -> winrt.system.Double: ...
 
+@typing.final
 class ForegroundEnergyDiagnostics(winrt.system.Object, metaclass=ForegroundEnergyDiagnostics_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ForegroundEnergyDiagnostics: ...

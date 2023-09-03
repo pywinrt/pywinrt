@@ -18,6 +18,7 @@ import winrt.windows.storage.streams
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class SpatialSurfaceInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialSurfaceInfo: ...
@@ -31,6 +32,7 @@ class SpatialSurfaceInfo(winrt.system.Object):
     @_property
     def update_time(self) -> datetime.datetime: ...
 
+@typing.final
 class SpatialSurfaceMesh(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialSurfaceMesh: ...
@@ -47,6 +49,7 @@ class SpatialSurfaceMesh(winrt.system.Object):
     @_property
     def vertex_positions(self) -> typing.Optional[SpatialSurfaceMeshBuffer]: ...
 
+@typing.final
 class SpatialSurfaceMeshBuffer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialSurfaceMeshBuffer: ...
@@ -59,6 +62,7 @@ class SpatialSurfaceMeshBuffer(winrt.system.Object):
     @_property
     def stride(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class SpatialSurfaceMeshOptions_Static(type):
     @_property
     def supported_triangle_index_formats(cls) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.graphics.directx.DirectXPixelFormat]]: ...
@@ -67,6 +71,7 @@ class SpatialSurfaceMeshOptions_Static(type):
     @_property
     def supported_vertex_position_formats(cls) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.graphics.directx.DirectXPixelFormat]]: ...
 
+@typing.final
 class SpatialSurfaceMeshOptions(winrt.system.Object, metaclass=SpatialSurfaceMeshOptions_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialSurfaceMeshOptions: ...
@@ -88,10 +93,12 @@ class SpatialSurfaceMeshOptions(winrt.system.Object, metaclass=SpatialSurfaceMes
     @include_vertex_normals.setter
     def include_vertex_normals(self, value: bool) -> None: ...
 
+@typing.final
 class SpatialSurfaceObserver_Static(type):
     def is_supported(cls) -> bool: ...
     def request_access_async(cls) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.perception.spatial.SpatialPerceptionAccessStatus]: ...
 
+@typing.final
 class SpatialSurfaceObserver(winrt.system.Object, metaclass=SpatialSurfaceObserver_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialSurfaceObserver: ...

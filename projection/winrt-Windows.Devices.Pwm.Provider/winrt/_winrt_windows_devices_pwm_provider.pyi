@@ -13,6 +13,7 @@ import winrt.windows.foundation.collections
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class IPwmControllerProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPwmControllerProvider: ...
@@ -31,6 +32,7 @@ class IPwmControllerProvider(winrt.system.Object):
     @_property
     def pin_count(self) -> winrt.system.Int32: ...
 
+@typing.final
 class IPwmProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPwmProvider: ...

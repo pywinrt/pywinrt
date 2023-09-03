@@ -14,6 +14,7 @@ import winrt.windows.foundation.collections
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class EnterpriseKeyCredentialRegistrationInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EnterpriseKeyCredentialRegistrationInfo: ...
@@ -28,10 +29,12 @@ class EnterpriseKeyCredentialRegistrationInfo(winrt.system.Object):
     @_property
     def tenant_name(self) -> str: ...
 
+@typing.final
 class EnterpriseKeyCredentialRegistrationManager_Static(type):
     @_property
     def current(cls) -> typing.Optional[EnterpriseKeyCredentialRegistrationManager]: ...
 
+@typing.final
 class EnterpriseKeyCredentialRegistrationManager(winrt.system.Object, metaclass=EnterpriseKeyCredentialRegistrationManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EnterpriseKeyCredentialRegistrationManager: ...

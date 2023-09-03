@@ -27,6 +27,7 @@ from winrt.windows.media.audio import AudioDeviceNodeCreationStatus, AudioFileNo
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class AudioDeviceInputNode(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -62,6 +63,7 @@ class AudioDeviceInputNode(winrt.system.Object):
     @_property
     def encoding_properties(self) -> typing.Optional[winrt.windows.media.mediaproperties.AudioEncodingProperties]: ...
 
+@typing.final
 class AudioDeviceOutputNode(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -92,6 +94,7 @@ class AudioDeviceOutputNode(winrt.system.Object):
     @listener.setter
     def listener(self, value: typing.Optional[AudioNodeListener]) -> None: ...
 
+@typing.final
 class AudioFileInputNode(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -150,6 +153,7 @@ class AudioFileInputNode(winrt.system.Object):
     @_property
     def encoding_properties(self) -> typing.Optional[winrt.windows.media.mediaproperties.AudioEncodingProperties]: ...
 
+@typing.final
 class AudioFileOutputNode(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -179,12 +183,14 @@ class AudioFileOutputNode(winrt.system.Object):
     @_property
     def encoding_properties(self) -> typing.Optional[winrt.windows.media.mediaproperties.AudioEncodingProperties]: ...
 
+@typing.final
 class AudioFrameCompletedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AudioFrameCompletedEventArgs: ...
     @_property
     def frame(self) -> typing.Optional[winrt.windows.media.AudioFrame]: ...
 
+@typing.final
 class AudioFrameInputNode(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -230,6 +236,7 @@ class AudioFrameInputNode(winrt.system.Object):
     @_property
     def encoding_properties(self) -> typing.Optional[winrt.windows.media.mediaproperties.AudioEncodingProperties]: ...
 
+@typing.final
 class AudioFrameOutputNode(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -255,9 +262,11 @@ class AudioFrameOutputNode(winrt.system.Object):
     @_property
     def encoding_properties(self) -> typing.Optional[winrt.windows.media.mediaproperties.AudioEncodingProperties]: ...
 
+@typing.final
 class AudioGraph_Static(type):
     def create_async(cls, settings: typing.Optional[AudioGraphSettings], /) -> winrt.windows.foundation.IAsyncOperation[CreateAudioGraphResult]: ...
 
+@typing.final
 class AudioGraph(winrt.system.Object, metaclass=AudioGraph_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -324,6 +333,7 @@ class AudioGraph(winrt.system.Object, metaclass=AudioGraph_Static):
     @_property
     def samples_per_quantum(self) -> winrt.system.Int32: ...
 
+@typing.final
 class AudioGraphBatchUpdater(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -331,6 +341,7 @@ class AudioGraphBatchUpdater(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> AudioGraphBatchUpdater: ...
     def close(self) -> None: ...
 
+@typing.final
 class AudioGraphConnection(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AudioGraphConnection: ...
@@ -341,6 +352,7 @@ class AudioGraphConnection(winrt.system.Object):
     @_property
     def destination(self) -> typing.Optional[IAudioNode]: ...
 
+@typing.final
 class AudioGraphSettings(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AudioGraphSettings: ...
@@ -374,12 +386,14 @@ class AudioGraphSettings(winrt.system.Object):
     @max_playback_speed_factor.setter
     def max_playback_speed_factor(self, value: winrt.system.Double) -> None: ...
 
+@typing.final
 class AudioGraphUnrecoverableErrorOccurredEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AudioGraphUnrecoverableErrorOccurredEventArgs: ...
     @_property
     def error(self) -> AudioGraphUnrecoverableError: ...
 
+@typing.final
 class AudioNodeEmitter(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AudioNodeEmitter: ...
@@ -422,6 +436,7 @@ class AudioNodeEmitter(winrt.system.Object):
     @spatial_audio_model.setter
     def spatial_audio_model(self, value: SpatialAudioModel) -> None: ...
 
+@typing.final
 class AudioNodeEmitterConeProperties(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AudioNodeEmitterConeProperties: ...
@@ -432,10 +447,12 @@ class AudioNodeEmitterConeProperties(winrt.system.Object):
     @_property
     def outer_angle_gain(self) -> winrt.system.Double: ...
 
+@typing.final
 class AudioNodeEmitterDecayModel_Static(type):
     def create_custom(cls, min_gain: winrt.system.Double, max_gain: winrt.system.Double, /) -> typing.Optional[AudioNodeEmitterDecayModel]: ...
     def create_natural(cls, min_gain: winrt.system.Double, max_gain: winrt.system.Double, unity_gain_distance: winrt.system.Double, cutoff_distance: winrt.system.Double, /) -> typing.Optional[AudioNodeEmitterDecayModel]: ...
 
+@typing.final
 class AudioNodeEmitterDecayModel(winrt.system.Object, metaclass=AudioNodeEmitterDecayModel_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AudioNodeEmitterDecayModel: ...
@@ -448,6 +465,7 @@ class AudioNodeEmitterDecayModel(winrt.system.Object, metaclass=AudioNodeEmitter
     @_property
     def natural_properties(self) -> typing.Optional[AudioNodeEmitterNaturalDecayModelProperties]: ...
 
+@typing.final
 class AudioNodeEmitterNaturalDecayModelProperties(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AudioNodeEmitterNaturalDecayModelProperties: ...
@@ -456,10 +474,12 @@ class AudioNodeEmitterNaturalDecayModelProperties(winrt.system.Object):
     @_property
     def unity_gain_distance(self) -> winrt.system.Double: ...
 
+@typing.final
 class AudioNodeEmitterShape_Static(type):
     def create_cone(cls, inner_angle: winrt.system.Double, outer_angle: winrt.system.Double, outer_angle_gain: winrt.system.Double, /) -> typing.Optional[AudioNodeEmitterShape]: ...
     def create_omnidirectional(cls) -> typing.Optional[AudioNodeEmitterShape]: ...
 
+@typing.final
 class AudioNodeEmitterShape(winrt.system.Object, metaclass=AudioNodeEmitterShape_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AudioNodeEmitterShape: ...
@@ -468,6 +488,7 @@ class AudioNodeEmitterShape(winrt.system.Object, metaclass=AudioNodeEmitterShape
     @_property
     def kind(self) -> AudioNodeEmitterShapeKind: ...
 
+@typing.final
 class AudioNodeListener(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AudioNodeListener: ...
@@ -489,10 +510,12 @@ class AudioNodeListener(winrt.system.Object):
     @doppler_velocity.setter
     def doppler_velocity(self, value: winrt.windows.foundation.numerics.Vector3) -> None: ...
 
+@typing.final
 class AudioPlaybackConnection_Static(type):
     def get_device_selector(cls) -> str: ...
     def try_create_from_id(cls, id: str, /) -> typing.Optional[AudioPlaybackConnection]: ...
 
+@typing.final
 class AudioPlaybackConnection(winrt.system.Object, metaclass=AudioPlaybackConnection_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -510,6 +533,7 @@ class AudioPlaybackConnection(winrt.system.Object, metaclass=AudioPlaybackConnec
     @_property
     def state(self) -> AudioPlaybackConnectionState: ...
 
+@typing.final
 class AudioPlaybackConnectionOpenResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AudioPlaybackConnectionOpenResult: ...
@@ -518,6 +542,7 @@ class AudioPlaybackConnectionOpenResult(winrt.system.Object):
     @_property
     def status(self) -> AudioPlaybackConnectionOpenResultStatus: ...
 
+@typing.final
 class AudioStateMonitor_Static(type):
     @typing.overload
     def create_for_capture_monitoring(cls) -> typing.Optional[AudioStateMonitor]: ...
@@ -534,6 +559,7 @@ class AudioStateMonitor_Static(type):
     def create_for_render_monitoring(cls, category: winrt.windows.media.render.AudioRenderCategory, role: winrt.windows.media.devices.AudioDeviceRole, /) -> typing.Optional[AudioStateMonitor]: ...
     def create_for_render_monitoring_with_category_and_device_id(cls, category: winrt.windows.media.render.AudioRenderCategory, device_id: str, /) -> typing.Optional[AudioStateMonitor]: ...
 
+@typing.final
 class AudioStateMonitor(winrt.system.Object, metaclass=AudioStateMonitor_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AudioStateMonitor: ...
@@ -542,6 +568,7 @@ class AudioStateMonitor(winrt.system.Object, metaclass=AudioStateMonitor_Static)
     @_property
     def sound_level(self) -> winrt.windows.media.SoundLevel: ...
 
+@typing.final
 class AudioSubmixNode(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -575,6 +602,7 @@ class AudioSubmixNode(winrt.system.Object):
     @_property
     def encoding_properties(self) -> typing.Optional[winrt.windows.media.mediaproperties.AudioEncodingProperties]: ...
 
+@typing.final
 class CreateAudioDeviceInputNodeResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CreateAudioDeviceInputNodeResult: ...
@@ -585,6 +613,7 @@ class CreateAudioDeviceInputNodeResult(winrt.system.Object):
     @_property
     def extended_error(self) -> winrt.windows.foundation.HResult: ...
 
+@typing.final
 class CreateAudioDeviceOutputNodeResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CreateAudioDeviceOutputNodeResult: ...
@@ -595,6 +624,7 @@ class CreateAudioDeviceOutputNodeResult(winrt.system.Object):
     @_property
     def extended_error(self) -> winrt.windows.foundation.HResult: ...
 
+@typing.final
 class CreateAudioFileInputNodeResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CreateAudioFileInputNodeResult: ...
@@ -605,6 +635,7 @@ class CreateAudioFileInputNodeResult(winrt.system.Object):
     @_property
     def extended_error(self) -> winrt.windows.foundation.HResult: ...
 
+@typing.final
 class CreateAudioFileOutputNodeResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CreateAudioFileOutputNodeResult: ...
@@ -615,6 +646,7 @@ class CreateAudioFileOutputNodeResult(winrt.system.Object):
     @_property
     def extended_error(self) -> winrt.windows.foundation.HResult: ...
 
+@typing.final
 class CreateAudioGraphResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CreateAudioGraphResult: ...
@@ -625,6 +657,7 @@ class CreateAudioGraphResult(winrt.system.Object):
     @_property
     def extended_error(self) -> winrt.windows.foundation.HResult: ...
 
+@typing.final
 class CreateMediaSourceAudioInputNodeResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CreateMediaSourceAudioInputNodeResult: ...
@@ -635,6 +668,7 @@ class CreateMediaSourceAudioInputNodeResult(winrt.system.Object):
     @_property
     def extended_error(self) -> winrt.windows.foundation.HResult: ...
 
+@typing.final
 class EchoEffectDefinition(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EchoEffectDefinition: ...
@@ -656,6 +690,7 @@ class EchoEffectDefinition(winrt.system.Object):
     @_property
     def properties(self) -> typing.Optional[winrt.windows.foundation.collections.IPropertySet]: ...
 
+@typing.final
 class EqualizerBand(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EqualizerBand: ...
@@ -672,6 +707,7 @@ class EqualizerBand(winrt.system.Object):
     @bandwidth.setter
     def bandwidth(self, value: winrt.system.Double) -> None: ...
 
+@typing.final
 class EqualizerEffectDefinition(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EqualizerEffectDefinition: ...
@@ -683,12 +719,14 @@ class EqualizerEffectDefinition(winrt.system.Object):
     @_property
     def properties(self) -> typing.Optional[winrt.windows.foundation.collections.IPropertySet]: ...
 
+@typing.final
 class FrameInputNodeQuantumStartedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FrameInputNodeQuantumStartedEventArgs: ...
     @_property
     def required_samples(self) -> winrt.system.Int32: ...
 
+@typing.final
 class LimiterEffectDefinition(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LimiterEffectDefinition: ...
@@ -706,6 +744,7 @@ class LimiterEffectDefinition(winrt.system.Object):
     @_property
     def properties(self) -> typing.Optional[winrt.windows.foundation.collections.IPropertySet]: ...
 
+@typing.final
 class MediaSourceAudioInputNode(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -764,6 +803,7 @@ class MediaSourceAudioInputNode(winrt.system.Object):
     @_property
     def position(self) -> datetime.timedelta: ...
 
+@typing.final
 class ReverbEffectDefinition(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ReverbEffectDefinition: ...
@@ -865,15 +905,18 @@ class ReverbEffectDefinition(winrt.system.Object):
     @_property
     def properties(self) -> typing.Optional[winrt.windows.foundation.collections.IPropertySet]: ...
 
+@typing.final
 class SetDefaultSpatialAudioFormatResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SetDefaultSpatialAudioFormatResult: ...
     @_property
     def status(self) -> SetDefaultSpatialAudioFormatStatus: ...
 
+@typing.final
 class SpatialAudioDeviceConfiguration_Static(type):
     def get_for_device_id(cls, device_id: str, /) -> typing.Optional[SpatialAudioDeviceConfiguration]: ...
 
+@typing.final
 class SpatialAudioDeviceConfiguration(winrt.system.Object, metaclass=SpatialAudioDeviceConfiguration_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialAudioDeviceConfiguration: ...
@@ -890,9 +933,11 @@ class SpatialAudioDeviceConfiguration(winrt.system.Object, metaclass=SpatialAudi
     @_property
     def is_spatial_audio_supported(self) -> bool: ...
 
+@typing.final
 class SpatialAudioFormatConfiguration_Static(type):
     def get_default(cls) -> typing.Optional[SpatialAudioFormatConfiguration]: ...
 
+@typing.final
 class SpatialAudioFormatConfiguration(winrt.system.Object, metaclass=SpatialAudioFormatConfiguration_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialAudioFormatConfiguration: ...
@@ -903,6 +948,7 @@ class SpatialAudioFormatConfiguration(winrt.system.Object, metaclass=SpatialAudi
     @mixed_reality_exclusive_mode_policy.setter
     def mixed_reality_exclusive_mode_policy(self, value: MixedRealitySpatialAudioFormatPolicy) -> None: ...
 
+@typing.final
 class SpatialAudioFormatSubtype_Static(type):
     @_property
     def d_t_s_headphone_x(cls) -> str: ...
@@ -919,10 +965,12 @@ class SpatialAudioFormatSubtype_Static(type):
     @_property
     def d_t_s_x_for_home_theater(cls) -> str: ...
 
+@typing.final
 class SpatialAudioFormatSubtype(winrt.system.Object, metaclass=SpatialAudioFormatSubtype_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialAudioFormatSubtype: ...
 
+@typing.final
 class IAudioInputNode(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -954,6 +1002,7 @@ class IAudioInputNode(winrt.system.Object):
     @outgoing_gain.setter
     def outgoing_gain(self, value: winrt.system.Double) -> None: ...
 
+@typing.final
 class IAudioInputNode2(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -987,6 +1036,7 @@ class IAudioInputNode2(winrt.system.Object):
     @_property
     def outgoing_connections(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[AudioGraphConnection]]: ...
 
+@typing.final
 class IAudioNode(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -1011,6 +1061,7 @@ class IAudioNode(winrt.system.Object):
     @outgoing_gain.setter
     def outgoing_gain(self, value: winrt.system.Double) -> None: ...
 
+@typing.final
 class IAudioNodeWithListener(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...

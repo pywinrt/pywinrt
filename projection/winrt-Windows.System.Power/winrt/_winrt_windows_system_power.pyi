@@ -15,6 +15,7 @@ from winrt.windows.system.power import BatteryStatus, EnergySaverStatus, PowerSu
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class BackgroundEnergyManager_Static(type):
     def add_recent_energy_usage_increased(cls, handler: winrt.windows.foundation.EventHandler[winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_recent_energy_usage_increased(cls, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
@@ -37,10 +38,12 @@ class BackgroundEnergyManager_Static(type):
     @_property
     def termination_usage_level(cls) -> winrt.system.UInt32: ...
 
+@typing.final
 class BackgroundEnergyManager(winrt.system.Object, metaclass=BackgroundEnergyManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BackgroundEnergyManager: ...
 
+@typing.final
 class ForegroundEnergyManager_Static(type):
     def add_recent_energy_usage_increased(cls, handler: winrt.windows.foundation.EventHandler[winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_recent_energy_usage_increased(cls, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
@@ -59,10 +62,12 @@ class ForegroundEnergyManager_Static(type):
     @_property
     def recent_energy_usage_level(cls) -> winrt.system.UInt32: ...
 
+@typing.final
 class ForegroundEnergyManager(winrt.system.Object, metaclass=ForegroundEnergyManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ForegroundEnergyManager: ...
 
+@typing.final
 class PowerManager_Static(type):
     def add_battery_status_changed(cls, handler: winrt.windows.foundation.EventHandler[winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_battery_status_changed(cls, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
@@ -85,6 +90,7 @@ class PowerManager_Static(type):
     @_property
     def remaining_discharge_time(cls) -> datetime.timedelta: ...
 
+@typing.final
 class PowerManager(winrt.system.Object, metaclass=PowerManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PowerManager: ...

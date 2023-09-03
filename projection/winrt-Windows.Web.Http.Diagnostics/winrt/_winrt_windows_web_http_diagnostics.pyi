@@ -18,9 +18,11 @@ from winrt.windows.web.http.diagnostics import HttpDiagnosticRequestInitiator
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class HttpDiagnosticProvider_Static(type):
     def create_from_process_diagnostic_info(cls, process_diagnostic_info: typing.Optional[winrt.windows.system.diagnostics.ProcessDiagnosticInfo], /) -> typing.Optional[HttpDiagnosticProvider]: ...
 
+@typing.final
 class HttpDiagnosticProvider(winrt.system.Object, metaclass=HttpDiagnosticProvider_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HttpDiagnosticProvider: ...
@@ -33,6 +35,7 @@ class HttpDiagnosticProvider(winrt.system.Object, metaclass=HttpDiagnosticProvid
     def add_response_received(self, handler: winrt.windows.foundation.TypedEventHandler[HttpDiagnosticProvider, HttpDiagnosticProviderResponseReceivedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_response_received(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class HttpDiagnosticProviderRequestResponseCompletedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HttpDiagnosticProviderRequestResponseCompletedEventArgs: ...
@@ -51,6 +54,7 @@ class HttpDiagnosticProviderRequestResponseCompletedEventArgs(winrt.system.Objec
     @_property
     def timestamps(self) -> typing.Optional[HttpDiagnosticProviderRequestResponseTimestamps]: ...
 
+@typing.final
 class HttpDiagnosticProviderRequestResponseTimestamps(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HttpDiagnosticProviderRequestResponseTimestamps: ...
@@ -73,6 +77,7 @@ class HttpDiagnosticProviderRequestResponseTimestamps(winrt.system.Object):
     @_property
     def ssl_negotiated_timestamp(self) -> typing.Optional[typing.Optional[datetime.datetime]]: ...
 
+@typing.final
 class HttpDiagnosticProviderRequestSentEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HttpDiagnosticProviderRequestSentEventArgs: ...
@@ -91,6 +96,7 @@ class HttpDiagnosticProviderRequestSentEventArgs(winrt.system.Object):
     @_property
     def timestamp(self) -> datetime.datetime: ...
 
+@typing.final
 class HttpDiagnosticProviderResponseReceivedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HttpDiagnosticProviderResponseReceivedEventArgs: ...
@@ -101,6 +107,7 @@ class HttpDiagnosticProviderResponseReceivedEventArgs(winrt.system.Object):
     @_property
     def timestamp(self) -> datetime.datetime: ...
 
+@typing.final
 class HttpDiagnosticSourceLocation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HttpDiagnosticSourceLocation: ...

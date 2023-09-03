@@ -17,6 +17,7 @@ from winrt.windows.globalization import DayOfWeek, LanguageLayoutDirection
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class ApplicationLanguages_Static(type):
     def get_languages_for_user(cls, user: typing.Optional[winrt.windows.system.User], /) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]: ...
     @_property
@@ -28,10 +29,12 @@ class ApplicationLanguages_Static(type):
     @_property
     def manifest_languages(cls) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]: ...
 
+@typing.final
 class ApplicationLanguages(winrt.system.Object, metaclass=ApplicationLanguages_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ApplicationLanguages: ...
 
+@typing.final
 class Calendar(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Calendar: ...
@@ -208,6 +211,7 @@ class Calendar(winrt.system.Object):
     @_property
     def first_period_in_this_day(self) -> winrt.system.Int32: ...
 
+@typing.final
 class CalendarIdentifiers_Static(type):
     @_property
     def julian(cls) -> str: ...
@@ -240,20 +244,24 @@ class CalendarIdentifiers_Static(type):
     @_property
     def japanese_lunar(cls) -> str: ...
 
+@typing.final
 class CalendarIdentifiers(winrt.system.Object, metaclass=CalendarIdentifiers_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CalendarIdentifiers: ...
 
+@typing.final
 class ClockIdentifiers_Static(type):
     @_property
     def twelve_hour(cls) -> str: ...
     @_property
     def twenty_four_hour(cls) -> str: ...
 
+@typing.final
 class ClockIdentifiers(winrt.system.Object, metaclass=ClockIdentifiers_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ClockIdentifiers: ...
 
+@typing.final
 class CurrencyAmount(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CurrencyAmount: ...
@@ -263,6 +271,7 @@ class CurrencyAmount(winrt.system.Object):
     @_property
     def currency(self) -> str: ...
 
+@typing.final
 class CurrencyIdentifiers_Static(type):
     @_property
     def h_n_l(cls) -> str: ...
@@ -589,13 +598,16 @@ class CurrencyIdentifiers_Static(type):
     @_property
     def m_r_u(cls) -> str: ...
 
+@typing.final
 class CurrencyIdentifiers(winrt.system.Object, metaclass=CurrencyIdentifiers_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CurrencyIdentifiers: ...
 
+@typing.final
 class GeographicRegion_Static(type):
     def is_supported(cls, geographic_region_code: str, /) -> bool: ...
 
+@typing.final
 class GeographicRegion(winrt.system.Object, metaclass=GeographicRegion_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GeographicRegion: ...
@@ -618,6 +630,7 @@ class GeographicRegion(winrt.system.Object, metaclass=GeographicRegion_Static):
     @_property
     def native_name(self) -> str: ...
 
+@typing.final
 class JapanesePhoneme(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> JapanesePhoneme: ...
@@ -628,16 +641,19 @@ class JapanesePhoneme(winrt.system.Object):
     @_property
     def yomi_text(self) -> str: ...
 
+@typing.final
 class JapanesePhoneticAnalyzer_Static(type):
     @typing.overload
     def get_words(cls, input: str, /) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[JapanesePhoneme]]: ...
     @typing.overload
     def get_words(cls, input: str, mono_ruby: bool, /) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[JapanesePhoneme]]: ...
 
+@typing.final
 class JapanesePhoneticAnalyzer(winrt.system.Object, metaclass=JapanesePhoneticAnalyzer_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> JapanesePhoneticAnalyzer: ...
 
+@typing.final
 class Language_Static(type):
     def get_mui_compatible_language_list_from_language_tags(cls, language_tags: typing.Iterable[str], /) -> typing.Optional[winrt.windows.foundation.collections.IVector[str]]: ...
     def is_well_formed(cls, language_tag: str, /) -> bool: ...
@@ -645,6 +661,7 @@ class Language_Static(type):
     @_property
     def current_input_method_language_tag(cls) -> str: ...
 
+@typing.final
 class Language(winrt.system.Object, metaclass=Language_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Language: ...
@@ -663,6 +680,7 @@ class Language(winrt.system.Object, metaclass=Language_Static):
     @_property
     def abbreviated_name(self) -> str: ...
 
+@typing.final
 class NumeralSystemIdentifiers_Static(type):
     @_property
     def full_wide(cls) -> str: ...
@@ -761,6 +779,7 @@ class NumeralSystemIdentifiers_Static(type):
     @_property
     def brah(cls) -> str: ...
 
+@typing.final
 class NumeralSystemIdentifiers(winrt.system.Object, metaclass=NumeralSystemIdentifiers_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NumeralSystemIdentifiers: ...

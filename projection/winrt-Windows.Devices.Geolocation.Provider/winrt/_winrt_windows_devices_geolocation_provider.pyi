@@ -16,6 +16,7 @@ from winrt.windows.devices.geolocation.provider import LocationOverrideStatus
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class GeolocationProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GeolocationProvider: ...

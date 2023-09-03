@@ -19,10 +19,12 @@ from winrt.windows.ui.xaml.data import CurrentChangingEventHandler, PropertyChan
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class LoadMoreItemsResult:
     count: winrt.system.UInt32
     def __init__(self, count: winrt.system.UInt32) -> None: ...
 
+@typing.final
 class Binding(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Binding: ...
@@ -72,11 +74,13 @@ class Binding(winrt.system.Object):
     @fallback_value.setter
     def fallback_value(self, value: typing.Optional[winrt.system.Object]) -> None: ...
 
+@typing.final
 class BindingBase(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BindingBase: ...
     def __new__(cls: typing.Type[BindingBase]) -> BindingBase:...
 
+@typing.final
 class BindingExpression(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BindingExpression: ...
@@ -86,17 +90,21 @@ class BindingExpression(winrt.system.Object):
     @_property
     def parent_binding(self) -> typing.Optional[Binding]: ...
 
+@typing.final
 class BindingExpressionBase(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BindingExpressionBase: ...
 
+@typing.final
 class BindingOperations_Static(type):
     def set_binding(cls, target: typing.Optional[winrt.windows.ui.xaml.DependencyObject], dp: typing.Optional[winrt.windows.ui.xaml.DependencyProperty], binding: typing.Optional[BindingBase], /) -> None: ...
 
+@typing.final
 class BindingOperations(winrt.system.Object, metaclass=BindingOperations_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BindingOperations: ...
 
+@typing.final
 class CollectionViewSource_Static(type):
     @_property
     def is_source_grouped_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
@@ -107,6 +115,7 @@ class CollectionViewSource_Static(type):
     @_property
     def view_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class CollectionViewSource(winrt.system.Object, metaclass=CollectionViewSource_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CollectionViewSource: ...
@@ -126,6 +135,7 @@ class CollectionViewSource(winrt.system.Object, metaclass=CollectionViewSource_S
     @_property
     def view(self) -> typing.Optional[ICollectionView]: ...
 
+@typing.final
 class CurrentChangingEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CurrentChangingEventArgs: ...
@@ -140,6 +150,7 @@ class CurrentChangingEventArgs(winrt.system.Object):
     @_property
     def is_cancelable(self) -> bool: ...
 
+@typing.final
 class ItemIndexRange(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ItemIndexRange: ...
@@ -151,6 +162,7 @@ class ItemIndexRange(winrt.system.Object):
     @_property
     def length(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class PropertyChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PropertyChangedEventArgs: ...
@@ -158,6 +170,7 @@ class PropertyChangedEventArgs(winrt.system.Object):
     @_property
     def property_name(self) -> str: ...
 
+@typing.final
 class RelativeSource(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RelativeSource: ...
@@ -167,6 +180,7 @@ class RelativeSource(winrt.system.Object):
     @mode.setter
     def mode(self, value: RelativeSourceMode) -> None: ...
 
+@typing.final
 class ICollectionView(winrt.system.Object, winrt._winrt.MutableSequence[winrt.system.Object]):
     def __len__(self) -> int: ...
     def __iter__(self) -> winrt.windows.foundation.collections.IIterator[winrt.system.Object]: ...
@@ -224,11 +238,13 @@ class ICollectionView(winrt.system.Object, winrt._winrt.MutableSequence[winrt.sy
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class ICollectionViewFactory(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICollectionViewFactory: ...
     def create_view(self) -> typing.Optional[ICollectionView]: ...
 
+@typing.final
 class ICollectionViewGroup(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICollectionViewGroup: ...
@@ -237,6 +253,7 @@ class ICollectionViewGroup(winrt.system.Object):
     @_property
     def group_items(self) -> typing.Optional[winrt.windows.foundation.collections.IObservableVector[winrt.system.Object]]: ...
 
+@typing.final
 class ICustomProperty(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICustomProperty: ...
@@ -253,6 +270,7 @@ class ICustomProperty(winrt.system.Object):
     @_property
     def type(self) -> winrt.windows.ui.xaml.interop.TypeName: ...
 
+@typing.final
 class ICustomPropertyProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICustomPropertyProvider: ...
@@ -262,6 +280,7 @@ class ICustomPropertyProvider(winrt.system.Object):
     @_property
     def type(self) -> winrt.windows.ui.xaml.interop.TypeName: ...
 
+@typing.final
 class IItemsRangeInfo(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -270,12 +289,14 @@ class IItemsRangeInfo(winrt.system.Object):
     def close(self) -> None: ...
     def ranges_changed(self, visible_range: typing.Optional[ItemIndexRange], tracked_items: winrt.windows.foundation.collections.IVectorView[ItemIndexRange], /) -> None: ...
 
+@typing.final
 class INotifyPropertyChanged(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INotifyPropertyChanged: ...
     def add_property_changed(self, handler: typing.Optional[PropertyChangedEventHandler], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_property_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class ISelectionInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISelectionInfo: ...
@@ -284,6 +305,7 @@ class ISelectionInfo(winrt.system.Object):
     def is_selected(self, index: winrt.system.Int32, /) -> bool: ...
     def select_range(self, item_index_range: typing.Optional[ItemIndexRange], /) -> None: ...
 
+@typing.final
 class ISupportIncrementalLoading(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISupportIncrementalLoading: ...
@@ -291,6 +313,7 @@ class ISupportIncrementalLoading(winrt.system.Object):
     @_property
     def has_more_items(self) -> bool: ...
 
+@typing.final
 class IValueConverter(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IValueConverter: ...
