@@ -16,11 +16,13 @@ from winrt.windows.devices.display import DisplayMonitorConnectionKind, DisplayM
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class DisplayMonitor_Static(type):
     def from_id_async(cls, device_id: str, /) -> winrt.windows.foundation.IAsyncOperation[DisplayMonitor]: ...
     def from_interface_id_async(cls, device_interface_id: str, /) -> winrt.windows.foundation.IAsyncOperation[DisplayMonitor]: ...
     def get_device_selector(cls) -> str: ...
 
+@typing.final
 class DisplayMonitor(winrt.system.Object, metaclass=DisplayMonitor_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DisplayMonitor: ...

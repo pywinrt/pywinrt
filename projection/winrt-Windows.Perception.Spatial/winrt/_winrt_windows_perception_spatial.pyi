@@ -20,11 +20,13 @@ from winrt.windows.perception.spatial import SpatialAnchorExportPurpose, Spatial
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class SpatialBoundingBox:
     center: winrt.windows.foundation.numerics.Vector3
     extents: winrt.windows.foundation.numerics.Vector3
     def __init__(self, center: winrt.windows.foundation.numerics.Vector3, extents: winrt.windows.foundation.numerics.Vector3) -> None: ...
 
+@typing.final
 class SpatialBoundingFrustum:
     near: winrt.windows.foundation.numerics.Plane
     far: winrt.windows.foundation.numerics.Plane
@@ -34,22 +36,26 @@ class SpatialBoundingFrustum:
     bottom: winrt.windows.foundation.numerics.Plane
     def __init__(self, near: winrt.windows.foundation.numerics.Plane, far: winrt.windows.foundation.numerics.Plane, right: winrt.windows.foundation.numerics.Plane, left: winrt.windows.foundation.numerics.Plane, top: winrt.windows.foundation.numerics.Plane, bottom: winrt.windows.foundation.numerics.Plane) -> None: ...
 
+@typing.final
 class SpatialBoundingOrientedBox:
     center: winrt.windows.foundation.numerics.Vector3
     extents: winrt.windows.foundation.numerics.Vector3
     orientation: winrt.windows.foundation.numerics.Quaternion
     def __init__(self, center: winrt.windows.foundation.numerics.Vector3, extents: winrt.windows.foundation.numerics.Vector3, orientation: winrt.windows.foundation.numerics.Quaternion) -> None: ...
 
+@typing.final
 class SpatialBoundingSphere:
     center: winrt.windows.foundation.numerics.Vector3
     radius: winrt.system.Single
     def __init__(self, center: winrt.windows.foundation.numerics.Vector3, radius: winrt.system.Single) -> None: ...
 
+@typing.final
 class SpatialRay:
     origin: winrt.windows.foundation.numerics.Vector3
     direction: winrt.windows.foundation.numerics.Vector3
     def __init__(self, origin: winrt.windows.foundation.numerics.Vector3, direction: winrt.windows.foundation.numerics.Vector3) -> None: ...
 
+@typing.final
 class SpatialAnchor_Static(type):
     @typing.overload
     def try_create_relative_to(cls, coordinate_system: typing.Optional[SpatialCoordinateSystem], /) -> typing.Optional[SpatialAnchor]: ...
@@ -58,6 +64,7 @@ class SpatialAnchor_Static(type):
     @typing.overload
     def try_create_relative_to(cls, coordinate_system: typing.Optional[SpatialCoordinateSystem], position: winrt.windows.foundation.numerics.Vector3, orientation: winrt.windows.foundation.numerics.Quaternion, /) -> typing.Optional[SpatialAnchor]: ...
 
+@typing.final
 class SpatialAnchor(winrt.system.Object, metaclass=SpatialAnchor_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialAnchor: ...
@@ -70,6 +77,7 @@ class SpatialAnchor(winrt.system.Object, metaclass=SpatialAnchor_Static):
     @_property
     def removed_by_user(self) -> bool: ...
 
+@typing.final
 class SpatialAnchorExportSufficiency(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialAnchorExportSufficiency: ...
@@ -80,29 +88,35 @@ class SpatialAnchorExportSufficiency(winrt.system.Object):
     @_property
     def sufficiency_level(self) -> winrt.system.Double: ...
 
+@typing.final
 class SpatialAnchorExporter_Static(type):
     def get_default(cls) -> typing.Optional[SpatialAnchorExporter]: ...
     def request_access_async(cls) -> winrt.windows.foundation.IAsyncOperation[SpatialPerceptionAccessStatus]: ...
 
+@typing.final
 class SpatialAnchorExporter(winrt.system.Object, metaclass=SpatialAnchorExporter_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialAnchorExporter: ...
     def get_anchor_export_sufficiency_async(self, anchor: typing.Optional[SpatialAnchor], purpose: SpatialAnchorExportPurpose, /) -> winrt.windows.foundation.IAsyncOperation[SpatialAnchorExportSufficiency]: ...
     def try_export_anchor_async(self, anchor: typing.Optional[SpatialAnchor], purpose: SpatialAnchorExportPurpose, stream: typing.Optional[winrt.windows.storage.streams.IOutputStream], /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
 
+@typing.final
 class SpatialAnchorManager_Static(type):
     def request_store_async(cls) -> winrt.windows.foundation.IAsyncOperation[SpatialAnchorStore]: ...
 
+@typing.final
 class SpatialAnchorManager(winrt.system.Object, metaclass=SpatialAnchorManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialAnchorManager: ...
 
+@typing.final
 class SpatialAnchorRawCoordinateSystemAdjustedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialAnchorRawCoordinateSystemAdjustedEventArgs: ...
     @_property
     def old_raw_coordinate_system_to_new_raw_coordinate_system_transform(self) -> winrt.windows.foundation.numerics.Matrix4x4: ...
 
+@typing.final
 class SpatialAnchorStore(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialAnchorStore: ...
@@ -111,30 +125,36 @@ class SpatialAnchorStore(winrt.system.Object):
     def remove(self, id: str, /) -> None: ...
     def try_save(self, id: str, anchor: typing.Optional[SpatialAnchor], /) -> bool: ...
 
+@typing.final
 class SpatialAnchorTransferManager_Static(type):
     def request_access_async(cls) -> winrt.windows.foundation.IAsyncOperation[SpatialPerceptionAccessStatus]: ...
     def try_export_anchors_async(cls, anchors: typing.Iterable[winrt.windows.foundation.collections.IKeyValuePair[str, SpatialAnchor]], stream: typing.Optional[winrt.windows.storage.streams.IOutputStream], /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     def try_import_anchors_async(cls, stream: typing.Optional[winrt.windows.storage.streams.IInputStream], /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IMapView[str, SpatialAnchor]]: ...
 
+@typing.final
 class SpatialAnchorTransferManager(winrt.system.Object, metaclass=SpatialAnchorTransferManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialAnchorTransferManager: ...
 
+@typing.final
 class SpatialBoundingVolume_Static(type):
     def from_box(cls, coordinate_system: typing.Optional[SpatialCoordinateSystem], box: SpatialBoundingBox, /) -> typing.Optional[SpatialBoundingVolume]: ...
     def from_frustum(cls, coordinate_system: typing.Optional[SpatialCoordinateSystem], frustum: SpatialBoundingFrustum, /) -> typing.Optional[SpatialBoundingVolume]: ...
     def from_oriented_box(cls, coordinate_system: typing.Optional[SpatialCoordinateSystem], box: SpatialBoundingOrientedBox, /) -> typing.Optional[SpatialBoundingVolume]: ...
     def from_sphere(cls, coordinate_system: typing.Optional[SpatialCoordinateSystem], sphere: SpatialBoundingSphere, /) -> typing.Optional[SpatialBoundingVolume]: ...
 
+@typing.final
 class SpatialBoundingVolume(winrt.system.Object, metaclass=SpatialBoundingVolume_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialBoundingVolume: ...
 
+@typing.final
 class SpatialCoordinateSystem(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialCoordinateSystem: ...
     def try_get_transform_to(self, target: typing.Optional[SpatialCoordinateSystem], /) -> typing.Optional[typing.Optional[winrt.windows.foundation.numerics.Matrix4x4]]: ...
 
+@typing.final
 class SpatialEntity(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialEntity: ...
@@ -149,23 +169,27 @@ class SpatialEntity(winrt.system.Object):
     @_property
     def properties(self) -> typing.Optional[winrt.windows.foundation.collections.ValueSet]: ...
 
+@typing.final
 class SpatialEntityAddedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialEntityAddedEventArgs: ...
     @_property
     def entity(self) -> typing.Optional[SpatialEntity]: ...
 
+@typing.final
 class SpatialEntityRemovedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialEntityRemovedEventArgs: ...
     @_property
     def entity(self) -> typing.Optional[SpatialEntity]: ...
 
+@typing.final
 class SpatialEntityStore_Static(type):
     def try_get(cls, session: typing.Optional[winrt.windows.system.remotesystems.RemoteSystemSession], /) -> typing.Optional[SpatialEntityStore]: ...
     @_property
     def is_supported(cls) -> bool: ...
 
+@typing.final
 class SpatialEntityStore(winrt.system.Object, metaclass=SpatialEntityStore_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialEntityStore: ...
@@ -173,12 +197,14 @@ class SpatialEntityStore(winrt.system.Object, metaclass=SpatialEntityStore_Stati
     def remove_async(self, entity: typing.Optional[SpatialEntity], /) -> winrt.windows.foundation.IAsyncAction: ...
     def save_async(self, entity: typing.Optional[SpatialEntity], /) -> winrt.windows.foundation.IAsyncAction: ...
 
+@typing.final
 class SpatialEntityUpdatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialEntityUpdatedEventArgs: ...
     @_property
     def entity(self) -> typing.Optional[SpatialEntity]: ...
 
+@typing.final
 class SpatialEntityWatcher(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialEntityWatcher: ...
@@ -195,6 +221,7 @@ class SpatialEntityWatcher(winrt.system.Object):
     @_property
     def status(self) -> SpatialEntityWatcherStatus: ...
 
+@typing.final
 class SpatialLocation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialLocation: ...
@@ -215,9 +242,11 @@ class SpatialLocation(winrt.system.Object):
     @_property
     def absolute_angular_velocity_axis_angle(self) -> winrt.windows.foundation.numerics.Vector3: ...
 
+@typing.final
 class SpatialLocator_Static(type):
     def get_default(cls) -> typing.Optional[SpatialLocator]: ...
 
+@typing.final
 class SpatialLocator(winrt.system.Object, metaclass=SpatialLocator_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialLocator: ...
@@ -245,6 +274,7 @@ class SpatialLocator(winrt.system.Object, metaclass=SpatialLocator_Static):
     @_property
     def locatability(self) -> SpatialLocatability: ...
 
+@typing.final
 class SpatialLocatorAttachedFrameOfReference(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialLocatorAttachedFrameOfReference: ...
@@ -260,6 +290,7 @@ class SpatialLocatorAttachedFrameOfReference(winrt.system.Object):
     @relative_orientation.setter
     def relative_orientation(self, value: winrt.windows.foundation.numerics.Quaternion) -> None: ...
 
+@typing.final
 class SpatialLocatorPositionalTrackingDeactivatingEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialLocatorPositionalTrackingDeactivatingEventArgs: ...
@@ -268,6 +299,7 @@ class SpatialLocatorPositionalTrackingDeactivatingEventArgs(winrt.system.Object)
     @canceled.setter
     def canceled(self, value: bool) -> None: ...
 
+@typing.final
 class SpatialStageFrameOfReference_Static(type):
     def request_new_stage_async(cls) -> winrt.windows.foundation.IAsyncOperation[SpatialStageFrameOfReference]: ...
     def add_current_changed(cls, handler: winrt.windows.foundation.EventHandler[winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
@@ -275,6 +307,7 @@ class SpatialStageFrameOfReference_Static(type):
     @_property
     def current(cls) -> typing.Optional[SpatialStageFrameOfReference]: ...
 
+@typing.final
 class SpatialStageFrameOfReference(winrt.system.Object, metaclass=SpatialStageFrameOfReference_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialStageFrameOfReference: ...
@@ -287,6 +320,7 @@ class SpatialStageFrameOfReference(winrt.system.Object, metaclass=SpatialStageFr
     @_property
     def movement_range(self) -> SpatialMovementRange: ...
 
+@typing.final
 class SpatialStationaryFrameOfReference(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialStationaryFrameOfReference: ...

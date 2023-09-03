@@ -19,6 +19,7 @@ from winrt.windows.networking.pushnotifications import PushNotificationType
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class PushNotificationChannel(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PushNotificationChannel: ...
@@ -30,6 +31,7 @@ class PushNotificationChannel(winrt.system.Object):
     @_property
     def uri(self) -> str: ...
 
+@typing.final
 class PushNotificationChannelManager_Static(type):
     @typing.overload
     def create_push_notification_channel_for_application_async(cls) -> winrt.windows.foundation.IAsyncOperation[PushNotificationChannel]: ...
@@ -41,10 +43,12 @@ class PushNotificationChannelManager_Static(type):
     def add_channels_revoked(cls, handler: winrt.windows.foundation.EventHandler[PushNotificationChannelsRevokedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_channels_revoked(cls, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class PushNotificationChannelManager(winrt.system.Object, metaclass=PushNotificationChannelManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PushNotificationChannelManager: ...
 
+@typing.final
 class PushNotificationChannelManagerForUser(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PushNotificationChannelManagerForUser: ...
@@ -60,10 +64,12 @@ class PushNotificationChannelManagerForUser(winrt.system.Object):
     @_property
     def user(self) -> typing.Optional[winrt.windows.system.User]: ...
 
+@typing.final
 class PushNotificationChannelsRevokedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PushNotificationChannelsRevokedEventArgs: ...
 
+@typing.final
 class PushNotificationReceivedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PushNotificationReceivedEventArgs: ...
@@ -82,6 +88,7 @@ class PushNotificationReceivedEventArgs(winrt.system.Object):
     @_property
     def toast_notification(self) -> typing.Optional[winrt.windows.ui.notifications.ToastNotification]: ...
 
+@typing.final
 class RawNotification(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RawNotification: ...

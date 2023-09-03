@@ -20,6 +20,7 @@ from winrt.windows.media.transcoding import MediaVideoProcessingAlgorithm, Trans
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class MediaTranscoder(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaTranscoder: ...
@@ -57,6 +58,7 @@ class MediaTranscoder(winrt.system.Object):
     @video_processing_algorithm.setter
     def video_processing_algorithm(self, value: MediaVideoProcessingAlgorithm) -> None: ...
 
+@typing.final
 class PrepareTranscodeResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrepareTranscodeResult: ...

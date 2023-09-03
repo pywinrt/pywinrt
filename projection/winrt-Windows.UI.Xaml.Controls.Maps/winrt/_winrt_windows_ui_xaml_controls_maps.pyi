@@ -23,11 +23,13 @@ from winrt.windows.ui.xaml.controls.maps import MapAnimationKind, MapCameraChang
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class MapZoomLevelRange:
     min: winrt.system.Double
     max: winrt.system.Double
     def __init__(self, min: winrt.system.Double, max: winrt.system.Double) -> None: ...
 
+@typing.final
 class CustomMapTileDataSource(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CustomMapTileDataSource: ...
@@ -35,6 +37,7 @@ class CustomMapTileDataSource(winrt.system.Object):
     def add_bitmap_requested(self, handler: winrt.windows.foundation.TypedEventHandler[CustomMapTileDataSource, MapTileBitmapRequestedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_bitmap_requested(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class HttpMapTileDataSource(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HttpMapTileDataSource: ...
@@ -55,6 +58,7 @@ class HttpMapTileDataSource(winrt.system.Object):
     @_property
     def additional_request_headers(self) -> typing.Optional[winrt.windows.foundation.collections.IMap[str, str]]: ...
 
+@typing.final
 class LocalMapTileDataSource(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LocalMapTileDataSource: ...
@@ -69,6 +73,7 @@ class LocalMapTileDataSource(winrt.system.Object):
     @uri_format_string.setter
     def uri_format_string(self, value: str) -> None: ...
 
+@typing.final
 class MapActualCameraChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapActualCameraChangedEventArgs: ...
@@ -78,6 +83,7 @@ class MapActualCameraChangedEventArgs(winrt.system.Object):
     @_property
     def change_reason(self) -> MapCameraChangeReason: ...
 
+@typing.final
 class MapActualCameraChangingEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapActualCameraChangingEventArgs: ...
@@ -87,6 +93,7 @@ class MapActualCameraChangingEventArgs(winrt.system.Object):
     @_property
     def change_reason(self) -> MapCameraChangeReason: ...
 
+@typing.final
 class MapBillboard_Static(type):
     @_property
     def collision_behavior_desired_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
@@ -95,6 +102,7 @@ class MapBillboard_Static(type):
     @_property
     def normalized_anchor_point_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class MapBillboard(winrt.system.Object, metaclass=MapBillboard_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapBillboard: ...
@@ -118,6 +126,7 @@ class MapBillboard(winrt.system.Object, metaclass=MapBillboard_Static):
     @_property
     def reference_camera(self) -> typing.Optional[MapCamera]: ...
 
+@typing.final
 class MapCamera(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapCamera: ...
@@ -150,6 +159,7 @@ class MapCamera(winrt.system.Object):
     @field_of_view.setter
     def field_of_view(self, value: winrt.system.Double) -> None: ...
 
+@typing.final
 class MapContextRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapContextRequestedEventArgs: ...
@@ -161,6 +171,7 @@ class MapContextRequestedEventArgs(winrt.system.Object):
     @_property
     def position(self) -> winrt.windows.foundation.Point: ...
 
+@typing.final
 class MapControl_Static(type):
     def get_location(cls, element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], /) -> typing.Optional[winrt.windows.devices.geolocation.Geopoint]: ...
     def get_normalized_anchor_point(cls, element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], /) -> winrt.windows.foundation.Point: ...
@@ -247,6 +258,7 @@ class MapControl_Static(type):
     @_property
     def can_tilt_down_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class MapControl(winrt.system.Object, metaclass=MapControl_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapControl: ...
@@ -473,6 +485,7 @@ class MapControl(winrt.system.Object, metaclass=MapControl_Static):
     @_property
     def can_zoom_out(self) -> bool: ...
 
+@typing.final
 class MapControlBusinessLandmarkClickEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapControlBusinessLandmarkClickEventArgs: ...
@@ -480,6 +493,7 @@ class MapControlBusinessLandmarkClickEventArgs(winrt.system.Object):
     @_property
     def local_locations(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.services.maps.localsearch.LocalLocation]]: ...
 
+@typing.final
 class MapControlBusinessLandmarkPointerEnteredEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapControlBusinessLandmarkPointerEnteredEventArgs: ...
@@ -487,6 +501,7 @@ class MapControlBusinessLandmarkPointerEnteredEventArgs(winrt.system.Object):
     @_property
     def local_locations(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.services.maps.localsearch.LocalLocation]]: ...
 
+@typing.final
 class MapControlBusinessLandmarkPointerExitedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapControlBusinessLandmarkPointerExitedEventArgs: ...
@@ -494,6 +509,7 @@ class MapControlBusinessLandmarkPointerExitedEventArgs(winrt.system.Object):
     @_property
     def local_locations(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.services.maps.localsearch.LocalLocation]]: ...
 
+@typing.final
 class MapControlBusinessLandmarkRightTappedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapControlBusinessLandmarkRightTappedEventArgs: ...
@@ -501,9 +517,11 @@ class MapControlBusinessLandmarkRightTappedEventArgs(winrt.system.Object):
     @_property
     def local_locations(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.services.maps.localsearch.LocalLocation]]: ...
 
+@typing.final
 class MapControlDataHelper_Static(type):
     def create_map_control(cls, raster_render_mode: bool, /) -> typing.Optional[MapControl]: ...
 
+@typing.final
 class MapControlDataHelper(winrt.system.Object, metaclass=MapControlDataHelper_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapControlDataHelper: ...
@@ -525,6 +543,7 @@ class MapControlDataHelper(winrt.system.Object, metaclass=MapControlDataHelper_S
     def add_transit_feature_pointer_exited(self, value: winrt.windows.foundation.TypedEventHandler[MapControl, MapControlTransitFeaturePointerExitedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_transit_feature_pointer_exited(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class MapControlTransitFeatureClickEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapControlTransitFeatureClickEventArgs: ...
@@ -536,6 +555,7 @@ class MapControlTransitFeatureClickEventArgs(winrt.system.Object):
     @_property
     def transit_properties(self) -> typing.Optional[winrt.windows.foundation.collections.IMapView[str, winrt.system.Object]]: ...
 
+@typing.final
 class MapControlTransitFeaturePointerEnteredEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapControlTransitFeaturePointerEnteredEventArgs: ...
@@ -547,6 +567,7 @@ class MapControlTransitFeaturePointerEnteredEventArgs(winrt.system.Object):
     @_property
     def transit_properties(self) -> typing.Optional[winrt.windows.foundation.collections.IMapView[str, winrt.system.Object]]: ...
 
+@typing.final
 class MapControlTransitFeaturePointerExitedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapControlTransitFeaturePointerExitedEventArgs: ...
@@ -558,6 +579,7 @@ class MapControlTransitFeaturePointerExitedEventArgs(winrt.system.Object):
     @_property
     def transit_properties(self) -> typing.Optional[winrt.windows.foundation.collections.IMapView[str, winrt.system.Object]]: ...
 
+@typing.final
 class MapControlTransitFeatureRightTappedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapControlTransitFeatureRightTappedEventArgs: ...
@@ -569,16 +591,19 @@ class MapControlTransitFeatureRightTappedEventArgs(winrt.system.Object):
     @_property
     def transit_properties(self) -> typing.Optional[winrt.windows.foundation.collections.IMapView[str, winrt.system.Object]]: ...
 
+@typing.final
 class MapCustomExperience(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapCustomExperience: ...
     def __new__(cls: typing.Type[MapCustomExperience]) -> MapCustomExperience:...
 
+@typing.final
 class MapCustomExperienceChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapCustomExperienceChangedEventArgs: ...
     def __new__(cls: typing.Type[MapCustomExperienceChangedEventArgs]) -> MapCustomExperienceChangedEventArgs:...
 
+@typing.final
 class MapElement_Static(type):
     @_property
     def visible_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
@@ -595,6 +620,7 @@ class MapElement_Static(type):
     @_property
     def is_enabled_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class MapElement(winrt.system.Object, metaclass=MapElement_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapElement: ...
@@ -628,6 +654,7 @@ class MapElement(winrt.system.Object, metaclass=MapElement_Static):
     @is_enabled.setter
     def is_enabled(self, value: bool) -> None: ...
 
+@typing.final
 class MapElement3D_Static(type):
     @_property
     def heading_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
@@ -640,6 +667,7 @@ class MapElement3D_Static(type):
     @_property
     def scale_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class MapElement3D(winrt.system.Object, metaclass=MapElement3D_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapElement3D: ...
@@ -669,6 +697,7 @@ class MapElement3D(winrt.system.Object, metaclass=MapElement3D_Static):
     @heading.setter
     def heading(self, value: winrt.system.Double) -> None: ...
 
+@typing.final
 class MapElementClickEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapElementClickEventArgs: ...
@@ -680,6 +709,7 @@ class MapElementClickEventArgs(winrt.system.Object):
     @_property
     def position(self) -> winrt.windows.foundation.Point: ...
 
+@typing.final
 class MapElementPointerEnteredEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapElementPointerEnteredEventArgs: ...
@@ -691,6 +721,7 @@ class MapElementPointerEnteredEventArgs(winrt.system.Object):
     @_property
     def position(self) -> winrt.windows.foundation.Point: ...
 
+@typing.final
 class MapElementPointerExitedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapElementPointerExitedEventArgs: ...
@@ -702,10 +733,12 @@ class MapElementPointerExitedEventArgs(winrt.system.Object):
     @_property
     def position(self) -> winrt.windows.foundation.Point: ...
 
+@typing.final
 class MapElementsLayer_Static(type):
     @_property
     def map_elements_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class MapElementsLayer(winrt.system.Object, metaclass=MapElementsLayer_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapElementsLayer: ...
@@ -723,6 +756,7 @@ class MapElementsLayer(winrt.system.Object, metaclass=MapElementsLayer_Static):
     @map_elements.setter
     def map_elements(self, value: typing.Optional[winrt.windows.foundation.collections.IVector[MapElement]]) -> None: ...
 
+@typing.final
 class MapElementsLayerClickEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapElementsLayerClickEventArgs: ...
@@ -734,6 +768,7 @@ class MapElementsLayerClickEventArgs(winrt.system.Object):
     @_property
     def position(self) -> winrt.windows.foundation.Point: ...
 
+@typing.final
 class MapElementsLayerContextRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapElementsLayerContextRequestedEventArgs: ...
@@ -745,6 +780,7 @@ class MapElementsLayerContextRequestedEventArgs(winrt.system.Object):
     @_property
     def position(self) -> winrt.windows.foundation.Point: ...
 
+@typing.final
 class MapElementsLayerPointerEnteredEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapElementsLayerPointerEnteredEventArgs: ...
@@ -756,6 +792,7 @@ class MapElementsLayerPointerEnteredEventArgs(winrt.system.Object):
     @_property
     def position(self) -> winrt.windows.foundation.Point: ...
 
+@typing.final
 class MapElementsLayerPointerExitedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapElementsLayerPointerExitedEventArgs: ...
@@ -767,6 +804,7 @@ class MapElementsLayerPointerExitedEventArgs(winrt.system.Object):
     @_property
     def position(self) -> winrt.windows.foundation.Point: ...
 
+@typing.final
 class MapIcon_Static(type):
     @_property
     def location_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
@@ -777,6 +815,7 @@ class MapIcon_Static(type):
     @_property
     def collision_behavior_desired_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class MapIcon(winrt.system.Object, metaclass=MapIcon_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapIcon: ...
@@ -802,6 +841,7 @@ class MapIcon(winrt.system.Object, metaclass=MapIcon_Static):
     @collision_behavior_desired.setter
     def collision_behavior_desired(self, value: MapElementCollisionBehavior) -> None: ...
 
+@typing.final
 class MapInputEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapInputEventArgs: ...
@@ -811,6 +851,7 @@ class MapInputEventArgs(winrt.system.Object):
     @_property
     def position(self) -> winrt.windows.foundation.Point: ...
 
+@typing.final
 class MapItemsControl_Static(type):
     @_property
     def item_template_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
@@ -819,6 +860,7 @@ class MapItemsControl_Static(type):
     @_property
     def items_source_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class MapItemsControl(winrt.system.Object, metaclass=MapItemsControl_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapItemsControl: ...
@@ -834,6 +876,7 @@ class MapItemsControl(winrt.system.Object, metaclass=MapItemsControl_Static):
     @_property
     def items(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.ui.xaml.DependencyObject]]: ...
 
+@typing.final
 class MapLayer_Static(type):
     @_property
     def map_tab_index_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
@@ -842,6 +885,7 @@ class MapLayer_Static(type):
     @_property
     def z_index_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class MapLayer(winrt.system.Object, metaclass=MapLayer_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapLayer: ...
@@ -859,17 +903,20 @@ class MapLayer(winrt.system.Object, metaclass=MapLayer_Static):
     @map_tab_index.setter
     def map_tab_index(self, value: winrt.system.Int32) -> None: ...
 
+@typing.final
 class MapModel3D_Static(type):
     @typing.overload
     def create_from3_m_f_async(cls, source: typing.Optional[winrt.windows.storage.streams.IRandomAccessStreamReference], /) -> winrt.windows.foundation.IAsyncOperation[MapModel3D]: ...
     @typing.overload
     def create_from3_m_f_async(cls, source: typing.Optional[winrt.windows.storage.streams.IRandomAccessStreamReference], shading_option: MapModel3DShadingOption, /) -> winrt.windows.foundation.IAsyncOperation[MapModel3D]: ...
 
+@typing.final
 class MapModel3D(winrt.system.Object, metaclass=MapModel3D_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapModel3D: ...
     def __new__(cls: typing.Type[MapModel3D]) -> MapModel3D:...
 
+@typing.final
 class MapPolygon_Static(type):
     @_property
     def path_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
@@ -878,6 +925,7 @@ class MapPolygon_Static(type):
     @_property
     def stroke_thickness_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class MapPolygon(winrt.system.Object, metaclass=MapPolygon_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapPolygon: ...
@@ -905,12 +953,14 @@ class MapPolygon(winrt.system.Object, metaclass=MapPolygon_Static):
     @_property
     def paths(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.devices.geolocation.Geopath]]: ...
 
+@typing.final
 class MapPolyline_Static(type):
     @_property
     def path_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
     @_property
     def stroke_dashed_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class MapPolyline(winrt.system.Object, metaclass=MapPolyline_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapPolyline: ...
@@ -932,6 +982,7 @@ class MapPolyline(winrt.system.Object, metaclass=MapPolyline_Static):
     @path.setter
     def path(self, value: typing.Optional[winrt.windows.devices.geolocation.Geopath]) -> None: ...
 
+@typing.final
 class MapRightTappedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapRightTappedEventArgs: ...
@@ -941,6 +992,7 @@ class MapRightTappedEventArgs(winrt.system.Object):
     @_property
     def position(self) -> winrt.windows.foundation.Point: ...
 
+@typing.final
 class MapRouteView(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapRouteView: ...
@@ -956,6 +1008,7 @@ class MapRouteView(winrt.system.Object):
     @_property
     def route(self) -> typing.Optional[winrt.windows.services.maps.MapRoute]: ...
 
+@typing.final
 class MapScene_Static(type):
     @typing.overload
     def create_from_bounding_box(cls, bounds: typing.Optional[winrt.windows.devices.geolocation.GeoboundingBox], /) -> typing.Optional[MapScene]: ...
@@ -975,6 +1028,7 @@ class MapScene_Static(type):
     @typing.overload
     def create_from_locations(cls, locations: typing.Iterable[winrt.windows.devices.geolocation.Geopoint], heading_in_degrees: winrt.system.Double, pitch_in_degrees: winrt.system.Double, /) -> typing.Optional[MapScene]: ...
 
+@typing.final
 class MapScene(winrt.system.Object, metaclass=MapScene_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapScene: ...
@@ -983,6 +1037,7 @@ class MapScene(winrt.system.Object, metaclass=MapScene_Static):
     @_property
     def target_camera(self) -> typing.Optional[MapCamera]: ...
 
+@typing.final
 class MapStyleSheet_Static(type):
     def aerial(cls) -> typing.Optional[MapStyleSheet]: ...
     def aerial_with_overlay(cls) -> typing.Optional[MapStyleSheet]: ...
@@ -994,10 +1049,12 @@ class MapStyleSheet_Static(type):
     def road_light(cls) -> typing.Optional[MapStyleSheet]: ...
     def try_parse_from_json(cls, style_as_json: str, /) -> typing.Tuple[bool, typing.Optional[MapStyleSheet]]: ...
 
+@typing.final
 class MapStyleSheet(winrt.system.Object, metaclass=MapStyleSheet_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapStyleSheet: ...
 
+@typing.final
 class MapStyleSheetEntries_Static(type):
     @_property
     def admin_district(cls) -> str: ...
@@ -1128,10 +1185,12 @@ class MapStyleSheetEntries_Static(type):
     @_property
     def water_route(cls) -> str: ...
 
+@typing.final
 class MapStyleSheetEntries(winrt.system.Object, metaclass=MapStyleSheetEntries_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapStyleSheetEntries: ...
 
+@typing.final
 class MapStyleSheetEntryStates_Static(type):
     @_property
     def disabled(cls) -> str: ...
@@ -1140,10 +1199,12 @@ class MapStyleSheetEntryStates_Static(type):
     @_property
     def selected(cls) -> str: ...
 
+@typing.final
 class MapStyleSheetEntryStates(winrt.system.Object, metaclass=MapStyleSheetEntryStates_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapStyleSheetEntryStates: ...
 
+@typing.final
 class MapTargetCameraChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapTargetCameraChangedEventArgs: ...
@@ -1153,6 +1214,7 @@ class MapTargetCameraChangedEventArgs(winrt.system.Object):
     @_property
     def change_reason(self) -> MapCameraChangeReason: ...
 
+@typing.final
 class MapTileBitmapRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapTileBitmapRequest: ...
@@ -1163,12 +1225,14 @@ class MapTileBitmapRequest(winrt.system.Object):
     @pixel_data.setter
     def pixel_data(self, value: typing.Optional[winrt.windows.storage.streams.IRandomAccessStreamReference]) -> None: ...
 
+@typing.final
 class MapTileBitmapRequestDeferral(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapTileBitmapRequestDeferral: ...
     def __new__(cls: typing.Type[MapTileBitmapRequestDeferral]) -> MapTileBitmapRequestDeferral:...
     def complete(self) -> None: ...
 
+@typing.final
 class MapTileBitmapRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapTileBitmapRequestedEventArgs: ...
@@ -1184,11 +1248,13 @@ class MapTileBitmapRequestedEventArgs(winrt.system.Object):
     @_property
     def frame_index(self) -> winrt.system.Int32: ...
 
+@typing.final
 class MapTileDataSource(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapTileDataSource: ...
     def __new__(cls: typing.Type[MapTileDataSource]) -> MapTileDataSource:...
 
+@typing.final
 class MapTileSource_Static(type):
     @_property
     def allow_overstretch_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
@@ -1221,6 +1287,7 @@ class MapTileSource_Static(type):
     @_property
     def frame_duration_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class MapTileSource(winrt.system.Object, metaclass=MapTileSource_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapTileSource: ...
@@ -1296,6 +1363,7 @@ class MapTileSource(winrt.system.Object, metaclass=MapTileSource_Static):
     @_property
     def animation_state(self) -> MapTileAnimationState: ...
 
+@typing.final
 class MapTileUriRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapTileUriRequest: ...
@@ -1306,12 +1374,14 @@ class MapTileUriRequest(winrt.system.Object):
     @uri.setter
     def uri(self, value: typing.Optional[winrt.windows.foundation.Uri]) -> None: ...
 
+@typing.final
 class MapTileUriRequestDeferral(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapTileUriRequestDeferral: ...
     def __new__(cls: typing.Type[MapTileUriRequestDeferral]) -> MapTileUriRequestDeferral:...
     def complete(self) -> None: ...
 
+@typing.final
 class MapTileUriRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapTileUriRequestedEventArgs: ...
@@ -1327,6 +1397,7 @@ class MapTileUriRequestedEventArgs(winrt.system.Object):
     @_property
     def frame_index(self) -> winrt.system.Int32: ...
 
+@typing.final
 class StreetsideExperience(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StreetsideExperience: ...
@@ -1359,12 +1430,14 @@ class StreetsideExperience(winrt.system.Object):
     @address_text_visible.setter
     def address_text_visible(self, value: bool) -> None: ...
 
+@typing.final
 class StreetsidePanorama_Static(type):
     @typing.overload
     def find_nearby_async(cls, location: typing.Optional[winrt.windows.devices.geolocation.Geopoint], /) -> winrt.windows.foundation.IAsyncOperation[StreetsidePanorama]: ...
     @typing.overload
     def find_nearby_async(cls, location: typing.Optional[winrt.windows.devices.geolocation.Geopoint], radius_in_meters: winrt.system.Double, /) -> winrt.windows.foundation.IAsyncOperation[StreetsidePanorama]: ...
 
+@typing.final
 class StreetsidePanorama(winrt.system.Object, metaclass=StreetsidePanorama_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StreetsidePanorama: ...

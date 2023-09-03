@@ -16,6 +16,7 @@ import winrt.windows.storage.streams
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class LocalContentSuggestionSettings(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LocalContentSuggestionSettings: ...
@@ -33,10 +34,12 @@ class LocalContentSuggestionSettings(winrt.system.Object):
     @_property
     def properties_to_match(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[str]]: ...
 
+@typing.final
 class SearchPane_Static(type):
     def get_for_current_view(cls) -> typing.Optional[SearchPane]: ...
     def hide_this_application(cls) -> None: ...
 
+@typing.final
 class SearchPane(winrt.system.Object, metaclass=SearchPane_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SearchPane: ...
@@ -79,6 +82,7 @@ class SearchPane(winrt.system.Object, metaclass=SearchPane_Static):
     @_property
     def visible(self) -> bool: ...
 
+@typing.final
 class SearchPaneQueryChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SearchPaneQueryChangedEventArgs: ...
@@ -89,6 +93,7 @@ class SearchPaneQueryChangedEventArgs(winrt.system.Object):
     @_property
     def query_text(self) -> str: ...
 
+@typing.final
 class SearchPaneQueryLinguisticDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SearchPaneQueryLinguisticDetails: ...
@@ -99,6 +104,7 @@ class SearchPaneQueryLinguisticDetails(winrt.system.Object):
     @_property
     def query_text_composition_start(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class SearchPaneQuerySubmittedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SearchPaneQuerySubmittedEventArgs: ...
@@ -109,12 +115,14 @@ class SearchPaneQuerySubmittedEventArgs(winrt.system.Object):
     @_property
     def linguistic_details(self) -> typing.Optional[SearchPaneQueryLinguisticDetails]: ...
 
+@typing.final
 class SearchPaneResultSuggestionChosenEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SearchPaneResultSuggestionChosenEventArgs: ...
     @_property
     def tag(self) -> str: ...
 
+@typing.final
 class SearchPaneSuggestionsRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SearchPaneSuggestionsRequest: ...
@@ -124,11 +132,13 @@ class SearchPaneSuggestionsRequest(winrt.system.Object):
     @_property
     def search_suggestion_collection(self) -> typing.Optional[SearchSuggestionCollection]: ...
 
+@typing.final
 class SearchPaneSuggestionsRequestDeferral(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SearchPaneSuggestionsRequestDeferral: ...
     def complete(self) -> None: ...
 
+@typing.final
 class SearchPaneSuggestionsRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SearchPaneSuggestionsRequestedEventArgs: ...
@@ -141,12 +151,14 @@ class SearchPaneSuggestionsRequestedEventArgs(winrt.system.Object):
     @_property
     def request(self) -> typing.Optional[SearchPaneSuggestionsRequest]: ...
 
+@typing.final
 class SearchPaneVisibilityChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SearchPaneVisibilityChangedEventArgs: ...
     @_property
     def visible(self) -> bool: ...
 
+@typing.final
 class SearchQueryLinguisticDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SearchQueryLinguisticDetails: ...
@@ -158,6 +170,7 @@ class SearchQueryLinguisticDetails(winrt.system.Object):
     @_property
     def query_text_composition_start(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class SearchSuggestionCollection(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SearchSuggestionCollection: ...
@@ -168,6 +181,7 @@ class SearchSuggestionCollection(winrt.system.Object):
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class SearchSuggestionsRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SearchSuggestionsRequest: ...
@@ -177,11 +191,13 @@ class SearchSuggestionsRequest(winrt.system.Object):
     @_property
     def search_suggestion_collection(self) -> typing.Optional[SearchSuggestionCollection]: ...
 
+@typing.final
 class SearchSuggestionsRequestDeferral(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SearchSuggestionsRequestDeferral: ...
     def complete(self) -> None: ...
 
+@typing.final
 class ISearchPaneQueryChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISearchPaneQueryChangedEventArgs: ...

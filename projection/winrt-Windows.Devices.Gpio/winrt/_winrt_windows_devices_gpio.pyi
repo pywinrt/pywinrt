@@ -17,16 +17,19 @@ from winrt.windows.devices.gpio import GpioChangePolarity, GpioOpenStatus, GpioP
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class GpioChangeCount:
     count: winrt.system.UInt64
     relative_time: datetime.timedelta
     def __init__(self, count: winrt.system.UInt64, relative_time: datetime.timedelta) -> None: ...
 
+@typing.final
 class GpioChangeRecord:
     relative_time: datetime.timedelta
     edge: GpioPinEdge
     def __init__(self, relative_time: datetime.timedelta, edge: GpioPinEdge) -> None: ...
 
+@typing.final
 class GpioChangeCounter(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -45,6 +48,7 @@ class GpioChangeCounter(winrt.system.Object):
     @_property
     def is_started(self) -> bool: ...
 
+@typing.final
 class GpioChangeReader(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -77,11 +81,13 @@ class GpioChangeReader(winrt.system.Object):
     @_property
     def length(self) -> winrt.system.Int32: ...
 
+@typing.final
 class GpioController_Static(type):
     def get_controllers_async(cls, provider: typing.Optional[winrt.windows.devices.gpio.provider.IGpioProvider], /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[GpioController]]: ...
     def get_default(cls) -> typing.Optional[GpioController]: ...
     def get_default_async(cls) -> winrt.windows.foundation.IAsyncOperation[GpioController]: ...
 
+@typing.final
 class GpioController(winrt.system.Object, metaclass=GpioController_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GpioController: ...
@@ -93,6 +99,7 @@ class GpioController(winrt.system.Object, metaclass=GpioController_Static):
     @_property
     def pin_count(self) -> winrt.system.Int32: ...
 
+@typing.final
 class GpioPin(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -115,6 +122,7 @@ class GpioPin(winrt.system.Object):
     @_property
     def sharing_mode(self) -> GpioSharingMode: ...
 
+@typing.final
 class GpioPinValueChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GpioPinValueChangedEventArgs: ...

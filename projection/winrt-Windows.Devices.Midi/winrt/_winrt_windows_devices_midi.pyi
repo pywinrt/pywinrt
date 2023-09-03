@@ -17,6 +17,7 @@ from winrt.windows.devices.midi import MidiMessageType
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class MidiActiveSensingMessage(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MidiActiveSensingMessage: ...
@@ -28,6 +29,7 @@ class MidiActiveSensingMessage(winrt.system.Object):
     @_property
     def type(self) -> MidiMessageType: ...
 
+@typing.final
 class MidiChannelPressureMessage(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MidiChannelPressureMessage: ...
@@ -43,6 +45,7 @@ class MidiChannelPressureMessage(winrt.system.Object):
     @_property
     def type(self) -> MidiMessageType: ...
 
+@typing.final
 class MidiContinueMessage(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MidiContinueMessage: ...
@@ -54,6 +57,7 @@ class MidiContinueMessage(winrt.system.Object):
     @_property
     def type(self) -> MidiMessageType: ...
 
+@typing.final
 class MidiControlChangeMessage(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MidiControlChangeMessage: ...
@@ -71,10 +75,12 @@ class MidiControlChangeMessage(winrt.system.Object):
     @_property
     def type(self) -> MidiMessageType: ...
 
+@typing.final
 class MidiInPort_Static(type):
     def from_id_async(cls, device_id: str, /) -> winrt.windows.foundation.IAsyncOperation[MidiInPort]: ...
     def get_device_selector(cls) -> str: ...
 
+@typing.final
 class MidiInPort(winrt.system.Object, metaclass=MidiInPort_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -86,12 +92,14 @@ class MidiInPort(winrt.system.Object, metaclass=MidiInPort_Static):
     @_property
     def device_id(self) -> str: ...
 
+@typing.final
 class MidiMessageReceivedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MidiMessageReceivedEventArgs: ...
     @_property
     def message(self) -> typing.Optional[IMidiMessage]: ...
 
+@typing.final
 class MidiNoteOffMessage(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MidiNoteOffMessage: ...
@@ -109,6 +117,7 @@ class MidiNoteOffMessage(winrt.system.Object):
     @_property
     def velocity(self) -> winrt.system.UInt8: ...
 
+@typing.final
 class MidiNoteOnMessage(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MidiNoteOnMessage: ...
@@ -126,10 +135,12 @@ class MidiNoteOnMessage(winrt.system.Object):
     @_property
     def velocity(self) -> winrt.system.UInt8: ...
 
+@typing.final
 class MidiOutPort_Static(type):
     def from_id_async(cls, device_id: str, /) -> winrt.windows.foundation.IAsyncOperation[IMidiOutPort]: ...
     def get_device_selector(cls) -> str: ...
 
+@typing.final
 class MidiOutPort(winrt.system.Object, metaclass=MidiOutPort_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -141,6 +152,7 @@ class MidiOutPort(winrt.system.Object, metaclass=MidiOutPort_Static):
     @_property
     def device_id(self) -> str: ...
 
+@typing.final
 class MidiPitchBendChangeMessage(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MidiPitchBendChangeMessage: ...
@@ -156,6 +168,7 @@ class MidiPitchBendChangeMessage(winrt.system.Object):
     @_property
     def channel(self) -> winrt.system.UInt8: ...
 
+@typing.final
 class MidiPolyphonicKeyPressureMessage(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MidiPolyphonicKeyPressureMessage: ...
@@ -173,6 +186,7 @@ class MidiPolyphonicKeyPressureMessage(winrt.system.Object):
     @_property
     def pressure(self) -> winrt.system.UInt8: ...
 
+@typing.final
 class MidiProgramChangeMessage(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MidiProgramChangeMessage: ...
@@ -188,6 +202,7 @@ class MidiProgramChangeMessage(winrt.system.Object):
     @_property
     def program(self) -> winrt.system.UInt8: ...
 
+@typing.final
 class MidiSongPositionPointerMessage(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MidiSongPositionPointerMessage: ...
@@ -201,6 +216,7 @@ class MidiSongPositionPointerMessage(winrt.system.Object):
     @_property
     def beats(self) -> winrt.system.UInt16: ...
 
+@typing.final
 class MidiSongSelectMessage(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MidiSongSelectMessage: ...
@@ -214,6 +230,7 @@ class MidiSongSelectMessage(winrt.system.Object):
     @_property
     def song(self) -> winrt.system.UInt8: ...
 
+@typing.final
 class MidiStartMessage(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MidiStartMessage: ...
@@ -225,6 +242,7 @@ class MidiStartMessage(winrt.system.Object):
     @_property
     def type(self) -> MidiMessageType: ...
 
+@typing.final
 class MidiStopMessage(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MidiStopMessage: ...
@@ -236,6 +254,7 @@ class MidiStopMessage(winrt.system.Object):
     @_property
     def type(self) -> MidiMessageType: ...
 
+@typing.final
 class MidiSynthesizer_Static(type):
     @typing.overload
     def create_async(cls) -> winrt.windows.foundation.IAsyncOperation[MidiSynthesizer]: ...
@@ -243,6 +262,7 @@ class MidiSynthesizer_Static(type):
     def create_async(cls, audio_device: typing.Optional[winrt.windows.devices.enumeration.DeviceInformation], /) -> winrt.windows.foundation.IAsyncOperation[MidiSynthesizer]: ...
     def is_synthesizer(cls, midi_device: typing.Optional[winrt.windows.devices.enumeration.DeviceInformation], /) -> bool: ...
 
+@typing.final
 class MidiSynthesizer(winrt.system.Object, metaclass=MidiSynthesizer_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -260,6 +280,7 @@ class MidiSynthesizer(winrt.system.Object, metaclass=MidiSynthesizer_Static):
     @_property
     def audio_device(self) -> typing.Optional[winrt.windows.devices.enumeration.DeviceInformation]: ...
 
+@typing.final
 class MidiSystemExclusiveMessage(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MidiSystemExclusiveMessage: ...
@@ -271,6 +292,7 @@ class MidiSystemExclusiveMessage(winrt.system.Object):
     @_property
     def type(self) -> MidiMessageType: ...
 
+@typing.final
 class MidiSystemResetMessage(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MidiSystemResetMessage: ...
@@ -282,6 +304,7 @@ class MidiSystemResetMessage(winrt.system.Object):
     @_property
     def type(self) -> MidiMessageType: ...
 
+@typing.final
 class MidiTimeCodeMessage(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MidiTimeCodeMessage: ...
@@ -297,6 +320,7 @@ class MidiTimeCodeMessage(winrt.system.Object):
     @_property
     def values(self) -> winrt.system.UInt8: ...
 
+@typing.final
 class MidiTimingClockMessage(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MidiTimingClockMessage: ...
@@ -308,6 +332,7 @@ class MidiTimingClockMessage(winrt.system.Object):
     @_property
     def type(self) -> MidiMessageType: ...
 
+@typing.final
 class MidiTuneRequestMessage(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MidiTuneRequestMessage: ...
@@ -319,6 +344,7 @@ class MidiTuneRequestMessage(winrt.system.Object):
     @_property
     def type(self) -> MidiMessageType: ...
 
+@typing.final
 class IMidiMessage(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IMidiMessage: ...
@@ -329,6 +355,7 @@ class IMidiMessage(winrt.system.Object):
     @_property
     def type(self) -> MidiMessageType: ...
 
+@typing.final
 class IMidiOutPort(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...

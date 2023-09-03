@@ -15,6 +15,7 @@ from winrt.windows.networking import DomainNameType, HostNameSortOptions, HostNa
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class EndpointPair(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EndpointPair: ...
@@ -36,9 +37,11 @@ class EndpointPair(winrt.system.Object):
     @local_host_name.setter
     def local_host_name(self, value: typing.Optional[HostName]) -> None: ...
 
+@typing.final
 class HostName_Static(type):
     def compare(cls, value1: str, value2: str, /) -> winrt.system.Int32: ...
 
+@typing.final
 class HostName(winrt.system.Object, metaclass=HostName_Static):
     def __str__(self) -> str: ...
     @staticmethod

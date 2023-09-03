@@ -18,6 +18,7 @@ from winrt.windows.networking.xboxlive import XboxLiveEndpointPairCreationBehavi
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class XboxLiveDeviceAddress_Static(type):
     def create_from_snapshot_base64(cls, base64: str, /) -> typing.Optional[XboxLiveDeviceAddress]: ...
     def create_from_snapshot_buffer(cls, buffer: typing.Optional[winrt.windows.storage.streams.IBuffer], /) -> typing.Optional[XboxLiveDeviceAddress]: ...
@@ -26,6 +27,7 @@ class XboxLiveDeviceAddress_Static(type):
     @_property
     def max_snapshot_bytes_size(cls) -> winrt.system.UInt32: ...
 
+@typing.final
 class XboxLiveDeviceAddress(winrt.system.Object, metaclass=XboxLiveDeviceAddress_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> XboxLiveDeviceAddress: ...
@@ -42,10 +44,12 @@ class XboxLiveDeviceAddress(winrt.system.Object, metaclass=XboxLiveDeviceAddress
     @_property
     def network_access_kind(self) -> XboxLiveNetworkAccessKind: ...
 
+@typing.final
 class XboxLiveEndpointPair_Static(type):
     def find_endpoint_pair_by_host_names_and_ports(cls, local_host_name: typing.Optional[winrt.windows.networking.HostName], local_port: str, remote_host_name: typing.Optional[winrt.windows.networking.HostName], remote_port: str, /) -> typing.Optional[XboxLiveEndpointPair]: ...
     def find_endpoint_pair_by_socket_address_bytes(cls, local_socket_address: winrt.system.Array[winrt.system.UInt8], remote_socket_address: winrt.system.Array[winrt.system.UInt8], /) -> typing.Optional[XboxLiveEndpointPair]: ...
 
+@typing.final
 class XboxLiveEndpointPair(winrt.system.Object, metaclass=XboxLiveEndpointPair_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> XboxLiveEndpointPair: ...
@@ -69,6 +73,7 @@ class XboxLiveEndpointPair(winrt.system.Object, metaclass=XboxLiveEndpointPair_S
     @_property
     def template(self) -> typing.Optional[XboxLiveEndpointPairTemplate]: ...
 
+@typing.final
 class XboxLiveEndpointPairCreationResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> XboxLiveEndpointPairCreationResult: ...
@@ -81,6 +86,7 @@ class XboxLiveEndpointPairCreationResult(winrt.system.Object):
     @_property
     def status(self) -> XboxLiveEndpointPairCreationStatus: ...
 
+@typing.final
 class XboxLiveEndpointPairStateChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> XboxLiveEndpointPairStateChangedEventArgs: ...
@@ -89,11 +95,13 @@ class XboxLiveEndpointPairStateChangedEventArgs(winrt.system.Object):
     @_property
     def old_state(self) -> XboxLiveEndpointPairState: ...
 
+@typing.final
 class XboxLiveEndpointPairTemplate_Static(type):
     def get_template_by_name(cls, name: str, /) -> typing.Optional[XboxLiveEndpointPairTemplate]: ...
     @_property
     def templates(cls) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[XboxLiveEndpointPairTemplate]]: ...
 
+@typing.final
 class XboxLiveEndpointPairTemplate(winrt.system.Object, metaclass=XboxLiveEndpointPairTemplate_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> XboxLiveEndpointPairTemplate: ...
@@ -122,12 +130,14 @@ class XboxLiveEndpointPairTemplate(winrt.system.Object, metaclass=XboxLiveEndpoi
     @_property
     def socket_kind(self) -> XboxLiveSocketKind: ...
 
+@typing.final
 class XboxLiveInboundEndpointPairCreatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> XboxLiveInboundEndpointPairCreatedEventArgs: ...
     @_property
     def endpoint_pair(self) -> typing.Optional[XboxLiveEndpointPair]: ...
 
+@typing.final
 class XboxLiveQualityOfServiceMeasurement_Static(type):
     def clear_private_payload(cls) -> None: ...
     def publish_private_payload_bytes(cls, payload: winrt.system.Array[winrt.system.UInt8], /) -> None: ...
@@ -150,6 +160,7 @@ class XboxLiveQualityOfServiceMeasurement_Static(type):
     @_property
     def max_private_payload_size(cls) -> winrt.system.UInt32: ...
 
+@typing.final
 class XboxLiveQualityOfServiceMeasurement(winrt.system.Object, metaclass=XboxLiveQualityOfServiceMeasurement_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> XboxLiveQualityOfServiceMeasurement: ...
@@ -182,6 +193,7 @@ class XboxLiveQualityOfServiceMeasurement(winrt.system.Object, metaclass=XboxLiv
     @_property
     def private_payload_results(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[XboxLiveQualityOfServicePrivatePayloadResult]]: ...
 
+@typing.final
 class XboxLiveQualityOfServiceMetricResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> XboxLiveQualityOfServiceMetricResult: ...
@@ -194,6 +206,7 @@ class XboxLiveQualityOfServiceMetricResult(winrt.system.Object):
     @_property
     def value(self) -> winrt.system.UInt64: ...
 
+@typing.final
 class XboxLiveQualityOfServicePrivatePayloadResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> XboxLiveQualityOfServicePrivatePayloadResult: ...

@@ -14,6 +14,7 @@ import winrt.windows.foundation
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class ContactDataProviderConnection(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactDataProviderConnection: ...
@@ -27,12 +28,14 @@ class ContactDataProviderConnection(winrt.system.Object):
     def add_delete_contact_requested(self, handler: winrt.windows.foundation.TypedEventHandler[ContactDataProviderConnection, ContactListDeleteContactRequestEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_delete_contact_requested(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class ContactDataProviderTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactDataProviderTriggerDetails: ...
     @_property
     def connection(self) -> typing.Optional[ContactDataProviderConnection]: ...
 
+@typing.final
 class ContactListCreateOrUpdateContactRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactListCreateOrUpdateContactRequest: ...
@@ -43,6 +46,7 @@ class ContactListCreateOrUpdateContactRequest(winrt.system.Object):
     @_property
     def contact_list_id(self) -> str: ...
 
+@typing.final
 class ContactListCreateOrUpdateContactRequestEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactListCreateOrUpdateContactRequestEventArgs: ...
@@ -50,6 +54,7 @@ class ContactListCreateOrUpdateContactRequestEventArgs(winrt.system.Object):
     @_property
     def request(self) -> typing.Optional[ContactListCreateOrUpdateContactRequest]: ...
 
+@typing.final
 class ContactListDeleteContactRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactListDeleteContactRequest: ...
@@ -60,6 +65,7 @@ class ContactListDeleteContactRequest(winrt.system.Object):
     @_property
     def contact_list_id(self) -> str: ...
 
+@typing.final
 class ContactListDeleteContactRequestEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactListDeleteContactRequestEventArgs: ...
@@ -67,6 +73,7 @@ class ContactListDeleteContactRequestEventArgs(winrt.system.Object):
     @_property
     def request(self) -> typing.Optional[ContactListDeleteContactRequest]: ...
 
+@typing.final
 class ContactListServerSearchReadBatchRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactListServerSearchReadBatchRequest: ...
@@ -82,6 +89,7 @@ class ContactListServerSearchReadBatchRequest(winrt.system.Object):
     @_property
     def suggested_batch_size(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class ContactListServerSearchReadBatchRequestEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactListServerSearchReadBatchRequestEventArgs: ...
@@ -89,6 +97,7 @@ class ContactListServerSearchReadBatchRequestEventArgs(winrt.system.Object):
     @_property
     def request(self) -> typing.Optional[ContactListServerSearchReadBatchRequest]: ...
 
+@typing.final
 class ContactListSyncManagerSyncRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactListSyncManagerSyncRequest: ...
@@ -97,6 +106,7 @@ class ContactListSyncManagerSyncRequest(winrt.system.Object):
     @_property
     def contact_list_id(self) -> str: ...
 
+@typing.final
 class ContactListSyncManagerSyncRequestEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactListSyncManagerSyncRequestEventArgs: ...

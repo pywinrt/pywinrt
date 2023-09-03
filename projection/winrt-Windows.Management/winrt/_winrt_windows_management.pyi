@@ -16,6 +16,7 @@ from winrt.windows.management import MdmAlertDataType, MdmAlertMark, MdmSessionS
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class MdmAlert(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MdmAlert: ...
@@ -47,6 +48,7 @@ class MdmAlert(winrt.system.Object):
     @_property
     def status(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class MdmSession(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MdmSession: ...
@@ -65,6 +67,7 @@ class MdmSession(winrt.system.Object):
     @_property
     def state(self) -> MdmSessionState: ...
 
+@typing.final
 class MdmSessionManager_Static(type):
     def delete_session_by_id(cls, session_id: str, /) -> None: ...
     def get_session_by_id(cls, session_id: str, /) -> typing.Optional[MdmSession]: ...
@@ -72,6 +75,7 @@ class MdmSessionManager_Static(type):
     @_property
     def session_ids(cls) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]: ...
 
+@typing.final
 class MdmSessionManager(winrt.system.Object, metaclass=MdmSessionManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MdmSessionManager: ...

@@ -17,6 +17,7 @@ from winrt.windows.devices.usb import UsbControlRecipient, UsbControlTransferTyp
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class UsbBulkInEndpointDescriptor(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UsbBulkInEndpointDescriptor: ...
@@ -27,6 +28,7 @@ class UsbBulkInEndpointDescriptor(winrt.system.Object):
     @_property
     def pipe(self) -> typing.Optional[UsbBulkInPipe]: ...
 
+@typing.final
 class UsbBulkInPipe(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UsbBulkInPipe: ...
@@ -43,6 +45,7 @@ class UsbBulkInPipe(winrt.system.Object):
     @_property
     def max_transfer_size_bytes(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class UsbBulkOutEndpointDescriptor(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UsbBulkOutEndpointDescriptor: ...
@@ -53,6 +56,7 @@ class UsbBulkOutEndpointDescriptor(winrt.system.Object):
     @_property
     def pipe(self) -> typing.Optional[UsbBulkOutPipe]: ...
 
+@typing.final
 class UsbBulkOutPipe(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UsbBulkOutPipe: ...
@@ -66,6 +70,7 @@ class UsbBulkOutPipe(winrt.system.Object):
     @_property
     def output_stream(self) -> typing.Optional[winrt.windows.storage.streams.IOutputStream]: ...
 
+@typing.final
 class UsbConfiguration(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UsbConfiguration: ...
@@ -76,10 +81,12 @@ class UsbConfiguration(winrt.system.Object):
     @_property
     def usb_interfaces(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[UsbInterface]]: ...
 
+@typing.final
 class UsbConfigurationDescriptor_Static(type):
     def parse(cls, descriptor: typing.Optional[UsbDescriptor], /) -> typing.Optional[UsbConfigurationDescriptor]: ...
     def try_parse(cls, descriptor: typing.Optional[UsbDescriptor], /) -> typing.Tuple[bool, typing.Optional[UsbConfigurationDescriptor]]: ...
 
+@typing.final
 class UsbConfigurationDescriptor(winrt.system.Object, metaclass=UsbConfigurationDescriptor_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UsbConfigurationDescriptor: ...
@@ -92,6 +99,7 @@ class UsbConfigurationDescriptor(winrt.system.Object, metaclass=UsbConfiguration
     @_property
     def self_powered(self) -> bool: ...
 
+@typing.final
 class UsbControlRequestType(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UsbControlRequestType: ...
@@ -113,6 +121,7 @@ class UsbControlRequestType(winrt.system.Object):
     @as_byte.setter
     def as_byte(self, value: winrt.system.UInt8) -> None: ...
 
+@typing.final
 class UsbDescriptor(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UsbDescriptor: ...
@@ -122,6 +131,7 @@ class UsbDescriptor(winrt.system.Object):
     @_property
     def length(self) -> winrt.system.UInt8: ...
 
+@typing.final
 class UsbDevice_Static(type):
     def from_id_async(cls, device_id: str, /) -> winrt.windows.foundation.IAsyncOperation[UsbDevice]: ...
     def get_device_class_selector(cls, usb_class: typing.Optional[UsbDeviceClass], /) -> str: ...
@@ -132,6 +142,7 @@ class UsbDevice_Static(type):
     @typing.overload
     def get_device_selector(cls, vendor_id: winrt.system.UInt32, product_id: winrt.system.UInt32, win_usb_interface_class: _uuid.UUID, /) -> str: ...
 
+@typing.final
 class UsbDevice(winrt.system.Object, metaclass=UsbDevice_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -153,6 +164,7 @@ class UsbDevice(winrt.system.Object, metaclass=UsbDevice_Static):
     @_property
     def device_descriptor(self) -> typing.Optional[UsbDeviceDescriptor]: ...
 
+@typing.final
 class UsbDeviceClass(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UsbDeviceClass: ...
@@ -170,6 +182,7 @@ class UsbDeviceClass(winrt.system.Object):
     @class_code.setter
     def class_code(self, value: winrt.system.UInt8) -> None: ...
 
+@typing.final
 class UsbDeviceClasses_Static(type):
     @_property
     def active_sync(cls) -> typing.Optional[UsbDeviceClass]: ...
@@ -190,10 +203,12 @@ class UsbDeviceClasses_Static(type):
     @_property
     def vendor_specific(cls) -> typing.Optional[UsbDeviceClass]: ...
 
+@typing.final
 class UsbDeviceClasses(winrt.system.Object, metaclass=UsbDeviceClasses_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UsbDeviceClasses: ...
 
+@typing.final
 class UsbDeviceDescriptor(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UsbDeviceDescriptor: ...
@@ -210,10 +225,12 @@ class UsbDeviceDescriptor(winrt.system.Object):
     @_property
     def vendor_id(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class UsbEndpointDescriptor_Static(type):
     def parse(cls, descriptor: typing.Optional[UsbDescriptor], /) -> typing.Optional[UsbEndpointDescriptor]: ...
     def try_parse(cls, descriptor: typing.Optional[UsbDescriptor], /) -> typing.Tuple[bool, typing.Optional[UsbEndpointDescriptor]]: ...
 
+@typing.final
 class UsbEndpointDescriptor(winrt.system.Object, metaclass=UsbEndpointDescriptor_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UsbEndpointDescriptor: ...
@@ -232,6 +249,7 @@ class UsbEndpointDescriptor(winrt.system.Object, metaclass=UsbEndpointDescriptor
     @_property
     def endpoint_type(self) -> UsbEndpointType: ...
 
+@typing.final
 class UsbInterface(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UsbInterface: ...
@@ -250,10 +268,12 @@ class UsbInterface(winrt.system.Object):
     @_property
     def interrupt_out_pipes(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[UsbInterruptOutPipe]]: ...
 
+@typing.final
 class UsbInterfaceDescriptor_Static(type):
     def parse(cls, descriptor: typing.Optional[UsbDescriptor], /) -> typing.Optional[UsbInterfaceDescriptor]: ...
     def try_parse(cls, descriptor: typing.Optional[UsbDescriptor], /) -> typing.Tuple[bool, typing.Optional[UsbInterfaceDescriptor]]: ...
 
+@typing.final
 class UsbInterfaceDescriptor(winrt.system.Object, metaclass=UsbInterfaceDescriptor_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UsbInterfaceDescriptor: ...
@@ -268,6 +288,7 @@ class UsbInterfaceDescriptor(winrt.system.Object, metaclass=UsbInterfaceDescript
     @_property
     def subclass_code(self) -> winrt.system.UInt8: ...
 
+@typing.final
 class UsbInterfaceSetting(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UsbInterfaceSetting: ...
@@ -287,6 +308,7 @@ class UsbInterfaceSetting(winrt.system.Object):
     @_property
     def selected(self) -> bool: ...
 
+@typing.final
 class UsbInterruptInEndpointDescriptor(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UsbInterruptInEndpointDescriptor: ...
@@ -299,12 +321,14 @@ class UsbInterruptInEndpointDescriptor(winrt.system.Object):
     @_property
     def pipe(self) -> typing.Optional[UsbInterruptInPipe]: ...
 
+@typing.final
 class UsbInterruptInEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UsbInterruptInEventArgs: ...
     @_property
     def interrupt_data(self) -> typing.Optional[winrt.windows.storage.streams.IBuffer]: ...
 
+@typing.final
 class UsbInterruptInPipe(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UsbInterruptInPipe: ...
@@ -314,6 +338,7 @@ class UsbInterruptInPipe(winrt.system.Object):
     @_property
     def endpoint_descriptor(self) -> typing.Optional[UsbInterruptInEndpointDescriptor]: ...
 
+@typing.final
 class UsbInterruptOutEndpointDescriptor(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UsbInterruptOutEndpointDescriptor: ...
@@ -326,6 +351,7 @@ class UsbInterruptOutEndpointDescriptor(winrt.system.Object):
     @_property
     def pipe(self) -> typing.Optional[UsbInterruptOutPipe]: ...
 
+@typing.final
 class UsbInterruptOutPipe(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UsbInterruptOutPipe: ...
@@ -339,6 +365,7 @@ class UsbInterruptOutPipe(winrt.system.Object):
     @_property
     def output_stream(self) -> typing.Optional[winrt.windows.storage.streams.IOutputStream]: ...
 
+@typing.final
 class UsbSetupPacket(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UsbSetupPacket: ...

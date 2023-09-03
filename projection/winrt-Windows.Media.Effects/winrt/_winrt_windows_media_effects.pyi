@@ -27,6 +27,7 @@ from winrt.windows.media.effects import AudioEffectType, MediaEffectClosedReason
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class AudioCaptureEffectsManager(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AudioCaptureEffectsManager: ...
@@ -34,12 +35,14 @@ class AudioCaptureEffectsManager(winrt.system.Object):
     def add_audio_capture_effects_changed(self, handler: winrt.windows.foundation.TypedEventHandler[AudioCaptureEffectsManager, winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_audio_capture_effects_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class AudioEffect(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AudioEffect: ...
     @_property
     def audio_effect_type(self) -> AudioEffectType: ...
 
+@typing.final
 class AudioEffectDefinition(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AudioEffectDefinition: ...
@@ -52,6 +55,7 @@ class AudioEffectDefinition(winrt.system.Object):
     @_property
     def properties(self) -> typing.Optional[winrt.windows.foundation.collections.IPropertySet]: ...
 
+@typing.final
 class AudioEffectsManager_Static(type):
     @typing.overload
     def create_audio_capture_effects_manager(cls, device_id: str, category: winrt.windows.media.capture.MediaCategory, /) -> typing.Optional[AudioCaptureEffectsManager]: ...
@@ -62,10 +66,12 @@ class AudioEffectsManager_Static(type):
     @typing.overload
     def create_audio_render_effects_manager(cls, device_id: str, category: winrt.windows.media.render.AudioRenderCategory, mode: winrt.windows.media.AudioProcessing, /) -> typing.Optional[AudioRenderEffectsManager]: ...
 
+@typing.final
 class AudioEffectsManager(winrt.system.Object, metaclass=AudioEffectsManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AudioEffectsManager: ...
 
+@typing.final
 class AudioRenderEffectsManager(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AudioRenderEffectsManager: ...
@@ -78,6 +84,7 @@ class AudioRenderEffectsManager(winrt.system.Object):
     @_property
     def effects_provider_thumbnail(self) -> typing.Optional[winrt.windows.storage.streams.IRandomAccessStreamWithContentType]: ...
 
+@typing.final
 class CompositeVideoFrameContext(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositeVideoFrameContext: ...
@@ -89,6 +96,7 @@ class CompositeVideoFrameContext(winrt.system.Object):
     @_property
     def surfaces_to_overlay(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.graphics.directx.direct3d11.IDirect3DSurface]]: ...
 
+@typing.final
 class ProcessAudioFrameContext(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProcessAudioFrameContext: ...
@@ -97,6 +105,7 @@ class ProcessAudioFrameContext(winrt.system.Object):
     @_property
     def output_frame(self) -> typing.Optional[winrt.windows.media.AudioFrame]: ...
 
+@typing.final
 class ProcessVideoFrameContext(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProcessVideoFrameContext: ...
@@ -105,6 +114,7 @@ class ProcessVideoFrameContext(winrt.system.Object):
     @_property
     def output_frame(self) -> typing.Optional[winrt.windows.media.VideoFrame]: ...
 
+@typing.final
 class SlowMotionEffectDefinition(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SlowMotionEffectDefinition: ...
@@ -118,6 +128,7 @@ class SlowMotionEffectDefinition(winrt.system.Object):
     @_property
     def properties(self) -> typing.Optional[winrt.windows.foundation.collections.IPropertySet]: ...
 
+@typing.final
 class VideoCompositorDefinition(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VideoCompositorDefinition: ...
@@ -130,6 +141,7 @@ class VideoCompositorDefinition(winrt.system.Object):
     @_property
     def properties(self) -> typing.Optional[winrt.windows.foundation.collections.IPropertySet]: ...
 
+@typing.final
 class VideoEffectDefinition(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VideoEffectDefinition: ...
@@ -142,6 +154,7 @@ class VideoEffectDefinition(winrt.system.Object):
     @_property
     def properties(self) -> typing.Optional[winrt.windows.foundation.collections.IPropertySet]: ...
 
+@typing.final
 class VideoTransformEffectDefinition(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VideoTransformEffectDefinition: ...
@@ -177,6 +190,7 @@ class VideoTransformEffectDefinition(winrt.system.Object):
     @_property
     def spherical_projection(self) -> typing.Optional[VideoTransformSphericalProjection]: ...
 
+@typing.final
 class VideoTransformSphericalProjection(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VideoTransformSphericalProjection: ...
@@ -201,6 +215,7 @@ class VideoTransformSphericalProjection(winrt.system.Object):
     @frame_format.setter
     def frame_format(self, value: winrt.windows.media.mediaproperties.SphericalVideoFrameFormat) -> None: ...
 
+@typing.final
 class IAudioEffectDefinition(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAudioEffectDefinition: ...
@@ -209,6 +224,7 @@ class IAudioEffectDefinition(winrt.system.Object):
     @_property
     def properties(self) -> typing.Optional[winrt.windows.foundation.collections.IPropertySet]: ...
 
+@typing.final
 class IBasicAudioEffect(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBasicAudioEffect: ...
@@ -222,6 +238,7 @@ class IBasicAudioEffect(winrt.system.Object):
     @_property
     def use_input_frame_for_output(self) -> bool: ...
 
+@typing.final
 class IBasicVideoEffect(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBasicVideoEffect: ...
@@ -239,6 +256,7 @@ class IBasicVideoEffect(winrt.system.Object):
     @_property
     def time_independent(self) -> bool: ...
 
+@typing.final
 class IVideoCompositor(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IVideoCompositor: ...
@@ -250,6 +268,7 @@ class IVideoCompositor(winrt.system.Object):
     @_property
     def time_independent(self) -> bool: ...
 
+@typing.final
 class IVideoCompositorDefinition(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IVideoCompositorDefinition: ...
@@ -258,6 +277,7 @@ class IVideoCompositorDefinition(winrt.system.Object):
     @_property
     def properties(self) -> typing.Optional[winrt.windows.foundation.collections.IPropertySet]: ...
 
+@typing.final
 class IVideoEffectDefinition(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IVideoEffectDefinition: ...

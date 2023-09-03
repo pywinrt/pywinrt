@@ -19,10 +19,12 @@ from winrt.windows.services.cortana import CortanaPermission, CortanaPermissions
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class CortanaActionableInsights_Static(type):
     def get_default(cls) -> typing.Optional[CortanaActionableInsights]: ...
     def get_for_user(cls, user: typing.Optional[winrt.windows.system.User], /) -> typing.Optional[CortanaActionableInsights]: ...
 
+@typing.final
 class CortanaActionableInsights(winrt.system.Object, metaclass=CortanaActionableInsights_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CortanaActionableInsights: ...
@@ -42,6 +44,7 @@ class CortanaActionableInsights(winrt.system.Object, metaclass=CortanaActionable
     @_property
     def user(self) -> typing.Optional[winrt.windows.system.User]: ...
 
+@typing.final
 class CortanaActionableInsightsOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CortanaActionableInsightsOptions: ...
@@ -55,9 +58,11 @@ class CortanaActionableInsightsOptions(winrt.system.Object):
     @content_source_web_link.setter
     def content_source_web_link(self, value: typing.Optional[winrt.windows.foundation.Uri]) -> None: ...
 
+@typing.final
 class CortanaPermissionsManager_Static(type):
     def get_default(cls) -> typing.Optional[CortanaPermissionsManager]: ...
 
+@typing.final
 class CortanaPermissionsManager(winrt.system.Object, metaclass=CortanaPermissionsManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CortanaPermissionsManager: ...
@@ -66,10 +71,12 @@ class CortanaPermissionsManager(winrt.system.Object, metaclass=CortanaPermission
     def is_supported(self) -> bool: ...
     def revoke_permissions_async(self, permissions: typing.Iterable[CortanaPermission], /) -> winrt.windows.foundation.IAsyncOperation[CortanaPermissionsChangeResult]: ...
 
+@typing.final
 class CortanaSettings_Static(type):
     def get_default(cls) -> typing.Optional[CortanaSettings]: ...
     def is_supported(cls) -> bool: ...
 
+@typing.final
 class CortanaSettings(winrt.system.Object, metaclass=CortanaSettings_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CortanaSettings: ...

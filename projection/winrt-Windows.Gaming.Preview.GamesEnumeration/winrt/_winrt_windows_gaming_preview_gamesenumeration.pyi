@@ -19,6 +19,7 @@ from winrt.windows.gaming.preview.gamesenumeration import GameListChangedEventHa
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class GameList_Static(type):
     @typing.overload
     def find_all_async(cls) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[GameListEntry]]: ...
@@ -33,10 +34,12 @@ class GameList_Static(type):
     def add_game_updated(cls, handler: typing.Optional[GameListChangedEventHandler], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_game_updated(cls, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class GameList(winrt.system.Object, metaclass=GameList_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GameList: ...
 
+@typing.final
 class GameListEntry(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GameListEntry: ...
@@ -64,6 +67,7 @@ class GameListEntry(winrt.system.Object):
     @_property
     def title_id(self) -> str: ...
 
+@typing.final
 class GameModeConfiguration(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GameModeConfiguration: ...
@@ -103,9 +107,11 @@ class GameModeConfiguration(winrt.system.Object):
     @_property
     def related_process_names(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[str]]: ...
 
+@typing.final
 class GameModeUserConfiguration_Static(type):
     def get_default(cls) -> typing.Optional[GameModeUserConfiguration]: ...
 
+@typing.final
 class GameModeUserConfiguration(winrt.system.Object, metaclass=GameModeUserConfiguration_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GameModeUserConfiguration: ...
@@ -113,6 +119,7 @@ class GameModeUserConfiguration(winrt.system.Object, metaclass=GameModeUserConfi
     @_property
     def gaming_related_process_names(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[str]]: ...
 
+@typing.final
 class IGameListEntry(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IGameListEntry: ...

@@ -15,6 +15,7 @@ from winrt.windows.devices.printers.extensions import Print3DWorkflowDetail, Pri
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class Print3DWorkflow(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Print3DWorkflow: ...
@@ -30,6 +31,7 @@ class Print3DWorkflow(winrt.system.Object):
     @_property
     def device_i_d(self) -> str: ...
 
+@typing.final
 class Print3DWorkflowPrintRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Print3DWorkflowPrintRequestedEventArgs: ...
@@ -39,19 +41,23 @@ class Print3DWorkflowPrintRequestedEventArgs(winrt.system.Object):
     @_property
     def status(self) -> Print3DWorkflowStatus: ...
 
+@typing.final
 class Print3DWorkflowPrinterChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Print3DWorkflowPrinterChangedEventArgs: ...
     @_property
     def new_device_id(self) -> str: ...
 
+@typing.final
 class PrintExtensionContext_Static(type):
     def from_device_id(cls, device_id: str, /) -> typing.Optional[winrt.system.Object]: ...
 
+@typing.final
 class PrintExtensionContext(winrt.system.Object, metaclass=PrintExtensionContext_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintExtensionContext: ...
 
+@typing.final
 class PrintNotificationEventDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintNotificationEventDetails: ...
@@ -62,6 +68,7 @@ class PrintNotificationEventDetails(winrt.system.Object):
     @_property
     def printer_name(self) -> str: ...
 
+@typing.final
 class PrintTaskConfiguration(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintTaskConfiguration: ...
@@ -70,6 +77,7 @@ class PrintTaskConfiguration(winrt.system.Object):
     @_property
     def printer_extension_context(self) -> typing.Optional[winrt.system.Object]: ...
 
+@typing.final
 class PrintTaskConfigurationSaveRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintTaskConfigurationSaveRequest: ...
@@ -79,11 +87,13 @@ class PrintTaskConfigurationSaveRequest(winrt.system.Object):
     @_property
     def deadline(self) -> datetime.datetime: ...
 
+@typing.final
 class PrintTaskConfigurationSaveRequestedDeferral(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintTaskConfigurationSaveRequestedDeferral: ...
     def complete(self) -> None: ...
 
+@typing.final
 class PrintTaskConfigurationSaveRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintTaskConfigurationSaveRequestedEventArgs: ...

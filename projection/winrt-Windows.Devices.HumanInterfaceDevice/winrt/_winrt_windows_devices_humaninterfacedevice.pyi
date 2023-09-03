@@ -18,6 +18,7 @@ from winrt.windows.devices.humaninterfacedevice import HidCollectionType, HidRep
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class HidBooleanControl(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HidBooleanControl: ...
@@ -34,6 +35,7 @@ class HidBooleanControl(winrt.system.Object):
     @_property
     def usage_page(self) -> winrt.system.UInt16: ...
 
+@typing.final
 class HidBooleanControlDescription(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HidBooleanControlDescription: ...
@@ -52,6 +54,7 @@ class HidBooleanControlDescription(winrt.system.Object):
     @_property
     def is_absolute(self) -> bool: ...
 
+@typing.final
 class HidCollection(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HidCollection: ...
@@ -64,6 +67,7 @@ class HidCollection(winrt.system.Object):
     @_property
     def usage_page(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class HidDevice_Static(type):
     def from_id_async(cls, device_id: str, access_mode: winrt.windows.storage.FileAccessMode, /) -> winrt.windows.foundation.IAsyncOperation[HidDevice]: ...
     @typing.overload
@@ -71,6 +75,7 @@ class HidDevice_Static(type):
     @typing.overload
     def get_device_selector(cls, usage_page: winrt.system.UInt16, usage_id: winrt.system.UInt16, vendor_id: winrt.system.UInt16, product_id: winrt.system.UInt16, /) -> str: ...
 
+@typing.final
 class HidDevice(winrt.system.Object, metaclass=HidDevice_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -110,6 +115,7 @@ class HidDevice(winrt.system.Object, metaclass=HidDevice_Static):
     @_property
     def version(self) -> winrt.system.UInt16: ...
 
+@typing.final
 class HidFeatureReport(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HidFeatureReport: ...
@@ -124,6 +130,7 @@ class HidFeatureReport(winrt.system.Object):
     @_property
     def id(self) -> winrt.system.UInt16: ...
 
+@typing.final
 class HidInputReport(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HidInputReport: ...
@@ -140,12 +147,14 @@ class HidInputReport(winrt.system.Object):
     @_property
     def transitioned_boolean_controls(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[HidBooleanControl]]: ...
 
+@typing.final
 class HidInputReportReceivedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HidInputReportReceivedEventArgs: ...
     @_property
     def report(self) -> typing.Optional[HidInputReport]: ...
 
+@typing.final
 class HidNumericControl(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HidNumericControl: ...
@@ -168,6 +177,7 @@ class HidNumericControl(winrt.system.Object):
     @_property
     def usage_page(self) -> winrt.system.UInt16: ...
 
+@typing.final
 class HidNumericControlDescription(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HidNumericControlDescription: ...
@@ -204,6 +214,7 @@ class HidNumericControlDescription(winrt.system.Object):
     @_property
     def usage_page(self) -> winrt.system.UInt16: ...
 
+@typing.final
 class HidOutputReport(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HidOutputReport: ...

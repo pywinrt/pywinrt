@@ -17,6 +17,7 @@ from winrt.windows.ui.popups import UICommandInvokedHandler
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class MessageDialog(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MessageDialog: ...
@@ -48,6 +49,7 @@ class MessageDialog(winrt.system.Object):
     @_property
     def commands(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[IUICommand]]: ...
 
+@typing.final
 class PopupMenu(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PopupMenu: ...
@@ -60,6 +62,7 @@ class PopupMenu(winrt.system.Object):
     @_property
     def commands(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[IUICommand]]: ...
 
+@typing.final
 class UICommand(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UICommand: ...
@@ -84,6 +87,7 @@ class UICommand(winrt.system.Object):
     @id.setter
     def id(self, value: typing.Optional[winrt.system.Object]) -> None: ...
 
+@typing.final
 class UICommandSeparator(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UICommandSeparator: ...
@@ -101,6 +105,7 @@ class UICommandSeparator(winrt.system.Object):
     @id.setter
     def id(self, value: typing.Optional[winrt.system.Object]) -> None: ...
 
+@typing.final
 class IUICommand(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IUICommand: ...

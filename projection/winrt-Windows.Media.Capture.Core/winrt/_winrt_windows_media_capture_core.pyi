@@ -14,6 +14,7 @@ import winrt.windows.media.capture
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class VariablePhotoCapturedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VariablePhotoCapturedEventArgs: ...
@@ -26,6 +27,7 @@ class VariablePhotoCapturedEventArgs(winrt.system.Object):
     @_property
     def used_frame_controller_index(self) -> typing.Optional[typing.Optional[winrt.system.UInt32]]: ...
 
+@typing.final
 class VariablePhotoSequenceCapture(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VariablePhotoSequenceCapture: ...

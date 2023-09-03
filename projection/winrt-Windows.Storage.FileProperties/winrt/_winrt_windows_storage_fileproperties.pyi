@@ -19,6 +19,7 @@ from winrt.windows.storage.fileproperties import PhotoOrientation, PropertyPrefe
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class BasicProperties(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BasicProperties: ...
@@ -34,6 +35,7 @@ class BasicProperties(winrt.system.Object):
     @_property
     def size(self) -> winrt.system.UInt64: ...
 
+@typing.final
 class DocumentProperties(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DocumentProperties: ...
@@ -55,15 +57,18 @@ class DocumentProperties(winrt.system.Object):
     @_property
     def keywords(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[str]]: ...
 
+@typing.final
 class GeotagHelper_Static(type):
     def get_geotag_async(cls, file: typing.Optional[winrt.windows.storage.IStorageFile], /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.devices.geolocation.Geopoint]: ...
     def set_geotag_async(cls, file: typing.Optional[winrt.windows.storage.IStorageFile], geopoint: typing.Optional[winrt.windows.devices.geolocation.Geopoint], /) -> winrt.windows.foundation.IAsyncAction: ...
     def set_geotag_from_geolocator_async(cls, file: typing.Optional[winrt.windows.storage.IStorageFile], geolocator: typing.Optional[winrt.windows.devices.geolocation.Geolocator], /) -> winrt.windows.foundation.IAsyncAction: ...
 
+@typing.final
 class GeotagHelper(winrt.system.Object, metaclass=GeotagHelper_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GeotagHelper: ...
 
+@typing.final
 class ImageProperties(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ImageProperties: ...
@@ -107,6 +112,7 @@ class ImageProperties(winrt.system.Object):
     @_property
     def width(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class MusicProperties(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MusicProperties: ...
@@ -166,6 +172,7 @@ class MusicProperties(winrt.system.Object):
     @_property
     def writers(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[str]]: ...
 
+@typing.final
 class StorageItemContentProperties(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StorageItemContentProperties: ...
@@ -179,6 +186,7 @@ class StorageItemContentProperties(winrt.system.Object):
     @typing.overload
     def save_properties_async(self, properties_to_save: typing.Iterable[winrt.windows.foundation.collections.IKeyValuePair[str, winrt.system.Object]], /) -> winrt.windows.foundation.IAsyncAction: ...
 
+@typing.final
 class StorageItemThumbnail(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -213,6 +221,7 @@ class StorageItemThumbnail(winrt.system.Object):
     @_property
     def position(self) -> winrt.system.UInt64: ...
 
+@typing.final
 class VideoProperties(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VideoProperties: ...
@@ -264,6 +273,7 @@ class VideoProperties(winrt.system.Object):
     @_property
     def writers(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[str]]: ...
 
+@typing.final
 class IStorageItemExtraProperties(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStorageItemExtraProperties: ...

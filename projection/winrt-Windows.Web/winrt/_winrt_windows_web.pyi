@@ -16,13 +16,16 @@ from winrt.windows.web import WebErrorStatus
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class WebError_Static(type):
     def get_status(cls, hresult: winrt.system.Int32, /) -> WebErrorStatus: ...
 
+@typing.final
 class WebError(winrt.system.Object, metaclass=WebError_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebError: ...
 
+@typing.final
 class IUriToStreamResolver(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IUriToStreamResolver: ...

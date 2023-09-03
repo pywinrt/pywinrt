@@ -16,6 +16,7 @@ from winrt.windows.ui.core.animationmetrics import AnimationEffect, AnimationEff
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class AnimationDescription(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AnimationDescription: ...
@@ -31,6 +32,7 @@ class AnimationDescription(winrt.system.Object):
     @_property
     def z_order(self) -> winrt.system.Int32: ...
 
+@typing.final
 class OpacityAnimation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> OpacityAnimation: ...
@@ -49,6 +51,7 @@ class OpacityAnimation(winrt.system.Object):
     @_property
     def type(self) -> PropertyAnimationType: ...
 
+@typing.final
 class PropertyAnimation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PropertyAnimation: ...
@@ -63,6 +66,7 @@ class PropertyAnimation(winrt.system.Object):
     @_property
     def type(self) -> PropertyAnimationType: ...
 
+@typing.final
 class ScaleAnimation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ScaleAnimation: ...
@@ -87,6 +91,7 @@ class ScaleAnimation(winrt.system.Object):
     @_property
     def normalized_origin(self) -> winrt.windows.foundation.Point: ...
 
+@typing.final
 class TranslationAnimation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TranslationAnimation: ...
@@ -101,6 +106,7 @@ class TranslationAnimation(winrt.system.Object):
     @_property
     def type(self) -> PropertyAnimationType: ...
 
+@typing.final
 class IPropertyAnimation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPropertyAnimation: ...

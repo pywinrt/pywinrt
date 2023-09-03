@@ -19,6 +19,7 @@ from winrt.windows.ui.notifications import AdaptiveNotificationContentKind, Badg
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class AdaptiveNotificationText(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AdaptiveNotificationText: ...
@@ -36,6 +37,7 @@ class AdaptiveNotificationText(winrt.system.Object):
     @language.setter
     def language(self, value: str) -> None: ...
 
+@typing.final
 class BadgeNotification(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BadgeNotification: ...
@@ -47,6 +49,7 @@ class BadgeNotification(winrt.system.Object):
     @_property
     def content(self) -> typing.Optional[winrt.windows.data.xml.dom.XmlDocument]: ...
 
+@typing.final
 class BadgeUpdateManager_Static(type):
     @typing.overload
     def create_badge_updater_for_application(cls) -> typing.Optional[BadgeUpdater]: ...
@@ -56,10 +59,12 @@ class BadgeUpdateManager_Static(type):
     def get_for_user(cls, user: typing.Optional[winrt.windows.system.User], /) -> typing.Optional[BadgeUpdateManagerForUser]: ...
     def get_template_content(cls, type: BadgeTemplateType, /) -> typing.Optional[winrt.windows.data.xml.dom.XmlDocument]: ...
 
+@typing.final
 class BadgeUpdateManager(winrt.system.Object, metaclass=BadgeUpdateManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BadgeUpdateManager: ...
 
+@typing.final
 class BadgeUpdateManagerForUser(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BadgeUpdateManagerForUser: ...
@@ -71,6 +76,7 @@ class BadgeUpdateManagerForUser(winrt.system.Object):
     @_property
     def user(self) -> typing.Optional[winrt.windows.system.User]: ...
 
+@typing.final
 class BadgeUpdater(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BadgeUpdater: ...
@@ -82,6 +88,7 @@ class BadgeUpdater(winrt.system.Object):
     def stop_periodic_update(self) -> None: ...
     def update(self, notification: typing.Optional[BadgeNotification], /) -> None: ...
 
+@typing.final
 class KnownAdaptiveNotificationHints_Static(type):
     @_property
     def align(cls) -> str: ...
@@ -96,10 +103,12 @@ class KnownAdaptiveNotificationHints_Static(type):
     @_property
     def wrap(cls) -> str: ...
 
+@typing.final
 class KnownAdaptiveNotificationHints(winrt.system.Object, metaclass=KnownAdaptiveNotificationHints_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> KnownAdaptiveNotificationHints: ...
 
+@typing.final
 class KnownAdaptiveNotificationTextStyles_Static(type):
     @_property
     def base(cls) -> str: ...
@@ -140,18 +149,22 @@ class KnownAdaptiveNotificationTextStyles_Static(type):
     @_property
     def title_subtle(cls) -> str: ...
 
+@typing.final
 class KnownAdaptiveNotificationTextStyles(winrt.system.Object, metaclass=KnownAdaptiveNotificationTextStyles_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> KnownAdaptiveNotificationTextStyles: ...
 
+@typing.final
 class KnownNotificationBindings_Static(type):
     @_property
     def toast_generic(cls) -> str: ...
 
+@typing.final
 class KnownNotificationBindings(winrt.system.Object, metaclass=KnownNotificationBindings_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> KnownNotificationBindings: ...
 
+@typing.final
 class Notification(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Notification: ...
@@ -165,6 +178,7 @@ class Notification(winrt.system.Object):
     @expiration_time.setter
     def expiration_time(self, value: typing.Optional[typing.Optional[datetime.datetime]]) -> None: ...
 
+@typing.final
 class NotificationBinding(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NotificationBinding: ...
@@ -180,6 +194,7 @@ class NotificationBinding(winrt.system.Object):
     @_property
     def hints(self) -> typing.Optional[winrt.windows.foundation.collections.IMap[str, str]]: ...
 
+@typing.final
 class NotificationData(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NotificationData: ...
@@ -196,6 +211,7 @@ class NotificationData(winrt.system.Object):
     @_property
     def values(self) -> typing.Optional[winrt.windows.foundation.collections.IMap[str, str]]: ...
 
+@typing.final
 class NotificationVisual(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NotificationVisual: ...
@@ -207,6 +223,7 @@ class NotificationVisual(winrt.system.Object):
     @_property
     def bindings(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[NotificationBinding]]: ...
 
+@typing.final
 class ScheduledTileNotification(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ScheduledTileNotification: ...
@@ -228,6 +245,7 @@ class ScheduledTileNotification(winrt.system.Object):
     @_property
     def delivery_time(self) -> datetime.datetime: ...
 
+@typing.final
 class ScheduledToastNotification(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ScheduledToastNotification: ...
@@ -272,6 +290,7 @@ class ScheduledToastNotification(winrt.system.Object):
     @expiration_time.setter
     def expiration_time(self, value: typing.Optional[typing.Optional[datetime.datetime]]) -> None: ...
 
+@typing.final
 class ScheduledToastNotificationShowingEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ScheduledToastNotificationShowingEventArgs: ...
@@ -283,12 +302,14 @@ class ScheduledToastNotificationShowingEventArgs(winrt.system.Object):
     @_property
     def scheduled_toast_notification(self) -> typing.Optional[ScheduledToastNotification]: ...
 
+@typing.final
 class ShownTileNotification(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ShownTileNotification: ...
     @_property
     def arguments(self) -> str: ...
 
+@typing.final
 class TileFlyoutNotification(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TileFlyoutNotification: ...
@@ -300,6 +321,7 @@ class TileFlyoutNotification(winrt.system.Object):
     @_property
     def content(self) -> typing.Optional[winrt.windows.data.xml.dom.XmlDocument]: ...
 
+@typing.final
 class TileFlyoutUpdateManager_Static(type):
     @typing.overload
     def create_tile_flyout_updater_for_application(cls) -> typing.Optional[TileFlyoutUpdater]: ...
@@ -308,10 +330,12 @@ class TileFlyoutUpdateManager_Static(type):
     def create_tile_flyout_updater_for_secondary_tile(cls, tile_id: str, /) -> typing.Optional[TileFlyoutUpdater]: ...
     def get_template_content(cls, type: TileFlyoutTemplateType, /) -> typing.Optional[winrt.windows.data.xml.dom.XmlDocument]: ...
 
+@typing.final
 class TileFlyoutUpdateManager(winrt.system.Object, metaclass=TileFlyoutUpdateManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TileFlyoutUpdateManager: ...
 
+@typing.final
 class TileFlyoutUpdater(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TileFlyoutUpdater: ...
@@ -325,6 +349,7 @@ class TileFlyoutUpdater(winrt.system.Object):
     @_property
     def setting(self) -> NotificationSetting: ...
 
+@typing.final
 class TileNotification(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TileNotification: ...
@@ -340,6 +365,7 @@ class TileNotification(winrt.system.Object):
     @_property
     def content(self) -> typing.Optional[winrt.windows.data.xml.dom.XmlDocument]: ...
 
+@typing.final
 class TileUpdateManager_Static(type):
     @typing.overload
     def create_tile_updater_for_application(cls) -> typing.Optional[TileUpdater]: ...
@@ -349,10 +375,12 @@ class TileUpdateManager_Static(type):
     def get_for_user(cls, user: typing.Optional[winrt.windows.system.User], /) -> typing.Optional[TileUpdateManagerForUser]: ...
     def get_template_content(cls, type: TileTemplateType, /) -> typing.Optional[winrt.windows.data.xml.dom.XmlDocument]: ...
 
+@typing.final
 class TileUpdateManager(winrt.system.Object, metaclass=TileUpdateManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TileUpdateManager: ...
 
+@typing.final
 class TileUpdateManagerForUser(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TileUpdateManagerForUser: ...
@@ -362,6 +390,7 @@ class TileUpdateManagerForUser(winrt.system.Object):
     @_property
     def user(self) -> typing.Optional[winrt.windows.system.User]: ...
 
+@typing.final
 class TileUpdater(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TileUpdater: ...
@@ -386,6 +415,7 @@ class TileUpdater(winrt.system.Object):
     @_property
     def setting(self) -> NotificationSetting: ...
 
+@typing.final
 class ToastActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ToastActivatedEventArgs: ...
@@ -394,6 +424,7 @@ class ToastActivatedEventArgs(winrt.system.Object):
     @_property
     def user_input(self) -> typing.Optional[winrt.windows.foundation.collections.ValueSet]: ...
 
+@typing.final
 class ToastCollection(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ToastCollection: ...
@@ -413,6 +444,7 @@ class ToastCollection(winrt.system.Object):
     @_property
     def id(self) -> str: ...
 
+@typing.final
 class ToastCollectionManager(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ToastCollectionManager: ...
@@ -426,18 +458,21 @@ class ToastCollectionManager(winrt.system.Object):
     @_property
     def user(self) -> typing.Optional[winrt.windows.system.User]: ...
 
+@typing.final
 class ToastDismissedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ToastDismissedEventArgs: ...
     @_property
     def reason(self) -> ToastDismissalReason: ...
 
+@typing.final
 class ToastFailedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ToastFailedEventArgs: ...
     @_property
     def error_code(self) -> winrt.windows.foundation.HResult: ...
 
+@typing.final
 class ToastNotification(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ToastNotification: ...
@@ -487,6 +522,7 @@ class ToastNotification(winrt.system.Object):
     @expires_on_reboot.setter
     def expires_on_reboot(self, value: bool) -> None: ...
 
+@typing.final
 class ToastNotificationActionTriggerDetail(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ToastNotificationActionTriggerDetail: ...
@@ -495,6 +531,7 @@ class ToastNotificationActionTriggerDetail(winrt.system.Object):
     @_property
     def user_input(self) -> typing.Optional[winrt.windows.foundation.collections.ValueSet]: ...
 
+@typing.final
 class ToastNotificationHistory(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ToastNotificationHistory: ...
@@ -517,6 +554,7 @@ class ToastNotificationHistory(winrt.system.Object):
     @typing.overload
     def remove_group(self, group: str, application_id: str, /) -> None: ...
 
+@typing.final
 class ToastNotificationHistoryChangedTriggerDetail(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ToastNotificationHistoryChangedTriggerDetail: ...
@@ -525,6 +563,7 @@ class ToastNotificationHistoryChangedTriggerDetail(winrt.system.Object):
     @_property
     def collection_id(self) -> str: ...
 
+@typing.final
 class ToastNotificationManager_Static(type):
     def configure_notification_mirroring(cls, value: NotificationMirroring, /) -> None: ...
     @typing.overload
@@ -537,10 +576,12 @@ class ToastNotificationManager_Static(type):
     @_property
     def history(cls) -> typing.Optional[ToastNotificationHistory]: ...
 
+@typing.final
 class ToastNotificationManager(winrt.system.Object, metaclass=ToastNotificationManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ToastNotificationManager: ...
 
+@typing.final
 class ToastNotificationManagerForUser(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ToastNotificationManagerForUser: ...
@@ -563,6 +604,7 @@ class ToastNotificationManagerForUser(winrt.system.Object):
     @_property
     def notification_mode(self) -> ToastNotificationMode: ...
 
+@typing.final
 class ToastNotifier(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ToastNotifier: ...
@@ -580,6 +622,7 @@ class ToastNotifier(winrt.system.Object):
     @_property
     def setting(self) -> NotificationSetting: ...
 
+@typing.final
 class UserNotification(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserNotification: ...
@@ -592,6 +635,7 @@ class UserNotification(winrt.system.Object):
     @_property
     def notification(self) -> typing.Optional[Notification]: ...
 
+@typing.final
 class UserNotificationChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserNotificationChangedEventArgs: ...
@@ -600,6 +644,7 @@ class UserNotificationChangedEventArgs(winrt.system.Object):
     @_property
     def user_notification_id(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class IAdaptiveNotificationContent(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAdaptiveNotificationContent: ...

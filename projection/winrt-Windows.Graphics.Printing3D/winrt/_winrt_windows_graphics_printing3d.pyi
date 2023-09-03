@@ -20,21 +20,25 @@ from winrt.windows.graphics.printing3d import Print3DTaskSourceRequestedHandler
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class Printing3DBufferDescription:
     format: Printing3DBufferFormat
     stride: winrt.system.UInt32
     def __init__(self, format: Printing3DBufferFormat, stride: winrt.system.UInt32) -> None: ...
 
+@typing.final
 class Print3DManager_Static(type):
     def get_for_current_view(cls) -> typing.Optional[Print3DManager]: ...
     def show_print_u_i_async(cls) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
 
+@typing.final
 class Print3DManager(winrt.system.Object, metaclass=Print3DManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Print3DManager: ...
     def add_task_requested(self, event_handler: winrt.windows.foundation.TypedEventHandler[Print3DManager, Print3DTaskRequestedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_task_requested(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class Print3DTask(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Print3DTask: ...
@@ -47,6 +51,7 @@ class Print3DTask(winrt.system.Object):
     @_property
     def source(self) -> typing.Optional[Printing3D3MFPackage]: ...
 
+@typing.final
 class Print3DTaskCompletedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Print3DTaskCompletedEventArgs: ...
@@ -55,31 +60,37 @@ class Print3DTaskCompletedEventArgs(winrt.system.Object):
     @_property
     def extended_status(self) -> Print3DTaskDetail: ...
 
+@typing.final
 class Print3DTaskRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Print3DTaskRequest: ...
     def create_task(self, title: str, printer_id: str, handler: typing.Optional[Print3DTaskSourceRequestedHandler], /) -> typing.Optional[Print3DTask]: ...
 
+@typing.final
 class Print3DTaskRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Print3DTaskRequestedEventArgs: ...
     @_property
     def request(self) -> typing.Optional[Print3DTaskRequest]: ...
 
+@typing.final
 class Print3DTaskSourceChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Print3DTaskSourceChangedEventArgs: ...
     @_property
     def source(self) -> typing.Optional[Printing3D3MFPackage]: ...
 
+@typing.final
 class Print3DTaskSourceRequestedArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Print3DTaskSourceRequestedArgs: ...
     def set_source(self, source: typing.Optional[Printing3D3MFPackage], /) -> None: ...
 
+@typing.final
 class Printing3D3MFPackage_Static(type):
     def load_async(cls, value: typing.Optional[winrt.windows.storage.streams.IRandomAccessStream], /) -> winrt.windows.foundation.IAsyncOperation[Printing3D3MFPackage]: ...
 
+@typing.final
 class Printing3D3MFPackage(winrt.system.Object, metaclass=Printing3D3MFPackage_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Printing3D3MFPackage: ...
@@ -106,12 +117,14 @@ class Printing3D3MFPackage(winrt.system.Object, metaclass=Printing3D3MFPackage_S
     @compression.setter
     def compression(self, value: Printing3DPackageCompression) -> None: ...
 
+@typing.final
 class Printing3DBaseMaterial_Static(type):
     @_property
     def abs(cls) -> str: ...
     @_property
     def pla(cls) -> str: ...
 
+@typing.final
 class Printing3DBaseMaterial(winrt.system.Object, metaclass=Printing3DBaseMaterial_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Printing3DBaseMaterial: ...
@@ -125,6 +138,7 @@ class Printing3DBaseMaterial(winrt.system.Object, metaclass=Printing3DBaseMateri
     @color.setter
     def color(self, value: typing.Optional[Printing3DColorMaterial]) -> None: ...
 
+@typing.final
 class Printing3DBaseMaterialGroup(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Printing3DBaseMaterialGroup: ...
@@ -134,6 +148,7 @@ class Printing3DBaseMaterialGroup(winrt.system.Object):
     @_property
     def material_group_id(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class Printing3DColorMaterial(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Printing3DColorMaterial: ...
@@ -147,6 +162,7 @@ class Printing3DColorMaterial(winrt.system.Object):
     @color.setter
     def color(self, value: winrt.windows.ui.Color) -> None: ...
 
+@typing.final
 class Printing3DColorMaterialGroup(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Printing3DColorMaterialGroup: ...
@@ -156,6 +172,7 @@ class Printing3DColorMaterialGroup(winrt.system.Object):
     @_property
     def material_group_id(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class Printing3DComponent(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Printing3DComponent: ...
@@ -183,6 +200,7 @@ class Printing3DComponent(winrt.system.Object):
     @_property
     def components(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[Printing3DComponentWithMatrix]]: ...
 
+@typing.final
 class Printing3DComponentWithMatrix(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Printing3DComponentWithMatrix: ...
@@ -196,6 +214,7 @@ class Printing3DComponentWithMatrix(winrt.system.Object):
     @component.setter
     def component(self, value: typing.Optional[Printing3DComponent]) -> None: ...
 
+@typing.final
 class Printing3DCompositeMaterial(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Printing3DCompositeMaterial: ...
@@ -203,6 +222,7 @@ class Printing3DCompositeMaterial(winrt.system.Object):
     @_property
     def values(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[winrt.system.Double]]: ...
 
+@typing.final
 class Printing3DCompositeMaterialGroup(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Printing3DCompositeMaterialGroup: ...
@@ -218,6 +238,7 @@ class Printing3DCompositeMaterialGroup(winrt.system.Object):
     @base_material_group.setter
     def base_material_group(self, value: typing.Optional[Printing3DBaseMaterialGroup]) -> None: ...
 
+@typing.final
 class Printing3DFaceReductionOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Printing3DFaceReductionOptions: ...
@@ -235,6 +256,7 @@ class Printing3DFaceReductionOptions(winrt.system.Object):
     @max_edge_length.setter
     def max_edge_length(self, value: winrt.system.Double) -> None: ...
 
+@typing.final
 class Printing3DMaterial(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Printing3DMaterial: ...
@@ -250,6 +272,7 @@ class Printing3DMaterial(winrt.system.Object):
     @_property
     def texture2_coord_groups(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[Printing3DTexture2CoordMaterialGroup]]: ...
 
+@typing.final
 class Printing3DMesh(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Printing3DMesh: ...
@@ -292,6 +315,7 @@ class Printing3DMesh(winrt.system.Object):
     @_property
     def buffer_set(self) -> typing.Optional[winrt.windows.foundation.collections.IPropertySet]: ...
 
+@typing.final
 class Printing3DMeshVerificationResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Printing3DMeshVerificationResult: ...
@@ -302,6 +326,7 @@ class Printing3DMeshVerificationResult(winrt.system.Object):
     @_property
     def reversed_normal_triangles(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.system.UInt32]]: ...
 
+@typing.final
 class Printing3DModel(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Printing3DModel: ...
@@ -346,6 +371,7 @@ class Printing3DModel(winrt.system.Object):
     @_property
     def textures(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[Printing3DModelTexture]]: ...
 
+@typing.final
 class Printing3DModelTexture(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Printing3DModelTexture: ...
@@ -363,6 +389,7 @@ class Printing3DModelTexture(winrt.system.Object):
     @texture_resource.setter
     def texture_resource(self, value: typing.Optional[Printing3DTextureResource]) -> None: ...
 
+@typing.final
 class Printing3DMultiplePropertyMaterial(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Printing3DMultiplePropertyMaterial: ...
@@ -370,6 +397,7 @@ class Printing3DMultiplePropertyMaterial(winrt.system.Object):
     @_property
     def material_indices(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[winrt.system.UInt32]]: ...
 
+@typing.final
 class Printing3DMultiplePropertyMaterialGroup(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Printing3DMultiplePropertyMaterialGroup: ...
@@ -381,6 +409,7 @@ class Printing3DMultiplePropertyMaterialGroup(winrt.system.Object):
     @_property
     def multiple_properties(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[Printing3DMultiplePropertyMaterial]]: ...
 
+@typing.final
 class Printing3DTexture2CoordMaterial(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Printing3DTexture2CoordMaterial: ...
@@ -398,6 +427,7 @@ class Printing3DTexture2CoordMaterial(winrt.system.Object):
     @texture.setter
     def texture(self, value: typing.Optional[Printing3DModelTexture]) -> None: ...
 
+@typing.final
 class Printing3DTexture2CoordMaterialGroup(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Printing3DTexture2CoordMaterialGroup: ...
@@ -411,6 +441,7 @@ class Printing3DTexture2CoordMaterialGroup(winrt.system.Object):
     @texture.setter
     def texture(self, value: typing.Optional[Printing3DModelTexture]) -> None: ...
 
+@typing.final
 class Printing3DTextureResource(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Printing3DTextureResource: ...

@@ -19,6 +19,7 @@ from winrt.windows.media.protection.playready import NDCertificateFeature, NDCer
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class NDClient(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NDClient: ...
@@ -38,6 +39,7 @@ class NDClient(winrt.system.Object):
     def add_registration_completed(self, handler: winrt.windows.foundation.TypedEventHandler[NDClient, INDRegistrationCompletedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_registration_completed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class NDCustomData(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NDCustomData: ...
@@ -47,6 +49,7 @@ class NDCustomData(winrt.system.Object):
     @_property
     def custom_data_type_i_d(self) -> winrt.system.UInt8: ...
 
+@typing.final
 class NDDownloadEngineNotifier(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NDDownloadEngineNotifier: ...
@@ -58,6 +61,7 @@ class NDDownloadEngineNotifier(winrt.system.Object):
     def on_play_ready_object_received(self, data_bytes: winrt.system.Array[winrt.system.UInt8], /) -> None: ...
     def on_stream_opened(self) -> None: ...
 
+@typing.final
 class NDLicenseFetchDescriptor(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NDLicenseFetchDescriptor: ...
@@ -71,12 +75,14 @@ class NDLicenseFetchDescriptor(winrt.system.Object):
     @_property
     def content_i_d_type(self) -> NDContentIDType: ...
 
+@typing.final
 class NDStorageFileHelper(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NDStorageFileHelper: ...
     def __new__(cls: typing.Type[NDStorageFileHelper]) -> NDStorageFileHelper:...
     def get_file_u_r_ls(self, file: typing.Optional[winrt.windows.storage.IStorageFile], /) -> typing.Optional[winrt.windows.foundation.collections.IVector[str]]: ...
 
+@typing.final
 class NDStreamParserNotifier(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NDStreamParserNotifier: ...
@@ -86,6 +92,7 @@ class NDStreamParserNotifier(winrt.system.Object):
     def on_media_stream_descriptor_created(self, audio_stream_descriptors: winrt.windows.foundation.collections.IVector[winrt.windows.media.core.AudioStreamDescriptor], video_stream_descriptors: winrt.windows.foundation.collections.IVector[winrt.windows.media.core.VideoStreamDescriptor], /) -> None: ...
     def on_sample_parsed(self, stream_i_d: winrt.system.UInt32, stream_type: NDMediaStreamType, stream_sample: typing.Optional[winrt.windows.media.core.MediaStreamSample], pts: winrt.system.Int64, cc_format: NDClosedCaptionFormat, cc_data_bytes: winrt.system.Array[winrt.system.UInt8], /) -> None: ...
 
+@typing.final
 class NDTCPMessenger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NDTCPMessenger: ...
@@ -95,6 +102,7 @@ class NDTCPMessenger(winrt.system.Object):
     def send_proximity_detection_start_async(self, pd_type: NDProximityDetectionType, transmitter_channel_bytes: winrt.system.Array[winrt.system.UInt8], session_i_d_bytes: winrt.system.Array[winrt.system.UInt8], challenge_data_bytes: winrt.system.Array[winrt.system.UInt8], /) -> winrt.windows.foundation.IAsyncOperation[INDSendResult]: ...
     def send_registration_request_async(self, session_i_d_bytes: winrt.system.Array[winrt.system.UInt8], challenge_data_bytes: winrt.system.Array[winrt.system.UInt8], /) -> winrt.windows.foundation.IAsyncOperation[INDSendResult]: ...
 
+@typing.final
 class PlayReadyContentHeader(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlayReadyContentHeader: ...
@@ -130,13 +138,16 @@ class PlayReadyContentHeader(winrt.system.Object):
     @_property
     def key_ids(self) -> _uuid.UUID: ...
 
+@typing.final
 class PlayReadyContentResolver_Static(type):
     def service_request(cls, content_header: typing.Optional[PlayReadyContentHeader], /) -> typing.Optional[IPlayReadyServiceRequest]: ...
 
+@typing.final
 class PlayReadyContentResolver(winrt.system.Object, metaclass=PlayReadyContentResolver_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlayReadyContentResolver: ...
 
+@typing.final
 class PlayReadyDomain(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlayReadyDomain: ...
@@ -151,6 +162,7 @@ class PlayReadyDomain(winrt.system.Object):
     @_property
     def service_id(self) -> _uuid.UUID: ...
 
+@typing.final
 class PlayReadyDomainIterable(winrt.system.Object):
     def __iter__(self) -> winrt.windows.foundation.collections.IIterator[IPlayReadyDomain]: ...
     @staticmethod
@@ -158,6 +170,7 @@ class PlayReadyDomainIterable(winrt.system.Object):
     def __new__(cls: typing.Type[PlayReadyDomainIterable], domain_account_id: _uuid.UUID) -> PlayReadyDomainIterable:...
     def first(self) -> typing.Optional[winrt.windows.foundation.collections.IIterator[IPlayReadyDomain]]: ...
 
+@typing.final
 class PlayReadyDomainIterator(winrt.system.Object):
     def __iter__(self: Self) -> Self: ...
     def __next__(self) -> IPlayReadyDomain: ...
@@ -170,6 +183,7 @@ class PlayReadyDomainIterator(winrt.system.Object):
     @_property
     def has_current(self) -> bool: ...
 
+@typing.final
 class PlayReadyDomainJoinServiceRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlayReadyDomainJoinServiceRequest: ...
@@ -205,6 +219,7 @@ class PlayReadyDomainJoinServiceRequest(winrt.system.Object):
     @_property
     def response_custom_data(self) -> str: ...
 
+@typing.final
 class PlayReadyDomainLeaveServiceRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlayReadyDomainLeaveServiceRequest: ...
@@ -236,12 +251,14 @@ class PlayReadyDomainLeaveServiceRequest(winrt.system.Object):
     @_property
     def response_custom_data(self) -> str: ...
 
+@typing.final
 class PlayReadyITADataGenerator(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlayReadyITADataGenerator: ...
     def __new__(cls: typing.Type[PlayReadyITADataGenerator]) -> PlayReadyITADataGenerator:...
     def generate_data(self, guid_c_p_system_id: _uuid.UUID, count_of_streams: winrt.system.UInt32, configuration: typing.Optional[winrt.windows.foundation.collections.IPropertySet], format: PlayReadyITADataFormat, /) -> winrt.system.UInt8: ...
 
+@typing.final
 class PlayReadyIndividualizationServiceRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlayReadyIndividualizationServiceRequest: ...
@@ -265,6 +282,7 @@ class PlayReadyIndividualizationServiceRequest(winrt.system.Object):
     @_property
     def response_custom_data(self) -> str: ...
 
+@typing.final
 class PlayReadyLicense(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlayReadyLicense: ...
@@ -290,6 +308,7 @@ class PlayReadyLicense(winrt.system.Object):
     @_property
     def security_level(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class PlayReadyLicenseAcquisitionServiceRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlayReadyLicenseAcquisitionServiceRequest: ...
@@ -324,6 +343,7 @@ class PlayReadyLicenseAcquisitionServiceRequest(winrt.system.Object):
     @_property
     def response_custom_data(self) -> str: ...
 
+@typing.final
 class PlayReadyLicenseIterable(winrt.system.Object):
     def __iter__(self) -> winrt.windows.foundation.collections.IIterator[IPlayReadyLicense]: ...
     @staticmethod
@@ -334,6 +354,7 @@ class PlayReadyLicenseIterable(winrt.system.Object):
     def __new__(cls: typing.Type[PlayReadyLicenseIterable], content_header: typing.Optional[PlayReadyContentHeader], fully_evaluated: bool) -> PlayReadyLicenseIterable:...
     def first(self) -> typing.Optional[winrt.windows.foundation.collections.IIterator[IPlayReadyLicense]]: ...
 
+@typing.final
 class PlayReadyLicenseIterator(winrt.system.Object):
     def __iter__(self: Self) -> Self: ...
     def __next__(self) -> IPlayReadyLicense: ...
@@ -346,13 +367,16 @@ class PlayReadyLicenseIterator(winrt.system.Object):
     @_property
     def has_current(self) -> bool: ...
 
+@typing.final
 class PlayReadyLicenseManagement_Static(type):
     def delete_licenses(cls, content_header: typing.Optional[PlayReadyContentHeader], /) -> winrt.windows.foundation.IAsyncAction: ...
 
+@typing.final
 class PlayReadyLicenseManagement(winrt.system.Object, metaclass=PlayReadyLicenseManagement_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlayReadyLicenseManagement: ...
 
+@typing.final
 class PlayReadyLicenseSession(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlayReadyLicenseSession: ...
@@ -361,6 +385,7 @@ class PlayReadyLicenseSession(winrt.system.Object):
     def create_l_a_service_request(self) -> typing.Optional[IPlayReadyLicenseAcquisitionServiceRequest]: ...
     def create_license_iterable(self, content_header: typing.Optional[PlayReadyContentHeader], fully_evaluated: bool, /) -> typing.Optional[PlayReadyLicenseIterable]: ...
 
+@typing.final
 class PlayReadyMeteringReportServiceRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlayReadyMeteringReportServiceRequest: ...
@@ -388,6 +413,7 @@ class PlayReadyMeteringReportServiceRequest(winrt.system.Object):
     @_property
     def response_custom_data(self) -> str: ...
 
+@typing.final
 class PlayReadyRevocationServiceRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlayReadyRevocationServiceRequest: ...
@@ -411,6 +437,7 @@ class PlayReadyRevocationServiceRequest(winrt.system.Object):
     @_property
     def response_custom_data(self) -> str: ...
 
+@typing.final
 class PlayReadySecureStopIterable(winrt.system.Object):
     def __iter__(self) -> winrt.windows.foundation.collections.IIterator[IPlayReadySecureStopServiceRequest]: ...
     @staticmethod
@@ -418,6 +445,7 @@ class PlayReadySecureStopIterable(winrt.system.Object):
     def __new__(cls: typing.Type[PlayReadySecureStopIterable], publisher_cert_bytes: winrt.system.Array[winrt.system.UInt8]) -> PlayReadySecureStopIterable:...
     def first(self) -> typing.Optional[winrt.windows.foundation.collections.IIterator[IPlayReadySecureStopServiceRequest]]: ...
 
+@typing.final
 class PlayReadySecureStopIterator(winrt.system.Object):
     def __iter__(self: Self) -> Self: ...
     def __next__(self) -> IPlayReadySecureStopServiceRequest: ...
@@ -430,6 +458,7 @@ class PlayReadySecureStopIterator(winrt.system.Object):
     @_property
     def has_current(self) -> bool: ...
 
+@typing.final
 class PlayReadySecureStopServiceRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlayReadySecureStopServiceRequest: ...
@@ -466,6 +495,7 @@ class PlayReadySecureStopServiceRequest(winrt.system.Object):
     @_property
     def response_custom_data(self) -> str: ...
 
+@typing.final
 class PlayReadySoapMessage(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlayReadySoapMessage: ...
@@ -475,6 +505,7 @@ class PlayReadySoapMessage(winrt.system.Object):
     @_property
     def uri(self) -> typing.Optional[winrt.windows.foundation.Uri]: ...
 
+@typing.final
 class PlayReadyStatics_Static(type):
     def check_supported_hardware(cls, hwdrm_feature: PlayReadyHardwareDRMFeatures, /) -> bool: ...
     def reset_hardware_d_r_m_disabled(cls) -> None: ...
@@ -507,10 +538,12 @@ class PlayReadyStatics_Static(type):
     @_property
     def hardware_d_r_m_disabled_at_time(cls) -> typing.Optional[typing.Optional[datetime.datetime]]: ...
 
+@typing.final
 class PlayReadyStatics(winrt.system.Object, metaclass=PlayReadyStatics_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlayReadyStatics: ...
 
+@typing.final
 class INDClosedCaptionDataReceivedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INDClosedCaptionDataReceivedEventArgs: ...
@@ -521,6 +554,7 @@ class INDClosedCaptionDataReceivedEventArgs(winrt.system.Object):
     @_property
     def presentation_timestamp(self) -> winrt.system.Int64: ...
 
+@typing.final
 class INDCustomData(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INDCustomData: ...
@@ -529,6 +563,7 @@ class INDCustomData(winrt.system.Object):
     @_property
     def custom_data_type_i_d(self) -> winrt.system.UInt8: ...
 
+@typing.final
 class INDDownloadEngine(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INDDownloadEngine: ...
@@ -546,6 +581,7 @@ class INDDownloadEngine(winrt.system.Object):
     @_property
     def notifier(self) -> typing.Optional[NDDownloadEngineNotifier]: ...
 
+@typing.final
 class INDDownloadEngineNotifier(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INDDownloadEngineNotifier: ...
@@ -556,12 +592,14 @@ class INDDownloadEngineNotifier(winrt.system.Object):
     def on_play_ready_object_received(self, data_bytes: winrt.system.Array[winrt.system.UInt8], /) -> None: ...
     def on_stream_opened(self) -> None: ...
 
+@typing.final
 class INDLicenseFetchCompletedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INDLicenseFetchCompletedEventArgs: ...
     @_property
     def response_custom_data(self) -> typing.Optional[INDCustomData]: ...
 
+@typing.final
 class INDLicenseFetchDescriptor(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INDLicenseFetchDescriptor: ...
@@ -574,12 +612,14 @@ class INDLicenseFetchDescriptor(winrt.system.Object):
     @license_fetch_challenge_custom_data.setter
     def license_fetch_challenge_custom_data(self, value: typing.Optional[INDCustomData]) -> None: ...
 
+@typing.final
 class INDLicenseFetchResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INDLicenseFetchResult: ...
     @_property
     def response_custom_data(self) -> typing.Optional[INDCustomData]: ...
 
+@typing.final
 class INDMessenger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INDMessenger: ...
@@ -588,12 +628,14 @@ class INDMessenger(winrt.system.Object):
     def send_proximity_detection_start_async(self, pd_type: NDProximityDetectionType, transmitter_channel_bytes: winrt.system.Array[winrt.system.UInt8], session_i_d_bytes: winrt.system.Array[winrt.system.UInt8], challenge_data_bytes: winrt.system.Array[winrt.system.UInt8], /) -> winrt.windows.foundation.IAsyncOperation[INDSendResult]: ...
     def send_registration_request_async(self, session_i_d_bytes: winrt.system.Array[winrt.system.UInt8], challenge_data_bytes: winrt.system.Array[winrt.system.UInt8], /) -> winrt.windows.foundation.IAsyncOperation[INDSendResult]: ...
 
+@typing.final
 class INDProximityDetectionCompletedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INDProximityDetectionCompletedEventArgs: ...
     @_property
     def proximity_detection_retry_count(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class INDRegistrationCompletedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INDRegistrationCompletedEventArgs: ...
@@ -606,23 +648,27 @@ class INDRegistrationCompletedEventArgs(winrt.system.Object):
     @_property
     def transmitter_properties(self) -> typing.Optional[INDTransmitterProperties]: ...
 
+@typing.final
 class INDSendResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INDSendResult: ...
     @_property
     def response(self) -> winrt.system.UInt8: ...
 
+@typing.final
 class INDStartResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INDStartResult: ...
     @_property
     def media_stream_source(self) -> typing.Optional[winrt.windows.media.core.MediaStreamSource]: ...
 
+@typing.final
 class INDStorageFileHelper(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INDStorageFileHelper: ...
     def get_file_u_r_ls(self, file: typing.Optional[winrt.windows.storage.IStorageFile], /) -> typing.Optional[winrt.windows.foundation.collections.IVector[str]]: ...
 
+@typing.final
 class INDStreamParser(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INDStreamParser: ...
@@ -633,6 +679,7 @@ class INDStreamParser(winrt.system.Object):
     @_property
     def notifier(self) -> typing.Optional[NDStreamParserNotifier]: ...
 
+@typing.final
 class INDStreamParserNotifier(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INDStreamParserNotifier: ...
@@ -641,6 +688,7 @@ class INDStreamParserNotifier(winrt.system.Object):
     def on_media_stream_descriptor_created(self, audio_stream_descriptors: winrt.windows.foundation.collections.IVector[winrt.windows.media.core.AudioStreamDescriptor], video_stream_descriptors: winrt.windows.foundation.collections.IVector[winrt.windows.media.core.VideoStreamDescriptor], /) -> None: ...
     def on_sample_parsed(self, stream_i_d: winrt.system.UInt32, stream_type: NDMediaStreamType, stream_sample: typing.Optional[winrt.windows.media.core.MediaStreamSample], pts: winrt.system.Int64, cc_format: NDClosedCaptionFormat, cc_data_bytes: winrt.system.Array[winrt.system.UInt8], /) -> None: ...
 
+@typing.final
 class INDTransmitterProperties(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INDTransmitterProperties: ...
@@ -667,6 +715,7 @@ class INDTransmitterProperties(winrt.system.Object):
     @_property
     def supported_features(self) -> NDCertificateFeature: ...
 
+@typing.final
 class IPlayReadyDomain(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPlayReadyDomain: ...
@@ -681,6 +730,7 @@ class IPlayReadyDomain(winrt.system.Object):
     @_property
     def service_id(self) -> _uuid.UUID: ...
 
+@typing.final
 class IPlayReadyLicense(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPlayReadyLicense: ...
@@ -698,6 +748,7 @@ class IPlayReadyLicense(winrt.system.Object):
     @_property
     def usable_for_play(self) -> bool: ...
 
+@typing.final
 class IPlayReadyLicenseAcquisitionServiceRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPlayReadyLicenseAcquisitionServiceRequest: ...
@@ -728,12 +779,14 @@ class IPlayReadyLicenseAcquisitionServiceRequest(winrt.system.Object):
     @_property
     def type(self) -> _uuid.UUID: ...
 
+@typing.final
 class IPlayReadyLicenseSession(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPlayReadyLicenseSession: ...
     def configure_media_protection_manager(self, mpm: typing.Optional[winrt.windows.media.protection.MediaProtectionManager], /) -> None: ...
     def create_l_a_service_request(self) -> typing.Optional[IPlayReadyLicenseAcquisitionServiceRequest]: ...
 
+@typing.final
 class IPlayReadyLicenseSession2(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPlayReadyLicenseSession2: ...
@@ -741,6 +794,7 @@ class IPlayReadyLicenseSession2(winrt.system.Object):
     def create_l_a_service_request(self) -> typing.Optional[IPlayReadyLicenseAcquisitionServiceRequest]: ...
     def create_license_iterable(self, content_header: typing.Optional[PlayReadyContentHeader], fully_evaluated: bool, /) -> typing.Optional[PlayReadyLicenseIterable]: ...
 
+@typing.final
 class IPlayReadySecureStopServiceRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPlayReadySecureStopServiceRequest: ...
@@ -773,6 +827,7 @@ class IPlayReadySecureStopServiceRequest(winrt.system.Object):
     @_property
     def type(self) -> _uuid.UUID: ...
 
+@typing.final
 class IPlayReadyServiceRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPlayReadyServiceRequest: ...

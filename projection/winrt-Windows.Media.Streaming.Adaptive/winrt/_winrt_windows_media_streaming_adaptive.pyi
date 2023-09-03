@@ -18,6 +18,7 @@ from winrt.windows.media.streaming.adaptive import AdaptiveMediaSourceCreationSt
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class AdaptiveMediaSource_Static(type):
     @typing.overload
     def create_from_stream_async(cls, stream: typing.Optional[winrt.windows.storage.streams.IInputStream], uri: typing.Optional[winrt.windows.foundation.Uri], content_type: str, /) -> winrt.windows.foundation.IAsyncOperation[AdaptiveMediaSourceCreationResult]: ...
@@ -29,6 +30,7 @@ class AdaptiveMediaSource_Static(type):
     def create_from_uri_async(cls, uri: typing.Optional[winrt.windows.foundation.Uri], http_client: typing.Optional[winrt.windows.web.http.HttpClient], /) -> winrt.windows.foundation.IAsyncOperation[AdaptiveMediaSourceCreationResult]: ...
     def is_content_type_supported(cls, content_type: str, /) -> bool: ...
 
+@typing.final
 class AdaptiveMediaSource(winrt.system.Object, metaclass=AdaptiveMediaSource_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -91,6 +93,7 @@ class AdaptiveMediaSource(winrt.system.Object, metaclass=AdaptiveMediaSource_Sta
     @_property
     def min_live_offset(self) -> typing.Optional[typing.Optional[datetime.timedelta]]: ...
 
+@typing.final
 class AdaptiveMediaSourceAdvancedSettings(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AdaptiveMediaSourceAdvancedSettings: ...
@@ -107,6 +110,7 @@ class AdaptiveMediaSourceAdvancedSettings(winrt.system.Object):
     @all_segments_independent.setter
     def all_segments_independent(self, value: bool) -> None: ...
 
+@typing.final
 class AdaptiveMediaSourceCorrelatedTimes(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AdaptiveMediaSourceCorrelatedTimes: ...
@@ -117,6 +121,7 @@ class AdaptiveMediaSourceCorrelatedTimes(winrt.system.Object):
     @_property
     def program_date_time(self) -> typing.Optional[typing.Optional[datetime.datetime]]: ...
 
+@typing.final
 class AdaptiveMediaSourceCreationResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AdaptiveMediaSourceCreationResult: ...
@@ -129,6 +134,7 @@ class AdaptiveMediaSourceCreationResult(winrt.system.Object):
     @_property
     def extended_error(self) -> winrt.windows.foundation.HResult: ...
 
+@typing.final
 class AdaptiveMediaSourceDiagnosticAvailableEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AdaptiveMediaSourceDiagnosticAvailableEventArgs: ...
@@ -157,12 +163,14 @@ class AdaptiveMediaSourceDiagnosticAvailableEventArgs(winrt.system.Object):
     @_property
     def resource_duration(self) -> typing.Optional[typing.Optional[datetime.timedelta]]: ...
 
+@typing.final
 class AdaptiveMediaSourceDiagnostics(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AdaptiveMediaSourceDiagnostics: ...
     def add_diagnostic_available(self, handler: winrt.windows.foundation.TypedEventHandler[AdaptiveMediaSourceDiagnostics, AdaptiveMediaSourceDiagnosticAvailableEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_diagnostic_available(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class AdaptiveMediaSourceDownloadBitrateChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AdaptiveMediaSourceDownloadBitrateChangedEventArgs: ...
@@ -173,6 +181,7 @@ class AdaptiveMediaSourceDownloadBitrateChangedEventArgs(winrt.system.Object):
     @_property
     def reason(self) -> AdaptiveMediaSourceDownloadBitrateChangedReason: ...
 
+@typing.final
 class AdaptiveMediaSourceDownloadCompletedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AdaptiveMediaSourceDownloadCompletedEventArgs: ...
@@ -197,6 +206,7 @@ class AdaptiveMediaSourceDownloadCompletedEventArgs(winrt.system.Object):
     @_property
     def resource_duration(self) -> typing.Optional[typing.Optional[datetime.timedelta]]: ...
 
+@typing.final
 class AdaptiveMediaSourceDownloadFailedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AdaptiveMediaSourceDownloadFailedEventArgs: ...
@@ -223,11 +233,13 @@ class AdaptiveMediaSourceDownloadFailedEventArgs(winrt.system.Object):
     @_property
     def resource_duration(self) -> typing.Optional[typing.Optional[datetime.timedelta]]: ...
 
+@typing.final
 class AdaptiveMediaSourceDownloadRequestedDeferral(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AdaptiveMediaSourceDownloadRequestedDeferral: ...
     def complete(self) -> None: ...
 
+@typing.final
 class AdaptiveMediaSourceDownloadRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AdaptiveMediaSourceDownloadRequestedEventArgs: ...
@@ -251,6 +263,7 @@ class AdaptiveMediaSourceDownloadRequestedEventArgs(winrt.system.Object):
     @_property
     def resource_duration(self) -> typing.Optional[typing.Optional[datetime.timedelta]]: ...
 
+@typing.final
 class AdaptiveMediaSourceDownloadResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AdaptiveMediaSourceDownloadResult: ...
@@ -283,6 +296,7 @@ class AdaptiveMediaSourceDownloadResult(winrt.system.Object):
     @resource_byte_range_length.setter
     def resource_byte_range_length(self, value: typing.Optional[typing.Optional[winrt.system.UInt64]]) -> None: ...
 
+@typing.final
 class AdaptiveMediaSourceDownloadStatistics(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AdaptiveMediaSourceDownloadStatistics: ...
@@ -295,6 +309,7 @@ class AdaptiveMediaSourceDownloadStatistics(winrt.system.Object):
     @_property
     def time_to_last_byte_received(self) -> typing.Optional[typing.Optional[datetime.timedelta]]: ...
 
+@typing.final
 class AdaptiveMediaSourcePlaybackBitrateChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AdaptiveMediaSourcePlaybackBitrateChangedEventArgs: ...

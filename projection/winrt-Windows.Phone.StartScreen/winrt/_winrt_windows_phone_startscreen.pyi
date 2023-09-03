@@ -14,6 +14,7 @@ import winrt.windows.ui.notifications
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class DualSimTile_Static(type):
     def create_badge_updater_for_sim1(cls) -> typing.Optional[winrt.windows.ui.notifications.BadgeUpdater]: ...
     def create_badge_updater_for_sim2(cls) -> typing.Optional[winrt.windows.ui.notifications.BadgeUpdater]: ...
@@ -24,6 +25,7 @@ class DualSimTile_Static(type):
     def get_tile_for_sim2(cls) -> typing.Optional[DualSimTile]: ...
     def update_display_name_for_sim1_async(cls, name: str, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
 
+@typing.final
 class DualSimTile(winrt.system.Object, metaclass=DualSimTile_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DualSimTile: ...
@@ -38,6 +40,7 @@ class DualSimTile(winrt.system.Object, metaclass=DualSimTile_Static):
     @_property
     def is_pinned_to_start(self) -> bool: ...
 
+@typing.final
 class IToastNotificationManagerStatics3(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IToastNotificationManagerStatics3: ...

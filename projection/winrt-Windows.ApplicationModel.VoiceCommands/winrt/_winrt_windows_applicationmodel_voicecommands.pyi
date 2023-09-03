@@ -20,6 +20,7 @@ from winrt.windows.applicationmodel.voicecommands import VoiceCommandCompletionR
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class VoiceCommand(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VoiceCommand: ...
@@ -30,18 +31,21 @@ class VoiceCommand(winrt.system.Object):
     @_property
     def speech_recognition_result(self) -> typing.Optional[winrt.windows.media.speechrecognition.SpeechRecognitionResult]: ...
 
+@typing.final
 class VoiceCommandCompletedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VoiceCommandCompletedEventArgs: ...
     @_property
     def reason(self) -> VoiceCommandCompletionReason: ...
 
+@typing.final
 class VoiceCommandConfirmationResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VoiceCommandConfirmationResult: ...
     @_property
     def confirmed(self) -> bool: ...
 
+@typing.final
 class VoiceCommandContentTile(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VoiceCommandContentTile: ...
@@ -79,6 +83,7 @@ class VoiceCommandContentTile(winrt.system.Object):
     @app_context.setter
     def app_context(self, value: typing.Optional[winrt.system.Object]) -> None: ...
 
+@typing.final
 class VoiceCommandDefinition(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VoiceCommandDefinition: ...
@@ -88,21 +93,25 @@ class VoiceCommandDefinition(winrt.system.Object):
     @_property
     def name(self) -> str: ...
 
+@typing.final
 class VoiceCommandDefinitionManager_Static(type):
     def install_command_definitions_from_storage_file_async(cls, file: typing.Optional[winrt.windows.storage.StorageFile], /) -> winrt.windows.foundation.IAsyncAction: ...
     @_property
     def installed_command_definitions(cls) -> typing.Optional[winrt.windows.foundation.collections.IMapView[str, VoiceCommandDefinition]]: ...
 
+@typing.final
 class VoiceCommandDefinitionManager(winrt.system.Object, metaclass=VoiceCommandDefinitionManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VoiceCommandDefinitionManager: ...
 
+@typing.final
 class VoiceCommandDisambiguationResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VoiceCommandDisambiguationResult: ...
     @_property
     def selected_item(self) -> typing.Optional[VoiceCommandContentTile]: ...
 
+@typing.final
 class VoiceCommandResponse_Static(type):
     @typing.overload
     def create_response(cls, user_message: typing.Optional[VoiceCommandUserMessage], /) -> typing.Optional[VoiceCommandResponse]: ...
@@ -115,6 +124,7 @@ class VoiceCommandResponse_Static(type):
     @_property
     def max_supported_voice_command_content_tiles(cls) -> winrt.system.UInt32: ...
 
+@typing.final
 class VoiceCommandResponse(winrt.system.Object, metaclass=VoiceCommandResponse_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VoiceCommandResponse: ...
@@ -133,9 +143,11 @@ class VoiceCommandResponse(winrt.system.Object, metaclass=VoiceCommandResponse_S
     @_property
     def voice_command_content_tiles(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[VoiceCommandContentTile]]: ...
 
+@typing.final
 class VoiceCommandServiceConnection_Static(type):
     def from_app_service_trigger_details(cls, trigger_details: typing.Optional[winrt.windows.applicationmodel.appservice.AppServiceTriggerDetails], /) -> typing.Optional[VoiceCommandServiceConnection]: ...
 
+@typing.final
 class VoiceCommandServiceConnection(winrt.system.Object, metaclass=VoiceCommandServiceConnection_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VoiceCommandServiceConnection: ...
@@ -151,6 +163,7 @@ class VoiceCommandServiceConnection(winrt.system.Object, metaclass=VoiceCommandS
     @_property
     def language(self) -> typing.Optional[winrt.windows.globalization.Language]: ...
 
+@typing.final
 class VoiceCommandUserMessage(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VoiceCommandUserMessage: ...

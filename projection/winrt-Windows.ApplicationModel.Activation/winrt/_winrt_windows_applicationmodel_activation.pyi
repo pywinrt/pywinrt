@@ -37,6 +37,7 @@ from winrt.windows.applicationmodel.activation import ActivationKind, Applicatio
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class AppointmentsProviderAddAppointmentActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentsProviderAddAppointmentActivatedEventArgs: ...
@@ -53,6 +54,7 @@ class AppointmentsProviderAddAppointmentActivatedEventArgs(winrt.system.Object):
     @_property
     def add_appointment_operation(self) -> typing.Optional[winrt.windows.applicationmodel.appointments.appointmentsprovider.AddAppointmentOperation]: ...
 
+@typing.final
 class AppointmentsProviderRemoveAppointmentActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentsProviderRemoveAppointmentActivatedEventArgs: ...
@@ -69,6 +71,7 @@ class AppointmentsProviderRemoveAppointmentActivatedEventArgs(winrt.system.Objec
     @_property
     def remove_appointment_operation(self) -> typing.Optional[winrt.windows.applicationmodel.appointments.appointmentsprovider.RemoveAppointmentOperation]: ...
 
+@typing.final
 class AppointmentsProviderReplaceAppointmentActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentsProviderReplaceAppointmentActivatedEventArgs: ...
@@ -85,6 +88,7 @@ class AppointmentsProviderReplaceAppointmentActivatedEventArgs(winrt.system.Obje
     @_property
     def replace_appointment_operation(self) -> typing.Optional[winrt.windows.applicationmodel.appointments.appointmentsprovider.ReplaceAppointmentOperation]: ...
 
+@typing.final
 class AppointmentsProviderShowAppointmentDetailsActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentsProviderShowAppointmentDetailsActivatedEventArgs: ...
@@ -105,6 +109,7 @@ class AppointmentsProviderShowAppointmentDetailsActivatedEventArgs(winrt.system.
     @_property
     def roaming_id(self) -> str: ...
 
+@typing.final
 class AppointmentsProviderShowTimeFrameActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentsProviderShowTimeFrameActivatedEventArgs: ...
@@ -123,12 +128,14 @@ class AppointmentsProviderShowTimeFrameActivatedEventArgs(winrt.system.Object):
     @_property
     def time_to_show(self) -> datetime.datetime: ...
 
+@typing.final
 class BackgroundActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BackgroundActivatedEventArgs: ...
     @_property
     def task_instance(self) -> typing.Optional[winrt.windows.applicationmodel.background.IBackgroundTaskInstance]: ...
 
+@typing.final
 class BarcodeScannerPreviewActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BarcodeScannerPreviewActivatedEventArgs: ...
@@ -143,6 +150,7 @@ class BarcodeScannerPreviewActivatedEventArgs(winrt.system.Object):
     @_property
     def connection_id(self) -> str: ...
 
+@typing.final
 class CachedFileUpdaterActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CachedFileUpdaterActivatedEventArgs: ...
@@ -157,6 +165,7 @@ class CachedFileUpdaterActivatedEventArgs(winrt.system.Object):
     @_property
     def cached_file_updater_u_i(self) -> typing.Optional[winrt.windows.storage.provider.CachedFileUpdaterUI]: ...
 
+@typing.final
 class CameraSettingsActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CameraSettingsActivatedEventArgs: ...
@@ -171,6 +180,7 @@ class CameraSettingsActivatedEventArgs(winrt.system.Object):
     @_property
     def video_device_extension(self) -> typing.Optional[winrt.system.Object]: ...
 
+@typing.final
 class CommandLineActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CommandLineActivatedEventArgs: ...
@@ -185,6 +195,7 @@ class CommandLineActivatedEventArgs(winrt.system.Object):
     @_property
     def operation(self) -> typing.Optional[CommandLineActivationOperation]: ...
 
+@typing.final
 class CommandLineActivationOperation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CommandLineActivationOperation: ...
@@ -198,6 +209,7 @@ class CommandLineActivationOperation(winrt.system.Object):
     @_property
     def current_directory_path(self) -> str: ...
 
+@typing.final
 class ContactCallActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactCallActivatedEventArgs: ...
@@ -216,6 +228,7 @@ class ContactCallActivatedEventArgs(winrt.system.Object):
     @_property
     def service_user_id(self) -> str: ...
 
+@typing.final
 class ContactMapActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactMapActivatedEventArgs: ...
@@ -232,6 +245,7 @@ class ContactMapActivatedEventArgs(winrt.system.Object):
     @_property
     def contact(self) -> typing.Optional[winrt.windows.applicationmodel.contacts.Contact]: ...
 
+@typing.final
 class ContactMessageActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactMessageActivatedEventArgs: ...
@@ -250,6 +264,7 @@ class ContactMessageActivatedEventArgs(winrt.system.Object):
     @_property
     def service_user_id(self) -> str: ...
 
+@typing.final
 class ContactPanelActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactPanelActivatedEventArgs: ...
@@ -266,6 +281,7 @@ class ContactPanelActivatedEventArgs(winrt.system.Object):
     @_property
     def contact_panel(self) -> typing.Optional[winrt.windows.applicationmodel.contacts.ContactPanel]: ...
 
+@typing.final
 class ContactPickerActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactPickerActivatedEventArgs: ...
@@ -278,6 +294,7 @@ class ContactPickerActivatedEventArgs(winrt.system.Object):
     @_property
     def contact_picker_u_i(self) -> typing.Optional[winrt.windows.applicationmodel.contacts.provider.ContactPickerUI]: ...
 
+@typing.final
 class ContactPostActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactPostActivatedEventArgs: ...
@@ -296,6 +313,7 @@ class ContactPostActivatedEventArgs(winrt.system.Object):
     @_property
     def service_user_id(self) -> str: ...
 
+@typing.final
 class ContactVideoCallActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactVideoCallActivatedEventArgs: ...
@@ -314,6 +332,7 @@ class ContactVideoCallActivatedEventArgs(winrt.system.Object):
     @_property
     def service_user_id(self) -> str: ...
 
+@typing.final
 class DeviceActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DeviceActivatedEventArgs: ...
@@ -334,6 +353,7 @@ class DeviceActivatedEventArgs(winrt.system.Object):
     @_property
     def view_switcher(self) -> typing.Optional[winrt.windows.ui.viewmanagement.ActivationViewSwitcher]: ...
 
+@typing.final
 class DevicePairingActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DevicePairingActivatedEventArgs: ...
@@ -348,6 +368,7 @@ class DevicePairingActivatedEventArgs(winrt.system.Object):
     @_property
     def device_information(self) -> typing.Optional[winrt.windows.devices.enumeration.DeviceInformation]: ...
 
+@typing.final
 class DialReceiverActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DialReceiverActivatedEventArgs: ...
@@ -370,6 +391,7 @@ class DialReceiverActivatedEventArgs(winrt.system.Object):
     @_property
     def view_switcher(self) -> typing.Optional[winrt.windows.ui.viewmanagement.ActivationViewSwitcher]: ...
 
+@typing.final
 class FileActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FileActivatedEventArgs: ...
@@ -394,6 +416,7 @@ class FileActivatedEventArgs(winrt.system.Object):
     @_property
     def view_switcher(self) -> typing.Optional[winrt.windows.ui.viewmanagement.ActivationViewSwitcher]: ...
 
+@typing.final
 class FileOpenPickerActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FileOpenPickerActivatedEventArgs: ...
@@ -410,6 +433,7 @@ class FileOpenPickerActivatedEventArgs(winrt.system.Object):
     @_property
     def caller_package_family_name(self) -> str: ...
 
+@typing.final
 class FileOpenPickerContinuationEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FileOpenPickerContinuationEventArgs: ...
@@ -426,6 +450,7 @@ class FileOpenPickerContinuationEventArgs(winrt.system.Object):
     @_property
     def files(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.storage.StorageFile]]: ...
 
+@typing.final
 class FileSavePickerActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FileSavePickerActivatedEventArgs: ...
@@ -444,6 +469,7 @@ class FileSavePickerActivatedEventArgs(winrt.system.Object):
     @_property
     def enterprise_id(self) -> str: ...
 
+@typing.final
 class FileSavePickerContinuationEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FileSavePickerContinuationEventArgs: ...
@@ -460,6 +486,7 @@ class FileSavePickerContinuationEventArgs(winrt.system.Object):
     @_property
     def file(self) -> typing.Optional[winrt.windows.storage.StorageFile]: ...
 
+@typing.final
 class FolderPickerContinuationEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FolderPickerContinuationEventArgs: ...
@@ -476,6 +503,7 @@ class FolderPickerContinuationEventArgs(winrt.system.Object):
     @_property
     def folder(self) -> typing.Optional[winrt.windows.storage.StorageFolder]: ...
 
+@typing.final
 class LaunchActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LaunchActivatedEventArgs: ...
@@ -500,6 +528,7 @@ class LaunchActivatedEventArgs(winrt.system.Object):
     @_property
     def view_switcher(self) -> typing.Optional[winrt.windows.ui.viewmanagement.ActivationViewSwitcher]: ...
 
+@typing.final
 class LockScreenActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LockScreenActivatedEventArgs: ...
@@ -514,6 +543,7 @@ class LockScreenActivatedEventArgs(winrt.system.Object):
     @_property
     def info(self) -> typing.Optional[winrt.system.Object]: ...
 
+@typing.final
 class LockScreenCallActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LockScreenCallActivatedEventArgs: ...
@@ -534,6 +564,7 @@ class LockScreenCallActivatedEventArgs(winrt.system.Object):
     @_property
     def view_switcher(self) -> typing.Optional[winrt.windows.ui.viewmanagement.ActivationViewSwitcher]: ...
 
+@typing.final
 class LockScreenComponentActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LockScreenComponentActivatedEventArgs: ...
@@ -544,6 +575,7 @@ class LockScreenComponentActivatedEventArgs(winrt.system.Object):
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class PhoneCallActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneCallActivatedEventArgs: ...
@@ -558,6 +590,7 @@ class PhoneCallActivatedEventArgs(winrt.system.Object):
     @_property
     def line_id(self) -> _uuid.UUID: ...
 
+@typing.final
 class PickerReturnedActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PickerReturnedActivatedEventArgs: ...
@@ -570,6 +603,7 @@ class PickerReturnedActivatedEventArgs(winrt.system.Object):
     @_property
     def picker_operation_id(self) -> str: ...
 
+@typing.final
 class Print3DWorkflowActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Print3DWorkflowActivatedEventArgs: ...
@@ -582,6 +616,7 @@ class Print3DWorkflowActivatedEventArgs(winrt.system.Object):
     @_property
     def workflow(self) -> typing.Optional[winrt.windows.devices.printers.extensions.Print3DWorkflow]: ...
 
+@typing.final
 class PrintTaskSettingsActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintTaskSettingsActivatedEventArgs: ...
@@ -594,6 +629,7 @@ class PrintTaskSettingsActivatedEventArgs(winrt.system.Object):
     @_property
     def configuration(self) -> typing.Optional[winrt.windows.devices.printers.extensions.PrintTaskConfiguration]: ...
 
+@typing.final
 class ProtocolActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProtocolActivatedEventArgs: ...
@@ -616,6 +652,7 @@ class ProtocolActivatedEventArgs(winrt.system.Object):
     @_property
     def view_switcher(self) -> typing.Optional[winrt.windows.ui.viewmanagement.ActivationViewSwitcher]: ...
 
+@typing.final
 class ProtocolForResultsActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProtocolForResultsActivatedEventArgs: ...
@@ -640,6 +677,7 @@ class ProtocolForResultsActivatedEventArgs(winrt.system.Object):
     @_property
     def view_switcher(self) -> typing.Optional[winrt.windows.ui.viewmanagement.ActivationViewSwitcher]: ...
 
+@typing.final
 class RestrictedLaunchActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RestrictedLaunchActivatedEventArgs: ...
@@ -654,6 +692,7 @@ class RestrictedLaunchActivatedEventArgs(winrt.system.Object):
     @_property
     def shared_context(self) -> typing.Optional[winrt.system.Object]: ...
 
+@typing.final
 class SearchActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SearchActivatedEventArgs: ...
@@ -676,6 +715,7 @@ class SearchActivatedEventArgs(winrt.system.Object):
     @_property
     def view_switcher(self) -> typing.Optional[winrt.windows.ui.viewmanagement.ActivationViewSwitcher]: ...
 
+@typing.final
 class ShareTargetActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ShareTargetActivatedEventArgs: ...
@@ -690,6 +730,7 @@ class ShareTargetActivatedEventArgs(winrt.system.Object):
     @_property
     def share_operation(self) -> typing.Optional[winrt.windows.applicationmodel.datatransfer.sharetarget.ShareOperation]: ...
 
+@typing.final
 class SplashScreen(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SplashScreen: ...
@@ -698,6 +739,7 @@ class SplashScreen(winrt.system.Object):
     @_property
     def image_location(self) -> winrt.windows.foundation.Rect: ...
 
+@typing.final
 class StartupTaskActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StartupTaskActivatedEventArgs: ...
@@ -712,12 +754,14 @@ class StartupTaskActivatedEventArgs(winrt.system.Object):
     @_property
     def task_id(self) -> str: ...
 
+@typing.final
 class TileActivatedInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TileActivatedInfo: ...
     @_property
     def recently_shown_notifications(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.ui.notifications.ShownTileNotification]]: ...
 
+@typing.final
 class ToastNotificationActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ToastNotificationActivatedEventArgs: ...
@@ -736,6 +780,7 @@ class ToastNotificationActivatedEventArgs(winrt.system.Object):
     @_property
     def user_input(self) -> typing.Optional[winrt.windows.foundation.collections.ValueSet]: ...
 
+@typing.final
 class UserDataAccountProviderActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDataAccountProviderActivatedEventArgs: ...
@@ -748,6 +793,7 @@ class UserDataAccountProviderActivatedEventArgs(winrt.system.Object):
     @_property
     def operation(self) -> typing.Optional[winrt.windows.applicationmodel.userdataaccounts.provider.IUserDataAccountProviderOperation]: ...
 
+@typing.final
 class VoiceCommandActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VoiceCommandActivatedEventArgs: ...
@@ -762,6 +808,7 @@ class VoiceCommandActivatedEventArgs(winrt.system.Object):
     @_property
     def result(self) -> typing.Optional[winrt.windows.media.speechrecognition.SpeechRecognitionResult]: ...
 
+@typing.final
 class WalletActionActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WalletActionActivatedEventArgs: ...
@@ -778,6 +825,7 @@ class WalletActionActivatedEventArgs(winrt.system.Object):
     @_property
     def item_id(self) -> str: ...
 
+@typing.final
 class WebAccountProviderActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebAccountProviderActivatedEventArgs: ...
@@ -792,6 +840,7 @@ class WebAccountProviderActivatedEventArgs(winrt.system.Object):
     @_property
     def operation(self) -> typing.Optional[winrt.windows.security.authentication.web.provider.IWebAccountProviderOperation]: ...
 
+@typing.final
 class WebAuthenticationBrokerContinuationEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebAuthenticationBrokerContinuationEventArgs: ...
@@ -806,6 +855,7 @@ class WebAuthenticationBrokerContinuationEventArgs(winrt.system.Object):
     @_property
     def web_authentication_result(self) -> typing.Optional[winrt.windows.security.authentication.web.WebAuthenticationResult]: ...
 
+@typing.final
 class IActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IActivatedEventArgs: ...
@@ -816,6 +866,7 @@ class IActivatedEventArgs(winrt.system.Object):
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class IActivatedEventArgsWithUser(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IActivatedEventArgsWithUser: ...
@@ -828,6 +879,7 @@ class IActivatedEventArgsWithUser(winrt.system.Object):
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class IApplicationViewActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IApplicationViewActivatedEventArgs: ...
@@ -840,6 +892,7 @@ class IApplicationViewActivatedEventArgs(winrt.system.Object):
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class IAppointmentsProviderActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAppointmentsProviderActivatedEventArgs: ...
@@ -852,6 +905,7 @@ class IAppointmentsProviderActivatedEventArgs(winrt.system.Object):
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class IAppointmentsProviderAddAppointmentActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAppointmentsProviderAddAppointmentActivatedEventArgs: ...
@@ -866,6 +920,7 @@ class IAppointmentsProviderAddAppointmentActivatedEventArgs(winrt.system.Object)
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class IAppointmentsProviderRemoveAppointmentActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAppointmentsProviderRemoveAppointmentActivatedEventArgs: ...
@@ -880,6 +935,7 @@ class IAppointmentsProviderRemoveAppointmentActivatedEventArgs(winrt.system.Obje
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class IAppointmentsProviderReplaceAppointmentActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAppointmentsProviderReplaceAppointmentActivatedEventArgs: ...
@@ -894,6 +950,7 @@ class IAppointmentsProviderReplaceAppointmentActivatedEventArgs(winrt.system.Obj
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs: ...
@@ -912,6 +969,7 @@ class IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs(winrt.system
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class IAppointmentsProviderShowTimeFrameActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAppointmentsProviderShowTimeFrameActivatedEventArgs: ...
@@ -928,12 +986,14 @@ class IAppointmentsProviderShowTimeFrameActivatedEventArgs(winrt.system.Object):
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class IBackgroundActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBackgroundActivatedEventArgs: ...
     @_property
     def task_instance(self) -> typing.Optional[winrt.windows.applicationmodel.background.IBackgroundTaskInstance]: ...
 
+@typing.final
 class IBarcodeScannerPreviewActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBarcodeScannerPreviewActivatedEventArgs: ...
@@ -946,6 +1006,7 @@ class IBarcodeScannerPreviewActivatedEventArgs(winrt.system.Object):
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class ICachedFileUpdaterActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICachedFileUpdaterActivatedEventArgs: ...
@@ -958,6 +1019,7 @@ class ICachedFileUpdaterActivatedEventArgs(winrt.system.Object):
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class ICameraSettingsActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICameraSettingsActivatedEventArgs: ...
@@ -972,6 +1034,7 @@ class ICameraSettingsActivatedEventArgs(winrt.system.Object):
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class ICommandLineActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICommandLineActivatedEventArgs: ...
@@ -984,6 +1047,7 @@ class ICommandLineActivatedEventArgs(winrt.system.Object):
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class IContactActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IContactActivatedEventArgs: ...
@@ -996,6 +1060,7 @@ class IContactActivatedEventArgs(winrt.system.Object):
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class IContactCallActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IContactCallActivatedEventArgs: ...
@@ -1014,6 +1079,7 @@ class IContactCallActivatedEventArgs(winrt.system.Object):
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class IContactMapActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IContactMapActivatedEventArgs: ...
@@ -1030,6 +1096,7 @@ class IContactMapActivatedEventArgs(winrt.system.Object):
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class IContactMessageActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IContactMessageActivatedEventArgs: ...
@@ -1048,6 +1115,7 @@ class IContactMessageActivatedEventArgs(winrt.system.Object):
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class IContactPanelActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IContactPanelActivatedEventArgs: ...
@@ -1056,6 +1124,7 @@ class IContactPanelActivatedEventArgs(winrt.system.Object):
     @_property
     def contact_panel(self) -> typing.Optional[winrt.windows.applicationmodel.contacts.ContactPanel]: ...
 
+@typing.final
 class IContactPickerActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IContactPickerActivatedEventArgs: ...
@@ -1068,6 +1137,7 @@ class IContactPickerActivatedEventArgs(winrt.system.Object):
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class IContactPostActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IContactPostActivatedEventArgs: ...
@@ -1086,6 +1156,7 @@ class IContactPostActivatedEventArgs(winrt.system.Object):
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class IContactVideoCallActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IContactVideoCallActivatedEventArgs: ...
@@ -1104,6 +1175,7 @@ class IContactVideoCallActivatedEventArgs(winrt.system.Object):
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class IContactsProviderActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IContactsProviderActivatedEventArgs: ...
@@ -1116,6 +1188,7 @@ class IContactsProviderActivatedEventArgs(winrt.system.Object):
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class IContinuationActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IContinuationActivatedEventArgs: ...
@@ -1128,6 +1201,7 @@ class IContinuationActivatedEventArgs(winrt.system.Object):
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class IDeviceActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IDeviceActivatedEventArgs: ...
@@ -1142,6 +1216,7 @@ class IDeviceActivatedEventArgs(winrt.system.Object):
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class IDevicePairingActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IDevicePairingActivatedEventArgs: ...
@@ -1154,6 +1229,7 @@ class IDevicePairingActivatedEventArgs(winrt.system.Object):
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class IDialReceiverActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IDialReceiverActivatedEventArgs: ...
@@ -1170,6 +1246,7 @@ class IDialReceiverActivatedEventArgs(winrt.system.Object):
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class IFileActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IFileActivatedEventArgs: ...
@@ -1184,6 +1261,7 @@ class IFileActivatedEventArgs(winrt.system.Object):
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class IFileActivatedEventArgsWithCallerPackageFamilyName(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IFileActivatedEventArgsWithCallerPackageFamilyName: ...
@@ -1196,6 +1274,7 @@ class IFileActivatedEventArgsWithCallerPackageFamilyName(winrt.system.Object):
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class IFileActivatedEventArgsWithNeighboringFiles(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IFileActivatedEventArgsWithNeighboringFiles: ...
@@ -1212,6 +1291,7 @@ class IFileActivatedEventArgsWithNeighboringFiles(winrt.system.Object):
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class IFileOpenPickerActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IFileOpenPickerActivatedEventArgs: ...
@@ -1224,12 +1304,14 @@ class IFileOpenPickerActivatedEventArgs(winrt.system.Object):
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class IFileOpenPickerActivatedEventArgs2(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IFileOpenPickerActivatedEventArgs2: ...
     @_property
     def caller_package_family_name(self) -> str: ...
 
+@typing.final
 class IFileOpenPickerContinuationEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IFileOpenPickerContinuationEventArgs: ...
@@ -1244,6 +1326,7 @@ class IFileOpenPickerContinuationEventArgs(winrt.system.Object):
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class IFileSavePickerActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IFileSavePickerActivatedEventArgs: ...
@@ -1256,6 +1339,7 @@ class IFileSavePickerActivatedEventArgs(winrt.system.Object):
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class IFileSavePickerActivatedEventArgs2(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IFileSavePickerActivatedEventArgs2: ...
@@ -1264,6 +1348,7 @@ class IFileSavePickerActivatedEventArgs2(winrt.system.Object):
     @_property
     def enterprise_id(self) -> str: ...
 
+@typing.final
 class IFileSavePickerContinuationEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IFileSavePickerContinuationEventArgs: ...
@@ -1278,6 +1363,7 @@ class IFileSavePickerContinuationEventArgs(winrt.system.Object):
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class IFolderPickerContinuationEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IFolderPickerContinuationEventArgs: ...
@@ -1292,6 +1378,7 @@ class IFolderPickerContinuationEventArgs(winrt.system.Object):
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class ILaunchActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ILaunchActivatedEventArgs: ...
@@ -1306,6 +1393,7 @@ class ILaunchActivatedEventArgs(winrt.system.Object):
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class ILaunchActivatedEventArgs2(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ILaunchActivatedEventArgs2: ...
@@ -1322,6 +1410,7 @@ class ILaunchActivatedEventArgs2(winrt.system.Object):
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class ILockScreenActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ILockScreenActivatedEventArgs: ...
@@ -1334,6 +1423,7 @@ class ILockScreenActivatedEventArgs(winrt.system.Object):
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class ILockScreenCallActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ILockScreenCallActivatedEventArgs: ...
@@ -1350,6 +1440,7 @@ class ILockScreenCallActivatedEventArgs(winrt.system.Object):
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class IPhoneCallActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPhoneCallActivatedEventArgs: ...
@@ -1362,6 +1453,7 @@ class IPhoneCallActivatedEventArgs(winrt.system.Object):
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class IPickerReturnedActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPickerReturnedActivatedEventArgs: ...
@@ -1374,6 +1466,7 @@ class IPickerReturnedActivatedEventArgs(winrt.system.Object):
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class IPrelaunchActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPrelaunchActivatedEventArgs: ...
@@ -1386,6 +1479,7 @@ class IPrelaunchActivatedEventArgs(winrt.system.Object):
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class IPrint3DWorkflowActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPrint3DWorkflowActivatedEventArgs: ...
@@ -1398,6 +1492,7 @@ class IPrint3DWorkflowActivatedEventArgs(winrt.system.Object):
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class IPrintTaskSettingsActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPrintTaskSettingsActivatedEventArgs: ...
@@ -1410,6 +1505,7 @@ class IPrintTaskSettingsActivatedEventArgs(winrt.system.Object):
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class IProtocolActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IProtocolActivatedEventArgs: ...
@@ -1422,6 +1518,7 @@ class IProtocolActivatedEventArgs(winrt.system.Object):
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData: ...
@@ -1436,6 +1533,7 @@ class IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData(winrt.system
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class IProtocolForResultsActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IProtocolForResultsActivatedEventArgs: ...
@@ -1448,6 +1546,7 @@ class IProtocolForResultsActivatedEventArgs(winrt.system.Object):
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class IRestrictedLaunchActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IRestrictedLaunchActivatedEventArgs: ...
@@ -1460,6 +1559,7 @@ class IRestrictedLaunchActivatedEventArgs(winrt.system.Object):
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class ISearchActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISearchActivatedEventArgs: ...
@@ -1474,12 +1574,14 @@ class ISearchActivatedEventArgs(winrt.system.Object):
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class ISearchActivatedEventArgsWithLinguisticDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISearchActivatedEventArgsWithLinguisticDetails: ...
     @_property
     def linguistic_details(self) -> typing.Optional[winrt.windows.applicationmodel.search.SearchPaneQueryLinguisticDetails]: ...
 
+@typing.final
 class IShareTargetActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IShareTargetActivatedEventArgs: ...
@@ -1492,6 +1594,7 @@ class IShareTargetActivatedEventArgs(winrt.system.Object):
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class IStartupTaskActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStartupTaskActivatedEventArgs: ...
@@ -1504,6 +1607,7 @@ class IStartupTaskActivatedEventArgs(winrt.system.Object):
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class IToastNotificationActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IToastNotificationActivatedEventArgs: ...
@@ -1518,6 +1622,7 @@ class IToastNotificationActivatedEventArgs(winrt.system.Object):
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class IUserDataAccountProviderActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IUserDataAccountProviderActivatedEventArgs: ...
@@ -1530,6 +1635,7 @@ class IUserDataAccountProviderActivatedEventArgs(winrt.system.Object):
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class IViewSwitcherProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IViewSwitcherProvider: ...
@@ -1542,6 +1648,7 @@ class IViewSwitcherProvider(winrt.system.Object):
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class IVoiceCommandActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IVoiceCommandActivatedEventArgs: ...
@@ -1554,6 +1661,7 @@ class IVoiceCommandActivatedEventArgs(winrt.system.Object):
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class IWalletActionActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWalletActionActivatedEventArgs: ...
@@ -1570,6 +1678,7 @@ class IWalletActionActivatedEventArgs(winrt.system.Object):
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class IWebAccountProviderActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebAccountProviderActivatedEventArgs: ...
@@ -1582,6 +1691,7 @@ class IWebAccountProviderActivatedEventArgs(winrt.system.Object):
     @_property
     def splash_screen(self) -> typing.Optional[SplashScreen]: ...
 
+@typing.final
 class IWebAuthenticationBrokerContinuationEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebAuthenticationBrokerContinuationEventArgs: ...

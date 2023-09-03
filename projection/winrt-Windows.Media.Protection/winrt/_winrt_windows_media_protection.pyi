@@ -18,6 +18,7 @@ from winrt.windows.media.protection import ComponentLoadFailedEventHandler, Rebo
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class ComponentLoadFailedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ComponentLoadFailedEventArgs: ...
@@ -26,13 +27,16 @@ class ComponentLoadFailedEventArgs(winrt.system.Object):
     @_property
     def information(self) -> typing.Optional[RevocationAndRenewalInformation]: ...
 
+@typing.final
 class ComponentRenewal_Static(type):
     def renew_system_components_async(cls, information: typing.Optional[RevocationAndRenewalInformation], /) -> winrt.windows.foundation.IAsyncOperationWithProgress[RenewalStatus, winrt.system.UInt32]: ...
 
+@typing.final
 class ComponentRenewal(winrt.system.Object, metaclass=ComponentRenewal_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ComponentRenewal: ...
 
+@typing.final
 class HdcpSession(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -46,6 +50,7 @@ class HdcpSession(winrt.system.Object):
     def add_protection_changed(self, handler: winrt.windows.foundation.TypedEventHandler[HdcpSession, winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_protection_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class MediaProtectionManager(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaProtectionManager: ...
@@ -59,6 +64,7 @@ class MediaProtectionManager(winrt.system.Object):
     @_property
     def properties(self) -> typing.Optional[winrt.windows.foundation.collections.IPropertySet]: ...
 
+@typing.final
 class MediaProtectionPMPServer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaProtectionPMPServer: ...
@@ -66,23 +72,27 @@ class MediaProtectionPMPServer(winrt.system.Object):
     @_property
     def properties(self) -> typing.Optional[winrt.windows.foundation.collections.IPropertySet]: ...
 
+@typing.final
 class MediaProtectionServiceCompletion(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaProtectionServiceCompletion: ...
     def complete(self, success: bool, /) -> None: ...
 
+@typing.final
 class ProtectionCapabilities(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProtectionCapabilities: ...
     def __new__(cls: typing.Type[ProtectionCapabilities]) -> ProtectionCapabilities:...
     def is_type_supported(self, type: str, key_system: str, /) -> ProtectionCapabilityResult: ...
 
+@typing.final
 class RevocationAndRenewalInformation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RevocationAndRenewalInformation: ...
     @_property
     def items(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[RevocationAndRenewalItem]]: ...
 
+@typing.final
 class RevocationAndRenewalItem(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RevocationAndRenewalItem: ...
@@ -97,6 +107,7 @@ class RevocationAndRenewalItem(winrt.system.Object):
     @_property
     def renewal_id(self) -> str: ...
 
+@typing.final
 class ServiceRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ServiceRequestedEventArgs: ...
@@ -107,6 +118,7 @@ class ServiceRequestedEventArgs(winrt.system.Object):
     @_property
     def media_playback_item(self) -> typing.Optional[winrt.windows.media.playback.MediaPlaybackItem]: ...
 
+@typing.final
 class IMediaProtectionServiceRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IMediaProtectionServiceRequest: ...

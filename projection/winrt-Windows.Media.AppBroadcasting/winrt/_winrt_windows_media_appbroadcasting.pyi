@@ -14,6 +14,7 @@ import winrt.windows.system
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class AppBroadcastingMonitor(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBroadcastingMonitor: ...
@@ -23,6 +24,7 @@ class AppBroadcastingMonitor(winrt.system.Object):
     @_property
     def is_current_app_broadcasting(self) -> bool: ...
 
+@typing.final
 class AppBroadcastingStatus(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBroadcastingStatus: ...
@@ -31,6 +33,7 @@ class AppBroadcastingStatus(winrt.system.Object):
     @_property
     def details(self) -> typing.Optional[AppBroadcastingStatusDetails]: ...
 
+@typing.final
 class AppBroadcastingStatusDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBroadcastingStatusDetails: ...
@@ -51,10 +54,12 @@ class AppBroadcastingStatusDetails(winrt.system.Object):
     @_property
     def is_gpu_constrained(self) -> bool: ...
 
+@typing.final
 class AppBroadcastingUI_Static(type):
     def get_default(cls) -> typing.Optional[AppBroadcastingUI]: ...
     def get_for_user(cls, user: typing.Optional[winrt.windows.system.User], /) -> typing.Optional[AppBroadcastingUI]: ...
 
+@typing.final
 class AppBroadcastingUI(winrt.system.Object, metaclass=AppBroadcastingUI_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBroadcastingUI: ...

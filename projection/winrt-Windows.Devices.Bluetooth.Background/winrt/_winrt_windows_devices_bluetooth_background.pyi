@@ -22,6 +22,7 @@ from winrt.windows.devices.bluetooth.background import BluetoothEventTriggeringM
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class BluetoothLEAdvertisementPublisherTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BluetoothLEAdvertisementPublisherTriggerDetails: ...
@@ -32,6 +33,7 @@ class BluetoothLEAdvertisementPublisherTriggerDetails(winrt.system.Object):
     @_property
     def selected_transmit_power_level_in_d_bm(self) -> typing.Optional[typing.Optional[winrt.system.Int16]]: ...
 
+@typing.final
 class BluetoothLEAdvertisementWatcherTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BluetoothLEAdvertisementWatcherTriggerDetails: ...
@@ -42,6 +44,7 @@ class BluetoothLEAdvertisementWatcherTriggerDetails(winrt.system.Object):
     @_property
     def signal_strength_filter(self) -> typing.Optional[winrt.windows.devices.bluetooth.BluetoothSignalStrengthFilter]: ...
 
+@typing.final
 class GattCharacteristicNotificationTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattCharacteristicNotificationTriggerDetails: ...
@@ -56,10 +59,12 @@ class GattCharacteristicNotificationTriggerDetails(winrt.system.Object):
     @_property
     def value_changed_events(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.devices.bluetooth.genericattributeprofile.GattValueChangedEventArgs]]: ...
 
+@typing.final
 class GattServiceProviderConnection_Static(type):
     @_property
     def all_services(cls) -> typing.Optional[winrt.windows.foundation.collections.IMapView[str, GattServiceProviderConnection]]: ...
 
+@typing.final
 class GattServiceProviderConnection(winrt.system.Object, metaclass=GattServiceProviderConnection_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattServiceProviderConnection: ...
@@ -69,12 +74,14 @@ class GattServiceProviderConnection(winrt.system.Object, metaclass=GattServicePr
     @_property
     def trigger_id(self) -> str: ...
 
+@typing.final
 class GattServiceProviderTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattServiceProviderTriggerDetails: ...
     @_property
     def connection(self) -> typing.Optional[GattServiceProviderConnection]: ...
 
+@typing.final
 class RfcommConnectionTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RfcommConnectionTriggerDetails: ...
@@ -85,6 +92,7 @@ class RfcommConnectionTriggerDetails(winrt.system.Object):
     @_property
     def socket(self) -> typing.Optional[winrt.windows.networking.sockets.StreamSocket]: ...
 
+@typing.final
 class RfcommInboundConnectionInformation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RfcommInboundConnectionInformation: ...
@@ -101,6 +109,7 @@ class RfcommInboundConnectionInformation(winrt.system.Object):
     @local_service_id.setter
     def local_service_id(self, value: typing.Optional[winrt.windows.devices.bluetooth.rfcomm.RfcommServiceId]) -> None: ...
 
+@typing.final
 class RfcommOutboundConnectionInformation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RfcommOutboundConnectionInformation: ...

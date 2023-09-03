@@ -20,6 +20,7 @@ from winrt.windows.applicationmodel.email import EmailAttachmentDownloadState, E
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class EmailAttachment(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailAttachment: ...
@@ -66,6 +67,7 @@ class EmailAttachment(winrt.system.Object):
     @_property
     def is_from_base_message(self) -> bool: ...
 
+@typing.final
 class EmailConversation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailConversation: ...
@@ -100,6 +102,7 @@ class EmailConversation(winrt.system.Object):
     @_property
     def unread_message_count(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class EmailConversationBatch(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailConversationBatch: ...
@@ -108,11 +111,13 @@ class EmailConversationBatch(winrt.system.Object):
     @_property
     def status(self) -> EmailBatchStatus: ...
 
+@typing.final
 class EmailConversationReader(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailConversationReader: ...
     def read_batch_async(self) -> winrt.windows.foundation.IAsyncOperation[EmailConversationBatch]: ...
 
+@typing.final
 class EmailFolder(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailFolder: ...
@@ -160,6 +165,7 @@ class EmailFolder(winrt.system.Object):
     @_property
     def parent_folder_id(self) -> str: ...
 
+@typing.final
 class EmailIrmInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailIrmInfo: ...
@@ -216,6 +222,7 @@ class EmailIrmInfo(winrt.system.Object):
     @can_reply_all.setter
     def can_reply_all(self, value: bool) -> None: ...
 
+@typing.final
 class EmailIrmTemplate(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailIrmTemplate: ...
@@ -236,6 +243,7 @@ class EmailIrmTemplate(winrt.system.Object):
     @description.setter
     def description(self, value: str) -> None: ...
 
+@typing.final
 class EmailItemCounts(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailItemCounts: ...
@@ -248,6 +256,7 @@ class EmailItemCounts(winrt.system.Object):
     @_property
     def unread(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class EmailMailbox(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMailbox: ...
@@ -341,6 +350,7 @@ class EmailMailbox(winrt.system.Object):
     @_property
     def network_id(self) -> str: ...
 
+@typing.final
 class EmailMailboxAction(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMailboxAction: ...
@@ -349,6 +359,7 @@ class EmailMailboxAction(winrt.system.Object):
     @_property
     def kind(self) -> EmailMailboxActionKind: ...
 
+@typing.final
 class EmailMailboxAutoReply(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMailboxAutoReply: ...
@@ -361,6 +372,7 @@ class EmailMailboxAutoReply(winrt.system.Object):
     @is_enabled.setter
     def is_enabled(self, value: bool) -> None: ...
 
+@typing.final
 class EmailMailboxAutoReplySettings(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMailboxAutoReplySettings: ...
@@ -388,6 +400,7 @@ class EmailMailboxAutoReplySettings(winrt.system.Object):
     @_property
     def unknown_external_reply(self) -> typing.Optional[EmailMailboxAutoReply]: ...
 
+@typing.final
 class EmailMailboxCapabilities(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMailboxCapabilities: ...
@@ -448,6 +461,7 @@ class EmailMailboxCapabilities(winrt.system.Object):
     @can_create_folder.setter
     def can_create_folder(self, value: bool) -> None: ...
 
+@typing.final
 class EmailMailboxChange(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMailboxChange: ...
@@ -460,6 +474,7 @@ class EmailMailboxChange(winrt.system.Object):
     @_property
     def message(self) -> typing.Optional[EmailMessage]: ...
 
+@typing.final
 class EmailMailboxChangeReader(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMailboxChangeReader: ...
@@ -467,6 +482,7 @@ class EmailMailboxChangeReader(winrt.system.Object):
     def accept_changes_through(self, last_change_to_acknowledge: typing.Optional[EmailMailboxChange], /) -> None: ...
     def read_batch_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[EmailMailboxChange]]: ...
 
+@typing.final
 class EmailMailboxChangeTracker(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMailboxChangeTracker: ...
@@ -476,16 +492,19 @@ class EmailMailboxChangeTracker(winrt.system.Object):
     @_property
     def is_tracking(self) -> bool: ...
 
+@typing.final
 class EmailMailboxChangedDeferral(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMailboxChangedDeferral: ...
     def complete(self) -> None: ...
 
+@typing.final
 class EmailMailboxChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMailboxChangedEventArgs: ...
     def get_deferral(self) -> typing.Optional[EmailMailboxChangedDeferral]: ...
 
+@typing.final
 class EmailMailboxCreateFolderResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMailboxCreateFolderResult: ...
@@ -494,6 +513,7 @@ class EmailMailboxCreateFolderResult(winrt.system.Object):
     @_property
     def status(self) -> EmailMailboxCreateFolderStatus: ...
 
+@typing.final
 class EmailMailboxPolicies(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMailboxPolicies: ...
@@ -522,6 +542,7 @@ class EmailMailboxPolicies(winrt.system.Object):
     @must_encrypt_smime_messages.setter
     def must_encrypt_smime_messages(self, value: bool) -> None: ...
 
+@typing.final
 class EmailMailboxSyncManager(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMailboxSyncManager: ...
@@ -541,15 +562,18 @@ class EmailMailboxSyncManager(winrt.system.Object):
     @last_attempted_sync_time.setter
     def last_attempted_sync_time(self, value: datetime.datetime) -> None: ...
 
+@typing.final
 class EmailManager_Static(type):
     def get_for_user(cls, user: typing.Optional[winrt.windows.system.User], /) -> typing.Optional[EmailManagerForUser]: ...
     def request_store_async(cls, access_type: EmailStoreAccessType, /) -> winrt.windows.foundation.IAsyncOperation[EmailStore]: ...
     def show_compose_new_email_async(cls, message: typing.Optional[EmailMessage], /) -> winrt.windows.foundation.IAsyncAction: ...
 
+@typing.final
 class EmailManager(winrt.system.Object, metaclass=EmailManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailManager: ...
 
+@typing.final
 class EmailManagerForUser(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailManagerForUser: ...
@@ -558,6 +582,7 @@ class EmailManagerForUser(winrt.system.Object):
     @_property
     def user(self) -> typing.Optional[winrt.windows.system.User]: ...
 
+@typing.final
 class EmailMeetingInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMeetingInfo: ...
@@ -617,6 +642,7 @@ class EmailMeetingInfo(winrt.system.Object):
     @_property
     def is_reported_out_of_date_by_server(self) -> bool: ...
 
+@typing.final
 class EmailMessage(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMessage: ...
@@ -740,6 +766,7 @@ class EmailMessage(winrt.system.Object):
     @_property
     def reply_to(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[EmailRecipient]]: ...
 
+@typing.final
 class EmailMessageBatch(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMessageBatch: ...
@@ -748,11 +775,13 @@ class EmailMessageBatch(winrt.system.Object):
     @_property
     def status(self) -> EmailBatchStatus: ...
 
+@typing.final
 class EmailMessageReader(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMessageReader: ...
     def read_batch_async(self) -> winrt.windows.foundation.IAsyncOperation[EmailMessageBatch]: ...
 
+@typing.final
 class EmailQueryOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailQueryOptions: ...
@@ -779,6 +808,7 @@ class EmailQueryOptions(winrt.system.Object):
     @_property
     def text_search(self) -> typing.Optional[EmailQueryTextSearch]: ...
 
+@typing.final
 class EmailQueryTextSearch(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailQueryTextSearch: ...
@@ -795,6 +825,7 @@ class EmailQueryTextSearch(winrt.system.Object):
     @fields.setter
     def fields(self, value: EmailQuerySearchFields) -> None: ...
 
+@typing.final
 class EmailRecipient(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailRecipient: ...
@@ -813,6 +844,7 @@ class EmailRecipient(winrt.system.Object):
     @address.setter
     def address(self, value: str) -> None: ...
 
+@typing.final
 class EmailRecipientResolutionResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailRecipientResolutionResult: ...
@@ -825,6 +857,7 @@ class EmailRecipientResolutionResult(winrt.system.Object):
     @_property
     def public_keys(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.security.cryptography.certificates.Certificate]]: ...
 
+@typing.final
 class EmailStore(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailStore: ...
@@ -846,6 +879,7 @@ class EmailStore(winrt.system.Object):
     @typing.overload
     def get_message_reader(self, options: typing.Optional[EmailQueryOptions], /) -> typing.Optional[EmailMessageReader]: ...
 
+@typing.final
 class EmailStoreNotificationTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailStoreNotificationTriggerDetails: ...

@@ -18,6 +18,7 @@ from winrt.windows.graphics.imaging import BitmapAlphaMode, BitmapBufferAccessMo
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class BitmapBounds:
     x: winrt.system.UInt32
     y: winrt.system.UInt32
@@ -25,6 +26,7 @@ class BitmapBounds:
     height: winrt.system.UInt32
     def __init__(self, x: winrt.system.UInt32, y: winrt.system.UInt32, width: winrt.system.UInt32, height: winrt.system.UInt32) -> None: ...
 
+@typing.final
 class BitmapPlaneDescription:
     start_index: winrt.system.Int32
     width: winrt.system.Int32
@@ -32,11 +34,13 @@ class BitmapPlaneDescription:
     stride: winrt.system.Int32
     def __init__(self, start_index: winrt.system.Int32, width: winrt.system.Int32, height: winrt.system.Int32, stride: winrt.system.Int32) -> None: ...
 
+@typing.final
 class BitmapSize:
     width: winrt.system.UInt32
     height: winrt.system.UInt32
     def __init__(self, width: winrt.system.UInt32, height: winrt.system.UInt32) -> None: ...
 
+@typing.final
 class BitmapBuffer(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -47,6 +51,7 @@ class BitmapBuffer(winrt.system.Object):
     def get_plane_count(self) -> winrt.system.Int32: ...
     def get_plane_description(self, index: winrt.system.Int32, /) -> BitmapPlaneDescription: ...
 
+@typing.final
 class BitmapCodecInformation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BitmapCodecInformation: ...
@@ -59,6 +64,7 @@ class BitmapCodecInformation(winrt.system.Object):
     @_property
     def mime_types(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]: ...
 
+@typing.final
 class BitmapDecoder_Static(type):
     @typing.overload
     def create_async(cls, stream: typing.Optional[winrt.windows.storage.streams.IRandomAccessStream], /) -> winrt.windows.foundation.IAsyncOperation[BitmapDecoder]: ...
@@ -84,6 +90,7 @@ class BitmapDecoder_Static(type):
     @_property
     def webp_decoder_id(cls) -> _uuid.UUID: ...
 
+@typing.final
 class BitmapDecoder(winrt.system.Object, metaclass=BitmapDecoder_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BitmapDecoder: ...
@@ -125,6 +132,7 @@ class BitmapDecoder(winrt.system.Object, metaclass=BitmapDecoder_Static):
     @_property
     def pixel_width(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class BitmapEncoder_Static(type):
     @typing.overload
     def create_async(cls, encoder_id: _uuid.UUID, stream: typing.Optional[winrt.windows.storage.streams.IRandomAccessStream], /) -> winrt.windows.foundation.IAsyncOperation[BitmapEncoder]: ...
@@ -148,6 +156,7 @@ class BitmapEncoder_Static(type):
     @_property
     def heif_encoder_id(cls) -> _uuid.UUID: ...
 
+@typing.final
 class BitmapEncoder(winrt.system.Object, metaclass=BitmapEncoder_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BitmapEncoder: ...
@@ -179,6 +188,7 @@ class BitmapEncoder(winrt.system.Object, metaclass=BitmapEncoder_Static):
     @_property
     def encoder_information(self) -> typing.Optional[BitmapCodecInformation]: ...
 
+@typing.final
 class BitmapFrame(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BitmapFrame: ...
@@ -212,17 +222,20 @@ class BitmapFrame(winrt.system.Object):
     @_property
     def pixel_width(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class BitmapProperties(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BitmapProperties: ...
     def get_properties_async(self, properties_to_retrieve: typing.Iterable[str], /) -> winrt.windows.foundation.IAsyncOperation[BitmapPropertySet]: ...
     def set_properties_async(self, properties_to_set: typing.Iterable[winrt.windows.foundation.collections.IKeyValuePair[str, BitmapTypedValue]], /) -> winrt.windows.foundation.IAsyncAction: ...
 
+@typing.final
 class BitmapPropertiesView(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BitmapPropertiesView: ...
     def get_properties_async(self, properties_to_retrieve: typing.Iterable[str], /) -> winrt.windows.foundation.IAsyncOperation[BitmapPropertySet]: ...
 
+@typing.final
 class BitmapPropertySet(winrt.system.Object, winrt._winrt.MutableMapping[str, BitmapTypedValue]):
     def __len__(self) -> int: ...
     def __iter__(self) -> typing.Iterator[str]: ...
@@ -243,6 +256,7 @@ class BitmapPropertySet(winrt.system.Object, winrt._winrt.MutableMapping[str, Bi
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class BitmapTransform(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BitmapTransform: ...
@@ -272,6 +286,7 @@ class BitmapTransform(winrt.system.Object):
     @bounds.setter
     def bounds(self, value: BitmapBounds) -> None: ...
 
+@typing.final
 class BitmapTypedValue(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BitmapTypedValue: ...
@@ -281,6 +296,7 @@ class BitmapTypedValue(winrt.system.Object):
     @_property
     def value(self) -> typing.Optional[winrt.system.Object]: ...
 
+@typing.final
 class ImageStream(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -307,11 +323,13 @@ class ImageStream(winrt.system.Object):
     @_property
     def position(self) -> winrt.system.UInt64: ...
 
+@typing.final
 class PixelDataProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PixelDataProvider: ...
     def detach_pixel_data(self) -> winrt.system.UInt8: ...
 
+@typing.final
 class SoftwareBitmap_Static(type):
     @typing.overload
     def convert(cls, source: typing.Optional[SoftwareBitmap], format: BitmapPixelFormat, /) -> typing.Optional[SoftwareBitmap]: ...
@@ -327,6 +345,7 @@ class SoftwareBitmap_Static(type):
     @typing.overload
     def create_copy_from_surface_async(cls, surface: typing.Optional[winrt.windows.graphics.directx.direct3d11.IDirect3DSurface], alpha: BitmapAlphaMode, /) -> winrt.windows.foundation.IAsyncOperation[SoftwareBitmap]: ...
 
+@typing.final
 class SoftwareBitmap(winrt.system.Object, metaclass=SoftwareBitmap_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -361,6 +380,7 @@ class SoftwareBitmap(winrt.system.Object, metaclass=SoftwareBitmap_Static):
     @_property
     def pixel_width(self) -> winrt.system.Int32: ...
 
+@typing.final
 class IBitmapFrame(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBitmapFrame: ...
@@ -388,6 +408,7 @@ class IBitmapFrame(winrt.system.Object):
     @_property
     def pixel_width(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class IBitmapFrameWithSoftwareBitmap(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBitmapFrameWithSoftwareBitmap: ...
@@ -421,6 +442,7 @@ class IBitmapFrameWithSoftwareBitmap(winrt.system.Object):
     @_property
     def pixel_width(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class IBitmapPropertiesView(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBitmapPropertiesView: ...

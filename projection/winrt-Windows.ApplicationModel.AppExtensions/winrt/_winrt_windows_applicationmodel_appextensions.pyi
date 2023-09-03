@@ -16,6 +16,7 @@ import winrt.windows.storage
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class AppExtension(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppExtension: ...
@@ -34,9 +35,11 @@ class AppExtension(winrt.system.Object):
     @_property
     def app_user_model_id(self) -> str: ...
 
+@typing.final
 class AppExtensionCatalog_Static(type):
     def open(cls, app_extension_name: str, /) -> typing.Optional[AppExtensionCatalog]: ...
 
+@typing.final
 class AppExtensionCatalog(winrt.system.Object, metaclass=AppExtensionCatalog_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppExtensionCatalog: ...
@@ -53,6 +56,7 @@ class AppExtensionCatalog(winrt.system.Object, metaclass=AppExtensionCatalog_Sta
     def add_package_updating(self, handler: winrt.windows.foundation.TypedEventHandler[AppExtensionCatalog, AppExtensionPackageUpdatingEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_package_updating(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class AppExtensionPackageInstalledEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppExtensionPackageInstalledEventArgs: ...
@@ -63,6 +67,7 @@ class AppExtensionPackageInstalledEventArgs(winrt.system.Object):
     @_property
     def package(self) -> typing.Optional[winrt.windows.applicationmodel.Package]: ...
 
+@typing.final
 class AppExtensionPackageStatusChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppExtensionPackageStatusChangedEventArgs: ...
@@ -71,6 +76,7 @@ class AppExtensionPackageStatusChangedEventArgs(winrt.system.Object):
     @_property
     def package(self) -> typing.Optional[winrt.windows.applicationmodel.Package]: ...
 
+@typing.final
 class AppExtensionPackageUninstallingEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppExtensionPackageUninstallingEventArgs: ...
@@ -79,6 +85,7 @@ class AppExtensionPackageUninstallingEventArgs(winrt.system.Object):
     @_property
     def package(self) -> typing.Optional[winrt.windows.applicationmodel.Package]: ...
 
+@typing.final
 class AppExtensionPackageUpdatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppExtensionPackageUpdatedEventArgs: ...
@@ -89,6 +96,7 @@ class AppExtensionPackageUpdatedEventArgs(winrt.system.Object):
     @_property
     def package(self) -> typing.Optional[winrt.windows.applicationmodel.Package]: ...
 
+@typing.final
 class AppExtensionPackageUpdatingEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppExtensionPackageUpdatingEventArgs: ...

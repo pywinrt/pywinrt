@@ -16,6 +16,7 @@ from winrt.windows.security.authentication.web import TokenBindingKeyType, WebAu
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class WebAuthenticationBroker_Static(type):
     @typing.overload
     def authenticate_and_continue(cls, request_uri: typing.Optional[winrt.windows.foundation.Uri], /) -> None: ...
@@ -33,10 +34,12 @@ class WebAuthenticationBroker_Static(type):
     def authenticate_silently_async(cls, request_uri: typing.Optional[winrt.windows.foundation.Uri], options: WebAuthenticationOptions, /) -> winrt.windows.foundation.IAsyncOperation[WebAuthenticationResult]: ...
     def get_current_application_callback_uri(cls) -> typing.Optional[winrt.windows.foundation.Uri]: ...
 
+@typing.final
 class WebAuthenticationBroker(winrt.system.Object, metaclass=WebAuthenticationBroker_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebAuthenticationBroker: ...
 
+@typing.final
 class WebAuthenticationResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebAuthenticationResult: ...

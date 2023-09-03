@@ -18,6 +18,7 @@ from winrt.windows.data.xml.dom import NodeType
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class DtdEntity(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DtdEntity: ...
@@ -76,6 +77,7 @@ class DtdEntity(winrt.system.Object):
     @inner_text.setter
     def inner_text(self, value: str) -> None: ...
 
+@typing.final
 class DtdNotation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DtdNotation: ...
@@ -132,6 +134,7 @@ class DtdNotation(winrt.system.Object):
     @inner_text.setter
     def inner_text(self, value: str) -> None: ...
 
+@typing.final
 class XmlAttribute(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> XmlAttribute: ...
@@ -192,6 +195,7 @@ class XmlAttribute(winrt.system.Object):
     @inner_text.setter
     def inner_text(self, value: str) -> None: ...
 
+@typing.final
 class XmlCDataSection(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> XmlCDataSection: ...
@@ -256,6 +260,7 @@ class XmlCDataSection(winrt.system.Object):
     @inner_text.setter
     def inner_text(self, value: str) -> None: ...
 
+@typing.final
 class XmlComment(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> XmlComment: ...
@@ -319,6 +324,7 @@ class XmlComment(winrt.system.Object):
     @inner_text.setter
     def inner_text(self, value: str) -> None: ...
 
+@typing.final
 class XmlDocument_Static(type):
     @typing.overload
     def load_from_file_async(cls, file: typing.Optional[winrt.windows.storage.IStorageFile], /) -> winrt.windows.foundation.IAsyncOperation[XmlDocument]: ...
@@ -329,6 +335,7 @@ class XmlDocument_Static(type):
     @typing.overload
     def load_from_uri_async(cls, uri: typing.Optional[winrt.windows.foundation.Uri], load_settings: typing.Optional[XmlLoadSettings], /) -> winrt.windows.foundation.IAsyncOperation[XmlDocument]: ...
 
+@typing.final
 class XmlDocument(winrt.system.Object, metaclass=XmlDocument_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> XmlDocument: ...
@@ -412,6 +419,7 @@ class XmlDocument(winrt.system.Object, metaclass=XmlDocument_Static):
     @inner_text.setter
     def inner_text(self, value: str) -> None: ...
 
+@typing.final
 class XmlDocumentFragment(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> XmlDocumentFragment: ...
@@ -464,6 +472,7 @@ class XmlDocumentFragment(winrt.system.Object):
     @inner_text.setter
     def inner_text(self, value: str) -> None: ...
 
+@typing.final
 class XmlDocumentType(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> XmlDocumentType: ...
@@ -522,11 +531,13 @@ class XmlDocumentType(winrt.system.Object):
     @inner_text.setter
     def inner_text(self, value: str) -> None: ...
 
+@typing.final
 class XmlDomImplementation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> XmlDomImplementation: ...
     def has_feature(self, feature: str, version: typing.Optional[winrt.system.Object], /) -> bool: ...
 
+@typing.final
 class XmlElement(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> XmlElement: ...
@@ -593,6 +604,7 @@ class XmlElement(winrt.system.Object):
     @inner_text.setter
     def inner_text(self, value: str) -> None: ...
 
+@typing.final
 class XmlEntityReference(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> XmlEntityReference: ...
@@ -645,6 +657,7 @@ class XmlEntityReference(winrt.system.Object):
     @inner_text.setter
     def inner_text(self, value: str) -> None: ...
 
+@typing.final
 class XmlLoadSettings(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> XmlLoadSettings: ...
@@ -670,6 +683,7 @@ class XmlLoadSettings(winrt.system.Object):
     @element_content_white_space.setter
     def element_content_white_space(self, value: bool) -> None: ...
 
+@typing.final
 class XmlNamedNodeMap(winrt.system.Object, winrt._winrt.Sequence[IXmlNode]):
     def __len__(self) -> int: ...
     def __iter__(self) -> winrt.windows.foundation.collections.IIterator[IXmlNode]: ...
@@ -695,6 +709,7 @@ class XmlNamedNodeMap(winrt.system.Object, winrt._winrt.Sequence[IXmlNode]):
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class XmlNodeList(winrt.system.Object, winrt._winrt.Sequence[IXmlNode]):
     def __len__(self) -> int: ...
     def __iter__(self) -> winrt.windows.foundation.collections.IIterator[IXmlNode]: ...
@@ -714,6 +729,7 @@ class XmlNodeList(winrt.system.Object, winrt._winrt.Sequence[IXmlNode]):
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class XmlProcessingInstruction(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> XmlProcessingInstruction: ...
@@ -772,6 +788,7 @@ class XmlProcessingInstruction(winrt.system.Object):
     @_property
     def target(self) -> str: ...
 
+@typing.final
 class XmlText(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> XmlText: ...
@@ -836,6 +853,7 @@ class XmlText(winrt.system.Object):
     @inner_text.setter
     def inner_text(self, value: str) -> None: ...
 
+@typing.final
 class IXmlCharacterData(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IXmlCharacterData: ...
@@ -899,6 +917,7 @@ class IXmlCharacterData(winrt.system.Object):
     @inner_text.setter
     def inner_text(self, value: str) -> None: ...
 
+@typing.final
 class IXmlNode(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IXmlNode: ...
@@ -951,6 +970,7 @@ class IXmlNode(winrt.system.Object):
     @inner_text.setter
     def inner_text(self, value: str) -> None: ...
 
+@typing.final
 class IXmlNodeSelector(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IXmlNodeSelector: ...
@@ -959,6 +979,7 @@ class IXmlNodeSelector(winrt.system.Object):
     def select_single_node(self, xpath: str, /) -> typing.Optional[IXmlNode]: ...
     def select_single_node_n_s(self, xpath: str, namespaces: typing.Optional[winrt.system.Object], /) -> typing.Optional[IXmlNode]: ...
 
+@typing.final
 class IXmlNodeSerializer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IXmlNodeSerializer: ...
@@ -968,6 +989,7 @@ class IXmlNodeSerializer(winrt.system.Object):
     @inner_text.setter
     def inner_text(self, value: str) -> None: ...
 
+@typing.final
 class IXmlText(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IXmlText: ...

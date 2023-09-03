@@ -15,6 +15,7 @@ from winrt.windows.system.diagnostics.tracereporting import PlatformDiagnosticAc
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class PlatformDiagnosticActions_Static(type):
     def download_latest_settings_for_namespace(cls, partner: str, feature: str, is_scenario_namespace: bool, download_over_costed_network: bool, download_over_battery: bool, /) -> PlatformDiagnosticActionState: ...
     def force_upload(cls, latency: PlatformDiagnosticEventBufferLatencies, upload_over_costed_network: bool, upload_over_battery: bool, /) -> PlatformDiagnosticActionState: ...
@@ -25,10 +26,12 @@ class PlatformDiagnosticActions_Static(type):
     def is_trace_running(cls, slot_type: PlatformDiagnosticTraceSlotType, scenario_id: _uuid.UUID, trace_profile_hash: winrt.system.UInt64, /) -> PlatformDiagnosticTraceSlotState: ...
     def try_escalate_scenario(cls, scenario_id: _uuid.UUID, escalation_type: PlatformDiagnosticEscalationType, output_directory: str, timestamp_output_directory: bool, force_escalation_upload: bool, triggers: winrt.windows.foundation.collections.IMapView[str, str], /) -> bool: ...
 
+@typing.final
 class PlatformDiagnosticActions(winrt.system.Object, metaclass=PlatformDiagnosticActions_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlatformDiagnosticActions: ...
 
+@typing.final
 class PlatformDiagnosticTraceInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlatformDiagnosticTraceInfo: ...
@@ -45,6 +48,7 @@ class PlatformDiagnosticTraceInfo(winrt.system.Object):
     @_property
     def scenario_id(self) -> _uuid.UUID: ...
 
+@typing.final
 class PlatformDiagnosticTraceRuntimeInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlatformDiagnosticTraceRuntimeInfo: ...

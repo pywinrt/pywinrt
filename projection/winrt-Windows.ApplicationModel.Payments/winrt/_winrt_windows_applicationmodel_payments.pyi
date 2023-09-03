@@ -17,6 +17,7 @@ from winrt.windows.applicationmodel.payments import PaymentRequestChangedHandler
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class PaymentAddress(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PaymentAddress: ...
@@ -68,6 +69,7 @@ class PaymentAddress(winrt.system.Object):
     @_property
     def properties(self) -> typing.Optional[winrt.windows.foundation.collections.ValueSet]: ...
 
+@typing.final
 class PaymentCanMakePaymentResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PaymentCanMakePaymentResult: ...
@@ -75,6 +77,7 @@ class PaymentCanMakePaymentResult(winrt.system.Object):
     @_property
     def status(self) -> PaymentCanMakePaymentResultStatus: ...
 
+@typing.final
 class PaymentCurrencyAmount(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PaymentCurrencyAmount: ...
@@ -95,6 +98,7 @@ class PaymentCurrencyAmount(winrt.system.Object):
     @currency.setter
     def currency(self, value: str) -> None: ...
 
+@typing.final
 class PaymentDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PaymentDetails: ...
@@ -121,6 +125,7 @@ class PaymentDetails(winrt.system.Object):
     @display_items.setter
     def display_items(self, value: typing.Optional[winrt.windows.foundation.collections.IVectorView[PaymentItem]]) -> None: ...
 
+@typing.final
 class PaymentDetailsModifier(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PaymentDetailsModifier: ...
@@ -139,6 +144,7 @@ class PaymentDetailsModifier(winrt.system.Object):
     @_property
     def total(self) -> typing.Optional[PaymentItem]: ...
 
+@typing.final
 class PaymentItem(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PaymentItem: ...
@@ -156,6 +162,7 @@ class PaymentItem(winrt.system.Object):
     @amount.setter
     def amount(self, value: typing.Optional[PaymentCurrencyAmount]) -> None: ...
 
+@typing.final
 class PaymentMediator(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PaymentMediator: ...
@@ -167,6 +174,7 @@ class PaymentMediator(winrt.system.Object):
     @typing.overload
     def submit_payment_request_async(self, payment_request: typing.Optional[PaymentRequest], change_handler: typing.Optional[PaymentRequestChangedHandler], /) -> winrt.windows.foundation.IAsyncOperation[PaymentRequestSubmitResult]: ...
 
+@typing.final
 class PaymentMerchantInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PaymentMerchantInfo: ...
@@ -179,6 +187,7 @@ class PaymentMerchantInfo(winrt.system.Object):
     @_property
     def uri(self) -> typing.Optional[winrt.windows.foundation.Uri]: ...
 
+@typing.final
 class PaymentMethodData(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PaymentMethodData: ...
@@ -191,6 +200,7 @@ class PaymentMethodData(winrt.system.Object):
     @_property
     def supported_method_ids(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]: ...
 
+@typing.final
 class PaymentOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PaymentOptions: ...
@@ -216,6 +226,7 @@ class PaymentOptions(winrt.system.Object):
     @request_payer_email.setter
     def request_payer_email(self, value: PaymentOptionPresence) -> None: ...
 
+@typing.final
 class PaymentRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PaymentRequest: ...
@@ -238,6 +249,7 @@ class PaymentRequest(winrt.system.Object):
     @_property
     def id(self) -> str: ...
 
+@typing.final
 class PaymentRequestChangedArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PaymentRequestChangedArgs: ...
@@ -249,6 +261,7 @@ class PaymentRequestChangedArgs(winrt.system.Object):
     @_property
     def shipping_address(self) -> typing.Optional[PaymentAddress]: ...
 
+@typing.final
 class PaymentRequestChangedResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PaymentRequestChangedResult: ...
@@ -269,6 +282,7 @@ class PaymentRequestChangedResult(winrt.system.Object):
     @change_accepted_by_merchant.setter
     def change_accepted_by_merchant(self, value: bool) -> None: ...
 
+@typing.final
 class PaymentRequestSubmitResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PaymentRequestSubmitResult: ...
@@ -277,6 +291,7 @@ class PaymentRequestSubmitResult(winrt.system.Object):
     @_property
     def status(self) -> PaymentRequestStatus: ...
 
+@typing.final
 class PaymentResponse(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PaymentResponse: ...
@@ -294,6 +309,7 @@ class PaymentResponse(winrt.system.Object):
     @_property
     def shipping_option(self) -> typing.Optional[PaymentShippingOption]: ...
 
+@typing.final
 class PaymentShippingOption(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PaymentShippingOption: ...
@@ -320,6 +336,7 @@ class PaymentShippingOption(winrt.system.Object):
     @amount.setter
     def amount(self, value: typing.Optional[PaymentCurrencyAmount]) -> None: ...
 
+@typing.final
 class PaymentToken(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PaymentToken: ...

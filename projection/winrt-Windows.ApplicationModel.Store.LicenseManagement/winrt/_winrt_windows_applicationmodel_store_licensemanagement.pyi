@@ -17,15 +17,18 @@ from winrt.windows.applicationmodel.store.licensemanagement import LicenseRefres
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class LicenseManager_Static(type):
     def add_license_async(cls, license: typing.Optional[winrt.windows.storage.streams.IBuffer], /) -> winrt.windows.foundation.IAsyncAction: ...
     def get_satisfaction_infos_async(cls, content_ids: typing.Iterable[str], key_ids: typing.Iterable[str], /) -> winrt.windows.foundation.IAsyncOperation[LicenseSatisfactionResult]: ...
     def refresh_licenses_async(cls, refresh_option: LicenseRefreshOption, /) -> winrt.windows.foundation.IAsyncAction: ...
 
+@typing.final
 class LicenseManager(winrt.system.Object, metaclass=LicenseManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LicenseManager: ...
 
+@typing.final
 class LicenseSatisfactionInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LicenseSatisfactionInfo: ...
@@ -44,6 +47,7 @@ class LicenseSatisfactionInfo(winrt.system.Object):
     @_property
     def satisfied_by_trial(self) -> bool: ...
 
+@typing.final
 class LicenseSatisfactionResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LicenseSatisfactionResult: ...

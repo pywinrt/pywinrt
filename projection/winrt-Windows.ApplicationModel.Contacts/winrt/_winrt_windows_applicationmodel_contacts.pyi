@@ -22,6 +22,7 @@ from winrt.windows.applicationmodel.contacts import ContactAddressKind, ContactA
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class AggregateContactManager(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AggregateContactManager: ...
@@ -31,6 +32,7 @@ class AggregateContactManager(winrt.system.Object):
     def try_set_preferred_source_for_picture_async(self, aggregate_contact: typing.Optional[Contact], raw_contact: typing.Optional[Contact], /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     def unlink_raw_contact_async(self, contact: typing.Optional[Contact], /) -> winrt.windows.foundation.IAsyncAction: ...
 
+@typing.final
 class Contact(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Contact: ...
@@ -152,6 +154,7 @@ class Contact(winrt.system.Object):
     @_property
     def yomi_display_name(self) -> str: ...
 
+@typing.final
 class ContactAddress(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactAddress: ...
@@ -185,6 +188,7 @@ class ContactAddress(winrt.system.Object):
     @country.setter
     def country(self, value: str) -> None: ...
 
+@typing.final
 class ContactAnnotation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactAnnotation: ...
@@ -214,6 +218,7 @@ class ContactAnnotation(winrt.system.Object):
     @contact_list_id.setter
     def contact_list_id(self, value: str) -> None: ...
 
+@typing.final
 class ContactAnnotationList(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactAnnotationList: ...
@@ -230,6 +235,7 @@ class ContactAnnotationList(winrt.system.Object):
     @_property
     def user_data_account_id(self) -> str: ...
 
+@typing.final
 class ContactAnnotationStore(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactAnnotationStore: ...
@@ -245,6 +251,7 @@ class ContactAnnotationStore(winrt.system.Object):
     def find_contact_ids_by_phone_number_async(self, phone_number: str, /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[str]]: ...
     def get_annotation_list_async(self, annotation_list_id: str, /) -> winrt.windows.foundation.IAsyncOperation[ContactAnnotationList]: ...
 
+@typing.final
 class ContactBatch(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactBatch: ...
@@ -253,6 +260,7 @@ class ContactBatch(winrt.system.Object):
     @_property
     def status(self) -> ContactBatchStatus: ...
 
+@typing.final
 class ContactCardDelayedDataLoader(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -261,6 +269,7 @@ class ContactCardDelayedDataLoader(winrt.system.Object):
     def close(self) -> None: ...
     def set_data(self, contact: typing.Optional[Contact], /) -> None: ...
 
+@typing.final
 class ContactCardOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactCardOptions: ...
@@ -276,6 +285,7 @@ class ContactCardOptions(winrt.system.Object):
     @_property
     def server_search_contact_list_ids(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[str]]: ...
 
+@typing.final
 class ContactChange(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactChange: ...
@@ -284,6 +294,7 @@ class ContactChange(winrt.system.Object):
     @_property
     def contact(self) -> typing.Optional[Contact]: ...
 
+@typing.final
 class ContactChangeReader(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactChangeReader: ...
@@ -291,6 +302,7 @@ class ContactChangeReader(winrt.system.Object):
     def accept_changes_through(self, last_change_to_accept: typing.Optional[ContactChange], /) -> None: ...
     def read_batch_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[ContactChange]]: ...
 
+@typing.final
 class ContactChangeTracker(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactChangeTracker: ...
@@ -300,16 +312,19 @@ class ContactChangeTracker(winrt.system.Object):
     @_property
     def is_tracking(self) -> bool: ...
 
+@typing.final
 class ContactChangedDeferral(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactChangedDeferral: ...
     def complete(self) -> None: ...
 
+@typing.final
 class ContactChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactChangedEventArgs: ...
     def get_deferral(self) -> typing.Optional[ContactChangedDeferral]: ...
 
+@typing.final
 class ContactConnectedServiceAccount(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactConnectedServiceAccount: ...
@@ -323,6 +338,7 @@ class ContactConnectedServiceAccount(winrt.system.Object):
     @id.setter
     def id(self, value: str) -> None: ...
 
+@typing.final
 class ContactDate(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactDate: ...
@@ -348,6 +364,7 @@ class ContactDate(winrt.system.Object):
     @day.setter
     def day(self, value: typing.Optional[typing.Optional[winrt.system.UInt32]]) -> None: ...
 
+@typing.final
 class ContactEmail(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactEmail: ...
@@ -365,6 +382,7 @@ class ContactEmail(winrt.system.Object):
     @address.setter
     def address(self, value: str) -> None: ...
 
+@typing.final
 class ContactField(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactField: ...
@@ -383,6 +401,7 @@ class ContactField(winrt.system.Object):
     @_property
     def value(self) -> str: ...
 
+@typing.final
 class ContactFieldFactory(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactFieldFactory: ...
@@ -406,10 +425,12 @@ class ContactFieldFactory(winrt.system.Object):
     @typing.overload
     def create_location(self, unstructured_address: str, category: ContactFieldCategory, street: str, city: str, region: str, country: str, postal_code: str, /) -> typing.Optional[ContactLocationField]: ...
 
+@typing.final
 class ContactGroup(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactGroup: ...
 
+@typing.final
 class ContactInformation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactInformation: ...
@@ -428,6 +449,7 @@ class ContactInformation(winrt.system.Object):
     @_property
     def phone_numbers(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[ContactField]]: ...
 
+@typing.final
 class ContactInstantMessageField(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactInstantMessageField: ...
@@ -454,6 +476,7 @@ class ContactInstantMessageField(winrt.system.Object):
     @_property
     def user_name(self) -> str: ...
 
+@typing.final
 class ContactJobInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactJobInfo: ...
@@ -491,6 +514,7 @@ class ContactJobInfo(winrt.system.Object):
     @company_address.setter
     def company_address(self, value: str) -> None: ...
 
+@typing.final
 class ContactLaunchActionVerbs_Static(type):
     @_property
     def call(cls) -> str: ...
@@ -503,10 +527,12 @@ class ContactLaunchActionVerbs_Static(type):
     @_property
     def video_call(cls) -> str: ...
 
+@typing.final
 class ContactLaunchActionVerbs(winrt.system.Object, metaclass=ContactLaunchActionVerbs_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactLaunchActionVerbs: ...
 
+@typing.final
 class ContactList(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactList: ...
@@ -560,12 +586,14 @@ class ContactList(winrt.system.Object):
     @_property
     def limited_write_operations(self) -> typing.Optional[ContactListLimitedWriteOperations]: ...
 
+@typing.final
 class ContactListLimitedWriteOperations(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactListLimitedWriteOperations: ...
     def try_create_or_update_contact_async(self, contact: typing.Optional[Contact], /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     def try_delete_contact_async(self, contact_id: str, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
 
+@typing.final
 class ContactListSyncConstraints(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactListSyncConstraints: ...
@@ -682,6 +710,7 @@ class ContactListSyncConstraints(winrt.system.Object):
     @max_sibling_relationships.setter
     def max_sibling_relationships(self, value: typing.Optional[typing.Optional[winrt.system.Int32]]) -> None: ...
 
+@typing.final
 class ContactListSyncManager(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactListSyncManager: ...
@@ -701,6 +730,7 @@ class ContactListSyncManager(winrt.system.Object):
     @last_attempted_sync_time.setter
     def last_attempted_sync_time(self, value: datetime.datetime) -> None: ...
 
+@typing.final
 class ContactLocationField(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactLocationField: ...
@@ -731,6 +761,7 @@ class ContactLocationField(winrt.system.Object):
     @_property
     def unstructured_address(self) -> str: ...
 
+@typing.final
 class ContactManager_Static(type):
     @typing.overload
     def convert_contact_to_v_card_async(cls, contact: typing.Optional[Contact], /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.storage.streams.RandomAccessStreamReference]: ...
@@ -770,10 +801,12 @@ class ContactManager_Static(type):
     @include_middle_name_in_system_display_and_sort.setter
     def include_middle_name_in_system_display_and_sort(cls, value: bool) -> None: ...
 
+@typing.final
 class ContactManager(winrt.system.Object, metaclass=ContactManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactManager: ...
 
+@typing.final
 class ContactManagerForUser(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactManagerForUser: ...
@@ -796,6 +829,7 @@ class ContactManagerForUser(winrt.system.Object):
     @_property
     def user(self) -> typing.Optional[winrt.windows.system.User]: ...
 
+@typing.final
 class ContactMatchReason(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactMatchReason: ...
@@ -806,6 +840,7 @@ class ContactMatchReason(winrt.system.Object):
     @_property
     def text(self) -> str: ...
 
+@typing.final
 class ContactPanel(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactPanel: ...
@@ -819,11 +854,13 @@ class ContactPanel(winrt.system.Object):
     @header_color.setter
     def header_color(self, value: typing.Optional[typing.Optional[winrt.windows.ui.Color]]) -> None: ...
 
+@typing.final
 class ContactPanelClosingEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactPanelClosingEventArgs: ...
     def get_deferral(self) -> typing.Optional[winrt.windows.foundation.Deferral]: ...
 
+@typing.final
 class ContactPanelLaunchFullAppRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactPanelLaunchFullAppRequestedEventArgs: ...
@@ -832,6 +869,7 @@ class ContactPanelLaunchFullAppRequestedEventArgs(winrt.system.Object):
     @handled.setter
     def handled(self, value: bool) -> None: ...
 
+@typing.final
 class ContactPhone(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactPhone: ...
@@ -849,10 +887,12 @@ class ContactPhone(winrt.system.Object):
     @description.setter
     def description(self, value: str) -> None: ...
 
+@typing.final
 class ContactPicker_Static(type):
     def create_for_user(cls, user: typing.Optional[winrt.windows.system.User], /) -> typing.Optional[ContactPicker]: ...
     def is_supported_async(cls) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
 
+@typing.final
 class ContactPicker(winrt.system.Object, metaclass=ContactPicker_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactPicker: ...
@@ -876,6 +916,7 @@ class ContactPicker(winrt.system.Object, metaclass=ContactPicker_Static):
     @_property
     def user(self) -> typing.Optional[winrt.windows.system.User]: ...
 
+@typing.final
 class ContactQueryOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactQueryOptions: ...
@@ -904,6 +945,7 @@ class ContactQueryOptions(winrt.system.Object):
     @_property
     def text_search(self) -> typing.Optional[ContactQueryTextSearch]: ...
 
+@typing.final
 class ContactQueryTextSearch(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactQueryTextSearch: ...
@@ -920,12 +962,14 @@ class ContactQueryTextSearch(winrt.system.Object):
     @fields.setter
     def fields(self, value: ContactQuerySearchFields) -> None: ...
 
+@typing.final
 class ContactReader(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactReader: ...
     def get_matching_properties_with_match_reason(self, contact: typing.Optional[Contact], /) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[ContactMatchReason]]: ...
     def read_batch_async(self) -> winrt.windows.foundation.IAsyncOperation[ContactBatch]: ...
 
+@typing.final
 class ContactSignificantOther(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactSignificantOther: ...
@@ -943,6 +987,7 @@ class ContactSignificantOther(winrt.system.Object):
     @relationship.setter
     def relationship(self, value: ContactRelationship) -> None: ...
 
+@typing.final
 class ContactStore(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactStore: ...
@@ -970,10 +1015,12 @@ class ContactStore(winrt.system.Object):
     @_property
     def change_tracker(self) -> typing.Optional[ContactChangeTracker]: ...
 
+@typing.final
 class ContactStoreNotificationTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactStoreNotificationTriggerDetails: ...
 
+@typing.final
 class ContactWebsite(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactWebsite: ...
@@ -991,6 +1038,7 @@ class ContactWebsite(winrt.system.Object):
     @raw_value.setter
     def raw_value(self, value: str) -> None: ...
 
+@typing.final
 class FullContactCardOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FullContactCardOptions: ...
@@ -1000,6 +1048,7 @@ class FullContactCardOptions(winrt.system.Object):
     @desired_remaining_view.setter
     def desired_remaining_view(self, value: winrt.windows.ui.viewmanagement.ViewSizePreference) -> None: ...
 
+@typing.final
 class KnownContactField_Static(type):
     def convert_name_to_type(cls, name: str, /) -> ContactFieldType: ...
     def convert_type_to_name(cls, type: ContactFieldType, /) -> str: ...
@@ -1012,21 +1061,25 @@ class KnownContactField_Static(type):
     @_property
     def phone_number(cls) -> str: ...
 
+@typing.final
 class KnownContactField(winrt.system.Object, metaclass=KnownContactField_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> KnownContactField: ...
 
+@typing.final
 class PinnedContactIdsQueryResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PinnedContactIdsQueryResult: ...
     @_property
     def contact_ids(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[str]]: ...
 
+@typing.final
 class PinnedContactManager_Static(type):
     def get_default(cls) -> typing.Optional[PinnedContactManager]: ...
     def get_for_user(cls, user: typing.Optional[winrt.windows.system.User], /) -> typing.Optional[PinnedContactManager]: ...
     def is_supported(cls) -> bool: ...
 
+@typing.final
 class PinnedContactManager(winrt.system.Object, metaclass=PinnedContactManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PinnedContactManager: ...
@@ -1040,6 +1093,7 @@ class PinnedContactManager(winrt.system.Object, metaclass=PinnedContactManager_S
     @_property
     def user(self) -> typing.Optional[winrt.windows.system.User]: ...
 
+@typing.final
 class IContactField(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IContactField: ...
@@ -1052,6 +1106,7 @@ class IContactField(winrt.system.Object):
     @_property
     def value(self) -> str: ...
 
+@typing.final
 class IContactFieldFactory(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IContactFieldFactory: ...
@@ -1062,6 +1117,7 @@ class IContactFieldFactory(winrt.system.Object):
     @typing.overload
     def create_field(self, name: str, value: str, type: ContactFieldType, category: ContactFieldCategory, /) -> typing.Optional[ContactField]: ...
 
+@typing.final
 class IContactInstantMessageFieldFactory(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IContactInstantMessageFieldFactory: ...
@@ -1072,6 +1128,7 @@ class IContactInstantMessageFieldFactory(winrt.system.Object):
     @typing.overload
     def create_instant_message(self, user_name: str, category: ContactFieldCategory, service: str, display_text: str, verb: typing.Optional[winrt.windows.foundation.Uri], /) -> typing.Optional[ContactInstantMessageField]: ...
 
+@typing.final
 class IContactLocationFieldFactory(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IContactLocationFieldFactory: ...

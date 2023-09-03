@@ -18,6 +18,7 @@ from winrt.windows.ui.xaml.printing import AddPagesEventHandler, GetPreviewPageE
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class AddPagesEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AddPagesEventArgs: ...
@@ -25,6 +26,7 @@ class AddPagesEventArgs(winrt.system.Object):
     @_property
     def print_task_options(self) -> typing.Optional[winrt.windows.graphics.printing.PrintTaskOptions]: ...
 
+@typing.final
 class GetPreviewPageEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GetPreviewPageEventArgs: ...
@@ -32,6 +34,7 @@ class GetPreviewPageEventArgs(winrt.system.Object):
     @_property
     def page_number(self) -> winrt.system.Int32: ...
 
+@typing.final
 class PaginateEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PaginateEventArgs: ...
@@ -41,10 +44,12 @@ class PaginateEventArgs(winrt.system.Object):
     @_property
     def print_task_options(self) -> typing.Optional[winrt.windows.graphics.printing.PrintTaskOptions]: ...
 
+@typing.final
 class PrintDocument_Static(type):
     @_property
     def document_source_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class PrintDocument(winrt.system.Object, metaclass=PrintDocument_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintDocument: ...

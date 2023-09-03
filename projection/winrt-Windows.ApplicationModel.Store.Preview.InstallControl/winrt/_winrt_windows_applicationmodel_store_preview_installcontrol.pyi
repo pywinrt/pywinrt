@@ -18,6 +18,7 @@ from winrt.windows.applicationmodel.store.preview.installcontrol import AppInsta
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class AppInstallItem(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppInstallItem: ...
@@ -75,6 +76,7 @@ class AppInstallItem(winrt.system.Object):
     @completed_install_toast_notification_mode.setter
     def completed_install_toast_notification_mode(self, value: AppInstallationToastNotificationMode) -> None: ...
 
+@typing.final
 class AppInstallManager(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppInstallManager: ...
@@ -161,12 +163,14 @@ class AppInstallManager(winrt.system.Object):
     @_property
     def can_install_for_all_users(self) -> bool: ...
 
+@typing.final
 class AppInstallManagerItemEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppInstallManagerItemEventArgs: ...
     @_property
     def item(self) -> typing.Optional[AppInstallItem]: ...
 
+@typing.final
 class AppInstallOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppInstallOptions: ...
@@ -232,6 +236,7 @@ class AppInstallOptions(winrt.system.Object):
     @campaign_id.setter
     def campaign_id(self, value: str) -> None: ...
 
+@typing.final
 class AppInstallStatus(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppInstallStatus: ...
@@ -252,6 +257,7 @@ class AppInstallStatus(winrt.system.Object):
     @_property
     def is_staged(self) -> bool: ...
 
+@typing.final
 class AppUpdateOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppUpdateOptions: ...
@@ -269,6 +275,7 @@ class AppUpdateOptions(winrt.system.Object):
     @automatically_download_and_install_update_if_found.setter
     def automatically_download_and_install_update_if_found(self, value: bool) -> None: ...
 
+@typing.final
 class GetEntitlementResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GetEntitlementResult: ...

@@ -14,6 +14,7 @@ import winrt.windows.storage
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class PhoneCallOrigin(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneCallOrigin: ...
@@ -39,6 +40,7 @@ class PhoneCallOrigin(winrt.system.Object):
     @display_picture.setter
     def display_picture(self, value: typing.Optional[winrt.windows.storage.StorageFile]) -> None: ...
 
+@typing.final
 class PhoneCallOriginManager_Static(type):
     def request_set_as_active_call_origin_app_async(cls) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     def set_call_origin(cls, request_id: _uuid.UUID, call_origin: typing.Optional[PhoneCallOrigin], /) -> None: ...
@@ -48,6 +50,7 @@ class PhoneCallOriginManager_Static(type):
     @_property
     def is_supported(cls) -> bool: ...
 
+@typing.final
 class PhoneCallOriginManager(winrt.system.Object, metaclass=PhoneCallOriginManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneCallOriginManager: ...

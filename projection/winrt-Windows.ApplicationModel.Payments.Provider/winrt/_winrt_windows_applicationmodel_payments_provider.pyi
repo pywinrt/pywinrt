@@ -15,6 +15,7 @@ import winrt.windows.foundation.collections
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class PaymentAppCanMakePaymentTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PaymentAppCanMakePaymentTriggerDetails: ...
@@ -22,19 +23,23 @@ class PaymentAppCanMakePaymentTriggerDetails(winrt.system.Object):
     @_property
     def request(self) -> typing.Optional[winrt.windows.applicationmodel.payments.PaymentRequest]: ...
 
+@typing.final
 class PaymentAppManager_Static(type):
     @_property
     def current(cls) -> typing.Optional[PaymentAppManager]: ...
 
+@typing.final
 class PaymentAppManager(winrt.system.Object, metaclass=PaymentAppManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PaymentAppManager: ...
     def register_async(self, supported_payment_method_ids: typing.Iterable[str], /) -> winrt.windows.foundation.IAsyncAction: ...
     def unregister_async(self) -> winrt.windows.foundation.IAsyncAction: ...
 
+@typing.final
 class PaymentTransaction_Static(type):
     def from_id_async(cls, id: str, /) -> winrt.windows.foundation.IAsyncOperation[PaymentTransaction]: ...
 
+@typing.final
 class PaymentTransaction(winrt.system.Object, metaclass=PaymentTransaction_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PaymentTransaction: ...
@@ -57,6 +62,7 @@ class PaymentTransaction(winrt.system.Object, metaclass=PaymentTransaction_Stati
     @_property
     def payment_request(self) -> typing.Optional[winrt.windows.applicationmodel.payments.PaymentRequest]: ...
 
+@typing.final
 class PaymentTransactionAcceptResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PaymentTransactionAcceptResult: ...

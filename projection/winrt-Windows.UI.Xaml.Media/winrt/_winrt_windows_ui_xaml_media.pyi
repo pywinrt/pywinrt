@@ -24,6 +24,7 @@ from winrt.windows.ui.xaml.media import RateChangedRoutedEventHandler, TimelineM
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class Matrix:
     m11: winrt.system.Double
     m12: winrt.system.Double
@@ -33,6 +34,7 @@ class Matrix:
     offset_y: winrt.system.Double
     def __init__(self, m11: winrt.system.Double, m12: winrt.system.Double, m21: winrt.system.Double, m22: winrt.system.Double, offset_x: winrt.system.Double, offset_y: winrt.system.Double) -> None: ...
 
+@typing.final
 class AcrylicBrush_Static(type):
     @_property
     def always_use_fallback_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
@@ -47,6 +49,7 @@ class AcrylicBrush_Static(type):
     @_property
     def tint_luminosity_opacity_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class AcrylicBrush(winrt.system.Object, metaclass=AcrylicBrush_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AcrylicBrush: ...
@@ -76,6 +79,7 @@ class AcrylicBrush(winrt.system.Object, metaclass=AcrylicBrush_Static):
     @tint_luminosity_opacity.setter
     def tint_luminosity_opacity(self, value: typing.Optional[typing.Optional[winrt.system.Double]]) -> None: ...
 
+@typing.final
 class ArcSegment_Static(type):
     @_property
     def is_large_arc_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
@@ -88,6 +92,7 @@ class ArcSegment_Static(type):
     @_property
     def sweep_direction_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class ArcSegment(winrt.system.Object, metaclass=ArcSegment_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ArcSegment: ...
@@ -113,6 +118,7 @@ class ArcSegment(winrt.system.Object, metaclass=ArcSegment_Static):
     @is_large_arc.setter
     def is_large_arc(self, value: bool) -> None: ...
 
+@typing.final
 class BezierSegment_Static(type):
     @_property
     def point1_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
@@ -121,6 +127,7 @@ class BezierSegment_Static(type):
     @_property
     def point3_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class BezierSegment(winrt.system.Object, metaclass=BezierSegment_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BezierSegment: ...
@@ -138,11 +145,13 @@ class BezierSegment(winrt.system.Object, metaclass=BezierSegment_Static):
     @point1.setter
     def point1(self, value: winrt.windows.foundation.Point) -> None: ...
 
+@typing.final
 class BitmapCache(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BitmapCache: ...
     def __new__(cls: typing.Type[BitmapCache]) -> BitmapCache:...
 
+@typing.final
 class Brush_Static(type):
     @_property
     def opacity_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
@@ -151,6 +160,7 @@ class Brush_Static(type):
     @_property
     def transform_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class Brush(winrt.system.Object, metaclass=Brush_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Brush: ...
@@ -169,6 +179,7 @@ class Brush(winrt.system.Object, metaclass=Brush_Static):
     @opacity.setter
     def opacity(self, value: winrt.system.Double) -> None: ...
 
+@typing.final
 class BrushCollection(winrt.system.Object, winrt._winrt.MutableSequence[Brush]):
     def __len__(self) -> int: ...
     def __iter__(self) -> winrt.windows.foundation.collections.IIterator[Brush]: ...
@@ -202,10 +213,12 @@ class BrushCollection(winrt.system.Object, winrt._winrt.MutableSequence[Brush]):
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class CacheMode(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CacheMode: ...
 
+@typing.final
 class CompositeTransform_Static(type):
     @_property
     def center_x_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
@@ -226,6 +239,7 @@ class CompositeTransform_Static(type):
     @_property
     def translate_y_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class CompositeTransform(winrt.system.Object, metaclass=CompositeTransform_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositeTransform: ...
@@ -267,6 +281,7 @@ class CompositeTransform(winrt.system.Object, metaclass=CompositeTransform_Stati
     @center_x.setter
     def center_x(self, value: winrt.system.Double) -> None: ...
 
+@typing.final
 class CompositionTarget_Static(type):
     def add_rendered(cls, handler: winrt.windows.foundation.EventHandler[RenderedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_rendered(cls, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
@@ -275,10 +290,12 @@ class CompositionTarget_Static(type):
     def add_surface_contents_lost(cls, handler: winrt.windows.foundation.EventHandler[winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_surface_contents_lost(cls, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class CompositionTarget(winrt.system.Object, metaclass=CompositionTarget_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionTarget: ...
 
+@typing.final
 class DoubleCollection(winrt.system.Object, winrt._winrt.MutableSequence[winrt.system.Double]):
     def __len__(self) -> int: ...
     def __iter__(self) -> winrt.windows.foundation.collections.IIterator[winrt.system.Double]: ...
@@ -312,6 +329,7 @@ class DoubleCollection(winrt.system.Object, winrt._winrt.MutableSequence[winrt.s
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class EllipseGeometry_Static(type):
     @_property
     def center_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
@@ -320,6 +338,7 @@ class EllipseGeometry_Static(type):
     @_property
     def radius_y_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class EllipseGeometry(winrt.system.Object, metaclass=EllipseGeometry_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EllipseGeometry: ...
@@ -337,10 +356,12 @@ class EllipseGeometry(winrt.system.Object, metaclass=EllipseGeometry_Static):
     @center.setter
     def center(self, value: winrt.windows.foundation.Point) -> None: ...
 
+@typing.final
 class FontFamily_Static(type):
     @_property
     def xaml_auto_font_family(cls) -> typing.Optional[FontFamily]: ...
 
+@typing.final
 class FontFamily(winrt.system.Object, metaclass=FontFamily_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FontFamily: ...
@@ -348,6 +369,7 @@ class FontFamily(winrt.system.Object, metaclass=FontFamily_Static):
     @_property
     def source(self) -> str: ...
 
+@typing.final
 class GeneralTransform(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GeneralTransform: ...
@@ -361,6 +383,7 @@ class GeneralTransform(winrt.system.Object):
     @_property
     def inverse_core(self) -> typing.Optional[GeneralTransform]: ...
 
+@typing.final
 class Geometry_Static(type):
     @_property
     def empty(cls) -> typing.Optional[Geometry]: ...
@@ -369,6 +392,7 @@ class Geometry_Static(type):
     @_property
     def transform_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class Geometry(winrt.system.Object, metaclass=Geometry_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Geometry: ...
@@ -379,6 +403,7 @@ class Geometry(winrt.system.Object, metaclass=Geometry_Static):
     @_property
     def bounds(self) -> winrt.windows.foundation.Rect: ...
 
+@typing.final
 class GeometryCollection(winrt.system.Object, winrt._winrt.MutableSequence[Geometry]):
     def __len__(self) -> int: ...
     def __iter__(self) -> winrt.windows.foundation.collections.IIterator[Geometry]: ...
@@ -412,12 +437,14 @@ class GeometryCollection(winrt.system.Object, winrt._winrt.MutableSequence[Geome
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class GeometryGroup_Static(type):
     @_property
     def children_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
     @_property
     def fill_rule_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class GeometryGroup(winrt.system.Object, metaclass=GeometryGroup_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GeometryGroup: ...
@@ -431,6 +458,7 @@ class GeometryGroup(winrt.system.Object, metaclass=GeometryGroup_Static):
     @children.setter
     def children(self, value: typing.Optional[GeometryCollection]) -> None: ...
 
+@typing.final
 class GradientBrush_Static(type):
     @_property
     def color_interpolation_mode_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
@@ -441,6 +469,7 @@ class GradientBrush_Static(type):
     @_property
     def spread_method_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class GradientBrush(winrt.system.Object, metaclass=GradientBrush_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GradientBrush: ...
@@ -461,12 +490,14 @@ class GradientBrush(winrt.system.Object, metaclass=GradientBrush_Static):
     @color_interpolation_mode.setter
     def color_interpolation_mode(self, value: ColorInterpolationMode) -> None: ...
 
+@typing.final
 class GradientStop_Static(type):
     @_property
     def color_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
     @_property
     def offset_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class GradientStop(winrt.system.Object, metaclass=GradientStop_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GradientStop: ...
@@ -480,6 +511,7 @@ class GradientStop(winrt.system.Object, metaclass=GradientStop_Static):
     @color.setter
     def color(self, value: winrt.windows.ui.Color) -> None: ...
 
+@typing.final
 class GradientStopCollection(winrt.system.Object, winrt._winrt.MutableSequence[GradientStop]):
     def __len__(self) -> int: ...
     def __iter__(self) -> winrt.windows.foundation.collections.IIterator[GradientStop]: ...
@@ -513,10 +545,12 @@ class GradientStopCollection(winrt.system.Object, winrt._winrt.MutableSequence[G
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class ImageBrush_Static(type):
     @_property
     def image_source_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class ImageBrush(winrt.system.Object, metaclass=ImageBrush_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ImageBrush: ...
@@ -530,16 +564,19 @@ class ImageBrush(winrt.system.Object, metaclass=ImageBrush_Static):
     @image_source.setter
     def image_source(self, value: typing.Optional[ImageSource]) -> None: ...
 
+@typing.final
 class ImageSource(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ImageSource: ...
 
+@typing.final
 class LineGeometry_Static(type):
     @_property
     def end_point_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
     @_property
     def start_point_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class LineGeometry(winrt.system.Object, metaclass=LineGeometry_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LineGeometry: ...
@@ -553,10 +590,12 @@ class LineGeometry(winrt.system.Object, metaclass=LineGeometry_Static):
     @end_point.setter
     def end_point(self, value: winrt.windows.foundation.Point) -> None: ...
 
+@typing.final
 class LineSegment_Static(type):
     @_property
     def point_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class LineSegment(winrt.system.Object, metaclass=LineSegment_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LineSegment: ...
@@ -566,12 +605,14 @@ class LineSegment(winrt.system.Object, metaclass=LineSegment_Static):
     @point.setter
     def point(self, value: winrt.windows.foundation.Point) -> None: ...
 
+@typing.final
 class LinearGradientBrush_Static(type):
     @_property
     def end_point_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
     @_property
     def start_point_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class LinearGradientBrush(winrt.system.Object, metaclass=LinearGradientBrush_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LinearGradientBrush: ...
@@ -588,12 +629,14 @@ class LinearGradientBrush(winrt.system.Object, metaclass=LinearGradientBrush_Sta
     @end_point.setter
     def end_point(self, value: winrt.windows.foundation.Point) -> None: ...
 
+@typing.final
 class LoadedImageSourceLoadCompletedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LoadedImageSourceLoadCompletedEventArgs: ...
     @_property
     def status(self) -> LoadedImageSourceLoadStatus: ...
 
+@typing.final
 class LoadedImageSurface_Static(type):
     @typing.overload
     def start_load_from_stream(cls, stream: typing.Optional[winrt.windows.storage.streams.IRandomAccessStream], /) -> typing.Optional[LoadedImageSurface]: ...
@@ -604,6 +647,7 @@ class LoadedImageSurface_Static(type):
     @typing.overload
     def start_load_from_uri(cls, uri: typing.Optional[winrt.windows.foundation.Uri], desired_max_size: winrt.windows.foundation.Size, /) -> typing.Optional[LoadedImageSurface]: ...
 
+@typing.final
 class LoadedImageSurface(winrt.system.Object, metaclass=LoadedImageSurface_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -619,10 +663,12 @@ class LoadedImageSurface(winrt.system.Object, metaclass=LoadedImageSurface_Stati
     @_property
     def natural_size(self) -> winrt.windows.foundation.Size: ...
 
+@typing.final
 class Matrix3DProjection_Static(type):
     @_property
     def projection_matrix_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class Matrix3DProjection(winrt.system.Object, metaclass=Matrix3DProjection_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Matrix3DProjection: ...
@@ -632,6 +678,7 @@ class Matrix3DProjection(winrt.system.Object, metaclass=Matrix3DProjection_Stati
     @projection_matrix.setter
     def projection_matrix(self, value: winrt.windows.ui.xaml.media.media3d.Matrix3D) -> None: ...
 
+@typing.final
 class MatrixHelper_Static(type):
     def from_elements(cls, m11: winrt.system.Double, m12: winrt.system.Double, m21: winrt.system.Double, m22: winrt.system.Double, offset_x: winrt.system.Double, offset_y: winrt.system.Double, /) -> Matrix: ...
     def get_is_identity(cls, target: Matrix, /) -> bool: ...
@@ -639,14 +686,17 @@ class MatrixHelper_Static(type):
     @_property
     def identity(cls) -> Matrix: ...
 
+@typing.final
 class MatrixHelper(winrt.system.Object, metaclass=MatrixHelper_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MatrixHelper: ...
 
+@typing.final
 class MatrixTransform_Static(type):
     @_property
     def matrix_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class MatrixTransform(winrt.system.Object, metaclass=MatrixTransform_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MatrixTransform: ...
@@ -656,12 +706,14 @@ class MatrixTransform(winrt.system.Object, metaclass=MatrixTransform_Static):
     @matrix.setter
     def matrix(self, value: Matrix) -> None: ...
 
+@typing.final
 class MediaTransportControlsThumbnailRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaTransportControlsThumbnailRequestedEventArgs: ...
     def get_deferral(self) -> typing.Optional[winrt.windows.foundation.Deferral]: ...
     def set_thumbnail_image(self, source: typing.Optional[winrt.windows.storage.streams.IInputStream], /) -> None: ...
 
+@typing.final
 class PartialMediaFailureDetectedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PartialMediaFailureDetectedEventArgs: ...
@@ -671,6 +723,7 @@ class PartialMediaFailureDetectedEventArgs(winrt.system.Object):
     @_property
     def extended_error(self) -> winrt.windows.foundation.HResult: ...
 
+@typing.final
 class PathFigure_Static(type):
     @_property
     def is_closed_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
@@ -681,6 +734,7 @@ class PathFigure_Static(type):
     @_property
     def start_point_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class PathFigure(winrt.system.Object, metaclass=PathFigure_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PathFigure: ...
@@ -702,6 +756,7 @@ class PathFigure(winrt.system.Object, metaclass=PathFigure_Static):
     @is_closed.setter
     def is_closed(self, value: bool) -> None: ...
 
+@typing.final
 class PathFigureCollection(winrt.system.Object, winrt._winrt.MutableSequence[PathFigure]):
     def __len__(self) -> int: ...
     def __iter__(self) -> winrt.windows.foundation.collections.IIterator[PathFigure]: ...
@@ -735,12 +790,14 @@ class PathFigureCollection(winrt.system.Object, winrt._winrt.MutableSequence[Pat
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class PathGeometry_Static(type):
     @_property
     def figures_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
     @_property
     def fill_rule_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class PathGeometry(winrt.system.Object, metaclass=PathGeometry_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PathGeometry: ...
@@ -754,10 +811,12 @@ class PathGeometry(winrt.system.Object, metaclass=PathGeometry_Static):
     @figures.setter
     def figures(self, value: typing.Optional[PathFigureCollection]) -> None: ...
 
+@typing.final
 class PathSegment(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PathSegment: ...
 
+@typing.final
 class PathSegmentCollection(winrt.system.Object, winrt._winrt.MutableSequence[PathSegment]):
     def __len__(self) -> int: ...
     def __iter__(self) -> winrt.windows.foundation.collections.IIterator[PathSegment]: ...
@@ -791,6 +850,7 @@ class PathSegmentCollection(winrt.system.Object, winrt._winrt.MutableSequence[Pa
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class PlaneProjection_Static(type):
     @_property
     def center_of_rotation_x_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
@@ -819,6 +879,7 @@ class PlaneProjection_Static(type):
     @_property
     def rotation_z_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class PlaneProjection(winrt.system.Object, metaclass=PlaneProjection_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlaneProjection: ...
@@ -874,6 +935,7 @@ class PlaneProjection(winrt.system.Object, metaclass=PlaneProjection_Static):
     @_property
     def projection_matrix(self) -> winrt.windows.ui.xaml.media.media3d.Matrix3D: ...
 
+@typing.final
 class PointCollection(winrt.system.Object, winrt._winrt.MutableSequence[winrt.windows.foundation.Point]):
     def __len__(self) -> int: ...
     def __iter__(self) -> winrt.windows.foundation.collections.IIterator[winrt.windows.foundation.Point]: ...
@@ -907,10 +969,12 @@ class PointCollection(winrt.system.Object, winrt._winrt.MutableSequence[winrt.wi
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class PolyBezierSegment_Static(type):
     @_property
     def points_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class PolyBezierSegment(winrt.system.Object, metaclass=PolyBezierSegment_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PolyBezierSegment: ...
@@ -920,10 +984,12 @@ class PolyBezierSegment(winrt.system.Object, metaclass=PolyBezierSegment_Static)
     @points.setter
     def points(self, value: typing.Optional[PointCollection]) -> None: ...
 
+@typing.final
 class PolyLineSegment_Static(type):
     @_property
     def points_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class PolyLineSegment(winrt.system.Object, metaclass=PolyLineSegment_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PolyLineSegment: ...
@@ -933,10 +999,12 @@ class PolyLineSegment(winrt.system.Object, metaclass=PolyLineSegment_Static):
     @points.setter
     def points(self, value: typing.Optional[PointCollection]) -> None: ...
 
+@typing.final
 class PolyQuadraticBezierSegment_Static(type):
     @_property
     def points_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class PolyQuadraticBezierSegment(winrt.system.Object, metaclass=PolyQuadraticBezierSegment_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PolyQuadraticBezierSegment: ...
@@ -946,16 +1014,19 @@ class PolyQuadraticBezierSegment(winrt.system.Object, metaclass=PolyQuadraticBez
     @points.setter
     def points(self, value: typing.Optional[PointCollection]) -> None: ...
 
+@typing.final
 class Projection(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Projection: ...
 
+@typing.final
 class QuadraticBezierSegment_Static(type):
     @_property
     def point1_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
     @_property
     def point2_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class QuadraticBezierSegment(winrt.system.Object, metaclass=QuadraticBezierSegment_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> QuadraticBezierSegment: ...
@@ -969,15 +1040,18 @@ class QuadraticBezierSegment(winrt.system.Object, metaclass=QuadraticBezierSegme
     @point1.setter
     def point1(self, value: winrt.windows.foundation.Point) -> None: ...
 
+@typing.final
 class RateChangedRoutedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RateChangedRoutedEventArgs: ...
     def __new__(cls: typing.Type[RateChangedRoutedEventArgs]) -> RateChangedRoutedEventArgs:...
 
+@typing.final
 class RectangleGeometry_Static(type):
     @_property
     def rect_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class RectangleGeometry(winrt.system.Object, metaclass=RectangleGeometry_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RectangleGeometry: ...
@@ -987,28 +1061,33 @@ class RectangleGeometry(winrt.system.Object, metaclass=RectangleGeometry_Static)
     @rect.setter
     def rect(self, value: winrt.windows.foundation.Rect) -> None: ...
 
+@typing.final
 class RenderedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RenderedEventArgs: ...
     @_property
     def frame_duration(self) -> datetime.timedelta: ...
 
+@typing.final
 class RenderingEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RenderingEventArgs: ...
     @_property
     def rendering_time(self) -> datetime.timedelta: ...
 
+@typing.final
 class RevealBackgroundBrush(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RevealBackgroundBrush: ...
     def __new__(cls: typing.Type[RevealBackgroundBrush]) -> RevealBackgroundBrush:...
 
+@typing.final
 class RevealBorderBrush(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RevealBorderBrush: ...
     def __new__(cls: typing.Type[RevealBorderBrush]) -> RevealBorderBrush:...
 
+@typing.final
 class RevealBrush_Static(type):
     def get_state(cls, element: typing.Optional[winrt.windows.ui.xaml.UIElement], /) -> RevealBrushState: ...
     def set_state(cls, element: typing.Optional[winrt.windows.ui.xaml.UIElement], value: RevealBrushState, /) -> None: ...
@@ -1021,6 +1100,7 @@ class RevealBrush_Static(type):
     @_property
     def target_theme_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class RevealBrush(winrt.system.Object, metaclass=RevealBrush_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RevealBrush: ...
@@ -1037,6 +1117,7 @@ class RevealBrush(winrt.system.Object, metaclass=RevealBrush_Static):
     @always_use_fallback.setter
     def always_use_fallback(self, value: bool) -> None: ...
 
+@typing.final
 class RotateTransform_Static(type):
     @_property
     def angle_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
@@ -1045,6 +1126,7 @@ class RotateTransform_Static(type):
     @_property
     def center_y_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class RotateTransform(winrt.system.Object, metaclass=RotateTransform_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RotateTransform: ...
@@ -1062,6 +1144,7 @@ class RotateTransform(winrt.system.Object, metaclass=RotateTransform_Static):
     @angle.setter
     def angle(self, value: winrt.system.Double) -> None: ...
 
+@typing.final
 class ScaleTransform_Static(type):
     @_property
     def center_x_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
@@ -1072,6 +1155,7 @@ class ScaleTransform_Static(type):
     @_property
     def scale_y_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class ScaleTransform(winrt.system.Object, metaclass=ScaleTransform_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ScaleTransform: ...
@@ -1093,10 +1177,12 @@ class ScaleTransform(winrt.system.Object, metaclass=ScaleTransform_Static):
     @center_x.setter
     def center_x(self, value: winrt.system.Double) -> None: ...
 
+@typing.final
 class Shadow(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Shadow: ...
 
+@typing.final
 class SkewTransform_Static(type):
     @_property
     def angle_x_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
@@ -1107,6 +1193,7 @@ class SkewTransform_Static(type):
     @_property
     def center_y_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class SkewTransform(winrt.system.Object, metaclass=SkewTransform_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SkewTransform: ...
@@ -1128,10 +1215,12 @@ class SkewTransform(winrt.system.Object, metaclass=SkewTransform_Static):
     @angle_x.setter
     def angle_x(self, value: winrt.system.Double) -> None: ...
 
+@typing.final
 class SolidColorBrush_Static(type):
     @_property
     def color_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class SolidColorBrush(winrt.system.Object, metaclass=SolidColorBrush_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SolidColorBrush: ...
@@ -1144,6 +1233,7 @@ class SolidColorBrush(winrt.system.Object, metaclass=SolidColorBrush_Static):
     @color.setter
     def color(self, value: winrt.windows.ui.Color) -> None: ...
 
+@typing.final
 class ThemeShadow(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ThemeShadow: ...
@@ -1151,6 +1241,7 @@ class ThemeShadow(winrt.system.Object):
     @_property
     def receivers(self) -> typing.Optional[winrt.windows.ui.xaml.UIElementWeakCollection]: ...
 
+@typing.final
 class TileBrush_Static(type):
     @_property
     def alignment_x_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
@@ -1159,6 +1250,7 @@ class TileBrush_Static(type):
     @_property
     def stretch_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class TileBrush(winrt.system.Object, metaclass=TileBrush_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TileBrush: ...
@@ -1175,6 +1267,7 @@ class TileBrush(winrt.system.Object, metaclass=TileBrush_Static):
     @alignment_x.setter
     def alignment_x(self, value: AlignmentX) -> None: ...
 
+@typing.final
 class TimelineMarker_Static(type):
     @_property
     def text_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
@@ -1183,6 +1276,7 @@ class TimelineMarker_Static(type):
     @_property
     def type_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class TimelineMarker(winrt.system.Object, metaclass=TimelineMarker_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TimelineMarker: ...
@@ -1200,6 +1294,7 @@ class TimelineMarker(winrt.system.Object, metaclass=TimelineMarker_Static):
     @text.setter
     def text(self, value: str) -> None: ...
 
+@typing.final
 class TimelineMarkerCollection(winrt.system.Object, winrt._winrt.MutableSequence[TimelineMarker]):
     def __len__(self) -> int: ...
     def __iter__(self) -> winrt.windows.foundation.collections.IIterator[TimelineMarker]: ...
@@ -1233,6 +1328,7 @@ class TimelineMarkerCollection(winrt.system.Object, winrt._winrt.MutableSequence
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class TimelineMarkerRoutedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TimelineMarkerRoutedEventArgs: ...
@@ -1242,10 +1338,12 @@ class TimelineMarkerRoutedEventArgs(winrt.system.Object):
     @marker.setter
     def marker(self, value: typing.Optional[TimelineMarker]) -> None: ...
 
+@typing.final
 class Transform(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Transform: ...
 
+@typing.final
 class TransformCollection(winrt.system.Object, winrt._winrt.MutableSequence[Transform]):
     def __len__(self) -> int: ...
     def __iter__(self) -> winrt.windows.foundation.collections.IIterator[Transform]: ...
@@ -1279,10 +1377,12 @@ class TransformCollection(winrt.system.Object, winrt._winrt.MutableSequence[Tran
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class TransformGroup_Static(type):
     @_property
     def children_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class TransformGroup(winrt.system.Object, metaclass=TransformGroup_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TransformGroup: ...
@@ -1294,12 +1394,14 @@ class TransformGroup(winrt.system.Object, metaclass=TransformGroup_Static):
     @_property
     def value(self) -> Matrix: ...
 
+@typing.final
 class TranslateTransform_Static(type):
     @_property
     def x_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
     @_property
     def y_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class TranslateTransform(winrt.system.Object, metaclass=TranslateTransform_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TranslateTransform: ...
@@ -1313,6 +1415,7 @@ class TranslateTransform(winrt.system.Object, metaclass=TranslateTransform_Stati
     @x.setter
     def x(self, value: winrt.system.Double) -> None: ...
 
+@typing.final
 class VisualTreeHelper_Static(type):
     def disconnect_children_recursive(cls, element: typing.Optional[winrt.windows.ui.xaml.UIElement], /) -> None: ...
     @typing.overload
@@ -1325,14 +1428,17 @@ class VisualTreeHelper_Static(type):
     def get_open_popups_for_xaml_root(cls, xaml_root: typing.Optional[winrt.windows.ui.xaml.XamlRoot], /) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.ui.xaml.controls.primitives.Popup]]: ...
     def get_parent(cls, reference: typing.Optional[winrt.windows.ui.xaml.DependencyObject], /) -> typing.Optional[winrt.windows.ui.xaml.DependencyObject]: ...
 
+@typing.final
 class VisualTreeHelper(winrt.system.Object, metaclass=VisualTreeHelper_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VisualTreeHelper: ...
 
+@typing.final
 class XamlCompositionBrushBase_Static(type):
     @_property
     def fallback_color_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class XamlCompositionBrushBase(winrt.system.Object, metaclass=XamlCompositionBrushBase_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> XamlCompositionBrushBase: ...
@@ -1347,12 +1453,14 @@ class XamlCompositionBrushBase(winrt.system.Object, metaclass=XamlCompositionBru
     @composition_brush.setter
     def composition_brush(self, value: typing.Optional[winrt.windows.ui.composition.CompositionBrush]) -> None: ...
 
+@typing.final
 class XamlLight_Static(type):
     def add_target_brush(cls, light_id: str, brush: typing.Optional[Brush], /) -> None: ...
     def add_target_element(cls, light_id: str, element: typing.Optional[winrt.windows.ui.xaml.UIElement], /) -> None: ...
     def remove_target_brush(cls, light_id: str, brush: typing.Optional[Brush], /) -> None: ...
     def remove_target_element(cls, light_id: str, element: typing.Optional[winrt.windows.ui.xaml.UIElement], /) -> None: ...
 
+@typing.final
 class XamlLight(winrt.system.Object, metaclass=XamlLight_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> XamlLight: ...

@@ -16,6 +16,7 @@ from winrt.windows.applicationmodel.resources.management import IndexedResourceT
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class IndexedResourceCandidate(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IndexedResourceCandidate: ...
@@ -31,6 +32,7 @@ class IndexedResourceCandidate(winrt.system.Object):
     @_property
     def value_as_string(self) -> str: ...
 
+@typing.final
 class IndexedResourceQualifier(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IndexedResourceQualifier: ...
@@ -39,6 +41,7 @@ class IndexedResourceQualifier(winrt.system.Object):
     @_property
     def qualifier_value(self) -> str: ...
 
+@typing.final
 class ResourceIndexer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ResourceIndexer: ...

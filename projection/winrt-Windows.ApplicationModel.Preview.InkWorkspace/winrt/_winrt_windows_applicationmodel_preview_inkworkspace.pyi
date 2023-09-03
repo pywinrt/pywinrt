@@ -14,9 +14,11 @@ import winrt.windows.graphics.imaging
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class InkWorkspaceHostedAppManager_Static(type):
     def get_for_current_app(cls) -> typing.Optional[InkWorkspaceHostedAppManager]: ...
 
+@typing.final
 class InkWorkspaceHostedAppManager(winrt.system.Object, metaclass=InkWorkspaceHostedAppManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InkWorkspaceHostedAppManager: ...

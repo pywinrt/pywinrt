@@ -15,12 +15,14 @@ from winrt.windows.applicationmodel.extendedexecution import ExtendedExecutionRe
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class ExtendedExecutionRevokedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ExtendedExecutionRevokedEventArgs: ...
     @_property
     def reason(self) -> ExtendedExecutionRevokedReason: ...
 
+@typing.final
 class ExtendedExecutionSession(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...

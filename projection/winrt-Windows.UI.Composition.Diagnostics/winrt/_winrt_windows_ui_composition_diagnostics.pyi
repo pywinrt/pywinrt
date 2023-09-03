@@ -15,6 +15,7 @@ from winrt.windows.ui.composition.diagnostics import CompositionDebugOverdrawCon
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class CompositionDebugHeatMaps(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionDebugHeatMaps: ...
@@ -23,9 +24,11 @@ class CompositionDebugHeatMaps(winrt.system.Object):
     def show_overdraw(self, subtree: typing.Optional[winrt.windows.ui.composition.Visual], content_kinds: CompositionDebugOverdrawContentKinds, /) -> None: ...
     def show_redraw(self, subtree: typing.Optional[winrt.windows.ui.composition.Visual], /) -> None: ...
 
+@typing.final
 class CompositionDebugSettings_Static(type):
     def try_get_settings(cls, compositor: typing.Optional[winrt.windows.ui.composition.Compositor], /) -> typing.Optional[CompositionDebugSettings]: ...
 
+@typing.final
 class CompositionDebugSettings(winrt.system.Object, metaclass=CompositionDebugSettings_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionDebugSettings: ...

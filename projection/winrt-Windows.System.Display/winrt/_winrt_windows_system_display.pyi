@@ -12,6 +12,7 @@ import winrt.system
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class DisplayRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DisplayRequest: ...

@@ -13,10 +13,12 @@ import winrt.windows.gaming.input.custom
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class GameControllerProviderInfo_Static(type):
     def get_parent_provider_id(cls, provider: typing.Optional[winrt.windows.gaming.input.custom.IGameControllerProvider], /) -> str: ...
     def get_provider_id(cls, provider: typing.Optional[winrt.windows.gaming.input.custom.IGameControllerProvider], /) -> str: ...
 
+@typing.final
 class GameControllerProviderInfo(winrt.system.Object, metaclass=GameControllerProviderInfo_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GameControllerProviderInfo: ...

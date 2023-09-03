@@ -13,6 +13,7 @@ import winrt.windows.foundation
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class OemSupportInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> OemSupportInfo: ...
@@ -23,14 +24,17 @@ class OemSupportInfo(winrt.system.Object):
     @_property
     def support_provider(self) -> str: ...
 
+@typing.final
 class SmbiosInformation_Static(type):
     @_property
     def serial_number(cls) -> str: ...
 
+@typing.final
 class SmbiosInformation(winrt.system.Object, metaclass=SmbiosInformation_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmbiosInformation: ...
 
+@typing.final
 class SystemSupportDeviceInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SystemSupportDeviceInfo: ...
@@ -49,6 +53,7 @@ class SystemSupportDeviceInfo(winrt.system.Object):
     @_property
     def system_sku(self) -> str: ...
 
+@typing.final
 class SystemSupportInfo_Static(type):
     @_property
     def local_system_edition(cls) -> str: ...
@@ -57,6 +62,7 @@ class SystemSupportInfo_Static(type):
     @_property
     def local_device_info(cls) -> typing.Optional[SystemSupportDeviceInfo]: ...
 
+@typing.final
 class SystemSupportInfo(winrt.system.Object, metaclass=SystemSupportInfo_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SystemSupportInfo: ...

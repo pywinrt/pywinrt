@@ -15,6 +15,7 @@ from winrt.windows.applicationmodel.calls.background import PhoneCallBlockedReas
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class PhoneCallBlockedTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneCallBlockedTriggerDetails: ...
@@ -25,6 +26,7 @@ class PhoneCallBlockedTriggerDetails(winrt.system.Object):
     @_property
     def phone_number(self) -> str: ...
 
+@typing.final
 class PhoneCallOriginDataRequestTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneCallOriginDataRequestTriggerDetails: ...
@@ -33,6 +35,7 @@ class PhoneCallOriginDataRequestTriggerDetails(winrt.system.Object):
     @_property
     def request_id(self) -> _uuid.UUID: ...
 
+@typing.final
 class PhoneIncomingCallDismissedTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneIncomingCallDismissedTriggerDetails: ...
@@ -49,6 +52,7 @@ class PhoneIncomingCallDismissedTriggerDetails(winrt.system.Object):
     @_property
     def text_reply_message(self) -> str: ...
 
+@typing.final
 class PhoneIncomingCallNotificationTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneIncomingCallNotificationTriggerDetails: ...
@@ -57,6 +61,7 @@ class PhoneIncomingCallNotificationTriggerDetails(winrt.system.Object):
     @_property
     def line_id(self) -> _uuid.UUID: ...
 
+@typing.final
 class PhoneLineChangedTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneLineChangedTriggerDetails: ...
@@ -66,6 +71,7 @@ class PhoneLineChangedTriggerDetails(winrt.system.Object):
     @_property
     def line_id(self) -> _uuid.UUID: ...
 
+@typing.final
 class PhoneNewVoicemailMessageTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneNewVoicemailMessageTriggerDetails: ...

@@ -24,10 +24,12 @@ from winrt.windows.media.editing import MediaTrimmingPreference, VideoFramePreci
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class BackgroundAudioTrack_Static(type):
     def create_from_embedded_audio_track(cls, embedded_audio_track: typing.Optional[EmbeddedAudioTrack], /) -> typing.Optional[BackgroundAudioTrack]: ...
     def create_from_file_async(cls, file: typing.Optional[winrt.windows.storage.IStorageFile], /) -> winrt.windows.foundation.IAsyncOperation[BackgroundAudioTrack]: ...
 
+@typing.final
 class BackgroundAudioTrack(winrt.system.Object, metaclass=BackgroundAudioTrack_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BackgroundAudioTrack: ...
@@ -58,17 +60,20 @@ class BackgroundAudioTrack(winrt.system.Object, metaclass=BackgroundAudioTrack_S
     @_property
     def user_data(self) -> typing.Optional[winrt.windows.foundation.collections.IMap[str, str]]: ...
 
+@typing.final
 class EmbeddedAudioTrack(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmbeddedAudioTrack: ...
     def get_audio_encoding_properties(self) -> typing.Optional[winrt.windows.media.mediaproperties.AudioEncodingProperties]: ...
 
+@typing.final
 class MediaClip_Static(type):
     def create_from_color(cls, color: winrt.windows.ui.Color, original_duration: datetime.timedelta, /) -> typing.Optional[MediaClip]: ...
     def create_from_file_async(cls, file: typing.Optional[winrt.windows.storage.IStorageFile], /) -> winrt.windows.foundation.IAsyncOperation[MediaClip]: ...
     def create_from_image_file_async(cls, file: typing.Optional[winrt.windows.storage.IStorageFile], original_duration: datetime.timedelta, /) -> winrt.windows.foundation.IAsyncOperation[MediaClip]: ...
     def create_from_surface(cls, surface: typing.Optional[winrt.windows.graphics.directx.direct3d11.IDirect3DSurface], original_duration: datetime.timedelta, /) -> typing.Optional[MediaClip]: ...
 
+@typing.final
 class MediaClip(winrt.system.Object, metaclass=MediaClip_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaClip: ...
@@ -107,9 +112,11 @@ class MediaClip(winrt.system.Object, metaclass=MediaClip_Static):
     @_property
     def audio_effect_definitions(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.media.effects.IAudioEffectDefinition]]: ...
 
+@typing.final
 class MediaComposition_Static(type):
     def load_async(cls, file: typing.Optional[winrt.windows.storage.StorageFile], /) -> winrt.windows.foundation.IAsyncOperation[MediaComposition]: ...
 
+@typing.final
 class MediaComposition(winrt.system.Object, metaclass=MediaComposition_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaComposition: ...
@@ -141,6 +148,7 @@ class MediaComposition(winrt.system.Object, metaclass=MediaComposition_Static):
     @_property
     def overlay_layers(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[MediaOverlayLayer]]: ...
 
+@typing.final
 class MediaOverlay(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaOverlay: ...
@@ -168,6 +176,7 @@ class MediaOverlay(winrt.system.Object):
     @_property
     def clip(self) -> typing.Optional[MediaClip]: ...
 
+@typing.final
 class MediaOverlayLayer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaOverlayLayer: ...

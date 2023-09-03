@@ -22,11 +22,13 @@ from winrt.windows.media import AudioBufferAccessMode, AudioProcessing, MediaPla
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class MediaTimeRange:
     start: datetime.timedelta
     end: datetime.timedelta
     def __init__(self, start: datetime.timedelta, end: datetime.timedelta) -> None: ...
 
+@typing.final
 class AudioBuffer(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -41,6 +43,7 @@ class AudioBuffer(winrt.system.Object):
     @_property
     def capacity(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class AudioFrame(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -72,12 +75,14 @@ class AudioFrame(winrt.system.Object):
     @_property
     def type(self) -> str: ...
 
+@typing.final
 class AutoRepeatModeChangeRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AutoRepeatModeChangeRequestedEventArgs: ...
     @_property
     def requested_auto_repeat_mode(self) -> MediaPlaybackAutoRepeatMode: ...
 
+@typing.final
 class ImageDisplayProperties(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ImageDisplayProperties: ...
@@ -90,6 +95,7 @@ class ImageDisplayProperties(winrt.system.Object):
     @subtitle.setter
     def subtitle(self, value: str) -> None: ...
 
+@typing.final
 class MediaControl_Static(type):
     def add_channel_down_pressed(cls, handler: winrt.windows.foundation.EventHandler[winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_channel_down_pressed(cls, cookie: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
@@ -134,10 +140,12 @@ class MediaControl_Static(type):
     @_property
     def sound_level(cls) -> SoundLevel: ...
 
+@typing.final
 class MediaControl(winrt.system.Object, metaclass=MediaControl_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaControl: ...
 
+@typing.final
 class MediaExtensionManager(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaExtensionManager: ...
@@ -168,20 +176,24 @@ class MediaExtensionManager(winrt.system.Object):
     @typing.overload
     def register_video_encoder(self, activatable_class_id: str, input_subtype: _uuid.UUID, output_subtype: _uuid.UUID, configuration: typing.Optional[winrt.windows.foundation.collections.IPropertySet], /) -> None: ...
 
+@typing.final
 class MediaMarkerTypes_Static(type):
     @_property
     def bookmark(cls) -> str: ...
 
+@typing.final
 class MediaMarkerTypes(winrt.system.Object, metaclass=MediaMarkerTypes_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaMarkerTypes: ...
 
+@typing.final
 class MediaProcessingTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaProcessingTriggerDetails: ...
     @_property
     def arguments(self) -> typing.Optional[winrt.windows.foundation.collections.ValueSet]: ...
 
+@typing.final
 class MediaTimelineController(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaTimelineController: ...
@@ -216,12 +228,14 @@ class MediaTimelineController(winrt.system.Object):
     @duration.setter
     def duration(self, value: typing.Optional[typing.Optional[datetime.timedelta]]) -> None: ...
 
+@typing.final
 class MediaTimelineControllerFailedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaTimelineControllerFailedEventArgs: ...
     @_property
     def extended_error(self) -> winrt.windows.foundation.HResult: ...
 
+@typing.final
 class MusicDisplayProperties(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MusicDisplayProperties: ...
@@ -252,27 +266,32 @@ class MusicDisplayProperties(winrt.system.Object):
     @album_track_count.setter
     def album_track_count(self, value: winrt.system.UInt32) -> None: ...
 
+@typing.final
 class PlaybackPositionChangeRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlaybackPositionChangeRequestedEventArgs: ...
     @_property
     def requested_playback_position(self) -> datetime.timedelta: ...
 
+@typing.final
 class PlaybackRateChangeRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlaybackRateChangeRequestedEventArgs: ...
     @_property
     def requested_playback_rate(self) -> winrt.system.Double: ...
 
+@typing.final
 class ShuffleEnabledChangeRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ShuffleEnabledChangeRequestedEventArgs: ...
     @_property
     def requested_shuffle_enabled(self) -> bool: ...
 
+@typing.final
 class SystemMediaTransportControls_Static(type):
     def get_for_current_view(cls) -> typing.Optional[SystemMediaTransportControls]: ...
 
+@typing.final
 class SystemMediaTransportControls(winrt.system.Object, metaclass=SystemMediaTransportControls_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SystemMediaTransportControls: ...
@@ -354,12 +373,14 @@ class SystemMediaTransportControls(winrt.system.Object, metaclass=SystemMediaTra
     @auto_repeat_mode.setter
     def auto_repeat_mode(self, value: MediaPlaybackAutoRepeatMode) -> None: ...
 
+@typing.final
 class SystemMediaTransportControlsButtonPressedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SystemMediaTransportControlsButtonPressedEventArgs: ...
     @_property
     def button(self) -> SystemMediaTransportControlsButton: ...
 
+@typing.final
 class SystemMediaTransportControlsDisplayUpdater(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SystemMediaTransportControlsDisplayUpdater: ...
@@ -385,12 +406,14 @@ class SystemMediaTransportControlsDisplayUpdater(winrt.system.Object):
     @_property
     def video_properties(self) -> typing.Optional[VideoDisplayProperties]: ...
 
+@typing.final
 class SystemMediaTransportControlsPropertyChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SystemMediaTransportControlsPropertyChangedEventArgs: ...
     @_property
     def property(self) -> SystemMediaTransportControlsProperty: ...
 
+@typing.final
 class SystemMediaTransportControlsTimelineProperties(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SystemMediaTransportControlsTimelineProperties: ...
@@ -416,6 +439,7 @@ class SystemMediaTransportControlsTimelineProperties(winrt.system.Object):
     @end_time.setter
     def end_time(self, value: datetime.timedelta) -> None: ...
 
+@typing.final
 class VideoDisplayProperties(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VideoDisplayProperties: ...
@@ -430,14 +454,17 @@ class VideoDisplayProperties(winrt.system.Object):
     @_property
     def genres(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[str]]: ...
 
+@typing.final
 class VideoEffects_Static(type):
     @_property
     def video_stabilization(cls) -> str: ...
 
+@typing.final
 class VideoEffects(winrt.system.Object, metaclass=VideoEffects_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VideoEffects: ...
 
+@typing.final
 class VideoFrame_Static(type):
     @typing.overload
     def create_as_direct3_d11_surface_backed(cls, format: winrt.windows.graphics.directx.DirectXPixelFormat, width: winrt.system.Int32, height: winrt.system.Int32, /) -> typing.Optional[VideoFrame]: ...
@@ -446,6 +473,7 @@ class VideoFrame_Static(type):
     def create_with_direct3_d11_surface(cls, surface: typing.Optional[winrt.windows.graphics.directx.direct3d11.IDirect3DSurface], /) -> typing.Optional[VideoFrame]: ...
     def create_with_software_bitmap(cls, bitmap: typing.Optional[winrt.windows.graphics.imaging.SoftwareBitmap], /) -> typing.Optional[VideoFrame]: ...
 
+@typing.final
 class VideoFrame(winrt.system.Object, metaclass=VideoFrame_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -487,11 +515,13 @@ class VideoFrame(winrt.system.Object, metaclass=VideoFrame_Static):
     @_property
     def software_bitmap(self) -> typing.Optional[winrt.windows.graphics.imaging.SoftwareBitmap]: ...
 
+@typing.final
 class IMediaExtension(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IMediaExtension: ...
     def set_properties(self, configuration: typing.Optional[winrt.windows.foundation.collections.IPropertySet], /) -> None: ...
 
+@typing.final
 class IMediaFrame(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -521,6 +551,7 @@ class IMediaFrame(winrt.system.Object):
     @_property
     def type(self) -> str: ...
 
+@typing.final
 class IMediaMarker(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IMediaMarker: ...
@@ -531,6 +562,7 @@ class IMediaMarker(winrt.system.Object):
     @_property
     def time(self) -> datetime.timedelta: ...
 
+@typing.final
 class IMediaMarkers(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IMediaMarkers: ...

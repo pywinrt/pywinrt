@@ -17,6 +17,7 @@ from winrt.windows.devices.geolocation.geofencing import GeofenceMonitorStatus, 
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class Geofence(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Geofence: ...
@@ -43,10 +44,12 @@ class Geofence(winrt.system.Object):
     @_property
     def start_time(self) -> datetime.datetime: ...
 
+@typing.final
 class GeofenceMonitor_Static(type):
     @_property
     def current(cls) -> typing.Optional[GeofenceMonitor]: ...
 
+@typing.final
 class GeofenceMonitor(winrt.system.Object, metaclass=GeofenceMonitor_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GeofenceMonitor: ...
@@ -62,6 +65,7 @@ class GeofenceMonitor(winrt.system.Object, metaclass=GeofenceMonitor_Static):
     @_property
     def status(self) -> GeofenceMonitorStatus: ...
 
+@typing.final
 class GeofenceStateChangeReport(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GeofenceStateChangeReport: ...

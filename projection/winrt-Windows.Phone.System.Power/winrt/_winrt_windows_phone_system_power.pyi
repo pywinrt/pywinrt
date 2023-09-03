@@ -15,6 +15,7 @@ from winrt.windows.phone.system.power import PowerSavingMode
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class PowerManager_Static(type):
     def add_power_saving_mode_changed(cls, change_handler: winrt.windows.foundation.EventHandler[winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_power_saving_mode_changed(cls, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
@@ -23,6 +24,7 @@ class PowerManager_Static(type):
     @_property
     def power_saving_mode_enabled(cls) -> bool: ...
 
+@typing.final
 class PowerManager(winrt.system.Object, metaclass=PowerManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PowerManager: ...

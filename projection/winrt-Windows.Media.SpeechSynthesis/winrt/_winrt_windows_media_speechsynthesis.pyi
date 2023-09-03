@@ -19,6 +19,7 @@ from winrt.windows.media.speechsynthesis import SpeechAppendedSilence, SpeechPun
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class SpeechSynthesisStream(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -49,6 +50,7 @@ class SpeechSynthesisStream(winrt.system.Object):
     @_property
     def position(self) -> winrt.system.UInt64: ...
 
+@typing.final
 class SpeechSynthesizer_Static(type):
     def try_set_default_voice_async(cls, voice: typing.Optional[VoiceInformation], /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     @_property
@@ -56,6 +58,7 @@ class SpeechSynthesizer_Static(type):
     @_property
     def default_voice(cls) -> typing.Optional[VoiceInformation]: ...
 
+@typing.final
 class SpeechSynthesizer(winrt.system.Object, metaclass=SpeechSynthesizer_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -72,6 +75,7 @@ class SpeechSynthesizer(winrt.system.Object, metaclass=SpeechSynthesizer_Static)
     @_property
     def options(self) -> typing.Optional[SpeechSynthesizerOptions]: ...
 
+@typing.final
 class SpeechSynthesizerOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpeechSynthesizerOptions: ...
@@ -104,6 +108,7 @@ class SpeechSynthesizerOptions(winrt.system.Object):
     @appended_silence.setter
     def appended_silence(self, value: SpeechAppendedSilence) -> None: ...
 
+@typing.final
 class VoiceInformation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VoiceInformation: ...

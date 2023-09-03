@@ -18,6 +18,7 @@ from winrt.windows.storage.pickers import PickerLocationId, PickerViewMode
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class FileExtensionVector(winrt.system.Object, winrt._winrt.MutableSequence[str]):
     def __len__(self) -> int: ...
     def __iter__(self) -> winrt.windows.foundation.collections.IIterator[str]: ...
@@ -50,10 +51,12 @@ class FileExtensionVector(winrt.system.Object, winrt._winrt.MutableSequence[str]
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class FileOpenPicker_Static(type):
     def create_for_user(cls, user: typing.Optional[winrt.windows.system.User], /) -> typing.Optional[FileOpenPicker]: ...
     def resume_pick_single_file_async(cls) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.storage.StorageFile]: ...
 
+@typing.final
 class FileOpenPicker(winrt.system.Object, metaclass=FileOpenPicker_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FileOpenPicker: ...
@@ -88,6 +91,7 @@ class FileOpenPicker(winrt.system.Object, metaclass=FileOpenPicker_Static):
     @_property
     def user(self) -> typing.Optional[winrt.windows.system.User]: ...
 
+@typing.final
 class FilePickerFileTypesOrderedMap(winrt.system.Object, winrt._winrt.MutableMapping[str, winrt.windows.foundation.collections.IVector[str]]):
     def __len__(self) -> int: ...
     def __iter__(self) -> typing.Iterator[str]: ...
@@ -107,6 +111,7 @@ class FilePickerFileTypesOrderedMap(winrt.system.Object, winrt._winrt.MutableMap
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class FilePickerSelectedFilesArray(winrt.system.Object, winrt._winrt.Sequence[winrt.windows.storage.StorageFile]):
     def __len__(self) -> int: ...
     def __iter__(self) -> winrt.windows.foundation.collections.IIterator[winrt.windows.storage.StorageFile]: ...
@@ -123,9 +128,11 @@ class FilePickerSelectedFilesArray(winrt.system.Object, winrt._winrt.Sequence[wi
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class FileSavePicker_Static(type):
     def create_for_user(cls, user: typing.Optional[winrt.windows.system.User], /) -> typing.Optional[FileSavePicker]: ...
 
+@typing.final
 class FileSavePicker(winrt.system.Object, metaclass=FileSavePicker_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FileSavePicker: ...
@@ -167,9 +174,11 @@ class FileSavePicker(winrt.system.Object, metaclass=FileSavePicker_Static):
     @_property
     def user(self) -> typing.Optional[winrt.windows.system.User]: ...
 
+@typing.final
 class FolderPicker_Static(type):
     def create_for_user(cls, user: typing.Optional[winrt.windows.system.User], /) -> typing.Optional[FolderPicker]: ...
 
+@typing.final
 class FolderPicker(winrt.system.Object, metaclass=FolderPicker_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FolderPicker: ...

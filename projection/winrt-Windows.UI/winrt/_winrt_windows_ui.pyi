@@ -12,6 +12,7 @@ import winrt.system
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class Color:
     a: winrt.system.UInt8
     r: winrt.system.UInt8
@@ -19,18 +20,22 @@ class Color:
     b: winrt.system.UInt8
     def __init__(self, a: winrt.system.UInt8, r: winrt.system.UInt8, g: winrt.system.UInt8, b: winrt.system.UInt8) -> None: ...
 
+@typing.final
 class WindowId:
     value: winrt.system.UInt64
     def __init__(self, value: winrt.system.UInt64) -> None: ...
 
+@typing.final
 class ColorHelper_Static(type):
     def from_argb(cls, a: winrt.system.UInt8, r: winrt.system.UInt8, g: winrt.system.UInt8, b: winrt.system.UInt8, /) -> Color: ...
     def to_display_name(cls, color: Color, /) -> str: ...
 
+@typing.final
 class ColorHelper(winrt.system.Object, metaclass=ColorHelper_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ColorHelper: ...
 
+@typing.final
 class Colors_Static(type):
     @_property
     def alice_blue(cls) -> Color: ...
@@ -315,16 +320,19 @@ class Colors_Static(type):
     @_property
     def yellow_green(cls) -> Color: ...
 
+@typing.final
 class Colors(winrt.system.Object, metaclass=Colors_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Colors: ...
 
+@typing.final
 class UIContentRoot(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UIContentRoot: ...
     @_property
     def u_i_context(self) -> typing.Optional[UIContext]: ...
 
+@typing.final
 class UIContext(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UIContext: ...

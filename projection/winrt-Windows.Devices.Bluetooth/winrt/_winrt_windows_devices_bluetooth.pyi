@@ -22,11 +22,13 @@ from winrt.windows.devices.bluetooth import BluetoothAddressType, BluetoothCache
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class BluetoothAdapter_Static(type):
     def from_id_async(cls, device_id: str, /) -> winrt.windows.foundation.IAsyncOperation[BluetoothAdapter]: ...
     def get_default_async(cls) -> winrt.windows.foundation.IAsyncOperation[BluetoothAdapter]: ...
     def get_device_selector(cls) -> str: ...
 
+@typing.final
 class BluetoothAdapter(winrt.system.Object, metaclass=BluetoothAdapter_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BluetoothAdapter: ...
@@ -54,10 +56,12 @@ class BluetoothAdapter(winrt.system.Object, metaclass=BluetoothAdapter_Static):
     @_property
     def max_advertisement_data_length(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class BluetoothClassOfDevice_Static(type):
     def from_parts(cls, major_class: BluetoothMajorClass, minor_class: BluetoothMinorClass, service_capabilities: BluetoothServiceCapabilities, /) -> typing.Optional[BluetoothClassOfDevice]: ...
     def from_raw_value(cls, raw_value: winrt.system.UInt32, /) -> typing.Optional[BluetoothClassOfDevice]: ...
 
+@typing.final
 class BluetoothClassOfDevice(winrt.system.Object, metaclass=BluetoothClassOfDevice_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BluetoothClassOfDevice: ...
@@ -70,6 +74,7 @@ class BluetoothClassOfDevice(winrt.system.Object, metaclass=BluetoothClassOfDevi
     @_property
     def service_capabilities(self) -> BluetoothServiceCapabilities: ...
 
+@typing.final
 class BluetoothDevice_Static(type):
     def from_bluetooth_address_async(cls, address: winrt.system.UInt64, /) -> winrt.windows.foundation.IAsyncOperation[BluetoothDevice]: ...
     def from_host_name_async(cls, host_name: typing.Optional[winrt.windows.networking.HostName], /) -> winrt.windows.foundation.IAsyncOperation[BluetoothDevice]: ...
@@ -81,6 +86,7 @@ class BluetoothDevice_Static(type):
     def get_device_selector_from_device_name(cls, device_name: str, /) -> str: ...
     def get_device_selector_from_pairing_state(cls, pairing_state: bool, /) -> str: ...
 
+@typing.final
 class BluetoothDevice(winrt.system.Object, metaclass=BluetoothDevice_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -127,9 +133,11 @@ class BluetoothDevice(winrt.system.Object, metaclass=BluetoothDevice_Static):
     @_property
     def was_secure_connection_used_for_pairing(self) -> bool: ...
 
+@typing.final
 class BluetoothDeviceId_Static(type):
     def from_id(cls, device_id: str, /) -> typing.Optional[BluetoothDeviceId]: ...
 
+@typing.final
 class BluetoothDeviceId(winrt.system.Object, metaclass=BluetoothDeviceId_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BluetoothDeviceId: ...
@@ -140,10 +148,12 @@ class BluetoothDeviceId(winrt.system.Object, metaclass=BluetoothDeviceId_Static)
     @_property
     def is_low_energy_device(self) -> bool: ...
 
+@typing.final
 class BluetoothLEAppearance_Static(type):
     def from_parts(cls, appearance_category: winrt.system.UInt16, appearance_sub_category: winrt.system.UInt16, /) -> typing.Optional[BluetoothLEAppearance]: ...
     def from_raw_value(cls, raw_value: winrt.system.UInt16, /) -> typing.Optional[BluetoothLEAppearance]: ...
 
+@typing.final
 class BluetoothLEAppearance(winrt.system.Object, metaclass=BluetoothLEAppearance_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BluetoothLEAppearance: ...
@@ -154,6 +164,7 @@ class BluetoothLEAppearance(winrt.system.Object, metaclass=BluetoothLEAppearance
     @_property
     def sub_category(self) -> winrt.system.UInt16: ...
 
+@typing.final
 class BluetoothLEAppearanceCategories_Static(type):
     @_property
     def barcode_scanner(cls) -> winrt.system.UInt16: ...
@@ -200,10 +211,12 @@ class BluetoothLEAppearanceCategories_Static(type):
     @_property
     def weight_scale(cls) -> winrt.system.UInt16: ...
 
+@typing.final
 class BluetoothLEAppearanceCategories(winrt.system.Object, metaclass=BluetoothLEAppearanceCategories_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BluetoothLEAppearanceCategories: ...
 
+@typing.final
 class BluetoothLEAppearanceSubcategories_Static(type):
     @_property
     def barcode_scanner(cls) -> winrt.system.UInt16: ...
@@ -262,10 +275,12 @@ class BluetoothLEAppearanceSubcategories_Static(type):
     @_property
     def thermometer_ear(cls) -> winrt.system.UInt16: ...
 
+@typing.final
 class BluetoothLEAppearanceSubcategories(winrt.system.Object, metaclass=BluetoothLEAppearanceSubcategories_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BluetoothLEAppearanceSubcategories: ...
 
+@typing.final
 class BluetoothLEConnectionParameters(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BluetoothLEConnectionParameters: ...
@@ -276,6 +291,7 @@ class BluetoothLEConnectionParameters(winrt.system.Object):
     @_property
     def link_timeout(self) -> winrt.system.UInt16: ...
 
+@typing.final
 class BluetoothLEConnectionPhy(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BluetoothLEConnectionPhy: ...
@@ -284,6 +300,7 @@ class BluetoothLEConnectionPhy(winrt.system.Object):
     @_property
     def transmit_info(self) -> typing.Optional[BluetoothLEConnectionPhyInfo]: ...
 
+@typing.final
 class BluetoothLEConnectionPhyInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BluetoothLEConnectionPhyInfo: ...
@@ -294,6 +311,7 @@ class BluetoothLEConnectionPhyInfo(winrt.system.Object):
     @_property
     def is_uncoded2_m_phy(self) -> bool: ...
 
+@typing.final
 class BluetoothLEDevice_Static(type):
     @typing.overload
     def from_bluetooth_address_async(cls, bluetooth_address: winrt.system.UInt64, /) -> winrt.windows.foundation.IAsyncOperation[BluetoothLEDevice]: ...
@@ -310,6 +328,7 @@ class BluetoothLEDevice_Static(type):
     def get_device_selector_from_device_name(cls, device_name: str, /) -> str: ...
     def get_device_selector_from_pairing_state(cls, pairing_state: bool, /) -> str: ...
 
+@typing.final
 class BluetoothLEDevice(winrt.system.Object, metaclass=BluetoothLEDevice_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -362,6 +381,7 @@ class BluetoothLEDevice(winrt.system.Object, metaclass=BluetoothLEDevice_Static)
     @_property
     def was_secure_connection_used_for_pairing(self) -> bool: ...
 
+@typing.final
 class BluetoothLEPreferredConnectionParameters_Static(type):
     @_property
     def balanced(cls) -> typing.Optional[BluetoothLEPreferredConnectionParameters]: ...
@@ -370,6 +390,7 @@ class BluetoothLEPreferredConnectionParameters_Static(type):
     @_property
     def throughput_optimized(cls) -> typing.Optional[BluetoothLEPreferredConnectionParameters]: ...
 
+@typing.final
 class BluetoothLEPreferredConnectionParameters(winrt.system.Object, metaclass=BluetoothLEPreferredConnectionParameters_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BluetoothLEPreferredConnectionParameters: ...
@@ -382,6 +403,7 @@ class BluetoothLEPreferredConnectionParameters(winrt.system.Object, metaclass=Bl
     @_property
     def min_connection_interval(self) -> winrt.system.UInt16: ...
 
+@typing.final
 class BluetoothLEPreferredConnectionParametersRequest(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -391,6 +413,7 @@ class BluetoothLEPreferredConnectionParametersRequest(winrt.system.Object):
     @_property
     def status(self) -> BluetoothLEPreferredConnectionParametersRequestStatus: ...
 
+@typing.final
 class BluetoothSignalStrengthFilter(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BluetoothSignalStrengthFilter: ...
@@ -412,10 +435,12 @@ class BluetoothSignalStrengthFilter(winrt.system.Object):
     @in_range_threshold_in_d_bm.setter
     def in_range_threshold_in_d_bm(self, value: typing.Optional[typing.Optional[winrt.system.Int16]]) -> None: ...
 
+@typing.final
 class BluetoothUuidHelper_Static(type):
     def from_short_id(cls, short_id: winrt.system.UInt32, /) -> _uuid.UUID: ...
     def try_get_short_id(cls, uuid: _uuid.UUID, /) -> typing.Optional[typing.Optional[winrt.system.UInt32]]: ...
 
+@typing.final
 class BluetoothUuidHelper(winrt.system.Object, metaclass=BluetoothUuidHelper_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BluetoothUuidHelper: ...

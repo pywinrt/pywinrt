@@ -18,6 +18,7 @@ from winrt.windows.data.pdf import PdfPageRotation
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class PdfDocument_Static(type):
     @typing.overload
     def load_from_file_async(cls, file: typing.Optional[winrt.windows.storage.IStorageFile], /) -> winrt.windows.foundation.IAsyncOperation[PdfDocument]: ...
@@ -28,6 +29,7 @@ class PdfDocument_Static(type):
     @typing.overload
     def load_from_stream_async(cls, input_stream: typing.Optional[winrt.windows.storage.streams.IRandomAccessStream], password: str, /) -> winrt.windows.foundation.IAsyncOperation[PdfDocument]: ...
 
+@typing.final
 class PdfDocument(winrt.system.Object, metaclass=PdfDocument_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PdfDocument: ...
@@ -37,6 +39,7 @@ class PdfDocument(winrt.system.Object, metaclass=PdfDocument_Static):
     @_property
     def page_count(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class PdfPage(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -59,6 +62,7 @@ class PdfPage(winrt.system.Object):
     @_property
     def size(self) -> winrt.windows.foundation.Size: ...
 
+@typing.final
 class PdfPageDimensions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PdfPageDimensions: ...
@@ -73,6 +77,7 @@ class PdfPageDimensions(winrt.system.Object):
     @_property
     def trim_box(self) -> winrt.windows.foundation.Rect: ...
 
+@typing.final
 class PdfPageRenderOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PdfPageRenderOptions: ...

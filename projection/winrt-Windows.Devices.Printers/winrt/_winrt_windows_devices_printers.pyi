@@ -18,6 +18,7 @@ from winrt.windows.devices.printers import IppAttributeErrorReason, IppAttribute
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class IppAttributeError(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IppAttributeError: ...
@@ -27,6 +28,7 @@ class IppAttributeError(winrt.system.Object):
     @_property
     def reason(self) -> IppAttributeErrorReason: ...
 
+@typing.final
 class IppAttributeValue_Static(type):
     def create_boolean(cls, value: bool, /) -> typing.Optional[IppAttributeValue]: ...
     def create_boolean_array(cls, values: typing.Iterable[bool], /) -> typing.Optional[IppAttributeValue]: ...
@@ -68,6 +70,7 @@ class IppAttributeValue_Static(type):
     def create_uri_schema(cls, value: str, /) -> typing.Optional[IppAttributeValue]: ...
     def create_uri_schema_array(cls, values: typing.Iterable[str], /) -> typing.Optional[IppAttributeValue]: ...
 
+@typing.final
 class IppAttributeValue(winrt.system.Object, metaclass=IppAttributeValue_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IppAttributeValue: ...
@@ -92,6 +95,7 @@ class IppAttributeValue(winrt.system.Object, metaclass=IppAttributeValue_Static)
     @_property
     def kind(self) -> IppAttributeValueKind: ...
 
+@typing.final
 class IppIntegerRange(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IppIntegerRange: ...
@@ -101,12 +105,14 @@ class IppIntegerRange(winrt.system.Object):
     @_property
     def start(self) -> winrt.system.Int32: ...
 
+@typing.final
 class IppPrintDevice_Static(type):
     def from_id(cls, device_id: str, /) -> typing.Optional[IppPrintDevice]: ...
     def from_printer_name(cls, printer_name: str, /) -> typing.Optional[IppPrintDevice]: ...
     def get_device_selector(cls) -> str: ...
     def is_ipp_printer(cls, printer_name: str, /) -> bool: ...
 
+@typing.final
 class IppPrintDevice(winrt.system.Object, metaclass=IppPrintDevice_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IppPrintDevice: ...
@@ -123,6 +129,7 @@ class IppPrintDevice(winrt.system.Object, metaclass=IppPrintDevice_Static):
     @_property
     def printer_uri(self) -> typing.Optional[winrt.windows.foundation.Uri]: ...
 
+@typing.final
 class IppResolution(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IppResolution: ...
@@ -134,6 +141,7 @@ class IppResolution(winrt.system.Object):
     @_property
     def width(self) -> winrt.system.Int32: ...
 
+@typing.final
 class IppSetAttributesResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IppSetAttributesResult: ...
@@ -142,6 +150,7 @@ class IppSetAttributesResult(winrt.system.Object):
     @_property
     def succeeded(self) -> bool: ...
 
+@typing.final
 class IppTextWithLanguage(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IppTextWithLanguage: ...
@@ -151,6 +160,7 @@ class IppTextWithLanguage(winrt.system.Object):
     @_property
     def value(self) -> str: ...
 
+@typing.final
 class PageConfigurationSettings(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PageConfigurationSettings: ...
@@ -164,6 +174,7 @@ class PageConfigurationSettings(winrt.system.Object):
     @orientation_source.setter
     def orientation_source(self, value: PageConfigurationSource) -> None: ...
 
+@typing.final
 class PdlPassthroughProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PdlPassthroughProvider: ...
@@ -172,6 +183,7 @@ class PdlPassthroughProvider(winrt.system.Object):
     @_property
     def supported_pdl_content_types(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]: ...
 
+@typing.final
 class PdlPassthroughTarget(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -183,16 +195,19 @@ class PdlPassthroughTarget(winrt.system.Object):
     @_property
     def print_job_id(self) -> winrt.system.Int32: ...
 
+@typing.final
 class Print3DDevice_Static(type):
     def from_id_async(cls, device_id: str, /) -> winrt.windows.foundation.IAsyncOperation[Print3DDevice]: ...
     def get_device_selector(cls) -> str: ...
 
+@typing.final
 class Print3DDevice(winrt.system.Object, metaclass=Print3DDevice_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Print3DDevice: ...
     @_property
     def print_schema(self) -> typing.Optional[PrintSchema]: ...
 
+@typing.final
 class PrintSchema(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintSchema: ...

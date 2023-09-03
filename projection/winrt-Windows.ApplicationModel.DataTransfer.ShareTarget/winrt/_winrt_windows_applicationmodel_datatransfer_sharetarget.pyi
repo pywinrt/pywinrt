@@ -16,6 +16,7 @@ import winrt.windows.storage.streams
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class QuickLink(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> QuickLink: ...
@@ -37,6 +38,7 @@ class QuickLink(winrt.system.Object):
     @_property
     def supported_file_types(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[str]]: ...
 
+@typing.final
 class ShareOperation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ShareOperation: ...

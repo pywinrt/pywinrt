@@ -17,6 +17,7 @@ from winrt.windows.ui.input.inking.analysis import InkAnalysisDrawingKind, InkAn
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class InkAnalysisInkBullet(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InkAnalysisInkBullet: ...
@@ -36,6 +37,7 @@ class InkAnalysisInkBullet(winrt.system.Object):
     @_property
     def rotated_bounding_rect(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.foundation.Point]]: ...
 
+@typing.final
 class InkAnalysisInkDrawing(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InkAnalysisInkDrawing: ...
@@ -59,6 +61,7 @@ class InkAnalysisInkDrawing(winrt.system.Object):
     @_property
     def rotated_bounding_rect(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.foundation.Point]]: ...
 
+@typing.final
 class InkAnalysisInkWord(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InkAnalysisInkWord: ...
@@ -80,6 +83,7 @@ class InkAnalysisInkWord(winrt.system.Object):
     @_property
     def rotated_bounding_rect(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.foundation.Point]]: ...
 
+@typing.final
 class InkAnalysisLine(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InkAnalysisLine: ...
@@ -101,6 +105,7 @@ class InkAnalysisLine(winrt.system.Object):
     @_property
     def rotated_bounding_rect(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.foundation.Point]]: ...
 
+@typing.final
 class InkAnalysisListItem(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InkAnalysisListItem: ...
@@ -120,6 +125,7 @@ class InkAnalysisListItem(winrt.system.Object):
     @_property
     def rotated_bounding_rect(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.foundation.Point]]: ...
 
+@typing.final
 class InkAnalysisNode(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InkAnalysisNode: ...
@@ -137,6 +143,7 @@ class InkAnalysisNode(winrt.system.Object):
     @_property
     def rotated_bounding_rect(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.foundation.Point]]: ...
 
+@typing.final
 class InkAnalysisParagraph(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InkAnalysisParagraph: ...
@@ -156,12 +163,14 @@ class InkAnalysisParagraph(winrt.system.Object):
     @_property
     def recognized_text(self) -> str: ...
 
+@typing.final
 class InkAnalysisResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InkAnalysisResult: ...
     @_property
     def status(self) -> InkAnalysisStatus: ...
 
+@typing.final
 class InkAnalysisRoot(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InkAnalysisRoot: ...
@@ -182,6 +191,7 @@ class InkAnalysisRoot(winrt.system.Object):
     @_property
     def recognized_text(self) -> str: ...
 
+@typing.final
 class InkAnalysisWritingRegion(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InkAnalysisWritingRegion: ...
@@ -201,6 +211,7 @@ class InkAnalysisWritingRegion(winrt.system.Object):
     @_property
     def recognized_text(self) -> str: ...
 
+@typing.final
 class InkAnalyzer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InkAnalyzer: ...
@@ -218,6 +229,7 @@ class InkAnalyzer(winrt.system.Object):
     @_property
     def is_analyzing(self) -> bool: ...
 
+@typing.final
 class IInkAnalysisNode(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IInkAnalysisNode: ...
@@ -235,6 +247,7 @@ class IInkAnalysisNode(winrt.system.Object):
     @_property
     def rotated_bounding_rect(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.foundation.Point]]: ...
 
+@typing.final
 class IInkAnalyzerFactory(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IInkAnalyzerFactory: ...

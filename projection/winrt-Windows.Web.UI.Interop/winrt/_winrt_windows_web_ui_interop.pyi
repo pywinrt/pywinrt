@@ -24,6 +24,7 @@ from winrt.windows.web.ui.interop import WebViewControlAcceleratorKeyRoutingStag
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class WebViewControl(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebViewControl: ...
@@ -120,6 +121,7 @@ class WebViewControl(winrt.system.Object):
     @_property
     def settings(self) -> typing.Optional[winrt.windows.web.ui.WebViewControlSettings]: ...
 
+@typing.final
 class WebViewControlAcceleratorKeyPressedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebViewControlAcceleratorKeyPressedEventArgs: ...
@@ -136,12 +138,14 @@ class WebViewControlAcceleratorKeyPressedEventArgs(winrt.system.Object):
     @_property
     def virtual_key(self) -> winrt.windows.system.VirtualKey: ...
 
+@typing.final
 class WebViewControlMoveFocusRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebViewControlMoveFocusRequestedEventArgs: ...
     @_property
     def reason(self) -> WebViewControlMoveFocusReason: ...
 
+@typing.final
 class WebViewControlProcess(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebViewControlProcess: ...
@@ -161,6 +165,7 @@ class WebViewControlProcess(winrt.system.Object):
     @_property
     def process_id(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class WebViewControlProcessOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebViewControlProcessOptions: ...

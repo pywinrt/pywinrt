@@ -18,6 +18,7 @@ from winrt.windows.media.import_ import PhotoImportAccessMode, PhotoImportConnec
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class PhotoImportProgress:
     items_imported: winrt.system.UInt32
     total_items_to_import: winrt.system.UInt32
@@ -26,6 +27,7 @@ class PhotoImportProgress:
     import_progress: winrt.system.Double
     def __init__(self, items_imported: winrt.system.UInt32, total_items_to_import: winrt.system.UInt32, bytes_imported: winrt.system.UInt64, total_bytes_to_import: winrt.system.UInt64, import_progress: winrt.system.Double) -> None: ...
 
+@typing.final
 class PhotoImportDeleteImportedItemsFromSourceResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhotoImportDeleteImportedItemsFromSourceResult: ...
@@ -56,6 +58,7 @@ class PhotoImportDeleteImportedItemsFromSourceResult(winrt.system.Object):
     @_property
     def videos_size_in_bytes(self) -> winrt.system.UInt64: ...
 
+@typing.final
 class PhotoImportFindItemsResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhotoImportFindItemsResult: ...
@@ -118,6 +121,7 @@ class PhotoImportFindItemsResult(winrt.system.Object):
     @_property
     def videos_size_in_bytes(self) -> winrt.system.UInt64: ...
 
+@typing.final
 class PhotoImportImportItemsResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhotoImportImportItemsResult: ...
@@ -149,6 +153,7 @@ class PhotoImportImportItemsResult(winrt.system.Object):
     @_property
     def videos_size_in_bytes(self) -> winrt.system.UInt64: ...
 
+@typing.final
 class PhotoImportItem(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhotoImportItem: ...
@@ -181,21 +186,25 @@ class PhotoImportItem(winrt.system.Object):
     @_property
     def path(self) -> str: ...
 
+@typing.final
 class PhotoImportItemImportedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhotoImportItemImportedEventArgs: ...
     @_property
     def imported_item(self) -> typing.Optional[PhotoImportItem]: ...
 
+@typing.final
 class PhotoImportManager_Static(type):
     def find_all_sources_async(cls) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[PhotoImportSource]]: ...
     def get_pending_operations(cls) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[PhotoImportOperation]]: ...
     def is_supported_async(cls) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
 
+@typing.final
 class PhotoImportManager(winrt.system.Object, metaclass=PhotoImportManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhotoImportManager: ...
 
+@typing.final
 class PhotoImportOperation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhotoImportOperation: ...
@@ -210,12 +219,14 @@ class PhotoImportOperation(winrt.system.Object):
     @_property
     def stage(self) -> PhotoImportStage: ...
 
+@typing.final
 class PhotoImportSelectionChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhotoImportSelectionChangedEventArgs: ...
     @_property
     def is_selection_empty(self) -> bool: ...
 
+@typing.final
 class PhotoImportSession(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -252,6 +263,7 @@ class PhotoImportSession(winrt.system.Object):
     @remember_deselected_items.setter
     def remember_deselected_items(self, value: bool) -> None: ...
 
+@typing.final
 class PhotoImportSidecar(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhotoImportSidecar: ...
@@ -262,10 +274,12 @@ class PhotoImportSidecar(winrt.system.Object):
     @_property
     def size_in_bytes(self) -> winrt.system.UInt64: ...
 
+@typing.final
 class PhotoImportSource_Static(type):
     def from_folder_async(cls, source_root_folder: typing.Optional[winrt.windows.storage.IStorageFolder], /) -> winrt.windows.foundation.IAsyncOperation[PhotoImportSource]: ...
     def from_id_async(cls, source_id: str, /) -> winrt.windows.foundation.IAsyncOperation[PhotoImportSource]: ...
 
+@typing.final
 class PhotoImportSource(winrt.system.Object, metaclass=PhotoImportSource_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhotoImportSource: ...
@@ -303,6 +317,7 @@ class PhotoImportSource(winrt.system.Object, metaclass=PhotoImportSource_Static)
     @_property
     def type(self) -> PhotoImportSourceType: ...
 
+@typing.final
 class PhotoImportStorageMedium(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhotoImportStorageMedium: ...
@@ -322,6 +337,7 @@ class PhotoImportStorageMedium(winrt.system.Object):
     @_property
     def supported_access_mode(self) -> PhotoImportAccessMode: ...
 
+@typing.final
 class PhotoImportVideoSegment(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhotoImportVideoSegment: ...

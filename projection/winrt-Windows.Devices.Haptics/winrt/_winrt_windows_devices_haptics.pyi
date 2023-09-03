@@ -16,6 +16,7 @@ from winrt.windows.devices.haptics import VibrationAccessStatus
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class KnownSimpleHapticsControllerWaveforms_Static(type):
     @_property
     def buzz_continuous(cls) -> winrt.system.UInt16: ...
@@ -48,10 +49,12 @@ class KnownSimpleHapticsControllerWaveforms_Static(type):
     @_property
     def success(cls) -> winrt.system.UInt16: ...
 
+@typing.final
 class KnownSimpleHapticsControllerWaveforms(winrt.system.Object, metaclass=KnownSimpleHapticsControllerWaveforms_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> KnownSimpleHapticsControllerWaveforms: ...
 
+@typing.final
 class SimpleHapticsController(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SimpleHapticsController: ...
@@ -75,6 +78,7 @@ class SimpleHapticsController(winrt.system.Object):
     @_property
     def supported_feedback(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[SimpleHapticsControllerFeedback]]: ...
 
+@typing.final
 class SimpleHapticsControllerFeedback(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SimpleHapticsControllerFeedback: ...
@@ -83,6 +87,7 @@ class SimpleHapticsControllerFeedback(winrt.system.Object):
     @_property
     def waveform(self) -> winrt.system.UInt16: ...
 
+@typing.final
 class VibrationDevice_Static(type):
     def find_all_async(cls) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[VibrationDevice]]: ...
     def from_id_async(cls, device_id: str, /) -> winrt.windows.foundation.IAsyncOperation[VibrationDevice]: ...
@@ -90,6 +95,7 @@ class VibrationDevice_Static(type):
     def get_device_selector(cls) -> str: ...
     def request_access_async(cls) -> winrt.windows.foundation.IAsyncOperation[VibrationAccessStatus]: ...
 
+@typing.final
 class VibrationDevice(winrt.system.Object, metaclass=VibrationDevice_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VibrationDevice: ...

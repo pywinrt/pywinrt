@@ -16,6 +16,7 @@ from winrt.windows.media.closedcaptioning import ClosedCaptionColor, ClosedCapti
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class ClosedCaptionProperties_Static(type):
     def add_properties_changed(cls, handler: winrt.windows.foundation.EventHandler[winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_properties_changed(cls, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
@@ -44,6 +45,7 @@ class ClosedCaptionProperties_Static(type):
     @_property
     def region_opacity(cls) -> ClosedCaptionOpacity: ...
 
+@typing.final
 class ClosedCaptionProperties(winrt.system.Object, metaclass=ClosedCaptionProperties_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ClosedCaptionProperties: ...

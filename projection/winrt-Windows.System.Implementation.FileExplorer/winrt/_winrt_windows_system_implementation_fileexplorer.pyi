@@ -14,6 +14,7 @@ import winrt.windows.web.http
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class SysStorageProviderEventReceivedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SysStorageProviderEventReceivedEventArgs: ...
@@ -21,18 +22,21 @@ class SysStorageProviderEventReceivedEventArgs(winrt.system.Object):
     @_property
     def json(self) -> str: ...
 
+@typing.final
 class ISysStorageProviderEventSource(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISysStorageProviderEventSource: ...
     def add_event_received(self, handler: winrt.windows.foundation.TypedEventHandler[ISysStorageProviderEventSource, SysStorageProviderEventReceivedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_event_received(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class ISysStorageProviderHandlerFactory(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISysStorageProviderHandlerFactory: ...
     def get_event_source(self, sync_root_id: str, event_name: str, /) -> typing.Optional[ISysStorageProviderEventSource]: ...
     def get_http_request_provider(self, sync_root_id: str, /) -> typing.Optional[ISysStorageProviderHttpRequestProvider]: ...
 
+@typing.final
 class ISysStorageProviderHttpRequestProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISysStorageProviderHttpRequestProvider: ...

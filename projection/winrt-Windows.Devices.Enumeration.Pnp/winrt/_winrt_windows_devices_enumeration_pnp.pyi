@@ -17,6 +17,7 @@ from winrt.windows.devices.enumeration.pnp import PnpObjectType
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class PnpObject_Static(type):
     def create_from_id_async(cls, type: PnpObjectType, id: str, requested_properties: typing.Iterable[str], /) -> winrt.windows.foundation.IAsyncOperation[PnpObject]: ...
     @typing.overload
@@ -28,6 +29,7 @@ class PnpObject_Static(type):
     @typing.overload
     def find_all_async(cls, type: PnpObjectType, requested_properties: typing.Iterable[str], aqs_filter: str, /) -> winrt.windows.foundation.IAsyncOperation[PnpObjectCollection]: ...
 
+@typing.final
 class PnpObject(winrt.system.Object, metaclass=PnpObject_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PnpObject: ...
@@ -39,6 +41,7 @@ class PnpObject(winrt.system.Object, metaclass=PnpObject_Static):
     @_property
     def type(self) -> PnpObjectType: ...
 
+@typing.final
 class PnpObjectCollection(winrt.system.Object, winrt._winrt.Sequence[PnpObject]):
     def __len__(self) -> int: ...
     def __iter__(self) -> winrt.windows.foundation.collections.IIterator[PnpObject]: ...
@@ -55,6 +58,7 @@ class PnpObjectCollection(winrt.system.Object, winrt._winrt.Sequence[PnpObject])
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class PnpObjectUpdate(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PnpObjectUpdate: ...
@@ -65,6 +69,7 @@ class PnpObjectUpdate(winrt.system.Object):
     @_property
     def type(self) -> PnpObjectType: ...
 
+@typing.final
 class PnpObjectWatcher(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PnpObjectWatcher: ...

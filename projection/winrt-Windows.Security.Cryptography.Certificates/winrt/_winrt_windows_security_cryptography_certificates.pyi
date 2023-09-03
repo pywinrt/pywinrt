@@ -18,6 +18,7 @@ from winrt.windows.security.cryptography.certificates import CertificateChainPol
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class Certificate(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Certificate: ...
@@ -70,6 +71,7 @@ class Certificate(winrt.system.Object):
     @_property
     def store_name(self) -> str: ...
 
+@typing.final
 class CertificateChain(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CertificateChain: ...
@@ -79,6 +81,7 @@ class CertificateChain(winrt.system.Object):
     @typing.overload
     def validate(self, parameter: typing.Optional[ChainValidationParameters], /) -> ChainValidationResult: ...
 
+@typing.final
 class CertificateEnrollmentManager_Static(type):
     def create_request_async(cls, request: typing.Optional[CertificateRequestProperties], /) -> winrt.windows.foundation.IAsyncOperation[str]: ...
     @typing.overload
@@ -91,10 +94,12 @@ class CertificateEnrollmentManager_Static(type):
     @_property
     def user_certificate_enrollment_manager(cls) -> typing.Optional[UserCertificateEnrollmentManager]: ...
 
+@typing.final
 class CertificateEnrollmentManager(winrt.system.Object, metaclass=CertificateEnrollmentManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CertificateEnrollmentManager: ...
 
+@typing.final
 class CertificateExtension(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CertificateExtension: ...
@@ -113,6 +118,7 @@ class CertificateExtension(winrt.system.Object):
     @is_critical.setter
     def is_critical(self, value: bool) -> None: ...
 
+@typing.final
 class CertificateKeyUsages(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CertificateKeyUsages: ...
@@ -150,6 +156,7 @@ class CertificateKeyUsages(winrt.system.Object):
     @crl_sign.setter
     def crl_sign(self, value: bool) -> None: ...
 
+@typing.final
 class CertificateQuery(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CertificateQuery: ...
@@ -185,6 +192,7 @@ class CertificateQuery(winrt.system.Object):
     @include_duplicates.setter
     def include_duplicates(self, value: bool) -> None: ...
 
+@typing.final
 class CertificateRequestProperties(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CertificateRequestProperties: ...
@@ -264,6 +272,7 @@ class CertificateRequestProperties(winrt.system.Object):
     @_property
     def suppressed_defaults(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[str]]: ...
 
+@typing.final
 class CertificateStore(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CertificateStore: ...
@@ -272,6 +281,7 @@ class CertificateStore(winrt.system.Object):
     @_property
     def name(self) -> str: ...
 
+@typing.final
 class CertificateStores_Static(type):
     @typing.overload
     def find_all_async(cls) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[Certificate]]: ...
@@ -284,10 +294,12 @@ class CertificateStores_Static(type):
     @_property
     def trusted_root_certification_authorities(cls) -> typing.Optional[CertificateStore]: ...
 
+@typing.final
 class CertificateStores(winrt.system.Object, metaclass=CertificateStores_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CertificateStores: ...
 
+@typing.final
 class ChainBuildingParameters(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ChainBuildingParameters: ...
@@ -317,6 +329,7 @@ class ChainBuildingParameters(winrt.system.Object):
     @_property
     def exclusive_trust_roots(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[Certificate]]: ...
 
+@typing.final
 class ChainValidationParameters(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ChainValidationParameters: ...
@@ -330,9 +343,11 @@ class ChainValidationParameters(winrt.system.Object):
     @certificate_chain_policy.setter
     def certificate_chain_policy(self, value: CertificateChainPolicy) -> None: ...
 
+@typing.final
 class CmsAttachedSignature_Static(type):
     def generate_signature_async(cls, data: typing.Optional[winrt.windows.storage.streams.IBuffer], signers: typing.Iterable[CmsSignerInfo], certificates: typing.Iterable[Certificate], /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.storage.streams.IBuffer]: ...
 
+@typing.final
 class CmsAttachedSignature(winrt.system.Object, metaclass=CmsAttachedSignature_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CmsAttachedSignature: ...
@@ -345,9 +360,11 @@ class CmsAttachedSignature(winrt.system.Object, metaclass=CmsAttachedSignature_S
     @_property
     def signers(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[CmsSignerInfo]]: ...
 
+@typing.final
 class CmsDetachedSignature_Static(type):
     def generate_signature_async(cls, data: typing.Optional[winrt.windows.storage.streams.IInputStream], signers: typing.Iterable[CmsSignerInfo], certificates: typing.Iterable[Certificate], /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.storage.streams.IBuffer]: ...
 
+@typing.final
 class CmsDetachedSignature(winrt.system.Object, metaclass=CmsDetachedSignature_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CmsDetachedSignature: ...
@@ -358,6 +375,7 @@ class CmsDetachedSignature(winrt.system.Object, metaclass=CmsDetachedSignature_S
     @_property
     def signers(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[CmsSignerInfo]]: ...
 
+@typing.final
 class CmsSignerInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CmsSignerInfo: ...
@@ -373,6 +391,7 @@ class CmsSignerInfo(winrt.system.Object):
     @_property
     def timestamp_info(self) -> typing.Optional[CmsTimestampInfo]: ...
 
+@typing.final
 class CmsTimestampInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CmsTimestampInfo: ...
@@ -383,6 +402,7 @@ class CmsTimestampInfo(winrt.system.Object):
     @_property
     def timestamp(self) -> datetime.datetime: ...
 
+@typing.final
 class KeyAlgorithmNames_Static(type):
     @_property
     def dsa(cls) -> str: ...
@@ -405,10 +425,12 @@ class KeyAlgorithmNames_Static(type):
     @_property
     def ecdsa(cls) -> str: ...
 
+@typing.final
 class KeyAlgorithmNames(winrt.system.Object, metaclass=KeyAlgorithmNames_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> KeyAlgorithmNames: ...
 
+@typing.final
 class KeyAttestationHelper_Static(type):
     @typing.overload
     def decrypt_tpm_attestation_credential_async(cls, credential: str, /) -> winrt.windows.foundation.IAsyncOperation[str]: ...
@@ -416,10 +438,12 @@ class KeyAttestationHelper_Static(type):
     def decrypt_tpm_attestation_credential_async(cls, credential: str, container_name: str, /) -> winrt.windows.foundation.IAsyncOperation[str]: ...
     def get_tpm_attestation_credential_id(cls, credential: str, /) -> str: ...
 
+@typing.final
 class KeyAttestationHelper(winrt.system.Object, metaclass=KeyAttestationHelper_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> KeyAttestationHelper: ...
 
+@typing.final
 class KeyStorageProviderNames_Static(type):
     @_property
     def platform_key_storage_provider(cls) -> str: ...
@@ -430,10 +454,12 @@ class KeyStorageProviderNames_Static(type):
     @_property
     def passport_key_storage_provider(cls) -> str: ...
 
+@typing.final
 class KeyStorageProviderNames(winrt.system.Object, metaclass=KeyStorageProviderNames_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> KeyStorageProviderNames: ...
 
+@typing.final
 class PfxImportParameters(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PfxImportParameters: ...
@@ -467,6 +493,7 @@ class PfxImportParameters(winrt.system.Object):
     @container_name_prefix.setter
     def container_name_prefix(self, value: str) -> None: ...
 
+@typing.final
 class StandardCertificateStoreNames_Static(type):
     @_property
     def intermediate_certification_authorities(cls) -> str: ...
@@ -475,10 +502,12 @@ class StandardCertificateStoreNames_Static(type):
     @_property
     def trusted_root_certification_authorities(cls) -> str: ...
 
+@typing.final
 class StandardCertificateStoreNames(winrt.system.Object, metaclass=StandardCertificateStoreNames_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StandardCertificateStoreNames: ...
 
+@typing.final
 class SubjectAlternativeNameInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SubjectAlternativeNameInfo: ...
@@ -510,6 +539,7 @@ class SubjectAlternativeNameInfo(winrt.system.Object):
     @_property
     def urls(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[str]]: ...
 
+@typing.final
 class UserCertificateEnrollmentManager(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserCertificateEnrollmentManager: ...
@@ -522,6 +552,7 @@ class UserCertificateEnrollmentManager(winrt.system.Object):
     def import_pfx_data_async(self, pfx_data: str, password: str, exportable: ExportOption, key_protection_level: KeyProtectionLevel, install_option: InstallOptions, friendly_name: str, key_storage_provider: str, /) -> winrt.windows.foundation.IAsyncAction: ...
     def install_certificate_async(self, certificate: str, install_option: InstallOptions, /) -> winrt.windows.foundation.IAsyncAction: ...
 
+@typing.final
 class UserCertificateStore(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserCertificateStore: ...

@@ -16,12 +16,14 @@ from winrt.windows.devices.geolocation import AltitudeReferenceSystem, Geolocati
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class BasicGeoposition:
     latitude: winrt.system.Double
     longitude: winrt.system.Double
     altitude: winrt.system.Double
     def __init__(self, latitude: winrt.system.Double, longitude: winrt.system.Double, altitude: winrt.system.Double) -> None: ...
 
+@typing.final
 class CivicAddress(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CivicAddress: ...
@@ -36,6 +38,7 @@ class CivicAddress(winrt.system.Object):
     @_property
     def timestamp(self) -> datetime.datetime: ...
 
+@typing.final
 class GeoboundingBox_Static(type):
     @typing.overload
     def try_compute(cls, positions: typing.Iterable[BasicGeoposition], /) -> typing.Optional[GeoboundingBox]: ...
@@ -44,6 +47,7 @@ class GeoboundingBox_Static(type):
     @typing.overload
     def try_compute(cls, positions: typing.Iterable[BasicGeoposition], altitude_ref_system: AltitudeReferenceSystem, spatial_reference_id: winrt.system.UInt32, /) -> typing.Optional[GeoboundingBox]: ...
 
+@typing.final
 class GeoboundingBox(winrt.system.Object, metaclass=GeoboundingBox_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GeoboundingBox: ...
@@ -70,6 +74,7 @@ class GeoboundingBox(winrt.system.Object, metaclass=GeoboundingBox_Static):
     @_property
     def spatial_reference_id(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class Geocircle(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Geocircle: ...
@@ -90,6 +95,7 @@ class Geocircle(winrt.system.Object):
     @_property
     def spatial_reference_id(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class Geocoordinate(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Geocoordinate: ...
@@ -120,6 +126,7 @@ class Geocoordinate(winrt.system.Object):
     @_property
     def is_remote_source(self) -> bool: ...
 
+@typing.final
 class GeocoordinateSatelliteData(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GeocoordinateSatelliteData: ...
@@ -134,6 +141,7 @@ class GeocoordinateSatelliteData(winrt.system.Object):
     @_property
     def time_dilution_of_precision(self) -> typing.Optional[typing.Optional[winrt.system.Double]]: ...
 
+@typing.final
 class Geolocator_Static(type):
     @typing.overload
     def get_geoposition_history_async(cls, start_time: datetime.datetime, /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[Geoposition]]: ...
@@ -147,6 +155,7 @@ class Geolocator_Static(type):
     @_property
     def is_default_geoposition_recommended(cls) -> bool: ...
 
+@typing.final
 class Geolocator(winrt.system.Object, metaclass=Geolocator_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Geolocator: ...
@@ -179,6 +188,7 @@ class Geolocator(winrt.system.Object, metaclass=Geolocator_Static):
     @desired_accuracy_in_meters.setter
     def desired_accuracy_in_meters(self, value: typing.Optional[typing.Optional[winrt.system.UInt32]]) -> None: ...
 
+@typing.final
 class Geopath(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Geopath: ...
@@ -197,6 +207,7 @@ class Geopath(winrt.system.Object):
     @_property
     def spatial_reference_id(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class Geopoint(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Geopoint: ...
@@ -215,6 +226,7 @@ class Geopoint(winrt.system.Object):
     @_property
     def spatial_reference_id(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class Geoposition(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Geoposition: ...
@@ -225,6 +237,7 @@ class Geoposition(winrt.system.Object):
     @_property
     def venue_data(self) -> typing.Optional[VenueData]: ...
 
+@typing.final
 class Geovisit(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Geovisit: ...
@@ -235,9 +248,11 @@ class Geovisit(winrt.system.Object):
     @_property
     def timestamp(self) -> datetime.datetime: ...
 
+@typing.final
 class GeovisitMonitor_Static(type):
     def get_last_report_async(cls) -> winrt.windows.foundation.IAsyncOperation[Geovisit]: ...
 
+@typing.final
 class GeovisitMonitor(winrt.system.Object, metaclass=GeovisitMonitor_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GeovisitMonitor: ...
@@ -249,29 +264,34 @@ class GeovisitMonitor(winrt.system.Object, metaclass=GeovisitMonitor_Static):
     @_property
     def monitoring_scope(self) -> VisitMonitoringScope: ...
 
+@typing.final
 class GeovisitStateChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GeovisitStateChangedEventArgs: ...
     @_property
     def visit(self) -> typing.Optional[Geovisit]: ...
 
+@typing.final
 class GeovisitTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GeovisitTriggerDetails: ...
     def read_reports(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[Geovisit]]: ...
 
+@typing.final
 class PositionChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PositionChangedEventArgs: ...
     @_property
     def position(self) -> typing.Optional[Geoposition]: ...
 
+@typing.final
 class StatusChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StatusChangedEventArgs: ...
     @_property
     def status(self) -> PositionStatus: ...
 
+@typing.final
 class VenueData(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VenueData: ...
@@ -280,6 +300,7 @@ class VenueData(winrt.system.Object):
     @_property
     def level(self) -> str: ...
 
+@typing.final
 class IGeoshape(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IGeoshape: ...

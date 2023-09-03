@@ -16,6 +16,7 @@ from winrt.windows.graphics.display.core import HdmiDisplayColorSpace, HdmiDispl
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class HdmiDisplayHdr2086Metadata:
     red_primary_x: winrt.system.UInt16
     red_primary_y: winrt.system.UInt16
@@ -31,9 +32,11 @@ class HdmiDisplayHdr2086Metadata:
     max_frame_average_light_level: winrt.system.UInt16
     def __init__(self, red_primary_x: winrt.system.UInt16, red_primary_y: winrt.system.UInt16, green_primary_x: winrt.system.UInt16, green_primary_y: winrt.system.UInt16, blue_primary_x: winrt.system.UInt16, blue_primary_y: winrt.system.UInt16, white_point_x: winrt.system.UInt16, white_point_y: winrt.system.UInt16, max_mastering_luminance: winrt.system.UInt16, min_mastering_luminance: winrt.system.UInt16, max_content_light_level: winrt.system.UInt16, max_frame_average_light_level: winrt.system.UInt16) -> None: ...
 
+@typing.final
 class HdmiDisplayInformation_Static(type):
     def get_for_current_view(cls) -> typing.Optional[HdmiDisplayInformation]: ...
 
+@typing.final
 class HdmiDisplayInformation(winrt.system.Object, metaclass=HdmiDisplayInformation_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HdmiDisplayInformation: ...
@@ -49,6 +52,7 @@ class HdmiDisplayInformation(winrt.system.Object, metaclass=HdmiDisplayInformati
     def add_display_modes_changed(self, value: winrt.windows.foundation.TypedEventHandler[HdmiDisplayInformation, winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_display_modes_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class HdmiDisplayMode(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HdmiDisplayMode: ...

@@ -22,6 +22,7 @@ from winrt.windows.applicationmodel.userdataaccounts import UserDataAccountConte
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class UserDataAccount(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDataAccount: ...
@@ -71,6 +72,7 @@ class UserDataAccount(winrt.system.Object):
     @_property
     def provider_properties(self) -> typing.Optional[winrt.windows.foundation.collections.IPropertySet]: ...
 
+@typing.final
 class UserDataAccountManager_Static(type):
     def get_for_user(cls, user: typing.Optional[winrt.windows.system.User], /) -> typing.Optional[UserDataAccountManagerForUser]: ...
     def request_store_async(cls, store_access_type: UserDataAccountStoreAccessType, /) -> winrt.windows.foundation.IAsyncOperation[UserDataAccountStore]: ...
@@ -78,10 +80,12 @@ class UserDataAccountManager_Static(type):
     def show_account_settings_async(cls, id: str, /) -> winrt.windows.foundation.IAsyncAction: ...
     def show_add_account_async(cls, content_kinds: UserDataAccountContentKinds, /) -> winrt.windows.foundation.IAsyncOperation[str]: ...
 
+@typing.final
 class UserDataAccountManager(winrt.system.Object, metaclass=UserDataAccountManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDataAccountManager: ...
 
+@typing.final
 class UserDataAccountManagerForUser(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDataAccountManagerForUser: ...
@@ -89,6 +93,7 @@ class UserDataAccountManagerForUser(winrt.system.Object):
     @_property
     def user(self) -> typing.Optional[winrt.windows.system.User]: ...
 
+@typing.final
 class UserDataAccountStore(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDataAccountStore: ...
@@ -103,6 +108,7 @@ class UserDataAccountStore(winrt.system.Object):
     def add_store_changed(self, handler: winrt.windows.foundation.TypedEventHandler[UserDataAccountStore, UserDataAccountStoreChangedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_store_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class UserDataAccountStoreChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDataAccountStoreChangedEventArgs: ...

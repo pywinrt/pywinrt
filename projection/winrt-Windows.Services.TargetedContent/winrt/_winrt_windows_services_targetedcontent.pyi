@@ -17,16 +17,19 @@ from winrt.windows.services.targetedcontent import TargetedContentAppInstallatio
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class TargetedContentAction(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TargetedContentAction: ...
     def invoke_async(self) -> winrt.windows.foundation.IAsyncAction: ...
 
+@typing.final
 class TargetedContentAvailabilityChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TargetedContentAvailabilityChangedEventArgs: ...
     def get_deferral(self) -> typing.Optional[winrt.windows.foundation.Deferral]: ...
 
+@typing.final
 class TargetedContentChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TargetedContentChangedEventArgs: ...
@@ -34,6 +37,7 @@ class TargetedContentChangedEventArgs(winrt.system.Object):
     @_property
     def has_previous_content_expired(self) -> bool: ...
 
+@typing.final
 class TargetedContentCollection(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TargetedContentCollection: ...
@@ -50,9 +54,11 @@ class TargetedContentCollection(winrt.system.Object):
     @_property
     def properties(self) -> typing.Optional[winrt.windows.foundation.collections.IMapView[str, TargetedContentValue]]: ...
 
+@typing.final
 class TargetedContentContainer_Static(type):
     def get_async(cls, content_id: str, /) -> winrt.windows.foundation.IAsyncOperation[TargetedContentContainer]: ...
 
+@typing.final
 class TargetedContentContainer(winrt.system.Object, metaclass=TargetedContentContainer_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TargetedContentContainer: ...
@@ -66,11 +72,13 @@ class TargetedContentContainer(winrt.system.Object, metaclass=TargetedContentCon
     @_property
     def timestamp(self) -> datetime.datetime: ...
 
+@typing.final
 class TargetedContentFile(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TargetedContentFile: ...
     def open_read_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.storage.streams.IRandomAccessStreamWithContentType]: ...
 
+@typing.final
 class TargetedContentImage(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TargetedContentImage: ...
@@ -80,6 +88,7 @@ class TargetedContentImage(winrt.system.Object):
     @_property
     def width(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class TargetedContentItem(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TargetedContentItem: ...
@@ -94,6 +103,7 @@ class TargetedContentItem(winrt.system.Object):
     @_property
     def state(self) -> typing.Optional[TargetedContentItemState]: ...
 
+@typing.final
 class TargetedContentItemState(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TargetedContentItemState: ...
@@ -102,6 +112,7 @@ class TargetedContentItemState(winrt.system.Object):
     @_property
     def should_display(self) -> bool: ...
 
+@typing.final
 class TargetedContentObject(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TargetedContentObject: ...
@@ -114,15 +125,18 @@ class TargetedContentObject(winrt.system.Object):
     @_property
     def value(self) -> typing.Optional[TargetedContentValue]: ...
 
+@typing.final
 class TargetedContentStateChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TargetedContentStateChangedEventArgs: ...
     def get_deferral(self) -> typing.Optional[winrt.windows.foundation.Deferral]: ...
 
+@typing.final
 class TargetedContentSubscription_Static(type):
     def get_async(cls, subscription_id: str, /) -> winrt.windows.foundation.IAsyncOperation[TargetedContentSubscription]: ...
     def get_options(cls, subscription_id: str, /) -> typing.Optional[TargetedContentSubscriptionOptions]: ...
 
+@typing.final
 class TargetedContentSubscription(winrt.system.Object, metaclass=TargetedContentSubscription_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TargetedContentSubscription: ...
@@ -136,6 +150,7 @@ class TargetedContentSubscription(winrt.system.Object, metaclass=TargetedContent
     @_property
     def id(self) -> str: ...
 
+@typing.final
 class TargetedContentSubscriptionOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TargetedContentSubscriptionOptions: ...
@@ -151,6 +166,7 @@ class TargetedContentSubscriptionOptions(winrt.system.Object):
     @_property
     def subscription_id(self) -> str: ...
 
+@typing.final
 class TargetedContentValue(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TargetedContentValue: ...

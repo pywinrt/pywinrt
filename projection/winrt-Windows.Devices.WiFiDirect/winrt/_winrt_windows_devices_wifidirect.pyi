@@ -20,6 +20,7 @@ from winrt.windows.devices.wifidirect import WiFiDirectAdvertisementListenStateD
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class WiFiDirectAdvertisement(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WiFiDirectAdvertisement: ...
@@ -40,6 +41,7 @@ class WiFiDirectAdvertisement(winrt.system.Object):
     @_property
     def supported_configuration_methods(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[WiFiDirectConfigurationMethod]]: ...
 
+@typing.final
 class WiFiDirectAdvertisementPublisher(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WiFiDirectAdvertisementPublisher: ...
@@ -53,6 +55,7 @@ class WiFiDirectAdvertisementPublisher(winrt.system.Object):
     @_property
     def status(self) -> WiFiDirectAdvertisementPublisherStatus: ...
 
+@typing.final
 class WiFiDirectAdvertisementPublisherStatusChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WiFiDirectAdvertisementPublisherStatusChangedEventArgs: ...
@@ -61,6 +64,7 @@ class WiFiDirectAdvertisementPublisherStatusChangedEventArgs(winrt.system.Object
     @_property
     def status(self) -> WiFiDirectAdvertisementPublisherStatus: ...
 
+@typing.final
 class WiFiDirectConnectionListener(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WiFiDirectConnectionListener: ...
@@ -68,9 +72,11 @@ class WiFiDirectConnectionListener(winrt.system.Object):
     def add_connection_requested(self, handler: winrt.windows.foundation.TypedEventHandler[WiFiDirectConnectionListener, WiFiDirectConnectionRequestedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_connection_requested(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class WiFiDirectConnectionParameters_Static(type):
     def get_device_pairing_kinds(cls, configuration_method: WiFiDirectConfigurationMethod, /) -> winrt.windows.devices.enumeration.DevicePairingKinds: ...
 
+@typing.final
 class WiFiDirectConnectionParameters(winrt.system.Object, metaclass=WiFiDirectConnectionParameters_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WiFiDirectConnectionParameters: ...
@@ -86,6 +92,7 @@ class WiFiDirectConnectionParameters(winrt.system.Object, metaclass=WiFiDirectCo
     @_property
     def preference_ordered_configuration_methods(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[WiFiDirectConfigurationMethod]]: ...
 
+@typing.final
 class WiFiDirectConnectionRequest(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -95,11 +102,13 @@ class WiFiDirectConnectionRequest(winrt.system.Object):
     @_property
     def device_information(self) -> typing.Optional[winrt.windows.devices.enumeration.DeviceInformation]: ...
 
+@typing.final
 class WiFiDirectConnectionRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WiFiDirectConnectionRequestedEventArgs: ...
     def get_connection_request(self) -> typing.Optional[WiFiDirectConnectionRequest]: ...
 
+@typing.final
 class WiFiDirectDevice_Static(type):
     @typing.overload
     def from_id_async(cls, device_id: str, /) -> winrt.windows.foundation.IAsyncOperation[WiFiDirectDevice]: ...
@@ -110,6 +119,7 @@ class WiFiDirectDevice_Static(type):
     @typing.overload
     def get_device_selector(cls, type: WiFiDirectDeviceSelectorType, /) -> str: ...
 
+@typing.final
 class WiFiDirectDevice(winrt.system.Object, metaclass=WiFiDirectDevice_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -124,10 +134,12 @@ class WiFiDirectDevice(winrt.system.Object, metaclass=WiFiDirectDevice_Static):
     @_property
     def device_id(self) -> str: ...
 
+@typing.final
 class WiFiDirectInformationElement_Static(type):
     def create_from_buffer(cls, buffer: typing.Optional[winrt.windows.storage.streams.IBuffer], /) -> typing.Optional[winrt.windows.foundation.collections.IVector[WiFiDirectInformationElement]]: ...
     def create_from_device_information(cls, device_information: typing.Optional[winrt.windows.devices.enumeration.DeviceInformation], /) -> typing.Optional[winrt.windows.foundation.collections.IVector[WiFiDirectInformationElement]]: ...
 
+@typing.final
 class WiFiDirectInformationElement(winrt.system.Object, metaclass=WiFiDirectInformationElement_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WiFiDirectInformationElement: ...
@@ -145,6 +157,7 @@ class WiFiDirectInformationElement(winrt.system.Object, metaclass=WiFiDirectInfo
     @oui.setter
     def oui(self, value: typing.Optional[winrt.windows.storage.streams.IBuffer]) -> None: ...
 
+@typing.final
 class WiFiDirectLegacySettings(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WiFiDirectLegacySettings: ...

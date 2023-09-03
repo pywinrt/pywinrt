@@ -13,6 +13,7 @@ import winrt.windows.foundation
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class PerceptionTimestamp(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PerceptionTimestamp: ...
@@ -23,10 +24,12 @@ class PerceptionTimestamp(winrt.system.Object):
     @_property
     def system_relative_target_time(self) -> datetime.timedelta: ...
 
+@typing.final
 class PerceptionTimestampHelper_Static(type):
     def from_historical_target_time(cls, target_time: datetime.datetime, /) -> typing.Optional[PerceptionTimestamp]: ...
     def from_system_relative_target_time(cls, target_time: datetime.timedelta, /) -> typing.Optional[PerceptionTimestamp]: ...
 
+@typing.final
 class PerceptionTimestampHelper(winrt.system.Object, metaclass=PerceptionTimestampHelper_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PerceptionTimestampHelper: ...

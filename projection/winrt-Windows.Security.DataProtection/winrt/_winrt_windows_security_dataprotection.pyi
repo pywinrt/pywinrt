@@ -18,11 +18,13 @@ from winrt.windows.security.dataprotection import UserDataAvailability, UserData
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class UserDataAvailabilityStateChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDataAvailabilityStateChangedEventArgs: ...
     def get_deferral(self) -> typing.Optional[winrt.windows.foundation.Deferral]: ...
 
+@typing.final
 class UserDataBufferUnprotectResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDataBufferUnprotectResult: ...
@@ -31,10 +33,12 @@ class UserDataBufferUnprotectResult(winrt.system.Object):
     @_property
     def unprotected_buffer(self) -> typing.Optional[winrt.windows.storage.streams.IBuffer]: ...
 
+@typing.final
 class UserDataProtectionManager_Static(type):
     def try_get_default(cls) -> typing.Optional[UserDataProtectionManager]: ...
     def try_get_for_user(cls, user: typing.Optional[winrt.windows.system.User], /) -> typing.Optional[UserDataProtectionManager]: ...
 
+@typing.final
 class UserDataProtectionManager(winrt.system.Object, metaclass=UserDataProtectionManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDataProtectionManager: ...
@@ -46,6 +50,7 @@ class UserDataProtectionManager(winrt.system.Object, metaclass=UserDataProtectio
     def add_data_availability_state_changed(self, handler: winrt.windows.foundation.TypedEventHandler[UserDataProtectionManager, UserDataAvailabilityStateChangedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_data_availability_state_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class UserDataStorageItemProtectionInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDataStorageItemProtectionInfo: ...

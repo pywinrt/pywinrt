@@ -14,6 +14,7 @@ import winrt.windows.foundation
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class UserDataTaskDataProviderConnection(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDataTaskDataProviderConnection: ...
@@ -29,12 +30,14 @@ class UserDataTaskDataProviderConnection(winrt.system.Object):
     def add_sync_requested(self, handler: winrt.windows.foundation.TypedEventHandler[UserDataTaskDataProviderConnection, UserDataTaskListSyncManagerSyncRequestEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_sync_requested(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class UserDataTaskDataProviderTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDataTaskDataProviderTriggerDetails: ...
     @_property
     def connection(self) -> typing.Optional[UserDataTaskDataProviderConnection]: ...
 
+@typing.final
 class UserDataTaskListCompleteTaskRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDataTaskListCompleteTaskRequest: ...
@@ -45,6 +48,7 @@ class UserDataTaskListCompleteTaskRequest(winrt.system.Object):
     @_property
     def task_list_id(self) -> str: ...
 
+@typing.final
 class UserDataTaskListCompleteTaskRequestEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDataTaskListCompleteTaskRequestEventArgs: ...
@@ -52,6 +56,7 @@ class UserDataTaskListCompleteTaskRequestEventArgs(winrt.system.Object):
     @_property
     def request(self) -> typing.Optional[UserDataTaskListCompleteTaskRequest]: ...
 
+@typing.final
 class UserDataTaskListCreateOrUpdateTaskRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDataTaskListCreateOrUpdateTaskRequest: ...
@@ -62,6 +67,7 @@ class UserDataTaskListCreateOrUpdateTaskRequest(winrt.system.Object):
     @_property
     def task_list_id(self) -> str: ...
 
+@typing.final
 class UserDataTaskListCreateOrUpdateTaskRequestEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDataTaskListCreateOrUpdateTaskRequestEventArgs: ...
@@ -69,6 +75,7 @@ class UserDataTaskListCreateOrUpdateTaskRequestEventArgs(winrt.system.Object):
     @_property
     def request(self) -> typing.Optional[UserDataTaskListCreateOrUpdateTaskRequest]: ...
 
+@typing.final
 class UserDataTaskListDeleteTaskRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDataTaskListDeleteTaskRequest: ...
@@ -79,6 +86,7 @@ class UserDataTaskListDeleteTaskRequest(winrt.system.Object):
     @_property
     def task_list_id(self) -> str: ...
 
+@typing.final
 class UserDataTaskListDeleteTaskRequestEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDataTaskListDeleteTaskRequestEventArgs: ...
@@ -86,6 +94,7 @@ class UserDataTaskListDeleteTaskRequestEventArgs(winrt.system.Object):
     @_property
     def request(self) -> typing.Optional[UserDataTaskListDeleteTaskRequest]: ...
 
+@typing.final
 class UserDataTaskListSkipOccurrenceRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDataTaskListSkipOccurrenceRequest: ...
@@ -96,6 +105,7 @@ class UserDataTaskListSkipOccurrenceRequest(winrt.system.Object):
     @_property
     def task_list_id(self) -> str: ...
 
+@typing.final
 class UserDataTaskListSkipOccurrenceRequestEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDataTaskListSkipOccurrenceRequestEventArgs: ...
@@ -103,6 +113,7 @@ class UserDataTaskListSkipOccurrenceRequestEventArgs(winrt.system.Object):
     @_property
     def request(self) -> typing.Optional[UserDataTaskListSkipOccurrenceRequest]: ...
 
+@typing.final
 class UserDataTaskListSyncManagerSyncRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDataTaskListSyncManagerSyncRequest: ...
@@ -111,6 +122,7 @@ class UserDataTaskListSyncManagerSyncRequest(winrt.system.Object):
     @_property
     def task_list_id(self) -> str: ...
 
+@typing.final
 class UserDataTaskListSyncManagerSyncRequestEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDataTaskListSyncManagerSyncRequestEventArgs: ...

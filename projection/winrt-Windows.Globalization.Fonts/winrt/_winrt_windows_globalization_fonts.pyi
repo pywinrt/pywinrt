@@ -13,6 +13,7 @@ import winrt.windows.ui.text
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class LanguageFont(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LanguageFont: ...
@@ -27,6 +28,7 @@ class LanguageFont(winrt.system.Object):
     @_property
     def scale_factor(self) -> winrt.system.Double: ...
 
+@typing.final
 class LanguageFontGroup(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LanguageFontGroup: ...

@@ -16,14 +16,17 @@ from winrt.windows.ui.uiautomation.core import AutomationRemoteOperationStatus
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class AutomationAnnotationTypeRegistration:
     local_id: winrt.system.Int32
     def __init__(self, local_id: winrt.system.Int32) -> None: ...
 
+@typing.final
 class AutomationRemoteOperationOperandId:
     value: winrt.system.Int32
     def __init__(self, value: winrt.system.Int32) -> None: ...
 
+@typing.final
 class AutomationRemoteOperationResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AutomationRemoteOperationResult: ...
@@ -36,14 +39,17 @@ class AutomationRemoteOperationResult(winrt.system.Object):
     @_property
     def status(self) -> AutomationRemoteOperationStatus: ...
 
+@typing.final
 class CoreAutomationRegistrar_Static(type):
     def register_annotation_type(cls, guid: _uuid.UUID, /) -> AutomationAnnotationTypeRegistration: ...
     def unregister_annotation_type(cls, registration: AutomationAnnotationTypeRegistration, /) -> None: ...
 
+@typing.final
 class CoreAutomationRegistrar(winrt.system.Object, metaclass=CoreAutomationRegistrar_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreAutomationRegistrar: ...
 
+@typing.final
 class CoreAutomationRemoteOperation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreAutomationRemoteOperation: ...
@@ -55,6 +61,7 @@ class CoreAutomationRemoteOperation(winrt.system.Object):
     def import_text_range(self, operand_id: AutomationRemoteOperationOperandId, text_range: typing.Optional[winrt.windows.ui.uiautomation.AutomationTextRange], /) -> None: ...
     def is_opcode_supported(self, opcode: winrt.system.UInt32, /) -> bool: ...
 
+@typing.final
 class CoreAutomationRemoteOperationContext(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreAutomationRemoteOperationContext: ...
@@ -64,6 +71,7 @@ class CoreAutomationRemoteOperationContext(winrt.system.Object):
     @typing.overload
     def set_operand(self, id: AutomationRemoteOperationOperandId, operand: typing.Optional[winrt.system.Object], operand_interface_id: _uuid.UUID, /) -> None: ...
 
+@typing.final
 class RemoteAutomationClientSession(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteAutomationClientSession: ...
@@ -81,6 +89,7 @@ class RemoteAutomationClientSession(winrt.system.Object):
     @_property
     def session_id(self) -> _uuid.UUID: ...
 
+@typing.final
 class RemoteAutomationConnectionRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteAutomationConnectionRequestedEventArgs: ...
@@ -89,19 +98,23 @@ class RemoteAutomationConnectionRequestedEventArgs(winrt.system.Object):
     @_property
     def remote_process_id(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class RemoteAutomationDisconnectedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteAutomationDisconnectedEventArgs: ...
     @_property
     def local_pipe_name(self) -> str: ...
 
+@typing.final
 class RemoteAutomationServer_Static(type):
     def report_session(cls, session_id: _uuid.UUID, /) -> None: ...
 
+@typing.final
 class RemoteAutomationServer(winrt.system.Object, metaclass=RemoteAutomationServer_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteAutomationServer: ...
 
+@typing.final
 class RemoteAutomationWindow(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteAutomationWindow: ...
@@ -109,12 +122,14 @@ class RemoteAutomationWindow(winrt.system.Object):
     @_property
     def automation_provider(self) -> typing.Optional[winrt.system.Object]: ...
 
+@typing.final
 class ICoreAutomationConnectionBoundObjectProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICoreAutomationConnectionBoundObjectProvider: ...
     @_property
     def is_com_threading_required(self) -> bool: ...
 
+@typing.final
 class ICoreAutomationRemoteOperationExtensionProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICoreAutomationRemoteOperationExtensionProvider: ...

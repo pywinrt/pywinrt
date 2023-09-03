@@ -12,9 +12,11 @@ import winrt.system
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class HtmlUtilities_Static(type):
     def convert_to_text(cls, html: str, /) -> str: ...
 
+@typing.final
 class HtmlUtilities(winrt.system.Object, metaclass=HtmlUtilities_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HtmlUtilities: ...

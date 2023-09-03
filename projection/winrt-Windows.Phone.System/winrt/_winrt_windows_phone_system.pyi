@@ -12,11 +12,13 @@ import winrt.system
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class SystemProtection_Static(type):
     def request_screen_unlock(cls) -> None: ...
     @_property
     def screen_locked(cls) -> bool: ...
 
+@typing.final
 class SystemProtection(winrt.system.Object, metaclass=SystemProtection_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SystemProtection: ...

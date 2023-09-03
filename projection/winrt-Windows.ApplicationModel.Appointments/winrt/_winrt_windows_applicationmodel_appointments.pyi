@@ -19,6 +19,7 @@ from winrt.windows.applicationmodel.appointments import AppointmentBusyStatus, A
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class Appointment(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Appointment: ...
@@ -124,6 +125,7 @@ class Appointment(winrt.system.Object):
     @_property
     def change_number(self) -> winrt.system.UInt64: ...
 
+@typing.final
 class AppointmentCalendar(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentCalendar: ...
@@ -218,6 +220,7 @@ class AppointmentCalendar(winrt.system.Object):
     @_property
     def user_data_account_id(self) -> str: ...
 
+@typing.final
 class AppointmentCalendarSyncManager(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentCalendarSyncManager: ...
@@ -237,6 +240,7 @@ class AppointmentCalendarSyncManager(winrt.system.Object):
     @last_attempted_sync_time.setter
     def last_attempted_sync_time(self, value: datetime.datetime) -> None: ...
 
+@typing.final
 class AppointmentConflictResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentConflictResult: ...
@@ -245,6 +249,7 @@ class AppointmentConflictResult(winrt.system.Object):
     @_property
     def type(self) -> AppointmentConflictType: ...
 
+@typing.final
 class AppointmentException(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentException: ...
@@ -255,6 +260,7 @@ class AppointmentException(winrt.system.Object):
     @_property
     def is_deleted(self) -> bool: ...
 
+@typing.final
 class AppointmentInvitee(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentInvitee: ...
@@ -276,6 +282,7 @@ class AppointmentInvitee(winrt.system.Object):
     @address.setter
     def address(self, value: str) -> None: ...
 
+@typing.final
 class AppointmentManager_Static(type):
     def get_for_user(cls, user: typing.Optional[winrt.windows.system.User], /) -> typing.Optional[AppointmentManagerForUser]: ...
     def request_store_async(cls, options: AppointmentStoreAccessType, /) -> winrt.windows.foundation.IAsyncOperation[AppointmentStore]: ...
@@ -302,10 +309,12 @@ class AppointmentManager_Static(type):
     def show_replace_appointment_async(cls, appointment_id: str, appointment: typing.Optional[Appointment], selection: winrt.windows.foundation.Rect, preferred_placement: winrt.windows.ui.popups.Placement, instance_start_date: datetime.datetime, /) -> winrt.windows.foundation.IAsyncOperation[str]: ...
     def show_time_frame_async(cls, time_to_show: datetime.datetime, duration: datetime.timedelta, /) -> winrt.windows.foundation.IAsyncAction: ...
 
+@typing.final
 class AppointmentManager(winrt.system.Object, metaclass=AppointmentManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentManager: ...
 
+@typing.final
 class AppointmentManagerForUser(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentManagerForUser: ...
@@ -335,6 +344,7 @@ class AppointmentManagerForUser(winrt.system.Object):
     @_property
     def user(self) -> typing.Optional[winrt.windows.system.User]: ...
 
+@typing.final
 class AppointmentOrganizer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentOrganizer: ...
@@ -348,6 +358,7 @@ class AppointmentOrganizer(winrt.system.Object):
     @address.setter
     def address(self, value: str) -> None: ...
 
+@typing.final
 class AppointmentProperties_Static(type):
     @_property
     def has_invitees(cls) -> str: ...
@@ -402,10 +413,12 @@ class AppointmentProperties_Static(type):
     @_property
     def change_number(cls) -> str: ...
 
+@typing.final
 class AppointmentProperties(winrt.system.Object, metaclass=AppointmentProperties_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentProperties: ...
 
+@typing.final
 class AppointmentRecurrence(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentRecurrence: ...
@@ -451,6 +464,7 @@ class AppointmentRecurrence(winrt.system.Object):
     @_property
     def calendar_identifier(self) -> str: ...
 
+@typing.final
 class AppointmentStore(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentStore: ...
@@ -495,6 +509,7 @@ class AppointmentStore(winrt.system.Object):
     @_property
     def change_tracker(self) -> typing.Optional[AppointmentStoreChangeTracker]: ...
 
+@typing.final
 class AppointmentStoreChange(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentStoreChange: ...
@@ -505,6 +520,7 @@ class AppointmentStoreChange(winrt.system.Object):
     @_property
     def appointment_calendar(self) -> typing.Optional[AppointmentCalendar]: ...
 
+@typing.final
 class AppointmentStoreChangeReader(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentStoreChangeReader: ...
@@ -512,6 +528,7 @@ class AppointmentStoreChangeReader(winrt.system.Object):
     def accept_changes_through(self, last_change_to_accept: typing.Optional[AppointmentStoreChange], /) -> None: ...
     def read_batch_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[AppointmentStoreChange]]: ...
 
+@typing.final
 class AppointmentStoreChangeTracker(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentStoreChangeTracker: ...
@@ -521,20 +538,24 @@ class AppointmentStoreChangeTracker(winrt.system.Object):
     @_property
     def is_tracking(self) -> bool: ...
 
+@typing.final
 class AppointmentStoreChangedDeferral(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentStoreChangedDeferral: ...
     def complete(self) -> None: ...
 
+@typing.final
 class AppointmentStoreChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentStoreChangedEventArgs: ...
     def get_deferral(self) -> typing.Optional[AppointmentStoreChangedDeferral]: ...
 
+@typing.final
 class AppointmentStoreNotificationTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentStoreNotificationTriggerDetails: ...
 
+@typing.final
 class FindAppointmentsOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FindAppointmentsOptions: ...
@@ -552,6 +573,7 @@ class FindAppointmentsOptions(winrt.system.Object):
     @_property
     def fetch_properties(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[str]]: ...
 
+@typing.final
 class IAppointmentParticipant(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAppointmentParticipant: ...

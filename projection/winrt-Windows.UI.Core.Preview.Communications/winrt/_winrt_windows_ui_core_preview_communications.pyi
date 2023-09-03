@@ -15,17 +15,20 @@ from winrt.windows.ui.core.preview.communications import PreviewMeetingInfoDispl
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class PreviewTeamCleanupRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PreviewTeamCleanupRequestedEventArgs: ...
     def get_deferral(self) -> typing.Optional[winrt.windows.foundation.Deferral]: ...
 
+@typing.final
 class PreviewTeamCommandInvokedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PreviewTeamCommandInvokedEventArgs: ...
     @_property
     def command(self) -> PreviewTeamViewCommand: ...
 
+@typing.final
 class PreviewTeamDeviceCredentials(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PreviewTeamDeviceCredentials: ...
@@ -37,11 +40,13 @@ class PreviewTeamDeviceCredentials(winrt.system.Object):
     @_property
     def user_principal_name(self) -> str: ...
 
+@typing.final
 class PreviewTeamEndMeetingRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PreviewTeamEndMeetingRequestedEventArgs: ...
     def get_deferral(self) -> typing.Optional[winrt.windows.foundation.Deferral]: ...
 
+@typing.final
 class PreviewTeamJoinMeetingRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PreviewTeamJoinMeetingRequestedEventArgs: ...
@@ -49,9 +54,11 @@ class PreviewTeamJoinMeetingRequestedEventArgs(winrt.system.Object):
     @_property
     def meeting_uri(self) -> typing.Optional[winrt.windows.foundation.Uri]: ...
 
+@typing.final
 class PreviewTeamView_Static(type):
     def get_for_current_view(cls) -> typing.Optional[PreviewTeamView]: ...
 
+@typing.final
 class PreviewTeamView(winrt.system.Object, metaclass=PreviewTeamView_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PreviewTeamView: ...

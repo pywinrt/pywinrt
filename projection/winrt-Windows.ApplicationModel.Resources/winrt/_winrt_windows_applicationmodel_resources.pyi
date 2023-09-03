@@ -14,6 +14,7 @@ import winrt.windows.ui
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class ResourceLoader_Static(type):
     def get_default_pri_path(cls, package_full_name: str, /) -> str: ...
     @typing.overload
@@ -27,6 +28,7 @@ class ResourceLoader_Static(type):
     def get_for_view_independent_use(cls, name: str, /) -> typing.Optional[ResourceLoader]: ...
     def get_string_for_reference(cls, uri: typing.Optional[winrt.windows.foundation.Uri], /) -> str: ...
 
+@typing.final
 class ResourceLoader(winrt.system.Object, metaclass=ResourceLoader_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ResourceLoader: ...

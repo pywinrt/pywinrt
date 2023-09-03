@@ -20,11 +20,13 @@ from winrt.windows.gaming.input import ArcadeStickButtons, FlightStickButtons, G
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class ArcadeStickReading:
     timestamp: winrt.system.UInt64
     buttons: ArcadeStickButtons
     def __init__(self, timestamp: winrt.system.UInt64, buttons: ArcadeStickButtons) -> None: ...
 
+@typing.final
 class FlightStickReading:
     timestamp: winrt.system.UInt64
     buttons: FlightStickButtons
@@ -35,6 +37,7 @@ class FlightStickReading:
     throttle: winrt.system.Double
     def __init__(self, timestamp: winrt.system.UInt64, buttons: FlightStickButtons, hat_switch: GameControllerSwitchPosition, roll: winrt.system.Double, pitch: winrt.system.Double, yaw: winrt.system.Double, throttle: winrt.system.Double) -> None: ...
 
+@typing.final
 class GamepadReading:
     timestamp: winrt.system.UInt64
     buttons: GamepadButtons
@@ -46,6 +49,7 @@ class GamepadReading:
     right_thumbstick_y: winrt.system.Double
     def __init__(self, timestamp: winrt.system.UInt64, buttons: GamepadButtons, left_trigger: winrt.system.Double, right_trigger: winrt.system.Double, left_thumbstick_x: winrt.system.Double, left_thumbstick_y: winrt.system.Double, right_thumbstick_x: winrt.system.Double, right_thumbstick_y: winrt.system.Double) -> None: ...
 
+@typing.final
 class GamepadVibration:
     left_motor: winrt.system.Double
     right_motor: winrt.system.Double
@@ -53,6 +57,7 @@ class GamepadVibration:
     right_trigger: winrt.system.Double
     def __init__(self, left_motor: winrt.system.Double, right_motor: winrt.system.Double, left_trigger: winrt.system.Double, right_trigger: winrt.system.Double) -> None: ...
 
+@typing.final
 class RacingWheelReading:
     timestamp: winrt.system.UInt64
     buttons: RacingWheelButtons
@@ -64,12 +69,14 @@ class RacingWheelReading:
     handbrake: winrt.system.Double
     def __init__(self, timestamp: winrt.system.UInt64, buttons: RacingWheelButtons, pattern_shifter_gear: winrt.system.Int32, wheel: winrt.system.Double, throttle: winrt.system.Double, brake: winrt.system.Double, clutch: winrt.system.Double, handbrake: winrt.system.Double) -> None: ...
 
+@typing.final
 class UINavigationReading:
     timestamp: winrt.system.UInt64
     required_buttons: RequiredUINavigationButtons
     optional_buttons: OptionalUINavigationButtons
     def __init__(self, timestamp: winrt.system.UInt64, required_buttons: RequiredUINavigationButtons, optional_buttons: OptionalUINavigationButtons) -> None: ...
 
+@typing.final
 class ArcadeStick_Static(type):
     def from_game_controller(cls, game_controller: typing.Optional[IGameController], /) -> typing.Optional[ArcadeStick]: ...
     def add_arcade_stick_added(cls, value: winrt.windows.foundation.EventHandler[ArcadeStick], /) -> winrt.windows.foundation.EventRegistrationToken: ...
@@ -79,6 +86,7 @@ class ArcadeStick_Static(type):
     @_property
     def arcade_sticks(cls) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[ArcadeStick]]: ...
 
+@typing.final
 class ArcadeStick(winrt.system.Object, metaclass=ArcadeStick_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ArcadeStick: ...
@@ -98,6 +106,7 @@ class ArcadeStick(winrt.system.Object, metaclass=ArcadeStick_Static):
     @_property
     def user(self) -> typing.Optional[winrt.windows.system.User]: ...
 
+@typing.final
 class FlightStick_Static(type):
     def from_game_controller(cls, game_controller: typing.Optional[IGameController], /) -> typing.Optional[FlightStick]: ...
     def add_flight_stick_added(cls, value: winrt.windows.foundation.EventHandler[FlightStick], /) -> winrt.windows.foundation.EventRegistrationToken: ...
@@ -107,6 +116,7 @@ class FlightStick_Static(type):
     @_property
     def flight_sticks(cls) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[FlightStick]]: ...
 
+@typing.final
 class FlightStick(winrt.system.Object, metaclass=FlightStick_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FlightStick: ...
@@ -128,6 +138,7 @@ class FlightStick(winrt.system.Object, metaclass=FlightStick_Static):
     @_property
     def user(self) -> typing.Optional[winrt.windows.system.User]: ...
 
+@typing.final
 class Gamepad_Static(type):
     def from_game_controller(cls, game_controller: typing.Optional[IGameController], /) -> typing.Optional[Gamepad]: ...
     def add_gamepad_added(cls, value: winrt.windows.foundation.EventHandler[Gamepad], /) -> winrt.windows.foundation.EventRegistrationToken: ...
@@ -137,6 +148,7 @@ class Gamepad_Static(type):
     @_property
     def gamepads(cls) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[Gamepad]]: ...
 
+@typing.final
 class Gamepad(winrt.system.Object, metaclass=Gamepad_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Gamepad: ...
@@ -160,6 +172,7 @@ class Gamepad(winrt.system.Object, metaclass=Gamepad_Static):
     @vibration.setter
     def vibration(self, value: GamepadVibration) -> None: ...
 
+@typing.final
 class Headset(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Headset: ...
@@ -169,6 +182,7 @@ class Headset(winrt.system.Object):
     @_property
     def render_device_id(self) -> str: ...
 
+@typing.final
 class RacingWheel_Static(type):
     def from_game_controller(cls, game_controller: typing.Optional[IGameController], /) -> typing.Optional[RacingWheel]: ...
     def add_racing_wheel_added(cls, value: winrt.windows.foundation.EventHandler[RacingWheel], /) -> winrt.windows.foundation.EventRegistrationToken: ...
@@ -178,6 +192,7 @@ class RacingWheel_Static(type):
     @_property
     def racing_wheels(cls) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[RacingWheel]]: ...
 
+@typing.final
 class RacingWheel(winrt.system.Object, metaclass=RacingWheel_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RacingWheel: ...
@@ -209,6 +224,7 @@ class RacingWheel(winrt.system.Object, metaclass=RacingWheel_Static):
     @_property
     def wheel_motor(self) -> typing.Optional[winrt.windows.gaming.input.forcefeedback.ForceFeedbackMotor]: ...
 
+@typing.final
 class RawGameController_Static(type):
     def from_game_controller(cls, game_controller: typing.Optional[IGameController], /) -> typing.Optional[RawGameController]: ...
     def add_raw_game_controller_added(cls, value: winrt.windows.foundation.EventHandler[RawGameController], /) -> winrt.windows.foundation.EventRegistrationToken: ...
@@ -218,6 +234,7 @@ class RawGameController_Static(type):
     @_property
     def raw_game_controllers(cls) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[RawGameController]]: ...
 
+@typing.final
 class RawGameController(winrt.system.Object, metaclass=RawGameController_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RawGameController: ...
@@ -256,6 +273,7 @@ class RawGameController(winrt.system.Object, metaclass=RawGameController_Static)
     @_property
     def simple_haptics_controllers(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.devices.haptics.SimpleHapticsController]]: ...
 
+@typing.final
 class UINavigationController_Static(type):
     def from_game_controller(cls, game_controller: typing.Optional[IGameController], /) -> typing.Optional[UINavigationController]: ...
     def add_u_i_navigation_controller_added(cls, value: winrt.windows.foundation.EventHandler[UINavigationController], /) -> winrt.windows.foundation.EventRegistrationToken: ...
@@ -265,6 +283,7 @@ class UINavigationController_Static(type):
     @_property
     def u_i_navigation_controllers(cls) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[UINavigationController]]: ...
 
+@typing.final
 class UINavigationController(winrt.system.Object, metaclass=UINavigationController_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UINavigationController: ...
@@ -285,6 +304,7 @@ class UINavigationController(winrt.system.Object, metaclass=UINavigationControll
     @_property
     def user(self) -> typing.Optional[winrt.windows.system.User]: ...
 
+@typing.final
 class IGameController(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IGameController: ...
@@ -301,6 +321,7 @@ class IGameController(winrt.system.Object):
     @_property
     def user(self) -> typing.Optional[winrt.windows.system.User]: ...
 
+@typing.final
 class IGameControllerBatteryInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IGameControllerBatteryInfo: ...

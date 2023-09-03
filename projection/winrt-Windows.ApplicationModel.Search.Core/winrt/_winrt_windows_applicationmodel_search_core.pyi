@@ -18,10 +18,12 @@ from winrt.windows.applicationmodel.search.core import SearchSuggestionKind
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class RequestingFocusOnKeyboardInputEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RequestingFocusOnKeyboardInputEventArgs: ...
 
+@typing.final
 class SearchSuggestion(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SearchSuggestion: ...
@@ -38,6 +40,7 @@ class SearchSuggestion(winrt.system.Object):
     @_property
     def text(self) -> str: ...
 
+@typing.final
 class SearchSuggestionManager(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SearchSuggestionManager: ...
@@ -69,6 +72,7 @@ class SearchSuggestionManager(winrt.system.Object):
     @_property
     def suggestions(self) -> typing.Optional[winrt.windows.foundation.collections.IObservableVector[SearchSuggestion]]: ...
 
+@typing.final
 class SearchSuggestionsRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SearchSuggestionsRequestedEventArgs: ...

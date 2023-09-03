@@ -19,6 +19,7 @@ from winrt.windows.graphics.printing import PrintTaskSourceRequestedHandler
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class PrintPageDescription:
     page_size: winrt.windows.foundation.Size
     imageable_rect: winrt.windows.foundation.Rect
@@ -26,17 +27,20 @@ class PrintPageDescription:
     dpi_y: winrt.system.UInt32
     def __init__(self, page_size: winrt.windows.foundation.Size, imageable_rect: winrt.windows.foundation.Rect, dpi_x: winrt.system.UInt32, dpi_y: winrt.system.UInt32) -> None: ...
 
+@typing.final
 class PrintManager_Static(type):
     def get_for_current_view(cls) -> typing.Optional[PrintManager]: ...
     def is_supported(cls) -> bool: ...
     def show_print_u_i_async(cls) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
 
+@typing.final
 class PrintManager(winrt.system.Object, metaclass=PrintManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintManager: ...
     def add_print_task_requested(self, event_handler: winrt.windows.foundation.TypedEventHandler[PrintManager, PrintTaskRequestedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_print_task_requested(self, event_cookie: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class PrintPageInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintPageInfo: ...
@@ -62,6 +66,7 @@ class PrintPageInfo(winrt.system.Object):
     @dpi_x.setter
     def dpi_x(self, value: winrt.system.UInt32) -> None: ...
 
+@typing.final
 class PrintPageRange(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintPageRange: ...
@@ -74,6 +79,7 @@ class PrintPageRange(winrt.system.Object):
     @_property
     def last_page_number(self) -> winrt.system.Int32: ...
 
+@typing.final
 class PrintPageRangeOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintPageRangeOptions: ...
@@ -90,6 +96,7 @@ class PrintPageRangeOptions(winrt.system.Object):
     @allow_all_pages.setter
     def allow_all_pages(self, value: bool) -> None: ...
 
+@typing.final
 class PrintTask(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintTask: ...
@@ -120,12 +127,14 @@ class PrintTask(winrt.system.Object):
     @is3_d_manufacturing_target_enabled.setter
     def is3_d_manufacturing_target_enabled(self, value: bool) -> None: ...
 
+@typing.final
 class PrintTaskCompletedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintTaskCompletedEventArgs: ...
     @_property
     def completion(self) -> PrintTaskCompletion: ...
 
+@typing.final
 class PrintTaskOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintTaskOptions: ...
@@ -190,12 +199,14 @@ class PrintTaskOptions(winrt.system.Object):
     @_property
     def displayed_options(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[str]]: ...
 
+@typing.final
 class PrintTaskProgressingEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintTaskProgressingEventArgs: ...
     @_property
     def document_page_count(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class PrintTaskRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintTaskRequest: ...
@@ -204,17 +215,20 @@ class PrintTaskRequest(winrt.system.Object):
     @_property
     def deadline(self) -> datetime.datetime: ...
 
+@typing.final
 class PrintTaskRequestedDeferral(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintTaskRequestedDeferral: ...
     def complete(self) -> None: ...
 
+@typing.final
 class PrintTaskRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintTaskRequestedEventArgs: ...
     @_property
     def request(self) -> typing.Optional[PrintTaskRequest]: ...
 
+@typing.final
 class PrintTaskSourceRequestedArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintTaskSourceRequestedArgs: ...
@@ -223,11 +237,13 @@ class PrintTaskSourceRequestedArgs(winrt.system.Object):
     @_property
     def deadline(self) -> datetime.datetime: ...
 
+@typing.final
 class PrintTaskSourceRequestedDeferral(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintTaskSourceRequestedDeferral: ...
     def complete(self) -> None: ...
 
+@typing.final
 class StandardPrintTaskOptions_Static(type):
     @_property
     def copies(cls) -> str: ...
@@ -260,19 +276,23 @@ class StandardPrintTaskOptions_Static(type):
     @_property
     def custom_page_ranges(cls) -> str: ...
 
+@typing.final
 class StandardPrintTaskOptions(winrt.system.Object, metaclass=StandardPrintTaskOptions_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StandardPrintTaskOptions: ...
 
+@typing.final
 class IPrintDocumentSource(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPrintDocumentSource: ...
 
+@typing.final
 class IPrintTaskOptionsCore(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPrintTaskOptionsCore: ...
     def get_page_description(self, job_page_number: winrt.system.UInt32, /) -> PrintPageDescription: ...
 
+@typing.final
 class IPrintTaskOptionsCoreProperties(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPrintTaskOptionsCoreProperties: ...
@@ -325,6 +345,7 @@ class IPrintTaskOptionsCoreProperties(winrt.system.Object):
     @staple.setter
     def staple(self, value: PrintStaple) -> None: ...
 
+@typing.final
 class IPrintTaskOptionsCoreUIConfiguration(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPrintTaskOptionsCoreUIConfiguration: ...

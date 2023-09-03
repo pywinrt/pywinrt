@@ -21,25 +21,30 @@ from winrt.windows.ui.xaml.media.animation import ClockState, ConnectedAnimation
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class KeyTime:
     time_span: datetime.timedelta
     def __init__(self, time_span: datetime.timedelta) -> None: ...
 
+@typing.final
 class RepeatBehavior:
     count: winrt.system.Double
     duration: datetime.timedelta
     type: RepeatBehaviorType
     def __init__(self, count: winrt.system.Double, duration: datetime.timedelta, type: RepeatBehaviorType) -> None: ...
 
+@typing.final
 class AddDeleteThemeTransition(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AddDeleteThemeTransition: ...
     def __new__(cls: typing.Type[AddDeleteThemeTransition]) -> AddDeleteThemeTransition:...
 
+@typing.final
 class BackEase_Static(type):
     @_property
     def amplitude_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class BackEase(winrt.system.Object, metaclass=BackEase_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BackEase: ...
@@ -49,15 +54,18 @@ class BackEase(winrt.system.Object, metaclass=BackEase_Static):
     @amplitude.setter
     def amplitude(self, value: winrt.system.Double) -> None: ...
 
+@typing.final
 class BasicConnectedAnimationConfiguration(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BasicConnectedAnimationConfiguration: ...
     def __new__(cls: typing.Type[BasicConnectedAnimationConfiguration]) -> BasicConnectedAnimationConfiguration:...
 
+@typing.final
 class BeginStoryboard_Static(type):
     @_property
     def storyboard_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class BeginStoryboard(winrt.system.Object, metaclass=BeginStoryboard_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BeginStoryboard: ...
@@ -67,12 +75,14 @@ class BeginStoryboard(winrt.system.Object, metaclass=BeginStoryboard_Static):
     @storyboard.setter
     def storyboard(self, value: typing.Optional[Storyboard]) -> None: ...
 
+@typing.final
 class BounceEase_Static(type):
     @_property
     def bounces_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
     @_property
     def bounciness_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class BounceEase(winrt.system.Object, metaclass=BounceEase_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BounceEase: ...
@@ -86,11 +96,13 @@ class BounceEase(winrt.system.Object, metaclass=BounceEase_Static):
     @bounces.setter
     def bounces(self, value: winrt.system.Int32) -> None: ...
 
+@typing.final
 class CircleEase(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CircleEase: ...
     def __new__(cls: typing.Type[CircleEase]) -> CircleEase:...
 
+@typing.final
 class ColorAnimation_Static(type):
     @_property
     def by_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
@@ -103,6 +115,7 @@ class ColorAnimation_Static(type):
     @_property
     def to_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class ColorAnimation(winrt.system.Object, metaclass=ColorAnimation_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ColorAnimation: ...
@@ -128,10 +141,12 @@ class ColorAnimation(winrt.system.Object, metaclass=ColorAnimation_Static):
     @by.setter
     def by(self, value: typing.Optional[typing.Optional[winrt.windows.ui.Color]]) -> None: ...
 
+@typing.final
 class ColorAnimationUsingKeyFrames_Static(type):
     @_property
     def enable_dependent_animation_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class ColorAnimationUsingKeyFrames(winrt.system.Object, metaclass=ColorAnimationUsingKeyFrames_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ColorAnimationUsingKeyFrames: ...
@@ -143,12 +158,14 @@ class ColorAnimationUsingKeyFrames(winrt.system.Object, metaclass=ColorAnimation
     @_property
     def key_frames(self) -> typing.Optional[ColorKeyFrameCollection]: ...
 
+@typing.final
 class ColorKeyFrame_Static(type):
     @_property
     def key_time_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
     @_property
     def value_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class ColorKeyFrame(winrt.system.Object, metaclass=ColorKeyFrame_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ColorKeyFrame: ...
@@ -161,6 +178,7 @@ class ColorKeyFrame(winrt.system.Object, metaclass=ColorKeyFrame_Static):
     @key_time.setter
     def key_time(self, value: KeyTime) -> None: ...
 
+@typing.final
 class ColorKeyFrameCollection(winrt.system.Object, winrt._winrt.MutableSequence[ColorKeyFrame]):
     def __len__(self) -> int: ...
     def __iter__(self) -> winrt.windows.foundation.collections.IIterator[ColorKeyFrame]: ...
@@ -194,6 +212,7 @@ class ColorKeyFrameCollection(winrt.system.Object, winrt._winrt.MutableSequence[
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class CommonNavigationTransitionInfo_Static(type):
     def get_is_stagger_element(cls, element: typing.Optional[winrt.windows.ui.xaml.UIElement], /) -> bool: ...
     def set_is_stagger_element(cls, element: typing.Optional[winrt.windows.ui.xaml.UIElement], value: bool, /) -> None: ...
@@ -202,6 +221,7 @@ class CommonNavigationTransitionInfo_Static(type):
     @_property
     def is_staggering_enabled_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class CommonNavigationTransitionInfo(winrt.system.Object, metaclass=CommonNavigationTransitionInfo_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CommonNavigationTransitionInfo: ...
@@ -211,6 +231,7 @@ class CommonNavigationTransitionInfo(winrt.system.Object, metaclass=CommonNaviga
     @is_staggering_enabled.setter
     def is_staggering_enabled(self, value: bool) -> None: ...
 
+@typing.final
 class ConnectedAnimation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ConnectedAnimation: ...
@@ -231,13 +252,16 @@ class ConnectedAnimation(winrt.system.Object):
     @configuration.setter
     def configuration(self, value: typing.Optional[ConnectedAnimationConfiguration]) -> None: ...
 
+@typing.final
 class ConnectedAnimationConfiguration(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ConnectedAnimationConfiguration: ...
 
+@typing.final
 class ConnectedAnimationService_Static(type):
     def get_for_current_view(cls) -> typing.Optional[ConnectedAnimationService]: ...
 
+@typing.final
 class ConnectedAnimationService(winrt.system.Object, metaclass=ConnectedAnimationService_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ConnectedAnimationService: ...
@@ -252,12 +276,14 @@ class ConnectedAnimationService(winrt.system.Object, metaclass=ConnectedAnimatio
     @default_duration.setter
     def default_duration(self, value: datetime.timedelta) -> None: ...
 
+@typing.final
 class ContentThemeTransition_Static(type):
     @_property
     def horizontal_offset_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
     @_property
     def vertical_offset_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class ContentThemeTransition(winrt.system.Object, metaclass=ContentThemeTransition_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContentThemeTransition: ...
@@ -271,6 +297,7 @@ class ContentThemeTransition(winrt.system.Object, metaclass=ContentThemeTransiti
     @horizontal_offset.setter
     def horizontal_offset(self, value: winrt.system.Double) -> None: ...
 
+@typing.final
 class ContinuumNavigationTransitionInfo_Static(type):
     def get_exit_element_container(cls, element: typing.Optional[winrt.windows.ui.xaml.controls.ListViewBase], /) -> bool: ...
     def get_is_entrance_element(cls, element: typing.Optional[winrt.windows.ui.xaml.UIElement], /) -> bool: ...
@@ -287,6 +314,7 @@ class ContinuumNavigationTransitionInfo_Static(type):
     @_property
     def is_exit_element_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class ContinuumNavigationTransitionInfo(winrt.system.Object, metaclass=ContinuumNavigationTransitionInfo_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContinuumNavigationTransitionInfo: ...
@@ -296,36 +324,43 @@ class ContinuumNavigationTransitionInfo(winrt.system.Object, metaclass=Continuum
     @exit_element.setter
     def exit_element(self, value: typing.Optional[winrt.windows.ui.xaml.UIElement]) -> None: ...
 
+@typing.final
 class CubicEase(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CubicEase: ...
     def __new__(cls: typing.Type[CubicEase]) -> CubicEase:...
 
+@typing.final
 class DirectConnectedAnimationConfiguration(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DirectConnectedAnimationConfiguration: ...
     def __new__(cls: typing.Type[DirectConnectedAnimationConfiguration]) -> DirectConnectedAnimationConfiguration:...
 
+@typing.final
 class DiscreteColorKeyFrame(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DiscreteColorKeyFrame: ...
     def __new__(cls: typing.Type[DiscreteColorKeyFrame]) -> DiscreteColorKeyFrame:...
 
+@typing.final
 class DiscreteDoubleKeyFrame(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DiscreteDoubleKeyFrame: ...
     def __new__(cls: typing.Type[DiscreteDoubleKeyFrame]) -> DiscreteDoubleKeyFrame:...
 
+@typing.final
 class DiscreteObjectKeyFrame(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DiscreteObjectKeyFrame: ...
     def __new__(cls: typing.Type[DiscreteObjectKeyFrame]) -> DiscreteObjectKeyFrame:...
 
+@typing.final
 class DiscretePointKeyFrame(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DiscretePointKeyFrame: ...
     def __new__(cls: typing.Type[DiscretePointKeyFrame]) -> DiscretePointKeyFrame:...
 
+@typing.final
 class DoubleAnimation_Static(type):
     @_property
     def by_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
@@ -338,6 +373,7 @@ class DoubleAnimation_Static(type):
     @_property
     def to_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class DoubleAnimation(winrt.system.Object, metaclass=DoubleAnimation_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DoubleAnimation: ...
@@ -363,10 +399,12 @@ class DoubleAnimation(winrt.system.Object, metaclass=DoubleAnimation_Static):
     @by.setter
     def by(self, value: typing.Optional[typing.Optional[winrt.system.Double]]) -> None: ...
 
+@typing.final
 class DoubleAnimationUsingKeyFrames_Static(type):
     @_property
     def enable_dependent_animation_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class DoubleAnimationUsingKeyFrames(winrt.system.Object, metaclass=DoubleAnimationUsingKeyFrames_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DoubleAnimationUsingKeyFrames: ...
@@ -378,12 +416,14 @@ class DoubleAnimationUsingKeyFrames(winrt.system.Object, metaclass=DoubleAnimati
     @_property
     def key_frames(self) -> typing.Optional[DoubleKeyFrameCollection]: ...
 
+@typing.final
 class DoubleKeyFrame_Static(type):
     @_property
     def key_time_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
     @_property
     def value_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class DoubleKeyFrame(winrt.system.Object, metaclass=DoubleKeyFrame_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DoubleKeyFrame: ...
@@ -396,6 +436,7 @@ class DoubleKeyFrame(winrt.system.Object, metaclass=DoubleKeyFrame_Static):
     @key_time.setter
     def key_time(self, value: KeyTime) -> None: ...
 
+@typing.final
 class DoubleKeyFrameCollection(winrt.system.Object, winrt._winrt.MutableSequence[DoubleKeyFrame]):
     def __len__(self) -> int: ...
     def __iter__(self) -> winrt.windows.foundation.collections.IIterator[DoubleKeyFrame]: ...
@@ -429,10 +470,12 @@ class DoubleKeyFrameCollection(winrt.system.Object, winrt._winrt.MutableSequence
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class DragItemThemeAnimation_Static(type):
     @_property
     def target_name_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class DragItemThemeAnimation(winrt.system.Object, metaclass=DragItemThemeAnimation_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DragItemThemeAnimation: ...
@@ -442,6 +485,7 @@ class DragItemThemeAnimation(winrt.system.Object, metaclass=DragItemThemeAnimati
     @target_name.setter
     def target_name(self, value: str) -> None: ...
 
+@typing.final
 class DragOverThemeAnimation_Static(type):
     @_property
     def direction_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
@@ -450,6 +494,7 @@ class DragOverThemeAnimation_Static(type):
     @_property
     def to_offset_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class DragOverThemeAnimation(winrt.system.Object, metaclass=DragOverThemeAnimation_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DragOverThemeAnimation: ...
@@ -467,11 +512,13 @@ class DragOverThemeAnimation(winrt.system.Object, metaclass=DragOverThemeAnimati
     @direction.setter
     def direction(self, value: winrt.windows.ui.xaml.controls.primitives.AnimationDirection) -> None: ...
 
+@typing.final
 class DrillInNavigationTransitionInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DrillInNavigationTransitionInfo: ...
     def __new__(cls: typing.Type[DrillInNavigationTransitionInfo]) -> DrillInNavigationTransitionInfo:...
 
+@typing.final
 class DrillInThemeAnimation_Static(type):
     @_property
     def entrance_target_name_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
@@ -482,6 +529,7 @@ class DrillInThemeAnimation_Static(type):
     @_property
     def exit_target_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class DrillInThemeAnimation(winrt.system.Object, metaclass=DrillInThemeAnimation_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DrillInThemeAnimation: ...
@@ -503,6 +551,7 @@ class DrillInThemeAnimation(winrt.system.Object, metaclass=DrillInThemeAnimation
     @entrance_target.setter
     def entrance_target(self, value: typing.Optional[winrt.windows.ui.xaml.DependencyObject]) -> None: ...
 
+@typing.final
 class DrillOutThemeAnimation_Static(type):
     @_property
     def entrance_target_name_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
@@ -513,6 +562,7 @@ class DrillOutThemeAnimation_Static(type):
     @_property
     def exit_target_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class DrillOutThemeAnimation(winrt.system.Object, metaclass=DrillOutThemeAnimation_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DrillOutThemeAnimation: ...
@@ -534,10 +584,12 @@ class DrillOutThemeAnimation(winrt.system.Object, metaclass=DrillOutThemeAnimati
     @entrance_target.setter
     def entrance_target(self, value: typing.Optional[winrt.windows.ui.xaml.DependencyObject]) -> None: ...
 
+@typing.final
 class DropTargetItemThemeAnimation_Static(type):
     @_property
     def target_name_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class DropTargetItemThemeAnimation(winrt.system.Object, metaclass=DropTargetItemThemeAnimation_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DropTargetItemThemeAnimation: ...
@@ -547,10 +599,12 @@ class DropTargetItemThemeAnimation(winrt.system.Object, metaclass=DropTargetItem
     @target_name.setter
     def target_name(self, value: str) -> None: ...
 
+@typing.final
 class EasingColorKeyFrame_Static(type):
     @_property
     def easing_function_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class EasingColorKeyFrame(winrt.system.Object, metaclass=EasingColorKeyFrame_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EasingColorKeyFrame: ...
@@ -560,10 +614,12 @@ class EasingColorKeyFrame(winrt.system.Object, metaclass=EasingColorKeyFrame_Sta
     @easing_function.setter
     def easing_function(self, value: typing.Optional[EasingFunctionBase]) -> None: ...
 
+@typing.final
 class EasingDoubleKeyFrame_Static(type):
     @_property
     def easing_function_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class EasingDoubleKeyFrame(winrt.system.Object, metaclass=EasingDoubleKeyFrame_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EasingDoubleKeyFrame: ...
@@ -573,10 +629,12 @@ class EasingDoubleKeyFrame(winrt.system.Object, metaclass=EasingDoubleKeyFrame_S
     @easing_function.setter
     def easing_function(self, value: typing.Optional[EasingFunctionBase]) -> None: ...
 
+@typing.final
 class EasingFunctionBase_Static(type):
     @_property
     def easing_mode_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class EasingFunctionBase(winrt.system.Object, metaclass=EasingFunctionBase_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EasingFunctionBase: ...
@@ -586,10 +644,12 @@ class EasingFunctionBase(winrt.system.Object, metaclass=EasingFunctionBase_Stati
     @easing_mode.setter
     def easing_mode(self, value: EasingMode) -> None: ...
 
+@typing.final
 class EasingPointKeyFrame_Static(type):
     @_property
     def easing_function_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class EasingPointKeyFrame(winrt.system.Object, metaclass=EasingPointKeyFrame_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EasingPointKeyFrame: ...
@@ -599,10 +659,12 @@ class EasingPointKeyFrame(winrt.system.Object, metaclass=EasingPointKeyFrame_Sta
     @easing_function.setter
     def easing_function(self, value: typing.Optional[EasingFunctionBase]) -> None: ...
 
+@typing.final
 class EdgeUIThemeTransition_Static(type):
     @_property
     def edge_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class EdgeUIThemeTransition(winrt.system.Object, metaclass=EdgeUIThemeTransition_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EdgeUIThemeTransition: ...
@@ -612,12 +674,14 @@ class EdgeUIThemeTransition(winrt.system.Object, metaclass=EdgeUIThemeTransition
     @edge.setter
     def edge(self, value: winrt.windows.ui.xaml.controls.primitives.EdgeTransitionLocation) -> None: ...
 
+@typing.final
 class ElasticEase_Static(type):
     @_property
     def oscillations_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
     @_property
     def springiness_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class ElasticEase(winrt.system.Object, metaclass=ElasticEase_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ElasticEase: ...
@@ -631,17 +695,20 @@ class ElasticEase(winrt.system.Object, metaclass=ElasticEase_Static):
     @oscillations.setter
     def oscillations(self, value: winrt.system.Int32) -> None: ...
 
+@typing.final
 class EntranceNavigationTransitionInfo_Static(type):
     def get_is_target_element(cls, element: typing.Optional[winrt.windows.ui.xaml.UIElement], /) -> bool: ...
     def set_is_target_element(cls, element: typing.Optional[winrt.windows.ui.xaml.UIElement], value: bool, /) -> None: ...
     @_property
     def is_target_element_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class EntranceNavigationTransitionInfo(winrt.system.Object, metaclass=EntranceNavigationTransitionInfo_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EntranceNavigationTransitionInfo: ...
     def __new__(cls: typing.Type[EntranceNavigationTransitionInfo]) -> EntranceNavigationTransitionInfo:...
 
+@typing.final
 class EntranceThemeTransition_Static(type):
     @_property
     def from_horizontal_offset_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
@@ -650,6 +717,7 @@ class EntranceThemeTransition_Static(type):
     @_property
     def is_staggering_enabled_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class EntranceThemeTransition(winrt.system.Object, metaclass=EntranceThemeTransition_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EntranceThemeTransition: ...
@@ -667,10 +735,12 @@ class EntranceThemeTransition(winrt.system.Object, metaclass=EntranceThemeTransi
     @from_horizontal_offset.setter
     def from_horizontal_offset(self, value: winrt.system.Double) -> None: ...
 
+@typing.final
 class ExponentialEase_Static(type):
     @_property
     def exponent_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class ExponentialEase(winrt.system.Object, metaclass=ExponentialEase_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ExponentialEase: ...
@@ -680,10 +750,12 @@ class ExponentialEase(winrt.system.Object, metaclass=ExponentialEase_Static):
     @exponent.setter
     def exponent(self, value: winrt.system.Double) -> None: ...
 
+@typing.final
 class FadeInThemeAnimation_Static(type):
     @_property
     def target_name_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class FadeInThemeAnimation(winrt.system.Object, metaclass=FadeInThemeAnimation_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FadeInThemeAnimation: ...
@@ -693,10 +765,12 @@ class FadeInThemeAnimation(winrt.system.Object, metaclass=FadeInThemeAnimation_S
     @target_name.setter
     def target_name(self, value: str) -> None: ...
 
+@typing.final
 class FadeOutThemeAnimation_Static(type):
     @_property
     def target_name_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class FadeOutThemeAnimation(winrt.system.Object, metaclass=FadeOutThemeAnimation_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FadeOutThemeAnimation: ...
@@ -706,6 +780,7 @@ class FadeOutThemeAnimation(winrt.system.Object, metaclass=FadeOutThemeAnimation
     @target_name.setter
     def target_name(self, value: str) -> None: ...
 
+@typing.final
 class GravityConnectedAnimationConfiguration(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GravityConnectedAnimationConfiguration: ...
@@ -715,6 +790,7 @@ class GravityConnectedAnimationConfiguration(winrt.system.Object):
     @is_shadow_enabled.setter
     def is_shadow_enabled(self, value: bool) -> None: ...
 
+@typing.final
 class KeySpline(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> KeySpline: ...
@@ -728,32 +804,39 @@ class KeySpline(winrt.system.Object):
     @control_point1.setter
     def control_point1(self, value: winrt.windows.foundation.Point) -> None: ...
 
+@typing.final
 class KeyTimeHelper_Static(type):
     def from_time_span(cls, time_span: datetime.timedelta, /) -> KeyTime: ...
 
+@typing.final
 class KeyTimeHelper(winrt.system.Object, metaclass=KeyTimeHelper_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> KeyTimeHelper: ...
 
+@typing.final
 class LinearColorKeyFrame(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LinearColorKeyFrame: ...
     def __new__(cls: typing.Type[LinearColorKeyFrame]) -> LinearColorKeyFrame:...
 
+@typing.final
 class LinearDoubleKeyFrame(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LinearDoubleKeyFrame: ...
     def __new__(cls: typing.Type[LinearDoubleKeyFrame]) -> LinearDoubleKeyFrame:...
 
+@typing.final
 class LinearPointKeyFrame(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LinearPointKeyFrame: ...
     def __new__(cls: typing.Type[LinearPointKeyFrame]) -> LinearPointKeyFrame:...
 
+@typing.final
 class NavigationThemeTransition_Static(type):
     @_property
     def default_navigation_transition_info_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class NavigationThemeTransition(winrt.system.Object, metaclass=NavigationThemeTransition_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NavigationThemeTransition: ...
@@ -763,16 +846,19 @@ class NavigationThemeTransition(winrt.system.Object, metaclass=NavigationThemeTr
     @default_navigation_transition_info.setter
     def default_navigation_transition_info(self, value: typing.Optional[NavigationTransitionInfo]) -> None: ...
 
+@typing.final
 class NavigationTransitionInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NavigationTransitionInfo: ...
     def get_navigation_state_core(self) -> str: ...
     def set_navigation_state_core(self, navigation_state: str, /) -> None: ...
 
+@typing.final
 class ObjectAnimationUsingKeyFrames_Static(type):
     @_property
     def enable_dependent_animation_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class ObjectAnimationUsingKeyFrames(winrt.system.Object, metaclass=ObjectAnimationUsingKeyFrames_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ObjectAnimationUsingKeyFrames: ...
@@ -784,12 +870,14 @@ class ObjectAnimationUsingKeyFrames(winrt.system.Object, metaclass=ObjectAnimati
     @_property
     def key_frames(self) -> typing.Optional[ObjectKeyFrameCollection]: ...
 
+@typing.final
 class ObjectKeyFrame_Static(type):
     @_property
     def key_time_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
     @_property
     def value_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class ObjectKeyFrame(winrt.system.Object, metaclass=ObjectKeyFrame_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ObjectKeyFrame: ...
@@ -802,6 +890,7 @@ class ObjectKeyFrame(winrt.system.Object, metaclass=ObjectKeyFrame_Static):
     @key_time.setter
     def key_time(self, value: KeyTime) -> None: ...
 
+@typing.final
 class ObjectKeyFrameCollection(winrt.system.Object, winrt._winrt.MutableSequence[ObjectKeyFrame]):
     def __len__(self) -> int: ...
     def __iter__(self) -> winrt.windows.foundation.collections.IIterator[ObjectKeyFrame]: ...
@@ -835,10 +924,12 @@ class ObjectKeyFrameCollection(winrt.system.Object, winrt._winrt.MutableSequence
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class PaneThemeTransition_Static(type):
     @_property
     def edge_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class PaneThemeTransition(winrt.system.Object, metaclass=PaneThemeTransition_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PaneThemeTransition: ...
@@ -848,6 +939,7 @@ class PaneThemeTransition(winrt.system.Object, metaclass=PaneThemeTransition_Sta
     @edge.setter
     def edge(self, value: winrt.windows.ui.xaml.controls.primitives.EdgeTransitionLocation) -> None: ...
 
+@typing.final
 class PointAnimation_Static(type):
     @_property
     def by_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
@@ -860,6 +952,7 @@ class PointAnimation_Static(type):
     @_property
     def to_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class PointAnimation(winrt.system.Object, metaclass=PointAnimation_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PointAnimation: ...
@@ -885,10 +978,12 @@ class PointAnimation(winrt.system.Object, metaclass=PointAnimation_Static):
     @by.setter
     def by(self, value: typing.Optional[typing.Optional[winrt.windows.foundation.Point]]) -> None: ...
 
+@typing.final
 class PointAnimationUsingKeyFrames_Static(type):
     @_property
     def enable_dependent_animation_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class PointAnimationUsingKeyFrames(winrt.system.Object, metaclass=PointAnimationUsingKeyFrames_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PointAnimationUsingKeyFrames: ...
@@ -900,12 +995,14 @@ class PointAnimationUsingKeyFrames(winrt.system.Object, metaclass=PointAnimation
     @_property
     def key_frames(self) -> typing.Optional[PointKeyFrameCollection]: ...
 
+@typing.final
 class PointKeyFrame_Static(type):
     @_property
     def key_time_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
     @_property
     def value_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class PointKeyFrame(winrt.system.Object, metaclass=PointKeyFrame_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PointKeyFrame: ...
@@ -918,6 +1015,7 @@ class PointKeyFrame(winrt.system.Object, metaclass=PointKeyFrame_Static):
     @key_time.setter
     def key_time(self, value: KeyTime) -> None: ...
 
+@typing.final
 class PointKeyFrameCollection(winrt.system.Object, winrt._winrt.MutableSequence[PointKeyFrame]):
     def __len__(self) -> int: ...
     def __iter__(self) -> winrt.windows.foundation.collections.IIterator[PointKeyFrame]: ...
@@ -951,10 +1049,12 @@ class PointKeyFrameCollection(winrt.system.Object, winrt._winrt.MutableSequence[
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class PointerDownThemeAnimation_Static(type):
     @_property
     def target_name_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class PointerDownThemeAnimation(winrt.system.Object, metaclass=PointerDownThemeAnimation_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PointerDownThemeAnimation: ...
@@ -964,10 +1064,12 @@ class PointerDownThemeAnimation(winrt.system.Object, metaclass=PointerDownThemeA
     @target_name.setter
     def target_name(self, value: str) -> None: ...
 
+@typing.final
 class PointerUpThemeAnimation_Static(type):
     @_property
     def target_name_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class PointerUpThemeAnimation(winrt.system.Object, metaclass=PointerUpThemeAnimation_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PointerUpThemeAnimation: ...
@@ -977,6 +1079,7 @@ class PointerUpThemeAnimation(winrt.system.Object, metaclass=PointerUpThemeAnima
     @target_name.setter
     def target_name(self, value: str) -> None: ...
 
+@typing.final
 class PopInThemeAnimation_Static(type):
     @_property
     def from_horizontal_offset_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
@@ -985,6 +1088,7 @@ class PopInThemeAnimation_Static(type):
     @_property
     def target_name_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class PopInThemeAnimation(winrt.system.Object, metaclass=PopInThemeAnimation_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PopInThemeAnimation: ...
@@ -1002,10 +1106,12 @@ class PopInThemeAnimation(winrt.system.Object, metaclass=PopInThemeAnimation_Sta
     @from_horizontal_offset.setter
     def from_horizontal_offset(self, value: winrt.system.Double) -> None: ...
 
+@typing.final
 class PopOutThemeAnimation_Static(type):
     @_property
     def target_name_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class PopOutThemeAnimation(winrt.system.Object, metaclass=PopOutThemeAnimation_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PopOutThemeAnimation: ...
@@ -1015,12 +1121,14 @@ class PopOutThemeAnimation(winrt.system.Object, metaclass=PopOutThemeAnimation_S
     @target_name.setter
     def target_name(self, value: str) -> None: ...
 
+@typing.final
 class PopupThemeTransition_Static(type):
     @_property
     def from_horizontal_offset_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
     @_property
     def from_vertical_offset_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class PopupThemeTransition(winrt.system.Object, metaclass=PopupThemeTransition_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PopupThemeTransition: ...
@@ -1034,10 +1142,12 @@ class PopupThemeTransition(winrt.system.Object, metaclass=PopupThemeTransition_S
     @from_horizontal_offset.setter
     def from_horizontal_offset(self, value: winrt.system.Double) -> None: ...
 
+@typing.final
 class PowerEase_Static(type):
     @_property
     def power_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class PowerEase(winrt.system.Object, metaclass=PowerEase_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PowerEase: ...
@@ -1047,26 +1157,31 @@ class PowerEase(winrt.system.Object, metaclass=PowerEase_Static):
     @power.setter
     def power(self, value: winrt.system.Double) -> None: ...
 
+@typing.final
 class QuadraticEase(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> QuadraticEase: ...
     def __new__(cls: typing.Type[QuadraticEase]) -> QuadraticEase:...
 
+@typing.final
 class QuarticEase(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> QuarticEase: ...
     def __new__(cls: typing.Type[QuarticEase]) -> QuarticEase:...
 
+@typing.final
 class QuinticEase(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> QuinticEase: ...
     def __new__(cls: typing.Type[QuinticEase]) -> QuinticEase:...
 
+@typing.final
 class ReorderThemeTransition(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ReorderThemeTransition: ...
     def __new__(cls: typing.Type[ReorderThemeTransition]) -> ReorderThemeTransition:...
 
+@typing.final
 class RepeatBehaviorHelper_Static(type):
     def equals(cls, target: RepeatBehavior, value: RepeatBehavior, /) -> bool: ...
     def from_count(cls, count: winrt.system.Double, /) -> RepeatBehavior: ...
@@ -1076,10 +1191,12 @@ class RepeatBehaviorHelper_Static(type):
     @_property
     def forever(cls) -> RepeatBehavior: ...
 
+@typing.final
 class RepeatBehaviorHelper(winrt.system.Object, metaclass=RepeatBehaviorHelper_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RepeatBehaviorHelper: ...
 
+@typing.final
 class RepositionThemeAnimation_Static(type):
     @_property
     def from_horizontal_offset_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
@@ -1088,6 +1205,7 @@ class RepositionThemeAnimation_Static(type):
     @_property
     def target_name_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class RepositionThemeAnimation(winrt.system.Object, metaclass=RepositionThemeAnimation_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RepositionThemeAnimation: ...
@@ -1105,10 +1223,12 @@ class RepositionThemeAnimation(winrt.system.Object, metaclass=RepositionThemeAni
     @from_horizontal_offset.setter
     def from_horizontal_offset(self, value: winrt.system.Double) -> None: ...
 
+@typing.final
 class RepositionThemeTransition_Static(type):
     @_property
     def is_staggering_enabled_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class RepositionThemeTransition(winrt.system.Object, metaclass=RepositionThemeTransition_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RepositionThemeTransition: ...
@@ -1118,15 +1238,18 @@ class RepositionThemeTransition(winrt.system.Object, metaclass=RepositionThemeTr
     @is_staggering_enabled.setter
     def is_staggering_enabled(self, value: bool) -> None: ...
 
+@typing.final
 class SineEase(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SineEase: ...
     def __new__(cls: typing.Type[SineEase]) -> SineEase:...
 
+@typing.final
 class SlideNavigationTransitionInfo_Static(type):
     @_property
     def effect_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class SlideNavigationTransitionInfo(winrt.system.Object, metaclass=SlideNavigationTransitionInfo_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SlideNavigationTransitionInfo: ...
@@ -1136,10 +1259,12 @@ class SlideNavigationTransitionInfo(winrt.system.Object, metaclass=SlideNavigati
     @effect.setter
     def effect(self, value: SlideNavigationTransitionEffect) -> None: ...
 
+@typing.final
 class SplineColorKeyFrame_Static(type):
     @_property
     def key_spline_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class SplineColorKeyFrame(winrt.system.Object, metaclass=SplineColorKeyFrame_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SplineColorKeyFrame: ...
@@ -1149,10 +1274,12 @@ class SplineColorKeyFrame(winrt.system.Object, metaclass=SplineColorKeyFrame_Sta
     @key_spline.setter
     def key_spline(self, value: typing.Optional[KeySpline]) -> None: ...
 
+@typing.final
 class SplineDoubleKeyFrame_Static(type):
     @_property
     def key_spline_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class SplineDoubleKeyFrame(winrt.system.Object, metaclass=SplineDoubleKeyFrame_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SplineDoubleKeyFrame: ...
@@ -1162,10 +1289,12 @@ class SplineDoubleKeyFrame(winrt.system.Object, metaclass=SplineDoubleKeyFrame_S
     @key_spline.setter
     def key_spline(self, value: typing.Optional[KeySpline]) -> None: ...
 
+@typing.final
 class SplinePointKeyFrame_Static(type):
     @_property
     def key_spline_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class SplinePointKeyFrame(winrt.system.Object, metaclass=SplinePointKeyFrame_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SplinePointKeyFrame: ...
@@ -1175,6 +1304,7 @@ class SplinePointKeyFrame(winrt.system.Object, metaclass=SplinePointKeyFrame_Sta
     @key_spline.setter
     def key_spline(self, value: typing.Optional[KeySpline]) -> None: ...
 
+@typing.final
 class SplitCloseThemeAnimation_Static(type):
     @_property
     def closed_length_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
@@ -1199,6 +1329,7 @@ class SplitCloseThemeAnimation_Static(type):
     @_property
     def opened_target_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class SplitCloseThemeAnimation(winrt.system.Object, metaclass=SplitCloseThemeAnimation_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SplitCloseThemeAnimation: ...
@@ -1248,6 +1379,7 @@ class SplitCloseThemeAnimation(winrt.system.Object, metaclass=SplitCloseThemeAni
     @closed_length.setter
     def closed_length(self, value: winrt.system.Double) -> None: ...
 
+@typing.final
 class SplitOpenThemeAnimation_Static(type):
     @_property
     def closed_length_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
@@ -1272,6 +1404,7 @@ class SplitOpenThemeAnimation_Static(type):
     @_property
     def opened_target_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class SplitOpenThemeAnimation(winrt.system.Object, metaclass=SplitOpenThemeAnimation_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SplitOpenThemeAnimation: ...
@@ -1321,6 +1454,7 @@ class SplitOpenThemeAnimation(winrt.system.Object, metaclass=SplitOpenThemeAnima
     @closed_length.setter
     def closed_length(self, value: winrt.system.Double) -> None: ...
 
+@typing.final
 class Storyboard_Static(type):
     def get_target_name(cls, element: typing.Optional[Timeline], /) -> str: ...
     def get_target_property(cls, element: typing.Optional[Timeline], /) -> str: ...
@@ -1332,6 +1466,7 @@ class Storyboard_Static(type):
     @_property
     def target_property_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class Storyboard(winrt.system.Object, metaclass=Storyboard_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Storyboard: ...
@@ -1348,11 +1483,13 @@ class Storyboard(winrt.system.Object, metaclass=Storyboard_Static):
     @_property
     def children(self) -> typing.Optional[TimelineCollection]: ...
 
+@typing.final
 class SuppressNavigationTransitionInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SuppressNavigationTransitionInfo: ...
     def __new__(cls: typing.Type[SuppressNavigationTransitionInfo]) -> SuppressNavigationTransitionInfo:...
 
+@typing.final
 class SwipeBackThemeAnimation_Static(type):
     @_property
     def from_horizontal_offset_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
@@ -1361,6 +1498,7 @@ class SwipeBackThemeAnimation_Static(type):
     @_property
     def target_name_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class SwipeBackThemeAnimation(winrt.system.Object, metaclass=SwipeBackThemeAnimation_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SwipeBackThemeAnimation: ...
@@ -1378,6 +1516,7 @@ class SwipeBackThemeAnimation(winrt.system.Object, metaclass=SwipeBackThemeAnima
     @from_horizontal_offset.setter
     def from_horizontal_offset(self, value: winrt.system.Double) -> None: ...
 
+@typing.final
 class SwipeHintThemeAnimation_Static(type):
     @_property
     def target_name_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
@@ -1386,6 +1525,7 @@ class SwipeHintThemeAnimation_Static(type):
     @_property
     def to_vertical_offset_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class SwipeHintThemeAnimation(winrt.system.Object, metaclass=SwipeHintThemeAnimation_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SwipeHintThemeAnimation: ...
@@ -1403,6 +1543,7 @@ class SwipeHintThemeAnimation(winrt.system.Object, metaclass=SwipeHintThemeAnima
     @target_name.setter
     def target_name(self, value: str) -> None: ...
 
+@typing.final
 class Timeline_Static(type):
     @_property
     def allow_dependent_animations(cls) -> bool: ...
@@ -1421,6 +1562,7 @@ class Timeline_Static(type):
     @_property
     def speed_ratio_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class Timeline(winrt.system.Object, metaclass=Timeline_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Timeline: ...
@@ -1451,6 +1593,7 @@ class Timeline(winrt.system.Object, metaclass=Timeline_Static):
     @auto_reverse.setter
     def auto_reverse(self, value: bool) -> None: ...
 
+@typing.final
 class TimelineCollection(winrt.system.Object, winrt._winrt.MutableSequence[Timeline]):
     def __len__(self) -> int: ...
     def __iter__(self) -> winrt.windows.foundation.collections.IIterator[Timeline]: ...
@@ -1484,10 +1627,12 @@ class TimelineCollection(winrt.system.Object, winrt._winrt.MutableSequence[Timel
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class Transition(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Transition: ...
 
+@typing.final
 class TransitionCollection(winrt.system.Object, winrt._winrt.MutableSequence[Transition]):
     def __len__(self) -> int: ...
     def __iter__(self) -> winrt.windows.foundation.collections.IIterator[Transition]: ...

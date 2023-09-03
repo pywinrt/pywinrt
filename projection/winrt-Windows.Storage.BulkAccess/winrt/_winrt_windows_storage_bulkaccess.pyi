@@ -18,6 +18,7 @@ import winrt.windows.storage.streams
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class FileInformation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FileInformation: ...
@@ -104,6 +105,7 @@ class FileInformation(winrt.system.Object):
     @_property
     def provider(self) -> typing.Optional[winrt.windows.storage.StorageProvider]: ...
 
+@typing.final
 class FileInformationFactory(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FileInformationFactory: ...
@@ -131,6 +133,7 @@ class FileInformationFactory(winrt.system.Object):
     def get_virtualized_folders_vector(self) -> typing.Optional[winrt.system.Object]: ...
     def get_virtualized_items_vector(self) -> typing.Optional[winrt.system.Object]: ...
 
+@typing.final
 class FolderInformation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FolderInformation: ...
@@ -231,6 +234,7 @@ class FolderInformation(winrt.system.Object):
     @_property
     def provider(self) -> typing.Optional[winrt.windows.storage.StorageProvider]: ...
 
+@typing.final
 class IStorageItemInformation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStorageItemInformation: ...

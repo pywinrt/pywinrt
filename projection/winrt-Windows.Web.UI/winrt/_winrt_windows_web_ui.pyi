@@ -21,18 +21,21 @@ from winrt.windows.web.ui import WebViewControlPermissionState, WebViewControlPe
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class WebViewControlContentLoadingEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebViewControlContentLoadingEventArgs: ...
     @_property
     def uri(self) -> typing.Optional[winrt.windows.foundation.Uri]: ...
 
+@typing.final
 class WebViewControlDOMContentLoadedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebViewControlDOMContentLoadedEventArgs: ...
     @_property
     def uri(self) -> typing.Optional[winrt.windows.foundation.Uri]: ...
 
+@typing.final
 class WebViewControlDeferredPermissionRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebViewControlDeferredPermissionRequest: ...
@@ -45,6 +48,7 @@ class WebViewControlDeferredPermissionRequest(winrt.system.Object):
     @_property
     def uri(self) -> typing.Optional[winrt.windows.foundation.Uri]: ...
 
+@typing.final
 class WebViewControlLongRunningScriptDetectedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebViewControlLongRunningScriptDetectedEventArgs: ...
@@ -55,6 +59,7 @@ class WebViewControlLongRunningScriptDetectedEventArgs(winrt.system.Object):
     @_property
     def execution_time(self) -> datetime.timedelta: ...
 
+@typing.final
 class WebViewControlNavigationCompletedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebViewControlNavigationCompletedEventArgs: ...
@@ -65,6 +70,7 @@ class WebViewControlNavigationCompletedEventArgs(winrt.system.Object):
     @_property
     def web_error_status(self) -> winrt.windows.web.WebErrorStatus: ...
 
+@typing.final
 class WebViewControlNavigationStartingEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebViewControlNavigationStartingEventArgs: ...
@@ -75,6 +81,7 @@ class WebViewControlNavigationStartingEventArgs(winrt.system.Object):
     @_property
     def uri(self) -> typing.Optional[winrt.windows.foundation.Uri]: ...
 
+@typing.final
 class WebViewControlNewWindowRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebViewControlNewWindowRequestedEventArgs: ...
@@ -92,6 +99,7 @@ class WebViewControlNewWindowRequestedEventArgs(winrt.system.Object):
     @new_window.setter
     def new_window(self, value: typing.Optional[IWebViewControl]) -> None: ...
 
+@typing.final
 class WebViewControlPermissionRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebViewControlPermissionRequest: ...
@@ -107,12 +115,14 @@ class WebViewControlPermissionRequest(winrt.system.Object):
     @_property
     def uri(self) -> typing.Optional[winrt.windows.foundation.Uri]: ...
 
+@typing.final
 class WebViewControlPermissionRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebViewControlPermissionRequestedEventArgs: ...
     @_property
     def permission_request(self) -> typing.Optional[WebViewControlPermissionRequest]: ...
 
+@typing.final
 class WebViewControlScriptNotifyEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebViewControlScriptNotifyEventArgs: ...
@@ -121,6 +131,7 @@ class WebViewControlScriptNotifyEventArgs(winrt.system.Object):
     @_property
     def value(self) -> str: ...
 
+@typing.final
 class WebViewControlSettings(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebViewControlSettings: ...
@@ -137,6 +148,7 @@ class WebViewControlSettings(winrt.system.Object):
     @is_indexed_d_b_enabled.setter
     def is_indexed_d_b_enabled(self, value: bool) -> None: ...
 
+@typing.final
 class WebViewControlUnsupportedUriSchemeIdentifiedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebViewControlUnsupportedUriSchemeIdentifiedEventArgs: ...
@@ -147,6 +159,7 @@ class WebViewControlUnsupportedUriSchemeIdentifiedEventArgs(winrt.system.Object)
     @_property
     def uri(self) -> typing.Optional[winrt.windows.foundation.Uri]: ...
 
+@typing.final
 class WebViewControlUnviewableContentIdentifiedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebViewControlUnviewableContentIdentifiedEventArgs: ...
@@ -157,6 +170,7 @@ class WebViewControlUnviewableContentIdentifiedEventArgs(winrt.system.Object):
     @_property
     def uri(self) -> typing.Optional[winrt.windows.foundation.Uri]: ...
 
+@typing.final
 class WebViewControlWebResourceRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebViewControlWebResourceRequestedEventArgs: ...
@@ -168,6 +182,7 @@ class WebViewControlWebResourceRequestedEventArgs(winrt.system.Object):
     @_property
     def request(self) -> typing.Optional[winrt.windows.web.http.HttpRequestMessage]: ...
 
+@typing.final
 class IWebViewControl(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebViewControl: ...
@@ -239,6 +254,7 @@ class IWebViewControl(winrt.system.Object):
     @source.setter
     def source(self, value: typing.Optional[winrt.windows.foundation.Uri]) -> None: ...
 
+@typing.final
 class IWebViewControl2(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebViewControl2: ...

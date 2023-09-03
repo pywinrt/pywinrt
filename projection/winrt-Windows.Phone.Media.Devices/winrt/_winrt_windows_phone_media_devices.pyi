@@ -15,9 +15,11 @@ from winrt.windows.phone.media.devices import AudioRoutingEndpoint, AvailableAud
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class AudioRoutingManager_Static(type):
     def get_default(cls) -> typing.Optional[AudioRoutingManager]: ...
 
+@typing.final
 class AudioRoutingManager(winrt.system.Object, metaclass=AudioRoutingManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AudioRoutingManager: ...

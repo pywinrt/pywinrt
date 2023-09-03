@@ -17,9 +17,11 @@ from winrt.windows.media.apprecording import AppRecordingSaveScreenshotOption
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class AppRecordingManager_Static(type):
     def get_default(cls) -> typing.Optional[AppRecordingManager]: ...
 
+@typing.final
 class AppRecordingManager(winrt.system.Object, metaclass=AppRecordingManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppRecordingManager: ...
@@ -30,6 +32,7 @@ class AppRecordingManager(winrt.system.Object, metaclass=AppRecordingManager_Sta
     @_property
     def supported_screenshot_media_encoding_subtypes(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]: ...
 
+@typing.final
 class AppRecordingResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppRecordingResult: ...
@@ -42,6 +45,7 @@ class AppRecordingResult(winrt.system.Object):
     @_property
     def succeeded(self) -> bool: ...
 
+@typing.final
 class AppRecordingSaveScreenshotResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppRecordingSaveScreenshotResult: ...
@@ -52,6 +56,7 @@ class AppRecordingSaveScreenshotResult(winrt.system.Object):
     @_property
     def succeeded(self) -> bool: ...
 
+@typing.final
 class AppRecordingSavedScreenshotInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppRecordingSavedScreenshotInfo: ...
@@ -60,6 +65,7 @@ class AppRecordingSavedScreenshotInfo(winrt.system.Object):
     @_property
     def media_encoding_subtype(self) -> str: ...
 
+@typing.final
 class AppRecordingStatus(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppRecordingStatus: ...
@@ -72,6 +78,7 @@ class AppRecordingStatus(winrt.system.Object):
     @_property
     def historical_buffer_duration(self) -> datetime.timedelta: ...
 
+@typing.final
 class AppRecordingStatusDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppRecordingStatusDetails: ...

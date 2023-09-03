@@ -18,6 +18,7 @@ from winrt.windows.applicationmodel.socialinfo import SocialFeedItemStyle, Socia
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class SocialFeedChildItem(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SocialFeedChildItem: ...
@@ -43,6 +44,7 @@ class SocialFeedChildItem(winrt.system.Object):
     @_property
     def thumbnails(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[SocialItemThumbnail]]: ...
 
+@typing.final
 class SocialFeedContent(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SocialFeedContent: ...
@@ -59,6 +61,7 @@ class SocialFeedContent(winrt.system.Object):
     @message.setter
     def message(self, value: str) -> None: ...
 
+@typing.final
 class SocialFeedItem(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SocialFeedItem: ...
@@ -104,6 +107,7 @@ class SocialFeedItem(winrt.system.Object):
     @_property
     def secondary_content(self) -> typing.Optional[SocialFeedContent]: ...
 
+@typing.final
 class SocialFeedSharedItem(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SocialFeedSharedItem: ...
@@ -127,6 +131,7 @@ class SocialFeedSharedItem(winrt.system.Object):
     @_property
     def content(self) -> typing.Optional[SocialFeedContent]: ...
 
+@typing.final
 class SocialItemThumbnail(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SocialItemThumbnail: ...
@@ -145,6 +150,7 @@ class SocialItemThumbnail(winrt.system.Object):
     @bitmap_size.setter
     def bitmap_size(self, value: winrt.windows.graphics.imaging.BitmapSize) -> None: ...
 
+@typing.final
 class SocialUserInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SocialUserInfo: ...

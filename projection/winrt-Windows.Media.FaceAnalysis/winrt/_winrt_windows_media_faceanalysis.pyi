@@ -16,12 +16,14 @@ import winrt.windows.media
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class DetectedFace(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DetectedFace: ...
     @_property
     def face_box(self) -> winrt.windows.graphics.imaging.BitmapBounds: ...
 
+@typing.final
 class FaceDetector_Static(type):
     def create_async(cls) -> winrt.windows.foundation.IAsyncOperation[FaceDetector]: ...
     def get_supported_bitmap_pixel_formats(cls) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.graphics.imaging.BitmapPixelFormat]]: ...
@@ -29,6 +31,7 @@ class FaceDetector_Static(type):
     @_property
     def is_supported(cls) -> bool: ...
 
+@typing.final
 class FaceDetector(winrt.system.Object, metaclass=FaceDetector_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FaceDetector: ...
@@ -45,6 +48,7 @@ class FaceDetector(winrt.system.Object, metaclass=FaceDetector_Static):
     @max_detectable_face_size.setter
     def max_detectable_face_size(self, value: winrt.windows.graphics.imaging.BitmapSize) -> None: ...
 
+@typing.final
 class FaceTracker_Static(type):
     def create_async(cls) -> winrt.windows.foundation.IAsyncOperation[FaceTracker]: ...
     def get_supported_bitmap_pixel_formats(cls) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.graphics.imaging.BitmapPixelFormat]]: ...
@@ -52,6 +56,7 @@ class FaceTracker_Static(type):
     @_property
     def is_supported(cls) -> bool: ...
 
+@typing.final
 class FaceTracker(winrt.system.Object, metaclass=FaceTracker_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FaceTracker: ...

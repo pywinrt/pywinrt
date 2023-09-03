@@ -20,6 +20,7 @@ from winrt.windows.devices.wifidirect.services import WiFiDirectServiceAdvertise
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class WiFiDirectService_Static(type):
     def from_id_async(cls, device_id: str, /) -> winrt.windows.foundation.IAsyncOperation[WiFiDirectService]: ...
     @typing.overload
@@ -27,6 +28,7 @@ class WiFiDirectService_Static(type):
     @typing.overload
     def get_selector(cls, service_name: str, service_info_filter: typing.Optional[winrt.windows.storage.streams.IBuffer], /) -> str: ...
 
+@typing.final
 class WiFiDirectService(winrt.system.Object, metaclass=WiFiDirectService_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WiFiDirectService: ...
@@ -52,6 +54,7 @@ class WiFiDirectService(winrt.system.Object, metaclass=WiFiDirectService_Static)
     @_property
     def supported_configuration_methods(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[WiFiDirectServiceConfigurationMethod]]: ...
 
+@typing.final
 class WiFiDirectServiceAdvertiser(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WiFiDirectServiceAdvertiser: ...
@@ -103,6 +106,7 @@ class WiFiDirectServiceAdvertiser(winrt.system.Object):
     @_property
     def advertisement_status(self) -> WiFiDirectServiceAdvertisementStatus: ...
 
+@typing.final
 class WiFiDirectServiceAutoAcceptSessionConnectedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WiFiDirectServiceAutoAcceptSessionConnectedEventArgs: ...
@@ -111,6 +115,7 @@ class WiFiDirectServiceAutoAcceptSessionConnectedEventArgs(winrt.system.Object):
     @_property
     def session_info(self) -> typing.Optional[winrt.windows.storage.streams.IBuffer]: ...
 
+@typing.final
 class WiFiDirectServiceProvisioningInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WiFiDirectServiceProvisioningInfo: ...
@@ -119,6 +124,7 @@ class WiFiDirectServiceProvisioningInfo(winrt.system.Object):
     @_property
     def selected_configuration_method(self) -> WiFiDirectServiceConfigurationMethod: ...
 
+@typing.final
 class WiFiDirectServiceRemotePortAddedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WiFiDirectServiceRemotePortAddedEventArgs: ...
@@ -127,6 +133,7 @@ class WiFiDirectServiceRemotePortAddedEventArgs(winrt.system.Object):
     @_property
     def protocol(self) -> WiFiDirectServiceIPProtocol: ...
 
+@typing.final
 class WiFiDirectServiceSession(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -155,12 +162,14 @@ class WiFiDirectServiceSession(winrt.system.Object):
     @_property
     def status(self) -> WiFiDirectServiceSessionStatus: ...
 
+@typing.final
 class WiFiDirectServiceSessionDeferredEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WiFiDirectServiceSessionDeferredEventArgs: ...
     @_property
     def deferred_session_info(self) -> typing.Optional[winrt.windows.storage.streams.IBuffer]: ...
 
+@typing.final
 class WiFiDirectServiceSessionRequest(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -174,6 +183,7 @@ class WiFiDirectServiceSessionRequest(winrt.system.Object):
     @_property
     def session_info(self) -> typing.Optional[winrt.windows.storage.streams.IBuffer]: ...
 
+@typing.final
 class WiFiDirectServiceSessionRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WiFiDirectServiceSessionRequestedEventArgs: ...

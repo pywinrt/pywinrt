@@ -20,15 +20,18 @@ from winrt.windows.system.userprofile import AccountPictureKind, SetAccountPictu
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class AdvertisingManager_Static(type):
     def get_for_user(cls, user: typing.Optional[winrt.windows.system.User], /) -> typing.Optional[AdvertisingManagerForUser]: ...
     @_property
     def advertising_id(cls) -> str: ...
 
+@typing.final
 class AdvertisingManager(winrt.system.Object, metaclass=AdvertisingManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AdvertisingManager: ...
 
+@typing.final
 class AdvertisingManagerForUser(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AdvertisingManagerForUser: ...
@@ -37,10 +40,12 @@ class AdvertisingManagerForUser(winrt.system.Object):
     @_property
     def user(self) -> typing.Optional[winrt.windows.system.User]: ...
 
+@typing.final
 class AssignedAccessSettings_Static(type):
     def get_default(cls) -> typing.Optional[AssignedAccessSettings]: ...
     def get_for_user(cls, user: typing.Optional[winrt.windows.system.User], /) -> typing.Optional[AssignedAccessSettings]: ...
 
+@typing.final
 class AssignedAccessSettings(winrt.system.Object, metaclass=AssignedAccessSettings_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AssignedAccessSettings: ...
@@ -51,10 +56,12 @@ class AssignedAccessSettings(winrt.system.Object, metaclass=AssignedAccessSettin
     @_property
     def user(self) -> typing.Optional[winrt.windows.system.User]: ...
 
+@typing.final
 class DiagnosticsSettings_Static(type):
     def get_default(cls) -> typing.Optional[DiagnosticsSettings]: ...
     def get_for_user(cls, user: typing.Optional[winrt.windows.system.User], /) -> typing.Optional[DiagnosticsSettings]: ...
 
+@typing.final
 class DiagnosticsSettings(winrt.system.Object, metaclass=DiagnosticsSettings_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DiagnosticsSettings: ...
@@ -63,9 +70,11 @@ class DiagnosticsSettings(winrt.system.Object, metaclass=DiagnosticsSettings_Sta
     @_property
     def user(self) -> typing.Optional[winrt.windows.system.User]: ...
 
+@typing.final
 class FirstSignInSettings_Static(type):
     def get_default(cls) -> typing.Optional[FirstSignInSettings]: ...
 
+@typing.final
 class FirstSignInSettings(winrt.system.Object, winrt._winrt.Mapping[str, winrt.system.Object], metaclass=FirstSignInSettings_Static):
     def __len__(self) -> int: ...
     def __iter__(self) -> typing.Iterator[str]: ...
@@ -80,6 +89,7 @@ class FirstSignInSettings(winrt.system.Object, winrt._winrt.Mapping[str, winrt.s
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class GlobalizationPreferences_Static(type):
     def get_for_user(cls, user: typing.Optional[winrt.windows.system.User], /) -> typing.Optional[GlobalizationPreferencesForUser]: ...
     def try_set_home_geographic_region(cls, region: str, /) -> bool: ...
@@ -97,10 +107,12 @@ class GlobalizationPreferences_Static(type):
     @_property
     def week_starts_on(cls) -> winrt.windows.globalization.DayOfWeek: ...
 
+@typing.final
 class GlobalizationPreferences(winrt.system.Object, metaclass=GlobalizationPreferences_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GlobalizationPreferences: ...
 
+@typing.final
 class GlobalizationPreferencesForUser(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GlobalizationPreferencesForUser: ...
@@ -119,6 +131,7 @@ class GlobalizationPreferencesForUser(winrt.system.Object):
     @_property
     def week_starts_on(self) -> winrt.windows.globalization.DayOfWeek: ...
 
+@typing.final
 class LockScreen_Static(type):
     def get_image_stream(cls) -> typing.Optional[winrt.windows.storage.streams.IRandomAccessStream]: ...
     def request_set_image_feed_async(cls, syndication_feed_uri: typing.Optional[winrt.windows.foundation.Uri], /) -> winrt.windows.foundation.IAsyncOperation[SetImageFeedResult]: ...
@@ -128,10 +141,12 @@ class LockScreen_Static(type):
     @_property
     def original_image_file(cls) -> typing.Optional[winrt.windows.foundation.Uri]: ...
 
+@typing.final
 class LockScreen(winrt.system.Object, metaclass=LockScreen_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LockScreen: ...
 
+@typing.final
 class UserInformation_Static(type):
     def get_account_picture(cls, kind: AccountPictureKind, /) -> typing.Optional[winrt.windows.storage.IStorageFile]: ...
     def get_display_name_async(cls) -> winrt.windows.foundation.IAsyncOperation[str]: ...
@@ -151,15 +166,18 @@ class UserInformation_Static(type):
     @_property
     def name_access_allowed(cls) -> bool: ...
 
+@typing.final
 class UserInformation(winrt.system.Object, metaclass=UserInformation_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserInformation: ...
 
+@typing.final
 class UserProfilePersonalizationSettings_Static(type):
     def is_supported(cls) -> bool: ...
     @_property
     def current(cls) -> typing.Optional[UserProfilePersonalizationSettings]: ...
 
+@typing.final
 class UserProfilePersonalizationSettings(winrt.system.Object, metaclass=UserProfilePersonalizationSettings_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserProfilePersonalizationSettings: ...

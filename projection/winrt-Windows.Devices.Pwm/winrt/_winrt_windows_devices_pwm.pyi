@@ -17,6 +17,7 @@ from winrt.windows.devices.pwm import PwmPulsePolarity
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class PwmController_Static(type):
     def from_id_async(cls, device_id: str, /) -> winrt.windows.foundation.IAsyncOperation[PwmController]: ...
     def get_controllers_async(cls, provider: typing.Optional[winrt.windows.devices.pwm.provider.IPwmProvider], /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[PwmController]]: ...
@@ -26,6 +27,7 @@ class PwmController_Static(type):
     @typing.overload
     def get_device_selector(cls, friendly_name: str, /) -> str: ...
 
+@typing.final
 class PwmController(winrt.system.Object, metaclass=PwmController_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PwmController: ...
@@ -40,6 +42,7 @@ class PwmController(winrt.system.Object, metaclass=PwmController_Static):
     @_property
     def pin_count(self) -> winrt.system.Int32: ...
 
+@typing.final
 class PwmPin(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...

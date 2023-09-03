@@ -13,6 +13,7 @@ import winrt.windows.foundation
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class ScreenReaderPositionChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ScreenReaderPositionChangedEventArgs: ...
@@ -21,6 +22,7 @@ class ScreenReaderPositionChangedEventArgs(winrt.system.Object):
     @_property
     def screen_position_in_raw_pixels(self) -> winrt.windows.foundation.Rect: ...
 
+@typing.final
 class ScreenReaderService(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ScreenReaderService: ...

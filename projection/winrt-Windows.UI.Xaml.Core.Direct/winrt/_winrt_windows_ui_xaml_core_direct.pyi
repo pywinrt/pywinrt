@@ -19,9 +19,11 @@ from winrt.windows.ui.xaml.core.direct import XamlEventIndex, XamlPropertyIndex,
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class XamlDirect_Static(type):
     def get_default(cls) -> typing.Optional[XamlDirect]: ...
 
+@typing.final
 class XamlDirect(winrt.system.Object, metaclass=XamlDirect_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> XamlDirect: ...
@@ -80,6 +82,7 @@ class XamlDirect(winrt.system.Object, metaclass=XamlDirect_Static):
     def set_time_span_property(self, xaml_direct_object: typing.Optional[IXamlDirectObject], property_index: XamlPropertyIndex, value: datetime.timedelta, /) -> None: ...
     def set_xaml_direct_object_property(self, xaml_direct_object: typing.Optional[IXamlDirectObject], property_index: XamlPropertyIndex, value: typing.Optional[IXamlDirectObject], /) -> None: ...
 
+@typing.final
 class IXamlDirectObject(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IXamlDirectObject: ...

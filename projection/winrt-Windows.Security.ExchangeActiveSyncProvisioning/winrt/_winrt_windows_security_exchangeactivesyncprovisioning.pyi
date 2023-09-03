@@ -15,6 +15,7 @@ from winrt.windows.security.exchangeactivesyncprovisioning import EasDisallowCon
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class EasClientDeviceInformation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EasClientDeviceInformation: ...
@@ -36,6 +37,7 @@ class EasClientDeviceInformation(winrt.system.Object):
     @_property
     def system_hardware_version(self) -> str: ...
 
+@typing.final
 class EasClientSecurityPolicy(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EasClientSecurityPolicy: ...
@@ -75,6 +77,7 @@ class EasClientSecurityPolicy(winrt.system.Object):
     @disallow_convenience_logon.setter
     def disallow_convenience_logon(self, value: bool) -> None: ...
 
+@typing.final
 class EasComplianceResults(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EasComplianceResults: ...

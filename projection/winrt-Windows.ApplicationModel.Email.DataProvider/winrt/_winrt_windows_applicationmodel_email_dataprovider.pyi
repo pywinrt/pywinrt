@@ -16,6 +16,7 @@ import winrt.windows.security.cryptography.certificates
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class EmailDataProviderConnection(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailDataProviderConnection: ...
@@ -51,12 +52,14 @@ class EmailDataProviderConnection(winrt.system.Object):
     def add_validate_certificates_requested(self, handler: winrt.windows.foundation.TypedEventHandler[EmailDataProviderConnection, EmailMailboxValidateCertificatesRequestEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_validate_certificates_requested(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class EmailDataProviderTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailDataProviderTriggerDetails: ...
     @_property
     def connection(self) -> typing.Optional[EmailDataProviderConnection]: ...
 
+@typing.final
 class EmailMailboxCreateFolderRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMailboxCreateFolderRequest: ...
@@ -69,6 +72,7 @@ class EmailMailboxCreateFolderRequest(winrt.system.Object):
     @_property
     def parent_folder_id(self) -> str: ...
 
+@typing.final
 class EmailMailboxCreateFolderRequestEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMailboxCreateFolderRequestEventArgs: ...
@@ -76,6 +80,7 @@ class EmailMailboxCreateFolderRequestEventArgs(winrt.system.Object):
     @_property
     def request(self) -> typing.Optional[EmailMailboxCreateFolderRequest]: ...
 
+@typing.final
 class EmailMailboxDeleteFolderRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMailboxDeleteFolderRequest: ...
@@ -86,6 +91,7 @@ class EmailMailboxDeleteFolderRequest(winrt.system.Object):
     @_property
     def email_mailbox_id(self) -> str: ...
 
+@typing.final
 class EmailMailboxDeleteFolderRequestEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMailboxDeleteFolderRequestEventArgs: ...
@@ -93,6 +99,7 @@ class EmailMailboxDeleteFolderRequestEventArgs(winrt.system.Object):
     @_property
     def request(self) -> typing.Optional[EmailMailboxDeleteFolderRequest]: ...
 
+@typing.final
 class EmailMailboxDownloadAttachmentRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMailboxDownloadAttachmentRequest: ...
@@ -105,6 +112,7 @@ class EmailMailboxDownloadAttachmentRequest(winrt.system.Object):
     @_property
     def email_message_id(self) -> str: ...
 
+@typing.final
 class EmailMailboxDownloadAttachmentRequestEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMailboxDownloadAttachmentRequestEventArgs: ...
@@ -112,6 +120,7 @@ class EmailMailboxDownloadAttachmentRequestEventArgs(winrt.system.Object):
     @_property
     def request(self) -> typing.Optional[EmailMailboxDownloadAttachmentRequest]: ...
 
+@typing.final
 class EmailMailboxDownloadMessageRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMailboxDownloadMessageRequest: ...
@@ -122,6 +131,7 @@ class EmailMailboxDownloadMessageRequest(winrt.system.Object):
     @_property
     def email_message_id(self) -> str: ...
 
+@typing.final
 class EmailMailboxDownloadMessageRequestEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMailboxDownloadMessageRequestEventArgs: ...
@@ -129,6 +139,7 @@ class EmailMailboxDownloadMessageRequestEventArgs(winrt.system.Object):
     @_property
     def request(self) -> typing.Optional[EmailMailboxDownloadMessageRequest]: ...
 
+@typing.final
 class EmailMailboxEmptyFolderRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMailboxEmptyFolderRequest: ...
@@ -139,6 +150,7 @@ class EmailMailboxEmptyFolderRequest(winrt.system.Object):
     @_property
     def email_mailbox_id(self) -> str: ...
 
+@typing.final
 class EmailMailboxEmptyFolderRequestEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMailboxEmptyFolderRequestEventArgs: ...
@@ -146,6 +158,7 @@ class EmailMailboxEmptyFolderRequestEventArgs(winrt.system.Object):
     @_property
     def request(self) -> typing.Optional[EmailMailboxEmptyFolderRequest]: ...
 
+@typing.final
 class EmailMailboxForwardMeetingRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMailboxForwardMeetingRequest: ...
@@ -166,6 +179,7 @@ class EmailMailboxForwardMeetingRequest(winrt.system.Object):
     @_property
     def subject(self) -> str: ...
 
+@typing.final
 class EmailMailboxForwardMeetingRequestEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMailboxForwardMeetingRequestEventArgs: ...
@@ -173,6 +187,7 @@ class EmailMailboxForwardMeetingRequestEventArgs(winrt.system.Object):
     @_property
     def request(self) -> typing.Optional[EmailMailboxForwardMeetingRequest]: ...
 
+@typing.final
 class EmailMailboxGetAutoReplySettingsRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMailboxGetAutoReplySettingsRequest: ...
@@ -183,6 +198,7 @@ class EmailMailboxGetAutoReplySettingsRequest(winrt.system.Object):
     @_property
     def requested_format(self) -> winrt.windows.applicationmodel.email.EmailMailboxAutoReplyMessageResponseKind: ...
 
+@typing.final
 class EmailMailboxGetAutoReplySettingsRequestEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMailboxGetAutoReplySettingsRequestEventArgs: ...
@@ -190,6 +206,7 @@ class EmailMailboxGetAutoReplySettingsRequestEventArgs(winrt.system.Object):
     @_property
     def request(self) -> typing.Optional[EmailMailboxGetAutoReplySettingsRequest]: ...
 
+@typing.final
 class EmailMailboxMoveFolderRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMailboxMoveFolderRequest: ...
@@ -204,6 +221,7 @@ class EmailMailboxMoveFolderRequest(winrt.system.Object):
     @_property
     def new_parent_folder_id(self) -> str: ...
 
+@typing.final
 class EmailMailboxMoveFolderRequestEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMailboxMoveFolderRequestEventArgs: ...
@@ -211,6 +229,7 @@ class EmailMailboxMoveFolderRequestEventArgs(winrt.system.Object):
     @_property
     def request(self) -> typing.Optional[EmailMailboxMoveFolderRequest]: ...
 
+@typing.final
 class EmailMailboxProposeNewTimeForMeetingRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMailboxProposeNewTimeForMeetingRequest: ...
@@ -229,6 +248,7 @@ class EmailMailboxProposeNewTimeForMeetingRequest(winrt.system.Object):
     @_property
     def subject(self) -> str: ...
 
+@typing.final
 class EmailMailboxProposeNewTimeForMeetingRequestEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMailboxProposeNewTimeForMeetingRequestEventArgs: ...
@@ -236,6 +256,7 @@ class EmailMailboxProposeNewTimeForMeetingRequestEventArgs(winrt.system.Object):
     @_property
     def request(self) -> typing.Optional[EmailMailboxProposeNewTimeForMeetingRequest]: ...
 
+@typing.final
 class EmailMailboxResolveRecipientsRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMailboxResolveRecipientsRequest: ...
@@ -246,6 +267,7 @@ class EmailMailboxResolveRecipientsRequest(winrt.system.Object):
     @_property
     def recipients(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]: ...
 
+@typing.final
 class EmailMailboxResolveRecipientsRequestEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMailboxResolveRecipientsRequestEventArgs: ...
@@ -253,6 +275,7 @@ class EmailMailboxResolveRecipientsRequestEventArgs(winrt.system.Object):
     @_property
     def request(self) -> typing.Optional[EmailMailboxResolveRecipientsRequest]: ...
 
+@typing.final
 class EmailMailboxServerSearchReadBatchRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMailboxServerSearchReadBatchRequest: ...
@@ -270,6 +293,7 @@ class EmailMailboxServerSearchReadBatchRequest(winrt.system.Object):
     @_property
     def suggested_batch_size(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class EmailMailboxServerSearchReadBatchRequestEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMailboxServerSearchReadBatchRequestEventArgs: ...
@@ -277,6 +301,7 @@ class EmailMailboxServerSearchReadBatchRequestEventArgs(winrt.system.Object):
     @_property
     def request(self) -> typing.Optional[EmailMailboxServerSearchReadBatchRequest]: ...
 
+@typing.final
 class EmailMailboxSetAutoReplySettingsRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMailboxSetAutoReplySettingsRequest: ...
@@ -287,6 +312,7 @@ class EmailMailboxSetAutoReplySettingsRequest(winrt.system.Object):
     @_property
     def email_mailbox_id(self) -> str: ...
 
+@typing.final
 class EmailMailboxSetAutoReplySettingsRequestEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMailboxSetAutoReplySettingsRequestEventArgs: ...
@@ -294,6 +320,7 @@ class EmailMailboxSetAutoReplySettingsRequestEventArgs(winrt.system.Object):
     @_property
     def request(self) -> typing.Optional[EmailMailboxSetAutoReplySettingsRequest]: ...
 
+@typing.final
 class EmailMailboxSyncManagerSyncRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMailboxSyncManagerSyncRequest: ...
@@ -302,6 +329,7 @@ class EmailMailboxSyncManagerSyncRequest(winrt.system.Object):
     @_property
     def email_mailbox_id(self) -> str: ...
 
+@typing.final
 class EmailMailboxSyncManagerSyncRequestEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMailboxSyncManagerSyncRequestEventArgs: ...
@@ -309,6 +337,7 @@ class EmailMailboxSyncManagerSyncRequestEventArgs(winrt.system.Object):
     @_property
     def request(self) -> typing.Optional[EmailMailboxSyncManagerSyncRequest]: ...
 
+@typing.final
 class EmailMailboxUpdateMeetingResponseRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMailboxUpdateMeetingResponseRequest: ...
@@ -327,6 +356,7 @@ class EmailMailboxUpdateMeetingResponseRequest(winrt.system.Object):
     @_property
     def subject(self) -> str: ...
 
+@typing.final
 class EmailMailboxUpdateMeetingResponseRequestEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMailboxUpdateMeetingResponseRequestEventArgs: ...
@@ -334,6 +364,7 @@ class EmailMailboxUpdateMeetingResponseRequestEventArgs(winrt.system.Object):
     @_property
     def request(self) -> typing.Optional[EmailMailboxUpdateMeetingResponseRequest]: ...
 
+@typing.final
 class EmailMailboxValidateCertificatesRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMailboxValidateCertificatesRequest: ...
@@ -344,6 +375,7 @@ class EmailMailboxValidateCertificatesRequest(winrt.system.Object):
     @_property
     def email_mailbox_id(self) -> str: ...
 
+@typing.final
 class EmailMailboxValidateCertificatesRequestEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMailboxValidateCertificatesRequestEventArgs: ...

@@ -19,6 +19,7 @@ from winrt.windows.networking.servicediscovery.dnssd import DnssdRegistrationSta
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class DnssdRegistrationResult(winrt.system.Object):
     def __str__(self) -> str: ...
     @staticmethod
@@ -32,6 +33,7 @@ class DnssdRegistrationResult(winrt.system.Object):
     @_property
     def status(self) -> DnssdRegistrationStatus: ...
 
+@typing.final
 class DnssdServiceInstance(winrt.system.Object):
     def __str__(self) -> str: ...
     @staticmethod
@@ -69,6 +71,7 @@ class DnssdServiceInstance(winrt.system.Object):
     @_property
     def text_attributes(self) -> typing.Optional[winrt.windows.foundation.collections.IMap[str, str]]: ...
 
+@typing.final
 class DnssdServiceInstanceCollection(winrt.system.Object, winrt._winrt.Sequence[DnssdServiceInstance]):
     def __len__(self) -> int: ...
     def __iter__(self) -> winrt.windows.foundation.collections.IIterator[DnssdServiceInstance]: ...
@@ -85,6 +88,7 @@ class DnssdServiceInstanceCollection(winrt.system.Object, winrt._winrt.Sequence[
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class DnssdServiceWatcher(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DnssdServiceWatcher: ...

@@ -20,6 +20,7 @@ from winrt.windows.media.miracast import MiracastReceiverApplySettingsStatus, Mi
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class MiracastReceiver(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MiracastReceiver: ...
@@ -38,6 +39,7 @@ class MiracastReceiver(winrt.system.Object):
     def add_status_changed(self, handler: winrt.windows.foundation.TypedEventHandler[MiracastReceiver, winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_status_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class MiracastReceiverApplySettingsResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MiracastReceiverApplySettingsResult: ...
@@ -46,6 +48,7 @@ class MiracastReceiverApplySettingsResult(winrt.system.Object):
     @_property
     def status(self) -> MiracastReceiverApplySettingsStatus: ...
 
+@typing.final
 class MiracastReceiverConnection(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -69,6 +72,7 @@ class MiracastReceiverConnection(winrt.system.Object):
     @_property
     def transmitter(self) -> typing.Optional[MiracastTransmitter]: ...
 
+@typing.final
 class MiracastReceiverConnectionCreatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MiracastReceiverConnectionCreatedEventArgs: ...
@@ -78,6 +82,7 @@ class MiracastReceiverConnectionCreatedEventArgs(winrt.system.Object):
     @_property
     def pin(self) -> str: ...
 
+@typing.final
 class MiracastReceiverCursorImageChannel(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MiracastReceiverCursorImageChannel: ...
@@ -94,6 +99,7 @@ class MiracastReceiverCursorImageChannel(winrt.system.Object):
     @_property
     def position(self) -> winrt.windows.graphics.PointInt32: ...
 
+@typing.final
 class MiracastReceiverCursorImageChannelSettings(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MiracastReceiverCursorImageChannelSettings: ...
@@ -106,12 +112,14 @@ class MiracastReceiverCursorImageChannelSettings(winrt.system.Object):
     @is_enabled.setter
     def is_enabled(self, value: bool) -> None: ...
 
+@typing.final
 class MiracastReceiverDisconnectedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MiracastReceiverDisconnectedEventArgs: ...
     @_property
     def connection(self) -> typing.Optional[MiracastReceiverConnection]: ...
 
+@typing.final
 class MiracastReceiverGameControllerDevice(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MiracastReceiverGameControllerDevice: ...
@@ -130,6 +138,7 @@ class MiracastReceiverGameControllerDevice(winrt.system.Object):
     @_property
     def is_transmitting_input(self) -> bool: ...
 
+@typing.final
 class MiracastReceiverInputDevices(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MiracastReceiverInputDevices: ...
@@ -138,6 +147,7 @@ class MiracastReceiverInputDevices(winrt.system.Object):
     @_property
     def keyboard(self) -> typing.Optional[MiracastReceiverKeyboardDevice]: ...
 
+@typing.final
 class MiracastReceiverKeyboardDevice(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MiracastReceiverKeyboardDevice: ...
@@ -152,6 +162,7 @@ class MiracastReceiverKeyboardDevice(winrt.system.Object):
     @_property
     def is_transmitting_input(self) -> bool: ...
 
+@typing.final
 class MiracastReceiverMediaSourceCreatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MiracastReceiverMediaSourceCreatedEventArgs: ...
@@ -163,6 +174,7 @@ class MiracastReceiverMediaSourceCreatedEventArgs(winrt.system.Object):
     @_property
     def media_source(self) -> typing.Optional[winrt.windows.media.core.MediaSource]: ...
 
+@typing.final
 class MiracastReceiverSession(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -186,6 +198,7 @@ class MiracastReceiverSession(winrt.system.Object):
     @allow_connection_takeover.setter
     def allow_connection_takeover(self, value: bool) -> None: ...
 
+@typing.final
 class MiracastReceiverSessionStartResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MiracastReceiverSessionStartResult: ...
@@ -194,6 +207,7 @@ class MiracastReceiverSessionStartResult(winrt.system.Object):
     @_property
     def status(self) -> MiracastReceiverSessionStartStatus: ...
 
+@typing.final
 class MiracastReceiverSettings(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MiracastReceiverSettings: ...
@@ -218,6 +232,7 @@ class MiracastReceiverSettings(winrt.system.Object):
     @authorization_method.setter
     def authorization_method(self, value: MiracastReceiverAuthorizationMethod) -> None: ...
 
+@typing.final
 class MiracastReceiverStatus(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MiracastReceiverStatus: ...
@@ -232,6 +247,7 @@ class MiracastReceiverStatus(winrt.system.Object):
     @_property
     def wi_fi_status(self) -> MiracastReceiverWiFiStatus: ...
 
+@typing.final
 class MiracastReceiverStreamControl(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MiracastReceiverStreamControl: ...
@@ -244,6 +260,7 @@ class MiracastReceiverStreamControl(winrt.system.Object):
     @mute_audio.setter
     def mute_audio(self, value: bool) -> None: ...
 
+@typing.final
 class MiracastReceiverVideoStreamSettings(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MiracastReceiverVideoStreamSettings: ...
@@ -256,6 +273,7 @@ class MiracastReceiverVideoStreamSettings(winrt.system.Object):
     @bitrate.setter
     def bitrate(self, value: winrt.system.Int32) -> None: ...
 
+@typing.final
 class MiracastTransmitter(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MiracastTransmitter: ...

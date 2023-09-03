@@ -17,6 +17,7 @@ from winrt.windows.applicationmodel.userdatatasks import UserDataTaskDaysOfWeek,
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class UserDataTask(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDataTask: ...
@@ -76,12 +77,14 @@ class UserDataTask(winrt.system.Object):
     @_property
     def list_id(self) -> str: ...
 
+@typing.final
 class UserDataTaskBatch(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDataTaskBatch: ...
     @_property
     def tasks(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[UserDataTask]]: ...
 
+@typing.final
 class UserDataTaskList(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDataTaskList: ...
@@ -118,6 +121,7 @@ class UserDataTaskList(winrt.system.Object):
     @_property
     def user_data_account_id(self) -> str: ...
 
+@typing.final
 class UserDataTaskListLimitedWriteOperations(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDataTaskListLimitedWriteOperations: ...
@@ -126,6 +130,7 @@ class UserDataTaskListLimitedWriteOperations(winrt.system.Object):
     def try_delete_task_async(self, user_data_task_id: str, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     def try_skip_occurrence_async(self, user_data_task_id: str, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
 
+@typing.final
 class UserDataTaskListSyncManager(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDataTaskListSyncManager: ...
@@ -145,10 +150,12 @@ class UserDataTaskListSyncManager(winrt.system.Object):
     @last_attempted_sync_time.setter
     def last_attempted_sync_time(self, value: datetime.datetime) -> None: ...
 
+@typing.final
 class UserDataTaskManager_Static(type):
     def get_default(cls) -> typing.Optional[UserDataTaskManager]: ...
     def get_for_user(cls, user: typing.Optional[winrt.windows.system.User], /) -> typing.Optional[UserDataTaskManager]: ...
 
+@typing.final
 class UserDataTaskManager(winrt.system.Object, metaclass=UserDataTaskManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDataTaskManager: ...
@@ -156,6 +163,7 @@ class UserDataTaskManager(winrt.system.Object, metaclass=UserDataTaskManager_Sta
     @_property
     def user(self) -> typing.Optional[winrt.windows.system.User]: ...
 
+@typing.final
 class UserDataTaskQueryOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDataTaskQueryOptions: ...
@@ -169,11 +177,13 @@ class UserDataTaskQueryOptions(winrt.system.Object):
     @kind.setter
     def kind(self, value: UserDataTaskQueryKind) -> None: ...
 
+@typing.final
 class UserDataTaskReader(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDataTaskReader: ...
     def read_batch_async(self) -> winrt.windows.foundation.IAsyncOperation[UserDataTaskBatch]: ...
 
+@typing.final
 class UserDataTaskRecurrenceProperties(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDataTaskRecurrenceProperties: ...
@@ -211,6 +221,7 @@ class UserDataTaskRecurrenceProperties(winrt.system.Object):
     @day.setter
     def day(self, value: typing.Optional[typing.Optional[winrt.system.Int32]]) -> None: ...
 
+@typing.final
 class UserDataTaskRegenerationProperties(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDataTaskRegenerationProperties: ...
@@ -232,6 +243,7 @@ class UserDataTaskRegenerationProperties(winrt.system.Object):
     @interval.setter
     def interval(self, value: winrt.system.Int32) -> None: ...
 
+@typing.final
 class UserDataTaskStore(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDataTaskStore: ...

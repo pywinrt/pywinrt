@@ -20,12 +20,14 @@ from winrt.windows.networking.proximity import DeviceArrivedEventHandler, Device
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class ConnectionRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ConnectionRequestedEventArgs: ...
     @_property
     def peer_information(self) -> typing.Optional[PeerInformation]: ...
 
+@typing.final
 class PeerFinder_Static(type):
     def connect_async(cls, peer_information: typing.Optional[PeerInformation], /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.networking.sockets.StreamSocket]: ...
     def create_watcher(cls) -> typing.Optional[PeerWatcher]: ...
@@ -68,10 +70,12 @@ class PeerFinder_Static(type):
     @discovery_data.setter
     def discovery_data(cls, value: typing.Optional[winrt.windows.storage.streams.IBuffer]) -> None: ...
 
+@typing.final
 class PeerFinder(winrt.system.Object, metaclass=PeerFinder_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PeerFinder: ...
 
+@typing.final
 class PeerInformation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PeerInformation: ...
@@ -86,6 +90,7 @@ class PeerInformation(winrt.system.Object):
     @_property
     def service_name(self) -> str: ...
 
+@typing.final
 class PeerWatcher(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PeerWatcher: ...
@@ -104,11 +109,13 @@ class PeerWatcher(winrt.system.Object):
     @_property
     def status(self) -> PeerWatcherStatus: ...
 
+@typing.final
 class ProximityDevice_Static(type):
     def from_id(cls, device_id: str, /) -> typing.Optional[ProximityDevice]: ...
     def get_default(cls) -> typing.Optional[ProximityDevice]: ...
     def get_device_selector(cls) -> str: ...
 
+@typing.final
 class ProximityDevice(winrt.system.Object, metaclass=ProximityDevice_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProximityDevice: ...
@@ -138,6 +145,7 @@ class ProximityDevice(winrt.system.Object, metaclass=ProximityDevice_Static):
     @_property
     def max_message_bytes(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class ProximityMessage(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProximityMessage: ...
@@ -150,6 +158,7 @@ class ProximityMessage(winrt.system.Object):
     @_property
     def subscription_id(self) -> winrt.system.Int64: ...
 
+@typing.final
 class TriggeredConnectionStateChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TriggeredConnectionStateChangedEventArgs: ...

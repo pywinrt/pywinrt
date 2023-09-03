@@ -21,9 +21,11 @@ from winrt.windows.applicationmodel.store.preview import DeliveryOptimizationDow
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class DeliveryOptimizationSettings_Static(type):
     def get_current_settings(cls) -> typing.Optional[DeliveryOptimizationSettings]: ...
 
+@typing.final
 class DeliveryOptimizationSettings(winrt.system.Object, metaclass=DeliveryOptimizationSettings_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DeliveryOptimizationSettings: ...
@@ -32,6 +34,7 @@ class DeliveryOptimizationSettings(winrt.system.Object, metaclass=DeliveryOptimi
     @_property
     def download_mode_source(self) -> DeliveryOptimizationDownloadModeSource: ...
 
+@typing.final
 class StoreConfiguration_Static(type):
     def filter_unsupported_system_features_async(cls, system_features: typing.Iterable[StoreSystemFeature], /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[StoreSystemFeature]]: ...
     def get_enterprise_store_web_account_id(cls) -> str: ...
@@ -65,10 +68,12 @@ class StoreConfiguration_Static(type):
     @purchase_prompting_policy.setter
     def purchase_prompting_policy(cls, value: typing.Optional[typing.Optional[winrt.system.UInt32]]) -> None: ...
 
+@typing.final
 class StoreConfiguration(winrt.system.Object, metaclass=StoreConfiguration_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StoreConfiguration: ...
 
+@typing.final
 class StoreHardwareManufacturerInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StoreHardwareManufacturerInfo: ...
@@ -81,14 +86,17 @@ class StoreHardwareManufacturerInfo(winrt.system.Object):
     @_property
     def store_content_modifier_id(self) -> str: ...
 
+@typing.final
 class StorePreview_Static(type):
     def load_add_on_product_infos_async(cls) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[StorePreviewProductInfo]]: ...
     def request_product_purchase_by_product_id_and_sku_id_async(cls, product_id: str, sku_id: str, /) -> winrt.windows.foundation.IAsyncOperation[StorePreviewPurchaseResults]: ...
 
+@typing.final
 class StorePreview(winrt.system.Object, metaclass=StorePreview_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StorePreview: ...
 
+@typing.final
 class StorePreviewProductInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StorePreviewProductInfo: ...
@@ -103,12 +111,14 @@ class StorePreviewProductInfo(winrt.system.Object):
     @_property
     def title(self) -> str: ...
 
+@typing.final
 class StorePreviewPurchaseResults(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StorePreviewPurchaseResults: ...
     @_property
     def product_purchase_status(self) -> StorePreviewProductPurchaseStatus: ...
 
+@typing.final
 class StorePreviewSkuInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StorePreviewSkuInfo: ...
@@ -131,12 +141,14 @@ class StorePreviewSkuInfo(winrt.system.Object):
     @_property
     def title(self) -> str: ...
 
+@typing.final
 class WebAuthenticationCoreManagerHelper_Static(type):
     @typing.overload
     def request_token_with_u_i_element_hosting_async(cls, request: typing.Optional[winrt.windows.security.authentication.web.core.WebTokenRequest], ui_element: typing.Optional[winrt.windows.ui.xaml.UIElement], /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.security.authentication.web.core.WebTokenRequestResult]: ...
     @typing.overload
     def request_token_with_u_i_element_hosting_async(cls, request: typing.Optional[winrt.windows.security.authentication.web.core.WebTokenRequest], web_account: typing.Optional[winrt.windows.security.credentials.WebAccount], ui_element: typing.Optional[winrt.windows.ui.xaml.UIElement], /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.security.authentication.web.core.WebTokenRequestResult]: ...
 
+@typing.final
 class WebAuthenticationCoreManagerHelper(winrt.system.Object, metaclass=WebAuthenticationCoreManagerHelper_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebAuthenticationCoreManagerHelper: ...

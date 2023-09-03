@@ -19,13 +19,16 @@ from winrt.windows.storage.provider import CachedFileOptions, CachedFileTarget, 
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class CachedFileUpdater_Static(type):
     def set_update_information(cls, file: typing.Optional[winrt.windows.storage.IStorageFile], content_id: str, read_mode: ReadActivationMode, write_mode: WriteActivationMode, options: CachedFileOptions, /) -> None: ...
 
+@typing.final
 class CachedFileUpdater(winrt.system.Object, metaclass=CachedFileUpdater_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CachedFileUpdater: ...
 
+@typing.final
 class CachedFileUpdaterUI(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CachedFileUpdaterUI: ...
@@ -45,6 +48,7 @@ class CachedFileUpdaterUI(winrt.system.Object):
     @_property
     def update_request(self) -> typing.Optional[FileUpdateRequest]: ...
 
+@typing.final
 class FileUpdateRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FileUpdateRequest: ...
@@ -63,17 +67,20 @@ class FileUpdateRequest(winrt.system.Object):
     @user_input_needed_message.setter
     def user_input_needed_message(self, value: str) -> None: ...
 
+@typing.final
 class FileUpdateRequestDeferral(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FileUpdateRequestDeferral: ...
     def complete(self) -> None: ...
 
+@typing.final
 class FileUpdateRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FileUpdateRequestedEventArgs: ...
     @_property
     def request(self) -> typing.Optional[FileUpdateRequest]: ...
 
+@typing.final
 class StorageProviderFileTypeInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StorageProviderFileTypeInfo: ...
@@ -83,6 +90,7 @@ class StorageProviderFileTypeInfo(winrt.system.Object):
     @_property
     def icon_resource(self) -> str: ...
 
+@typing.final
 class StorageProviderGetContentInfoForPathResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StorageProviderGetContentInfoForPathResult: ...
@@ -100,6 +108,7 @@ class StorageProviderGetContentInfoForPathResult(winrt.system.Object):
     @content_id.setter
     def content_id(self, value: str) -> None: ...
 
+@typing.final
 class StorageProviderGetPathForContentUriResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StorageProviderGetPathForContentUriResult: ...
@@ -113,13 +122,16 @@ class StorageProviderGetPathForContentUriResult(winrt.system.Object):
     @path.setter
     def path(self, value: str) -> None: ...
 
+@typing.final
 class StorageProviderItemProperties_Static(type):
     def set_async(cls, item: typing.Optional[winrt.windows.storage.IStorageItem], item_properties: typing.Iterable[StorageProviderItemProperty], /) -> winrt.windows.foundation.IAsyncAction: ...
 
+@typing.final
 class StorageProviderItemProperties(winrt.system.Object, metaclass=StorageProviderItemProperties_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StorageProviderItemProperties: ...
 
+@typing.final
 class StorageProviderItemProperty(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StorageProviderItemProperty: ...
@@ -137,6 +149,7 @@ class StorageProviderItemProperty(winrt.system.Object):
     @icon_resource.setter
     def icon_resource(self, value: str) -> None: ...
 
+@typing.final
 class StorageProviderItemPropertyDefinition(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StorageProviderItemPropertyDefinition: ...
@@ -150,6 +163,7 @@ class StorageProviderItemPropertyDefinition(winrt.system.Object):
     @display_name_resource.setter
     def display_name_resource(self, value: str) -> None: ...
 
+@typing.final
 class StorageProviderMoreInfoUI(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StorageProviderMoreInfoUI: ...
@@ -163,6 +177,7 @@ class StorageProviderMoreInfoUI(winrt.system.Object):
     @command.setter
     def command(self, value: typing.Optional[IStorageProviderUICommand]) -> None: ...
 
+@typing.final
 class StorageProviderQuotaUI(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StorageProviderQuotaUI: ...
@@ -184,6 +199,7 @@ class StorageProviderQuotaUI(winrt.system.Object):
     @quota_total_in_bytes.setter
     def quota_total_in_bytes(self, value: winrt.system.UInt64) -> None: ...
 
+@typing.final
 class StorageProviderStatusUI(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StorageProviderStatusUI: ...
@@ -221,6 +237,7 @@ class StorageProviderStatusUI(winrt.system.Object):
     @more_info_u_i.setter
     def more_info_u_i(self, value: typing.Optional[StorageProviderMoreInfoUI]) -> None: ...
 
+@typing.final
 class StorageProviderSyncRootInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StorageProviderSyncRootInfo: ...
@@ -294,6 +311,7 @@ class StorageProviderSyncRootInfo(winrt.system.Object):
     @_property
     def fallback_file_type_info(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[StorageProviderFileTypeInfo]]: ...
 
+@typing.final
 class StorageProviderSyncRootManager_Static(type):
     def get_current_sync_roots(cls) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[StorageProviderSyncRootInfo]]: ...
     def get_sync_root_information_for_folder(cls, folder: typing.Optional[winrt.windows.storage.IStorageFolder], /) -> typing.Optional[StorageProviderSyncRootInfo]: ...
@@ -302,20 +320,24 @@ class StorageProviderSyncRootManager_Static(type):
     def register(cls, sync_root_information: typing.Optional[StorageProviderSyncRootInfo], /) -> None: ...
     def unregister(cls, id: str, /) -> None: ...
 
+@typing.final
 class StorageProviderSyncRootManager(winrt.system.Object, metaclass=StorageProviderSyncRootManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StorageProviderSyncRootManager: ...
 
+@typing.final
 class IStorageProviderItemPropertySource(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStorageProviderItemPropertySource: ...
     def get_item_properties(self, item_path: str, /) -> typing.Optional[winrt.windows.foundation.collections.IIterable[StorageProviderItemProperty]]: ...
 
+@typing.final
 class IStorageProviderPropertyCapabilities(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStorageProviderPropertyCapabilities: ...
     def is_property_supported(self, property_canonical_name: str, /) -> bool: ...
 
+@typing.final
 class IStorageProviderStatusUISource(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStorageProviderStatusUISource: ...
@@ -323,11 +345,13 @@ class IStorageProviderStatusUISource(winrt.system.Object):
     def add_status_u_i_changed(self, handler: winrt.windows.foundation.TypedEventHandler[IStorageProviderStatusUISource, winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_status_u_i_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class IStorageProviderStatusUISourceFactory(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStorageProviderStatusUISourceFactory: ...
     def get_status_u_i_source(self, sync_root_id: str, /) -> typing.Optional[IStorageProviderStatusUISource]: ...
 
+@typing.final
 class IStorageProviderUICommand(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStorageProviderUICommand: ...
@@ -341,6 +365,7 @@ class IStorageProviderUICommand(winrt.system.Object):
     @_property
     def state(self) -> StorageProviderUICommandState: ...
 
+@typing.final
 class IStorageProviderUriSource(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStorageProviderUriSource: ...

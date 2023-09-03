@@ -21,9 +21,11 @@ from winrt.windows.web.http.filters import HttpCacheReadBehavior, HttpCacheWrite
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class HttpBaseProtocolFilter_Static(type):
     def create_for_user(cls, user: typing.Optional[winrt.windows.system.User], /) -> typing.Optional[HttpBaseProtocolFilter]: ...
 
+@typing.final
 class HttpBaseProtocolFilter(winrt.system.Object, metaclass=HttpBaseProtocolFilter_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -84,6 +86,7 @@ class HttpBaseProtocolFilter(winrt.system.Object, metaclass=HttpBaseProtocolFilt
     @_property
     def user(self) -> typing.Optional[winrt.windows.system.User]: ...
 
+@typing.final
 class HttpCacheControl(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HttpCacheControl: ...
@@ -96,6 +99,7 @@ class HttpCacheControl(winrt.system.Object):
     @read_behavior.setter
     def read_behavior(self, value: HttpCacheReadBehavior) -> None: ...
 
+@typing.final
 class HttpServerCustomValidationRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HttpServerCustomValidationRequestedEventArgs: ...
@@ -112,6 +116,7 @@ class HttpServerCustomValidationRequestedEventArgs(winrt.system.Object):
     @_property
     def server_intermediate_certificates(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.security.cryptography.certificates.Certificate]]: ...
 
+@typing.final
 class IHttpFilter(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...

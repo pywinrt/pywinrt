@@ -16,10 +16,12 @@ from winrt.windows.devices.custom import DeviceAccessMode, DeviceSharingMode, IO
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class CustomDevice_Static(type):
     def from_id_async(cls, device_id: str, desired_access: DeviceAccessMode, sharing_mode: DeviceSharingMode, /) -> winrt.windows.foundation.IAsyncOperation[CustomDevice]: ...
     def get_device_selector(cls, class_guid: _uuid.UUID, /) -> str: ...
 
+@typing.final
 class CustomDevice(winrt.system.Object, metaclass=CustomDevice_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CustomDevice: ...
@@ -30,6 +32,7 @@ class CustomDevice(winrt.system.Object, metaclass=CustomDevice_Static):
     @_property
     def output_stream(self) -> typing.Optional[winrt.windows.storage.streams.IOutputStream]: ...
 
+@typing.final
 class IOControlCode(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IOControlCode: ...
@@ -45,14 +48,17 @@ class IOControlCode(winrt.system.Object):
     @_property
     def function(self) -> winrt.system.UInt16: ...
 
+@typing.final
 class KnownDeviceTypes_Static(type):
     @_property
     def unknown(cls) -> winrt.system.UInt16: ...
 
+@typing.final
 class KnownDeviceTypes(winrt.system.Object, metaclass=KnownDeviceTypes_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> KnownDeviceTypes: ...
 
+@typing.final
 class IIOControlCode(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IIOControlCode: ...

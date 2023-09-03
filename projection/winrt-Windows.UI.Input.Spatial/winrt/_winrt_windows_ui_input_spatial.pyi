@@ -23,6 +23,7 @@ from winrt.windows.ui.input.spatial import SpatialGestureSettings, SpatialIntera
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class SpatialGestureRecognizer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialGestureRecognizer: ...
@@ -61,18 +62,21 @@ class SpatialGestureRecognizer(winrt.system.Object):
     @_property
     def gesture_settings(self) -> SpatialGestureSettings: ...
 
+@typing.final
 class SpatialHoldCanceledEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialHoldCanceledEventArgs: ...
     @_property
     def interaction_source_kind(self) -> SpatialInteractionSourceKind: ...
 
+@typing.final
 class SpatialHoldCompletedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialHoldCompletedEventArgs: ...
     @_property
     def interaction_source_kind(self) -> SpatialInteractionSourceKind: ...
 
+@typing.final
 class SpatialHoldStartedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialHoldStartedEventArgs: ...
@@ -80,12 +84,14 @@ class SpatialHoldStartedEventArgs(winrt.system.Object):
     @_property
     def interaction_source_kind(self) -> SpatialInteractionSourceKind: ...
 
+@typing.final
 class SpatialInteraction(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialInteraction: ...
     @_property
     def source_state(self) -> typing.Optional[SpatialInteractionSourceState]: ...
 
+@typing.final
 class SpatialInteractionController(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialInteractionController: ...
@@ -104,6 +110,7 @@ class SpatialInteractionController(winrt.system.Object):
     @_property
     def version(self) -> winrt.system.UInt16: ...
 
+@typing.final
 class SpatialInteractionControllerProperties(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialInteractionControllerProperties: ...
@@ -122,6 +129,7 @@ class SpatialInteractionControllerProperties(winrt.system.Object):
     @_property
     def touchpad_y(self) -> winrt.system.Double: ...
 
+@typing.final
 class SpatialInteractionDetectedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialInteractionDetectedEventArgs: ...
@@ -133,10 +141,12 @@ class SpatialInteractionDetectedEventArgs(winrt.system.Object):
     @_property
     def interaction_source(self) -> typing.Optional[SpatialInteractionSource]: ...
 
+@typing.final
 class SpatialInteractionManager_Static(type):
     def get_for_current_view(cls) -> typing.Optional[SpatialInteractionManager]: ...
     def is_source_kind_supported(cls, kind: SpatialInteractionSourceKind, /) -> bool: ...
 
+@typing.final
 class SpatialInteractionManager(winrt.system.Object, metaclass=SpatialInteractionManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialInteractionManager: ...
@@ -154,6 +164,7 @@ class SpatialInteractionManager(winrt.system.Object, metaclass=SpatialInteractio
     def add_source_updated(self, handler: winrt.windows.foundation.TypedEventHandler[SpatialInteractionManager, SpatialInteractionSourceEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_source_updated(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class SpatialInteractionSource(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialInteractionSource: ...
@@ -175,6 +186,7 @@ class SpatialInteractionSource(winrt.system.Object):
     @_property
     def handedness(self) -> SpatialInteractionSourceHandedness: ...
 
+@typing.final
 class SpatialInteractionSourceEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialInteractionSourceEventArgs: ...
@@ -183,6 +195,7 @@ class SpatialInteractionSourceEventArgs(winrt.system.Object):
     @_property
     def press_kind(self) -> SpatialInteractionPressKind: ...
 
+@typing.final
 class SpatialInteractionSourceLocation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialInteractionSourceLocation: ...
@@ -199,6 +212,7 @@ class SpatialInteractionSourceLocation(winrt.system.Object):
     @_property
     def source_pointer_pose(self) -> typing.Optional[SpatialPointerInteractionSourcePose]: ...
 
+@typing.final
 class SpatialInteractionSourceProperties(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialInteractionSourceProperties: ...
@@ -207,6 +221,7 @@ class SpatialInteractionSourceProperties(winrt.system.Object):
     @_property
     def source_loss_risk(self) -> winrt.system.Double: ...
 
+@typing.final
 class SpatialInteractionSourceState(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialInteractionSourceState: ...
@@ -231,12 +246,14 @@ class SpatialInteractionSourceState(winrt.system.Object):
     @_property
     def select_pressed_value(self) -> winrt.system.Double: ...
 
+@typing.final
 class SpatialManipulationCanceledEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialManipulationCanceledEventArgs: ...
     @_property
     def interaction_source_kind(self) -> SpatialInteractionSourceKind: ...
 
+@typing.final
 class SpatialManipulationCompletedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialManipulationCompletedEventArgs: ...
@@ -244,12 +261,14 @@ class SpatialManipulationCompletedEventArgs(winrt.system.Object):
     @_property
     def interaction_source_kind(self) -> SpatialInteractionSourceKind: ...
 
+@typing.final
 class SpatialManipulationDelta(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialManipulationDelta: ...
     @_property
     def translation(self) -> winrt.windows.foundation.numerics.Vector3: ...
 
+@typing.final
 class SpatialManipulationStartedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialManipulationStartedEventArgs: ...
@@ -257,6 +276,7 @@ class SpatialManipulationStartedEventArgs(winrt.system.Object):
     @_property
     def interaction_source_kind(self) -> SpatialInteractionSourceKind: ...
 
+@typing.final
 class SpatialManipulationUpdatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialManipulationUpdatedEventArgs: ...
@@ -264,12 +284,14 @@ class SpatialManipulationUpdatedEventArgs(winrt.system.Object):
     @_property
     def interaction_source_kind(self) -> SpatialInteractionSourceKind: ...
 
+@typing.final
 class SpatialNavigationCanceledEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialNavigationCanceledEventArgs: ...
     @_property
     def interaction_source_kind(self) -> SpatialInteractionSourceKind: ...
 
+@typing.final
 class SpatialNavigationCompletedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialNavigationCompletedEventArgs: ...
@@ -278,6 +300,7 @@ class SpatialNavigationCompletedEventArgs(winrt.system.Object):
     @_property
     def normalized_offset(self) -> winrt.windows.foundation.numerics.Vector3: ...
 
+@typing.final
 class SpatialNavigationStartedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialNavigationStartedEventArgs: ...
@@ -291,6 +314,7 @@ class SpatialNavigationStartedEventArgs(winrt.system.Object):
     @_property
     def is_navigating_z(self) -> bool: ...
 
+@typing.final
 class SpatialNavigationUpdatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialNavigationUpdatedEventArgs: ...
@@ -299,6 +323,7 @@ class SpatialNavigationUpdatedEventArgs(winrt.system.Object):
     @_property
     def normalized_offset(self) -> winrt.windows.foundation.numerics.Vector3: ...
 
+@typing.final
 class SpatialPointerInteractionSourcePose(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialPointerInteractionSourcePose: ...
@@ -313,9 +338,11 @@ class SpatialPointerInteractionSourcePose(winrt.system.Object):
     @_property
     def position_accuracy(self) -> SpatialInteractionSourcePositionAccuracy: ...
 
+@typing.final
 class SpatialPointerPose_Static(type):
     def try_get_at_timestamp(cls, coordinate_system: typing.Optional[winrt.windows.perception.spatial.SpatialCoordinateSystem], timestamp: typing.Optional[winrt.windows.perception.PerceptionTimestamp], /) -> typing.Optional[SpatialPointerPose]: ...
 
+@typing.final
 class SpatialPointerPose(winrt.system.Object, metaclass=SpatialPointerPose_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialPointerPose: ...
@@ -329,12 +356,14 @@ class SpatialPointerPose(winrt.system.Object, metaclass=SpatialPointerPose_Stati
     @_property
     def is_head_captured_by_system(self) -> bool: ...
 
+@typing.final
 class SpatialRecognitionEndedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialRecognitionEndedEventArgs: ...
     @_property
     def interaction_source_kind(self) -> SpatialInteractionSourceKind: ...
 
+@typing.final
 class SpatialRecognitionStartedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialRecognitionStartedEventArgs: ...
@@ -343,6 +372,7 @@ class SpatialRecognitionStartedEventArgs(winrt.system.Object):
     @_property
     def interaction_source_kind(self) -> SpatialInteractionSourceKind: ...
 
+@typing.final
 class SpatialTappedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialTappedEventArgs: ...

@@ -17,6 +17,7 @@ from winrt.windows.applicationmodel.contacts.provider import AddContactResult
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class ContactPickerUI(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactPickerUI: ...
@@ -35,6 +36,7 @@ class ContactPickerUI(winrt.system.Object):
     @_property
     def desired_fields_with_contact_field_type(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.applicationmodel.contacts.ContactFieldType]]: ...
 
+@typing.final
 class ContactRemovedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactRemovedEventArgs: ...

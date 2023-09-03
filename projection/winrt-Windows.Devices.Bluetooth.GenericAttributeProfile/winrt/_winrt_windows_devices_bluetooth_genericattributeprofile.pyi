@@ -19,9 +19,11 @@ from winrt.windows.devices.bluetooth.genericattributeprofile import GattCharacte
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class GattCharacteristic_Static(type):
     def convert_short_id_to_uuid(cls, short_id: winrt.system.UInt16, /) -> _uuid.UUID: ...
 
+@typing.final
 class GattCharacteristic(winrt.system.Object, metaclass=GattCharacteristic_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattCharacteristic: ...
@@ -69,6 +71,7 @@ class GattCharacteristic(winrt.system.Object, metaclass=GattCharacteristic_Stati
     @_property
     def service(self) -> typing.Optional[GattDeviceService]: ...
 
+@typing.final
 class GattCharacteristicUuids_Static(type):
     @_property
     def heart_rate_measurement(cls) -> _uuid.UUID: ...
@@ -233,10 +236,12 @@ class GattCharacteristicUuids_Static(type):
     @_property
     def gap_device_name(cls) -> _uuid.UUID: ...
 
+@typing.final
 class GattCharacteristicUuids(winrt.system.Object, metaclass=GattCharacteristicUuids_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattCharacteristicUuids: ...
 
+@typing.final
 class GattCharacteristicsResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattCharacteristicsResult: ...
@@ -247,6 +252,7 @@ class GattCharacteristicsResult(winrt.system.Object):
     @_property
     def status(self) -> GattCommunicationStatus: ...
 
+@typing.final
 class GattClientNotificationResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattClientNotificationResult: ...
@@ -259,9 +265,11 @@ class GattClientNotificationResult(winrt.system.Object):
     @_property
     def bytes_sent(self) -> winrt.system.UInt16: ...
 
+@typing.final
 class GattDescriptor_Static(type):
     def convert_short_id_to_uuid(cls, short_id: winrt.system.UInt16, /) -> _uuid.UUID: ...
 
+@typing.final
 class GattDescriptor(winrt.system.Object, metaclass=GattDescriptor_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattDescriptor: ...
@@ -280,6 +288,7 @@ class GattDescriptor(winrt.system.Object, metaclass=GattDescriptor_Static):
     @_property
     def uuid(self) -> _uuid.UUID: ...
 
+@typing.final
 class GattDescriptorUuids_Static(type):
     @_property
     def characteristic_aggregate_format(cls) -> _uuid.UUID: ...
@@ -294,10 +303,12 @@ class GattDescriptorUuids_Static(type):
     @_property
     def server_characteristic_configuration(cls) -> _uuid.UUID: ...
 
+@typing.final
 class GattDescriptorUuids(winrt.system.Object, metaclass=GattDescriptorUuids_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattDescriptorUuids: ...
 
+@typing.final
 class GattDescriptorsResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattDescriptorsResult: ...
@@ -308,6 +319,7 @@ class GattDescriptorsResult(winrt.system.Object):
     @_property
     def status(self) -> GattCommunicationStatus: ...
 
+@typing.final
 class GattDeviceService_Static(type):
     def convert_short_id_to_uuid(cls, short_id: winrt.system.UInt16, /) -> _uuid.UUID: ...
     @typing.overload
@@ -325,6 +337,7 @@ class GattDeviceService_Static(type):
     def get_device_selector_from_short_id(cls, service_short_id: winrt.system.UInt16, /) -> str: ...
     def get_device_selector_from_uuid(cls, service_uuid: _uuid.UUID, /) -> str: ...
 
+@typing.final
 class GattDeviceService(winrt.system.Object, metaclass=GattDeviceService_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -370,6 +383,7 @@ class GattDeviceService(winrt.system.Object, metaclass=GattDeviceService_Static)
     @_property
     def sharing_mode(self) -> GattSharingMode: ...
 
+@typing.final
 class GattDeviceServicesResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattDeviceServicesResult: ...
@@ -380,6 +394,7 @@ class GattDeviceServicesResult(winrt.system.Object):
     @_property
     def status(self) -> GattCommunicationStatus: ...
 
+@typing.final
 class GattLocalCharacteristic(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattLocalCharacteristic: ...
@@ -413,6 +428,7 @@ class GattLocalCharacteristic(winrt.system.Object):
     @_property
     def write_protection_level(self) -> GattProtectionLevel: ...
 
+@typing.final
 class GattLocalCharacteristicParameters(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattLocalCharacteristicParameters: ...
@@ -440,6 +456,7 @@ class GattLocalCharacteristicParameters(winrt.system.Object):
     @_property
     def presentation_formats(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[GattPresentationFormat]]: ...
 
+@typing.final
 class GattLocalCharacteristicResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattLocalCharacteristicResult: ...
@@ -448,6 +465,7 @@ class GattLocalCharacteristicResult(winrt.system.Object):
     @_property
     def error(self) -> winrt.windows.devices.bluetooth.BluetoothError: ...
 
+@typing.final
 class GattLocalDescriptor(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattLocalDescriptor: ...
@@ -464,6 +482,7 @@ class GattLocalDescriptor(winrt.system.Object):
     @_property
     def write_protection_level(self) -> GattProtectionLevel: ...
 
+@typing.final
 class GattLocalDescriptorParameters(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattLocalDescriptorParameters: ...
@@ -481,6 +500,7 @@ class GattLocalDescriptorParameters(winrt.system.Object):
     @read_protection_level.setter
     def read_protection_level(self, value: GattProtectionLevel) -> None: ...
 
+@typing.final
 class GattLocalDescriptorResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattLocalDescriptorResult: ...
@@ -489,6 +509,7 @@ class GattLocalDescriptorResult(winrt.system.Object):
     @_property
     def error(self) -> winrt.windows.devices.bluetooth.BluetoothError: ...
 
+@typing.final
 class GattLocalService(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattLocalService: ...
@@ -498,11 +519,13 @@ class GattLocalService(winrt.system.Object):
     @_property
     def uuid(self) -> _uuid.UUID: ...
 
+@typing.final
 class GattPresentationFormat_Static(type):
     def from_parts(cls, format_type: winrt.system.UInt8, exponent: winrt.system.Int32, unit: winrt.system.UInt16, namespace_id: winrt.system.UInt8, description: winrt.system.UInt16, /) -> typing.Optional[GattPresentationFormat]: ...
     @_property
     def bluetooth_sig_assigned_numbers(cls) -> winrt.system.UInt8: ...
 
+@typing.final
 class GattPresentationFormat(winrt.system.Object, metaclass=GattPresentationFormat_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattPresentationFormat: ...
@@ -517,6 +540,7 @@ class GattPresentationFormat(winrt.system.Object, metaclass=GattPresentationForm
     @_property
     def unit(self) -> winrt.system.UInt16: ...
 
+@typing.final
 class GattPresentationFormatTypes_Static(type):
     @_property
     def bit2(cls) -> winrt.system.UInt8: ...
@@ -573,10 +597,12 @@ class GattPresentationFormatTypes_Static(type):
     @_property
     def utf8(cls) -> winrt.system.UInt8: ...
 
+@typing.final
 class GattPresentationFormatTypes(winrt.system.Object, metaclass=GattPresentationFormatTypes_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattPresentationFormatTypes: ...
 
+@typing.final
 class GattProtocolError_Static(type):
     @_property
     def attribute_not_found(cls) -> winrt.system.UInt8: ...
@@ -613,10 +639,12 @@ class GattProtocolError_Static(type):
     @_property
     def write_not_permitted(cls) -> winrt.system.UInt8: ...
 
+@typing.final
 class GattProtocolError(winrt.system.Object, metaclass=GattProtocolError_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattProtocolError: ...
 
+@typing.final
 class GattReadClientCharacteristicConfigurationDescriptorResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattReadClientCharacteristicConfigurationDescriptorResult: ...
@@ -627,6 +655,7 @@ class GattReadClientCharacteristicConfigurationDescriptorResult(winrt.system.Obj
     @_property
     def protocol_error(self) -> typing.Optional[typing.Optional[winrt.system.UInt8]]: ...
 
+@typing.final
 class GattReadRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattReadRequest: ...
@@ -641,6 +670,7 @@ class GattReadRequest(winrt.system.Object):
     @_property
     def state(self) -> GattRequestState: ...
 
+@typing.final
 class GattReadRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattReadRequestedEventArgs: ...
@@ -649,6 +679,7 @@ class GattReadRequestedEventArgs(winrt.system.Object):
     @_property
     def session(self) -> typing.Optional[GattSession]: ...
 
+@typing.final
 class GattReadResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattReadResult: ...
@@ -659,6 +690,7 @@ class GattReadResult(winrt.system.Object):
     @_property
     def protocol_error(self) -> typing.Optional[typing.Optional[winrt.system.UInt8]]: ...
 
+@typing.final
 class GattReliableWriteTransaction(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattReliableWriteTransaction: ...
@@ -667,6 +699,7 @@ class GattReliableWriteTransaction(winrt.system.Object):
     def commit_with_result_async(self) -> winrt.windows.foundation.IAsyncOperation[GattWriteResult]: ...
     def write_value(self, characteristic: typing.Optional[GattCharacteristic], value: typing.Optional[winrt.windows.storage.streams.IBuffer], /) -> None: ...
 
+@typing.final
 class GattRequestStateChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattRequestStateChangedEventArgs: ...
@@ -675,9 +708,11 @@ class GattRequestStateChangedEventArgs(winrt.system.Object):
     @_property
     def state(self) -> GattRequestState: ...
 
+@typing.final
 class GattServiceProvider_Static(type):
     def create_async(cls, service_uuid: _uuid.UUID, /) -> winrt.windows.foundation.IAsyncOperation[GattServiceProviderResult]: ...
 
+@typing.final
 class GattServiceProvider(winrt.system.Object, metaclass=GattServiceProvider_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattServiceProvider: ...
@@ -693,6 +728,7 @@ class GattServiceProvider(winrt.system.Object, metaclass=GattServiceProvider_Sta
     @_property
     def service(self) -> typing.Optional[GattLocalService]: ...
 
+@typing.final
 class GattServiceProviderAdvertisementStatusChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattServiceProviderAdvertisementStatusChangedEventArgs: ...
@@ -701,6 +737,7 @@ class GattServiceProviderAdvertisementStatusChangedEventArgs(winrt.system.Object
     @_property
     def status(self) -> GattServiceProviderAdvertisementStatus: ...
 
+@typing.final
 class GattServiceProviderAdvertisingParameters(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattServiceProviderAdvertisingParameters: ...
@@ -718,6 +755,7 @@ class GattServiceProviderAdvertisingParameters(winrt.system.Object):
     @service_data.setter
     def service_data(self, value: typing.Optional[winrt.windows.storage.streams.IBuffer]) -> None: ...
 
+@typing.final
 class GattServiceProviderResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattServiceProviderResult: ...
@@ -726,6 +764,7 @@ class GattServiceProviderResult(winrt.system.Object):
     @_property
     def service_provider(self) -> typing.Optional[GattServiceProvider]: ...
 
+@typing.final
 class GattServiceUuids_Static(type):
     @_property
     def battery(cls) -> _uuid.UUID: ...
@@ -772,13 +811,16 @@ class GattServiceUuids_Static(type):
     @_property
     def tx_power(cls) -> _uuid.UUID: ...
 
+@typing.final
 class GattServiceUuids(winrt.system.Object, metaclass=GattServiceUuids_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattServiceUuids: ...
 
+@typing.final
 class GattSession_Static(type):
     def from_device_id_async(cls, device_id: typing.Optional[winrt.windows.devices.bluetooth.BluetoothDeviceId], /) -> winrt.windows.foundation.IAsyncOperation[GattSession]: ...
 
+@typing.final
 class GattSession(winrt.system.Object, metaclass=GattSession_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -802,6 +844,7 @@ class GattSession(winrt.system.Object, metaclass=GattSession_Static):
     @_property
     def session_status(self) -> GattSessionStatus: ...
 
+@typing.final
 class GattSessionStatusChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattSessionStatusChangedEventArgs: ...
@@ -810,6 +853,7 @@ class GattSessionStatusChangedEventArgs(winrt.system.Object):
     @_property
     def status(self) -> GattSessionStatus: ...
 
+@typing.final
 class GattSubscribedClient(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattSubscribedClient: ...
@@ -820,6 +864,7 @@ class GattSubscribedClient(winrt.system.Object):
     @_property
     def session(self) -> typing.Optional[GattSession]: ...
 
+@typing.final
 class GattValueChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattValueChangedEventArgs: ...
@@ -828,6 +873,7 @@ class GattValueChangedEventArgs(winrt.system.Object):
     @_property
     def timestamp(self) -> datetime.datetime: ...
 
+@typing.final
 class GattWriteRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattWriteRequest: ...
@@ -844,6 +890,7 @@ class GattWriteRequest(winrt.system.Object):
     @_property
     def value(self) -> typing.Optional[winrt.windows.storage.streams.IBuffer]: ...
 
+@typing.final
 class GattWriteRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattWriteRequestedEventArgs: ...
@@ -852,6 +899,7 @@ class GattWriteRequestedEventArgs(winrt.system.Object):
     @_property
     def session(self) -> typing.Optional[GattSession]: ...
 
+@typing.final
 class GattWriteResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattWriteResult: ...

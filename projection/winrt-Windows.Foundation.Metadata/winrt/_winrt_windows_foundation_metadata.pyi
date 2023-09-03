@@ -14,6 +14,7 @@ from winrt.windows.foundation.metadata import AttributeTargets, CompositionType,
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class ApiInformation_Static(type):
     @typing.overload
     def is_api_contract_present(cls, contract_name: str, major_version: winrt.system.UInt16, /) -> bool: ...
@@ -30,6 +31,7 @@ class ApiInformation_Static(type):
     def is_type_present(cls, type_name: str, /) -> bool: ...
     def is_writeable_property_present(cls, type_name: str, property_name: str, /) -> bool: ...
 
+@typing.final
 class ApiInformation(winrt.system.Object, metaclass=ApiInformation_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ApiInformation: ...

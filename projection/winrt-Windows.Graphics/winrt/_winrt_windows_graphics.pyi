@@ -12,20 +12,24 @@ import winrt.system
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class DisplayAdapterId:
     low_part: winrt.system.UInt32
     high_part: winrt.system.Int32
     def __init__(self, low_part: winrt.system.UInt32, high_part: winrt.system.Int32) -> None: ...
 
+@typing.final
 class DisplayId:
     value: winrt.system.UInt64
     def __init__(self, value: winrt.system.UInt64) -> None: ...
 
+@typing.final
 class PointInt32:
     x: winrt.system.Int32
     y: winrt.system.Int32
     def __init__(self, x: winrt.system.Int32, y: winrt.system.Int32) -> None: ...
 
+@typing.final
 class RectInt32:
     x: winrt.system.Int32
     y: winrt.system.Int32
@@ -33,11 +37,13 @@ class RectInt32:
     height: winrt.system.Int32
     def __init__(self, x: winrt.system.Int32, y: winrt.system.Int32, width: winrt.system.Int32, height: winrt.system.Int32) -> None: ...
 
+@typing.final
 class SizeInt32:
     width: winrt.system.Int32
     height: winrt.system.Int32
     def __init__(self, width: winrt.system.Int32, height: winrt.system.Int32) -> None: ...
 
+@typing.final
 class IGeometrySource2D(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IGeometrySource2D: ...

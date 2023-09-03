@@ -19,9 +19,11 @@ from winrt.windows.system.diagnostics.deviceportal import DevicePortalConnection
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class DevicePortalConnection_Static(type):
     def get_for_app_service_connection(cls, app_service_connection: typing.Optional[winrt.windows.applicationmodel.appservice.AppServiceConnection], /) -> typing.Optional[DevicePortalConnection]: ...
 
+@typing.final
 class DevicePortalConnection(winrt.system.Object, metaclass=DevicePortalConnection_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DevicePortalConnection: ...
@@ -40,12 +42,14 @@ class DevicePortalConnection(winrt.system.Object, metaclass=DevicePortalConnecti
     def add_request_received(self, handler: winrt.windows.foundation.TypedEventHandler[DevicePortalConnection, DevicePortalConnectionRequestReceivedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_request_received(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class DevicePortalConnectionClosedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DevicePortalConnectionClosedEventArgs: ...
     @_property
     def reason(self) -> DevicePortalConnectionClosedReason: ...
 
+@typing.final
 class DevicePortalConnectionRequestReceivedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DevicePortalConnectionRequestReceivedEventArgs: ...

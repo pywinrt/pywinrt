@@ -19,12 +19,14 @@ from winrt.windows.graphics.display import DisplayPropertiesEventHandler
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class NitRange:
     min_nits: winrt.system.Single
     max_nits: winrt.system.Single
     step_size_nits: winrt.system.Single
     def __init__(self, min_nits: winrt.system.Single, max_nits: winrt.system.Single, step_size_nits: winrt.system.Single) -> None: ...
 
+@typing.final
 class AdvancedColorInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AdvancedColorInfo: ...
@@ -49,11 +51,13 @@ class AdvancedColorInfo(winrt.system.Object):
     @_property
     def white_point(self) -> winrt.windows.foundation.Point: ...
 
+@typing.final
 class BrightnessOverride_Static(type):
     def get_default_for_system(cls) -> typing.Optional[BrightnessOverride]: ...
     def get_for_current_view(cls) -> typing.Optional[BrightnessOverride]: ...
     def save_for_system_async(cls, value: typing.Optional[BrightnessOverride], /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
 
+@typing.final
 class BrightnessOverride(winrt.system.Object, metaclass=BrightnessOverride_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BrightnessOverride: ...
@@ -75,11 +79,13 @@ class BrightnessOverride(winrt.system.Object, metaclass=BrightnessOverride_Stati
     @_property
     def is_supported(self) -> bool: ...
 
+@typing.final
 class BrightnessOverrideSettings_Static(type):
     def create_from_display_brightness_override_scenario(cls, override_scenario: DisplayBrightnessOverrideScenario, /) -> typing.Optional[BrightnessOverrideSettings]: ...
     def create_from_level(cls, level: winrt.system.Double, /) -> typing.Optional[BrightnessOverrideSettings]: ...
     def create_from_nits(cls, nits: winrt.system.Single, /) -> typing.Optional[BrightnessOverrideSettings]: ...
 
+@typing.final
 class BrightnessOverrideSettings(winrt.system.Object, metaclass=BrightnessOverrideSettings_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BrightnessOverrideSettings: ...
@@ -88,18 +94,22 @@ class BrightnessOverrideSettings(winrt.system.Object, metaclass=BrightnessOverri
     @_property
     def desired_nits(self) -> winrt.system.Single: ...
 
+@typing.final
 class ColorOverrideSettings_Static(type):
     def create_from_display_color_override_scenario(cls, override_scenario: DisplayColorOverrideScenario, /) -> typing.Optional[ColorOverrideSettings]: ...
 
+@typing.final
 class ColorOverrideSettings(winrt.system.Object, metaclass=ColorOverrideSettings_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ColorOverrideSettings: ...
     @_property
     def desired_display_color_override_scenario(self) -> DisplayColorOverrideScenario: ...
 
+@typing.final
 class DisplayEnhancementOverride_Static(type):
     def get_for_current_view(cls) -> typing.Optional[DisplayEnhancementOverride]: ...
 
+@typing.final
 class DisplayEnhancementOverride(winrt.system.Object, metaclass=DisplayEnhancementOverride_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DisplayEnhancementOverride: ...
@@ -125,6 +135,7 @@ class DisplayEnhancementOverride(winrt.system.Object, metaclass=DisplayEnhanceme
     @_property
     def is_override_active(self) -> bool: ...
 
+@typing.final
 class DisplayEnhancementOverrideCapabilities(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DisplayEnhancementOverrideCapabilities: ...
@@ -134,12 +145,14 @@ class DisplayEnhancementOverrideCapabilities(winrt.system.Object):
     @_property
     def is_brightness_nits_control_supported(self) -> bool: ...
 
+@typing.final
 class DisplayEnhancementOverrideCapabilitiesChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DisplayEnhancementOverrideCapabilitiesChangedEventArgs: ...
     @_property
     def capabilities(self) -> typing.Optional[DisplayEnhancementOverrideCapabilities]: ...
 
+@typing.final
 class DisplayInformation_Static(type):
     def get_for_current_view(cls) -> typing.Optional[DisplayInformation]: ...
     def add_display_contents_invalidated(cls, handler: winrt.windows.foundation.TypedEventHandler[DisplayInformation, winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
@@ -149,6 +162,7 @@ class DisplayInformation_Static(type):
     @auto_rotation_preferences.setter
     def auto_rotation_preferences(cls, value: DisplayOrientations) -> None: ...
 
+@typing.final
 class DisplayInformation(winrt.system.Object, metaclass=DisplayInformation_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DisplayInformation: ...
@@ -187,6 +201,7 @@ class DisplayInformation(winrt.system.Object, metaclass=DisplayInformation_Stati
     @_property
     def screen_width_in_raw_pixels(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class DisplayProperties_Static(type):
     def get_color_profile_async(cls) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.storage.streams.IRandomAccessStream]: ...
     def add_color_profile_changed(cls, handler: typing.Optional[DisplayPropertiesEventHandler], /) -> winrt.windows.foundation.EventRegistrationToken: ...
@@ -214,13 +229,16 @@ class DisplayProperties_Static(type):
     @_property
     def stereo_enabled(cls) -> bool: ...
 
+@typing.final
 class DisplayProperties(winrt.system.Object, metaclass=DisplayProperties_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DisplayProperties: ...
 
+@typing.final
 class DisplayServices_Static(type):
     def find_all(cls) -> winrt.windows.graphics.DisplayId: ...
 
+@typing.final
 class DisplayServices(winrt.system.Object, metaclass=DisplayServices_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DisplayServices: ...

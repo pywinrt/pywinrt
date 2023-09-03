@@ -15,6 +15,7 @@ import winrt.windows.foundation.collections
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class AppointmentCalendarCancelMeetingRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentCalendarCancelMeetingRequest: ...
@@ -33,6 +34,7 @@ class AppointmentCalendarCancelMeetingRequest(winrt.system.Object):
     @_property
     def subject(self) -> str: ...
 
+@typing.final
 class AppointmentCalendarCancelMeetingRequestEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentCalendarCancelMeetingRequestEventArgs: ...
@@ -40,6 +42,7 @@ class AppointmentCalendarCancelMeetingRequestEventArgs(winrt.system.Object):
     @_property
     def request(self) -> typing.Optional[AppointmentCalendarCancelMeetingRequest]: ...
 
+@typing.final
 class AppointmentCalendarCreateOrUpdateAppointmentRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentCalendarCreateOrUpdateAppointmentRequest: ...
@@ -54,6 +57,7 @@ class AppointmentCalendarCreateOrUpdateAppointmentRequest(winrt.system.Object):
     @_property
     def notify_invitees(self) -> bool: ...
 
+@typing.final
 class AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs: ...
@@ -61,6 +65,7 @@ class AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs(winrt.system.
     @_property
     def request(self) -> typing.Optional[AppointmentCalendarCreateOrUpdateAppointmentRequest]: ...
 
+@typing.final
 class AppointmentCalendarForwardMeetingRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentCalendarForwardMeetingRequest: ...
@@ -81,6 +86,7 @@ class AppointmentCalendarForwardMeetingRequest(winrt.system.Object):
     @_property
     def subject(self) -> str: ...
 
+@typing.final
 class AppointmentCalendarForwardMeetingRequestEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentCalendarForwardMeetingRequestEventArgs: ...
@@ -88,6 +94,7 @@ class AppointmentCalendarForwardMeetingRequestEventArgs(winrt.system.Object):
     @_property
     def request(self) -> typing.Optional[AppointmentCalendarForwardMeetingRequest]: ...
 
+@typing.final
 class AppointmentCalendarProposeNewTimeForMeetingRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentCalendarProposeNewTimeForMeetingRequest: ...
@@ -108,6 +115,7 @@ class AppointmentCalendarProposeNewTimeForMeetingRequest(winrt.system.Object):
     @_property
     def subject(self) -> str: ...
 
+@typing.final
 class AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs: ...
@@ -115,6 +123,7 @@ class AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs(winrt.system.O
     @_property
     def request(self) -> typing.Optional[AppointmentCalendarProposeNewTimeForMeetingRequest]: ...
 
+@typing.final
 class AppointmentCalendarSyncManagerSyncRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentCalendarSyncManagerSyncRequest: ...
@@ -123,6 +132,7 @@ class AppointmentCalendarSyncManagerSyncRequest(winrt.system.Object):
     @_property
     def appointment_calendar_local_id(self) -> str: ...
 
+@typing.final
 class AppointmentCalendarSyncManagerSyncRequestEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentCalendarSyncManagerSyncRequestEventArgs: ...
@@ -130,6 +140,7 @@ class AppointmentCalendarSyncManagerSyncRequestEventArgs(winrt.system.Object):
     @_property
     def request(self) -> typing.Optional[AppointmentCalendarSyncManagerSyncRequest]: ...
 
+@typing.final
 class AppointmentCalendarUpdateMeetingResponseRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentCalendarUpdateMeetingResponseRequest: ...
@@ -150,6 +161,7 @@ class AppointmentCalendarUpdateMeetingResponseRequest(winrt.system.Object):
     @_property
     def subject(self) -> str: ...
 
+@typing.final
 class AppointmentCalendarUpdateMeetingResponseRequestEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentCalendarUpdateMeetingResponseRequestEventArgs: ...
@@ -157,6 +169,7 @@ class AppointmentCalendarUpdateMeetingResponseRequestEventArgs(winrt.system.Obje
     @_property
     def request(self) -> typing.Optional[AppointmentCalendarUpdateMeetingResponseRequest]: ...
 
+@typing.final
 class AppointmentDataProviderConnection(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentDataProviderConnection: ...
@@ -174,6 +187,7 @@ class AppointmentDataProviderConnection(winrt.system.Object):
     def add_update_meeting_response_requested(self, handler: winrt.windows.foundation.TypedEventHandler[AppointmentDataProviderConnection, AppointmentCalendarUpdateMeetingResponseRequestEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_update_meeting_response_requested(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class AppointmentDataProviderTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentDataProviderTriggerDetails: ...

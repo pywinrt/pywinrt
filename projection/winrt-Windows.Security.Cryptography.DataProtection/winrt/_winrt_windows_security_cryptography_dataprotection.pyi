@@ -14,6 +14,7 @@ import winrt.windows.storage.streams
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class DataProtectionProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DataProtectionProvider: ...

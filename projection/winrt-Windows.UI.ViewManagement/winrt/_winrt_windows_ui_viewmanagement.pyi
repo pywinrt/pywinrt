@@ -21,6 +21,7 @@ from winrt.windows.ui.viewmanagement import ApplicationViewBoundsMode, Applicati
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class AccessibilitySettings(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AccessibilitySettings: ...
@@ -32,6 +33,7 @@ class AccessibilitySettings(winrt.system.Object):
     @_property
     def high_contrast_scheme(self) -> str: ...
 
+@typing.final
 class ActivationViewSwitcher(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ActivationViewSwitcher: ...
@@ -41,6 +43,7 @@ class ActivationViewSwitcher(winrt.system.Object):
     @typing.overload
     def show_as_standalone_async(self, view_id: winrt.system.Int32, size_preference: ViewSizePreference, /) -> winrt.windows.foundation.IAsyncAction: ...
 
+@typing.final
 class ApplicationView_Static(type):
     def clear_all_persisted_state(cls) -> None: ...
     def clear_persisted_state(cls, key: str, /) -> None: ...
@@ -63,6 +66,7 @@ class ApplicationView_Static(type):
     @preferred_launch_view_size.setter
     def preferred_launch_view_size(cls, value: winrt.windows.foundation.Size) -> None: ...
 
+@typing.final
 class ApplicationView(winrt.system.Object, metaclass=ApplicationView_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ApplicationView: ...
@@ -130,6 +134,7 @@ class ApplicationView(winrt.system.Object, metaclass=ApplicationView_Static):
     @_property
     def u_i_context(self) -> typing.Optional[winrt.windows.ui.UIContext]: ...
 
+@typing.final
 class ApplicationViewConsolidatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ApplicationViewConsolidatedEventArgs: ...
@@ -138,15 +143,18 @@ class ApplicationViewConsolidatedEventArgs(winrt.system.Object):
     @_property
     def is_app_initiated(self) -> bool: ...
 
+@typing.final
 class ApplicationViewScaling_Static(type):
     def try_set_disable_layout_scaling(cls, disable_layout_scaling: bool, /) -> bool: ...
     @_property
     def disable_layout_scaling(cls) -> bool: ...
 
+@typing.final
 class ApplicationViewScaling(winrt.system.Object, metaclass=ApplicationViewScaling_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ApplicationViewScaling: ...
 
+@typing.final
 class ApplicationViewSwitcher_Static(type):
     def disable_showing_main_view_on_activation(cls) -> None: ...
     def disable_system_view_activation_policy(cls) -> None: ...
@@ -168,10 +176,12 @@ class ApplicationViewSwitcher_Static(type):
     @typing.overload
     def try_show_as_view_mode_async(cls, view_id: winrt.system.Int32, view_mode: ApplicationViewMode, view_mode_preferences: typing.Optional[ViewModePreferences], /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
 
+@typing.final
 class ApplicationViewSwitcher(winrt.system.Object, metaclass=ApplicationViewSwitcher_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ApplicationViewSwitcher: ...
 
+@typing.final
 class ApplicationViewTitleBar(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ApplicationViewTitleBar: ...
@@ -224,10 +234,12 @@ class ApplicationViewTitleBar(winrt.system.Object):
     @background_color.setter
     def background_color(self, value: typing.Optional[typing.Optional[winrt.windows.ui.Color]]) -> None: ...
 
+@typing.final
 class ApplicationViewTransferContext_Static(type):
     @_property
     def data_package_format_id(cls) -> str: ...
 
+@typing.final
 class ApplicationViewTransferContext(winrt.system.Object, metaclass=ApplicationViewTransferContext_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ApplicationViewTransferContext: ...
@@ -237,10 +249,12 @@ class ApplicationViewTransferContext(winrt.system.Object, metaclass=ApplicationV
     @view_id.setter
     def view_id(self, value: winrt.system.Int32) -> None: ...
 
+@typing.final
 class InputPane_Static(type):
     def get_for_current_view(cls) -> typing.Optional[InputPane]: ...
     def get_for_u_i_context(cls, context: typing.Optional[winrt.windows.ui.UIContext], /) -> typing.Optional[InputPane]: ...
 
+@typing.final
 class InputPane(winrt.system.Object, metaclass=InputPane_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InputPane: ...
@@ -257,6 +271,7 @@ class InputPane(winrt.system.Object, metaclass=InputPane_Static):
     @visible.setter
     def visible(self, value: bool) -> None: ...
 
+@typing.final
 class InputPaneVisibilityEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InputPaneVisibilityEventArgs: ...
@@ -267,6 +282,7 @@ class InputPaneVisibilityEventArgs(winrt.system.Object):
     @_property
     def occluded_rect(self) -> winrt.windows.foundation.Rect: ...
 
+@typing.final
 class ProjectionManager_Static(type):
     def get_device_selector(cls) -> str: ...
     @typing.overload
@@ -284,13 +300,16 @@ class ProjectionManager_Static(type):
     @_property
     def projection_display_available(cls) -> bool: ...
 
+@typing.final
 class ProjectionManager(winrt.system.Object, metaclass=ProjectionManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProjectionManager: ...
 
+@typing.final
 class StatusBar_Static(type):
     def get_for_current_view(cls) -> typing.Optional[StatusBar]: ...
 
+@typing.final
 class StatusBar(winrt.system.Object, metaclass=StatusBar_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StatusBar: ...
@@ -317,6 +336,7 @@ class StatusBar(winrt.system.Object, metaclass=StatusBar_Static):
     @_property
     def progress_indicator(self) -> typing.Optional[StatusBarProgressIndicator]: ...
 
+@typing.final
 class StatusBarProgressIndicator(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StatusBarProgressIndicator: ...
@@ -331,6 +351,7 @@ class StatusBarProgressIndicator(winrt.system.Object):
     @progress_value.setter
     def progress_value(self, value: typing.Optional[typing.Optional[winrt.system.Double]]) -> None: ...
 
+@typing.final
 class UISettings(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UISettings: ...
@@ -380,30 +401,37 @@ class UISettings(winrt.system.Object):
     @_property
     def auto_hide_scroll_bars(self) -> bool: ...
 
+@typing.final
 class UISettingsAnimationsEnabledChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UISettingsAnimationsEnabledChangedEventArgs: ...
 
+@typing.final
 class UISettingsAutoHideScrollBarsChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UISettingsAutoHideScrollBarsChangedEventArgs: ...
 
+@typing.final
 class UISettingsMessageDurationChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UISettingsMessageDurationChangedEventArgs: ...
 
+@typing.final
 class UIViewSettings_Static(type):
     def get_for_current_view(cls) -> typing.Optional[UIViewSettings]: ...
 
+@typing.final
 class UIViewSettings(winrt.system.Object, metaclass=UIViewSettings_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UIViewSettings: ...
     @_property
     def user_interaction_mode(self) -> UserInteractionMode: ...
 
+@typing.final
 class ViewModePreferences_Static(type):
     def create_default(cls, mode: ApplicationViewMode, /) -> typing.Optional[ViewModePreferences]: ...
 
+@typing.final
 class ViewModePreferences(winrt.system.Object, metaclass=ViewModePreferences_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ViewModePreferences: ...

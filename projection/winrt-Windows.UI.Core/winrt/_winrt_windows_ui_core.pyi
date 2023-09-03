@@ -22,6 +22,7 @@ from winrt.windows.ui.core import DispatchedHandler, IdleDispatchedHandler
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class CorePhysicalKeyStatus:
     repeat_count: winrt.system.UInt32
     scan_code: winrt.system.UInt32
@@ -31,11 +32,13 @@ class CorePhysicalKeyStatus:
     is_key_released: bool
     def __init__(self, repeat_count: winrt.system.UInt32, scan_code: winrt.system.UInt32, is_extended_key: bool, is_menu_key_down: bool, was_key_down: bool, is_key_released: bool) -> None: ...
 
+@typing.final
 class CoreProximityEvaluation:
     score: winrt.system.Int32
     adjusted_point: winrt.windows.foundation.Point
     def __init__(self, score: winrt.system.Int32, adjusted_point: winrt.windows.foundation.Point) -> None: ...
 
+@typing.final
 class AcceleratorKeyEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AcceleratorKeyEventArgs: ...
@@ -52,6 +55,7 @@ class AcceleratorKeyEventArgs(winrt.system.Object):
     @handled.setter
     def handled(self, value: bool) -> None: ...
 
+@typing.final
 class AutomationProviderRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AutomationProviderRequestedEventArgs: ...
@@ -64,6 +68,7 @@ class AutomationProviderRequestedEventArgs(winrt.system.Object):
     @handled.setter
     def handled(self, value: bool) -> None: ...
 
+@typing.final
 class BackRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BackRequestedEventArgs: ...
@@ -72,6 +77,7 @@ class BackRequestedEventArgs(winrt.system.Object):
     @handled.setter
     def handled(self, value: bool) -> None: ...
 
+@typing.final
 class CharacterReceivedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CharacterReceivedEventArgs: ...
@@ -84,6 +90,7 @@ class CharacterReceivedEventArgs(winrt.system.Object):
     @handled.setter
     def handled(self, value: bool) -> None: ...
 
+@typing.final
 class ClosestInteractiveBoundsRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ClosestInteractiveBoundsRequestedEventArgs: ...
@@ -96,12 +103,14 @@ class ClosestInteractiveBoundsRequestedEventArgs(winrt.system.Object):
     @_property
     def search_bounds(self) -> winrt.windows.foundation.Rect: ...
 
+@typing.final
 class CoreAcceleratorKeys(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreAcceleratorKeys: ...
     def add_accelerator_key_activated(self, handler: winrt.windows.foundation.TypedEventHandler[CoreDispatcher, AcceleratorKeyEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_accelerator_key_activated(self, cookie: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class CoreComponentInputSource(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreComponentInputSource: ...
@@ -158,6 +167,7 @@ class CoreComponentInputSource(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> typing.Optional[winrt.windows.system.DispatcherQueue]: ...
 
+@typing.final
 class CoreCursor(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreCursor: ...
@@ -167,6 +177,7 @@ class CoreCursor(winrt.system.Object):
     @_property
     def type(self) -> CoreCursorType: ...
 
+@typing.final
 class CoreDispatcher(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreDispatcher: ...
@@ -189,6 +200,7 @@ class CoreDispatcher(winrt.system.Object):
     @current_priority.setter
     def current_priority(self, value: CoreDispatcherPriority) -> None: ...
 
+@typing.final
 class CoreIndependentInputSource(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreIndependentInputSource: ...
@@ -233,10 +245,12 @@ class CoreIndependentInputSource(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> typing.Optional[winrt.windows.system.DispatcherQueue]: ...
 
+@typing.final
 class CoreIndependentInputSourceController_Static(type):
     def create_for_i_visual_element(cls, visual_element: typing.Optional[winrt.windows.ui.composition.IVisualElement], /) -> typing.Optional[CoreIndependentInputSourceController]: ...
     def create_for_visual(cls, visual: typing.Optional[winrt.windows.ui.composition.Visual], /) -> typing.Optional[CoreIndependentInputSourceController]: ...
 
+@typing.final
 class CoreIndependentInputSourceController(winrt.system.Object, metaclass=CoreIndependentInputSourceController_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -258,9 +272,11 @@ class CoreIndependentInputSourceController(winrt.system.Object, metaclass=CoreIn
     @_property
     def source(self) -> typing.Optional[CoreIndependentInputSource]: ...
 
+@typing.final
 class CoreWindow_Static(type):
     def get_for_current_thread(cls) -> typing.Optional[CoreWindow]: ...
 
+@typing.final
 class CoreWindow(winrt.system.Object, metaclass=CoreWindow_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreWindow: ...
@@ -350,6 +366,7 @@ class CoreWindow(winrt.system.Object, metaclass=CoreWindow_Static):
     @_property
     def u_i_context(self) -> typing.Optional[winrt.windows.ui.UIContext]: ...
 
+@typing.final
 class CoreWindowDialog(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreWindowDialog: ...
@@ -387,6 +404,7 @@ class CoreWindowDialog(winrt.system.Object):
     @_property
     def min_size(self) -> winrt.windows.foundation.Size: ...
 
+@typing.final
 class CoreWindowEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreWindowEventArgs: ...
@@ -395,6 +413,7 @@ class CoreWindowEventArgs(winrt.system.Object):
     @handled.setter
     def handled(self, value: bool) -> None: ...
 
+@typing.final
 class CoreWindowFlyout(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreWindowFlyout: ...
@@ -428,14 +447,17 @@ class CoreWindowFlyout(winrt.system.Object):
     @_property
     def min_size(self) -> winrt.windows.foundation.Size: ...
 
+@typing.final
 class CoreWindowPopupShowingEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreWindowPopupShowingEventArgs: ...
     def set_desired_size(self, value: winrt.windows.foundation.Size, /) -> None: ...
 
+@typing.final
 class CoreWindowResizeManager_Static(type):
     def get_for_current_view(cls) -> typing.Optional[CoreWindowResizeManager]: ...
 
+@typing.final
 class CoreWindowResizeManager(winrt.system.Object, metaclass=CoreWindowResizeManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreWindowResizeManager: ...
@@ -445,12 +467,14 @@ class CoreWindowResizeManager(winrt.system.Object, metaclass=CoreWindowResizeMan
     @should_wait_for_layout_completion.setter
     def should_wait_for_layout_completion(self, value: bool) -> None: ...
 
+@typing.final
 class IdleDispatchedHandlerArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IdleDispatchedHandlerArgs: ...
     @_property
     def is_dispatcher_idle(self) -> bool: ...
 
+@typing.final
 class InputEnabledEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InputEnabledEventArgs: ...
@@ -461,6 +485,7 @@ class InputEnabledEventArgs(winrt.system.Object):
     @_property
     def input_enabled(self) -> bool: ...
 
+@typing.final
 class KeyEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> KeyEventArgs: ...
@@ -475,6 +500,7 @@ class KeyEventArgs(winrt.system.Object):
     @_property
     def device_id(self) -> str: ...
 
+@typing.final
 class PointerEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PointerEventArgs: ...
@@ -488,9 +514,11 @@ class PointerEventArgs(winrt.system.Object):
     @_property
     def key_modifiers(self) -> winrt.windows.system.VirtualKeyModifiers: ...
 
+@typing.final
 class SystemNavigationManager_Static(type):
     def get_for_current_view(cls) -> typing.Optional[SystemNavigationManager]: ...
 
+@typing.final
 class SystemNavigationManager(winrt.system.Object, metaclass=SystemNavigationManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SystemNavigationManager: ...
@@ -501,6 +529,7 @@ class SystemNavigationManager(winrt.system.Object, metaclass=SystemNavigationMan
     @app_view_back_button_visibility.setter
     def app_view_back_button_visibility(self, value: AppViewBackButtonVisibility) -> None: ...
 
+@typing.final
 class TouchHitTestingEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TouchHitTestingEventArgs: ...
@@ -518,6 +547,7 @@ class TouchHitTestingEventArgs(winrt.system.Object):
     @_property
     def point(self) -> winrt.windows.foundation.Point: ...
 
+@typing.final
 class VisibilityChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VisibilityChangedEventArgs: ...
@@ -528,6 +558,7 @@ class VisibilityChangedEventArgs(winrt.system.Object):
     @_property
     def visible(self) -> bool: ...
 
+@typing.final
 class WindowActivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WindowActivatedEventArgs: ...
@@ -538,6 +569,7 @@ class WindowActivatedEventArgs(winrt.system.Object):
     @_property
     def window_activation_state(self) -> CoreWindowActivationState: ...
 
+@typing.final
 class WindowSizeChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WindowSizeChangedEventArgs: ...
@@ -548,12 +580,14 @@ class WindowSizeChangedEventArgs(winrt.system.Object):
     @_property
     def size(self) -> winrt.windows.foundation.Size: ...
 
+@typing.final
 class ICoreAcceleratorKeys(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICoreAcceleratorKeys: ...
     def add_accelerator_key_activated(self, handler: winrt.windows.foundation.TypedEventHandler[CoreDispatcher, AcceleratorKeyEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_accelerator_key_activated(self, cookie: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class ICoreInputSourceBase(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICoreInputSourceBase: ...
@@ -566,6 +600,7 @@ class ICoreInputSourceBase(winrt.system.Object):
     @is_input_enabled.setter
     def is_input_enabled(self, value: bool) -> None: ...
 
+@typing.final
 class ICorePointerInputSource(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICorePointerInputSource: ...
@@ -594,6 +629,7 @@ class ICorePointerInputSource(winrt.system.Object):
     @_property
     def pointer_position(self) -> winrt.windows.foundation.Point: ...
 
+@typing.final
 class ICorePointerInputSource2(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICorePointerInputSource2: ...
@@ -624,6 +660,7 @@ class ICorePointerInputSource2(winrt.system.Object):
     @_property
     def pointer_position(self) -> winrt.windows.foundation.Point: ...
 
+@typing.final
 class ICorePointerRedirector(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICorePointerRedirector: ...
@@ -634,6 +671,7 @@ class ICorePointerRedirector(winrt.system.Object):
     def add_pointer_routed_to(self, handler: winrt.windows.foundation.TypedEventHandler[ICorePointerRedirector, PointerEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_pointer_routed_to(self, cookie: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class ICoreWindow(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICoreWindow: ...
@@ -702,6 +740,7 @@ class ICoreWindow(winrt.system.Object):
     @_property
     def visible(self) -> bool: ...
 
+@typing.final
 class ICoreWindowEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICoreWindowEventArgs: ...
@@ -710,6 +749,7 @@ class ICoreWindowEventArgs(winrt.system.Object):
     @handled.setter
     def handled(self, value: bool) -> None: ...
 
+@typing.final
 class IInitializeWithCoreWindow(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IInitializeWithCoreWindow: ...

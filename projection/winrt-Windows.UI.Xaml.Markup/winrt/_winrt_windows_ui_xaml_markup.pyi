@@ -17,30 +17,36 @@ import winrt.windows.ui.xaml.interop
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class XamlBinaryWriterErrorInformation:
     input_stream_index: winrt.system.UInt32
     line_number: winrt.system.UInt32
     line_position: winrt.system.UInt32
     def __init__(self, input_stream_index: winrt.system.UInt32, line_number: winrt.system.UInt32, line_position: winrt.system.UInt32) -> None: ...
 
+@typing.final
 class XmlnsDefinition:
     xml_namespace: str
     namespace: str
     def __init__(self, xml_namespace: str, namespace: str) -> None: ...
 
+@typing.final
 class MarkupExtension(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MarkupExtension: ...
     def __new__(cls: typing.Type[MarkupExtension]) -> MarkupExtension:...
     def provide_value(self) -> typing.Optional[winrt.system.Object]: ...
 
+@typing.final
 class XamlBinaryWriter_Static(type):
     def write(cls, input_streams: winrt.windows.foundation.collections.IVector[winrt.windows.storage.streams.IRandomAccessStream], output_streams: winrt.windows.foundation.collections.IVector[winrt.windows.storage.streams.IRandomAccessStream], xaml_metadata_provider: typing.Optional[IXamlMetadataProvider], /) -> XamlBinaryWriterErrorInformation: ...
 
+@typing.final
 class XamlBinaryWriter(winrt.system.Object, metaclass=XamlBinaryWriter_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> XamlBinaryWriter: ...
 
+@typing.final
 class XamlBindingHelper_Static(type):
     def convert_value(cls, type: winrt.windows.ui.xaml.interop.TypeName, value: typing.Optional[winrt.system.Object], /) -> typing.Optional[winrt.system.Object]: ...
     def get_data_template_component(cls, element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], /) -> typing.Optional[IDataTemplateComponent]: ...
@@ -67,46 +73,56 @@ class XamlBindingHelper_Static(type):
     @_property
     def data_template_component_property(cls) -> typing.Optional[winrt.windows.ui.xaml.DependencyProperty]: ...
 
+@typing.final
 class XamlBindingHelper(winrt.system.Object, metaclass=XamlBindingHelper_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> XamlBindingHelper: ...
 
+@typing.final
 class XamlMarkupHelper_Static(type):
     def unload_object(cls, element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], /) -> None: ...
 
+@typing.final
 class XamlMarkupHelper(winrt.system.Object, metaclass=XamlMarkupHelper_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> XamlMarkupHelper: ...
 
+@typing.final
 class XamlReader_Static(type):
     def load(cls, xaml: str, /) -> typing.Optional[winrt.system.Object]: ...
     def load_with_initial_template_validation(cls, xaml: str, /) -> typing.Optional[winrt.system.Object]: ...
 
+@typing.final
 class XamlReader(winrt.system.Object, metaclass=XamlReader_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> XamlReader: ...
 
+@typing.final
 class IComponentConnector(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IComponentConnector: ...
     def connect(self, connection_id: winrt.system.Int32, target: typing.Optional[winrt.system.Object], /) -> None: ...
 
+@typing.final
 class IComponentConnector2(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IComponentConnector2: ...
     def get_binding_connector(self, connection_id: winrt.system.Int32, target: typing.Optional[winrt.system.Object], /) -> typing.Optional[IComponentConnector]: ...
 
+@typing.final
 class IDataTemplateComponent(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IDataTemplateComponent: ...
     def process_bindings(self, item: typing.Optional[winrt.system.Object], item_index: winrt.system.Int32, phase: winrt.system.Int32, /) -> winrt.system.Int32: ...
     def recycle(self) -> None: ...
 
+@typing.final
 class IXamlBindScopeDiagnostics(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IXamlBindScopeDiagnostics: ...
     def disable(self, line_number: winrt.system.Int32, column_number: winrt.system.Int32, /) -> None: ...
 
+@typing.final
 class IXamlMember(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IXamlMember: ...
@@ -125,12 +141,14 @@ class IXamlMember(winrt.system.Object):
     @_property
     def type(self) -> typing.Optional[IXamlType]: ...
 
+@typing.final
 class IXamlMetadataProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IXamlMetadataProvider: ...
     def get_xaml_type(self, type: winrt.windows.ui.xaml.interop.TypeName, /) -> typing.Optional[IXamlType]: ...
     def get_xmlns_definitions(self) -> XmlnsDefinition: ...
 
+@typing.final
 class IXamlType(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IXamlType: ...
@@ -165,6 +183,7 @@ class IXamlType(winrt.system.Object):
     @_property
     def underlying_type(self) -> winrt.windows.ui.xaml.interop.TypeName: ...
 
+@typing.final
 class IXamlType2(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IXamlType2: ...

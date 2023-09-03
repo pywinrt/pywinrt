@@ -15,12 +15,14 @@ import winrt.windows.storage.streams
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class NotePlacementChangedPreviewEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NotePlacementChangedPreviewEventArgs: ...
     @_property
     def view_id(self) -> winrt.system.Int32: ...
 
+@typing.final
 class NoteVisibilityChangedPreviewEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NoteVisibilityChangedPreviewEventArgs: ...
@@ -29,9 +31,11 @@ class NoteVisibilityChangedPreviewEventArgs(winrt.system.Object):
     @_property
     def view_id(self) -> winrt.system.Int32: ...
 
+@typing.final
 class NotesWindowManagerPreview_Static(type):
     def get_for_current_app(cls) -> typing.Optional[NotesWindowManagerPreview]: ...
 
+@typing.final
 class NotesWindowManagerPreview(winrt.system.Object, metaclass=NotesWindowManagerPreview_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NotesWindowManagerPreview: ...
@@ -60,6 +64,7 @@ class NotesWindowManagerPreview(winrt.system.Object, metaclass=NotesWindowManage
     @_property
     def is_screen_locked(self) -> bool: ...
 
+@typing.final
 class NotesWindowManagerPreviewShowNoteOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NotesWindowManagerPreviewShowNoteOptions: ...

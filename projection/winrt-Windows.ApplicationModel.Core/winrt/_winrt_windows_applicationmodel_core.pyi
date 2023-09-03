@@ -20,6 +20,7 @@ from winrt.windows.applicationmodel.core import AppRestartFailureReason
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class AppListEntry(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppListEntry: ...
@@ -32,6 +33,7 @@ class AppListEntry(winrt.system.Object):
     @_property
     def app_info(self) -> typing.Optional[winrt.windows.applicationmodel.AppInfo]: ...
 
+@typing.final
 class CoreApplication_Static(type):
     @typing.overload
     def create_new_view(cls) -> typing.Optional[CoreApplicationView]: ...
@@ -71,10 +73,12 @@ class CoreApplication_Static(type):
     @_property
     def views(cls) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[CoreApplicationView]]: ...
 
+@typing.final
 class CoreApplication(winrt.system.Object, metaclass=CoreApplication_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreApplication: ...
 
+@typing.final
 class CoreApplicationView(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreApplicationView: ...
@@ -99,6 +103,7 @@ class CoreApplicationView(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> typing.Optional[winrt.windows.system.DispatcherQueue]: ...
 
+@typing.final
 class CoreApplicationViewTitleBar(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreApplicationViewTitleBar: ...
@@ -119,11 +124,13 @@ class CoreApplicationViewTitleBar(winrt.system.Object):
     @_property
     def system_overlay_right_inset(self) -> winrt.system.Double: ...
 
+@typing.final
 class HostedViewClosingEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HostedViewClosingEventArgs: ...
     def get_deferral(self) -> typing.Optional[winrt.windows.foundation.Deferral]: ...
 
+@typing.final
 class UnhandledError(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UnhandledError: ...
@@ -131,18 +138,21 @@ class UnhandledError(winrt.system.Object):
     @_property
     def handled(self) -> bool: ...
 
+@typing.final
 class UnhandledErrorDetectedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UnhandledErrorDetectedEventArgs: ...
     @_property
     def unhandled_error(self) -> typing.Optional[UnhandledError]: ...
 
+@typing.final
 class ICoreApplicationUnhandledError(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICoreApplicationUnhandledError: ...
     def add_unhandled_error_detected(self, handler: winrt.windows.foundation.EventHandler[UnhandledErrorDetectedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_unhandled_error_detected(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class IFrameworkView(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IFrameworkView: ...
@@ -152,6 +162,7 @@ class IFrameworkView(winrt.system.Object):
     def set_window(self, window: typing.Optional[winrt.windows.ui.core.CoreWindow], /) -> None: ...
     def uninitialize(self) -> None: ...
 
+@typing.final
 class IFrameworkViewSource(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IFrameworkViewSource: ...

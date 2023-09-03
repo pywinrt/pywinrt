@@ -15,11 +15,13 @@ from winrt.windows.graphics.directx.direct3d11 import Direct3DBindings, Direct3D
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class Direct3DMultisampleDescription:
     count: winrt.system.Int32
     quality: winrt.system.Int32
     def __init__(self, count: winrt.system.Int32, quality: winrt.system.Int32) -> None: ...
 
+@typing.final
 class Direct3DSurfaceDescription:
     width: winrt.system.Int32
     height: winrt.system.Int32
@@ -27,6 +29,7 @@ class Direct3DSurfaceDescription:
     multisample_description: Direct3DMultisampleDescription
     def __init__(self, width: winrt.system.Int32, height: winrt.system.Int32, format: winrt.windows.graphics.directx.DirectXPixelFormat, multisample_description: Direct3DMultisampleDescription) -> None: ...
 
+@typing.final
 class IDirect3DDevice(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -35,6 +38,7 @@ class IDirect3DDevice(winrt.system.Object):
     def close(self) -> None: ...
     def trim(self) -> None: ...
 
+@typing.final
 class IDirect3DSurface(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...

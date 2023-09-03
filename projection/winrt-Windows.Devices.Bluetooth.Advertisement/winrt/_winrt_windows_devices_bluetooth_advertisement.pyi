@@ -18,6 +18,7 @@ from winrt.windows.devices.bluetooth.advertisement import BluetoothLEAdvertiseme
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class BluetoothLEAdvertisement(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BluetoothLEAdvertisement: ...
@@ -39,6 +40,7 @@ class BluetoothLEAdvertisement(winrt.system.Object):
     @_property
     def service_uuids(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[_uuid.UUID]]: ...
 
+@typing.final
 class BluetoothLEAdvertisementBytePattern(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BluetoothLEAdvertisementBytePattern: ...
@@ -59,6 +61,7 @@ class BluetoothLEAdvertisementBytePattern(winrt.system.Object):
     @data.setter
     def data(self, value: typing.Optional[winrt.windows.storage.streams.IBuffer]) -> None: ...
 
+@typing.final
 class BluetoothLEAdvertisementDataSection(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BluetoothLEAdvertisementDataSection: ...
@@ -75,6 +78,7 @@ class BluetoothLEAdvertisementDataSection(winrt.system.Object):
     @data.setter
     def data(self, value: typing.Optional[winrt.windows.storage.streams.IBuffer]) -> None: ...
 
+@typing.final
 class BluetoothLEAdvertisementDataTypes_Static(type):
     @_property
     def advertising_interval(cls) -> winrt.system.UInt8: ...
@@ -121,10 +125,12 @@ class BluetoothLEAdvertisementDataTypes_Static(type):
     @_property
     def tx_power_level(cls) -> winrt.system.UInt8: ...
 
+@typing.final
 class BluetoothLEAdvertisementDataTypes(winrt.system.Object, metaclass=BluetoothLEAdvertisementDataTypes_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BluetoothLEAdvertisementDataTypes: ...
 
+@typing.final
 class BluetoothLEAdvertisementFilter(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BluetoothLEAdvertisementFilter: ...
@@ -136,6 +142,7 @@ class BluetoothLEAdvertisementFilter(winrt.system.Object):
     @_property
     def byte_patterns(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[BluetoothLEAdvertisementBytePattern]]: ...
 
+@typing.final
 class BluetoothLEAdvertisementPublisher(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BluetoothLEAdvertisementPublisher: ...
@@ -168,6 +175,7 @@ class BluetoothLEAdvertisementPublisher(winrt.system.Object):
     @include_transmit_power_level.setter
     def include_transmit_power_level(self, value: bool) -> None: ...
 
+@typing.final
 class BluetoothLEAdvertisementPublisherStatusChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BluetoothLEAdvertisementPublisherStatusChangedEventArgs: ...
@@ -178,6 +186,7 @@ class BluetoothLEAdvertisementPublisherStatusChangedEventArgs(winrt.system.Objec
     @_property
     def selected_transmit_power_level_in_d_bm(self) -> typing.Optional[typing.Optional[winrt.system.Int16]]: ...
 
+@typing.final
 class BluetoothLEAdvertisementReceivedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BluetoothLEAdvertisementReceivedEventArgs: ...
@@ -206,6 +215,7 @@ class BluetoothLEAdvertisementReceivedEventArgs(winrt.system.Object):
     @_property
     def transmit_power_level_in_d_bm(self) -> typing.Optional[typing.Optional[winrt.system.Int16]]: ...
 
+@typing.final
 class BluetoothLEAdvertisementWatcher(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BluetoothLEAdvertisementWatcher: ...
@@ -246,12 +256,14 @@ class BluetoothLEAdvertisementWatcher(winrt.system.Object):
     @allow_extended_advertisements.setter
     def allow_extended_advertisements(self, value: bool) -> None: ...
 
+@typing.final
 class BluetoothLEAdvertisementWatcherStoppedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BluetoothLEAdvertisementWatcherStoppedEventArgs: ...
     @_property
     def error(self) -> winrt.windows.devices.bluetooth.BluetoothError: ...
 
+@typing.final
 class BluetoothLEManufacturerData(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BluetoothLEManufacturerData: ...

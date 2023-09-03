@@ -16,18 +16,21 @@ from winrt.windows.devices.serialcommunication import SerialError, SerialHandsha
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class ErrorReceivedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ErrorReceivedEventArgs: ...
     @_property
     def error(self) -> SerialError: ...
 
+@typing.final
 class PinChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PinChangedEventArgs: ...
     @_property
     def pin_change(self) -> SerialPinChange: ...
 
+@typing.final
 class SerialDevice_Static(type):
     def from_id_async(cls, device_id: str, /) -> winrt.windows.foundation.IAsyncOperation[SerialDevice]: ...
     @typing.overload
@@ -36,6 +39,7 @@ class SerialDevice_Static(type):
     def get_device_selector(cls, port_name: str, /) -> str: ...
     def get_device_selector_from_usb_vid_pid(cls, vendor_id: winrt.system.UInt16, product_id: winrt.system.UInt16, /) -> str: ...
 
+@typing.final
 class SerialDevice(winrt.system.Object, metaclass=SerialDevice_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...

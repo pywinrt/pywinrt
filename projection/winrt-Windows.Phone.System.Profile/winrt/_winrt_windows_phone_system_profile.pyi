@@ -12,10 +12,12 @@ import winrt.system
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class RetailMode_Static(type):
     @_property
     def retail_mode_enabled(cls) -> bool: ...
 
+@typing.final
 class RetailMode(winrt.system.Object, metaclass=RetailMode_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RetailMode: ...

@@ -21,6 +21,7 @@ from winrt.windows.ui.input import CrossSlidingState, DraggingState, EdgeGesture
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class CrossSlideThresholds:
     selection_start: winrt.system.Single
     speed_bump_start: winrt.system.Single
@@ -28,6 +29,7 @@ class CrossSlideThresholds:
     rearrange_start: winrt.system.Single
     def __init__(self, selection_start: winrt.system.Single, speed_bump_start: winrt.system.Single, speed_bump_end: winrt.system.Single, rearrange_start: winrt.system.Single) -> None: ...
 
+@typing.final
 class ManipulationDelta:
     translation: winrt.windows.foundation.Point
     scale: winrt.system.Single
@@ -35,12 +37,14 @@ class ManipulationDelta:
     expansion: winrt.system.Single
     def __init__(self, translation: winrt.windows.foundation.Point, scale: winrt.system.Single, rotation: winrt.system.Single, expansion: winrt.system.Single) -> None: ...
 
+@typing.final
 class ManipulationVelocities:
     linear: winrt.windows.foundation.Point
     angular: winrt.system.Single
     expansion: winrt.system.Single
     def __init__(self, linear: winrt.windows.foundation.Point, angular: winrt.system.Single, expansion: winrt.system.Single) -> None: ...
 
+@typing.final
 class AttachableInputObject(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -48,6 +52,7 @@ class AttachableInputObject(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> AttachableInputObject: ...
     def close(self) -> None: ...
 
+@typing.final
 class CrossSlidingEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CrossSlidingEventArgs: ...
@@ -60,6 +65,7 @@ class CrossSlidingEventArgs(winrt.system.Object):
     @_property
     def contact_count(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class DraggingEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DraggingEventArgs: ...
@@ -72,9 +78,11 @@ class DraggingEventArgs(winrt.system.Object):
     @_property
     def contact_count(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class EdgeGesture_Static(type):
     def get_for_current_view(cls) -> typing.Optional[EdgeGesture]: ...
 
+@typing.final
 class EdgeGesture(winrt.system.Object, metaclass=EdgeGesture_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EdgeGesture: ...
@@ -85,12 +93,14 @@ class EdgeGesture(winrt.system.Object, metaclass=EdgeGesture_Static):
     def add_starting(self, handler: winrt.windows.foundation.TypedEventHandler[EdgeGesture, EdgeGestureEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_starting(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class EdgeGestureEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EdgeGestureEventArgs: ...
     @_property
     def kind(self) -> EdgeGestureKind: ...
 
+@typing.final
 class GestureRecognizer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GestureRecognizer: ...
@@ -219,6 +229,7 @@ class GestureRecognizer(winrt.system.Object):
     @hold_max_contact_count.setter
     def hold_max_contact_count(self, value: winrt.system.UInt32) -> None: ...
 
+@typing.final
 class HoldingEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HoldingEventArgs: ...
@@ -233,6 +244,7 @@ class HoldingEventArgs(winrt.system.Object):
     @_property
     def current_contact_count(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class InputActivationListener(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InputActivationListener: ...
@@ -241,15 +253,18 @@ class InputActivationListener(winrt.system.Object):
     @_property
     def state(self) -> InputActivationState: ...
 
+@typing.final
 class InputActivationListenerActivationChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InputActivationListenerActivationChangedEventArgs: ...
     @_property
     def state(self) -> InputActivationState: ...
 
+@typing.final
 class KeyboardDeliveryInterceptor_Static(type):
     def get_for_current_view(cls) -> typing.Optional[KeyboardDeliveryInterceptor]: ...
 
+@typing.final
 class KeyboardDeliveryInterceptor(winrt.system.Object, metaclass=KeyboardDeliveryInterceptor_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> KeyboardDeliveryInterceptor: ...
@@ -262,6 +277,7 @@ class KeyboardDeliveryInterceptor(winrt.system.Object, metaclass=KeyboardDeliver
     @is_interception_enabled_when_in_foreground.setter
     def is_interception_enabled_when_in_foreground(self, value: bool) -> None: ...
 
+@typing.final
 class ManipulationCompletedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ManipulationCompletedEventArgs: ...
@@ -278,6 +294,7 @@ class ManipulationCompletedEventArgs(winrt.system.Object):
     @_property
     def current_contact_count(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class ManipulationInertiaStartingEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ManipulationInertiaStartingEventArgs: ...
@@ -294,6 +311,7 @@ class ManipulationInertiaStartingEventArgs(winrt.system.Object):
     @_property
     def contact_count(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class ManipulationStartedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ManipulationStartedEventArgs: ...
@@ -306,6 +324,7 @@ class ManipulationStartedEventArgs(winrt.system.Object):
     @_property
     def contact_count(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class ManipulationUpdatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ManipulationUpdatedEventArgs: ...
@@ -324,6 +343,7 @@ class ManipulationUpdatedEventArgs(winrt.system.Object):
     @_property
     def current_contact_count(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class MouseWheelParameters(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MouseWheelParameters: ...
@@ -344,6 +364,7 @@ class MouseWheelParameters(winrt.system.Object):
     @char_translation.setter
     def char_translation(self, value: winrt.windows.foundation.Point) -> None: ...
 
+@typing.final
 class PointerPoint_Static(type):
     @typing.overload
     def get_current_point(cls, pointer_id: winrt.system.UInt32, /) -> typing.Optional[PointerPoint]: ...
@@ -354,6 +375,7 @@ class PointerPoint_Static(type):
     @typing.overload
     def get_intermediate_points(cls, pointer_id: winrt.system.UInt32, transform: typing.Optional[IPointerPointTransform], /) -> typing.Optional[winrt.windows.foundation.collections.IVector[PointerPoint]]: ...
 
+@typing.final
 class PointerPoint(winrt.system.Object, metaclass=PointerPoint_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PointerPoint: ...
@@ -374,6 +396,7 @@ class PointerPoint(winrt.system.Object, metaclass=PointerPoint_Static):
     @_property
     def timestamp(self) -> winrt.system.UInt64: ...
 
+@typing.final
 class PointerPointProperties(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PointerPointProperties: ...
@@ -426,9 +449,11 @@ class PointerPointProperties(winrt.system.Object):
     @_property
     def z_distance(self) -> typing.Optional[typing.Optional[winrt.system.Single]]: ...
 
+@typing.final
 class PointerVisualizationSettings_Static(type):
     def get_for_current_view(cls) -> typing.Optional[PointerVisualizationSettings]: ...
 
+@typing.final
 class PointerVisualizationSettings(winrt.system.Object, metaclass=PointerVisualizationSettings_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PointerVisualizationSettings: ...
@@ -441,10 +466,12 @@ class PointerVisualizationSettings(winrt.system.Object, metaclass=PointerVisuali
     @is_barrel_button_feedback_enabled.setter
     def is_barrel_button_feedback_enabled(self, value: bool) -> None: ...
 
+@typing.final
 class RadialController_Static(type):
     def create_for_current_view(cls) -> typing.Optional[RadialController]: ...
     def is_supported(cls) -> bool: ...
 
+@typing.final
 class RadialController(winrt.system.Object, metaclass=RadialController_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RadialController: ...
@@ -479,6 +506,7 @@ class RadialController(winrt.system.Object, metaclass=RadialController_Static):
     @_property
     def menu(self) -> typing.Optional[RadialControllerMenu]: ...
 
+@typing.final
 class RadialControllerButtonClickedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RadialControllerButtonClickedEventArgs: ...
@@ -487,6 +515,7 @@ class RadialControllerButtonClickedEventArgs(winrt.system.Object):
     @_property
     def simple_haptics_controller(self) -> typing.Optional[winrt.windows.devices.haptics.SimpleHapticsController]: ...
 
+@typing.final
 class RadialControllerButtonHoldingEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RadialControllerButtonHoldingEventArgs: ...
@@ -495,6 +524,7 @@ class RadialControllerButtonHoldingEventArgs(winrt.system.Object):
     @_property
     def simple_haptics_controller(self) -> typing.Optional[winrt.windows.devices.haptics.SimpleHapticsController]: ...
 
+@typing.final
 class RadialControllerButtonPressedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RadialControllerButtonPressedEventArgs: ...
@@ -503,6 +533,7 @@ class RadialControllerButtonPressedEventArgs(winrt.system.Object):
     @_property
     def simple_haptics_controller(self) -> typing.Optional[winrt.windows.devices.haptics.SimpleHapticsController]: ...
 
+@typing.final
 class RadialControllerButtonReleasedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RadialControllerButtonReleasedEventArgs: ...
@@ -511,6 +542,7 @@ class RadialControllerButtonReleasedEventArgs(winrt.system.Object):
     @_property
     def simple_haptics_controller(self) -> typing.Optional[winrt.windows.devices.haptics.SimpleHapticsController]: ...
 
+@typing.final
 class RadialControllerConfiguration_Static(type):
     def get_for_current_view(cls) -> typing.Optional[RadialControllerConfiguration]: ...
     @_property
@@ -522,6 +554,7 @@ class RadialControllerConfiguration_Static(type):
     @app_controller.setter
     def app_controller(cls, value: typing.Optional[RadialController]) -> None: ...
 
+@typing.final
 class RadialControllerConfiguration(winrt.system.Object, metaclass=RadialControllerConfiguration_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RadialControllerConfiguration: ...
@@ -537,6 +570,7 @@ class RadialControllerConfiguration(winrt.system.Object, metaclass=RadialControl
     @active_controller_when_menu_is_suppressed.setter
     def active_controller_when_menu_is_suppressed(self, value: typing.Optional[RadialController]) -> None: ...
 
+@typing.final
 class RadialControllerControlAcquiredEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RadialControllerControlAcquiredEventArgs: ...
@@ -547,6 +581,7 @@ class RadialControllerControlAcquiredEventArgs(winrt.system.Object):
     @_property
     def simple_haptics_controller(self) -> typing.Optional[winrt.windows.devices.haptics.SimpleHapticsController]: ...
 
+@typing.final
 class RadialControllerMenu(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RadialControllerMenu: ...
@@ -560,6 +595,7 @@ class RadialControllerMenu(winrt.system.Object):
     @_property
     def items(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[RadialControllerMenuItem]]: ...
 
+@typing.final
 class RadialControllerMenuItem_Static(type):
     @typing.overload
     def create_from_font_glyph(cls, display_text: str, glyph: str, font_family: str, /) -> typing.Optional[RadialControllerMenuItem]: ...
@@ -568,6 +604,7 @@ class RadialControllerMenuItem_Static(type):
     def create_from_icon(cls, display_text: str, icon: typing.Optional[winrt.windows.storage.streams.RandomAccessStreamReference], /) -> typing.Optional[RadialControllerMenuItem]: ...
     def create_from_known_icon(cls, display_text: str, value: RadialControllerMenuKnownIcon, /) -> typing.Optional[RadialControllerMenuItem]: ...
 
+@typing.final
 class RadialControllerMenuItem(winrt.system.Object, metaclass=RadialControllerMenuItem_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RadialControllerMenuItem: ...
@@ -580,6 +617,7 @@ class RadialControllerMenuItem(winrt.system.Object, metaclass=RadialControllerMe
     @_property
     def display_text(self) -> str: ...
 
+@typing.final
 class RadialControllerRotationChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RadialControllerRotationChangedEventArgs: ...
@@ -592,6 +630,7 @@ class RadialControllerRotationChangedEventArgs(winrt.system.Object):
     @_property
     def simple_haptics_controller(self) -> typing.Optional[winrt.windows.devices.haptics.SimpleHapticsController]: ...
 
+@typing.final
 class RadialControllerScreenContact(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RadialControllerScreenContact: ...
@@ -600,6 +639,7 @@ class RadialControllerScreenContact(winrt.system.Object):
     @_property
     def position(self) -> winrt.windows.foundation.Point: ...
 
+@typing.final
 class RadialControllerScreenContactContinuedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RadialControllerScreenContactContinuedEventArgs: ...
@@ -610,6 +650,7 @@ class RadialControllerScreenContactContinuedEventArgs(winrt.system.Object):
     @_property
     def simple_haptics_controller(self) -> typing.Optional[winrt.windows.devices.haptics.SimpleHapticsController]: ...
 
+@typing.final
 class RadialControllerScreenContactEndedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RadialControllerScreenContactEndedEventArgs: ...
@@ -618,6 +659,7 @@ class RadialControllerScreenContactEndedEventArgs(winrt.system.Object):
     @_property
     def simple_haptics_controller(self) -> typing.Optional[winrt.windows.devices.haptics.SimpleHapticsController]: ...
 
+@typing.final
 class RadialControllerScreenContactStartedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RadialControllerScreenContactStartedEventArgs: ...
@@ -628,6 +670,7 @@ class RadialControllerScreenContactStartedEventArgs(winrt.system.Object):
     @_property
     def simple_haptics_controller(self) -> typing.Optional[winrt.windows.devices.haptics.SimpleHapticsController]: ...
 
+@typing.final
 class RightTappedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RightTappedEventArgs: ...
@@ -638,9 +681,11 @@ class RightTappedEventArgs(winrt.system.Object):
     @_property
     def contact_count(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class SystemButtonEventController_Static(type):
     def create_for_dispatcher_queue(cls, queue: typing.Optional[winrt.windows.system.DispatcherQueue], /) -> typing.Optional[SystemButtonEventController]: ...
 
+@typing.final
 class SystemButtonEventController(winrt.system.Object, metaclass=SystemButtonEventController_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SystemButtonEventController: ...
@@ -653,6 +698,7 @@ class SystemButtonEventController(winrt.system.Object, metaclass=SystemButtonEve
     def add_system_function_lock_indicator_changed(self, handler: winrt.windows.foundation.TypedEventHandler[SystemButtonEventController, SystemFunctionLockIndicatorChangedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_system_function_lock_indicator_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class SystemFunctionButtonEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SystemFunctionButtonEventArgs: ...
@@ -663,6 +709,7 @@ class SystemFunctionButtonEventArgs(winrt.system.Object):
     @_property
     def timestamp(self) -> winrt.system.UInt64: ...
 
+@typing.final
 class SystemFunctionLockChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SystemFunctionLockChangedEventArgs: ...
@@ -675,6 +722,7 @@ class SystemFunctionLockChangedEventArgs(winrt.system.Object):
     @_property
     def timestamp(self) -> winrt.system.UInt64: ...
 
+@typing.final
 class SystemFunctionLockIndicatorChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SystemFunctionLockIndicatorChangedEventArgs: ...
@@ -687,6 +735,7 @@ class SystemFunctionLockIndicatorChangedEventArgs(winrt.system.Object):
     @_property
     def timestamp(self) -> winrt.system.UInt64: ...
 
+@typing.final
 class TappedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TappedEventArgs: ...
@@ -699,6 +748,7 @@ class TappedEventArgs(winrt.system.Object):
     @_property
     def contact_count(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class IPointerPointTransform(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPointerPointTransform: ...

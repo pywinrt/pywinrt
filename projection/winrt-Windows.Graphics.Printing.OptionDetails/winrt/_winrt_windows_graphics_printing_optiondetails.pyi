@@ -18,6 +18,7 @@ from winrt.windows.graphics.printing.optiondetails import PrintOptionStates, Pri
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class PrintBindingOptionDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintBindingOptionDetails: ...
@@ -47,6 +48,7 @@ class PrintBindingOptionDetails(winrt.system.Object):
     @_property
     def value(self) -> typing.Optional[winrt.system.Object]: ...
 
+@typing.final
 class PrintBorderingOptionDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintBorderingOptionDetails: ...
@@ -76,6 +78,7 @@ class PrintBorderingOptionDetails(winrt.system.Object):
     @_property
     def value(self) -> typing.Optional[winrt.system.Object]: ...
 
+@typing.final
 class PrintCollationOptionDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintCollationOptionDetails: ...
@@ -105,6 +108,7 @@ class PrintCollationOptionDetails(winrt.system.Object):
     @_property
     def value(self) -> typing.Optional[winrt.system.Object]: ...
 
+@typing.final
 class PrintColorModeOptionDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintColorModeOptionDetails: ...
@@ -134,6 +138,7 @@ class PrintColorModeOptionDetails(winrt.system.Object):
     @_property
     def value(self) -> typing.Optional[winrt.system.Object]: ...
 
+@typing.final
 class PrintCopiesOptionDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintCopiesOptionDetails: ...
@@ -165,6 +170,7 @@ class PrintCopiesOptionDetails(winrt.system.Object):
     @_property
     def value(self) -> typing.Optional[winrt.system.Object]: ...
 
+@typing.final
 class PrintCustomItemDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintCustomItemDetails: ...
@@ -175,6 +181,7 @@ class PrintCustomItemDetails(winrt.system.Object):
     @_property
     def item_id(self) -> str: ...
 
+@typing.final
 class PrintCustomItemListOptionDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintCustomItemListOptionDetails: ...
@@ -212,6 +219,7 @@ class PrintCustomItemListOptionDetails(winrt.system.Object):
     @_property
     def value(self) -> typing.Optional[winrt.system.Object]: ...
 
+@typing.final
 class PrintCustomTextOptionDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintCustomTextOptionDetails: ...
@@ -247,6 +255,7 @@ class PrintCustomTextOptionDetails(winrt.system.Object):
     @_property
     def value(self) -> typing.Optional[winrt.system.Object]: ...
 
+@typing.final
 class PrintCustomToggleOptionDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintCustomToggleOptionDetails: ...
@@ -278,6 +287,7 @@ class PrintCustomToggleOptionDetails(winrt.system.Object):
     @_property
     def value(self) -> typing.Optional[winrt.system.Object]: ...
 
+@typing.final
 class PrintDuplexOptionDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintDuplexOptionDetails: ...
@@ -307,6 +317,7 @@ class PrintDuplexOptionDetails(winrt.system.Object):
     @_property
     def value(self) -> typing.Optional[winrt.system.Object]: ...
 
+@typing.final
 class PrintHolePunchOptionDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintHolePunchOptionDetails: ...
@@ -336,6 +347,7 @@ class PrintHolePunchOptionDetails(winrt.system.Object):
     @_property
     def value(self) -> typing.Optional[winrt.system.Object]: ...
 
+@typing.final
 class PrintMediaSizeOptionDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintMediaSizeOptionDetails: ...
@@ -365,6 +377,7 @@ class PrintMediaSizeOptionDetails(winrt.system.Object):
     @_property
     def value(self) -> typing.Optional[winrt.system.Object]: ...
 
+@typing.final
 class PrintMediaTypeOptionDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintMediaTypeOptionDetails: ...
@@ -394,6 +407,7 @@ class PrintMediaTypeOptionDetails(winrt.system.Object):
     @_property
     def value(self) -> typing.Optional[winrt.system.Object]: ...
 
+@typing.final
 class PrintOrientationOptionDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintOrientationOptionDetails: ...
@@ -423,6 +437,7 @@ class PrintOrientationOptionDetails(winrt.system.Object):
     @description.setter
     def description(self, value: str) -> None: ...
 
+@typing.final
 class PrintPageRangeOptionDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintPageRangeOptionDetails: ...
@@ -450,6 +465,7 @@ class PrintPageRangeOptionDetails(winrt.system.Object):
     @description.setter
     def description(self, value: str) -> None: ...
 
+@typing.final
 class PrintQualityOptionDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintQualityOptionDetails: ...
@@ -479,6 +495,7 @@ class PrintQualityOptionDetails(winrt.system.Object):
     @description.setter
     def description(self, value: str) -> None: ...
 
+@typing.final
 class PrintStapleOptionDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintStapleOptionDetails: ...
@@ -508,15 +525,18 @@ class PrintStapleOptionDetails(winrt.system.Object):
     @description.setter
     def description(self, value: str) -> None: ...
 
+@typing.final
 class PrintTaskOptionChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintTaskOptionChangedEventArgs: ...
     @_property
     def option_id(self) -> typing.Optional[winrt.system.Object]: ...
 
+@typing.final
 class PrintTaskOptionDetails_Static(type):
     def get_from_print_task_options(cls, print_task_options: typing.Optional[winrt.windows.graphics.printing.PrintTaskOptions], /) -> typing.Optional[PrintTaskOptionDetails]: ...
 
+@typing.final
 class PrintTaskOptionDetails(winrt.system.Object, metaclass=PrintTaskOptionDetails_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintTaskOptionDetails: ...
@@ -533,6 +553,7 @@ class PrintTaskOptionDetails(winrt.system.Object, metaclass=PrintTaskOptionDetai
     @_property
     def options(self) -> typing.Optional[winrt.windows.foundation.collections.IMapView[str, IPrintOptionDetails]]: ...
 
+@typing.final
 class IPrintCustomOptionDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPrintCustomOptionDetails: ...
@@ -556,6 +577,7 @@ class IPrintCustomOptionDetails(winrt.system.Object):
     @_property
     def value(self) -> typing.Optional[winrt.system.Object]: ...
 
+@typing.final
 class IPrintItemListOptionDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPrintItemListOptionDetails: ...
@@ -577,6 +599,7 @@ class IPrintItemListOptionDetails(winrt.system.Object):
     @_property
     def value(self) -> typing.Optional[winrt.system.Object]: ...
 
+@typing.final
 class IPrintNumberOptionDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPrintNumberOptionDetails: ...
@@ -600,6 +623,7 @@ class IPrintNumberOptionDetails(winrt.system.Object):
     @_property
     def value(self) -> typing.Optional[winrt.system.Object]: ...
 
+@typing.final
 class IPrintOptionDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPrintOptionDetails: ...
@@ -619,6 +643,7 @@ class IPrintOptionDetails(winrt.system.Object):
     @_property
     def value(self) -> typing.Optional[winrt.system.Object]: ...
 
+@typing.final
 class IPrintTextOptionDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPrintTextOptionDetails: ...

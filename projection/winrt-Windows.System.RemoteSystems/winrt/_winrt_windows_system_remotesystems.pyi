@@ -20,6 +20,7 @@ from winrt.windows.system.remotesystems import RemoteSystemAccessStatus, RemoteS
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class KnownRemoteSystemCapabilities_Static(type):
     @_property
     def app_service(cls) -> str: ...
@@ -30,10 +31,12 @@ class KnownRemoteSystemCapabilities_Static(type):
     @_property
     def spatial_entity(cls) -> str: ...
 
+@typing.final
 class KnownRemoteSystemCapabilities(winrt.system.Object, metaclass=KnownRemoteSystemCapabilities_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> KnownRemoteSystemCapabilities: ...
 
+@typing.final
 class RemoteSystem_Static(type):
     @typing.overload
     def create_watcher(cls) -> typing.Optional[RemoteSystemWatcher]: ...
@@ -47,6 +50,7 @@ class RemoteSystem_Static(type):
     def is_authorization_kind_enabled(cls, kind: RemoteSystemAuthorizationKind, /) -> bool: ...
     def request_access_async(cls) -> winrt.windows.foundation.IAsyncOperation[RemoteSystemAccessStatus]: ...
 
+@typing.final
 class RemoteSystem(winrt.system.Object, metaclass=RemoteSystem_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteSystem: ...
@@ -74,12 +78,14 @@ class RemoteSystem(winrt.system.Object, metaclass=RemoteSystem_Static):
     @_property
     def user(self) -> typing.Optional[winrt.windows.system.User]: ...
 
+@typing.final
 class RemoteSystemAddedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteSystemAddedEventArgs: ...
     @_property
     def remote_system(self) -> typing.Optional[RemoteSystem]: ...
 
+@typing.final
 class RemoteSystemApp(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteSystemApp: ...
@@ -98,10 +104,12 @@ class RemoteSystemApp(winrt.system.Object):
     @_property
     def user(self) -> typing.Optional[winrt.windows.system.User]: ...
 
+@typing.final
 class RemoteSystemAppRegistration_Static(type):
     def get_default(cls) -> typing.Optional[RemoteSystemAppRegistration]: ...
     def get_for_user(cls, user: typing.Optional[winrt.windows.system.User], /) -> typing.Optional[RemoteSystemAppRegistration]: ...
 
+@typing.final
 class RemoteSystemAppRegistration(winrt.system.Object, metaclass=RemoteSystemAppRegistration_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteSystemAppRegistration: ...
@@ -111,6 +119,7 @@ class RemoteSystemAppRegistration(winrt.system.Object, metaclass=RemoteSystemApp
     @_property
     def user(self) -> typing.Optional[winrt.windows.system.User]: ...
 
+@typing.final
 class RemoteSystemAuthorizationKindFilter(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteSystemAuthorizationKindFilter: ...
@@ -118,20 +127,24 @@ class RemoteSystemAuthorizationKindFilter(winrt.system.Object):
     @_property
     def remote_system_authorization_kind(self) -> RemoteSystemAuthorizationKind: ...
 
+@typing.final
 class RemoteSystemConnectionInfo_Static(type):
     def try_create_from_app_service_connection(cls, connection: typing.Optional[winrt.windows.applicationmodel.appservice.AppServiceConnection], /) -> typing.Optional[RemoteSystemConnectionInfo]: ...
 
+@typing.final
 class RemoteSystemConnectionInfo(winrt.system.Object, metaclass=RemoteSystemConnectionInfo_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteSystemConnectionInfo: ...
     @_property
     def is_proximal(self) -> bool: ...
 
+@typing.final
 class RemoteSystemConnectionRequest_Static(type):
     def create_for_app(cls, remote_system_app: typing.Optional[RemoteSystemApp], /) -> typing.Optional[RemoteSystemConnectionRequest]: ...
     def create_from_connection_token(cls, connection_token: str, /) -> typing.Optional[RemoteSystemConnectionRequest]: ...
     def create_from_connection_token_for_user(cls, user: typing.Optional[winrt.windows.system.User], connection_token: str, /) -> typing.Optional[RemoteSystemConnectionRequest]: ...
 
+@typing.final
 class RemoteSystemConnectionRequest(winrt.system.Object, metaclass=RemoteSystemConnectionRequest_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteSystemConnectionRequest: ...
@@ -143,6 +156,7 @@ class RemoteSystemConnectionRequest(winrt.system.Object, metaclass=RemoteSystemC
     @_property
     def connection_token(self) -> str: ...
 
+@typing.final
 class RemoteSystemDiscoveryTypeFilter(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteSystemDiscoveryTypeFilter: ...
@@ -150,10 +164,12 @@ class RemoteSystemDiscoveryTypeFilter(winrt.system.Object):
     @_property
     def remote_system_discovery_type(self) -> RemoteSystemDiscoveryType: ...
 
+@typing.final
 class RemoteSystemEnumerationCompletedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteSystemEnumerationCompletedEventArgs: ...
 
+@typing.final
 class RemoteSystemKindFilter(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteSystemKindFilter: ...
@@ -161,6 +177,7 @@ class RemoteSystemKindFilter(winrt.system.Object):
     @_property
     def remote_system_kinds(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]: ...
 
+@typing.final
 class RemoteSystemKinds_Static(type):
     @_property
     def desktop(cls) -> str: ...
@@ -179,19 +196,23 @@ class RemoteSystemKinds_Static(type):
     @_property
     def tablet(cls) -> str: ...
 
+@typing.final
 class RemoteSystemKinds(winrt.system.Object, metaclass=RemoteSystemKinds_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteSystemKinds: ...
 
+@typing.final
 class RemoteSystemRemovedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteSystemRemovedEventArgs: ...
     @_property
     def remote_system_id(self) -> str: ...
 
+@typing.final
 class RemoteSystemSession_Static(type):
     def create_watcher(cls) -> typing.Optional[RemoteSystemSessionWatcher]: ...
 
+@typing.final
 class RemoteSystemSession(winrt.system.Object, metaclass=RemoteSystemSession_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -209,12 +230,14 @@ class RemoteSystemSession(winrt.system.Object, metaclass=RemoteSystemSession_Sta
     @_property
     def id(self) -> str: ...
 
+@typing.final
 class RemoteSystemSessionAddedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteSystemSessionAddedEventArgs: ...
     @_property
     def session_info(self) -> typing.Optional[RemoteSystemSessionInfo]: ...
 
+@typing.final
 class RemoteSystemSessionController(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteSystemSessionController: ...
@@ -227,6 +250,7 @@ class RemoteSystemSessionController(winrt.system.Object):
     def add_join_requested(self, handler: winrt.windows.foundation.TypedEventHandler[RemoteSystemSessionController, RemoteSystemSessionJoinRequestedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_join_requested(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class RemoteSystemSessionCreationResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteSystemSessionCreationResult: ...
@@ -235,12 +259,14 @@ class RemoteSystemSessionCreationResult(winrt.system.Object):
     @_property
     def status(self) -> RemoteSystemSessionCreationStatus: ...
 
+@typing.final
 class RemoteSystemSessionDisconnectedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteSystemSessionDisconnectedEventArgs: ...
     @_property
     def reason(self) -> RemoteSystemSessionDisconnectedReason: ...
 
+@typing.final
 class RemoteSystemSessionInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteSystemSessionInfo: ...
@@ -250,6 +276,7 @@ class RemoteSystemSessionInfo(winrt.system.Object):
     @_property
     def display_name(self) -> str: ...
 
+@typing.final
 class RemoteSystemSessionInvitation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteSystemSessionInvitation: ...
@@ -258,6 +285,7 @@ class RemoteSystemSessionInvitation(winrt.system.Object):
     @_property
     def session_info(self) -> typing.Optional[RemoteSystemSessionInfo]: ...
 
+@typing.final
 class RemoteSystemSessionInvitationListener(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteSystemSessionInvitationListener: ...
@@ -265,12 +293,14 @@ class RemoteSystemSessionInvitationListener(winrt.system.Object):
     def add_invitation_received(self, handler: winrt.windows.foundation.TypedEventHandler[RemoteSystemSessionInvitationListener, RemoteSystemSessionInvitationReceivedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_invitation_received(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class RemoteSystemSessionInvitationReceivedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteSystemSessionInvitationReceivedEventArgs: ...
     @_property
     def invitation(self) -> typing.Optional[RemoteSystemSessionInvitation]: ...
 
+@typing.final
 class RemoteSystemSessionJoinRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteSystemSessionJoinRequest: ...
@@ -278,6 +308,7 @@ class RemoteSystemSessionJoinRequest(winrt.system.Object):
     @_property
     def participant(self) -> typing.Optional[RemoteSystemSessionParticipant]: ...
 
+@typing.final
 class RemoteSystemSessionJoinRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteSystemSessionJoinRequestedEventArgs: ...
@@ -285,6 +316,7 @@ class RemoteSystemSessionJoinRequestedEventArgs(winrt.system.Object):
     @_property
     def join_request(self) -> typing.Optional[RemoteSystemSessionJoinRequest]: ...
 
+@typing.final
 class RemoteSystemSessionJoinResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteSystemSessionJoinResult: ...
@@ -293,6 +325,7 @@ class RemoteSystemSessionJoinResult(winrt.system.Object):
     @_property
     def status(self) -> RemoteSystemSessionJoinStatus: ...
 
+@typing.final
 class RemoteSystemSessionMessageChannel(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteSystemSessionMessageChannel: ...
@@ -308,6 +341,7 @@ class RemoteSystemSessionMessageChannel(winrt.system.Object):
     @_property
     def session(self) -> typing.Optional[RemoteSystemSession]: ...
 
+@typing.final
 class RemoteSystemSessionOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteSystemSessionOptions: ...
@@ -317,6 +351,7 @@ class RemoteSystemSessionOptions(winrt.system.Object):
     @is_invite_only.setter
     def is_invite_only(self, value: bool) -> None: ...
 
+@typing.final
 class RemoteSystemSessionParticipant(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteSystemSessionParticipant: ...
@@ -324,18 +359,21 @@ class RemoteSystemSessionParticipant(winrt.system.Object):
     @_property
     def remote_system(self) -> typing.Optional[RemoteSystem]: ...
 
+@typing.final
 class RemoteSystemSessionParticipantAddedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteSystemSessionParticipantAddedEventArgs: ...
     @_property
     def participant(self) -> typing.Optional[RemoteSystemSessionParticipant]: ...
 
+@typing.final
 class RemoteSystemSessionParticipantRemovedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteSystemSessionParticipantRemovedEventArgs: ...
     @_property
     def participant(self) -> typing.Optional[RemoteSystemSessionParticipant]: ...
 
+@typing.final
 class RemoteSystemSessionParticipantWatcher(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteSystemSessionParticipantWatcher: ...
@@ -350,18 +388,21 @@ class RemoteSystemSessionParticipantWatcher(winrt.system.Object):
     @_property
     def status(self) -> RemoteSystemSessionParticipantWatcherStatus: ...
 
+@typing.final
 class RemoteSystemSessionRemovedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteSystemSessionRemovedEventArgs: ...
     @_property
     def session_info(self) -> typing.Optional[RemoteSystemSessionInfo]: ...
 
+@typing.final
 class RemoteSystemSessionUpdatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteSystemSessionUpdatedEventArgs: ...
     @_property
     def session_info(self) -> typing.Optional[RemoteSystemSessionInfo]: ...
 
+@typing.final
 class RemoteSystemSessionValueSetReceivedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteSystemSessionValueSetReceivedEventArgs: ...
@@ -370,6 +411,7 @@ class RemoteSystemSessionValueSetReceivedEventArgs(winrt.system.Object):
     @_property
     def sender(self) -> typing.Optional[RemoteSystemSessionParticipant]: ...
 
+@typing.final
 class RemoteSystemSessionWatcher(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteSystemSessionWatcher: ...
@@ -384,6 +426,7 @@ class RemoteSystemSessionWatcher(winrt.system.Object):
     @_property
     def status(self) -> RemoteSystemSessionWatcherStatus: ...
 
+@typing.final
 class RemoteSystemStatusTypeFilter(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteSystemStatusTypeFilter: ...
@@ -391,12 +434,14 @@ class RemoteSystemStatusTypeFilter(winrt.system.Object):
     @_property
     def remote_system_status_type(self) -> RemoteSystemStatusType: ...
 
+@typing.final
 class RemoteSystemUpdatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteSystemUpdatedEventArgs: ...
     @_property
     def remote_system(self) -> typing.Optional[RemoteSystem]: ...
 
+@typing.final
 class RemoteSystemWatcher(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteSystemWatcher: ...
@@ -415,12 +460,14 @@ class RemoteSystemWatcher(winrt.system.Object):
     @_property
     def user(self) -> typing.Optional[winrt.windows.system.User]: ...
 
+@typing.final
 class RemoteSystemWatcherErrorOccurredEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteSystemWatcherErrorOccurredEventArgs: ...
     @_property
     def error(self) -> RemoteSystemWatcherError: ...
 
+@typing.final
 class RemoteSystemWebAccountFilter(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteSystemWebAccountFilter: ...
@@ -428,6 +475,7 @@ class RemoteSystemWebAccountFilter(winrt.system.Object):
     @_property
     def account(self) -> typing.Optional[winrt.windows.security.credentials.WebAccount]: ...
 
+@typing.final
 class IRemoteSystemFilter(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IRemoteSystemFilter: ...

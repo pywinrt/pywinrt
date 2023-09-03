@@ -21,10 +21,12 @@ from winrt.windows.ui.startscreen import ForegroundText, JumpListItemKind, JumpL
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class JumpList_Static(type):
     def is_supported(cls) -> bool: ...
     def load_current_async(cls) -> winrt.windows.foundation.IAsyncOperation[JumpList]: ...
 
+@typing.final
 class JumpList(winrt.system.Object, metaclass=JumpList_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> JumpList: ...
@@ -36,10 +38,12 @@ class JumpList(winrt.system.Object, metaclass=JumpList_Static):
     @_property
     def items(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[JumpListItem]]: ...
 
+@typing.final
 class JumpListItem_Static(type):
     def create_separator(cls) -> typing.Optional[JumpListItem]: ...
     def create_with_arguments(cls, arguments: str, display_name: str, /) -> typing.Optional[JumpListItem]: ...
 
+@typing.final
 class JumpListItem(winrt.system.Object, metaclass=JumpListItem_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> JumpListItem: ...
@@ -66,6 +70,7 @@ class JumpListItem(winrt.system.Object, metaclass=JumpListItem_Static):
     @_property
     def removed_by_user(self) -> bool: ...
 
+@typing.final
 class SecondaryTile_Static(type):
     def exists(cls, tile_id: str, /) -> bool: ...
     @typing.overload
@@ -74,6 +79,7 @@ class SecondaryTile_Static(type):
     def find_all_async(cls, application_id: str, /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[SecondaryTile]]: ...
     def find_all_for_package_async(cls) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[SecondaryTile]]: ...
 
+@typing.final
 class SecondaryTile(winrt.system.Object, metaclass=SecondaryTile_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SecondaryTile: ...
@@ -165,6 +171,7 @@ class SecondaryTile(winrt.system.Object, metaclass=SecondaryTile_Static):
     @_property
     def visual_elements(self) -> typing.Optional[SecondaryTileVisualElements]: ...
 
+@typing.final
 class SecondaryTileVisualElements(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SecondaryTileVisualElements: ...
@@ -219,10 +226,12 @@ class SecondaryTileVisualElements(winrt.system.Object):
     @_property
     def mixed_reality_model(self) -> typing.Optional[TileMixedRealityModel]: ...
 
+@typing.final
 class StartScreenManager_Static(type):
     def get_default(cls) -> typing.Optional[StartScreenManager]: ...
     def get_for_user(cls, user: typing.Optional[winrt.windows.system.User], /) -> typing.Optional[StartScreenManager]: ...
 
+@typing.final
 class StartScreenManager(winrt.system.Object, metaclass=StartScreenManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StartScreenManager: ...
@@ -234,6 +243,7 @@ class StartScreenManager(winrt.system.Object, metaclass=StartScreenManager_Stati
     @_property
     def user(self) -> typing.Optional[winrt.windows.system.User]: ...
 
+@typing.final
 class TileMixedRealityModel(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TileMixedRealityModel: ...
@@ -250,6 +260,7 @@ class TileMixedRealityModel(winrt.system.Object):
     @activation_behavior.setter
     def activation_behavior(self, value: TileMixedRealityModelActivationBehavior) -> None: ...
 
+@typing.final
 class VisualElementsRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VisualElementsRequest: ...
@@ -261,11 +272,13 @@ class VisualElementsRequest(winrt.system.Object):
     @_property
     def visual_elements(self) -> typing.Optional[SecondaryTileVisualElements]: ...
 
+@typing.final
 class VisualElementsRequestDeferral(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VisualElementsRequestDeferral: ...
     def complete(self) -> None: ...
 
+@typing.final
 class VisualElementsRequestedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VisualElementsRequestedEventArgs: ...

@@ -18,6 +18,7 @@ from winrt.windows.services.maps import ManeuverWarningKind, ManeuverWarningSeve
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class EnhancedWaypoint(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EnhancedWaypoint: ...
@@ -27,6 +28,7 @@ class EnhancedWaypoint(winrt.system.Object):
     @_property
     def point(self) -> typing.Optional[winrt.windows.devices.geolocation.Geopoint]: ...
 
+@typing.final
 class ManeuverWarning(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ManeuverWarning: ...
@@ -35,6 +37,7 @@ class ManeuverWarning(winrt.system.Object):
     @_property
     def severity(self) -> ManeuverWarningSeverity: ...
 
+@typing.final
 class MapAddress(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapAddress: ...
@@ -71,6 +74,7 @@ class MapAddress(winrt.system.Object):
     @_property
     def formatted_address(self) -> str: ...
 
+@typing.final
 class MapLocation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapLocation: ...
@@ -83,6 +87,7 @@ class MapLocation(winrt.system.Object):
     @_property
     def point(self) -> typing.Optional[winrt.windows.devices.geolocation.Geopoint]: ...
 
+@typing.final
 class MapLocationFinder_Static(type):
     @typing.overload
     def find_locations_async(cls, search_text: str, reference_point: typing.Optional[winrt.windows.devices.geolocation.Geopoint], /) -> winrt.windows.foundation.IAsyncOperation[MapLocationFinderResult]: ...
@@ -93,10 +98,12 @@ class MapLocationFinder_Static(type):
     @typing.overload
     def find_locations_at_async(cls, query_point: typing.Optional[winrt.windows.devices.geolocation.Geopoint], accuracy: MapLocationDesiredAccuracy, /) -> winrt.windows.foundation.IAsyncOperation[MapLocationFinderResult]: ...
 
+@typing.final
 class MapLocationFinder(winrt.system.Object, metaclass=MapLocationFinder_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapLocationFinder: ...
 
+@typing.final
 class MapLocationFinderResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapLocationFinderResult: ...
@@ -105,14 +112,17 @@ class MapLocationFinderResult(winrt.system.Object):
     @_property
     def status(self) -> MapLocationFinderStatus: ...
 
+@typing.final
 class MapManager_Static(type):
     def show_downloaded_maps_u_i(cls) -> None: ...
     def show_maps_update_u_i(cls) -> None: ...
 
+@typing.final
 class MapManager(winrt.system.Object, metaclass=MapManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapManager: ...
 
+@typing.final
 class MapRoute(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapRoute: ...
@@ -139,6 +149,7 @@ class MapRoute(winrt.system.Object):
     @_property
     def is_scenic(self) -> bool: ...
 
+@typing.final
 class MapRouteDrivingOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapRouteDrivingOptions: ...
@@ -164,6 +175,7 @@ class MapRouteDrivingOptions(winrt.system.Object):
     @departure_time.setter
     def departure_time(self, value: typing.Optional[typing.Optional[datetime.datetime]]) -> None: ...
 
+@typing.final
 class MapRouteFinder_Static(type):
     @typing.overload
     def get_driving_route_async(cls, start_point: typing.Optional[winrt.windows.devices.geolocation.Geopoint], end_point: typing.Optional[winrt.windows.devices.geolocation.Geopoint], /) -> winrt.windows.foundation.IAsyncOperation[MapRouteFinderResult]: ...
@@ -188,10 +200,12 @@ class MapRouteFinder_Static(type):
     def get_walking_route_async(cls, start_point: typing.Optional[winrt.windows.devices.geolocation.Geopoint], end_point: typing.Optional[winrt.windows.devices.geolocation.Geopoint], /) -> winrt.windows.foundation.IAsyncOperation[MapRouteFinderResult]: ...
     def get_walking_route_from_waypoints_async(cls, way_points: typing.Iterable[winrt.windows.devices.geolocation.Geopoint], /) -> winrt.windows.foundation.IAsyncOperation[MapRouteFinderResult]: ...
 
+@typing.final
 class MapRouteFinder(winrt.system.Object, metaclass=MapRouteFinder_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapRouteFinder: ...
 
+@typing.final
 class MapRouteFinderResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapRouteFinderResult: ...
@@ -202,6 +216,7 @@ class MapRouteFinderResult(winrt.system.Object):
     @_property
     def alternate_routes(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[MapRoute]]: ...
 
+@typing.final
 class MapRouteLeg(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapRouteLeg: ...
@@ -220,6 +235,7 @@ class MapRouteLeg(winrt.system.Object):
     @_property
     def traffic_congestion(self) -> TrafficCongestion: ...
 
+@typing.final
 class MapRouteManeuver(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapRouteManeuver: ...
@@ -244,6 +260,7 @@ class MapRouteManeuver(winrt.system.Object):
     @_property
     def warnings(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[ManeuverWarning]]: ...
 
+@typing.final
 class MapService_Static(type):
     @_property
     def service_token(cls) -> str: ...
@@ -258,10 +275,12 @@ class MapService_Static(type):
     @data_usage_preference.setter
     def data_usage_preference(cls, value: MapServiceDataUsagePreference) -> None: ...
 
+@typing.final
 class MapService(winrt.system.Object, metaclass=MapService_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapService: ...
 
+@typing.final
 class PlaceInfo_Static(type):
     @typing.overload
     def create(cls, reference_point: typing.Optional[winrt.windows.devices.geolocation.Geopoint], /) -> typing.Optional[PlaceInfo]: ...
@@ -279,6 +298,7 @@ class PlaceInfo_Static(type):
     @_property
     def is_show_supported(cls) -> bool: ...
 
+@typing.final
 class PlaceInfo(winrt.system.Object, metaclass=PlaceInfo_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlaceInfo: ...
@@ -295,6 +315,7 @@ class PlaceInfo(winrt.system.Object, metaclass=PlaceInfo_Static):
     @_property
     def identifier(self) -> str: ...
 
+@typing.final
 class PlaceInfoCreateOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlaceInfoCreateOptions: ...

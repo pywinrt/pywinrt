@@ -18,6 +18,7 @@ from winrt.windows.security.authentication.web.core import FindAllWebAccountsSta
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class FindAllAccountsResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FindAllAccountsResult: ...
@@ -28,12 +29,14 @@ class FindAllAccountsResult(winrt.system.Object):
     @_property
     def status(self) -> FindAllWebAccountsStatus: ...
 
+@typing.final
 class WebAccountEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebAccountEventArgs: ...
     @_property
     def account(self) -> typing.Optional[winrt.windows.security.credentials.WebAccount]: ...
 
+@typing.final
 class WebAccountMonitor(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebAccountMonitor: ...
@@ -46,6 +49,7 @@ class WebAccountMonitor(winrt.system.Object):
     def add_account_picture_updated(self, handler: winrt.windows.foundation.TypedEventHandler[WebAccountMonitor, WebAccountEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_account_picture_updated(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
+@typing.final
 class WebAuthenticationCoreManager_Static(type):
     def create_web_account_monitor(cls, web_accounts: typing.Iterable[winrt.windows.security.credentials.WebAccount], /) -> typing.Optional[WebAccountMonitor]: ...
     def find_account_async(cls, provider: typing.Optional[winrt.windows.security.credentials.WebAccountProvider], web_account_id: str, /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.security.credentials.WebAccount]: ...
@@ -74,10 +78,12 @@ class WebAuthenticationCoreManager_Static(type):
     @typing.overload
     def request_token_async(cls, request: typing.Optional[WebTokenRequest], web_account: typing.Optional[winrt.windows.security.credentials.WebAccount], /) -> winrt.windows.foundation.IAsyncOperation[WebTokenRequestResult]: ...
 
+@typing.final
 class WebAuthenticationCoreManager(winrt.system.Object, metaclass=WebAuthenticationCoreManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebAuthenticationCoreManager: ...
 
+@typing.final
 class WebProviderError(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebProviderError: ...
@@ -89,6 +95,7 @@ class WebProviderError(winrt.system.Object):
     @_property
     def properties(self) -> typing.Optional[winrt.windows.foundation.collections.IMap[str, str]]: ...
 
+@typing.final
 class WebTokenRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebTokenRequest: ...
@@ -117,6 +124,7 @@ class WebTokenRequest(winrt.system.Object):
     @correlation_id.setter
     def correlation_id(self, value: str) -> None: ...
 
+@typing.final
 class WebTokenRequestResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebTokenRequestResult: ...
@@ -128,6 +136,7 @@ class WebTokenRequestResult(winrt.system.Object):
     @_property
     def response_status(self) -> WebTokenRequestStatus: ...
 
+@typing.final
 class WebTokenResponse(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebTokenResponse: ...

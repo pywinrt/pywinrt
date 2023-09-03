@@ -19,28 +19,33 @@ from winrt.windows.devices.smartcards import SmartCardPinResetHandler
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class CardAddedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CardAddedEventArgs: ...
     @_property
     def smart_card(self) -> typing.Optional[SmartCard]: ...
 
+@typing.final
 class CardRemovedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CardRemovedEventArgs: ...
     @_property
     def smart_card(self) -> typing.Optional[SmartCard]: ...
 
+@typing.final
 class KnownSmartCardAppletIds_Static(type):
     @_property
     def payment_system_environment(cls) -> typing.Optional[winrt.windows.storage.streams.IBuffer]: ...
     @_property
     def proximity_payment_system_environment(cls) -> typing.Optional[winrt.windows.storage.streams.IBuffer]: ...
 
+@typing.final
 class KnownSmartCardAppletIds(winrt.system.Object, metaclass=KnownSmartCardAppletIds_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> KnownSmartCardAppletIds: ...
 
+@typing.final
 class SmartCard(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmartCard: ...
@@ -50,10 +55,12 @@ class SmartCard(winrt.system.Object):
     @_property
     def reader(self) -> typing.Optional[SmartCardReader]: ...
 
+@typing.final
 class SmartCardAppletIdGroup_Static(type):
     @_property
     def max_applet_ids(cls) -> winrt.system.UInt16: ...
 
+@typing.final
 class SmartCardAppletIdGroup(winrt.system.Object, metaclass=SmartCardAppletIdGroup_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmartCardAppletIdGroup: ...
@@ -94,6 +101,7 @@ class SmartCardAppletIdGroup(winrt.system.Object, metaclass=SmartCardAppletIdGro
     @_property
     def properties(self) -> typing.Optional[winrt.windows.foundation.collections.ValueSet]: ...
 
+@typing.final
 class SmartCardAppletIdGroupRegistration(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmartCardAppletIdGroupRegistration: ...
@@ -109,6 +117,7 @@ class SmartCardAppletIdGroupRegistration(winrt.system.Object):
     @_property
     def smart_card_reader_id(self) -> str: ...
 
+@typing.final
 class SmartCardAutomaticResponseApdu(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmartCardAutomaticResponseApdu: ...
@@ -146,6 +155,7 @@ class SmartCardAutomaticResponseApdu(winrt.system.Object):
     @allow_when_cryptogram_generator_not_prepared.setter
     def allow_when_cryptogram_generator_not_prepared(self, value: bool) -> None: ...
 
+@typing.final
 class SmartCardChallengeContext(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -161,6 +171,7 @@ class SmartCardChallengeContext(winrt.system.Object):
     @_property
     def challenge(self) -> typing.Optional[winrt.windows.storage.streams.IBuffer]: ...
 
+@typing.final
 class SmartCardConnection(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -169,10 +180,12 @@ class SmartCardConnection(winrt.system.Object):
     def close(self) -> None: ...
     def transmit_async(self, command: typing.Optional[winrt.windows.storage.streams.IBuffer], /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.storage.streams.IBuffer]: ...
 
+@typing.final
 class SmartCardCryptogramGenerator_Static(type):
     def get_smart_card_cryptogram_generator_async(cls) -> winrt.windows.foundation.IAsyncOperation[SmartCardCryptogramGenerator]: ...
     def is_supported(cls) -> bool: ...
 
+@typing.final
 class SmartCardCryptogramGenerator(winrt.system.Object, metaclass=SmartCardCryptogramGenerator_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmartCardCryptogramGenerator: ...
@@ -201,6 +214,7 @@ class SmartCardCryptogramGenerator(winrt.system.Object, metaclass=SmartCardCrypt
     @_property
     def supported_smart_card_cryptogram_storage_key_capabilities(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[SmartCardCryptogramStorageKeyCapabilities]]: ...
 
+@typing.final
 class SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult: ...
@@ -210,6 +224,7 @@ class SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult(winrt.sys
     @_property
     def operation_status(self) -> SmartCardCryptogramGeneratorOperationStatus: ...
 
+@typing.final
 class SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult: ...
@@ -219,6 +234,7 @@ class SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult(wi
     @_property
     def operation_status(self) -> SmartCardCryptogramGeneratorOperationStatus: ...
 
+@typing.final
 class SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult: ...
@@ -228,6 +244,7 @@ class SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult(winrt.s
     @_property
     def operation_status(self) -> SmartCardCryptogramGeneratorOperationStatus: ...
 
+@typing.final
 class SmartCardCryptogramMaterialCharacteristics(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmartCardCryptogramMaterialCharacteristics: ...
@@ -249,6 +266,7 @@ class SmartCardCryptogramMaterialCharacteristics(winrt.system.Object):
     @_property
     def protection_version(self) -> winrt.system.Int32: ...
 
+@typing.final
 class SmartCardCryptogramMaterialPackageCharacteristics(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmartCardCryptogramMaterialPackageCharacteristics: ...
@@ -262,6 +280,7 @@ class SmartCardCryptogramMaterialPackageCharacteristics(winrt.system.Object):
     @_property
     def storage_key_name(self) -> str: ...
 
+@typing.final
 class SmartCardCryptogramMaterialPossessionProof(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmartCardCryptogramMaterialPossessionProof: ...
@@ -270,6 +289,7 @@ class SmartCardCryptogramMaterialPossessionProof(winrt.system.Object):
     @_property
     def proof(self) -> typing.Optional[winrt.windows.storage.streams.IBuffer]: ...
 
+@typing.final
 class SmartCardCryptogramPlacementStep(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmartCardCryptogramPlacementStep: ...
@@ -311,6 +331,7 @@ class SmartCardCryptogramPlacementStep(winrt.system.Object):
     @algorithm.setter
     def algorithm(self, value: SmartCardCryptogramAlgorithm) -> None: ...
 
+@typing.final
 class SmartCardCryptogramStorageKeyCharacteristics(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmartCardCryptogramStorageKeyCharacteristics: ...
@@ -324,6 +345,7 @@ class SmartCardCryptogramStorageKeyCharacteristics(winrt.system.Object):
     @_property
     def storage_key_name(self) -> str: ...
 
+@typing.final
 class SmartCardCryptogramStorageKeyInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmartCardCryptogramStorageKeyInfo: ...
@@ -344,6 +366,7 @@ class SmartCardCryptogramStorageKeyInfo(winrt.system.Object):
     @_property
     def operational_requirements(self) -> str: ...
 
+@typing.final
 class SmartCardEmulator_Static(type):
     def get_applet_id_group_registrations_async(cls) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[SmartCardAppletIdGroupRegistration]]: ...
     def get_default_async(cls) -> winrt.windows.foundation.IAsyncOperation[SmartCardEmulator]: ...
@@ -353,6 +376,7 @@ class SmartCardEmulator_Static(type):
     @_property
     def max_applet_id_group_registrations(cls) -> winrt.system.UInt16: ...
 
+@typing.final
 class SmartCardEmulator(winrt.system.Object, metaclass=SmartCardEmulator_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmartCardEmulator: ...
@@ -365,6 +389,7 @@ class SmartCardEmulator(winrt.system.Object, metaclass=SmartCardEmulator_Static)
     @_property
     def enablement_policy(self) -> SmartCardEmulatorEnablementPolicy: ...
 
+@typing.final
 class SmartCardEmulatorApduReceivedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmartCardEmulatorApduReceivedEventArgs: ...
@@ -385,6 +410,7 @@ class SmartCardEmulatorApduReceivedEventArgs(winrt.system.Object):
     @_property
     def state(self) -> winrt.system.UInt32: ...
 
+@typing.final
 class SmartCardEmulatorConnectionDeactivatedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmartCardEmulatorConnectionDeactivatedEventArgs: ...
@@ -393,6 +419,7 @@ class SmartCardEmulatorConnectionDeactivatedEventArgs(winrt.system.Object):
     @_property
     def reason(self) -> SmartCardEmulatorConnectionDeactivatedReason: ...
 
+@typing.final
 class SmartCardEmulatorConnectionProperties(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmartCardEmulatorConnectionProperties: ...
@@ -401,6 +428,7 @@ class SmartCardEmulatorConnectionProperties(winrt.system.Object):
     @_property
     def source(self) -> SmartCardEmulatorConnectionSource: ...
 
+@typing.final
 class SmartCardPinPolicy(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmartCardPinPolicy: ...
@@ -430,11 +458,13 @@ class SmartCardPinPolicy(winrt.system.Object):
     @digits.setter
     def digits(self, value: SmartCardPinCharacterPolicyOption) -> None: ...
 
+@typing.final
 class SmartCardPinResetDeferral(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmartCardPinResetDeferral: ...
     def complete(self) -> None: ...
 
+@typing.final
 class SmartCardPinResetRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmartCardPinResetRequest: ...
@@ -445,6 +475,7 @@ class SmartCardPinResetRequest(winrt.system.Object):
     @_property
     def deadline(self) -> datetime.datetime: ...
 
+@typing.final
 class SmartCardProvisioning_Static(type):
     def from_smart_card_async(cls, card: typing.Optional[SmartCard], /) -> winrt.windows.foundation.IAsyncOperation[SmartCardProvisioning]: ...
     @typing.overload
@@ -457,6 +488,7 @@ class SmartCardProvisioning_Static(type):
     def request_virtual_smart_card_creation_async(cls, friendly_name: str, administrative_key: typing.Optional[winrt.windows.storage.streams.IBuffer], pin_policy: typing.Optional[SmartCardPinPolicy], card_id: _uuid.UUID, /) -> winrt.windows.foundation.IAsyncOperation[SmartCardProvisioning]: ...
     def request_virtual_smart_card_deletion_async(cls, card: typing.Optional[SmartCard], /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
 
+@typing.final
 class SmartCardProvisioning(winrt.system.Object, metaclass=SmartCardProvisioning_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmartCardProvisioning: ...
@@ -469,6 +501,7 @@ class SmartCardProvisioning(winrt.system.Object, metaclass=SmartCardProvisioning
     @_property
     def smart_card(self) -> typing.Optional[SmartCard]: ...
 
+@typing.final
 class SmartCardReader_Static(type):
     def from_id_async(cls, device_id: str, /) -> winrt.windows.foundation.IAsyncOperation[SmartCardReader]: ...
     @typing.overload
@@ -476,6 +509,7 @@ class SmartCardReader_Static(type):
     @typing.overload
     def get_device_selector(cls, kind: SmartCardReaderKind, /) -> str: ...
 
+@typing.final
 class SmartCardReader(winrt.system.Object, metaclass=SmartCardReader_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmartCardReader: ...
@@ -492,6 +526,7 @@ class SmartCardReader(winrt.system.Object, metaclass=SmartCardReader_Static):
     @_property
     def name(self) -> str: ...
 
+@typing.final
 class SmartCardTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmartCardTriggerDetails: ...

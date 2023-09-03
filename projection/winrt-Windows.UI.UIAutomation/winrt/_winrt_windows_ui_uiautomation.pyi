@@ -12,6 +12,7 @@ import winrt.system
 
 Self = typing.TypeVar('Self')
 
+@typing.final
 class AutomationConnection(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AutomationConnection: ...
@@ -22,12 +23,14 @@ class AutomationConnection(winrt.system.Object):
     @_property
     def is_remote_system(self) -> bool: ...
 
+@typing.final
 class AutomationConnectionBoundObject(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AutomationConnectionBoundObject: ...
     @_property
     def connection(self) -> typing.Optional[AutomationConnection]: ...
 
+@typing.final
 class AutomationElement(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AutomationElement: ...
@@ -38,6 +41,7 @@ class AutomationElement(winrt.system.Object):
     @_property
     def is_remote_system(self) -> bool: ...
 
+@typing.final
 class AutomationTextRange(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AutomationTextRange: ...
