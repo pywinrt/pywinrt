@@ -19,9 +19,9 @@ dynamic = ["version"]
 requires-python = ">=3.9,<3.13"
 
 [project.urls]
-# Homepage = "https://github.com/pywrint/pywrinrt"
+# Homepage = "https://github.com/pywinrt/pywinrt"
 Documentation = "https://pywinrt.readthedocs.io"
-Repository = "https://github.com/pywrint/pywrinrt"
+Repository = "https://github.com/pywinrt/pywinrt"
 Changelog = "https://github.com/pywinrt/pywinrt/blob/main/CHANGELOG.md"
 
 [tool.setuptools.dynamic]
