@@ -15348,6 +15348,219 @@ namespace py::cpp::Windows::UI::Composition
         _type_slots_CompositionTarget
     };
 
+    // ----- CompositionTexture class --------------------
+
+    static PyObject* _new_CompositionTexture(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionTexture>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionTexture>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_CompositionTexture(py::wrapper::Windows::UI::Composition::CompositionTexture* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* CompositionTexture_get_SourceRect(py::wrapper::Windows::UI::Composition::CompositionTexture* self, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionTexture", L"SourceRect"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert(self->obj.SourceRect());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int CompositionTexture_put_SourceRect(py::wrapper::Windows::UI::Composition::CompositionTexture* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionTexture", L"SourceRect"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return -1;
+        }
+
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            auto param0 = py::convert_to<winrt::Windows::Graphics::RectInt32>(arg);
+
+            self->obj.SourceRect(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* CompositionTexture_get_ColorSpace(py::wrapper::Windows::UI::Composition::CompositionTexture* self, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionTexture", L"ColorSpace"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert(self->obj.ColorSpace());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int CompositionTexture_put_ColorSpace(py::wrapper::Windows::UI::Composition::CompositionTexture* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionTexture", L"ColorSpace"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return -1;
+        }
+
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            auto param0 = py::convert_to<winrt::Windows::Graphics::DirectX::DirectXColorSpace>(arg);
+
+            self->obj.ColorSpace(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* CompositionTexture_get_AlphaMode(py::wrapper::Windows::UI::Composition::CompositionTexture* self, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionTexture", L"AlphaMode"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert(self->obj.AlphaMode());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int CompositionTexture_put_AlphaMode(py::wrapper::Windows::UI::Composition::CompositionTexture* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.CompositionTexture", L"AlphaMode"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return -1;
+        }
+
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            auto param0 = py::convert_to<winrt::Windows::Graphics::DirectX::DirectXAlphaMode>(arg);
+
+            self->obj.AlphaMode(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* _assign_array_CompositionTexture(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Composition::CompositionTexture>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_CompositionTexture(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::UI::Composition::CompositionTexture>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_CompositionTexture[] = {
+        { "_assign_array_", _assign_array_CompositionTexture, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_CompositionTexture), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_CompositionTexture[] = {
+        { "source_rect", reinterpret_cast<getter>(CompositionTexture_get_SourceRect), reinterpret_cast<setter>(CompositionTexture_put_SourceRect), nullptr, nullptr },
+        { "color_space", reinterpret_cast<getter>(CompositionTexture_get_ColorSpace), reinterpret_cast<setter>(CompositionTexture_put_ColorSpace), nullptr, nullptr },
+        { "alpha_mode", reinterpret_cast<getter>(CompositionTexture_get_AlphaMode), reinterpret_cast<setter>(CompositionTexture_put_AlphaMode), nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_CompositionTexture[] = 
+    {
+        { Py_tp_new, reinterpret_cast<void*>(_new_CompositionTexture) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionTexture) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionTexture) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionTexture) },
+        { },
+    };
+
+    static PyType_Spec type_spec_CompositionTexture =
+    {
+        "winrt._winrt_windows_ui_composition.CompositionTexture",
+        sizeof(py::wrapper::Windows::UI::Composition::CompositionTexture),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_CompositionTexture
+    };
+
     // ----- CompositionTransform class --------------------
 
     static PyObject* _new_CompositionTransform(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -29511,6 +29724,11 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_composition(void) noexcept
     }
 
     if (py::register_python_type(module.get(), &type_spec_CompositionTarget, object_bases.get(), nullptr) == -1)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_CompositionTexture, object_bases.get(), nullptr) == -1)
     {
         return nullptr;
     }

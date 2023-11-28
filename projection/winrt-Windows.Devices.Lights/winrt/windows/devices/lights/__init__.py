@@ -26,6 +26,7 @@ class LampArrayKind(enum.IntEnum):
     WEARABLE = 8
     FURNITURE = 9
     ART = 10
+    HEADSET = 11
 
 class LampPurposes(enum.IntFlag):
     UNDEFINED = 0

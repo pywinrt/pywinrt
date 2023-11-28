@@ -42,8 +42,10 @@ namespace py::impl::Windows::Media::MediaProperties
 namespace py::wrapper::Windows::Media::MediaProperties
 {
     using AudioEncodingProperties = py::winrt_wrapper<winrt::Windows::Media::MediaProperties::AudioEncodingProperties>;
+    using Av1ProfileIds = py::winrt_wrapper<winrt::Windows::Media::MediaProperties::Av1ProfileIds>;
     using ContainerEncodingProperties = py::winrt_wrapper<winrt::Windows::Media::MediaProperties::ContainerEncodingProperties>;
     using H264ProfileIds = py::winrt_wrapper<winrt::Windows::Media::MediaProperties::H264ProfileIds>;
+    using HevcProfileIds = py::winrt_wrapper<winrt::Windows::Media::MediaProperties::HevcProfileIds>;
     using ImageEncodingProperties = py::winrt_wrapper<winrt::Windows::Media::MediaProperties::ImageEncodingProperties>;
     using MediaEncodingProfile = py::winrt_wrapper<winrt::Windows::Media::MediaProperties::MediaEncodingProfile>;
     using MediaEncodingSubtypes = py::winrt_wrapper<winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes>;
@@ -52,6 +54,7 @@ namespace py::wrapper::Windows::Media::MediaProperties
     using Mpeg2ProfileIds = py::winrt_wrapper<winrt::Windows::Media::MediaProperties::Mpeg2ProfileIds>;
     using TimedMetadataEncodingProperties = py::winrt_wrapper<winrt::Windows::Media::MediaProperties::TimedMetadataEncodingProperties>;
     using VideoEncodingProperties = py::winrt_wrapper<winrt::Windows::Media::MediaProperties::VideoEncodingProperties>;
+    using Vp9ProfileIds = py::winrt_wrapper<winrt::Windows::Media::MediaProperties::Vp9ProfileIds>;
     using IMediaEncodingProperties = py::winrt_wrapper<winrt::Windows::Media::MediaProperties::IMediaEncodingProperties>;
 }
 
@@ -146,6 +149,13 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Windows::Media::MediaProperties::Av1ProfileIds>
+    {
+        static constexpr const char* module_name = "winrt.windows.media.mediaproperties";
+        static constexpr const char* type_name = "Av1ProfileIds";
+    };
+
+    template<>
     struct py_type<winrt::Windows::Media::MediaProperties::ContainerEncodingProperties>
     {
         static constexpr const char* module_name = "winrt.windows.media.mediaproperties";
@@ -157,6 +167,13 @@ namespace py
     {
         static constexpr const char* module_name = "winrt.windows.media.mediaproperties";
         static constexpr const char* type_name = "H264ProfileIds";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::Media::MediaProperties::HevcProfileIds>
+    {
+        static constexpr const char* module_name = "winrt.windows.media.mediaproperties";
+        static constexpr const char* type_name = "HevcProfileIds";
     };
 
     template<>
@@ -213,6 +230,13 @@ namespace py
     {
         static constexpr const char* module_name = "winrt.windows.media.mediaproperties";
         static constexpr const char* type_name = "VideoEncodingProperties";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::Media::MediaProperties::Vp9ProfileIds>
+    {
+        static constexpr const char* module_name = "winrt.windows.media.mediaproperties";
+        static constexpr const char* type_name = "Vp9ProfileIds";
     };
 
     template<>

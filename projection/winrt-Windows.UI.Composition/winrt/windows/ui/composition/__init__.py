@@ -87,6 +87,7 @@ __all__ = [
     "CompositionStrokeDashArray",
     "CompositionSurfaceBrush",
     "CompositionTarget",
+    "CompositionTexture",
     "CompositionTransform",
     "CompositionViewBox",
     "CompositionVirtualDrawingSurface",
@@ -322,6 +323,7 @@ CompositionStrokeDashArray = _winrt_windows_ui_composition.CompositionStrokeDash
 winrt.system._mixin_mutable_sequence(CompositionStrokeDashArray)
 CompositionSurfaceBrush = _winrt_windows_ui_composition.CompositionSurfaceBrush
 CompositionTarget = _winrt_windows_ui_composition.CompositionTarget
+CompositionTexture = _winrt_windows_ui_composition.CompositionTexture
 CompositionTransform = _winrt_windows_ui_composition.CompositionTransform
 CompositionViewBox = _winrt_windows_ui_composition.CompositionViewBox
 CompositionVirtualDrawingSurface = _winrt_windows_ui_composition.CompositionVirtualDrawingSurface

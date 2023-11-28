@@ -1925,6 +1925,509 @@ namespace py::cpp::Windows::Storage::Provider
         _type_slots_StorageProviderItemPropertyDefinition
     };
 
+    // ----- StorageProviderKnownFolderEntry class --------------------
+
+    static PyObject* _new_StorageProviderKnownFolderEntry(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    {
+        if (kwds != nullptr)
+        {
+            py::set_invalid_kwd_args_error();
+            return nullptr;
+        }
+
+        auto arg_count = PyTuple_Size(args);
+        if (arg_count == 0)
+        {
+            try
+            {
+                winrt::Windows::Storage::Provider::StorageProviderKnownFolderEntry instance{  };
+                return py::wrap(instance, type);
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static void _dealloc_StorageProviderKnownFolderEntry(py::wrapper::Windows::Storage::Provider::StorageProviderKnownFolderEntry* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* StorageProviderKnownFolderEntry_get_Status(py::wrapper::Windows::Storage::Provider::StorageProviderKnownFolderEntry* self, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderKnownFolderEntry", L"Status"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert(self->obj.Status());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int StorageProviderKnownFolderEntry_put_Status(py::wrapper::Windows::Storage::Provider::StorageProviderKnownFolderEntry* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderKnownFolderEntry", L"Status"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return -1;
+        }
+
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            auto param0 = py::convert_to<winrt::Windows::Storage::Provider::StorageProviderKnownFolderSyncStatus>(arg);
+
+            self->obj.Status(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* StorageProviderKnownFolderEntry_get_KnownFolderId(py::wrapper::Windows::Storage::Provider::StorageProviderKnownFolderEntry* self, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderKnownFolderEntry", L"KnownFolderId"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert(self->obj.KnownFolderId());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int StorageProviderKnownFolderEntry_put_KnownFolderId(py::wrapper::Windows::Storage::Provider::StorageProviderKnownFolderEntry* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderKnownFolderEntry", L"KnownFolderId"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return -1;
+        }
+
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            auto param0 = py::convert_to<winrt::guid>(arg);
+
+            self->obj.KnownFolderId(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* _assign_array_StorageProviderKnownFolderEntry(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::Provider::StorageProviderKnownFolderEntry>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_StorageProviderKnownFolderEntry(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Storage::Provider::StorageProviderKnownFolderEntry>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_StorageProviderKnownFolderEntry[] = {
+        { "_assign_array_", _assign_array_StorageProviderKnownFolderEntry, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_StorageProviderKnownFolderEntry), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_StorageProviderKnownFolderEntry[] = {
+        { "status", reinterpret_cast<getter>(StorageProviderKnownFolderEntry_get_Status), reinterpret_cast<setter>(StorageProviderKnownFolderEntry_put_Status), nullptr, nullptr },
+        { "known_folder_id", reinterpret_cast<getter>(StorageProviderKnownFolderEntry_get_KnownFolderId), reinterpret_cast<setter>(StorageProviderKnownFolderEntry_put_KnownFolderId), nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_StorageProviderKnownFolderEntry[] = 
+    {
+        { Py_tp_new, reinterpret_cast<void*>(_new_StorageProviderKnownFolderEntry) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StorageProviderKnownFolderEntry) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_StorageProviderKnownFolderEntry) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_StorageProviderKnownFolderEntry) },
+        { },
+    };
+
+    static PyType_Spec type_spec_StorageProviderKnownFolderEntry =
+    {
+        "winrt._winrt_windows_storage_provider.StorageProviderKnownFolderEntry",
+        sizeof(py::wrapper::Windows::Storage::Provider::StorageProviderKnownFolderEntry),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_StorageProviderKnownFolderEntry
+    };
+
+    // ----- StorageProviderKnownFolderSyncInfo class --------------------
+
+    static PyObject* _new_StorageProviderKnownFolderSyncInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    {
+        if (kwds != nullptr)
+        {
+            py::set_invalid_kwd_args_error();
+            return nullptr;
+        }
+
+        auto arg_count = PyTuple_Size(args);
+        if (arg_count == 0)
+        {
+            try
+            {
+                winrt::Windows::Storage::Provider::StorageProviderKnownFolderSyncInfo instance{  };
+                return py::wrap(instance, type);
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static void _dealloc_StorageProviderKnownFolderSyncInfo(py::wrapper::Windows::Storage::Provider::StorageProviderKnownFolderSyncInfo* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* StorageProviderKnownFolderSyncInfo_get_SyncRequested(py::wrapper::Windows::Storage::Provider::StorageProviderKnownFolderSyncInfo* self, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderKnownFolderSyncInfo", L"SyncRequested"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert(self->obj.SyncRequested());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int StorageProviderKnownFolderSyncInfo_put_SyncRequested(py::wrapper::Windows::Storage::Provider::StorageProviderKnownFolderSyncInfo* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderKnownFolderSyncInfo", L"SyncRequested"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return -1;
+        }
+
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            auto param0 = py::convert_to<winrt::Windows::Storage::Provider::StorageProviderKnownFolderSyncRequestedHandler>(arg);
+
+            self->obj.SyncRequested(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* StorageProviderKnownFolderSyncInfo_get_ProviderDisplayName(py::wrapper::Windows::Storage::Provider::StorageProviderKnownFolderSyncInfo* self, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderKnownFolderSyncInfo", L"ProviderDisplayName"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert(self->obj.ProviderDisplayName());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int StorageProviderKnownFolderSyncInfo_put_ProviderDisplayName(py::wrapper::Windows::Storage::Provider::StorageProviderKnownFolderSyncInfo* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderKnownFolderSyncInfo", L"ProviderDisplayName"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return -1;
+        }
+
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.ProviderDisplayName(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* StorageProviderKnownFolderSyncInfo_get_KnownFolderEntries(py::wrapper::Windows::Storage::Provider::StorageProviderKnownFolderSyncInfo* self, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderKnownFolderSyncInfo", L"KnownFolderEntries"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert(self->obj.KnownFolderEntries());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_StorageProviderKnownFolderSyncInfo(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::Provider::StorageProviderKnownFolderSyncInfo>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_StorageProviderKnownFolderSyncInfo(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Storage::Provider::StorageProviderKnownFolderSyncInfo>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_StorageProviderKnownFolderSyncInfo[] = {
+        { "_assign_array_", _assign_array_StorageProviderKnownFolderSyncInfo, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_StorageProviderKnownFolderSyncInfo), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_StorageProviderKnownFolderSyncInfo[] = {
+        { "sync_requested", reinterpret_cast<getter>(StorageProviderKnownFolderSyncInfo_get_SyncRequested), reinterpret_cast<setter>(StorageProviderKnownFolderSyncInfo_put_SyncRequested), nullptr, nullptr },
+        { "provider_display_name", reinterpret_cast<getter>(StorageProviderKnownFolderSyncInfo_get_ProviderDisplayName), reinterpret_cast<setter>(StorageProviderKnownFolderSyncInfo_put_ProviderDisplayName), nullptr, nullptr },
+        { "known_folder_entries", reinterpret_cast<getter>(StorageProviderKnownFolderSyncInfo_get_KnownFolderEntries), nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_StorageProviderKnownFolderSyncInfo[] = 
+    {
+        { Py_tp_new, reinterpret_cast<void*>(_new_StorageProviderKnownFolderSyncInfo) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StorageProviderKnownFolderSyncInfo) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_StorageProviderKnownFolderSyncInfo) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_StorageProviderKnownFolderSyncInfo) },
+        { },
+    };
+
+    static PyType_Spec type_spec_StorageProviderKnownFolderSyncInfo =
+    {
+        "winrt._winrt_windows_storage_provider.StorageProviderKnownFolderSyncInfo",
+        sizeof(py::wrapper::Windows::Storage::Provider::StorageProviderKnownFolderSyncInfo),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_StorageProviderKnownFolderSyncInfo
+    };
+
+    // ----- StorageProviderKnownFolderSyncRequestArgs class --------------------
+
+    static PyObject* _new_StorageProviderKnownFolderSyncRequestArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Windows::Storage::Provider::StorageProviderKnownFolderSyncRequestArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Provider::StorageProviderKnownFolderSyncRequestArgs>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_StorageProviderKnownFolderSyncRequestArgs(py::wrapper::Windows::Storage::Provider::StorageProviderKnownFolderSyncRequestArgs* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* StorageProviderKnownFolderSyncRequestArgs_get_KnownFolders(py::wrapper::Windows::Storage::Provider::StorageProviderKnownFolderSyncRequestArgs* self, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderKnownFolderSyncRequestArgs", L"KnownFolders"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert(self->obj.KnownFolders());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* StorageProviderKnownFolderSyncRequestArgs_get_Source(py::wrapper::Windows::Storage::Provider::StorageProviderKnownFolderSyncRequestArgs* self, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderKnownFolderSyncRequestArgs", L"Source"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert(self->obj.Source());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_StorageProviderKnownFolderSyncRequestArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::Provider::StorageProviderKnownFolderSyncRequestArgs>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_StorageProviderKnownFolderSyncRequestArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Storage::Provider::StorageProviderKnownFolderSyncRequestArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_StorageProviderKnownFolderSyncRequestArgs[] = {
+        { "_assign_array_", _assign_array_StorageProviderKnownFolderSyncRequestArgs, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_StorageProviderKnownFolderSyncRequestArgs), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_StorageProviderKnownFolderSyncRequestArgs[] = {
+        { "known_folders", reinterpret_cast<getter>(StorageProviderKnownFolderSyncRequestArgs_get_KnownFolders), nullptr, nullptr, nullptr },
+        { "source", reinterpret_cast<getter>(StorageProviderKnownFolderSyncRequestArgs_get_Source), nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_StorageProviderKnownFolderSyncRequestArgs[] = 
+    {
+        { Py_tp_new, reinterpret_cast<void*>(_new_StorageProviderKnownFolderSyncRequestArgs) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StorageProviderKnownFolderSyncRequestArgs) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_StorageProviderKnownFolderSyncRequestArgs) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_StorageProviderKnownFolderSyncRequestArgs) },
+        { },
+    };
+
+    static PyType_Spec type_spec_StorageProviderKnownFolderSyncRequestArgs =
+    {
+        "winrt._winrt_windows_storage_provider.StorageProviderKnownFolderSyncRequestArgs",
+        sizeof(py::wrapper::Windows::Storage::Provider::StorageProviderKnownFolderSyncRequestArgs),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_StorageProviderKnownFolderSyncRequestArgs
+    };
+
     // ----- StorageProviderMoreInfoUI class --------------------
 
     static PyObject* _new_StorageProviderMoreInfoUI(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -4119,6 +4622,249 @@ namespace py::cpp::Windows::Storage::Provider
         _type_slots_IStorageProviderItemPropertySource
     };
 
+    // ----- IStorageProviderKnownFolderSyncInfoSource interface --------------------
+
+    static PyObject* _new_IStorageProviderKnownFolderSyncInfoSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSource>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSource>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_IStorageProviderKnownFolderSyncInfoSource(py::wrapper::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSource* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* IStorageProviderKnownFolderSyncInfoSource_GetKnownFolderSyncInfo(py::wrapper::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSource* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Provider.IStorageProviderKnownFolderSyncInfoSource", L"GetKnownFolderSyncInfo", 0))
+            {
+                py::set_arg_count_version_error(0);
+                return nullptr;
+            }
+
+            try
+            {
+                return py::convert(self->obj.GetKnownFolderSyncInfo());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IStorageProviderKnownFolderSyncInfoSource_add_KnownFolderSyncInfoChanged(py::wrapper::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSource* self, PyObject* arg) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.Provider.IStorageProviderKnownFolderSyncInfoSource", L"KnownFolderSyncInfoChanged"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+            return nullptr;
+        }
+
+        try
+        {
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSource, winrt::Windows::Foundation::IInspectable>>(arg);
+
+            return py::convert(self->obj.KnownFolderSyncInfoChanged(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* IStorageProviderKnownFolderSyncInfoSource_remove_KnownFolderSyncInfoChanged(py::wrapper::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSource* self, PyObject* arg) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Storage.Provider.IStorageProviderKnownFolderSyncInfoSource", L"KnownFolderSyncInfoChanged"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+            return nullptr;
+        }
+
+        try
+        {
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.KnownFolderSyncInfoChanged(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_IStorageProviderKnownFolderSyncInfoSource(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSource>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_IStorageProviderKnownFolderSyncInfoSource(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSource>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_IStorageProviderKnownFolderSyncInfoSource[] = {
+        { "get_known_folder_sync_info", reinterpret_cast<PyCFunction>(IStorageProviderKnownFolderSyncInfoSource_GetKnownFolderSyncInfo), METH_VARARGS, nullptr },
+        { "add_known_folder_sync_info_changed", reinterpret_cast<PyCFunction>(IStorageProviderKnownFolderSyncInfoSource_add_KnownFolderSyncInfoChanged), METH_O, nullptr },
+        { "remove_known_folder_sync_info_changed", reinterpret_cast<PyCFunction>(IStorageProviderKnownFolderSyncInfoSource_remove_KnownFolderSyncInfoChanged), METH_O, nullptr },
+        { "_assign_array_", _assign_array_IStorageProviderKnownFolderSyncInfoSource, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_IStorageProviderKnownFolderSyncInfoSource), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_IStorageProviderKnownFolderSyncInfoSource[] = {
+        { }
+    };
+
+    static PyType_Slot _type_slots_IStorageProviderKnownFolderSyncInfoSource[] = 
+    {
+        { Py_tp_new, reinterpret_cast<void*>(_new_IStorageProviderKnownFolderSyncInfoSource) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStorageProviderKnownFolderSyncInfoSource) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_IStorageProviderKnownFolderSyncInfoSource) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_IStorageProviderKnownFolderSyncInfoSource) },
+        { },
+    };
+
+    static PyType_Spec type_spec_IStorageProviderKnownFolderSyncInfoSource =
+    {
+        "winrt._winrt_windows_storage_provider.IStorageProviderKnownFolderSyncInfoSource",
+        sizeof(py::wrapper::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSource),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_IStorageProviderKnownFolderSyncInfoSource
+    };
+
+    // ----- IStorageProviderKnownFolderSyncInfoSourceFactory interface --------------------
+
+    static PyObject* _new_IStorageProviderKnownFolderSyncInfoSourceFactory(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSourceFactory>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSourceFactory>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_IStorageProviderKnownFolderSyncInfoSourceFactory(py::wrapper::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSourceFactory* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* IStorageProviderKnownFolderSyncInfoSourceFactory_GetKnownFolderSyncInfoSource(py::wrapper::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSourceFactory* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Provider.IStorageProviderKnownFolderSyncInfoSourceFactory", L"GetKnownFolderSyncInfoSource", 0))
+            {
+                py::set_arg_count_version_error(0);
+                return nullptr;
+            }
+
+            try
+            {
+                return py::convert(self->obj.GetKnownFolderSyncInfoSource());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_IStorageProviderKnownFolderSyncInfoSourceFactory(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSourceFactory>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_IStorageProviderKnownFolderSyncInfoSourceFactory(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSourceFactory>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_IStorageProviderKnownFolderSyncInfoSourceFactory[] = {
+        { "get_known_folder_sync_info_source", reinterpret_cast<PyCFunction>(IStorageProviderKnownFolderSyncInfoSourceFactory_GetKnownFolderSyncInfoSource), METH_VARARGS, nullptr },
+        { "_assign_array_", _assign_array_IStorageProviderKnownFolderSyncInfoSourceFactory, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_IStorageProviderKnownFolderSyncInfoSourceFactory), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_IStorageProviderKnownFolderSyncInfoSourceFactory[] = {
+        { }
+    };
+
+    static PyType_Slot _type_slots_IStorageProviderKnownFolderSyncInfoSourceFactory[] = 
+    {
+        { Py_tp_new, reinterpret_cast<void*>(_new_IStorageProviderKnownFolderSyncInfoSourceFactory) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStorageProviderKnownFolderSyncInfoSourceFactory) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_IStorageProviderKnownFolderSyncInfoSourceFactory) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_IStorageProviderKnownFolderSyncInfoSourceFactory) },
+        { },
+    };
+
+    static PyType_Spec type_spec_IStorageProviderKnownFolderSyncInfoSourceFactory =
+    {
+        "winrt._winrt_windows_storage_provider.IStorageProviderKnownFolderSyncInfoSourceFactory",
+        sizeof(py::wrapper::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSourceFactory),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_IStorageProviderKnownFolderSyncInfoSourceFactory
+    };
+
     // ----- IStorageProviderPropertyCapabilities interface --------------------
 
     static PyObject* _new_IStorageProviderPropertyCapabilities(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -4895,6 +5641,21 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_provider(void) noexcept
         return nullptr;
     }
 
+    if (py::register_python_type(module.get(), &type_spec_StorageProviderKnownFolderEntry, object_bases.get(), nullptr) == -1)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_StorageProviderKnownFolderSyncInfo, object_bases.get(), nullptr) == -1)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_StorageProviderKnownFolderSyncRequestArgs, object_bases.get(), nullptr) == -1)
+    {
+        return nullptr;
+    }
+
     if (py::register_python_type(module.get(), &type_spec_StorageProviderMoreInfoUI, object_bases.get(), nullptr) == -1)
     {
         return nullptr;
@@ -4927,6 +5688,16 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_provider(void) noexcept
     }
 
     if (py::register_python_type(module.get(), &type_spec_IStorageProviderItemPropertySource, object_bases.get(), nullptr) == -1)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_IStorageProviderKnownFolderSyncInfoSource, object_bases.get(), nullptr) == -1)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_IStorageProviderKnownFolderSyncInfoSourceFactory, object_bases.get(), nullptr) == -1)
     {
         return nullptr;
     }

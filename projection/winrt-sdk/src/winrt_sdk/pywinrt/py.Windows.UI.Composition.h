@@ -120,6 +120,7 @@ namespace py::wrapper::Windows::UI::Composition
     using CompositionStrokeDashArray = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionStrokeDashArray>;
     using CompositionSurfaceBrush = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionSurfaceBrush>;
     using CompositionTarget = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionTarget>;
+    using CompositionTexture = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionTexture>;
     using CompositionTransform = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionTransform>;
     using CompositionViewBox = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionViewBox>;
     using CompositionVirtualDrawingSurface = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionVirtualDrawingSurface>;
@@ -802,6 +803,13 @@ namespace py
     {
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionTarget";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::UI::Composition::CompositionTexture>
+    {
+        static constexpr const char* module_name = "winrt.windows.ui.composition";
+        static constexpr const char* type_name = "CompositionTexture";
     };
 
     template<>

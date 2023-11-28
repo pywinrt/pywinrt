@@ -1219,6 +1219,68 @@ namespace py::cpp::Windows::Devices::Lights
         }
     }
 
+    static PyObject* LampArray_get_IsAvailable(py::wrapper::Windows::Devices::Lights::LampArray* self, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Lights.LampArray", L"IsAvailable"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert(self->obj.IsAvailable());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* LampArray_add_AvailabilityChanged(py::wrapper::Windows::Devices::Lights::LampArray* self, PyObject* arg) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Lights.LampArray", L"AvailabilityChanged"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+            return nullptr;
+        }
+
+        try
+        {
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Lights::LampArray, winrt::Windows::Foundation::IInspectable>>(arg);
+
+            return py::convert(self->obj.AvailabilityChanged(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* LampArray_remove_AvailabilityChanged(py::wrapper::Windows::Devices::Lights::LampArray* self, PyObject* arg) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Lights.LampArray", L"AvailabilityChanged"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+            return nullptr;
+        }
+
+        try
+        {
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.AvailabilityChanged(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_LampArray(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Lights::LampArray>>();
@@ -1256,6 +1318,8 @@ namespace py::cpp::Windows::Devices::Lights
         { "set_colors_for_keys", reinterpret_cast<PyCFunction>(LampArray_SetColorsForKeys), METH_VARARGS, nullptr },
         { "set_colors_for_purposes", reinterpret_cast<PyCFunction>(LampArray_SetColorsForPurposes), METH_VARARGS, nullptr },
         { "set_single_color_for_indices", reinterpret_cast<PyCFunction>(LampArray_SetSingleColorForIndices), METH_VARARGS, nullptr },
+        { "add_availability_changed", reinterpret_cast<PyCFunction>(LampArray_add_AvailabilityChanged), METH_O, nullptr },
+        { "remove_availability_changed", reinterpret_cast<PyCFunction>(LampArray_remove_AvailabilityChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_LampArray, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LampArray), METH_O | METH_STATIC, nullptr },
         { }
@@ -1274,6 +1338,7 @@ namespace py::cpp::Windows::Devices::Lights
         { "lamp_count", reinterpret_cast<getter>(LampArray_get_LampCount), nullptr, nullptr, nullptr },
         { "min_update_interval", reinterpret_cast<getter>(LampArray_get_MinUpdateInterval), nullptr, nullptr, nullptr },
         { "supports_virtual_keys", reinterpret_cast<getter>(LampArray_get_SupportsVirtualKeys), nullptr, nullptr, nullptr },
+        { "is_available", reinterpret_cast<getter>(LampArray_get_IsAvailable), nullptr, nullptr, nullptr },
         { }
     };
 
