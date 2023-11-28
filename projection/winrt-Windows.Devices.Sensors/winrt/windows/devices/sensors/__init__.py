@@ -50,6 +50,7 @@ __all__ = [
     "HumanPresenceSensor",
     "HumanPresenceSensorReading",
     "HumanPresenceSensorReadingChangedEventArgs",
+    "HumanPresenceSensorReadingUpdate",
     "HumanPresenceSettings",
     "Inclinometer",
     "InclinometerDataThreshold",
@@ -82,6 +83,7 @@ __all__ = [
     "SimpleOrientationSensor",
     "SimpleOrientationSensorOrientationChangedEventArgs",
     "WakeOnApproachOptions",
+    "IHumanPresenceSensorExtension",
     "ISensorDataThreshold",
 ]
 
@@ -190,6 +192,7 @@ HumanPresenceFeatures = _winrt_windows_devices_sensors.HumanPresenceFeatures
 HumanPresenceSensor = _winrt_windows_devices_sensors.HumanPresenceSensor
 HumanPresenceSensorReading = _winrt_windows_devices_sensors.HumanPresenceSensorReading
 HumanPresenceSensorReadingChangedEventArgs = _winrt_windows_devices_sensors.HumanPresenceSensorReadingChangedEventArgs
+HumanPresenceSensorReadingUpdate = _winrt_windows_devices_sensors.HumanPresenceSensorReadingUpdate
 HumanPresenceSettings = _winrt_windows_devices_sensors.HumanPresenceSettings
 Inclinometer = _winrt_windows_devices_sensors.Inclinometer
 InclinometerDataThreshold = _winrt_windows_devices_sensors.InclinometerDataThreshold
@@ -222,4 +225,5 @@ SensorRotationMatrix = _winrt_windows_devices_sensors.SensorRotationMatrix
 SimpleOrientationSensor = _winrt_windows_devices_sensors.SimpleOrientationSensor
 SimpleOrientationSensorOrientationChangedEventArgs = _winrt_windows_devices_sensors.SimpleOrientationSensorOrientationChangedEventArgs
 WakeOnApproachOptions = _winrt_windows_devices_sensors.WakeOnApproachOptions
+IHumanPresenceSensorExtension = _winrt_windows_devices_sensors.IHumanPresenceSensorExtension
 ISensorDataThreshold = _winrt_windows_devices_sensors.ISensorDataThreshold

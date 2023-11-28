@@ -7,7 +7,12 @@ from winrt import _winrt_windows_system_remotedesktop_provider
 
 __all__ = [
     "RemoteDesktopConnectionStatus",
+    "RemoteDesktopLocalAction",
+    "PerformLocalActionRequestedEventArgs",
     "RemoteDesktopConnectionInfo",
+    "RemoteDesktopConnectionRemoteInfo",
+    "RemoteDesktopInfo",
+    "RemoteDesktopRegistrar",
 ]
 
 class RemoteDesktopConnectionStatus(enum.IntEnum):
@@ -16,4 +21,11 @@ class RemoteDesktopConnectionStatus(enum.IntEnum):
     USER_INPUT_NEEDED = 2
     DISCONNECTED = 3
 
+class RemoteDesktopLocalAction(enum.IntEnum):
+    SHOW_BLUETOOTH_SETTINGS = 0
+
+PerformLocalActionRequestedEventArgs = _winrt_windows_system_remotedesktop_provider.PerformLocalActionRequestedEventArgs
 RemoteDesktopConnectionInfo = _winrt_windows_system_remotedesktop_provider.RemoteDesktopConnectionInfo
+RemoteDesktopConnectionRemoteInfo = _winrt_windows_system_remotedesktop_provider.RemoteDesktopConnectionRemoteInfo
+RemoteDesktopInfo = _winrt_windows_system_remotedesktop_provider.RemoteDesktopInfo
+RemoteDesktopRegistrar = _winrt_windows_system_remotedesktop_provider.RemoteDesktopRegistrar

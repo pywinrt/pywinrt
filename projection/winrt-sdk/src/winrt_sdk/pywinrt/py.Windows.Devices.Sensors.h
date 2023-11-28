@@ -64,6 +64,7 @@ namespace py::wrapper::Windows::Devices::Sensors
     using HumanPresenceSensor = py::winrt_wrapper<winrt::Windows::Devices::Sensors::HumanPresenceSensor>;
     using HumanPresenceSensorReading = py::winrt_wrapper<winrt::Windows::Devices::Sensors::HumanPresenceSensorReading>;
     using HumanPresenceSensorReadingChangedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Sensors::HumanPresenceSensorReadingChangedEventArgs>;
+    using HumanPresenceSensorReadingUpdate = py::winrt_wrapper<winrt::Windows::Devices::Sensors::HumanPresenceSensorReadingUpdate>;
     using HumanPresenceSettings = py::winrt_wrapper<winrt::Windows::Devices::Sensors::HumanPresenceSettings>;
     using Inclinometer = py::winrt_wrapper<winrt::Windows::Devices::Sensors::Inclinometer>;
     using InclinometerDataThreshold = py::winrt_wrapper<winrt::Windows::Devices::Sensors::InclinometerDataThreshold>;
@@ -96,6 +97,7 @@ namespace py::wrapper::Windows::Devices::Sensors
     using SimpleOrientationSensor = py::winrt_wrapper<winrt::Windows::Devices::Sensors::SimpleOrientationSensor>;
     using SimpleOrientationSensorOrientationChangedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Sensors::SimpleOrientationSensorOrientationChangedEventArgs>;
     using WakeOnApproachOptions = py::winrt_wrapper<winrt::Windows::Devices::Sensors::WakeOnApproachOptions>;
+    using IHumanPresenceSensorExtension = py::winrt_wrapper<winrt::Windows::Devices::Sensors::IHumanPresenceSensorExtension>;
     using ISensorDataThreshold = py::winrt_wrapper<winrt::Windows::Devices::Sensors::ISensorDataThreshold>;
 }
 
@@ -444,6 +446,13 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Windows::Devices::Sensors::HumanPresenceSensorReadingUpdate>
+    {
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "HumanPresenceSensorReadingUpdate";
+    };
+
+    template<>
     struct py_type<winrt::Windows::Devices::Sensors::HumanPresenceSettings>
     {
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
@@ -665,6 +674,13 @@ namespace py
     {
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "WakeOnApproachOptions";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::Devices::Sensors::IHumanPresenceSensorExtension>
+    {
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "IHumanPresenceSensorExtension";
     };
 
     template<>
