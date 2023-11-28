@@ -22,6 +22,13 @@ WINRT_EXPORT namespace winrt::Windows::Devices::Lights
         ILampArray(std::nullptr_t = nullptr) noexcept {}
         ILampArray(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES ILampArray2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ILampArray2>
+    {
+        ILampArray2(std::nullptr_t = nullptr) noexcept {}
+        ILampArray2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES ILampArrayStatics :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<ILampArrayStatics>
