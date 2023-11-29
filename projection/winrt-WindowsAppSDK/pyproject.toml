@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "winrt-WindowsAppSDK"
-description = "Python projection of Windows Runtime (WinRT) APIs"
+description = "Windows Runtime SDK for Python header files"
 readme = "README.md"
 license = { text = "MIT" }
 classifiers = [
@@ -31,17 +31,4 @@ version = { file = "pywinrt-version.txt" }
 where = ["src"]
 
 [tool.setuptools.package-data]
-winrt = ["*.pyi"]
-
-[tool.cibuildwheel]
-# use local winrt-sdk build dependency
-environment = { PYTHONPATH="../winrt-sdk/src" }
-# don't install winrt-sdk from PyPI
-build-frontend = { name = "build", args = ["--skip-dependency-check", "--no-isolation"] }
-# don't build for PyPy
-skip = "pp*"
-# suppress warnings about ARM64 testing
-test-skip = "*-win_arm64"
-
-[tool.cibuildwheel.windows]
-archs = ["x86", "AMD64", "ARM64"]
+"*" = ["*.h"]

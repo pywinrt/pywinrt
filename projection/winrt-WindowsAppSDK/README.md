@@ -2,6 +2,29 @@
 
 # winrt-WindowsAppSDK
 
-Windows Runtime (WinRT) APIs for for the `WindowsAppSDK` namespace.
+This package provides PyWinRT header files for WindowsAppSDK.
 
-This package provides the `winrt.windowsappsdk` module.
+This package is a build time dependency, not a runtime dependency.
+
+Example use in a `pyproject.toml` file:
+
+```toml
+[build-system]
+requires = ["setuptools", "setuptools-scm", "winrt-sdk", "winrt-WindowsAppSDK"]
+build-backend = "setuptools.build_meta"
+```
+
+Then in your `setup.py`:
+
+```python
+from setuptools import setup
+from winrt_sdk import get_include_dirs
+
+setup(
+    ...
+    include_dirs=get_include_dirs()
+)
+```
+
+For the runtime package, use `winrt-runtime` and the various namespace packages
+instead.

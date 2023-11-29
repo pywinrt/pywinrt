@@ -1,3 +1,5 @@
+<!-- warning: Please don't edit this file. It was automatically generated. -->
+
 # winrt-sdk
 
 This package provides PyWinRT header files for the Windows SDK.
@@ -24,4 +26,5 @@ setup(
 )
 ```
 
-For the runtime package, use `winrt-runtime` instead.
+For the runtime package, use `winrt-runtime` and the various namespace packages
+instead.
