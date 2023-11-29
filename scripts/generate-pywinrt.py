@@ -123,7 +123,11 @@ subprocess.check_call(
 
 # copy versioned files to non-generated packages
 for path in itertools.chain(
-    [PROJECTION_PATH / "winrt-sdk", PROJECTION_PATH / "winrt-runtime"],
+    [
+        PROJECTION_PATH / "winrt-sdk",
+        PROJECTION_PATH / "winrt-WindowsAppSDK",
+        PROJECTION_PATH / "winrt-runtime",
+    ],
     (PROJECTION_PATH / "interop").glob("winrt-*"),
 ):
     shutil.copy(
