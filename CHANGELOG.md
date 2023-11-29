@@ -4,6 +4,8 @@
 
 ## [Unreleased]
 
+## [v2.0.0-beta.2] - 2023-11-29
+
 ### Added
 - Added `@final` decorator to runtime class type hints.
 - Added support for Windows App SDK (`Microsoft.Windows` namespace).
@@ -205,7 +207,8 @@
 ### Removed
 - Removed selecting apartment thread type during module init.
 
-[Unreleased]: https://github.com/pywinrt/pywinrt/compare/v2.0.0-beta.1...HEAD
+[Unreleased]: https://github.com/pywinrt/pywinrt/compare/v2.0.0-beta.2...HEAD
+[v2.0.0-beta.2]: https://github.com/pywinrt/pywinrt/compare/v2.0.0-beta.1...v2.0.0-beta.2
 [v2.0.0-beta.1]: https://github.com/pywinrt/pywinrt/compare/v1.0.0-beta.10...v2.0.0-beta.1
 [v1.0.0-beta.10]: https://github.com/pywinrt/pywinrt/compare/v1.0.0-beta.9...v1.0.0-beta.10
 [v1.0.0-beta.9]: https://github.com/pywinrt/pywinrt/compare/v1.0.0-beta.8...v1.0.0-beta.9
