@@ -5,7 +5,7 @@ param(
     [string]$CppWinRTVersion = "2.0.230706.1",
 
     [Parameter(Mandatory=$false)]
-    [string]$PyWinRTVersion = "2.0.0-beta.1",
+    [string]$PyWinRTVersion = "2.0.0-beta.2",
 
     [Parameter(Mandatory=$false)]
     [string]$WindowsAppSDKVersion = "1.4.231115000",
