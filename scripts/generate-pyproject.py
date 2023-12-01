@@ -6,7 +6,7 @@ PYPROJECT_TOML_TEMPLATE = """\
 # WARNING: Please don't edit this file. It was automatically generated.
 
 [build-system]
-requires = ["setuptools", "setuptools-scm"{base_build_requires}{extra_build_requires}]
+requires = ["setuptools", "setuptools-scm"{requires_winrt_sdk}{requires_windows_app_sdk}]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -197,10 +197,10 @@ def write_project_files(
     with open(package_path / "pyproject.toml", "w", newline="\n") as f:
         f.write(
             PYPROJECT_TOML_TEMPLATE.format(
-                base_build_requires=""
-                if package_name == "winrt-sdk"
+                requires_winrt_sdk=""
+                if is_sdk_package(package_name)
                 else ', "winrt-sdk"',
-                extra_build_requires=', "winrt-WindowsAppSDK"'
+                requires_windows_app_sdk=', "winrt-WindowsAppSDK"'
                 if package_name.startswith("winrt-Microsoft.")
                 else "",
                 package_name=package_name,
