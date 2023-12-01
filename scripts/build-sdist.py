@@ -10,7 +10,7 @@ try:
     import winrt_windows_app_sdk  # noqa: F401
 except ImportError:
     print(
-        "winrt_sdk and winrt_windows_app_sdk must be installed first installed in order for build to succeed."
+        "winrt-sdk and winrt-WindowsAppSDK must be installed first installed in order for build to succeed."
     )
     exit(1)
 
