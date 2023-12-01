@@ -23,7 +23,7 @@ jobs:
         run: pyproject-build --outdir wheelhouse projection/winrt-WindowsAppSDK
       - name: Install winrt-WindowsAppSDK
         run: |
-          $whl = (Get-ChildItem wheelhouse/winrt_windows_app_sdk-*.whl | Select-Object -First 1).FullName
+          $whl = (Get-ChildItem wheelhouse/winrt_WindowsAppSDK-*.whl | Select-Object -First 1).FullName
           pip install $whl
       - name: Build sdists
         run: python scripts/build-sdist.py
