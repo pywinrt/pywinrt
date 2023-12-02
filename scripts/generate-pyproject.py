@@ -72,14 +72,14 @@ SETUP_PY_TEMPLATE = """\
 # WARNING: Please don't edit this file. It was automatically generated.
 
 from setuptools import Extension, setup
-from winrt_sdk import get_include_dirs
+from winrt_sdk import get_include_dirs{extra_imports}
 
 setup(
     ext_modules=[
         Extension(
             "winrt.{ext_module}",
             sources=[{sources}],
-            include_dirs=get_include_dirs(),
+            include_dirs=get_include_dirs(){extra_include_dirs},
             extra_compile_args=["/std:c++20", "/permissive-"],
             libraries=["windowsapp"],
         )
@@ -117,11 +117,11 @@ Then in your `setup.py`:
 
 ```python
 from setuptools import setup
-from winrt_sdk import get_include_dirs
+from winrt_sdk import get_include_dirs{extra_imports}
 
 setup(
     ...
-    include_dirs=get_include_dirs()
+    include_dirs=get_include_dirs(){extra_include_dirs}
 )
 ```
 
@@ -178,6 +178,10 @@ def is_sdk_package(name: str) -> bool:
     return name in ["winrt-sdk", "winrt-WindowsAppSDK"]
 
 
+def is_windows_app_package(name: str) -> str:
+    return name.startswith("winrt-Microsoft.")
+
+
 def winrt_ns_to_py_package(ns: str) -> str:
     return ".".join(avoid_keyword(x.lower()) for x in ns.split("."))
 
@@ -201,7 +205,7 @@ def write_project_files(
                 if is_sdk_package(package_name)
                 else ', "winrt-sdk"',
                 requires_windows_app_sdk=', "winrt-WindowsAppSDK"'
-                if package_name.startswith("winrt-Microsoft.")
+                if is_windows_app_package(package_name)
                 else "",
                 package_name=package_name,
                 description="Windows Runtime SDK for Python header files"
@@ -228,7 +232,7 @@ def write_project_files(
                     else "",
                     relative=relative,
                     extra_python_path=f";{relative}/winrt-WindowsAppSDK/src"
-                    if package_name.startswith("winrt-Microsoft.")
+                    if is_windows_app_package(package_name)
                     else "",
                 )
             )
@@ -239,6 +243,12 @@ def write_project_files(
                 SETUP_PY_TEMPLATE.format(
                     ext_module=ext_module_name,
                     sources=", ".join(f'"{x}"' for x in sources),
+                    extra_imports="\nfrom winrt_windows_app_sdk import get_include_dirs as get_app_sdk_include_dirs"
+                    if is_windows_app_package(package_name)
+                    else "",
+                    extra_include_dirs="+ get_app_sdk_include_dirs()"
+                    if is_windows_app_package(package_name)
+                    else "",
                 )
             )
 
@@ -259,6 +269,12 @@ def write_project_files(
                         extra_requires=""
                         if package_name == "winrt-sdk"
                         else f', "{package_name}"',
+                        extra_imports="\nfrom winrt_windows_app_sdk import get_include_dirs as get_app_sdk_include_dirs"
+                        if is_windows_app_package(package_name)
+                        else "",
+                        extra_include_dirs="+ get_app_sdk_include_dirs()"
+                        if is_windows_app_package(package_name)
+                        else "",
                     )
                 )
             else:
