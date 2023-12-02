@@ -72,14 +72,14 @@ SETUP_PY_TEMPLATE = """\
 # WARNING: Please don't edit this file. It was automatically generated.
 
 from setuptools import Extension, setup
-from winrt_sdk import get_include_dirs
+from winrt_sdk import get_include_dirs{extra_imports}
 
 setup(
     ext_modules=[
         Extension(
             "winrt.{ext_module}",
             sources=[{sources}],
-            include_dirs=get_include_dirs(),
+            include_dirs=get_include_dirs(){extra_include_dirs},
             extra_compile_args=["/std:c++20", "/permissive-"],
             libraries=["windowsapp"],
         )
@@ -117,11 +117,11 @@ Then in your `setup.py`:
 
 ```python
 from setuptools import setup
-from winrt_sdk import get_include_dirs
+from winrt_sdk import get_include_dirs{extra_imports}
 
 setup(
     ...
-    include_dirs=get_include_dirs()
+    include_dirs=get_include_dirs(){extra_include_dirs}
 )
 ```
 
@@ -239,6 +239,12 @@ def write_project_files(
                 SETUP_PY_TEMPLATE.format(
                     ext_module=ext_module_name,
                     sources=", ".join(f'"{x}"' for x in sources),
+                    extra_imports="\nfrom winrt_windows_app_sdk import get_include_dirs as get_app_sdk_include_dirs"
+                    if package_name.startswith("winrt-Microsoft.")
+                    else "",
+                    extra_include_dirs="+ get_app_sdk_include_dirs()"
+                    if package_name.startswith("winrt-Microsoft.")
+                    else "",
                 )
             )
 
@@ -259,6 +265,12 @@ def write_project_files(
                         extra_requires=""
                         if package_name == "winrt-sdk"
                         else f', "{package_name}"',
+                        extra_imports="\nfrom winrt_windows_app_sdk import get_include_dirs as get_app_sdk_include_dirs"
+                        if package_name.startswith("winrt-Microsoft.")
+                        else "",
+                        extra_include_dirs="+ get_app_sdk_include_dirs()"
+                        if package_name.startswith("winrt-Microsoft.")
+                        else "",
                     )
                 )
             else:
