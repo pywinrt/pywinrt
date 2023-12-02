@@ -9,9 +9,9 @@ PROJECTION_PATH = (Path(__file__).parent.parent / "projection").resolve()
 
 for package_path in chain(
     [PROJECTION_PATH / "winrt-runtime"],
-    (PROJECTION_PATH / "interop").glob("winrt-Windows*"),
-    PROJECTION_PATH.glob("winrt-Windows*"),
-    PROJECTION_PATH.glob("winrt-Microsoft*"),
+    (PROJECTION_PATH / "interop").glob("winrt-*"),
+    PROJECTION_PATH.glob("winrt-Windows.*"),
+    PROJECTION_PATH.glob("winrt-Microsoft.*"),
 ):
     subprocess.check_call(
         [
