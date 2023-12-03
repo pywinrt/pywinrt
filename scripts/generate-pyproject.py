@@ -178,7 +178,7 @@ def is_sdk_package(name: str) -> bool:
     return name in ["winrt-sdk", "winrt-WindowsAppSDK"]
 
 
-def is_windows_app_package(name: str) -> str:
+def is_windows_app_package(name: str) -> bool:
     return name.startswith("winrt-Microsoft.")
 
 
