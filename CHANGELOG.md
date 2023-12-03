@@ -4,6 +4,9 @@
 
 ## [Unreleased]
 
+### Added
+- Added `py.typed` to each subpackage.
+
 ## [v2.0.0-beta.2] - 2023-11-29
 
 ### Added

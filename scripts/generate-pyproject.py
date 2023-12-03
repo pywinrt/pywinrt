@@ -41,7 +41,7 @@ SDK_PACKAGE_TEMPLATE = """\
 
 BINARY_PACKAGE_TEMPLATE = """\
 [tool.setuptools.package-data]
-winrt = ["*.pyi"{extra_winrt_package_data}]
+"*" = ["*.pyi", "py.typed"]
 
 [tool.cibuildwheel]
 # use local winrt-sdk build dependency
@@ -227,9 +227,6 @@ def write_project_files(
         else:
             f.write(
                 BINARY_PACKAGE_TEMPLATE.format(
-                    extra_winrt_package_data=', "py.typed"'
-                    if package_name == "winrt-runtime"
-                    else "",
                     relative=relative,
                     extra_python_path=f";{relative}/winrt-WindowsAppSDK/src"
                     if is_windows_app_package(package_name)
@@ -253,6 +250,14 @@ def write_project_files(
             )
 
     if package_name != "winrt-runtime":
+        if not is_sdk_package(package_name):
+            with open(
+                package_path / Path(*module_name.split(".")) / "py.typed",
+                "w",
+                newline="\n",
+            ) as f:
+                pass
+
         with open(package_path / "README.md", "w", newline="\n") as f:
             f.write(
                 README_TEMPLATE.format(

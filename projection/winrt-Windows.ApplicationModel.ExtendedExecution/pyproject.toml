@@ -30,7 +30,7 @@ dependencies = { file = "requirements.txt" }
 optional-dependencies.all = { file = "all-requirements.txt" }
 
 [tool.setuptools.package-data]
-winrt = ["*.pyi"]
+"*" = ["*.pyi", "py.typed"]
 
 [tool.cibuildwheel]
 # use local winrt-sdk build dependency
