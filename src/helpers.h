@@ -513,6 +513,12 @@ namespace pywinrt
         return prop.MethodSemantic().first.Method().Flags().Static();
     }
 
+    inline auto is_default_overload(MethodDef const& method)
+    {
+        return bool(get_attribute(
+            method, "Windows.Foundation.Metadata", "DefaultOverloadAttribute"));
+    }
+
     auto get_property_methods(Property const& prop)
     {
         MethodDef get_method{}, set_method{};

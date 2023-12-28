@@ -1003,21 +1003,7 @@ namespace pywinrt
                         // arguments, we need to use the default overload
                         // https://devblogs.microsoft.com/oldnewthing/20210528-00/?p=105259
                         auto default_overload = std::find_if(
-                            o.second.begin(),
-                            o.second.end(),
-                            [](auto m)
-                            {
-                                for (auto a : m.CustomAttribute())
-                                {
-                                    if (a.TypeNamespaceAndName().second
-                                        == "DefaultOverloadAttribute")
-                                    {
-                                        return true;
-                                    }
-                                }
-
-                                return false;
-                            });
+                            o.second.begin(), o.second.end(), is_default_overload);
 
                         // if there was no default, just use the first (and
                         // hopefully only) overload
