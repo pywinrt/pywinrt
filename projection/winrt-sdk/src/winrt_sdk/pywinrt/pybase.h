@@ -1317,6 +1317,11 @@ namespace py
         static PyObject* convert(
             winrt::Windows::Foundation::IInspectable const& value) noexcept
         {
+            if (!value)
+            {
+                Py_RETURN_NONE;
+            }
+
             auto object_type = get_object_type();
 
             if (!object_type)
@@ -1330,6 +1335,11 @@ namespace py
         static winrt::Windows::Foundation::IInspectable convert_to(PyObject* obj)
         {
             throw_if_pyobj_null(obj);
+
+            if (Py_IsNone(obj))
+            {
+                return nullptr;
+            }
 
             auto object_type = get_object_type();
 
