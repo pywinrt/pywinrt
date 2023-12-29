@@ -9,6 +9,7 @@
 
 ### Fixed
 - Fixed implicitly converting `None` to `System.Object`.
+- Fixed `KeyError` when accessing accessing values of mappings that return `None`.
 
 ## [v2.0.0-beta.2] - 2023-11-29
 

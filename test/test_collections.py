@@ -156,9 +156,8 @@ class TestCollectionsPropertySet(unittest.TestCase):
         # self.assertEqual(m, {"hello": "world"})
         # self.assertFalse(m != {"hello": "world"})
 
-        # TODO: this is a bug in the Mapping implementation
-        # m["hello"] = box_value(None)
-        # self.assertEqual(unbox_value(m["hello"]), None)
+        m["hello"] = box_value(None)
+        self.assertEqual(unbox_value(m["hello"]), None)
 
         del m["hello"]
 

@@ -670,9 +670,18 @@ namespace py::impl::Windows::Foundation::Collections
         {
             try
             {
-                auto value = _obj.TryLookup(py::convert_to<K>(key));
+                auto _key = py::convert_to<K>(key);
+                auto value = _obj.TryLookup(_key);
 
                 if (!value) {
+                    if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)
+                    {
+                        if (_obj.HasKey(_key))
+                        {
+                            Py_RETURN_NONE;
+                        }
+                    }
+
                     PyErr_SetObject(PyExc_KeyError, key);
                     return nullptr;
                 }
@@ -959,9 +968,18 @@ namespace py::impl::Windows::Foundation::Collections
         {
             try
             {
-                auto value = _obj.TryLookup(py::convert_to<K>(key));
+                auto _key = py::convert_to<K>(key);
+                auto value = _obj.TryLookup(_key);
 
                 if (!value) {
+                    if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)
+                    {
+                        if (_obj.HasKey(_key))
+                        {
+                            Py_RETURN_NONE;
+                        }
+                    }
+
                     PyErr_SetObject(PyExc_KeyError, key);
                     return nullptr;
                 }
@@ -1302,9 +1320,18 @@ namespace py::impl::Windows::Foundation::Collections
         {
             try
             {
-                auto value = _obj.TryLookup(py::convert_to<K>(key));
+                auto _key = py::convert_to<K>(key);
+                auto value = _obj.TryLookup(_key);
 
                 if (!value) {
+                    if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)
+                    {
+                        if (_obj.HasKey(_key))
+                        {
+                            Py_RETURN_NONE;
+                        }
+                    }
+
                     PyErr_SetObject(PyExc_KeyError, key);
                     return nullptr;
                 }

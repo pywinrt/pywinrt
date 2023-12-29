@@ -1571,9 +1571,18 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     {
         try
         {
-            auto value = self->obj.TryLookup(py::convert_to<winrt::hstring>(key));
+            auto _key = py::convert_to<winrt::hstring>(key);
+            auto value = self->obj.TryLookup(_key);
 
             if (!value) {
+                if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)
+                {
+                    if (self->obj.HasKey(_key))
+                    {
+                        Py_RETURN_NONE;
+                    }
+                }
+
                 PyErr_SetObject(PyExc_KeyError, key);
                 return nullptr;
             }

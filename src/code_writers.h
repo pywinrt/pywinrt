@@ -1561,14 +1561,34 @@ return 0;
             {
                 // we use the CppWinRT extension TryLookup so we can raise
                 // KeyError on failure.
+                w.write("auto _key = py::convert_to<%>(key);\n", key_type);
                 w.write(
-                    "auto value = %TryLookup(py::convert_to<%>(key));\n",
-                    bind<write_method_invoke_context>(type, MethodDef{}),
-                    key_type);
+                    "auto value = %TryLookup(_key);\n",
+                    bind<write_method_invoke_context>(type, MethodDef{}));
 
                 w.write("\nif (!value) {\n");
                 {
                     writer::indent_guard g{w};
+
+                    // there isn't a way to differentiate between a failed lookup
+                    // and a null value for reference types, so we have to check
+                    // check HasKey to avoid raising KeyError on actual null values.
+                    w.write(
+                        "if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, decltype(value)>)\n{\n");
+                    {
+                        writer::indent_guard gg{w};
+
+                        w.write(
+                            "if (%HasKey(_key))\n{\n",
+                            bind<write_method_invoke_context>(type, MethodDef{}));
+                        {
+                            writer::indent_guard ggg{w};
+
+                            w.write("Py_RETURN_NONE;\n");
+                        }
+                        w.write("}\n");
+                    }
+                    w.write("}\n\n");
 
                     w.write("PyErr_SetObject(PyExc_KeyError, key);\n");
                     w.write("return nullptr;\n");
