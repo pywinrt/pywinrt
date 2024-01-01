@@ -27,4 +27,5 @@ to bridge between WinRT and other interfaces.
 .. toctree::
    :maxdepth: 2
 
+   windows/foundation/interop
    windows/graphics.capture.interop

@@ -102,6 +102,7 @@ else()
         "winrt-Windows.Storage.Streams"
     )
     set(interop_packages
+        "interop/winrt-Windows.Foundation.Interop"
         "interop/winrt-Windows.Graphics.Capture.Interop"
     )
 endif()

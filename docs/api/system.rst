@@ -2,6 +2,8 @@
 :mod:`winrt.system` module
 ===========================
 
+.. currentmodule:: winrt.system
+
 .. class:: Object
 
     A wrapper around the WinRT ``System.Object`` type. 

@@ -2,8 +2,8 @@ import asyncio
 import collections.abc
 import unittest
 
-import winrt.windows.foundation as wf
 import winrt.windows.foundation.collections as wfc
+from winrt.windows.foundation.interop import box, unbox
 
 from ._util import async_test
 
@@ -106,27 +106,16 @@ class TestCollectionsStringMap(unittest.TestCase):
         called = await asyncio.wait_for(future, 1)
         self.assertTrue(called)
 
-def box_value(value):
-    if value is None:
-        return None
-
-    return wf.PropertyValue.create_string(value)
-
-def unbox_value(value):
-    if value is None:
-        return None
-
-    return wf.IPropertyValue._from(value).get_string()
 
 class TestCollectionsPropertySet(unittest.TestCase):
     def test_value_set(self):
         m = wfc.PropertySet()
-        m.insert("hello", box_value("world"))
+        m.insert("hello", box("world"))
 
         self.assertTrue(m.has_key("hello"))
         self.assertFalse(m.has_key("world"))
         self.assertEqual(m.size, 1)
-        self.assertEqual(unbox_value(m.lookup("hello")), "world")
+        self.assertEqual(unbox(m.lookup("hello")), "world")
 
         m.remove("hello")
 
@@ -143,12 +132,12 @@ class TestCollectionsPropertySet(unittest.TestCase):
 
         self.assertIsInstance(m, collections.abc.Mapping)
 
-        m["hello"] = box_value("world")
+        m["hello"] = box("world")
 
         self.assertEqual(len(m), 1)
-        self.assertEqual(unbox_value(m["hello"]), "world")
+        self.assertEqual(unbox(m["hello"]), "world")
         self.assertIn("hello", m)
-        self.assertEqual(unbox_value(m.get("hello")) ,"world")
+        self.assertEqual(unbox(m.get("hello")) ,"world")
         self.assertIn("hello", m.keys())
         # can't test these because there is no equality for boxed values
         # self.assertIn("world", m.values())
@@ -156,8 +145,8 @@ class TestCollectionsPropertySet(unittest.TestCase):
         # self.assertEqual(m, {"hello": "world"})
         # self.assertFalse(m != {"hello": "world"})
 
-        m["hello"] = box_value(None)
-        self.assertEqual(unbox_value(m["hello"]), None)
+        m["hello"] = box(None)
+        self.assertEqual(unbox(m["hello"]), None)
 
         del m["hello"]
 
@@ -170,21 +159,21 @@ class TestCollectionsPropertySet(unittest.TestCase):
         self.assertNotIn("hello", m)
         self.assertIsNone(m.get("hello"))
 
-        m.update(hello=box_value("world"))
-        self.assertEqual(unbox_value(m["hello"]), "world")
+        m.update(hello=box("world"))
+        self.assertEqual(unbox(m["hello"]), "world")
         self.assertTrue(m)
 
         m.clear()
         self.assertFalse(m)
 
-        m.update({"hello": box_value("world")})
-        self.assertEqual(unbox_value(m.pop("hello")), "world")
+        m.update({"hello": box("world")})
+        self.assertEqual(unbox(m.pop("hello")), "world")
 
         with self.assertRaises(KeyError):
             m.pop("hello")
 
-        self.assertEqual(unbox_value(m.setdefault("hello", box_value("world"))), "world")
-        self.assertEqual(unbox_value(m.setdefault("hello", box_value("other"))), "world")
+        self.assertEqual(unbox(m.setdefault("hello", box("world"))), "world")
+        self.assertEqual(unbox(m.setdefault("hello", box("other"))), "world")
 
         self.assertIsNotNone(m.popitem())
 

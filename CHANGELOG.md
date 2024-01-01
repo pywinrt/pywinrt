@@ -6,6 +6,7 @@
 
 ### Added
 - Added `py.typed` to each subpackage.
+- Added `winrt.windows.foundation.interop` module with `box` and `unbox` methods.
 
 ### Fixed
 - Fixed implicitly converting `None` to `System.Object`.
