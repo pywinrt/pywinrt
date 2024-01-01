@@ -28,4 +28,4 @@ to bridge between WinRT and other interfaces.
    :maxdepth: 2
 
    windows/foundation/interop
-   windows/graphics.capture.interop
+   windows/graphics/capture/interop
