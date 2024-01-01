@@ -146,19 +146,17 @@ Example::
     uri = Uri("https://example.com")
     print(uri.scheme_name)
 
-Static properties are implemented as class attributes, so are accessed by using
-the type object rather than an instance object::
+Static properties are implemented as class attributes via a metaclass, so are
+accessed by using the type object rather than an instance object::
 
     from winrt.windows.foundation import GuidHelper
 
     empty_uuid = GuidHelper.empty
 
-In the type hints, static properties are denoted using :data:`typing.ClassVar`.
-
 .. versionchanged:: v1.0.0b8
 
     Previous beta releases implemented static properties as ``get_name()`` and
-    ``put_name()`` methods instead of class attributes.
+    ``put_name()`` static methods instead of class attributes.
 
 Events
 ======
