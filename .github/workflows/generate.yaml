@@ -24,7 +24,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: ./scripts/vsdevcmd-build.cmd
-      - run: ./scripts/fetch-tools.ps1
+      - run: ./scripts/fetch-tools.ps1 -noPyWinRT
       - run: python3 ./scripts/generate-cppwinrt.py
       - run: python3 ./scripts/generate-pywinrt.py
       - run: python3 ./scripts/generate-pyproject.py
