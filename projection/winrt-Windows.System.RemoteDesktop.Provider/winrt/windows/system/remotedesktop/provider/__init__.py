@@ -23,6 +23,10 @@ class RemoteDesktopConnectionStatus(enum.IntEnum):
 
 class RemoteDesktopLocalAction(enum.IntEnum):
     SHOW_BLUETOOTH_SETTINGS = 0
+    SHOW_SYSTEM_SOUND_SETTINGS = 1
+    SHOW_SYSTEM_DISPLAY_SETTINGS = 2
+    SHOW_SYSTEM_ACCOUNT_SETTINGS = 3
+    SHOW_LOCAL_SETTINGS = 4
 
 PerformLocalActionRequestedEventArgs = _winrt_windows_system_remotedesktop_provider.PerformLocalActionRequestedEventArgs
 RemoteDesktopConnectionInfo = _winrt_windows_system_remotedesktop_provider.RemoteDesktopConnectionInfo

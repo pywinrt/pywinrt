@@ -8,6 +8,9 @@
 - Added `py.typed` to each subpackage.
 - Added `winrt.windows.foundation.interop` module with `box` and `unbox` methods.
 
+### Changed
+- Regenerated files for Windows 11 SDK 10.0.22621.0 Febuary 2024 update.
+
 ### Fixed
 - Fixed implicitly converting `None` to `System.Object`.
 - Fixed `KeyError` when accessing accessing values of mappings that return `None`.

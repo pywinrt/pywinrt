@@ -43,6 +43,7 @@ namespace py::wrapper::Windows::System::Profile
     using HardwareIdentification = py::winrt_wrapper<winrt::Windows::System::Profile::HardwareIdentification>;
     using HardwareToken = py::winrt_wrapper<winrt::Windows::System::Profile::HardwareToken>;
     using KnownRetailInfoProperties = py::winrt_wrapper<winrt::Windows::System::Profile::KnownRetailInfoProperties>;
+    using PlatformAutomaticAppSignInManager = py::winrt_wrapper<winrt::Windows::System::Profile::PlatformAutomaticAppSignInManager>;
     using PlatformDiagnosticsAndUsageDataSettings = py::winrt_wrapper<winrt::Windows::System::Profile::PlatformDiagnosticsAndUsageDataSettings>;
     using RetailInfo = py::winrt_wrapper<winrt::Windows::System::Profile::RetailInfo>;
     using SharedModeSettings = py::winrt_wrapper<winrt::Windows::System::Profile::SharedModeSettings>;
@@ -57,6 +58,9 @@ namespace py::wrapper::Windows::System::Profile
 namespace py
 {
     template<>
+    inline constexpr const char* buffer_format<winrt::Windows::System::Profile::PlatformAutomaticAppSignInPolicy> = "i";
+
+    template<>
     inline constexpr const char* buffer_format<winrt::Windows::System::Profile::PlatformDataCollectionLevel> = "i";
 
     template<>
@@ -68,6 +72,13 @@ namespace py
     template<>
     inline constexpr const char* buffer_format<winrt::Windows::System::Profile::UnsupportedAppRequirementReasons> = "I";
 
+
+    template<>
+    struct py_type<winrt::Windows::System::Profile::PlatformAutomaticAppSignInPolicy>
+    {
+        static constexpr const char* module_name = "winrt.windows.system.profile";
+        static constexpr const char* type_name = "PlatformAutomaticAppSignInPolicy";
+    };
 
     template<>
     struct py_type<winrt::Windows::System::Profile::PlatformDataCollectionLevel>
@@ -144,6 +155,13 @@ namespace py
     {
         static constexpr const char* module_name = "winrt.windows.system.profile";
         static constexpr const char* type_name = "KnownRetailInfoProperties";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::System::Profile::PlatformAutomaticAppSignInManager>
+    {
+        static constexpr const char* module_name = "winrt.windows.system.profile";
+        static constexpr const char* type_name = "PlatformAutomaticAppSignInManager";
     };
 
     template<>
