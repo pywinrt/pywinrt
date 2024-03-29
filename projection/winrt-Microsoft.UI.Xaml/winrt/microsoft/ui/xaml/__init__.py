@@ -12,6 +12,7 @@ __all__ = [
     "ApplicationRequiresPointerMode",
     "ApplicationTheme",
     "AutomationTextAttributesEnum",
+    "DispatcherShutdownMode",
     "DurationType",
     "ElementHighContrastAdjustment",
     "ElementSoundKind",
@@ -31,6 +32,8 @@ __all__ = [
     "FontVariants",
     "GridUnitType",
     "HorizontalAlignment",
+    "LayoutCycleDebugBreakLevel",
+    "LayoutCycleTracingLevel",
     "LineStackingStrategy",
     "OpticalMarginAlignment",
     "TextAlignment",
@@ -198,6 +201,10 @@ class AutomationTextAttributesEnum(enum.IntEnum):
     CARET_POSITION_ATTRIBUTE = 40038
     CARET_BIDI_MODE_ATTRIBUTE = 40039
 
+class DispatcherShutdownMode(enum.IntEnum):
+    ON_LAST_WINDOW_CLOSE = 0
+    ON_EXPLICIT_SHUTDOWN = 1
+
 class DurationType(enum.IntEnum):
     AUTOMATIC = 0
     TIME_SPAN = 1
@@ -314,6 +321,16 @@ class HorizontalAlignment(enum.IntEnum):
     CENTER = 1
     RIGHT = 2
     STRETCH = 3
+
+class LayoutCycleDebugBreakLevel(enum.IntEnum):
+    NONE = 0
+    LOW = 1
+    HIGH = 2
+
+class LayoutCycleTracingLevel(enum.IntEnum):
+    NONE = 0
+    LOW = 1
+    HIGH = 2
 
 class LineStackingStrategy(enum.IntEnum):
     MAX_HEIGHT = 0

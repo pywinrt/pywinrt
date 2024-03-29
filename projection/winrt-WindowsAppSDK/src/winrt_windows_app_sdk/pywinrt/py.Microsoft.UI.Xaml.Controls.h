@@ -65,6 +65,10 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include "py.Windows.ApplicationModel.DataTransfer.h"
 #endif
 
+#if __has_include("py.Windows.Devices.Geolocation.h")
+#include "py.Windows.Devices.Geolocation.h"
+#endif
+
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
 #endif
@@ -120,6 +124,7 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Microsoft.Web.WebView2.Core.h>
 #include <winrt/Windows.ApplicationModel.Contacts.h>
 #include <winrt/Windows.ApplicationModel.DataTransfer.h>
+#include <winrt/Windows.Devices.Geolocation.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Foundation.Numerics.h>
@@ -826,6 +831,13 @@ namespace py::wrapper::Microsoft::UI::Xaml::Controls
     using ListViewHeaderItem = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::ListViewHeaderItem>;
     using ListViewItem = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::ListViewItem>;
     using ListViewPersistenceHelper = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::ListViewPersistenceHelper>;
+    using MapControl = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::MapControl>;
+    using MapControlMapServiceErrorOccurredEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::MapControlMapServiceErrorOccurredEventArgs>;
+    using MapElement = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::MapElement>;
+    using MapElementClickEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::MapElementClickEventArgs>;
+    using MapElementsLayer = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::MapElementsLayer>;
+    using MapIcon = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::MapIcon>;
+    using MapLayer = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::MapLayer>;
     using MediaPlayerElement = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::MediaPlayerElement>;
     using MediaPlayerPresenter = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::MediaPlayerPresenter>;
     using MediaTransportControls = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::MediaTransportControls>;
@@ -915,6 +927,9 @@ namespace py::wrapper::Microsoft::UI::Xaml::Controls
     using ScrollingZoomOptions = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::ScrollingZoomOptions>;
     using SectionsInViewChangedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::SectionsInViewChangedEventArgs>;
     using SelectionChangedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::SelectionChangedEventArgs>;
+    using SelectorBar = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::SelectorBar>;
+    using SelectorBarItem = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::SelectorBarItem>;
+    using SelectorBarSelectionChangedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::SelectorBarSelectionChangedEventArgs>;
     using SemanticZoom = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::SemanticZoom>;
     using SemanticZoomLocation = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::SemanticZoomLocation>;
     using SemanticZoomViewChangedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::SemanticZoomViewChangedEventArgs>;
@@ -2996,6 +3011,55 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Controls::MapControl>
+    {
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr const char* type_name = "MapControl";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Controls::MapControlMapServiceErrorOccurredEventArgs>
+    {
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr const char* type_name = "MapControlMapServiceErrorOccurredEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Controls::MapElement>
+    {
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr const char* type_name = "MapElement";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Controls::MapElementClickEventArgs>
+    {
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr const char* type_name = "MapElementClickEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Controls::MapElementsLayer>
+    {
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr const char* type_name = "MapElementsLayer";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Controls::MapIcon>
+    {
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr const char* type_name = "MapIcon";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Controls::MapLayer>
+    {
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr const char* type_name = "MapLayer";
+    };
+
+    template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::MediaPlayerElement>
     {
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
@@ -3616,6 +3680,27 @@ namespace py
     {
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "SelectionChangedEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Controls::SelectorBar>
+    {
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr const char* type_name = "SelectorBar";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Controls::SelectorBarItem>
+    {
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr const char* type_name = "SelectorBarItem";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Controls::SelectorBarSelectionChangedEventArgs>
+    {
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr const char* type_name = "SelectorBarSelectionChangedEventArgs";
     };
 
     template<>

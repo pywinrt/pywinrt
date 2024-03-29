@@ -15,6 +15,7 @@ winrt-Microsoft.UI.Xaml.Navigation[all]==0.0.0
 winrt-Microsoft.Web.WebView2.Core[all]==0.0.0
 winrt-Windows.ApplicationModel.Contacts[all]==0.0.0
 winrt-Windows.ApplicationModel.DataTransfer[all]==0.0.0
+winrt-Windows.Devices.Geolocation[all]==0.0.0
 winrt-Windows.Foundation[all]==0.0.0
 winrt-Windows.Foundation.Collections[all]==0.0.0
 winrt-Windows.Foundation.Numerics[all]==0.0.0

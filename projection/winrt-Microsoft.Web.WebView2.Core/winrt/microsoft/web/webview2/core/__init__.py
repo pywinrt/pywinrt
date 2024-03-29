@@ -18,12 +18,14 @@ __all__ = [
     "CoreWebView2DownloadInterruptReason",
     "CoreWebView2DownloadState",
     "CoreWebView2FaviconImageFormat",
+    "CoreWebView2FrameKind",
     "CoreWebView2HostResourceAccessKind",
     "CoreWebView2KeyEventKind",
     "CoreWebView2MemoryUsageTargetLevel",
     "CoreWebView2MouseEventKind",
     "CoreWebView2MouseEventVirtualKeys",
     "CoreWebView2MoveFocusReason",
+    "CoreWebView2NavigationKind",
     "CoreWebView2PdfToolbarItems",
     "CoreWebView2PermissionKind",
     "CoreWebView2PermissionState",
@@ -50,6 +52,7 @@ __all__ = [
     "CoreWebView2AcceleratorKeyPressedEventArgs",
     "CoreWebView2BasicAuthenticationRequestedEventArgs",
     "CoreWebView2BasicAuthenticationResponse",
+    "CoreWebView2BrowserExtension",
     "CoreWebView2BrowserProcessExitedEventArgs",
     "CoreWebView2Certificate",
     "CoreWebView2ClientCertificate",
@@ -88,6 +91,7 @@ __all__ = [
     "CoreWebView2PermissionSetting",
     "CoreWebView2PointerInfo",
     "CoreWebView2PrintSettings",
+    "CoreWebView2ProcessExtendedInfo",
     "CoreWebView2ProcessFailedEventArgs",
     "CoreWebView2ProcessInfo",
     "CoreWebView2Profile",
@@ -130,6 +134,7 @@ class CoreWebView2BrowsingDataKinds(enum.IntFlag):
     BROWSING_HISTORY = 0x1000
     SETTINGS = 0x2000
     ALL_PROFILE = 0x4000
+    SERVICE_WORKERS = 0x8000
 
 class CoreWebView2CapturePreviewImageFormat(enum.IntEnum):
     PNG = 0
@@ -206,6 +211,13 @@ class CoreWebView2FaviconImageFormat(enum.IntEnum):
     PNG = 0
     JPEG = 1
 
+class CoreWebView2FrameKind(enum.IntEnum):
+    UNKNOWN = 0
+    MAIN_FRAME = 1
+    IFRAME = 2
+    EMBED = 3
+    OBJECT = 4
+
 class CoreWebView2HostResourceAccessKind(enum.IntEnum):
     DENY = 0
     ALLOW = 1
@@ -238,6 +250,8 @@ class CoreWebView2MouseEventKind(enum.IntEnum):
     X_BUTTON_DOUBLE_CLICK = 525
     X_BUTTON_DOWN = 523
     X_BUTTON_UP = 524
+    NON_CLIENT_RIGHT_BUTTON_DOWN = 164
+    NON_CLIENT_RIGHT_BUTTON_UP = 165
 
 class CoreWebView2MouseEventVirtualKeys(enum.IntFlag):
     NONE = 0
@@ -253,6 +267,11 @@ class CoreWebView2MoveFocusReason(enum.IntEnum):
     PROGRAMMATIC = 0
     NEXT = 1
     PREVIOUS = 2
+
+class CoreWebView2NavigationKind(enum.IntEnum):
+    RELOAD = 0
+    BACK_OR_FORWARD = 1
+    NEW_DOCUMENT = 2
 
 class CoreWebView2PdfToolbarItems(enum.IntFlag):
     NONE = 0
@@ -432,6 +451,7 @@ CoreWebView2 = _winrt_microsoft_web_webview2_core.CoreWebView2
 CoreWebView2AcceleratorKeyPressedEventArgs = _winrt_microsoft_web_webview2_core.CoreWebView2AcceleratorKeyPressedEventArgs
 CoreWebView2BasicAuthenticationRequestedEventArgs = _winrt_microsoft_web_webview2_core.CoreWebView2BasicAuthenticationRequestedEventArgs
 CoreWebView2BasicAuthenticationResponse = _winrt_microsoft_web_webview2_core.CoreWebView2BasicAuthenticationResponse
+CoreWebView2BrowserExtension = _winrt_microsoft_web_webview2_core.CoreWebView2BrowserExtension
 CoreWebView2BrowserProcessExitedEventArgs = _winrt_microsoft_web_webview2_core.CoreWebView2BrowserProcessExitedEventArgs
 CoreWebView2Certificate = _winrt_microsoft_web_webview2_core.CoreWebView2Certificate
 CoreWebView2ClientCertificate = _winrt_microsoft_web_webview2_core.CoreWebView2ClientCertificate
@@ -470,6 +490,7 @@ CoreWebView2PermissionRequestedEventArgs = _winrt_microsoft_web_webview2_core.Co
 CoreWebView2PermissionSetting = _winrt_microsoft_web_webview2_core.CoreWebView2PermissionSetting
 CoreWebView2PointerInfo = _winrt_microsoft_web_webview2_core.CoreWebView2PointerInfo
 CoreWebView2PrintSettings = _winrt_microsoft_web_webview2_core.CoreWebView2PrintSettings
+CoreWebView2ProcessExtendedInfo = _winrt_microsoft_web_webview2_core.CoreWebView2ProcessExtendedInfo
 CoreWebView2ProcessFailedEventArgs = _winrt_microsoft_web_webview2_core.CoreWebView2ProcessFailedEventArgs
 CoreWebView2ProcessInfo = _winrt_microsoft_web_webview2_core.CoreWebView2ProcessInfo
 CoreWebView2Profile = _winrt_microsoft_web_webview2_core.CoreWebView2Profile

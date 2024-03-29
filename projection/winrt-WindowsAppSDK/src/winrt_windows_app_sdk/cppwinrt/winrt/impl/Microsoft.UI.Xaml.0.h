@@ -223,6 +223,11 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml
         CaretPositionAttribute = 40038,
         CaretBidiModeAttribute = 40039,
     };
+    enum class DispatcherShutdownMode : int32_t
+    {
+        OnLastWindowClose = 0,
+        OnExplicitShutdown = 1,
+    };
     enum class DurationType : int32_t
     {
         Automatic = 0,
@@ -359,6 +364,18 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml
         Right = 2,
         Stretch = 3,
     };
+    enum class LayoutCycleDebugBreakLevel : int32_t
+    {
+        None = 0,
+        Low = 1,
+        High = 2,
+    };
+    enum class LayoutCycleTracingLevel : int32_t
+    {
+        None = 0,
+        Low = 1,
+        High = 2,
+    };
     enum class LineStackingStrategy : int32_t
     {
         MaxHeight = 0,
@@ -435,6 +452,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml
     struct IAdaptiveTriggerStatics;
     struct IApplication;
     struct IApplication2;
+    struct IApplication3;
     struct IApplicationFactory;
     struct IApplicationInitializationCallbackParams;
     struct IApplicationOverrides;
@@ -457,6 +475,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml
     struct IDataTemplateStatics;
     struct IDebugSettings;
     struct IDebugSettings2;
+    struct IDebugSettings3;
     struct IDependencyObject;
     struct IDependencyObjectCollectionFactory;
     struct IDependencyObjectFactory;
@@ -676,6 +695,7 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::IAdaptiveTriggerStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::IApplication>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::IApplication2>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::IApplication3>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::IApplicationFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::IApplicationInitializationCallbackParams>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::IApplicationOverrides>{ using type = interface_category; };
@@ -698,6 +718,7 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::IDataTemplateStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::IDebugSettings>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::IDebugSettings2>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::IDebugSettings3>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::IDependencyObject>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::IDependencyObjectCollectionFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::IDependencyObjectFactory>{ using type = interface_category; };
@@ -892,6 +913,7 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::ApplicationRequiresPointerMode>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::ApplicationTheme>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::AutomationTextAttributesEnum>{ using type = enum_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::DispatcherShutdownMode>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::DurationType>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::ElementHighContrastAdjustment>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::ElementSoundKind>{ using type = enum_category; };
@@ -911,6 +933,8 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::FontVariants>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::GridUnitType>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::HorizontalAlignment>{ using type = enum_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::LayoutCycleDebugBreakLevel>{ using type = enum_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::LayoutCycleTracingLevel>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::LineStackingStrategy>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::OpticalMarginAlignment>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::TextAlignment>{ using type = enum_category; };
@@ -1023,6 +1047,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::ApplicationRequiresPointerMode> = L"Microsoft.UI.Xaml.ApplicationRequiresPointerMode";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::ApplicationTheme> = L"Microsoft.UI.Xaml.ApplicationTheme";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::AutomationTextAttributesEnum> = L"Microsoft.UI.Xaml.AutomationTextAttributesEnum";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::DispatcherShutdownMode> = L"Microsoft.UI.Xaml.DispatcherShutdownMode";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::DurationType> = L"Microsoft.UI.Xaml.DurationType";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::ElementHighContrastAdjustment> = L"Microsoft.UI.Xaml.ElementHighContrastAdjustment";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::ElementSoundKind> = L"Microsoft.UI.Xaml.ElementSoundKind";
@@ -1042,6 +1067,8 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::FontVariants> = L"Microsoft.UI.Xaml.FontVariants";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::GridUnitType> = L"Microsoft.UI.Xaml.GridUnitType";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::HorizontalAlignment> = L"Microsoft.UI.Xaml.HorizontalAlignment";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::LayoutCycleDebugBreakLevel> = L"Microsoft.UI.Xaml.LayoutCycleDebugBreakLevel";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::LayoutCycleTracingLevel> = L"Microsoft.UI.Xaml.LayoutCycleTracingLevel";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::LineStackingStrategy> = L"Microsoft.UI.Xaml.LineStackingStrategy";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::OpticalMarginAlignment> = L"Microsoft.UI.Xaml.OpticalMarginAlignment";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::TextAlignment> = L"Microsoft.UI.Xaml.TextAlignment";
@@ -1062,6 +1089,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::IAdaptiveTriggerStatics> = L"Microsoft.UI.Xaml.IAdaptiveTriggerStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::IApplication> = L"Microsoft.UI.Xaml.IApplication";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::IApplication2> = L"Microsoft.UI.Xaml.IApplication2";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::IApplication3> = L"Microsoft.UI.Xaml.IApplication3";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::IApplicationFactory> = L"Microsoft.UI.Xaml.IApplicationFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::IApplicationInitializationCallbackParams> = L"Microsoft.UI.Xaml.IApplicationInitializationCallbackParams";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::IApplicationOverrides> = L"Microsoft.UI.Xaml.IApplicationOverrides";
@@ -1084,6 +1112,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::IDataTemplateStatics> = L"Microsoft.UI.Xaml.IDataTemplateStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::IDebugSettings> = L"Microsoft.UI.Xaml.IDebugSettings";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::IDebugSettings2> = L"Microsoft.UI.Xaml.IDebugSettings2";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::IDebugSettings3> = L"Microsoft.UI.Xaml.IDebugSettings3";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::IDependencyObject> = L"Microsoft.UI.Xaml.IDependencyObject";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::IDependencyObjectCollectionFactory> = L"Microsoft.UI.Xaml.IDependencyObjectCollectionFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::IDependencyObjectFactory> = L"Microsoft.UI.Xaml.IDependencyObjectFactory";
@@ -1218,6 +1247,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::IAdaptiveTriggerStatics>{ 0xE7A3547F,0xC077,0x5F20,{ 0xAA,0xB1,0xD1,0x6C,0x30,0xD9,0xD3,0x7F } }; // E7A3547F-C077-5F20-AAB1-D16C30D9D37F
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::IApplication>{ 0x06A8F4E7,0x1146,0x55AF,{ 0x82,0x0D,0xEB,0xD5,0x56,0x43,0xB0,0x21 } }; // 06A8F4E7-1146-55AF-820D-EBD55643B021
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::IApplication2>{ 0x469E6D36,0x2E11,0x5B06,{ 0x9E,0x0A,0xC5,0xEE,0xF0,0xCF,0x8F,0x12 } }; // 469E6D36-2E11-5B06-9E0A-C5EEF0CF8F12
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::IApplication3>{ 0xBE941595,0x61FE,0x5B36,{ 0xA3,0xD3,0x96,0x2A,0x64,0x7D,0x7C,0x6F } }; // BE941595-61FE-5B36-A3D3-962A647D7C6F
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::IApplicationFactory>{ 0x9FD96657,0x5294,0x5A65,{ 0xA1,0xDB,0x4F,0xEA,0x14,0x35,0x97,0xDA } }; // 9FD96657-5294-5A65-A1DB-4FEA143597DA
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::IApplicationInitializationCallbackParams>{ 0x1B1906EA,0x5B7B,0x5876,{ 0x81,0xAB,0x7C,0x22,0x81,0xAC,0x3D,0x20 } }; // 1B1906EA-5B7B-5876-81AB-7C2281AC3D20
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::IApplicationOverrides>{ 0xA33E81EF,0xC665,0x503B,{ 0x88,0x27,0xD2,0x7E,0xF1,0x72,0x0A,0x06 } }; // A33E81EF-C665-503B-8827-D27EF1720A06
@@ -1240,6 +1270,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::IDataTemplateStatics>{ 0xCF6ADA69,0x4BF1,0x5F2D,{ 0x8B,0xDB,0x09,0xEA,0x1A,0x26,0xF9,0x75 } }; // CF6ADA69-4BF1-5F2D-8BDB-09EA1A26F975
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::IDebugSettings>{ 0x4004943B,0x2509,0x5476,{ 0xBB,0xA2,0x3F,0xE0,0x5E,0xCF,0x61,0x5D } }; // 4004943B-2509-5476-BBA2-3FE05ECF615D
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::IDebugSettings2>{ 0x6DFB6F51,0xD2F8,0x59C4,{ 0x8B,0xCA,0x44,0x10,0x92,0x95,0x77,0xD0 } }; // 6DFB6F51-D2F8-59C4-8BCA-4410929577D0
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::IDebugSettings3>{ 0x36135BD5,0x3917,0x5C8D,{ 0xA3,0xC6,0x2F,0xC8,0x9A,0x50,0x3F,0x26 } }; // 36135BD5-3917-5C8D-A3C6-2FC89A503F26
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::IDependencyObject>{ 0xE7BEAEE7,0x160E,0x50F7,{ 0x87,0x89,0xD6,0x34,0x63,0xF9,0x79,0xFA } }; // E7BEAEE7-160E-50F7-8789-D63463F979FA
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::IDependencyObjectCollectionFactory>{ 0x2A74EE43,0x90FD,0x5D61,{ 0x93,0x83,0x58,0x4E,0xA8,0x42,0x2B,0x39 } }; // 2A74EE43-90FD-5D61-9383-584EA8422B39
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::IDependencyObjectFactory>{ 0x936B614C,0x475F,0x5D7D,{ 0xB3,0xF7,0xBF,0x1F,0xBE,0xA2,0x81,0x26 } }; // 936B614C-475F-5D7D-B3F7-BF1FBEA28126
@@ -1496,6 +1527,14 @@ namespace winrt::impl
             virtual int32_t __stdcall remove_ResourceManagerRequested(winrt::event_token) noexcept = 0;
         };
     };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::IApplication3>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_DispatcherShutdownMode(int32_t*) noexcept = 0;
+            virtual int32_t __stdcall put_DispatcherShutdownMode(int32_t) noexcept = 0;
+        };
+    };
     template <> struct abi<winrt::Microsoft::UI::Xaml::IApplicationFactory>
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
@@ -1748,6 +1787,16 @@ namespace winrt::impl
             virtual int32_t __stdcall put_IsXamlResourceReferenceTracingEnabled(bool) noexcept = 0;
             virtual int32_t __stdcall add_XamlResourceReferenceFailed(void*, winrt::event_token*) noexcept = 0;
             virtual int32_t __stdcall remove_XamlResourceReferenceFailed(winrt::event_token) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::IDebugSettings3>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_LayoutCycleTracingLevel(int32_t*) noexcept = 0;
+            virtual int32_t __stdcall put_LayoutCycleTracingLevel(int32_t) noexcept = 0;
+            virtual int32_t __stdcall get_LayoutCycleDebugBreakLevel(int32_t*) noexcept = 0;
+            virtual int32_t __stdcall put_LayoutCycleDebugBreakLevel(int32_t) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Microsoft::UI::Xaml::IDependencyObject>
@@ -3296,6 +3345,16 @@ namespace winrt::impl
         template <typename D> using type = consume_Microsoft_UI_Xaml_IApplication2<D>;
     };
     template <typename D>
+    struct consume_Microsoft_UI_Xaml_IApplication3
+    {
+        [[nodiscard]] auto DispatcherShutdownMode() const;
+        auto DispatcherShutdownMode(winrt::Microsoft::UI::Xaml::DispatcherShutdownMode const& value) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::IApplication3>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_IApplication3<D>;
+    };
+    template <typename D>
     struct consume_Microsoft_UI_Xaml_IApplicationFactory
     {
         auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
@@ -3596,6 +3655,18 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::UI::Xaml::IDebugSettings2>
     {
         template <typename D> using type = consume_Microsoft_UI_Xaml_IDebugSettings2<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_IDebugSettings3
+    {
+        [[nodiscard]] auto LayoutCycleTracingLevel() const;
+        auto LayoutCycleTracingLevel(winrt::Microsoft::UI::Xaml::LayoutCycleTracingLevel const& value) const;
+        [[nodiscard]] auto LayoutCycleDebugBreakLevel() const;
+        auto LayoutCycleDebugBreakLevel(winrt::Microsoft::UI::Xaml::LayoutCycleDebugBreakLevel const& value) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::IDebugSettings3>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_IDebugSettings3<D>;
     };
     template <typename D>
     struct consume_Microsoft_UI_Xaml_IDependencyObject

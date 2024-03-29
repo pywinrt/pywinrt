@@ -8,6 +8,8 @@ from winrt import _winrt_microsoft_ui_input
 __all__ = [
     "CrossSlidingState",
     "DraggingState",
+    "FocusNavigationReason",
+    "FocusNavigationResult",
     "GestureSettings",
     "HoldingState",
     "InputActivationState",
@@ -26,6 +28,8 @@ __all__ = [
     "CrossSlidingEventArgs",
     "DraggingEventArgs",
     "FocusChangedEventArgs",
+    "FocusNavigationRequest",
+    "FocusNavigationRequestEventArgs",
     "GestureRecognizer",
     "HoldingEventArgs",
     "InputActivationListener",
@@ -34,8 +38,8 @@ __all__ = [
     "InputCustomCursor",
     "InputDesktopNamedResourceCursor",
     "InputDesktopResourceCursor",
-    "InputFocusChangedEventArgs",
     "InputFocusController",
+    "InputFocusNavigationHost",
     "InputKeyboardSource",
     "InputLightDismissAction",
     "InputLightDismissEventArgs",
@@ -75,6 +79,21 @@ class DraggingState(enum.IntEnum):
     STARTED = 0
     CONTINUING = 1
     COMPLETED = 2
+
+class FocusNavigationReason(enum.IntEnum):
+    PROGRAMMATIC = 0
+    RESTORE = 1
+    FIRST = 2
+    LAST = 3
+    LEFT = 4
+    UP = 5
+    RIGHT = 6
+    DOWN = 7
+
+class FocusNavigationResult(enum.IntEnum):
+    NOT_MOVED = 0
+    MOVED = 1
+    NO_FOCUSABLE_ELEMENTS = 2
 
 class GestureSettings(enum.IntFlag):
     NONE = 0
@@ -175,6 +194,8 @@ ContextMenuKeyEventArgs = _winrt_microsoft_ui_input.ContextMenuKeyEventArgs
 CrossSlidingEventArgs = _winrt_microsoft_ui_input.CrossSlidingEventArgs
 DraggingEventArgs = _winrt_microsoft_ui_input.DraggingEventArgs
 FocusChangedEventArgs = _winrt_microsoft_ui_input.FocusChangedEventArgs
+FocusNavigationRequest = _winrt_microsoft_ui_input.FocusNavigationRequest
+FocusNavigationRequestEventArgs = _winrt_microsoft_ui_input.FocusNavigationRequestEventArgs
 GestureRecognizer = _winrt_microsoft_ui_input.GestureRecognizer
 HoldingEventArgs = _winrt_microsoft_ui_input.HoldingEventArgs
 InputActivationListener = _winrt_microsoft_ui_input.InputActivationListener
@@ -183,8 +204,8 @@ InputCursor = _winrt_microsoft_ui_input.InputCursor
 InputCustomCursor = _winrt_microsoft_ui_input.InputCustomCursor
 InputDesktopNamedResourceCursor = _winrt_microsoft_ui_input.InputDesktopNamedResourceCursor
 InputDesktopResourceCursor = _winrt_microsoft_ui_input.InputDesktopResourceCursor
-InputFocusChangedEventArgs = _winrt_microsoft_ui_input.InputFocusChangedEventArgs
 InputFocusController = _winrt_microsoft_ui_input.InputFocusController
+InputFocusNavigationHost = _winrt_microsoft_ui_input.InputFocusNavigationHost
 InputKeyboardSource = _winrt_microsoft_ui_input.InputKeyboardSource
 InputLightDismissAction = _winrt_microsoft_ui_input.InputLightDismissAction
 InputLightDismissEventArgs = _winrt_microsoft_ui_input.InputLightDismissEventArgs

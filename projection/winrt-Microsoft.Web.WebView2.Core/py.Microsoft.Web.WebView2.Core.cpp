@@ -1395,6 +1395,25 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
+    static PyObject* CoreWebView2_get_FrameId(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"FrameId"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert(self->obj.FrameId());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* CoreWebView2_get_IsSuspended(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, void* /*unused*/) noexcept
     {
         if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2", L"IsSuspended"))
@@ -3022,6 +3041,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "memory_usage_target_level", reinterpret_cast<getter>(CoreWebView2_get_MemoryUsageTargetLevel), reinterpret_cast<setter>(CoreWebView2_put_MemoryUsageTargetLevel), nullptr, nullptr },
         { "cookie_manager", reinterpret_cast<getter>(CoreWebView2_get_CookieManager), nullptr, nullptr, nullptr },
         { "environment", reinterpret_cast<getter>(CoreWebView2_get_Environment), nullptr, nullptr, nullptr },
+        { "frame_id", reinterpret_cast<getter>(CoreWebView2_get_FrameId), nullptr, nullptr, nullptr },
         { "is_suspended", reinterpret_cast<getter>(CoreWebView2_get_IsSuspended), nullptr, nullptr, nullptr },
         { "is_muted", reinterpret_cast<getter>(CoreWebView2_get_IsMuted), reinterpret_cast<setter>(CoreWebView2_put_IsMuted), nullptr, nullptr },
         { "is_document_playing_audio", reinterpret_cast<getter>(CoreWebView2_get_IsDocumentPlayingAudio), nullptr, nullptr, nullptr },
@@ -3189,6 +3209,53 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
+    static PyObject* CoreWebView2AcceleratorKeyPressedEventArgs_get_IsBrowserAcceleratorKeyEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2AcceleratorKeyPressedEventArgs* self, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2AcceleratorKeyPressedEventArgs", L"IsBrowserAcceleratorKeyEnabled"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert(self->obj.IsBrowserAcceleratorKeyEnabled());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int CoreWebView2AcceleratorKeyPressedEventArgs_put_IsBrowserAcceleratorKeyEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2AcceleratorKeyPressedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2AcceleratorKeyPressedEventArgs", L"IsBrowserAcceleratorKeyEnabled"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return -1;
+        }
+
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.IsBrowserAcceleratorKeyEnabled(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
     static PyObject* _assign_array_CoreWebView2AcceleratorKeyPressedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::Web::WebView2::Core::CoreWebView2AcceleratorKeyPressedEventArgs>>();
@@ -3225,6 +3292,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "key_event_l_param", reinterpret_cast<getter>(CoreWebView2AcceleratorKeyPressedEventArgs_get_KeyEventLParam), nullptr, nullptr, nullptr },
         { "physical_key_status", reinterpret_cast<getter>(CoreWebView2AcceleratorKeyPressedEventArgs_get_PhysicalKeyStatus), nullptr, nullptr, nullptr },
         { "virtual_key", reinterpret_cast<getter>(CoreWebView2AcceleratorKeyPressedEventArgs_get_VirtualKey), nullptr, nullptr, nullptr },
+        { "is_browser_accelerator_key_enabled", reinterpret_cast<getter>(CoreWebView2AcceleratorKeyPressedEventArgs_get_IsBrowserAcceleratorKeyEnabled), reinterpret_cast<setter>(CoreWebView2AcceleratorKeyPressedEventArgs_put_IsBrowserAcceleratorKeyEnabled), nullptr, nullptr },
         { }
     };
 
@@ -3616,6 +3684,197 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_CoreWebView2BasicAuthenticationResponse
+    };
+
+    // ----- CoreWebView2BrowserExtension class --------------------
+
+    static PyObject* _new_CoreWebView2BrowserExtension(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::Web::WebView2::Core::CoreWebView2BrowserExtension>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::Web::WebView2::Core::CoreWebView2BrowserExtension>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_CoreWebView2BrowserExtension(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2BrowserExtension* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* CoreWebView2BrowserExtension_EnableAsync(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2BrowserExtension* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2BrowserExtension", L"EnableAsync", 1))
+            {
+                py::set_arg_count_version_error(1);
+                return nullptr;
+            }
+
+            try
+            {
+                auto param0 = py::convert_to<bool>(args, 0);
+
+                return py::convert(self->obj.EnableAsync(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CoreWebView2BrowserExtension_RemoveAsync(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2BrowserExtension* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2BrowserExtension", L"RemoveAsync", 0))
+            {
+                py::set_arg_count_version_error(0);
+                return nullptr;
+            }
+
+            try
+            {
+                return py::convert(self->obj.RemoveAsync());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CoreWebView2BrowserExtension_get_Id(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2BrowserExtension* self, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2BrowserExtension", L"Id"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert(self->obj.Id());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* CoreWebView2BrowserExtension_get_IsEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2BrowserExtension* self, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2BrowserExtension", L"IsEnabled"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert(self->obj.IsEnabled());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* CoreWebView2BrowserExtension_get_Name(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2BrowserExtension* self, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2BrowserExtension", L"Name"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert(self->obj.Name());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_CoreWebView2BrowserExtension(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Web::WebView2::Core::CoreWebView2BrowserExtension>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_CoreWebView2BrowserExtension(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2BrowserExtension>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_CoreWebView2BrowserExtension[] = {
+        { "enable_async", reinterpret_cast<PyCFunction>(CoreWebView2BrowserExtension_EnableAsync), METH_VARARGS, nullptr },
+        { "remove_async", reinterpret_cast<PyCFunction>(CoreWebView2BrowserExtension_RemoveAsync), METH_VARARGS, nullptr },
+        { "_assign_array_", _assign_array_CoreWebView2BrowserExtension, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2BrowserExtension), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_CoreWebView2BrowserExtension[] = {
+        { "id", reinterpret_cast<getter>(CoreWebView2BrowserExtension_get_Id), nullptr, nullptr, nullptr },
+        { "is_enabled", reinterpret_cast<getter>(CoreWebView2BrowserExtension_get_IsEnabled), nullptr, nullptr, nullptr },
+        { "name", reinterpret_cast<getter>(CoreWebView2BrowserExtension_get_Name), nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_CoreWebView2BrowserExtension[] = 
+    {
+        { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2BrowserExtension) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2BrowserExtension) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2BrowserExtension) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2BrowserExtension) },
+        { },
+    };
+
+    static PyType_Spec type_spec_CoreWebView2BrowserExtension =
+    {
+        "winrt._winrt_microsoft_web_webview2_core.CoreWebView2BrowserExtension",
+        sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2BrowserExtension),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_CoreWebView2BrowserExtension
     };
 
     // ----- CoreWebView2BrowserProcessExitedEventArgs class --------------------
@@ -8128,11 +8387,35 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     // ----- CoreWebView2CustomSchemeRegistration class --------------------
 
-    static PyObject* _new_CoreWebView2CustomSchemeRegistration(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    static PyObject* _new_CoreWebView2CustomSchemeRegistration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        static_assert(py::py_type<winrt::Microsoft::Web::WebView2::Core::CoreWebView2CustomSchemeRegistration>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::Web::WebView2::Core::CoreWebView2CustomSchemeRegistration>::type_name);
-        return nullptr;
+        if (kwds != nullptr)
+        {
+            py::set_invalid_kwd_args_error();
+            return nullptr;
+        }
+
+        auto arg_count = PyTuple_Size(args);
+        if (arg_count == 1)
+        {
+            try
+            {
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                winrt::Microsoft::Web::WebView2::Core::CoreWebView2CustomSchemeRegistration instance{ param0 };
+                return py::wrap(instance, type);
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static void _dealloc_CoreWebView2CustomSchemeRegistration(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CustomSchemeRegistration* self) noexcept
@@ -8237,6 +8520,44 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
+    static PyObject* CoreWebView2CustomSchemeRegistration_get_AllowedOrigins(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CustomSchemeRegistration* self, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CustomSchemeRegistration", L"AllowedOrigins"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert(self->obj.AllowedOrigins());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* CoreWebView2CustomSchemeRegistration_get_SchemeName(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CustomSchemeRegistration* self, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2CustomSchemeRegistration", L"SchemeName"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert(self->obj.SchemeName());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_CoreWebView2CustomSchemeRegistration(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::Web::WebView2::Core::CoreWebView2CustomSchemeRegistration>>();
@@ -8270,6 +8591,8 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     static PyGetSetDef _getset_CoreWebView2CustomSchemeRegistration[] = {
         { "treat_as_secure", reinterpret_cast<getter>(CoreWebView2CustomSchemeRegistration_get_TreatAsSecure), reinterpret_cast<setter>(CoreWebView2CustomSchemeRegistration_put_TreatAsSecure), nullptr, nullptr },
         { "has_authority_component", reinterpret_cast<getter>(CoreWebView2CustomSchemeRegistration_get_HasAuthorityComponent), reinterpret_cast<setter>(CoreWebView2CustomSchemeRegistration_put_HasAuthorityComponent), nullptr, nullptr },
+        { "allowed_origins", reinterpret_cast<getter>(CoreWebView2CustomSchemeRegistration_get_AllowedOrigins), nullptr, nullptr, nullptr },
+        { "scheme_name", reinterpret_cast<getter>(CoreWebView2CustomSchemeRegistration_get_SchemeName), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -9846,6 +10169,35 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
+    static PyObject* CoreWebView2Environment_GetProcessExtendedInfosAsync(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Environment* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Environment", L"GetProcessExtendedInfosAsync", 0))
+            {
+                py::set_arg_count_version_error(0);
+                return nullptr;
+            }
+
+            try
+            {
+                return py::convert(self->obj.GetProcessExtendedInfosAsync());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* CoreWebView2Environment_GetProcessInfos(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Environment* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -10095,6 +10447,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "create_shared_buffer", reinterpret_cast<PyCFunction>(CoreWebView2Environment_CreateSharedBuffer), METH_VARARGS, nullptr },
         { "create_web_resource_request", reinterpret_cast<PyCFunction>(CoreWebView2Environment_CreateWebResourceRequest), METH_VARARGS, nullptr },
         { "create_web_resource_response", reinterpret_cast<PyCFunction>(CoreWebView2Environment_CreateWebResourceResponse), METH_VARARGS, nullptr },
+        { "get_process_extended_infos_async", reinterpret_cast<PyCFunction>(CoreWebView2Environment_GetProcessExtendedInfosAsync), METH_VARARGS, nullptr },
         { "get_process_infos", reinterpret_cast<PyCFunction>(CoreWebView2Environment_GetProcessInfos), METH_VARARGS, nullptr },
         { "add_browser_process_exited", reinterpret_cast<PyCFunction>(CoreWebView2Environment_add_BrowserProcessExited), METH_O, nullptr },
         { "remove_browser_process_exited", reinterpret_cast<PyCFunction>(CoreWebView2Environment_remove_BrowserProcessExited), METH_O, nullptr },
@@ -10388,6 +10741,53 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
+    static PyObject* CoreWebView2EnvironmentOptions_get_CustomSchemeRegistrations(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2EnvironmentOptions* self, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions", L"CustomSchemeRegistrations"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert(self->obj.CustomSchemeRegistrations());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int CoreWebView2EnvironmentOptions_put_CustomSchemeRegistrations(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2EnvironmentOptions* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions", L"CustomSchemeRegistrations"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return -1;
+        }
+
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Microsoft::Web::WebView2::Core::CoreWebView2CustomSchemeRegistration>>(arg);
+
+            self->obj.CustomSchemeRegistrations(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
     static PyObject* CoreWebView2EnvironmentOptions_get_ExclusiveUserDataFolderAccess(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2EnvironmentOptions* self, void* /*unused*/) noexcept
     {
         if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions", L"ExclusiveUserDataFolderAccess"))
@@ -10529,6 +10929,53 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
+    static PyObject* CoreWebView2EnvironmentOptions_get_AreBrowserExtensionsEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2EnvironmentOptions* self, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions", L"AreBrowserExtensionsEnabled"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert(self->obj.AreBrowserExtensionsEnabled());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int CoreWebView2EnvironmentOptions_put_AreBrowserExtensionsEnabled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2EnvironmentOptions* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions", L"AreBrowserExtensionsEnabled"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return -1;
+        }
+
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.AreBrowserExtensionsEnabled(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
     static PyObject* _assign_array_CoreWebView2EnvironmentOptions(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::Web::WebView2::Core::CoreWebView2EnvironmentOptions>>();
@@ -10564,9 +11011,11 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "language", reinterpret_cast<getter>(CoreWebView2EnvironmentOptions_get_Language), reinterpret_cast<setter>(CoreWebView2EnvironmentOptions_put_Language), nullptr, nullptr },
         { "allow_single_sign_on_using_o_s_primary_account", reinterpret_cast<getter>(CoreWebView2EnvironmentOptions_get_AllowSingleSignOnUsingOSPrimaryAccount), reinterpret_cast<setter>(CoreWebView2EnvironmentOptions_put_AllowSingleSignOnUsingOSPrimaryAccount), nullptr, nullptr },
         { "additional_browser_arguments", reinterpret_cast<getter>(CoreWebView2EnvironmentOptions_get_AdditionalBrowserArguments), reinterpret_cast<setter>(CoreWebView2EnvironmentOptions_put_AdditionalBrowserArguments), nullptr, nullptr },
+        { "custom_scheme_registrations", reinterpret_cast<getter>(CoreWebView2EnvironmentOptions_get_CustomSchemeRegistrations), reinterpret_cast<setter>(CoreWebView2EnvironmentOptions_put_CustomSchemeRegistrations), nullptr, nullptr },
         { "exclusive_user_data_folder_access", reinterpret_cast<getter>(CoreWebView2EnvironmentOptions_get_ExclusiveUserDataFolderAccess), reinterpret_cast<setter>(CoreWebView2EnvironmentOptions_put_ExclusiveUserDataFolderAccess), nullptr, nullptr },
         { "is_custom_crash_reporting_enabled", reinterpret_cast<getter>(CoreWebView2EnvironmentOptions_get_IsCustomCrashReportingEnabled), reinterpret_cast<setter>(CoreWebView2EnvironmentOptions_put_IsCustomCrashReportingEnabled), nullptr, nullptr },
         { "enable_tracking_prevention", reinterpret_cast<getter>(CoreWebView2EnvironmentOptions_get_EnableTrackingPrevention), reinterpret_cast<setter>(CoreWebView2EnvironmentOptions_put_EnableTrackingPrevention), nullptr, nullptr },
+        { "are_browser_extensions_enabled", reinterpret_cast<getter>(CoreWebView2EnvironmentOptions_get_AreBrowserExtensionsEnabled), reinterpret_cast<setter>(CoreWebView2EnvironmentOptions_put_AreBrowserExtensionsEnabled), nullptr, nullptr },
         { }
     };
 
@@ -10895,6 +11344,25 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         try
         {
             return py::convert(self->obj.Name());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* CoreWebView2Frame_get_FrameId(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Frame* self, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Frame", L"FrameId"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert(self->obj.FrameId());
         }
         catch (...)
         {
@@ -11301,6 +11769,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyGetSetDef _getset_CoreWebView2Frame[] = {
         { "name", reinterpret_cast<getter>(CoreWebView2Frame_get_Name), nullptr, nullptr, nullptr },
+        { "frame_id", reinterpret_cast<getter>(CoreWebView2Frame_get_FrameId), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -11466,6 +11935,63 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
+    static PyObject* CoreWebView2FrameInfo_get_FrameId(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2FrameInfo* self, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2FrameInfo", L"FrameId"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert(self->obj.FrameId());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* CoreWebView2FrameInfo_get_FrameKind(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2FrameInfo* self, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2FrameInfo", L"FrameKind"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert(self->obj.FrameKind());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* CoreWebView2FrameInfo_get_ParentFrameInfo(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2FrameInfo* self, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2FrameInfo", L"ParentFrameInfo"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert(self->obj.ParentFrameInfo());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_CoreWebView2FrameInfo(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::Web::WebView2::Core::CoreWebView2FrameInfo>>();
@@ -11499,6 +12025,9 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     static PyGetSetDef _getset_CoreWebView2FrameInfo[] = {
         { "name", reinterpret_cast<getter>(CoreWebView2FrameInfo_get_Name), nullptr, nullptr, nullptr },
         { "source", reinterpret_cast<getter>(CoreWebView2FrameInfo_get_Source), nullptr, nullptr, nullptr },
+        { "frame_id", reinterpret_cast<getter>(CoreWebView2FrameInfo_get_FrameId), nullptr, nullptr, nullptr },
+        { "frame_kind", reinterpret_cast<getter>(CoreWebView2FrameInfo_get_FrameKind), nullptr, nullptr, nullptr },
+        { "parent_frame_info", reinterpret_cast<getter>(CoreWebView2FrameInfo_get_ParentFrameInfo), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -12937,6 +13466,25 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
+    static PyObject* CoreWebView2NavigationStartingEventArgs_get_NavigationKind(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2NavigationStartingEventArgs* self, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs", L"NavigationKind"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert(self->obj.NavigationKind());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_CoreWebView2NavigationStartingEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::Web::WebView2::Core::CoreWebView2NavigationStartingEventArgs>>();
@@ -12975,6 +13523,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "request_headers", reinterpret_cast<getter>(CoreWebView2NavigationStartingEventArgs_get_RequestHeaders), nullptr, nullptr, nullptr },
         { "uri", reinterpret_cast<getter>(CoreWebView2NavigationStartingEventArgs_get_Uri), nullptr, nullptr, nullptr },
         { "additional_allowed_frame_ancestors", reinterpret_cast<getter>(CoreWebView2NavigationStartingEventArgs_get_AdditionalAllowedFrameAncestors), reinterpret_cast<setter>(CoreWebView2NavigationStartingEventArgs_put_AdditionalAllowedFrameAncestors), nullptr, nullptr },
+        { "navigation_kind", reinterpret_cast<getter>(CoreWebView2NavigationStartingEventArgs_get_NavigationKind), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -13212,6 +13761,25 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
+    static PyObject* CoreWebView2NewWindowRequestedEventArgs_get_OriginalSourceFrameInfo(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2NewWindowRequestedEventArgs* self, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2NewWindowRequestedEventArgs", L"OriginalSourceFrameInfo"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert(self->obj.OriginalSourceFrameInfo());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_CoreWebView2NewWindowRequestedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::Web::WebView2::Core::CoreWebView2NewWindowRequestedEventArgs>>();
@@ -13250,6 +13818,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "uri", reinterpret_cast<getter>(CoreWebView2NewWindowRequestedEventArgs_get_Uri), nullptr, nullptr, nullptr },
         { "window_features", reinterpret_cast<getter>(CoreWebView2NewWindowRequestedEventArgs_get_WindowFeatures), nullptr, nullptr, nullptr },
         { "name", reinterpret_cast<getter>(CoreWebView2NewWindowRequestedEventArgs_get_Name), nullptr, nullptr, nullptr },
+        { "original_source_frame_info", reinterpret_cast<getter>(CoreWebView2NewWindowRequestedEventArgs_get_OriginalSourceFrameInfo), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -16193,6 +16762,115 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         _type_slots_CoreWebView2PrintSettings
     };
 
+    // ----- CoreWebView2ProcessExtendedInfo class --------------------
+
+    static PyObject* _new_CoreWebView2ProcessExtendedInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ProcessExtendedInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ProcessExtendedInfo>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_CoreWebView2ProcessExtendedInfo(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ProcessExtendedInfo* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* CoreWebView2ProcessExtendedInfo_get_AssociatedFrameInfos(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ProcessExtendedInfo* self, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ProcessExtendedInfo", L"AssociatedFrameInfos"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert(self->obj.AssociatedFrameInfos());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* CoreWebView2ProcessExtendedInfo_get_ProcessInfo(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ProcessExtendedInfo* self, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2ProcessExtendedInfo", L"ProcessInfo"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert(self->obj.ProcessInfo());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_CoreWebView2ProcessExtendedInfo(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ProcessExtendedInfo>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_CoreWebView2ProcessExtendedInfo(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ProcessExtendedInfo>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_CoreWebView2ProcessExtendedInfo[] = {
+        { "_assign_array_", _assign_array_CoreWebView2ProcessExtendedInfo, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2ProcessExtendedInfo), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_CoreWebView2ProcessExtendedInfo[] = {
+        { "associated_frame_infos", reinterpret_cast<getter>(CoreWebView2ProcessExtendedInfo_get_AssociatedFrameInfos), nullptr, nullptr, nullptr },
+        { "process_info", reinterpret_cast<getter>(CoreWebView2ProcessExtendedInfo_get_ProcessInfo), nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_CoreWebView2ProcessExtendedInfo[] = 
+    {
+        { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2ProcessExtendedInfo) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2ProcessExtendedInfo) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2ProcessExtendedInfo) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2ProcessExtendedInfo) },
+        { },
+    };
+
+    static PyType_Spec type_spec_CoreWebView2ProcessExtendedInfo =
+    {
+        "winrt._winrt_microsoft_web_webview2_core.CoreWebView2ProcessExtendedInfo",
+        sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ProcessExtendedInfo),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_CoreWebView2ProcessExtendedInfo
+    };
+
     // ----- CoreWebView2ProcessFailedEventArgs class --------------------
 
     static PyObject* _new_CoreWebView2ProcessFailedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -16488,6 +17166,37 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         Py_DECREF(tp);
     }
 
+    static PyObject* CoreWebView2Profile_AddBrowserExtensionAsync(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Profile* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Profile", L"AddBrowserExtensionAsync", 1))
+            {
+                py::set_arg_count_version_error(1);
+                return nullptr;
+            }
+
+            try
+            {
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert(self->obj.AddBrowserExtensionAsync(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* CoreWebView2Profile_ClearBrowsingDataAsync(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Profile* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -16545,6 +17254,36 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
                 auto param2 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 2);
 
                 return py::convert(self->obj.ClearBrowsingDataAsync(param0, param1, param2));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CoreWebView2Profile_Delete(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Profile* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Profile", L"Delete", 0))
+            {
+                py::set_arg_count_version_error(0);
+                return nullptr;
+            }
+
+            try
+            {
+                self->obj.Delete();
+                Py_RETURN_NONE;
             }
             catch (...)
             {
@@ -16932,6 +17671,49 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
+    static PyObject* CoreWebView2Profile_add_Deleted(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Profile* self, PyObject* arg) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Profile", L"Deleted"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+            return nullptr;
+        }
+
+        try
+        {
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Profile, winrt::Windows::Foundation::IInspectable>>(arg);
+
+            return py::convert(self->obj.Deleted(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* CoreWebView2Profile_remove_Deleted(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Profile* self, PyObject* arg) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Web.WebView2.Core.CoreWebView2Profile", L"Deleted"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+            return nullptr;
+        }
+
+        try
+        {
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.Deleted(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_CoreWebView2Profile(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Profile>>();
@@ -16957,9 +17739,13 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     }
 
     static PyMethodDef _methods_CoreWebView2Profile[] = {
+        { "add_browser_extension_async", reinterpret_cast<PyCFunction>(CoreWebView2Profile_AddBrowserExtensionAsync), METH_VARARGS, nullptr },
         { "clear_browsing_data_async", reinterpret_cast<PyCFunction>(CoreWebView2Profile_ClearBrowsingDataAsync), METH_VARARGS, nullptr },
+        { "delete", reinterpret_cast<PyCFunction>(CoreWebView2Profile_Delete), METH_VARARGS, nullptr },
         { "get_non_default_permission_settings_async", reinterpret_cast<PyCFunction>(CoreWebView2Profile_GetNonDefaultPermissionSettingsAsync), METH_VARARGS, nullptr },
         { "set_permission_state_async", reinterpret_cast<PyCFunction>(CoreWebView2Profile_SetPermissionStateAsync), METH_VARARGS, nullptr },
+        { "add_deleted", reinterpret_cast<PyCFunction>(CoreWebView2Profile_add_Deleted), METH_O, nullptr },
+        { "remove_deleted", reinterpret_cast<PyCFunction>(CoreWebView2Profile_remove_Deleted), METH_O, nullptr },
         { "_assign_array_", _assign_array_CoreWebView2Profile, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2Profile), METH_O | METH_STATIC, nullptr },
         { }
@@ -20588,6 +21374,11 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_web_webview2_core(void) noexcept
         return nullptr;
     }
 
+    if (py::register_python_type(module.get(), &type_spec_CoreWebView2BrowserExtension, object_bases.get(), nullptr) == -1)
+    {
+        return nullptr;
+    }
+
     if (py::register_python_type(module.get(), &type_spec_CoreWebView2BrowserProcessExitedEventArgs, object_bases.get(), nullptr) == -1)
     {
         return nullptr;
@@ -20786,6 +21577,11 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_web_webview2_core(void) noexcept
     }
 
     if (py::register_python_type(module.get(), &type_spec_CoreWebView2PrintSettings, object_bases.get(), nullptr) == -1)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_CoreWebView2ProcessExtendedInfo, object_bases.get(), nullptr) == -1)
     {
         return nullptr;
     }

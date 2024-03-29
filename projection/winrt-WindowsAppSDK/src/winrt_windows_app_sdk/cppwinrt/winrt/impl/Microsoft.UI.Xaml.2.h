@@ -247,7 +247,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml
         [[nodiscard]] static auto MinWindowHeightProperty();
     };
     struct WINRT_IMPL_EMPTY_BASES Application : winrt::Microsoft::UI::Xaml::IApplication,
-        impl::require<Application, winrt::Microsoft::UI::Xaml::IApplication2, winrt::Microsoft::UI::Xaml::IApplicationOverrides>
+        impl::require<Application, winrt::Microsoft::UI::Xaml::IApplication2, winrt::Microsoft::UI::Xaml::IApplication3, winrt::Microsoft::UI::Xaml::IApplicationOverrides>
     {
         Application(std::nullptr_t) noexcept {}
         Application(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::IApplication(ptr, take_ownership_from_abi) {}
@@ -325,7 +325,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml
         explicit DataTemplateKey(winrt::Windows::Foundation::IInspectable const& dataType);
     };
     struct WINRT_IMPL_EMPTY_BASES DebugSettings : winrt::Microsoft::UI::Xaml::IDebugSettings,
-        impl::require<DebugSettings, winrt::Microsoft::UI::Xaml::IDebugSettings2>
+        impl::require<DebugSettings, winrt::Microsoft::UI::Xaml::IDebugSettings2, winrt::Microsoft::UI::Xaml::IDebugSettings3>
     {
         DebugSettings(std::nullptr_t) noexcept {}
         DebugSettings(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::IDebugSettings(ptr, take_ownership_from_abi) {}

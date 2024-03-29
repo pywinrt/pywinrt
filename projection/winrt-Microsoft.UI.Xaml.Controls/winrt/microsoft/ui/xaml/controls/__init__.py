@@ -251,6 +251,13 @@ __all__ = [
     "ListViewHeaderItem",
     "ListViewItem",
     "ListViewPersistenceHelper",
+    "MapControl",
+    "MapControlMapServiceErrorOccurredEventArgs",
+    "MapElement",
+    "MapElementClickEventArgs",
+    "MapElementsLayer",
+    "MapIcon",
+    "MapLayer",
     "MediaPlayerElement",
     "MediaPlayerPresenter",
     "MediaTransportControls",
@@ -340,6 +347,9 @@ __all__ = [
     "ScrollingZoomOptions",
     "SectionsInViewChangedEventArgs",
     "SelectionChangedEventArgs",
+    "SelectorBar",
+    "SelectorBarItem",
+    "SelectorBarSelectionChangedEventArgs",
     "SemanticZoom",
     "SemanticZoomLocation",
     "SemanticZoomViewChangedEventArgs",
@@ -1279,6 +1289,13 @@ ListViewBaseHeaderItem = _winrt_microsoft_ui_xaml_controls.ListViewBaseHeaderIte
 ListViewHeaderItem = _winrt_microsoft_ui_xaml_controls.ListViewHeaderItem
 ListViewItem = _winrt_microsoft_ui_xaml_controls.ListViewItem
 ListViewPersistenceHelper = _winrt_microsoft_ui_xaml_controls.ListViewPersistenceHelper
+MapControl = _winrt_microsoft_ui_xaml_controls.MapControl
+MapControlMapServiceErrorOccurredEventArgs = _winrt_microsoft_ui_xaml_controls.MapControlMapServiceErrorOccurredEventArgs
+MapElement = _winrt_microsoft_ui_xaml_controls.MapElement
+MapElementClickEventArgs = _winrt_microsoft_ui_xaml_controls.MapElementClickEventArgs
+MapElementsLayer = _winrt_microsoft_ui_xaml_controls.MapElementsLayer
+MapIcon = _winrt_microsoft_ui_xaml_controls.MapIcon
+MapLayer = _winrt_microsoft_ui_xaml_controls.MapLayer
 MediaPlayerElement = _winrt_microsoft_ui_xaml_controls.MediaPlayerElement
 MediaPlayerPresenter = _winrt_microsoft_ui_xaml_controls.MediaPlayerPresenter
 MediaTransportControls = _winrt_microsoft_ui_xaml_controls.MediaTransportControls
@@ -1369,6 +1386,9 @@ ScrollingZoomCompletedEventArgs = _winrt_microsoft_ui_xaml_controls.ScrollingZoo
 ScrollingZoomOptions = _winrt_microsoft_ui_xaml_controls.ScrollingZoomOptions
 SectionsInViewChangedEventArgs = _winrt_microsoft_ui_xaml_controls.SectionsInViewChangedEventArgs
 SelectionChangedEventArgs = _winrt_microsoft_ui_xaml_controls.SelectionChangedEventArgs
+SelectorBar = _winrt_microsoft_ui_xaml_controls.SelectorBar
+SelectorBarItem = _winrt_microsoft_ui_xaml_controls.SelectorBarItem
+SelectorBarSelectionChangedEventArgs = _winrt_microsoft_ui_xaml_controls.SelectorBarSelectionChangedEventArgs
 SemanticZoom = _winrt_microsoft_ui_xaml_controls.SemanticZoom
 SemanticZoomLocation = _winrt_microsoft_ui_xaml_controls.SemanticZoomLocation
 SemanticZoomViewChangedEventArgs = _winrt_microsoft_ui_xaml_controls.SemanticZoomViewChangedEventArgs

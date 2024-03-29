@@ -653,6 +653,53 @@ namespace py::cpp::Microsoft::UI::Xaml
         }
     }
 
+    static PyObject* Application_get_DispatcherShutdownMode(py::wrapper::Microsoft::UI::Xaml::Application* self, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Application", L"DispatcherShutdownMode"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert(self->obj.DispatcherShutdownMode());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int Application_put_DispatcherShutdownMode(py::wrapper::Microsoft::UI::Xaml::Application* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Application", L"DispatcherShutdownMode"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return -1;
+        }
+
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DispatcherShutdownMode>(arg);
+
+            self->obj.DispatcherShutdownMode(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
     static PyObject* Application_get_Current(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
         if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Application", L"Current"))
@@ -800,6 +847,7 @@ namespace py::cpp::Microsoft::UI::Xaml
         { "high_contrast_adjustment", reinterpret_cast<getter>(Application_get_HighContrastAdjustment), reinterpret_cast<setter>(Application_put_HighContrastAdjustment), nullptr, nullptr },
         { "focus_visual_kind", reinterpret_cast<getter>(Application_get_FocusVisualKind), reinterpret_cast<setter>(Application_put_FocusVisualKind), nullptr, nullptr },
         { "debug_settings", reinterpret_cast<getter>(Application_get_DebugSettings), nullptr, nullptr, nullptr },
+        { "dispatcher_shutdown_mode", reinterpret_cast<getter>(Application_get_DispatcherShutdownMode), reinterpret_cast<setter>(Application_put_DispatcherShutdownMode), nullptr, nullptr },
         { }
     };
 
@@ -4310,6 +4358,100 @@ namespace py::cpp::Microsoft::UI::Xaml
         }
     }
 
+    static PyObject* DebugSettings_get_LayoutCycleTracingLevel(py::wrapper::Microsoft::UI::Xaml::DebugSettings* self, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DebugSettings", L"LayoutCycleTracingLevel"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert(self->obj.LayoutCycleTracingLevel());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int DebugSettings_put_LayoutCycleTracingLevel(py::wrapper::Microsoft::UI::Xaml::DebugSettings* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DebugSettings", L"LayoutCycleTracingLevel"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return -1;
+        }
+
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::LayoutCycleTracingLevel>(arg);
+
+            self->obj.LayoutCycleTracingLevel(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* DebugSettings_get_LayoutCycleDebugBreakLevel(py::wrapper::Microsoft::UI::Xaml::DebugSettings* self, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DebugSettings", L"LayoutCycleDebugBreakLevel"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert(self->obj.LayoutCycleDebugBreakLevel());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int DebugSettings_put_LayoutCycleDebugBreakLevel(py::wrapper::Microsoft::UI::Xaml::DebugSettings* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DebugSettings", L"LayoutCycleDebugBreakLevel"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return -1;
+        }
+
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::LayoutCycleDebugBreakLevel>(arg);
+
+            self->obj.LayoutCycleDebugBreakLevel(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
     static PyObject* DebugSettings_add_BindingFailed(py::wrapper::Microsoft::UI::Xaml::DebugSettings* self, PyObject* arg) noexcept
     {
         if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.DebugSettings", L"BindingFailed"))
@@ -4436,6 +4578,8 @@ namespace py::cpp::Microsoft::UI::Xaml
         { "fail_fast_on_errors", reinterpret_cast<getter>(DebugSettings_get_FailFastOnErrors), reinterpret_cast<setter>(DebugSettings_put_FailFastOnErrors), nullptr, nullptr },
         { "enable_frame_rate_counter", reinterpret_cast<getter>(DebugSettings_get_EnableFrameRateCounter), reinterpret_cast<setter>(DebugSettings_put_EnableFrameRateCounter), nullptr, nullptr },
         { "is_xaml_resource_reference_tracing_enabled", reinterpret_cast<getter>(DebugSettings_get_IsXamlResourceReferenceTracingEnabled), reinterpret_cast<setter>(DebugSettings_put_IsXamlResourceReferenceTracingEnabled), nullptr, nullptr },
+        { "layout_cycle_tracing_level", reinterpret_cast<getter>(DebugSettings_get_LayoutCycleTracingLevel), reinterpret_cast<setter>(DebugSettings_put_LayoutCycleTracingLevel), nullptr, nullptr },
+        { "layout_cycle_debug_break_level", reinterpret_cast<getter>(DebugSettings_get_LayoutCycleDebugBreakLevel), reinterpret_cast<setter>(DebugSettings_put_LayoutCycleDebugBreakLevel), nullptr, nullptr },
         { }
     };
 

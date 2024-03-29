@@ -10,6 +10,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI
 WINRT_EXPORT namespace winrt::Microsoft::UI::Content
 {
     struct ContentIsland;
+    struct IContentSiteBridge;
 }
 WINRT_EXPORT namespace winrt::Microsoft::UI::Dispatching
 {
@@ -57,6 +58,23 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Input
         Started = 0,
         Continuing = 1,
         Completed = 2,
+    };
+    enum class FocusNavigationReason : int32_t
+    {
+        Programmatic = 0,
+        Restore = 1,
+        First = 2,
+        Last = 3,
+        Left = 4,
+        Up = 5,
+        Right = 6,
+        Down = 7,
+    };
+    enum class FocusNavigationResult : int32_t
+    {
+        NotMoved = 0,
+        Moved = 1,
+        NoFocusableElements = 2,
     };
     enum class GestureSettings : uint32_t
     {
@@ -162,6 +180,9 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Input
     struct ICrossSlidingEventArgs;
     struct IDraggingEventArgs;
     struct IFocusChangedEventArgs;
+    struct IFocusNavigationRequest;
+    struct IFocusNavigationRequestEventArgs;
+    struct IFocusNavigationRequestStatics;
     struct IGestureRecognizer;
     struct IHoldingEventArgs;
     struct IInputActivationListener;
@@ -177,9 +198,11 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Input
     struct IInputDesktopNamedResourceCursorStatics;
     struct IInputDesktopResourceCursor;
     struct IInputDesktopResourceCursorStatics;
-    struct IInputFocusChangedEventArgs;
     struct IInputFocusController;
+    struct IInputFocusController2;
     struct IInputFocusControllerStatics;
+    struct IInputFocusNavigationHost;
+    struct IInputFocusNavigationHostStatics;
     struct IInputKeyboardSource;
     struct IInputKeyboardSource2;
     struct IInputKeyboardSourceStatics;
@@ -219,6 +242,8 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Input
     struct CrossSlidingEventArgs;
     struct DraggingEventArgs;
     struct FocusChangedEventArgs;
+    struct FocusNavigationRequest;
+    struct FocusNavigationRequestEventArgs;
     struct GestureRecognizer;
     struct HoldingEventArgs;
     struct InputActivationListener;
@@ -227,8 +252,8 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Input
     struct InputCustomCursor;
     struct InputDesktopNamedResourceCursor;
     struct InputDesktopResourceCursor;
-    struct InputFocusChangedEventArgs;
     struct InputFocusController;
+    struct InputFocusNavigationHost;
     struct InputKeyboardSource;
     struct InputLightDismissAction;
     struct InputLightDismissEventArgs;
@@ -264,6 +289,9 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Input::ICrossSlidingEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Input::IDraggingEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Input::IFocusChangedEventArgs>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Input::IFocusNavigationRequest>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Input::IFocusNavigationRequestEventArgs>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Input::IFocusNavigationRequestStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Input::IGestureRecognizer>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Input::IHoldingEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Input::IInputActivationListener>{ using type = interface_category; };
@@ -279,9 +307,11 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Input::IInputDesktopNamedResourceCursorStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Input::IInputDesktopResourceCursor>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Input::IInputDesktopResourceCursorStatics>{ using type = interface_category; };
-    template <> struct category<winrt::Microsoft::UI::Input::IInputFocusChangedEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Input::IInputFocusController>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Input::IInputFocusController2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Input::IInputFocusControllerStatics>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Input::IInputFocusNavigationHost>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Input::IInputFocusNavigationHostStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Input::IInputKeyboardSource>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Input::IInputKeyboardSource2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Input::IInputKeyboardSourceStatics>{ using type = interface_category; };
@@ -321,6 +351,8 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Input::CrossSlidingEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Input::DraggingEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Input::FocusChangedEventArgs>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Input::FocusNavigationRequest>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Input::FocusNavigationRequestEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Input::GestureRecognizer>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Input::HoldingEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Input::InputActivationListener>{ using type = class_category; };
@@ -329,8 +361,8 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Input::InputCustomCursor>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Input::InputDesktopNamedResourceCursor>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Input::InputDesktopResourceCursor>{ using type = class_category; };
-    template <> struct category<winrt::Microsoft::UI::Input::InputFocusChangedEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Input::InputFocusController>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Input::InputFocusNavigationHost>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Input::InputKeyboardSource>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Input::InputLightDismissAction>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Input::InputLightDismissEventArgs>{ using type = class_category; };
@@ -356,6 +388,8 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Input::TappedEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Input::CrossSlidingState>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Input::DraggingState>{ using type = enum_category; };
+    template <> struct category<winrt::Microsoft::UI::Input::FocusNavigationReason>{ using type = enum_category; };
+    template <> struct category<winrt::Microsoft::UI::Input::FocusNavigationResult>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Input::GestureSettings>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Input::HoldingState>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Input::InputActivationState>{ using type = enum_category; };
@@ -374,6 +408,8 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::CrossSlidingEventArgs> = L"Microsoft.UI.Input.CrossSlidingEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::DraggingEventArgs> = L"Microsoft.UI.Input.DraggingEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::FocusChangedEventArgs> = L"Microsoft.UI.Input.FocusChangedEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::FocusNavigationRequest> = L"Microsoft.UI.Input.FocusNavigationRequest";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::FocusNavigationRequestEventArgs> = L"Microsoft.UI.Input.FocusNavigationRequestEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::GestureRecognizer> = L"Microsoft.UI.Input.GestureRecognizer";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::HoldingEventArgs> = L"Microsoft.UI.Input.HoldingEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::InputActivationListener> = L"Microsoft.UI.Input.InputActivationListener";
@@ -382,8 +418,8 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::InputCustomCursor> = L"Microsoft.UI.Input.InputCustomCursor";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::InputDesktopNamedResourceCursor> = L"Microsoft.UI.Input.InputDesktopNamedResourceCursor";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::InputDesktopResourceCursor> = L"Microsoft.UI.Input.InputDesktopResourceCursor";
-    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::InputFocusChangedEventArgs> = L"Microsoft.UI.Input.InputFocusChangedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::InputFocusController> = L"Microsoft.UI.Input.InputFocusController";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::InputFocusNavigationHost> = L"Microsoft.UI.Input.InputFocusNavigationHost";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::InputKeyboardSource> = L"Microsoft.UI.Input.InputKeyboardSource";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::InputLightDismissAction> = L"Microsoft.UI.Input.InputLightDismissAction";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::InputLightDismissEventArgs> = L"Microsoft.UI.Input.InputLightDismissEventArgs";
@@ -409,6 +445,8 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::TappedEventArgs> = L"Microsoft.UI.Input.TappedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::CrossSlidingState> = L"Microsoft.UI.Input.CrossSlidingState";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::DraggingState> = L"Microsoft.UI.Input.DraggingState";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::FocusNavigationReason> = L"Microsoft.UI.Input.FocusNavigationReason";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::FocusNavigationResult> = L"Microsoft.UI.Input.FocusNavigationResult";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::GestureSettings> = L"Microsoft.UI.Input.GestureSettings";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::HoldingState> = L"Microsoft.UI.Input.HoldingState";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::InputActivationState> = L"Microsoft.UI.Input.InputActivationState";
@@ -427,6 +465,9 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::ICrossSlidingEventArgs> = L"Microsoft.UI.Input.ICrossSlidingEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IDraggingEventArgs> = L"Microsoft.UI.Input.IDraggingEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IFocusChangedEventArgs> = L"Microsoft.UI.Input.IFocusChangedEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IFocusNavigationRequest> = L"Microsoft.UI.Input.IFocusNavigationRequest";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IFocusNavigationRequestEventArgs> = L"Microsoft.UI.Input.IFocusNavigationRequestEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IFocusNavigationRequestStatics> = L"Microsoft.UI.Input.IFocusNavigationRequestStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IGestureRecognizer> = L"Microsoft.UI.Input.IGestureRecognizer";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IHoldingEventArgs> = L"Microsoft.UI.Input.IHoldingEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IInputActivationListener> = L"Microsoft.UI.Input.IInputActivationListener";
@@ -442,9 +483,11 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IInputDesktopNamedResourceCursorStatics> = L"Microsoft.UI.Input.IInputDesktopNamedResourceCursorStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IInputDesktopResourceCursor> = L"Microsoft.UI.Input.IInputDesktopResourceCursor";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IInputDesktopResourceCursorStatics> = L"Microsoft.UI.Input.IInputDesktopResourceCursorStatics";
-    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IInputFocusChangedEventArgs> = L"Microsoft.UI.Input.IInputFocusChangedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IInputFocusController> = L"Microsoft.UI.Input.IInputFocusController";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IInputFocusController2> = L"Microsoft.UI.Input.IInputFocusController2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IInputFocusControllerStatics> = L"Microsoft.UI.Input.IInputFocusControllerStatics";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IInputFocusNavigationHost> = L"Microsoft.UI.Input.IInputFocusNavigationHost";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IInputFocusNavigationHostStatics> = L"Microsoft.UI.Input.IInputFocusNavigationHostStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IInputKeyboardSource> = L"Microsoft.UI.Input.IInputKeyboardSource";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IInputKeyboardSource2> = L"Microsoft.UI.Input.IInputKeyboardSource2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IInputKeyboardSourceStatics> = L"Microsoft.UI.Input.IInputKeyboardSourceStatics";
@@ -484,6 +527,9 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::ICrossSlidingEventArgs>{ 0x7679641F,0xBA9F,0x543C,{ 0xA7,0xC8,0x62,0x29,0xA9,0x8F,0x89,0xEF } }; // 7679641F-BA9F-543C-A7C8-6229A98F89EF
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IDraggingEventArgs>{ 0x3EFB1B75,0x3D3B,0x550E,{ 0x96,0x3D,0x08,0x28,0xCA,0x76,0x12,0x8A } }; // 3EFB1B75-3D3B-550E-963D-0828CA76128A
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IFocusChangedEventArgs>{ 0xA039B115,0xDBDF,0x594C,{ 0x9B,0x86,0xDA,0x6A,0xA0,0x5C,0x9F,0xA2 } }; // A039B115-DBDF-594C-9B86-DA6AA05C9FA2
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IFocusNavigationRequest>{ 0x6D84BB83,0x9C84,0x5112,{ 0x85,0xE9,0x89,0x19,0xAC,0xF9,0x72,0x62 } }; // 6D84BB83-9C84-5112-85E9-8919ACF97262
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IFocusNavigationRequestEventArgs>{ 0x35A63426,0xE271,0x59F9,{ 0xA2,0x31,0x0D,0x19,0x03,0x14,0xB4,0x15 } }; // 35A63426-E271-59F9-A231-0D190314B415
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IFocusNavigationRequestStatics>{ 0x8C4D2ED8,0x3A63,0x519E,{ 0xA8,0x27,0xF5,0x7E,0x26,0x3B,0xD1,0xFF } }; // 8C4D2ED8-3A63-519E-A827-F57E263BD1FF
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IGestureRecognizer>{ 0xCDA89AFC,0x6BD0,0x595C,{ 0xBA,0x37,0x54,0x5F,0xCE,0x5B,0xF0,0x16 } }; // CDA89AFC-6BD0-595C-BA37-545FCE5BF016
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IHoldingEventArgs>{ 0x8E449E85,0xD223,0x533C,{ 0xB0,0xB2,0xBF,0x7C,0x6D,0x10,0xC2,0xDB } }; // 8E449E85-D223-533C-B0B2-BF7C6D10C2DB
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IInputActivationListener>{ 0x3B818627,0x6CE7,0x5E0D,{ 0xA0,0xF5,0x66,0x84,0xFD,0x1A,0xEC,0x78 } }; // 3B818627-6CE7-5E0D-A0F5-6684FD1AEC78
@@ -499,9 +545,11 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IInputDesktopNamedResourceCursorStatics>{ 0xE8B6D5AA,0x898B,0x5E69,{ 0xB0,0x1F,0x38,0x3A,0x09,0x43,0xE3,0xE4 } }; // E8B6D5AA-898B-5E69-B01F-383A0943E3E4
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IInputDesktopResourceCursor>{ 0x1DF2777F,0x7C90,0x58FC,{ 0xA7,0xA3,0xD5,0x73,0x6C,0x65,0x10,0xFD } }; // 1DF2777F-7C90-58FC-A7A3-D5736C6510FD
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IInputDesktopResourceCursorStatics>{ 0xF440DC37,0xA0B6,0x56EB,{ 0xBC,0xEC,0xB0,0x24,0xF2,0x23,0x3D,0x47 } }; // F440DC37-A0B6-56EB-BCEC-B024F2233D47
-    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IInputFocusChangedEventArgs>{ 0xD85B1B7A,0x045D,0x5A1B,{ 0x99,0x66,0xEB,0xC0,0xB3,0xD4,0x75,0x67 } }; // D85B1B7A-045D-5A1B-9966-EBC0B3D47567
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IInputFocusController>{ 0x8DFDC26C,0x8B8D,0x515D,{ 0x8D,0xDD,0x46,0x85,0xB3,0xA5,0x40,0xE9 } }; // 8DFDC26C-8B8D-515D-8DDD-4685B3A540E9
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IInputFocusController2>{ 0x5165077C,0xCD4B,0x501D,{ 0xB3,0x86,0xB5,0x06,0x82,0x36,0x01,0x85 } }; // 5165077C-CD4B-501D-B386-B50682360185
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IInputFocusControllerStatics>{ 0xAEB311DA,0xDA9B,0x5A1B,{ 0x92,0xF4,0x83,0xDD,0xDE,0x93,0x3E,0x00 } }; // AEB311DA-DA9B-5A1B-92F4-83DDDE933E00
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IInputFocusNavigationHost>{ 0x53C2A147,0x932C,0x5486,{ 0xA9,0xC6,0xF6,0xC5,0xA9,0xC6,0x59,0x56 } }; // 53C2A147-932C-5486-A9C6-F6C5A9C65956
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IInputFocusNavigationHostStatics>{ 0xC9C62CD1,0x73DB,0x5AA9,{ 0xB8,0x9D,0x14,0x35,0x09,0xDB,0x8F,0x37 } }; // C9C62CD1-73DB-5AA9-B89D-143509DB8F37
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IInputKeyboardSource>{ 0xED61B906,0x16AD,0x5DF7,{ 0xA5,0x50,0x5E,0x6F,0x7D,0x22,0x29,0xF7 } }; // ED61B906-16AD-5DF7-A550-5E6F7D2229F7
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IInputKeyboardSource2>{ 0x79D1C9B6,0xB3C9,0x5EC2,{ 0x8A,0x5B,0x70,0x70,0x88,0x78,0x7F,0x78 } }; // 79D1C9B6-B3C9-5EC2-8A5B-707088787F78
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IInputKeyboardSourceStatics>{ 0xF4E1563D,0x8C2E,0x5BCD,{ 0xB7,0x84,0x47,0xAD,0xEA,0xA3,0xCD,0x7E } }; // F4E1563D-8C2E-5BCD-B784-47ADEAA3CD7E
@@ -541,6 +589,8 @@ namespace winrt::impl
     template <> struct default_interface<winrt::Microsoft::UI::Input::CrossSlidingEventArgs>{ using type = winrt::Microsoft::UI::Input::ICrossSlidingEventArgs; };
     template <> struct default_interface<winrt::Microsoft::UI::Input::DraggingEventArgs>{ using type = winrt::Microsoft::UI::Input::IDraggingEventArgs; };
     template <> struct default_interface<winrt::Microsoft::UI::Input::FocusChangedEventArgs>{ using type = winrt::Microsoft::UI::Input::IFocusChangedEventArgs; };
+    template <> struct default_interface<winrt::Microsoft::UI::Input::FocusNavigationRequest>{ using type = winrt::Microsoft::UI::Input::IFocusNavigationRequest; };
+    template <> struct default_interface<winrt::Microsoft::UI::Input::FocusNavigationRequestEventArgs>{ using type = winrt::Microsoft::UI::Input::IFocusNavigationRequestEventArgs; };
     template <> struct default_interface<winrt::Microsoft::UI::Input::GestureRecognizer>{ using type = winrt::Microsoft::UI::Input::IGestureRecognizer; };
     template <> struct default_interface<winrt::Microsoft::UI::Input::HoldingEventArgs>{ using type = winrt::Microsoft::UI::Input::IHoldingEventArgs; };
     template <> struct default_interface<winrt::Microsoft::UI::Input::InputActivationListener>{ using type = winrt::Microsoft::UI::Input::IInputActivationListener; };
@@ -549,8 +599,8 @@ namespace winrt::impl
     template <> struct default_interface<winrt::Microsoft::UI::Input::InputCustomCursor>{ using type = winrt::Microsoft::UI::Input::IInputCustomCursor; };
     template <> struct default_interface<winrt::Microsoft::UI::Input::InputDesktopNamedResourceCursor>{ using type = winrt::Microsoft::UI::Input::IInputDesktopNamedResourceCursor; };
     template <> struct default_interface<winrt::Microsoft::UI::Input::InputDesktopResourceCursor>{ using type = winrt::Microsoft::UI::Input::IInputDesktopResourceCursor; };
-    template <> struct default_interface<winrt::Microsoft::UI::Input::InputFocusChangedEventArgs>{ using type = winrt::Microsoft::UI::Input::IInputFocusChangedEventArgs; };
     template <> struct default_interface<winrt::Microsoft::UI::Input::InputFocusController>{ using type = winrt::Microsoft::UI::Input::IInputFocusController; };
+    template <> struct default_interface<winrt::Microsoft::UI::Input::InputFocusNavigationHost>{ using type = winrt::Microsoft::UI::Input::IInputFocusNavigationHost; };
     template <> struct default_interface<winrt::Microsoft::UI::Input::InputKeyboardSource>{ using type = winrt::Microsoft::UI::Input::IInputKeyboardSource; };
     template <> struct default_interface<winrt::Microsoft::UI::Input::InputLightDismissAction>{ using type = winrt::Microsoft::UI::Input::IInputLightDismissAction; };
     template <> struct default_interface<winrt::Microsoft::UI::Input::InputLightDismissEventArgs>{ using type = winrt::Microsoft::UI::Input::IInputLightDismissEventArgs; };
@@ -616,6 +666,33 @@ namespace winrt::impl
         {
             virtual int32_t __stdcall get_Handled(bool*) noexcept = 0;
             virtual int32_t __stdcall put_Handled(bool) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Input::IFocusNavigationRequest>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_CorrelationId(winrt::guid*) noexcept = 0;
+            virtual int32_t __stdcall get_HintRect(void**) noexcept = 0;
+            virtual int32_t __stdcall get_Reason(int32_t*) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Input::IFocusNavigationRequestEventArgs>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_Request(void**) noexcept = 0;
+            virtual int32_t __stdcall get_Result(int32_t*) noexcept = 0;
+            virtual int32_t __stdcall put_Result(int32_t) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Input::IFocusNavigationRequestStatics>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall Create(int32_t, void**) noexcept = 0;
+            virtual int32_t __stdcall CreateWithHintRect(int32_t, winrt::Windows::Foundation::Rect, void**) noexcept = 0;
+            virtual int32_t __stdcall CreateWithHintRectAndId(int32_t, winrt::Windows::Foundation::Rect, winrt::guid, void**) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Microsoft::UI::Input::IGestureRecognizer>
@@ -783,12 +860,6 @@ namespace winrt::impl
             virtual int32_t __stdcall CreateFromModule(void*, uint32_t, void**) noexcept = 0;
         };
     };
-    template <> struct abi<winrt::Microsoft::UI::Input::IInputFocusChangedEventArgs>
-    {
-        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
-        {
-        };
-    };
     template <> struct abi<winrt::Microsoft::UI::Input::IInputFocusController>
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
@@ -801,11 +872,37 @@ namespace winrt::impl
             virtual int32_t __stdcall remove_LostFocus(winrt::event_token) noexcept = 0;
         };
     };
+    template <> struct abi<winrt::Microsoft::UI::Input::IInputFocusController2>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall DepartFocus(void*, int32_t*) noexcept = 0;
+            virtual int32_t __stdcall add_NavigateFocusRequested(void*, winrt::event_token*) noexcept = 0;
+            virtual int32_t __stdcall remove_NavigateFocusRequested(winrt::event_token) noexcept = 0;
+        };
+    };
     template <> struct abi<winrt::Microsoft::UI::Input::IInputFocusControllerStatics>
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
         {
             virtual int32_t __stdcall GetForIsland(void*, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Input::IInputFocusNavigationHost>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_ContainsFocus(bool*) noexcept = 0;
+            virtual int32_t __stdcall NavigateFocus(void*, int32_t*) noexcept = 0;
+            virtual int32_t __stdcall add_DepartFocusRequested(void*, winrt::event_token*) noexcept = 0;
+            virtual int32_t __stdcall remove_DepartFocusRequested(winrt::event_token) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Input::IInputFocusNavigationHostStatics>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall GetForSiteBridge(void*, void**) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Microsoft::UI::Input::IInputKeyboardSource>
@@ -1218,6 +1315,39 @@ namespace winrt::impl
         template <typename D> using type = consume_Microsoft_UI_Input_IFocusChangedEventArgs<D>;
     };
     template <typename D>
+    struct consume_Microsoft_UI_Input_IFocusNavigationRequest
+    {
+        [[nodiscard]] auto CorrelationId() const;
+        [[nodiscard]] auto HintRect() const;
+        [[nodiscard]] auto Reason() const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Input::IFocusNavigationRequest>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Input_IFocusNavigationRequest<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Input_IFocusNavigationRequestEventArgs
+    {
+        [[nodiscard]] auto Request() const;
+        [[nodiscard]] auto Result() const;
+        auto Result(winrt::Microsoft::UI::Input::FocusNavigationResult const& value) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Input::IFocusNavigationRequestEventArgs>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Input_IFocusNavigationRequestEventArgs<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Input_IFocusNavigationRequestStatics
+    {
+        auto Create(winrt::Microsoft::UI::Input::FocusNavigationReason const& reason) const;
+        auto Create(winrt::Microsoft::UI::Input::FocusNavigationReason const& reason, winrt::Windows::Foundation::Rect const& hintRect) const;
+        auto Create(winrt::Microsoft::UI::Input::FocusNavigationReason const& reason, winrt::Windows::Foundation::Rect const& hintRect, winrt::guid const& correlationId) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Input::IFocusNavigationRequestStatics>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Input_IFocusNavigationRequestStatics<D>;
+    };
+    template <typename D>
     struct consume_Microsoft_UI_Input_IGestureRecognizer
     {
         [[nodiscard]] auto AutoProcessInertia() const;
@@ -1433,14 +1563,6 @@ namespace winrt::impl
         template <typename D> using type = consume_Microsoft_UI_Input_IInputDesktopResourceCursorStatics<D>;
     };
     template <typename D>
-    struct consume_Microsoft_UI_Input_IInputFocusChangedEventArgs
-    {
-    };
-    template <> struct consume<winrt::Microsoft::UI::Input::IInputFocusChangedEventArgs>
-    {
-        template <typename D> using type = consume_Microsoft_UI_Input_IInputFocusChangedEventArgs<D>;
-    };
-    template <typename D>
     struct consume_Microsoft_UI_Input_IInputFocusController
     {
         [[nodiscard]] auto HasFocus() const;
@@ -1459,6 +1581,19 @@ namespace winrt::impl
         template <typename D> using type = consume_Microsoft_UI_Input_IInputFocusController<D>;
     };
     template <typename D>
+    struct consume_Microsoft_UI_Input_IInputFocusController2
+    {
+        auto DepartFocus(winrt::Microsoft::UI::Input::FocusNavigationRequest const& request) const;
+        auto NavigateFocusRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputFocusController, winrt::Microsoft::UI::Input::FocusNavigationRequestEventArgs> const& handler) const;
+        using NavigateFocusRequested_revoker = impl::event_revoker<winrt::Microsoft::UI::Input::IInputFocusController2, &impl::abi_t<winrt::Microsoft::UI::Input::IInputFocusController2>::remove_NavigateFocusRequested>;
+        [[nodiscard]] auto NavigateFocusRequested(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputFocusController, winrt::Microsoft::UI::Input::FocusNavigationRequestEventArgs> const& handler) const;
+        auto NavigateFocusRequested(winrt::event_token const& token) const noexcept;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Input::IInputFocusController2>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Input_IInputFocusController2<D>;
+    };
+    template <typename D>
     struct consume_Microsoft_UI_Input_IInputFocusControllerStatics
     {
         auto GetForIsland(winrt::Microsoft::UI::Content::ContentIsland const& island) const;
@@ -1466,6 +1601,29 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::UI::Input::IInputFocusControllerStatics>
     {
         template <typename D> using type = consume_Microsoft_UI_Input_IInputFocusControllerStatics<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Input_IInputFocusNavigationHost
+    {
+        [[nodiscard]] auto ContainsFocus() const;
+        auto NavigateFocus(winrt::Microsoft::UI::Input::FocusNavigationRequest const& request) const;
+        auto DepartFocusRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputFocusNavigationHost, winrt::Microsoft::UI::Input::FocusNavigationRequestEventArgs> const& handler) const;
+        using DepartFocusRequested_revoker = impl::event_revoker<winrt::Microsoft::UI::Input::IInputFocusNavigationHost, &impl::abi_t<winrt::Microsoft::UI::Input::IInputFocusNavigationHost>::remove_DepartFocusRequested>;
+        [[nodiscard]] auto DepartFocusRequested(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputFocusNavigationHost, winrt::Microsoft::UI::Input::FocusNavigationRequestEventArgs> const& handler) const;
+        auto DepartFocusRequested(winrt::event_token const& token) const noexcept;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Input::IInputFocusNavigationHost>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Input_IInputFocusNavigationHost<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Input_IInputFocusNavigationHostStatics
+    {
+        auto GetForSiteBridge(winrt::Microsoft::UI::Content::IContentSiteBridge const& site) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Input::IInputFocusNavigationHostStatics>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Input_IInputFocusNavigationHostStatics<D>;
     };
     template <typename D>
     struct consume_Microsoft_UI_Input_IInputKeyboardSource

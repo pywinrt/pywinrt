@@ -102,6 +102,7 @@ __all__ = [
     "ScrollBarAutomationPeer",
     "ScrollViewerAutomationPeer",
     "SelectorAutomationPeer",
+    "SelectorBarItemAutomationPeer",
     "SelectorItemAutomationPeer",
     "SemanticZoomAutomationPeer",
     "SliderAutomationPeer",
@@ -384,6 +385,7 @@ RichTextBlockOverflowAutomationPeer = _winrt_microsoft_ui_xaml_automation_peers.
 ScrollBarAutomationPeer = _winrt_microsoft_ui_xaml_automation_peers.ScrollBarAutomationPeer
 ScrollViewerAutomationPeer = _winrt_microsoft_ui_xaml_automation_peers.ScrollViewerAutomationPeer
 SelectorAutomationPeer = _winrt_microsoft_ui_xaml_automation_peers.SelectorAutomationPeer
+SelectorBarItemAutomationPeer = _winrt_microsoft_ui_xaml_automation_peers.SelectorBarItemAutomationPeer
 SelectorItemAutomationPeer = _winrt_microsoft_ui_xaml_automation_peers.SelectorItemAutomationPeer
 SemanticZoomAutomationPeer = _winrt_microsoft_ui_xaml_automation_peers.SemanticZoomAutomationPeer
 SliderAutomationPeer = _winrt_microsoft_ui_xaml_automation_peers.SliderAutomationPeer

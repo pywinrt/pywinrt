@@ -97,6 +97,19 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Input
         FocusChangedEventArgs(std::nullptr_t) noexcept {}
         FocusChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Input::IFocusChangedEventArgs(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES FocusNavigationRequest : winrt::Microsoft::UI::Input::IFocusNavigationRequest
+    {
+        FocusNavigationRequest(std::nullptr_t) noexcept {}
+        FocusNavigationRequest(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Input::IFocusNavigationRequest(ptr, take_ownership_from_abi) {}
+        static auto Create(winrt::Microsoft::UI::Input::FocusNavigationReason const& reason);
+        static auto Create(winrt::Microsoft::UI::Input::FocusNavigationReason const& reason, winrt::Windows::Foundation::Rect const& hintRect);
+        static auto Create(winrt::Microsoft::UI::Input::FocusNavigationReason const& reason, winrt::Windows::Foundation::Rect const& hintRect, winrt::guid const& correlationId);
+    };
+    struct WINRT_IMPL_EMPTY_BASES FocusNavigationRequestEventArgs : winrt::Microsoft::UI::Input::IFocusNavigationRequestEventArgs
+    {
+        FocusNavigationRequestEventArgs(std::nullptr_t) noexcept {}
+        FocusNavigationRequestEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Input::IFocusNavigationRequestEventArgs(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES GestureRecognizer : winrt::Microsoft::UI::Input::IGestureRecognizer
     {
         GestureRecognizer(std::nullptr_t) noexcept {}
@@ -154,18 +167,21 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Input
         static auto Create(uint32_t resourceId);
         static auto CreateFromModule(param::hstring const& moduleName, uint32_t resourceId);
     };
-    struct WINRT_IMPL_EMPTY_BASES InputFocusChangedEventArgs : winrt::Microsoft::UI::Input::IInputFocusChangedEventArgs
-    {
-        InputFocusChangedEventArgs(std::nullptr_t) noexcept {}
-        InputFocusChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Input::IInputFocusChangedEventArgs(ptr, take_ownership_from_abi) {}
-    };
     struct WINRT_IMPL_EMPTY_BASES InputFocusController : winrt::Microsoft::UI::Input::IInputFocusController,
         impl::base<InputFocusController, winrt::Microsoft::UI::Input::InputObject>,
-        impl::require<InputFocusController, winrt::Microsoft::UI::Input::IInputObject>
+        impl::require<InputFocusController, winrt::Microsoft::UI::Input::IInputFocusController2, winrt::Microsoft::UI::Input::IInputObject>
     {
         InputFocusController(std::nullptr_t) noexcept {}
         InputFocusController(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Input::IInputFocusController(ptr, take_ownership_from_abi) {}
         static auto GetForIsland(winrt::Microsoft::UI::Content::ContentIsland const& island);
+    };
+    struct WINRT_IMPL_EMPTY_BASES InputFocusNavigationHost : winrt::Microsoft::UI::Input::IInputFocusNavigationHost,
+        impl::base<InputFocusNavigationHost, winrt::Microsoft::UI::Input::InputObject>,
+        impl::require<InputFocusNavigationHost, winrt::Microsoft::UI::Input::IInputObject>
+    {
+        InputFocusNavigationHost(std::nullptr_t) noexcept {}
+        InputFocusNavigationHost(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Input::IInputFocusNavigationHost(ptr, take_ownership_from_abi) {}
+        static auto GetForSiteBridge(winrt::Microsoft::UI::Content::IContentSiteBridge const& site);
     };
     struct WINRT_IMPL_EMPTY_BASES InputKeyboardSource : winrt::Microsoft::UI::Input::IInputKeyboardSource,
         impl::base<InputKeyboardSource, winrt::Microsoft::UI::Input::InputObject>,

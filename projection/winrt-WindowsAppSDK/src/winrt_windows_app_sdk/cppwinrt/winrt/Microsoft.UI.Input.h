@@ -96,6 +96,58 @@ namespace winrt::impl
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IFocusChangedEventArgs)->put_Handled(value));
     }
+    template <typename D> auto consume_Microsoft_UI_Input_IFocusNavigationRequest<D>::CorrelationId() const
+    {
+        winrt::guid value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IFocusNavigationRequest)->get_CorrelationId(put_abi(value)));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IFocusNavigationRequest<D>::HintRect() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IFocusNavigationRequest)->get_HintRect(&value));
+        return winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Rect>{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IFocusNavigationRequest<D>::Reason() const
+    {
+        winrt::Microsoft::UI::Input::FocusNavigationReason value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IFocusNavigationRequest)->get_Reason(reinterpret_cast<int32_t*>(&value)));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IFocusNavigationRequestEventArgs<D>::Request() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IFocusNavigationRequestEventArgs)->get_Request(&value));
+        return winrt::Microsoft::UI::Input::FocusNavigationRequest{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IFocusNavigationRequestEventArgs<D>::Result() const
+    {
+        winrt::Microsoft::UI::Input::FocusNavigationResult value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IFocusNavigationRequestEventArgs)->get_Result(reinterpret_cast<int32_t*>(&value)));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IFocusNavigationRequestEventArgs<D>::Result(winrt::Microsoft::UI::Input::FocusNavigationResult const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IFocusNavigationRequestEventArgs)->put_Result(static_cast<int32_t>(value)));
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IFocusNavigationRequestStatics<D>::Create(winrt::Microsoft::UI::Input::FocusNavigationReason const& reason) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IFocusNavigationRequestStatics)->Create(static_cast<int32_t>(reason), &result));
+        return winrt::Microsoft::UI::Input::FocusNavigationRequest{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IFocusNavigationRequestStatics<D>::Create(winrt::Microsoft::UI::Input::FocusNavigationReason const& reason, winrt::Windows::Foundation::Rect const& hintRect) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IFocusNavigationRequestStatics)->CreateWithHintRect(static_cast<int32_t>(reason), impl::bind_in(hintRect), &result));
+        return winrt::Microsoft::UI::Input::FocusNavigationRequest{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IFocusNavigationRequestStatics<D>::Create(winrt::Microsoft::UI::Input::FocusNavigationReason const& reason, winrt::Windows::Foundation::Rect const& hintRect, winrt::guid const& correlationId) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IFocusNavigationRequestStatics)->CreateWithHintRectAndId(static_cast<int32_t>(reason), impl::bind_in(hintRect), impl::bind_in(correlationId), &result));
+        return winrt::Microsoft::UI::Input::FocusNavigationRequest{ result, take_ownership_from_abi };
+    }
     template <typename D> auto consume_Microsoft_UI_Input_IGestureRecognizer<D>::AutoProcessInertia() const
     {
         bool value{};
@@ -564,11 +616,63 @@ namespace winrt::impl
     {
         WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IInputFocusController)->remove_LostFocus(impl::bind_in(token));
     }
+    template <typename D> auto consume_Microsoft_UI_Input_IInputFocusController2<D>::DepartFocus(winrt::Microsoft::UI::Input::FocusNavigationRequest const& request) const
+    {
+        winrt::Microsoft::UI::Input::FocusNavigationResult result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IInputFocusController2)->DepartFocus(*(void**)(&request), reinterpret_cast<int32_t*>(&result)));
+        return result;
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IInputFocusController2<D>::NavigateFocusRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputFocusController, winrt::Microsoft::UI::Input::FocusNavigationRequestEventArgs> const& handler) const
+    {
+        winrt::event_token token{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IInputFocusController2)->add_NavigateFocusRequested(*(void**)(&handler), put_abi(token)));
+        return token;
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IInputFocusController2<D>::NavigateFocusRequested(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputFocusController, winrt::Microsoft::UI::Input::FocusNavigationRequestEventArgs> const& handler) const
+    {
+        return impl::make_event_revoker<D, NavigateFocusRequested_revoker>(this, NavigateFocusRequested(handler));
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IInputFocusController2<D>::NavigateFocusRequested(winrt::event_token const& token) const noexcept
+    {
+        WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IInputFocusController2)->remove_NavigateFocusRequested(impl::bind_in(token));
+    }
     template <typename D> auto consume_Microsoft_UI_Input_IInputFocusControllerStatics<D>::GetForIsland(winrt::Microsoft::UI::Content::ContentIsland const& island) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IInputFocusControllerStatics)->GetForIsland(*(void**)(&island), &result));
         return winrt::Microsoft::UI::Input::InputFocusController{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IInputFocusNavigationHost<D>::ContainsFocus() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IInputFocusNavigationHost)->get_ContainsFocus(&value));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IInputFocusNavigationHost<D>::NavigateFocus(winrt::Microsoft::UI::Input::FocusNavigationRequest const& request) const
+    {
+        winrt::Microsoft::UI::Input::FocusNavigationResult result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IInputFocusNavigationHost)->NavigateFocus(*(void**)(&request), reinterpret_cast<int32_t*>(&result)));
+        return result;
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IInputFocusNavigationHost<D>::DepartFocusRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputFocusNavigationHost, winrt::Microsoft::UI::Input::FocusNavigationRequestEventArgs> const& handler) const
+    {
+        winrt::event_token token{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IInputFocusNavigationHost)->add_DepartFocusRequested(*(void**)(&handler), put_abi(token)));
+        return token;
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IInputFocusNavigationHost<D>::DepartFocusRequested(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputFocusNavigationHost, winrt::Microsoft::UI::Input::FocusNavigationRequestEventArgs> const& handler) const
+    {
+        return impl::make_event_revoker<D, DepartFocusRequested_revoker>(this, DepartFocusRequested(handler));
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IInputFocusNavigationHost<D>::DepartFocusRequested(winrt::event_token const& token) const noexcept
+    {
+        WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IInputFocusNavigationHost)->remove_DepartFocusRequested(impl::bind_in(token));
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IInputFocusNavigationHostStatics<D>::GetForSiteBridge(winrt::Microsoft::UI::Content::IContentSiteBridge const& site) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IInputFocusNavigationHostStatics)->GetForSiteBridge(*(void**)(&site), &result));
+        return winrt::Microsoft::UI::Input::InputFocusNavigationHost{ result, take_ownership_from_abi };
     }
     template <typename D> auto consume_Microsoft_UI_Input_IInputKeyboardSource2<D>::GetCurrentKeyState(winrt::Windows::System::VirtualKey const& virtualKey) const
     {
@@ -1638,6 +1742,92 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Input::IFocusNavigationRequest> : produce_base<D, winrt::Microsoft::UI::Input::IFocusNavigationRequest>
+    {
+        int32_t __stdcall get_CorrelationId(winrt::guid* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::guid>(this->shim().CorrelationId());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_HintRect(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Rect>>(this->shim().HintRect());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_Reason(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Input::FocusNavigationReason>(this->shim().Reason());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Input::IFocusNavigationRequestEventArgs> : produce_base<D, winrt::Microsoft::UI::Input::IFocusNavigationRequestEventArgs>
+    {
+        int32_t __stdcall get_Request(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Input::FocusNavigationRequest>(this->shim().Request());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_Result(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Input::FocusNavigationResult>(this->shim().Result());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_Result(int32_t value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Result(*reinterpret_cast<winrt::Microsoft::UI::Input::FocusNavigationResult const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Input::IFocusNavigationRequestStatics> : produce_base<D, winrt::Microsoft::UI::Input::IFocusNavigationRequestStatics>
+    {
+        int32_t __stdcall Create(int32_t reason, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Microsoft::UI::Input::FocusNavigationRequest>(this->shim().Create(*reinterpret_cast<winrt::Microsoft::UI::Input::FocusNavigationReason const*>(&reason)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall CreateWithHintRect(int32_t reason, winrt::Windows::Foundation::Rect hintRect, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Microsoft::UI::Input::FocusNavigationRequest>(this->shim().Create(*reinterpret_cast<winrt::Microsoft::UI::Input::FocusNavigationReason const*>(&reason), *reinterpret_cast<winrt::Windows::Foundation::Rect const*>(&hintRect)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall CreateWithHintRectAndId(int32_t reason, winrt::Windows::Foundation::Rect hintRect, winrt::guid correlationId, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Microsoft::UI::Input::FocusNavigationRequest>(this->shim().Create(*reinterpret_cast<winrt::Microsoft::UI::Input::FocusNavigationReason const*>(&reason), *reinterpret_cast<winrt::Windows::Foundation::Rect const*>(&hintRect), *reinterpret_cast<winrt::guid const*>(&correlationId)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::UI::Input::IGestureRecognizer> : produce_base<D, winrt::Microsoft::UI::Input::IGestureRecognizer>
     {
         int32_t __stdcall get_AutoProcessInertia(bool* value) noexcept final try
@@ -2267,12 +2457,6 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, winrt::Microsoft::UI::Input::IInputFocusChangedEventArgs> : produce_base<D, winrt::Microsoft::UI::Input::IInputFocusChangedEventArgs>
-    {
-    };
-#endif
-#ifndef WINRT_LEAN_AND_MEAN
-    template <typename D>
     struct produce<D, winrt::Microsoft::UI::Input::IInputFocusController> : produce_base<D, winrt::Microsoft::UI::Input::IInputFocusController>
     {
         int32_t __stdcall get_HasFocus(bool* value) noexcept final try
@@ -2321,6 +2505,33 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Input::IInputFocusController2> : produce_base<D, winrt::Microsoft::UI::Input::IInputFocusController2>
+    {
+        int32_t __stdcall DepartFocus(void* request, int32_t* result) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Microsoft::UI::Input::FocusNavigationResult>(this->shim().DepartFocus(*reinterpret_cast<winrt::Microsoft::UI::Input::FocusNavigationRequest const*>(&request)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall add_NavigateFocusRequested(void* handler, winrt::event_token* token) noexcept final try
+        {
+            zero_abi<winrt::event_token>(token);
+            typename D::abi_guard guard(this->shim());
+            *token = detach_from<winrt::event_token>(this->shim().NavigateFocusRequested(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputFocusController, winrt::Microsoft::UI::Input::FocusNavigationRequestEventArgs> const*>(&handler)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall remove_NavigateFocusRequested(winrt::event_token token) noexcept final
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().NavigateFocusRequested(*reinterpret_cast<winrt::event_token const*>(&token));
+            return 0;
+        }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::UI::Input::IInputFocusControllerStatics> : produce_base<D, winrt::Microsoft::UI::Input::IInputFocusControllerStatics>
     {
         int32_t __stdcall GetForIsland(void* island, void** result) noexcept final try
@@ -2328,6 +2539,54 @@ namespace winrt::impl
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
             *result = detach_from<winrt::Microsoft::UI::Input::InputFocusController>(this->shim().GetForIsland(*reinterpret_cast<winrt::Microsoft::UI::Content::ContentIsland const*>(&island)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Input::IInputFocusNavigationHost> : produce_base<D, winrt::Microsoft::UI::Input::IInputFocusNavigationHost>
+    {
+        int32_t __stdcall get_ContainsFocus(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().ContainsFocus());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall NavigateFocus(void* request, int32_t* result) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Microsoft::UI::Input::FocusNavigationResult>(this->shim().NavigateFocus(*reinterpret_cast<winrt::Microsoft::UI::Input::FocusNavigationRequest const*>(&request)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall add_DepartFocusRequested(void* handler, winrt::event_token* token) noexcept final try
+        {
+            zero_abi<winrt::event_token>(token);
+            typename D::abi_guard guard(this->shim());
+            *token = detach_from<winrt::event_token>(this->shim().DepartFocusRequested(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputFocusNavigationHost, winrt::Microsoft::UI::Input::FocusNavigationRequestEventArgs> const*>(&handler)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall remove_DepartFocusRequested(winrt::event_token token) noexcept final
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().DepartFocusRequested(*reinterpret_cast<winrt::event_token const*>(&token));
+            return 0;
+        }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Input::IInputFocusNavigationHostStatics> : produce_base<D, winrt::Microsoft::UI::Input::IInputFocusNavigationHostStatics>
+    {
+        int32_t __stdcall GetForSiteBridge(void* site, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Microsoft::UI::Input::InputFocusNavigationHost>(this->shim().GetForSiteBridge(*reinterpret_cast<winrt::Microsoft::UI::Content::IContentSiteBridge const*>(&site)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3732,6 +3991,18 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Input
         left = left ^ right;
         return left;
     }
+    inline auto FocusNavigationRequest::Create(winrt::Microsoft::UI::Input::FocusNavigationReason const& reason)
+    {
+        return impl::call_factory<FocusNavigationRequest, IFocusNavigationRequestStatics>([&](IFocusNavigationRequestStatics const& f) { return f.Create(reason); });
+    }
+    inline auto FocusNavigationRequest::Create(winrt::Microsoft::UI::Input::FocusNavigationReason const& reason, winrt::Windows::Foundation::Rect const& hintRect)
+    {
+        return impl::call_factory<FocusNavigationRequest, IFocusNavigationRequestStatics>([&](IFocusNavigationRequestStatics const& f) { return f.Create(reason, hintRect); });
+    }
+    inline auto FocusNavigationRequest::Create(winrt::Microsoft::UI::Input::FocusNavigationReason const& reason, winrt::Windows::Foundation::Rect const& hintRect, winrt::guid const& correlationId)
+    {
+        return impl::call_factory<FocusNavigationRequest, IFocusNavigationRequestStatics>([&](IFocusNavigationRequestStatics const& f) { return f.Create(reason, hintRect, correlationId); });
+    }
     inline GestureRecognizer::GestureRecognizer() :
         GestureRecognizer(impl::call_factory_cast<GestureRecognizer(*)(winrt::Windows::Foundation::IActivationFactory const&), GestureRecognizer>([](winrt::Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<GestureRecognizer>(); }))
     {
@@ -3767,6 +4038,10 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Input
     inline auto InputFocusController::GetForIsland(winrt::Microsoft::UI::Content::ContentIsland const& island)
     {
         return impl::call_factory<InputFocusController, IInputFocusControllerStatics>([&](IInputFocusControllerStatics const& f) { return f.GetForIsland(island); });
+    }
+    inline auto InputFocusNavigationHost::GetForSiteBridge(winrt::Microsoft::UI::Content::IContentSiteBridge const& site)
+    {
+        return impl::call_factory<InputFocusNavigationHost, IInputFocusNavigationHostStatics>([&](IInputFocusNavigationHostStatics const& f) { return f.GetForSiteBridge(site); });
     }
     inline auto InputKeyboardSource::GetKeyStateForCurrentThread(winrt::Windows::System::VirtualKey const& virtualKey)
     {
@@ -3809,6 +4084,9 @@ namespace std
     template<> struct hash<winrt::Microsoft::UI::Input::ICrossSlidingEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::IDraggingEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::IFocusChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Input::IFocusNavigationRequest> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Input::IFocusNavigationRequestEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Input::IFocusNavigationRequestStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::IGestureRecognizer> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::IHoldingEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::IInputActivationListener> : winrt::impl::hash_base {};
@@ -3824,9 +4102,11 @@ namespace std
     template<> struct hash<winrt::Microsoft::UI::Input::IInputDesktopNamedResourceCursorStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::IInputDesktopResourceCursor> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::IInputDesktopResourceCursorStatics> : winrt::impl::hash_base {};
-    template<> struct hash<winrt::Microsoft::UI::Input::IInputFocusChangedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::IInputFocusController> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Input::IInputFocusController2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::IInputFocusControllerStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Input::IInputFocusNavigationHost> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Input::IInputFocusNavigationHostStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::IInputKeyboardSource> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::IInputKeyboardSource2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::IInputKeyboardSourceStatics> : winrt::impl::hash_base {};
@@ -3866,6 +4146,8 @@ namespace std
     template<> struct hash<winrt::Microsoft::UI::Input::CrossSlidingEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::DraggingEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::FocusChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Input::FocusNavigationRequest> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Input::FocusNavigationRequestEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::GestureRecognizer> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::HoldingEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::InputActivationListener> : winrt::impl::hash_base {};
@@ -3874,8 +4156,8 @@ namespace std
     template<> struct hash<winrt::Microsoft::UI::Input::InputCustomCursor> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::InputDesktopNamedResourceCursor> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::InputDesktopResourceCursor> : winrt::impl::hash_base {};
-    template<> struct hash<winrt::Microsoft::UI::Input::InputFocusChangedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::InputFocusController> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Input::InputFocusNavigationHost> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::InputKeyboardSource> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::InputLightDismissAction> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::InputLightDismissEventArgs> : winrt::impl::hash_base {};

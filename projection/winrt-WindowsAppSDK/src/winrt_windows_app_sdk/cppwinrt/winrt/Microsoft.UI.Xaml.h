@@ -153,6 +153,16 @@ namespace winrt::impl
     {
         WINRT_IMPL_SHIM(winrt::Microsoft::UI::Xaml::IApplication2)->remove_ResourceManagerRequested(impl::bind_in(token));
     }
+    template <typename D> auto consume_Microsoft_UI_Xaml_IApplication3<D>::DispatcherShutdownMode() const
+    {
+        winrt::Microsoft::UI::Xaml::DispatcherShutdownMode value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Xaml::IApplication3)->get_DispatcherShutdownMode(reinterpret_cast<int32_t*>(&value)));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Xaml_IApplication3<D>::DispatcherShutdownMode(winrt::Microsoft::UI::Xaml::DispatcherShutdownMode const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Xaml::IApplication3)->put_DispatcherShutdownMode(static_cast<int32_t>(value)));
+    }
     template <typename D> auto consume_Microsoft_UI_Xaml_IApplicationFactory<D>::CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const
     {
         void* value{};
@@ -782,6 +792,26 @@ namespace winrt::impl
     template <typename D> auto consume_Microsoft_UI_Xaml_IDebugSettings2<D>::XamlResourceReferenceFailed(winrt::event_token const& token) const noexcept
     {
         WINRT_IMPL_SHIM(winrt::Microsoft::UI::Xaml::IDebugSettings2)->remove_XamlResourceReferenceFailed(impl::bind_in(token));
+    }
+    template <typename D> auto consume_Microsoft_UI_Xaml_IDebugSettings3<D>::LayoutCycleTracingLevel() const
+    {
+        winrt::Microsoft::UI::Xaml::LayoutCycleTracingLevel value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Xaml::IDebugSettings3)->get_LayoutCycleTracingLevel(reinterpret_cast<int32_t*>(&value)));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Xaml_IDebugSettings3<D>::LayoutCycleTracingLevel(winrt::Microsoft::UI::Xaml::LayoutCycleTracingLevel const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Xaml::IDebugSettings3)->put_LayoutCycleTracingLevel(static_cast<int32_t>(value)));
+    }
+    template <typename D> auto consume_Microsoft_UI_Xaml_IDebugSettings3<D>::LayoutCycleDebugBreakLevel() const
+    {
+        winrt::Microsoft::UI::Xaml::LayoutCycleDebugBreakLevel value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Xaml::IDebugSettings3)->get_LayoutCycleDebugBreakLevel(reinterpret_cast<int32_t*>(&value)));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Xaml_IDebugSettings3<D>::LayoutCycleDebugBreakLevel(winrt::Microsoft::UI::Xaml::LayoutCycleDebugBreakLevel const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Xaml::IDebugSettings3)->put_LayoutCycleDebugBreakLevel(static_cast<int32_t>(value)));
     }
     template <typename D> auto consume_Microsoft_UI_Xaml_IDependencyObject<D>::GetValue(winrt::Microsoft::UI::Xaml::DependencyProperty const& dp) const
     {
@@ -5102,6 +5132,26 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Xaml::IApplication3> : produce_base<D, winrt::Microsoft::UI::Xaml::IApplication3>
+    {
+        int32_t __stdcall get_DispatcherShutdownMode(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Xaml::DispatcherShutdownMode>(this->shim().DispatcherShutdownMode());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_DispatcherShutdownMode(int32_t value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().DispatcherShutdownMode(*reinterpret_cast<winrt::Microsoft::UI::Xaml::DispatcherShutdownMode const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::UI::Xaml::IApplicationFactory> : produce_base<D, winrt::Microsoft::UI::Xaml::IApplicationFactory>
     {
         int32_t __stdcall CreateInstance(void* baseInterface, void** innerInterface, void** value) noexcept final try
@@ -6144,6 +6194,40 @@ namespace winrt::impl
             this->shim().XamlResourceReferenceFailed(*reinterpret_cast<winrt::event_token const*>(&token));
             return 0;
         }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Xaml::IDebugSettings3> : produce_base<D, winrt::Microsoft::UI::Xaml::IDebugSettings3>
+    {
+        int32_t __stdcall get_LayoutCycleTracingLevel(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Xaml::LayoutCycleTracingLevel>(this->shim().LayoutCycleTracingLevel());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_LayoutCycleTracingLevel(int32_t value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().LayoutCycleTracingLevel(*reinterpret_cast<winrt::Microsoft::UI::Xaml::LayoutCycleTracingLevel const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_LayoutCycleDebugBreakLevel(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Xaml::LayoutCycleDebugBreakLevel>(this->shim().LayoutCycleDebugBreakLevel());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_LayoutCycleDebugBreakLevel(int32_t value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().LayoutCycleDebugBreakLevel(*reinterpret_cast<winrt::Microsoft::UI::Xaml::LayoutCycleDebugBreakLevel const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
     };
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
@@ -13645,7 +13729,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml
     template <typename D, typename... Interfaces>
     struct ApplicationT :
         implements<D, winrt::Microsoft::UI::Xaml::IApplicationOverrides, composing, Interfaces...>,
-        impl::require<D, winrt::Microsoft::UI::Xaml::IApplication, winrt::Microsoft::UI::Xaml::IApplication2>,
+        impl::require<D, winrt::Microsoft::UI::Xaml::IApplication, winrt::Microsoft::UI::Xaml::IApplication2, winrt::Microsoft::UI::Xaml::IApplication3>,
         impl::base<D, Application>,
         winrt::Microsoft::UI::Xaml::IApplicationOverridesT<D>
     {
@@ -13948,6 +14032,7 @@ namespace std
     template<> struct hash<winrt::Microsoft::UI::Xaml::IAdaptiveTriggerStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::IApplication> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::IApplication2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Xaml::IApplication3> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::IApplicationFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::IApplicationInitializationCallbackParams> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::IApplicationOverrides> : winrt::impl::hash_base {};
@@ -13970,6 +14055,7 @@ namespace std
     template<> struct hash<winrt::Microsoft::UI::Xaml::IDataTemplateStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::IDebugSettings> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::IDebugSettings2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Xaml::IDebugSettings3> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::IDependencyObject> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::IDependencyObjectCollectionFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::IDependencyObjectFactory> : winrt::impl::hash_base {};

@@ -269,6 +269,53 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
         }
     }
 
+    static PyObject* DesktopWindowXamlSource_get_ShouldConstrainPopupsToWorkArea(py::wrapper::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource* self, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSource", L"ShouldConstrainPopupsToWorkArea"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert(self->obj.ShouldConstrainPopupsToWorkArea());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int DesktopWindowXamlSource_put_ShouldConstrainPopupsToWorkArea(py::wrapper::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSource", L"ShouldConstrainPopupsToWorkArea"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return -1;
+        }
+
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.ShouldConstrainPopupsToWorkArea(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
     static PyObject* DesktopWindowXamlSource_add_GotFocus(py::wrapper::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource* self, PyObject* arg) noexcept
     {
         if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSource", L"GotFocus"))
@@ -418,6 +465,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
         { "content", reinterpret_cast<getter>(DesktopWindowXamlSource_get_Content), reinterpret_cast<setter>(DesktopWindowXamlSource_put_Content), nullptr, nullptr },
         { "has_focus", reinterpret_cast<getter>(DesktopWindowXamlSource_get_HasFocus), nullptr, nullptr, nullptr },
         { "site_bridge", reinterpret_cast<getter>(DesktopWindowXamlSource_get_SiteBridge), nullptr, nullptr, nullptr },
+        { "should_constrain_popups_to_work_area", reinterpret_cast<getter>(DesktopWindowXamlSource_get_ShouldConstrainPopupsToWorkArea), reinterpret_cast<setter>(DesktopWindowXamlSource_put_ShouldConstrainPopupsToWorkArea), nullptr, nullptr },
         { }
     };
 
@@ -1022,6 +1070,35 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
         }
     }
 
+    static PyObject* WindowsXamlManager_GetForCurrentThread(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Hosting.WindowsXamlManager", L"GetForCurrentThread", 0))
+            {
+                py::set_arg_count_version_error(0);
+                return nullptr;
+            }
+
+            try
+            {
+                return py::convert(winrt::Microsoft::UI::Xaml::Hosting::WindowsXamlManager::GetForCurrentThread());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* WindowsXamlManager_InitializeForCurrentThread(PyObject* /*unused*/, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -1047,6 +1124,49 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
         else
         {
             py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* WindowsXamlManager_add_XamlShutdownCompletedOnThread(py::wrapper::Microsoft::UI::Xaml::Hosting::WindowsXamlManager* self, PyObject* arg) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Hosting.WindowsXamlManager", L"XamlShutdownCompletedOnThread"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+            return nullptr;
+        }
+
+        try
+        {
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Hosting::WindowsXamlManager, winrt::Microsoft::UI::Xaml::Hosting::XamlShutdownCompletedOnThreadEventArgs>>(arg);
+
+            return py::convert(self->obj.XamlShutdownCompletedOnThread(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* WindowsXamlManager_remove_XamlShutdownCompletedOnThread(py::wrapper::Microsoft::UI::Xaml::Hosting::WindowsXamlManager* self, PyObject* arg) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Hosting.WindowsXamlManager", L"XamlShutdownCompletedOnThread"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+            return nullptr;
+        }
+
+        try
+        {
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.XamlShutdownCompletedOnThread(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
             return nullptr;
         }
     }
@@ -1096,6 +1216,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
 
     static PyMethodDef _methods_WindowsXamlManager[] = {
         { "close", reinterpret_cast<PyCFunction>(WindowsXamlManager_Close), METH_VARARGS, nullptr },
+        { "add_xaml_shutdown_completed_on_thread", reinterpret_cast<PyCFunction>(WindowsXamlManager_add_XamlShutdownCompletedOnThread), METH_O, nullptr },
+        { "remove_xaml_shutdown_completed_on_thread", reinterpret_cast<PyCFunction>(WindowsXamlManager_remove_XamlShutdownCompletedOnThread), METH_O, nullptr },
         { "_assign_array_", _assign_array_WindowsXamlManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WindowsXamlManager), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_WindowsXamlManager), METH_NOARGS, nullptr },
@@ -1130,6 +1252,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
     };
 
     static PyMethodDef methods_WindowsXamlManager_Static[] = {
+        { "get_for_current_thread", reinterpret_cast<PyCFunction>(WindowsXamlManager_GetForCurrentThread), METH_VARARGS, nullptr },
         { "initialize_for_current_thread", reinterpret_cast<PyCFunction>(WindowsXamlManager_InitializeForCurrentThread), METH_VARARGS, nullptr },
         { }
     };
@@ -1149,6 +1272,105 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
         type_slots_WindowsXamlManager_Static
+    };
+
+    // ----- XamlShutdownCompletedOnThreadEventArgs class --------------------
+
+    static PyObject* _new_XamlShutdownCompletedOnThreadEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::UI::Xaml::Hosting::XamlShutdownCompletedOnThreadEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Xaml::Hosting::XamlShutdownCompletedOnThreadEventArgs>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_XamlShutdownCompletedOnThreadEventArgs(py::wrapper::Microsoft::UI::Xaml::Hosting::XamlShutdownCompletedOnThreadEventArgs* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* XamlShutdownCompletedOnThreadEventArgs_GetDispatcherQueueDeferral(py::wrapper::Microsoft::UI::Xaml::Hosting::XamlShutdownCompletedOnThreadEventArgs* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Hosting.XamlShutdownCompletedOnThreadEventArgs", L"GetDispatcherQueueDeferral", 0))
+            {
+                py::set_arg_count_version_error(0);
+                return nullptr;
+            }
+
+            try
+            {
+                return py::convert(self->obj.GetDispatcherQueueDeferral());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_XamlShutdownCompletedOnThreadEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Hosting::XamlShutdownCompletedOnThreadEventArgs>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_XamlShutdownCompletedOnThreadEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::UI::Xaml::Hosting::XamlShutdownCompletedOnThreadEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_XamlShutdownCompletedOnThreadEventArgs[] = {
+        { "get_dispatcher_queue_deferral", reinterpret_cast<PyCFunction>(XamlShutdownCompletedOnThreadEventArgs_GetDispatcherQueueDeferral), METH_VARARGS, nullptr },
+        { "_assign_array_", _assign_array_XamlShutdownCompletedOnThreadEventArgs, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_XamlShutdownCompletedOnThreadEventArgs), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_XamlShutdownCompletedOnThreadEventArgs[] = {
+        { }
+    };
+
+    static PyType_Slot _type_slots_XamlShutdownCompletedOnThreadEventArgs[] = 
+    {
+        { Py_tp_new, reinterpret_cast<void*>(_new_XamlShutdownCompletedOnThreadEventArgs) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XamlShutdownCompletedOnThreadEventArgs) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_XamlShutdownCompletedOnThreadEventArgs) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_XamlShutdownCompletedOnThreadEventArgs) },
+        { },
+    };
+
+    static PyType_Spec type_spec_XamlShutdownCompletedOnThreadEventArgs =
+    {
+        "winrt._winrt_microsoft_ui_xaml_hosting.XamlShutdownCompletedOnThreadEventArgs",
+        sizeof(py::wrapper::Microsoft::UI::Xaml::Hosting::XamlShutdownCompletedOnThreadEventArgs),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_XamlShutdownCompletedOnThreadEventArgs
     };
 
     // ----- XamlSourceFocusNavigationRequest class --------------------
@@ -1529,6 +1751,11 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_hosting(void) noexcept
     }
 
     if (py::register_python_type(module.get(), &type_spec_WindowsXamlManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WindowsXamlManager_Static.get())) == -1)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_XamlShutdownCompletedOnThreadEventArgs, object_bases.get(), nullptr) == -1)
     {
         return nullptr;
     }

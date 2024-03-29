@@ -654,6 +654,372 @@ namespace py::cpp::Microsoft::UI::Input
         _type_slots_FocusChangedEventArgs
     };
 
+    // ----- FocusNavigationRequest class --------------------
+
+    static PyObject* _new_FocusNavigationRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::UI::Input::FocusNavigationRequest>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Input::FocusNavigationRequest>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_FocusNavigationRequest(py::wrapper::Microsoft::UI::Input::FocusNavigationRequest* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* FocusNavigationRequest_Create(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.FocusNavigationRequest", L"Create", 1))
+            {
+                py::set_arg_count_version_error(1);
+                return nullptr;
+            }
+
+            try
+            {
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Input::FocusNavigationReason>(args, 0);
+
+                return py::convert(winrt::Microsoft::UI::Input::FocusNavigationRequest::Create(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 2)
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.FocusNavigationRequest", L"Create", 2))
+            {
+                py::set_arg_count_version_error(2);
+                return nullptr;
+            }
+
+            try
+            {
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Input::FocusNavigationReason>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
+
+                return py::convert(winrt::Microsoft::UI::Input::FocusNavigationRequest::Create(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 3)
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.FocusNavigationRequest", L"Create", 3))
+            {
+                py::set_arg_count_version_error(3);
+                return nullptr;
+            }
+
+            try
+            {
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Input::FocusNavigationReason>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
+                auto param2 = py::convert_to<winrt::guid>(args, 2);
+
+                return py::convert(winrt::Microsoft::UI::Input::FocusNavigationRequest::Create(param0, param1, param2));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* FocusNavigationRequest_get_CorrelationId(py::wrapper::Microsoft::UI::Input::FocusNavigationRequest* self, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.FocusNavigationRequest", L"CorrelationId"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert(self->obj.CorrelationId());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* FocusNavigationRequest_get_HintRect(py::wrapper::Microsoft::UI::Input::FocusNavigationRequest* self, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.FocusNavigationRequest", L"HintRect"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert(self->obj.HintRect());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* FocusNavigationRequest_get_Reason(py::wrapper::Microsoft::UI::Input::FocusNavigationRequest* self, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.FocusNavigationRequest", L"Reason"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert(self->obj.Reason());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_FocusNavigationRequest(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Input::FocusNavigationRequest>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_FocusNavigationRequest(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::UI::Input::FocusNavigationRequest>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_FocusNavigationRequest[] = {
+        { "_assign_array_", _assign_array_FocusNavigationRequest, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_FocusNavigationRequest), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_FocusNavigationRequest[] = {
+        { "correlation_id", reinterpret_cast<getter>(FocusNavigationRequest_get_CorrelationId), nullptr, nullptr, nullptr },
+        { "hint_rect", reinterpret_cast<getter>(FocusNavigationRequest_get_HintRect), nullptr, nullptr, nullptr },
+        { "reason", reinterpret_cast<getter>(FocusNavigationRequest_get_Reason), nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_FocusNavigationRequest[] = 
+    {
+        { Py_tp_new, reinterpret_cast<void*>(_new_FocusNavigationRequest) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FocusNavigationRequest) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_FocusNavigationRequest) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_FocusNavigationRequest) },
+        { },
+    };
+
+    static PyType_Spec type_spec_FocusNavigationRequest =
+    {
+        "winrt._winrt_microsoft_ui_input.FocusNavigationRequest",
+        sizeof(py::wrapper::Microsoft::UI::Input::FocusNavigationRequest),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_FocusNavigationRequest
+    };
+
+    static PyGetSetDef getset_FocusNavigationRequest_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_FocusNavigationRequest_Static[] = {
+        { "create", reinterpret_cast<PyCFunction>(FocusNavigationRequest_Create), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_FocusNavigationRequest_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_FocusNavigationRequest_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_FocusNavigationRequest_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_FocusNavigationRequest_Static =
+    {
+        "winrt._winrt_microsoft_ui_input.FocusNavigationRequest_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_FocusNavigationRequest_Static
+    };
+
+    // ----- FocusNavigationRequestEventArgs class --------------------
+
+    static PyObject* _new_FocusNavigationRequestEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::UI::Input::FocusNavigationRequestEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Input::FocusNavigationRequestEventArgs>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_FocusNavigationRequestEventArgs(py::wrapper::Microsoft::UI::Input::FocusNavigationRequestEventArgs* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* FocusNavigationRequestEventArgs_get_Result(py::wrapper::Microsoft::UI::Input::FocusNavigationRequestEventArgs* self, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.FocusNavigationRequestEventArgs", L"Result"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert(self->obj.Result());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int FocusNavigationRequestEventArgs_put_Result(py::wrapper::Microsoft::UI::Input::FocusNavigationRequestEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.FocusNavigationRequestEventArgs", L"Result"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return -1;
+        }
+
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Input::FocusNavigationResult>(arg);
+
+            self->obj.Result(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* FocusNavigationRequestEventArgs_get_Request(py::wrapper::Microsoft::UI::Input::FocusNavigationRequestEventArgs* self, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.FocusNavigationRequestEventArgs", L"Request"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert(self->obj.Request());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_FocusNavigationRequestEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Input::FocusNavigationRequestEventArgs>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_FocusNavigationRequestEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::UI::Input::FocusNavigationRequestEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_FocusNavigationRequestEventArgs[] = {
+        { "_assign_array_", _assign_array_FocusNavigationRequestEventArgs, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_FocusNavigationRequestEventArgs), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_FocusNavigationRequestEventArgs[] = {
+        { "result", reinterpret_cast<getter>(FocusNavigationRequestEventArgs_get_Result), reinterpret_cast<setter>(FocusNavigationRequestEventArgs_put_Result), nullptr, nullptr },
+        { "request", reinterpret_cast<getter>(FocusNavigationRequestEventArgs_get_Request), nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_FocusNavigationRequestEventArgs[] = 
+    {
+        { Py_tp_new, reinterpret_cast<void*>(_new_FocusNavigationRequestEventArgs) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FocusNavigationRequestEventArgs) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_FocusNavigationRequestEventArgs) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_FocusNavigationRequestEventArgs) },
+        { },
+    };
+
+    static PyType_Spec type_spec_FocusNavigationRequestEventArgs =
+    {
+        "winrt._winrt_microsoft_ui_input.FocusNavigationRequestEventArgs",
+        sizeof(py::wrapper::Microsoft::UI::Input::FocusNavigationRequestEventArgs),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_FocusNavigationRequestEventArgs
+    };
+
     // ----- GestureRecognizer class --------------------
 
     static PyObject* _new_GestureRecognizer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -3224,75 +3590,6 @@ namespace py::cpp::Microsoft::UI::Input
         type_slots_InputDesktopResourceCursor_Static
     };
 
-    // ----- InputFocusChangedEventArgs class --------------------
-
-    static PyObject* _new_InputFocusChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Microsoft::UI::Input::InputFocusChangedEventArgs>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Input::InputFocusChangedEventArgs>::type_name);
-        return nullptr;
-    }
-
-    static void _dealloc_InputFocusChangedEventArgs(py::wrapper::Microsoft::UI::Input::InputFocusChangedEventArgs* self) noexcept
-    {
-        auto tp = Py_TYPE(self);
-        std::destroy_at(&self->obj);
-        tp->tp_free(self);
-        Py_DECREF(tp);
-    }
-
-    static PyObject* _assign_array_InputFocusChangedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Input::InputFocusChangedEventArgs>>();
-        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-        Py_RETURN_NONE;
-    }
-
-    static PyObject* _from_InputFocusChangedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
-    {
-        try
-        {
-            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
-            return py::convert(return_value.as<winrt::Microsoft::UI::Input::InputFocusChangedEventArgs>());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
-    static PyMethodDef _methods_InputFocusChangedEventArgs[] = {
-        { "_assign_array_", _assign_array_InputFocusChangedEventArgs, METH_O | METH_STATIC, nullptr },
-        { "_from", reinterpret_cast<PyCFunction>(_from_InputFocusChangedEventArgs), METH_O | METH_STATIC, nullptr },
-        { }
-    };
-
-    static PyGetSetDef _getset_InputFocusChangedEventArgs[] = {
-        { }
-    };
-
-    static PyType_Slot _type_slots_InputFocusChangedEventArgs[] = 
-    {
-        { Py_tp_new, reinterpret_cast<void*>(_new_InputFocusChangedEventArgs) },
-        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InputFocusChangedEventArgs) },
-        { Py_tp_methods, reinterpret_cast<void*>(_methods_InputFocusChangedEventArgs) },
-        { Py_tp_getset, reinterpret_cast<void*>(_getset_InputFocusChangedEventArgs) },
-        { },
-    };
-
-    static PyType_Spec type_spec_InputFocusChangedEventArgs =
-    {
-        "winrt._winrt_microsoft_ui_input.InputFocusChangedEventArgs",
-        sizeof(py::wrapper::Microsoft::UI::Input::InputFocusChangedEventArgs),
-        0,
-        Py_TPFLAGS_DEFAULT,
-        _type_slots_InputFocusChangedEventArgs
-    };
-
     // ----- InputFocusController class --------------------
 
     static PyObject* _new_InputFocusController(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -3308,6 +3605,37 @@ namespace py::cpp::Microsoft::UI::Input
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* InputFocusController_DepartFocus(py::wrapper::Microsoft::UI::Input::InputFocusController* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.InputFocusController", L"DepartFocus", 1))
+            {
+                py::set_arg_count_version_error(1);
+                return nullptr;
+            }
+
+            try
+            {
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Input::FocusNavigationRequest>(args, 0);
+
+                return py::convert(self->obj.DepartFocus(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* InputFocusController_GetForIsland(PyObject* /*unused*/, PyObject* args) noexcept
@@ -3475,6 +3803,49 @@ namespace py::cpp::Microsoft::UI::Input
         }
     }
 
+    static PyObject* InputFocusController_add_NavigateFocusRequested(py::wrapper::Microsoft::UI::Input::InputFocusController* self, PyObject* arg) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Input.InputFocusController", L"NavigateFocusRequested"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+            return nullptr;
+        }
+
+        try
+        {
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputFocusController, winrt::Microsoft::UI::Input::FocusNavigationRequestEventArgs>>(arg);
+
+            return py::convert(self->obj.NavigateFocusRequested(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* InputFocusController_remove_NavigateFocusRequested(py::wrapper::Microsoft::UI::Input::InputFocusController* self, PyObject* arg) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Input.InputFocusController", L"NavigateFocusRequested"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+            return nullptr;
+        }
+
+        try
+        {
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.NavigateFocusRequested(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_InputFocusController(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Input::InputFocusController>>();
@@ -3500,11 +3871,14 @@ namespace py::cpp::Microsoft::UI::Input
     }
 
     static PyMethodDef _methods_InputFocusController[] = {
+        { "depart_focus", reinterpret_cast<PyCFunction>(InputFocusController_DepartFocus), METH_VARARGS, nullptr },
         { "try_set_focus", reinterpret_cast<PyCFunction>(InputFocusController_TrySetFocus), METH_VARARGS, nullptr },
         { "add_got_focus", reinterpret_cast<PyCFunction>(InputFocusController_add_GotFocus), METH_O, nullptr },
         { "remove_got_focus", reinterpret_cast<PyCFunction>(InputFocusController_remove_GotFocus), METH_O, nullptr },
         { "add_lost_focus", reinterpret_cast<PyCFunction>(InputFocusController_add_LostFocus), METH_O, nullptr },
         { "remove_lost_focus", reinterpret_cast<PyCFunction>(InputFocusController_remove_LostFocus), METH_O, nullptr },
+        { "add_navigate_focus_requested", reinterpret_cast<PyCFunction>(InputFocusController_add_NavigateFocusRequested), METH_O, nullptr },
+        { "remove_navigate_focus_requested", reinterpret_cast<PyCFunction>(InputFocusController_remove_NavigateFocusRequested), METH_O, nullptr },
         { "_assign_array_", _assign_array_InputFocusController, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InputFocusController), METH_O | METH_STATIC, nullptr },
         { }
@@ -3557,6 +3931,229 @@ namespace py::cpp::Microsoft::UI::Input
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
         type_slots_InputFocusController_Static
+    };
+
+    // ----- InputFocusNavigationHost class --------------------
+
+    static PyObject* _new_InputFocusNavigationHost(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::UI::Input::InputFocusNavigationHost>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Input::InputFocusNavigationHost>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_InputFocusNavigationHost(py::wrapper::Microsoft::UI::Input::InputFocusNavigationHost* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* InputFocusNavigationHost_GetForSiteBridge(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.InputFocusNavigationHost", L"GetForSiteBridge", 1))
+            {
+                py::set_arg_count_version_error(1);
+                return nullptr;
+            }
+
+            try
+            {
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Content::IContentSiteBridge>(args, 0);
+
+                return py::convert(winrt::Microsoft::UI::Input::InputFocusNavigationHost::GetForSiteBridge(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* InputFocusNavigationHost_NavigateFocus(py::wrapper::Microsoft::UI::Input::InputFocusNavigationHost* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.InputFocusNavigationHost", L"NavigateFocus", 1))
+            {
+                py::set_arg_count_version_error(1);
+                return nullptr;
+            }
+
+            try
+            {
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Input::FocusNavigationRequest>(args, 0);
+
+                return py::convert(self->obj.NavigateFocus(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* InputFocusNavigationHost_get_ContainsFocus(py::wrapper::Microsoft::UI::Input::InputFocusNavigationHost* self, void* /*unused*/) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.InputFocusNavigationHost", L"ContainsFocus"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert(self->obj.ContainsFocus());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* InputFocusNavigationHost_add_DepartFocusRequested(py::wrapper::Microsoft::UI::Input::InputFocusNavigationHost* self, PyObject* arg) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Input.InputFocusNavigationHost", L"DepartFocusRequested"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+            return nullptr;
+        }
+
+        try
+        {
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputFocusNavigationHost, winrt::Microsoft::UI::Input::FocusNavigationRequestEventArgs>>(arg);
+
+            return py::convert(self->obj.DepartFocusRequested(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* InputFocusNavigationHost_remove_DepartFocusRequested(py::wrapper::Microsoft::UI::Input::InputFocusNavigationHost* self, PyObject* arg) noexcept
+    {
+        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Input.InputFocusNavigationHost", L"DepartFocusRequested"))
+        {
+            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+            return nullptr;
+        }
+
+        try
+        {
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.DepartFocusRequested(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_InputFocusNavigationHost(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Input::InputFocusNavigationHost>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_InputFocusNavigationHost(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::UI::Input::InputFocusNavigationHost>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_InputFocusNavigationHost[] = {
+        { "navigate_focus", reinterpret_cast<PyCFunction>(InputFocusNavigationHost_NavigateFocus), METH_VARARGS, nullptr },
+        { "add_depart_focus_requested", reinterpret_cast<PyCFunction>(InputFocusNavigationHost_add_DepartFocusRequested), METH_O, nullptr },
+        { "remove_depart_focus_requested", reinterpret_cast<PyCFunction>(InputFocusNavigationHost_remove_DepartFocusRequested), METH_O, nullptr },
+        { "_assign_array_", _assign_array_InputFocusNavigationHost, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_InputFocusNavigationHost), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_InputFocusNavigationHost[] = {
+        { "contains_focus", reinterpret_cast<getter>(InputFocusNavigationHost_get_ContainsFocus), nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_InputFocusNavigationHost[] = 
+    {
+        { Py_tp_new, reinterpret_cast<void*>(_new_InputFocusNavigationHost) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InputFocusNavigationHost) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_InputFocusNavigationHost) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_InputFocusNavigationHost) },
+        { },
+    };
+
+    static PyType_Spec type_spec_InputFocusNavigationHost =
+    {
+        "winrt._winrt_microsoft_ui_input.InputFocusNavigationHost",
+        sizeof(py::wrapper::Microsoft::UI::Input::InputFocusNavigationHost),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_InputFocusNavigationHost
+    };
+
+    static PyGetSetDef getset_InputFocusNavigationHost_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_InputFocusNavigationHost_Static[] = {
+        { "get_for_site_bridge", reinterpret_cast<PyCFunction>(InputFocusNavigationHost_GetForSiteBridge), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_InputFocusNavigationHost_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_InputFocusNavigationHost_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_InputFocusNavigationHost_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_InputFocusNavigationHost_Static =
+    {
+        "winrt._winrt_microsoft_ui_input.InputFocusNavigationHost_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_InputFocusNavigationHost_Static
     };
 
     // ----- InputKeyboardSource class --------------------
@@ -9942,6 +10539,22 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_input(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle type_FocusNavigationRequest_Static{PyType_FromSpec(&type_spec_FocusNavigationRequest_Static)};
+    if (!type_FocusNavigationRequest_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_FocusNavigationRequest, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FocusNavigationRequest_Static.get())) == -1)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_FocusNavigationRequestEventArgs, object_bases.get(), nullptr) == -1)
+    {
+        return nullptr;
+    }
+
     if (py::register_python_type(module.get(), &type_spec_GestureRecognizer, object_bases.get(), nullptr) == -1)
     {
         return nullptr;
@@ -10006,11 +10619,6 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_input(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InputFocusChangedEventArgs, object_bases.get(), nullptr) == -1)
-    {
-        return nullptr;
-    }
-
     py::pyobj_handle type_InputFocusController_Static{PyType_FromSpec(&type_spec_InputFocusController_Static)};
     if (!type_InputFocusController_Static)
     {
@@ -10018,6 +10626,17 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_input(void) noexcept
     }
 
     if (py::register_python_type(module.get(), &type_spec_InputFocusController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InputFocusController_Static.get())) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_InputFocusNavigationHost_Static{PyType_FromSpec(&type_spec_InputFocusNavigationHost_Static)};
+    if (!type_InputFocusNavigationHost_Static)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_InputFocusNavigationHost, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InputFocusNavigationHost_Static.get())) == -1)
     {
         return nullptr;
     }

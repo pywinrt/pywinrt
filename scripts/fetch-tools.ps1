@@ -8,7 +8,7 @@ param(
     [string]$PyWinRTVersion = "2.0.0-beta.2",
 
     [Parameter(Mandatory=$false)]
-    [string]$WindowsAppSDKVersion = "1.4.231115000",
+    [string]$WindowsAppSDKVersion = "1.5.240311000",
 
     [Parameter(Mandatory=$false)]
     [string]$TestWinRTVersion = "1.0.12",

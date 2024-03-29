@@ -61,6 +61,8 @@ namespace py::wrapper::Microsoft::UI::Input
     using CrossSlidingEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::CrossSlidingEventArgs>;
     using DraggingEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::DraggingEventArgs>;
     using FocusChangedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::FocusChangedEventArgs>;
+    using FocusNavigationRequest = py::winrt_wrapper<winrt::Microsoft::UI::Input::FocusNavigationRequest>;
+    using FocusNavigationRequestEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::FocusNavigationRequestEventArgs>;
     using GestureRecognizer = py::winrt_wrapper<winrt::Microsoft::UI::Input::GestureRecognizer>;
     using HoldingEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::HoldingEventArgs>;
     using InputActivationListener = py::winrt_wrapper<winrt::Microsoft::UI::Input::InputActivationListener>;
@@ -69,8 +71,8 @@ namespace py::wrapper::Microsoft::UI::Input
     using InputCustomCursor = py::winrt_wrapper<winrt::Microsoft::UI::Input::InputCustomCursor>;
     using InputDesktopNamedResourceCursor = py::winrt_wrapper<winrt::Microsoft::UI::Input::InputDesktopNamedResourceCursor>;
     using InputDesktopResourceCursor = py::winrt_wrapper<winrt::Microsoft::UI::Input::InputDesktopResourceCursor>;
-    using InputFocusChangedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::InputFocusChangedEventArgs>;
     using InputFocusController = py::winrt_wrapper<winrt::Microsoft::UI::Input::InputFocusController>;
+    using InputFocusNavigationHost = py::winrt_wrapper<winrt::Microsoft::UI::Input::InputFocusNavigationHost>;
     using InputKeyboardSource = py::winrt_wrapper<winrt::Microsoft::UI::Input::InputKeyboardSource>;
     using InputLightDismissAction = py::winrt_wrapper<winrt::Microsoft::UI::Input::InputLightDismissAction>;
     using InputLightDismissEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::InputLightDismissEventArgs>;
@@ -108,6 +110,12 @@ namespace py
 
     template<>
     inline constexpr const char* buffer_format<winrt::Microsoft::UI::Input::DraggingState> = "i";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Input::FocusNavigationReason> = "i";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Input::FocusNavigationResult> = "i";
 
     template<>
     inline constexpr const char* buffer_format<winrt::Microsoft::UI::Input::GestureSettings> = "I";
@@ -161,6 +169,20 @@ namespace py
     {
         static constexpr const char* module_name = "winrt.microsoft.ui.input";
         static constexpr const char* type_name = "DraggingState";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Input::FocusNavigationReason>
+    {
+        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr const char* type_name = "FocusNavigationReason";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Input::FocusNavigationResult>
+    {
+        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr const char* type_name = "FocusNavigationResult";
     };
 
     template<>
@@ -262,6 +284,20 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Microsoft::UI::Input::FocusNavigationRequest>
+    {
+        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr const char* type_name = "FocusNavigationRequest";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Input::FocusNavigationRequestEventArgs>
+    {
+        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr const char* type_name = "FocusNavigationRequestEventArgs";
+    };
+
+    template<>
     struct py_type<winrt::Microsoft::UI::Input::GestureRecognizer>
     {
         static constexpr const char* module_name = "winrt.microsoft.ui.input";
@@ -318,17 +354,17 @@ namespace py
     };
 
     template<>
-    struct py_type<winrt::Microsoft::UI::Input::InputFocusChangedEventArgs>
-    {
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
-        static constexpr const char* type_name = "InputFocusChangedEventArgs";
-    };
-
-    template<>
     struct py_type<winrt::Microsoft::UI::Input::InputFocusController>
     {
         static constexpr const char* module_name = "winrt.microsoft.ui.input";
         static constexpr const char* type_name = "InputFocusController";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Input::InputFocusNavigationHost>
+    {
+        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr const char* type_name = "InputFocusNavigationHost";
     };
 
     template<>
