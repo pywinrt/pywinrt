@@ -13,7 +13,8 @@ WINRT_EXPORT namespace winrt::Windows::System::RemoteDesktop::Provider
         PerformLocalActionRequestedEventArgs(std::nullptr_t) noexcept {}
         PerformLocalActionRequestedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::System::RemoteDesktop::Provider::IPerformLocalActionRequestedEventArgs(ptr, take_ownership_from_abi) {}
     };
-    struct WINRT_IMPL_EMPTY_BASES RemoteDesktopConnectionInfo : winrt::Windows::System::RemoteDesktop::Provider::IRemoteDesktopConnectionInfo
+    struct WINRT_IMPL_EMPTY_BASES RemoteDesktopConnectionInfo : winrt::Windows::System::RemoteDesktop::Provider::IRemoteDesktopConnectionInfo,
+        impl::require<RemoteDesktopConnectionInfo, winrt::Windows::System::RemoteDesktop::Provider::IRemoteDesktopConnectionInfo2>
     {
         RemoteDesktopConnectionInfo(std::nullptr_t) noexcept {}
         RemoteDesktopConnectionInfo(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::System::RemoteDesktop::Provider::IRemoteDesktopConnectionInfo(ptr, take_ownership_from_abi) {}

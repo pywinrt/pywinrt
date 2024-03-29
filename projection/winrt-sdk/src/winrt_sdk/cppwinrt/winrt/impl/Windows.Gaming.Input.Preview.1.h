@@ -13,5 +13,19 @@ WINRT_EXPORT namespace winrt::Windows::Gaming::Input::Preview
         IGameControllerProviderInfoStatics(std::nullptr_t = nullptr) noexcept {}
         IGameControllerProviderInfoStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES ILegacyGipGameControllerProvider :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ILegacyGipGameControllerProvider>
+    {
+        ILegacyGipGameControllerProvider(std::nullptr_t = nullptr) noexcept {}
+        ILegacyGipGameControllerProvider(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES ILegacyGipGameControllerProviderStatics :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ILegacyGipGameControllerProviderStatics>
+    {
+        ILegacyGipGameControllerProviderStatics(std::nullptr_t = nullptr) noexcept {}
+        ILegacyGipGameControllerProviderStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
 }
 #endif

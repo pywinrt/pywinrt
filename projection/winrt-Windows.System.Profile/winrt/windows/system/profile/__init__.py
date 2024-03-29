@@ -6,6 +6,7 @@ import winrt.system
 from winrt import _winrt_windows_system_profile
 
 __all__ = [
+    "PlatformAutomaticAppSignInPolicy",
     "PlatformDataCollectionLevel",
     "SystemIdentificationSource",
     "SystemOutOfBoxExperienceState",
@@ -17,6 +18,7 @@ __all__ = [
     "HardwareIdentification",
     "HardwareToken",
     "KnownRetailInfoProperties",
+    "PlatformAutomaticAppSignInManager",
     "PlatformDiagnosticsAndUsageDataSettings",
     "RetailInfo",
     "SharedModeSettings",
@@ -27,6 +29,11 @@ __all__ = [
     "UnsupportedAppRequirement",
     "WindowsIntegrityPolicy",
 ]
+
+class PlatformAutomaticAppSignInPolicy(enum.IntEnum):
+    UNKNOWN = 0
+    PERMISSION_REQUIRED = 1
+    ALWAYS_ALLOWED = 2
 
 class PlatformDataCollectionLevel(enum.IntEnum):
     SECURITY = 0
@@ -56,6 +63,7 @@ EducationSettings = _winrt_windows_system_profile.EducationSettings
 HardwareIdentification = _winrt_windows_system_profile.HardwareIdentification
 HardwareToken = _winrt_windows_system_profile.HardwareToken
 KnownRetailInfoProperties = _winrt_windows_system_profile.KnownRetailInfoProperties
+PlatformAutomaticAppSignInManager = _winrt_windows_system_profile.PlatformAutomaticAppSignInManager
 PlatformDiagnosticsAndUsageDataSettings = _winrt_windows_system_profile.PlatformDiagnosticsAndUsageDataSettings
 RetailInfo = _winrt_windows_system_profile.RetailInfo
 SharedModeSettings = _winrt_windows_system_profile.SharedModeSettings

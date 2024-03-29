@@ -20,6 +20,13 @@ WINRT_EXPORT namespace winrt::Windows::System::RemoteDesktop::Provider
         IRemoteDesktopConnectionInfo(std::nullptr_t = nullptr) noexcept {}
         IRemoteDesktopConnectionInfo(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IRemoteDesktopConnectionInfo2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IRemoteDesktopConnectionInfo2>
+    {
+        IRemoteDesktopConnectionInfo2(std::nullptr_t = nullptr) noexcept {}
+        IRemoteDesktopConnectionInfo2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IRemoteDesktopConnectionInfoStatics :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IRemoteDesktopConnectionInfoStatics>

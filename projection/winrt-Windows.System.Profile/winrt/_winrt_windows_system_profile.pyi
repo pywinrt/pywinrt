@@ -14,7 +14,7 @@ import winrt.windows.foundation.collections
 import winrt.windows.storage.streams
 import winrt.windows.system
 
-from winrt.windows.system.profile import PlatformDataCollectionLevel, SystemIdentificationSource, SystemOutOfBoxExperienceState, UnsupportedAppRequirementReasons
+from winrt.windows.system.profile import PlatformAutomaticAppSignInPolicy, PlatformDataCollectionLevel, SystemIdentificationSource, SystemOutOfBoxExperienceState, UnsupportedAppRequirementReasons
 
 Self = typing.TypeVar('Self')
 
@@ -132,6 +132,16 @@ class KnownRetailInfoProperties_Static(type):
 class KnownRetailInfoProperties(winrt.system.Object, metaclass=KnownRetailInfoProperties_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> KnownRetailInfoProperties: ...
+
+@typing.final
+class PlatformAutomaticAppSignInManager_Static(type):
+    @_property
+    def policy(cls) -> PlatformAutomaticAppSignInPolicy: ...
+
+@typing.final
+class PlatformAutomaticAppSignInManager(winrt.system.Object, metaclass=PlatformAutomaticAppSignInManager_Static):
+    @staticmethod
+    def _from(obj: winrt.system.Object, /) -> PlatformAutomaticAppSignInManager: ...
 
 @typing.final
 class PlatformDiagnosticsAndUsageDataSettings_Static(type):

@@ -27,6 +27,10 @@ namespace winrt::impl
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteDesktop::Provider::IRemoteDesktopConnectionInfo)->SwitchToLocalSession());
     }
+    template <typename D> auto consume_Windows_System_RemoteDesktop_Provider_IRemoteDesktopConnectionInfo2<D>::PerformLocalActionFromRemote(winrt::Windows::System::RemoteDesktop::Provider::RemoteDesktopLocalAction const& action) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteDesktop::Provider::IRemoteDesktopConnectionInfo2)->PerformLocalActionFromRemote(static_cast<int32_t>(action)));
+    }
     template <typename D> auto consume_Windows_System_RemoteDesktop_Provider_IRemoteDesktopConnectionInfoStatics<D>::GetForLaunchUri(winrt::Windows::Foundation::Uri const& launchUri, winrt::Windows::UI::WindowId const& windowId) const
     {
         void* result{};
@@ -135,6 +139,19 @@ namespace winrt::impl
         {
             typename D::abi_guard guard(this->shim());
             this->shim().SwitchToLocalSession();
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Windows::System::RemoteDesktop::Provider::IRemoteDesktopConnectionInfo2> : produce_base<D, winrt::Windows::System::RemoteDesktop::Provider::IRemoteDesktopConnectionInfo2>
+    {
+        int32_t __stdcall PerformLocalActionFromRemote(int32_t action) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().PerformLocalActionFromRemote(*reinterpret_cast<winrt::Windows::System::RemoteDesktop::Provider::RemoteDesktopLocalAction const*>(&action));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -306,6 +323,7 @@ namespace std
 #ifndef WINRT_LEAN_AND_MEAN
     template<> struct hash<winrt::Windows::System::RemoteDesktop::Provider::IPerformLocalActionRequestedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::System::RemoteDesktop::Provider::IRemoteDesktopConnectionInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::System::RemoteDesktop::Provider::IRemoteDesktopConnectionInfo2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::System::RemoteDesktop::Provider::IRemoteDesktopConnectionInfoStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::System::RemoteDesktop::Provider::IRemoteDesktopConnectionRemoteInfo> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::System::RemoteDesktop::Provider::IRemoteDesktopConnectionRemoteInfoStatics> : winrt::impl::hash_base {};
