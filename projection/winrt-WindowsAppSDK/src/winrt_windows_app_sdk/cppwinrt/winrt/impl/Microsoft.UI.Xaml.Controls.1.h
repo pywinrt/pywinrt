@@ -2272,6 +2272,111 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
         IListViewPersistenceHelperStatics(std::nullptr_t = nullptr) noexcept {}
         IListViewPersistenceHelperStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IMapControl :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IMapControl>
+    {
+        IMapControl(std::nullptr_t = nullptr) noexcept {}
+        IMapControl(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IMapControlFactory :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IMapControlFactory>
+    {
+        IMapControlFactory(std::nullptr_t = nullptr) noexcept {}
+        IMapControlFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IMapControlMapServiceErrorOccurredEventArgs :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IMapControlMapServiceErrorOccurredEventArgs>
+    {
+        IMapControlMapServiceErrorOccurredEventArgs(std::nullptr_t = nullptr) noexcept {}
+        IMapControlMapServiceErrorOccurredEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IMapControlStatics :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IMapControlStatics>
+    {
+        IMapControlStatics(std::nullptr_t = nullptr) noexcept {}
+        IMapControlStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IMapElement :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IMapElement>
+    {
+        IMapElement(std::nullptr_t = nullptr) noexcept {}
+        IMapElement(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IMapElementClickEventArgs :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IMapElementClickEventArgs>
+    {
+        IMapElementClickEventArgs(std::nullptr_t = nullptr) noexcept {}
+        IMapElementClickEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IMapElementFactory :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IMapElementFactory>
+    {
+        IMapElementFactory(std::nullptr_t = nullptr) noexcept {}
+        IMapElementFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IMapElementsLayer :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IMapElementsLayer>
+    {
+        IMapElementsLayer(std::nullptr_t = nullptr) noexcept {}
+        IMapElementsLayer(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IMapElementsLayerFactory :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IMapElementsLayerFactory>
+    {
+        IMapElementsLayerFactory(std::nullptr_t = nullptr) noexcept {}
+        IMapElementsLayerFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IMapElementsLayerStatics :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IMapElementsLayerStatics>
+    {
+        IMapElementsLayerStatics(std::nullptr_t = nullptr) noexcept {}
+        IMapElementsLayerStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IMapIcon :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IMapIcon>
+    {
+        IMapIcon(std::nullptr_t = nullptr) noexcept {}
+        IMapIcon(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IMapIconFactory :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IMapIconFactory>
+    {
+        IMapIconFactory(std::nullptr_t = nullptr) noexcept {}
+        IMapIconFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IMapIconStatics :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IMapIconStatics>
+    {
+        IMapIconStatics(std::nullptr_t = nullptr) noexcept {}
+        IMapIconStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IMapLayer :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IMapLayer>
+    {
+        IMapLayer(std::nullptr_t = nullptr) noexcept {}
+        IMapLayer(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IMapLayerFactory :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IMapLayerFactory>
+    {
+        IMapLayerFactory(std::nullptr_t = nullptr) noexcept {}
+        IMapLayerFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IMediaPlayerElement :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IMediaPlayerElement>
@@ -3665,6 +3770,55 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
         ISelectionChangedEventArgsFactory(std::nullptr_t = nullptr) noexcept {}
         ISelectionChangedEventArgsFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES ISelectorBar :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ISelectorBar>
+    {
+        ISelectorBar(std::nullptr_t = nullptr) noexcept {}
+        ISelectorBar(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES ISelectorBarFactory :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ISelectorBarFactory>
+    {
+        ISelectorBarFactory(std::nullptr_t = nullptr) noexcept {}
+        ISelectorBarFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES ISelectorBarItem :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ISelectorBarItem>
+    {
+        ISelectorBarItem(std::nullptr_t = nullptr) noexcept {}
+        ISelectorBarItem(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES ISelectorBarItemFactory :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ISelectorBarItemFactory>
+    {
+        ISelectorBarItemFactory(std::nullptr_t = nullptr) noexcept {}
+        ISelectorBarItemFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES ISelectorBarItemStatics :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ISelectorBarItemStatics>
+    {
+        ISelectorBarItemStatics(std::nullptr_t = nullptr) noexcept {}
+        ISelectorBarItemStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES ISelectorBarSelectionChangedEventArgs :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ISelectorBarSelectionChangedEventArgs>
+    {
+        ISelectorBarSelectionChangedEventArgs(std::nullptr_t = nullptr) noexcept {}
+        ISelectorBarSelectionChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES ISelectorBarStatics :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ISelectorBarStatics>
+    {
+        ISelectorBarStatics(std::nullptr_t = nullptr) noexcept {}
+        ISelectorBarStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES ISemanticZoom :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<ISemanticZoom>
@@ -4847,6 +5001,13 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     {
         IWebView2(std::nullptr_t = nullptr) noexcept {}
         IWebView2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IWebView22 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IWebView22>
+    {
+        IWebView22(std::nullptr_t = nullptr) noexcept {}
+        IWebView22(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES IWebView2Factory :
         winrt::Windows::Foundation::IInspectable,

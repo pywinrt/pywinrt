@@ -13,6 +13,13 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Hosting
         IDesktopWindowXamlSource(std::nullptr_t = nullptr) noexcept {}
         IDesktopWindowXamlSource(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IDesktopWindowXamlSource2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IDesktopWindowXamlSource2>
+    {
+        IDesktopWindowXamlSource2(std::nullptr_t = nullptr) noexcept {}
+        IDesktopWindowXamlSource2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IDesktopWindowXamlSourceFactory :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IDesktopWindowXamlSourceFactory>
@@ -55,12 +62,33 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Hosting
         IWindowsXamlManager(std::nullptr_t = nullptr) noexcept {}
         IWindowsXamlManager(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IWindowsXamlManager2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IWindowsXamlManager2>
+    {
+        IWindowsXamlManager2(std::nullptr_t = nullptr) noexcept {}
+        IWindowsXamlManager2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IWindowsXamlManagerStatics :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IWindowsXamlManagerStatics>
     {
         IWindowsXamlManagerStatics(std::nullptr_t = nullptr) noexcept {}
         IWindowsXamlManagerStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IWindowsXamlManagerStatics2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IWindowsXamlManagerStatics2>
+    {
+        IWindowsXamlManagerStatics2(std::nullptr_t = nullptr) noexcept {}
+        IWindowsXamlManagerStatics2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IXamlShutdownCompletedOnThreadEventArgs :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IXamlShutdownCompletedOnThreadEventArgs>
+    {
+        IXamlShutdownCompletedOnThreadEventArgs(std::nullptr_t = nullptr) noexcept {}
+        IXamlShutdownCompletedOnThreadEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES IXamlSourceFocusNavigationRequest :
         winrt::Windows::Foundation::IInspectable,

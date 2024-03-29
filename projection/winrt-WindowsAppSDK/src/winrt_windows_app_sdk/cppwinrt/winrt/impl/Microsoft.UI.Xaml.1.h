@@ -41,6 +41,13 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml
         IApplication2(std::nullptr_t = nullptr) noexcept {}
         IApplication2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IApplication3 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IApplication3>
+    {
+        IApplication3(std::nullptr_t = nullptr) noexcept {}
+        IApplication3(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IApplicationFactory :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IApplicationFactory>
@@ -194,6 +201,13 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml
     {
         IDebugSettings2(std::nullptr_t = nullptr) noexcept {}
         IDebugSettings2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IDebugSettings3 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IDebugSettings3>
+    {
+        IDebugSettings3(std::nullptr_t = nullptr) noexcept {}
+        IDebugSettings3(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES IDependencyObject :
         winrt::Windows::Foundation::IInspectable,

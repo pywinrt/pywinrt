@@ -1165,6 +1165,12 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Xaml::Automation::Peers::ISelectorAutomationPeerFactory)->CreateInstanceWithOwner(*(void**)(&owner), *(void**)(&baseInterface), impl::bind_out(innerInterface), &value));
         return winrt::Microsoft::UI::Xaml::Automation::Peers::SelectorAutomationPeer{ value, take_ownership_from_abi };
     }
+    template <typename D> auto consume_Microsoft_UI_Xaml_Automation_Peers_ISelectorBarItemAutomationPeerFactory<D>::CreateInstanceWithOwner(winrt::Microsoft::UI::Xaml::Controls::SelectorBarItem const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Xaml::Automation::Peers::ISelectorBarItemAutomationPeerFactory)->CreateInstanceWithOwner(*(void**)(&owner), *(void**)(&baseInterface), impl::bind_out(innerInterface), &value));
+        return winrt::Microsoft::UI::Xaml::Automation::Peers::SelectorBarItemAutomationPeer{ value, take_ownership_from_abi };
+    }
     template <typename D> auto consume_Microsoft_UI_Xaml_Automation_Peers_ISelectorItemAutomationPeerFactory<D>::CreateInstanceWithParentAndItem(winrt::Windows::Foundation::IInspectable const& item, winrt::Microsoft::UI::Xaml::Automation::Peers::SelectorAutomationPeer const& parent, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const
     {
         void* value{};
@@ -4001,6 +4007,29 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Xaml::Automation::Peers::ISelectorBarItemAutomationPeer> : produce_base<D, winrt::Microsoft::UI::Xaml::Automation::Peers::ISelectorBarItemAutomationPeer>
+    {
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Xaml::Automation::Peers::ISelectorBarItemAutomationPeerFactory> : produce_base<D, winrt::Microsoft::UI::Xaml::Automation::Peers::ISelectorBarItemAutomationPeerFactory>
+    {
+        int32_t __stdcall CreateInstanceWithOwner(void* owner, void* baseInterface, void** innerInterface, void** value) noexcept final try
+        {
+            if (innerInterface) *innerInterface = nullptr;
+            winrt::Windows::Foundation::IInspectable winrt_impl_innerInterface;
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Xaml::Automation::Peers::SelectorBarItemAutomationPeer>(this->shim().CreateInstanceWithOwner(*reinterpret_cast<winrt::Microsoft::UI::Xaml::Controls::SelectorBarItem const*>(&owner), *reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&baseInterface), winrt_impl_innerInterface));
+                if (innerInterface) *innerInterface = detach_abi(winrt_impl_innerInterface);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::UI::Xaml::Automation::Peers::ISelectorItemAutomationPeer> : produce_base<D, winrt::Microsoft::UI::Xaml::Automation::Peers::ISelectorItemAutomationPeer>
     {
     };
@@ -5283,6 +5312,11 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Automation::Peers
     {
         winrt::Windows::Foundation::IInspectable baseInterface, innerInterface;
         *this = impl::call_factory<SelectorAutomationPeer, ISelectorAutomationPeerFactory>([&](ISelectorAutomationPeerFactory const& f) { return f.CreateInstanceWithOwner(owner, baseInterface, innerInterface); });
+    }
+    inline SelectorBarItemAutomationPeer::SelectorBarItemAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::SelectorBarItem const& owner)
+    {
+        winrt::Windows::Foundation::IInspectable baseInterface, innerInterface;
+        *this = impl::call_factory<SelectorBarItemAutomationPeer, ISelectorBarItemAutomationPeerFactory>([&](ISelectorBarItemAutomationPeerFactory const& f) { return f.CreateInstanceWithOwner(owner, baseInterface, innerInterface); });
     }
     inline SelectorItemAutomationPeer::SelectorItemAutomationPeer(winrt::Windows::Foundation::IInspectable const& item, winrt::Microsoft::UI::Xaml::Automation::Peers::SelectorAutomationPeer const& parent)
     {
@@ -6594,6 +6628,20 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Automation::Peers
         }
     };
     template <typename D, typename... Interfaces>
+    struct SelectorBarItemAutomationPeerT :
+        implements<D, winrt::Microsoft::UI::Xaml::Automation::Peers::IAutomationPeerOverrides, composing, Interfaces...>,
+        impl::require<D, winrt::Microsoft::UI::Xaml::Automation::Peers::ISelectorBarItemAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Peers::IItemContainerAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Provider::ISelectionItemProvider, winrt::Microsoft::UI::Xaml::Automation::Provider::IInvokeProvider, winrt::Microsoft::UI::Xaml::Automation::Peers::IFrameworkElementAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Peers::IAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Peers::IAutomationPeerProtected, winrt::Microsoft::UI::Xaml::IDependencyObject>,
+        impl::base<D, SelectorBarItemAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Peers::ItemContainerAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer, winrt::Microsoft::UI::Xaml::DependencyObject>,
+        winrt::Microsoft::UI::Xaml::Automation::Peers::IAutomationPeerOverridesT<D>
+    {
+        using composable = SelectorBarItemAutomationPeer;
+    protected:
+        SelectorBarItemAutomationPeerT(winrt::Microsoft::UI::Xaml::Controls::SelectorBarItem const& owner)
+        {
+            impl::call_factory<SelectorBarItemAutomationPeer, ISelectorBarItemAutomationPeerFactory>([&](ISelectorBarItemAutomationPeerFactory const& f) { [[maybe_unused]] auto winrt_impl_discarded = f.CreateInstanceWithOwner(owner, *this, this->m_inner); });
+        }
+    };
+    template <typename D, typename... Interfaces>
     struct SelectorItemAutomationPeerT :
         implements<D, winrt::Microsoft::UI::Xaml::Automation::Peers::IAutomationPeerOverrides, composing, Interfaces...>,
         impl::require<D, winrt::Microsoft::UI::Xaml::Automation::Peers::ISelectorItemAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Provider::ISelectionItemProvider, winrt::Microsoft::UI::Xaml::Automation::Peers::IItemAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Provider::IVirtualizedItemProvider, winrt::Microsoft::UI::Xaml::Automation::Peers::IAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Peers::IAutomationPeerProtected, winrt::Microsoft::UI::Xaml::IDependencyObject>,
@@ -7031,6 +7079,8 @@ namespace std
     template<> struct hash<winrt::Microsoft::UI::Xaml::Automation::Peers::IScrollViewerAutomationPeerFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Automation::Peers::ISelectorAutomationPeer> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Automation::Peers::ISelectorAutomationPeerFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Xaml::Automation::Peers::ISelectorBarItemAutomationPeer> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Xaml::Automation::Peers::ISelectorBarItemAutomationPeerFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Automation::Peers::ISelectorItemAutomationPeer> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Automation::Peers::ISelectorItemAutomationPeerFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Automation::Peers::ISemanticZoomAutomationPeer> : winrt::impl::hash_base {};
@@ -7153,6 +7203,7 @@ namespace std
     template<> struct hash<winrt::Microsoft::UI::Xaml::Automation::Peers::ScrollBarAutomationPeer> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeer> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Automation::Peers::SelectorAutomationPeer> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Xaml::Automation::Peers::SelectorBarItemAutomationPeer> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Automation::Peers::SelectorItemAutomationPeer> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Automation::Peers::SemanticZoomAutomationPeer> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Automation::Peers::SliderAutomationPeer> : winrt::impl::hash_base {};

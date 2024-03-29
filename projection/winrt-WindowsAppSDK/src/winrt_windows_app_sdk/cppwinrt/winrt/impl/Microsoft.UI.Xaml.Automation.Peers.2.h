@@ -702,6 +702,14 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Automation::Peers
         SelectorAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Automation::Peers::ISelectorAutomationPeer(ptr, take_ownership_from_abi) {}
         explicit SelectorAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::Primitives::Selector const& owner);
     };
+    struct WINRT_IMPL_EMPTY_BASES SelectorBarItemAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::ISelectorBarItemAutomationPeer,
+        impl::base<SelectorBarItemAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Peers::ItemContainerAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer, winrt::Microsoft::UI::Xaml::DependencyObject>,
+        impl::require<SelectorBarItemAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Peers::IItemContainerAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Provider::ISelectionItemProvider, winrt::Microsoft::UI::Xaml::Automation::Provider::IInvokeProvider, winrt::Microsoft::UI::Xaml::Automation::Peers::IFrameworkElementAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Peers::IAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Peers::IAutomationPeerProtected, winrt::Microsoft::UI::Xaml::Automation::Peers::IAutomationPeerOverrides, winrt::Microsoft::UI::Xaml::IDependencyObject>
+    {
+        SelectorBarItemAutomationPeer(std::nullptr_t) noexcept {}
+        SelectorBarItemAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Automation::Peers::ISelectorBarItemAutomationPeer(ptr, take_ownership_from_abi) {}
+        explicit SelectorBarItemAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::SelectorBarItem const& owner);
+    };
     struct WINRT_IMPL_EMPTY_BASES SelectorItemAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::ISelectorItemAutomationPeer,
         impl::base<SelectorItemAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Peers::ItemAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer, winrt::Microsoft::UI::Xaml::DependencyObject>,
         impl::require<SelectorItemAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Provider::ISelectionItemProvider, winrt::Microsoft::UI::Xaml::Automation::Peers::IItemAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Provider::IVirtualizedItemProvider, winrt::Microsoft::UI::Xaml::Automation::Peers::IAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Peers::IAutomationPeerProtected, winrt::Microsoft::UI::Xaml::Automation::Peers::IAutomationPeerOverrides, winrt::Microsoft::UI::Xaml::IDependencyObject>

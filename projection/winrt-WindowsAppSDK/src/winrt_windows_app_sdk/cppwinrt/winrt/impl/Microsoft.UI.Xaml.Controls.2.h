@@ -1706,6 +1706,61 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
         static auto GetRelativeScrollPosition(winrt::Microsoft::UI::Xaml::Controls::ListViewBase const& listViewBase, winrt::Microsoft::UI::Xaml::Controls::ListViewItemToKeyHandler const& itemToKeyHandler);
         static auto SetRelativeScrollPositionAsync(winrt::Microsoft::UI::Xaml::Controls::ListViewBase const& listViewBase, param::hstring const& relativeScrollPosition, winrt::Microsoft::UI::Xaml::Controls::ListViewKeyToItemHandler const& keyToItemHandler);
     };
+    struct WINRT_IMPL_EMPTY_BASES MapControl : winrt::Microsoft::UI::Xaml::Controls::IMapControl,
+        impl::base<MapControl, winrt::Microsoft::UI::Xaml::Controls::Control, winrt::Microsoft::UI::Xaml::FrameworkElement, winrt::Microsoft::UI::Xaml::UIElement, winrt::Microsoft::UI::Xaml::DependencyObject>,
+        impl::require<MapControl, winrt::Microsoft::UI::Xaml::Controls::IControl, winrt::Microsoft::UI::Xaml::Controls::IControlProtected, winrt::Microsoft::UI::Xaml::Controls::IControlOverrides, winrt::Microsoft::UI::Xaml::IFrameworkElement, winrt::Microsoft::UI::Xaml::IFrameworkElementProtected, winrt::Microsoft::UI::Xaml::IFrameworkElementOverrides, winrt::Microsoft::UI::Xaml::IUIElement, winrt::Microsoft::UI::Xaml::IUIElementProtected, winrt::Microsoft::UI::Xaml::IUIElementOverrides, winrt::Microsoft::UI::Composition::IAnimationObject, winrt::Microsoft::UI::Composition::IVisualElement, winrt::Microsoft::UI::Composition::IVisualElement2, winrt::Microsoft::UI::Xaml::IDependencyObject>
+    {
+        MapControl(std::nullptr_t) noexcept {}
+        MapControl(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::IMapControl(ptr, take_ownership_from_abi) {}
+        MapControl();
+        [[nodiscard]] static auto LayersProperty();
+        [[nodiscard]] static auto MapServiceTokenProperty();
+        [[nodiscard]] static auto CenterProperty();
+        [[nodiscard]] static auto ZoomLevelProperty();
+        [[nodiscard]] static auto InteractiveControlsVisibleProperty();
+    };
+    struct WINRT_IMPL_EMPTY_BASES MapControlMapServiceErrorOccurredEventArgs : winrt::Microsoft::UI::Xaml::Controls::IMapControlMapServiceErrorOccurredEventArgs
+    {
+        MapControlMapServiceErrorOccurredEventArgs(std::nullptr_t) noexcept {}
+        MapControlMapServiceErrorOccurredEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::IMapControlMapServiceErrorOccurredEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES MapElement : winrt::Microsoft::UI::Xaml::Controls::IMapElement,
+        impl::base<MapElement, winrt::Microsoft::UI::Xaml::DependencyObject>,
+        impl::require<MapElement, winrt::Microsoft::UI::Xaml::IDependencyObject>
+    {
+        MapElement(std::nullptr_t) noexcept {}
+        MapElement(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::IMapElement(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES MapElementClickEventArgs : winrt::Microsoft::UI::Xaml::Controls::IMapElementClickEventArgs
+    {
+        MapElementClickEventArgs(std::nullptr_t) noexcept {}
+        MapElementClickEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::IMapElementClickEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES MapElementsLayer : winrt::Microsoft::UI::Xaml::Controls::IMapElementsLayer,
+        impl::base<MapElementsLayer, winrt::Microsoft::UI::Xaml::Controls::MapLayer, winrt::Microsoft::UI::Xaml::DependencyObject>,
+        impl::require<MapElementsLayer, winrt::Microsoft::UI::Xaml::Controls::IMapLayer, winrt::Microsoft::UI::Xaml::IDependencyObject>
+    {
+        MapElementsLayer(std::nullptr_t) noexcept {}
+        MapElementsLayer(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::IMapElementsLayer(ptr, take_ownership_from_abi) {}
+        MapElementsLayer();
+        [[nodiscard]] static auto MapElementsProperty();
+    };
+    struct WINRT_IMPL_EMPTY_BASES MapIcon : winrt::Microsoft::UI::Xaml::Controls::IMapIcon,
+        impl::base<MapIcon, winrt::Microsoft::UI::Xaml::Controls::MapElement, winrt::Microsoft::UI::Xaml::DependencyObject>,
+        impl::require<MapIcon, winrt::Microsoft::UI::Xaml::Controls::IMapElement, winrt::Microsoft::UI::Xaml::IDependencyObject>
+    {
+        MapIcon(std::nullptr_t) noexcept {}
+        MapIcon(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::IMapIcon(ptr, take_ownership_from_abi) {}
+        MapIcon();
+        [[nodiscard]] static auto LocationProperty();
+    };
+    struct WINRT_IMPL_EMPTY_BASES MapLayer : winrt::Microsoft::UI::Xaml::Controls::IMapLayer,
+        impl::base<MapLayer, winrt::Microsoft::UI::Xaml::DependencyObject>,
+        impl::require<MapLayer, winrt::Microsoft::UI::Xaml::IDependencyObject>
+    {
+        MapLayer(std::nullptr_t) noexcept {}
+        MapLayer(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::IMapLayer(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES MediaPlayerElement : winrt::Microsoft::UI::Xaml::Controls::IMediaPlayerElement,
         impl::base<MediaPlayerElement, winrt::Microsoft::UI::Xaml::Controls::Control, winrt::Microsoft::UI::Xaml::FrameworkElement, winrt::Microsoft::UI::Xaml::UIElement, winrt::Microsoft::UI::Xaml::DependencyObject>,
         impl::require<MediaPlayerElement, winrt::Microsoft::UI::Xaml::Controls::IControl, winrt::Microsoft::UI::Xaml::Controls::IControlProtected, winrt::Microsoft::UI::Xaml::Controls::IControlOverrides, winrt::Microsoft::UI::Xaml::IFrameworkElement, winrt::Microsoft::UI::Xaml::IFrameworkElementProtected, winrt::Microsoft::UI::Xaml::IFrameworkElementOverrides, winrt::Microsoft::UI::Xaml::IUIElement, winrt::Microsoft::UI::Xaml::IUIElementProtected, winrt::Microsoft::UI::Xaml::IUIElementOverrides, winrt::Microsoft::UI::Composition::IAnimationObject, winrt::Microsoft::UI::Composition::IVisualElement, winrt::Microsoft::UI::Composition::IVisualElement2, winrt::Microsoft::UI::Xaml::IDependencyObject>
@@ -2791,6 +2846,31 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
         SelectionChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::ISelectionChangedEventArgs(ptr, take_ownership_from_abi) {}
         SelectionChangedEventArgs(param::vector<winrt::Windows::Foundation::IInspectable> const& removedItems, param::vector<winrt::Windows::Foundation::IInspectable> const& addedItems);
     };
+    struct WINRT_IMPL_EMPTY_BASES SelectorBar : winrt::Microsoft::UI::Xaml::Controls::ISelectorBar,
+        impl::base<SelectorBar, winrt::Microsoft::UI::Xaml::Controls::Control, winrt::Microsoft::UI::Xaml::FrameworkElement, winrt::Microsoft::UI::Xaml::UIElement, winrt::Microsoft::UI::Xaml::DependencyObject>,
+        impl::require<SelectorBar, winrt::Microsoft::UI::Xaml::Controls::IControl, winrt::Microsoft::UI::Xaml::Controls::IControlProtected, winrt::Microsoft::UI::Xaml::Controls::IControlOverrides, winrt::Microsoft::UI::Xaml::IFrameworkElement, winrt::Microsoft::UI::Xaml::IFrameworkElementProtected, winrt::Microsoft::UI::Xaml::IFrameworkElementOverrides, winrt::Microsoft::UI::Xaml::IUIElement, winrt::Microsoft::UI::Xaml::IUIElementProtected, winrt::Microsoft::UI::Xaml::IUIElementOverrides, winrt::Microsoft::UI::Composition::IAnimationObject, winrt::Microsoft::UI::Composition::IVisualElement, winrt::Microsoft::UI::Composition::IVisualElement2, winrt::Microsoft::UI::Xaml::IDependencyObject>
+    {
+        SelectorBar(std::nullptr_t) noexcept {}
+        SelectorBar(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::ISelectorBar(ptr, take_ownership_from_abi) {}
+        SelectorBar();
+        [[nodiscard]] static auto ItemsProperty();
+        [[nodiscard]] static auto SelectedItemProperty();
+    };
+    struct WINRT_IMPL_EMPTY_BASES SelectorBarItem : winrt::Microsoft::UI::Xaml::Controls::ISelectorBarItem,
+        impl::base<SelectorBarItem, winrt::Microsoft::UI::Xaml::Controls::ItemContainer, winrt::Microsoft::UI::Xaml::Controls::Control, winrt::Microsoft::UI::Xaml::FrameworkElement, winrt::Microsoft::UI::Xaml::UIElement, winrt::Microsoft::UI::Xaml::DependencyObject>,
+        impl::require<SelectorBarItem, winrt::Microsoft::UI::Xaml::Controls::IItemContainer, winrt::Microsoft::UI::Xaml::Controls::IControl, winrt::Microsoft::UI::Xaml::Controls::IControlProtected, winrt::Microsoft::UI::Xaml::Controls::IControlOverrides, winrt::Microsoft::UI::Xaml::IFrameworkElement, winrt::Microsoft::UI::Xaml::IFrameworkElementProtected, winrt::Microsoft::UI::Xaml::IFrameworkElementOverrides, winrt::Microsoft::UI::Xaml::IUIElement, winrt::Microsoft::UI::Xaml::IUIElementProtected, winrt::Microsoft::UI::Xaml::IUIElementOverrides, winrt::Microsoft::UI::Composition::IAnimationObject, winrt::Microsoft::UI::Composition::IVisualElement, winrt::Microsoft::UI::Composition::IVisualElement2, winrt::Microsoft::UI::Xaml::IDependencyObject>
+    {
+        SelectorBarItem(std::nullptr_t) noexcept {}
+        SelectorBarItem(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::ISelectorBarItem(ptr, take_ownership_from_abi) {}
+        SelectorBarItem();
+        [[nodiscard]] static auto TextProperty();
+        [[nodiscard]] static auto IconProperty();
+    };
+    struct WINRT_IMPL_EMPTY_BASES SelectorBarSelectionChangedEventArgs : winrt::Microsoft::UI::Xaml::Controls::ISelectorBarSelectionChangedEventArgs
+    {
+        SelectorBarSelectionChangedEventArgs(std::nullptr_t) noexcept {}
+        SelectorBarSelectionChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::ISelectorBarSelectionChangedEventArgs(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES SemanticZoom : winrt::Microsoft::UI::Xaml::Controls::ISemanticZoom,
         impl::base<SemanticZoom, winrt::Microsoft::UI::Xaml::Controls::Control, winrt::Microsoft::UI::Xaml::FrameworkElement, winrt::Microsoft::UI::Xaml::UIElement, winrt::Microsoft::UI::Xaml::DependencyObject>,
         impl::require<SemanticZoom, winrt::Microsoft::UI::Xaml::Controls::IControl, winrt::Microsoft::UI::Xaml::Controls::IControlProtected, winrt::Microsoft::UI::Xaml::Controls::IControlOverrides, winrt::Microsoft::UI::Xaml::IFrameworkElement, winrt::Microsoft::UI::Xaml::IFrameworkElementProtected, winrt::Microsoft::UI::Xaml::IFrameworkElementOverrides, winrt::Microsoft::UI::Xaml::IUIElement, winrt::Microsoft::UI::Xaml::IUIElementProtected, winrt::Microsoft::UI::Xaml::IUIElementOverrides, winrt::Microsoft::UI::Composition::IAnimationObject, winrt::Microsoft::UI::Composition::IVisualElement, winrt::Microsoft::UI::Composition::IVisualElement2, winrt::Microsoft::UI::Xaml::IDependencyObject>
@@ -3571,11 +3651,13 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     };
     struct WINRT_IMPL_EMPTY_BASES WebView2 : winrt::Microsoft::UI::Xaml::Controls::IWebView2,
         impl::base<WebView2, winrt::Microsoft::UI::Xaml::FrameworkElement, winrt::Microsoft::UI::Xaml::UIElement, winrt::Microsoft::UI::Xaml::DependencyObject>,
-        impl::require<WebView2, winrt::Microsoft::UI::Xaml::IFrameworkElement, winrt::Microsoft::UI::Xaml::IFrameworkElementProtected, winrt::Microsoft::UI::Xaml::IFrameworkElementOverrides, winrt::Microsoft::UI::Xaml::IUIElement, winrt::Microsoft::UI::Xaml::IUIElementProtected, winrt::Microsoft::UI::Xaml::IUIElementOverrides, winrt::Microsoft::UI::Composition::IAnimationObject, winrt::Microsoft::UI::Composition::IVisualElement, winrt::Microsoft::UI::Composition::IVisualElement2, winrt::Microsoft::UI::Xaml::IDependencyObject>
+        impl::require<WebView2, winrt::Microsoft::UI::Xaml::Controls::IWebView22, winrt::Microsoft::UI::Xaml::IFrameworkElement, winrt::Microsoft::UI::Xaml::IFrameworkElementProtected, winrt::Microsoft::UI::Xaml::IFrameworkElementOverrides, winrt::Microsoft::UI::Xaml::IUIElement, winrt::Microsoft::UI::Xaml::IUIElementProtected, winrt::Microsoft::UI::Xaml::IUIElementOverrides, winrt::Microsoft::UI::Composition::IAnimationObject, winrt::Microsoft::UI::Composition::IVisualElement, winrt::Microsoft::UI::Composition::IVisualElement2, winrt::Microsoft::UI::Xaml::IDependencyObject>
     {
         WebView2(std::nullptr_t) noexcept {}
         WebView2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::IWebView2(ptr, take_ownership_from_abi) {}
         WebView2();
+        using winrt::Microsoft::UI::Xaml::Controls::IWebView2::EnsureCoreWebView2Async;
+        using impl::consume_t<WebView2, winrt::Microsoft::UI::Xaml::Controls::IWebView22>::EnsureCoreWebView2Async;
         [[nodiscard]] static auto SourceProperty();
         [[nodiscard]] static auto CanGoForwardProperty();
         [[nodiscard]] static auto CanGoBackProperty();

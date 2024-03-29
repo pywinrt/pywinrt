@@ -41,6 +41,27 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Input
         IFocusChangedEventArgs(std::nullptr_t = nullptr) noexcept {}
         IFocusChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IFocusNavigationRequest :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IFocusNavigationRequest>
+    {
+        IFocusNavigationRequest(std::nullptr_t = nullptr) noexcept {}
+        IFocusNavigationRequest(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IFocusNavigationRequestEventArgs :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IFocusNavigationRequestEventArgs>
+    {
+        IFocusNavigationRequestEventArgs(std::nullptr_t = nullptr) noexcept {}
+        IFocusNavigationRequestEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IFocusNavigationRequestStatics :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IFocusNavigationRequestStatics>
+    {
+        IFocusNavigationRequestStatics(std::nullptr_t = nullptr) noexcept {}
+        IFocusNavigationRequestStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IGestureRecognizer :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IGestureRecognizer>
@@ -146,13 +167,6 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Input
         IInputDesktopResourceCursorStatics(std::nullptr_t = nullptr) noexcept {}
         IInputDesktopResourceCursorStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
-    struct WINRT_IMPL_EMPTY_BASES IInputFocusChangedEventArgs :
-        winrt::Windows::Foundation::IInspectable,
-        impl::consume_t<IInputFocusChangedEventArgs>
-    {
-        IInputFocusChangedEventArgs(std::nullptr_t = nullptr) noexcept {}
-        IInputFocusChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
-    };
     struct WINRT_IMPL_EMPTY_BASES IInputFocusController :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IInputFocusController>
@@ -160,12 +174,33 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Input
         IInputFocusController(std::nullptr_t = nullptr) noexcept {}
         IInputFocusController(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IInputFocusController2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IInputFocusController2>
+    {
+        IInputFocusController2(std::nullptr_t = nullptr) noexcept {}
+        IInputFocusController2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IInputFocusControllerStatics :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IInputFocusControllerStatics>
     {
         IInputFocusControllerStatics(std::nullptr_t = nullptr) noexcept {}
         IInputFocusControllerStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IInputFocusNavigationHost :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IInputFocusNavigationHost>
+    {
+        IInputFocusNavigationHost(std::nullptr_t = nullptr) noexcept {}
+        IInputFocusNavigationHost(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IInputFocusNavigationHostStatics :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IInputFocusNavigationHostStatics>
+    {
+        IInputFocusNavigationHostStatics(std::nullptr_t = nullptr) noexcept {}
+        IInputFocusNavigationHostStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES IInputKeyboardSource :
         winrt::Windows::Foundation::IInspectable,

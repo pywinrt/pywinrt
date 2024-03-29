@@ -12,6 +12,7 @@ __all__ = [
     "DesktopWindowXamlSourceTakeFocusRequestedEventArgs",
     "ElementCompositionPreview",
     "WindowsXamlManager",
+    "XamlShutdownCompletedOnThreadEventArgs",
     "XamlSourceFocusNavigationRequest",
     "XamlSourceFocusNavigationResult",
 ]
@@ -31,5 +32,6 @@ DesktopWindowXamlSourceGotFocusEventArgs = _winrt_microsoft_ui_xaml_hosting.Desk
 DesktopWindowXamlSourceTakeFocusRequestedEventArgs = _winrt_microsoft_ui_xaml_hosting.DesktopWindowXamlSourceTakeFocusRequestedEventArgs
 ElementCompositionPreview = _winrt_microsoft_ui_xaml_hosting.ElementCompositionPreview
 WindowsXamlManager = _winrt_microsoft_ui_xaml_hosting.WindowsXamlManager
+XamlShutdownCompletedOnThreadEventArgs = _winrt_microsoft_ui_xaml_hosting.XamlShutdownCompletedOnThreadEventArgs
 XamlSourceFocusNavigationRequest = _winrt_microsoft_ui_xaml_hosting.XamlSourceFocusNavigationRequest
 XamlSourceFocusNavigationResult = _winrt_microsoft_ui_xaml_hosting.XamlSourceFocusNavigationResult

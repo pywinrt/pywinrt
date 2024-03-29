@@ -36,7 +36,7 @@ import winrt.windows.ui
 import winrt.windows.ui.core
 import winrt.windows.ui.xaml.interop
 
-from winrt.microsoft.ui.xaml import ApplicationHighContrastAdjustment, ApplicationRequiresPointerMode, ApplicationTheme, AutomationTextAttributesEnum, DurationType, ElementHighContrastAdjustment, ElementSoundKind, ElementSoundMode, ElementSoundPlayerState, ElementSpatialAudioMode, ElementTheme, FlowDirection, FocusState, FocusVisualKind, FontCapitals, FontEastAsianLanguage, FontEastAsianWidths, FontFraction, FontNumeralAlignment, FontNumeralStyle, FontVariants, GridUnitType, HorizontalAlignment, LineStackingStrategy, OpticalMarginAlignment, TextAlignment, TextLineBounds, TextReadingOrder, TextTrimming, TextWrapping, Vector3TransitionComponents, VerticalAlignment, Visibility, WindowActivationState
+from winrt.microsoft.ui.xaml import ApplicationHighContrastAdjustment, ApplicationRequiresPointerMode, ApplicationTheme, AutomationTextAttributesEnum, DispatcherShutdownMode, DurationType, ElementHighContrastAdjustment, ElementSoundKind, ElementSoundMode, ElementSoundPlayerState, ElementSpatialAudioMode, ElementTheme, FlowDirection, FocusState, FocusVisualKind, FontCapitals, FontEastAsianLanguage, FontEastAsianWidths, FontFraction, FontNumeralAlignment, FontNumeralStyle, FontVariants, GridUnitType, HorizontalAlignment, LayoutCycleDebugBreakLevel, LayoutCycleTracingLevel, LineStackingStrategy, OpticalMarginAlignment, TextAlignment, TextLineBounds, TextReadingOrder, TextTrimming, TextWrapping, Vector3TransitionComponents, VerticalAlignment, Visibility, WindowActivationState
 from winrt.microsoft.ui.xaml import ApplicationInitializationCallback, BindingFailedEventHandler, CreateDefaultValueCallback, DependencyPropertyChangedCallback, DependencyPropertyChangedEventHandler, DragEventHandler, EnteredBackgroundEventHandler, ExceptionRoutedEventHandler, LeavingBackgroundEventHandler, PropertyChangedCallback, RoutedEventHandler, SizeChangedEventHandler, SuspendingEventHandler, UnhandledExceptionEventHandler, VisualStateChangedEventHandler
 
 Self = typing.TypeVar('Self')
@@ -129,6 +129,10 @@ class Application(winrt.system.Object, metaclass=Application_Static):
     def focus_visual_kind(self, value: FocusVisualKind) -> None: ...
     @_property
     def debug_settings(self) -> typing.Optional[DebugSettings]: ...
+    @_property
+    def dispatcher_shutdown_mode(self) -> DispatcherShutdownMode: ...
+    @dispatcher_shutdown_mode.setter
+    def dispatcher_shutdown_mode(self, value: DispatcherShutdownMode) -> None: ...
 
 @typing.final
 class ApplicationInitializationCallbackParams(winrt.system.Object):
@@ -407,6 +411,14 @@ class DebugSettings(winrt.system.Object):
     def is_xaml_resource_reference_tracing_enabled(self) -> bool: ...
     @is_xaml_resource_reference_tracing_enabled.setter
     def is_xaml_resource_reference_tracing_enabled(self, value: bool) -> None: ...
+    @_property
+    def layout_cycle_tracing_level(self) -> LayoutCycleTracingLevel: ...
+    @layout_cycle_tracing_level.setter
+    def layout_cycle_tracing_level(self, value: LayoutCycleTracingLevel) -> None: ...
+    @_property
+    def layout_cycle_debug_break_level(self) -> LayoutCycleDebugBreakLevel: ...
+    @layout_cycle_debug_break_level.setter
+    def layout_cycle_debug_break_level(self, value: LayoutCycleDebugBreakLevel) -> None: ...
 
 @typing.final
 class DependencyObject(winrt.system.Object):

@@ -858,6 +858,9 @@ namespace py
     inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::AutomationTextAttributesEnum> = "i";
 
     template<>
+    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::DispatcherShutdownMode> = "i";
+
+    template<>
     inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::DurationType> = "i";
 
     template<>
@@ -913,6 +916,12 @@ namespace py
 
     template<>
     inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::HorizontalAlignment> = "i";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::LayoutCycleDebugBreakLevel> = "i";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::LayoutCycleTracingLevel> = "i";
 
     template<>
     inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::LineStackingStrategy> = "i";
@@ -986,6 +995,13 @@ namespace py
     {
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml";
         static constexpr const char* type_name = "AutomationTextAttributesEnum";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::DispatcherShutdownMode>
+    {
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml";
+        static constexpr const char* type_name = "DispatcherShutdownMode";
     };
 
     template<>
@@ -1119,6 +1135,20 @@ namespace py
     {
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml";
         static constexpr const char* type_name = "HorizontalAlignment";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::LayoutCycleDebugBreakLevel>
+    {
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml";
+        static constexpr const char* type_name = "LayoutCycleDebugBreakLevel";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::LayoutCycleTracingLevel>
+    {
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml";
+        static constexpr const char* type_name = "LayoutCycleTracingLevel";
     };
 
     template<>

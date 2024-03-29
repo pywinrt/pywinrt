@@ -87,6 +87,16 @@ namespace winrt::impl
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Xaml::Hosting::IDesktopWindowXamlSource)->Initialize(impl::bind_in(parentWindowId)));
     }
+    template <typename D> auto consume_Microsoft_UI_Xaml_Hosting_IDesktopWindowXamlSource2<D>::ShouldConstrainPopupsToWorkArea() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Xaml::Hosting::IDesktopWindowXamlSource2)->get_ShouldConstrainPopupsToWorkArea(&value));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Xaml_Hosting_IDesktopWindowXamlSource2<D>::ShouldConstrainPopupsToWorkArea(bool value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Xaml::Hosting::IDesktopWindowXamlSource2)->put_ShouldConstrainPopupsToWorkArea(value));
+    }
     template <typename D> auto consume_Microsoft_UI_Xaml_Hosting_IDesktopWindowXamlSourceFactory<D>::CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const
     {
         void* value{};
@@ -145,11 +155,37 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Xaml::Hosting::IElementCompositionPreviewStatics)->GetPointerPositionPropertySet(*(void**)(&targetElement), &result));
         return winrt::Microsoft::UI::Composition::CompositionPropertySet{ result, take_ownership_from_abi };
     }
+    template <typename D> auto consume_Microsoft_UI_Xaml_Hosting_IWindowsXamlManager2<D>::XamlShutdownCompletedOnThread(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Hosting::WindowsXamlManager, winrt::Microsoft::UI::Xaml::Hosting::XamlShutdownCompletedOnThreadEventArgs> const& handler) const
+    {
+        winrt::event_token token{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Xaml::Hosting::IWindowsXamlManager2)->add_XamlShutdownCompletedOnThread(*(void**)(&handler), put_abi(token)));
+        return token;
+    }
+    template <typename D> auto consume_Microsoft_UI_Xaml_Hosting_IWindowsXamlManager2<D>::XamlShutdownCompletedOnThread(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Hosting::WindowsXamlManager, winrt::Microsoft::UI::Xaml::Hosting::XamlShutdownCompletedOnThreadEventArgs> const& handler) const
+    {
+        return impl::make_event_revoker<D, XamlShutdownCompletedOnThread_revoker>(this, XamlShutdownCompletedOnThread(handler));
+    }
+    template <typename D> auto consume_Microsoft_UI_Xaml_Hosting_IWindowsXamlManager2<D>::XamlShutdownCompletedOnThread(winrt::event_token const& token) const noexcept
+    {
+        WINRT_IMPL_SHIM(winrt::Microsoft::UI::Xaml::Hosting::IWindowsXamlManager2)->remove_XamlShutdownCompletedOnThread(impl::bind_in(token));
+    }
     template <typename D> auto consume_Microsoft_UI_Xaml_Hosting_IWindowsXamlManagerStatics<D>::InitializeForCurrentThread() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Xaml::Hosting::IWindowsXamlManagerStatics)->InitializeForCurrentThread(&result));
         return winrt::Microsoft::UI::Xaml::Hosting::WindowsXamlManager{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Xaml_Hosting_IWindowsXamlManagerStatics2<D>::GetForCurrentThread() const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Xaml::Hosting::IWindowsXamlManagerStatics2)->GetForCurrentThread(&result));
+        return winrt::Microsoft::UI::Xaml::Hosting::WindowsXamlManager{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Xaml_Hosting_IXamlShutdownCompletedOnThreadEventArgs<D>::GetDispatcherQueueDeferral() const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Xaml::Hosting::IXamlShutdownCompletedOnThreadEventArgs)->GetDispatcherQueueDeferral(&result));
+        return winrt::Windows::Foundation::Deferral{ result, take_ownership_from_abi };
     }
     template <typename D> auto consume_Microsoft_UI_Xaml_Hosting_IXamlSourceFocusNavigationRequest<D>::Reason() const
     {
@@ -295,6 +331,26 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Xaml::Hosting::IDesktopWindowXamlSource2> : produce_base<D, winrt::Microsoft::UI::Xaml::Hosting::IDesktopWindowXamlSource2>
+    {
+        int32_t __stdcall get_ShouldConstrainPopupsToWorkArea(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().ShouldConstrainPopupsToWorkArea());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_ShouldConstrainPopupsToWorkArea(bool value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().ShouldConstrainPopupsToWorkArea(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::UI::Xaml::Hosting::IDesktopWindowXamlSourceFactory> : produce_base<D, winrt::Microsoft::UI::Xaml::Hosting::IDesktopWindowXamlSourceFactory>
     {
         int32_t __stdcall CreateInstance(void* baseInterface, void** innerInterface, void** value) noexcept final try
@@ -418,6 +474,26 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Xaml::Hosting::IWindowsXamlManager2> : produce_base<D, winrt::Microsoft::UI::Xaml::Hosting::IWindowsXamlManager2>
+    {
+        int32_t __stdcall add_XamlShutdownCompletedOnThread(void* handler, winrt::event_token* token) noexcept final try
+        {
+            zero_abi<winrt::event_token>(token);
+            typename D::abi_guard guard(this->shim());
+            *token = detach_from<winrt::event_token>(this->shim().XamlShutdownCompletedOnThread(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Hosting::WindowsXamlManager, winrt::Microsoft::UI::Xaml::Hosting::XamlShutdownCompletedOnThreadEventArgs> const*>(&handler)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall remove_XamlShutdownCompletedOnThread(winrt::event_token token) noexcept final
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().XamlShutdownCompletedOnThread(*reinterpret_cast<winrt::event_token const*>(&token));
+            return 0;
+        }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::UI::Xaml::Hosting::IWindowsXamlManagerStatics> : produce_base<D, winrt::Microsoft::UI::Xaml::Hosting::IWindowsXamlManagerStatics>
     {
         int32_t __stdcall InitializeForCurrentThread(void** result) noexcept final try
@@ -425,6 +501,34 @@ namespace winrt::impl
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
             *result = detach_from<winrt::Microsoft::UI::Xaml::Hosting::WindowsXamlManager>(this->shim().InitializeForCurrentThread());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Xaml::Hosting::IWindowsXamlManagerStatics2> : produce_base<D, winrt::Microsoft::UI::Xaml::Hosting::IWindowsXamlManagerStatics2>
+    {
+        int32_t __stdcall GetForCurrentThread(void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Microsoft::UI::Xaml::Hosting::WindowsXamlManager>(this->shim().GetForCurrentThread());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Xaml::Hosting::IXamlShutdownCompletedOnThreadEventArgs> : produce_base<D, winrt::Microsoft::UI::Xaml::Hosting::IXamlShutdownCompletedOnThreadEventArgs>
+    {
+        int32_t __stdcall GetDispatcherQueueDeferral(void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Windows::Foundation::Deferral>(this->shim().GetDispatcherQueueDeferral());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -559,6 +663,10 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Hosting
     {
         return impl::call_factory_cast<winrt::Microsoft::UI::Xaml::Hosting::WindowsXamlManager(*)(IWindowsXamlManagerStatics const&), WindowsXamlManager, IWindowsXamlManagerStatics>([](IWindowsXamlManagerStatics const& f) { return f.InitializeForCurrentThread(); });
     }
+    inline auto WindowsXamlManager::GetForCurrentThread()
+    {
+        return impl::call_factory_cast<winrt::Microsoft::UI::Xaml::Hosting::WindowsXamlManager(*)(IWindowsXamlManagerStatics2 const&), WindowsXamlManager, IWindowsXamlManagerStatics2>([](IWindowsXamlManagerStatics2 const& f) { return f.GetForCurrentThread(); });
+    }
     inline XamlSourceFocusNavigationRequest::XamlSourceFocusNavigationRequest(winrt::Microsoft::UI::Xaml::Hosting::XamlSourceFocusNavigationReason const& reason) :
         XamlSourceFocusNavigationRequest(impl::call_factory<XamlSourceFocusNavigationRequest, IXamlSourceFocusNavigationRequestFactory>([&](IXamlSourceFocusNavigationRequestFactory const& f) { return f.CreateInstance(reason); }))
     {
@@ -578,7 +686,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Hosting
     template <typename D, typename... Interfaces>
     struct DesktopWindowXamlSourceT :
         implements<D, winrt::Windows::Foundation::IInspectable, composing, Interfaces...>,
-        impl::require<D, winrt::Microsoft::UI::Xaml::Hosting::IDesktopWindowXamlSource, winrt::Windows::Foundation::IClosable>,
+        impl::require<D, winrt::Microsoft::UI::Xaml::Hosting::IDesktopWindowXamlSource, winrt::Microsoft::UI::Xaml::Hosting::IDesktopWindowXamlSource2, winrt::Windows::Foundation::IClosable>,
         impl::base<D, DesktopWindowXamlSource>
     {
         using composable = DesktopWindowXamlSource;
@@ -593,13 +701,17 @@ namespace std
 {
 #ifndef WINRT_LEAN_AND_MEAN
     template<> struct hash<winrt::Microsoft::UI::Xaml::Hosting::IDesktopWindowXamlSource> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Xaml::Hosting::IDesktopWindowXamlSource2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Hosting::IDesktopWindowXamlSourceFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Hosting::IDesktopWindowXamlSourceGotFocusEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Hosting::IDesktopWindowXamlSourceTakeFocusRequestedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Hosting::IElementCompositionPreview> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Hosting::IElementCompositionPreviewStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Hosting::IWindowsXamlManager> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Xaml::Hosting::IWindowsXamlManager2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Hosting::IWindowsXamlManagerStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Xaml::Hosting::IWindowsXamlManagerStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Xaml::Hosting::IXamlShutdownCompletedOnThreadEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Hosting::IXamlSourceFocusNavigationRequest> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Hosting::IXamlSourceFocusNavigationRequestFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Hosting::IXamlSourceFocusNavigationResult> : winrt::impl::hash_base {};
@@ -609,6 +721,7 @@ namespace std
     template<> struct hash<winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSourceTakeFocusRequestedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Hosting::ElementCompositionPreview> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Hosting::WindowsXamlManager> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Xaml::Hosting::XamlShutdownCompletedOnThreadEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Hosting::XamlSourceFocusNavigationRequest> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Hosting::XamlSourceFocusNavigationResult> : winrt::impl::hash_base {};
 #endif

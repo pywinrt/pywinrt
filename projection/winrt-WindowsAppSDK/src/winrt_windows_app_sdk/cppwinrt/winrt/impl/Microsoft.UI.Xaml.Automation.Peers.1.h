@@ -1168,6 +1168,20 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Automation::Peers
         ISelectorAutomationPeerFactory(std::nullptr_t = nullptr) noexcept {}
         ISelectorAutomationPeerFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES ISelectorBarItemAutomationPeer :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ISelectorBarItemAutomationPeer>
+    {
+        ISelectorBarItemAutomationPeer(std::nullptr_t = nullptr) noexcept {}
+        ISelectorBarItemAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES ISelectorBarItemAutomationPeerFactory :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ISelectorBarItemAutomationPeerFactory>
+    {
+        ISelectorBarItemAutomationPeerFactory(std::nullptr_t = nullptr) noexcept {}
+        ISelectorBarItemAutomationPeerFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES ISelectorItemAutomationPeer :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<ISelectorItemAutomationPeer>

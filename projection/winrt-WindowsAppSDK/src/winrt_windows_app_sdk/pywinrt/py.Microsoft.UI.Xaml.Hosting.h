@@ -56,6 +56,7 @@ namespace py::wrapper::Microsoft::UI::Xaml::Hosting
     using DesktopWindowXamlSourceTakeFocusRequestedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSourceTakeFocusRequestedEventArgs>;
     using ElementCompositionPreview = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Hosting::ElementCompositionPreview>;
     using WindowsXamlManager = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Hosting::WindowsXamlManager>;
+    using XamlShutdownCompletedOnThreadEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Hosting::XamlShutdownCompletedOnThreadEventArgs>;
     using XamlSourceFocusNavigationRequest = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Hosting::XamlSourceFocusNavigationRequest>;
     using XamlSourceFocusNavigationResult = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Hosting::XamlSourceFocusNavigationResult>;
 }
@@ -106,6 +107,13 @@ namespace py
     {
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.hosting";
         static constexpr const char* type_name = "WindowsXamlManager";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Hosting::XamlShutdownCompletedOnThreadEventArgs>
+    {
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.hosting";
+        static constexpr const char* type_name = "XamlShutdownCompletedOnThreadEventArgs";
     };
 
     template<>

@@ -11,7 +11,7 @@
 WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Hosting
 {
     struct WINRT_IMPL_EMPTY_BASES DesktopWindowXamlSource : winrt::Microsoft::UI::Xaml::Hosting::IDesktopWindowXamlSource,
-        impl::require<DesktopWindowXamlSource, winrt::Windows::Foundation::IClosable>
+        impl::require<DesktopWindowXamlSource, winrt::Microsoft::UI::Xaml::Hosting::IDesktopWindowXamlSource2, winrt::Windows::Foundation::IClosable>
     {
         DesktopWindowXamlSource(std::nullptr_t) noexcept {}
         DesktopWindowXamlSource(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Hosting::IDesktopWindowXamlSource(ptr, take_ownership_from_abi) {}
@@ -41,11 +41,17 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Hosting
         static auto GetPointerPositionPropertySet(winrt::Microsoft::UI::Xaml::UIElement const& targetElement);
     };
     struct WINRT_IMPL_EMPTY_BASES WindowsXamlManager : winrt::Microsoft::UI::Xaml::Hosting::IWindowsXamlManager,
-        impl::require<WindowsXamlManager, winrt::Windows::Foundation::IClosable>
+        impl::require<WindowsXamlManager, winrt::Microsoft::UI::Xaml::Hosting::IWindowsXamlManager2, winrt::Windows::Foundation::IClosable>
     {
         WindowsXamlManager(std::nullptr_t) noexcept {}
         WindowsXamlManager(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Hosting::IWindowsXamlManager(ptr, take_ownership_from_abi) {}
         static auto InitializeForCurrentThread();
+        static auto GetForCurrentThread();
+    };
+    struct WINRT_IMPL_EMPTY_BASES XamlShutdownCompletedOnThreadEventArgs : winrt::Microsoft::UI::Xaml::Hosting::IXamlShutdownCompletedOnThreadEventArgs
+    {
+        XamlShutdownCompletedOnThreadEventArgs(std::nullptr_t) noexcept {}
+        XamlShutdownCompletedOnThreadEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Hosting::IXamlShutdownCompletedOnThreadEventArgs(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES XamlSourceFocusNavigationRequest : winrt::Microsoft::UI::Xaml::Hosting::IXamlSourceFocusNavigationRequest
     {

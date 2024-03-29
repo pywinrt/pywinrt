@@ -14746,6 +14746,99 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         _type_slots_SelectorAutomationPeer
     };
 
+    // ----- SelectorBarItemAutomationPeer class --------------------
+
+    static PyObject* _new_SelectorBarItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    {
+        if (kwds != nullptr)
+        {
+            py::set_invalid_kwd_args_error();
+            return nullptr;
+        }
+
+        auto arg_count = PyTuple_Size(args);
+        if (arg_count == 1)
+        {
+            try
+            {
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::SelectorBarItem>(args, 0);
+
+                winrt::Microsoft::UI::Xaml::Automation::Peers::SelectorBarItemAutomationPeer instance{ param0 };
+                return py::wrap(instance, type);
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static void _dealloc_SelectorBarItemAutomationPeer(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SelectorBarItemAutomationPeer* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* _assign_array_SelectorBarItemAutomationPeer(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Automation::Peers::SelectorBarItemAutomationPeer>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_SelectorBarItemAutomationPeer(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::UI::Xaml::Automation::Peers::SelectorBarItemAutomationPeer>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_SelectorBarItemAutomationPeer[] = {
+        { "_assign_array_", _assign_array_SelectorBarItemAutomationPeer, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_SelectorBarItemAutomationPeer), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_SelectorBarItemAutomationPeer[] = {
+        { }
+    };
+
+    static PyType_Slot _type_slots_SelectorBarItemAutomationPeer[] = 
+    {
+        { Py_tp_new, reinterpret_cast<void*>(_new_SelectorBarItemAutomationPeer) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SelectorBarItemAutomationPeer) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_SelectorBarItemAutomationPeer) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_SelectorBarItemAutomationPeer) },
+        { },
+    };
+
+    static PyType_Spec type_spec_SelectorBarItemAutomationPeer =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.SelectorBarItemAutomationPeer",
+        sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SelectorBarItemAutomationPeer),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_SelectorBarItemAutomationPeer
+    };
+
     // ----- SelectorItemAutomationPeer class --------------------
 
     static PyObject* _new_SelectorItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -17967,6 +18060,11 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation_peers(void) noexcept
     }
 
     if (py::register_python_type(module.get(), &type_spec_SelectorAutomationPeer, object_bases.get(), nullptr) == -1)
+    {
+        return nullptr;
+    }
+
+    if (py::register_python_type(module.get(), &type_spec_SelectorBarItemAutomationPeer, object_bases.get(), nullptr) == -1)
     {
         return nullptr;
     }

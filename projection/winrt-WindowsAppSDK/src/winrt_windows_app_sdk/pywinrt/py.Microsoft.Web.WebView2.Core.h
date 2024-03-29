@@ -60,6 +60,7 @@ namespace py::wrapper::Microsoft::Web::WebView2::Core
     using CoreWebView2AcceleratorKeyPressedEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2AcceleratorKeyPressedEventArgs>;
     using CoreWebView2BasicAuthenticationRequestedEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2BasicAuthenticationRequestedEventArgs>;
     using CoreWebView2BasicAuthenticationResponse = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2BasicAuthenticationResponse>;
+    using CoreWebView2BrowserExtension = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2BrowserExtension>;
     using CoreWebView2BrowserProcessExitedEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2BrowserProcessExitedEventArgs>;
     using CoreWebView2Certificate = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Certificate>;
     using CoreWebView2ClientCertificate = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ClientCertificate>;
@@ -98,6 +99,7 @@ namespace py::wrapper::Microsoft::Web::WebView2::Core
     using CoreWebView2PermissionSetting = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PermissionSetting>;
     using CoreWebView2PointerInfo = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo>;
     using CoreWebView2PrintSettings = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings>;
+    using CoreWebView2ProcessExtendedInfo = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ProcessExtendedInfo>;
     using CoreWebView2ProcessFailedEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ProcessFailedEventArgs>;
     using CoreWebView2ProcessInfo = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ProcessInfo>;
     using CoreWebView2Profile = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Profile>;
@@ -156,6 +158,9 @@ namespace py
     inline constexpr const char* buffer_format<winrt::Microsoft::Web::WebView2::Core::CoreWebView2FaviconImageFormat> = "i";
 
     template<>
+    inline constexpr const char* buffer_format<winrt::Microsoft::Web::WebView2::Core::CoreWebView2FrameKind> = "i";
+
+    template<>
     inline constexpr const char* buffer_format<winrt::Microsoft::Web::WebView2::Core::CoreWebView2HostResourceAccessKind> = "i";
 
     template<>
@@ -172,6 +177,9 @@ namespace py
 
     template<>
     inline constexpr const char* buffer_format<winrt::Microsoft::Web::WebView2::Core::CoreWebView2MoveFocusReason> = "i";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Microsoft::Web::WebView2::Core::CoreWebView2NavigationKind> = "i";
 
     template<>
     inline constexpr const char* buffer_format<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PdfToolbarItems> = "I";
@@ -325,6 +333,13 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Microsoft::Web::WebView2::Core::CoreWebView2FrameKind>
+    {
+        static constexpr const char* module_name = "winrt.microsoft.web.webview2.core";
+        static constexpr const char* type_name = "CoreWebView2FrameKind";
+    };
+
+    template<>
     struct py_type<winrt::Microsoft::Web::WebView2::Core::CoreWebView2HostResourceAccessKind>
     {
         static constexpr const char* module_name = "winrt.microsoft.web.webview2.core";
@@ -364,6 +379,13 @@ namespace py
     {
         static constexpr const char* module_name = "winrt.microsoft.web.webview2.core";
         static constexpr const char* type_name = "CoreWebView2MoveFocusReason";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::Web::WebView2::Core::CoreWebView2NavigationKind>
+    {
+        static constexpr const char* module_name = "winrt.microsoft.web.webview2.core";
+        static constexpr const char* type_name = "CoreWebView2NavigationKind";
     };
 
     template<>
@@ -539,6 +561,13 @@ namespace py
     {
         static constexpr const char* module_name = "winrt.microsoft.web.webview2.core";
         static constexpr const char* type_name = "CoreWebView2BasicAuthenticationResponse";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::Web::WebView2::Core::CoreWebView2BrowserExtension>
+    {
+        static constexpr const char* module_name = "winrt.microsoft.web.webview2.core";
+        static constexpr const char* type_name = "CoreWebView2BrowserExtension";
     };
 
     template<>
@@ -805,6 +834,13 @@ namespace py
     {
         static constexpr const char* module_name = "winrt.microsoft.web.webview2.core";
         static constexpr const char* type_name = "CoreWebView2PrintSettings";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ProcessExtendedInfo>
+    {
+        static constexpr const char* module_name = "winrt.microsoft.web.webview2.core";
+        static constexpr const char* type_name = "CoreWebView2ProcessExtendedInfo";
     };
 
     template<>
