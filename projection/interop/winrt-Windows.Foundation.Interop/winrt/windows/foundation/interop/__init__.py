@@ -158,6 +158,8 @@ def box(value, ptype: Optional[PropertyType] = None) -> Optional[Object]:
     if isinstance(value, Array):
         raise TypeError("Must provide a property type for System.Array values")
 
+    raise TypeError(f"Unsupported type: {type(value)}")
+
 
 def unbox(obj: Optional[Object]):
     """
