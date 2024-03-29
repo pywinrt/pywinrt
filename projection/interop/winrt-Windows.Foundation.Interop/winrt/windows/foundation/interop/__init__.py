@@ -1,5 +1,6 @@
 from datetime import datetime, timedelta
 from enum import IntEnum, IntFlag
+from typing import Optional
 from uuid import UUID
 
 from winrt.system import Object, Array
@@ -89,7 +90,7 @@ _PROPERTY_TYPE_UNBOX_MAP = {
     PropertyType.UINT8: IPropertyValue.get_uint8,
 }
 
-def box(value, ptype: PropertyType = None) -> Object:
+def box(value, ptype: Optional[PropertyType] = None) -> Optional[Object]:
     """
     Boxes a Python value into a System.Object.
 
@@ -113,7 +114,7 @@ def box(value, ptype: PropertyType = None) -> Object:
         except KeyError:
             raise ValueError(f"Unsupported property type: {ptype.name}")
 
-        return func(value)
+        return func(value)  # type: ignore[operator]
 
     if isinstance(value, str):
         return PropertyValue.create_string(value)
@@ -158,7 +159,7 @@ def box(value, ptype: PropertyType = None) -> Object:
         raise TypeError("Must provide a property type for System.Array values")
 
 
-def unbox(obj: Object):
+def unbox(obj: Optional[Object]):
     """
     Unboxes a System.Object into a Python value.
 
