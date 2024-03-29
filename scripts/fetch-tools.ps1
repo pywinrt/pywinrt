@@ -13,7 +13,8 @@ param(
     [Parameter(Mandatory=$false)]
     [string]$TestWinRTVersion = "1.0.12",
 
-    [switch]$useLocalPyWinRT
+    [switch]$useLocalPyWinRTNuget,
+    [switch]$noPyWinRT
 )
 
 $repoRootPath = (Get-Item $PSScriptRoot).Parent.FullName
@@ -31,8 +32,10 @@ if ($LASTEXITCODE -ne 0) {
     exit $LASTEXITCODE
 }
 
-$source = If ($useLocalPyWinRT) { "-Source", "$repoRootPath" } Else { "" }
-& nuget install PyWinRT -Version $PyWinRTVersion -Prerelease -DependencyVersion Ignore -ExcludeVersion -OutputDirectory "$repoRootPath/_tools" $source
+If (!$noPyWinRT) {
+    $source = If ($useLocalPyWinRTNuget) { "-Source", "$repoRootPath" } Else { "" }
+    & nuget install PyWinRT -Version $PyWinRTVersion -Prerelease -DependencyVersion Ignore -ExcludeVersion -OutputDirectory "$repoRootPath/_tools" $source
+}
 
 if ($LASTEXITCODE -ne 0) {
     exit $LASTEXITCODE
