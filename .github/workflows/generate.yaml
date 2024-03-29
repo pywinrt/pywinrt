@@ -22,7 +22,7 @@ jobs:
   generate:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: ./scripts/vsdevcmd-build.cmd
       - run: ./scripts/fetch-tools.ps1
       - run: python3 ./scripts/generate-cppwinrt.py
