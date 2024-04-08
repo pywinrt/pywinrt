@@ -9,7 +9,7 @@ from winrt_windows_app_sdk import get_include_dirs as get_app_sdk_include_dirs
 class build_ext_ex(build_ext):
     def build_extension(self, ext):
         if self.compiler.compiler_type == "msvc":
-            ext.extra_compile_args = ["/std:c++20", "/permissive-"]
+            ext.extra_compile_args = ["/std:c++20", "/permissive-", "/d2FH4-"]
         else:
             ext.extra_compile_args = ["-std=c++20"]
 
