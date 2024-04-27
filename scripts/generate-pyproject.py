@@ -6,7 +6,7 @@ PYPROJECT_TOML_TEMPLATE = """\
 # WARNING: Please don't edit this file. It was automatically generated.
 
 [build-system]
-requires = ["setuptools", "setuptools-scm"{requires_winrt_sdk}{requires_windows_app_sdk}]
+requires = ["setuptools"{requires_winrt_sdk}{requires_windows_app_sdk}]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -121,7 +121,7 @@ Example use in a `pyproject.toml` file:
 
 ```toml
 [build-system]
-requires = ["setuptools", "setuptools-scm", "winrt-sdk"{extra_requires}]
+requires = ["setuptools", "winrt-sdk"{extra_requires}]
 build-backend = "setuptools.build_meta"
 ```
 

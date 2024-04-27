@@ -1,7 +1,7 @@
 # WARNING: Please don't edit this file. It was automatically generated.
 
 [build-system]
-requires = ["setuptools", "setuptools-scm", "winrt-sdk", "winrt-WindowsAppSDK"]
+requires = ["setuptools", "winrt-sdk", "winrt-WindowsAppSDK"]
 build-backend = "setuptools.build_meta"
 
 [project]

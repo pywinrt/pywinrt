@@ -10,7 +10,7 @@ Example use in a `pyproject.toml` file:
 
 ```toml
 [build-system]
-requires = ["setuptools", "setuptools-scm", "winrt-sdk", "winrt-WindowsAppSDK"]
+requires = ["setuptools", "winrt-sdk", "winrt-WindowsAppSDK"]
 build-backend = "setuptools.build_meta"
 ```
 
