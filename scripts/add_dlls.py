@@ -51,7 +51,7 @@ data = subprocess.check_output(
         "-products",
         "*",
         "-requires",
-        f"Microsoft.VisualStudio.Component.VC.Tools.{"ARM64" if wheel_arch == "arm64" else "x86.x64"}",
+        f"Microsoft.VisualStudio.Component.VC.Tools.{'ARM64' if wheel_arch == 'arm64' else 'x86.x64'}",
     ]
 )
 
