@@ -4,6 +4,8 @@
 
 ## [Unreleased]
 
+## [v2.0.0] - 2024-04-27
+
 ### Added
 - Added `py.typed` to each subpackage.
 - Added `winrt.windows.foundation.interop` module with `box` and `unbox` methods.
@@ -225,7 +227,8 @@
 ### Removed
 - Removed selecting apartment thread type during module init.
 
-[Unreleased]: https://github.com/pywinrt/pywinrt/compare/v2.0.0-beta.2...HEAD
+[Unreleased]: https://github.com/pywinrt/pywinrt/compare/v2.0.0...HEAD
+[v2.0.0]: https://github.com/pywinrt/pywinrt/compare/v2.0.0-beta.2...v2.0.0
 [v2.0.0-beta.2]: https://github.com/pywinrt/pywinrt/compare/v2.0.0-beta.1...v2.0.0-beta.2
 [v2.0.0-beta.1]: https://github.com/pywinrt/pywinrt/compare/v1.0.0-beta.10...v2.0.0-beta.1
 [v1.0.0-beta.10]: https://github.com/pywinrt/pywinrt/compare/v1.0.0-beta.9...v1.0.0-beta.10
