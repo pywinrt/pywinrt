@@ -17,7 +17,9 @@
 - Fixed implicitly converting `None` to `System.Object`.
 - Fixed `KeyError` when accessing accessing values of mappings that return `None`.
 - Fixed building from source package with non-MSVC compiler ([#44]).
+- Fixed module load failing on systems without `msvcp140.dll` ([#43]).
 
+[#43]: https://github.com/pywinrt/pywinrt/issues/43
 [#44]: https://github.com/pywinrt/pywinrt/issues/44
 
 ## [v2.0.0-beta.2] - 2023-11-29

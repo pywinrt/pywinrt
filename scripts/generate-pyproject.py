@@ -54,7 +54,7 @@ skip = "pp*"
 test-skip = "*-win_arm64"
 
 [tool.cibuildwheel.windows]
-archs = ["x86", "AMD64", "ARM64"]
+archs = ["x86", "AMD64", "ARM64"]{extra_cibuildwheel_windows}
 """
 
 DEPENDENCIES = """
@@ -242,6 +242,9 @@ def write_project_files(
                     relative=relative,
                     extra_python_path=f";{relative}/winrt-WindowsAppSDK/src"
                     if is_windows_app_package(package_name)
+                    else "",
+                    extra_cibuildwheel_windows='\nrepair-wheel-command = "python scripts/add_dlls.py {wheel} {dest_dir}"'
+                    if package_name == "winrt-runtime"
                     else "",
                 )
             )
