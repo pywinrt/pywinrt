@@ -9,7 +9,7 @@
 
 
 project = "PyWinRT"
-copyright = "2022-2023, David Lechner"
+copyright = "2022-2024, David Lechner"
 author = "David Lechner"
 
 # -- General configuration --
