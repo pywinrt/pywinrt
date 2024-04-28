@@ -11,6 +11,7 @@ class build_ext_ex(build_ext):
             ext.extra_compile_args = ["/std:c++20", "/permissive-"]
         else:
             ext.extra_compile_args = ["-std=c++20"]
+            ext.extra_link_args = ["-loleaut32"]
 
         build_ext.build_extension(self, ext)
 
