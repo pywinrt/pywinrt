@@ -5,7 +5,6 @@ winrt-Microsoft.UI.Content[all]==0.0.0
 winrt-Microsoft.UI.Dispatching[all]==0.0.0
 winrt-Microsoft.UI.Input[all]==0.0.0
 winrt-Microsoft.UI.Windowing[all]==0.0.0
-winrt-Microsoft.UI.Xaml.Automation.Peers[all]==0.0.0
 winrt-Microsoft.UI.Xaml.Controls[all]==0.0.0
 winrt-Microsoft.UI.Xaml.Controls.Primitives[all]==0.0.0
 winrt-Microsoft.UI.Xaml.Data[all]==0.0.0

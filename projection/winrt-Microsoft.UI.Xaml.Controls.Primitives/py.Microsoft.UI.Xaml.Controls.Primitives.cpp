@@ -6455,35 +6455,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         Py_DECREF(tp);
     }
 
-    static PyObject* FlyoutBase_CreatePresenter(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 0)
-        {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", L"CreatePresenter", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
-            try
-            {
-                return py::convert(self->obj.CreatePresenter());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
     static PyObject* FlyoutBase_GetAttachedFlyout(PyObject* /*unused*/, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -6530,38 +6501,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
             try
             {
                 self->obj.Hide();
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* FlyoutBase_OnProcessKeyboardAccelerators(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 1)
-        {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase", L"OnProcessKeyboardAccelerators", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
-            try
-            {
-                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs>(args, 0);
-
-                self->obj.OnProcessKeyboardAccelerators(param0);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -7784,9 +7723,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     }
 
     static PyMethodDef _methods_FlyoutBase[] = {
-        { "create_presenter", reinterpret_cast<PyCFunction>(FlyoutBase_CreatePresenter), METH_VARARGS, nullptr },
         { "hide", reinterpret_cast<PyCFunction>(FlyoutBase_Hide), METH_VARARGS, nullptr },
-        { "on_process_keyboard_accelerators", reinterpret_cast<PyCFunction>(FlyoutBase_OnProcessKeyboardAccelerators), METH_VARARGS, nullptr },
         { "show_at", reinterpret_cast<PyCFunction>(FlyoutBase_ShowAt), METH_VARARGS, nullptr },
         { "try_invoke_keyboard_accelerator", reinterpret_cast<PyCFunction>(FlyoutBase_TryInvokeKeyboardAccelerator), METH_VARARGS, nullptr },
         { "add_closed", reinterpret_cast<PyCFunction>(FlyoutBase_add_Closed), METH_O, nullptr },
@@ -18740,36 +18677,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
-    static PyObject* PickerFlyoutBase_OnConfirmed(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::PickerFlyoutBase* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 0)
-        {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.PickerFlyoutBase", L"OnConfirmed", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
-            try
-            {
-                self->obj.OnConfirmed();
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
     static PyObject* PickerFlyoutBase_SetTitle(PyObject* /*unused*/, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -18789,35 +18696,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
                 winrt::Microsoft::UI::Xaml::Controls::Primitives::PickerFlyoutBase::SetTitle(param0, param1);
                 Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* PickerFlyoutBase_ShouldShowConfirmationButtons(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::PickerFlyoutBase* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 0)
-        {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.PickerFlyoutBase", L"ShouldShowConfirmationButtons", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
-            try
-            {
-                return py::convert(self->obj.ShouldShowConfirmationButtons());
             }
             catch (...)
             {
@@ -18876,8 +18754,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     }
 
     static PyMethodDef _methods_PickerFlyoutBase[] = {
-        { "on_confirmed", reinterpret_cast<PyCFunction>(PickerFlyoutBase_OnConfirmed), METH_VARARGS, nullptr },
-        { "should_show_confirmation_buttons", reinterpret_cast<PyCFunction>(PickerFlyoutBase_ShouldShowConfirmationButtons), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PickerFlyoutBase, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PickerFlyoutBase), METH_O | METH_STATIC, nullptr },
         { }
@@ -20471,105 +20347,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         Py_DECREF(tp);
     }
 
-    static PyObject* RangeBase_OnMaximumChanged(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::RangeBase* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 2)
-        {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.RangeBase", L"OnMaximumChanged", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
-            try
-            {
-                auto param0 = py::convert_to<double>(args, 0);
-                auto param1 = py::convert_to<double>(args, 1);
-
-                self->obj.OnMaximumChanged(param0, param1);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* RangeBase_OnMinimumChanged(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::RangeBase* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 2)
-        {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.RangeBase", L"OnMinimumChanged", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
-            try
-            {
-                auto param0 = py::convert_to<double>(args, 0);
-                auto param1 = py::convert_to<double>(args, 1);
-
-                self->obj.OnMinimumChanged(param0, param1);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* RangeBase_OnValueChanged(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::RangeBase* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 2)
-        {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.RangeBase", L"OnValueChanged", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
-            try
-            {
-                auto param0 = py::convert_to<double>(args, 0);
-                auto param1 = py::convert_to<double>(args, 1);
-
-                self->obj.OnValueChanged(param0, param1);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
     static PyObject* RangeBase_get_Value(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::RangeBase* self, void* /*unused*/) noexcept
     {
         if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.RangeBase", L"Value"))
@@ -20968,9 +20745,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     }
 
     static PyMethodDef _methods_RangeBase[] = {
-        { "on_maximum_changed", reinterpret_cast<PyCFunction>(RangeBase_OnMaximumChanged), METH_VARARGS, nullptr },
-        { "on_minimum_changed", reinterpret_cast<PyCFunction>(RangeBase_OnMinimumChanged), METH_VARARGS, nullptr },
-        { "on_value_changed", reinterpret_cast<PyCFunction>(RangeBase_OnValueChanged), METH_VARARGS, nullptr },
         { "add_value_changed", reinterpret_cast<PyCFunction>(RangeBase_add_ValueChanged), METH_O, nullptr },
         { "remove_value_changed", reinterpret_cast<PyCFunction>(RangeBase_remove_ValueChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_RangeBase, METH_O | METH_STATIC, nullptr },
@@ -27160,36 +26934,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         Py_DECREF(tp);
     }
 
-    static PyObject* ToggleButton_OnToggle(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ToggleButton* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 0)
-        {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ToggleButton", L"OnToggle", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
-            try
-            {
-                self->obj.OnToggle();
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
     static PyObject* ToggleButton_get_IsThreeState(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::ToggleButton* self, void* /*unused*/) noexcept
     {
         if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ToggleButton", L"IsThreeState"))
@@ -27476,7 +27220,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
     }
 
     static PyMethodDef _methods_ToggleButton[] = {
-        { "on_toggle", reinterpret_cast<PyCFunction>(ToggleButton_OnToggle), METH_VARARGS, nullptr },
         { "add_checked", reinterpret_cast<PyCFunction>(ToggleButton_add_Checked), METH_O, nullptr },
         { "remove_checked", reinterpret_cast<PyCFunction>(ToggleButton_remove_Checked), METH_O, nullptr },
         { "add_indeterminate", reinterpret_cast<PyCFunction>(ToggleButton_add_Indeterminate), METH_O, nullptr },

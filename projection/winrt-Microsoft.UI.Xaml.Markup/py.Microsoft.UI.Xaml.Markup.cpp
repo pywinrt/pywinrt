@@ -44,55 +44,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
         Py_DECREF(tp);
     }
 
-    static PyObject* MarkupExtension_ProvideValue(py::wrapper::Microsoft::UI::Xaml::Markup::MarkupExtension* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 0)
-        {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Markup.MarkupExtension", L"ProvideValue", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
-            try
-            {
-                return py::convert(self->obj.ProvideValue());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 1)
-        {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Markup.MarkupExtension", L"ProvideValue", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
-            try
-            {
-                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::IXamlServiceProvider>(args, 0);
-
-                return py::convert(self->obj.ProvideValue(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
     static PyObject* _assign_array_MarkupExtension(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Markup::MarkupExtension>>();
@@ -118,7 +69,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
     }
 
     static PyMethodDef _methods_MarkupExtension[] = {
-        { "provide_value", reinterpret_cast<PyCFunction>(MarkupExtension_ProvideValue), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MarkupExtension, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MarkupExtension), METH_O | METH_STATIC, nullptr },
         { }

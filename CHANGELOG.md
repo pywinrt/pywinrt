@@ -4,6 +4,11 @@
 
 ## [Unreleased]
 
+## [v2.0.1] - 2024-04-28
+
+### Fixed
+- Fixed modules with protected methods/properties failing to compile.
+
 ## [v2.0.0] - 2024-04-27
 
 ### Added
@@ -232,7 +237,8 @@
 ### Removed
 - Removed selecting apartment thread type during module init.
 
-[Unreleased]: https://github.com/pywinrt/pywinrt/compare/v2.0.0...HEAD
+[Unreleased]: https://github.com/pywinrt/pywinrt/compare/v2.0.1...HEAD
+[v2.0.1]: https://github.com/pywinrt/pywinrt/compare/v2.0.0...v2.0.1
 [v2.0.0]: https://github.com/pywinrt/pywinrt/compare/v2.0.0-beta.2...v2.0.0
 [v2.0.0-beta.2]: https://github.com/pywinrt/pywinrt/compare/v2.0.0-beta.1...v2.0.0-beta.2
 [v2.0.0-beta.1]: https://github.com/pywinrt/pywinrt/compare/v1.0.0-beta.10...v2.0.0-beta.1

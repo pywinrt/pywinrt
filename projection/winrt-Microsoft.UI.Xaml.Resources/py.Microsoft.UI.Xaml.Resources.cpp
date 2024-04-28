@@ -44,40 +44,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Resources
         Py_DECREF(tp);
     }
 
-    static PyObject* CustomXamlResourceLoader_GetResource(py::wrapper::Microsoft::UI::Xaml::Resources::CustomXamlResourceLoader* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 4)
-        {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Resources.CustomXamlResourceLoader", L"GetResource", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
-            try
-            {
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::hstring>(args, 1);
-                auto param2 = py::convert_to<winrt::hstring>(args, 2);
-                auto param3 = py::convert_to<winrt::hstring>(args, 3);
-
-                return py::convert(self->obj.GetResource(param0, param1, param2, param3));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
     static PyObject* CustomXamlResourceLoader_get_Current(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
         if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Resources.CustomXamlResourceLoader", L"Current"))
@@ -150,7 +116,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Resources
     }
 
     static PyMethodDef _methods_CustomXamlResourceLoader[] = {
-        { "get_resource", reinterpret_cast<PyCFunction>(CustomXamlResourceLoader_GetResource), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CustomXamlResourceLoader, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CustomXamlResourceLoader), METH_O | METH_STATIC, nullptr },
         { }
