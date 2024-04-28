@@ -106,7 +106,7 @@ namespace py::cpp::_winrt
         PyObject* arg0;
         PyObject* arg1 = nullptr;
 
-        if (PyArg_UnpackTuple(args, "Array", 1, 2, &arg0, &arg1) < 0)
+        if (!PyArg_UnpackTuple(args, "Array", 1, 2, &arg0, &arg1))
         {
             return nullptr;
         }
