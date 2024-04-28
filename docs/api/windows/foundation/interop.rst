@@ -36,7 +36,7 @@ APIs for interop with the `Windows.Foundation
     :raises ValueError:
         if *ptype* is not a supported type.
 
-    .. versionadded:: 2.0.0b3
+    .. versionadded:: 2.0.0
 
 .. function:: unbox(obj)
 
@@ -58,4 +58,4 @@ APIs for interop with the `Windows.Foundation
     :raises TypeError:
         if *obj* is not a :class:winrt.system.Object`
 
-    .. versionadded:: 2.0.0b3
+    .. versionadded:: 2.0.0
