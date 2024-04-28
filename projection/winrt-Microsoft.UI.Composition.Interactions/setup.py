@@ -10,9 +10,11 @@ class build_ext_ex(build_ext):
     def build_extension(self, ext):
         if self.compiler.compiler_type == "msvc":
             ext.extra_compile_args = ["/std:c++20", "/permissive-"]
-        else:
-            ext.extra_compile_args = ["-std=c++20"]
+        elif self.compiler.compiler_type == "mingw32":
+            ext.extra_compile_args = ["-std=c++20", "-D_WIN32_WINNT=_WIN32_WINNT_WIN10"]
             ext.extra_link_args = ["-loleaut32"]
+        else:
+            raise ValueError(f"Unsupported compiler: {self.compiler.compiler_type}")
 
         build_ext.build_extension(self, ext)
 
