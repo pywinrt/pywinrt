@@ -10,7 +10,6 @@ from builtins import property as _property
 import winrt._winrt
 import winrt.system
 import winrt.microsoft.ui.xaml
-import winrt.windows.applicationmodel.background
 import winrt.windows.foundation
 import winrt.windows.graphics.imaging
 import winrt.windows.storage.streams
@@ -221,5 +220,4 @@ class WriteableBitmap(winrt.system.Object):
 class XamlRenderingBackgroundTask(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> XamlRenderingBackgroundTask: ...
-    def on_run(self, task_instance: typing.Optional[winrt.windows.applicationmodel.background.IBackgroundTaskInstance], /) -> None: ...
 

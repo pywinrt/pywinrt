@@ -10885,67 +10885,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         Py_DECREF(tp);
     }
 
-    static PyObject* NavigationTransitionInfo_GetNavigationStateCore(py::wrapper::Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 0)
-        {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.NavigationTransitionInfo", L"GetNavigationStateCore", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
-            try
-            {
-                return py::convert(self->obj.GetNavigationStateCore());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* NavigationTransitionInfo_SetNavigationStateCore(py::wrapper::Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 1)
-        {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.NavigationTransitionInfo", L"SetNavigationStateCore", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
-            try
-            {
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-
-                self->obj.SetNavigationStateCore(param0);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
     static PyObject* _assign_array_NavigationTransitionInfo(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo>>();
@@ -10971,8 +10910,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     }
 
     static PyMethodDef _methods_NavigationTransitionInfo[] = {
-        { "get_navigation_state_core", reinterpret_cast<PyCFunction>(NavigationTransitionInfo_GetNavigationStateCore), METH_VARARGS, nullptr },
-        { "set_navigation_state_core", reinterpret_cast<PyCFunction>(NavigationTransitionInfo_SetNavigationStateCore), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_NavigationTransitionInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_NavigationTransitionInfo), METH_O | METH_STATIC, nullptr },
         { }

@@ -1157,9 +1157,6 @@ static PyObject* _new_@(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject
         MethodDef const& method,
         std::string_view const& prop_name)
     {
-        if (!method)
-            return;
-
         w.write(
             "\nstatic int @_%(%, PyObject* arg, void* /*unused*/) noexcept\n{\n",
             type.TypeName(),
@@ -1702,8 +1699,18 @@ return 0;
             [&](auto const& prop)
             {
                 auto&& [get_method, put_method] = get_property_methods(prop);
+
+                if (!is_public(get_method))
+                {
+                    return;
+                }
+
                 write_get_property_function(w, type, get_method, prop.Name());
-                write_put_property_function(w, type, put_method, prop.Name());
+
+                if (put_method && is_public(put_method))
+                {
+                    write_put_property_function(w, type, put_method, prop.Name());
+                }
             });
 
         enumerate_events(
@@ -2161,13 +2168,18 @@ return 0;
                     {
                         auto [getter, setter] = get_property_methods(prop);
 
+                        if (!is_public(getter))
+                        {
+                            return;
+                        }
+
                         // static properties are implemented in the metaclass
                         if (!is_static(getter))
                         {
                             write_row(
                                 prop.Name(),
                                 getter.Name(),
-                                setter ? setter.Name() : "");
+                                setter && is_public(setter) ? setter.Name() : "");
                         }
                     });
             }
@@ -2327,10 +2339,17 @@ static PyType_Spec type_spec_@ =
                 {
                     auto [getter, setter] = get_property_methods(prop);
 
+                    if (!is_public(getter))
+                    {
+                        return;
+                    }
+
                     if (is_static(getter))
                     {
                         write_row(
-                            prop.Name(), getter.Name(), setter ? setter.Name() : "");
+                            prop.Name(),
+                            getter.Name(),
+                            setter && is_public(setter) ? setter.Name() : "");
                     }
                 });
 
@@ -2539,8 +2558,14 @@ struct pinterface_python_type<%<%>>
                 [&](auto const& prop)
                 {
                     auto [get_method, put_method] = get_property_methods(prop);
+
+                    if (!is_public(get_method))
+                    {
+                        return;
+                    }
+
                     w.write("virtual PyObject* %() noexcept = 0;\n", get_method.Name());
-                    if (put_method)
+                    if (put_method && is_public(put_method))
                     {
                         w.write(
                             "virtual int %(PyObject*) noexcept = 0;\n",
@@ -2656,9 +2681,12 @@ struct pinterface_python_type<%<%>>
                 type,
                 [&](auto const& prop)
                 {
-                    auto methods = get_property_methods(prop);
-                    auto get_method = std::get<0>(methods);
-                    auto put_method = std::get<1>(methods);
+                    auto [get_method, put_method] = get_property_methods(prop);
+
+                    if (!is_public(get_method))
+                    {
+                        return;
+                    }
 
                     w.write("PyObject* %() noexcept override\n{\n", get_method.Name());
                     {
@@ -2672,7 +2700,7 @@ struct pinterface_python_type<%<%>>
                     }
                     w.write("}\n");
 
-                    if (put_method)
+                    if (put_method && is_public(put_method))
                     {
                         w.write(
                             "int %(PyObject* arg) noexcept override\n{\n",
@@ -4244,6 +4272,11 @@ if (!return_value)
 
                     auto [get_method, put_method] = get_property_methods(property);
 
+                    if (!is_public(get_method))
+                    {
+                        return;
+                    }
+
                     auto type = w.write_temp(
                         "%", bind<write_nullable_python_type>(property.Type().Type()));
 
@@ -4255,7 +4288,7 @@ if (!return_value)
                         bind<write_lower_snake_case_python_identifier>(property.Name()),
                         type);
 
-                    if (put_method)
+                    if (put_method && is_public(put_method))
                     {
                         w.write(
                             "^@%.setter\n",
@@ -4611,6 +4644,11 @@ if (!return_value)
 
                 auto [get_method, put_method] = get_property_methods(property);
 
+                if (!is_public(get_method))
+                {
+                    return;
+                }
+
                 auto type = w.write_temp(
                     "%", bind<write_nullable_python_type>(property.Type().Type()));
 
@@ -4622,7 +4660,7 @@ if (!return_value)
                     bind<write_lower_snake_case_python_identifier>(property.Name()),
                     type);
 
-                if (put_method)
+                if (put_method && is_public(put_method))
                 {
                     w.write(
                         "^@%.setter\n",

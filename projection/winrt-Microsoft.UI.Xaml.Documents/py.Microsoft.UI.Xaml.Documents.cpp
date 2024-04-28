@@ -4849,36 +4849,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static PyObject* TextElement_OnDisconnectVisualChildren(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 0)
-        {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Documents.TextElement", L"OnDisconnectVisualChildren", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
-            try
-            {
-                self->obj.OnDisconnectVisualChildren();
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
     static PyObject* TextElement_get_XamlRoot(py::wrapper::Microsoft::UI::Xaml::Documents::TextElement* self, void* /*unused*/) noexcept
     {
         if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Documents.TextElement", L"XamlRoot"))
@@ -6364,7 +6334,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
     static PyMethodDef _methods_TextElement[] = {
         { "find_name", reinterpret_cast<PyCFunction>(TextElement_FindName), METH_VARARGS, nullptr },
-        { "on_disconnect_visual_children", reinterpret_cast<PyCFunction>(TextElement_OnDisconnectVisualChildren), METH_VARARGS, nullptr },
         { "add_access_key_display_dismissed", reinterpret_cast<PyCFunction>(TextElement_add_AccessKeyDisplayDismissed), METH_O, nullptr },
         { "remove_access_key_display_dismissed", reinterpret_cast<PyCFunction>(TextElement_remove_AccessKeyDisplayDismissed), METH_O, nullptr },
         { "add_access_key_display_requested", reinterpret_cast<PyCFunction>(TextElement_add_AccessKeyDisplayRequested), METH_O, nullptr },

@@ -44,35 +44,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         Py_DECREF(tp);
     }
 
-    static PyObject* MarkupExtension_ProvideValue(py::wrapper::Windows::UI::Xaml::Markup::MarkupExtension* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 0)
-        {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Markup.MarkupExtension", L"ProvideValue", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
-            try
-            {
-                return py::convert(self->obj.ProvideValue());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
     static PyObject* _assign_array_MarkupExtension(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Markup::MarkupExtension>>();
@@ -98,7 +69,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     }
 
     static PyMethodDef _methods_MarkupExtension[] = {
-        { "provide_value", reinterpret_cast<PyCFunction>(MarkupExtension_ProvideValue), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MarkupExtension, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MarkupExtension), METH_O | METH_STATIC, nullptr },
         { }

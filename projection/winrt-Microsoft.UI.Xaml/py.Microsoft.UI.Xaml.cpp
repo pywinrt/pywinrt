@@ -382,38 +382,6 @@ namespace py::cpp::Microsoft::UI::Xaml
         }
     }
 
-    static PyObject* Application_OnLaunched(py::wrapper::Microsoft::UI::Xaml::Application* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 1)
-        {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Application", L"OnLaunched", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
-            try
-            {
-                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::LaunchActivatedEventArgs>(args, 0);
-
-                self->obj.OnLaunched(param0);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
     static PyObject* Application_Start(PyObject* /*unused*/, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -831,7 +799,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyMethodDef _methods_Application[] = {
         { "exit", reinterpret_cast<PyCFunction>(Application_Exit), METH_VARARGS, nullptr },
-        { "on_launched", reinterpret_cast<PyCFunction>(Application_OnLaunched), METH_VARARGS, nullptr },
         { "add_unhandled_exception", reinterpret_cast<PyCFunction>(Application_add_UnhandledException), METH_O, nullptr },
         { "remove_unhandled_exception", reinterpret_cast<PyCFunction>(Application_remove_UnhandledException), METH_O, nullptr },
         { "add_resource_manager_requested", reinterpret_cast<PyCFunction>(Application_add_ResourceManagerRequested), METH_O, nullptr },
@@ -9047,37 +9014,6 @@ namespace py::cpp::Microsoft::UI::Xaml
         Py_DECREF(tp);
     }
 
-    static PyObject* FrameworkElement_ArrangeOverride(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 1)
-        {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"ArrangeOverride", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
-            try
-            {
-                auto param0 = py::convert_to<winrt::Windows::Foundation::Size>(args, 0);
-
-                return py::convert(self->obj.ArrangeOverride(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
     static PyObject* FrameworkElement_DeferTree(PyObject* /*unused*/, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -9158,129 +9094,6 @@ namespace py::cpp::Microsoft::UI::Xaml
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
 
                 return py::convert(self->obj.GetBindingExpression(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* FrameworkElement_GoToElementStateCore(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 2)
-        {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"GoToElementStateCore", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
-            try
-            {
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<bool>(args, 1);
-
-                return py::convert(self->obj.GoToElementStateCore(param0, param1));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* FrameworkElement_InvalidateViewport(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 0)
-        {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"InvalidateViewport", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
-            try
-            {
-                self->obj.InvalidateViewport();
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* FrameworkElement_MeasureOverride(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 1)
-        {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"MeasureOverride", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
-            try
-            {
-                auto param0 = py::convert_to<winrt::Windows::Foundation::Size>(args, 0);
-
-                return py::convert(self->obj.MeasureOverride(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* FrameworkElement_OnApplyTemplate(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 0)
-        {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.FrameworkElement", L"OnApplyTemplate", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
-            try
-            {
-                self->obj.OnApplyTemplate();
-                Py_RETURN_NONE;
             }
             catch (...)
             {
@@ -11452,13 +11265,8 @@ namespace py::cpp::Microsoft::UI::Xaml
     }
 
     static PyMethodDef _methods_FrameworkElement[] = {
-        { "arrange_override", reinterpret_cast<PyCFunction>(FrameworkElement_ArrangeOverride), METH_VARARGS, nullptr },
         { "find_name", reinterpret_cast<PyCFunction>(FrameworkElement_FindName), METH_VARARGS, nullptr },
         { "get_binding_expression", reinterpret_cast<PyCFunction>(FrameworkElement_GetBindingExpression), METH_VARARGS, nullptr },
-        { "go_to_element_state_core", reinterpret_cast<PyCFunction>(FrameworkElement_GoToElementStateCore), METH_VARARGS, nullptr },
-        { "invalidate_viewport", reinterpret_cast<PyCFunction>(FrameworkElement_InvalidateViewport), METH_VARARGS, nullptr },
-        { "measure_override", reinterpret_cast<PyCFunction>(FrameworkElement_MeasureOverride), METH_VARARGS, nullptr },
-        { "on_apply_template", reinterpret_cast<PyCFunction>(FrameworkElement_OnApplyTemplate), METH_VARARGS, nullptr },
         { "set_binding", reinterpret_cast<PyCFunction>(FrameworkElement_SetBinding), METH_VARARGS, nullptr },
         { "add_actual_theme_changed", reinterpret_cast<PyCFunction>(FrameworkElement_add_ActualThemeChanged), METH_O, nullptr },
         { "remove_actual_theme_changed", reinterpret_cast<PyCFunction>(FrameworkElement_remove_ActualThemeChanged), METH_O, nullptr },
@@ -15991,38 +15799,6 @@ namespace py::cpp::Microsoft::UI::Xaml
         Py_DECREF(tp);
     }
 
-    static PyObject* StateTriggerBase_SetActive(py::wrapper::Microsoft::UI::Xaml::StateTriggerBase* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 1)
-        {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.StateTriggerBase", L"SetActive", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
-            try
-            {
-                auto param0 = py::convert_to<bool>(args, 0);
-
-                self->obj.SetActive(param0);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
     static PyObject* _assign_array_StateTriggerBase(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::StateTriggerBase>>();
@@ -16048,7 +15824,6 @@ namespace py::cpp::Microsoft::UI::Xaml
     }
 
     static PyMethodDef _methods_StateTriggerBase[] = {
-        { "set_active", reinterpret_cast<PyCFunction>(StateTriggerBase_SetActive), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_StateTriggerBase, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StateTriggerBase), METH_O | METH_STATIC, nullptr },
         { }
@@ -18249,38 +18024,6 @@ namespace py::cpp::Microsoft::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_FindSubElementsForTouchTargeting(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 2)
-        {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"FindSubElementsForTouchTargeting", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
-            try
-            {
-                auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
-
-                return py::convert(self->obj.FindSubElementsForTouchTargeting(param0, param1));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
     static PyObject* UIElement_Focus(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -18298,35 +18041,6 @@ namespace py::cpp::Microsoft::UI::Xaml
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::FocusState>(args, 0);
 
                 return py::convert(self->obj.Focus(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* UIElement_GetChildrenInTabFocusOrder(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 0)
-        {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"GetChildrenInTabFocusOrder", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
-            try
-            {
-                return py::convert(self->obj.GetChildrenInTabFocusOrder());
             }
             catch (...)
             {
@@ -18462,161 +18176,6 @@ namespace py::cpp::Microsoft::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_OnBringIntoViewRequested(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 1)
-        {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"OnBringIntoViewRequested", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
-            try
-            {
-                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::BringIntoViewRequestedEventArgs>(args, 0);
-
-                self->obj.OnBringIntoViewRequested(param0);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* UIElement_OnCreateAutomationPeer(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 0)
-        {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"OnCreateAutomationPeer", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
-            try
-            {
-                return py::convert(self->obj.OnCreateAutomationPeer());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* UIElement_OnDisconnectVisualChildren(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 0)
-        {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"OnDisconnectVisualChildren", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
-            try
-            {
-                self->obj.OnDisconnectVisualChildren();
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* UIElement_OnKeyboardAcceleratorInvoked(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 1)
-        {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"OnKeyboardAcceleratorInvoked", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
-            try
-            {
-                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::KeyboardAcceleratorInvokedEventArgs>(args, 0);
-
-                self->obj.OnKeyboardAcceleratorInvoked(param0);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* UIElement_OnProcessKeyboardAccelerators(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 1)
-        {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"OnProcessKeyboardAccelerators", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
-            try
-            {
-                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs>(args, 0);
-
-                self->obj.OnProcessKeyboardAccelerators(param0);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
     static PyObject* UIElement_PopulatePropertyInfo(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -18635,39 +18194,6 @@ namespace py::cpp::Microsoft::UI::Xaml
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationPropertyInfo>(args, 1);
 
                 self->obj.PopulatePropertyInfo(param0, param1);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* UIElement_PopulatePropertyInfoOverride(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 2)
-        {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.UIElement", L"PopulatePropertyInfoOverride", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
-            try
-            {
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationPropertyInfo>(args, 1);
-
-                self->obj.PopulatePropertyInfoOverride(param0, param1);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -21958,53 +21484,6 @@ namespace py::cpp::Microsoft::UI::Xaml
         }
     }
 
-    static PyObject* UIElement_get_ProtectedCursor(py::wrapper::Microsoft::UI::Xaml::UIElement* self, void* /*unused*/) noexcept
-    {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"ProtectedCursor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
-        try
-        {
-            return py::convert(self->obj.ProtectedCursor());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
-    static int UIElement_put_ProtectedCursor(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"ProtectedCursor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
-        if (arg == nullptr)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            auto param0 = py::convert_to<winrt::Microsoft::UI::Input::InputCursor>(arg);
-
-            self->obj.ProtectedCursor(param0);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* UIElement_get_AccessKeyProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
         if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.UIElement", L"AccessKeyProperty"))
@@ -25274,20 +24753,12 @@ namespace py::cpp::Microsoft::UI::Xaml
         { "arrange", reinterpret_cast<PyCFunction>(UIElement_Arrange), METH_VARARGS, nullptr },
         { "cancel_direct_manipulations", reinterpret_cast<PyCFunction>(UIElement_CancelDirectManipulations), METH_VARARGS, nullptr },
         { "capture_pointer", reinterpret_cast<PyCFunction>(UIElement_CapturePointer), METH_VARARGS, nullptr },
-        { "find_sub_elements_for_touch_targeting", reinterpret_cast<PyCFunction>(UIElement_FindSubElementsForTouchTargeting), METH_VARARGS, nullptr },
         { "focus", reinterpret_cast<PyCFunction>(UIElement_Focus), METH_VARARGS, nullptr },
-        { "get_children_in_tab_focus_order", reinterpret_cast<PyCFunction>(UIElement_GetChildrenInTabFocusOrder), METH_VARARGS, nullptr },
         { "get_visual_internal", reinterpret_cast<PyCFunction>(UIElement_GetVisualInternal), METH_VARARGS, nullptr },
         { "invalidate_arrange", reinterpret_cast<PyCFunction>(UIElement_InvalidateArrange), METH_VARARGS, nullptr },
         { "invalidate_measure", reinterpret_cast<PyCFunction>(UIElement_InvalidateMeasure), METH_VARARGS, nullptr },
         { "measure", reinterpret_cast<PyCFunction>(UIElement_Measure), METH_VARARGS, nullptr },
-        { "on_bring_into_view_requested", reinterpret_cast<PyCFunction>(UIElement_OnBringIntoViewRequested), METH_VARARGS, nullptr },
-        { "on_create_automation_peer", reinterpret_cast<PyCFunction>(UIElement_OnCreateAutomationPeer), METH_VARARGS, nullptr },
-        { "on_disconnect_visual_children", reinterpret_cast<PyCFunction>(UIElement_OnDisconnectVisualChildren), METH_VARARGS, nullptr },
-        { "on_keyboard_accelerator_invoked", reinterpret_cast<PyCFunction>(UIElement_OnKeyboardAcceleratorInvoked), METH_VARARGS, nullptr },
-        { "on_process_keyboard_accelerators", reinterpret_cast<PyCFunction>(UIElement_OnProcessKeyboardAccelerators), METH_VARARGS, nullptr },
         { "populate_property_info", reinterpret_cast<PyCFunction>(UIElement_PopulatePropertyInfo), METH_VARARGS, nullptr },
-        { "populate_property_info_override", reinterpret_cast<PyCFunction>(UIElement_PopulatePropertyInfoOverride), METH_VARARGS, nullptr },
         { "release_pointer_capture", reinterpret_cast<PyCFunction>(UIElement_ReleasePointerCapture), METH_VARARGS, nullptr },
         { "release_pointer_captures", reinterpret_cast<PyCFunction>(UIElement_ReleasePointerCaptures), METH_VARARGS, nullptr },
         { "remove_handler", reinterpret_cast<PyCFunction>(UIElement_RemoveHandler), METH_VARARGS, nullptr },
@@ -25450,7 +24921,6 @@ namespace py::cpp::Microsoft::UI::Xaml
         { "pointer_captures", reinterpret_cast<getter>(UIElement_get_PointerCaptures), nullptr, nullptr, nullptr },
         { "actual_offset", reinterpret_cast<getter>(UIElement_get_ActualOffset), nullptr, nullptr, nullptr },
         { "actual_size", reinterpret_cast<getter>(UIElement_get_ActualSize), nullptr, nullptr, nullptr },
-        { "protected_cursor", reinterpret_cast<getter>(UIElement_get_ProtectedCursor), reinterpret_cast<setter>(UIElement_put_ProtectedCursor), nullptr, nullptr },
         { }
     };
 
@@ -27391,112 +26861,6 @@ namespace py::cpp::Microsoft::UI::Xaml
         }
     }
 
-    static PyObject* VisualStateManager_GoToStateCore(py::wrapper::Microsoft::UI::Xaml::VisualStateManager* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 6)
-        {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.VisualStateManager", L"GoToStateCore", 6))
-            {
-                py::set_arg_count_version_error(6);
-                return nullptr;
-            }
-
-            try
-            {
-                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Control>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::FrameworkElement>(args, 1);
-                auto param2 = py::convert_to<winrt::hstring>(args, 2);
-                auto param3 = py::convert_to<winrt::Microsoft::UI::Xaml::VisualStateGroup>(args, 3);
-                auto param4 = py::convert_to<winrt::Microsoft::UI::Xaml::VisualState>(args, 4);
-                auto param5 = py::convert_to<bool>(args, 5);
-
-                return py::convert(self->obj.GoToStateCore(param0, param1, param2, param3, param4, param5));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* VisualStateManager_RaiseCurrentStateChanged(py::wrapper::Microsoft::UI::Xaml::VisualStateManager* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 4)
-        {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.VisualStateManager", L"RaiseCurrentStateChanged", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
-            try
-            {
-                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::VisualStateGroup>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::VisualState>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Xaml::VisualState>(args, 2);
-                auto param3 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Control>(args, 3);
-
-                self->obj.RaiseCurrentStateChanged(param0, param1, param2, param3);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* VisualStateManager_RaiseCurrentStateChanging(py::wrapper::Microsoft::UI::Xaml::VisualStateManager* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 4)
-        {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.VisualStateManager", L"RaiseCurrentStateChanging", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
-            try
-            {
-                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::VisualStateGroup>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::VisualState>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Xaml::VisualState>(args, 2);
-                auto param3 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::Control>(args, 3);
-
-                self->obj.RaiseCurrentStateChanging(param0, param1, param2, param3);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
     static PyObject* VisualStateManager_SetCustomVisualStateManager(PyObject* /*unused*/, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -27574,9 +26938,6 @@ namespace py::cpp::Microsoft::UI::Xaml
     }
 
     static PyMethodDef _methods_VisualStateManager[] = {
-        { "go_to_state_core", reinterpret_cast<PyCFunction>(VisualStateManager_GoToStateCore), METH_VARARGS, nullptr },
-        { "raise_current_state_changed", reinterpret_cast<PyCFunction>(VisualStateManager_RaiseCurrentStateChanged), METH_VARARGS, nullptr },
-        { "raise_current_state_changing", reinterpret_cast<PyCFunction>(VisualStateManager_RaiseCurrentStateChanging), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_VisualStateManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VisualStateManager), METH_O | METH_STATIC, nullptr },
         { }

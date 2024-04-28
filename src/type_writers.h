@@ -940,7 +940,7 @@ namespace pywinrt
     }
 
     /**
-     * Calls @p func on all methods in @p type.
+     * Calls @p func on all public methods in @p type.
      *
      * @param [in]  w       A writer.
      * @param [in]  type    The type that contains the methods.
@@ -964,6 +964,12 @@ namespace pywinrt
                     if (method.SpecialName())
                     {
                         // skip .ctor, get_/put_ and add_/remove_ methods
+                        continue;
+                    }
+
+                    if (!is_public(method))
+                    {
+                        // skip non-public methods
                         continue;
                     }
 

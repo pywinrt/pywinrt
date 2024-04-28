@@ -2631,38 +2631,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         Py_DECREF(tp);
     }
 
-    static PyObject* XamlRenderingBackgroundTask_OnRun(py::wrapper::Windows::UI::Xaml::Media::Imaging::XamlRenderingBackgroundTask* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 1)
-        {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Imaging.XamlRenderingBackgroundTask", L"OnRun", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
-            try
-            {
-                auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance>(args, 0);
-
-                self->obj.OnRun(param0);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
     static PyObject* _assign_array_XamlRenderingBackgroundTask(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Xaml::Media::Imaging::XamlRenderingBackgroundTask>>();
@@ -2688,7 +2656,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
     }
 
     static PyMethodDef _methods_XamlRenderingBackgroundTask[] = {
-        { "on_run", reinterpret_cast<PyCFunction>(XamlRenderingBackgroundTask_OnRun), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_XamlRenderingBackgroundTask, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_XamlRenderingBackgroundTask), METH_O | METH_STATIC, nullptr },
         { }

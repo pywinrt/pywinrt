@@ -9,10 +9,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include "py.Windows.ApplicationModel.h"
 #endif
 
-#if __has_include("py.Windows.ApplicationModel.Activation.h")
-#include "py.Windows.ApplicationModel.Activation.h"
-#endif
-
 #if __has_include("py.Windows.ApplicationModel.Core.h")
 #include "py.Windows.ApplicationModel.Core.h"
 #endif
@@ -57,10 +53,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include "py.Windows.UI.Input.h"
 #endif
 
-#if __has_include("py.Windows.UI.Xaml.Automation.Peers.h")
-#include "py.Windows.UI.Xaml.Automation.Peers.h"
-#endif
-
 #if __has_include("py.Windows.UI.Xaml.Controls.h")
 #include "py.Windows.UI.Xaml.Controls.h"
 #endif
@@ -98,7 +90,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #endif
 
 #include <winrt/Windows.ApplicationModel.h>
-#include <winrt/Windows.ApplicationModel.Activation.h>
 #include <winrt/Windows.ApplicationModel.Core.h>
 #include <winrt/Windows.ApplicationModel.DataTransfer.h>
 #include <winrt/Windows.ApplicationModel.DataTransfer.DragDrop.h>
@@ -110,7 +101,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.UI.Composition.h>
 #include <winrt/Windows.UI.Core.h>
 #include <winrt/Windows.UI.Input.h>
-#include <winrt/Windows.UI.Xaml.Automation.Peers.h>
 #include <winrt/Windows.UI.Xaml.Controls.h>
 #include <winrt/Windows.UI.Xaml.Controls.Primitives.h>
 #include <winrt/Windows.UI.Xaml.Data.h>
