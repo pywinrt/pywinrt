@@ -10,6 +10,9 @@ on:
       - projection/winrt-sdk/src/winrt_sdk/cppwinrt/**
       - projection/winrt-sdk/src/winrt_sdk/pywinrt/**
       - projection/winrt-*/py.*.cpp
+      - projection/winrt-*/pyproject.toml
+      - projection/winrt-*/setup.py
+      - projection/winrt-*/README.md
       - src/**
       - scripts/build.cmd
       - scripts/fetch-tools.ps1
