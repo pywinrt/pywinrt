@@ -21,6 +21,7 @@
 - Fixed building from source package with non-MSVC compiler ([#44]).
 - Fixed module load failing on systems without `msvcp140.dll` ([#43]).
 - Fixed installing from source in MSYS2 CLANG64 ([#47]).
+- Fixed crash when `winrt.system.Array()` called with no arguments.
 
 [#43]: https://github.com/pywinrt/pywinrt/issues/43
 [#44]: https://github.com/pywinrt/pywinrt/issues/44
