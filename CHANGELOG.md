@@ -11,7 +11,7 @@
 - Added `winrt.windows.foundation.interop` module with `box` and `unbox` methods.
 
 ### Changed
-- Regenerated files for Windows 11 SDK 10.0.22621.0 Febuary 2024 update.
+- Regenerated files for Windows 11 SDK 10.0.22621.0 February 2024 update.
 - Updated to Windows App SDK 1.5.240311000
 - Updated to CppWinRT 2.0.240111.5
 
