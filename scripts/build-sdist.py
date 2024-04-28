@@ -17,7 +17,7 @@ except ImportError:
 
 for package_path in chain(
     [str(PROJECTION_PATH / "winrt-runtime")],
-    iglob(str(PROJECTION_PATH / "interop" / "winrt-Windows.*")),
+    iglob(str(PROJECTION_PATH / "interop" / "winrt-*")),
     iglob(str(PROJECTION_PATH / "winrt-Windows.*")),
     iglob(str(PROJECTION_PATH / "winrt-Microsoft.*")),
 ):
