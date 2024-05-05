@@ -130,7 +130,10 @@ for path in itertools.chain(
     ],
     (PROJECTION_PATH / "interop").glob("winrt-*"),
 ):
-    shutil.copy(
-        str(PROJECTION_PATH / "winrt-Windows.Foundation" / "pywinrt-version.txt"),
-        str(path / "pywinrt-version.txt"),
-    )
+    try:
+        shutil.copy(
+            str(PROJECTION_PATH / "winrt-Windows.Foundation" / "pywinrt-version.txt"),
+            str(path / "pywinrt-version.txt"),
+        )
+    except shutil.SameFileError:
+        pass
